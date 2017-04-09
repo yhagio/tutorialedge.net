@@ -3,6 +3,7 @@ date = "2017-04-09T21:04:56+01:00"
 title = "angular components tutorial"
 draft = true
 desc = "Here we look at everything it takes to define your own Angular components."
+tags = ["angular", "typescript"]
 +++
 
 > This tutorial was created using Angular 2.2

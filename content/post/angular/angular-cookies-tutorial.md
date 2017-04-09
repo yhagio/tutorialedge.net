@@ -2,6 +2,7 @@
 date = "2016-02-14T16:11:58+05:30"
 draft = true
 title = "Angular Cookies Tutorial"
+desc = "
 +++
 
 > This tutorial was built using Angular 2.2. 
