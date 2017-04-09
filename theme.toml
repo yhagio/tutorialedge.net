@@ -1,13 +1,12 @@
-name = "Robust"
+name = "Blank"
 license = "MIT"
-licenselink = "https://github.com/dim0627/hugo_theme_robust/blob/master/LICENSE.md"
-description = "Grid based theme for Hugo."
-homepage = "https://github.com/dim0627/hugo_theme_robust"
-tags = ["blog"]
-features = ["responsive", "thumbnail", "grid", "syntax highlight", "structured data", "ogp", "twitter cards"]
-min_version = 0.16
+licenselink = "https://github.com/vimux/blank/blob/master/LICENSE.md"
+description = "Starter Hugo theme for developers."
+homepage = "https://github.com/vimux/blank/"
+tags = ["blog", "plain", "blank", "starter"]
+features = ["blog"]
+min_version = 0.19
 
 [author]
-  name = "Daisuke Tsuji"
-  homepage = "https://yet.unresolved.xyz/"
-
+  name = "Vimux"
+  homepage = "https://github.com/vimux"

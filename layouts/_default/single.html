@@ -1,31 +1,22 @@
-{{ define "title" }}{{ .Title }} - {{ end }}
-
-{{ define "meta" }}
-{{ partial "single_meta.html" . }}
-{{ partial "single_json_ld.html" . }}
-{{ end }}
-
-{{ define "main" }}
-<div class="row">
-  <div class="col-md-8">
-
-    <nav class="p-crumb">
-      <ol>
-        <li><a href="{{ .Site.BaseURL }}"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-        {{ with .Section }}
-        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ $.Site.BaseURL }}{{ . | urlize }}/" itemprop="url"><span itemprop="title">{{ . }}</span></a></li>
-        {{ end }}
-        <li class="active">{{ .Title }}</li>
-      </ol>
-    </nav>
-
-    {{ .Render "summary" }}
-
-    {{ template "_internal/disqus.html" . }}
-  </div>
-
-  <div class="col-md-4">
-    {{ partial "sidebar.html" . }}
-  </div>
-</div>
-{{ end }}
+{{ partial "header.html" . }}
+	<main>
+		<article>
+			<h1>{{ .Title }}</h1>
+			<time>{{ .Date.Format "02.01.2006 15:04" }}</time>
+			<div>
+				{{ .Content }}
+			</div>
+			<div>
+				<ul id="tags">
+					{{ range .Params.tags }}
+					<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> </li>
+					{{ end }}
+				</ul>
+			</div>
+			<div>
+				{{ template "_internal/disqus.html" . }}
+			</div>
+		</article>
+	</main>
+{{ partial "sidebar.html" . }}
+{{ partial "footer.html" . }}
