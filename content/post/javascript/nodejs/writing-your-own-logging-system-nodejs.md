@@ -3,7 +3,7 @@ date = "2017-04-09T21:26:14+01:00"
 title = "writing your own logging system nodejs"
 draft = true
 desc = "In this tutorial we discuss how to implement a very simple logging system using nodejs"
-
+series = [ "nodejs" ]
 +++
 
 ## Logging - Why Is It Important?

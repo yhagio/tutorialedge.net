@@ -3,6 +3,7 @@ draft = true
 date = "2017-04-09T21:28:15+01:00"
 title = "golang mysql tutorial"
 desc = "In this tutorial I'll be demonstrating how we can work with MySQL databases using Go."
+series = [ "golang" ]
 +++
 
 > In this tutorial I’ll be demonstrating how you can connect to a MySQL database and perform basic SQL statements using Go.

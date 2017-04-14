@@ -3,6 +3,8 @@ date = "2017-04-09T21:11:31+01:00"
 title = "angularjs store cookies tutorial"
 draft = true
 desc = "In this tutorial we look at how we can use the $cookie service in angularjs in order to store information across requests."
+tags = ["angularjs", "javascript"]
+series = [ "angularjs" ]
 +++
 
 In this tutorial we look at how you can store information in cookies in your AngularJS application. 

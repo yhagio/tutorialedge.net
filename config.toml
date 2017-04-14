@@ -1,3 +1,8 @@
 languageCode = "en-us"
-title = "My New Hugo Site"
-baseURL = "http://example.org/"
+title = "TutorialEdge.net"
+baseURL = "/"
+
+[indexes] 
+    category = "categories" 
+    tag = "tags" 
+    series = "series"

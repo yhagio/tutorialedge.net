@@ -1,41 +1,277 @@
 body {
-    font-family: 'proxima-nova',sans-serif;
+    font-family: "Proxima Nova", "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 400;
-    background-color: #F1F4F5;
+    line-height: 1.5;
+    color: #0a0a0a;
+    -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Proxima Nova", "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    color: #333;
 }
 
-article {
-  background-color: white;
-  padding: 20px 40px; 
-  margin-top: 40px;
+nav { background-color: #2B3840; }
+nav .brand-logo { font-weight: 300; }
+nav li:first-child { border-left: 1px solid #3B4951; }
+nav li:not(:last-child) { border-right: 1px solid #3B4951; }
+nav .button-collapse .ion { color: white !important; }
+.flexbox-courses {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  /* Safari */
+  justify-content: center;
+  -webkit-justify-content: space-between;
+  /* Safari */
+  justify-content: space-between;
+  -webkit-align-content: space-around;
+  /* Safari */
+  align-content: space-around;
+  -webkit-flex-wrap: wrap;
+  /* Safari */
+  flex-wrap: wrap;
+}
+
+.courses {
+  width: 100%;
+  padding: 40px;
+  width: 100%;
+  padding: 40px;
+  background-color: #fafafa !important;
+  border-bottom: 1px solid #f6f4f4;
+  text-align: center;
+}
+
+.courses h2 {
+  color: #074E68 !important;
+  font-size: 2.9375rem;
+  font-weight: 400;
+  line-height: 3.125rem;
+  padding: 0;
+  margin: 0;
   margin-bottom: 40px;
 }
 
-article h1 {
-    font-size: 40px;
+.course-card {
+  width: 350px;
+  height: 220px;
+  background-color: white;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 0px 0px 4px rgba(0,0,0,0.05);
+  transition: box-shadow 0.4s ease,
+              top 0.4s ease,
+              width  0.4s ease,
+              height  0.4s ease;
+}
+.course-card:hover {
+  box-shadow: 0 12px 20px -10px rgba(0,0,0,0.5);
+    top: -5px;
+}
+
+.course-card .top-half{
+    width: 100%;
+    height: 150px;
+    border-radius: 10px 10px 0px 0px;
+    background-color: #333333;
+    background-image: url(http://www.invokemedia.com/wp-content/uploads/2015/07/angular.png);
+    background-size: auto 130%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.course-card .bottom-half {
+  margin-left: 5%;
+    margin-top: 12px;
+    width: 90%;
+    text-align: center;
+}
+.course-card .title{
+  font-size: 22px;
+  color: #555555;
+  margin-bottom: 2px;
+}
+.course-card .subtitle{
+  font-size: 12px;
+  color: #999999;
+}
+.tutorials {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.about {
+  width: 100%;
+  padding: 40px;
+  background-color: #fafafa !important;
+  border-top: 1px solid #f6f4f4;
+}
+.about .ion {
+  color: #074E68;
+  margin-top: 50px;
+  font-size: 120px;
+}
+.about h3 {
+    font-size: 26px;
+    margin-top: 20px;
+    color: #333;
+}
+.about p {
+      font-size: 18px;
+    color: #333;
+}
+.course-box {
+  max-width: 380px;
+  height: 100%;
+  background-color: white;
+}
+.course-box h2 a{
+      margin: 0;
+    padding: 0 0 10px;
+    color: #333333;
+    line-height: 1;
+    font-size: 23px;
+    font-weight: 700;
+}
+.container p {
+    font-family: inherit;
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 1.25em;
+    text-rendering: optimizeLegibility;
+}
+
+.title-bar {
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+  background-color: #074E68;
+}
+.title-bar h1 {
+  color: white !important;
+  font-size: 2.9375rem;
+  font-weight: 600;
+  line-height: 3.125rem;
+}
+.title-bar p {
+  color: white !important;
+}
+.title-bar .chip {
+  background-color: #158DA0 !important;
+  color: white !important;
+}
+
+.container article {
+  background-color: white;
+  padding: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+article h1,h2,h3,h4,h5 {
     font-weight: 300;
     line-height: 1.2;
     margin-bottom: 10px;
 }
+article h1 { font-size: 40px; }
+article h2 { font-size: 34px; }
+article h3 { font-size: 28px; }
+article h4 { font-size: 24px; }
+article h5 { font-size: 20px; }
+article .info { color: #999; font-size: 14px; padding: 0;}
+article pre {
+    border-left: 4px solid #074E68;
+    position: relative;
+    overflow: visible;
+    white-space: pre;
+    word-wrap: normal;
+    color: #C1C2C3;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #272822;
+}
+.sidebar {
+  padding: 20px;
+}
+.sidebar h3 {
+  color: #262626;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 0 10px 0;
+  letter-spacing: 1px;
+  clear: both;
+}
+.sidebar ul li {
+  font-size: 14px;
+  font-weight: 400;
+  list-style: none;
+  padding: 7px 0 7px 5px;
+}
+.sidebar ul li a {
+  color: #676a74;
+  text-decoration: none;
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  -ms-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
 
-article h2 {
-  font-size: 34px;
-  font-weight: 300;
+.welcome-bar {
+  background-color: #074E68;
+  color: white;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
 }
-article h3 {
-  font-size: 28px;
-  font-weight: 300;
+.welcome-bar h1 {
+  color: white !important;
+  font-size: 2.9375rem;
+  font-weight: 600;
+  line-height: 3.125rem;
 }
-article h4 {
-  font-size: 24px;
-  font-weight: 300;
-}
-article h5 {
-  font-size: 20px;
-  font-weight: 300;
+.title-bar p {
+  color: white !important;
 }
 
-article time {
-    color: #999;
-    font-size: 14px;
+.join-us {
+  background-color: #085A78;
+  width: 100%;
+  padding: 20px;
 }
+.join-us h5 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 0;
+}
+.join-us p {
+    clear: both;
+    color: #fff;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+.join-us button {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  background-color: #2199E8;
+}
+footer.page-footer{
+    background-color:#074E68;
+    color: #fff;
+    margin-top: 0;
+}
+footer h5 { color: white; }
+footer a { color: white; }
+footer .footer-copyright {
+    background-color: #2C3840 !important;
+    color: #fafafa !important;
+}
+
+.clear { clear:both; }

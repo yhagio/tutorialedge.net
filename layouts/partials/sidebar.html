@@ -1,14 +1,19 @@
-	<aside>
-		<div>
-			<div>
-				<h3>LATEST POSTS</h3>
-			</div>
-			<div>
-				<ul>
-					{{ range first 5 .Site.Pages }}
-					<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-					{{ end }}
-				</ul>
-			</div>
-		</div>
-	</aside>
+<div class="sidebar">
+    {{ range $key, $value := .Params.series }} 
+    <h3>{{ $value }}</h3>
+    <ul> 
+      {{ range (index $.Site.Taxonomies.series $value) }}
+        <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a></li>
+      {{ end }}
+    </ul>
+    {{ end }}
+
+    {{ range $key, $value := .Params.tags }}
+    <ul>
+      {{ range (index $.Site.Taxonomies.tags $value ) }}
+        <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a></li>
+      {{ end }}
+    </ul>
+    {{ end }}
+
+</div>

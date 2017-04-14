@@ -3,6 +3,7 @@ date = "2017-04-09T21:07:45+01:00"
 title = "parsing xml with golang"
 draft = true
 desc = "In this tutorial we examine how to read in files and unmarshal them using the xml package in go."
+series = [ "golang" ]
 +++
 
 In this tutorial we look at how you can effectively read in an XML file from the file system and then parse this file using Go’s [“encoding/xml” Package](https://golang.org/pkg/encoding/xml/). We’ll look at how you can traverse multiple nested xml elements and then we’ll simply print this out to our terminal window.

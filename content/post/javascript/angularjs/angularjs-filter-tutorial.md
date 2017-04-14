@@ -2,7 +2,9 @@
 title = "AngularJS Filter Tutorial"
 draft = true
 date = "2017-04-09T21:22:03+01:00"
-desc = "In this tutorial we define exactly what filters are, how we can use existing filters and finally how we can implement our own filters.'
+desc = "In this tutorial we define exactly what filters are, how we can use existing filters and finally how we can implement our own filters."
+tags = ["angularjs", "javascript"]
+series = [ "angularjs" ]
 +++
 
 ## Introduction

@@ -3,6 +3,8 @@ date = "2017-04-09T21:17:41+01:00"
 title = "automating your angularjs workflow with gulp"
 draft = true
 desc = "This article looks at automating your angularjs workflow using the gulp task runner."
+tags = ["angularjs", "javascript"]
+series = [ "angularjs" ]
 +++
 
 ### Automate the Repeatable Things

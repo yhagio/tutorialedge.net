@@ -2,7 +2,9 @@
 date = "2017-04-09T21:22:46+01:00"
 title = "AngularJS Factory Tutorial"
 draft = true
-desc = "In this tutorial we'll look at how we can implement factories in AngularJS'
+desc = "In this tutorial we'll look at how we can implement factories in AngularJS"
+tags = ["angularjs", "javascript"]
+series = [ "angularjs" ]
 +++
 
 ## What Are Factories

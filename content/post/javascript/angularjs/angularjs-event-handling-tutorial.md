@@ -3,6 +3,8 @@ title = "angularjs event handling tutorial"
 draft = true
 date = "2017-04-09T21:13:59+01:00"
 desc = "In this tutorial we explore some of the ways we can handle browser and document events in our AngularJS applications"
+tags = ["angularjs", "javascript"]
+series = [ "angularjs" ]
 +++
 
 In this tutorial we’ll be looking at the different ways we can handle events in AngularJS. We’ll be exploring several of the event listening directives that AngularJS has on offer and how we can use these to create cool behaviours in our AngularJS Applications.

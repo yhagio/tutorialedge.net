@@ -3,6 +3,7 @@ date = "2017-04-09T21:24:02+01:00"
 title = "UDP Client Server Tutorial Java"
 draft = true
 desc = "In this tutorial we discuss how to set up a UDP client and server using datagramsockets in Java"
+series = [ "java" ]
 +++
 
 In this tutorial we’ll be looking at how we can set up a UDP client and server using Java’s DatagramSocket’s. 

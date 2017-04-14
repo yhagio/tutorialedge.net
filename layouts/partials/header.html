@@ -7,14 +7,17 @@
 	<title>{{ .Title }}</title>
 	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
 	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
-
+	<!--Import Google Icon Font-->
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/monokai.min.css">
 	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/materialize.min.css">
 	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
 	{{ if .RSSLink -}}<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}">{{- end }}
 	{{ .Hugo.Generator }}
 
-
+	<!-- Compiled and minified JavaScript -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
 	<script src="{{ .Site.BaseURL }}js/highlight.pack.js"></script>
 	<script>hljs.initHighlightingOnLoad();</script>
 </head>
@@ -22,9 +25,19 @@
 
 	<header>
 		<nav>
-			<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-			{{ range .Site.Menus.main }}
-			<a href="{{ .URL | relURL }}">{{ .Name }}</a>
-			{{ end }}
+			<div class="nav-wrapper">
+				<a class="brand-logo" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><a href="#">Get Involved</a></li>
+					<li><a href="#">Courses</a></li>
+					<li><a href="#">Tutorials</a></li>
+				</ul>
+				<ul class="side-nav" id="mobile-demo">
+					<li><a href="#">Get Involved</a></li>
+					<li><a href="#">Courses</a></li>
+					<li><a href="#">Tutorials</a></li>
+				</ul>
+			</div>
 		</nav>
 	</header>

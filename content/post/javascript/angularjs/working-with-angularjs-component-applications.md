@@ -1,8 +1,10 @@
 +++
 date = "2017-04-09T21:15:58+01:00"
-title = "working with angularjs component applications"
+title = "Working With AngularJS Component Based Applications"
 draft = true
 desc = "In this tutorial we look at how you can define your own components and effectively extend component based angularjs applications."
+tags = ["angularjs", "javascript"]
+series = [ "angularjs" ]
 +++
 
 If you haven’t read my article on using a different architecture styles in your AngularJS applications then I recommend you check it out here: [Structuring AngularJS Applications](https://tutorialedge.net/angularjs-project-structure-tutorial) 

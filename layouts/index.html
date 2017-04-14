@@ -1,10 +1,85 @@
 {{ partial "header.html" . }}
-	<main>
-		{{ $paginator := .Paginate (where .Site.Pages "Type" "post") }}
-		{{ range $paginator.Pages }}
-			{{ partial "summary.html" . }}
-		{{ end }}
+
+{{ partial "welcome-bar.html" . }}
+
+<div class="courses">
+	<div class="container">
+		<h2>Top Courses</h2>
+		<div class="row">
+
+			<div class="col l4">
+				<a href="#">
+					<div class="course-card">
+						<div class="top-half">
+						</div>
+						<div class="bottom-half">
+						<div class="title">Angular Primer</div>
+						<div class="subtitle">
+							Intermediate Level
+						</div>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="col l4">
+				<a href="#">
+					<div class="course-card">
+						<div class="top-half">
+						</div>
+						<div class="bottom-half">
+						<div class="title">Angular Primer</div>
+						<div class="subtitle">
+							Intermediate Level
+						</div>
+						</div>
+					</div>
+				</a>
+			</div>
+			
+			<div class="col l4">
+				<a href="#">
+					<div class="course-card">
+						<div class="top-half">
+						</div>
+						<div class="bottom-half">
+						<div class="title">Angular Primer</div>
+						<div class="subtitle">
+							Intermediate Level
+						</div>
+						</div>
+					</div>
+				</a>
+			</div>
+
+		</div>
+
+	</div>
+</div>
+
+<div class="tutorials container">
+	<div class="row flexbox-courses">
+	{{ $paginator := .Paginate (where .Site.Pages "Type" "post") }}
+	{{ range $paginator.Pages }}
+		<div class="col l4">
+			<div class="card">
+				<div class="card-content">
+					<span class="card-title">{{ .Title }}</span>
+					<p>{{ .Params.desc }}</p>
+				</div>
+				<div class="card-action">
+					<a href="{{ .RelPermalink }}">Read More</a>
+				</div>
+			</div>
+		</div>
+	{{ end }}
+	</div>
+	<div class="clear"></div>
+	<div class="center-align">
 		{{ partial "pagination.html" . }}
-	</main>
-{{ partial "sidebar.html" . }}
+	</div>
+</div>
+
+{{ partial "about.html" . }}
+
 {{ partial "footer.html" . }}
