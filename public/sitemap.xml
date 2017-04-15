@@ -547,13 +547,13 @@
   </url>
   
   <url>
-    <loc>https://tutorialedge.net/tags/ai/</loc>
+    <loc>https://tutorialedge.net/series/ai/</loc>
     <lastmod>2017-04-15T09:23:35+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tutorialedge.net/series/ai/</loc>
+    <loc>https://tutorialedge.net/tags/ai/</loc>
     <lastmod>2017-04-15T09:23:35+01:00</lastmod>
     <priority>0</priority>
   </url>
@@ -565,13 +565,13 @@
   </url>
   
   <url>
-    <loc>https://tutorialedge.net/tags/angularjs/</loc>
+    <loc>https://tutorialedge.net/series/angularjs/</loc>
     <lastmod>2017-04-15T14:41:31+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tutorialedge.net/series/angularjs/</loc>
+    <loc>https://tutorialedge.net/tags/angularjs/</loc>
     <lastmod>2017-04-15T14:41:31+01:00</lastmod>
     <priority>0</priority>
   </url>
@@ -583,25 +583,25 @@
   </url>
   
   <url>
-    <loc>https://tutorialedge.net/tags/beginner/</loc>
-    <lastmod>2017-04-15T09:53:07+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://tutorialedge.net/series/beginner/</loc>
     <lastmod>2017-04-15T09:53:07+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tutorialedge.net/tags/blog/</loc>
-    <lastmod>2016-02-14T16:11:58+05:30</lastmod>
+    <loc>https://tutorialedge.net/tags/beginner/</loc>
+    <lastmod>2017-04-15T09:53:07+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tutorialedge.net/series/blog/</loc>
+    <lastmod>2016-02-14T16:11:58+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tutorialedge.net/tags/blog/</loc>
     <lastmod>2016-02-14T16:11:58+05:30</lastmod>
     <priority>0</priority>
   </url>
@@ -631,13 +631,13 @@
   </url>
   
   <url>
-    <loc>https://tutorialedge.net/tags/design-patterns/</loc>
+    <loc>https://tutorialedge.net/series/design-patterns/</loc>
     <lastmod>2017-04-15T09:53:07+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tutorialedge.net/series/design-patterns/</loc>
+    <loc>https://tutorialedge.net/tags/design-patterns/</loc>
     <lastmod>2017-04-15T09:53:07+01:00</lastmod>
     <priority>0</priority>
   </url>
@@ -661,14 +661,14 @@
   </url>
   
   <url>
-    <loc>https://tutorialedge.net/tags/gamedev/</loc>
-    <lastmod>2017-04-15T09:54:44+01:00</lastmod>
+    <loc>https://tutorialedge.net/series/gamedev/</loc>
+    <lastmod>2017-04-15T09:30:45+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tutorialedge.net/series/gamedev/</loc>
-    <lastmod>2017-04-15T09:30:45+01:00</lastmod>
+    <loc>https://tutorialedge.net/tags/gamedev/</loc>
+    <lastmod>2017-04-15T09:54:44+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -679,13 +679,13 @@
   </url>
   
   <url>
-    <loc>https://tutorialedge.net/tags/golang/</loc>
+    <loc>https://tutorialedge.net/series/golang/</loc>
     <lastmod>2017-04-15T08:48:49+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tutorialedge.net/series/golang/</loc>
+    <loc>https://tutorialedge.net/tags/golang/</loc>
     <lastmod>2017-04-15T08:48:49+01:00</lastmod>
     <priority>0</priority>
   </url>
@@ -703,20 +703,14 @@
   </url>
   
   <url>
-    <loc>https://tutorialedge.net/tags/java/</loc>
-    <lastmod>2017-04-15T09:54:44+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://tutorialedge.net/series/java/</loc>
     <lastmod>2017-04-15T08:42:15+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tutorialedge.net/tags/javascript/</loc>
-    <lastmod>2017-04-15T14:41:31+01:00</lastmod>
+    <loc>https://tutorialedge.net/tags/java/</loc>
+    <lastmod>2017-04-15T09:54:44+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -727,14 +721,14 @@
   </url>
   
   <url>
-    <loc>https://tutorialedge.net/tags/json/</loc>
-    <lastmod>2017-04-09T21:29:02+01:00</lastmod>
+    <loc>https://tutorialedge.net/tags/javascript/</loc>
+    <lastmod>2017-04-15T14:41:31+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tutorialedge.net/tags/laravel-5/index.2/</loc>
-    <lastmod>2017-04-15T14:42:47+01:00</lastmod>
+    <loc>https://tutorialedge.net/tags/json/</loc>
+    <lastmod>2017-04-09T21:29:02+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -745,13 +739,19 @@
   </url>
   
   <url>
-    <loc>https://tutorialedge.net/tags/lwjgl3/</loc>
-    <lastmod>2017-04-15T09:54:44+01:00</lastmod>
+    <loc>https://tutorialedge.net/tags/laravel-5/index.2/</loc>
+    <lastmod>2017-04-15T14:42:47+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tutorialedge.net/series/lwjgl3/</loc>
+    <lastmod>2017-04-15T09:54:44+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tutorialedge.net/tags/lwjgl3/</loc>
     <lastmod>2017-04-15T09:54:44+01:00</lastmod>
     <priority>0</priority>
   </url>
@@ -781,25 +781,25 @@
   </url>
   
   <url>
-    <loc>https://tutorialedge.net/tags/nodejs/</loc>
-    <lastmod>2017-04-15T08:38:40+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://tutorialedge.net/series/nodejs/</loc>
     <lastmod>2017-04-15T08:38:40+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tutorialedge.net/tags/opengl/</loc>
-    <lastmod>2017-04-15T08:50:41+01:00</lastmod>
+    <loc>https://tutorialedge.net/tags/nodejs/</loc>
+    <lastmod>2017-04-15T08:38:40+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tutorialedge.net/series/opengl/</loc>
+    <lastmod>2017-04-15T08:50:41+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tutorialedge.net/tags/opengl/</loc>
     <lastmod>2017-04-15T08:50:41+01:00</lastmod>
     <priority>0</priority>
   </url>
@@ -823,13 +823,13 @@
   </url>
   
   <url>
-    <loc>https://tutorialedge.net/tags/python/</loc>
+    <loc>https://tutorialedge.net/series/python/</loc>
     <lastmod>2017-04-15T09:55:57+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tutorialedge.net/series/python/</loc>
+    <loc>https://tutorialedge.net/tags/python/</loc>
     <lastmod>2017-04-15T09:55:57+01:00</lastmod>
     <priority>0</priority>
   </url>
@@ -881,14 +881,14 @@
   </url>
   
   <url>
-    <loc>https://tutorialedge.net/tags/unix/</loc>
-    <lastmod>2017-04-15T08:47:48+01:00</lastmod>
+    <loc>https://tutorialedge.net/series/unix/</loc>
+    <lastmod>2017-04-09T21:06:27+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tutorialedge.net/series/unix/</loc>
-    <lastmod>2017-04-09T21:06:27+01:00</lastmod>
+    <loc>https://tutorialedge.net/tags/unix/</loc>
+    <lastmod>2017-04-15T08:47:48+01:00</lastmod>
     <priority>0</priority>
   </url>
   
