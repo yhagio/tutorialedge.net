@@ -11,7 +11,7 @@
 		<div class="row">
 			{{ range (where .Site.Pages "Section" "course") }}
 			{{ if ne .Title "Courses" }}
-			<div class="col l4">
+			<div class="col l4 m6 s12">
 				<a href="{{ .Permalink }}">
 					<div class="course-card">
 						<div class="top-half">
