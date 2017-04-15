@@ -1,9 +1,11 @@
 +++
 date = "2017-04-09T21:09:39+01:00"
-title = "golang integer string conversion tutorial"
+title = "Golang Integer String Conversion Tutorial"
 draft = true
 desc = "In this tutorial we look at how we can convert String to integer and back again using the strconv golang package."
 series = [ "golang" ]
+author = "Elliot Forbes"
+twitter = "https://twitter.com/Elliot_F"
 +++
 
 In this tutorial we briefly look at how one can convert an integer to string and back again in GoLang. In order to do this we’ll be using the ‘strconv’ package and the Atoi and Itoa functions.

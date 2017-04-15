@@ -4,27 +4,12 @@
 	<div class="container">
 		<h1>{{ .Title }}</h1>
 		<p>{{ .Params.desc }}</p>
-		{{ range .Params.tags }}
-		<a href="/tags/{{ . }}"><div class="chip">{{ . }}</div></a>
-		{{ end }}
 	</div>
 </div>
 
 <div class="container">
 	<div class="row">
-		<div class="col l2">
-			{{ partial "sidebar.html" . }}
-		</div>
 		<div class="col l8">	
-			<article>
-				<div class="info">Author: {{ .Params.author }} | Posted at: {{ .Date.Format "02.01.2006 15:04" }}</div>
-				<div>
-					{{ .Content }}
-				</div>
-				<div>
-					{{ template "_internal/disqus.html" . }}
-				</div>
-			</article>
 		</div>
 	</div>
 </div>

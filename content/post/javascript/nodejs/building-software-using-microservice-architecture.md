@@ -4,6 +4,9 @@ title = "Building Software using A Microservice Based Architecture"
 draft = true
 desc = "In this tutorial I demonstrate a simple example of microservice based architecture"
 series = [ "nodejs" ]
+tags = [ "javascript", "nodejs"]
+author = "Elliot Forbes"
+twitter = "https://twitter.com/Elliot_F"
 +++
 
 In this tutorial I’m going to be showing an example of how you could go about building your own software following a microservice based architecture. 

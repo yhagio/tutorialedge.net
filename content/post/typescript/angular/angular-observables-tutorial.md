@@ -1,9 +1,11 @@
 +++
 date = "2016-02-14T16:11:58+05:30"
 draft = true
-title = "Angular Observable Tutorial using RxJS"
+title = "Angular Observables Tutorial using RxJS"
 desc = "In this tutorial we'll be looking at Angular 2 Observables, what they are and how we can use them in our Angular applications."
-
+author = "Elliot Forbes"
+tags = ["angular", "typescript"]
+twitter = "https://twitter.com/Elliot_F"
 +++
 
 The Observable Design pattern is an incredibly powerful paradigm that we can utilize in a wide array of different applications. In this tutorial we’ll be covering how you can implement your own observables in Angular. 

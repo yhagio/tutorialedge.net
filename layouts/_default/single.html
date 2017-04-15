@@ -21,10 +21,15 @@
 					{{ .Content }}
 				</div>
 				<div>
-					{{ template "_internal/disqus.html" . }}
+					{{ partial "comments.html" . }}
 				</div>
 			</article>
 		</div>
+
+		<div class="col l2">
+			{{ partial "right-sidebar.html" .}}
+		</div>
+		
 	</div>
 </div>
 {{ partial "footer.html" . }}

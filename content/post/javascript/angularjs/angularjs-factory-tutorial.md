@@ -5,6 +5,8 @@ draft = true
 desc = "In this tutorial we'll look at how we can implement factories in AngularJS"
 tags = ["angularjs", "javascript"]
 series = [ "angularjs" ]
+author = "Elliot Forbes"
+twitter = "https://twitter.com/Elliot_F"
 +++
 
 ## What Are Factories

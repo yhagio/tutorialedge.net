@@ -3,7 +3,9 @@ date = "2016-02-14T16:11:58+05:30"
 draft = true
 title = "Angular Routing Tutorial"
 desc = "In this tutorial we look at how we can define routes in our Angular applications."
-
+author = "Elliot Forbes"
+tags = ["angular", "typescript"]
+twitter = "https://twitter.com/Elliot_F"
 +++
 
 > This tutorial was built using Angular 2.2. Some of the code samples may not work if you are using previous versions

@@ -7,50 +7,24 @@
 		<h2>Top Courses</h2>
 		<div class="row">
 
+		{{ range (where .Site.Pages "Section" "course") }}
+			{{ if ne .Title "Courses" }}
 			<div class="col l4">
-				<a href="#">
+				<a href="{{ .Permalink }}">
 					<div class="course-card">
 						<div class="top-half">
 						</div>
 						<div class="bottom-half">
-						<div class="title">Angular Primer</div>
+						<div class="title">{{.Title}}</div>
 						<div class="subtitle">
-							Intermediate Level
+							Read Now
 						</div>
 						</div>
 					</div>
 				</a>
 			</div>
-
-			<div class="col l4">
-				<a href="#">
-					<div class="course-card">
-						<div class="top-half">
-						</div>
-						<div class="bottom-half">
-						<div class="title">Angular Primer</div>
-						<div class="subtitle">
-							Intermediate Level
-						</div>
-						</div>
-					</div>
-				</a>
-			</div>
-			
-			<div class="col l4">
-				<a href="#">
-					<div class="course-card">
-						<div class="top-half">
-						</div>
-						<div class="bottom-half">
-						<div class="title">Angular Primer</div>
-						<div class="subtitle">
-							Intermediate Level
-						</div>
-						</div>
-					</div>
-				</a>
-			</div>
+			{{ end }}
+			{{ end }}
 
 		</div>
 

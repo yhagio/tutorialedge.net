@@ -1,7 +1,10 @@
 +++
-title = "Angular Tutorial Series"
+date = "2017-04-14T20:27:58+01:00"
+title = "Angular Fundamentals"
 draft = true
-date = "2017-04-14T20:28:13+01:00"
 author = "Elliot Forbes"
-series = [ "misc" ]
+layout = "simple"
+
 +++
+
+test

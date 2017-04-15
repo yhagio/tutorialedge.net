@@ -1,10 +1,12 @@
 +++
 draft = true
 date = "2017-04-09T21:18:27+01:00"
-title = "angularjs project structure tutorial"
+title = "AngularJS Project Structure Tutorial"
 desc = "In this tutorial we look at the numerous different ways you can structure your angularjs applications as well as the pros and cons to each structure"
 tags = ["angularjs", "javascript"]
 series = [ "angularjs" ]
+author = "Elliot Forbes"
+twitter = "https://twitter.com/Elliot_F"
 +++
 
 Project organization is important for all angularjs applications. Having a well defined and easy to traverse project structure can be hugely beneficial further down the line when you have to deal with maintenance and enhancements. 

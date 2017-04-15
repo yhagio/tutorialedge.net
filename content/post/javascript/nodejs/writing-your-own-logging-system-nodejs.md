@@ -1,9 +1,12 @@
 +++
 date = "2017-04-09T21:26:14+01:00"
-title = "writing your own logging system nodejs"
+title = "Writing Your Own Logging System NodeJS"
 draft = true
 desc = "In this tutorial we discuss how to implement a very simple logging system using nodejs"
 series = [ "nodejs" ]
+tags = [ "javascript", "nodejs"]
+author = "Elliot Forbes"
+twitter = "https://twitter.com/Elliot_F"
 +++
 
 ## Logging - Why Is It Important?

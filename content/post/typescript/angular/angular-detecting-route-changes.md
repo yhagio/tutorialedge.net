@@ -3,7 +3,9 @@ draft = true
 date = "2017-04-09T20:55:22+01:00"
 title = "angular detecting route changes"
 desc = "In this tutorial we look at how we can subscribe to route change events within our Angular 2 applications."
-
+author = "Elliot Forbes"
+tags = ["angular", "typescript"]
+twitter = "https://twitter.com/Elliot_F"
 +++
 
 <div class="note">This tutorial was built using Angular 2.2. Some of the features in this tutorial may not work for earlier/later versions.</div>

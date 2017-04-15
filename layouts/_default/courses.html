@@ -1,0 +1,34 @@
+{{ partial "header.html" . }}
+
+<div class="title-bar">
+	<div class="container">
+		<h1>{{ .Title }}</h1>
+	</div>
+</div>
+	
+<div class="courses">
+	<div class="container">
+		<div class="row">
+			{{ range (where .Site.Pages "Section" "course") }}
+			{{ if ne .Title "Courses" }}
+			<div class="col l4">
+				<a href="{{ .Permalink }}">
+					<div class="course-card">
+						<div class="top-half">
+						</div>
+						<div class="bottom-half">
+						<div class="title">{{.Title}}</div>
+						<div class="subtitle">
+							Read Now
+						</div>
+						</div>
+					</div>
+				</a>
+			</div>
+			{{ end }}
+			{{ end }}
+
+	</div>
+</div>
+</div>
+{{ partial "footer.html" . }}

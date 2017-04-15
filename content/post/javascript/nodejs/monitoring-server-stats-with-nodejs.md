@@ -4,6 +4,9 @@ draft = true
 date = "2017-04-09T21:25:15+01:00"
 desc = "In this tutorial we look at how we can observe key statistics such as free memory and cpu usage in Nodejs"
 series = [ "nodejs" ]
+tags = [ "javascript", "nodejs"]
+author = "Elliot Forbes"
+twitter = "https://twitter.com/Elliot_F"
 +++
 
 In production environments having visibility over how your systems are performing is vital. Being able to watch memory usage and ensure that servers are not being brought down by memory leaks and greedy programs can be hugely beneficial and can help you deal with issues before they become real headaches.

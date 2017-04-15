@@ -1,10 +1,12 @@
 +++
 date = "2017-04-09T21:13:23+01:00"
-title = "passing data between routes angularjs"
+title = "Passing Data Between Routes in AngularJS"
 draft = true
 desc = "In this tutorial we look at how we can store information between routes using services in our angularjs applications."
 tags = ["angularjs", "javascript"]
 series = [ "angularjs" ]
+author = "Elliot Forbes"
+twitter = "https://twitter.com/Elliot_F"
 +++
 
 In this tutorial we’ll be looking at how we can store or pass information between routes in an AngularJS application. This can be useful in a number of different applications and is actually quite simple.

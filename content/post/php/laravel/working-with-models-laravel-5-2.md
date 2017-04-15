@@ -1,8 +1,12 @@
 +++
 date = "2017-04-09T21:34:10+01:00"
-title = "working with models laravel 5 2"
+title = "Working With Models in Laravel 5.2"
 draft = true
 desc = "In this tutorial we begin by looking at why our application needs models and then we look at how we can define our own."
+tags = ["laravel-5.2", "php"]
+series = ["laravel-5.2"]
+author = "Elliot Forbes"
+twitter = "https://twitter.com/Elliot_F"
 +++
 
 <p>This tutorial is part of the <a href="https://tutorialedge.net/course/laravel-5">Building a blog with Laravel 5.2</a> course.</p>

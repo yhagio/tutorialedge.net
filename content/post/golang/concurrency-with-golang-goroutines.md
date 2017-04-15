@@ -1,13 +1,14 @@
 +++
 date = "2017-04-09T21:06:27+01:00"
-title = "concurrency with golang goroutines"
+title = "Concurrency With Golang Goroutines"
 draft = true
 desc = "In this tutorial we examine how we can build concurrent highly performant go programs using goroutines."
-
+series = [ "golang" ]
+author = "Elliot Forbes"
+twitter = "https://twitter.com/Elliot_F"
 +++
 
 Go is an incredibly performant language that features a hell of a lot of great features that allow you to build incredibly fast applications. It redefines what it means to build concurrent programs by offering what are called goroutines and channels. Using goroutines is a very easy way to turn what would be a sequential program into a concurrent program without having to worry about things like creating threads or thread-pools.
-
 
 ## What Are Goroutines?
 

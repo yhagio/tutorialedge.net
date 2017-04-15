@@ -4,6 +4,9 @@ title = "UDP Client Server Tutorial Java"
 draft = true
 desc = "In this tutorial we discuss how to set up a UDP client and server using datagramsockets in Java"
 series = [ "java" ]
+tags = ["java", "networking", "udp"]
+author = "Elliot Forbes"
+twitter = "https://twitter.com/Elliot_F"
 +++
 
 In this tutorial we’ll be looking at how we can set up a UDP client and server using Java’s DatagramSocket’s. 

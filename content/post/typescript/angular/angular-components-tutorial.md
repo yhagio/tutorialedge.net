@@ -4,6 +4,8 @@ title = "angular components tutorial"
 draft = true
 desc = "Here we look at everything it takes to define your own Angular components."
 tags = ["angular", "typescript"]
+author = "Elliot Forbes"
+twitter = "https://twitter.com/Elliot_F"
 +++
 
 > This tutorial was created using Angular 2.2

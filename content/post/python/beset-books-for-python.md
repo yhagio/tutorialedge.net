@@ -3,7 +3,8 @@ date = "2016-02-14T16:11:58+05:30"
 draft = true
 title = "The Top Books for Learning to Program in Python"
 desc = "In this article we explore some of the best books available for learning Python in 2017."
-
+author = "Elliot Forbes"
+twitter = "https://twitter.com/Elliot_F"
 +++
 
 Python is one of the most popular programming languages on the planet. It’s widely regarded as one of the best languages to learn first if you are wanting to get into computer programming. 

@@ -101,6 +101,83 @@ nav .button-collapse .ion { color: white !important; }
   padding-bottom: 40px;
 }
 
+
+.wrapper {
+  margin: 63px auto;
+  z-index: 1;
+}
+.wrapper .container {
+  background-color: #fff;
+  width: 100%;
+  text-align: center;
+  height: auto;
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 10px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 10px;
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+.wrapper .trophy {
+  margin-bottom: 24px;
+}
+.wrapper h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #1a1a1a;
+  font-size: 22px;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+.wrapper .score {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #0288d1;
+  font-size: 12px;
+  display: block;
+  letter-spacing: 1px;
+  margin-bottom: 17px;
+}
+.wrapper img {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  margin: 0;
+  padding: 0;
+}
+.wrapper p {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #999999;
+  font-size: 15px;
+  padding: 0 15%;
+  line-height: 24px;
+}
+.wrapper .buttons {
+  width: 100%;
+  text-align: center;
+}
+.wrapper .buttons .button {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  margin: 0 10%;
+  height: 48px;
+  line-height: 48px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+.wrapper .buttons .button:hover span {
+  border-bottom: 1px solid #fff;
+}
+.wrapper .buttons .button.light {
+  background-color: #4fc3f7;
+}
+
 .about {
   width: 100%;
   padding: 40px;
@@ -120,27 +197,6 @@ nav .button-collapse .ion { color: white !important; }
 .about p {
       font-size: 18px;
     color: #333;
-}
-.course-box {
-  max-width: 380px;
-  height: 100%;
-  background-color: white;
-}
-.course-box h2 a{
-      margin: 0;
-    padding: 0 0 10px;
-    color: #333333;
-    line-height: 1;
-    font-size: 23px;
-    font-weight: 700;
-}
-.container p {
-    font-family: inherit;
-    font-weight: normal;
-    font-size: 1em;
-    line-height: 1.6;
-    margin-bottom: 1.25em;
-    text-rendering: optimizeLegibility;
 }
 
 .title-bar {
@@ -210,6 +266,7 @@ article pre {
   font-weight: 400;
   list-style: none;
   padding: 7px 0 7px 5px;
+  border-bottom: 1px solid #C1C2C3;
 }
 .sidebar ul li a {
   color: #676a74;

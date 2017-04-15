@@ -5,6 +5,8 @@ title = "Writing A Twitter Bot in Golang"
 desc = "In this tutorial I'll be demonstrating how you can implement a twitter bot using the go programming language"
 tags = ["golang", "go", "twitter"]
 series = [ "golang" ]
+author = "Elliot Forbes"
+twitter = "https://twitter.com/Elliot_F"
 +++
 
 In this tutorial I’m going to be demonstrating how to build a twitter bot using <a href="https://github.com/dghubble/go-twitter">go-twitter</a>, a popular Go client library for the Twitter API.

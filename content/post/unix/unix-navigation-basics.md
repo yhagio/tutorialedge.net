@@ -4,6 +4,8 @@ title = "Unix Navigation Basics"
 draft = true
 desc = "Everything you need to navigate your way through a unix system"
 series = [ "unix" ]
+author = "Elliot Forbes"
+twitter = "https://twitter.com/Elliot_F"
 +++
 
 ls command

@@ -1,0 +1,77 @@
++++
+date = "2017-04-15T09:55:57+01:00"
+title = "Python Multithreading Tutorial - Concurrent Programming"
+draft = true
+desc = "Explore the python multithreading module and the power of asynchronous programming"
+tags = ["python", "concurrency"]
+series = ["python"]
+author = "Elliot Forbes"
+twitter = "https://twitter.com/Elliot_F"
++++
+
+## What is Multithreading?
+
+Modern computers tend to feature a CPU that has multiple processing cores, each of these cores can run many threads simultaneously which, by proxy, gives us the ability to perform several tasks in parallel. Typically, you should only implement multiple threads when each thread you plan is completely independent of each other. So for instance in a game you would tend to create one thread for graphics processing, one for physics and one for networking. Each of these threads would be running and working with completely different data sets. This tutorial will hopefully show you how to get started with pythons ''threading'' module. 
+
+**Objectives:**
+
+
+1. Creating and Running Threads
+2. Teaching the Limitations of Python's threading implementation
+
+<h2>Creating Threads in Python</h2>
+
+<p>To begin with we are going to want to create a new file and call it worker.py, this will contain all our code for one of our threads. To begin with we are going to create a class in python and have it import and extend the threading module.</p>
+
+~~~
+import threading
+
+class Worker(threading.Thread):
+    # Our workers constructor, note the super() method which is vital if we want this
+    # to function properly
+    def __init__(self):
+        super(Worker, self).__init__()
+
+    def run(self):
+        for i in range(10):
+           print(i)
+~~~
+
+<p>Now that we have our worker class we can start work on our main class. Create a new python file and call it main.py and put the following code in:</p>
+
+~~~
+import threading 
+from worker import Worker
+
+def main():
+    # This initializes ''thread1'' as an instance of our Worker Thread
+   thread1 = Worker()
+    # This is the code needed to run our newly created thread
+    thread1.start()
+
+  if __name__ == "__main__":  
+      main()
+~~~
+
+<p>That''s all the code you need to successfully create and instantiate a thread in python. If you can run python through your command line then open up a new terminal at your current folder and type ''python main.py''. You should hopefully see the output of the above program should no errors occur.</p>
+
+<h2>Exercise:</h2>
+
+<p>Try instantiating more threads by creating new Worker() objects and then start them:</p>
+
+~~~
+    thread1 = Worker(1)
+    thread2 = Worker(2)
+    thread3 = Worker(3)
+    thread1.start()
+    thread2.start()
+    thread3.start()
+~~~
+
+<p>When you run this you should see output that looks something like this:  Notice that the outputted numbers are out of order, this basically shows you the precise order in which the threads have completed their tasks in and shows you the true power of asynchronous programming, multiple threads performing in parallel.</p>
+
+<h2>Limitation with Classic Python Threads</h2>
+
+One of the main problems with Python's classic implementation of threads is that they are not truly asynchronous. Performing tests on huge datasets show that the execution times of python threads is not entirely in parallel and you''ll often find execution times increasing adding multiple threads to programs as often performing these tasks synchronously will greatly reduce execution times. This is due to the way Global Interpreter Lock (GIL) works in Python, this basically ensures that only one line of python code can be compiled at one time. 
+
+> More about the GIL can be found here: <a href="https://wiki.python.org/moin/GlobalInterpreterLock">https://wiki.python.org/moin/GlobalInterpreterLock</a>

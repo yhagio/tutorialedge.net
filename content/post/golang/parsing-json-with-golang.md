@@ -1,9 +1,11 @@
 +++
 date = "2017-04-09T21:07:11+01:00"
-title = "parsing json with golang"
+title = "Parsing JSON files With Golang"
 draft = true
 desc = "In this tutorial we examine the encoding/json go package and how to parse xml files."
 series = [ "golang" ]
+author = "Elliot Forbes"
+twitter = "https://twitter.com/Elliot_F"
 +++
 
 JSON or Javascript Object Notation as it is short for, is a standard format for sending and receiving information. We could represent the same information with either XML or JSON, but JSON provides one advantage in the fact it is far more compact. This provides advantageous for situations where bandwidth is 

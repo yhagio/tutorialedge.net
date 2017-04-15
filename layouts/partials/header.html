@@ -29,13 +29,17 @@
 				<a class="brand-logo" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
 				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 				<ul id="nav-mobile" class="right hide-on-med-and-down">
-					<li><a href="#">Get Involved</a></li>
-					<li><a href="#">Courses</a></li>
+					<li><a href="{{ .Site.BaseURL }}/about/">About</a></li>
+					<li><a href="{{ .Site.BaseURL }}/get-involved/">Get Involved</a></li>
+					<li><a href="{{ .Site.BaseURL }}/courses/">Courses</a></li>
+					<li><a href="{{ .Site.BaseURL }}/blog/">Blog</a></li>
 					<li><a href="#">Tutorials</a></li>
 				</ul>
 				<ul class="side-nav" id="mobile-demo">
-					<li><a href="#">Get Involved</a></li>
-					<li><a href="#">Courses</a></li>
+					<li><a href="{{ .Site.BaseURL }}/about/">About</a></li>
+					<li><a href="{{ .Site.BaseURL }}/get-involved/">Get Involved</a></li>
+					<li><a href="{{ .Site.BaseURL }}/courses/">Courses</a></li>
+					<li><a href="{{ .Site.BaseURL }}/blog/">Blog</a></li>
 					<li><a href="#">Tutorials</a></li>
 				</ul>
 			</div>

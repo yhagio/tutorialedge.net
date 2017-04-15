@@ -5,6 +5,8 @@ draft = true
 desc = "In this article we look at the most important changes to AngularJS in the latest upcoming release version 1.6."
 tags = ["angularjs", "javascript"]
 series = ["angularjs"]
+author = "Elliot Forbes"
+twitter = "https://twitter.com/Elliot_F"
 +++
 
 <div class="github-link">The changelog with the AngularJS 1.6 release notes can be found here: <a href="https://github.com/angular/angular.js/blob/master/CHANGELOG.md">AngularJS 1.6-RC.0</a></div>

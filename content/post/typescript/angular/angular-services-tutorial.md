@@ -1,8 +1,11 @@
 +++
 date = "2017-04-09T21:04:22+01:00"
-title = "angular services tutorial"
+title = "Angular Services Tutorial"
 draft = true
 desc = "In this tutorial we look at how we can define and utilize services within Angular 2"
+author = "Elliot Forbes"
+tags = ["angular", "typescript"]
+twitter = "https://twitter.com/Elliot_F"
 +++
 
 If you’ve ever written an application in Angular 1.* that interfaces with a RESTful web API then you should have come across services. Services are essentially the interfaces we should use in order to interact with these APIs. 

@@ -1,7 +1,14 @@
 {{ partial "header.html" . }}
+
+<div class="title-bar">
+	<div class="container">
+		<h1>{{ .Title }} </h1>
+	</div>
+</div>
+	
 	<div class="container">
 		<div class="row flexbox-courses">
-		{{ $paginator := .Paginate (where .Site.Pages "Type" "post") }}
+		{{ $paginator := .Paginate ( where .Data.Pages "Section" "post")  }}
 		{{ range $paginator.Pages }}
 			<div class="col l4">
 				<div class="card course-box">
@@ -12,5 +19,4 @@
 		{{ partial "pagination.html" . }}
 		</div>
 	</div>
-{{ partial "sidebar.html" . }}
 {{ partial "footer.html" . }}

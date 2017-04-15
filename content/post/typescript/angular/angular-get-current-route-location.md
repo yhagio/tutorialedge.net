@@ -1,8 +1,11 @@
 +++
 date = "2017-04-09T20:56:49+01:00"
-title = "angular get current route location"
+title = "Angular Get Current Route using the Location Service"
 draft = true
 desc = "In this tutorial we examine ways to obtain the current URL route using the location service."
+author = "Elliot Forbes"
+tags = ["angular", "typescript"]
+twitter = "https://twitter.com/Elliot_F"
 +++
 
 >This tutorial was built using Angular 2.2. If you want to check out the official documentation for <a href="https://angular.io/docs/ts/latest/api/common/index/Location-class.html">Angular 2 Location</a>

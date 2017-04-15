@@ -5,6 +5,8 @@ draft = true
 desc = "In this tutorial we look at how you can define your own components and effectively extend component based angularjs applications."
 tags = ["angularjs", "javascript"]
 series = [ "angularjs" ]
+author = "Elliot Forbes"
+twitter = "https://twitter.com/Elliot_F"
 +++
 
 If you haven’t read my article on using a different architecture styles in your AngularJS applications then I recommend you check it out here: [Structuring AngularJS Applications](https://tutorialedge.net/angularjs-project-structure-tutorial) 
@@ -35,7 +37,7 @@ The first thing we should look at is the structure. For cleanliness I’ve creat
 
 All of our required node_modules will be stored at the root directory of our project and this should hopefully keep them somewhat out of the way. The same is true for our gulpfile.js, our package.json and our readme.md. 
 
-~~~
+~~~c
 -- node_modules/
 -- src/
 ---- app/
