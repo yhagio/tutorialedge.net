@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Design Patterns on TutorialEdge.net</title>
-    <link>/tags/design-patterns/index.xml</link>
+    <link>https://tutorialedge.net/tags/design-patterns/index.xml</link>
     <description>Recent content in Design Patterns on TutorialEdge.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/design-patterns/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tutorialedge.net/tags/design-patterns/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Bridge Design Pattern Tutorial</title>
-      <link>/post/general/design-patterns/bridge-design-pattern/</link>
+      <link>https://tutorialedge.net/post/general/design-patterns/bridge-design-pattern/</link>
       <pubDate>Sat, 15 Apr 2017 09:53:07 +0100</pubDate>
       
-      <guid>/post/general/design-patterns/bridge-design-pattern/</guid>
+      <guid>https://tutorialedge.net/post/general/design-patterns/bridge-design-pattern/</guid>
       <description>&lt;h2&gt;Intent&lt;/h2&gt;
 
 &lt;p&gt;The intent of the Bridge design pattern is to decouple an abstraction from its implementation so that the two can vary independently. This basically allows you to build upon an abstract class and allows you to build to very different concrete classes based upon this abstract class.&lt;/p&gt;

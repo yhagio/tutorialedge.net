@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Java on TutorialEdge.net</title>
-    <link>/series/java/index.xml</link>
+    <link>https://tutorialedge.net/series/java/index.xml</link>
     <description>Recent content in Java on TutorialEdge.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/series/java/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tutorialedge.net/series/java/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Java Multithreading Tutorial Using Callable</title>
-      <link>/post/java/java-multithreading-tutorial-using-callable/</link>
+      <link>https://tutorialedge.net/post/java/java-multithreading-tutorial-using-callable/</link>
       <pubDate>Sat, 15 Apr 2017 08:42:15 +0100</pubDate>
       
-      <guid>/post/java/java-multithreading-tutorial-using-callable/</guid>
+      <guid>https://tutorialedge.net/post/java/java-multithreading-tutorial-using-callable/</guid>
       <description>&lt;p&gt;In this tutorial I’ll be giving you a brief introduction to the world of concurrent programming using the Java programming language. By the end of this tutorial you should hopefully have a feel for what it takes to write simple, multi-threaded java programs and an understanding of how these can help improve the performance of your programs on multithreaded/multicore machines.&lt;/p&gt;
 
 &lt;h2&gt;Requirements&lt;/h2&gt;
@@ -96,10 +96,10 @@ public class Main {
     
     <item>
       <title>UDP Client Server Tutorial Java</title>
-      <link>/post/java/udp-client-server-tutorial-java/</link>
+      <link>https://tutorialedge.net/post/java/udp-client-server-tutorial-java/</link>
       <pubDate>Sun, 09 Apr 2017 21:24:02 +0100</pubDate>
       
-      <guid>/post/java/udp-client-server-tutorial-java/</guid>
+      <guid>https://tutorialedge.net/post/java/udp-client-server-tutorial-java/</guid>
       <description>
 
 &lt;p&gt;In this tutorial we’ll be looking at how we can set up a UDP client and server using Java’s DatagramSocket’s.&lt;/p&gt;

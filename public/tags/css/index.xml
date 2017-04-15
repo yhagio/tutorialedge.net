@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Css on TutorialEdge.net</title>
-    <link>/tags/css/index.xml</link>
+    <link>https://tutorialedge.net/tags/css/index.xml</link>
     <description>Recent content in Css on TutorialEdge.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tutorialedge.net/tags/css/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Equal Height Columns in a Row using Flex Box</title>
-      <link>/post/webdev/equal-height-columns-using-css/</link>
+      <link>https://tutorialedge.net/post/webdev/equal-height-columns-using-css/</link>
       <pubDate>Sat, 15 Apr 2017 09:19:19 +0100</pubDate>
       
-      <guid>/post/webdev/equal-height-columns-using-css/</guid>
+      <guid>https://tutorialedge.net/post/webdev/equal-height-columns-using-css/</guid>
       <description>&lt;p&gt;In this tutorial I&#39;ll be showcasing how we can achieve equal heights on our columns using the CSS and HTML. More specifically I&#39;ll be demonstrating the Flex Box feature of CSS which allows us to create these equal height columns without resorting to a nasty javascript workaround.&lt;/p&gt;
 
 &lt;h2&gt;Flex CSS&lt;/h2&gt;

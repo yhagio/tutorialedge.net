@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Javascript on TutorialEdge.net</title>
-    <link>/series/javascript/index.xml</link>
+    <link>https://tutorialedge.net/series/javascript/index.xml</link>
     <description>Recent content in Javascript on TutorialEdge.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/series/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tutorialedge.net/series/javascript/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Retrieving Website Visitor Information Using Javascript</title>
-      <link>/post/javascript/retrieving-visitor-information-javascript/</link>
+      <link>https://tutorialedge.net/post/javascript/retrieving-visitor-information-javascript/</link>
       <pubDate>Sat, 15 Apr 2017 08:40:42 +0100</pubDate>
       
-      <guid>/post/javascript/retrieving-visitor-information-javascript/</guid>
+      <guid>https://tutorialedge.net/post/javascript/retrieving-visitor-information-javascript/</guid>
       <description>&lt;p&gt;In this tutorial I&#39;ll be demonstrating how you can retrieve key information about all your website visitors using a very simple javascript snippet. This could in theory be placed on all your website&#39;s pages and then returned to a REST API which then stores this information for you to analyse in the future. I thought this would be an interesting little snippet for those of you thinking of rolling your own google analytics-like tracking.&lt;/p&gt;
 
 &lt;h2&gt;The Web Page&lt;/h2&gt;

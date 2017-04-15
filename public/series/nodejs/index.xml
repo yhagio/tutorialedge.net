@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nodejs on TutorialEdge.net</title>
-    <link>/series/nodejs/index.xml</link>
+    <link>https://tutorialedge.net/series/nodejs/index.xml</link>
     <description>Recent content in Nodejs on TutorialEdge.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/series/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tutorialedge.net/series/nodejs/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Keeping NodeJS Applications Running Forever Using PM2</title>
-      <link>/post/javascript/nodejs/keeping-node-apps-running-forever-pm2/</link>
+      <link>https://tutorialedge.net/post/javascript/nodejs/keeping-node-apps-running-forever-pm2/</link>
       <pubDate>Sat, 15 Apr 2017 08:38:40 +0100</pubDate>
       
-      <guid>/post/javascript/nodejs/keeping-node-apps-running-forever-pm2/</guid>
+      <guid>https://tutorialedge.net/post/javascript/nodejs/keeping-node-apps-running-forever-pm2/</guid>
       <description>&lt;p&gt;If you write an application that you need to keep running forever on your servers then this is the tutorial for you. &lt;/p&gt;
 
 &lt;p&gt;If you&#39;re a software developer working on business critical applications and have to adhere to strict Service Level Agreements (SLAs for short) then you know just how vital it is to have your applications back up and running the second they fall over, every second counts when trying to achieve the 5 9&#39;s or 99.999% availability throughout the year. In this tutorial I&#39;ll be demonstrating the effectiveness of PM2 which is a production process manager for Node.js applications which also features a built-in load balancer for those high-performance applications. &lt;/p&gt;
@@ -44,10 +44,10 @@
     
     <item>
       <title>Building a Webserver using ExpressJS and NodeJS</title>
-      <link>/post/javascript/nodejs/creating-a-webserver-with-nodejs/</link>
+      <link>https://tutorialedge.net/post/javascript/nodejs/creating-a-webserver-with-nodejs/</link>
       <pubDate>Sat, 15 Apr 2017 08:32:01 +0100</pubDate>
       
-      <guid>/post/javascript/nodejs/creating-a-webserver-with-nodejs/</guid>
+      <guid>https://tutorialedge.net/post/javascript/nodejs/creating-a-webserver-with-nodejs/</guid>
       <description>
 
 &lt;p&gt;This is the first tutorial in a series in which we’ll be building up a website for a domain name I’ve been sitting on for a few years now. This is intended to show you everything it takes in order to program your own website using NodeJS and the new Angular2 framework.&lt;/p&gt;
@@ -150,10 +150,10 @@ var server = app.listen(3000, function () {
     
     <item>
       <title>Executing Shell Scripts With NodeJS</title>
-      <link>/post/javascript/nodejs/executing-shell-scripts-with-nodejs/</link>
+      <link>https://tutorialedge.net/post/javascript/nodejs/executing-shell-scripts-with-nodejs/</link>
       <pubDate>Sat, 15 Apr 2017 08:26:02 +0100</pubDate>
       
-      <guid>/post/javascript/nodejs/executing-shell-scripts-with-nodejs/</guid>
+      <guid>https://tutorialedge.net/post/javascript/nodejs/executing-shell-scripts-with-nodejs/</guid>
       <description>&lt;p&gt;One of the problems I’ve been faced with recently is how do I go about executing shell scripts using NodeJS. This essentially allows me to query the status of certain processes and utilize the full power of the unix shell commands. &lt;/p&gt;
 
 &lt;h2&gt;Implementation using NodeJS child_process Module&lt;/h2&gt;
@@ -183,10 +183,10 @@ testscript.stderr.on(&#39;data&#39;, function(data){
     
     <item>
       <title>Reading and Writing Files With NodeJS</title>
-      <link>/post/javascript/nodejs/reading-writing-files-with-nodejs/</link>
+      <link>https://tutorialedge.net/post/javascript/nodejs/reading-writing-files-with-nodejs/</link>
       <pubDate>Sat, 15 Apr 2017 08:20:02 +0100</pubDate>
       
-      <guid>/post/javascript/nodejs/reading-writing-files-with-nodejs/</guid>
+      <guid>https://tutorialedge.net/post/javascript/nodejs/reading-writing-files-with-nodejs/</guid>
       <description>&lt;p&gt;&lt;strong&gt;In this tutorial&lt;/strong&gt; I’m going to be showing you exactly how we can read and write files on our local filesystem using NodeJS.&lt;/p&gt;
 
 &lt;h2 id=”reading-from-files”&gt;Reading From Files&lt;/h2&gt;
@@ -257,10 +257,10 @@ fs.writeFile(&#39;temp.txt&#39;, data, function(err, data){
     
     <item>
       <title>Creating and Deleting Directories With NodeJS</title>
-      <link>/post/javascript/nodejs/creating-deleting-directories-with-nodejs/</link>
+      <link>https://tutorialedge.net/post/javascript/nodejs/creating-deleting-directories-with-nodejs/</link>
       <pubDate>Sat, 15 Apr 2017 08:17:02 +0100</pubDate>
       
-      <guid>/post/javascript/nodejs/creating-deleting-directories-with-nodejs/</guid>
+      <guid>https://tutorialedge.net/post/javascript/nodejs/creating-deleting-directories-with-nodejs/</guid>
       <description>
 
 &lt;p&gt;&lt;strong&gt;In this tutorial I’ll be showing you how to create and delete directories using NodeJS&lt;/strong&gt; and we’ll be using the mkdirp and the rimraf node package in order to achieve this.&lt;/p&gt;
@@ -318,10 +318,10 @@ rimraf(&#39;test&#39;, function(err){
     
     <item>
       <title>Editing XML Files With NodeJS</title>
-      <link>/post/javascript/nodejs/editing-xml-files-with-nodejs/</link>
+      <link>https://tutorialedge.net/post/javascript/nodejs/editing-xml-files-with-nodejs/</link>
       <pubDate>Sat, 15 Apr 2017 08:14:10 +0100</pubDate>
       
-      <guid>/post/javascript/nodejs/editing-xml-files-with-nodejs/</guid>
+      <guid>https://tutorialedge.net/post/javascript/nodejs/editing-xml-files-with-nodejs/</guid>
       <description>&lt;p&gt;XML files are still widely used in enterprise programs and being able to manipulate xml files can be incredibly important.&lt;/p&gt;
 
 &lt;h2&gt;XML2JS Node Package&lt;/h2&gt;
@@ -465,10 +465,10 @@ fs.readFile(&#39;test.xml&#39;, &#39;utf-8&#39;, function (err, data){
     
     <item>
       <title>Converting CSV to JSON using NodeJS</title>
-      <link>/post/javascript/nodejs/converting-csv-json-node/</link>
+      <link>https://tutorialedge.net/post/javascript/nodejs/converting-csv-json-node/</link>
       <pubDate>Sun, 09 Apr 2017 21:29:02 +0100</pubDate>
       
-      <guid>/post/javascript/nodejs/converting-csv-json-node/</guid>
+      <guid>https://tutorialedge.net/post/javascript/nodejs/converting-csv-json-node/</guid>
       <description>
 
 &lt;p&gt;In this tutorial I’m going to be showing you how we can create a NodeJS script that takes in a csv file and outputs the contents of that CSV file as JSON.&lt;/p&gt;
@@ -514,10 +514,10 @@ converter.fromFile(&amp;quot;./path-to-your-file.csv&amp;quot;,function(err,resu
     
     <item>
       <title>Building Software using A Microservice Based Architecture</title>
-      <link>/post/javascript/nodejs/building-software-using-microservice-architecture/</link>
+      <link>https://tutorialedge.net/post/javascript/nodejs/building-software-using-microservice-architecture/</link>
       <pubDate>Sun, 09 Apr 2017 21:27:23 +0100</pubDate>
       
-      <guid>/post/javascript/nodejs/building-software-using-microservice-architecture/</guid>
+      <guid>https://tutorialedge.net/post/javascript/nodejs/building-software-using-microservice-architecture/</guid>
       <description>
 
 &lt;p&gt;In this tutorial I’m going to be showing an example of how you could go about building your own software following a microservice based architecture.&lt;/p&gt;
@@ -761,10 +761,10 @@ This hopefully served as a useful demonstration of microservices working togethe
     
     <item>
       <title>Writing Your Own Logging System NodeJS</title>
-      <link>/post/javascript/nodejs/writing-your-own-logging-system-nodejs/</link>
+      <link>https://tutorialedge.net/post/javascript/nodejs/writing-your-own-logging-system-nodejs/</link>
       <pubDate>Sun, 09 Apr 2017 21:26:14 +0100</pubDate>
       
-      <guid>/post/javascript/nodejs/writing-your-own-logging-system-nodejs/</guid>
+      <guid>https://tutorialedge.net/post/javascript/nodejs/writing-your-own-logging-system-nodejs/</guid>
       <description>
 
 &lt;h2 id=&#34;logging-why-is-it-important&#34;&gt;Logging - Why Is It Important?&lt;/h2&gt;
@@ -909,10 +909,10 @@ module.exports = router;
     
     <item>
       <title>Monitoring Server Stats With NodeJS</title>
-      <link>/post/javascript/nodejs/monitoring-server-stats-with-nodejs/</link>
+      <link>https://tutorialedge.net/post/javascript/nodejs/monitoring-server-stats-with-nodejs/</link>
       <pubDate>Sun, 09 Apr 2017 21:25:15 +0100</pubDate>
       
-      <guid>/post/javascript/nodejs/monitoring-server-stats-with-nodejs/</guid>
+      <guid>https://tutorialedge.net/post/javascript/nodejs/monitoring-server-stats-with-nodejs/</guid>
       <description>
 
 &lt;p&gt;In production environments having visibility over how your systems are performing is vital. Being able to watch memory usage and ensure that servers are not being brought down by memory leaks and greedy programs can be hugely beneficial and can help you deal with issues before they become real headaches.&lt;/p&gt;

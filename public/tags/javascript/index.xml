@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Javascript on TutorialEdge.net</title>
-    <link>/tags/javascript/index.xml</link>
+    <link>https://tutorialedge.net/tags/javascript/index.xml</link>
     <description>Recent content in Javascript on TutorialEdge.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tutorialedge.net/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>AngularJS Promises Tutorial</title>
-      <link>/post/javascript/angularjs/angularjs-promises-tutorial/</link>
+      <link>https://tutorialedge.net/post/javascript/angularjs/angularjs-promises-tutorial/</link>
       <pubDate>Sat, 15 Apr 2017 14:41:31 +0100</pubDate>
       
-      <guid>/post/javascript/angularjs/angularjs-promises-tutorial/</guid>
+      <guid>https://tutorialedge.net/post/javascript/angularjs/angularjs-promises-tutorial/</guid>
       <description>
 
 &lt;p&gt;In this tutorial we&amp;rsquo;ll be looking at how to work with and define promises in AngularJS. For more information check out the official &lt;a href=&#34;https://docs.angularjs.org/api/ng/service/$q&#34;&gt;AngularJS Documentation&lt;/a&gt;&lt;/p&gt;
@@ -123,10 +123,10 @@ angular.module(&#39;root&#39;)
     
     <item>
       <title>Most Important Changes to AngularJS in 1.6</title>
-      <link>/post/javascript/angularjs/most-important-changes-angularjs-1-6/</link>
+      <link>https://tutorialedge.net/post/javascript/angularjs/most-important-changes-angularjs-1-6/</link>
       <pubDate>Sat, 15 Apr 2017 14:31:36 +0100</pubDate>
       
-      <guid>/post/javascript/angularjs/most-important-changes-angularjs-1-6/</guid>
+      <guid>https://tutorialedge.net/post/javascript/angularjs/most-important-changes-angularjs-1-6/</guid>
       <description>
 
 &lt;div class=&#34;github-link&#34;&gt;The changelog with the AngularJS 1.6 release notes can be found here: &lt;a href=&#34;https://github.com/angular/angular.js/blob/master/CHANGELOG.md&#34;&gt;AngularJS 1.6-RC.0&lt;/a&gt;&lt;/div&gt;
@@ -191,10 +191,10 @@ $scope.$watch(&#39;something&#39;, function() {
     
     <item>
       <title>AngularJS ng-model in ng-if Tutorial</title>
-      <link>/post/javascript/angularjs/angularjs-ng-model-in-ng-if-tutorial/</link>
+      <link>https://tutorialedge.net/post/javascript/angularjs/angularjs-ng-model-in-ng-if-tutorial/</link>
       <pubDate>Sat, 15 Apr 2017 09:17:38 +0100</pubDate>
       
-      <guid>/post/javascript/angularjs/angularjs-ng-model-in-ng-if-tutorial/</guid>
+      <guid>https://tutorialedge.net/post/javascript/angularjs/angularjs-ng-model-in-ng-if-tutorial/</guid>
       <description>&lt;p&gt;a quick tip for those trying to get the ng-model directive working in your angularjs application within ng-if.&lt;/p&gt;
 
 &lt;h2&gt;ng-if Child Scopes&lt;/h2&gt;
@@ -243,10 +243,10 @@ testApp.controller(&#39;testController&#39; , function ($scope) {
     
     <item>
       <title>AngularJS Data Binding Tutorial</title>
-      <link>/post/javascript/angularjs/angularjs-data-binding-tutorial/</link>
+      <link>https://tutorialedge.net/post/javascript/angularjs/angularjs-data-binding-tutorial/</link>
       <pubDate>Sat, 15 Apr 2017 09:16:16 +0100</pubDate>
       
-      <guid>/post/javascript/angularjs/angularjs-data-binding-tutorial/</guid>
+      <guid>https://tutorialedge.net/post/javascript/angularjs/angularjs-data-binding-tutorial/</guid>
       <description>
 
 &lt;p&gt;AngularJS Official Docs on Data Binding can be found here: &lt;a href=&#34;https://docs.angularjs.org/guide/databinding&#34;&gt;AngularJS Data Binding&lt;/a&gt;&lt;/p&gt;
@@ -305,10 +305,10 @@ testApp.controller(&#39;testController&#39; , function ($scope) {
     
     <item>
       <title>AngularJS Controllers Tutorial</title>
-      <link>/post/javascript/angularjs/angularjs-controllers-tutorial/</link>
+      <link>https://tutorialedge.net/post/javascript/angularjs/angularjs-controllers-tutorial/</link>
       <pubDate>Sat, 15 Apr 2017 09:10:12 +0100</pubDate>
       
-      <guid>/post/javascript/angularjs/angularjs-controllers-tutorial/</guid>
+      <guid>https://tutorialedge.net/post/javascript/angularjs/angularjs-controllers-tutorial/</guid>
       <description>&lt;p&gt;AngularJS controllers are somewhat similar to classes in Object Oriented programming and as such you can define the functionality of your applications in these controllers. When a controller is attached to the DOM via the ng-controller directive it instantiates a new Controller object.&lt;/p&gt;
 
 &lt;div class=&#34;note&#34;&gt;
@@ -405,10 +405,10 @@ testApp.controller(&#39;childTestController&#39;, function($scope) {
     
     <item>
       <title>AngularJS Templating Tutorial Using ng-view</title>
-      <link>/post/javascript/angularjs/angularjs-template-tutorial-using-ng-view/</link>
+      <link>https://tutorialedge.net/post/javascript/angularjs/angularjs-template-tutorial-using-ng-view/</link>
       <pubDate>Sat, 15 Apr 2017 09:09:12 +0100</pubDate>
       
-      <guid>/post/javascript/angularjs/angularjs-template-tutorial-using-ng-view/</guid>
+      <guid>https://tutorialedge.net/post/javascript/angularjs/angularjs-template-tutorial-using-ng-view/</guid>
       <description>
 
 &lt;p&gt;Templating is fantastic for reducing the amount of code you have to maintain, if you have a defined structure to all of your webapp&amp;rsquo;s pages then templating allows you to create one master page for this structure and then just replace pieces of the page with different content based on the url.&lt;/p&gt;
@@ -560,10 +560,10 @@ $routeProvider
     
     <item>
       <title>AngularJS Directives Tutorial</title>
-      <link>/post/javascript/angularjs/angularjs-directives-tutorial/</link>
+      <link>https://tutorialedge.net/post/javascript/angularjs/angularjs-directives-tutorial/</link>
       <pubDate>Sat, 15 Apr 2017 09:08:03 +0100</pubDate>
       
-      <guid>/post/javascript/angularjs/angularjs-directives-tutorial/</guid>
+      <guid>https://tutorialedge.net/post/javascript/angularjs/angularjs-directives-tutorial/</guid>
       <description>&lt;p&gt;The official documentation for AngularJS’s directives can be found here: &lt;a href=&#34;https://docs.angularjs.org/guide/directive&#34;&gt;AngularJS Directives&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2&gt;What Are Directives?&lt;/h2&gt;
@@ -667,10 +667,10 @@ app.directive(&#34;mydirective&#34;, function() {
     
     <item>
       <title>AngularJS Template Route Provider Tutorial</title>
-      <link>/post/javascript/angularjs/template-route-provider-tutorial/</link>
+      <link>https://tutorialedge.net/post/javascript/angularjs/template-route-provider-tutorial/</link>
       <pubDate>Sat, 15 Apr 2017 09:04:56 +0100</pubDate>
       
-      <guid>/post/javascript/angularjs/template-route-provider-tutorial/</guid>
+      <guid>https://tutorialedge.net/post/javascript/angularjs/template-route-provider-tutorial/</guid>
       <description>&lt;p&gt;This tutorial covers how you can utilize AngularJS’s $routeProvider in order to create a multiple page application that features one master page. The official documentation for Routing and multiple views can be found here: &lt;a href=&#34;https://docs.angularjs.org/tutorial/step_07&#34; target=&#34;_blank&#34;&gt;https://docs.angularjs.org/tutorial/step_07 &lt;/a&gt;&lt;/p&gt;
 
 &lt;h2&gt;Our Project&lt;/h2&gt;
@@ -760,10 +760,10 @@ testApp.controller(&#39;ContactController&#39;, function($scope) {
     
     <item>
       <title>Interacting With RESTful APIs Using $http in AngularJS</title>
-      <link>/post/javascript/angularjs/interacting-with-apis-using-http-angularjs/</link>
+      <link>https://tutorialedge.net/post/javascript/angularjs/interacting-with-apis-using-http-angularjs/</link>
       <pubDate>Sat, 15 Apr 2017 09:03:47 +0100</pubDate>
       
-      <guid>/post/javascript/angularjs/interacting-with-apis-using-http-angularjs/</guid>
+      <guid>https://tutorialedge.net/post/javascript/angularjs/interacting-with-apis-using-http-angularjs/</guid>
       <description>
 
 &lt;p&gt;In this tutorial I will be showing you how we can create a frontend angularjs application that could interact with a RESTful API. In order for our Angular applications to be able to make API calls, we’ll have to use the $http service which gives us the ability to perform GET, POST, PUT and DELETE api calls, there are other types of calls but for now we’ll focus on these 4.&lt;/p&gt;
@@ -896,10 +896,10 @@ testApp.controller(&#39;testController&#39; , function ($scope, $http) {
     
     <item>
       <title>AngularJS Filter Search Tutorial</title>
-      <link>/post/javascript/angularjs/angularjs-filter-search-tutorial/</link>
+      <link>https://tutorialedge.net/post/javascript/angularjs/angularjs-filter-search-tutorial/</link>
       <pubDate>Sat, 15 Apr 2017 08:59:44 +0100</pubDate>
       
-      <guid>/post/javascript/angularjs/angularjs-filter-search-tutorial/</guid>
+      <guid>https://tutorialedge.net/post/javascript/angularjs/angularjs-filter-search-tutorial/</guid>
       <description>&lt;h3&gt;Links:&lt;/h3&gt;
 
 &lt;div class=&#34;github-link&#34;&gt;Full Source Code: &lt;a href=&#34;https://github.com/emforce/AngularFuzzySearch&#34;&gt;https://github.com/emforce/AngularFuzzySearch&lt;/a&gt;&lt;/div&gt;
@@ -1049,10 +1049,10 @@ myApp.controller(&#39;SearchController&#39;, [&#39;$scope&#39;, function($scope)
     
     <item>
       <title>Retrieving Website Visitor Information Using Javascript</title>
-      <link>/post/javascript/retrieving-visitor-information-javascript/</link>
+      <link>https://tutorialedge.net/post/javascript/retrieving-visitor-information-javascript/</link>
       <pubDate>Sat, 15 Apr 2017 08:40:42 +0100</pubDate>
       
-      <guid>/post/javascript/retrieving-visitor-information-javascript/</guid>
+      <guid>https://tutorialedge.net/post/javascript/retrieving-visitor-information-javascript/</guid>
       <description>&lt;p&gt;In this tutorial I&#39;ll be demonstrating how you can retrieve key information about all your website visitors using a very simple javascript snippet. This could in theory be placed on all your website&#39;s pages and then returned to a REST API which then stores this information for you to analyse in the future. I thought this would be an interesting little snippet for those of you thinking of rolling your own google analytics-like tracking.&lt;/p&gt;
 
 &lt;h2&gt;The Web Page&lt;/h2&gt;
@@ -1090,10 +1090,10 @@ console.log(&amp;quot;Geolocation: &amp;quot; + navigator.geolocation);
     
     <item>
       <title>Keeping NodeJS Applications Running Forever Using PM2</title>
-      <link>/post/javascript/nodejs/keeping-node-apps-running-forever-pm2/</link>
+      <link>https://tutorialedge.net/post/javascript/nodejs/keeping-node-apps-running-forever-pm2/</link>
       <pubDate>Sat, 15 Apr 2017 08:38:40 +0100</pubDate>
       
-      <guid>/post/javascript/nodejs/keeping-node-apps-running-forever-pm2/</guid>
+      <guid>https://tutorialedge.net/post/javascript/nodejs/keeping-node-apps-running-forever-pm2/</guid>
       <description>&lt;p&gt;If you write an application that you need to keep running forever on your servers then this is the tutorial for you. &lt;/p&gt;
 
 &lt;p&gt;If you&#39;re a software developer working on business critical applications and have to adhere to strict Service Level Agreements (SLAs for short) then you know just how vital it is to have your applications back up and running the second they fall over, every second counts when trying to achieve the 5 9&#39;s or 99.999% availability throughout the year. In this tutorial I&#39;ll be demonstrating the effectiveness of PM2 which is a production process manager for Node.js applications which also features a built-in load balancer for those high-performance applications. &lt;/p&gt;
@@ -1124,10 +1124,10 @@ console.log(&amp;quot;Geolocation: &amp;quot; + navigator.geolocation);
     
     <item>
       <title>Setting a Default Value for Select Elements in AngularJS</title>
-      <link>/post/javascript/angularjs/setting-default-select-value-angularjs/</link>
+      <link>https://tutorialedge.net/post/javascript/angularjs/setting-default-select-value-angularjs/</link>
       <pubDate>Sat, 15 Apr 2017 08:37:21 +0100</pubDate>
       
-      <guid>/post/javascript/angularjs/setting-default-select-value-angularjs/</guid>
+      <guid>https://tutorialedge.net/post/javascript/angularjs/setting-default-select-value-angularjs/</guid>
       <description>&lt;p&gt;This is just a quick code snippet for those of you facing this slight problem when developing your applications using AngularJS 1.5. This works for those of you &lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;&amp;lt;select ng-model=&amp;quot;selection&amp;quot; ng-init=&amp;quot;selection =&#39;The First Default Option&#39;&amp;quot;&amp;gt;
@@ -1140,10 +1140,10 @@ console.log(&amp;quot;Geolocation: &amp;quot; + navigator.geolocation);
     
     <item>
       <title>Using Hidden Input in a Form in AngularJS</title>
-      <link>/post/javascript/angularjs/hidden-input-form-angularjs/</link>
+      <link>https://tutorialedge.net/post/javascript/angularjs/hidden-input-form-angularjs/</link>
       <pubDate>Sat, 15 Apr 2017 08:35:56 +0100</pubDate>
       
-      <guid>/post/javascript/angularjs/hidden-input-form-angularjs/</guid>
+      <guid>https://tutorialedge.net/post/javascript/angularjs/hidden-input-form-angularjs/</guid>
       <description>&lt;p&gt;This ended up being an interesting little problem for me during one of my programming sessions. Below you&#39;ll find a couple of different methods that you can use to pass hidden data to any form submission using AngularJS.&lt;/p&gt;
 
 &lt;h4&gt;Method 1&lt;/h4&gt;
@@ -1155,10 +1155,10 @@ console.log(&amp;quot;Geolocation: &amp;quot; + navigator.geolocation);
     
     <item>
       <title>Building a Webserver using ExpressJS and NodeJS</title>
-      <link>/post/javascript/nodejs/creating-a-webserver-with-nodejs/</link>
+      <link>https://tutorialedge.net/post/javascript/nodejs/creating-a-webserver-with-nodejs/</link>
       <pubDate>Sat, 15 Apr 2017 08:32:01 +0100</pubDate>
       
-      <guid>/post/javascript/nodejs/creating-a-webserver-with-nodejs/</guid>
+      <guid>https://tutorialedge.net/post/javascript/nodejs/creating-a-webserver-with-nodejs/</guid>
       <description>
 
 &lt;p&gt;This is the first tutorial in a series in which we’ll be building up a website for a domain name I’ve been sitting on for a few years now. This is intended to show you everything it takes in order to program your own website using NodeJS and the new Angular2 framework.&lt;/p&gt;

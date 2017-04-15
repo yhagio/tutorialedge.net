@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Laravel 5.2 on TutorialEdge.net</title>
-    <link>/tags/laravel-5.2/index.xml</link>
+    <link>https://tutorialedge.net/tags/laravel-5.2/index.xml</link>
     <description>Recent content in Laravel 5.2 on TutorialEdge.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/laravel-5.2/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tutorialedge.net/tags/laravel-5.2/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Simple Laravel 5 Pagination</title>
-      <link>/post/php/laravel/simple-laravel-pagination/</link>
+      <link>https://tutorialedge.net/post/php/laravel/simple-laravel-pagination/</link>
       <pubDate>Sat, 15 Apr 2017 14:42:47 +0100</pubDate>
       
-      <guid>/post/php/laravel/simple-laravel-pagination/</guid>
+      <guid>https://tutorialedge.net/post/php/laravel/simple-laravel-pagination/</guid>
       <description>&lt;p&gt;Pagination is a way of splitting up content into several different pages and making content layout far more organized. A must for blogs who wish their front-pages to be small enough to load and yet big enough to showcase the most important tutorials.&lt;/p&gt;
 
 &lt;h2&gt;Modifying the Controller:&lt;/h2&gt;
@@ -66,10 +66,10 @@ class ArticleController extends Controller {
     
     <item>
       <title>Creating an Admin Area with Laravel 5</title>
-      <link>/post/php/laravel/creating-an-admin-area-laravel/</link>
+      <link>https://tutorialedge.net/post/php/laravel/creating-an-admin-area-laravel/</link>
       <pubDate>Sat, 15 Apr 2017 09:35:37 +0100</pubDate>
       
-      <guid>/post/php/laravel/creating-an-admin-area-laravel/</guid>
+      <guid>https://tutorialedge.net/post/php/laravel/creating-an-admin-area-laravel/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;This tutorial assumes prior knowledge of Laravel 5. &lt;/p&gt;
 &lt;/blockquote&gt;
@@ -163,10 +163,10 @@ class Authenticate
     
     <item>
       <title>Laravel 5 Simple Site Search Bar Tutorial</title>
-      <link>/post/php/laravel/laravel-5-simple-site-search-bar/</link>
+      <link>https://tutorialedge.net/post/php/laravel/laravel-5-simple-site-search-bar/</link>
       <pubDate>Sat, 15 Apr 2017 09:26:20 +0100</pubDate>
       
-      <guid>/post/php/laravel/laravel-5-simple-site-search-bar/</guid>
+      <guid>https://tutorialedge.net/post/php/laravel/laravel-5-simple-site-search-bar/</guid>
       <description>&lt;p&gt;Something that I’ve been working on recently on the site is the search bar functionality which allows people to effectively search every through every article on the site to find one that will help them the most. In this tutorial I’ll be documenting a few of the ways that you can implement a simple full site search using Laravel 5.&lt;/p&gt;
 
 &lt;h2&gt;Requirements&lt;/h2&gt;
@@ -262,10 +262,10 @@ class Authenticate
     
     <item>
       <title>Laravel 5.1 Routes Cheat Sheet</title>
-      <link>/post/php/laravel/laravel-routes-cheat-sheet/</link>
+      <link>https://tutorialedge.net/post/php/laravel/laravel-routes-cheat-sheet/</link>
       <pubDate>Sat, 15 Apr 2017 09:22:16 +0100</pubDate>
       
-      <guid>/post/php/laravel/laravel-routes-cheat-sheet/</guid>
+      <guid>https://tutorialedge.net/post/php/laravel/laravel-routes-cheat-sheet/</guid>
       <description>&lt;h2&gt;Static Pages:&lt;/h2&gt;
 
 &lt;p&gt;Static pages are just simple pages that don’t necessarily change too much. A good example of pages that would typically fall under this umbrella are your About and Contact us pages. These routes point back to views that have already been created in your resources/views folder. I.e resources/views/contact.blade.php would be the file for our contact view returned below.&lt;/p&gt;
@@ -352,10 +352,10 @@ Route::get(‘/about’, function()
     
     <item>
       <title>Laravel 5 Middleware Tutorial</title>
-      <link>/post/php/laravel/laravel-5-middleware-tutorial/</link>
+      <link>https://tutorialedge.net/post/php/laravel/laravel-5-middleware-tutorial/</link>
       <pubDate>Sat, 15 Apr 2017 09:20:55 +0100</pubDate>
       
-      <guid>/post/php/laravel/laravel-5-middleware-tutorial/</guid>
+      <guid>https://tutorialedge.net/post/php/laravel/laravel-5-middleware-tutorial/</guid>
       <description>&lt;p&gt;This tutorial serves as a more expanded introduction to Laravel 5.1’s middleware than that of the documentation. I’ll be exploring a more expanded ins-and-outs of the middleware part of the framework.&lt;/p&gt;
 
 &lt;h2&gt;What is Middleware?&lt;/h2&gt;
@@ -458,10 +458,10 @@ protected $routeMiddleware = [
     
     <item>
       <title>Adding Github Registry and Authentication To Laravel 5.2</title>
-      <link>/post/php/laravel/adding-github-oauth-to-laravel-5-2/</link>
+      <link>https://tutorialedge.net/post/php/laravel/adding-github-oauth-to-laravel-5-2/</link>
       <pubDate>Sat, 15 Apr 2017 08:27:49 +0100</pubDate>
       
-      <guid>/post/php/laravel/adding-github-oauth-to-laravel-5-2/</guid>
+      <guid>https://tutorialedge.net/post/php/laravel/adding-github-oauth-to-laravel-5-2/</guid>
       <description>&lt;p&gt;As part of the ongoing work I’ve been doing on this site, I thought it would be a good idea to totally remove the traditional method of registering and logging in and instead replace that with github authentication. This actively reduces the risks that the site takes with regards to storing passwords and allows me to rely upon a relatively secure authentication method rather than having to roll my own.&lt;/p&gt;
 
 &lt;h2&gt;Creating a Github Application&lt;/h2&gt;
@@ -616,10 +616,10 @@ protected $fillable = [&#39;github_id&#39;,&#39;name&#39;, &#39;email&#39;, &#39
     
     <item>
       <title>Building A Blog With Laravel 5.2</title>
-      <link>/post/php/laravel/building-a-blog-with-laravel-5-2/</link>
+      <link>https://tutorialedge.net/post/php/laravel/building-a-blog-with-laravel-5-2/</link>
       <pubDate>Sat, 15 Apr 2017 08:21:41 +0100</pubDate>
       
-      <guid>/post/php/laravel/building-a-blog-with-laravel-5-2/</guid>
+      <guid>https://tutorialedge.net/post/php/laravel/building-a-blog-with-laravel-5-2/</guid>
       <description>&lt;p&gt;In this series we’ll be building a fully functioning blog using the Laravel 5.2 framework. We’ll iteratively build up our own content management system from the ground up and I’ll focus on demonstrating the best practices and by the end of this you’ll have a solid base for whatever projects you have in the pipeline.&lt;/p&gt;
 
 &lt;h2&gt;Creating our Project&lt;/h2&gt;
@@ -657,10 +657,10 @@ chmod -R 777 storage
     
     <item>
       <title>The Cipher and or Key Length are Invalid - laravel 5.2 Issue</title>
-      <link>/post/php/laravel/cipher-keylength-invalid-laravel-5-2/</link>
+      <link>https://tutorialedge.net/post/php/laravel/cipher-keylength-invalid-laravel-5-2/</link>
       <pubDate>Sat, 15 Apr 2017 08:08:41 +0100</pubDate>
       
-      <guid>/post/php/laravel/cipher-keylength-invalid-laravel-5-2/</guid>
+      <guid>https://tutorialedge.net/post/php/laravel/cipher-keylength-invalid-laravel-5-2/</guid>
       <description>&lt;p&gt;One of the issues you may face with a new laravel 5.2 installation is where the Cipher and or Keylength is invalid.&lt;/p&gt;
 
 &lt;h2&gt;Resolving the Issue&lt;/h2&gt;
@@ -726,10 +726,10 @@ Stack trace:
     
     <item>
       <title>Introduction To Routing in Laravel 5.2</title>
-      <link>/post/php/laravel/introduction-to-routing-laravel-5-2/</link>
+      <link>https://tutorialedge.net/post/php/laravel/introduction-to-routing-laravel-5-2/</link>
       <pubDate>Sat, 15 Apr 2017 08:07:02 +0100</pubDate>
       
-      <guid>/post/php/laravel/introduction-to-routing-laravel-5-2/</guid>
+      <guid>https://tutorialedge.net/post/php/laravel/introduction-to-routing-laravel-5-2/</guid>
       <description>&lt;p&gt;This tutorial is part 2 of the &lt;a target=”_blank” href=&#34;https://tutorialedge.net/course/laravel-5&#34;&gt;Building a Blog with Laravel 5.2&lt;/a&gt; course.&lt;/p&gt;
 
 &lt;p&gt;Ok, so we left off with an very simple, working Laravel 5.2 installation. When we run this using php artisan serve, we should see the Laravel welcome page when we navigate to http://localhost:8000/. Now that we’ve got that ready, it’s time to start playing about with routing and some basic views.&lt;/p&gt;
@@ -833,10 +833,10 @@ Route::get(&#39;/&#39;, function () {
     
     <item>
       <title>Effective Debugging of Laravel 5.2 Applications</title>
-      <link>/post/php/laravel/effective-debugging-laravel-5-2/</link>
+      <link>https://tutorialedge.net/post/php/laravel/effective-debugging-laravel-5-2/</link>
       <pubDate>Sat, 15 Apr 2017 08:05:46 +0100</pubDate>
       
-      <guid>/post/php/laravel/effective-debugging-laravel-5-2/</guid>
+      <guid>https://tutorialedge.net/post/php/laravel/effective-debugging-laravel-5-2/</guid>
       <description>&lt;p&gt;Knowing how to effectively debug problems with your laravel 5.2 application is vital if you are to combat problems and reduce the amount of errors within your application.&lt;/p&gt;
 
 &lt;p&gt;Below you’ll find an array of different methods you can use either one their own or in any combination in order to fight against the dreaded bugs that might be turning potential customers away.&lt;/p&gt;
@@ -877,10 +877,10 @@ class TestlController extends Controller
     
     <item>
       <title>Getting Started With Controllers in Laravel 5.2</title>
-      <link>/post/php/laravel/getting-started-with-controllers-laravel-5-2/</link>
+      <link>https://tutorialedge.net/post/php/laravel/getting-started-with-controllers-laravel-5-2/</link>
       <pubDate>Sat, 15 Apr 2017 08:04:33 +0100</pubDate>
       
-      <guid>/post/php/laravel/getting-started-with-controllers-laravel-5-2/</guid>
+      <guid>https://tutorialedge.net/post/php/laravel/getting-started-with-controllers-laravel-5-2/</guid>
       <description>&lt;p&gt;This tutorial is part of the &lt;a href=&#34;https://tutorialedge.net/course/laravel-5&#34;&gt;Build a blog with Laravel 5.2&lt;/a&gt; course.&lt;/p&gt;
 
 &lt;h2&gt;What are Controllers?&lt;/h2&gt;
@@ -1028,10 +1028,10 @@ Route::get(&#39;/{slug}&#39;, &#39;BlogController@single&#39;);
     
     <item>
       <title>Working With Tables in Laravel 5.2</title>
-      <link>/post/php/laravel/working-with-tables/</link>
+      <link>https://tutorialedge.net/post/php/laravel/working-with-tables/</link>
       <pubDate>Sat, 15 Apr 2017 08:01:33 +0100</pubDate>
       
-      <guid>/post/php/laravel/working-with-tables/</guid>
+      <guid>https://tutorialedge.net/post/php/laravel/working-with-tables/</guid>
       <description>&lt;h2&gt;Pre-Requisites&lt;/h2&gt;
 
 &lt;p&gt;&lt;b&gt;Before we can get started&lt;/b&gt; building our blog, we&#39;ll first need to set up a database on our machine that we can play around with for testing purposes.&lt;/p&gt;
@@ -1344,10 +1344,10 @@ class CreatePostsTable extends Migration
     
     <item>
       <title>Working With Models in Laravel 5.2</title>
-      <link>/post/php/laravel/working-with-models-laravel-5-2/</link>
+      <link>https://tutorialedge.net/post/php/laravel/working-with-models-laravel-5-2/</link>
       <pubDate>Sun, 09 Apr 2017 21:34:10 +0100</pubDate>
       
-      <guid>/post/php/laravel/working-with-models-laravel-5-2/</guid>
+      <guid>https://tutorialedge.net/post/php/laravel/working-with-models-laravel-5-2/</guid>
       <description>&lt;p&gt;This tutorial is part of the &lt;a href=&#34;https://tutorialedge.net/course/laravel-5&#34;&gt;Building a blog with Laravel 5.2&lt;/a&gt; course.&lt;/p&gt;
 
 &lt;h2&gt;Working with Models&lt;/h2&gt;

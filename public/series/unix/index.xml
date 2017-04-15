@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Unix on TutorialEdge.net</title>
-    <link>/series/unix/index.xml</link>
+    <link>https://tutorialedge.net/series/unix/index.xml</link>
     <description>Recent content in Unix on TutorialEdge.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/series/unix/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tutorialedge.net/series/unix/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Unix Navigation Basics</title>
-      <link>/post/unix/unix-navigation-basics/</link>
+      <link>https://tutorialedge.net/post/unix/unix-navigation-basics/</link>
       <pubDate>Sun, 09 Apr 2017 21:06:27 +0100</pubDate>
       
-      <guid>/post/unix/unix-navigation-basics/</guid>
+      <guid>https://tutorialedge.net/post/unix/unix-navigation-basics/</guid>
       <description>&lt;p&gt;ls command&lt;/p&gt;
 </description>
     </item>

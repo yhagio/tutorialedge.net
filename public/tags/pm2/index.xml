@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pm2 on TutorialEdge.net</title>
-    <link>/tags/pm2/index.xml</link>
+    <link>https://tutorialedge.net/tags/pm2/index.xml</link>
     <description>Recent content in Pm2 on TutorialEdge.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/pm2/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tutorialedge.net/tags/pm2/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Keeping NodeJS Applications Running Forever Using PM2</title>
-      <link>/post/javascript/nodejs/keeping-node-apps-running-forever-pm2/</link>
+      <link>https://tutorialedge.net/post/javascript/nodejs/keeping-node-apps-running-forever-pm2/</link>
       <pubDate>Sat, 15 Apr 2017 08:38:40 +0100</pubDate>
       
-      <guid>/post/javascript/nodejs/keeping-node-apps-running-forever-pm2/</guid>
+      <guid>https://tutorialedge.net/post/javascript/nodejs/keeping-node-apps-running-forever-pm2/</guid>
       <description>&lt;p&gt;If you write an application that you need to keep running forever on your servers then this is the tutorial for you. &lt;/p&gt;
 
 &lt;p&gt;If you&#39;re a software developer working on business critical applications and have to adhere to strict Service Level Agreements (SLAs for short) then you know just how vital it is to have your applications back up and running the second they fall over, every second counts when trying to achieve the 5 9&#39;s or 99.999% availability throughout the year. In this tutorial I&#39;ll be demonstrating the effectiveness of PM2 which is a production process manager for Node.js applications which also features a built-in load balancer for those high-performance applications. &lt;/p&gt;

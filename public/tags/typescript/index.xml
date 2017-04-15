@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Typescript on TutorialEdge.net</title>
-    <link>/tags/typescript/index.xml</link>
+    <link>https://tutorialedge.net/tags/typescript/index.xml</link>
     <description>Recent content in Typescript on TutorialEdge.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tutorialedge.net/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Angular Modules Tutorial</title>
-      <link>/post/typescript/angular/angular-modules-tutorial/</link>
+      <link>https://tutorialedge.net/post/typescript/angular/angular-modules-tutorial/</link>
       <pubDate>Sun, 09 Apr 2017 21:05:28 +0100</pubDate>
       
-      <guid>/post/typescript/angular/angular-modules-tutorial/</guid>
+      <guid>https://tutorialedge.net/post/typescript/angular/angular-modules-tutorial/</guid>
       <description>
 
 &lt;div class=&#34;note&#34;&gt;This tutorial was built of the official Angular 2.2 release. &lt;/div&gt;
@@ -141,10 +141,10 @@ platformBrowserDynamic().bootstrapModule(AppModule);
     
     <item>
       <title>angular components tutorial</title>
-      <link>/post/typescript/angular/angular-components-tutorial/</link>
+      <link>https://tutorialedge.net/post/typescript/angular/angular-components-tutorial/</link>
       <pubDate>Sun, 09 Apr 2017 21:04:56 +0100</pubDate>
       
-      <guid>/post/typescript/angular/angular-components-tutorial/</guid>
+      <guid>https://tutorialedge.net/post/typescript/angular/angular-components-tutorial/</guid>
       <description>
 
 &lt;blockquote&gt;
@@ -204,10 +204,10 @@ export class UserComponent { }
     
     <item>
       <title>Angular Services Tutorial</title>
-      <link>/post/typescript/angular/angular-services-tutorial/</link>
+      <link>https://tutorialedge.net/post/typescript/angular/angular-services-tutorial/</link>
       <pubDate>Sun, 09 Apr 2017 21:04:22 +0100</pubDate>
       
-      <guid>/post/typescript/angular/angular-services-tutorial/</guid>
+      <guid>https://tutorialedge.net/post/typescript/angular/angular-services-tutorial/</guid>
       <description>
 
 &lt;p&gt;If you’ve ever written an application in Angular 1.* that interfaces with a RESTful web API then you should have come across services. Services are essentially the interfaces we should use in order to interact with these APIs.&lt;/p&gt;
@@ -342,10 +342,10 @@ export class ArticleComponent implements OnInit {
     
     <item>
       <title>The Top Books For Learning Angular</title>
-      <link>/post/typescript/angular/best-books-for-learning-angular/</link>
+      <link>https://tutorialedge.net/post/typescript/angular/best-books-for-learning-angular/</link>
       <pubDate>Sun, 09 Apr 2017 21:03:26 +0100</pubDate>
       
-      <guid>/post/typescript/angular/best-books-for-learning-angular/</guid>
+      <guid>https://tutorialedge.net/post/typescript/angular/best-books-for-learning-angular/</guid>
       <description>
 
 &lt;blockquote&gt;
@@ -368,10 +368,10 @@ export class ArticleComponent implements OnInit {
     
     <item>
       <title>Angular Get Current Route using the Location Service</title>
-      <link>/post/typescript/angular/angular-get-current-route-location/</link>
+      <link>https://tutorialedge.net/post/typescript/angular/angular-get-current-route-location/</link>
       <pubDate>Sun, 09 Apr 2017 20:56:49 +0100</pubDate>
       
-      <guid>/post/typescript/angular/angular-get-current-route-location/</guid>
+      <guid>https://tutorialedge.net/post/typescript/angular/angular-get-current-route-location/</guid>
       <description>
 
 &lt;blockquote&gt;
@@ -433,10 +433,10 @@ export class TopNavComponent implements OnInit {
     
     <item>
       <title>angular detecting route changes</title>
-      <link>/post/typescript/angular/angular-detecting-route-changes/</link>
+      <link>https://tutorialedge.net/post/typescript/angular/angular-detecting-route-changes/</link>
       <pubDate>Sun, 09 Apr 2017 20:55:22 +0100</pubDate>
       
-      <guid>/post/typescript/angular/angular-detecting-route-changes/</guid>
+      <guid>https://tutorialedge.net/post/typescript/angular/angular-detecting-route-changes/</guid>
       <description>
 
 &lt;div class=&#34;note&#34;&gt;This tutorial was built using Angular 2.2. Some of the features in this tutorial may not work for earlier/later versions.&lt;/div&gt;
@@ -490,10 +490,10 @@ export class TopNavComponent implements OnInit {
     
     <item>
       <title>Angular Websockets Tutorial</title>
-      <link>/post/typescript/angular/angular-websockets-tutorial/</link>
+      <link>https://tutorialedge.net/post/typescript/angular/angular-websockets-tutorial/</link>
       <pubDate>Sun, 09 Apr 2017 20:52:33 +0100</pubDate>
       
-      <guid>/post/typescript/angular/angular-websockets-tutorial/</guid>
+      <guid>https://tutorialedge.net/post/typescript/angular/angular-websockets-tutorial/</guid>
       <description>
 
 &lt;p&gt;In this tutorial we’ll be looking at how you can implement very simple websockets in an Angular 2+ application.&lt;/p&gt;
@@ -678,10 +678,10 @@ export class AppComponent {
     
     <item>
       <title>Angular Cookies Tutorial</title>
-      <link>/post/typescript/angular/angular-cookies-tutorial/</link>
+      <link>https://tutorialedge.net/post/typescript/angular/angular-cookies-tutorial/</link>
       <pubDate>Sun, 14 Feb 2016 16:11:58 +0530</pubDate>
       
-      <guid>/post/typescript/angular/angular-cookies-tutorial/</guid>
+      <guid>https://tutorialedge.net/post/typescript/angular/angular-cookies-tutorial/</guid>
       <description>
 
 &lt;blockquote&gt;
@@ -783,10 +783,10 @@ this._cookieService.get(&#39;test&#39;);
     
     <item>
       <title>Angular Multiple Environment Configuration Tutorial</title>
-      <link>/post/typescript/angular/angular-environment-configuration-tutorial/</link>
+      <link>https://tutorialedge.net/post/typescript/angular/angular-environment-configuration-tutorial/</link>
       <pubDate>Sun, 14 Feb 2016 16:11:58 +0530</pubDate>
       
-      <guid>/post/typescript/angular/angular-environment-configuration-tutorial/</guid>
+      <guid>https://tutorialedge.net/post/typescript/angular/angular-environment-configuration-tutorial/</guid>
       <description>
 
 &lt;blockquote&gt;
@@ -876,10 +876,10 @@ export const environment = {
     
     <item>
       <title>Angular Observables Tutorial using RxJS</title>
-      <link>/post/typescript/angular/angular-observables-tutorial/</link>
+      <link>https://tutorialedge.net/post/typescript/angular/angular-observables-tutorial/</link>
       <pubDate>Sun, 14 Feb 2016 16:11:58 +0530</pubDate>
       
-      <guid>/post/typescript/angular/angular-observables-tutorial/</guid>
+      <guid>https://tutorialedge.net/post/typescript/angular/angular-observables-tutorial/</guid>
       <description>
 
 &lt;p&gt;The Observable Design pattern is an incredibly powerful paradigm that we can utilize in a wide array of different applications. In this tutorial we’ll be covering how you can implement your own observables in Angular.&lt;/p&gt;
@@ -976,10 +976,10 @@ export class WebsocketService {
     
     <item>
       <title>Angular Routing Tutorial</title>
-      <link>/post/typescript/angular/angular-routing-tutorial/</link>
+      <link>https://tutorialedge.net/post/typescript/angular/angular-routing-tutorial/</link>
       <pubDate>Sun, 14 Feb 2016 16:11:58 +0530</pubDate>
       
-      <guid>/post/typescript/angular/angular-routing-tutorial/</guid>
+      <guid>https://tutorialedge.net/post/typescript/angular/angular-routing-tutorial/</guid>
       <description>
 
 &lt;blockquote&gt;

@@ -1,6 +1,6 @@
 languageCode = "en-us"
 title = "TutorialEdge.net"
-baseURL = "/"
+baseURL = "https://tutorialedge.net"
 
 [indexes] 
     category = "categories" 

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ai on TutorialEdge.net</title>
-    <link>/series/ai/index.xml</link>
+    <link>https://tutorialedge.net/series/ai/index.xml</link>
     <description>Recent content in Ai on TutorialEdge.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/series/ai/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tutorialedge.net/series/ai/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Breadth First Search Algorithm Tutorial with Java</title>
-      <link>/post/general/artificial-intelligence/breadth-first-search-java/</link>
+      <link>https://tutorialedge.net/post/general/artificial-intelligence/breadth-first-search-java/</link>
       <pubDate>Sat, 15 Apr 2017 09:23:35 +0100</pubDate>
       
-      <guid>/post/general/artificial-intelligence/breadth-first-search-java/</guid>
+      <guid>https://tutorialedge.net/post/general/artificial-intelligence/breadth-first-search-java/</guid>
       <description>
 
 &lt;blockquote&gt;
@@ -208,10 +208,10 @@ public class Driver {
     
     <item>
       <title>Depth First Search in Java</title>
-      <link>/post/general/artificial-intelligence/depth-first-search/</link>
+      <link>https://tutorialedge.net/post/general/artificial-intelligence/depth-first-search/</link>
       <pubDate>Sat, 15 Apr 2017 09:23:35 +0100</pubDate>
       
-      <guid>/post/general/artificial-intelligence/depth-first-search/</guid>
+      <guid>https://tutorialedge.net/post/general/artificial-intelligence/depth-first-search/</guid>
       <description>
 
 &lt;h2&gt;Depth First Search&lt;/h2&gt;
@@ -341,10 +341,10 @@ public class Driver {
     
     <item>
       <title>Depth Limited Search in Java</title>
-      <link>/post/general/artificial-intelligence/depth-limited-search-in-java/</link>
+      <link>https://tutorialedge.net/post/general/artificial-intelligence/depth-limited-search-in-java/</link>
       <pubDate>Sat, 15 Apr 2017 09:23:35 +0100</pubDate>
       
-      <guid>/post/general/artificial-intelligence/depth-limited-search-in-java/</guid>
+      <guid>https://tutorialedge.net/post/general/artificial-intelligence/depth-limited-search-in-java/</guid>
       <description>&lt;h2&gt;About Depth Limited Searching&lt;/h2&gt;
 
 &lt;p&gt;Traditional depth first search could be deemed useless in infinite state spaces as they will continue to traverse down the leftmost branch infinitely. This essentially means that the path to the goal node might never be found, in order to combat this we can add a limit to the depth that our search recurses down the tree, this essentially transforms our depth first algorithm into a depth-limited algorithm.&lt;/p&gt;
@@ -453,10 +453,10 @@ public class DepthLimitedSearch extends AbstractSearch {
     
     <item>
       <title>An Introduction To Artificial Intelligence</title>
-      <link>/post/general/artificial-intelligence/introduction-to-artificial-intelligence/</link>
+      <link>https://tutorialedge.net/post/general/artificial-intelligence/introduction-to-artificial-intelligence/</link>
       <pubDate>Sat, 15 Apr 2017 08:11:58 +0100</pubDate>
       
-      <guid>/post/general/artificial-intelligence/introduction-to-artificial-intelligence/</guid>
+      <guid>https://tutorialedge.net/post/general/artificial-intelligence/introduction-to-artificial-intelligence/</guid>
       <description>&lt;p&gt;This is lesson one of the &lt;a href=&#34;https://tutorialedge.net/course/artificial-intelligence&#34;&gt;Artificial Intelligence&lt;/a&gt; course on this website. &lt;/p&gt;
 
 &lt;h2&gt;What is Artificial Intelligence?&lt;/h2&gt;
@@ -499,10 +499,10 @@ public class DepthLimitedSearch extends AbstractSearch {
     
     <item>
       <title>What Is An Intelligent Agent</title>
-      <link>/post/general/artificial-intelligence/what-is-intelligent-agent/</link>
+      <link>https://tutorialedge.net/post/general/artificial-intelligence/what-is-intelligent-agent/</link>
       <pubDate>Sat, 15 Apr 2017 08:10:24 +0100</pubDate>
       
-      <guid>/post/general/artificial-intelligence/what-is-intelligent-agent/</guid>
+      <guid>https://tutorialedge.net/post/general/artificial-intelligence/what-is-intelligent-agent/</guid>
       <description>&lt;p&gt;In Artificial Intelligence, Intelligent agents are the decision makers. They perceive their environment through a series of sensors and act upon this information using actuators.&lt;/p&gt;
 
 &lt;p&gt;A simple example of this is a robot hoover. Through a series of sensors, it can sense whether or not the floor is dirty and based off this information it will then decide whether or not to continue cleaning the floor.&lt;/p&gt;

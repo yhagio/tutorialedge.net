@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lwjgl3 on TutorialEdge.net</title>
-    <link>/tags/lwjgl3/index.xml</link>
+    <link>https://tutorialedge.net/tags/lwjgl3/index.xml</link>
     <description>Recent content in Lwjgl3 on TutorialEdge.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/lwjgl3/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tutorialedge.net/tags/lwjgl3/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Getting Started with LWJGL 3 and OpenGL</title>
-      <link>/post/java/lwjgl3/getting-started-java-lwjgl3/</link>
+      <link>https://tutorialedge.net/post/java/lwjgl3/getting-started-java-lwjgl3/</link>
       <pubDate>Sat, 15 Apr 2017 09:54:44 +0100</pubDate>
       
-      <guid>/post/java/lwjgl3/getting-started-java-lwjgl3/</guid>
+      <guid>https://tutorialedge.net/post/java/lwjgl3/getting-started-java-lwjgl3/</guid>
       <description>&lt;p&gt;&lt;b&gt;&lt;i&gt;Note: This guide is still under construction so please refer back to it often for more articles.&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;
 
 &lt;p&gt;Welcome to the ultimate comprehensive guide to getting started with LWJGL 3 and OpenGL. My main goal for this part of the site is to create the ultimate primer from which game developers can refer to.&lt;/p&gt;
@@ -52,10 +52,10 @@
     
     <item>
       <title>LWJGL 3 Mouse Current Position Tutorial</title>
-      <link>/post/java/lwjgl3/lwjgl-3-mouse-current-position-tutorial/</link>
+      <link>https://tutorialedge.net/post/java/lwjgl3/lwjgl-3-mouse-current-position-tutorial/</link>
       <pubDate>Sat, 15 Apr 2017 09:43:47 +0100</pubDate>
       
-      <guid>/post/java/lwjgl3/lwjgl-3-mouse-current-position-tutorial/</guid>
+      <guid>https://tutorialedge.net/post/java/lwjgl3/lwjgl-3-mouse-current-position-tutorial/</guid>
       <description>&lt;p&gt;In this tutorial I will be showing you how you can obtain the X and Y coordinates of the Mouse cursor in an applications window and print it out to the console.&lt;/p&gt;
 
 &lt;h2&gt;Creating a MouseHandler Class&lt;/h2&gt;
@@ -90,7 +90,7 @@ public class MouseHandler extends GLFWCursorPosCallback {
 
 &lt;p&gt;And that should be it all done, you should now be seeing the cursors position outputted to the console.&lt;/p&gt;
 
-&lt;p&gt;&lt;img style=&#34;width: 100%; height: auto;&#34; src=&#34;/uploads/articles/cursor-pos-console.PNG&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img style=&#34;width: 100%; height: auto;&#34; src=&#34;https://tutorialedge.net/uploads/articles/cursor-pos-console.PNG&#34; /&gt;&lt;/p&gt;
 
 &lt;h2&gt;Main Class&lt;/h2&gt;
 
@@ -225,10 +225,10 @@ public class HelloWorld {
     
     <item>
       <title>LWJGL 3 Keyboard Input Handler Tutorial</title>
-      <link>/post/java/lwjgl3/lwjgl-3-keyboard-input-handler-tutorial/</link>
+      <link>https://tutorialedge.net/post/java/lwjgl3/lwjgl-3-keyboard-input-handler-tutorial/</link>
       <pubDate>Sat, 15 Apr 2017 09:42:07 +0100</pubDate>
       
-      <guid>/post/java/lwjgl3/lwjgl-3-keyboard-input-handler-tutorial/</guid>
+      <guid>https://tutorialedge.net/post/java/lwjgl3/lwjgl-3-keyboard-input-handler-tutorial/</guid>
       <description>&lt;p&gt;This tutorial looks to demonstrate how you can extend the lightweight java game library in order to create your own input handlers which can be used in your games as a means for handling keyboard and mouse input.&lt;/p&gt;
 
 &lt;h2&gt;The Observer Design Pattern&lt;/h2&gt;
@@ -422,10 +422,10 @@ public class HelloWorld {
     
     <item>
       <title>LWJGL 3 Orthographic Camera Tutorial</title>
-      <link>/post/java/lwjgl3/lwjgl-3-orthographic-camera-tutorial/</link>
+      <link>https://tutorialedge.net/post/java/lwjgl3/lwjgl-3-orthographic-camera-tutorial/</link>
       <pubDate>Sat, 15 Apr 2017 09:39:43 +0100</pubDate>
       
-      <guid>/post/java/lwjgl3/lwjgl-3-orthographic-camera-tutorial/</guid>
+      <guid>https://tutorialedge.net/post/java/lwjgl3/lwjgl-3-orthographic-camera-tutorial/</guid>
       <description>&lt;p&gt;This tutorial leads on from some of the topics covered in my previous tutorial : How Matrices are used in Game Development so if you haven’t got a good grounding in matrices then I suggest you check that out first. There are several YouTube videos out there that expertly cover the topic of matrices as well so check them out!&lt;/p&gt;
 
 &lt;h2&gt;Orthographic Projection Camera&lt;/h2&gt;
@@ -536,10 +536,10 @@ void main()
     
     <item>
       <title>Creating a Game Window using GLFW - LWJGL3</title>
-      <link>/post/java/lwjgl3/creating-game-window-lwjgl3-glfw/</link>
+      <link>https://tutorialedge.net/post/java/lwjgl3/creating-game-window-lwjgl3-glfw/</link>
       <pubDate>Sat, 15 Apr 2017 09:29:14 +0100</pubDate>
       
-      <guid>/post/java/lwjgl3/creating-game-window-lwjgl3-glfw/</guid>
+      <guid>https://tutorialedge.net/post/java/lwjgl3/creating-game-window-lwjgl3-glfw/</guid>
       <description>&lt;h2&gt;Creating our Game Window&lt;/h2&gt;
 
 &lt;p&gt;So now that you’ve got the base project set up, you are going to want to start writing some code and making some magic happen on the screen.
@@ -786,10 +786,10 @@ public class Main implements Runnable{
     
     <item>
       <title>LWJGL 3 Main Game Loop Tutorial</title>
-      <link>/post/java/lwjgl3/lwjgl-3-fps-main-game-loop/</link>
+      <link>https://tutorialedge.net/post/java/lwjgl3/lwjgl-3-fps-main-game-loop/</link>
       <pubDate>Sat, 15 Apr 2017 09:29:14 +0100</pubDate>
       
-      <guid>/post/java/lwjgl3/lwjgl-3-fps-main-game-loop/</guid>
+      <guid>https://tutorialedge.net/post/java/lwjgl3/lwjgl-3-fps-main-game-loop/</guid>
       <description>&lt;p&gt;The code featured below is an example of how you create a game loop that is limited to 60 frames per second. This is useful if you have implemented update functions that are bounded by the number of times they are called rather than based on time between updates. &lt;/p&gt;
 
 &lt;h2&gt;The Code&lt;/h2&gt;
@@ -832,10 +832,10 @@ public class Main implements Runnable{
     
     <item>
       <title>Managing Game States With LWJGL 3</title>
-      <link>/post/java/lwjgl3/managing-game-state-with-lwjgl3/</link>
+      <link>https://tutorialedge.net/post/java/lwjgl3/managing-game-state-with-lwjgl3/</link>
       <pubDate>Sat, 15 Apr 2017 08:23:18 +0100</pubDate>
       
-      <guid>/post/java/lwjgl3/managing-game-state-with-lwjgl3/</guid>
+      <guid>https://tutorialedge.net/post/java/lwjgl3/managing-game-state-with-lwjgl3/</guid>
       <description>&lt;p&gt;Managing game states effectively in any game can sometimes be tricky and if not done properly from the outset, can lead to a tangled mess of spaghetti code that’s almost unmaintainable. In this tutorial I’m hopefully going to be helping to prevent any of these problems from arising in your own personal game development projects. For the purpose of this tutorial I’ll be using Java and the OpenGL wrapper library LWJGL3 in order to demonstrate how to effectively manage game states.&lt;/p&gt;
 
 &lt;h2&gt;The Design&lt;/h2&gt;

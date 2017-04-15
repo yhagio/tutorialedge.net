@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Twitter on TutorialEdge.net</title>
-    <link>/tags/twitter/index.xml</link>
+    <link>https://tutorialedge.net/tags/twitter/index.xml</link>
     <description>Recent content in Twitter on TutorialEdge.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/twitter/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tutorialedge.net/tags/twitter/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Writing A Twitter Bot in Golang</title>
-      <link>/post/golang/writing-a-twitter-bot-golang/</link>
+      <link>https://tutorialedge.net/post/golang/writing-a-twitter-bot-golang/</link>
       <pubDate>Sun, 09 Apr 2017 21:33:19 +0100</pubDate>
       
-      <guid>/post/golang/writing-a-twitter-bot-golang/</guid>
+      <guid>https://tutorialedge.net/post/golang/writing-a-twitter-bot-golang/</guid>
       <description>&lt;p&gt;In this tutorial I’m going to be demonstrating how to build a twitter bot using &lt;a href=&#34;https://github.com/dghubble/go-twitter&#34;&gt;go-twitter&lt;/a&gt;, a popular Go client library for the Twitter API.&lt;/p&gt;
 
 &lt;p&gt;I’ll be demonstrating how you can build a go based twitter bot that will be able to do such things as automatically reply to tweets and favourite tweets that contain a specific hashtag.&lt;/p&gt;

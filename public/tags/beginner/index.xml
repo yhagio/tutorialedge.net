@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Beginner on TutorialEdge.net</title>
-    <link>/tags/beginner/index.xml</link>
+    <link>https://tutorialedge.net/tags/beginner/index.xml</link>
     <description>Recent content in Beginner on TutorialEdge.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/beginner/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tutorialedge.net/tags/beginner/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Learning to Code in 2017</title>
-      <link>/post/general/learning-to-code-2017/</link>
+      <link>https://tutorialedge.net/post/general/learning-to-code-2017/</link>
       <pubDate>Sat, 15 Apr 2017 09:53:07 +0100</pubDate>
       
-      <guid>/post/general/learning-to-code-2017/</guid>
+      <guid>https://tutorialedge.net/post/general/learning-to-code-2017/</guid>
       <description>
 
 &lt;p&gt;Programming has changed a hell of a lot in the last few years and we’ve seen multiple new languages pop up all addressing different problem sets and skill levels. The main goal for this article is clarifying some of the basic concepts and guiding you as to where to start if you are wanting to learn how to program in 2017.&lt;/p&gt;
@@ -74,10 +74,10 @@
     
     <item>
       <title>What is a RESTful API?</title>
-      <link>/post/general/what-is-a-rest-api/</link>
+      <link>https://tutorialedge.net/post/general/what-is-a-rest-api/</link>
       <pubDate>Sat, 15 Apr 2017 09:53:07 +0100</pubDate>
       
-      <guid>/post/general/what-is-a-rest-api/</guid>
+      <guid>https://tutorialedge.net/post/general/what-is-a-rest-api/</guid>
       <description>
 
 &lt;p&gt;As a developer I spend a lot of time developing new or improving on existing RESTful APIs and one of the big questions I’ve been asked is - What is a REST API?&lt;/p&gt;

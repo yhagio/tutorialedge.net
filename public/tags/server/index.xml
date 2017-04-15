@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Server on TutorialEdge.net</title>
-    <link>/tags/server/index.xml</link>
+    <link>https://tutorialedge.net/tags/server/index.xml</link>
     <description>Recent content in Server on TutorialEdge.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/server/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tutorialedge.net/tags/server/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Creating A Simple Web Server With Golang</title>
-      <link>/post/golang/creating-simple-web-server-with-golang/</link>
+      <link>https://tutorialedge.net/post/golang/creating-simple-web-server-with-golang/</link>
       <pubDate>Sat, 15 Apr 2017 08:46:33 +0100</pubDate>
       
-      <guid>/post/golang/creating-simple-web-server-with-golang/</guid>
+      <guid>https://tutorialedge.net/post/golang/creating-simple-web-server-with-golang/</guid>
       <description>
 
 &lt;p&gt;In this tutorial we&amp;rsquo;ll be focusing on creating a very simple web server using the &lt;a href=&#34;https://golang.org/pkg/net/http/&#34;&gt;net/http&lt;/a&gt; package. If you&amp;rsquo;ve ever used something like Node&amp;rsquo;s ExpressJS or Python&amp;rsquo;s Tornado, then you should hopefully see some similarities to how things are handled.&lt;/p&gt;

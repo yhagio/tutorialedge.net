@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Unix on TutorialEdge.net</title>
-    <link>/tags/unix/index.xml</link>
+    <link>https://tutorialedge.net/tags/unix/index.xml</link>
     <description>Recent content in Unix on TutorialEdge.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/unix/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tutorialedge.net/tags/unix/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Executing System Commands With Golang</title>
-      <link>/post/golang/executing-system-commands-with-golang/</link>
+      <link>https://tutorialedge.net/post/golang/executing-system-commands-with-golang/</link>
       <pubDate>Sat, 15 Apr 2017 08:47:48 +0100</pubDate>
       
-      <guid>/post/golang/executing-system-commands-with-golang/</guid>
+      <guid>https://tutorialedge.net/post/golang/executing-system-commands-with-golang/</guid>
       <description>
 
 &lt;p&gt;This tutorial is just a quick and simple tutorial as to how to execute system commands using Google&amp;rsquo;s GoLang programming language.&lt;/p&gt;
@@ -100,10 +100,10 @@ func main() {
     
     <item>
       <title>Executing Shell Scripts With NodeJS</title>
-      <link>/post/javascript/nodejs/executing-shell-scripts-with-nodejs/</link>
+      <link>https://tutorialedge.net/post/javascript/nodejs/executing-shell-scripts-with-nodejs/</link>
       <pubDate>Sat, 15 Apr 2017 08:26:02 +0100</pubDate>
       
-      <guid>/post/javascript/nodejs/executing-shell-scripts-with-nodejs/</guid>
+      <guid>https://tutorialedge.net/post/javascript/nodejs/executing-shell-scripts-with-nodejs/</guid>
       <description>&lt;p&gt;One of the problems I’ve been faced with recently is how do I go about executing shell scripts using NodeJS. This essentially allows me to query the status of certain processes and utilize the full power of the unix shell commands. &lt;/p&gt;
 
 &lt;h2&gt;Implementation using NodeJS child_process Module&lt;/h2&gt;

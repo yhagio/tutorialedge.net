@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Golang on TutorialEdge.net</title>
-    <link>/tags/golang/index.xml</link>
+    <link>https://tutorialedge.net/tags/golang/index.xml</link>
     <description>Recent content in Golang on TutorialEdge.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tutorialedge.net/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Reading in Console Input in Golang</title>
-      <link>/post/golang/reading-console-input-golang/</link>
+      <link>https://tutorialedge.net/post/golang/reading-console-input-golang/</link>
       <pubDate>Sat, 15 Apr 2017 08:48:49 +0100</pubDate>
       
-      <guid>/post/golang/reading-console-input-golang/</guid>
+      <guid>https://tutorialedge.net/post/golang/reading-console-input-golang/</guid>
       <description>
 
 &lt;p&gt;This is a quick and simple tutorial on how to read in console text input into your Go (GoLang) program. In this tutorial we&#39;ll be creating the basis for a very simple shell that will take in all user input and simply echo it back to the user.&lt;/p&gt;
@@ -111,10 +111,10 @@ case &#39;a&#39;:
     
     <item>
       <title>Executing System Commands With Golang</title>
-      <link>/post/golang/executing-system-commands-with-golang/</link>
+      <link>https://tutorialedge.net/post/golang/executing-system-commands-with-golang/</link>
       <pubDate>Sat, 15 Apr 2017 08:47:48 +0100</pubDate>
       
-      <guid>/post/golang/executing-system-commands-with-golang/</guid>
+      <guid>https://tutorialedge.net/post/golang/executing-system-commands-with-golang/</guid>
       <description>
 
 &lt;p&gt;This tutorial is just a quick and simple tutorial as to how to execute system commands using Google&amp;rsquo;s GoLang programming language.&lt;/p&gt;
@@ -201,10 +201,10 @@ func main() {
     
     <item>
       <title>Creating A Simple Web Server With Golang</title>
-      <link>/post/golang/creating-simple-web-server-with-golang/</link>
+      <link>https://tutorialedge.net/post/golang/creating-simple-web-server-with-golang/</link>
       <pubDate>Sat, 15 Apr 2017 08:46:33 +0100</pubDate>
       
-      <guid>/post/golang/creating-simple-web-server-with-golang/</guid>
+      <guid>https://tutorialedge.net/post/golang/creating-simple-web-server-with-golang/</guid>
       <description>
 
 &lt;p&gt;In this tutorial we&amp;rsquo;ll be focusing on creating a very simple web server using the &lt;a href=&#34;https://golang.org/pkg/net/http/&#34;&gt;net/http&lt;/a&gt; package. If you&amp;rsquo;ve ever used something like Node&amp;rsquo;s ExpressJS or Python&amp;rsquo;s Tornado, then you should hopefully see some similarities to how things are handled.&lt;/p&gt;
@@ -341,10 +341,10 @@ func main() {
     
     <item>
       <title>Creating a RESTful API With Golang</title>
-      <link>/post/golang/creating-restful-api-with-golang/</link>
+      <link>https://tutorialedge.net/post/golang/creating-restful-api-with-golang/</link>
       <pubDate>Sat, 15 Apr 2017 08:45:15 +0100</pubDate>
       
-      <guid>/post/golang/creating-restful-api-with-golang/</guid>
+      <guid>https://tutorialedge.net/post/golang/creating-restful-api-with-golang/</guid>
       <description>
 
 &lt;h2&gt;REST Architectures&lt;/h2&gt;
@@ -541,10 +541,10 @@ func handleRequests() {
     
     <item>
       <title>Sending Email Using Go And Mailgun</title>
-      <link>/post/golang/sending-email-using-go-and-mailgun/</link>
+      <link>https://tutorialedge.net/post/golang/sending-email-using-go-and-mailgun/</link>
       <pubDate>Sat, 15 Apr 2017 08:44:00 +0100</pubDate>
       
-      <guid>/post/golang/sending-email-using-go-and-mailgun/</guid>
+      <guid>https://tutorialedge.net/post/golang/sending-email-using-go-and-mailgun/</guid>
       <description>&lt;p&gt;In this tutorial I&#39;m going to be demonstrating how you can send mail with Go(Lang) and the mailgun api. Thankfully, mailgun&#39;s API is fantastic and sending mail is incredibly easy once you&#39;ve set everything up properly.&lt;/p&gt;
 
 &lt;h2&gt;Requirements&lt;/h2&gt;
@@ -585,10 +585,10 @@ func main(){
     
     <item>
       <title>Writing A Twitter Bot in Golang</title>
-      <link>/post/golang/writing-a-twitter-bot-golang/</link>
+      <link>https://tutorialedge.net/post/golang/writing-a-twitter-bot-golang/</link>
       <pubDate>Sun, 09 Apr 2017 21:33:19 +0100</pubDate>
       
-      <guid>/post/golang/writing-a-twitter-bot-golang/</guid>
+      <guid>https://tutorialedge.net/post/golang/writing-a-twitter-bot-golang/</guid>
       <description>&lt;p&gt;In this tutorial I’m going to be demonstrating how to build a twitter bot using &lt;a href=&#34;https://github.com/dghubble/go-twitter&#34;&gt;go-twitter&lt;/a&gt;, a popular Go client library for the Twitter API.&lt;/p&gt;
 
 &lt;p&gt;I’ll be demonstrating how you can build a go based twitter bot that will be able to do such things as automatically reply to tweets and favourite tweets that contain a specific hashtag.&lt;/p&gt;

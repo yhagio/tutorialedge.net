@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Csv on TutorialEdge.net</title>
-    <link>/tags/csv/index.xml</link>
+    <link>https://tutorialedge.net/tags/csv/index.xml</link>
     <description>Recent content in Csv on TutorialEdge.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/csv/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tutorialedge.net/tags/csv/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Converting CSV to JSON using NodeJS</title>
-      <link>/post/javascript/nodejs/converting-csv-json-node/</link>
+      <link>https://tutorialedge.net/post/javascript/nodejs/converting-csv-json-node/</link>
       <pubDate>Sun, 09 Apr 2017 21:29:02 +0100</pubDate>
       
-      <guid>/post/javascript/nodejs/converting-csv-json-node/</guid>
+      <guid>https://tutorialedge.net/post/javascript/nodejs/converting-csv-json-node/</guid>
       <description>
 
 &lt;p&gt;In this tutorial I’m going to be showing you how we can create a NodeJS script that takes in a csv file and outputs the contents of that CSV file as JSON.&lt;/p&gt;

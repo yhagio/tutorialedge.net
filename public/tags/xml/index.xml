@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Xml on TutorialEdge.net</title>
-    <link>/tags/xml/index.xml</link>
+    <link>https://tutorialedge.net/tags/xml/index.xml</link>
     <description>Recent content in Xml on TutorialEdge.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/xml/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tutorialedge.net/tags/xml/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Creating and Deleting Directories With NodeJS</title>
-      <link>/post/javascript/nodejs/creating-deleting-directories-with-nodejs/</link>
+      <link>https://tutorialedge.net/post/javascript/nodejs/creating-deleting-directories-with-nodejs/</link>
       <pubDate>Sat, 15 Apr 2017 08:17:02 +0100</pubDate>
       
-      <guid>/post/javascript/nodejs/creating-deleting-directories-with-nodejs/</guid>
+      <guid>https://tutorialedge.net/post/javascript/nodejs/creating-deleting-directories-with-nodejs/</guid>
       <description>
 
 &lt;p&gt;&lt;strong&gt;In this tutorial I’ll be showing you how to create and delete directories using NodeJS&lt;/strong&gt; and we’ll be using the mkdirp and the rimraf node package in order to achieve this.&lt;/p&gt;
@@ -71,10 +71,10 @@ rimraf(&#39;test&#39;, function(err){
     
     <item>
       <title>Editing XML Files With NodeJS</title>
-      <link>/post/javascript/nodejs/editing-xml-files-with-nodejs/</link>
+      <link>https://tutorialedge.net/post/javascript/nodejs/editing-xml-files-with-nodejs/</link>
       <pubDate>Sat, 15 Apr 2017 08:14:10 +0100</pubDate>
       
-      <guid>/post/javascript/nodejs/editing-xml-files-with-nodejs/</guid>
+      <guid>https://tutorialedge.net/post/javascript/nodejs/editing-xml-files-with-nodejs/</guid>
       <description>&lt;p&gt;XML files are still widely used in enterprise programs and being able to manipulate xml files can be incredibly important.&lt;/p&gt;
 
 &lt;h2&gt;XML2JS Node Package&lt;/h2&gt;

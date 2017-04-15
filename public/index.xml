@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>TutorialEdge.net</title>
-    <link>/index.xml</link>
+    <link>https://tutorialedge.net/index.xml</link>
     <description>Recent content on TutorialEdge.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 15 Apr 2017 14:42:47 +0100</lastBuildDate>
-    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tutorialedge.net/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Simple Laravel 5 Pagination</title>
-      <link>/post/php/laravel/simple-laravel-pagination/</link>
+      <link>https://tutorialedge.net/post/php/laravel/simple-laravel-pagination/</link>
       <pubDate>Sat, 15 Apr 2017 14:42:47 +0100</pubDate>
       
-      <guid>/post/php/laravel/simple-laravel-pagination/</guid>
+      <guid>https://tutorialedge.net/post/php/laravel/simple-laravel-pagination/</guid>
       <description>&lt;p&gt;Pagination is a way of splitting up content into several different pages and making content layout far more organized. A must for blogs who wish their front-pages to be small enough to load and yet big enough to showcase the most important tutorials.&lt;/p&gt;
 
 &lt;h2&gt;Modifying the Controller:&lt;/h2&gt;
@@ -67,10 +67,10 @@ class ArticleController extends Controller {
     
     <item>
       <title>AngularJS Promises Tutorial</title>
-      <link>/post/javascript/angularjs/angularjs-promises-tutorial/</link>
+      <link>https://tutorialedge.net/post/javascript/angularjs/angularjs-promises-tutorial/</link>
       <pubDate>Sat, 15 Apr 2017 14:41:31 +0100</pubDate>
       
-      <guid>/post/javascript/angularjs/angularjs-promises-tutorial/</guid>
+      <guid>https://tutorialedge.net/post/javascript/angularjs/angularjs-promises-tutorial/</guid>
       <description>
 
 &lt;p&gt;In this tutorial we&amp;rsquo;ll be looking at how to work with and define promises in AngularJS. For more information check out the official &lt;a href=&#34;https://docs.angularjs.org/api/ng/service/$q&#34;&gt;AngularJS Documentation&lt;/a&gt;&lt;/p&gt;
@@ -180,10 +180,10 @@ angular.module(&#39;root&#39;)
     
     <item>
       <title>Most Important Changes to AngularJS in 1.6</title>
-      <link>/post/javascript/angularjs/most-important-changes-angularjs-1-6/</link>
+      <link>https://tutorialedge.net/post/javascript/angularjs/most-important-changes-angularjs-1-6/</link>
       <pubDate>Sat, 15 Apr 2017 14:31:36 +0100</pubDate>
       
-      <guid>/post/javascript/angularjs/most-important-changes-angularjs-1-6/</guid>
+      <guid>https://tutorialedge.net/post/javascript/angularjs/most-important-changes-angularjs-1-6/</guid>
       <description>
 
 &lt;div class=&#34;github-link&#34;&gt;The changelog with the AngularJS 1.6 release notes can be found here: &lt;a href=&#34;https://github.com/angular/angular.js/blob/master/CHANGELOG.md&#34;&gt;AngularJS 1.6-RC.0&lt;/a&gt;&lt;/div&gt;
@@ -248,20 +248,20 @@ $scope.$watch(&#39;something&#39;, function() {
     
     <item>
       <title>All Courses</title>
-      <link>/courses/</link>
+      <link>https://tutorialedge.net/courses/</link>
       <pubDate>Sat, 15 Apr 2017 09:55:57 +0100</pubDate>
       
-      <guid>/courses/</guid>
+      <guid>https://tutorialedge.net/courses/</guid>
       <description>&lt;p&gt;test&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Python Multithreading Tutorial - Concurrent Programming</title>
-      <link>/post/python/python-multithreading-tutorial/</link>
+      <link>https://tutorialedge.net/post/python/python-multithreading-tutorial/</link>
       <pubDate>Sat, 15 Apr 2017 09:55:57 +0100</pubDate>
       
-      <guid>/post/python/python-multithreading-tutorial/</guid>
+      <guid>https://tutorialedge.net/post/python/python-multithreading-tutorial/</guid>
       <description>
 
 &lt;h2 id=&#34;what-is-multithreading&#34;&gt;What is Multithreading?&lt;/h2&gt;
@@ -335,10 +335,10 @@ def main():
     
     <item>
       <title>Getting Started with LWJGL 3 and OpenGL</title>
-      <link>/post/java/lwjgl3/getting-started-java-lwjgl3/</link>
+      <link>https://tutorialedge.net/post/java/lwjgl3/getting-started-java-lwjgl3/</link>
       <pubDate>Sat, 15 Apr 2017 09:54:44 +0100</pubDate>
       
-      <guid>/post/java/lwjgl3/getting-started-java-lwjgl3/</guid>
+      <guid>https://tutorialedge.net/post/java/lwjgl3/getting-started-java-lwjgl3/</guid>
       <description>&lt;p&gt;&lt;b&gt;&lt;i&gt;Note: This guide is still under construction so please refer back to it often for more articles.&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;
 
 &lt;p&gt;Welcome to the ultimate comprehensive guide to getting started with LWJGL 3 and OpenGL. My main goal for this part of the site is to create the ultimate primer from which game developers can refer to.&lt;/p&gt;
@@ -377,10 +377,10 @@ def main():
     
     <item>
       <title>Bridge Design Pattern Tutorial</title>
-      <link>/post/general/design-patterns/bridge-design-pattern/</link>
+      <link>https://tutorialedge.net/post/general/design-patterns/bridge-design-pattern/</link>
       <pubDate>Sat, 15 Apr 2017 09:53:07 +0100</pubDate>
       
-      <guid>/post/general/design-patterns/bridge-design-pattern/</guid>
+      <guid>https://tutorialedge.net/post/general/design-patterns/bridge-design-pattern/</guid>
       <description>&lt;h2&gt;Intent&lt;/h2&gt;
 
 &lt;p&gt;The intent of the Bridge design pattern is to decouple an abstraction from its implementation so that the two can vary independently. This basically allows you to build upon an abstract class and allows you to build to very different concrete classes based upon this abstract class.&lt;/p&gt;
@@ -540,10 +540,10 @@ public class Driver {
     
     <item>
       <title>Learning to Code in 2017</title>
-      <link>/post/general/learning-to-code-2017/</link>
+      <link>https://tutorialedge.net/post/general/learning-to-code-2017/</link>
       <pubDate>Sat, 15 Apr 2017 09:53:07 +0100</pubDate>
       
-      <guid>/post/general/learning-to-code-2017/</guid>
+      <guid>https://tutorialedge.net/post/general/learning-to-code-2017/</guid>
       <description>
 
 &lt;p&gt;Programming has changed a hell of a lot in the last few years and we’ve seen multiple new languages pop up all addressing different problem sets and skill levels. The main goal for this article is clarifying some of the basic concepts and guiding you as to where to start if you are wanting to learn how to program in 2017.&lt;/p&gt;
@@ -604,10 +604,10 @@ public class Driver {
     
     <item>
       <title>What is a RESTful API?</title>
-      <link>/post/general/what-is-a-rest-api/</link>
+      <link>https://tutorialedge.net/post/general/what-is-a-rest-api/</link>
       <pubDate>Sat, 15 Apr 2017 09:53:07 +0100</pubDate>
       
-      <guid>/post/general/what-is-a-rest-api/</guid>
+      <guid>https://tutorialedge.net/post/general/what-is-a-rest-api/</guid>
       <description>
 
 &lt;p&gt;As a developer I spend a lot of time developing new or improving on existing RESTful APIs and one of the big questions I’ve been asked is - What is a REST API?&lt;/p&gt;
@@ -650,10 +650,10 @@ public class Driver {
     
     <item>
       <title>UDP Client and Server Tutorial in Python</title>
-      <link>/post/python/udp-client-server-python/</link>
+      <link>https://tutorialedge.net/post/python/udp-client-server-python/</link>
       <pubDate>Sat, 15 Apr 2017 09:49:35 +0100</pubDate>
       
-      <guid>/post/python/udp-client-server-python/</guid>
+      <guid>https://tutorialedge.net/post/python/udp-client-server-python/</guid>
       <description>&lt;p&gt;In this tutorial I&#39;ll be showing you exactly how you can set up your own UDP chat server using CPython 3.3 and Python&#39;s Socket module. The end product will be a server that listens for all connections and messages over a specific port and prints out any messages to the console. This could be extended in the future to create a chat server that subsequently broadcasts any messages received to all parties listening for responses.&lt;/p&gt;
 
 &lt;h2&gt;Advantages of UDP in Games Programming&lt;/h2&gt;
@@ -717,10 +717,10 @@ serverSock.bind((UDP_IP_ADDRESS, UDP_PORT_NO))
     
     <item>
       <title>Calculating Keyword Density of a Web Page with Python</title>
-      <link>/post/python/calculating-keyword-density-python/</link>
+      <link>https://tutorialedge.net/post/python/calculating-keyword-density-python/</link>
       <pubDate>Sat, 15 Apr 2017 09:47:55 +0100</pubDate>
       
-      <guid>/post/python/calculating-keyword-density-python/</guid>
+      <guid>https://tutorialedge.net/post/python/calculating-keyword-density-python/</guid>
       <description>&lt;p&gt;In this tutorial I will be showing you how to calculate the keyword density of a web page using the Python programming language. This will be a continuation of the previous tutorial in which we retrieved a web page using Pythons urllib2 Python module.&lt;/p&gt;
 
 &lt;h2&gt;Keyword Density Calculation&lt;/h2&gt;
@@ -808,10 +808,10 @@ if __name__ == &amp;quot;__main__&amp;quot;:
     
     <item>
       <title>Fetching Web Pages In Python Using Urllib2</title>
-      <link>/post/python/fetching-web-pages-python/</link>
+      <link>https://tutorialedge.net/post/python/fetching-web-pages-python/</link>
       <pubDate>Sat, 15 Apr 2017 09:47:01 +0100</pubDate>
       
-      <guid>/post/python/fetching-web-pages-python/</guid>
+      <guid>https://tutorialedge.net/post/python/fetching-web-pages-python/</guid>
       <description>&lt;p&gt;In this tutorial I will be showing you how you can fetch the a webpage using the urllib2 python module. This is a relatively simple process that can be accomplished in 5 lines of code.&lt;/p&gt;
 
 &lt;h2&gt;The Imports&lt;/h2&gt;
@@ -886,10 +886,10 @@ print content
     
     <item>
       <title>Creating a Twitter Bot Using Python and the Twitter API</title>
-      <link>/post/python/creating-twitter-bot-python/</link>
+      <link>https://tutorialedge.net/post/python/creating-twitter-bot-python/</link>
       <pubDate>Sat, 15 Apr 2017 09:45:44 +0100</pubDate>
       
-      <guid>/post/python/creating-twitter-bot-python/</guid>
+      <guid>https://tutorialedge.net/post/python/creating-twitter-bot-python/</guid>
       <description>&lt;p&gt;Twitter bots are a fantastic way to drum up a bit of interest in your brand or website and I&#39;ve had fantastic results myself building up an audience for the Twitter account specifically for this website. This tutorial will hopefully cover everything it takes to construct your own twitter bot that utilizes the RESTful Twitter API. The source code for this Python wrapper for the Twitter API can be found here: &lt;a href=&#34;https://github.com/bear/python-twitter&#34;&gt;Github: Bear&#39;s Python-Twitter Wrapper&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2&gt;Getting Started&lt;/h2&gt;
@@ -1048,10 +1048,10 @@ if __name__ == &amp;quot;__main__&amp;quot;:
     
     <item>
       <title>LWJGL 3 Mouse Current Position Tutorial</title>
-      <link>/post/java/lwjgl3/lwjgl-3-mouse-current-position-tutorial/</link>
+      <link>https://tutorialedge.net/post/java/lwjgl3/lwjgl-3-mouse-current-position-tutorial/</link>
       <pubDate>Sat, 15 Apr 2017 09:43:47 +0100</pubDate>
       
-      <guid>/post/java/lwjgl3/lwjgl-3-mouse-current-position-tutorial/</guid>
+      <guid>https://tutorialedge.net/post/java/lwjgl3/lwjgl-3-mouse-current-position-tutorial/</guid>
       <description>&lt;p&gt;In this tutorial I will be showing you how you can obtain the X and Y coordinates of the Mouse cursor in an applications window and print it out to the console.&lt;/p&gt;
 
 &lt;h2&gt;Creating a MouseHandler Class&lt;/h2&gt;
@@ -1086,7 +1086,7 @@ public class MouseHandler extends GLFWCursorPosCallback {
 
 &lt;p&gt;And that should be it all done, you should now be seeing the cursors position outputted to the console.&lt;/p&gt;
 
-&lt;p&gt;&lt;img style=&#34;width: 100%; height: auto;&#34; src=&#34;/uploads/articles/cursor-pos-console.PNG&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img style=&#34;width: 100%; height: auto;&#34; src=&#34;https://tutorialedge.net/uploads/articles/cursor-pos-console.PNG&#34; /&gt;&lt;/p&gt;
 
 &lt;h2&gt;Main Class&lt;/h2&gt;
 
@@ -1221,10 +1221,10 @@ public class HelloWorld {
     
     <item>
       <title>LWJGL 3 Keyboard Input Handler Tutorial</title>
-      <link>/post/java/lwjgl3/lwjgl-3-keyboard-input-handler-tutorial/</link>
+      <link>https://tutorialedge.net/post/java/lwjgl3/lwjgl-3-keyboard-input-handler-tutorial/</link>
       <pubDate>Sat, 15 Apr 2017 09:42:07 +0100</pubDate>
       
-      <guid>/post/java/lwjgl3/lwjgl-3-keyboard-input-handler-tutorial/</guid>
+      <guid>https://tutorialedge.net/post/java/lwjgl3/lwjgl-3-keyboard-input-handler-tutorial/</guid>
       <description>&lt;p&gt;This tutorial looks to demonstrate how you can extend the lightweight java game library in order to create your own input handlers which can be used in your games as a means for handling keyboard and mouse input.&lt;/p&gt;
 
 &lt;h2&gt;The Observer Design Pattern&lt;/h2&gt;

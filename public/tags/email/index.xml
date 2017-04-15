@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Email on TutorialEdge.net</title>
-    <link>/tags/email/index.xml</link>
+    <link>https://tutorialedge.net/tags/email/index.xml</link>
     <description>Recent content in Email on TutorialEdge.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/email/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tutorialedge.net/tags/email/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Sending Email Using Go And Mailgun</title>
-      <link>/post/golang/sending-email-using-go-and-mailgun/</link>
+      <link>https://tutorialedge.net/post/golang/sending-email-using-go-and-mailgun/</link>
       <pubDate>Sat, 15 Apr 2017 08:44:00 +0100</pubDate>
       
-      <guid>/post/golang/sending-email-using-go-and-mailgun/</guid>
+      <guid>https://tutorialedge.net/post/golang/sending-email-using-go-and-mailgun/</guid>
       <description>&lt;p&gt;In this tutorial I&#39;m going to be demonstrating how you can send mail with Go(Lang) and the mailgun api. Thankfully, mailgun&#39;s API is fantastic and sending mail is incredibly easy once you&#39;ve set everything up properly.&lt;/p&gt;
 
 &lt;h2&gt;Requirements&lt;/h2&gt;

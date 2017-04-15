@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Opengl on TutorialEdge.net</title>
-    <link>/tags/opengl/index.xml</link>
+    <link>https://tutorialedge.net/tags/opengl/index.xml</link>
     <description>Recent content in Opengl on TutorialEdge.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/opengl/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tutorialedge.net/tags/opengl/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Getting Started With Shaders in OpenGL</title>
-      <link>/post/gamedev/opengl/getting-started-with-shaders/</link>
+      <link>https://tutorialedge.net/post/gamedev/opengl/getting-started-with-shaders/</link>
       <pubDate>Sat, 15 Apr 2017 08:50:41 +0100</pubDate>
       
-      <guid>/post/gamedev/opengl/getting-started-with-shaders/</guid>
+      <guid>https://tutorialedge.net/post/gamedev/opengl/getting-started-with-shaders/</guid>
       <description>&lt;p&gt;The modern OpenGL rendering pipeline rely heavily on shaders to process the huge amounts of data that a highly demanding program like a game requires. These shaders are typically written using the OpenGL Shading Language - GLSL, this language is very similar to C in syntax. &lt;/p&gt;
 
 &lt;p&gt;Learning shaders is just about one of the most important things you can do if you are going to get into graphical programming as it enables you to control just about everything when it comes to rendering your models in a game. Each stage grants an extra level of granularity through which you can create a game that looks like no other and whilst graphics don&#39;t make the game, having an aesthetically pleasing game can certainly help it. &lt;/p&gt;

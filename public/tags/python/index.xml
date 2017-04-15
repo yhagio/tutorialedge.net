@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python on TutorialEdge.net</title>
-    <link>/tags/python/index.xml</link>
+    <link>https://tutorialedge.net/tags/python/index.xml</link>
     <description>Recent content in Python on TutorialEdge.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tutorialedge.net/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Python Multithreading Tutorial - Concurrent Programming</title>
-      <link>/post/python/python-multithreading-tutorial/</link>
+      <link>https://tutorialedge.net/post/python/python-multithreading-tutorial/</link>
       <pubDate>Sat, 15 Apr 2017 09:55:57 +0100</pubDate>
       
-      <guid>/post/python/python-multithreading-tutorial/</guid>
+      <guid>https://tutorialedge.net/post/python/python-multithreading-tutorial/</guid>
       <description>
 
 &lt;h2 id=&#34;what-is-multithreading&#34;&gt;What is Multithreading?&lt;/h2&gt;
@@ -87,10 +87,10 @@ def main():
     
     <item>
       <title>UDP Client and Server Tutorial in Python</title>
-      <link>/post/python/udp-client-server-python/</link>
+      <link>https://tutorialedge.net/post/python/udp-client-server-python/</link>
       <pubDate>Sat, 15 Apr 2017 09:49:35 +0100</pubDate>
       
-      <guid>/post/python/udp-client-server-python/</guid>
+      <guid>https://tutorialedge.net/post/python/udp-client-server-python/</guid>
       <description>&lt;p&gt;In this tutorial I&#39;ll be showing you exactly how you can set up your own UDP chat server using CPython 3.3 and Python&#39;s Socket module. The end product will be a server that listens for all connections and messages over a specific port and prints out any messages to the console. This could be extended in the future to create a chat server that subsequently broadcasts any messages received to all parties listening for responses.&lt;/p&gt;
 
 &lt;h2&gt;Advantages of UDP in Games Programming&lt;/h2&gt;
@@ -154,10 +154,10 @@ serverSock.bind((UDP_IP_ADDRESS, UDP_PORT_NO))
     
     <item>
       <title>Calculating Keyword Density of a Web Page with Python</title>
-      <link>/post/python/calculating-keyword-density-python/</link>
+      <link>https://tutorialedge.net/post/python/calculating-keyword-density-python/</link>
       <pubDate>Sat, 15 Apr 2017 09:47:55 +0100</pubDate>
       
-      <guid>/post/python/calculating-keyword-density-python/</guid>
+      <guid>https://tutorialedge.net/post/python/calculating-keyword-density-python/</guid>
       <description>&lt;p&gt;In this tutorial I will be showing you how to calculate the keyword density of a web page using the Python programming language. This will be a continuation of the previous tutorial in which we retrieved a web page using Pythons urllib2 Python module.&lt;/p&gt;
 
 &lt;h2&gt;Keyword Density Calculation&lt;/h2&gt;
@@ -245,10 +245,10 @@ if __name__ == &amp;quot;__main__&amp;quot;:
     
     <item>
       <title>Fetching Web Pages In Python Using Urllib2</title>
-      <link>/post/python/fetching-web-pages-python/</link>
+      <link>https://tutorialedge.net/post/python/fetching-web-pages-python/</link>
       <pubDate>Sat, 15 Apr 2017 09:47:01 +0100</pubDate>
       
-      <guid>/post/python/fetching-web-pages-python/</guid>
+      <guid>https://tutorialedge.net/post/python/fetching-web-pages-python/</guid>
       <description>&lt;p&gt;In this tutorial I will be showing you how you can fetch the a webpage using the urllib2 python module. This is a relatively simple process that can be accomplished in 5 lines of code.&lt;/p&gt;
 
 &lt;h2&gt;The Imports&lt;/h2&gt;
@@ -323,10 +323,10 @@ print content
     
     <item>
       <title>Creating a Twitter Bot Using Python and the Twitter API</title>
-      <link>/post/python/creating-twitter-bot-python/</link>
+      <link>https://tutorialedge.net/post/python/creating-twitter-bot-python/</link>
       <pubDate>Sat, 15 Apr 2017 09:45:44 +0100</pubDate>
       
-      <guid>/post/python/creating-twitter-bot-python/</guid>
+      <guid>https://tutorialedge.net/post/python/creating-twitter-bot-python/</guid>
       <description>&lt;p&gt;Twitter bots are a fantastic way to drum up a bit of interest in your brand or website and I&#39;ve had fantastic results myself building up an audience for the Twitter account specifically for this website. This tutorial will hopefully cover everything it takes to construct your own twitter bot that utilizes the RESTful Twitter API. The source code for this Python wrapper for the Twitter API can be found here: &lt;a href=&#34;https://github.com/bear/python-twitter&#34;&gt;Github: Bear&#39;s Python-Twitter Wrapper&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2&gt;Getting Started&lt;/h2&gt;
@@ -485,10 +485,10 @@ if __name__ == &amp;quot;__main__&amp;quot;:
     
     <item>
       <title>Removing HTML Tags from a String with Python</title>
-      <link>/post/python/removing-html-from-string/</link>
+      <link>https://tutorialedge.net/post/python/removing-html-from-string/</link>
       <pubDate>Sat, 15 Apr 2017 09:38:07 +0100</pubDate>
       
-      <guid>/post/python/removing-html-from-string/</guid>
+      <guid>https://tutorialedge.net/post/python/removing-html-from-string/</guid>
       <description>&lt;p&gt;This tutorial will demonstrate two different methods as to how one can remove html tags from a string such as the one that we retrieved in my previous tutorial on &lt;a href=&#34;http://tutorialedge.net/fetching-web-pages-with-python&#34;&gt;fetching a web page using python.&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2&gt;Method 1&lt;/h2&gt;
@@ -521,10 +521,10 @@ def remove_tags(text):
     
     <item>
       <title>Python Multiprocessing Tutorial</title>
-      <link>/post/python/python-multiprocessing-tutorial/</link>
+      <link>https://tutorialedge.net/post/python/python-multiprocessing-tutorial/</link>
       <pubDate>Sat, 15 Apr 2017 09:28:06 +0100</pubDate>
       
-      <guid>/post/python/python-multiprocessing-tutorial/</guid>
+      <guid>https://tutorialedge.net/post/python/python-multiprocessing-tutorial/</guid>
       <description>&lt;p&gt;Previously we&#39;ve looked at how you can try to achieve concurrency with Python using multithreading, the tutorial of which can be found here: &lt;a href=&#34;http://tutorialedge.net/asynchronous-programming-pythons-threading-module&#34;&gt;Python Multithreading Tutorial&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Now we are going to be having a look at how we can sidestep the limiting Global Interpreter Lock that effectively prevented our multithreaded applications from being truly concurrent by using the multiprocessing Python module. &lt;/p&gt;

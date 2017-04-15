@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Networking on TutorialEdge.net</title>
-    <link>/tags/networking/index.xml</link>
+    <link>https://tutorialedge.net/tags/networking/index.xml</link>
     <description>Recent content in Networking on TutorialEdge.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/networking/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tutorialedge.net/tags/networking/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>UDP Client and Server Tutorial in Python</title>
-      <link>/post/python/udp-client-server-python/</link>
+      <link>https://tutorialedge.net/post/python/udp-client-server-python/</link>
       <pubDate>Sat, 15 Apr 2017 09:49:35 +0100</pubDate>
       
-      <guid>/post/python/udp-client-server-python/</guid>
+      <guid>https://tutorialedge.net/post/python/udp-client-server-python/</guid>
       <description>&lt;p&gt;In this tutorial I&#39;ll be showing you exactly how you can set up your own UDP chat server using CPython 3.3 and Python&#39;s Socket module. The end product will be a server that listens for all connections and messages over a specific port and prints out any messages to the console. This could be extended in the future to create a chat server that subsequently broadcasts any messages received to all parties listening for responses.&lt;/p&gt;
 
 &lt;h2&gt;Advantages of UDP in Games Programming&lt;/h2&gt;
@@ -77,10 +77,10 @@ serverSock.bind((UDP_IP_ADDRESS, UDP_PORT_NO))
     
     <item>
       <title>UDP Client Server Tutorial Java</title>
-      <link>/post/java/udp-client-server-tutorial-java/</link>
+      <link>https://tutorialedge.net/post/java/udp-client-server-tutorial-java/</link>
       <pubDate>Sun, 09 Apr 2017 21:24:02 +0100</pubDate>
       
-      <guid>/post/java/udp-client-server-tutorial-java/</guid>
+      <guid>https://tutorialedge.net/post/java/udp-client-server-tutorial-java/</guid>
       <description>
 
 &lt;p&gt;In this tutorial we’ll be looking at how we can set up a UDP client and server using Java’s DatagramSocket’s.&lt;/p&gt;

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Expressjs on TutorialEdge.net</title>
-    <link>/tags/expressjs/index.xml</link>
+    <link>https://tutorialedge.net/tags/expressjs/index.xml</link>
     <description>Recent content in Expressjs on TutorialEdge.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/expressjs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tutorialedge.net/tags/expressjs/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Building a Webserver using ExpressJS and NodeJS</title>
-      <link>/post/javascript/nodejs/creating-a-webserver-with-nodejs/</link>
+      <link>https://tutorialedge.net/post/javascript/nodejs/creating-a-webserver-with-nodejs/</link>
       <pubDate>Sat, 15 Apr 2017 08:32:01 +0100</pubDate>
       
-      <guid>/post/javascript/nodejs/creating-a-webserver-with-nodejs/</guid>
+      <guid>https://tutorialedge.net/post/javascript/nodejs/creating-a-webserver-with-nodejs/</guid>
       <description>
 
 &lt;p&gt;This is the first tutorial in a series in which we’ll be building up a website for a domain name I’ve been sitting on for a few years now. This is intended to show you everything it takes in order to program your own website using NodeJS and the new Angular2 framework.&lt;/p&gt;

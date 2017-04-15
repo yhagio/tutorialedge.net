@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rest on TutorialEdge.net</title>
-    <link>/tags/rest/index.xml</link>
+    <link>https://tutorialedge.net/tags/rest/index.xml</link>
     <description>Recent content in Rest on TutorialEdge.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/rest/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tutorialedge.net/tags/rest/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Creating a RESTful API With Golang</title>
-      <link>/post/golang/creating-restful-api-with-golang/</link>
+      <link>https://tutorialedge.net/post/golang/creating-restful-api-with-golang/</link>
       <pubDate>Sat, 15 Apr 2017 08:45:15 +0100</pubDate>
       
-      <guid>/post/golang/creating-restful-api-with-golang/</guid>
+      <guid>https://tutorialedge.net/post/golang/creating-restful-api-with-golang/</guid>
       <description>
 
 &lt;h2&gt;REST Architectures&lt;/h2&gt;

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Graphics on TutorialEdge.net</title>
-    <link>/tags/graphics/index.xml</link>
+    <link>https://tutorialedge.net/tags/graphics/index.xml</link>
     <description>Recent content in Graphics on TutorialEdge.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/graphics/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tutorialedge.net/tags/graphics/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>LWJGL 3 Orthographic Camera Tutorial</title>
-      <link>/post/java/lwjgl3/lwjgl-3-orthographic-camera-tutorial/</link>
+      <link>https://tutorialedge.net/post/java/lwjgl3/lwjgl-3-orthographic-camera-tutorial/</link>
       <pubDate>Sat, 15 Apr 2017 09:39:43 +0100</pubDate>
       
-      <guid>/post/java/lwjgl3/lwjgl-3-orthographic-camera-tutorial/</guid>
+      <guid>https://tutorialedge.net/post/java/lwjgl3/lwjgl-3-orthographic-camera-tutorial/</guid>
       <description>&lt;p&gt;This tutorial leads on from some of the topics covered in my previous tutorial : How Matrices are used in Game Development so if you haven’t got a good grounding in matrices then I suggest you check that out first. There are several YouTube videos out there that expertly cover the topic of matrices as well so check them out!&lt;/p&gt;
 
 &lt;h2&gt;Orthographic Projection Camera&lt;/h2&gt;
@@ -124,10 +124,10 @@ void main()
     
     <item>
       <title>Getting Started With Shaders in OpenGL</title>
-      <link>/post/gamedev/opengl/getting-started-with-shaders/</link>
+      <link>https://tutorialedge.net/post/gamedev/opengl/getting-started-with-shaders/</link>
       <pubDate>Sat, 15 Apr 2017 08:50:41 +0100</pubDate>
       
-      <guid>/post/gamedev/opengl/getting-started-with-shaders/</guid>
+      <guid>https://tutorialedge.net/post/gamedev/opengl/getting-started-with-shaders/</guid>
       <description>&lt;p&gt;The modern OpenGL rendering pipeline rely heavily on shaders to process the huge amounts of data that a highly demanding program like a game requires. These shaders are typically written using the OpenGL Shading Language - GLSL, this language is very similar to C in syntax. &lt;/p&gt;
 
 &lt;p&gt;Learning shaders is just about one of the most important things you can do if you are going to get into graphical programming as it enables you to control just about everything when it comes to rendering your models in a game. Each stage grants an extra level of granularity through which you can create a game that looks like no other and whilst graphics don&#39;t make the game, having an aesthetically pleasing game can certainly help it. &lt;/p&gt;
@@ -197,10 +197,10 @@ main()
     
     <item>
       <title>Managing Game States With LWJGL 3</title>
-      <link>/post/java/lwjgl3/managing-game-state-with-lwjgl3/</link>
+      <link>https://tutorialedge.net/post/java/lwjgl3/managing-game-state-with-lwjgl3/</link>
       <pubDate>Sat, 15 Apr 2017 08:23:18 +0100</pubDate>
       
-      <guid>/post/java/lwjgl3/managing-game-state-with-lwjgl3/</guid>
+      <guid>https://tutorialedge.net/post/java/lwjgl3/managing-game-state-with-lwjgl3/</guid>
       <description>&lt;p&gt;Managing game states effectively in any game can sometimes be tricky and if not done properly from the outset, can lead to a tangled mess of spaghetti code that’s almost unmaintainable. In this tutorial I’m hopefully going to be helping to prevent any of these problems from arising in your own personal game development projects. For the purpose of this tutorial I’ll be using Java and the OpenGL wrapper library LWJGL3 in order to demonstrate how to effectively manage game states.&lt;/p&gt;
 
 &lt;h2&gt;The Design&lt;/h2&gt;

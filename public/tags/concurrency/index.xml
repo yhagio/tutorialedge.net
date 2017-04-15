@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Concurrency on TutorialEdge.net</title>
-    <link>/tags/concurrency/index.xml</link>
+    <link>https://tutorialedge.net/tags/concurrency/index.xml</link>
     <description>Recent content in Concurrency on TutorialEdge.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/tags/concurrency/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tutorialedge.net/tags/concurrency/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Python Multithreading Tutorial - Concurrent Programming</title>
-      <link>/post/python/python-multithreading-tutorial/</link>
+      <link>https://tutorialedge.net/post/python/python-multithreading-tutorial/</link>
       <pubDate>Sat, 15 Apr 2017 09:55:57 +0100</pubDate>
       
-      <guid>/post/python/python-multithreading-tutorial/</guid>
+      <guid>https://tutorialedge.net/post/python/python-multithreading-tutorial/</guid>
       <description>
 
 &lt;h2 id=&#34;what-is-multithreading&#34;&gt;What is Multithreading?&lt;/h2&gt;
@@ -87,10 +87,10 @@ def main():
     
     <item>
       <title>Python Multiprocessing Tutorial</title>
-      <link>/post/python/python-multiprocessing-tutorial/</link>
+      <link>https://tutorialedge.net/post/python/python-multiprocessing-tutorial/</link>
       <pubDate>Sat, 15 Apr 2017 09:28:06 +0100</pubDate>
       
-      <guid>/post/python/python-multiprocessing-tutorial/</guid>
+      <guid>https://tutorialedge.net/post/python/python-multiprocessing-tutorial/</guid>
       <description>&lt;p&gt;Previously we&#39;ve looked at how you can try to achieve concurrency with Python using multithreading, the tutorial of which can be found here: &lt;a href=&#34;http://tutorialedge.net/asynchronous-programming-pythons-threading-module&#34;&gt;Python Multithreading Tutorial&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Now we are going to be having a look at how we can sidestep the limiting Global Interpreter Lock that effectively prevented our multithreaded applications from being truly concurrent by using the multiprocessing Python module. &lt;/p&gt;
@@ -172,10 +172,10 @@ if __name__ == &amp;quot;__main__&amp;quot;:
     
     <item>
       <title>Java Multithreading Tutorial Using Callable</title>
-      <link>/post/java/java-multithreading-tutorial-using-callable/</link>
+      <link>https://tutorialedge.net/post/java/java-multithreading-tutorial-using-callable/</link>
       <pubDate>Sat, 15 Apr 2017 08:42:15 +0100</pubDate>
       
-      <guid>/post/java/java-multithreading-tutorial-using-callable/</guid>
+      <guid>https://tutorialedge.net/post/java/java-multithreading-tutorial-using-callable/</guid>
       <description>&lt;p&gt;In this tutorial I’ll be giving you a brief introduction to the world of concurrent programming using the Java programming language. By the end of this tutorial you should hopefully have a feel for what it takes to write simple, multi-threaded java programs and an understanding of how these can help improve the performance of your programs on multithreaded/multicore machines.&lt;/p&gt;
 
 &lt;h2&gt;Requirements&lt;/h2&gt;

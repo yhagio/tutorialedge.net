@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gamedev on TutorialEdge.net</title>
-    <link>/series/gamedev/index.xml</link>
+    <link>https://tutorialedge.net/series/gamedev/index.xml</link>
     <description>Recent content in Gamedev on TutorialEdge.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/series/gamedev/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tutorialedge.net/series/gamedev/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>AABB Collision Detection Tutorial</title>
-      <link>/post/gamedev/aabb-collision-detection-tutorial/</link>
+      <link>https://tutorialedge.net/post/gamedev/aabb-collision-detection-tutorial/</link>
       <pubDate>Sat, 15 Apr 2017 09:30:45 +0100</pubDate>
       
-      <guid>/post/gamedev/aabb-collision-detection-tutorial/</guid>
+      <guid>https://tutorialedge.net/post/gamedev/aabb-collision-detection-tutorial/</guid>
       <description>&lt;p&gt;AABB Collision Detection or &#34;Axis-Aligned Bounding Box&#34; Collision detection as it stands for is the simplest form, or one of the simplest forms of collision detection that you can implement in a 2D game. If you have an object that is axis-aligned, ie. not rotated and doesn&#39;t need tight collision detection then AABB collision detection is the route you are going to want to take.&lt;/p&gt;
 
 &lt;h2&gt;Implementing AABB Collision Detection in Java&lt;/h2&gt;

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on TutorialEdge.net</title>
-    <link>/series/blog/index.xml</link>
+    <link>https://tutorialedge.net/series/blog/index.xml</link>
     <description>Recent content in Blog on TutorialEdge.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/series/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tutorialedge.net/series/blog/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Migrating to Hugo</title>
-      <link>/post/blog/migrating-to-hugo/</link>
+      <link>https://tutorialedge.net/post/blog/migrating-to-hugo/</link>
       <pubDate>Sun, 14 Feb 2016 16:11:58 +0530</pubDate>
       
-      <guid>/post/blog/migrating-to-hugo/</guid>
+      <guid>https://tutorialedge.net/post/blog/migrating-to-hugo/</guid>
       <description>
 
 &lt;p&gt;If you&amp;rsquo;ve frequented this site in the past you should hopefully have noticed a huge change to the way the site looks and hopefully the speed at which the site serves content. Over the past 2 weeks I&amp;rsquo;ve been working with a static site tool, similar to that of Jekyll, called Hugo.&lt;/p&gt;
