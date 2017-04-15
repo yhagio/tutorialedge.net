@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Unix on TutorialEdge.net</title>
+    <link>/tags/unix/index.xml</link>
+    <description>Recent content in Unix on TutorialEdge.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="/tags/unix/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Executing System Commands With Golang</title>
+      <link>/post/golang/executing-system-commands-with-golang/</link>
+      <pubDate>Sat, 15 Apr 2017 08:47:48 +0100</pubDate>
+      
+      <guid>/post/golang/executing-system-commands-with-golang/</guid>
+      <description>
+
+&lt;p&gt;This tutorial is just a quick and simple tutorial as to how to execute system commands using Google&amp;rsquo;s GoLang programming language.&lt;/p&gt;
+
+&lt;h2 id=&#34;official-documentation&#34;&gt;Official Documentation&lt;/h2&gt;
+
+&lt;p&gt;The official documentation for executing system commands can be found under the exec package: &lt;a href=&#34;https://golang.org/pkg/os/exec/&#34;&gt;Exec Package&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;cross-compatibility-issues&#34;&gt;Cross Compatibility Issues&lt;/h2&gt;
+
+&lt;p&gt;Please note that some of these commands may not work on your operating system. If you are trying to write code that is compatible on multiple platforms then it would be wise to select commands that only feature on all platforms. If this is unachievable then I recommend you add conditional logic to your program that executes a different system command depending on the system it&amp;rsquo;s executing on top of.&lt;/p&gt;
+
+&lt;h4 id=&#34;checking-current-operating-system&#34;&gt;Checking Current Operating System&lt;/h4&gt;
+
+&lt;p&gt;In order to check what operating system our code is running on we can use the runtime package and check the GOOS constant. This will return the operating system target:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;    if runtime.GOOS == &amp;quot;windows&amp;quot; {
+		fmt.Println(&amp;quot;Can&#39;t Execute this on a windows machine&amp;quot;)
+	} else {
+		execute()
+	}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The full list of GOOS variables can be found here: &lt;a href=&#34;https://golang.org/pkg/runtime/internal/sys/#GOOS&#34;&gt;Sys Package&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;implementation&#34;&gt;Implementation&lt;/h2&gt;
+
+&lt;p&gt;Below is the absolute bare essentials as to how to execute a system command, I&amp;rsquo;ve stripped out all the error handling just to keep it simple.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import (
+	&amp;quot;fmt&amp;quot;
+	&amp;quot;os/exec&amp;quot;
+	&amp;quot;runtime&amp;quot;
+)
+
+func execute() {
+
+  // here we perform the pwd command.
+  // we can store the output of this in our out variable 
+  // and catch any errors in err
+	out, err := exec.Command(&amp;quot;pwd&amp;quot;).Output()
+
+  // if there is an error with our execution
+  // handle it here
+	if err != nil {
+		fmt.Printf(&amp;quot;%s&amp;quot;, err)
+	}
+
+	fmt.Println(&amp;quot;Command Successfully Executed&amp;quot;)
+  // as the out variable defined above is of type []byte we need to convert
+  // this to a string or else we will see garbage printed out in our console
+  // this is how we convert it to a string
+	output := string(out[:])
+
+  // once we have converted it to a string we can then output it.
+	fmt.Println(output)
+}
+
+func main() {
+
+	fmt.Println(&amp;quot;Simple Shell&amp;quot;)
+	fmt.Println(&amp;quot;---------------------&amp;quot;)
+
+	if runtime.GOOS == &amp;quot;windows&amp;quot; {
+		fmt.Println(&amp;quot;Can&#39;t Execute this on a windows machine&amp;quot;)
+	} else {
+		execute()
+	}
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;exit-codes&#34;&gt;Exit Codes&lt;/h2&gt;
+
+&lt;p&gt;// to be added&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;If you found this tutorial useful or wish to ask anything extra then please feel free to do so in the comments section below!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Executing Shell Scripts With NodeJS</title>
+      <link>/post/javascript/nodejs/executing-shell-scripts-with-nodejs/</link>
+      <pubDate>Sat, 15 Apr 2017 08:26:02 +0100</pubDate>
+      
+      <guid>/post/javascript/nodejs/executing-shell-scripts-with-nodejs/</guid>
+      <description>&lt;p&gt;One of the problems I’ve been faced with recently is how do I go about executing shell scripts using NodeJS. This essentially allows me to query the status of certain processes and utilize the full power of the unix shell commands. &lt;/p&gt;
+
+&lt;h2&gt;Implementation using NodeJS child_process Module&lt;/h2&gt;
+
+&lt;p&gt;Node thankfully already has a module which is designed specifically for executing shell scripts and can be found &lt;a href=&#34;https://nodejs.org/api/child_process.html&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; in the documentation.&lt;/p&gt;
+
+&lt;p&gt;This module essentially creates a child process in which we can execute our shell script and also sets everything up for us so that we can utilize stdin, stdout and stderr within our NodeJS application. &lt;/p&gt;
+
+&lt;p&gt;In the below example you’ll see how we can utilize callbacks in order to access the data from stdout and stderr and subsequently view any errors and output our shell scripts output.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=”language-javascript”&gt;
+var exec = require(&#39;child_process&#39;).exec, child;
+var testscript = exec(&#39;sh myscript.sh /directory&#39;);
+
+testscript.stdout.on(&#39;data&#39;, function(data){
+    console.log(data); 
+    sendBackInfo();
+});
+
+testscript.stderr.on(&#39;data&#39;, function(data){
+    console.log(data);
+    triggerErrorStuff(); 
+});
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

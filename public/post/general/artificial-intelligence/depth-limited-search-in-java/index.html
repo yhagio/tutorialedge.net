@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Depth Limited Search in Java</title>
+	
+	
+	
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/monokai.min.css">
+	<link rel="stylesheet" href="/css/materialize.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<meta name="generator" content="Hugo 0.19" />
+
+	
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+	<script src="/js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<script async>
+			(function (i, s, o, g, r, a, m) {
+					i['GoogleAnalyticsObject'] = r;
+					i[r] = i[r] || function () {
+							(i[r].q = i[r].q || []).push(arguments)
+					}, i[r].l = 1 * new Date();
+					a = s.createElement(o),
+					m = s.getElementsByTagName(o)[0];
+					a.async = 1;
+					a.src = g;
+					m.parentNode.insertBefore(a, m)
+			})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+			ga('create', 'UA-10255990-23', 'auto');
+			ga('send', 'pageview');
+	</script>
+</head>
+<body>
+
+	<header>
+		<nav>
+			<div class="nav-wrapper">
+				<a class="brand-logo" href="/">TutorialEdge.net</a>
+				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><a href="//about/">About</a></li>
+					<li><a href="//get-involved/">Get Involved</a></li>
+					<li><a href="//courses/">Courses</a></li>
+					<li><a href="//post/">Tutorials</a></li>
+				</ul>
+				<ul class="side-nav" id="mobile-demo">
+					<li><a href="//about/">About</a></li>
+					<li><a href="//get-involved/">Get Involved</a></li>
+					<li><a href="//courses/">Courses</a></li>
+					<li><a href="//post/">Tutorials</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+<div class="title-bar">
+	<div class="container">
+		<h1>Depth Limited Search in Java</h1>
+		<p>depth limited search demonstrated in java programming language. </p>
+		
+		<a href="/tags/ai"><div class="chip">ai</div></a>
+		
+		<a href="/tags/java"><div class="chip">java</div></a>
+		
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col l2">
+			<div class="sidebar">
+     
+    <h3>ai</h3>
+    <ul> 
+      
+        <li><a href="/post/general/artificial-intelligence/breadth-first-search-java/">Breadth First Search Algorithm Tutorial with Java</a></li>
+      
+        <li><a href="/post/general/artificial-intelligence/depth-first-search/">Depth First Search in Java</a></li>
+      
+        <li><a href="/post/general/artificial-intelligence/depth-limited-search-in-java/">Depth Limited Search in Java</a></li>
+      
+        <li><a href="/post/general/artificial-intelligence/introduction-to-artificial-intelligence/">An Introduction To Artificial Intelligence</a></li>
+      
+        <li><a href="/post/general/artificial-intelligence/what-is-intelligent-agent/">What Is An Intelligent Agent</a></li>
+      
+    </ul>
+    
+
+</div> 
+		</div>
+		<div class="col l8">	
+			<article>
+				<div class="info">Author: Elliot Forbes | Posted at: 15.04.2017 09:23</div>
+				<div>
+					<h2>About Depth Limited Searching</h2>
+
+<p>Traditional depth first search could be deemed useless in infinite state spaces as they will continue to traverse down the leftmost branch infinitely. This essentially means that the path to the goal node might never be found, in order to combat this we can add a limit to the depth that our search recurses down the tree, this essentially transforms our depth first algorithm into a depth-limited algorithm.</p>
+
+<p>This algorithm can fail in two different ways. First is that no goal node is found in the graph and the other is the cutoff type of failure in which no goal node is found within the set depth.</p>
+
+<h2>Walkthrough</h2>
+
+<p>This algorithm basically follows the same methods as the depth first search.</p>
+
+<ol>
+<li>Node 1 is added to the stack
+
+<ol>
+<li>If Node 1 is not the goal node then add Node 2 to the stack</li>
+<li>If Node 2 is not the goal node then add Node 4 to the stack</li>
+<li>If Node 4 is not the goal node and depth limit has been reached then revert to nearest Node with unexplored children and add these to stack</li>
+</ol></li>
+<li>continue until all nodes within depth limit have been searched or goal node has been found.</li>
+</ol>
+
+<p><strong>Depth First Search:</strong></p>
+
+<blockquote>
+<p>For more information about the search based algorithm that this is based off, you can check out this tutorial here: <a href="http://tutorialedge.net/depth-first-search-in-java">Depth First Search in Java</a></p>
+</blockquote>
+
+<h2>The Implementation:</h2>
+
+<p>Below you’ll find an implementation of a Depth-Limited search class which is built as an extension of the AbstractSearch java class.</p>
+
+<h2>AbstractSearch Java Class:</h2>
+
+<pre><code class="language-java">/**
+* AbstractSearch.
+*/
+public abstract class AbstractSearch {
+
+   Node startNode;
+   Node goalNode;
+
+   public AbstractSearch(Node startNode, Node goalNode){
+       this.startNode = startNode;
+       this.goalNode = goalNode;
+   }
+
+   public abstract boolean execute();
+
+}
+</code></pre>
+
+<h2>Depth Limited Search Class</h2>
+
+<pre><code class="language-java">import java.util.ArrayList;
+import java.util.Stack;
+
+/**
+* Depth Limited Search Class
+*/
+public class DepthLimitedSearch extends AbstractSearch {
+
+   Node startNode;
+   Node goalNode;
+   int depth = 0;
+   int limit = 2;
+
+   public DepthLimitedSearch(Node start, Node goalNode){
+       super(start, goalNode);
+       this.startNode = start;
+       this.goalNode = goalNode;
+   }
+
+   public boolean execute(){
+       Stack&lt;node&gt; nodeStack = new Stack&lt;&gt;();
+       ArrayList&lt;node&gt; visitedNodes = new ArrayList&lt;&gt;();
+       nodeStack.add(startNode);
+
+       depth = 0;
+
+       while(!nodeStack.isEmpty()){
+           if(depth &lt;= limit) {
+               Node current = nodeStack.pop();
+               if (current.equals(goalNode)) {
+                   System.out.print(visitedNodes);
+                   System.out.println(&quot;Goal node found&quot;);
+                   return true;
+               } else {
+                   visitedNodes.add(current);
+                   nodeStack.addAll(current.getChildren());
+                   depth++;
+
+               }
+           } else {
+               System.out.println(&quot;Goal Node not found within depth limit&quot;);
+               return false;
+           }
+       }
+
+
+       return false;
+   }
+}
+</code></pre>
+
+				</div>
+				<div>
+					<div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://tutorialedge.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+				</div>
+			</article>
+		</div>
+
+		<div class="col l2">
+			<div class="wrapper">
+    <div class="container">
+      <img src="https://twitter.com/Elliot_F/profile_image?size=original" alt="Elliot Forbes" class="trophy" />
+      <h1>Elliot Forbes</h1>
+      <span class="score">Follow me:</span>
+  
+      <div class="buttons">
+          <a href="https://twitter.com/Elliot_F" target="_blank" class="button light">
+              <span><i class="ion ion-social-twitter"></i> Twitter</span>
+          </a>
+      </div>
+    </div>
+</div>
+
+		</div>
+		
+	</div>
+</div>
+
+<div class="join-us">
+	<div class="container">
+		<div class="row">
+			<div class="col l8">
+				<h5>Become a Contributor!</h5>
+				<p>Think you could improve the articles on this site? Feel free to submit a pull request to the sites github repo.</p>
+			</div>
+			<div class="col l4">
+				<a href="https://github.com/elliotforbes/tutorialedge-v2"><button class="btn valign">Fork Our Repo</button></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="page-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col l6 s12">
+				<h5>TutorialEdge.net</h5>
+				<p class="text-lighten-4">This site is dedicated to bringing you the highest quality courses designed to teach you the ins and outs of programming with various frameworks and programming languages.</p>
+			</div>
+			<div class="col l4 offset-l2 s12">
+				<h5>Links</h5>
+				<ul>
+					<li><a class="text-lighten-3" href="/tutorials">All Tutorials</a></li>
+					<li><a class="text-lighten-3" href="/books">Books</a></li>
+					<li><a class="text-lighten-3" href="/contact">Contact</a></li>
+					<li><a class="text-lighten-3" href="/courses">Courses</a></li>
+					<li><a class="text-lighten-3" href="/blog">Blog</a></li>
+					<li><a class="text-lighten-3" href="/about">About</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer-copyright">
+		<div class="container">
+		TutorialEdge © 2016 Copyright 
+		</div>
+	</div>
+</footer>
+
+<script>
+$(".button-collapse").sideNav();
+</script>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Reading and Writing Files With NodeJS</title>
+	
+	
+	
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/monokai.min.css">
+	<link rel="stylesheet" href="/css/materialize.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<meta name="generator" content="Hugo 0.19" />
+
+	
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+	<script src="/js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<script async>
+			(function (i, s, o, g, r, a, m) {
+					i['GoogleAnalyticsObject'] = r;
+					i[r] = i[r] || function () {
+							(i[r].q = i[r].q || []).push(arguments)
+					}, i[r].l = 1 * new Date();
+					a = s.createElement(o),
+					m = s.getElementsByTagName(o)[0];
+					a.async = 1;
+					a.src = g;
+					m.parentNode.insertBefore(a, m)
+			})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+			ga('create', 'UA-10255990-23', 'auto');
+			ga('send', 'pageview');
+	</script>
+</head>
+<body>
+
+	<header>
+		<nav>
+			<div class="nav-wrapper">
+				<a class="brand-logo" href="/">TutorialEdge.net</a>
+				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><a href="//about/">About</a></li>
+					<li><a href="//get-involved/">Get Involved</a></li>
+					<li><a href="//courses/">Courses</a></li>
+					<li><a href="//post/">Tutorials</a></li>
+				</ul>
+				<ul class="side-nav" id="mobile-demo">
+					<li><a href="//about/">About</a></li>
+					<li><a href="//get-involved/">Get Involved</a></li>
+					<li><a href="//courses/">Courses</a></li>
+					<li><a href="//post/">Tutorials</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+<div class="title-bar">
+	<div class="container">
+		<h1>Reading and Writing Files With NodeJS</h1>
+		<p>In this tutorial I’m going to be showing you exactly how we can read and write files on our local filesystem using NodeJS.</p>
+		
+		<a href="/tags/javascript"><div class="chip">javascript</div></a>
+		
+		<a href="/tags/nodejs"><div class="chip">nodejs</div></a>
+		
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col l2">
+			<div class="sidebar">
+     
+    <h3>nodejs</h3>
+    <ul> 
+      
+        <li><a href="/post/javascript/nodejs/keeping-node-apps-running-forever-pm2/">Keeping NodeJS Applications Running Forever Using PM2</a></li>
+      
+        <li><a href="/post/javascript/nodejs/creating-a-webserver-with-nodejs/">Building a Webserver using ExpressJS and NodeJS</a></li>
+      
+        <li><a href="/post/javascript/nodejs/executing-shell-scripts-with-nodejs/">Executing Shell Scripts With NodeJS</a></li>
+      
+        <li><a href="/post/javascript/nodejs/reading-writing-files-with-nodejs/">Reading and Writing Files With NodeJS</a></li>
+      
+        <li><a href="/post/javascript/nodejs/creating-deleting-directories-with-nodejs/">Creating and Deleting Directories With NodeJS</a></li>
+      
+        <li><a href="/post/javascript/nodejs/editing-xml-files-with-nodejs/">Editing XML Files With NodeJS</a></li>
+      
+        <li><a href="/post/javascript/nodejs/converting-csv-json-node/">Converting CSV to JSON using NodeJS</a></li>
+      
+        <li><a href="/post/javascript/nodejs/building-software-using-microservice-architecture/">Building Software using A Microservice Based Architecture</a></li>
+      
+        <li><a href="/post/javascript/nodejs/writing-your-own-logging-system-nodejs/">Writing Your Own Logging System NodeJS</a></li>
+      
+        <li><a href="/post/javascript/nodejs/monitoring-server-stats-with-nodejs/">Monitoring Server Stats With NodeJS</a></li>
+      
+    </ul>
+    
+
+</div> 
+		</div>
+		<div class="col l8">	
+			<article>
+				<div class="info">Author: Elliot Forbes | Posted at: 15.04.2017 08:20</div>
+				<div>
+					<p><strong>In this tutorial</strong> I’m going to be showing you exactly how we can read and write files on our local filesystem using NodeJS.</p>
+
+<h2 id=”reading-from-files”>Reading From Files</h2>
+
+<p>Being able to read from files on your local file system can be hugely useful and there are a number of different things you can build on top of this. A log reader, importing information from spreadsheets and xml files or whatever you can think of, being able to read from files is hugely useful.</p>
+
+<h5>The FS Package</h5>
+
+<p>Create a new file called index.js and add the following: </p>
+
+<pre><code class="language-js">var fs = require('fs');
+
+fs.readFile('temp.txt', function(err, buf) {
+  console.log(buf.toString());
+});
+</code></pre>
+
+<p>Create a temp.txt within the same directory and write in it anything you’d like. Run your script using node index.js and you should see in the console the contents of your file.</p>
+
+<h5>Understanding the Code</h5>
+
+<p>We’ll step through this with comments.</p>
+
+<pre><code class="language-js">var fs = require('fs');
+</code></pre>
+
+<p>This line does the job of importing the fs package and allowing us to utilize it within our own code.</p>
+
+<pre><code class="language-js">fs.readFile('temp.txt', function(err, buf) {
+  console.log(buf.toString());
+});
+</code></pre>
+
+<p>This calls the readFile function asynchronously and then prints the contents of the file to the console.</p>
+
+<h5>Returning a Buffer?</h5>
+
+<p>If the above code hasn’t worked as expected and you are seeing a buffer being printed out in the terminal then it might be an idea to specify the files encoding. We can do this like so: </p>
+
+<pre><code class="language-js">var fs = require('fs');
+
+fs.readFile('temp.txt', 'utf-8' ,function(err, buf) {
+  console.log(buf.toString());
+});
+</code></pre>
+
+<h2 id=”writing-to-files”>Writing To Files</h2>
+
+<p>Now that you’ve got the reading of files down, it’s time to start modifying these files. To do this we’ll be using the same FS package we used in part one. </p>
+
+<h5>The Code:</h5>
+
+<p>Again create a new file within your current directory and call it write.js and then add the following javascript code:</p>
+
+<pre><code class="language-js">var fs = require('fs');
+
+var data = &quot;New File Contents&quot;;
+
+fs.writeFile('temp.txt', data, function(err, data){
+    if (err) console.log(err);
+    console.log(&quot;Successfully Written to File.&quot;);
+});
+</code></pre>
+
+<p>Run this code by executing node write.js in the terminal and then open up temp.txt in your editor, you should now see the new contents of the file. </p>
+
+				</div>
+				<div>
+					<div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://tutorialedge.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+				</div>
+			</article>
+		</div>
+
+		<div class="col l2">
+			<div class="wrapper">
+    <div class="container">
+      <img src="https://twitter.com/Elliot_F/profile_image?size=original" alt="Elliot Forbes" class="trophy" />
+      <h1>Elliot Forbes</h1>
+      <span class="score">Follow me:</span>
+  
+      <div class="buttons">
+          <a href="https://twitter.com/Elliot_F" target="_blank" class="button light">
+              <span><i class="ion ion-social-twitter"></i> Twitter</span>
+          </a>
+      </div>
+    </div>
+</div>
+
+		</div>
+		
+	</div>
+</div>
+
+<div class="join-us">
+	<div class="container">
+		<div class="row">
+			<div class="col l8">
+				<h5>Become a Contributor!</h5>
+				<p>Think you could improve the articles on this site? Feel free to submit a pull request to the sites github repo.</p>
+			</div>
+			<div class="col l4">
+				<a href="https://github.com/elliotforbes/tutorialedge-v2"><button class="btn valign">Fork Our Repo</button></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="page-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col l6 s12">
+				<h5>TutorialEdge.net</h5>
+				<p class="text-lighten-4">This site is dedicated to bringing you the highest quality courses designed to teach you the ins and outs of programming with various frameworks and programming languages.</p>
+			</div>
+			<div class="col l4 offset-l2 s12">
+				<h5>Links</h5>
+				<ul>
+					<li><a class="text-lighten-3" href="/tutorials">All Tutorials</a></li>
+					<li><a class="text-lighten-3" href="/books">Books</a></li>
+					<li><a class="text-lighten-3" href="/contact">Contact</a></li>
+					<li><a class="text-lighten-3" href="/courses">Courses</a></li>
+					<li><a class="text-lighten-3" href="/blog">Blog</a></li>
+					<li><a class="text-lighten-3" href="/about">About</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer-copyright">
+		<div class="container">
+		TutorialEdge © 2016 Copyright 
+		</div>
+	</div>
+</footer>
+
+<script>
+$(".button-collapse").sideNav();
+</script>

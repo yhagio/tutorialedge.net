@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Parsing XML Files With Golang</title>
+	
+	
+	
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/monokai.min.css">
+	<link rel="stylesheet" href="/css/materialize.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<meta name="generator" content="Hugo 0.19" />
+
+	
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+	<script src="/js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<script async>
+			(function (i, s, o, g, r, a, m) {
+					i['GoogleAnalyticsObject'] = r;
+					i[r] = i[r] || function () {
+							(i[r].q = i[r].q || []).push(arguments)
+					}, i[r].l = 1 * new Date();
+					a = s.createElement(o),
+					m = s.getElementsByTagName(o)[0];
+					a.async = 1;
+					a.src = g;
+					m.parentNode.insertBefore(a, m)
+			})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+			ga('create', 'UA-10255990-23', 'auto');
+			ga('send', 'pageview');
+	</script>
+</head>
+<body>
+
+	<header>
+		<nav>
+			<div class="nav-wrapper">
+				<a class="brand-logo" href="/">TutorialEdge.net</a>
+				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><a href="//about/">About</a></li>
+					<li><a href="//get-involved/">Get Involved</a></li>
+					<li><a href="//courses/">Courses</a></li>
+					<li><a href="//post/">Tutorials</a></li>
+				</ul>
+				<ul class="side-nav" id="mobile-demo">
+					<li><a href="//about/">About</a></li>
+					<li><a href="//get-involved/">Get Involved</a></li>
+					<li><a href="//courses/">Courses</a></li>
+					<li><a href="//post/">Tutorials</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+<div class="title-bar">
+	<div class="container">
+		<h1>Parsing XML Files With Golang</h1>
+		<p>In this tutorial we examine how to read in files and unmarshal them using the xml package in go.</p>
+		
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col l2">
+			<div class="sidebar">
+     
+    <h3>golang</h3>
+    <ul> 
+      
+        <li><a href="/post/golang/reading-console-input-golang/">Reading in Console Input in Golang</a></li>
+      
+        <li><a href="/post/golang/executing-system-commands-with-golang/">Executing System Commands With Golang</a></li>
+      
+        <li><a href="/post/golang/creating-simple-web-server-with-golang/">Creating A Simple Web Server With Golang</a></li>
+      
+        <li><a href="/post/golang/creating-restful-api-with-golang/">Creating a RESTful API With Golang</a></li>
+      
+        <li><a href="/post/golang/sending-email-using-go-and-mailgun/">Sending Email Using Go And Mailgun</a></li>
+      
+        <li><a href="/post/golang/implementing-bubble-sort-with-golang/">Implementing the Bubble Sort Algorithm using Golang</a></li>
+      
+        <li><a href="/post/golang/writing-a-twitter-bot-golang/">Writing A Twitter Bot in Golang</a></li>
+      
+        <li><a href="/post/golang/golang-mysql-tutorial/">Golang MySQL Tutorial</a></li>
+      
+        <li><a href="/post/golang/golang-integer-string-conversion-tutorial/">Golang Integer String Conversion Tutorial</a></li>
+      
+        <li><a href="/post/golang/parsing-xml-with-golang/">Parsing XML Files With Golang</a></li>
+      
+    </ul>
+    
+
+</div> 
+		</div>
+		<div class="col l8">	
+			<article>
+				<div class="info">Author: Elliot Forbes | Posted at: 09.04.2017 21:07</div>
+				<div>
+					
+
+<p>In this tutorial we look at how you can effectively read in an XML file from the file system and then parse this file using Go’s <a href="https://golang.org/pkg/encoding/xml/">“encoding/xml” Package</a>. We’ll look at how you can traverse multiple nested xml elements and then we’ll simply print this out to our terminal window.</p>
+
+<h2 id="our-example-xml-file">Our Example XML File</h2>
+
+<p>So to begin with, we’ll need an xml file that we can traverse.</p>
+
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;users&gt;
+  &lt;user type=&quot;admin&quot;&gt;
+    &lt;name&gt;Elliot&lt;/name&gt;
+    &lt;social&gt;
+      &lt;facebook&gt;https://facebook.com&lt;/facebook&gt;
+      &lt;twitter&gt;https://twitter.com&lt;/twitter&gt;
+      &lt;youtube&gt;https://youtube.com&lt;/youtube&gt;
+    &lt;/social&gt;
+  &lt;/user&gt;  
+  &lt;user type=&quot;reader&quot;&gt;
+    &lt;name&gt;Fraser&lt;/name&gt;
+    &lt;social&gt;
+      &lt;facebook&gt;https://facebook.com&lt;/facebook&gt;
+      &lt;twitter&gt;https://twitter.com&lt;/twitter&gt;
+      &lt;youtube&gt;https://youtube.com&lt;/youtube&gt;
+    &lt;/social&gt;
+  &lt;/user&gt;  
+&lt;/users&gt;
+</code></pre>
+
+<p>You’ll see the above xml has attributes set on the user tags, nested elements and if you are able to parse this then you should, by extension, be able to parse any xml file regardless of size.</p>
+
+<h2 id="reading-in-our-file">Reading in our File</h2>
+
+<p>The first obstacle we’ll have to overcome is reading this file into memory. We can do this by using a combination of the “os” package and the “io/ioutil” package.</p>
+
+<pre><code>package main
+
+
+import (
+	&quot;fmt&quot;
+	&quot;io/ioutil&quot;
+	&quot;os&quot;
+)
+
+
+func main() {
+
+
+	// Open our xmlFile
+	xmlFile, err := os.Open(&quot;users.xml&quot;)
+	// if we os.Open returns an error then handle it
+	if err != nil {
+		fmt.Println(err)
+	}
+
+
+	fmt.Println(&quot;Successfully Opened users.xml&quot;)
+	// defer the closing of our xmlFile so that we can parse it later on
+	defer xmlFile.Close()
+
+
+}
+</code></pre>
+
+<h2 id="defining-our-structs">Defining our Structs</h2>
+
+<p>Before we can parse our xml file, we need to define some structs. We’ll have one to represent the complete list of users, one to represent our user and then one to represent our users social links.</p>
+
+<pre><code>import (
+  ... 
+  // remember to add encoding/xml to your list of imports
+	&quot;encoding/xml&quot;
+	...
+)
+
+
+// our struct which contains the complete
+// array of all Users in the file
+type Users struct {
+	XMLName xml.Name `xml:&quot;users&quot;`
+	Users   []User   `xml:&quot;user&quot;`
+}
+
+
+// the user struct, this contains our
+// Type attribute, our user's name and
+// a social struct which will contain all
+// our social links
+type User struct {
+	XMLName xml.Name `xml:&quot;user&quot;`
+	Type    string   `xml:&quot;type,attr&quot;`
+	Name    string   `xml:&quot;name&quot;`
+	Social  Social   `xml:&quot;social&quot;`
+}
+
+
+// a simple struct which contains all our
+// social links
+type Social struct {
+	XMLName  xml.Name `xml:&quot;social&quot;`
+	Facebook string   `xml:&quot;facebook&quot;`
+	Twitter  string   `xml:&quot;twitter&quot;`
+	Youtube  string   `xml:&quot;youtube&quot;`
+}
+</code></pre>
+
+<h2 id="unmarshalling-our-xml">Unmarshalling Our XML</h2>
+
+<p>So above we’ve seen how to load in our file into memory, in order to marshal it we need to convert this file to a byte array and then use the xml.Unmarshal method in order to populate our Users array.</p>
+
+<pre><code>// read our opened xmlFile as a byte array.
+	byteValue, _ := ioutil.ReadAll(xmlFile)
+
+
+	// we initialize our Users array
+	var users Users
+	// we unmarshal our byteArray which contains our
+	// xmlFiles content into 'users' which we defined above
+	xml.Unmarshal(byteValue, &amp;users)
+</code></pre>
+
+<h2 id="full-implementation">Full Implementation</h2>
+
+<pre><code>package main
+
+
+import (
+	&quot;encoding/xml&quot;
+	&quot;fmt&quot;
+	&quot;io/ioutil&quot;
+	&quot;os&quot;
+)
+
+
+// our struct which contains the complete
+// array of all Users in the file
+type Users struct {
+	XMLName xml.Name `xml:&quot;users&quot;`
+	Users   []User   `xml:&quot;user&quot;`
+}
+
+
+// the user struct, this contains our
+// Type attribute, our user's name and
+// a social struct which will contain all
+// our social links
+type User struct {
+	XMLName xml.Name `xml:&quot;user&quot;`
+	Type    string   `xml:&quot;type,attr&quot;`
+	Name    string   `xml:&quot;name&quot;`
+	Social  Social   `xml:&quot;social&quot;`
+}
+
+
+// a simple struct which contains all our
+// social links
+type Social struct {
+	XMLName  xml.Name `xml:&quot;social&quot;`
+	Facebook string   `xml:&quot;facebook&quot;`
+	Twitter  string   `xml:&quot;twitter&quot;`
+	Youtube  string   `xml:&quot;youtube&quot;`
+}
+
+
+func main() {
+
+
+	// Open our xmlFile
+	xmlFile, err := os.Open(&quot;users.xml&quot;)
+	// if we os.Open returns an error then handle it
+	if err != nil {
+		fmt.Println(err)
+	}
+
+
+	fmt.Println(&quot;Successfully Opened users.xml&quot;)
+	// defer the closing of our xmlFile so that we can parse it later on
+	defer xmlFile.Close()
+
+
+	// read our opened xmlFile as a byte array.
+	byteValue, _ := ioutil.ReadAll(xmlFile)
+
+
+	// we initialize our Users array
+	var users Users
+	// we unmarshal our byteArray which contains our
+	// xmlFiles content into 'users' which we defined above
+	xml.Unmarshal(byteValue, &amp;users)
+
+
+	// we iterate through every user within our users array and
+	// print out the user Type, their name, and their facebook url
+	// as just an example
+	for i := 0; i &lt; len(users.Users); i++ {
+		fmt.Println(&quot;User Type: &quot; + users.Users[i].Type)
+		fmt.Println(&quot;User Name: &quot; + users.Users[i].Name)
+		fmt.Println(&quot;Facebook Url: &quot; + users.Users[i].Social.Facebook)
+	}
+
+
+}
+</code></pre>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>I hope you found this tutorial beneficial, if you’ve got anything you wish to add then please do in the comments section below!</p>
+
+				</div>
+				<div>
+					<div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://tutorialedge.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+				</div>
+			</article>
+		</div>
+
+		<div class="col l2">
+			<div class="wrapper">
+    <div class="container">
+      <img src="https://twitter.com/Elliot_F/profile_image?size=original" alt="Elliot Forbes" class="trophy" />
+      <h1>Elliot Forbes</h1>
+      <span class="score">Follow me:</span>
+  
+      <div class="buttons">
+          <a href="https://twitter.com/Elliot_F" target="_blank" class="button light">
+              <span><i class="ion ion-social-twitter"></i> Twitter</span>
+          </a>
+      </div>
+    </div>
+</div>
+
+		</div>
+		
+	</div>
+</div>
+
+<div class="join-us">
+	<div class="container">
+		<div class="row">
+			<div class="col l8">
+				<h5>Become a Contributor!</h5>
+				<p>Think you could improve the articles on this site? Feel free to submit a pull request to the sites github repo.</p>
+			</div>
+			<div class="col l4">
+				<a href="https://github.com/elliotforbes/tutorialedge-v2"><button class="btn valign">Fork Our Repo</button></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="page-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col l6 s12">
+				<h5>TutorialEdge.net</h5>
+				<p class="text-lighten-4">This site is dedicated to bringing you the highest quality courses designed to teach you the ins and outs of programming with various frameworks and programming languages.</p>
+			</div>
+			<div class="col l4 offset-l2 s12">
+				<h5>Links</h5>
+				<ul>
+					<li><a class="text-lighten-3" href="/tutorials">All Tutorials</a></li>
+					<li><a class="text-lighten-3" href="/books">Books</a></li>
+					<li><a class="text-lighten-3" href="/contact">Contact</a></li>
+					<li><a class="text-lighten-3" href="/courses">Courses</a></li>
+					<li><a class="text-lighten-3" href="/blog">Blog</a></li>
+					<li><a class="text-lighten-3" href="/about">About</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer-copyright">
+		<div class="container">
+		TutorialEdge © 2016 Copyright 
+		</div>
+	</div>
+</footer>
+
+<script>
+$(".button-collapse").sideNav();
+</script>

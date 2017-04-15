@@ -1,0 +1,1121 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Typescript on TutorialEdge.net</title>
+    <link>/tags/typescript/index.xml</link>
+    <description>Recent content in Typescript on TutorialEdge.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Angular Modules Tutorial</title>
+      <link>/post/typescript/angular/angular-modules-tutorial/</link>
+      <pubDate>Sun, 09 Apr 2017 21:05:28 +0100</pubDate>
+      
+      <guid>/post/typescript/angular/angular-modules-tutorial/</guid>
+      <description>
+
+&lt;div class=&#34;note&#34;&gt;This tutorial was built of the official Angular 2.2 release. &lt;/div&gt;
+
+&lt;p&gt;In this tutorial we’ll be examining what modules are in Angular 2.0 as well as how to define them, what the best practices are for using modules and what the differences are between 1.* Modules and 2.* modules.&lt;/p&gt;
+
+&lt;div class=&#34;note&#34;&gt;Official documentation for Angular 2 Modules can be found here: &lt;a href=&#34;https://angular.io/docs/ts/latest/guide/ngmodule.html&#34;&gt;Angular 2 Modules&lt;/a&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;what-are-modules&#34;&gt;What Are Modules?&lt;/h2&gt;
+
+&lt;p&gt;Typically a module would contain all the code necessary for one cohesive piece of functionality for your application. So say you were designing an admin dashboard for your website or application. You would have one root module and possibly a module for your articles section, a module for your users section, a module for your stats section and so on.&lt;/p&gt;
+
+&lt;p&gt;Being able to structure your application into a series of smaller blocks of functionality is highly advantageous as it allows for easy extendibility and maintainability further down the line. We can group things like components, directives and services into a single module and should we wish to use any of these things within another module, we would simply import that module at the top of our file like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// import OurService from the ourmodule folder
+import { OurService } from ./ourmodule/our.module&#39;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ever Angular application contains at least one route module. Without this your angular application simply wouldn’t work. Modules were introduced in Angular 2&amp;rsquo;s 5th Release candidate and Angular 2 offers in built modules such as the FormsModule, the HttpModule and the RouterModule. These standard modules can all be imported into our application and will allow us to do things like perform http calls or define routes within our application.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// Notice how all of the sub modules and components are branched off the root module like a tree.
+-- Root Module
+---- Users Module
+------ new user component
+-------- new-user.ts|html|spec.ts|css
+---- Articles Module
+------ New/edit/delete/search article code
+---- Statistics Module
+------ All our code for gathering statistics and displaying them etc. 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;our-main-module&#34;&gt;Our Main Module&lt;/h2&gt;
+
+&lt;p&gt;Now we know every Angular application must have at the very least a root module. This is typically a class that has been decorated with @NgModule. @NgModule typically tells Angular how to compile and run module code. This root module acts as your applications main entry point.&lt;/p&gt;
+
+&lt;div class=&#34;note&#34;&gt;Note that it is considered best practice to include the app.module.ts file within your apps root directory.&lt;/div&gt;
+
+&lt;pre&gt;&lt;code&gt;import { NgModule }      from &#39;@angular/core&#39;;
+import { BrowserModule } from &#39;@angular/platform-browser&#39;;
+import { FormsModule }   from &#39;@angular/forms&#39;;
+import { AppComponent }  from &#39;./app.component&#39;;
+import { TestComponent } from &#39;./test-component/test-component.component&#39;;
+
+
+@NgModule({
+  imports: [
+    BrowserModule,
+    FormsModule
+  ],
+  declarations: [
+    AppComponent,
+    TestComponent
+  ],
+  bootstrap: [ AppComponent ]
+})
+export class AppModule { }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div class=&#34;note&#34;&gt;We can add our own custom components to the declarations array. Notice I’ve added TestComponent above. &lt;/div&gt;
+
+&lt;h3 id=&#34;the-ngmodule-decorator&#34;&gt;The @NgModule Decorator&lt;/h3&gt;
+
+&lt;p&gt;In order to define a module we need to first define a class within our application. After we&amp;rsquo;ve defined this class we would then have to decorate it with the @NgModule decorator. Within this we define our metadata for this module, this metadata declares what components, directives, services and so on belong in this module.&lt;/p&gt;
+
+&lt;p&gt;Defining your own new modules is relatively simple in Angular 2. Below you&amp;rsquo;ll find the code needed to define your own UserModule module that contains a user component and also exports this component so that other modules can utilize it.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import { NgModule } from &#39;@angular/core&#39;;
+import { BrowserModule } from &#39;@angular/platform-browser&#39;;
+import { UserComponent } from &#39;./user.component&#39;;
+
+@NgModule({
+  imports: [
+    BrowserModule
+  ],
+  declarations: [
+    UserComponent
+  ],
+  exports: [
+    UserComponent
+  ]
+})
+export class UserModule { }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And next we&amp;rsquo;ll define the very simple UserComponent that the above module references. This component will be bound to the &amp;lsquo;user&amp;rsquo; html tag and will basically print out own h2 title that says &amp;lsquo;User Component&amp;rsquo;, exciting I know.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import { Component } from &#39;@angular/core&#39;;
+
+@Component({
+  selector: &#39;user&#39;,
+  template: &#39;&amp;lt;h2&amp;gt;User Component&amp;lt;/h2&amp;gt;&#39;
+})
+export class UserComponent { }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In order for us to use the UserComponent within our root AppModule that we defined above we simply have to add the following to our list of imports at the top of our file.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import { UserModule, UserComponent } from &#39;./users/users.module&#39;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div class=&#34;note&#34;&gt;If we failed to add UserComponent to the list of exports in our UserModule file then we would be unable to import it in our root Module&lt;/div&gt;
+
+&lt;p&gt;Once we&amp;rsquo;ve done this we can then utilize the &lt;user&gt;&lt;/user&gt; tags within any component that lies within our root AppModule.&lt;/p&gt;
+
+&lt;h2 id=&#34;bootstrapping&#34;&gt;Bootstrapping&lt;/h2&gt;
+
+&lt;p&gt;In Angular 1.* we would typically have used the ng-app directive to bootstrap our angular application. This would act almost like a main function that would act as the starting point for all of our Angular code.&lt;/p&gt;
+
+&lt;p&gt;In Angular 2 this ng-app directive no longer exists and we have to resort to explicitly calling a bootstrap function and passing our root module to this function.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import { platformBrowserDynamic } from &#39;@angular/platform-browser-dynamic&#39;;
+// we import our root module file, notice the lack of file-extension
+import { AppModule } from &#39;./app.module&#39;;
+
+
+// this compiles and launches our AngularJS Application for us
+platformBrowserDynamic().bootstrapModule(AppModule);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;I hope you found this tutorial useful. If you want any further help or information then please let me know in the comments section below!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>angular components tutorial</title>
+      <link>/post/typescript/angular/angular-components-tutorial/</link>
+      <pubDate>Sun, 09 Apr 2017 21:04:56 +0100</pubDate>
+      
+      <guid>/post/typescript/angular/angular-components-tutorial/</guid>
+      <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;This tutorial was created using Angular 2.2&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Most new frontend frameworks feature this concept of components and compartmentalizing blocks of code into distinct blocks that can be reused in multiple locations around your application. In Angular 2 we can do this by creating our own components.&lt;/p&gt;
+
+&lt;h2 id=&#34;what-are-components&#34;&gt;What Are Components?&lt;/h2&gt;
+
+&lt;p&gt;In Angular we can define these things we call components. These components are functional blocks of code that we can attach to html tags. Say for instance we are creating an application that mimics facebook, we want a to display a small widget on the side of the page that shows the current users current profile picture, as well as some other pieces of information. We could encapsulate all the functionality of this widget into a component.&lt;/p&gt;
+
+&lt;h3 id=&#34;why-are-components-used&#34;&gt;Why Are Components Used?&lt;/h3&gt;
+
+&lt;p&gt;When we split our applications into numerous components and sub-components we are essentially breaking down our problems into smaller and smaller problems. We create a loosely coupled system of components that can be easily changed and tested without potentially impacting anything else in our system.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;From a development point of view this is hugely beneficial, huge teams of developers can work on a single application without worrying about pushing other bugs into production.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;creating-a-simple-component&#34;&gt;Creating a Simple Component&lt;/h2&gt;
+
+&lt;p&gt;If you’ve come from an Angular 1.* background then you should find creating components to be a little bit simpler in Angular2. In Angular 2 we have done away with controllers and controller files and merged them straight into one single component file. In this component file we essentially define our controller as a class and then we annotate this class using the @Component({ … }) angular annotation.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// first we have to import Component
+import { Component } from &#39;@angular/core&#39;;
+
+
+// next we annotate our UserComponent class
+@Component({
+  selector: &#39;user&#39;,
+  template: &#39;&amp;lt;h2&amp;gt;User&amp;lt;/h2&amp;gt;&#39;
+})
+// we define our class
+export class UserComponent { }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;component-decorator&#34;&gt;@Component Decorator&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;selector&lt;/em&gt; - This defines what HTML tag we will bind to. In the above example we bind to the &lt;code&gt;&amp;lt;user&amp;gt;&amp;lt;/user&amp;gt;&lt;/code&gt; tag.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;template&lt;/em&gt; - In this we define what html we wish to render for this component. In the above component we are simply going to print out a very simple &lt;code&gt;&amp;lt;h2&amp;gt;&lt;/code&gt; tag.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;templateUrl&lt;/em&gt; - this is an alternative to &lt;em&gt;template&lt;/em&gt;, we can define a html file which will contain all the html content for this component. This is typically used for situations where there is a lot of html and it makes sense to split it apart from the main component file.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;styles&lt;/em&gt; - This option allows us to define specific styles that will be unique to our component.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;directives&lt;/em&gt; - If we want to access a directive then we would pass it into our component using this option.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;providers&lt;/em&gt; - Here we pass in any services that we want to utilize within our component.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;creating-components-using-the-angular-cli&#34;&gt;Creating Components using the Angular-CLI&lt;/h2&gt;
+
+&lt;p&gt;If you&amp;rsquo;ve built your project using the Angular-CLI then creating new components that work straight away is easy:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ng g component your_component_name
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Angular Services Tutorial</title>
+      <link>/post/typescript/angular/angular-services-tutorial/</link>
+      <pubDate>Sun, 09 Apr 2017 21:04:22 +0100</pubDate>
+      
+      <guid>/post/typescript/angular/angular-services-tutorial/</guid>
+      <description>
+
+&lt;p&gt;If you’ve ever written an application in Angular 1.* that interfaces with a RESTful web API then you should have come across services. Services are essentially the interfaces we should use in order to interact with these APIs.&lt;/p&gt;
+
+&lt;p&gt;They essentially provide a cleaner interface with which we can interact with APIs. If you are building a todo application that interacts with say a ToDo REST api then what method do you think is cleaner?&lt;/p&gt;
+
+&lt;p&gt;Defining a HTTP Promise, remembering the exact URL for the api and having to define the path parameters, modify cookies, play with http headers etc every time you want to create a new ToDo from multiple locations in your application or?
+Define all of the above &lt;strong&gt;ONCE&lt;/strong&gt; in a service so that we could do something like: TodoService.addTodo(todoObj);&lt;/p&gt;
+
+&lt;p&gt;Clearly it’s got to be the second way. It doesn’t take away the complexity of working with an API but it focuses it in one small place following the &lt;strong&gt;DRY&lt;/strong&gt; principle. Having it in one place also makes maintenance far easier, say for instance v2 of your API was released and you had to move all of your apps over to that API? Well having it defined in on service would mean that you just have one place to update it from.&lt;/p&gt;
+
+&lt;h2 id=&#34;defining-a-service-in-angular&#34;&gt;Defining a Service in Angular&lt;/h2&gt;
+
+&lt;p&gt;In order to define a service, create a file called user.service.ts. Within this file we will then do the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// We import the necessary Injectable module from angular/core
+import { Injectable } from &#39;@angular/core&#39;;
+
+
+// we decorate our UserService class with the @Injectable()
+// decorator
+@Injectable()
+export class UserService {
+
+
+  constructor() { }
+
+
+  // we define our services methods. 
+  getHi() {
+    return &#39;hi&#39;;
+  }
+
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;using-our-new-service&#34;&gt;Using our New Service&lt;/h2&gt;
+
+&lt;p&gt;If we wanted to start using our UserService within one of our components we would first have to import that service and pass the path to that file and then Inject it through the constructor of our components class.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import { Component } from &#39;@angular/core&#39;;
+import {Inject} from &#39;@angular/core&#39;;
+// Import our user service
+import { UserService } from &#39;./user.service&#39;;
+
+
+@Component({
+  selector: &#39;user&#39;,
+  template: &#39;&amp;lt;h2&amp;gt;User&amp;lt;/h2&amp;gt;&#39;
+})
+export class UserComponent {
+
+
+  title: string;
+
+
+  constructor(@Inject(UserService) userService: UserService) {   }
+  
+  ngOnInit() {
+    console.log(userService.getHi());
+  }
+
+ }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In this example we will simply print out the response from the service to the console.&lt;/p&gt;
+
+&lt;h2 id=&#34;interacting-with-http-apis&#34;&gt;Interacting with Http APIs&lt;/h2&gt;
+
+&lt;p&gt;Typically services are used as an interface between your components and your outside RESTful APIs. If you are wanting to do some form of Http request then you&amp;rsquo;ll have to first add the necessary imports and then within your function return a http request that maps the response and error into json.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import { Injectable } from &#39;@angular/core&#39;;
+// we need these imports in order to do any http requests
+import { Http, Response, Headers, RequestOptions } from &#39;@angular/http&#39;;
+import { Observable } from &#39;rxjs/Rx&#39;;
+
+@Injectable()
+export class ArticleService {
+
+  constructor(private http: Http) { }
+
+  getArticles() {
+    return this.http.get(&amp;quot;http://localhost:8000/api/lessons&amp;quot;)
+      .map((res:Response) =&amp;gt; res.json())
+      .catch((error:any) =&amp;gt; Observable.throw(error.json().error || &#39;Server Error&#39;));
+  }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once we&amp;rsquo;ve returned our http observable we can then call this function and subscribe to the response like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import { Component, OnInit } from &#39;@angular/core&#39;;
+import { ArticleService } from &#39;./article.service&#39;;
+
+@Component({
+  selector: &#39;app-article&#39;,
+  templateUrl: &#39;./article.component.html&#39;,
+  styleUrls: [&#39;./article.component.css&#39;]
+})
+export class ArticleComponent implements OnInit {
+
+  private articles: any;
+
+  constructor(private articleService: ArticleService) {   }
+
+  ngOnInit() { 
+    articleService.getArticles().subscribe(
+        articles =&amp;gt; {
+          this.articles = articles.lessons.data;
+        },
+        err =&amp;gt; {
+          console.log(err);
+        }
+      );
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Notice above that we import our newly defined ArticleService at the top and then ask for it as a parameter in our constructor. We then let our dependency injection do it&amp;rsquo;s magic and then we are able to call any of that service&amp;rsquo;s defined methods.&lt;/p&gt;
+
+&lt;h2 id=&#34;video-tutorial&#34;&gt;Video Tutorial&lt;/h2&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/RJHNe1x5ov4&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;If you found this tutorial helpful or require further assistance then please feel free to let me know in the comments section below.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Top Books For Learning Angular</title>
+      <link>/post/typescript/angular/best-books-for-learning-angular/</link>
+      <pubDate>Sun, 09 Apr 2017 21:03:26 +0100</pubDate>
+      
+      <guid>/post/typescript/angular/best-books-for-learning-angular/</guid>
+      <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;This list will be added to throughout the year. As Angular 2 was only officially released in 2016, the number of high quality resources that feature the latest changes are few and far between.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;angular-2-by-example&#34;&gt;Angular 2 By Example&lt;/h2&gt;
+
+&lt;div class=&#34;amazon-link&#34;&gt;Buy Now (US): &lt;a href=&#34;http://amzn.to/2j4VsHs&#34;&gt;Angular 2 By Example&lt;/a&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;asp-net-core-and-angular-2&#34;&gt;ASP.NET Core and Angular 2&lt;/h2&gt;
+
+&lt;div class=&#34;amazon-link&#34;&gt;Buy Now (US): &lt;a href=&#34;http://amzn.to/2iRmvX3&#34;&gt;ASP.NET Core and Angular 2&lt;/a&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;pro-typescript-application-scale-javascript-development&#34;&gt;Pro TypeScript: Application-Scale JavaScript Development&lt;/h2&gt;
+
+&lt;div class=&#34;amazon-link&#34;&gt;Buy Now (US): &lt;a href=&#34;http://amzn.to/2j50eEL&#34;&gt;Pro TypeScript: Application-Scale JavaScript Development&lt;/a&gt;&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Angular Get Current Route using the Location Service</title>
+      <link>/post/typescript/angular/angular-get-current-route-location/</link>
+      <pubDate>Sun, 09 Apr 2017 20:56:49 +0100</pubDate>
+      
+      <guid>/post/typescript/angular/angular-get-current-route-location/</guid>
+      <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;This tutorial was built using Angular 2.2. If you want to check out the official documentation for &lt;a href=&#34;https://angular.io/docs/ts/latest/api/common/index/Location-class.html&#34;&gt;Angular 2 Location&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In this tutorial we’ll be looking at various ways we can obtain the current URL of our application in Angular 2.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-location-service&#34;&gt;The Location Service&lt;/h2&gt;
+
+&lt;p&gt;The location service is part of the &lt;strong&gt;@angular/common&lt;/strong&gt; module. It allows you to interact directly with a browser’s URL and can read and redirect the user should you wish to.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;This tutorial assumes that you are familiar with Angular 2 Routing and have an application that utilizes routes.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&#34;getting-the-current-path&#34;&gt;Getting the Current Path&lt;/h4&gt;
+
+&lt;p&gt;Getting the current application path can be handy for scenarios where you want to show select sub-menus in say a navigation component.&lt;/p&gt;
+
+&lt;p&gt;In this example we’ll be working with a very simple ‘Top-Nav’ component that will simply assign a string variable to our current path every time a route change is observed.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import { Component, OnInit } from &#39;@angular/core&#39;;
+import { Location } from &#39;@angular/common&#39;;
+import { Router } from &#39;@angular/router&#39;;
+
+@Component({
+  selector: &#39;app-top-nav&#39;,
+  templateUrl: &#39;./top-nav.component.html&#39;,
+  styleUrls: [&#39;./top-nav.component.scss&#39;]
+})
+export class TopNavComponent implements OnInit {
+
+  route: string;
+
+  constructor(location: Location, router: Router) {
+    router.events.subscribe((val) =&amp;gt; {
+      if(location.path() != &#39;&#39;){
+        this.route = location.path();
+      } else {
+        this.route = &#39;Home&#39;
+      }
+    });
+  }
+
+  ngOnInit() {
+  }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Notice that we have to import both Location and Router at the top of our component and then ask for them in the constructor of our component. Once we’ve asked for them, we can let Angular 2’s dependency injection work it’s magic and we’ll be able to subscribe to route changes as demonstrated above.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;If you wish to see this as a live example then I suggest you check out my Angular 2 Admin github project: &lt;a href=&#34;https://github.com/elliotforbes/angular-2-admin/blob/master/src/app/common/top-nav/top-nav.component.ts&#34;&gt;top-nav.component.ts&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>angular detecting route changes</title>
+      <link>/post/typescript/angular/angular-detecting-route-changes/</link>
+      <pubDate>Sun, 09 Apr 2017 20:55:22 +0100</pubDate>
+      
+      <guid>/post/typescript/angular/angular-detecting-route-changes/</guid>
+      <description>
+
+&lt;div class=&#34;note&#34;&gt;This tutorial was built using Angular 2.2. Some of the features in this tutorial may not work for earlier/later versions.&lt;/div&gt;
+
+&lt;p&gt;Detecting whenever a route change happens in your application can be very useful for a multitude of reasons. For instance you may wish to store form data in a cookie in case they accidentally clicked on something they didn’t mean to.&lt;/p&gt;
+
+&lt;p&gt;In Angular 2 detecting this route change is relatively simple. If we have a component that is transient across all routes in our application then we can have it subscribe to our router for any changes and act upon these changes as we wish to.&lt;/p&gt;
+
+&lt;p&gt;In this example I’ve got a Top-Nav component which has subscribed to route changes so that in future it can determine what sub-navigation to show and so on:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import { Component, OnInit } from &#39;@angular/core&#39;;
+// I import Location so that I can query the current path
+import { Location } from &#39;@angular/common&#39;;
+// I also import Router so that I can subscribe to events
+import { Router } from &#39;@angular/router&#39;;
+
+@Component({
+  selector: &#39;app-top-nav&#39;,
+  templateUrl: &#39;./top-nav.component.html&#39;,
+  styleUrls: [&#39;./top-nav.component.scss&#39;]
+})
+export class TopNavComponent implements OnInit {
+
+  route: string;
+
+  constructor(location: Location, router: Router) {
+    // within our constructor we can define our subscription
+    // and then decide what to do when this event is triggered.
+    // in this case I simply update my route string.
+    router.events.subscribe((val) =&amp;gt; {
+      if(location.path() != &#39;&#39;){
+        this.route = location.path();
+      } else {
+        this.route = &#39;Home&#39;
+      }
+    });
+  }
+
+  ngOnInit() { }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;If you found this tutorial useful or require more examples or assistance then please let me know in the comments section below!&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;github-link&#34;&gt;A live example of this code can be found at: &lt;a href=&#34;https://github.com/elliotforbes/angular-2-admin/blob/master/src/app/common/top-nav/top-nav.component.ts&#34;&gt;Angular 2 Admin Dashboard&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Angular Websockets Tutorial</title>
+      <link>/post/typescript/angular/angular-websockets-tutorial/</link>
+      <pubDate>Sun, 09 Apr 2017 20:52:33 +0100</pubDate>
+      
+      <guid>/post/typescript/angular/angular-websockets-tutorial/</guid>
+      <description>
+
+&lt;p&gt;In this tutorial we’ll be looking at how you can implement very simple websockets in an Angular 2+ application.&lt;/p&gt;
+
+&lt;h2 id=&#34;browser-compatibility&#34;&gt;Browser Compatibility&lt;/h2&gt;
+
+&lt;p&gt;At this point in time I think it would be a good idea to let you know that websocket browser compatibility is not 100% and some older browsers may not support websockets. This tutorial, as a result, may not work in your browser if you haven’t updated in awhile.&lt;/p&gt;
+
+&lt;h2 id=&#34;websockets-in-angular-2&#34;&gt;Websockets in Angular 2&lt;/h2&gt;
+
+&lt;p&gt;Angular utilizes RxJS which is essentially a javascript implementation of reactive extensions. This is a library for composing asynchronous and event-based programs using observable sequences and is perfect for working with websockets.&lt;/p&gt;
+
+&lt;p&gt;Simply put, RxJS allows us to listen to new messages from a websocket connection and then perform an action when ‘X’ event occurs. An example of this could be in a real-time chat application. Say we have 3 people connected to our chat application and one of them sends a message. If we want to do something in our application whenever we receive a message then we can simply subscribe to a ‘new-message’ event and possibly show the new message in the other 2 listening applications.&lt;/p&gt;
+
+&lt;h4 id=&#34;working-with-websockets&#34;&gt;Working with Websockets&lt;/h4&gt;
+
+&lt;p&gt;The best way to implement websockets in our angular applications would be to encapsulate our websockets and events in a service and then call that service in whatever components we wish to interact with a websocket.&lt;/p&gt;
+
+&lt;div class=&#34;note&#34;&gt;If you are unfamiliar with services then please feel free to check out my tutorial on &lt;a href=&#34;https://tutorialedge.net/angular-2-services-tutorial&#34;&gt;Angular Services&lt;/a&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;creating-our-application&#34;&gt;Creating our Application&lt;/h2&gt;
+
+&lt;p&gt;Using the Angular CLI, create a new application by typing the following into the command line:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ng new websocket_tutorial
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This should create a new, fully functioning Angular 2 application in which we shall implement our websocket based services. To ensure that it’s working type:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ng serve
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And you should hopefully see the server successfully starting on port 4200. If you then navigate to localhost:4200 in your prefered web browser you should see ‘app works!’ displaying in your browser. Now that we’ve got our basic app up and running let’s move on to creating our websocket service.&lt;/p&gt;
+
+&lt;h2 id=&#34;creating-our-websocket-service&#34;&gt;Creating our Websocket Service&lt;/h2&gt;
+
+&lt;p&gt;To get us started we’ll be creating a very simple service that will connect to any given URL and return an RxJS subject that we can subscribe to in other services/components in order to listen for any incoming messages from the connected socket.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ng g service websocket
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We’ll need to import * from the rxjs library at the top of our new service. This will allow us to create the subject that will both observe and be observable. This essentially means our subject will watch our websocket for any incoming messages and will broadcast these messages to any components that happen to be subscribing to this service.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import { Injectable } from &#39;@angular/core&#39;;
+import * as Rx from &#39;rxjs/Rx&#39;;
+
+@Injectable()
+export class WebsocketService {
+  constructor() { }
+
+  private subject: Rx.Subject&amp;lt;MessageEvent&amp;gt;;
+
+  public connect(url): Rx.Subject&amp;lt;MessageEvent&amp;gt; {
+    if (!this.subject) {
+      this.subject = this.create(url);
+      console.log(&amp;quot;Successfully connected: &amp;quot; + url);
+    } 
+    return this.subject;
+  }
+
+  private create(url): Rx.Subject&amp;lt;MessageEvent&amp;gt; {
+    let ws = new WebSocket(url);
+
+    let observable = Rx.Observable.create(
+	(obs: Rx.Observer&amp;lt;MessageEvent&amp;gt;) =&amp;gt; {
+		ws.onmessage = obs.next.bind(obs);
+		ws.onerror = obs.error.bind(obs);
+		ws.onclose = obs.complete.bind(obs);
+		return ws.close.bind(ws);
+	})
+let observer = {
+		next: (data: Object) =&amp;gt; {
+			if (ws.readyState === WebSocket.OPEN) {
+				ws.send(JSON.stringify(data));
+			}
+		}
+	}
+	return Rx.Subject.create(observer, observable);
+  }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Next what we want to do is to create a second service that will interface with our websockets and will act as a type of adapter which will adapt the output from our websocket into a form that we can easily work with in the frontend. Again create this service using the angular-cli:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ng g service chat
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This should create a chat.service.ts within your root directory. In this file we are going to want to do something like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import { Injectable } from &#39;@angular/core&#39;;
+import { Observable, Subject } from &#39;rxjs/Rx&#39;;
+import { WebsocketService } from &#39;./websocket.service&#39;;
+
+const CHAT_URL = &#39;ws://echo.websocket.org/&#39;;
+
+export interface Message {
+	author: string,
+	message: string
+}
+
+@Injectable()
+export class ChatService {
+	public messages: Subject&amp;lt;Message&amp;gt;;
+
+	constructor(wsService: WebsocketService) {
+		this.messages = &amp;lt;Subject&amp;lt;Message&amp;gt;&amp;gt;wsService
+			.connect(CHAT_URL)
+			.map((response: MessageEvent): Message =&amp;gt; {
+				let data = JSON.parse(response.data);
+				return {
+					author: data.author,
+					message: data.message
+				}
+			});
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;updating-our-app-component&#34;&gt;Updating our App Component&lt;/h2&gt;
+
+&lt;p&gt;Finally we’ll want to update our app.component.ts file so that it imports our newly created chat service and allows us to push messages to this websocket:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import { Component } from &#39;@angular/core&#39;;
+import { WebsocketService } from &#39;./websocket.service&#39;;
+import { ChatService } from &#39;./chat.service&#39;;
+
+@Component({
+  selector: &#39;app-root&#39;,
+  templateUrl: &#39;./app.component.html&#39;,
+  styleUrls: [&#39;./app.component.css&#39;],
+  providers: [ WebsocketService, ChatService ]
+})
+export class AppComponent {
+
+	constructor(private chatService: ChatService) {
+		chatService.messages.subscribe(msg =&amp;gt; {			
+      console.log(&amp;quot;Response from websocket: &amp;quot; + msg);
+		});
+	}
+
+  private message = {
+		author: &#39;tutorialedge&#39;,
+		message: &#39;this is a test message&#39;
+	}
+
+  sendMsg() {
+		console.log(&#39;new message from client to websocket: &#39;, this.message);
+		this.chatService.messages.next(this.message);
+		this.message.message = &#39;&#39;;
+	}
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Finally we’ll need to update our html page for our app component so that we can actually use the sendMsg() function that we defined in our component file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!-- app.component.html --&amp;gt;
+&amp;lt;h1&amp;gt;
+  Angular 2 Websockets Tutorial
+&amp;lt;/h1&amp;gt;
+
+&amp;lt;button (click)=&amp;quot;sendMsg()&amp;quot;&amp;gt;Send Message&amp;lt;/button&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once these changes have been made, serve the application by going to the root directory and typing:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ng serve
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And you should see the Angular 2 Websockets tutorial and our ‘Send Message’ button rendered in your browser.&lt;/p&gt;
+
+&lt;p&gt;Open up the console and click the button a few times and you should see your application both sending and receiving messages to the test websocket server.&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;If you found this tutorial useful or wish to know more then please feel free to let me know in the comments section below.&lt;/p&gt;
+
+&lt;div class=&#34;github-link&#34;&gt;All source code for this tutorial can be found in this github repo: &lt;a href=&#34;https://github.com/elliotforbes/angular-websockets&#34;&gt;elliotforbes/angular-websockets&lt;/a&gt;&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Angular Cookies Tutorial</title>
+      <link>/post/typescript/angular/angular-cookies-tutorial/</link>
+      <pubDate>Sun, 14 Feb 2016 16:11:58 +0530</pubDate>
+      
+      <guid>/post/typescript/angular/angular-cookies-tutorial/</guid>
+      <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;This tutorial was built using Angular 2.2.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Cookies are small packages of information that are typically stored by your browser and websites tend to use cookies for multiple things. Cookies persist across multiple requests and browser sessions should you set them to and they can be a great method for authentication in some web apps.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Check out my AngularJS 1.* tutorial on &lt;a href=&#34;https://tutorialedge.net/angularjs-store-cookie-tutorial&#34;&gt;storing information in cookies&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;limitations-of-cookies&#34;&gt;Limitations of Cookies&lt;/h2&gt;
+
+&lt;p&gt;Typically we can only store no more than 20 cookies per web server and no more than 4KB of information in each cookie and they can last indefinitely should you choose to specify the max-age attribute.&lt;/p&gt;
+
+&lt;h2 id=&#34;setting-up&#34;&gt;Setting Up&lt;/h2&gt;
+
+&lt;p&gt;In order to play about with cookies in Angular 2 we’ll have to install the &lt;code&gt;angular2-cookie&lt;/code&gt; library by typing the following within our project:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm install angular2-cookie --save
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This should download angular2-cookies to our project’s node_modules folder and also add it as a dependency to our project.&lt;/p&gt;
+
+&lt;h2 id=&#34;implementation&#34;&gt;Implementation&lt;/h2&gt;
+
+&lt;p&gt;Once we’ve successfully added angular2-cookie to our project we can set about using it. It’s recommended that you import the CookieService within your module file and then add it to your providers array like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/*
+ * Custom Libraries
+ */
+import { CookieService } from &#39;angular2-cookie/services/cookies.service&#39;;
+
+// .. all other imports
+
+@NgModule({
+  declarations: [
+    // ...
+  ],
+  imports: [
+    // ..
+  ],
+  providers: [
+    CookieService
+  ],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then once we’ve added it as a provider we can utilize it in one of our component files like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import { Component } from &#39;@angular/core&#39;;
+import { CookieService } from &#39;angular2-cookie/core&#39;;
+
+@Component({
+  selector: &#39;app-root&#39;,
+  templateUrl: &#39;./app.component.html&#39;,
+  styleUrls: [&#39;./app.component.css&#39;]
+})
+export class AppComponent {
+  constructor(private _cookieService:CookieService){}
+
+  ngOnInit() {
+    this._cookieService.put(&#39;test&#39;, &#39;test&#39;);
+    console.log(&amp;quot;Set Test Cookie as Test&amp;quot;);
+  }
+
+  getCookie(key: string){
+    return this._cookieService.get(key);
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;setting-cookies&#34;&gt;Setting Cookies&lt;/h2&gt;
+
+&lt;p&gt;In order to set cookies using this library we would have to use the following method:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// the put method takes in the name of the cookie and the value for that cookie.
+// if we wanted to define cookie options then we would pass in a third parameter to 
+// this method containing those options.
+this._cookieService.put(&#39;test&#39;, &#39;test&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;retrieving-cookies&#34;&gt;Retrieving Cookies&lt;/h2&gt;
+
+&lt;p&gt;Once we have successfully set a cookie, we can then retrieve that same cookie by using the &lt;code&gt;.get(cookie)&lt;/code&gt; method like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// This would retrieve the previously defined &#39;test&#39; cookie 
+this._cookieService.get(&#39;test&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;If you found this tutorial useful or need further information on working with cookies in Angular 2 then please let me know in the comments section below.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Angular Multiple Environment Configuration Tutorial</title>
+      <link>/post/typescript/angular/angular-environment-configuration-tutorial/</link>
+      <pubDate>Sun, 14 Feb 2016 16:11:58 +0530</pubDate>
+      
+      <guid>/post/typescript/angular/angular-environment-configuration-tutorial/</guid>
+      <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;This Tutorial is part of the Angular Fundamentals course which can be found here: &lt;a href=&#34;https://tutorialedge.net/course/angular-2-fundamentals&#34;&gt;Angular Fundamentals&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;If you are developing serious applications there is a very good chance that you will have more than one environment. You’ll have at least one testing environment to harmlessly break things in and a polished production environment that is supposed to remain as stable as possible.&lt;/p&gt;
+
+&lt;p&gt;Angular, or more specifically the angular-cli provides a very good mechanism for having multiple differing configuration files and for building these files easily into your finished build artefacts.&lt;/p&gt;
+
+&lt;h2 id=&#34;why-is-this-necessary&#34;&gt;Why Is This Necessary&lt;/h2&gt;
+
+&lt;p&gt;Say for instance you are developing a new Administration dashboard for your website that interacts with a REST API that updates your articles. Now imagine you wanted to develop and test new features, without potentially breaking your existing application for people using your site. How would you test new features without impacting your existing application?&lt;/p&gt;
+
+&lt;p&gt;This is where different environments will help, ideally you would have at minimum 2 environments. One testing environment which interacts with a test REST API and a test Database.&lt;/p&gt;
+
+&lt;h2 id=&#34;how-do-you-manage-the-configuration&#34;&gt;How Do You Manage the Configuration?&lt;/h2&gt;
+
+&lt;p&gt;So the most basic way of managing two different environments is to just change a variable or two every time you want to test or deploy something. But then what happens when our app becomes increasingly sophisticated and requires hundreds of different configuration variables?&lt;/p&gt;
+
+&lt;p&gt;The most popular answer to this is to move all of this configuration to a set of configuration or ‘environment’ files. If your application was built using the Angular-CLI then you should notice an &lt;code&gt;environment&lt;/code&gt; directory within your &lt;code&gt;src&lt;/code&gt; directory.&lt;/p&gt;
+
+&lt;p&gt;The default file is your &lt;code&gt;environment.ts&lt;/code&gt; file which should look like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// The file contents for the current environment will overwrite these during build.
+// The build system defaults to the dev environment which uses `environment.ts`, but if you do
+// `ng build --env=prod` then `environment.prod.ts` will be used instead.
+// The list of which env maps to which file can be found in `angular-cli.json`.
+
+export const environment = {
+  production: false
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;adding-your-own-configuration&#34;&gt;Adding Your Own Configuration&lt;/h2&gt;
+
+&lt;p&gt;So in this example, we want to be able to easily switch between APIs depending on what environment we are in.&lt;/p&gt;
+
+&lt;p&gt;In our standard &lt;code&gt;environment.ts&lt;/code&gt; file we can define the api location of our test REST API:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// The file contents for the current environment will overwrite these during build.
+// The build system defaults to the dev environment which uses `environment.ts`, but if you do
+// `ng build --env=prod` then `environment.prod.ts` will be used instead.
+// The list of which env maps to which file can be found in `angular-cli.json`.
+
+export const environment = {
+  production: false,
+  api_url: &#39;http://localhost:8000&#39;
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And in our &lt;code&gt;environment.prod.ts&lt;/code&gt; file we can define our production REST API:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;export const environment = {
+  production: true,
+  api_url: &#39;http://localhost:9000&#39;
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;importing-these-variables-where-they-are-needed&#34;&gt;Importing These Variables Where They Are Needed:&lt;/h2&gt;
+
+&lt;p&gt;So now that we’ve defined these variables, how do we reference these in our environment files?&lt;/p&gt;
+
+&lt;p&gt;So typically we interact with APIs using services, in this example we’ll be interacting with a &lt;code&gt;user&lt;/code&gt; api. At the top of our service file we add: &lt;code&gt;import { environment } from ‘../../environments/environment’;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;This then references whatever production file we need depending on the arguments we pass to our build or serve command.&lt;/p&gt;
+
+&lt;h2 id=&#34;building-for-different-environments&#34;&gt;Building For Different Environments&lt;/h2&gt;
+
+&lt;p&gt;The Angular CLI provides both a build and serve command for use that takes in an environment argument. Whenever we want to build our application for a specific environment we do the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ng build -e prod
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And change &lt;code&gt;prod&lt;/code&gt; to the environment that we want. Leaving it blank will default it to the standard test environment config. The built files in the dist folder can then be pushed up to wherever you are hosting your application.&lt;/p&gt;
+
+&lt;p&gt;If we wanted to run the serve command for our test environment we would then do:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ng serve
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
+
+&lt;p&gt;If you found this tutorial useful then please be sure to let me know in the comments section below.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Angular Observables Tutorial using RxJS</title>
+      <link>/post/typescript/angular/angular-observables-tutorial/</link>
+      <pubDate>Sun, 14 Feb 2016 16:11:58 +0530</pubDate>
+      
+      <guid>/post/typescript/angular/angular-observables-tutorial/</guid>
+      <description>
+
+&lt;p&gt;The Observable Design pattern is an incredibly powerful paradigm that we can utilize in a wide array of different applications. In this tutorial we’ll be covering how you can implement your own observables in Angular.&lt;/p&gt;
+
+&lt;div class=&#34;note&#34;&gt;Check out my tutorial on the &lt;a href=&#34;https://tutorialedge.net/programming-design-concepts-observer-design-pattern&#34;&gt;Observer Design Pattern here:&lt;/a&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;rxjs&#34;&gt;RxJS&lt;/h2&gt;
+
+&lt;p&gt;RxJS or reactive extensions is a set of libraries that are designed to help implement asynchronous and event-based programs and it’s necessary if you are wanting to perform Http requests or work with streams of information in Angular applications.&lt;/p&gt;
+
+&lt;h4 id=&#34;examples-of-observable-uses&#34;&gt;Examples of Observable Uses:&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;UI Events&lt;/li&gt;
+&lt;li&gt;Websocket Streams&lt;/li&gt;
+&lt;li&gt;Http Requests&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;what-are-streams&#34;&gt;What Are Streams&lt;/h2&gt;
+
+&lt;p&gt;Streams are essentially a sequence of ongoing events ordered in time. Using RxJS we can specifically subscribe to each of these signals and act upon them whenever we get them. We can ‘Observe’ them and constantly watch them in the background by subscribing to ‘Subjects’.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Streams emit 3 different types of signals: value, error and completed. We can subscribe to these individually and react to whenever one of these signals is given.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;subjects-in-rxjs&#34;&gt;Subjects in RxJS&lt;/h2&gt;
+
+&lt;p&gt;In RxJS we are provided with these things known as Subjects. These are both observers and observable and can watch a stream of data for us. These subjects notify all the subscribers to these subjects of any updates.&lt;/p&gt;
+
+&lt;p&gt;Below you’ll find the declaration for RxJS’s Subject class. You should notice that it implements the Subscription interface and also extends the Observable class.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/**
+ * @class Subject&amp;lt;T&amp;gt;
+ */
+export declare class Subject&amp;lt;T&amp;gt; extends Observable&amp;lt;T&amp;gt; implements ISubscription {
+…
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;a-live-example&#34;&gt;A Live Example:&lt;/h2&gt;
+
+&lt;div class=&#34;github-link&#34;&gt;If you want to see a live example of Angular observables then I recommend checking out : &lt;a href=&#34;https://github.com/elliotforbes/ng-chat&#34;&gt;elliotforbes/ng-chat&lt;/a&gt;.&lt;/div&gt;
+
+&lt;p&gt;Below you’ll find the code for the WebsocketService which is included in this github repo.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import { Injectable } from &#39;@angular/core&#39;;
+import * as Rx from &#39;rxjs/Rx&#39;;
+
+@Injectable()
+export class WebsocketService {
+  constructor() { }
+
+  private subject: Rx.Subject&amp;lt;MessageEvent&amp;gt;;
+
+  public connect(url): Rx.Subject&amp;lt;MessageEvent&amp;gt; {
+    if (!this.subject) {
+      this.subject = this.create(url);
+      console.log(&amp;quot;Successfully connected: &amp;quot; + url);
+    } 
+    return this.subject;
+  }
+
+  private create(url): Rx.Subject&amp;lt;MessageEvent&amp;gt; {
+    let ws = new WebSocket(url);
+
+    let observable = Rx.Observable.create(
+    (obs: Rx.Observer&amp;lt;MessageEvent&amp;gt;) =&amp;gt; {
+        ws.onmessage = obs.next.bind(obs);
+        ws.onerror = obs.error.bind(obs);
+        ws.onclose = obs.complete.bind(obs);
+        return ws.close.bind(ws);
+    })
+
+    let observer = {
+        next: (data: Object) =&amp;gt; {
+            if (ws.readyState === WebSocket.OPEN) {
+                ws.send(JSON.stringify(data));
+            }
+        }
+    }
+    
+    return Rx.Subject.create(observer, observable);
+  }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;If you found this tutorial helpful or require more information then please let me know in the comments section below.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Angular Routing Tutorial</title>
+      <link>/post/typescript/angular/angular-routing-tutorial/</link>
+      <pubDate>Sun, 14 Feb 2016 16:11:58 +0530</pubDate>
+      
+      <guid>/post/typescript/angular/angular-routing-tutorial/</guid>
+      <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;This tutorial was built using Angular 2.2. Some of the code samples may not work if you are using previous versions&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Routing is practically essential in all larger Angular applications, it provides us with the ability to show different sections of html within a master template and basically create a full-blown multi-page application.&lt;/p&gt;
+
+&lt;p&gt;Routing in Angular 2+ has changed dramatically from the original AngularJS days where you would have to utilize the $routeProvider and typically define routes in a separate file to that of your module file.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;If you are interested, check out my &lt;a href=&#34;https://tutorialedge.net/angularjs-template-tutorial-ng-view&#34;&gt;AngularJS 1.5 Routing Tutorial&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;defining-your-first-routes&#34;&gt;Defining your First Routes&lt;/h2&gt;
+
+&lt;p&gt;The first thing that you need to do in order to add routing to your application is append the following tag to your index.html page:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;base href=&amp;quot;/&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This should be placed somewhere within your &lt;code&gt;&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;&lt;/code&gt; tags. The &lt;code&gt;&amp;lt;base href=&amp;quot;/&amp;quot;&amp;gt;&lt;/code&gt; tells the Angular router what is the static part of the URL. The router then only modifies the remaining part of the URL.&lt;/p&gt;
+
+&lt;div class=&#34;note&#34;&gt;Without the base href tag you will see errors like this: &lt;a href=&#34;http://stackoverflow.com/questions/34535163/angular-2-router-no-base-href-set&#34;&gt;Angular 2 Router no Base href set&lt;/a&gt;&lt;/div&gt;
+
+&lt;p&gt;Now that we’ve set the our base href tag, we can then move on to defining some routes without your route module file or your &lt;code&gt;app.module.ts&lt;/code&gt; file if you follow the standard convention.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import { RouterModule, Routes } from &#39;@angular/router&#39;;
+// …
+const appRoutes: Routes = [
+  // To represent our index page or root page we simply
+  // pass in empty single quotes as our path value
+  { path: &#39;&#39;, component: HomeComponent },
+  // if we want a page on http://ourapp.com/social then 
+  // we can define it like so and it will show the SocialComponent 
+  { path: &#39;social&#39;, component: SocialComponent },
+  // the same goes for settings and email
+  { path: &#39;settings&#39;, component: SettingsComponent },
+  { path: &#39;email&#39;, component: EmailComponent }
+]
+// …
+
+@NgModule({
+  declarations: [
+    // ...
+    EmailComponent,
+    HomeComponent,
+    SettingsComponent,
+    SocialComponent
+  ],
+  imports: [
+    // ...
+    RouterModule.forRoot(appRoutes)
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In this example I’ve imported the RouterModule and Routes from @angular/router and then I’ve defined my routes as appRoutes and passed in 4 different routes that all resolve to differing components.&lt;/p&gt;
+
+&lt;p&gt;I’ve then ensured that these components lie within our AppModules declarations array and finally I’ve added the following line to the bottom of our imports array:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;RouterModule.forRoot(appRoutes)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Finally we need to define where we want our sub-pages html to render. We can do this by placing:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;router-outlet&amp;gt;&amp;lt;/router-outlet&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In our app.component.html file. In my &lt;a href=&#34;https://github.com/elliotforbes/angular-2-admin/blob/master/src/app/app.component.html&#34;&gt;example project&lt;/a&gt; you’ll see that I’ve defined this below my app-top-nav which will remain constant for all pages throughout my application.&lt;/p&gt;
+
+&lt;h2 id=&#34;child-routes&#34;&gt;Child Routes&lt;/h2&gt;
+
+&lt;p&gt;So now that we know how to define our own routes we could keep adding and adding them to our app.module.ts file forever right? Well what happens when we are working with an application that features hundreds or potentially thousands of sub-pages? Our app.module.ts would become un-maintainable and a giant mess of routes. Thankfully Angular provides a solution to this problem by allowing us to define child routes within sub-modules of our application.&lt;/p&gt;
+
+&lt;p&gt;In a sub-module of my application I can do the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import { RouterModule, Routes } from &#39;@angular/router&#39;;
+// …
+// define all the routes I want for my blog component
+export const blogRoutes:Routes = [
+  { path: &#39;blog&#39;, component: BlogComponent },
+  { path: &#39;blog/new&#39;, component: BlogNewComponent }
+]
+// …
+@NgModule({
+  imports: [
+    // ...
+    RouterModule.forChild(blogRoutes)
+  ],
+  declarations: [
+    BlogComponent,
+    BlogNewComponent
+  ],
+  providers: [
+    BlogService
+  ]
+})
+export class BlogModule { }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Above you’ll see that it looks almost identical to our &lt;code&gt;app.module.ts&lt;/code&gt; except for one key difference. Notice that in our module’s imports we’ve changed our RouterModule import to use the forChild method and we’ve passed in our sub-modules defined routes:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;RouterModule.forChild(blogRoutes)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;navigation-between-routes-in-html&#34;&gt;Navigation Between Routes in HTML&lt;/h2&gt;
+
+&lt;p&gt;Now that we’ve defined our routes we need to provide a means to navigate between these routes in our html. If we were wanting to link to any other route in our application then we can use the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;a routerLink=&amp;quot;/settings&amp;quot;&amp;gt;Settings&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The above &lt;code&gt;&amp;lt;a/&amp;gt;&lt;/code&gt; tag would link to our settings page that we defined above.&lt;/p&gt;
+
+&lt;h2 id=&#34;a-live-example&#34;&gt;A Live Example&lt;/h2&gt;
+
+&lt;p&gt;Should you wish to see a live example of Angular routing then feel free to checkout my Angular Admin repo: &lt;a href=&#34;https://github.com/elliotforbes/angular-2-admin.git&#34;&gt;Angular-2-Admin-Dashboard&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;If you found this tutorial helpful or need further assistance then please do not hesitate to let me know in the comments section below.&lt;/p&gt;
+
+&lt;div class=&#34;note&#34;&gt;Please check out the &lt;a href=&#34;https://angular.io/docs/ts/latest/guide/router.html&#34;&gt;official angular routing documentation&lt;/a&gt; for more in-depth resources&lt;/div&gt;
+
+&lt;h4 id=&#34;further-reading&#34;&gt;Further Reading&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://tutorialedge.net/angular-2-detecting-route-changes&#34;&gt;Angular Detecting Route Changes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://tutorialedge.net/angular-2-get-current-route-location&#34;&gt;Angular Getting Current Location using Location Provider&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

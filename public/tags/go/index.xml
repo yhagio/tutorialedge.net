@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Go on TutorialEdge.net</title>
+    <link>/tags/go/index.xml</link>
+    <description>Recent content in Go on TutorialEdge.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Writing A Twitter Bot in Golang</title>
+      <link>/post/golang/writing-a-twitter-bot-golang/</link>
+      <pubDate>Sun, 09 Apr 2017 21:33:19 +0100</pubDate>
+      
+      <guid>/post/golang/writing-a-twitter-bot-golang/</guid>
+      <description>&lt;p&gt;In this tutorial I’m going to be demonstrating how to build a twitter bot using &lt;a href=&#34;https://github.com/dghubble/go-twitter&#34;&gt;go-twitter&lt;/a&gt;, a popular Go client library for the Twitter API.&lt;/p&gt;
+
+&lt;p&gt;I’ll be demonstrating how you can build a go based twitter bot that will be able to do such things as automatically reply to tweets and favourite tweets that contain a specific hashtag.&lt;/p&gt;
+
+&lt;h2&gt;Connecting to Twitter&lt;/h2&gt;
+
+&lt;p&gt;Just like with the &lt;a href=&#34;https://tutorialedge.net/creating-python-twitter-bot-using-twitter-api&#34;&gt;Python version of this tutorial&lt;/a&gt;, you’ll have to create an app in twitter’s &lt;a href=”https://apps.twitter.com/”&gt;app control panel&lt;/a&gt;. Once you’ve created a new application, it should present you with all the secret tokens and keys that you need in order to proceed.&lt;/p&gt;
+
+&lt;h2&gt;Writing our Basic Go Twitter Bot&lt;/h2&gt;
+
+&lt;p&gt;Once you’ve got all the access tokens and secret tokens ready, it’s time to start implementing our Bot. Create a new file called &lt;b&gt;twitter-bot.go&lt;/b&gt; and add the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import (
+    &amp;quot;fmt&amp;quot;
+    &amp;quot;log&amp;quot;
+    &amp;quot;os&amp;quot;
+    &amp;quot;os/signal&amp;quot;
+    &amp;quot;syscall&amp;quot;
+    
+    &amp;quot;github.com/dghubble/go-twitter/twitter&amp;quot;
+    &amp;quot;github.com/dghubble/oauth1&amp;quot;
+)
+
+func configure() {
+    // Pass in your consumer key (API Key) and your Consumer Secret (API Secret) 
+    config := oauth1.NewConfig(&amp;quot;consumer-key&amp;quot;, &amp;quot;consumer-secret&amp;quot;)
+    // Pass in your Access Token and your Access Token Secret
+    token := oauth1.NewToken(&amp;quot;access-token&amp;quot;, &amp;quot;access-token-secret&amp;quot;)
+    httpClient := config.Client(oauth1.NoContext, token)
+    client := twitter.NewClient(httpClient)
+    
+    
+    demux := twitter.NewSwitchDemux()
+    
+    demux.Tweet = func(tweet *twitter.Tweet){
+        fmt.Println(tweet.Text)
+    }
+    
+    demux.DM = func(dm *twitter.DirectMessage){
+        fmt.Println(dm.SenderID)
+    }
+    
+    fmt.Println(&amp;quot;Starting Stream...&amp;quot;)
+    
+    // FILTER
+	filterParams := &amp;amp;twitter.StreamFilterParams{
+		Track:         []string{&amp;quot;cat&amp;quot;},
+		StallWarnings: twitter.Bool(true),
+	}
+	stream, err := client.Streams.Filter(filterParams)
+	if err != nil {
+		log.Fatal(err)
+	}
+    
+    // Receive messages until stopped or stream quits
+	go demux.HandleChan(stream.Messages)
+
+	// Wait for SIGINT and SIGTERM (HIT CTRL-C)
+	ch := make(chan os.Signal)
+	signal.Notify(ch, syscall.SIGINT, syscall.SIGTERM)
+	log.Println(&amp;lt;-ch)
+
+	fmt.Println(&amp;quot;Stopping Stream...&amp;quot;)
+	stream.Stop()
+    
+}
+
+func main() {
+    fmt.Println(&amp;quot;Go-Twitter Bot v0.01&amp;quot;)
+    configure()
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

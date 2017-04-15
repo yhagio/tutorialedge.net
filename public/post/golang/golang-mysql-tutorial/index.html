@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Golang MySQL Tutorial</title>
+	
+	
+	
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/monokai.min.css">
+	<link rel="stylesheet" href="/css/materialize.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<meta name="generator" content="Hugo 0.19" />
+
+	
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+	<script src="/js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<script async>
+			(function (i, s, o, g, r, a, m) {
+					i['GoogleAnalyticsObject'] = r;
+					i[r] = i[r] || function () {
+							(i[r].q = i[r].q || []).push(arguments)
+					}, i[r].l = 1 * new Date();
+					a = s.createElement(o),
+					m = s.getElementsByTagName(o)[0];
+					a.async = 1;
+					a.src = g;
+					m.parentNode.insertBefore(a, m)
+			})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+			ga('create', 'UA-10255990-23', 'auto');
+			ga('send', 'pageview');
+	</script>
+</head>
+<body>
+
+	<header>
+		<nav>
+			<div class="nav-wrapper">
+				<a class="brand-logo" href="/">TutorialEdge.net</a>
+				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><a href="//about/">About</a></li>
+					<li><a href="//get-involved/">Get Involved</a></li>
+					<li><a href="//courses/">Courses</a></li>
+					<li><a href="//post/">Tutorials</a></li>
+				</ul>
+				<ul class="side-nav" id="mobile-demo">
+					<li><a href="//about/">About</a></li>
+					<li><a href="//get-involved/">Get Involved</a></li>
+					<li><a href="//courses/">Courses</a></li>
+					<li><a href="//post/">Tutorials</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+<div class="title-bar">
+	<div class="container">
+		<h1>Golang MySQL Tutorial</h1>
+		<p>In this tutorial I&#39;ll be demonstrating how we can work with MySQL databases using Go.</p>
+		
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col l2">
+			<div class="sidebar">
+     
+    <h3>golang</h3>
+    <ul> 
+      
+        <li><a href="/post/golang/reading-console-input-golang/">Reading in Console Input in Golang</a></li>
+      
+        <li><a href="/post/golang/executing-system-commands-with-golang/">Executing System Commands With Golang</a></li>
+      
+        <li><a href="/post/golang/creating-simple-web-server-with-golang/">Creating A Simple Web Server With Golang</a></li>
+      
+        <li><a href="/post/golang/creating-restful-api-with-golang/">Creating a RESTful API With Golang</a></li>
+      
+        <li><a href="/post/golang/sending-email-using-go-and-mailgun/">Sending Email Using Go And Mailgun</a></li>
+      
+        <li><a href="/post/golang/implementing-bubble-sort-with-golang/">Implementing the Bubble Sort Algorithm using Golang</a></li>
+      
+        <li><a href="/post/golang/writing-a-twitter-bot-golang/">Writing A Twitter Bot in Golang</a></li>
+      
+        <li><a href="/post/golang/golang-mysql-tutorial/">Golang MySQL Tutorial</a></li>
+      
+        <li><a href="/post/golang/golang-integer-string-conversion-tutorial/">Golang Integer String Conversion Tutorial</a></li>
+      
+        <li><a href="/post/golang/parsing-xml-with-golang/">Parsing XML Files With Golang</a></li>
+      
+    </ul>
+    
+
+</div> 
+		</div>
+		<div class="col l8">	
+			<article>
+				<div class="info">Author: Elliot Forbes | Posted at: 09.04.2017 21:28</div>
+				<div>
+					
+
+<blockquote>
+<p>In this tutorial I’ll be demonstrating how you can connect to a MySQL database and perform basic SQL statements using Go.</p>
+</blockquote>
+
+<p>In order to do this we’ll be using <a href=”https://github.com/go-sql-driver/mysql”><a href="https://github.com/go-sql-driver/mysql">https://github.com/go-sql-driver/mysql</a></a> as our MySQL driver. Go-SQL-Driver is a lightweight and fast MySQL driver that supports connections over TCP/IPv4, TCP/IPv6, Unix domain sockets or custom protocols and features automatic handling of broken connections.</p>
+
+<blockquote>
+<p>Github Repo: <strong><a href="https://github.com/go-sql-driver/mysql">go-sql-driver/mysql</a></strong></p>
+</blockquote>
+
+<h2 id="implementation">Implementation</h2>
+
+<p>We’ll begin by connecting to a database we’ve set up on our local machine and then go on to perform some basic insert and select statements.</p>
+
+<h4 id="connecting-to-a-mysql-database">Connecting to a MySQL database</h4>
+
+<pre><code class="language-go">package main
+
+import (
+    &quot;fmt&quot;
+    &quot;database/sql&quot;
+    _ &quot;github.com/go-sql-driver/mysql&quot;
+)
+
+func main() {
+    fmt.Println(&quot;Go MySQL Tutorial&quot;)
+    
+    // Open up our database connection.
+    // I've set up a database on my local machine using phpmyadmin.
+    // The database is called testDb
+    db, err := sql.Open(&quot;mysql&quot;, &quot;username:password@tcp(127.0.0.1:3306)/test&quot;)
+    
+    // if there is an error opening the connection, handle it
+    if err != nil {
+        panic(err.Error())
+    }
+    
+    // defer the close till after the main function has finished
+    // executing 
+    defer db.Close()
+    
+}
+</code></pre>
+
+<h4>Performing Basic SQL Commands</h4>
+
+<p><code>db.Query(sql)</code> allows us to perform any SQL command we so desire. Simply construct the string and pass it in as a parameter.</p>
+
+<pre><code class="language-go">package main
+
+import (
+    &quot;fmt&quot;
+    &quot;database/sql&quot;
+    _ &quot;github.com/go-sql-driver/mysql&quot;
+)
+
+func main() {
+    fmt.Println(&quot;Go MySQL Tutorial&quot;)
+    
+    // Open up our database connection.
+    // I've set up a database on my local machine using phpmyadmin.
+    // The database is called testDb
+    db, err := sql.Open(&quot;mysql&quot;, &quot;root:password1@tcp(127.0.0.1:3306)/test&quot;)
+    
+    // if there is an error opening the connection, handle it
+    if err != nil {
+        panic(err.Error())
+    }
+    
+    // defer the close till after the main function has finished
+    // executing 
+    defer db.Close()
+    
+    // perform a db.Query insert 
+    insert, err := db.Query(&quot;INSERT INTO test VALUES ( 2, 'TEST' )&quot;)
+    
+    // if there is an error inserting, handle it
+    if err != nil {
+        panic(err.Error())
+    }
+    // be careful deferring Queries if you are using transactions
+    defer insert.Close()
+    
+    
+}
+</code></pre>
+
+<h2 id="populating-structs-from-results">Populating Structs from Results</h2>
+
+<p>Retrieving a set of results from the database is all well and good, but we need to be able to read these results or populating existing <code>structs</code> so that we can parse them and modify them easily. In order to parse a number of rows we can use the <code>.Scan(args...)</code> method which takes in any number of arguments and allows us to populate a composite object.</p>
+
+<pre><code>/*
+ * Tag... - a very simple struct
+ */
+type Tag struct {
+	ID   int    `json:&quot;id&quot;`
+	Name string `json:&quot;name&quot;`
+}
+</code></pre>
+
+<pre><code>func main() {
+	// Open up our database connection.
+	db, err := sql.Open(&quot;mysql&quot;, &quot;root:pass1@tcp(127.0.0.1:3306)/tuts&quot;)
+
+	// if there is an error opening the connection, handle it
+	if err != nil {
+		log.Print(err.Error())
+	}
+	defer db.Close()
+
+	// Execute the query
+	results, err := db.Query(&quot;SELECT id, name FROM tags&quot;)
+	if err != nil {
+		panic(err.Error()) // proper error handling instead of panic in your app
+	}
+
+	for results.Next() {
+		var tag Tag
+		// for each row, scan the result into our tag composite object
+		err = results.Scan(&amp;tag.ID, &amp;tag.Name)
+		if err != nil {
+			panic(err.Error()) // proper error handling instead of panic in your app
+		}
+                // and then print out the tag's Name attribute
+		log.Printf(tag.Name)
+	}
+
+}
+</code></pre>
+
+<p>In this example we retrieved 2 columns from the tags database and then used .Scan to populate our tag object.</p>
+
+<blockquote>
+<p>Note that if you retrieve 3 fields from the database and Scan only has 2 parameters, it will fail. They need to match up exactly.</p>
+</blockquote>
+
+<h2 id="querying-a-single-row">Querying a Single Row</h2>
+
+<p>Say we wanted to query a single row this time and had an ID and again wanted to populate our struct. We could do that like so:</p>
+
+<pre><code>var tag Tag
+// Execute the query
+err = db.QueryRow(&quot;SELECT id, name FROM tags where id = ?&quot;, 2).Scan(&amp;tag.ID, &amp;tag.Name)
+if err != nil {
+	panic(err.Error()) // proper error handling instead of panic in your app
+}
+
+log.Println(tag.ID)
+log.Println(tag.Name)
+</code></pre>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>If you found this tutorial helpful or require more assistance then please don&rsquo;t hesitate to let me know in the comments section below:</p>
+
+<blockquote>
+<p>Recommended Reading: <a href="https://tutorialedge.net/creating-simple-restful-json-api-with-go">Creating a RESTful JSON api with Go</a></p>
+</blockquote>
+
+				</div>
+				<div>
+					<div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://tutorialedge.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+				</div>
+			</article>
+		</div>
+
+		<div class="col l2">
+			<div class="wrapper">
+    <div class="container">
+      <img src="https://twitter.com/Elliot_F/profile_image?size=original" alt="Elliot Forbes" class="trophy" />
+      <h1>Elliot Forbes</h1>
+      <span class="score">Follow me:</span>
+  
+      <div class="buttons">
+          <a href="https://twitter.com/Elliot_F" target="_blank" class="button light">
+              <span><i class="ion ion-social-twitter"></i> Twitter</span>
+          </a>
+      </div>
+    </div>
+</div>
+
+		</div>
+		
+	</div>
+</div>
+
+<div class="join-us">
+	<div class="container">
+		<div class="row">
+			<div class="col l8">
+				<h5>Become a Contributor!</h5>
+				<p>Think you could improve the articles on this site? Feel free to submit a pull request to the sites github repo.</p>
+			</div>
+			<div class="col l4">
+				<a href="https://github.com/elliotforbes/tutorialedge-v2"><button class="btn valign">Fork Our Repo</button></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="page-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col l6 s12">
+				<h5>TutorialEdge.net</h5>
+				<p class="text-lighten-4">This site is dedicated to bringing you the highest quality courses designed to teach you the ins and outs of programming with various frameworks and programming languages.</p>
+			</div>
+			<div class="col l4 offset-l2 s12">
+				<h5>Links</h5>
+				<ul>
+					<li><a class="text-lighten-3" href="/tutorials">All Tutorials</a></li>
+					<li><a class="text-lighten-3" href="/books">Books</a></li>
+					<li><a class="text-lighten-3" href="/contact">Contact</a></li>
+					<li><a class="text-lighten-3" href="/courses">Courses</a></li>
+					<li><a class="text-lighten-3" href="/blog">Blog</a></li>
+					<li><a class="text-lighten-3" href="/about">About</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer-copyright">
+		<div class="container">
+		TutorialEdge © 2016 Copyright 
+		</div>
+	</div>
+</footer>
+
+<script>
+$(".button-collapse").sideNav();
+</script>

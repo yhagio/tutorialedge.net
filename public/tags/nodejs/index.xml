@@ -1,0 +1,966 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nodejs on TutorialEdge.net</title>
+    <link>/tags/nodejs/index.xml</link>
+    <description>Recent content in Nodejs on TutorialEdge.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Keeping NodeJS Applications Running Forever Using PM2</title>
+      <link>/post/javascript/nodejs/keeping-node-apps-running-forever-pm2/</link>
+      <pubDate>Sat, 15 Apr 2017 08:38:40 +0100</pubDate>
+      
+      <guid>/post/javascript/nodejs/keeping-node-apps-running-forever-pm2/</guid>
+      <description>&lt;p&gt;If you write an application that you need to keep running forever on your servers then this is the tutorial for you. &lt;/p&gt;
+
+&lt;p&gt;If you&#39;re a software developer working on business critical applications and have to adhere to strict Service Level Agreements (SLAs for short) then you know just how vital it is to have your applications back up and running the second they fall over, every second counts when trying to achieve the 5 9&#39;s or 99.999% availability throughout the year. In this tutorial I&#39;ll be demonstrating the effectiveness of PM2 which is a production process manager for Node.js applications which also features a built-in load balancer for those high-performance applications. &lt;/p&gt;
+
+&lt;p&gt;PM2 is an opensource bit of tech that&#39;s currently available here: &lt;a href=&#34;https://github.com/Unitech/pm2&#34; target=&#34;_blank&#34;&gt;https://github.com/Unitech/pm2&lt;/a&gt; and is currently owned and maintained by an Alexandre Strzelewicz from &lt;a href=&#34;http://keymetrics.io&#34; target=&#34;_blank&#34;&gt;http://keymetrics.io&lt;/a&gt; for those of you who want to check out his other work. &lt;/p&gt;
+
+&lt;h2&gt;Installing PM2&lt;/h2&gt;
+
+&lt;p&gt;PM2 doesn&#39;t require much configuration, if any, and if you&#39;ve got NPM installed on your machine then installing PM2 is just a case of running the following command: &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm install pm2 -g
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once that&#39;s installed on your machine then you are then ready to go. &lt;/p&gt;
+
+&lt;h2&gt;Starting an Application&lt;/h2&gt;
+
+&lt;p&gt;Starting a node application that you want to keep running forever is as simple as this: &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pm2 start app.js
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;More Info&lt;/h2&gt;
+
+&lt;p&gt;PM2&#39;s official can be found here: &lt;a href=&#34;http://pm2.keymetrics.io/&#34; target=&#34;_blank&#34;&gt;http://pm2.keymetrics.io/&lt;/a&gt; should you wish to read up a bit more on this pretty amazing opensource tool and potentially thank the developers for their efforts. &lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Building a Webserver using ExpressJS and NodeJS</title>
+      <link>/post/javascript/nodejs/creating-a-webserver-with-nodejs/</link>
+      <pubDate>Sat, 15 Apr 2017 08:32:01 +0100</pubDate>
+      
+      <guid>/post/javascript/nodejs/creating-a-webserver-with-nodejs/</guid>
+      <description>
+
+&lt;p&gt;This is the first tutorial in a series in which we’ll be building up a website for a domain name I’ve been sitting on for a few years now. This is intended to show you everything it takes in order to program your own website using NodeJS and the new Angular2 framework.&lt;/p&gt;
+
+&lt;h2 id=&#34;creating-a-simple-web-server-using-nodejs-and-expressjs&#34;&gt;Creating a Simple Web Server Using NodeJS and ExpressJS.&lt;/h2&gt;
+
+&lt;p&gt;So the very first thing we need for our site is the foundation and for this we can use a very simple ExpressJS server.&lt;/p&gt;
+
+&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h3&gt;
+
+&lt;p&gt;Before we can begin this series you’ll need to make sure you have the following installed on your computer:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;NodeJS and the NPM&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Typically NodeJS includes the node package manager (NPM) by default so once you’ve installed node on your machine, open up a terminal and test your installation. Type “npm” in your terminal and if everything has been configured correctly you should see the manual for npm printed out.&lt;/p&gt;
+
+&lt;h2 id=&#34;setting-up-our-project&#34;&gt;Setting Up Our Project&lt;/h2&gt;
+
+&lt;p&gt;Create a directory on your development machine and then navigate to that folder using the terminal. Once you are here we can initialize our project with npm:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mpm init
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This should then ask you a series of questions that will be used in order to populate a package.json file that this command creates. These aren’t critically important and can be changed at a later date if needed.&lt;/p&gt;
+
+&lt;h2 id=&#34;installing-expressjs&#34;&gt;Installing ExpressJS&lt;/h2&gt;
+
+&lt;p&gt;Once you’ve initialized your project with npm we can then proceed to installing ExpressJS. &lt;code&gt;npm install express --save&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;This command should install ExpressJS into a node_modules directory within your project and this will now allow us to make a start programming our simple web server.&lt;/p&gt;
+
+&lt;h2 id=&#34;implementing-our-server&#34;&gt;Implementing our Server&lt;/h2&gt;
+
+&lt;p&gt;So to begin with you’ll want to create a new js file within your directory. We’ll call this server.js and it’s going to start off like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var express = require(&#39;express&#39;);
+
+var app = express();
+
+app.get(&#39;/&#39;, function (req, res){
+    res.send(&amp;quot;Hello World!&amp;quot;); 
+});
+
+
+var server = app.listen(3000, function () {
+    var host = server.address().address;
+    var port = server.address().port;
+    
+    console.log(&amp;quot;GadgetEdge.net listening at http://%s:%s&amp;quot;, host, port); 
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once you’ve got this in your server.js file we can test it out. Open up your terminal and navigate to your project’s directory and then run your server code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;node server.js
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This should start the server and if we navigate to our browser and type: &lt;a href=&#34;http://localhost:3000&#34;&gt;http://localhost:3000&lt;/a&gt; you should see Hello World! Printed out.&lt;/p&gt;
+
+&lt;h2 id=&#34;improving-our-server&#34;&gt;Improving Our Server&lt;/h2&gt;
+
+&lt;p&gt;So now that we’ve got a basic server up and running we now need to improve it a bit and give it functionality like serving our html files as well as all our assets.&lt;/p&gt;
+
+&lt;p&gt;First of all we are going to create a public directory within our project that will house all of our website files. Within this create an index.html page and another directory called assets. Within this assets folder create another file called: style.css This will house all of our css for our site.&lt;/p&gt;
+
+&lt;p&gt;Next thing we need to do is point our express server to look at this new public directory. We can do this like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// this line allows us to use the expressjs module
+var express = require(&#39;express&#39;);
+
+// Add this line so we can serve files from our local
+// directory
+var path = require(&#39;path&#39;);
+var app = express();
+
+// Add the abillity to serve our static files from the public directory
+app.use(express.static(&#39;public&#39;));
+
+// Here we serve up our index page
+app.get(&#39;/&#39;, function(req, res) {
+    res.sendFile(path.join(__dirname + &#39;/public/index.html&#39;));
+});
+
+
+var server = app.listen(3000, function () {
+    var host = server.address().address;
+    var port = server.address().port;
+    
+    console.log(&amp;quot;GadgetEdge.net listening at http://%s:%s&amp;quot;, host, port); 
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;checking-it-all-works&#34;&gt;Checking it all works&lt;/h2&gt;
+
+&lt;p&gt;Once you’ve done all this, restart your server in the terminal by pressing ctrl-c or cmd-c and then restart it by running node server.js. Again navigate to localhost:3000 and you should see your index.html page rendered for you. Test the configuration by changing some of the css.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Executing Shell Scripts With NodeJS</title>
+      <link>/post/javascript/nodejs/executing-shell-scripts-with-nodejs/</link>
+      <pubDate>Sat, 15 Apr 2017 08:26:02 +0100</pubDate>
+      
+      <guid>/post/javascript/nodejs/executing-shell-scripts-with-nodejs/</guid>
+      <description>&lt;p&gt;One of the problems I’ve been faced with recently is how do I go about executing shell scripts using NodeJS. This essentially allows me to query the status of certain processes and utilize the full power of the unix shell commands. &lt;/p&gt;
+
+&lt;h2&gt;Implementation using NodeJS child_process Module&lt;/h2&gt;
+
+&lt;p&gt;Node thankfully already has a module which is designed specifically for executing shell scripts and can be found &lt;a href=&#34;https://nodejs.org/api/child_process.html&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; in the documentation.&lt;/p&gt;
+
+&lt;p&gt;This module essentially creates a child process in which we can execute our shell script and also sets everything up for us so that we can utilize stdin, stdout and stderr within our NodeJS application. &lt;/p&gt;
+
+&lt;p&gt;In the below example you’ll see how we can utilize callbacks in order to access the data from stdout and stderr and subsequently view any errors and output our shell scripts output.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=”language-javascript”&gt;
+var exec = require(&#39;child_process&#39;).exec, child;
+var testscript = exec(&#39;sh myscript.sh /directory&#39;);
+
+testscript.stdout.on(&#39;data&#39;, function(data){
+    console.log(data); 
+    sendBackInfo();
+});
+
+testscript.stderr.on(&#39;data&#39;, function(data){
+    console.log(data);
+    triggerErrorStuff(); 
+});
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Reading and Writing Files With NodeJS</title>
+      <link>/post/javascript/nodejs/reading-writing-files-with-nodejs/</link>
+      <pubDate>Sat, 15 Apr 2017 08:20:02 +0100</pubDate>
+      
+      <guid>/post/javascript/nodejs/reading-writing-files-with-nodejs/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;In this tutorial&lt;/strong&gt; I’m going to be showing you exactly how we can read and write files on our local filesystem using NodeJS.&lt;/p&gt;
+
+&lt;h2 id=”reading-from-files”&gt;Reading From Files&lt;/h2&gt;
+
+&lt;p&gt;Being able to read from files on your local file system can be hugely useful and there are a number of different things you can build on top of this. A log reader, importing information from spreadsheets and xml files or whatever you can think of, being able to read from files is hugely useful.&lt;/p&gt;
+
+&lt;h5&gt;The FS Package&lt;/h5&gt;
+
+&lt;p&gt;Create a new file called index.js and add the following: &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var fs = require(&#39;fs&#39;);
+
+fs.readFile(&#39;temp.txt&#39;, function(err, buf) {
+  console.log(buf.toString());
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Create a temp.txt within the same directory and write in it anything you’d like. Run your script using node index.js and you should see in the console the contents of your file.&lt;/p&gt;
+
+&lt;h5&gt;Understanding the Code&lt;/h5&gt;
+
+&lt;p&gt;We’ll step through this with comments.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var fs = require(&#39;fs&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This line does the job of importing the fs package and allowing us to utilize it within our own code.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;fs.readFile(&#39;temp.txt&#39;, function(err, buf) {
+  console.log(buf.toString());
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This calls the readFile function asynchronously and then prints the contents of the file to the console.&lt;/p&gt;
+
+&lt;h5&gt;Returning a Buffer?&lt;/h5&gt;
+
+&lt;p&gt;If the above code hasn’t worked as expected and you are seeing a buffer being printed out in the terminal then it might be an idea to specify the files encoding. We can do this like so: &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var fs = require(&#39;fs&#39;);
+
+fs.readFile(&#39;temp.txt&#39;, &#39;utf-8&#39; ,function(err, buf) {
+  console.log(buf.toString());
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=”writing-to-files”&gt;Writing To Files&lt;/h2&gt;
+
+&lt;p&gt;Now that you’ve got the reading of files down, it’s time to start modifying these files. To do this we’ll be using the same FS package we used in part one. &lt;/p&gt;
+
+&lt;h5&gt;The Code:&lt;/h5&gt;
+
+&lt;p&gt;Again create a new file within your current directory and call it write.js and then add the following javascript code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var fs = require(&#39;fs&#39;);
+
+var data = &amp;quot;New File Contents&amp;quot;;
+
+fs.writeFile(&#39;temp.txt&#39;, data, function(err, data){
+    if (err) console.log(err);
+    console.log(&amp;quot;Successfully Written to File.&amp;quot;);
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Run this code by executing node write.js in the terminal and then open up temp.txt in your editor, you should now see the new contents of the file. &lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Creating and Deleting Directories With NodeJS</title>
+      <link>/post/javascript/nodejs/creating-deleting-directories-with-nodejs/</link>
+      <pubDate>Sat, 15 Apr 2017 08:17:02 +0100</pubDate>
+      
+      <guid>/post/javascript/nodejs/creating-deleting-directories-with-nodejs/</guid>
+      <description>
+
+&lt;p&gt;&lt;strong&gt;In this tutorial I’ll be showing you how to create and delete directories using NodeJS&lt;/strong&gt; and we’ll be using the mkdirp and the rimraf node package in order to achieve this.&lt;/p&gt;
+
+&lt;h2 id=&#34;creating-directories&#34;&gt;Creating Directories&lt;/h2&gt;
+
+&lt;p&gt;In order to create a directory we’ll need first download the mkdirp npm package, we can do this like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;npm install mkdirp --local
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This should install the mkdirp package as well as any of it’s dependencies in a node_modules directory within your current directory. Once this has completed we can then start using this new package.&lt;/p&gt;
+
+&lt;p&gt;If you wish to read up more about this package you check it’s code out here: &lt;a href=”https://github.com/substack/node-mkdirp” target=”_blank”&gt;mkdirp github&lt;/a&gt;&lt;/p&gt;
+
+&lt;h5&gt;The Code&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;// first we import our newly installed mkdirp
+// package so that we can use it further down
+var mkdirp = require(&#39;mkdirp&#39;);
+
+// and then we call it giving 2 parameters, the first
+// being the name of the directory we wish to create
+// and the second a callback function.
+mkdirp(&#39;test&#39;, function (err){
+    // if any errors then print the errors to our console
+    if(err) console.log(err);
+    // else print a success message.
+    console.log(&amp;quot;Successfully created test directory&amp;quot;);
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Deleting Directories in Node&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;In order to delete directories using node we’ll use the rimraf package&lt;/strong&gt; and we’ll need to again install this using the node package manager:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;npm install rimraf --local
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Again, if you want to see the code for this package you can do so &lt;a href=”https://github.com/isaacs/rimraf” target=”_blank”&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;the-code&#34;&gt;The Code&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var rimraf = require(&#39;rimraf&#39;);
+
+rimraf(&#39;test&#39;, function(err){
+    if (err) console.log(err);
+    console.log(&amp;quot;Successfully deleted a directory&amp;quot;);
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Run this using node delete.js and you should hopefully see the success message printed out in your console as well as the test directory we created in the first part of the tutorial deleted.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Editing XML Files With NodeJS</title>
+      <link>/post/javascript/nodejs/editing-xml-files-with-nodejs/</link>
+      <pubDate>Sat, 15 Apr 2017 08:14:10 +0100</pubDate>
+      
+      <guid>/post/javascript/nodejs/editing-xml-files-with-nodejs/</guid>
+      <description>&lt;p&gt;XML files are still widely used in enterprise programs and being able to manipulate xml files can be incredibly important.&lt;/p&gt;
+
+&lt;h2&gt;XML2JS Node Package&lt;/h2&gt;
+
+&lt;p&gt;In this tutorial I’ll be demonstrating how you can easily manipulate XML files using the xml2js node package. This package is great due to the fact it reads in an xml string and converts it to a far easier to use json structure. &lt;/p&gt;
+
+&lt;h4&gt;Reading in our XML File&lt;/h4&gt;
+
+&lt;p&gt;In order for us to read in our XML file we will need to use the FS node package. You can install this by navigating to your command line and typing: &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;npm install fs --save-dev
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once you’ve successfully installed this, create a new js file and type the following: &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var fs = require(&#39;fs&#39;);
+
+fs.readFile(&#39;test.xml&#39;, &#39;utf-8&#39;, function (data, err){
+    if(err) console.log(err);
+    console.log(data);    
+});       
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Below you’ll find a sample xml file that we’ll be using:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;yes&amp;quot;?&amp;gt;
+&amp;lt;root&amp;gt;
+    &amp;lt;graph&amp;gt;
+        &amp;lt;node&amp;gt;
+            &amp;lt;name&amp;gt;Node 1&amp;lt;/name&amp;gt;
+            &amp;lt;weight&amp;gt;24&amp;lt;/weight&amp;gt;
+        &amp;lt;/node&amp;gt;
+        &amp;lt;node&amp;gt;
+            &amp;lt;name&amp;gt;Node 2&amp;lt;/name&amp;gt;
+            &amp;lt;weight&amp;gt;18&amp;lt;/weight&amp;gt;
+        &amp;lt;/node&amp;gt;
+        &amp;lt;node&amp;gt;
+            &amp;lt;name&amp;gt;Node 3&amp;lt;/name&amp;gt;
+            &amp;lt;weight&amp;gt;47&amp;lt;/weight&amp;gt;
+        &amp;lt;/node&amp;gt;
+        &amp;lt;node&amp;gt;
+            &amp;lt;name&amp;gt;Node 4&amp;lt;/name&amp;gt;
+            &amp;lt;weight&amp;gt;58&amp;lt;/weight&amp;gt;
+        &amp;lt;/node&amp;gt;
+    &amp;lt;/graph&amp;gt;
+&amp;lt;/root&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Converting Our XML Data to Json&lt;/h2&gt;
+
+&lt;p&gt;Ok, so now that we’ve got the ability to read our xml files, we can then convert this to a far easier format to work with. The xml2js package is an excellent package that will take in any xml string and convert it to a json object. Again we can install this using the node package manager:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;npm install xml2js --save-dev
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once this is installed, modify your existing code to use the parseString method like so: &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var fs = require(&#39;fs&#39;),
+    parseString = require(&#39;xml2js&#39;).parseString;
+
+fs.readFile(&#39;test.xml&#39;, &#39;utf-8&#39;, function (err, data){
+    if(err) console.log(err);
+    // we log out the readFile results    
+    console.log(data);
+    // we then pass the data to our method here
+    parseString(data, function(err, result){
+        if(err) console.log(err);
+        // here we log the results of our xml string conversion
+        console.log(result); 
+    });
+});       
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you run this you should see our newly created JSON object printed out in the console.&lt;/p&gt;
+
+&lt;h2&gt;Editing our New JSON Object&lt;/h2&gt;
+
+&lt;p&gt;JSON object manipulation is incredibly in javascript. I’m not going to go into depth about how we can edit it but as a means of demonstrating how we can edit the xml I’m going to change the name of the weight of the first node in our xml file. &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var fs = require(&#39;fs&#39;),
+    parseString = require(&#39;xml2js&#39;).parseString;
+
+fs.readFile(&#39;test.xml&#39;, &#39;utf-8&#39;, function (err, data){
+    if(err) console.log(err);
+    // we log out the readFile results    
+    console.log(data);
+    // we then pass the data to our method here
+    parseString(data, function(err, result){
+        if(err) console.log(err);
+        // here we log the results of our xml string conversion
+        console.log(result); 
+        // save our json to a variable
+        var json = result;
+        // edit the first node’s weight and set it to 99
+        json.root.graph[0].node[0].weight = &amp;quot;99&amp;quot;;
+                  
+    });
+});       
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Converting to XML and Writing to FIle&lt;/h2&gt;
+
+&lt;p&gt;Now that we’ve successfully edited our json, we can then convert it back to xml and finally write it to a file.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var fs = require(&#39;fs&#39;),
+    parseString = require(&#39;xml2js&#39;).parseString,
+    xml2js = require(&#39;xml2js&#39;);
+
+fs.readFile(&#39;test.xml&#39;, &#39;utf-8&#39;, function (err, data){
+    if(err) console.log(err);
+    // we log out the readFile results    
+    console.log(data);
+    // we then pass the data to our method here
+    parseString(data, function(err, result){
+        if(err) console.log(err);
+        // here we log the results of our xml string conversion
+        console.log(result); 
+        
+        var json = result;
+        
+        json.root.graph[0].node[0].weight = &amp;quot;99&amp;quot;;
+        
+        // create a new builder object and then convert
+        // our json back to xml.
+        var builder = new xml2js.Builder();
+        var xml = builder.buildObject(json);
+        
+        fs.writeFile(&#39;edited-test.xml&#39;, xml, function(err, data){
+            if (err) console.log(err);
+            
+            console.log(&amp;quot;successfully written our update xml to file&amp;quot;);
+        })
+                  
+    });
+});       
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Run this and you should see our newly created and updated xml within the same directory as your node script.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Converting CSV to JSON using NodeJS</title>
+      <link>/post/javascript/nodejs/converting-csv-json-node/</link>
+      <pubDate>Sun, 09 Apr 2017 21:29:02 +0100</pubDate>
+      
+      <guid>/post/javascript/nodejs/converting-csv-json-node/</guid>
+      <description>
+
+&lt;p&gt;In this tutorial I’m going to be showing you how we can create a NodeJS script that takes in a csv file and outputs the contents of that CSV file as JSON.&lt;/p&gt;
+
+&lt;p&gt;In order to do this conversion we’ll be using the &lt;a href=&#34;https://www.npmjs.com/package/csvtojson&#34;&gt;csvtojson&lt;/a&gt; node package. This package will do pretty much all the heavy lifting for us and having used it in production environments I can say that it’s remarkably easy to implement into a project.&lt;/p&gt;
+
+&lt;h2 id=&#34;setting-up-your-project&#34;&gt;Setting Up Your Project&lt;/h2&gt;
+
+&lt;p&gt;Create a new project directory on your machine and open up this location in your terminal. Next we’ll want to install the &lt;b&gt;csvtojson&lt;/b&gt; node module, you can do that by typing the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm install csvtojson --save
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This should create a &lt;b&gt;node_modules&lt;/b&gt; directory within your project which will contain all the dependencies that csvtojson requires.&lt;/p&gt;
+
+&lt;h2 id=&#34;implementation&#34;&gt;Implementation&lt;/h2&gt;
+
+&lt;p&gt;Now that we’ve got everything set up we can begin implementation. Open up your project in your prefered text editor and create a new js file. Within this file add the following code.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;//require the csvtojson converter class 
+var Converter = require(&amp;quot;csvtojson&amp;quot;).Converter;
+// create a new converter object
+var converter = new Converter({});
+
+// call the fromFile function which takes in the path to your 
+// csv file as well as a callback function
+converter.fromFile(&amp;quot;./path-to-your-file.csv&amp;quot;,function(err,result){
+    // if an error has occured then handle it
+    if(err){
+        console.log(&amp;quot;An Error Has Occured&amp;quot;);
+        console.log(err);  
+    } 
+    // create a variable called json and store
+    // the result of the conversion
+    var json = result;
+    
+    // log our json to verify it has worked
+    console.log(json);
+});
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Building Software using A Microservice Based Architecture</title>
+      <link>/post/javascript/nodejs/building-software-using-microservice-architecture/</link>
+      <pubDate>Sun, 09 Apr 2017 21:27:23 +0100</pubDate>
+      
+      <guid>/post/javascript/nodejs/building-software-using-microservice-architecture/</guid>
+      <description>
+
+&lt;p&gt;In this tutorial I’m going to be showing an example of how you could go about building your own software following a microservice based architecture.&lt;/p&gt;
+
+&lt;p&gt;I’m going to be discussing key things such as communication between services, asynchronous vs synchronous and most importantly managing your services. I’m going to be writing everything using Google’s Go(GoLang) programming language but these concepts will be transferable across to other language domains.&lt;/p&gt;
+
+&lt;h2 id=&#34;why-should-we-use-microservice-based-architecture&#34;&gt;Why Should We Use Microservice Based Architecture?&lt;/h2&gt;
+
+&lt;p&gt;Microservice based architecture isn’t a silver bullet that will solve all your problems, however, it does a very good job of simplifying the way you develop solutions. This architecture pattern effectively breaks up modules of your project into succinct pieces that can be scaled and reduced as needed.&lt;/p&gt;
+
+&lt;p&gt;It’s a style of architecture that allows teams to work independently on separate parts of a system with only the knowledge of another component’s interface. The architecture is flexible in the sense that modules can be replaced without impacting the picture and modules can be written in the programming language that best solves that particular problem.&lt;/p&gt;
+
+&lt;h2 id=&#34;high-level-overview&#34;&gt;High-Level Overview&lt;/h2&gt;
+
+&lt;p&gt;So we’ll be creating 2 services, one a &lt;em&gt;RESTful&lt;/em&gt; api that persists tweets and another a service that parses twitter for all tweets related to a certain topic. This could be beneficial if you wanted to automatically scrape twitter for tweets about your brand and possibly flag any tweets that are negative so that your PR team could contact them in person.&lt;/p&gt;
+
+&lt;p&gt;This could in theory be delivered as one monolithic application but say you wanted to add a service in the future that automatically favourited positive tweets then this separation would make it simple.&lt;/p&gt;
+
+&lt;h2&gt;Microservice 1 - Creating a Twitter Stream Reader in GoLang&lt;/h2&gt;
+The first microservices we are going to be building is a twitter stream reader that will monitor a twitter stream for the words &lt;b&gt;“tutorialedge”&lt;/b&gt;. When a tweet is found, it will be persisted to a database. 
+
+You can find the full tutorial for how to build a twitter stream reader here. We however are going to be slightly modifying that code so that it queries our newly built &lt;b&gt;REST&lt;/b&gt; API every time a tweet pops up:
+
+~~~js
+package main
+
+import (
+    &#34;fmt&#34;
+    &#34;log&#34;
+    &#34;os&#34;
+    &#34;os/signal&#34;
+    &#34;syscall&#34;
+    &#34;net/http&#34;
+    &#34;bytes&#34;
+    &#34;github.com/dghubble/go-twitter/twitter&#34;
+    &#34;github.com/dghubble/oauth1&#34;
+)
+
+func configure() {
+    // Pass in your consumer key (API Key) and your Consumer Secret (API Secret) 
+    config := oauth1.NewConfig(&#34;key&#34;, &#34;secret&#34;)
+    // Pass in your Access Token and your Access Token Secret
+    token := oauth1.NewToken(&#34;access&#34;, &#34;secret&#34;)
+    httpClient := config.Client(oauth1.NoContext, token)
+    client := twitter.NewClient(httpClient)
+    
+    
+    demux := twitter.NewSwitchDemux()
+    
+    demux.Tweet = func(tweet *twitter.Tweet){
+        fmt.Println(tweet.Text)
+        var url bytes.Buffer
+        user := tweet.User
+        
+        url.WriteString(&#34;http://localhost:10000/insert/&#34;)
+        url.WriteString(user.Name)
+        url.WriteString(&#34;/&#34;)
+        url.WriteString(tweet.Text)
+        
+        resp, err := http.Get(url.String())
+        
+        if err != nil {
+            fmt.Println(err.Error())
+        }
+        
+        fmt.Println(resp)
+    }
+    
+    demux.DM = func(dm *twitter.DirectMessage){
+        fmt.Println(dm.SenderID)
+    }
+    
+    fmt.Println(&#34;Starting Stream...&#34;)
+    
+    // FILTER
+	filterParams := &amp;twitter.StreamFilterParams{
+		Track:         []string{&#34;cat&#34;},
+		StallWarnings: twitter.Bool(true),
+	}
+	stream, err := client.Streams.Filter(filterParams)
+	if err != nil {
+		log.Fatal(err)
+	}
+    
+    // Receive messages until stopped or stream quits
+	go demux.HandleChan(stream.Messages)
+
+	// Wait for SIGINT and SIGTERM (HIT CTRL-C)
+	ch := make(chan os.Signal)
+	signal.Notify(ch, syscall.SIGINT, syscall.SIGTERM)
+	log.Println(&lt;-ch)
+
+	fmt.Println(&#34;Stopping Stream...&#34;)
+	stream.Stop()
+    
+}
+
+func main() {
+    fmt.Println(&#34;Go-Twitter Bot v0.01&#34;)
+    configure()
+}
+~~~
+
+&lt;h2&gt;Microservice 2 - REST API&lt;/h2&gt;
+The second microservice will be a simple REST API that retrieves the tweets that have been stored in the database to anyone who queries it. 
+
+~~~
+package main
+
+import (
+    &#34;log&#34;
+    &#34;fmt&#34;
+    &#34;net/http&#34;
+    &#34;database/sql&#34;
+    &#34;encoding/json&#34;
+    &#34;github.com/gorilla/mux&#34;
+    _ &#34;github.com/go-sql-driver/mysql&#34;
+)
+
+func getJSON(sqlString string) (string, error) {
+    // Open up our database connection.
+    db, err := sql.Open(&#34;mysql&#34;, &#34;root:charlie1@tcp(127.0.0.1:3306)/test&#34;)
+    
+    // if there is an error opening the connection, handle it
+    if err != nil {
+        panic(err.Error())
+    }
+    
+    rows, err := db.Query(sqlString)
+    if err != nil {
+        return &#34;&#34;, err
+    }
+    defer rows.Close()
+    columns, err := rows.Columns()
+    if err != nil {
+        return &#34;&#34;, err
+    }
+    count := len(columns)
+    tableData := make([]map[string]interface{}, 0)
+    values := make([]interface{}, count)
+    valuePtrs := make([]interface{}, count)
+    for rows.Next() {
+        for i := 0; i &lt; count; i++ {
+            valuePtrs[i] = &amp;values[i]
+        }
+        rows.Scan(valuePtrs...)
+        entry := make(map[string]interface{})
+        for i, col := range columns {
+            var v interface{}
+            val := values[i]
+            b, ok := val.([]byte)
+            if ok {
+                v = string(b)
+            } else {
+                v = val
+            }
+            entry[col] = v
+        }
+        tableData = append(tableData, entry)
+    }
+    jsonData, err := json.Marshal(tableData)
+    if err != nil {
+        return &#34;&#34;, err
+    }
+    fmt.Println(string(jsonData))
+    return string(jsonData), nil 
+}
+
+func returnAllArticles(w http.ResponseWriter, r *http.Request){
+    
+    // perform a db.Query insert 
+    all, err := getJSON(&#34;SELECT * FROM tweets&#34;)
+    
+    if err != nil {
+        fmt.Println(err.Error())
+    }
+    
+    fmt.Fprintf(w, all)
+
+}
+
+func homePage(w http.ResponseWriter, r *http.Request){
+    fmt.Fprintf(w, &#34;Our Simple RESTful Microservice!&#34;)
+    fmt.Println(&#34;Endpoint Hit: homePage&#34;)
+}
+
+func insertOne(w http.ResponseWriter, r *http.Request){
+    
+    vars := mux.Vars(r)
+    name := vars[&#34;name&#34;]
+    tweet := vars[&#34;tweet&#34;]
+    
+    fmt.Println(&#34;Name: &#34; + name)
+    fmt.Println(&#34;Tweet: &#34; + tweet)
+    
+    // Open up our database connection.
+    db, err := sql.Open(&#34;mysql&#34;, &#34;user:pass@tcp(127.0.0.1:3306)/test&#34;)
+    
+    // if there is an error opening the connection, handle it
+    if err != nil {
+        panic(err.Error())
+    }
+    
+    
+    insert, err := db.Query(&#34;INSERT INTO tweets (NAME, TWEET) VALUES ( ? , ? )&#34;, name, tweet)
+    
+    // if there is an error inserting, handle it
+    if err != nil {
+        panic(err.Error())
+    }
+    // be careful defering Queries if you are using transactions
+    defer insert.Close()
+    
+    fmt.Fprintf(w, &#34;Inserted one into the Database&#34;)
+}
+
+func handleRequests() {
+    myRouter := mux.NewRouter().StrictSlash(true)
+    myRouter.HandleFunc(&#34;/&#34;, homePage)
+    myRouter.HandleFunc(&#34;/all&#34;, returnAllArticles)
+    myRouter.HandleFunc(&#34;/insert/{name}/{tweet}&#34;, insertOne)
+    log.Fatal(http.ListenAndServe(&#34;:10000&#34;, myRouter))
+}
+
+func main() {
+    fmt.Println(&#34;Go MySQL Tutorial&#34;)
+    
+    handleRequests()
+    
+}
+~~~
+
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;These two services are independent of each other and if one falls over then the other services aren&amp;rsquo;t affected. This demonstrates the resiliency of the microservice based architecture and if performance becomes an issue, more instances of each service can be spun up.&lt;/p&gt;
+
+&lt;p&gt;These two small programs are just a very primitive example of a program that utilizes a microservice based architecture. Numerous services could be added on top of this such as a responder to every tweeter or auto-favourite service in order to boost community involvement or whatever.
+This hopefully served as a useful demonstration of microservices working together. If you found anything wrong with the tutorial then please let me know so I can rectify it.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Writing Your Own Logging System NodeJS</title>
+      <link>/post/javascript/nodejs/writing-your-own-logging-system-nodejs/</link>
+      <pubDate>Sun, 09 Apr 2017 21:26:14 +0100</pubDate>
+      
+      <guid>/post/javascript/nodejs/writing-your-own-logging-system-nodejs/</guid>
+      <description>
+
+&lt;h2 id=&#34;logging-why-is-it-important&#34;&gt;Logging - Why Is It Important?&lt;/h2&gt;
+
+&lt;p&gt;Logs are an invaluable resource when it comes to effectively maintaining applications. Think of them as breadcrumbs you can follow to find out where your application has faltered. In simple applications this may be unnecessary and overkill, but in production applications that work with highly sensitive and valuable data, logs are priceless.&lt;/p&gt;
+
+&lt;h2 id=&#34;logging-in-nodejs-applications&#34;&gt;Logging in NodeJS Applications&lt;/h2&gt;
+
+&lt;p&gt;In this tutorial I’m going to be demonstrating a quick and simple method of logging a very simple server program.&lt;/p&gt;
+
+&lt;h4 id=&#34;log-levels&#34;&gt;Log Levels&lt;/h4&gt;
+
+&lt;p&gt;Some applications process hundreds of millions of transactions every day, if we log all this out to a single file then we could be traversing hundreds of millions of lines of log files in order to find errors. This is time consuming and can be made unnecessary through using multiple levels of logging.&lt;/p&gt;
+
+&lt;p&gt;In this tutorial we are going to be creating 3 different log files for our simple server application, all of which take different levels of log messages. The levels will be as follows:&lt;/p&gt;
+
+&lt;p&gt;Info
+Warning
+Error&lt;/p&gt;
+
+&lt;p&gt;Not only that but we’ll set up a system where we create a new file every day so that we can narrow any error searches further.&lt;/p&gt;
+
+&lt;h3 id=&#34;implementation&#34;&gt;Implementation&lt;/h3&gt;
+
+&lt;p&gt;This is going to be a very simple logging system that has been made purely for demonstration purposes. It can be extended to suit your needs.&lt;/p&gt;
+
+&lt;h4 id=&#34;our-simple-server&#34;&gt;Our Simple Server&lt;/h4&gt;
+
+&lt;p&gt;Let’s create a very simple express based server that will serve as the base of our application. If you wish to read more about writing your own express based server then you can do so here: &lt;a href=&#34;https://tutorialedge.net/creating-simple-server-express-js&#34;&gt;Tutorial: Writing your own ExpressJS Server&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;router-js&#34;&gt;router.js&lt;/h4&gt;
+
+&lt;p&gt;First we’ll begin by creating a router which will act as our servers middleware for all requests:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var express = require(&#39;express&#39;);
+var router = new express.Router();
+
+router.use(function timeLog(req, res, next) {
+  next();
+});
+
+router.get(&#39;/&#39;, function(req, res) {
+  res.send(&#39;Home Page&#39;);
+});
+
+module.exports = router;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;app-js&#34;&gt;app.js&lt;/h4&gt;
+
+&lt;p&gt;And then we’ll create the server:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var express = require(&#39;express&#39;);
+var app = express();
+
+var router = require(&#39;./router&#39;);
+
+app.use(&#39;/&#39;, router);
+
+app.listen(3000, function() {
+  console.log(&amp;quot;Now Listening on port 3000&amp;quot;);
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you want to try this out then you can do so by typing:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Node app.js
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;implementing-our-logging-system&#34;&gt;Implementing Our Logging System&lt;/h2&gt;
+
+&lt;p&gt;Now that we’ve got a basic application running on port 3000, we can now begin to create our simple logging system;&lt;/p&gt;
+
+&lt;p&gt;Create a new file called logger.js in your projects directory:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// Firstly we&#39;ll need to import the fs library
+var fs = require(&#39;fs&#39;);
+
+// next we&#39;ll want make our Logger object available
+// to whatever file references it.
+var Logger = exports.Logger = {};
+
+
+// Create 3 sets of write streams for the 3 levels of logging we wish to do
+// every time we get an error we&#39;ll append to our error streams, any debug message
+// to our debug stream etc...
+var infoStream = fs.createWriteStream(&#39;logs/info.txt&#39;);
+// Notice we set the path of our log files in the first parameter of 
+// fs.createWriteStream. This could easily be pulled in from a config
+// file if needed.
+var errorStream = fs.createWriteStream(&#39;logs/error.txt&#39;);
+// createWriteStream takes in options as a second, optional parameter
+// if you wanted to set the file encoding of your output file you could
+// do so by setting it like so: (&#39;logs/debug.txt&#39; , { encoding : &#39;utf-8&#39; });
+var debugStream = fs.createWriteStream(&#39;logs/debug.txt&#39;);
+
+
+// Finally we create 3 different functions
+// each of which appends our given messages to 
+// their own log files along with the current date as an
+// iso string and a \n newline character
+Logger.info = function(msg) {
+  var message = new Date().toISOString() + &amp;quot; : &amp;quot; + msg + &amp;quot;\n&amp;quot;;
+  infoStream.write(message);
+};
+
+Logger.debug = function(msg) {
+  var message = new Date().toISOString() + &amp;quot; : &amp;quot; + msg + &amp;quot;\n&amp;quot;;
+  debugStream.write(message);
+};
+
+Logger.error = function(msg) {
+  var message = new Date().toISOString() + &amp;quot; : &amp;quot; + msg + &amp;quot;\n&amp;quot;;
+  errorStream.write(message);
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;using-our-new-logging-system&#34;&gt;Using our new Logging System:&lt;/h2&gt;
+
+&lt;p&gt;Now that we’ve implemented our basic logging system we can go back into our router.js file and add the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var express = require(&#39;express&#39;);
+var router = new express.Router();
+// Here we import our Logger file and instantiate a logger object
+var logger = require(&#39;./logger&#39;).Logger;
+
+router.use(function timeLog(req, res, next) {
+  // this is an example of how you would call our new logging system to log an info message
+  logger.info(&amp;quot;Test Message&amp;quot;);
+  next();
+});
+
+router.get(&#39;/&#39;, function(req, res) {
+  res.send(&#39;Home Page&#39;);
+});
+
+module.exports = router;
+
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Monitoring Server Stats With NodeJS</title>
+      <link>/post/javascript/nodejs/monitoring-server-stats-with-nodejs/</link>
+      <pubDate>Sun, 09 Apr 2017 21:25:15 +0100</pubDate>
+      
+      <guid>/post/javascript/nodejs/monitoring-server-stats-with-nodejs/</guid>
+      <description>
+
+&lt;p&gt;In production environments having visibility over how your systems are performing is vital. Being able to watch memory usage and ensure that servers are not being brought down by memory leaks and greedy programs can be hugely beneficial and can help you deal with issues before they become real headaches.&lt;/p&gt;
+
+&lt;p&gt;In this tutorial I’m going to be demonstrating how you can build a simple, yet effective NodeJS based monitoring system that will monitor your servers CPU usage, the total memory for a system and the current free memory for a system, the system uptime and possibly most importantly the average load for the last 15 minutes.&lt;/p&gt;
+
+&lt;p&gt;In order to do this we’ll be using the os-utils package which can be found here: &lt;a href=&#34;https://github.com/oscmejia/os-utils&#34;&gt;https://github.com/oscmejia/os-utils&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
+
+&lt;p&gt;So initially we’ll write a script that gives us&lt;/p&gt;
+
+&lt;p&gt;We’ll begin by creating a new directory on your local machine and run the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm install --local os-utils
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will install the required npm package within the current working directory and will allow us to use it within our node script.&lt;/p&gt;
+
+&lt;p&gt;Create a new file within this directory called index.js and within this file we are going to do the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// load the os-utils npm package to allow us to use it
+var osutils = require(‘os-utils’);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Next we are going to start calling some of the os-utils functions to allow us to see the stats of our system.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var osutils = require(&#39;os-utils&#39;);
+
+console.log(&amp;quot;Platform: &amp;quot; + osutils.platform());
+console.log(&amp;quot;Number of CPUs: &amp;quot; + osutils.cpuCount());
+
+osutils.cpuUsage(function(v) {
+  console.log(&#39;CPU Usage (%) : &#39; + v);
+});
+
+console.log(&amp;quot;Load Average (5m): &amp;quot; + osutils.loadavg(5));
+
+console.log(&amp;quot;Total Memory: &amp;quot; + osutils.totalmem() + &amp;quot;MB&amp;quot;);
+
+console.log(&amp;quot;Free Memory: &amp;quot; + osutils.freemem() + &amp;quot;MB&amp;quot;);
+
+console.log(&amp;quot;Free Memory (%): &amp;quot; + osutils.freememPercentage());
+
+console.log(&amp;quot;System Uptime: &amp;quot; + osutils.sysUptime() + &amp;quot;ms&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

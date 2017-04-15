@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Laravel 5.1 Routes Cheat Sheet</title>
+	
+	
+	
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/monokai.min.css">
+	<link rel="stylesheet" href="/css/materialize.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<meta name="generator" content="Hugo 0.19" />
+
+	
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+	<script src="/js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<script async>
+			(function (i, s, o, g, r, a, m) {
+					i['GoogleAnalyticsObject'] = r;
+					i[r] = i[r] || function () {
+							(i[r].q = i[r].q || []).push(arguments)
+					}, i[r].l = 1 * new Date();
+					a = s.createElement(o),
+					m = s.getElementsByTagName(o)[0];
+					a.async = 1;
+					a.src = g;
+					m.parentNode.insertBefore(a, m)
+			})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+			ga('create', 'UA-10255990-23', 'auto');
+			ga('send', 'pageview');
+	</script>
+</head>
+<body>
+
+	<header>
+		<nav>
+			<div class="nav-wrapper">
+				<a class="brand-logo" href="/">TutorialEdge.net</a>
+				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><a href="//about/">About</a></li>
+					<li><a href="//get-involved/">Get Involved</a></li>
+					<li><a href="//courses/">Courses</a></li>
+					<li><a href="//post/">Tutorials</a></li>
+				</ul>
+				<ul class="side-nav" id="mobile-demo">
+					<li><a href="//about/">About</a></li>
+					<li><a href="//get-involved/">Get Involved</a></li>
+					<li><a href="//courses/">Courses</a></li>
+					<li><a href="//post/">Tutorials</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+<div class="title-bar">
+	<div class="container">
+		<h1>Laravel 5.1 Routes Cheat Sheet</h1>
+		<p>A simple primer on all the different ways to handle routes in laravel 5.1. We cover route groups, prefixes, middleware and simple routes.</p>
+		
+		<a href="/tags/laravel-5.2"><div class="chip">laravel-5.2</div></a>
+		
+		<a href="/tags/php"><div class="chip">php</div></a>
+		
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col l2">
+			<div class="sidebar">
+     
+    <h3>laravel-5.2</h3>
+    <ul> 
+      
+        <li><a href="/post/php/laravel/simple-laravel-pagination/">Simple Laravel 5 Pagination</a></li>
+      
+        <li><a href="/post/php/laravel/creating-an-admin-area-laravel/">Creating an Admin Area with Laravel 5</a></li>
+      
+        <li><a href="/post/php/laravel/laravel-5-simple-site-search-bar/">Laravel 5 Simple Site Search Bar Tutorial</a></li>
+      
+        <li><a href="/post/php/laravel/laravel-routes-cheat-sheet/">Laravel 5.1 Routes Cheat Sheet</a></li>
+      
+        <li><a href="/post/php/laravel/laravel-5-middleware-tutorial/">Laravel 5 Middleware Tutorial</a></li>
+      
+        <li><a href="/post/php/laravel/adding-github-oauth-to-laravel-5-2/">Adding Github Registry and Authentication To Laravel 5.2</a></li>
+      
+        <li><a href="/post/php/laravel/building-a-blog-with-laravel-5-2/">Building A Blog With Laravel 5.2</a></li>
+      
+        <li><a href="/post/php/laravel/cipher-keylength-invalid-laravel-5-2/">The Cipher and or Key Length are Invalid - laravel 5.2 Issue</a></li>
+      
+        <li><a href="/post/php/laravel/introduction-to-routing-laravel-5-2/">Introduction To Routing in Laravel 5.2</a></li>
+      
+        <li><a href="/post/php/laravel/effective-debugging-laravel-5-2/">Effective Debugging of Laravel 5.2 Applications</a></li>
+      
+    </ul>
+    
+
+</div> 
+		</div>
+		<div class="col l8">	
+			<article>
+				<div class="info">Author: Elliot Forbes | Posted at: 15.04.2017 09:22</div>
+				<div>
+					<h2>Static Pages:</h2>
+
+<p>Static pages are just simple pages that don’t necessarily change too much. A good example of pages that would typically fall under this umbrella are your About and Contact us pages. These routes point back to views that have already been created in your resources/views folder. I.e resources/views/contact.blade.php would be the file for our contact view returned below.</p>
+
+<pre><code class="language-php">Route::get(‘/contact’, function() 
+{
+    return view(‘contact’);
+});
+
+Route::get(‘/about’, function()
+{
+    return view(‘about’);
+});
+</code></pre>
+
+<p>Check that these have worked by calling:</p>
+
+<pre><code>php artisan route:list
+</code></pre>
+
+<p>If you were to open up your app and navigate to http://localhost:8000/about you should see your about.blade.php file rendered in full.</p>
+
+<h2>Route Prefixes:</h2>
+
+<p>A good way to create certain sections of your site such as a video section in which the uri would look something like this: http://localhost:8000/videos/latestvideo would be to use route prefixes like so:</p>
+
+<pre><code class="language-php">Route::group(['as' =&gt; 'videos::', 'prefix' =&gt; 'videos'], function () {
+   Route::get(‘latestvideo’, ['as' =&gt; 'latestvideo', function () {
+       return &quot;super amazing latest video&quot;;
+   }]);
+});
+</code></pre>
+
+<h2>Route Groups:</h2>
+
+<p>Route groups are an great way to create different sections of your site such as admin sections.</p>
+
+<pre><code class="language-php">Route::group(['as' =&gt; 'admin::', 'prefix' =&gt; 'admin'], function () {
+   Route::get('dashboard', ['as' =&gt; 'dashboard', function () {
+       return &quot;hello&quot;;
+   }]);
+});
+</code></pre>
+
+<p>If you navigate to admin/dashboard then you should be able to see hello printed out in the browser. Of course you can change this to point to another view if you desired.</p>
+
+<h3>Adding more routes to a Group</h3>
+
+<p>Adding more routes to a route group is as simple as placing them within the group array like so:</p>
+
+<pre><code class="language-php">Route::group(['as' =&gt; 'admin::', 'prefix' =&gt; 'admin'], function () {
+   Route::get('dashboard', ['as' =&gt; 'dashboard', function () {
+       return &quot;hello&quot;;
+   }]);
+   
+   Route::get('users', ['as'=&gt;'users', function() {
+       return &quot;users&quot;;
+   }]);
+});
+</code></pre>
+
+<h2>Adding Middleware to Groups:</h2>
+
+<p>Say for instance we wanted to create an admin only section of the site. We’d want to create a filter that wouldn’t allow any unauthorised access to the admin section. We can do that like so:</p>
+
+<pre><code class="language-php">Route::group(['as' =&gt; 'admin::', 'prefix' =&gt; 'admin', 'middleware'=&gt;'auth'], function () {
+   Route::get('dashboard', ['as' =&gt; 'dashboard', function () {
+       return &quot;hello&quot;;
+   }]);
+   
+   Route::get('users', ['as'=&gt;'users', function() {
+       return &quot;users&quot;;
+   }]);
+});
+</code></pre>
+
+<p>You’ll notice if you call php artisan route:list now you should see the auth middleware applied to both admin/dashboard and admin/users. You’ll have to create your own auth/login and auth/register views within Laravel 5.1 as these have been removed in the latest version.</p>
+
+<h2>Custom 404 Route:</h2>
+
+<p>Laravel 5.1 takes care of 404 errors for you so all you have to do is to create your custom 404 page: resources/views/errors/404.blade.php and the rest is handled for you.</p>
+
+				</div>
+				<div>
+					<div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://tutorialedge.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+				</div>
+			</article>
+		</div>
+
+		<div class="col l2">
+			<div class="wrapper">
+    <div class="container">
+      <img src="https://twitter.com/Elliot_F/profile_image?size=original" alt="Elliot Forbes" class="trophy" />
+      <h1>Elliot Forbes</h1>
+      <span class="score">Follow me:</span>
+  
+      <div class="buttons">
+          <a href="https://twitter.com/Elliot_F" target="_blank" class="button light">
+              <span><i class="ion ion-social-twitter"></i> Twitter</span>
+          </a>
+      </div>
+    </div>
+</div>
+
+		</div>
+		
+	</div>
+</div>
+
+<div class="join-us">
+	<div class="container">
+		<div class="row">
+			<div class="col l8">
+				<h5>Become a Contributor!</h5>
+				<p>Think you could improve the articles on this site? Feel free to submit a pull request to the sites github repo.</p>
+			</div>
+			<div class="col l4">
+				<a href="https://github.com/elliotforbes/tutorialedge-v2"><button class="btn valign">Fork Our Repo</button></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="page-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col l6 s12">
+				<h5>TutorialEdge.net</h5>
+				<p class="text-lighten-4">This site is dedicated to bringing you the highest quality courses designed to teach you the ins and outs of programming with various frameworks and programming languages.</p>
+			</div>
+			<div class="col l4 offset-l2 s12">
+				<h5>Links</h5>
+				<ul>
+					<li><a class="text-lighten-3" href="/tutorials">All Tutorials</a></li>
+					<li><a class="text-lighten-3" href="/books">Books</a></li>
+					<li><a class="text-lighten-3" href="/contact">Contact</a></li>
+					<li><a class="text-lighten-3" href="/courses">Courses</a></li>
+					<li><a class="text-lighten-3" href="/blog">Blog</a></li>
+					<li><a class="text-lighten-3" href="/about">About</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer-copyright">
+		<div class="container">
+		TutorialEdge © 2016 Copyright 
+		</div>
+	</div>
+</footer>
+
+<script>
+$(".button-collapse").sideNav();
+</script>

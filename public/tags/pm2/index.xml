@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pm2 on TutorialEdge.net</title>
+    <link>/tags/pm2/index.xml</link>
+    <description>Recent content in Pm2 on TutorialEdge.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="/tags/pm2/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Keeping NodeJS Applications Running Forever Using PM2</title>
+      <link>/post/javascript/nodejs/keeping-node-apps-running-forever-pm2/</link>
+      <pubDate>Sat, 15 Apr 2017 08:38:40 +0100</pubDate>
+      
+      <guid>/post/javascript/nodejs/keeping-node-apps-running-forever-pm2/</guid>
+      <description>&lt;p&gt;If you write an application that you need to keep running forever on your servers then this is the tutorial for you. &lt;/p&gt;
+
+&lt;p&gt;If you&#39;re a software developer working on business critical applications and have to adhere to strict Service Level Agreements (SLAs for short) then you know just how vital it is to have your applications back up and running the second they fall over, every second counts when trying to achieve the 5 9&#39;s or 99.999% availability throughout the year. In this tutorial I&#39;ll be demonstrating the effectiveness of PM2 which is a production process manager for Node.js applications which also features a built-in load balancer for those high-performance applications. &lt;/p&gt;
+
+&lt;p&gt;PM2 is an opensource bit of tech that&#39;s currently available here: &lt;a href=&#34;https://github.com/Unitech/pm2&#34; target=&#34;_blank&#34;&gt;https://github.com/Unitech/pm2&lt;/a&gt; and is currently owned and maintained by an Alexandre Strzelewicz from &lt;a href=&#34;http://keymetrics.io&#34; target=&#34;_blank&#34;&gt;http://keymetrics.io&lt;/a&gt; for those of you who want to check out his other work. &lt;/p&gt;
+
+&lt;h2&gt;Installing PM2&lt;/h2&gt;
+
+&lt;p&gt;PM2 doesn&#39;t require much configuration, if any, and if you&#39;ve got NPM installed on your machine then installing PM2 is just a case of running the following command: &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm install pm2 -g
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once that&#39;s installed on your machine then you are then ready to go. &lt;/p&gt;
+
+&lt;h2&gt;Starting an Application&lt;/h2&gt;
+
+&lt;p&gt;Starting a node application that you want to keep running forever is as simple as this: &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pm2 start app.js
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;More Info&lt;/h2&gt;
+
+&lt;p&gt;PM2&#39;s official can be found here: &lt;a href=&#34;http://pm2.keymetrics.io/&#34; target=&#34;_blank&#34;&gt;http://pm2.keymetrics.io/&lt;/a&gt; should you wish to read up a bit more on this pretty amazing opensource tool and potentially thank the developers for their efforts. &lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

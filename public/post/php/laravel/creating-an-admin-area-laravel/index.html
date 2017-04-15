@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Creating an Admin Area with Laravel 5</title>
+	
+	
+	
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/monokai.min.css">
+	<link rel="stylesheet" href="/css/materialize.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<meta name="generator" content="Hugo 0.19" />
+
+	
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+	<script src="/js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<script async>
+			(function (i, s, o, g, r, a, m) {
+					i['GoogleAnalyticsObject'] = r;
+					i[r] = i[r] || function () {
+							(i[r].q = i[r].q || []).push(arguments)
+					}, i[r].l = 1 * new Date();
+					a = s.createElement(o),
+					m = s.getElementsByTagName(o)[0];
+					a.async = 1;
+					a.src = g;
+					m.parentNode.insertBefore(a, m)
+			})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+			ga('create', 'UA-10255990-23', 'auto');
+			ga('send', 'pageview');
+	</script>
+</head>
+<body>
+
+	<header>
+		<nav>
+			<div class="nav-wrapper">
+				<a class="brand-logo" href="/">TutorialEdge.net</a>
+				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><a href="//about/">About</a></li>
+					<li><a href="//get-involved/">Get Involved</a></li>
+					<li><a href="//courses/">Courses</a></li>
+					<li><a href="//post/">Tutorials</a></li>
+				</ul>
+				<ul class="side-nav" id="mobile-demo">
+					<li><a href="//about/">About</a></li>
+					<li><a href="//get-involved/">Get Involved</a></li>
+					<li><a href="//courses/">Courses</a></li>
+					<li><a href="//post/">Tutorials</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+<div class="title-bar">
+	<div class="container">
+		<h1>Creating an Admin Area with Laravel 5</h1>
+		<p>This tutorial teaches you how to utilize route middleware in order to authenticate admin users for a backend of a laravel 5 site.</p>
+		
+		<a href="/tags/laravel-5.2"><div class="chip">laravel-5.2</div></a>
+		
+		<a href="/tags/php"><div class="chip">php</div></a>
+		
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col l2">
+			<div class="sidebar">
+     
+    <h3>laravel-5.2</h3>
+    <ul> 
+      
+        <li><a href="/post/php/laravel/simple-laravel-pagination/">Simple Laravel 5 Pagination</a></li>
+      
+        <li><a href="/post/php/laravel/creating-an-admin-area-laravel/">Creating an Admin Area with Laravel 5</a></li>
+      
+        <li><a href="/post/php/laravel/laravel-5-simple-site-search-bar/">Laravel 5 Simple Site Search Bar Tutorial</a></li>
+      
+        <li><a href="/post/php/laravel/laravel-routes-cheat-sheet/">Laravel 5.1 Routes Cheat Sheet</a></li>
+      
+        <li><a href="/post/php/laravel/laravel-5-middleware-tutorial/">Laravel 5 Middleware Tutorial</a></li>
+      
+        <li><a href="/post/php/laravel/adding-github-oauth-to-laravel-5-2/">Adding Github Registry and Authentication To Laravel 5.2</a></li>
+      
+        <li><a href="/post/php/laravel/building-a-blog-with-laravel-5-2/">Building A Blog With Laravel 5.2</a></li>
+      
+        <li><a href="/post/php/laravel/cipher-keylength-invalid-laravel-5-2/">The Cipher and or Key Length are Invalid - laravel 5.2 Issue</a></li>
+      
+        <li><a href="/post/php/laravel/introduction-to-routing-laravel-5-2/">Introduction To Routing in Laravel 5.2</a></li>
+      
+        <li><a href="/post/php/laravel/effective-debugging-laravel-5-2/">Effective Debugging of Laravel 5.2 Applications</a></li>
+      
+    </ul>
+    
+
+</div> 
+		</div>
+		<div class="col l8">	
+			<article>
+				<div class="info">Author: Elliot Forbes | Posted at: 15.04.2017 09:35</div>
+				<div>
+					<blockquote>
+<p>This tutorial assumes prior knowledge of Laravel 5. </p>
+</blockquote>
+
+<h2>Adding a new Column to Users Table</h2>
+
+<p>In order for this authentication to work, we are going to need to have a column that lets us distinguish between either admins or regular users. In this case I chose to extend the pre-existing users table by adding an integer column to the schema. Once you've added this rollback and then migrate so that you have access to this new column.</p>
+
+<h2>Using Middleware</h2>
+
+<p>Laravel 5's new middleware mechanism offers an exceptionally easy way to authenticate users and thus create an admin backend to manage any web apps. HTTP middleware provide a convenient mechanism for filtering HTTP requests entering your application, by utilizing these filters we can determine if the user is both logged in and features the correct access levels required to access the sensitive backend of our site. If the user requesting access to the backend of the site is not authenticated, the middleware redirects the user to the login screen. </p>
+
+<h3>Creating our AdminMiddleware</h3>
+
+<p>Open up your terminal and type the following in your projects root folder. </p>
+
+<pre><code>php artisan make:middleware AdminMiddleware
+</code></pre>
+
+<p>This will contain the code that will authenticate our user and ensure that they have the appropriate access levels.</p>
+
+<h3>Adding Middleware to Kernel.php</h3>
+
+<p>Once we've created our new AdminMiddleware we need to assign the middleware a short-hand key by opening up Kernel.php under App > Http and add the following line to your protected $routeMiddleware array.</p>
+
+<pre><code>&lt;?php
+  /**
+  * The application's route middleware.
+  *
+  * @var array
+  */
+  protected $routeMiddleware = [
+    'auth' =&gt; 'App\Http\Middleware\Authenticate',
+    'auth.basic' =&gt; 'Illuminate\Auth\Middleware\AuthenticateWithBasicAuth',
+    'guest' =&gt; 'App\Http\Middleware\RedirectIfAuthenticated',
+        # LINE TO BE ADDED HERE:
+        'admin' =&gt; 'App\Http\Middleware\AdminMiddleware',
+  ];
+</code></pre>
+
+<h3>Utilizing our Middleware in our Route Options:</h3>
+
+<p>Now that we've created our middleware and assigned it a short-hand key in our kernel.php file we can start using it in our Routes.php file:</p>
+
+<pre><code>Route::get('admin', ['middleware' =&gt; 'admin', 'uses' =&gt; 'AdminController@index']);
+</code></pre>
+
+<h2>Updating our AdminController</h2>
+
+<p>Our AdminController's index function mentioned in the route above will look something like this to return the index page:</p>
+
+<pre><code>&lt;?php
+
+namespace App\Http\Middleware;
+
+use Closure;
+use Illuminate\Support\Facades\Auth;
+use Log;
+
+class Authenticate
+{
+  /**
+    * Handle an incoming request.
+    *
+    * @param  \Illuminate\Http\Request  $request
+    * @param  \Closure  $next
+    * @param  string|null  $guard
+    * @return mixed
+    */
+  public function handle($request, Closure $next, $guard = null)
+  {
+    Log::info(&quot;Authenticating Users...&quot;);
+    if (Auth::guard($guard)-&gt;guest()) {
+      if ($request-&gt;ajax() || $request-&gt;wantsJson()) {
+        Log::info(&quot;Unauthorized ajax request.&quot;);
+        return response('Unauthorized.', 401);
+      } else {
+        Log::info(&quot;Redirecting to login page.&quot;);
+        return redirect()-&gt;guest('/auth/github');
+      }
+    }
+  }
+}
+</code></pre>
+
+<h3>Testing it Works</h3>
+
+<p>Now that you've set up your AdminController correctly and applied the AdminMiddleware to your 'admin' route, you should see that you are redirected back to the login screen should you happen to not be authenticated. This was just a quick and easy way to create an admin backend that only specific user groups can access, however if you believe there is a better way then please let me know in the comments section below!</p>
+
+				</div>
+				<div>
+					<div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://tutorialedge.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+				</div>
+			</article>
+		</div>
+
+		<div class="col l2">
+			<div class="wrapper">
+    <div class="container">
+      <img src="https://twitter.com/Elliot_F/profile_image?size=original" alt="Elliot Forbes" class="trophy" />
+      <h1>Elliot Forbes</h1>
+      <span class="score">Follow me:</span>
+  
+      <div class="buttons">
+          <a href="https://twitter.com/Elliot_F" target="_blank" class="button light">
+              <span><i class="ion ion-social-twitter"></i> Twitter</span>
+          </a>
+      </div>
+    </div>
+</div>
+
+		</div>
+		
+	</div>
+</div>
+
+<div class="join-us">
+	<div class="container">
+		<div class="row">
+			<div class="col l8">
+				<h5>Become a Contributor!</h5>
+				<p>Think you could improve the articles on this site? Feel free to submit a pull request to the sites github repo.</p>
+			</div>
+			<div class="col l4">
+				<a href="https://github.com/elliotforbes/tutorialedge-v2"><button class="btn valign">Fork Our Repo</button></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="page-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col l6 s12">
+				<h5>TutorialEdge.net</h5>
+				<p class="text-lighten-4">This site is dedicated to bringing you the highest quality courses designed to teach you the ins and outs of programming with various frameworks and programming languages.</p>
+			</div>
+			<div class="col l4 offset-l2 s12">
+				<h5>Links</h5>
+				<ul>
+					<li><a class="text-lighten-3" href="/tutorials">All Tutorials</a></li>
+					<li><a class="text-lighten-3" href="/books">Books</a></li>
+					<li><a class="text-lighten-3" href="/contact">Contact</a></li>
+					<li><a class="text-lighten-3" href="/courses">Courses</a></li>
+					<li><a class="text-lighten-3" href="/blog">Blog</a></li>
+					<li><a class="text-lighten-3" href="/about">About</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer-copyright">
+		<div class="container">
+		TutorialEdge © 2016 Copyright 
+		</div>
+	</div>
+</footer>
+
+<script>
+$(".button-collapse").sideNav();
+</script>

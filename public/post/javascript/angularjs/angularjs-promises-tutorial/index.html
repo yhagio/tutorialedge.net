@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>AngularJS Promises Tutorial</title>
+	
+	
+	
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/monokai.min.css">
+	<link rel="stylesheet" href="/css/materialize.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<meta name="generator" content="Hugo 0.19" />
+
+	
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+	<script src="/js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<script async>
+			(function (i, s, o, g, r, a, m) {
+					i['GoogleAnalyticsObject'] = r;
+					i[r] = i[r] || function () {
+							(i[r].q = i[r].q || []).push(arguments)
+					}, i[r].l = 1 * new Date();
+					a = s.createElement(o),
+					m = s.getElementsByTagName(o)[0];
+					a.async = 1;
+					a.src = g;
+					m.parentNode.insertBefore(a, m)
+			})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+			ga('create', 'UA-10255990-23', 'auto');
+			ga('send', 'pageview');
+	</script>
+</head>
+<body>
+
+	<header>
+		<nav>
+			<div class="nav-wrapper">
+				<a class="brand-logo" href="/">TutorialEdge.net</a>
+				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><a href="//about/">About</a></li>
+					<li><a href="//get-involved/">Get Involved</a></li>
+					<li><a href="//courses/">Courses</a></li>
+					<li><a href="//post/">Tutorials</a></li>
+				</ul>
+				<ul class="side-nav" id="mobile-demo">
+					<li><a href="//about/">About</a></li>
+					<li><a href="//get-involved/">Get Involved</a></li>
+					<li><a href="//courses/">Courses</a></li>
+					<li><a href="//post/">Tutorials</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+<div class="title-bar">
+	<div class="container">
+		<h1>AngularJS Promises Tutorial</h1>
+		<p>In this tutorial we examine the $q service and how we can chain promises.</p>
+		
+		<a href="/tags/angularjs"><div class="chip">angularjs</div></a>
+		
+		<a href="/tags/javascript"><div class="chip">javascript</div></a>
+		
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col l2">
+			<div class="sidebar">
+     
+    <h3>angularjs</h3>
+    <ul> 
+      
+        <li><a href="/post/javascript/angularjs/angularjs-promises-tutorial/">AngularJS Promises Tutorial</a></li>
+      
+        <li><a href="/post/javascript/angularjs/most-important-changes-angularjs-1-6/">Most Important Changes to AngularJS in 1.6</a></li>
+      
+        <li><a href="/post/javascript/angularjs/angularjs-ng-model-in-ng-if-tutorial/">AngularJS ng-model in ng-if Tutorial</a></li>
+      
+        <li><a href="/post/javascript/angularjs/angularjs-data-binding-tutorial/">AngularJS Data Binding Tutorial</a></li>
+      
+        <li><a href="/post/javascript/angularjs/angularjs-controllers-tutorial/">AngularJS Controllers Tutorial</a></li>
+      
+        <li><a href="/post/javascript/angularjs/angularjs-template-tutorial-using-ng-view/">AngularJS Templating Tutorial Using ng-view</a></li>
+      
+        <li><a href="/post/javascript/angularjs/angularjs-directives-tutorial/">AngularJS Directives Tutorial</a></li>
+      
+        <li><a href="/post/javascript/angularjs/template-route-provider-tutorial/">AngularJS Template Route Provider Tutorial</a></li>
+      
+        <li><a href="/post/javascript/angularjs/interacting-with-apis-using-http-angularjs/">Interacting With RESTful APIs Using $http in AngularJS</a></li>
+      
+        <li><a href="/post/javascript/angularjs/angularjs-filter-search-tutorial/">AngularJS Filter Search Tutorial</a></li>
+      
+    </ul>
+    
+
+</div> 
+		</div>
+		<div class="col l8">	
+			<article>
+				<div class="info">Author: Elliot Forbes | Posted at: 15.04.2017 14:41</div>
+				<div>
+					
+
+<p>In this tutorial we&rsquo;ll be looking at how to work with and define promises in AngularJS. For more information check out the official <a href="https://docs.angularjs.org/api/ng/service/$q">AngularJS Documentation</a></p>
+
+<h2 id="what-are-promises-in-javascript">What are Promises in Javascript?</h2>
+
+<p>Essentially when you create a promise, you are ensuring that a certain order is followed in the execution of your code. Javascript is asynchronous by nature and in the execution of a method it’s not guaranteed what part of it will finish execution first. This is a big change if you are used to languages like Java and C++ where the order of execution is always exactly the same.</p>
+
+<h2 id="example-of-a-promise">Example of a Promise</h2>
+
+<p>If you have written any AngularJS applications that call upon the $http service then you will have already had experience working with Promises. For example this is a promise:</p>
+
+<pre><code class="language-js">// We create our promise
+$http.get(‘api/status’)
+    // that once complete will call either our success callback function
+    // or our error callback function
+    .then(function success(response) {
+        // handle our response object
+        $log.log(response);
+    }, function error(response) {
+        // handle our error
+        $log.log(“Error Thrown”);
+    });
+</code></pre>
+
+<p>This is essentially what all promises look like in javascript, we create the promise and pass it two <em>callback</em> functions. A good analogy to describe this is as follows:</p>
+
+<p>Say you were cooking a meal
+You delegate the task of cutting the onions to another person and say, let me know when this is done.
+Whilst this other person is working on cutting the onions, you are free to carry on working on the carrots.
+When the other person is done with the onions, they let you know and you can either add the onions to the stew if they were cut the right way, or throw them in the bin and try again.</p>
+
+<p>This is also a good example of one of the main benefits to Javascript asynchronous design, the thread executing the code isn’t held up and can carry on doing other things whilst it waits for the results of the promise.</p>
+
+<p>In code terms the above flow would look something like this:</p>
+
+<pre><code class="language-js">$http.get('api/cut/onions')
+  .then(function success(response){
+    // add them to the stew
+  }, function error(response){
+    // these onions were bad,
+    // throw them away
+  });
+
+// continue cutting carrots whilst you wait for the promise to finish executing
+cutCarrots();
+</code></pre>
+
+<p>However this is also an example of how things can go wrong in your applications, for instance. Because we don’t have any control over when a promise will finish, we could see weird side-effects from our code. For instance we could see the onions added to the stew before the carrots which might not be what we want.</p>
+
+<h2 id="chaining-promises">Chaining Promises</h2>
+
+<p>Thankfully, we have a way we can dictate when we want things done. This is where the $q service comes in. If we wanted to maintain the order in which things happen in the preparation of our stew we could do something like this:</p>
+
+<pre><code class="language-js">// first chop our onions
+$http.get('api/chop/onions')
+  .then(function success(response){
+    // once that is done chop our carrots
+    return $http.get('api/chop/carrots');
+  })
+  .then(function success(response){
+    // once the carrots are done, add both to the stew
+    return $http.get('api/add/onionsAndCarrots');
+  })
+  .then(function success(response){
+    // serve our stew
+  });
+</code></pre>
+
+<h2 id="defining-our-own-promises">Defining our Own Promises</h2>
+
+<p>AngularJS&rsquo;s $q service allows to define our own promises. Below you&rsquo;ll find an example controller that contains the ctrl.ourPromise function, this function returns a promise object that we can chain like we have done in our ctrl.$onInit function.</p>
+
+<pre><code class="language-js">function TestController($q, $log){
+  var ctrl = this;
+  // our $onInit function shows exactly how we can
+  // chain our newly defined promise object
+  ctrl.$onInit = function() {
+    ctrl.ourPromise()
+      .then(function success(){
+        $log.log(&quot;Our Promise has finished&quot;);
+      });
+  };
+  // we define our promise object and return it in
+  // this function
+  ctrl.ourPromise = function(){
+    var defer = $q.defer();
+
+    $log.log(&quot;Do all of our stuff in here&quot;);
+
+    return defer.promise;
+  };
+
+};
+
+TestController.$inject = ['$q', '$log'];
+
+angular.module('root')
+  .controller('TestController', TestController);
+</code></pre>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>If you spot any errors with this tutorial or wish to ask any further questions then let me know in the comments section below.</p>
+
+				</div>
+				<div>
+					<div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://tutorialedge.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+				</div>
+			</article>
+		</div>
+
+		<div class="col l2">
+			<div class="wrapper">
+    <div class="container">
+      <img src="https://twitter.com/Elliot_F/profile_image?size=original" alt="Elliot Forbes" class="trophy" />
+      <h1>Elliot Forbes</h1>
+      <span class="score">Follow me:</span>
+  
+      <div class="buttons">
+          <a href="https://twitter.com/Elliot_F" target="_blank" class="button light">
+              <span><i class="ion ion-social-twitter"></i> Twitter</span>
+          </a>
+      </div>
+    </div>
+</div>
+
+		</div>
+		
+	</div>
+</div>
+
+<div class="join-us">
+	<div class="container">
+		<div class="row">
+			<div class="col l8">
+				<h5>Become a Contributor!</h5>
+				<p>Think you could improve the articles on this site? Feel free to submit a pull request to the sites github repo.</p>
+			</div>
+			<div class="col l4">
+				<a href="https://github.com/elliotforbes/tutorialedge-v2"><button class="btn valign">Fork Our Repo</button></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="page-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col l6 s12">
+				<h5>TutorialEdge.net</h5>
+				<p class="text-lighten-4">This site is dedicated to bringing you the highest quality courses designed to teach you the ins and outs of programming with various frameworks and programming languages.</p>
+			</div>
+			<div class="col l4 offset-l2 s12">
+				<h5>Links</h5>
+				<ul>
+					<li><a class="text-lighten-3" href="/tutorials">All Tutorials</a></li>
+					<li><a class="text-lighten-3" href="/books">Books</a></li>
+					<li><a class="text-lighten-3" href="/contact">Contact</a></li>
+					<li><a class="text-lighten-3" href="/courses">Courses</a></li>
+					<li><a class="text-lighten-3" href="/blog">Blog</a></li>
+					<li><a class="text-lighten-3" href="/about">About</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer-copyright">
+		<div class="container">
+		TutorialEdge © 2016 Copyright 
+		</div>
+	</div>
+</footer>
+
+<script>
+$(".button-collapse").sideNav();
+</script>

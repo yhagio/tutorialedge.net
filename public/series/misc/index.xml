@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Misc on TutorialEdge.net</title>
+    <link>/series/misc/index.xml</link>
+    <description>Recent content in Misc on TutorialEdge.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="/series/misc/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Get Involved</title>
+      <link>/get-involved/</link>
+      <pubDate>Fri, 14 Apr 2017 20:28:13 +0100</pubDate>
+      
+      <guid>/get-involved/</guid>
+      <description>
+
+&lt;p&gt;Do you fancy contributing back to the site or writing a few of your own tutorials? Fork this entire site from our public github repo, make some changes and then submit a pull request and I&amp;rsquo;ll review it and if it meets our standards, it&amp;rsquo;ll get pushed live to the site.&lt;/p&gt;
+
+&lt;h2 id=&#34;authoring-new-tutorials&#34;&gt;Authoring New Tutorials&lt;/h2&gt;
+
+&lt;p&gt;Authoring a new tutorial is simple with hugo. All you have to do is create a new &lt;code&gt;file.md&lt;/code&gt; within the directory of your choice and then fill in the appropriate meta data at the top of the file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+++
+date = &amp;quot;2017-04-15T09:47:01+01:00&amp;quot;
+title = &amp;quot;The title of your article&amp;quot;
+draft = true
+desc = &amp;quot;A description that suits what your article is about&amp;quot;
+tags = [&amp;quot;python&amp;quot;]
+series = [&amp;quot;python&amp;quot;]
+author = &amp;quot;Elliot Forbes&amp;quot;
+twitter = &amp;quot;https://twitter.com/Elliot_F&amp;quot;
++++
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;getting-recognition&#34;&gt;Getting Recognition&lt;/h4&gt;
+
+&lt;p&gt;In order to be recognized for your work you simply need to change the author field to your name and then post a link to your twitter page as shown above. For any pages you write you&amp;rsquo;ll then see your name, your twitter profile picture and a link to your profile on the right hand sidebar.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

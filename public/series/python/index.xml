@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on TutorialEdge.net</title>
+    <link>/series/python/index.xml</link>
+    <description>Recent content in Python on TutorialEdge.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="/series/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Python Multithreading Tutorial - Concurrent Programming</title>
+      <link>/post/python/python-multithreading-tutorial/</link>
+      <pubDate>Sat, 15 Apr 2017 09:55:57 +0100</pubDate>
+      
+      <guid>/post/python/python-multithreading-tutorial/</guid>
+      <description>
+
+&lt;h2 id=&#34;what-is-multithreading&#34;&gt;What is Multithreading?&lt;/h2&gt;
+
+&lt;p&gt;Modern computers tend to feature a CPU that has multiple processing cores, each of these cores can run many threads simultaneously which, by proxy, gives us the ability to perform several tasks in parallel. Typically, you should only implement multiple threads when each thread you plan is completely independent of each other. So for instance in a game you would tend to create one thread for graphics processing, one for physics and one for networking. Each of these threads would be running and working with completely different data sets. This tutorial will hopefully show you how to get started with pythons &amp;ldquo;threading&amp;rdquo; module.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Objectives:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Creating and Running Threads&lt;/li&gt;
+&lt;li&gt;Teaching the Limitations of Python&amp;rsquo;s threading implementation&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2&gt;Creating Threads in Python&lt;/h2&gt;
+
+&lt;p&gt;To begin with we are going to want to create a new file and call it worker.py, this will contain all our code for one of our threads. To begin with we are going to create a class in python and have it import and extend the threading module.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import threading
+
+class Worker(threading.Thread):
+    # Our workers constructor, note the super() method which is vital if we want this
+    # to function properly
+    def __init__(self):
+        super(Worker, self).__init__()
+
+    def run(self):
+        for i in range(10):
+           print(i)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now that we have our worker class we can start work on our main class. Create a new python file and call it main.py and put the following code in:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import threading 
+from worker import Worker
+
+def main():
+    # This initializes &#39;&#39;thread1&#39;&#39; as an instance of our Worker Thread
+   thread1 = Worker()
+    # This is the code needed to run our newly created thread
+    thread1.start()
+
+  if __name__ == &amp;quot;__main__&amp;quot;:  
+      main()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;That&#39;&#39;s all the code you need to successfully create and instantiate a thread in python. If you can run python through your command line then open up a new terminal at your current folder and type &#39;&#39;python main.py&#39;&#39;. You should hopefully see the output of the above program should no errors occur.&lt;/p&gt;
+
+&lt;h2&gt;Exercise:&lt;/h2&gt;
+
+&lt;p&gt;Try instantiating more threads by creating new Worker() objects and then start them:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    thread1 = Worker(1)
+    thread2 = Worker(2)
+    thread3 = Worker(3)
+    thread1.start()
+    thread2.start()
+    thread3.start()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When you run this you should see output that looks something like this:  Notice that the outputted numbers are out of order, this basically shows you the precise order in which the threads have completed their tasks in and shows you the true power of asynchronous programming, multiple threads performing in parallel.&lt;/p&gt;
+
+&lt;h2&gt;Limitation with Classic Python Threads&lt;/h2&gt;
+
+&lt;p&gt;One of the main problems with Python&amp;rsquo;s classic implementation of threads is that they are not truly asynchronous. Performing tests on huge datasets show that the execution times of python threads is not entirely in parallel and you&amp;rdquo;ll often find execution times increasing adding multiple threads to programs as often performing these tasks synchronously will greatly reduce execution times. This is due to the way Global Interpreter Lock (GIL) works in Python, this basically ensures that only one line of python code can be compiled at one time.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;More about the GIL can be found here: &lt;a href=&#34;https://wiki.python.org/moin/GlobalInterpreterLock&#34;&gt;https://wiki.python.org/moin/GlobalInterpreterLock&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>UDP Client and Server Tutorial in Python</title>
+      <link>/post/python/udp-client-server-python/</link>
+      <pubDate>Sat, 15 Apr 2017 09:49:35 +0100</pubDate>
+      
+      <guid>/post/python/udp-client-server-python/</guid>
+      <description>&lt;p&gt;In this tutorial I&#39;ll be showing you exactly how you can set up your own UDP chat server using CPython 3.3 and Python&#39;s Socket module. The end product will be a server that listens for all connections and messages over a specific port and prints out any messages to the console. This could be extended in the future to create a chat server that subsequently broadcasts any messages received to all parties listening for responses.&lt;/p&gt;
+
+&lt;h2&gt;Advantages of UDP in Games Programming&lt;/h2&gt;
+
+&lt;p&gt;UDP or User Datagram Protocol is connection-less protocol which is suitable for applications that require efficient communication that doesn&#39;t have to worry about packet loss. For gaming applications this tends to be the perfect protocol due to the lower overhead incurred as opposed to TCP. Typically games send and receive thousands of packets a second that contain information such as opposing players health, location, direction and so on. Now if one of these packets was to be dropped during transmission then it isn&#39;t too critical to the game and the worst case scenario is that a player jerks about for a split second during gameplay. &lt;/p&gt;
+
+&lt;h2&gt;Implementing the Client&lt;/h2&gt;
+
+&lt;p&gt;To begin with we will need to import the socket python module, this can be done like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import socket
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once we&#39;&#39;ve got this we need to declare the IP address that we will be trying to send our UDP messages to as well as the port number. This port number is arbritary but ensure that you aren&#39;&#39;t using a socket that has already been taken.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;UDP_IP_ADDRESS = &amp;quot;127.0.0.1&amp;quot;
+UDP_PORT_NO = 6789
+Message = &amp;quot;Hello, Server&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now that we&#39;ve declared these few variables it&#39;&#39;s time to create the socket through which we will be sending our UDP message to the server.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;clientSock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And finally, once we&#39;ve constructed our new socket it&#39;s time to write the code that will send our UDP message:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;clientSock.sendto(Message, (UDP_IP_ADDRESS, UDP_PORT_NO))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Implementing the Server&lt;/h2&gt;
+
+&lt;p&gt;Now that we&#39;&#39;ve coded our client we then need to move on to creating our server program which will be continuously listening on our defined IP address and port number for any UDP messages. It is essential that this server has to be run prior to the execution of the client python script or the client script will fail.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# Again we import the necessary socket python module
+import socket
+# Here we define the UDP IP address as well as the port number that we have 
+# already defined in the client python script.
+UDP_IP_ADDRESS = &amp;quot;127.0.0.1&amp;quot;
+UDP_PORT_NO = 6789
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once we&#39;&#39;ve imported the socket module and declared our ip address and port number we can create another socket which will look exactly like the socket we constructed in our client program.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# declare our serverSocket upon which
+# we will be listening for UDP messages
+serverSock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+# One difference is that we will have to bind our declared IP address
+# and port number to our newly declared serverSock
+serverSock.bind((UDP_IP_ADDRESS, UDP_PORT_NO))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And finally, once we&#39;ve created our server socket, we need to write the code that will keep our script continuously listening to this socket until its termination. This takes form as a simple while loop, like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;while True:
+    data, addr = serverSock.recvfrom(1024)
+    print &amp;quot;Message: &amp;quot;, data
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Calculating Keyword Density of a Web Page with Python</title>
+      <link>/post/python/calculating-keyword-density-python/</link>
+      <pubDate>Sat, 15 Apr 2017 09:47:55 +0100</pubDate>
+      
+      <guid>/post/python/calculating-keyword-density-python/</guid>
+      <description>&lt;p&gt;In this tutorial I will be showing you how to calculate the keyword density of a web page using the Python programming language. This will be a continuation of the previous tutorial in which we retrieved a web page using Pythons urllib2 Python module.&lt;/p&gt;
+
+&lt;h2&gt;Keyword Density Calculation&lt;/h2&gt;
+
+&lt;p&gt;Keyword density is an easy metric to calculate as it has a relatively simple formula. The keyword density of a specific term is measured as the number of occurences of the chosen keyword over the total number of words in the body of text.&lt;/p&gt;
+
+&lt;h2&gt;Implementation&lt;/h2&gt;
+
+&lt;p&gt;In the previous 2 tutorials I showed you how you could fetch a web page as well as strip html tags from a fetched web page separately. The next stage of this tutorial series is putting what we&#39;ve learned together and then devising a method for counting the total number of words in our web page as well as counting the total number of occurrences of the chosen keyword.&lt;/p&gt;
+
+&lt;h3&gt;Utilizing the Dictionary Data Structure&lt;/h3&gt;
+
+&lt;p&gt;The easiest and fastest way to store our words as a list of words along with their respective occurences is to utilize Python&#39;s dictionary data structure. &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;# declaring a dictionary in python
+word_list = {}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now that we&#39;ve got our dictionary structure defined we can loop through every word from our html document after it&#39;s had it&#39;s html tags removed.&lt;/p&gt;
+
+&lt;h2&gt;Source Code&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;import urllib2
+import re
+
+TAG_RE = re.compile(r&#39;&amp;lt;[^&amp;gt;]+&amp;gt;&#39;)
+
+def fetch_page(siteURL):
+    # create a variable which will hold our desired web page as a string
+    site= siteURL
+    # create the approprriate headers for our http request so that we wont run
+    # into any 403 forbidden errors. All of this will be available at the tutorial
+    # page that I will link to in the description below
+    hdr = {&#39;User-Agent&#39;: &#39;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11&#39;,
+           &#39;Accept&#39;: &#39;text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#39;,
+           &#39;Accept-Charset&#39;: &#39;ISO-8859-1,utf-8;q=0.7,*;q=0.3&#39;,
+           &#39;Accept-Encoding&#39;: &#39;none&#39;,
+           &#39;Accept-Language&#39;: &#39;en-US,en;q=0.8&#39;,
+           &#39;Connection&#39;: &#39;keep-alive&#39;}
+
+    # Perform a HTTP request by passing in our desired URL and setting our headers to equal
+    # the headers that we&#39;ve defined above.
+    req = urllib2.Request(site, headers=hdr)
+
+    # 
+    try:
+        # here we are going to open our desired page using urllib2.urlopen
+        # and passing in our request object as a parameter and as a means of protection we 
+        # will surround this with a try except so that, should the script run into any errors
+        # it will fail gracefully instead of just crashing.
+        page = urllib2.urlopen(req)
+    except urllib2.HTTPError, e:
+        # print out the HTTPError
+        print e.fp.read()
+
+    # lastly we will want to read the response which was generated by opening
+    # the url and store it under content
+    content = page.read()
+    # and then print out this page.
+    return content
+
+def remove_tags(text):
+    return TAG_RE.sub(&#39;&#39;, text)
+
+
+def main():
+    page = fetch_page(&amp;quot;http://tutorialedge.net&amp;quot;)
+    wordsNoTags = remove_tags(page)
+
+    word_list = {}
+
+    for word in wordsNoTags:
+        if not word in word_list:
+            word_list[word] = 1
+        else:
+            word_list[word] += 1
+
+    print(len(word_list))
+
+if __name__ == &amp;quot;__main__&amp;quot;:
+    main()
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Fetching Web Pages In Python Using Urllib2</title>
+      <link>/post/python/fetching-web-pages-python/</link>
+      <pubDate>Sat, 15 Apr 2017 09:47:01 +0100</pubDate>
+      
+      <guid>/post/python/fetching-web-pages-python/</guid>
+      <description>&lt;p&gt;In this tutorial I will be showing you how you can fetch the a webpage using the urllib2 python module. This is a relatively simple process that can be accomplished in 5 lines of code.&lt;/p&gt;
+
+&lt;h2&gt;The Imports&lt;/h2&gt;
+
+&lt;p&gt;To begin with we will need to import the urllib2 python module so that we can utilize it&#39;s functionality:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;import urllib2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Fetching a Website&lt;/h2&gt;
+
+&lt;p&gt;Once we&#39;ve imported all the appropriate python modules we can move onto fetching our desired webpage. For the purpose of this example we&#39;ll be fetching this webpage and we can do that like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;req = urllib2.Request(&#39;http://www.tutorialedge.net/fetching-web-pages-with-python&#39;)
+response = urllib2.urlopen(req)
+the_page = response.read()
+# Here we print out the retrieved page&#39;s HTML to the console
+# once we&#39;ve got this we can start performing some analysis of 
+# the webpage and do some cooler things.
+print(the_page)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now in order to prevent being hit by 403 forbidden responses we need to define a set of headers for our HTTP request.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;import urllib2
+
+# create a variable which will hold our desired web page as a string
+site= &amp;quot;http://tutorialedge.net&amp;quot;
+# create the approprriate headers for our http request so that we wont run
+# into any 403 forbidden errors. All of this will be available at the tutorial
+# page that I will link to in the description below
+hdr = {&#39;User-Agent&#39;: &#39;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11&#39;,
+       &#39;Accept&#39;: &#39;text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#39;,
+       &#39;Accept-Charset&#39;: &#39;ISO-8859-1,utf-8;q=0.7,*;q=0.3&#39;,
+       &#39;Accept-Encoding&#39;: &#39;none&#39;,
+       &#39;Accept-Language&#39;: &#39;en-US,en;q=0.8&#39;,
+       &#39;Connection&#39;: &#39;keep-alive&#39;}
+
+# Perform a HTTP request by passing in our desired URL and setting our headers to equal
+# the headers that we&#39;ve defined above.
+req = urllib2.Request(site, headers=hdr)
+
+# 
+try:
+    # here we are going to open our desired page using urllib2.urlopen
+    # and passing in our request object as a parameter and as a means of protection we 
+    # will surround this with a try except so that, should the script run into any errors
+    # it will fail gracefully instead of just crashing.
+    page = urllib2.urlopen(req)
+except urllib2.HTTPError, e:
+    # print out the HTTPError
+    print e.fp.read()
+
+# lastly we will want to read the response which was generated by opening
+# the url and store it under content
+content = page.read()
+# and then print out this page.
+print content
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Video Tutorial&lt;/h2&gt;
+
+&lt;p&gt;&lt;iframe allowfullscreen=&#34;&#34; frameborder=&#34;0&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/LTGhCtp2Scw&#34; width=&#34;560&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;h2&gt;Moving Forward&lt;/h2&gt;
+
+&lt;p&gt;This tutorial will act as the base tutorial for quite a number of tutorials in which we will be calculating key SEO metrics such as keyword density. &lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Creating a Twitter Bot Using Python and the Twitter API</title>
+      <link>/post/python/creating-twitter-bot-python/</link>
+      <pubDate>Sat, 15 Apr 2017 09:45:44 +0100</pubDate>
+      
+      <guid>/post/python/creating-twitter-bot-python/</guid>
+      <description>&lt;p&gt;Twitter bots are a fantastic way to drum up a bit of interest in your brand or website and I&#39;ve had fantastic results myself building up an audience for the Twitter account specifically for this website. This tutorial will hopefully cover everything it takes to construct your own twitter bot that utilizes the RESTful Twitter API. The source code for this Python wrapper for the Twitter API can be found here: &lt;a href=&#34;https://github.com/bear/python-twitter&#34;&gt;Github: Bear&#39;s Python-Twitter Wrapper&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;Getting Started&lt;/h2&gt;
+
+&lt;p&gt;To get started you will have to use the pip tool to install the Twitter library on your machine. To do so you can use the python pip package manager by typing the following into the terminal:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;pip install python-twitter
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Full installation instructions can be found on the Readme.md file found on github if needed.&lt;/p&gt;
+
+&lt;h2&gt;Obtaining OAuth Access Tokens&lt;/h2&gt;
+
+&lt;p&gt;In order for this Twitter API to work you will have to generate OAuth access tokens for the owner of the application. These access tokens allow your application to run on behalf of the twitter account which you hold for your brand or website. The other option would be to use 3-Legged OAuth but in an attempt to keep this simple we&#39;ll be sticking to standard OAuth authentication. A good guide for building access tokens can be found on twitters dev subdomain here: &lt;a href=&#34;https://dev.twitter.com/oauth/overview/application-owner-access-tokens&#34;&gt;OAuth Access Tokens&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;Connecting to your Twitter Account using OAuth&lt;/h2&gt;
+
+&lt;p&gt;The code for connecting to your Twitter account using this Bear&#39;s Python wrapper looks like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;from twitter import Twitter, OAuth, TwitterHTTPError
+
+consumer_key = &#39;&#39;
+consumer_secret = &#39;&#39;
+access_token_key = &#39;&#39;
+access_token_secret = &#39;&#39;
+
+bot = Twitter(auth=OAuth(access_token_key, access_token_secret,
+            consumer_key, consumer_secret))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Replace the strings &#39;consumer_key&#39; etc. with the appropriate keys and secrets generated for you and you should have successfully connected to the Twitter RESTful API. Now that we&#39;ve connected we can begin to do some interesting things such as retweeting followers or searching tweets.&lt;/p&gt;
+
+&lt;h2&gt;Searching for Tweets&lt;/h2&gt;
+
+&lt;p&gt;The first thing we need to do is create a function for searching for tweets, this function will return all recent tweets that have mentioned a specific string anywhere within the tweet.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;def search_tweets(query, count=100):
+    return bot.search.tweets(query=query, result_type=&#39;recent&#39;, count=count)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Favoriting Tweets&lt;/h2&gt;
+
+&lt;p&gt;So now that we&#39;ve got the basic mechanisms in place to search for tweets, we now have to do something with them. The first interaction I&#39;m going to show you how to do is favourite tweets.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;def fav_tweet(tweet):
+    try:
+        result = t.favorites.create(_id=tweet[&#39;id&#39;])
+        print &amp;quot;Favorited: %s&amp;quot; % (result[&#39;text&#39;])
+        return result
+    # when you have already favourited a tweet
+    # this error is thrown
+    except TwitterHTTPError as e:
+        print &amp;quot;Error: &amp;quot;, e
+        return None
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Retweeting Tweets&lt;/h2&gt;
+
+&lt;p&gt;Retweeting specific tweets is again very similar to favoriting tweets and can be useful if you want to, for instance, retweet all replies to any of the posts you make and try to improve your community presence. &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;def retweet_tweet(tweet):
+    try:
+        result = t.statuses.retweet._id(_id=tweet[&#39;id&#39;])
+        print &amp;quot;Retweeted: %s&amp;quot; % (result[&#39;text&#39;])
+        return result
+    except TwitterHTTPError as e:
+        print &amp;quot;Error: &amp;quot;, e
+        return None
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Bringing it all together&lt;/h2&gt;
+
+&lt;p&gt;Now that you&#39;ve got an idea of how to favorite and retweet tweets, we can bring this together into a bot that constantly runs on a server or wherever else you choose to run it.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;from twitter import Twitter, OAuth, TwitterHTTPError
+import time
+#enter the corresponding information from your Twitter application:
+consumer_key = &#39;&#39;#keep the quotes, replace this with your consumer key
+consumer_secret = &#39;&#39;#keep the quotes, replace this with your consumer secret key
+access_token_key = &#39;&#39;#keep the quotes, replace this with your access token
+access_token_secret = &#39;&#39;#keep the quotes, replace this with your access token secret
+
+
+t = Twitter(auth=OAuth(access_token_key, access_token_secret,
+            consumer_key, consumer_secret))
+
+def search_tweets(q, count=100):
+    return t.search.tweets(q=q, result_type=&#39;recent&#39;, count=count)
+
+def get_limit():
+    try:
+        result = t.application.rate_limit_status()
+        print result
+    except TwitterHTTPError as e:
+        print &amp;quot;Error: &amp;quot;, e
+        return None
+
+def fav_tweet(tweet):
+    try:
+        result = t.favorites.create(_id=tweet[&#39;id&#39;])
+        print &amp;quot;Favorited: %s&amp;quot; % (result[&#39;text&#39;])
+        return result
+    # when you have already favourited a tweet
+    # this error is thrown
+    except TwitterHTTPError as e:
+        print &amp;quot;Error: &amp;quot;, e
+        return None
+    
+def retweet_tweet(tweet):
+    try:
+        result = t.statuses.retweet._id(_id=tweet[&#39;id&#39;])
+        print &amp;quot;Retweeted: %s&amp;quot; % (result[&#39;text&#39;])
+        return result
+    except TwitterHTTPError as e:
+        print &amp;quot;Error: &amp;quot;, e
+        return None
+    
+def auto_fav(q, count):
+    result = search_tweets(q, count)
+    a = result[&#39;statuses&#39;][0][&#39;user&#39;][&#39;screen_name&#39;]
+    print a
+    success = 0
+    for tweet in result[&#39;statuses&#39;]:
+        if fav_tweet(tweet) is not None:
+            success += 1
+    print &amp;quot;We Favorited a total of %i out of %i tweets&amp;quot; % (success,
+          len(result[&#39;statuses&#39;]))
+    
+def auto_retweet(q, count):
+    result = search_tweets(q, count)
+    a = result[&#39;statuses&#39;][0][&#39;user&#39;][&#39;screen_name&#39;]
+    print a
+    success = 0
+    for tweet in result[&#39;statuses&#39;]:
+        if retweet_tweet(tweet) is not None:
+            success += 1
+        time.sleep(10)
+    print &amp;quot;We Favorited a total of %i out of %i tweets&amp;quot; % (success, len(result[&#39;statuses&#39;]))
+    
+if __name__ == &amp;quot;__main__&amp;quot;:
+    while(1):
+        try:
+            auto_retweet(&amp;quot;GameDev&amp;quot;, 1)
+            auto_retweet(&amp;quot;IndieDev&amp;quot;, 1)
+            auto_retweet(&amp;quot;ScreenshotSaturday&amp;quot;, 1)
+        except Exception, e:
+            print(e)   
+        
+        try:
+            auto_fav(&amp;quot;IndieDev&amp;quot;, 1)
+        except Exception, e:
+            print(e)
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Removing HTML Tags from a String with Python</title>
+      <link>/post/python/removing-html-from-string/</link>
+      <pubDate>Sat, 15 Apr 2017 09:38:07 +0100</pubDate>
+      
+      <guid>/post/python/removing-html-from-string/</guid>
+      <description>&lt;p&gt;This tutorial will demonstrate two different methods as to how one can remove html tags from a string such as the one that we retrieved in my previous tutorial on &lt;a href=&#34;http://tutorialedge.net/fetching-web-pages-with-python&#34;&gt;fetching a web page using python.&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;Method 1&lt;/h2&gt;
+
+&lt;p&gt;This method will demonstrate a way that we can remove html tags from a string using regex strings. &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;import re
+
+TAG_RE = re.compile(r&#39;&amp;lt;[^&amp;gt;]+&amp;gt;&#39;)
+
+def remove_tags(text):
+    return TAG_RE.sub(&#39;&#39;, text)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Method 2&lt;/h2&gt;
+
+&lt;p&gt;This is another method we can use to remove html tags using functionality present in the Python Standard library so there is no need for any imports.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;def remove_tags(text):
+    &#39;&#39;.join(xml.etree.ElementTree.fromstring(text).itertext())
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Conclusions&lt;/h2&gt;
+
+&lt;p&gt;In the coming tutorials we will be learning how to calculate important seo metrics such as keyword density that will allow us to perform important seo analysis of competing sites to try and understand how they have achieved their success.&lt;/p&gt;
+
+&lt;p&gt;The methods for tag removal can be found here: http://stackoverflow.com/questions/9662346/python-code-to-remove-html-tags-from-a-string&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Python Multiprocessing Tutorial</title>
+      <link>/post/python/python-multiprocessing-tutorial/</link>
+      <pubDate>Sat, 15 Apr 2017 09:28:06 +0100</pubDate>
+      
+      <guid>/post/python/python-multiprocessing-tutorial/</guid>
+      <description>&lt;p&gt;Previously we&#39;ve looked at how you can try to achieve concurrency with Python using multithreading, the tutorial of which can be found here: &lt;a href=&#34;http://tutorialedge.net/asynchronous-programming-pythons-threading-module&#34;&gt;Python Multithreading Tutorial&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Now we are going to be having a look at how we can sidestep the limiting Global Interpreter Lock that effectively prevented our multithreaded applications from being truly concurrent by using the multiprocessing Python module. &lt;/p&gt;
+
+&lt;h2&gt;A Simple Example:&lt;/h2&gt;
+
+&lt;p&gt;In this example I&#39;ll be showing you how to spawn multiple processes at once and each process will output the random number that they will compute using the random module.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;from multiprocessing import Process, Queue
+import random
+
+def rand_num():
+    num = random.random()
+    print(num)
+    
+if __name__ == &amp;quot;__main__&amp;quot;:
+    queue = Queue()
+    
+    processes = [Process(target=rand_num, args=()) for x in range(4)]
+    
+    for p in processes:
+        p.start()
+        
+    for p in processes:
+        p.join()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Running this should then print out an array of 4 different decimal numbers between 0 and 1 like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Elliots-MacBook-Pro:Networking elliotforbes$ python processing.py
+0.090906474002
+0.306163229303
+0.995446921388
+0.0320995066016
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Passing Data Between Processes&lt;/h2&gt;
+
+&lt;p&gt;When performing concurrent programming the best practice is usually to avoid sharing state as much as possible. However when you absolutely need to have some form of shared data then the multiprocessing module provides a couple of ways of doing so. &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Queues:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Queue objects are a FIFO data structure that are thread and process safe which make them perfect for passing data between different processes without potentially corrupting data. Using them is relatively simple, we can expand:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;from multiprocessing import Process, Queue
+import random
+
+def rand_num(queue):
+    num = random.random()
+    queue.put(num)
+    
+if __name__ == &amp;quot;__main__&amp;quot;:
+    queue = Queue()
+    
+    processes = [Process(target=rand_num, args=(queue,)) for x in range(4)]
+    
+    for p in processes:
+        p.start()
+        
+    for p in processes:
+        p.join()
+    
+    results = [queue.get() for p in processes]
+
+    print(results)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This should output the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Elliots-MacBook-Pro:Networking elliotforbes$ python processing.py
+[0.6756465745753756, 0.4104274331895341, 0.6733748532075048, 0.9494118991646461]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Overall Python&#39;s MultiProcessing module is brilliant for those of you wishing to sidestep the limitations of the Global Interpreter Lock that hampers the performance of the multi-threading in python. I hope this has been helpful, if you feel anything else needs added to this tutorial then let me know in the comments section below!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

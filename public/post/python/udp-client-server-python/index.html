@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>UDP Client and Server Tutorial in Python</title>
+	
+	
+	
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/monokai.min.css">
+	<link rel="stylesheet" href="/css/materialize.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<meta name="generator" content="Hugo 0.19" />
+
+	
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+	<script src="/js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<script async>
+			(function (i, s, o, g, r, a, m) {
+					i['GoogleAnalyticsObject'] = r;
+					i[r] = i[r] || function () {
+							(i[r].q = i[r].q || []).push(arguments)
+					}, i[r].l = 1 * new Date();
+					a = s.createElement(o),
+					m = s.getElementsByTagName(o)[0];
+					a.async = 1;
+					a.src = g;
+					m.parentNode.insertBefore(a, m)
+			})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+			ga('create', 'UA-10255990-23', 'auto');
+			ga('send', 'pageview');
+	</script>
+</head>
+<body>
+
+	<header>
+		<nav>
+			<div class="nav-wrapper">
+				<a class="brand-logo" href="/">TutorialEdge.net</a>
+				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><a href="//about/">About</a></li>
+					<li><a href="//get-involved/">Get Involved</a></li>
+					<li><a href="//courses/">Courses</a></li>
+					<li><a href="//post/">Tutorials</a></li>
+				</ul>
+				<ul class="side-nav" id="mobile-demo">
+					<li><a href="//about/">About</a></li>
+					<li><a href="//get-involved/">Get Involved</a></li>
+					<li><a href="//courses/">Courses</a></li>
+					<li><a href="//post/">Tutorials</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+<div class="title-bar">
+	<div class="container">
+		<h1>UDP Client and Server Tutorial in Python</h1>
+		<p>This tutorial shows the user how to construct a UDP based client and server application</p>
+		
+		<a href="/tags/python"><div class="chip">python</div></a>
+		
+		<a href="/tags/networking"><div class="chip">networking</div></a>
+		
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col l2">
+			<div class="sidebar">
+     
+    <h3>python</h3>
+    <ul> 
+      
+        <li><a href="/post/python/python-multithreading-tutorial/">Python Multithreading Tutorial - Concurrent Programming</a></li>
+      
+        <li><a href="/post/python/udp-client-server-python/">UDP Client and Server Tutorial in Python</a></li>
+      
+        <li><a href="/post/python/calculating-keyword-density-python/">Calculating Keyword Density of a Web Page with Python</a></li>
+      
+        <li><a href="/post/python/fetching-web-pages-python/">Fetching Web Pages In Python Using Urllib2</a></li>
+      
+        <li><a href="/post/python/creating-twitter-bot-python/">Creating a Twitter Bot Using Python and the Twitter API</a></li>
+      
+        <li><a href="/post/python/removing-html-from-string/">Removing HTML Tags from a String with Python</a></li>
+      
+        <li><a href="/post/python/python-multiprocessing-tutorial/">Python Multiprocessing Tutorial</a></li>
+      
+    </ul>
+    
+
+</div> 
+		</div>
+		<div class="col l8">	
+			<article>
+				<div class="info">Author: Elliot Forbes | Posted at: 15.04.2017 09:49</div>
+				<div>
+					<p>In this tutorial I'll be showing you exactly how you can set up your own UDP chat server using CPython 3.3 and Python's Socket module. The end product will be a server that listens for all connections and messages over a specific port and prints out any messages to the console. This could be extended in the future to create a chat server that subsequently broadcasts any messages received to all parties listening for responses.</p>
+
+<h2>Advantages of UDP in Games Programming</h2>
+
+<p>UDP or User Datagram Protocol is connection-less protocol which is suitable for applications that require efficient communication that doesn't have to worry about packet loss. For gaming applications this tends to be the perfect protocol due to the lower overhead incurred as opposed to TCP. Typically games send and receive thousands of packets a second that contain information such as opposing players health, location, direction and so on. Now if one of these packets was to be dropped during transmission then it isn't too critical to the game and the worst case scenario is that a player jerks about for a split second during gameplay. </p>
+
+<h2>Implementing the Client</h2>
+
+<p>To begin with we will need to import the socket python module, this can be done like so:</p>
+
+<pre><code>import socket
+</code></pre>
+
+<p>Once we''ve got this we need to declare the IP address that we will be trying to send our UDP messages to as well as the port number. This port number is arbritary but ensure that you aren''t using a socket that has already been taken.</p>
+
+<pre><code>UDP_IP_ADDRESS = &quot;127.0.0.1&quot;
+UDP_PORT_NO = 6789
+Message = &quot;Hello, Server&quot;
+</code></pre>
+
+<p>Now that we've declared these few variables it''s time to create the socket through which we will be sending our UDP message to the server.</p>
+
+<pre><code>clientSock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+</code></pre>
+
+<p>And finally, once we've constructed our new socket it's time to write the code that will send our UDP message:</p>
+
+<pre><code>clientSock.sendto(Message, (UDP_IP_ADDRESS, UDP_PORT_NO))
+</code></pre>
+
+<h2>Implementing the Server</h2>
+
+<p>Now that we''ve coded our client we then need to move on to creating our server program which will be continuously listening on our defined IP address and port number for any UDP messages. It is essential that this server has to be run prior to the execution of the client python script or the client script will fail.</p>
+
+<pre><code># Again we import the necessary socket python module
+import socket
+# Here we define the UDP IP address as well as the port number that we have 
+# already defined in the client python script.
+UDP_IP_ADDRESS = &quot;127.0.0.1&quot;
+UDP_PORT_NO = 6789
+</code></pre>
+
+<p>Once we''ve imported the socket module and declared our ip address and port number we can create another socket which will look exactly like the socket we constructed in our client program.</p>
+
+<pre><code># declare our serverSocket upon which
+# we will be listening for UDP messages
+serverSock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+# One difference is that we will have to bind our declared IP address
+# and port number to our newly declared serverSock
+serverSock.bind((UDP_IP_ADDRESS, UDP_PORT_NO))
+</code></pre>
+
+<p>And finally, once we've created our server socket, we need to write the code that will keep our script continuously listening to this socket until its termination. This takes form as a simple while loop, like so:</p>
+
+<pre><code>while True:
+    data, addr = serverSock.recvfrom(1024)
+    print &quot;Message: &quot;, data
+</code></pre>
+
+				</div>
+				<div>
+					<div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://tutorialedge.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+				</div>
+			</article>
+		</div>
+
+		<div class="col l2">
+			<div class="wrapper">
+    <div class="container">
+      <img src="https://twitter.com/Elliot_F/profile_image?size=original" alt="Elliot Forbes" class="trophy" />
+      <h1>Elliot Forbes</h1>
+      <span class="score">Follow me:</span>
+  
+      <div class="buttons">
+          <a href="https://twitter.com/Elliot_F" target="_blank" class="button light">
+              <span><i class="ion ion-social-twitter"></i> Twitter</span>
+          </a>
+      </div>
+    </div>
+</div>
+
+		</div>
+		
+	</div>
+</div>
+
+<div class="join-us">
+	<div class="container">
+		<div class="row">
+			<div class="col l8">
+				<h5>Become a Contributor!</h5>
+				<p>Think you could improve the articles on this site? Feel free to submit a pull request to the sites github repo.</p>
+			</div>
+			<div class="col l4">
+				<a href="https://github.com/elliotforbes/tutorialedge-v2"><button class="btn valign">Fork Our Repo</button></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="page-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col l6 s12">
+				<h5>TutorialEdge.net</h5>
+				<p class="text-lighten-4">This site is dedicated to bringing you the highest quality courses designed to teach you the ins and outs of programming with various frameworks and programming languages.</p>
+			</div>
+			<div class="col l4 offset-l2 s12">
+				<h5>Links</h5>
+				<ul>
+					<li><a class="text-lighten-3" href="/tutorials">All Tutorials</a></li>
+					<li><a class="text-lighten-3" href="/books">Books</a></li>
+					<li><a class="text-lighten-3" href="/contact">Contact</a></li>
+					<li><a class="text-lighten-3" href="/courses">Courses</a></li>
+					<li><a class="text-lighten-3" href="/blog">Blog</a></li>
+					<li><a class="text-lighten-3" href="/about">About</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer-copyright">
+		<div class="container">
+		TutorialEdge © 2016 Copyright 
+		</div>
+	</div>
+</footer>
+
+<script>
+$(".button-collapse").sideNav();
+</script>

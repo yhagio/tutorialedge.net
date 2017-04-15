@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Udp on TutorialEdge.net</title>
+    <link>/tags/udp/index.xml</link>
+    <description>Recent content in Udp on TutorialEdge.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="/tags/udp/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>UDP Client Server Tutorial Java</title>
+      <link>/post/java/udp-client-server-tutorial-java/</link>
+      <pubDate>Sun, 09 Apr 2017 21:24:02 +0100</pubDate>
+      
+      <guid>/post/java/udp-client-server-tutorial-java/</guid>
+      <description>
+
+&lt;p&gt;In this tutorial we’ll be looking at how we can set up a UDP client and server using Java’s DatagramSocket’s.&lt;/p&gt;
+
+&lt;h2 id=&#34;udp-server&#34;&gt;UDP Server&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;package com.tutorialedge.server;
+
+import java.io.IOException;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
+import java.net.SocketException;
+
+import org.apache.log4j.Logger;
+
+import com.tutorialedge.driver.ServerDriver;
+
+public class Server implements Runnable{
+	final static Logger logger = Logger.getLogger(Server.class);
+	
+	private DatagramSocket serverSocket;
+	
+	private byte[] in;
+	private byte[] out;
+	
+	/*
+	 * Our constructor which instantiates our serverSocket
+	 */
+	public Server() throws SocketException{
+		serverSocket = new DatagramSocket(10000);
+	}
+
+	public void run() {
+		while(true){
+			try {
+				in = new byte[1024];
+				out = new byte[1024];
+				
+				/*
+				 * Create our inbound datagram packet
+				 */
+				DatagramPacket receivedPacket = new DatagramPacket(in, in.length);
+				serverSocket.receive(receivedPacket);
+				
+				/*
+				 * Get the data from the packet we&#39;ve just received
+				 * and transform it to uppercase.
+				 */
+				String text = new String(receivedPacket.getData());
+				out = text.toUpperCase().getBytes();
+				logger.info(&amp;quot;String Received: &amp;quot; + text);
+				
+				/*
+				 * Retrieve the IP Address and port number of the datagram packet
+				 * we&#39;ve just received
+				 */
+				InetAddress IPAddress = receivedPacket.getAddress();
+				int port = receivedPacket.getPort();
+				
+				/*
+				 * Create a DatagramPacket which will return our message back to the last system
+				 * that we received from
+				 */
+				DatagramPacket sendPacket = new DatagramPacket(in, in.length, IPAddress, port);
+				serverSocket.send(sendPacket);
+			} catch (IOException e) {
+				/*
+				 * Handle our servers exception
+				 */
+				logger.info(&amp;quot;Exception thrown: &amp;quot; + e.getLocalizedMessage());
+			}
+			
+		}
+	}
+	
+	
+	
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;udp-client&#34;&gt;UDP Client&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;package com.tutorialedge.client;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
+import java.net.SocketException;
+import java.net.UnknownHostException;
+
+import org.apache.log4j.Logger;
+
+import com.tutorialedge.server.Server;
+
+public class Client implements Runnable{
+	final static Logger logger = Logger.getLogger(Server.class);
+	
+	private BufferedReader inFromUser;
+	private DatagramSocket clientSocket;
+	private InetAddress IPAddress;
+	
+	/*
+	 * Our byte arrays that we&#39;ll use to read in and send out to our UDP server
+	 */
+	private byte[] outData;
+    private byte[] inData;
+	
+    /*
+     * Our Client constructor which instantiates our clientSocket
+     * and get&#39;s our IPAddress
+     */
+	public Client() throws SocketException, UnknownHostException{
+		clientSocket = new DatagramSocket();
+		IPAddress = InetAddress.getByName(&amp;quot;localhost&amp;quot;);
+		inFromUser = new BufferedReader(new InputStreamReader(System.in));
+	}
+	
+	private void shutdown(){
+		clientSocket.close();
+	}
+	
+	public void run() {
+		logger.info(&amp;quot;Client Started, Listening for Input:&amp;quot;);
+		/*
+		 * Start a while loop that will run until we kill the program, this will continuously
+		 * poll for user input and send it to the server.
+		 */
+		while(true){
+			try {
+				inData = new byte[1024];
+				outData = new byte[1024];
+				/*
+				 * First we read in the users input from the console.
+				 */
+				System.out.print(&amp;quot;&amp;gt; &amp;quot;);
+				String sentence = inFromUser.readLine();
+				outData = sentence.getBytes();
+				
+				/*
+				 * Next we create a datagram packet which will allow us send our message back to our datagram server
+				 */
+				DatagramPacket out = new DatagramPacket(outData, outData.length, IPAddress, 10000);
+				clientSocket.send(out);
+				
+				/*
+				 * Once we&#39;ve sent our message we create a second datagram packet which will
+				 * let us receive a response.
+				 */
+				DatagramPacket in = new DatagramPacket(inData, inData.length);
+				clientSocket.receive(in);
+				
+				/*
+				 * Finally we log the response from the server using log4j
+				 */
+				String modifiedSentence = new String(in.getData());
+				logger.info(&amp;quot;Server &amp;gt;&amp;quot; + modifiedSentence);
+				
+			} catch (IOException e) {
+				/*
+				 * Here we need to capture any exceptions thrown by our application
+				 */
+				logger.error(&amp;quot;Exception Thrown: &amp;quot; + e.getLocalizedMessage());
+			}
+		}
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;serverdriver-class&#34;&gt;ServerDriver Class&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;package com.tutorialedge.driver;
+
+import java.net.SocketException;
+
+import org.apache.log4j.Logger;
+
+import com.tutorialedge.server.Server;
+
+public class ServerDriver {
+	final static Logger logger = Logger.getLogger(ServerDriver.class);
+	
+	public static void main(String[] args) throws SocketException{
+		logger.info(&amp;quot;Networking Tutorial v0.01&amp;quot;);
+		new Thread(new Server()).start();
+	}
+	
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;clientdriver-class&#34;&gt;ClientDriver Class&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;package com.tutorialedge.driver;
+
+import java.net.SocketException;
+import java.net.UnknownHostException;
+
+import org.apache.log4j.Logger;
+
+import com.tutorialedge.client.Client;
+
+public class ClientDriver {
+	final static Logger logger = Logger.getLogger(ServerDriver.class);
+	
+	public static void main(String[] args) throws SocketException, UnknownHostException{
+		logger.info(&amp;quot;Starting Client...&amp;quot;);
+		new Thread(new Client()).start();
+	}
+	
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

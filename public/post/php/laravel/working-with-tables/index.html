@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Working With Tables in Laravel 5.2</title>
+	
+	
+	
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/monokai.min.css">
+	<link rel="stylesheet" href="/css/materialize.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<meta name="generator" content="Hugo 0.19" />
+
+	
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+	<script src="/js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<script async>
+			(function (i, s, o, g, r, a, m) {
+					i['GoogleAnalyticsObject'] = r;
+					i[r] = i[r] || function () {
+							(i[r].q = i[r].q || []).push(arguments)
+					}, i[r].l = 1 * new Date();
+					a = s.createElement(o),
+					m = s.getElementsByTagName(o)[0];
+					a.async = 1;
+					a.src = g;
+					m.parentNode.insertBefore(a, m)
+			})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+			ga('create', 'UA-10255990-23', 'auto');
+			ga('send', 'pageview');
+	</script>
+</head>
+<body>
+
+	<header>
+		<nav>
+			<div class="nav-wrapper">
+				<a class="brand-logo" href="/">TutorialEdge.net</a>
+				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><a href="//about/">About</a></li>
+					<li><a href="//get-involved/">Get Involved</a></li>
+					<li><a href="//courses/">Courses</a></li>
+					<li><a href="//post/">Tutorials</a></li>
+				</ul>
+				<ul class="side-nav" id="mobile-demo">
+					<li><a href="//about/">About</a></li>
+					<li><a href="//get-involved/">Get Involved</a></li>
+					<li><a href="//courses/">Courses</a></li>
+					<li><a href="//post/">Tutorials</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+<div class="title-bar">
+	<div class="container">
+		<h1>Working With Tables in Laravel 5.2</h1>
+		<p></p>
+		
+		<a href="/tags/laravel-5.2"><div class="chip">laravel-5.2</div></a>
+		
+		<a href="/tags/php"><div class="chip">php</div></a>
+		
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col l2">
+			<div class="sidebar">
+     
+    <h3>laravel-5.2</h3>
+    <ul> 
+      
+        <li><a href="/post/php/laravel/simple-laravel-pagination/">Simple Laravel 5 Pagination</a></li>
+      
+        <li><a href="/post/php/laravel/creating-an-admin-area-laravel/">Creating an Admin Area with Laravel 5</a></li>
+      
+        <li><a href="/post/php/laravel/laravel-5-simple-site-search-bar/">Laravel 5 Simple Site Search Bar Tutorial</a></li>
+      
+        <li><a href="/post/php/laravel/laravel-routes-cheat-sheet/">Laravel 5.1 Routes Cheat Sheet</a></li>
+      
+        <li><a href="/post/php/laravel/laravel-5-middleware-tutorial/">Laravel 5 Middleware Tutorial</a></li>
+      
+        <li><a href="/post/php/laravel/adding-github-oauth-to-laravel-5-2/">Adding Github Registry and Authentication To Laravel 5.2</a></li>
+      
+        <li><a href="/post/php/laravel/building-a-blog-with-laravel-5-2/">Building A Blog With Laravel 5.2</a></li>
+      
+        <li><a href="/post/php/laravel/cipher-keylength-invalid-laravel-5-2/">The Cipher and or Key Length are Invalid - laravel 5.2 Issue</a></li>
+      
+        <li><a href="/post/php/laravel/introduction-to-routing-laravel-5-2/">Introduction To Routing in Laravel 5.2</a></li>
+      
+        <li><a href="/post/php/laravel/effective-debugging-laravel-5-2/">Effective Debugging of Laravel 5.2 Applications</a></li>
+      
+    </ul>
+    
+
+</div> 
+		</div>
+		<div class="col l8">	
+			<article>
+				<div class="info">Author: Elliot Forbes | Posted at: 15.04.2017 08:01</div>
+				<div>
+					<h2>Pre-Requisites</h2>
+
+<p><b>Before we can get started</b> building our blog, we'll first need to set up a database on our machine that we can play around with for testing purposes.</p>
+
+<p>I typically use XAMPP on my local machines as it allows me to create MySQL tables using phpMyAdmin. I'd recommend, if you haven't already, downloading this and setting it up.</p>
+
+<p><b>Once you've set up phpMyAdmin</b> create a table with which we can build our blog. Create a user and give that user permission and then add this to your <b>.env</b> file within the root directory of your project.</p>
+
+<pre><code class="language-markup">DB_HOST=127.0.0.1
+DB_DATABASE=blog_db
+DB_USERNAME=your_user
+DB_PASSWORD=your_password</code></pre>
+
+<p>Test this connection out by performing <b>php artisan migrate</b> and if everything is configured correctly you should now see a users table within that database.</p>
+
+<h2>Creating our Database Tables:</h2>
+
+<p>Over these tutorials we will be implementing the following components:</p>
+
+<ul>
+<li>A Blog System with Tags</li>
+<li>A commenting system so that users can respond to our posts.</li>
+<li>User authentication using Facebook, Twitter and Google Plus</li>
+<li>An Admin Section where we can perform all CRUD on our posts.</li>
+<li>An API that we can consume and utilize for future components.</li>
+</ul>
+
+<p>For each of these things we’ll want to define some form of schema that can be used to store our data in our database. I’m purposefully leaving a few fields out of the initial design as it’ll let me demonstrate the power of migrations further down the line.</p>
+
+<h3>Posts</h3>
+
+<table class="striped">
+        <thead>
+          <tr>
+              <th data-field="id">Name</th>
+              <th data-field="name">Type</th>
+              <th data-field="price">Traits</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>id</td>
+            <td>integer</td>
+<td>unique, increments</td>
+          </tr>
+          <tr>
+            <td>Title</td>
+            <td>string</td>
+<td>n/a</td>
+          </tr>
+          <tr>
+            <td>description</td>
+            <td>text</td>
+<td>n/a</td>
+          </tr>
+<tr>
+<td>Author</td>
+<td>String</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Body</td>
+<td>Text</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>timestamp</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>timestamp</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>published_at</td>
+<td>timestamp</td>
+<td>N/A</td>
+</tr>
+        </tbody>
+      </table>
+
+<h3>Comments</h3>
+
+<table class="striped">
+        <thead>
+          <tr>
+              <th data-field="id">Name</th>
+              <th data-field="name">Type</th>
+              <th data-field="price">Traits</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>id</td>
+            <td>integer</td>
+<td>unique, increments</td>
+          </tr>
+          <tr>
+            <td>body</td>
+            <td>text</td>
+<td>n/a</td>
+          </tr>
+          <tr>
+            <td>author</td>
+            <td>string</td>
+<td>n/a</td>
+          </tr>
+<tr>
+<td>created_at</td>
+<td>timestamp</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>timestamp</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>published_at</td>
+<td>timestamp</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Tags</h3>
+
+<table class="striped">
+        <thead>
+          <tr>
+              <th data-field="id">Name</th>
+              <th data-field="name">Type</th>
+              <th data-field="price">Traits</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>id</td>
+            <td>integer</td>
+<td>unique, increments</td>
+          </tr>
+          <tr>
+            <td>name</td>
+            <td>string</td>
+<td>n/a</td>
+          </tr>
+<td>created_at</td>
+<td>timestamp</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>timestamp</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h3>Post_Tag</h3>
+
+<table class="striped">
+        <thead>
+          <tr>
+              <th data-field="id">Name</th>
+              <th data-field="name">Type</th>
+              <th data-field="price">Traits</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>post_id</td>
+            <td>integer</td>
+<td>n/a</td>
+          </tr>
+          <tr>
+            <td>tag_id</td>
+            <td>integer</td>
+<td>n/a</td>
+          </tr>
+<td>created_at</td>
+<td>timestamp</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>timestamp</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Creating our Migrations</h2>
+
+<p>php artisan again comes in useful when creating migrations. For each of the tables we’ve defined above, we are going to want to create a migration that will create a table in the database.</p>
+
+<p>Navigate to the root directory of the project and type the following commands in:</p>
+
+<pre><code class=”language-markup”>php artisan make:migration create_posts_table</code></pre>
+
+<pre><code class=”language-markup”>php artisan make:migration create_comments_table</code></pre>
+
+<pre><code class=”language-markup”>php artisan make:migration create_tags_table</code></pre>
+
+<pre><code class=”language-markup”>php artisan make:migration create_post_tag_table</code></pre>
+
+<p>This should create 4 new php classes under <b>database/migrations</b> and it’s in these 4 new files that we are going to define our tables schema.</p>
+
+<p><h2>Defining our Schemas</h2></p>
+
+<p>In each of these 4 new files we need to define the table structure for all of our tables. You’ll notice that the users table has already been defined for us.</p>
+
+<p>If you open up the CreatePostsTable class that will have been created from the first php artisan command then you should see something like the code below. The only difference is I've added the basic create and drop table functionality in the up and down methods. Migration classes like the one below contain 2 functions, an up function and a down function. The up function creates tables and the down function typically does the reverse.</p>
+
+<p>In this tutorial we'll be using <b>Laravel's Schema Builder</b> in order to elegantly craft the tables we need in our database. </p>
+
+<pre><code class="language-php"><xmp><?php
+
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreatePostsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('posts', function (Blueprint $table){
+           // our schema is defined in here 
+           $table->increments('id');
+           $table->string('title');
+           $table->text('description');
+           $table->text('body');
+           $table->string('author');
+           $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        // here we define what happens when we bring down our application
+        // in this case we want to drop our posts table
+        Schema::drop('posts');
+    }
+}</xmp></code></pre>
+
+<p><b>For the purpose of brevity</b>, I'm only going to be showing you the up functions for the next 3 tables we'll be creating.</p>
+
+<pre><code class="language-php"><xmp>public function up()
+    {
+        Schema::create('comments', function (Blueprint $table){
+           // our schema is defined in here 
+           $table->increments('id');
+           $table->integer('post_id');
+           $table->text('body');
+           $table->string('author');
+           $table->timestamps();
+        });
+    }</xmp></code></pre>
+
+<pre><code class="language-php">public function up()
+    {
+        Schema::create('tags', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->timestamps();
+        });
+    }</code></pre>
+
+<pre><code class="language-php">public function up()
+    {
+        Schema::create('post_tag', function (Blueprint $table){
+            $table->integer('post_id')->unsigned()->index();
+            $table->integer('tag_id')->unsigned()->index();
+            $table->timestamps(); 
+        }); 
+        
+        // This sets up the relationships for our table
+        Schema::table('post_tag', function ($table){
+            $table->foreign('post_id')->references('id')->on('posts')->onDelete('cascade');
+            $table->foreign('tag_id')->references('id')->on('tags')->onDelete('cascade'); 
+        });
+    }</code></pre>
+
+<p>Once these are in place and you have successfully set up a database for your test site, perform the following command in the terminal:</p>
+
+<pre><code class="language-markup">php artisan migrate</code></pre>
+
+<h2>Conclusions</h2>
+
+<p>If everything went smoothly with our migrations then you should have in place everything we need to start building our blog.</p> 
+
+<p>In the next lesson I'm going to be demonstrating how to implement some basic routes in Laravel 5.2</p>
+
+<p><b>Link:</b> <a href="https://tutorialedge.net/creating-some-routes-laravel-5">Lesson 3 - Creating some Basic Routes</a></p>
+
+				</div>
+				<div>
+					<div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://tutorialedge.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+				</div>
+			</article>
+		</div>
+
+		<div class="col l2">
+			<div class="wrapper">
+    <div class="container">
+      <img src="https://twitter.com/Elliot_F/profile_image?size=original" alt="Elliot Forbes" class="trophy" />
+      <h1>Elliot Forbes</h1>
+      <span class="score">Follow me:</span>
+  
+      <div class="buttons">
+          <a href="https://twitter.com/Elliot_F" target="_blank" class="button light">
+              <span><i class="ion ion-social-twitter"></i> Twitter</span>
+          </a>
+      </div>
+    </div>
+</div>
+
+		</div>
+		
+	</div>
+</div>
+
+<div class="join-us">
+	<div class="container">
+		<div class="row">
+			<div class="col l8">
+				<h5>Become a Contributor!</h5>
+				<p>Think you could improve the articles on this site? Feel free to submit a pull request to the sites github repo.</p>
+			</div>
+			<div class="col l4">
+				<a href="https://github.com/elliotforbes/tutorialedge-v2"><button class="btn valign">Fork Our Repo</button></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="page-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col l6 s12">
+				<h5>TutorialEdge.net</h5>
+				<p class="text-lighten-4">This site is dedicated to bringing you the highest quality courses designed to teach you the ins and outs of programming with various frameworks and programming languages.</p>
+			</div>
+			<div class="col l4 offset-l2 s12">
+				<h5>Links</h5>
+				<ul>
+					<li><a class="text-lighten-3" href="/tutorials">All Tutorials</a></li>
+					<li><a class="text-lighten-3" href="/books">Books</a></li>
+					<li><a class="text-lighten-3" href="/contact">Contact</a></li>
+					<li><a class="text-lighten-3" href="/courses">Courses</a></li>
+					<li><a class="text-lighten-3" href="/blog">Blog</a></li>
+					<li><a class="text-lighten-3" href="/about">About</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer-copyright">
+		<div class="container">
+		TutorialEdge © 2016 Copyright 
+		</div>
+	</div>
+</footer>
+
+<script>
+$(".button-collapse").sideNav();
+</script>

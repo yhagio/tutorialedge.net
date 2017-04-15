@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Beginner on TutorialEdge.net</title>
+    <link>/series/beginner/index.xml</link>
+    <description>Recent content in Beginner on TutorialEdge.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="/series/beginner/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Learning to Code in 2017</title>
+      <link>/post/general/learning-to-code-2017/</link>
+      <pubDate>Sat, 15 Apr 2017 09:53:07 +0100</pubDate>
+      
+      <guid>/post/general/learning-to-code-2017/</guid>
+      <description>
+
+&lt;p&gt;Programming has changed a hell of a lot in the last few years and we’ve seen multiple new languages pop up all addressing different problem sets and skill levels. The main goal for this article is clarifying some of the basic concepts and guiding you as to where to start if you are wanting to learn how to program in 2017.&lt;/p&gt;
+
+&lt;h2 id=&#34;choosing-a-language&#34;&gt;Choosing a Language&lt;/h2&gt;
+
+&lt;p&gt;There are literally hundreds of languages out there, from C++ to Python to Go. Choosing the right one to start off with can be hard and somewhat daunting for someone who is new to it all.&lt;/p&gt;
+
+&lt;p&gt;Generally the best language for anyone to start off with would be Python 3 and above. It’s certainly one of the easiest to read languages available and it’s immensely powerful in terms of what you can do with it.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The latest version is currently 3.6.0 at the time of writing this and you can download this by navigating to the Python Download’s Page &lt;a href=&#34;https://www.python.org/downloads/&#34;&gt;Here.&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In most languages we have this concept of libraries, which are essentially pre-written bits of code that we can easily add to our own code and use. Python is no exception and features thousands of already written libraries that can help you do things like write a web server, &lt;a href=&#34;https://tutorialedge.net/creating-python-twitter-bot-using-twitter-api&#34;&gt;build twitter-bots&lt;/a&gt;, &lt;a href=&#34;https://tutorialedge.net/fetching-web-pages-with-python&#34;&gt;scrape the web&lt;/a&gt; and more.&lt;/p&gt;
+
+&lt;h2 id=&#34;what-should-you-learn-first&#34;&gt;What Should You Learn First?&lt;/h2&gt;
+
+&lt;p&gt;If you are completely new to programming then the best place to start is to get a simple “Hello World” program working in your command line. Getting your first computer program written and running quickly is a huge motivational boost and definitely something that kept me going when I first started.&lt;/p&gt;
+
+&lt;h4 id=&#34;the-basics&#34;&gt;The Basics&lt;/h4&gt;
+
+&lt;p&gt;Once you’ve gotten your first “hello world” program running then it’s time to start learning some more powerful concepts like if statements, for loops and things like variables. One of the best online resources for learning these things is undoubtedly &lt;a href=&#34;https://www.codecademy.com/&#34;&gt;CodeAcademy&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;CodeAcademy’s Python course walks you through basic concepts and starts getting you into the programmer’s mindset.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;This github repo has a fantastic list of places that help you learn as well: &lt;a href=&#34;https://github.com/karlhorky/learn-to-program&#34;&gt;Learn To Program Repo&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&#34;testing-your-abilities&#34;&gt;Testing Your Abilities:&lt;/h4&gt;
+
+&lt;p&gt;Once you&amp;rsquo;ve worked through some of the basic courses then it would be a good idea to test your new-found abilities with some programming challenges. &lt;a href=&#34;https://www.reddit.com/r/dailyprogrammer/&#34;&gt;/r/dailyprogrammer&lt;/a&gt; provides some excellent daily challenges.&lt;/p&gt;
+
+&lt;p&gt;If these don&amp;rsquo;t take your fancy then I recommend possibly checking out Project Euler which features hundreds of programming but typically factor in various mathematical concepts: &lt;a href=&#34;https://projecteuler.net/archives&#34;&gt;Project Euler&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;source-control-management&#34;&gt;Source Control Management&lt;/h2&gt;
+
+&lt;p&gt;Once you’ve mastered the basics of Python then it’s time to start building a portfolio of all your cool projects and to start learning the basics of Source Control Management.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Source Control Management systems help teams work together on the same projects at the same time from anywhere in the world.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Github has an excellent interactive resource that you can use in order to learn the world&amp;rsquo;s most popular source control management system: git. Check it out here: &lt;a href=&#34;https://try.github.io/levels/1/challenges/1&#34;&gt;https://try.github.io/levels/1/challenges/1&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;A lot of the most popular open source software projects are written and managed using github.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;This article is by no means finished. I will be updating this throughout the year as I try to make this one of the most accessible and comprehensive guides on learning how to program in 2017.&lt;/p&gt;
+
+&lt;p&gt;If you have any comments or suggestions then please let me know in the comments section below.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>What is a RESTful API?</title>
+      <link>/post/general/what-is-a-rest-api/</link>
+      <pubDate>Sat, 15 Apr 2017 09:53:07 +0100</pubDate>
+      
+      <guid>/post/general/what-is-a-rest-api/</guid>
+      <description>
+
+&lt;p&gt;As a developer I spend a lot of time developing new or improving on existing RESTful APIs and one of the big questions I’ve been asked is - What is a REST API?&lt;/p&gt;
+
+&lt;p&gt;This tutorial will try to explain in layman’s terms what a REST API is and how we can utilize these APIs in order to build our own systems.&lt;/p&gt;
+
+&lt;h2 id=&#34;rest-basics&#34;&gt;REST Basics&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;REST&lt;/strong&gt; - Representational State Transfer.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;API&lt;/strong&gt; - Application Programming Interface&lt;/p&gt;
+
+&lt;p&gt;Most, if not all, large popular websites will rely upon some form of REST API in order to deliver some content or functionality to their users. Some sites like Facebook and Twitter actually expose some of these APIs to outside developers to build their own tools and systems.&lt;/p&gt;
+
+&lt;p&gt;We can communicate with REST APIs using HTTP requests, much like you’d do to navigate to a website or load an image. We can do HTTP requests to certain API urls and these urls would then return the information we required, or we could push data to an API url in order to change some data in a database.&lt;/p&gt;
+
+&lt;p&gt;Typically we send HTTP requests to an URL that we have defined in our REST API and it would either perform a given task for us or return a certain bit of data. Most APIs these days would return a response to us in the form of JSON.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://tutorialedge.net/uploads/rest-api.png&#34; alt=&#34;REST API Basics&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;a-simple-example&#34;&gt;A Simple Example&lt;/h2&gt;
+
+&lt;p&gt;Imagine you wrote a bit of code that gives you the current weather conditions at your house. It reads the temperature, humidity and rainfall and stores them locally. How would we then expose this information in such a way that websites or other applications could view it?&lt;/p&gt;
+
+&lt;p&gt;One answer to this question is by wrapping it in a RESTful API.&lt;/p&gt;
+
+&lt;p&gt;We could expose our code and wrap it in an API so that whenever we navigated to say &lt;a href=&#34;http://localhost:8000/api/weatherStats&#34;&gt;http://localhost:8000/api/weatherStats&lt;/a&gt; it would give us a JSON response that contained all the current weather stats.&lt;/p&gt;
+
+&lt;h2 id=&#34;why-do-we-do-this&#34;&gt;Why Do We Do This?&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Improved Code Reuse&lt;/strong&gt; - By exposing our code through REST APIs we essentially give ourselves a greater degree of flexibility. We can develop our software once and should we wish to use the same code again in a different project it would be easy, we could simply send HTTP requests to our API and we’ve reduced the need to duplicate our work efforts.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Always Available&lt;/strong&gt; - REST APIs are typically things that are running and available all the time. We make them very stable and as a result we can interact with them wherever we are in the world as long as we have internet connectivity.&lt;/p&gt;
+
+&lt;h2 id=&#34;taking-it-further&#34;&gt;Taking it Further&lt;/h2&gt;
+
+&lt;p&gt;If you want to learn how to implement your own REST APIs then I suggest you have a look at my tutorial on &lt;a href=&#34;https://tutorialedge.net/creating-simple-restful-json-api-with-go&#34;&gt;Writing RESTful APIs in Go&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>AngularJS Event Handling Tutorial</title>
+	
+	
+	
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/monokai.min.css">
+	<link rel="stylesheet" href="/css/materialize.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<meta name="generator" content="Hugo 0.19" />
+
+	
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+	<script src="/js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<script async>
+			(function (i, s, o, g, r, a, m) {
+					i['GoogleAnalyticsObject'] = r;
+					i[r] = i[r] || function () {
+							(i[r].q = i[r].q || []).push(arguments)
+					}, i[r].l = 1 * new Date();
+					a = s.createElement(o),
+					m = s.getElementsByTagName(o)[0];
+					a.async = 1;
+					a.src = g;
+					m.parentNode.insertBefore(a, m)
+			})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+			ga('create', 'UA-10255990-23', 'auto');
+			ga('send', 'pageview');
+	</script>
+</head>
+<body>
+
+	<header>
+		<nav>
+			<div class="nav-wrapper">
+				<a class="brand-logo" href="/">TutorialEdge.net</a>
+				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><a href="//about/">About</a></li>
+					<li><a href="//get-involved/">Get Involved</a></li>
+					<li><a href="//courses/">Courses</a></li>
+					<li><a href="//post/">Tutorials</a></li>
+				</ul>
+				<ul class="side-nav" id="mobile-demo">
+					<li><a href="//about/">About</a></li>
+					<li><a href="//get-involved/">Get Involved</a></li>
+					<li><a href="//courses/">Courses</a></li>
+					<li><a href="//post/">Tutorials</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+<div class="title-bar">
+	<div class="container">
+		<h1>AngularJS Event Handling Tutorial</h1>
+		<p>In this tutorial we explore some of the ways we can handle browser and document events in our AngularJS applications</p>
+		
+		<a href="/tags/angularjs"><div class="chip">angularjs</div></a>
+		
+		<a href="/tags/javascript"><div class="chip">javascript</div></a>
+		
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col l2">
+			<div class="sidebar">
+     
+    <h3>angularjs</h3>
+    <ul> 
+      
+        <li><a href="/post/javascript/angularjs/angularjs-promises-tutorial/">AngularJS Promises Tutorial</a></li>
+      
+        <li><a href="/post/javascript/angularjs/most-important-changes-angularjs-1-6/">Most Important Changes to AngularJS in 1.6</a></li>
+      
+        <li><a href="/post/javascript/angularjs/angularjs-ng-model-in-ng-if-tutorial/">AngularJS ng-model in ng-if Tutorial</a></li>
+      
+        <li><a href="/post/javascript/angularjs/angularjs-data-binding-tutorial/">AngularJS Data Binding Tutorial</a></li>
+      
+        <li><a href="/post/javascript/angularjs/angularjs-controllers-tutorial/">AngularJS Controllers Tutorial</a></li>
+      
+        <li><a href="/post/javascript/angularjs/angularjs-template-tutorial-using-ng-view/">AngularJS Templating Tutorial Using ng-view</a></li>
+      
+        <li><a href="/post/javascript/angularjs/angularjs-directives-tutorial/">AngularJS Directives Tutorial</a></li>
+      
+        <li><a href="/post/javascript/angularjs/template-route-provider-tutorial/">AngularJS Template Route Provider Tutorial</a></li>
+      
+        <li><a href="/post/javascript/angularjs/interacting-with-apis-using-http-angularjs/">Interacting With RESTful APIs Using $http in AngularJS</a></li>
+      
+        <li><a href="/post/javascript/angularjs/angularjs-filter-search-tutorial/">AngularJS Filter Search Tutorial</a></li>
+      
+    </ul>
+    
+
+</div> 
+		</div>
+		<div class="col l8">	
+			<article>
+				<div class="info">Author: Elliot Forbes | Posted at: 09.04.2017 21:13</div>
+				<div>
+					
+
+<p>In this tutorial we’ll be looking at the different ways we can handle events in AngularJS. We’ll be exploring several of the event listening directives that AngularJS has on offer and how we can use these to create cool behaviours in our AngularJS Applications.</p>
+
+<div class="github-link">
+All code in this tutorial can be found in this github repo: <a href="https://github.com/elliotforbes/angularjs-fundamentals">Github Repo</a>
+</div>
+
+<h2 id="browser-events">Browser Events</h2>
+
+<p>In most modern web browsers, every time something interesting happens in either the Document or the browser an event is generated. Within AngularJS we can register event listeners that will listen for said events and perform some action whenever they occur.</p>
+
+<p>An event can be a vast number of things, from hovering over a hyperlink to double-clicking on an object on the page and thankfully Angular has directives that cover a lot of these.</p>
+
+<h2 id="angularjs-event-listeners">AngularJS Event Listeners</h2>
+
+<p>The complete list of AngularJS events are as follows:</p>
+
+<ul>
+<li>ng-blur</li>
+<li>ng-change</li>
+<li>ng-click</li>
+<li>ng-copy</li>
+<li>ng-cut</li>
+<li>ng-dblclick</li>
+<li>ng-focus</li>
+<li>ng-keydown</li>
+<li>ng-keypress</li>
+<li>ng-keyup</li>
+<li>ng-mousedown</li>
+<li>ng-mouseenter</li>
+<li>ng-mouseleave</li>
+<li>ng-mousemove</li>
+<li>ng-mouseover</li>
+<li>ng-mouseup</li>
+<li>ng-paste</li>
+</ul>
+
+<p>These can be used by placing them on the object of your page and passing this directive the name of the function you wish to call or the code that you wish to execute.</p>
+
+<pre><code>// passing it the code we wish to execute
+&lt;div ng-click=&quot;console.log('hello world')&quot;&gt;&lt;/div&gt;
+// or the named function we wish to call
+&lt;div ng-click=&quot;myNamedFunction()&quot;&gt;&lt;/div&gt;
+</code></pre>
+
+<p>This shows the power of the AngularJS framework as it hides all the ugly DOM manipulation code and allows us to focus on implementing the business logic into our application.</p>
+
+<h2 id="implementation">Implementation</h2>
+
+<p>Below you&rsquo;ll find an array of how we can utilize these event handling directives in AngularJS. These are just some examples of how you could go about implementing these directives in your own Angular application.</p>
+
+<pre><code>&lt;input class=&quot;form-control&quot; ng-keydown=&quot;counter = counter + 1&quot; placeholder=&quot;Keydown Change...&quot;/&gt;
+&lt;input class=&quot;form-control&quot; ng-keypress=&quot;counter = counter + 1&quot; placeholder=&quot;Keypress change...&quot;/&gt;
+&lt;button class=&quot;btn btn-primary&quot; ng-click=&quot;counter = counter + 1&quot;&gt;Click Me!&lt;/button&gt;
+&lt;button class=&quot;btn btn-primary&quot; ng-dblclick=&quot;counter = counter + 1&quot;&gt;Double Click Me!&lt;/button&gt;
+&lt;p ng-copy=&quot;counter = counter + 1&quot;&gt;Copy text from me!&lt;/p&gt;
+&lt;textarea class=&quot;form-control&quot; ng-cut=&quot;counter = counter + 1&quot; cols=&quot;30&quot; rows=&quot;10&quot;&gt;Cut text from me!&lt;/textarea&gt;
+&lt;input type=&quot;text&quot; class=&quot;form-control&quot; ng-focus=&quot;counter = counter + 1&quot; placeholder=&quot;Focus on me...&quot;/&gt;
+&lt;p ng-mouseenter=&quot;counter = counter + 1&quot;&gt;Mouse Enter event&lt;/p&gt;
+&lt;p ng-mouseleave=&quot;counter = counter + 1&quot;&gt;Mouse Leave event&lt;/p&gt;
+&lt;input type=&quot;text&quot; class=&quot;form-control&quot; ng-paste=&quot;counter = counter + 1&quot; placeholder=&quot;paste into me...&quot;/&gt;
+</code></pre>
+
+				</div>
+				<div>
+					<div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://tutorialedge.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+				</div>
+			</article>
+		</div>
+
+		<div class="col l2">
+			<div class="wrapper">
+    <div class="container">
+      <img src="https://twitter.com/Elliot_F/profile_image?size=original" alt="Elliot Forbes" class="trophy" />
+      <h1>Elliot Forbes</h1>
+      <span class="score">Follow me:</span>
+  
+      <div class="buttons">
+          <a href="https://twitter.com/Elliot_F" target="_blank" class="button light">
+              <span><i class="ion ion-social-twitter"></i> Twitter</span>
+          </a>
+      </div>
+    </div>
+</div>
+
+		</div>
+		
+	</div>
+</div>
+
+<div class="join-us">
+	<div class="container">
+		<div class="row">
+			<div class="col l8">
+				<h5>Become a Contributor!</h5>
+				<p>Think you could improve the articles on this site? Feel free to submit a pull request to the sites github repo.</p>
+			</div>
+			<div class="col l4">
+				<a href="https://github.com/elliotforbes/tutorialedge-v2"><button class="btn valign">Fork Our Repo</button></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="page-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col l6 s12">
+				<h5>TutorialEdge.net</h5>
+				<p class="text-lighten-4">This site is dedicated to bringing you the highest quality courses designed to teach you the ins and outs of programming with various frameworks and programming languages.</p>
+			</div>
+			<div class="col l4 offset-l2 s12">
+				<h5>Links</h5>
+				<ul>
+					<li><a class="text-lighten-3" href="/tutorials">All Tutorials</a></li>
+					<li><a class="text-lighten-3" href="/books">Books</a></li>
+					<li><a class="text-lighten-3" href="/contact">Contact</a></li>
+					<li><a class="text-lighten-3" href="/courses">Courses</a></li>
+					<li><a class="text-lighten-3" href="/blog">Blog</a></li>
+					<li><a class="text-lighten-3" href="/about">About</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer-copyright">
+		<div class="container">
+		TutorialEdge © 2016 Copyright 
+		</div>
+	</div>
+</footer>
+
+<script>
+$(".button-collapse").sideNav();
+</script>

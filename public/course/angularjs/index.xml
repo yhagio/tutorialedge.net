@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Angularjs on TutorialEdge.net</title>
+    <link>/course/angularjs/index.xml</link>
+    <description>Recent content in Angularjs on TutorialEdge.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="/course/angularjs/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>AngularJS Controllers Tutorial</title>
+      <link>/post/javascript/angularjs/angularjs-controllers-tutorial/</link>
+      <pubDate>Sat, 15 Apr 2017 09:10:12 +0100</pubDate>
+      
+      <guid>/post/javascript/angularjs/angularjs-controllers-tutorial/</guid>
+      <description>&lt;p&gt;AngularJS controllers are somewhat similar to classes in Object Oriented programming and as such you can define the functionality of your applications in these controllers. When a controller is attached to the DOM via the ng-controller directive it instantiates a new Controller object.&lt;/p&gt;
+
+&lt;div class=&#34;note&#34;&gt;
+Check out my article on &lt;a href=&#34;https://tutorialedge.net/working-with-angularjs-component-applications&#34;&gt;Working with Components&lt;/a&gt; and see how you should use controllers within a component based system.
+&lt;/div&gt;
+
+&lt;h2&gt;Instantiating a Controller&lt;/h2&gt;
+
+&lt;p&gt;We’ll begin by creating a very simple controller that contains a function that we’ll call every time we click a button. We’ll also have a $scope variable that we will bind to somewhere on our HTML page so that we can see the effects of this function’s execution every time it is pressed.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var testApp = angular.module(&#39;testApp&#39;, []);
+
+testApp.controller(&#39;testController&#39; , function ($scope) {
+    
+    $scope.myNumber = 1;
+    
+    $scope.go = function() {
+        $scope.myNumber = $scope.myNumber + 1;
+        console.log(&amp;quot;hit&amp;quot;);
+    };
+    
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now that we’ve defined our controller, we need to create our button that will be able to call our newly defined function within our controller, we can do that like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;html ng-app=&amp;quot;testApp&amp;quot;&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;title&amp;gt;AngularJS ng-if child scopes example&amp;lt;/title&amp;gt;
+    &amp;lt;script src=&amp;quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body ng-controller=&amp;quot;testController&amp;quot;&amp;gt;
+    
+    &amp;lt;div&amp;gt;
+        {{myNumber}}
+        &amp;lt;!--
+            by using the ng-click directive we can call the function 
+            go() that we&#39;ve declared in our testController.
+        --&amp;gt;
+        &amp;lt;button ng-click=&amp;quot;go()&amp;quot;&amp;gt;Add One!&amp;lt;/button&amp;gt;
+    &amp;lt;/div&amp;gt;
+    
+    &amp;lt;script src=&amp;quot;script.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Notice we’ve that we’ve added the ng-controller directive to our body html tag and added the name of our controller in there as well as added the ng-app directive to our outermost html tags. These two things are essential if we want this to run.&lt;/p&gt;
+
+&lt;h2&gt;Scope Inheritance&lt;/h2&gt;
+
+&lt;p&gt;One very useful thing to note is that we can effectively achieve scope inheritance due to the fact each new ng-controller instantiation creates a new child scope. This essentially allows us to access scope variables declared higher up in the hierarchy and this can be quite useful if you are wanting to achieve less code duplication etc.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var testApp = angular.module(&#39;testApp&#39;, []);
+
+testApp.controller(&#39;testController&#39; , function ($scope) {
+    
+    $scope.myNumber = 1;
+    
+    $scope.go = function() {
+        $scope.myNumber = $scope.myNumber + 1;
+        console.log(&amp;quot;hit&amp;quot;);
+    };
+    
+});
+
+testApp.controller(&#39;childTestController&#39;, function($scope) {
+    $scope.yourNumber = 99;
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;html ng-app=&amp;quot;testApp&amp;quot;&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;title&amp;gt;AngularJS ng-if child scopes example&amp;lt;/title&amp;gt;
+    &amp;lt;script src=&amp;quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body ng-controller=&amp;quot;testController&amp;quot;&amp;gt;
+    
+    &amp;lt;div&amp;gt;
+        {{myNumber}}
+    &amp;lt;/div&amp;gt;
+    
+    &amp;lt;div ng-controller=&amp;quot;childTestController&amp;quot;&amp;gt;
+        {{yourNumber}}
+    &amp;lt;/div&amp;gt;
+    
+    
+    &amp;lt;script src=&amp;quot;script.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

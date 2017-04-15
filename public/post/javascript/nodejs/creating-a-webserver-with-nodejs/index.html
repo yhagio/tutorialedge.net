@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Building a Webserver using ExpressJS and NodeJS</title>
+	
+	
+	
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/monokai.min.css">
+	<link rel="stylesheet" href="/css/materialize.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<meta name="generator" content="Hugo 0.19" />
+
+	
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+	<script src="/js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<script async>
+			(function (i, s, o, g, r, a, m) {
+					i['GoogleAnalyticsObject'] = r;
+					i[r] = i[r] || function () {
+							(i[r].q = i[r].q || []).push(arguments)
+					}, i[r].l = 1 * new Date();
+					a = s.createElement(o),
+					m = s.getElementsByTagName(o)[0];
+					a.async = 1;
+					a.src = g;
+					m.parentNode.insertBefore(a, m)
+			})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+			ga('create', 'UA-10255990-23', 'auto');
+			ga('send', 'pageview');
+	</script>
+</head>
+<body>
+
+	<header>
+		<nav>
+			<div class="nav-wrapper">
+				<a class="brand-logo" href="/">TutorialEdge.net</a>
+				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><a href="//about/">About</a></li>
+					<li><a href="//get-involved/">Get Involved</a></li>
+					<li><a href="//courses/">Courses</a></li>
+					<li><a href="//post/">Tutorials</a></li>
+				</ul>
+				<ul class="side-nav" id="mobile-demo">
+					<li><a href="//about/">About</a></li>
+					<li><a href="//get-involved/">Get Involved</a></li>
+					<li><a href="//courses/">Courses</a></li>
+					<li><a href="//post/">Tutorials</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+<div class="title-bar">
+	<div class="container">
+		<h1>Building a Webserver using ExpressJS and NodeJS</h1>
+		<p>In this tutorial we look at ways to start up a webserver using ExpressJS</p>
+		
+		<a href="/tags/expressjs"><div class="chip">expressjs</div></a>
+		
+		<a href="/tags/nodejs"><div class="chip">nodejs</div></a>
+		
+		<a href="/tags/javascript"><div class="chip">javascript</div></a>
+		
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col l2">
+			<div class="sidebar">
+     
+    <h3>nodejs</h3>
+    <ul> 
+      
+        <li><a href="/post/javascript/nodejs/keeping-node-apps-running-forever-pm2/">Keeping NodeJS Applications Running Forever Using PM2</a></li>
+      
+        <li><a href="/post/javascript/nodejs/creating-a-webserver-with-nodejs/">Building a Webserver using ExpressJS and NodeJS</a></li>
+      
+        <li><a href="/post/javascript/nodejs/executing-shell-scripts-with-nodejs/">Executing Shell Scripts With NodeJS</a></li>
+      
+        <li><a href="/post/javascript/nodejs/reading-writing-files-with-nodejs/">Reading and Writing Files With NodeJS</a></li>
+      
+        <li><a href="/post/javascript/nodejs/creating-deleting-directories-with-nodejs/">Creating and Deleting Directories With NodeJS</a></li>
+      
+        <li><a href="/post/javascript/nodejs/editing-xml-files-with-nodejs/">Editing XML Files With NodeJS</a></li>
+      
+        <li><a href="/post/javascript/nodejs/converting-csv-json-node/">Converting CSV to JSON using NodeJS</a></li>
+      
+        <li><a href="/post/javascript/nodejs/building-software-using-microservice-architecture/">Building Software using A Microservice Based Architecture</a></li>
+      
+        <li><a href="/post/javascript/nodejs/writing-your-own-logging-system-nodejs/">Writing Your Own Logging System NodeJS</a></li>
+      
+        <li><a href="/post/javascript/nodejs/monitoring-server-stats-with-nodejs/">Monitoring Server Stats With NodeJS</a></li>
+      
+    </ul>
+    
+
+</div> 
+		</div>
+		<div class="col l8">	
+			<article>
+				<div class="info">Author: Elliot Forbes | Posted at: 15.04.2017 08:32</div>
+				<div>
+					
+
+<p>This is the first tutorial in a series in which we’ll be building up a website for a domain name I’ve been sitting on for a few years now. This is intended to show you everything it takes in order to program your own website using NodeJS and the new Angular2 framework.</p>
+
+<h2 id="creating-a-simple-web-server-using-nodejs-and-expressjs">Creating a Simple Web Server Using NodeJS and ExpressJS.</h2>
+
+<p>So the very first thing we need for our site is the foundation and for this we can use a very simple ExpressJS server.</p>
+
+<h3 id="prerequisites">Prerequisites</h3>
+
+<p>Before we can begin this series you’ll need to make sure you have the following installed on your computer:</p>
+
+<ul>
+<li>NodeJS and the NPM</li>
+</ul>
+
+<p>Typically NodeJS includes the node package manager (NPM) by default so once you’ve installed node on your machine, open up a terminal and test your installation. Type “npm” in your terminal and if everything has been configured correctly you should see the manual for npm printed out.</p>
+
+<h2 id="setting-up-our-project">Setting Up Our Project</h2>
+
+<p>Create a directory on your development machine and then navigate to that folder using the terminal. Once you are here we can initialize our project with npm:</p>
+
+<pre><code>mpm init
+</code></pre>
+
+<p>This should then ask you a series of questions that will be used in order to populate a package.json file that this command creates. These aren’t critically important and can be changed at a later date if needed.</p>
+
+<h2 id="installing-expressjs">Installing ExpressJS</h2>
+
+<p>Once you’ve initialized your project with npm we can then proceed to installing ExpressJS. <code>npm install express --save</code></p>
+
+<p>This command should install ExpressJS into a node_modules directory within your project and this will now allow us to make a start programming our simple web server.</p>
+
+<h2 id="implementing-our-server">Implementing our Server</h2>
+
+<p>So to begin with you’ll want to create a new js file within your directory. We’ll call this server.js and it’s going to start off like so:</p>
+
+<pre><code>var express = require('express');
+
+var app = express();
+
+app.get('/', function (req, res){
+    res.send(&quot;Hello World!&quot;); 
+});
+
+
+var server = app.listen(3000, function () {
+    var host = server.address().address;
+    var port = server.address().port;
+    
+    console.log(&quot;GadgetEdge.net listening at http://%s:%s&quot;, host, port); 
+});
+</code></pre>
+
+<p>Once you’ve got this in your server.js file we can test it out. Open up your terminal and navigate to your project’s directory and then run your server code:</p>
+
+<pre><code>node server.js
+</code></pre>
+
+<p>This should start the server and if we navigate to our browser and type: <a href="http://localhost:3000">http://localhost:3000</a> you should see Hello World! Printed out.</p>
+
+<h2 id="improving-our-server">Improving Our Server</h2>
+
+<p>So now that we’ve got a basic server up and running we now need to improve it a bit and give it functionality like serving our html files as well as all our assets.</p>
+
+<p>First of all we are going to create a public directory within our project that will house all of our website files. Within this create an index.html page and another directory called assets. Within this assets folder create another file called: style.css This will house all of our css for our site.</p>
+
+<p>Next thing we need to do is point our express server to look at this new public directory. We can do this like so:</p>
+
+<pre><code>// this line allows us to use the expressjs module
+var express = require('express');
+
+// Add this line so we can serve files from our local
+// directory
+var path = require('path');
+var app = express();
+
+// Add the abillity to serve our static files from the public directory
+app.use(express.static('public'));
+
+// Here we serve up our index page
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '/public/index.html'));
+});
+
+
+var server = app.listen(3000, function () {
+    var host = server.address().address;
+    var port = server.address().port;
+    
+    console.log(&quot;GadgetEdge.net listening at http://%s:%s&quot;, host, port); 
+});
+</code></pre>
+
+<h2 id="checking-it-all-works">Checking it all works</h2>
+
+<p>Once you’ve done all this, restart your server in the terminal by pressing ctrl-c or cmd-c and then restart it by running node server.js. Again navigate to localhost:3000 and you should see your index.html page rendered for you. Test the configuration by changing some of the css.</p>
+
+				</div>
+				<div>
+					<div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://tutorialedge.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+				</div>
+			</article>
+		</div>
+
+		<div class="col l2">
+			<div class="wrapper">
+    <div class="container">
+      <img src="https://twitter.com/Elliot_F/profile_image?size=original" alt="Elliot Forbes" class="trophy" />
+      <h1>Elliot Forbes</h1>
+      <span class="score">Follow me:</span>
+  
+      <div class="buttons">
+          <a href="https://twitter.com/Elliot_F" target="_blank" class="button light">
+              <span><i class="ion ion-social-twitter"></i> Twitter</span>
+          </a>
+      </div>
+    </div>
+</div>
+
+		</div>
+		
+	</div>
+</div>
+
+<div class="join-us">
+	<div class="container">
+		<div class="row">
+			<div class="col l8">
+				<h5>Become a Contributor!</h5>
+				<p>Think you could improve the articles on this site? Feel free to submit a pull request to the sites github repo.</p>
+			</div>
+			<div class="col l4">
+				<a href="https://github.com/elliotforbes/tutorialedge-v2"><button class="btn valign">Fork Our Repo</button></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="page-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col l6 s12">
+				<h5>TutorialEdge.net</h5>
+				<p class="text-lighten-4">This site is dedicated to bringing you the highest quality courses designed to teach you the ins and outs of programming with various frameworks and programming languages.</p>
+			</div>
+			<div class="col l4 offset-l2 s12">
+				<h5>Links</h5>
+				<ul>
+					<li><a class="text-lighten-3" href="/tutorials">All Tutorials</a></li>
+					<li><a class="text-lighten-3" href="/books">Books</a></li>
+					<li><a class="text-lighten-3" href="/contact">Contact</a></li>
+					<li><a class="text-lighten-3" href="/courses">Courses</a></li>
+					<li><a class="text-lighten-3" href="/blog">Blog</a></li>
+					<li><a class="text-lighten-3" href="/about">About</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer-copyright">
+		<div class="container">
+		TutorialEdge © 2016 Copyright 
+		</div>
+	</div>
+</footer>
+
+<script>
+$(".button-collapse").sideNav();
+</script>

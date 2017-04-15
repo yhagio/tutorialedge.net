@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Server on TutorialEdge.net</title>
+    <link>/tags/server/index.xml</link>
+    <description>Recent content in Server on TutorialEdge.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="/tags/server/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Creating A Simple Web Server With Golang</title>
+      <link>/post/golang/creating-simple-web-server-with-golang/</link>
+      <pubDate>Sat, 15 Apr 2017 08:46:33 +0100</pubDate>
+      
+      <guid>/post/golang/creating-simple-web-server-with-golang/</guid>
+      <description>
+
+&lt;p&gt;In this tutorial we&amp;rsquo;ll be focusing on creating a very simple web server using the &lt;a href=&#34;https://golang.org/pkg/net/http/&#34;&gt;net/http&lt;/a&gt; package. If you&amp;rsquo;ve ever used something like Node&amp;rsquo;s ExpressJS or Python&amp;rsquo;s Tornado, then you should hopefully see some similarities to how things are handled.&lt;/p&gt;
+
+&lt;h2 id=&#34;creating-a-basic-web-server&#34;&gt;Creating a Basic Web Server&lt;/h2&gt;
+
+&lt;p&gt;Ok, so to begin with we’ll create a very simple web server that will just return whatever the URL path is of your query. This will be a good base from which we can build on top of.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import (
+    &amp;quot;fmt&amp;quot;
+    &amp;quot;html&amp;quot;
+    &amp;quot;log&amp;quot;
+    &amp;quot;net/http&amp;quot;
+)
+
+func main() {
+
+    http.HandleFunc(&amp;quot;/&amp;quot;, func(w http.ResponseWriter, r *http.Request) {
+        fmt.Fprintf(w, &amp;quot;Hello, %q&amp;quot;, html.EscapeString(r.URL.Path))
+    })
+    
+    http.HandleFunc(&amp;quot;/hi&amp;quot;, func(w http.ResponseWriter, r *http.Request){
+        fmt.Fprintf(w, &amp;quot;Hi&amp;quot;)
+    })
+
+    log.Fatal(http.ListenAndServe(&amp;quot;:8081&amp;quot;, nil))
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In the above code we essentially define two different Handlers. These handlers are what respond to any http request that match the string pattern we define as the first parameter. So essentially whenever a request is made for the home page or &lt;em&gt;&lt;a href=&#34;http://localhost:8081/&#34;&gt;http://localhost:8081/&lt;/a&gt;&lt;/em&gt;, we&amp;rsquo;ll see our first handler respond as the query matches that pattern.&lt;/p&gt;
+
+&lt;h2 id=&#34;running-our-server&#34;&gt;Running Our Server&lt;/h2&gt;
+
+&lt;p&gt;Ok so now that we&amp;rsquo;ve created our own very simplistic server we can try running it by typing go run server.go into our console. This usually asks me for permission so accept that and then head over to your browser and head to &lt;a href=&#34;http://localhost:8081/world&#34;&gt;http://localhost:8081/world&lt;/a&gt;. On this page you should hopefully see your query string echoed back to you in true &amp;ldquo;hello world&amp;rdquo; fashion.&lt;/p&gt;
+
+&lt;h2 id=&#34;adding-a-bit-of-complexity&#34;&gt;Adding a bit of Complexity&lt;/h2&gt;
+
+&lt;p&gt;So now that we&amp;rsquo;ve got a basic web server set up, let&amp;rsquo;s try incrementing a counter every time a specific url is hit. Due to the fact that the web server is asynchronous, we&amp;rsquo;ll have to guard our counter using a mutex in order to prevent us from being hit with race-condition bugs.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import (
+	&amp;quot;fmt&amp;quot;
+	&amp;quot;log&amp;quot;
+	&amp;quot;net/http&amp;quot;
+	&amp;quot;strconv&amp;quot;
+	&amp;quot;sync&amp;quot;
+)
+
+var counter int
+var mutex = &amp;amp;sync.Mutex{}
+
+func echoString(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, &amp;quot;hello&amp;quot;)
+}
+
+func incrementCounter(w http.ResponseWriter, r *http.Request) {
+	mutex.Lock()
+	counter++
+	fmt.Fprintf(w, strconv.Itoa(counter))
+	mutex.Unlock()
+}
+
+func main() {
+	http.HandleFunc(&amp;quot;/&amp;quot;, echoString)
+
+	http.HandleFunc(&amp;quot;/increment&amp;quot;, incrementCounter)
+
+	http.HandleFunc(&amp;quot;/hi&amp;quot;, func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintf(w, &amp;quot;Hi&amp;quot;)
+	})
+
+	log.Fatal(http.ListenAndServe(&amp;quot;:8081&amp;quot;, nil))
+
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Run this and then navigate to &lt;a href=&#34;http://localhost:8081/increment&#34;&gt;http://localhost:8081/increment&lt;/a&gt; and you should see the current count which will be locked, incremented and then unlocked every time you make a request to that page.&lt;/p&gt;
+
+&lt;h2 id=&#34;serving-static-files&#34;&gt;Serving Static Files&lt;/h2&gt;
+
+&lt;p&gt;Ok, so now that we&amp;rsquo;ve set up a simple server in go, it&amp;rsquo;s time to start serving some static files. Create a static folder within your project&amp;rsquo;s directory and then create some simple html files. For this example I&amp;rsquo;m just serving back the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;html&amp;gt;
+    &amp;lt;head&amp;gt;
+        &amp;lt;title&amp;gt;Hello World&amp;lt;/title&amp;gt;
+    &amp;lt;/head&amp;gt;
+    &amp;lt;body&amp;gt;
+        &amp;lt;h2&amp;gt;Hello World!&amp;lt;/h2&amp;gt;
+    &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once you&amp;rsquo;ve got this then we can then modify our web server code to use the http.ServeFile method. Essentially this will take in the url of the request made to the server, and if it contains say index.html then it would return the index.html file, rendered as html in the browser. If we were to create an edit.html page and send a request to &lt;a href=&#34;http://localhost:8081/edit.html&#34;&gt;http://localhost:8081/edit.html&lt;/a&gt; then it would return whatever html content you choose to put in that edit.html page.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import (
+	&amp;quot;fmt&amp;quot;
+	&amp;quot;log&amp;quot;
+	&amp;quot;net/http&amp;quot;
+)
+
+func main() {
+
+	http.HandleFunc(&amp;quot;/&amp;quot;, func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, r.URL.Path[1:])
+	})
+
+	http.HandleFunc(&amp;quot;/hi&amp;quot;, func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintf(w, &amp;quot;Hi&amp;quot;)
+	})
+
+	log.Fatal(http.ListenAndServe(&amp;quot;:8081&amp;quot;, nil))
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;checking-it-works&#34;&gt;Checking it Works&lt;/h2&gt;
+
+&lt;p&gt;Again run the server and navigate to &lt;a href=&#34;http://localhost:8081/index.html&#34;&gt;http://localhost:8081/index.html&lt;/a&gt; and you should hopefully see your very simple index.html file rendered in all it&amp;rsquo;s glory.&lt;/p&gt;
+
+&lt;p&gt;I hope you found this tutorial useful and if you did then please let me know in the comments section below! This is part one of a series of GoLang tutorials in which we play around with APIs and creating servers so stay tuned for more!&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Recommended Reading: If you wanted to say display a blog then connecting to a database is vital: &lt;a href=&#34;https://tutorialedge.net/go-mysql-tutorials&#34;&gt;Go MySQL Tutorial&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

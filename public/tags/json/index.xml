@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Json on TutorialEdge.net</title>
+    <link>/tags/json/index.xml</link>
+    <description>Recent content in Json on TutorialEdge.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="/tags/json/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Converting CSV to JSON using NodeJS</title>
+      <link>/post/javascript/nodejs/converting-csv-json-node/</link>
+      <pubDate>Sun, 09 Apr 2017 21:29:02 +0100</pubDate>
+      
+      <guid>/post/javascript/nodejs/converting-csv-json-node/</guid>
+      <description>
+
+&lt;p&gt;In this tutorial I’m going to be showing you how we can create a NodeJS script that takes in a csv file and outputs the contents of that CSV file as JSON.&lt;/p&gt;
+
+&lt;p&gt;In order to do this conversion we’ll be using the &lt;a href=&#34;https://www.npmjs.com/package/csvtojson&#34;&gt;csvtojson&lt;/a&gt; node package. This package will do pretty much all the heavy lifting for us and having used it in production environments I can say that it’s remarkably easy to implement into a project.&lt;/p&gt;
+
+&lt;h2 id=&#34;setting-up-your-project&#34;&gt;Setting Up Your Project&lt;/h2&gt;
+
+&lt;p&gt;Create a new project directory on your machine and open up this location in your terminal. Next we’ll want to install the &lt;b&gt;csvtojson&lt;/b&gt; node module, you can do that by typing the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm install csvtojson --save
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This should create a &lt;b&gt;node_modules&lt;/b&gt; directory within your project which will contain all the dependencies that csvtojson requires.&lt;/p&gt;
+
+&lt;h2 id=&#34;implementation&#34;&gt;Implementation&lt;/h2&gt;
+
+&lt;p&gt;Now that we’ve got everything set up we can begin implementation. Open up your project in your prefered text editor and create a new js file. Within this file add the following code.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;//require the csvtojson converter class 
+var Converter = require(&amp;quot;csvtojson&amp;quot;).Converter;
+// create a new converter object
+var converter = new Converter({});
+
+// call the fromFile function which takes in the path to your 
+// csv file as well as a callback function
+converter.fromFile(&amp;quot;./path-to-your-file.csv&amp;quot;,function(err,result){
+    // if an error has occured then handle it
+    if(err){
+        console.log(&amp;quot;An Error Has Occured&amp;quot;);
+        console.log(err);  
+    } 
+    // create a variable called json and store
+    // the result of the conversion
+    var json = result;
+    
+    // log our json to verify it has worked
+    console.log(json);
+});
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

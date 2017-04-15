@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Depth First Search in Java</title>
+	
+	
+	
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/monokai.min.css">
+	<link rel="stylesheet" href="/css/materialize.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<meta name="generator" content="Hugo 0.19" />
+
+	
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+	<script src="/js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<script async>
+			(function (i, s, o, g, r, a, m) {
+					i['GoogleAnalyticsObject'] = r;
+					i[r] = i[r] || function () {
+							(i[r].q = i[r].q || []).push(arguments)
+					}, i[r].l = 1 * new Date();
+					a = s.createElement(o),
+					m = s.getElementsByTagName(o)[0];
+					a.async = 1;
+					a.src = g;
+					m.parentNode.insertBefore(a, m)
+			})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+			ga('create', 'UA-10255990-23', 'auto');
+			ga('send', 'pageview');
+	</script>
+</head>
+<body>
+
+	<header>
+		<nav>
+			<div class="nav-wrapper">
+				<a class="brand-logo" href="/">TutorialEdge.net</a>
+				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><a href="//about/">About</a></li>
+					<li><a href="//get-involved/">Get Involved</a></li>
+					<li><a href="//courses/">Courses</a></li>
+					<li><a href="//post/">Tutorials</a></li>
+				</ul>
+				<ul class="side-nav" id="mobile-demo">
+					<li><a href="//about/">About</a></li>
+					<li><a href="//get-involved/">Get Involved</a></li>
+					<li><a href="//courses/">Courses</a></li>
+					<li><a href="//post/">Tutorials</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+<div class="title-bar">
+	<div class="container">
+		<h1>Depth First Search in Java</h1>
+		<p>This article looks to demonstrate how one can implement the depth first graph search algorithm using the java programming language. </p>
+		
+		<a href="/tags/ai"><div class="chip">ai</div></a>
+		
+		<a href="/tags/java"><div class="chip">java</div></a>
+		
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col l2">
+			<div class="sidebar">
+     
+    <h3>ai</h3>
+    <ul> 
+      
+        <li><a href="/post/general/artificial-intelligence/breadth-first-search-java/">Breadth First Search Algorithm Tutorial with Java</a></li>
+      
+        <li><a href="/post/general/artificial-intelligence/depth-first-search/">Depth First Search in Java</a></li>
+      
+        <li><a href="/post/general/artificial-intelligence/depth-limited-search-in-java/">Depth Limited Search in Java</a></li>
+      
+        <li><a href="/post/general/artificial-intelligence/introduction-to-artificial-intelligence/">An Introduction To Artificial Intelligence</a></li>
+      
+        <li><a href="/post/general/artificial-intelligence/what-is-intelligent-agent/">What Is An Intelligent Agent</a></li>
+      
+    </ul>
+    
+
+</div> 
+		</div>
+		<div class="col l8">	
+			<article>
+				<div class="info">Author: Elliot Forbes | Posted at: 15.04.2017 09:23</div>
+				<div>
+					
+
+<h2>Depth First Search</h2>
+
+<p>DFS is another uninformed graph traversal algorithm which produces a non-optimal solution but can be useful for traversing quickly into deeper search domains. Depth first search is very similar to the previously covered breadth first search that we covered in this tutorial: <a href="http://tutorialedge.net/breadth-first-search-with-java">breadth first search in Java</a></p>
+
+<h2>How it Works</h2>
+
+<p>With Depth first search you start at the top most node in a tree and then follow the left most branch until there exists no more leafs in that branch. At that point you will search the nearest ancestor with unexplored nodes until such time as you find the goal node.</p>
+
+<p>If we take this binary tree as an example, the depth first search algorithm would do the following:</p>
+
+<ol>
+    <li>Add Node 1 to the stack </li>
+    <li>If Node 1 isn't the goal node then add Node 2 to the stack</li>
+    <li>Check if Node 2 is the goal node and if not add Node 4 to the stack.</li>
+    <li>If Node 4 isn't the goal node then add Node 8 to the stack. </li>
+    <li>If node 8 isn't the goal node then go to the nearest ancestor with unexplored children.</li>
+    <li>This happens to be Node 4, so we add Node 9 to the stack and check that.</li>
+    <li>If this isn't the goal node then we travel to Node 2 and explore it's unexplored children, Node 5.</li>
+    <li>and so on...</li>
+</ol>
+
+<p>We continue to go down the left most nodes until we find the first path that reaches our goal node.</p>
+
+<h2>AbstractSearch Class</h2>
+
+<p>As a means of clearing up the code from all these tutorials I am going to add in an abstract class to which all of our graph traversal classes will extend and adhere to. The source code for this looks like so:</p>
+
+<pre><code class="language-java">/**
+ * AbstractSearch class so that we have a template
+ * that all future graph traversal algorithms must adhere to.
+ * this will make it far easier to &quot;hot-swap&quot; different algorithms
+ * out for testing later on.
+ */
+public abstract class AbstractSearch {
+
+    Node startNode;
+    Node goalNode;
+
+    public AbstractSearch(Node startNode, Node goalNode){
+        this.startNode = startNode;
+        this.goalNode = goalNode;
+    }
+
+    public abstract boolean execute();
+
+}
+</code></pre>
+
+<h2 id="depth-first-search-implementation">Depth First Search Implementation</h2>
+
+<pre><code class="language-java">import java.util.ArrayList;
+import java.util.Stack;
+
+/**
+ * depth first search implementation using a stack structure instead of a queue
+ * structure as exhibited in the breadth first search algorithm
+ */
+public class DepthFirstSearch extends AbstractSearch{
+
+    Node startNode;
+    Node goalNode;
+
+    public DepthFirstSearch(Node start, Node goalNode){
+        super(start, goalNode);
+        this.startNode = start;
+        this.goalNode = goalNode;
+    }
+
+    public boolean execute(){
+        if(this.startNode.equals(goalNode)){
+            System.out.println(&quot;Goal Node Found at 0 depth&quot;);
+            System.out.println(startNode);
+        }
+        Stack&lt;node&gt; nodeStack = new Stack&lt;&gt;();
+        ArrayList&lt;node&gt; visitedNodes = new ArrayList&lt;&gt;();
+
+        nodeStack.add(startNode);
+
+        while(!nodeStack.isEmpty()){
+            Node current = nodeStack.pop();
+            if(current.equals(goalNode)){
+                System.out.print(visitedNodes);
+                System.out.println(&quot;Goal node found&quot;);
+                return true;
+            }
+            else {
+                visitedNodes.add(current);
+                nodeStack.addAll(current.getChildren());
+            }
+        }
+        return false;
+    }
+
+}
+</code></pre>
+
+<h2>Updating our Driver class</h2>
+
+<p>Due to the fact we've created an abstract search class we can now do something similar to this in our driver class:</p>
+
+<pre><code>/**
+ * Created by elliotforbes on 24/06/15.
+ */
+public class Driver {
+
+    public static void main(String args[]){
+        Node station1 = new Node(&quot;Westminster&quot;, null, null);
+        Node station2 = new Node(&quot;Waterloo&quot;, station1, null);
+        Node station3 = new Node(&quot;Trafalgar Square&quot;, station1, station2);
+        Node station4 = new Node(&quot;Canary Wharf&quot;, station2, station3);
+        Node station5 = new Node(&quot;London Bridge&quot;, station4, station3);
+        Node station6 = new Node(&quot;Tottenham Court Road&quot;, station5, station4);
+
+        // We instantiate searchAlgo as type AbstractSearch but we set it to equal
+        // our newly created DepthFirstSearch concrete class implementation
+        AbstractSearch searchAlgo = new DepthFirstSearch(station6, station1);
+
+        if(searchAlgo.execute())
+            System.out.print(&quot;Path Found!&quot;);
+    }
+}
+</code></pre>
+
+				</div>
+				<div>
+					<div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://tutorialedge.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+				</div>
+			</article>
+		</div>
+
+		<div class="col l2">
+			<div class="wrapper">
+    <div class="container">
+      <img src="https://twitter.com/Elliot_F/profile_image?size=original" alt="Elliot Forbes" class="trophy" />
+      <h1>Elliot Forbes</h1>
+      <span class="score">Follow me:</span>
+  
+      <div class="buttons">
+          <a href="https://twitter.com/Elliot_F" target="_blank" class="button light">
+              <span><i class="ion ion-social-twitter"></i> Twitter</span>
+          </a>
+      </div>
+    </div>
+</div>
+
+		</div>
+		
+	</div>
+</div>
+
+<div class="join-us">
+	<div class="container">
+		<div class="row">
+			<div class="col l8">
+				<h5>Become a Contributor!</h5>
+				<p>Think you could improve the articles on this site? Feel free to submit a pull request to the sites github repo.</p>
+			</div>
+			<div class="col l4">
+				<a href="https://github.com/elliotforbes/tutorialedge-v2"><button class="btn valign">Fork Our Repo</button></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="page-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col l6 s12">
+				<h5>TutorialEdge.net</h5>
+				<p class="text-lighten-4">This site is dedicated to bringing you the highest quality courses designed to teach you the ins and outs of programming with various frameworks and programming languages.</p>
+			</div>
+			<div class="col l4 offset-l2 s12">
+				<h5>Links</h5>
+				<ul>
+					<li><a class="text-lighten-3" href="/tutorials">All Tutorials</a></li>
+					<li><a class="text-lighten-3" href="/books">Books</a></li>
+					<li><a class="text-lighten-3" href="/contact">Contact</a></li>
+					<li><a class="text-lighten-3" href="/courses">Courses</a></li>
+					<li><a class="text-lighten-3" href="/blog">Blog</a></li>
+					<li><a class="text-lighten-3" href="/about">About</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer-copyright">
+		<div class="container">
+		TutorialEdge © 2016 Copyright 
+		</div>
+	</div>
+</footer>
+
+<script>
+$(".button-collapse").sideNav();
+</script>

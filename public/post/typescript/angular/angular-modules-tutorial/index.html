@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Angular Modules Tutorial</title>
+	
+	
+	
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/monokai.min.css">
+	<link rel="stylesheet" href="/css/materialize.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<meta name="generator" content="Hugo 0.19" />
+
+	
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+	<script src="/js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<script async>
+			(function (i, s, o, g, r, a, m) {
+					i['GoogleAnalyticsObject'] = r;
+					i[r] = i[r] || function () {
+							(i[r].q = i[r].q || []).push(arguments)
+					}, i[r].l = 1 * new Date();
+					a = s.createElement(o),
+					m = s.getElementsByTagName(o)[0];
+					a.async = 1;
+					a.src = g;
+					m.parentNode.insertBefore(a, m)
+			})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+			ga('create', 'UA-10255990-23', 'auto');
+			ga('send', 'pageview');
+	</script>
+</head>
+<body>
+
+	<header>
+		<nav>
+			<div class="nav-wrapper">
+				<a class="brand-logo" href="/">TutorialEdge.net</a>
+				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><a href="//about/">About</a></li>
+					<li><a href="//get-involved/">Get Involved</a></li>
+					<li><a href="//courses/">Courses</a></li>
+					<li><a href="//post/">Tutorials</a></li>
+				</ul>
+				<ul class="side-nav" id="mobile-demo">
+					<li><a href="//about/">About</a></li>
+					<li><a href="//get-involved/">Get Involved</a></li>
+					<li><a href="//courses/">Courses</a></li>
+					<li><a href="//post/">Tutorials</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+<div class="title-bar">
+	<div class="container">
+		<h1>Angular Modules Tutorial</h1>
+		<p>In this tutorial we look at modules within Angular 2.</p>
+		
+		<a href="/tags/angular"><div class="chip">angular</div></a>
+		
+		<a href="/tags/typescript"><div class="chip">typescript</div></a>
+		
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col l2">
+			<div class="sidebar">
+    
+
+</div> 
+		</div>
+		<div class="col l8">	
+			<article>
+				<div class="info">Author: Elliot Forbes | Posted at: 09.04.2017 21:05</div>
+				<div>
+					
+
+<div class="note">This tutorial was built of the official Angular 2.2 release. </div>
+
+<p>In this tutorial we’ll be examining what modules are in Angular 2.0 as well as how to define them, what the best practices are for using modules and what the differences are between 1.* Modules and 2.* modules.</p>
+
+<div class="note">Official documentation for Angular 2 Modules can be found here: <a href="https://angular.io/docs/ts/latest/guide/ngmodule.html">Angular 2 Modules</a></div>
+
+<h2 id="what-are-modules">What Are Modules?</h2>
+
+<p>Typically a module would contain all the code necessary for one cohesive piece of functionality for your application. So say you were designing an admin dashboard for your website or application. You would have one root module and possibly a module for your articles section, a module for your users section, a module for your stats section and so on.</p>
+
+<p>Being able to structure your application into a series of smaller blocks of functionality is highly advantageous as it allows for easy extendibility and maintainability further down the line. We can group things like components, directives and services into a single module and should we wish to use any of these things within another module, we would simply import that module at the top of our file like so:</p>
+
+<pre><code>// import OurService from the ourmodule folder
+import { OurService } from ./ourmodule/our.module';
+</code></pre>
+
+<p>Ever Angular application contains at least one route module. Without this your angular application simply wouldn’t work. Modules were introduced in Angular 2&rsquo;s 5th Release candidate and Angular 2 offers in built modules such as the FormsModule, the HttpModule and the RouterModule. These standard modules can all be imported into our application and will allow us to do things like perform http calls or define routes within our application.</p>
+
+<pre><code>// Notice how all of the sub modules and components are branched off the root module like a tree.
+-- Root Module
+---- Users Module
+------ new user component
+-------- new-user.ts|html|spec.ts|css
+---- Articles Module
+------ New/edit/delete/search article code
+---- Statistics Module
+------ All our code for gathering statistics and displaying them etc. 
+</code></pre>
+
+<h2 id="our-main-module">Our Main Module</h2>
+
+<p>Now we know every Angular application must have at the very least a root module. This is typically a class that has been decorated with @NgModule. @NgModule typically tells Angular how to compile and run module code. This root module acts as your applications main entry point.</p>
+
+<div class="note">Note that it is considered best practice to include the app.module.ts file within your apps root directory.</div>
+
+<pre><code>import { NgModule }      from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule }   from '@angular/forms';
+import { AppComponent }  from './app.component';
+import { TestComponent } from './test-component/test-component.component';
+
+
+@NgModule({
+  imports: [
+    BrowserModule,
+    FormsModule
+  ],
+  declarations: [
+    AppComponent,
+    TestComponent
+  ],
+  bootstrap: [ AppComponent ]
+})
+export class AppModule { }
+</code></pre>
+
+<div class="note">We can add our own custom components to the declarations array. Notice I’ve added TestComponent above. </div>
+
+<h3 id="the-ngmodule-decorator">The @NgModule Decorator</h3>
+
+<p>In order to define a module we need to first define a class within our application. After we&rsquo;ve defined this class we would then have to decorate it with the @NgModule decorator. Within this we define our metadata for this module, this metadata declares what components, directives, services and so on belong in this module.</p>
+
+<p>Defining your own new modules is relatively simple in Angular 2. Below you&rsquo;ll find the code needed to define your own UserModule module that contains a user component and also exports this component so that other modules can utilize it.</p>
+
+<pre><code>import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { UserComponent } from './user.component';
+
+@NgModule({
+  imports: [
+    BrowserModule
+  ],
+  declarations: [
+    UserComponent
+  ],
+  exports: [
+    UserComponent
+  ]
+})
+export class UserModule { }
+</code></pre>
+
+<p>And next we&rsquo;ll define the very simple UserComponent that the above module references. This component will be bound to the &lsquo;user&rsquo; html tag and will basically print out own h2 title that says &lsquo;User Component&rsquo;, exciting I know.</p>
+
+<pre><code>import { Component } from '@angular/core';
+
+@Component({
+  selector: 'user',
+  template: '&lt;h2&gt;User Component&lt;/h2&gt;'
+})
+export class UserComponent { }
+</code></pre>
+
+<p>In order for us to use the UserComponent within our root AppModule that we defined above we simply have to add the following to our list of imports at the top of our file.</p>
+
+<pre><code>import { UserModule, UserComponent } from './users/users.module';
+</code></pre>
+
+<div class="note">If we failed to add UserComponent to the list of exports in our UserModule file then we would be unable to import it in our root Module</div>
+
+<p>Once we&rsquo;ve done this we can then utilize the <user></user> tags within any component that lies within our root AppModule.</p>
+
+<h2 id="bootstrapping">Bootstrapping</h2>
+
+<p>In Angular 1.* we would typically have used the ng-app directive to bootstrap our angular application. This would act almost like a main function that would act as the starting point for all of our Angular code.</p>
+
+<p>In Angular 2 this ng-app directive no longer exists and we have to resort to explicitly calling a bootstrap function and passing our root module to this function.</p>
+
+<pre><code>import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+// we import our root module file, notice the lack of file-extension
+import { AppModule } from './app.module';
+
+
+// this compiles and launches our AngularJS Application for us
+platformBrowserDynamic().bootstrapModule(AppModule);
+</code></pre>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>I hope you found this tutorial useful. If you want any further help or information then please let me know in the comments section below!</p>
+
+				</div>
+				<div>
+					<div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://tutorialedge.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+				</div>
+			</article>
+		</div>
+
+		<div class="col l2">
+			<div class="wrapper">
+    <div class="container">
+      <img src="https://twitter.com/Elliot_F/profile_image?size=original" alt="Elliot Forbes" class="trophy" />
+      <h1>Elliot Forbes</h1>
+      <span class="score">Follow me:</span>
+  
+      <div class="buttons">
+          <a href="https://twitter.com/Elliot_F" target="_blank" class="button light">
+              <span><i class="ion ion-social-twitter"></i> Twitter</span>
+          </a>
+      </div>
+    </div>
+</div>
+
+		</div>
+		
+	</div>
+</div>
+
+<div class="join-us">
+	<div class="container">
+		<div class="row">
+			<div class="col l8">
+				<h5>Become a Contributor!</h5>
+				<p>Think you could improve the articles on this site? Feel free to submit a pull request to the sites github repo.</p>
+			</div>
+			<div class="col l4">
+				<a href="https://github.com/elliotforbes/tutorialedge-v2"><button class="btn valign">Fork Our Repo</button></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="page-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col l6 s12">
+				<h5>TutorialEdge.net</h5>
+				<p class="text-lighten-4">This site is dedicated to bringing you the highest quality courses designed to teach you the ins and outs of programming with various frameworks and programming languages.</p>
+			</div>
+			<div class="col l4 offset-l2 s12">
+				<h5>Links</h5>
+				<ul>
+					<li><a class="text-lighten-3" href="/tutorials">All Tutorials</a></li>
+					<li><a class="text-lighten-3" href="/books">Books</a></li>
+					<li><a class="text-lighten-3" href="/contact">Contact</a></li>
+					<li><a class="text-lighten-3" href="/courses">Courses</a></li>
+					<li><a class="text-lighten-3" href="/blog">Blog</a></li>
+					<li><a class="text-lighten-3" href="/about">About</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer-copyright">
+		<div class="container">
+		TutorialEdge © 2016 Copyright 
+		</div>
+	</div>
+</footer>
+
+<script>
+$(".button-collapse").sideNav();
+</script>

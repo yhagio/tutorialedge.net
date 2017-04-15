@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Concurrency on TutorialEdge.net</title>
+    <link>/tags/concurrency/index.xml</link>
+    <description>Recent content in Concurrency on TutorialEdge.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="/tags/concurrency/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Python Multithreading Tutorial - Concurrent Programming</title>
+      <link>/post/python/python-multithreading-tutorial/</link>
+      <pubDate>Sat, 15 Apr 2017 09:55:57 +0100</pubDate>
+      
+      <guid>/post/python/python-multithreading-tutorial/</guid>
+      <description>
+
+&lt;h2 id=&#34;what-is-multithreading&#34;&gt;What is Multithreading?&lt;/h2&gt;
+
+&lt;p&gt;Modern computers tend to feature a CPU that has multiple processing cores, each of these cores can run many threads simultaneously which, by proxy, gives us the ability to perform several tasks in parallel. Typically, you should only implement multiple threads when each thread you plan is completely independent of each other. So for instance in a game you would tend to create one thread for graphics processing, one for physics and one for networking. Each of these threads would be running and working with completely different data sets. This tutorial will hopefully show you how to get started with pythons &amp;ldquo;threading&amp;rdquo; module.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Objectives:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Creating and Running Threads&lt;/li&gt;
+&lt;li&gt;Teaching the Limitations of Python&amp;rsquo;s threading implementation&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2&gt;Creating Threads in Python&lt;/h2&gt;
+
+&lt;p&gt;To begin with we are going to want to create a new file and call it worker.py, this will contain all our code for one of our threads. To begin with we are going to create a class in python and have it import and extend the threading module.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import threading
+
+class Worker(threading.Thread):
+    # Our workers constructor, note the super() method which is vital if we want this
+    # to function properly
+    def __init__(self):
+        super(Worker, self).__init__()
+
+    def run(self):
+        for i in range(10):
+           print(i)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now that we have our worker class we can start work on our main class. Create a new python file and call it main.py and put the following code in:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import threading 
+from worker import Worker
+
+def main():
+    # This initializes &#39;&#39;thread1&#39;&#39; as an instance of our Worker Thread
+   thread1 = Worker()
+    # This is the code needed to run our newly created thread
+    thread1.start()
+
+  if __name__ == &amp;quot;__main__&amp;quot;:  
+      main()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;That&#39;&#39;s all the code you need to successfully create and instantiate a thread in python. If you can run python through your command line then open up a new terminal at your current folder and type &#39;&#39;python main.py&#39;&#39;. You should hopefully see the output of the above program should no errors occur.&lt;/p&gt;
+
+&lt;h2&gt;Exercise:&lt;/h2&gt;
+
+&lt;p&gt;Try instantiating more threads by creating new Worker() objects and then start them:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    thread1 = Worker(1)
+    thread2 = Worker(2)
+    thread3 = Worker(3)
+    thread1.start()
+    thread2.start()
+    thread3.start()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When you run this you should see output that looks something like this:  Notice that the outputted numbers are out of order, this basically shows you the precise order in which the threads have completed their tasks in and shows you the true power of asynchronous programming, multiple threads performing in parallel.&lt;/p&gt;
+
+&lt;h2&gt;Limitation with Classic Python Threads&lt;/h2&gt;
+
+&lt;p&gt;One of the main problems with Python&amp;rsquo;s classic implementation of threads is that they are not truly asynchronous. Performing tests on huge datasets show that the execution times of python threads is not entirely in parallel and you&amp;rdquo;ll often find execution times increasing adding multiple threads to programs as often performing these tasks synchronously will greatly reduce execution times. This is due to the way Global Interpreter Lock (GIL) works in Python, this basically ensures that only one line of python code can be compiled at one time.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;More about the GIL can be found here: &lt;a href=&#34;https://wiki.python.org/moin/GlobalInterpreterLock&#34;&gt;https://wiki.python.org/moin/GlobalInterpreterLock&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Python Multiprocessing Tutorial</title>
+      <link>/post/python/python-multiprocessing-tutorial/</link>
+      <pubDate>Sat, 15 Apr 2017 09:28:06 +0100</pubDate>
+      
+      <guid>/post/python/python-multiprocessing-tutorial/</guid>
+      <description>&lt;p&gt;Previously we&#39;ve looked at how you can try to achieve concurrency with Python using multithreading, the tutorial of which can be found here: &lt;a href=&#34;http://tutorialedge.net/asynchronous-programming-pythons-threading-module&#34;&gt;Python Multithreading Tutorial&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Now we are going to be having a look at how we can sidestep the limiting Global Interpreter Lock that effectively prevented our multithreaded applications from being truly concurrent by using the multiprocessing Python module. &lt;/p&gt;
+
+&lt;h2&gt;A Simple Example:&lt;/h2&gt;
+
+&lt;p&gt;In this example I&#39;ll be showing you how to spawn multiple processes at once and each process will output the random number that they will compute using the random module.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;from multiprocessing import Process, Queue
+import random
+
+def rand_num():
+    num = random.random()
+    print(num)
+    
+if __name__ == &amp;quot;__main__&amp;quot;:
+    queue = Queue()
+    
+    processes = [Process(target=rand_num, args=()) for x in range(4)]
+    
+    for p in processes:
+        p.start()
+        
+    for p in processes:
+        p.join()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Running this should then print out an array of 4 different decimal numbers between 0 and 1 like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Elliots-MacBook-Pro:Networking elliotforbes$ python processing.py
+0.090906474002
+0.306163229303
+0.995446921388
+0.0320995066016
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Passing Data Between Processes&lt;/h2&gt;
+
+&lt;p&gt;When performing concurrent programming the best practice is usually to avoid sharing state as much as possible. However when you absolutely need to have some form of shared data then the multiprocessing module provides a couple of ways of doing so. &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Queues:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Queue objects are a FIFO data structure that are thread and process safe which make them perfect for passing data between different processes without potentially corrupting data. Using them is relatively simple, we can expand:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;from multiprocessing import Process, Queue
+import random
+
+def rand_num(queue):
+    num = random.random()
+    queue.put(num)
+    
+if __name__ == &amp;quot;__main__&amp;quot;:
+    queue = Queue()
+    
+    processes = [Process(target=rand_num, args=(queue,)) for x in range(4)]
+    
+    for p in processes:
+        p.start()
+        
+    for p in processes:
+        p.join()
+    
+    results = [queue.get() for p in processes]
+
+    print(results)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This should output the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Elliots-MacBook-Pro:Networking elliotforbes$ python processing.py
+[0.6756465745753756, 0.4104274331895341, 0.6733748532075048, 0.9494118991646461]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Overall Python&#39;s MultiProcessing module is brilliant for those of you wishing to sidestep the limitations of the Global Interpreter Lock that hampers the performance of the multi-threading in python. I hope this has been helpful, if you feel anything else needs added to this tutorial then let me know in the comments section below!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Java Multithreading Tutorial Using Callable</title>
+      <link>/post/java/java-multithreading-tutorial-using-callable/</link>
+      <pubDate>Sat, 15 Apr 2017 08:42:15 +0100</pubDate>
+      
+      <guid>/post/java/java-multithreading-tutorial-using-callable/</guid>
+      <description>&lt;p&gt;In this tutorial I’ll be giving you a brief introduction to the world of concurrent programming using the Java programming language. By the end of this tutorial you should hopefully have a feel for what it takes to write simple, multi-threaded java programs and an understanding of how these can help improve the performance of your programs on multithreaded/multicore machines.&lt;/p&gt;
+
+&lt;h2&gt;Requirements&lt;/h2&gt;
+
+&lt;p&gt;In order to successfully complete this tutorial you will need to have Java 7 installed and running on your machine, as well as a method for editing and executing your Java code for which I would recommend the Eclipse or Intellij IDE.&lt;/p&gt;
+
+&lt;p&gt;You’ll also need a basic understanding of the Java programming language. Everything covered here will be built on top of a pre-existing Java background.&lt;/p&gt;
+
+&lt;h2&gt;Introduction - What is Concurrent Programming?&lt;/h2&gt;
+
+&lt;p&gt;“Concurrent computing is a form of computing in which several computations are executing during overlapping time periods - concurrently - instead of sequentially” - Wikipedia&lt;/p&gt;
+
+&lt;p&gt;What this essentially means for us is that we can have our programs utilizing more of the power that is contained within our CPUs by spreading the load evenly across multiple cores and threads. If you gave 1 worker 1,000,000 computations to work through and each computation took 1 minute, the fastest that worker could complete that task is in 1,000,000 minutes. If you had 100 workers working on that 1,000,000 computations then it should take roughly 100 times faster, this isn’t always the case with computers but we do see tremendous performance enhancements and far greater CPU utilization. &lt;/p&gt;
+
+&lt;p&gt;One thing to bear in mind is that we don’t have an infinite number of threads on a CPU and creating more and more threads could eventually start to severely hamper your program’s performance.&lt;/p&gt;
+
+&lt;h2&gt;Implementing this in Java&lt;/h2&gt;
+
+&lt;p&gt;There are multiple ways we can implement multithreading into our programs but the one I’m going to be focusing on in this tutorial is the Callable method. This method is advantageous over the Runnable and Thread methods as it allows you to see the results of execution.&lt;/p&gt;
+
+&lt;p&gt;We’ll start of with a basic Java class implementing Callable:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.tutorialedge.net;
+
+import java.util.concurrent.Callable;
+
+public class Worker implements Callable{
+	
+	String identifier;
+	
+	Worker(String identifier){
+		this.identifier = identifier;
+	}
+	
+	@Override
+	public String call() throws Exception {
+		System.out.println(&amp;quot;Worker ID: &amp;quot; + this.identifier);
+		
+		for(int i = 0; i &amp;lt; 10000; i++){
+			System.out.println(&amp;quot;ID: &amp;quot; + this.identifier + &amp;quot; ,Value: &amp;quot; + i);
+		}
+		
+		return null;
+	}
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Next thing we’ll do is create a main method which will run our workers for us. This will look something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.tutorialedge.net;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class Main {
+
+	public static void main(String[] args){
+		ExecutorService pool = Executors.newFixedThreadPool(4);
+		
+		Worker worker1 = new Worker(&amp;quot;1&amp;quot;);
+		Worker worker2 = new Worker(&amp;quot;2&amp;quot;);
+		Worker worker3 = new Worker(&amp;quot;3&amp;quot;);
+		Worker worker4 = new Worker(&amp;quot;4&amp;quot;);
+		
+		pool.submit(worker1);
+		pool.submit(worker2);
+		pool.submit(worker3);
+		pool.submit(worker4);
+		
+		pool.shutdown();
+		
+		System.out.println(&amp;quot;Hello World&amp;quot;);
+	}
+	
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

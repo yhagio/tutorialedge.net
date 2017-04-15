@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Email on TutorialEdge.net</title>
+    <link>/tags/email/index.xml</link>
+    <description>Recent content in Email on TutorialEdge.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="/tags/email/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Sending Email Using Go And Mailgun</title>
+      <link>/post/golang/sending-email-using-go-and-mailgun/</link>
+      <pubDate>Sat, 15 Apr 2017 08:44:00 +0100</pubDate>
+      
+      <guid>/post/golang/sending-email-using-go-and-mailgun/</guid>
+      <description>&lt;p&gt;In this tutorial I&#39;m going to be demonstrating how you can send mail with Go(Lang) and the mailgun api. Thankfully, mailgun&#39;s API is fantastic and sending mail is incredibly easy once you&#39;ve set everything up properly.&lt;/p&gt;
+
+&lt;h2&gt;Requirements&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;You&#39;ll need a mailgun account with your own verified domains&lt;/li&gt;
+&lt;li&gt;Mailgun&#39;s Go Package: Downloadable from here &gt; &lt;a href=&#34;https://github.com/mailgun/mailgun-go&#34; target=&#34;_blank&#34; &gt;https://github.com/mailgun/mailgun-go&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Your Mailgun&#39;s Public API Key&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Implementation&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import (
+    &amp;quot;github.com/mailgun/mailgun-go&amp;quot;
+)
+
+func SendSimpleMessage(domain, apiKey string) (string, error) {
+  mg := mailgun.NewMailgun(&amp;quot;tutorialedge.net&amp;quot;, apiKey, &amp;quot;key-12345671234567&amp;quot;)
+  m := mg.NewMessage(
+    &amp;quot;Excited User &amp;lt;elliot@tutorialedge.net&amp;gt;&amp;quot;,
+    &amp;quot;Hello&amp;quot;,
+    &amp;quot;Testing some Mailgun!&amp;quot;,
+    &amp;quot;elliot@tutorialedge.net&amp;quot;,
+  )
+  _, id, err := mg.Send(m)
+  return id, err
+}
+
+func main(){
+    SendSimpleMessage(&amp;quot;postmaster@elliotforbes.co.uk&amp;quot;, &amp;quot;key-12345671234567&amp;quot;)
+        
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

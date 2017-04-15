@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Angular Cookies Tutorial</title>
+	
+	
+	
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/monokai.min.css">
+	<link rel="stylesheet" href="/css/materialize.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<meta name="generator" content="Hugo 0.19" />
+
+	
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+	<script src="/js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<script async>
+			(function (i, s, o, g, r, a, m) {
+					i['GoogleAnalyticsObject'] = r;
+					i[r] = i[r] || function () {
+							(i[r].q = i[r].q || []).push(arguments)
+					}, i[r].l = 1 * new Date();
+					a = s.createElement(o),
+					m = s.getElementsByTagName(o)[0];
+					a.async = 1;
+					a.src = g;
+					m.parentNode.insertBefore(a, m)
+			})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+			ga('create', 'UA-10255990-23', 'auto');
+			ga('send', 'pageview');
+	</script>
+</head>
+<body>
+
+	<header>
+		<nav>
+			<div class="nav-wrapper">
+				<a class="brand-logo" href="/">TutorialEdge.net</a>
+				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><a href="//about/">About</a></li>
+					<li><a href="//get-involved/">Get Involved</a></li>
+					<li><a href="//courses/">Courses</a></li>
+					<li><a href="//post/">Tutorials</a></li>
+				</ul>
+				<ul class="side-nav" id="mobile-demo">
+					<li><a href="//about/">About</a></li>
+					<li><a href="//get-involved/">Get Involved</a></li>
+					<li><a href="//courses/">Courses</a></li>
+					<li><a href="//post/">Tutorials</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+<div class="title-bar">
+	<div class="container">
+		<h1>Angular Cookies Tutorial</h1>
+		<p>In this tutorial we look at how we can use cookies in our Angular 2 Applications</p>
+		
+		<a href="/tags/angular"><div class="chip">angular</div></a>
+		
+		<a href="/tags/typescript"><div class="chip">typescript</div></a>
+		
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col l2">
+			<div class="sidebar">
+    
+
+</div> 
+		</div>
+		<div class="col l8">	
+			<article>
+				<div class="info">Author: Elliot Forbes | Posted at: 14.02.2016 16:11</div>
+				<div>
+					
+
+<blockquote>
+<p>This tutorial was built using Angular 2.2.</p>
+</blockquote>
+
+<p>Cookies are small packages of information that are typically stored by your browser and websites tend to use cookies for multiple things. Cookies persist across multiple requests and browser sessions should you set them to and they can be a great method for authentication in some web apps.</p>
+
+<blockquote>
+<p>Check out my AngularJS 1.* tutorial on <a href="https://tutorialedge.net/angularjs-store-cookie-tutorial">storing information in cookies</a></p>
+</blockquote>
+
+<h2 id="limitations-of-cookies">Limitations of Cookies</h2>
+
+<p>Typically we can only store no more than 20 cookies per web server and no more than 4KB of information in each cookie and they can last indefinitely should you choose to specify the max-age attribute.</p>
+
+<h2 id="setting-up">Setting Up</h2>
+
+<p>In order to play about with cookies in Angular 2 we’ll have to install the <code>angular2-cookie</code> library by typing the following within our project:</p>
+
+<pre><code>npm install angular2-cookie --save
+</code></pre>
+
+<p>This should download angular2-cookies to our project’s node_modules folder and also add it as a dependency to our project.</p>
+
+<h2 id="implementation">Implementation</h2>
+
+<p>Once we’ve successfully added angular2-cookie to our project we can set about using it. It’s recommended that you import the CookieService within your module file and then add it to your providers array like so:</p>
+
+<pre><code>/*
+ * Custom Libraries
+ */
+import { CookieService } from 'angular2-cookie/services/cookies.service';
+
+// .. all other imports
+
+@NgModule({
+  declarations: [
+    // ...
+  ],
+  imports: [
+    // ..
+  ],
+  providers: [
+    CookieService
+  ],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+</code></pre>
+
+<p>Then once we’ve added it as a provider we can utilize it in one of our component files like so:</p>
+
+<pre><code>import { Component } from '@angular/core';
+import { CookieService } from 'angular2-cookie/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  constructor(private _cookieService:CookieService){}
+
+  ngOnInit() {
+    this._cookieService.put('test', 'test');
+    console.log(&quot;Set Test Cookie as Test&quot;);
+  }
+
+  getCookie(key: string){
+    return this._cookieService.get(key);
+  }
+}
+</code></pre>
+
+<h2 id="setting-cookies">Setting Cookies</h2>
+
+<p>In order to set cookies using this library we would have to use the following method:</p>
+
+<pre><code>// the put method takes in the name of the cookie and the value for that cookie.
+// if we wanted to define cookie options then we would pass in a third parameter to 
+// this method containing those options.
+this._cookieService.put('test', 'test');
+</code></pre>
+
+<h2 id="retrieving-cookies">Retrieving Cookies</h2>
+
+<p>Once we have successfully set a cookie, we can then retrieve that same cookie by using the <code>.get(cookie)</code> method like so:</p>
+
+<pre><code>// This would retrieve the previously defined 'test' cookie 
+this._cookieService.get('test');
+</code></pre>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>If you found this tutorial useful or need further information on working with cookies in Angular 2 then please let me know in the comments section below.</p>
+
+				</div>
+				<div>
+					<div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://tutorialedge.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+				</div>
+			</article>
+		</div>
+
+		<div class="col l2">
+			<div class="wrapper">
+    <div class="container">
+      <img src="https://twitter.com/Elliot_F/profile_image?size=original" alt="Elliot Forbes" class="trophy" />
+      <h1>Elliot Forbes</h1>
+      <span class="score">Follow me:</span>
+  
+      <div class="buttons">
+          <a href="https://twitter.com/Elliot_F" target="_blank" class="button light">
+              <span><i class="ion ion-social-twitter"></i> Twitter</span>
+          </a>
+      </div>
+    </div>
+</div>
+
+		</div>
+		
+	</div>
+</div>
+
+<div class="join-us">
+	<div class="container">
+		<div class="row">
+			<div class="col l8">
+				<h5>Become a Contributor!</h5>
+				<p>Think you could improve the articles on this site? Feel free to submit a pull request to the sites github repo.</p>
+			</div>
+			<div class="col l4">
+				<a href="https://github.com/elliotforbes/tutorialedge-v2"><button class="btn valign">Fork Our Repo</button></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="page-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col l6 s12">
+				<h5>TutorialEdge.net</h5>
+				<p class="text-lighten-4">This site is dedicated to bringing you the highest quality courses designed to teach you the ins and outs of programming with various frameworks and programming languages.</p>
+			</div>
+			<div class="col l4 offset-l2 s12">
+				<h5>Links</h5>
+				<ul>
+					<li><a class="text-lighten-3" href="/tutorials">All Tutorials</a></li>
+					<li><a class="text-lighten-3" href="/books">Books</a></li>
+					<li><a class="text-lighten-3" href="/contact">Contact</a></li>
+					<li><a class="text-lighten-3" href="/courses">Courses</a></li>
+					<li><a class="text-lighten-3" href="/blog">Blog</a></li>
+					<li><a class="text-lighten-3" href="/about">About</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer-copyright">
+		<div class="container">
+		TutorialEdge © 2016 Copyright 
+		</div>
+	</div>
+</footer>
+
+<script>
+$(".button-collapse").sideNav();
+</script>

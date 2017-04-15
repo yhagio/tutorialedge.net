@@ -1,0 +1,1524 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on TutorialEdge.net</title>
+    <link>/post/index.xml</link>
+    <description>Recent content in Posts on TutorialEdge.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 15 Apr 2017 14:42:47 +0100</lastBuildDate>
+    <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Simple Laravel 5 Pagination</title>
+      <link>/post/php/laravel/simple-laravel-pagination/</link>
+      <pubDate>Sat, 15 Apr 2017 14:42:47 +0100</pubDate>
+      
+      <guid>/post/php/laravel/simple-laravel-pagination/</guid>
+      <description>&lt;p&gt;Pagination is a way of splitting up content into several different pages and making content layout far more organized. A must for blogs who wish their front-pages to be small enough to load and yet big enough to showcase the most important tutorials.&lt;/p&gt;
+
+&lt;h2&gt;Modifying the Controller:&lt;/h2&gt;
+
+&lt;p&gt;Pagination in Laravel 5 is incredibly easy to implement. In this tutorial I will be using some of the code from this site to serve as an example:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Old Method - No Pagination:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+class ArticleController extends Controller {
+    public function index()
+    {
+        $articles = Article::get();
+        return view(&#39;someview&#39;, compact(&#39;articles&#39;));
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;b&gt;New Way : With Pagination&lt;/b&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+class ArticleController extends Controller {
+    public function index()
+    {
+        $articles = Article::paginate(15);
+        return view(&#39;someview&#39;, compact(&#39;articles&#39;));
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Modifying the View&lt;/h2&gt;
+
+&lt;p&gt;So now that we&#39;ve modified the controller we need to then modify the view ever so slightly in order to allow for our pagination. In this example I was printing out key details about my articles in a table and wanted the results to be split up instead of having huge lists of posts to wade through:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;@foreach ($articles as $article)
+
+    {{ $article-&amp;gt;id }}
+    {{ $article-&amp;gt;title }}
+    {{ $article-&amp;gt;published }}
+
+@endforeach
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;With the newly added pagination this works fine, but we have no current way to navigate between pages of rows. So in order for us to fix that we add the following wrapped in php tags:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php echo $articles-&amp;gt;render(); ?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>AngularJS Promises Tutorial</title>
+      <link>/post/javascript/angularjs/angularjs-promises-tutorial/</link>
+      <pubDate>Sat, 15 Apr 2017 14:41:31 +0100</pubDate>
+      
+      <guid>/post/javascript/angularjs/angularjs-promises-tutorial/</guid>
+      <description>
+
+&lt;p&gt;In this tutorial we&amp;rsquo;ll be looking at how to work with and define promises in AngularJS. For more information check out the official &lt;a href=&#34;https://docs.angularjs.org/api/ng/service/$q&#34;&gt;AngularJS Documentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;what-are-promises-in-javascript&#34;&gt;What are Promises in Javascript?&lt;/h2&gt;
+
+&lt;p&gt;Essentially when you create a promise, you are ensuring that a certain order is followed in the execution of your code. Javascript is asynchronous by nature and in the execution of a method it’s not guaranteed what part of it will finish execution first. This is a big change if you are used to languages like Java and C++ where the order of execution is always exactly the same.&lt;/p&gt;
+
+&lt;h2 id=&#34;example-of-a-promise&#34;&gt;Example of a Promise&lt;/h2&gt;
+
+&lt;p&gt;If you have written any AngularJS applications that call upon the $http service then you will have already had experience working with Promises. For example this is a promise:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;// We create our promise
+$http.get(‘api/status’)
+    // that once complete will call either our success callback function
+    // or our error callback function
+    .then(function success(response) {
+        // handle our response object
+        $log.log(response);
+    }, function error(response) {
+        // handle our error
+        $log.log(“Error Thrown”);
+    });
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is essentially what all promises look like in javascript, we create the promise and pass it two &lt;em&gt;callback&lt;/em&gt; functions. A good analogy to describe this is as follows:&lt;/p&gt;
+
+&lt;p&gt;Say you were cooking a meal
+You delegate the task of cutting the onions to another person and say, let me know when this is done.
+Whilst this other person is working on cutting the onions, you are free to carry on working on the carrots.
+When the other person is done with the onions, they let you know and you can either add the onions to the stew if they were cut the right way, or throw them in the bin and try again.&lt;/p&gt;
+
+&lt;p&gt;This is also a good example of one of the main benefits to Javascript asynchronous design, the thread executing the code isn’t held up and can carry on doing other things whilst it waits for the results of the promise.&lt;/p&gt;
+
+&lt;p&gt;In code terms the above flow would look something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;$http.get(&#39;api/cut/onions&#39;)
+  .then(function success(response){
+    // add them to the stew
+  }, function error(response){
+    // these onions were bad,
+    // throw them away
+  });
+
+// continue cutting carrots whilst you wait for the promise to finish executing
+cutCarrots();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;However this is also an example of how things can go wrong in your applications, for instance. Because we don’t have any control over when a promise will finish, we could see weird side-effects from our code. For instance we could see the onions added to the stew before the carrots which might not be what we want.&lt;/p&gt;
+
+&lt;h2 id=&#34;chaining-promises&#34;&gt;Chaining Promises&lt;/h2&gt;
+
+&lt;p&gt;Thankfully, we have a way we can dictate when we want things done. This is where the $q service comes in. If we wanted to maintain the order in which things happen in the preparation of our stew we could do something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;// first chop our onions
+$http.get(&#39;api/chop/onions&#39;)
+  .then(function success(response){
+    // once that is done chop our carrots
+    return $http.get(&#39;api/chop/carrots&#39;);
+  })
+  .then(function success(response){
+    // once the carrots are done, add both to the stew
+    return $http.get(&#39;api/add/onionsAndCarrots&#39;);
+  })
+  .then(function success(response){
+    // serve our stew
+  });
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;defining-our-own-promises&#34;&gt;Defining our Own Promises&lt;/h2&gt;
+
+&lt;p&gt;AngularJS&amp;rsquo;s $q service allows to define our own promises. Below you&amp;rsquo;ll find an example controller that contains the ctrl.ourPromise function, this function returns a promise object that we can chain like we have done in our ctrl.$onInit function.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;function TestController($q, $log){
+  var ctrl = this;
+  // our $onInit function shows exactly how we can
+  // chain our newly defined promise object
+  ctrl.$onInit = function() {
+    ctrl.ourPromise()
+      .then(function success(){
+        $log.log(&amp;quot;Our Promise has finished&amp;quot;);
+      });
+  };
+  // we define our promise object and return it in
+  // this function
+  ctrl.ourPromise = function(){
+    var defer = $q.defer();
+
+    $log.log(&amp;quot;Do all of our stuff in here&amp;quot;);
+
+    return defer.promise;
+  };
+
+};
+
+TestController.$inject = [&#39;$q&#39;, &#39;$log&#39;];
+
+angular.module(&#39;root&#39;)
+  .controller(&#39;TestController&#39;, TestController);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;If you spot any errors with this tutorial or wish to ask any further questions then let me know in the comments section below.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Most Important Changes to AngularJS in 1.6</title>
+      <link>/post/javascript/angularjs/most-important-changes-angularjs-1-6/</link>
+      <pubDate>Sat, 15 Apr 2017 14:31:36 +0100</pubDate>
+      
+      <guid>/post/javascript/angularjs/most-important-changes-angularjs-1-6/</guid>
+      <description>
+
+&lt;div class=&#34;github-link&#34;&gt;The changelog with the AngularJS 1.6 release notes can be found here: &lt;a href=&#34;https://github.com/angular/angular.js/blob/master/CHANGELOG.md&#34;&gt;AngularJS 1.6-RC.0&lt;/a&gt;&lt;/div&gt;
+
+&lt;p&gt;After having a look at the AngularJS release notes for 1.6, I thought I’d compile my thoughts together as to the most important changes to the framework in the coming release.&lt;/p&gt;
+
+&lt;h2 id=&#34;expression-sandbox-removal&#34;&gt;Expression Sandbox Removal&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://angularjs.blogspot.co.uk/2016/09/angular-16-expression-sandbox-removal.html&#34;&gt;Expression Sandbox Removal Full Notes&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The expression sandbox removal was essentially something that checked to see if your code was accidentally accessing arbitrary javascript and discourage you from placing any business logic inside your templates.&lt;/p&gt;
+
+&lt;p&gt;The expression sandbox was intended to be a security feature but exploits continued to be found regardless of the number of patches put out. Thus the Angular team decided to out and out remove the feature and to place to onus of securing applications on the developers using Angular.&lt;/p&gt;
+
+&lt;p&gt;This will help to speed up the framework as a whole and is ultimately a good thing,if you are developing a full stack app then you need to consider security at all levels of your application.&lt;/p&gt;
+
+&lt;h2 id=&#34;http-success-error-callback-methods-deprecated&#34;&gt;$http Success/Error Callback Methods Deprecated&lt;/h2&gt;
+
+&lt;p&gt;Regardless of the fact this was considered bad practice in Angular 1.5, you may still have some of these sprawled about your codebase, in 1.6 this callback function will be entirely removed and you will be forced to use the better practice for making http requests:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// this is the old way
+$http.get(‘oauth/clients’)
+    .success(function onSuccess(response){
+        // use response
+    })
+    .error(function onError(response){
+        // use error
+    });
+
+
+// this is the new way
+$http.get(&#39;oauth/clients&#39;)
+      .then(function success(response){
+        $log.log(response.data);
+      })
+      .catch(function error(response){
+        $log.log(response);
+        $log.log(response.status);
+        $log.log(response.headers);
+      });
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note: the response object returned is different, if you are trying to access the data of your response, just append .data and you should see the new content.&lt;/p&gt;
+
+&lt;h2 id=&#34;changes-to-ngmodel&#34;&gt;Changes to ngModel&lt;/h2&gt;
+
+&lt;p&gt;There have been some notable changes to ngModel, for instance you are no longer able to methods to $scope.$watch without some form of context. This essentially means you’ll have to wrap things in a function like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// old way with no context passed
+$scope.$watch(&#39;something&#39;, myNgModelCtrl.$render);
+// new way with context
+$scope.$watch(&#39;something&#39;, function() {
+  myNgModelCtrl.$render();
+})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;updates-to-jqlite&#34;&gt;Updates to jqLite&lt;/h2&gt;
+
+&lt;p&gt;I don’t typically use jqLite in my day to day coding but there were multiple breaking changes to this featured in the changelog, if you do tend to use this then I’d recommend you check out the changelog for more.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Python Multithreading Tutorial - Concurrent Programming</title>
+      <link>/post/python/python-multithreading-tutorial/</link>
+      <pubDate>Sat, 15 Apr 2017 09:55:57 +0100</pubDate>
+      
+      <guid>/post/python/python-multithreading-tutorial/</guid>
+      <description>
+
+&lt;h2 id=&#34;what-is-multithreading&#34;&gt;What is Multithreading?&lt;/h2&gt;
+
+&lt;p&gt;Modern computers tend to feature a CPU that has multiple processing cores, each of these cores can run many threads simultaneously which, by proxy, gives us the ability to perform several tasks in parallel. Typically, you should only implement multiple threads when each thread you plan is completely independent of each other. So for instance in a game you would tend to create one thread for graphics processing, one for physics and one for networking. Each of these threads would be running and working with completely different data sets. This tutorial will hopefully show you how to get started with pythons &amp;ldquo;threading&amp;rdquo; module.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Objectives:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Creating and Running Threads&lt;/li&gt;
+&lt;li&gt;Teaching the Limitations of Python&amp;rsquo;s threading implementation&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2&gt;Creating Threads in Python&lt;/h2&gt;
+
+&lt;p&gt;To begin with we are going to want to create a new file and call it worker.py, this will contain all our code for one of our threads. To begin with we are going to create a class in python and have it import and extend the threading module.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import threading
+
+class Worker(threading.Thread):
+    # Our workers constructor, note the super() method which is vital if we want this
+    # to function properly
+    def __init__(self):
+        super(Worker, self).__init__()
+
+    def run(self):
+        for i in range(10):
+           print(i)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now that we have our worker class we can start work on our main class. Create a new python file and call it main.py and put the following code in:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import threading 
+from worker import Worker
+
+def main():
+    # This initializes &#39;&#39;thread1&#39;&#39; as an instance of our Worker Thread
+   thread1 = Worker()
+    # This is the code needed to run our newly created thread
+    thread1.start()
+
+  if __name__ == &amp;quot;__main__&amp;quot;:  
+      main()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;That&#39;&#39;s all the code you need to successfully create and instantiate a thread in python. If you can run python through your command line then open up a new terminal at your current folder and type &#39;&#39;python main.py&#39;&#39;. You should hopefully see the output of the above program should no errors occur.&lt;/p&gt;
+
+&lt;h2&gt;Exercise:&lt;/h2&gt;
+
+&lt;p&gt;Try instantiating more threads by creating new Worker() objects and then start them:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    thread1 = Worker(1)
+    thread2 = Worker(2)
+    thread3 = Worker(3)
+    thread1.start()
+    thread2.start()
+    thread3.start()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When you run this you should see output that looks something like this:  Notice that the outputted numbers are out of order, this basically shows you the precise order in which the threads have completed their tasks in and shows you the true power of asynchronous programming, multiple threads performing in parallel.&lt;/p&gt;
+
+&lt;h2&gt;Limitation with Classic Python Threads&lt;/h2&gt;
+
+&lt;p&gt;One of the main problems with Python&amp;rsquo;s classic implementation of threads is that they are not truly asynchronous. Performing tests on huge datasets show that the execution times of python threads is not entirely in parallel and you&amp;rdquo;ll often find execution times increasing adding multiple threads to programs as often performing these tasks synchronously will greatly reduce execution times. This is due to the way Global Interpreter Lock (GIL) works in Python, this basically ensures that only one line of python code can be compiled at one time.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;More about the GIL can be found here: &lt;a href=&#34;https://wiki.python.org/moin/GlobalInterpreterLock&#34;&gt;https://wiki.python.org/moin/GlobalInterpreterLock&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Getting Started with LWJGL 3 and OpenGL</title>
+      <link>/post/java/lwjgl3/getting-started-java-lwjgl3/</link>
+      <pubDate>Sat, 15 Apr 2017 09:54:44 +0100</pubDate>
+      
+      <guid>/post/java/lwjgl3/getting-started-java-lwjgl3/</guid>
+      <description>&lt;p&gt;&lt;b&gt;&lt;i&gt;Note: This guide is still under construction so please refer back to it often for more articles.&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;
+
+&lt;p&gt;Welcome to the ultimate comprehensive guide to getting started with LWJGL 3 and OpenGL. My main goal for this part of the site is to create the ultimate primer from which game developers can refer to.&lt;/p&gt;
+
+&lt;h4&gt;Beginners Tutorials:&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://tutorialedge.net/setting-up-eclipse-with-lwgjl3-and-opengl&#34;&gt;Setting up Eclipse to use LWJGL3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tutorialedge.net/creating-game-window-tutorial-02-programming-2d-endless-runner&#34;&gt;Creating a Game Window with GLFW&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Beginners guide to Matrices and Vectors&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tutorialedge.net/lwjgl-3-fps-main-game-loop&#34;&gt;Creating a Game Loop&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Creating your First Triangle&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tutorialedge.net/initializing-opengl-with-lwjgl3-and-java&#34;&gt;Getting Started with OpenGL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Vertex Array Object and Vertex Buffer Objects&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Intermediate Tutorials&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://tutorialedge.net/getting-started-with-opengl-shaders&#34;&gt;Introduction to Shaders&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tutorialedge.net/lwjgl-3-orthographic-camera-tutorial&#34;&gt;Orthographic Camera Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Perspective Camera Tutorial&lt;/li&gt;
+&lt;li&gt;Input Handling Tutorial&lt;/li&gt;
+&lt;li&gt;Texturing with LWJGL 3&lt;/li&gt;
+&lt;li&gt;Getting Started with OpenAL and in-game Audio&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Advanced Tutorials&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ray Tracing with OpenGL&lt;/li&gt;
+&lt;li&gt;More to be Added...&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bridge Design Pattern Tutorial</title>
+      <link>/post/general/design-patterns/bridge-design-pattern/</link>
+      <pubDate>Sat, 15 Apr 2017 09:53:07 +0100</pubDate>
+      
+      <guid>/post/general/design-patterns/bridge-design-pattern/</guid>
+      <description>&lt;h2&gt;Intent&lt;/h2&gt;
+
+&lt;p&gt;The intent of the Bridge design pattern is to decouple an abstraction from its implementation so that the two can vary independently. This basically allows you to build upon an abstract class and allows you to build to very different concrete classes based upon this abstract class.&lt;/p&gt;
+
+&lt;h2&gt;Motivation&lt;/h2&gt;
+
+&lt;p&gt;When an abstraction can have one of several possible implementations, the usual way to accommodate them is to use inheritance. Traditional methods tend not to be flexible enough and thus the Bridge design pattern was conceived. &lt;/p&gt;
+
+&lt;p&gt;Now this can be hugely beneficial for those of you wishing to create multi-platform tools and games and need a way to design the code around the different operating systems code tweaks. &lt;/p&gt;
+
+&lt;h2&gt;When Should You Use This Pattern?&lt;/h2&gt;
+
+&lt;p&gt;You should typically use the Bridge pattern when:&lt;/p&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;You require run-time binding of the implementation.&lt;/li&gt;
+    &lt;li&gt;both the abstractions and their implementations should be extensible by subclassing.&lt;/li&gt;
+    &lt;li&gt;changes in the implementation of an abstraction should have no impact on clients; that is, their code should not have to be recompiled&lt;/li&gt;
+    &lt;li&gt;you want to share an implementation among multiple objects and this fact should be hidden from the client.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Implementation&lt;/h2&gt;
+
+&lt;p&gt;This code example showcases how you could implement the bridge design pattern in the context of a game programming scenario.&lt;/p&gt;
+
+&lt;h3&gt;Enemy Abstract Class&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;package Bridge;
+
+/**
+ * Enemy abstract class
+ */
+public abstract class Enemy {
+
+    protected Armour armour;
+
+    public Enemy(Armour armour){
+        this.armour = armour;
+    }
+
+    public abstract void addArmour();
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Archer Concrete Class&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;package Bridge;
+
+/**
+ * Archer Concrete Implementation
+ */
+public class Archer extends Enemy {
+
+    public Archer(Armour armour){
+        super(armour);
+    }
+
+    @Override
+    public void addArmour(){
+        armour.addArmour();
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Knight Concrete Class&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;package Bridge;
+
+/**
+ * Created by elliotforbes on 03/07/15.
+ */
+public class Knight extends Enemy {
+
+    public Knight(Armour armour){
+        super(armour);
+    }
+
+    public void addArmour(){
+        armour.addArmour();
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Armour Interface&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;package Bridge;
+
+/**
+ * Armour Interface
+ */
+public interface Armour {
+
+    public void addArmour();
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;LightArmour Concrete Class&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;package Bridge;
+
+/**
+ * Created by elliotforbes on 03/07/15.
+ */
+public class LightArmour implements Armour {
+
+    public void addArmour(){
+        System.out.println(&amp;quot;Light Armour Added&amp;quot;);
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;HeavyArmour Concrete Class&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;package Bridge;
+
+/**
+ * HeavyArmour Concrete Class
+ */
+public class HeavyArmour implements Armour {
+
+    public void addArmour(){
+        System.out.println(&amp;quot;Heavy Armour Added&amp;quot;);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Driver Class&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;package Bridge;
+
+/**
+ * In this class we create 2 new enemies of both
+ * type Knight and of type Archer respectively. 
+ * We pass in a HeavyArmour class to our Knight and
+ * a LightArmour class to our Archer.
+ * 
+ */
+public class Driver {
+
+    public static void main(String args[]){
+        System.out.println(&amp;quot;Bridge Design Pattern&amp;quot;);
+        Enemy knight = new Knight(new HeavyArmour());
+        Enemy archer = new Archer(new LightArmour());
+
+        knight.addArmour();
+        archer.addArmour();
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Learning to Code in 2017</title>
+      <link>/post/general/learning-to-code-2017/</link>
+      <pubDate>Sat, 15 Apr 2017 09:53:07 +0100</pubDate>
+      
+      <guid>/post/general/learning-to-code-2017/</guid>
+      <description>
+
+&lt;p&gt;Programming has changed a hell of a lot in the last few years and we’ve seen multiple new languages pop up all addressing different problem sets and skill levels. The main goal for this article is clarifying some of the basic concepts and guiding you as to where to start if you are wanting to learn how to program in 2017.&lt;/p&gt;
+
+&lt;h2 id=&#34;choosing-a-language&#34;&gt;Choosing a Language&lt;/h2&gt;
+
+&lt;p&gt;There are literally hundreds of languages out there, from C++ to Python to Go. Choosing the right one to start off with can be hard and somewhat daunting for someone who is new to it all.&lt;/p&gt;
+
+&lt;p&gt;Generally the best language for anyone to start off with would be Python 3 and above. It’s certainly one of the easiest to read languages available and it’s immensely powerful in terms of what you can do with it.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The latest version is currently 3.6.0 at the time of writing this and you can download this by navigating to the Python Download’s Page &lt;a href=&#34;https://www.python.org/downloads/&#34;&gt;Here.&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In most languages we have this concept of libraries, which are essentially pre-written bits of code that we can easily add to our own code and use. Python is no exception and features thousands of already written libraries that can help you do things like write a web server, &lt;a href=&#34;https://tutorialedge.net/creating-python-twitter-bot-using-twitter-api&#34;&gt;build twitter-bots&lt;/a&gt;, &lt;a href=&#34;https://tutorialedge.net/fetching-web-pages-with-python&#34;&gt;scrape the web&lt;/a&gt; and more.&lt;/p&gt;
+
+&lt;h2 id=&#34;what-should-you-learn-first&#34;&gt;What Should You Learn First?&lt;/h2&gt;
+
+&lt;p&gt;If you are completely new to programming then the best place to start is to get a simple “Hello World” program working in your command line. Getting your first computer program written and running quickly is a huge motivational boost and definitely something that kept me going when I first started.&lt;/p&gt;
+
+&lt;h4 id=&#34;the-basics&#34;&gt;The Basics&lt;/h4&gt;
+
+&lt;p&gt;Once you’ve gotten your first “hello world” program running then it’s time to start learning some more powerful concepts like if statements, for loops and things like variables. One of the best online resources for learning these things is undoubtedly &lt;a href=&#34;https://www.codecademy.com/&#34;&gt;CodeAcademy&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;CodeAcademy’s Python course walks you through basic concepts and starts getting you into the programmer’s mindset.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;This github repo has a fantastic list of places that help you learn as well: &lt;a href=&#34;https://github.com/karlhorky/learn-to-program&#34;&gt;Learn To Program Repo&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&#34;testing-your-abilities&#34;&gt;Testing Your Abilities:&lt;/h4&gt;
+
+&lt;p&gt;Once you&amp;rsquo;ve worked through some of the basic courses then it would be a good idea to test your new-found abilities with some programming challenges. &lt;a href=&#34;https://www.reddit.com/r/dailyprogrammer/&#34;&gt;/r/dailyprogrammer&lt;/a&gt; provides some excellent daily challenges.&lt;/p&gt;
+
+&lt;p&gt;If these don&amp;rsquo;t take your fancy then I recommend possibly checking out Project Euler which features hundreds of programming but typically factor in various mathematical concepts: &lt;a href=&#34;https://projecteuler.net/archives&#34;&gt;Project Euler&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;source-control-management&#34;&gt;Source Control Management&lt;/h2&gt;
+
+&lt;p&gt;Once you’ve mastered the basics of Python then it’s time to start building a portfolio of all your cool projects and to start learning the basics of Source Control Management.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Source Control Management systems help teams work together on the same projects at the same time from anywhere in the world.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Github has an excellent interactive resource that you can use in order to learn the world&amp;rsquo;s most popular source control management system: git. Check it out here: &lt;a href=&#34;https://try.github.io/levels/1/challenges/1&#34;&gt;https://try.github.io/levels/1/challenges/1&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;A lot of the most popular open source software projects are written and managed using github.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;This article is by no means finished. I will be updating this throughout the year as I try to make this one of the most accessible and comprehensive guides on learning how to program in 2017.&lt;/p&gt;
+
+&lt;p&gt;If you have any comments or suggestions then please let me know in the comments section below.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>What is a RESTful API?</title>
+      <link>/post/general/what-is-a-rest-api/</link>
+      <pubDate>Sat, 15 Apr 2017 09:53:07 +0100</pubDate>
+      
+      <guid>/post/general/what-is-a-rest-api/</guid>
+      <description>
+
+&lt;p&gt;As a developer I spend a lot of time developing new or improving on existing RESTful APIs and one of the big questions I’ve been asked is - What is a REST API?&lt;/p&gt;
+
+&lt;p&gt;This tutorial will try to explain in layman’s terms what a REST API is and how we can utilize these APIs in order to build our own systems.&lt;/p&gt;
+
+&lt;h2 id=&#34;rest-basics&#34;&gt;REST Basics&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;REST&lt;/strong&gt; - Representational State Transfer.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;API&lt;/strong&gt; - Application Programming Interface&lt;/p&gt;
+
+&lt;p&gt;Most, if not all, large popular websites will rely upon some form of REST API in order to deliver some content or functionality to their users. Some sites like Facebook and Twitter actually expose some of these APIs to outside developers to build their own tools and systems.&lt;/p&gt;
+
+&lt;p&gt;We can communicate with REST APIs using HTTP requests, much like you’d do to navigate to a website or load an image. We can do HTTP requests to certain API urls and these urls would then return the information we required, or we could push data to an API url in order to change some data in a database.&lt;/p&gt;
+
+&lt;p&gt;Typically we send HTTP requests to an URL that we have defined in our REST API and it would either perform a given task for us or return a certain bit of data. Most APIs these days would return a response to us in the form of JSON.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://tutorialedge.net/uploads/rest-api.png&#34; alt=&#34;REST API Basics&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;a-simple-example&#34;&gt;A Simple Example&lt;/h2&gt;
+
+&lt;p&gt;Imagine you wrote a bit of code that gives you the current weather conditions at your house. It reads the temperature, humidity and rainfall and stores them locally. How would we then expose this information in such a way that websites or other applications could view it?&lt;/p&gt;
+
+&lt;p&gt;One answer to this question is by wrapping it in a RESTful API.&lt;/p&gt;
+
+&lt;p&gt;We could expose our code and wrap it in an API so that whenever we navigated to say &lt;a href=&#34;http://localhost:8000/api/weatherStats&#34;&gt;http://localhost:8000/api/weatherStats&lt;/a&gt; it would give us a JSON response that contained all the current weather stats.&lt;/p&gt;
+
+&lt;h2 id=&#34;why-do-we-do-this&#34;&gt;Why Do We Do This?&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Improved Code Reuse&lt;/strong&gt; - By exposing our code through REST APIs we essentially give ourselves a greater degree of flexibility. We can develop our software once and should we wish to use the same code again in a different project it would be easy, we could simply send HTTP requests to our API and we’ve reduced the need to duplicate our work efforts.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Always Available&lt;/strong&gt; - REST APIs are typically things that are running and available all the time. We make them very stable and as a result we can interact with them wherever we are in the world as long as we have internet connectivity.&lt;/p&gt;
+
+&lt;h2 id=&#34;taking-it-further&#34;&gt;Taking it Further&lt;/h2&gt;
+
+&lt;p&gt;If you want to learn how to implement your own REST APIs then I suggest you have a look at my tutorial on &lt;a href=&#34;https://tutorialedge.net/creating-simple-restful-json-api-with-go&#34;&gt;Writing RESTful APIs in Go&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>UDP Client and Server Tutorial in Python</title>
+      <link>/post/python/udp-client-server-python/</link>
+      <pubDate>Sat, 15 Apr 2017 09:49:35 +0100</pubDate>
+      
+      <guid>/post/python/udp-client-server-python/</guid>
+      <description>&lt;p&gt;In this tutorial I&#39;ll be showing you exactly how you can set up your own UDP chat server using CPython 3.3 and Python&#39;s Socket module. The end product will be a server that listens for all connections and messages over a specific port and prints out any messages to the console. This could be extended in the future to create a chat server that subsequently broadcasts any messages received to all parties listening for responses.&lt;/p&gt;
+
+&lt;h2&gt;Advantages of UDP in Games Programming&lt;/h2&gt;
+
+&lt;p&gt;UDP or User Datagram Protocol is connection-less protocol which is suitable for applications that require efficient communication that doesn&#39;t have to worry about packet loss. For gaming applications this tends to be the perfect protocol due to the lower overhead incurred as opposed to TCP. Typically games send and receive thousands of packets a second that contain information such as opposing players health, location, direction and so on. Now if one of these packets was to be dropped during transmission then it isn&#39;t too critical to the game and the worst case scenario is that a player jerks about for a split second during gameplay. &lt;/p&gt;
+
+&lt;h2&gt;Implementing the Client&lt;/h2&gt;
+
+&lt;p&gt;To begin with we will need to import the socket python module, this can be done like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import socket
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once we&#39;&#39;ve got this we need to declare the IP address that we will be trying to send our UDP messages to as well as the port number. This port number is arbritary but ensure that you aren&#39;&#39;t using a socket that has already been taken.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;UDP_IP_ADDRESS = &amp;quot;127.0.0.1&amp;quot;
+UDP_PORT_NO = 6789
+Message = &amp;quot;Hello, Server&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now that we&#39;ve declared these few variables it&#39;&#39;s time to create the socket through which we will be sending our UDP message to the server.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;clientSock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And finally, once we&#39;ve constructed our new socket it&#39;s time to write the code that will send our UDP message:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;clientSock.sendto(Message, (UDP_IP_ADDRESS, UDP_PORT_NO))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Implementing the Server&lt;/h2&gt;
+
+&lt;p&gt;Now that we&#39;&#39;ve coded our client we then need to move on to creating our server program which will be continuously listening on our defined IP address and port number for any UDP messages. It is essential that this server has to be run prior to the execution of the client python script or the client script will fail.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# Again we import the necessary socket python module
+import socket
+# Here we define the UDP IP address as well as the port number that we have 
+# already defined in the client python script.
+UDP_IP_ADDRESS = &amp;quot;127.0.0.1&amp;quot;
+UDP_PORT_NO = 6789
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once we&#39;&#39;ve imported the socket module and declared our ip address and port number we can create another socket which will look exactly like the socket we constructed in our client program.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# declare our serverSocket upon which
+# we will be listening for UDP messages
+serverSock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+# One difference is that we will have to bind our declared IP address
+# and port number to our newly declared serverSock
+serverSock.bind((UDP_IP_ADDRESS, UDP_PORT_NO))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And finally, once we&#39;ve created our server socket, we need to write the code that will keep our script continuously listening to this socket until its termination. This takes form as a simple while loop, like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;while True:
+    data, addr = serverSock.recvfrom(1024)
+    print &amp;quot;Message: &amp;quot;, data
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Calculating Keyword Density of a Web Page with Python</title>
+      <link>/post/python/calculating-keyword-density-python/</link>
+      <pubDate>Sat, 15 Apr 2017 09:47:55 +0100</pubDate>
+      
+      <guid>/post/python/calculating-keyword-density-python/</guid>
+      <description>&lt;p&gt;In this tutorial I will be showing you how to calculate the keyword density of a web page using the Python programming language. This will be a continuation of the previous tutorial in which we retrieved a web page using Pythons urllib2 Python module.&lt;/p&gt;
+
+&lt;h2&gt;Keyword Density Calculation&lt;/h2&gt;
+
+&lt;p&gt;Keyword density is an easy metric to calculate as it has a relatively simple formula. The keyword density of a specific term is measured as the number of occurences of the chosen keyword over the total number of words in the body of text.&lt;/p&gt;
+
+&lt;h2&gt;Implementation&lt;/h2&gt;
+
+&lt;p&gt;In the previous 2 tutorials I showed you how you could fetch a web page as well as strip html tags from a fetched web page separately. The next stage of this tutorial series is putting what we&#39;ve learned together and then devising a method for counting the total number of words in our web page as well as counting the total number of occurrences of the chosen keyword.&lt;/p&gt;
+
+&lt;h3&gt;Utilizing the Dictionary Data Structure&lt;/h3&gt;
+
+&lt;p&gt;The easiest and fastest way to store our words as a list of words along with their respective occurences is to utilize Python&#39;s dictionary data structure. &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;# declaring a dictionary in python
+word_list = {}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now that we&#39;ve got our dictionary structure defined we can loop through every word from our html document after it&#39;s had it&#39;s html tags removed.&lt;/p&gt;
+
+&lt;h2&gt;Source Code&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;import urllib2
+import re
+
+TAG_RE = re.compile(r&#39;&amp;lt;[^&amp;gt;]+&amp;gt;&#39;)
+
+def fetch_page(siteURL):
+    # create a variable which will hold our desired web page as a string
+    site= siteURL
+    # create the approprriate headers for our http request so that we wont run
+    # into any 403 forbidden errors. All of this will be available at the tutorial
+    # page that I will link to in the description below
+    hdr = {&#39;User-Agent&#39;: &#39;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11&#39;,
+           &#39;Accept&#39;: &#39;text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#39;,
+           &#39;Accept-Charset&#39;: &#39;ISO-8859-1,utf-8;q=0.7,*;q=0.3&#39;,
+           &#39;Accept-Encoding&#39;: &#39;none&#39;,
+           &#39;Accept-Language&#39;: &#39;en-US,en;q=0.8&#39;,
+           &#39;Connection&#39;: &#39;keep-alive&#39;}
+
+    # Perform a HTTP request by passing in our desired URL and setting our headers to equal
+    # the headers that we&#39;ve defined above.
+    req = urllib2.Request(site, headers=hdr)
+
+    # 
+    try:
+        # here we are going to open our desired page using urllib2.urlopen
+        # and passing in our request object as a parameter and as a means of protection we 
+        # will surround this with a try except so that, should the script run into any errors
+        # it will fail gracefully instead of just crashing.
+        page = urllib2.urlopen(req)
+    except urllib2.HTTPError, e:
+        # print out the HTTPError
+        print e.fp.read()
+
+    # lastly we will want to read the response which was generated by opening
+    # the url and store it under content
+    content = page.read()
+    # and then print out this page.
+    return content
+
+def remove_tags(text):
+    return TAG_RE.sub(&#39;&#39;, text)
+
+
+def main():
+    page = fetch_page(&amp;quot;http://tutorialedge.net&amp;quot;)
+    wordsNoTags = remove_tags(page)
+
+    word_list = {}
+
+    for word in wordsNoTags:
+        if not word in word_list:
+            word_list[word] = 1
+        else:
+            word_list[word] += 1
+
+    print(len(word_list))
+
+if __name__ == &amp;quot;__main__&amp;quot;:
+    main()
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Fetching Web Pages In Python Using Urllib2</title>
+      <link>/post/python/fetching-web-pages-python/</link>
+      <pubDate>Sat, 15 Apr 2017 09:47:01 +0100</pubDate>
+      
+      <guid>/post/python/fetching-web-pages-python/</guid>
+      <description>&lt;p&gt;In this tutorial I will be showing you how you can fetch the a webpage using the urllib2 python module. This is a relatively simple process that can be accomplished in 5 lines of code.&lt;/p&gt;
+
+&lt;h2&gt;The Imports&lt;/h2&gt;
+
+&lt;p&gt;To begin with we will need to import the urllib2 python module so that we can utilize it&#39;s functionality:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;import urllib2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Fetching a Website&lt;/h2&gt;
+
+&lt;p&gt;Once we&#39;ve imported all the appropriate python modules we can move onto fetching our desired webpage. For the purpose of this example we&#39;ll be fetching this webpage and we can do that like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;req = urllib2.Request(&#39;http://www.tutorialedge.net/fetching-web-pages-with-python&#39;)
+response = urllib2.urlopen(req)
+the_page = response.read()
+# Here we print out the retrieved page&#39;s HTML to the console
+# once we&#39;ve got this we can start performing some analysis of 
+# the webpage and do some cooler things.
+print(the_page)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now in order to prevent being hit by 403 forbidden responses we need to define a set of headers for our HTTP request.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;import urllib2
+
+# create a variable which will hold our desired web page as a string
+site= &amp;quot;http://tutorialedge.net&amp;quot;
+# create the approprriate headers for our http request so that we wont run
+# into any 403 forbidden errors. All of this will be available at the tutorial
+# page that I will link to in the description below
+hdr = {&#39;User-Agent&#39;: &#39;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11&#39;,
+       &#39;Accept&#39;: &#39;text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#39;,
+       &#39;Accept-Charset&#39;: &#39;ISO-8859-1,utf-8;q=0.7,*;q=0.3&#39;,
+       &#39;Accept-Encoding&#39;: &#39;none&#39;,
+       &#39;Accept-Language&#39;: &#39;en-US,en;q=0.8&#39;,
+       &#39;Connection&#39;: &#39;keep-alive&#39;}
+
+# Perform a HTTP request by passing in our desired URL and setting our headers to equal
+# the headers that we&#39;ve defined above.
+req = urllib2.Request(site, headers=hdr)
+
+# 
+try:
+    # here we are going to open our desired page using urllib2.urlopen
+    # and passing in our request object as a parameter and as a means of protection we 
+    # will surround this with a try except so that, should the script run into any errors
+    # it will fail gracefully instead of just crashing.
+    page = urllib2.urlopen(req)
+except urllib2.HTTPError, e:
+    # print out the HTTPError
+    print e.fp.read()
+
+# lastly we will want to read the response which was generated by opening
+# the url and store it under content
+content = page.read()
+# and then print out this page.
+print content
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Video Tutorial&lt;/h2&gt;
+
+&lt;p&gt;&lt;iframe allowfullscreen=&#34;&#34; frameborder=&#34;0&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/LTGhCtp2Scw&#34; width=&#34;560&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;h2&gt;Moving Forward&lt;/h2&gt;
+
+&lt;p&gt;This tutorial will act as the base tutorial for quite a number of tutorials in which we will be calculating key SEO metrics such as keyword density. &lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Creating a Twitter Bot Using Python and the Twitter API</title>
+      <link>/post/python/creating-twitter-bot-python/</link>
+      <pubDate>Sat, 15 Apr 2017 09:45:44 +0100</pubDate>
+      
+      <guid>/post/python/creating-twitter-bot-python/</guid>
+      <description>&lt;p&gt;Twitter bots are a fantastic way to drum up a bit of interest in your brand or website and I&#39;ve had fantastic results myself building up an audience for the Twitter account specifically for this website. This tutorial will hopefully cover everything it takes to construct your own twitter bot that utilizes the RESTful Twitter API. The source code for this Python wrapper for the Twitter API can be found here: &lt;a href=&#34;https://github.com/bear/python-twitter&#34;&gt;Github: Bear&#39;s Python-Twitter Wrapper&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;Getting Started&lt;/h2&gt;
+
+&lt;p&gt;To get started you will have to use the pip tool to install the Twitter library on your machine. To do so you can use the python pip package manager by typing the following into the terminal:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;pip install python-twitter
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Full installation instructions can be found on the Readme.md file found on github if needed.&lt;/p&gt;
+
+&lt;h2&gt;Obtaining OAuth Access Tokens&lt;/h2&gt;
+
+&lt;p&gt;In order for this Twitter API to work you will have to generate OAuth access tokens for the owner of the application. These access tokens allow your application to run on behalf of the twitter account which you hold for your brand or website. The other option would be to use 3-Legged OAuth but in an attempt to keep this simple we&#39;ll be sticking to standard OAuth authentication. A good guide for building access tokens can be found on twitters dev subdomain here: &lt;a href=&#34;https://dev.twitter.com/oauth/overview/application-owner-access-tokens&#34;&gt;OAuth Access Tokens&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;Connecting to your Twitter Account using OAuth&lt;/h2&gt;
+
+&lt;p&gt;The code for connecting to your Twitter account using this Bear&#39;s Python wrapper looks like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;from twitter import Twitter, OAuth, TwitterHTTPError
+
+consumer_key = &#39;&#39;
+consumer_secret = &#39;&#39;
+access_token_key = &#39;&#39;
+access_token_secret = &#39;&#39;
+
+bot = Twitter(auth=OAuth(access_token_key, access_token_secret,
+            consumer_key, consumer_secret))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Replace the strings &#39;consumer_key&#39; etc. with the appropriate keys and secrets generated for you and you should have successfully connected to the Twitter RESTful API. Now that we&#39;ve connected we can begin to do some interesting things such as retweeting followers or searching tweets.&lt;/p&gt;
+
+&lt;h2&gt;Searching for Tweets&lt;/h2&gt;
+
+&lt;p&gt;The first thing we need to do is create a function for searching for tweets, this function will return all recent tweets that have mentioned a specific string anywhere within the tweet.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;def search_tweets(query, count=100):
+    return bot.search.tweets(query=query, result_type=&#39;recent&#39;, count=count)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Favoriting Tweets&lt;/h2&gt;
+
+&lt;p&gt;So now that we&#39;ve got the basic mechanisms in place to search for tweets, we now have to do something with them. The first interaction I&#39;m going to show you how to do is favourite tweets.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;def fav_tweet(tweet):
+    try:
+        result = t.favorites.create(_id=tweet[&#39;id&#39;])
+        print &amp;quot;Favorited: %s&amp;quot; % (result[&#39;text&#39;])
+        return result
+    # when you have already favourited a tweet
+    # this error is thrown
+    except TwitterHTTPError as e:
+        print &amp;quot;Error: &amp;quot;, e
+        return None
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Retweeting Tweets&lt;/h2&gt;
+
+&lt;p&gt;Retweeting specific tweets is again very similar to favoriting tweets and can be useful if you want to, for instance, retweet all replies to any of the posts you make and try to improve your community presence. &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;def retweet_tweet(tweet):
+    try:
+        result = t.statuses.retweet._id(_id=tweet[&#39;id&#39;])
+        print &amp;quot;Retweeted: %s&amp;quot; % (result[&#39;text&#39;])
+        return result
+    except TwitterHTTPError as e:
+        print &amp;quot;Error: &amp;quot;, e
+        return None
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Bringing it all together&lt;/h2&gt;
+
+&lt;p&gt;Now that you&#39;ve got an idea of how to favorite and retweet tweets, we can bring this together into a bot that constantly runs on a server or wherever else you choose to run it.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;from twitter import Twitter, OAuth, TwitterHTTPError
+import time
+#enter the corresponding information from your Twitter application:
+consumer_key = &#39;&#39;#keep the quotes, replace this with your consumer key
+consumer_secret = &#39;&#39;#keep the quotes, replace this with your consumer secret key
+access_token_key = &#39;&#39;#keep the quotes, replace this with your access token
+access_token_secret = &#39;&#39;#keep the quotes, replace this with your access token secret
+
+
+t = Twitter(auth=OAuth(access_token_key, access_token_secret,
+            consumer_key, consumer_secret))
+
+def search_tweets(q, count=100):
+    return t.search.tweets(q=q, result_type=&#39;recent&#39;, count=count)
+
+def get_limit():
+    try:
+        result = t.application.rate_limit_status()
+        print result
+    except TwitterHTTPError as e:
+        print &amp;quot;Error: &amp;quot;, e
+        return None
+
+def fav_tweet(tweet):
+    try:
+        result = t.favorites.create(_id=tweet[&#39;id&#39;])
+        print &amp;quot;Favorited: %s&amp;quot; % (result[&#39;text&#39;])
+        return result
+    # when you have already favourited a tweet
+    # this error is thrown
+    except TwitterHTTPError as e:
+        print &amp;quot;Error: &amp;quot;, e
+        return None
+    
+def retweet_tweet(tweet):
+    try:
+        result = t.statuses.retweet._id(_id=tweet[&#39;id&#39;])
+        print &amp;quot;Retweeted: %s&amp;quot; % (result[&#39;text&#39;])
+        return result
+    except TwitterHTTPError as e:
+        print &amp;quot;Error: &amp;quot;, e
+        return None
+    
+def auto_fav(q, count):
+    result = search_tweets(q, count)
+    a = result[&#39;statuses&#39;][0][&#39;user&#39;][&#39;screen_name&#39;]
+    print a
+    success = 0
+    for tweet in result[&#39;statuses&#39;]:
+        if fav_tweet(tweet) is not None:
+            success += 1
+    print &amp;quot;We Favorited a total of %i out of %i tweets&amp;quot; % (success,
+          len(result[&#39;statuses&#39;]))
+    
+def auto_retweet(q, count):
+    result = search_tweets(q, count)
+    a = result[&#39;statuses&#39;][0][&#39;user&#39;][&#39;screen_name&#39;]
+    print a
+    success = 0
+    for tweet in result[&#39;statuses&#39;]:
+        if retweet_tweet(tweet) is not None:
+            success += 1
+        time.sleep(10)
+    print &amp;quot;We Favorited a total of %i out of %i tweets&amp;quot; % (success, len(result[&#39;statuses&#39;]))
+    
+if __name__ == &amp;quot;__main__&amp;quot;:
+    while(1):
+        try:
+            auto_retweet(&amp;quot;GameDev&amp;quot;, 1)
+            auto_retweet(&amp;quot;IndieDev&amp;quot;, 1)
+            auto_retweet(&amp;quot;ScreenshotSaturday&amp;quot;, 1)
+        except Exception, e:
+            print(e)   
+        
+        try:
+            auto_fav(&amp;quot;IndieDev&amp;quot;, 1)
+        except Exception, e:
+            print(e)
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>LWJGL 3 Mouse Current Position Tutorial</title>
+      <link>/post/java/lwjgl3/lwjgl-3-mouse-current-position-tutorial/</link>
+      <pubDate>Sat, 15 Apr 2017 09:43:47 +0100</pubDate>
+      
+      <guid>/post/java/lwjgl3/lwjgl-3-mouse-current-position-tutorial/</guid>
+      <description>&lt;p&gt;In this tutorial I will be showing you how you can obtain the X and Y coordinates of the Mouse cursor in an applications window and print it out to the console.&lt;/p&gt;
+
+&lt;h2&gt;Creating a MouseHandler Class&lt;/h2&gt;
+
+&lt;p&gt;To begin with I recommend you create an &amp;lsquo;Input&amp;rsquo; package within your project as this is a good way to keep all Input Handler classes organized within your projects. Once you&amp;rsquo;ve created this package, right click on it and add a new class called MouseHandler. This class will extend the GLFWCursorPosCallback abstract class provided by the LWJGL3 framework.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package Input;
+
+import org.lwjgl.glfw.GLFWCursorPosCallback;
+
+// Our MouseHandler class extends the abstract class
+// abstract classes should never be instantiated so here
+// we create a concrete that we can instantiate
+public class MouseHandler extends GLFWCursorPosCallback {
+
+  @Override
+  public void invoke(long window, double xpos, double ypos) {
+    // TODO Auto-generated method stub
+    // this basically just prints out the X and Y coordinates 
+    // of our mouse whenever it is in our window
+    System.out.println(&amp;quot;X: &amp;quot; + xpos + &amp;quot; Y: &amp;quot; + ypos);
+  }	
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Making it Work&lt;/h2&gt;
+
+&lt;p&gt;Now that we&amp;rsquo;ve created our MouseHandler class we need to put in the following code just below our GLFW Window initialization so that our invoke method will be called every time the cursor&amp;rsquo;s position changes.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;glfwSetCursorPosCallback(window, mouseCallback = new MouseHandler());
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And that should be it all done, you should now be seeing the cursors position outputted to the console.&lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&#34;width: 100%; height: auto;&#34; src=&#34;/uploads/articles/cursor-pos-console.PNG&#34; /&gt;&lt;/p&gt;
+
+&lt;h2&gt;Main Class&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import org.lwjgl.Sys;
+import org.lwjgl.glfw.*;
+import org.lwjgl.opengl.*;
+
+import Input.KeyboardHandler;
+import Input.MouseHandler;
+
+import java.nio.ByteBuffer;
+ 
+
+import static org.lwjgl.glfw.Callbacks.*;
+import static org.lwjgl.glfw.GLFW.*;
+import static org.lwjgl.opengl.GL11.*;
+import static org.lwjgl.system.MemoryUtil.*;
+ 
+public class HelloWorld {
+ 
+  // We need to strongly reference callback instances.
+  private GLFWErrorCallback errorCallback;
+  private GLFWKeyCallback   keyCallback;
+  private GLFWCursorPosCallback mouseCallback;
+
+  // The window handle
+  private long window;
+
+  public void run() {
+    System.out.println(&amp;quot;Hello LWJGL &amp;quot; + Sys.getVersion() + &amp;quot;!&amp;quot;);
+
+    try {
+      init();
+      loop();
+
+      // Release window and window callbacks
+      glfwDestroyWindow(window);
+      keyCallback.release();
+    } finally {
+      // Terminate GLFW and release the GLFWerrorfun
+      glfwTerminate();
+      errorCallback.release();
+    }
+  }
+
+  private void init() {
+    // Setup an error callback. The default implementation
+    // will print the error message in System.err.
+    glfwSetErrorCallback(errorCallback = errorCallbackPrint(System.err));
+
+    // Initialize GLFW. Most GLFW functions will not work before doing this.
+    if ( glfwInit() != GL11.GL_TRUE )
+      throw new IllegalStateException(&amp;quot;Unable to initialize GLFW&amp;quot;);
+
+    // Configure our window
+    glfwDefaultWindowHints(); // optional, the current window hints are already the default
+    glfwWindowHint(GLFW_VISIBLE, GL_FALSE); // the window will stay hidden after creation
+    glfwWindowHint(GLFW_RESIZABLE, GL_TRUE); // the window will be resizable
+
+    int WIDTH = 300;
+    int HEIGHT = 300;
+
+    // Create the window
+    window = glfwCreateWindow(WIDTH, HEIGHT, &amp;quot;Hello World!&amp;quot;, NULL, NULL);
+    if ( window == NULL )
+      throw new RuntimeException(&amp;quot;Failed to create the GLFW window&amp;quot;);
+
+    // Setup a key callback. It will be called every time a key is pressed, repeated or released.
+    glfwSetKeyCallback(window, keyCallback = new KeyboardHandler());
+
+
+    glfwSetCursorPosCallback(window, mouseCallback = new MouseHandler());
+
+    // Get the resolution of the primary monitor
+    ByteBuffer vidmode = glfwGetVideoMode(glfwGetPrimaryMonitor());
+    // Center our window
+    glfwSetWindowPos(
+      window,
+      (GLFWvidmode.width(vidmode) - WIDTH) / 2,
+      (GLFWvidmode.height(vidmode) - HEIGHT) / 2
+    );
+
+    // Make the OpenGL context current
+    glfwMakeContextCurrent(window);
+    // Enable v-sync
+    glfwSwapInterval(1);
+
+    // Make the window visible
+    glfwShowWindow(window);
+  }
+  
+  public void update(){
+    if(KeyboardHandler.isKeyDown(GLFW_KEY_SPACE))
+      System.out.println(&amp;quot;Space Key Pressed&amp;quot;);
+  }
+
+  private void loop() {
+    // This line is critical for LWJGL&#39;s interoperation with GLFW&#39;s
+    // OpenGL context, or any context that is managed externally.
+    // LWJGL detects the context that is current in the current thread,
+    // creates the ContextCapabilities instance and makes the OpenGL
+    // bindings available for use.
+    GLContext.createFromCurrent();
+
+    // Set the clear color
+    glClearColor(1.0f, 0.0f, 0.0f, 0.0f);
+
+    // Run the rendering loop until the user has attempted to close
+    // the window or has pressed the ESCAPE key.
+    while ( glfwWindowShouldClose(window) == GL_FALSE ) {
+      glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // clear the framebuffer
+
+      glfwSwapBuffers(window); // swap the color buffers
+
+      // Poll for window events. The key callback above will only be
+      // invoked during this call.
+      glfwPollEvents();
+      
+      update();
+        
+    }
+  }
+
+  public static void main(String[] args) {
+    new HelloWorld().run();
+  }
+ 
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>LWJGL 3 Keyboard Input Handler Tutorial</title>
+      <link>/post/java/lwjgl3/lwjgl-3-keyboard-input-handler-tutorial/</link>
+      <pubDate>Sat, 15 Apr 2017 09:42:07 +0100</pubDate>
+      
+      <guid>/post/java/lwjgl3/lwjgl-3-keyboard-input-handler-tutorial/</guid>
+      <description>&lt;p&gt;This tutorial looks to demonstrate how you can extend the lightweight java game library in order to create your own input handlers which can be used in your games as a means for handling keyboard and mouse input.&lt;/p&gt;
+
+&lt;h2&gt;The Observer Design Pattern&lt;/h2&gt;
+
+&lt;p&gt;The programmers who developed LWJGL 3 have used an observer design pattern as a way to implement input. The works by having one part of the system listening for input through all the various input devices whilst also keeping a list of classes that should be notified every time an event takes place. This has been explained in more detail in a tutorial dedicated to the Observer Design Pattern which I recommend if you wish to help improve your overall understanding of how LWJGL 3 works.&lt;/p&gt;
+
+&lt;h2&gt;Creating a Keyboard Handler&lt;/h2&gt;
+
+&lt;p&gt;In order to keep the project tidy I recommend you create a new Package within your project and call it &#34;Input&#34; or something meaningful to that effect. Create a new class within this Package called KeyboardHandler. This KeyboardHandler class will look something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package Input;
+
+import org.lwjgl.glfw.GLFWKeyCallback;
+import static org.lwjgl.glfw.GLFW.*;
+
+public class KeyboardHandler extends GLFWKeyCallback{
+
+  public static boolean[] keys = new boolean[65536];
+
+  // The GLFWKeyCallback class is an abstract method that
+  // can&#39;t be instantiated by itself and must instead be extended
+  // 
+  @Override
+  public void invoke(long window, int key, int scancode, int action, int mods) {
+    // TODO Auto-generated method stub
+    keys[key] = action != GLFW_RELEASE;
+  }
+
+  // boolean method that returns true if a given key
+  // is pressed.
+  public static boolean isKeyDown(int keycode) {
+    return keys[keycode];
+  }
+	
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Making it Work&lt;/h2&gt;
+
+&lt;p&gt;Now that we&#39;ve got our input handler class it&#39;s time to register our new class as a listener in the class that deals with OpenGL and GLFW initialization as this is where we will have to register our newly built class as a listener. At the top of your class add an declaration of the GLFWKeyCallback class like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;// This prevents our window from crashing later on.
+private GLFWKeyCallback keyCallback;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now that we&#39;ve instantiated our keyCallBack class we can set this to equal our newly built KeyboardHandler class like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;// Sets our keycallback to equal our newly created Input class()
+glfwSetKeyCallback(window, keyCallback = new KeyboardHandler());		
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Checking it Works&lt;/h2&gt;
+
+&lt;p&gt;Now that we&#39;ve implemented our own KeyboardHandler class it&#39;s time to check to see if it works. We can do this by adding the following to our Update() function:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public void update(){
+  if(KeyboardHandler.isKeyDown(GLFW_KEY_SPACE))
+    System.out.println(&amp;quot;Space Key Pressed&amp;quot;);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Main Class&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import org.lwjgl.Sys;
+import org.lwjgl.glfw.*;
+import org.lwjgl.opengl.*;
+
+import Input.KeyboardHandler;
+
+import java.nio.ByteBuffer;
+ 
+
+import static org.lwjgl.glfw.Callbacks.*;
+import static org.lwjgl.glfw.GLFW.*;
+import static org.lwjgl.opengl.GL11.*;
+import static org.lwjgl.system.MemoryUtil.*;
+ 
+public class HelloWorld {
+ 
+    // We need to strongly reference callback instances.
+    private GLFWErrorCallback errorCallback;
+    private GLFWKeyCallback   keyCallback;
+ 
+    // The window handle
+    private long window;
+ 
+    public void run() {
+        System.out.println(&amp;quot;Hello LWJGL &amp;quot; + Sys.getVersion() + &amp;quot;!&amp;quot;);
+ 
+        try {
+            init();
+            loop();
+ 
+            // Release window and window callbacks
+            glfwDestroyWindow(window);
+            keyCallback.release();
+        } finally {
+            // Terminate GLFW and release the GLFWerrorfun
+            glfwTerminate();
+            errorCallback.release();
+        }
+    }
+ 
+    private void init() {
+        // Setup an error callback. The default implementation
+        // will print the error message in System.err.
+        glfwSetErrorCallback(errorCallback = errorCallbackPrint(System.err));
+ 
+        // Initialize GLFW. Most GLFW functions will not work before doing this.
+        if ( glfwInit() != GL11.GL_TRUE )
+            throw new IllegalStateException(&amp;quot;Unable to initialize GLFW&amp;quot;);
+ 
+        // Configure our window
+        glfwDefaultWindowHints(); // optional, the current window hints are already the default
+        glfwWindowHint(GLFW_VISIBLE, GL_FALSE); // the window will stay hidden after creation
+        glfwWindowHint(GLFW_RESIZABLE, GL_TRUE); // the window will be resizable
+ 
+        int WIDTH = 300;
+        int HEIGHT = 300;
+ 
+        // Create the window
+        window = glfwCreateWindow(WIDTH, HEIGHT, &amp;quot;Hello World!&amp;quot;, NULL, NULL);
+        if ( window == NULL )
+            throw new RuntimeException(&amp;quot;Failed to create the GLFW window&amp;quot;);
+ 
+        // Setup a key callback. It will be called every time a key is pressed, repeated or released.
+        glfwSetKeyCallback(window, keyCallback = new KeyboardHandler());
+ 
+        // Get the resolution of the primary monitor
+        ByteBuffer vidmode = glfwGetVideoMode(glfwGetPrimaryMonitor());
+        // Center our window
+        glfwSetWindowPos(
+            window,
+            (GLFWvidmode.width(vidmode) - WIDTH) / 2,
+            (GLFWvidmode.height(vidmode) - HEIGHT) / 2
+        );
+ 
+        // Make the OpenGL context current
+        glfwMakeContextCurrent(window);
+        // Enable v-sync
+        glfwSwapInterval(1);
+ 
+        // Make the window visible
+        glfwShowWindow(window);
+    }
+    
+    public void update(){
+    	if(KeyboardHandler.isKeyDown(GLFW_KEY_SPACE))
+    		System.out.println(&amp;quot;Space Key Pressed&amp;quot;);
+    }
+ 
+    private void loop() {
+        // This line is critical for LWJGL&#39;s interoperation with GLFW&#39;s
+        // OpenGL context, or any context that is managed externally.
+        // LWJGL detects the context that is current in the current thread,
+        // creates the ContextCapabilities instance and makes the OpenGL
+        // bindings available for use.
+        GLContext.createFromCurrent();
+ 
+        // Set the clear color
+        glClearColor(1.0f, 0.0f, 0.0f, 0.0f);
+ 
+        // Run the rendering loop until the user has attempted to close
+        // the window or has pressed the ESCAPE key.
+        while ( glfwWindowShouldClose(window) == GL_FALSE ) {
+            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // clear the framebuffer
+ 
+            glfwSwapBuffers(window); // swap the color buffers
+ 
+            // Poll for window events. The key callback above will only be
+            // invoked during this call.
+            glfwPollEvents();
+            
+            update();
+            
+        }
+    }
+ 
+    public static void main(String[] args) {
+        new HelloWorld().run();
+    }
+ 
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Video Tutorial&lt;/h2&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/_6b73ZxlQOg&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>LWJGL 3 Orthographic Camera Tutorial</title>
+      <link>/post/java/lwjgl3/lwjgl-3-orthographic-camera-tutorial/</link>
+      <pubDate>Sat, 15 Apr 2017 09:39:43 +0100</pubDate>
+      
+      <guid>/post/java/lwjgl3/lwjgl-3-orthographic-camera-tutorial/</guid>
+      <description>&lt;p&gt;This tutorial leads on from some of the topics covered in my previous tutorial : How Matrices are used in Game Development so if you haven’t got a good grounding in matrices then I suggest you check that out first. There are several YouTube videos out there that expertly cover the topic of matrices as well so check them out!&lt;/p&gt;
+
+&lt;h2&gt;Orthographic Projection Camera&lt;/h2&gt;
+
+&lt;p&gt;Orthographic cameras are a means of representing 3D points in our game world on a 2D monitor/screen. This basically means that you see objects moving away from the camera getting smaller and thus this is perfect for our 2D games. One of the key things you have to understand from the beginning is that there is no ‘physical’ camera object, the camera is basically represented by a matrix that we can translate, rotate or scale depending on however we need to move the camera.&lt;/p&gt;
+
+&lt;p&gt;In this tutorial we will be building the basic Orthographic projection matrix that is primarily used in 2D games. This orthographic matrix is one of the simplest camera matrices and doesn’t show any form of perspective to our objects in our scenes. Without any form of perspective we will never see objects getting smaller as they go further into the distance, but seeing as 2D games are only represented in terms of X and Y coordinates we don’t tend to worry about perspective in our scenes.&lt;/p&gt;
+
+&lt;p&gt;To create an orthographic matrix we will need 6 float variables:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;left&lt;/li&gt;
+&lt;li&gt;right&lt;/li&gt;
+&lt;li&gt;bottom&lt;/li&gt;
+&lt;li&gt;top&lt;/li&gt;
+&lt;li&gt;near&lt;/li&gt;
+&lt;li&gt;far&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;These will represent the positions of the clipping planes.&lt;/p&gt;
+
+&lt;h2&gt;Representing our Matrix in Code:&lt;/h2&gt;
+
+&lt;p&gt;I wont go into the specifics of how these matrices work as I’m pretty sure there are a hundred different YouTube videos that go to great lengths to describe these things, but I will go onto say that all of this code follows Column-major order just to avoid confusion.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;// Gives us our orthographic matrix
+  public static Matrix4f orthographic(float left, float right, float bottom, float top, float near, float far){
+  Matrix4f matrix = new Matrix4f();
+
+  matrix.elements[0 + 0 * 4] = 2.0f / (right - left);
+  matrix.elements[1 + 1 * 4] = 2.0f / (top - bottom);
+  matrix.elements[2 + 2 * 4] = 2.0f / (near - far);
+
+  matrix.elements[0 + 3 * 4] = (left + right) / (left - right);
+  matrix.elements[1 + 3 * 4] = (bottom + top) / (bottom - top);
+  matrix.elements[2 + 3 * 4] = (far + near) / (far - near);
+
+  matrix.elements[3 + 3 * 4] = 1.0f;
+
+  return matrix;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;By doing this we can now create a projection matrix in our initialization using this new method. In the demonstration code this is done like so in our main class:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Matrix4f pr_matrix = Matrix4f.orthographic(-10.0f, 10.0f, -10.0f * 9.0f / 16.0f, 10.0f * 9.0f / 16.0f, -10.0f, 10.0f);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Creating Camera Controls&lt;/h2&gt;
+
+&lt;p&gt;So now that we’ve got a matrix that will represent our projection matrix, we will also need some way of tracking and updating where our camera is in the world. We can do this by adding a Vector3f to our Camera class and calling it ‘position’. This will essentially store the coordinates of our camera and allow us to move the camera using the following update method:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public void update(){		
+  if(Input.isKeyDown(GLFW_KEY_W)){
+    position.y += 0.05f;
+  }
+  if(Input.isKeyDown(GLFW_KEY_S)){
+    position.y -= 0.05f;
+  }
+  if(Input.isKeyDown(GLFW_KEY_D)){
+    position.x += 0.05f;
+  }
+  if(Input.isKeyDown(GLFW_KEY_A)){
+    position.x -= 0.05f;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Updating Every Model in our Game&lt;/h2&gt;
+
+&lt;p&gt;The way that the game engine has been implemented is that every object currently uses the one shader which looks something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;#version 330 core
+
+layout ( location = 0 ) in vec4 position;
+layout ( location = 1 ) in vec2 tc;
+
+uniform mat4 pr_matrix;
+uniform mat4 vw_matrix;
+uniform mat4 ml_matrix = mat4(1.0);
+
+out DATA
+{
+	vec2 tc;
+} vs_out;
+
+void main()
+{
+	gl_Position = pr_matrix * vw_matrix * ml_matrix * position;
+	vs_out.tc = tc;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;By adding in the uniform mat4 variable vw_matrix, we can then pass our camera’s view matrix into our shader and multiply the gl_Position variable by the view matrix and update our camera.&lt;/p&gt;
+
+&lt;p&gt;In order for us to pass in our view matrix to our shader we have added the following line to our Main class.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Shader.shader1.setUniformMat4f(&amp;quot;vw_matrix&amp;quot;, Matrix4f.translate(camera.position));
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Conclusions&lt;/h2&gt;
+
+&lt;p&gt;So that should be all you need to get yourself up and running with the demonstration code and your own orthographic projection matrix! If you feel you need more detail on the subject then please leave a comment in the comments section below and I’ll try my best to expand upon the explanations already given!&lt;/p&gt;
+
+&lt;p&gt;You can find the repository for the example code here: &lt;a href=&#34;https://github.com/emforce/AlgebraTutorial&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

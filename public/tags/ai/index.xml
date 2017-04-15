@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ai on TutorialEdge.net</title>
+    <link>/tags/ai/index.xml</link>
+    <description>Recent content in Ai on TutorialEdge.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Breadth First Search Algorithm Tutorial with Java</title>
+      <link>/post/general/artificial-intelligence/breadth-first-search-java/</link>
+      <pubDate>Sat, 15 Apr 2017 09:23:35 +0100</pubDate>
+      
+      <guid>/post/general/artificial-intelligence/breadth-first-search-java/</guid>
+      <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;This lesson is part of the course: &lt;a href=&#34;https://tutorialedge.net/course/artificial-intelligence&#34;&gt;Artificial Intelligence&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;Uninformed Search vs Informed / Heuristic Search&lt;/h2&gt;
+
+&lt;p&gt;The next couple of algorithms we will be covering in this Artificial Intelligence course can be classed as either:&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;uninformed or blind searches:&lt;/b&gt; in which our algorithms have no additional information about states beyond that provided in the problem definition.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Informed or Heuristic searches:&lt;/b&gt; in which our algorithms have some extra knowledge about the problem domain and can distinguish whether or not one non-goal state is “more promising” than another.&lt;/p&gt;
+
+&lt;h2&gt;Breadth First Search&lt;/h2&gt;
+
+&lt;p&gt;BFS is a simple strategy in which the root node is expanded first, then all the successors of the root node are expanded next, then their successors and so on until the best possible path has been found. Due to the fact that this strategy for graph traversal has no additional information about states beyond that provided in the problem definition, Breadth First Search is classed as an uninformed or blind search.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Breadth First Search Utilizes the queue data structure as opposed to the stack that Depth First Search uses.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;BFS uses a queue data structure which is a &#39;First in, First Out&#39; or FIFO data structure. This queue stores all the nodes that we have to explore and each time a node is explored it is added to our set of visited nodes.&lt;/p&gt;
+
+&lt;p&gt;If we were to conduct a breadth first search on the binary tree above then it would do the following:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Set Node 1 as the start Node&lt;/li&gt;
+&lt;li&gt;Add this Node to the Queue&lt;/li&gt;
+&lt;li&gt;Add this Node to the visited set&lt;/li&gt;
+&lt;li&gt;If this node is our goal node then return true, else add Node 2 and Node 3 to our Queue&lt;/li&gt;
+&lt;li&gt;Check Node 2 and if it isn&amp;rsquo;t add both Node 4 and Node 5 to our Queue. &lt;/li&gt;
+&lt;li&gt;Take the next node from our Queue which should be Node 3 and check that.&lt;/li&gt;
+&lt;li&gt;If Node 3 isn&amp;rsquo;t our goal node add Node 6 and Node 7 to our Queue.&lt;/li&gt;
+&lt;li&gt;Repeat until goal Node is found.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;If we stopped execution after Node 3 was checked then our Queue would look like this:&lt;/p&gt;
+
+&lt;p&gt;Node 4, Node 5, Node 7, Node 8.&lt;/p&gt;
+
+&lt;p&gt;As you can see, if you follow this algorithm through then you will recursively search every level of the binary tree going deeper and deeper until you find the shortest possible path.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://tutorialedge.net/uploads/breadth-first-search.png?v=123&#34; alt=&#34;breadth-first-search&#34; /&gt;&lt;/p&gt;
+
+&lt;h2&gt;How it Works&lt;/h2&gt;
+
+&lt;p&gt;Say we had a map of the London Underground, each station would represent a node which would itself have a smaller list of stations that are directly connected to it. The entire map of the London Underground represents our Graph and each of the stations on that graph represent a node.&lt;/p&gt;
+
+&lt;p&gt;For example, take Westminster station for example. This station could be represented as a node which would have: STATION 1, STATION 2 and STATION 3 in its list of child nodes.&lt;/p&gt;
+
+&lt;p&gt;We can represent this sort of structure like so in Java:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import java.lang.reflect.Array;
+import java.util.ArrayList;
+
+/**
+ * The Node class represents a station
+ * in this tutorial and will as such have
+ * a string representing the station&#39;s name.
+ * As well as an ArrayList of nodes that will store
+ * any instantiated nodes children.
+ */
+public class Node {
+
+    //    A Unique Identifier for our node
+    public String stationName;
+    //    An arraylist containing a list of Nodes that
+//    This node is directly connected to - It&#39;s child nodes.
+    Node leftChild;
+    Node rightChild;
+
+    public Node(String stationName, Node firstChild, Node secondChild){
+        this.stationName = stationName;
+        this.leftChild = firstChild;
+        this.rightChild = secondChild;
+    }
+
+    public ArrayList&amp;lt;node&amp;gt; getChildren(){
+        ArrayList&amp;lt;node&amp;gt; childNodes = new ArrayList&amp;lt;&amp;gt;();
+        if(this.leftChild != null)
+        {
+            childNodes.add(leftChild);
+        }
+        if(this.rightChild != null) {
+            childNodes.add(rightChild);
+        }
+        return childNodes;
+    }
+
+    //    An auxiliary function which allows
+//    us to remove any child nodes from
+//    our list of child nodes.
+    public boolean removeChild(Node n){
+        return false;
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Our Breadth First Search Class&lt;/h2&gt;
+
+&lt;p&gt;In this tutorial I will be implementing the breadth first searching algorithm as a class as this makes it far easier to swap in and out different graph traversal algorithms later on.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+
+/**
+ * basic breadth first search in java
+ */
+public class BreadthFirstSearch {
+
+    Node startNode;
+    Node goalNode;
+
+    public BreadthFirstSearch(Node start, Node goalNode){
+        this.startNode = start;
+        this.goalNode = goalNode;
+    }
+
+    public boolean compute(){
+
+        if(this.startNode.equals(goalNode)){
+            System.out.println(&amp;quot;Goal Node Found!&amp;quot;);
+            System.out.println(startNode);
+        }
+
+        Queue&amp;lt;node&amp;gt; queue = new LinkedList&amp;lt;&amp;gt;();
+        ArrayList&amp;lt;node&amp;gt; explored = new ArrayList&amp;lt;&amp;gt;();
+        queue.add(this.startNode);
+        explored.add(startNode);
+
+        while(!queue.isEmpty()){
+            Node current = queue.remove();
+            if(current.equals(this.goalNode)) {
+                System.out.println(explored);
+                return true;
+            }
+            else{
+                if(current.getChildren().isEmpty())
+                    return false;
+                else
+                    queue.addAll(current.getChildren());
+            }
+            explored.add(current);
+        }
+
+        return false;
+
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;The Results&lt;/h2&gt;
+
+&lt;p&gt;Whilst Breadth First Search can be useful in graph traversal algorithms, one of its flaws is that it finds the shallowest goal node or station which doesn’t necessarily mean it’s the most optimal solution. Breadth First Search is only every optimal if for instance you happen to be in a scenario where all actions have the same cost.&lt;/p&gt;
+
+&lt;p&gt;Breadth First graph traversal algorithms also happen to be very computationally demanding in the way that they calculate the shortest path. Take for instance if we have a binary tree of depth 10. The binary tree contains nodes which contain a maximum of 2 child nodes each, this is otherwise known as having a branching factor equal to 2.  if we wanted to compute the optimal path for this graph then we would have to traverse, in a worst case scenario, 512 distinct nodes. Given that on modern machines this isn’t exactly what we would consider demanding, imagine if we had a new graph that had 3 child nodes for every node and the same depth of 10. With this new graph we would have to traverse, in a worst case scenario, 19,683 different nodes. And given that this is only at depth 10 with 3 child nodes, you can easily extrapolate the numbers for yourself. With a branching factor of 10 and a depth of 16, it would take 350 years to compute the solution on an ordinary personal computer, give or take.&lt;/p&gt;
+
+&lt;h2&gt;Our Driver Class&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;/**
+ * Our main driver class which instantiates some example nodes
+ * and then performs the breadth first search upon these newly created
+ * nodes.
+ */
+public class Driver {
+
+    public static void main(String args[]){
+        Node station1 = new Node(&amp;quot;Westminster&amp;quot;, null, null);
+        Node station2 = new Node(&amp;quot;Waterloo&amp;quot;, station1, null);
+        Node station3 = new Node(&amp;quot;Trafalgar Square&amp;quot;, station1, station2);
+        Node station4 = new Node(&amp;quot;Canary Wharf&amp;quot;, station2, station3);
+        Node station5 = new Node(&amp;quot;London Bridge&amp;quot;, station4, station3);
+        Node station6 = new Node(&amp;quot;Tottenham Court Road&amp;quot;, station5, station4);
+
+        BreadthFirstSearch bfs = new BreadthFirstSearch(station6, station1);
+
+        if(bfs.compute())
+            System.out.print(&amp;quot;Path Found!&amp;quot;);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;If you found this tutorial useful or require further assistance then please let me know in the comments section below!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Depth First Search in Java</title>
+      <link>/post/general/artificial-intelligence/depth-first-search/</link>
+      <pubDate>Sat, 15 Apr 2017 09:23:35 +0100</pubDate>
+      
+      <guid>/post/general/artificial-intelligence/depth-first-search/</guid>
+      <description>
+
+&lt;h2&gt;Depth First Search&lt;/h2&gt;
+
+&lt;p&gt;DFS is another uninformed graph traversal algorithm which produces a non-optimal solution but can be useful for traversing quickly into deeper search domains. Depth first search is very similar to the previously covered breadth first search that we covered in this tutorial: &lt;a href=&#34;http://tutorialedge.net/breadth-first-search-with-java&#34;&gt;breadth first search in Java&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;How it Works&lt;/h2&gt;
+
+&lt;p&gt;With Depth first search you start at the top most node in a tree and then follow the left most branch until there exists no more leafs in that branch. At that point you will search the nearest ancestor with unexplored nodes until such time as you find the goal node.&lt;/p&gt;
+
+&lt;p&gt;If we take this binary tree as an example, the depth first search algorithm would do the following:&lt;/p&gt;
+
+&lt;ol&gt;
+    &lt;li&gt;Add Node 1 to the stack &lt;/li&gt;
+    &lt;li&gt;If Node 1 isn&#39;t the goal node then add Node 2 to the stack&lt;/li&gt;
+    &lt;li&gt;Check if Node 2 is the goal node and if not add Node 4 to the stack.&lt;/li&gt;
+    &lt;li&gt;If Node 4 isn&#39;t the goal node then add Node 8 to the stack. &lt;/li&gt;
+    &lt;li&gt;If node 8 isn&#39;t the goal node then go to the nearest ancestor with unexplored children.&lt;/li&gt;
+    &lt;li&gt;This happens to be Node 4, so we add Node 9 to the stack and check that.&lt;/li&gt;
+    &lt;li&gt;If this isn&#39;t the goal node then we travel to Node 2 and explore it&#39;s unexplored children, Node 5.&lt;/li&gt;
+    &lt;li&gt;and so on...&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;We continue to go down the left most nodes until we find the first path that reaches our goal node.&lt;/p&gt;
+
+&lt;h2&gt;AbstractSearch Class&lt;/h2&gt;
+
+&lt;p&gt;As a means of clearing up the code from all these tutorials I am going to add in an abstract class to which all of our graph traversal classes will extend and adhere to. The source code for this looks like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;/**
+ * AbstractSearch class so that we have a template
+ * that all future graph traversal algorithms must adhere to.
+ * this will make it far easier to &amp;quot;hot-swap&amp;quot; different algorithms
+ * out for testing later on.
+ */
+public abstract class AbstractSearch {
+
+    Node startNode;
+    Node goalNode;
+
+    public AbstractSearch(Node startNode, Node goalNode){
+        this.startNode = startNode;
+        this.goalNode = goalNode;
+    }
+
+    public abstract boolean execute();
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;depth-first-search-implementation&#34;&gt;Depth First Search Implementation&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import java.util.ArrayList;
+import java.util.Stack;
+
+/**
+ * depth first search implementation using a stack structure instead of a queue
+ * structure as exhibited in the breadth first search algorithm
+ */
+public class DepthFirstSearch extends AbstractSearch{
+
+    Node startNode;
+    Node goalNode;
+
+    public DepthFirstSearch(Node start, Node goalNode){
+        super(start, goalNode);
+        this.startNode = start;
+        this.goalNode = goalNode;
+    }
+
+    public boolean execute(){
+        if(this.startNode.equals(goalNode)){
+            System.out.println(&amp;quot;Goal Node Found at 0 depth&amp;quot;);
+            System.out.println(startNode);
+        }
+        Stack&amp;lt;node&amp;gt; nodeStack = new Stack&amp;lt;&amp;gt;();
+        ArrayList&amp;lt;node&amp;gt; visitedNodes = new ArrayList&amp;lt;&amp;gt;();
+
+        nodeStack.add(startNode);
+
+        while(!nodeStack.isEmpty()){
+            Node current = nodeStack.pop();
+            if(current.equals(goalNode)){
+                System.out.print(visitedNodes);
+                System.out.println(&amp;quot;Goal node found&amp;quot;);
+                return true;
+            }
+            else {
+                visitedNodes.add(current);
+                nodeStack.addAll(current.getChildren());
+            }
+        }
+        return false;
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Updating our Driver class&lt;/h2&gt;
+
+&lt;p&gt;Due to the fact we&#39;ve created an abstract search class we can now do something similar to this in our driver class:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/**
+ * Created by elliotforbes on 24/06/15.
+ */
+public class Driver {
+
+    public static void main(String args[]){
+        Node station1 = new Node(&amp;quot;Westminster&amp;quot;, null, null);
+        Node station2 = new Node(&amp;quot;Waterloo&amp;quot;, station1, null);
+        Node station3 = new Node(&amp;quot;Trafalgar Square&amp;quot;, station1, station2);
+        Node station4 = new Node(&amp;quot;Canary Wharf&amp;quot;, station2, station3);
+        Node station5 = new Node(&amp;quot;London Bridge&amp;quot;, station4, station3);
+        Node station6 = new Node(&amp;quot;Tottenham Court Road&amp;quot;, station5, station4);
+
+        // We instantiate searchAlgo as type AbstractSearch but we set it to equal
+        // our newly created DepthFirstSearch concrete class implementation
+        AbstractSearch searchAlgo = new DepthFirstSearch(station6, station1);
+
+        if(searchAlgo.execute())
+            System.out.print(&amp;quot;Path Found!&amp;quot;);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Depth Limited Search in Java</title>
+      <link>/post/general/artificial-intelligence/depth-limited-search-in-java/</link>
+      <pubDate>Sat, 15 Apr 2017 09:23:35 +0100</pubDate>
+      
+      <guid>/post/general/artificial-intelligence/depth-limited-search-in-java/</guid>
+      <description>&lt;h2&gt;About Depth Limited Searching&lt;/h2&gt;
+
+&lt;p&gt;Traditional depth first search could be deemed useless in infinite state spaces as they will continue to traverse down the leftmost branch infinitely. This essentially means that the path to the goal node might never be found, in order to combat this we can add a limit to the depth that our search recurses down the tree, this essentially transforms our depth first algorithm into a depth-limited algorithm.&lt;/p&gt;
+
+&lt;p&gt;This algorithm can fail in two different ways. First is that no goal node is found in the graph and the other is the cutoff type of failure in which no goal node is found within the set depth.&lt;/p&gt;
+
+&lt;h2&gt;Walkthrough&lt;/h2&gt;
+
+&lt;p&gt;This algorithm basically follows the same methods as the depth first search.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Node 1 is added to the stack
+
+&lt;ol&gt;
+&lt;li&gt;If Node 1 is not the goal node then add Node 2 to the stack&lt;/li&gt;
+&lt;li&gt;If Node 2 is not the goal node then add Node 4 to the stack&lt;/li&gt;
+&lt;li&gt;If Node 4 is not the goal node and depth limit has been reached then revert to nearest Node with unexplored children and add these to stack&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;continue until all nodes within depth limit have been searched or goal node has been found.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Depth First Search:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;For more information about the search based algorithm that this is based off, you can check out this tutorial here: &lt;a href=&#34;http://tutorialedge.net/depth-first-search-in-java&#34;&gt;Depth First Search in Java&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;The Implementation:&lt;/h2&gt;
+
+&lt;p&gt;Below you’ll find an implementation of a Depth-Limited search class which is built as an extension of the AbstractSearch java class.&lt;/p&gt;
+
+&lt;h2&gt;AbstractSearch Java Class:&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;/**
+* AbstractSearch.
+*/
+public abstract class AbstractSearch {
+
+   Node startNode;
+   Node goalNode;
+
+   public AbstractSearch(Node startNode, Node goalNode){
+       this.startNode = startNode;
+       this.goalNode = goalNode;
+   }
+
+   public abstract boolean execute();
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Depth Limited Search Class&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import java.util.ArrayList;
+import java.util.Stack;
+
+/**
+* Depth Limited Search Class
+*/
+public class DepthLimitedSearch extends AbstractSearch {
+
+   Node startNode;
+   Node goalNode;
+   int depth = 0;
+   int limit = 2;
+
+   public DepthLimitedSearch(Node start, Node goalNode){
+       super(start, goalNode);
+       this.startNode = start;
+       this.goalNode = goalNode;
+   }
+
+   public boolean execute(){
+       Stack&amp;lt;node&amp;gt; nodeStack = new Stack&amp;lt;&amp;gt;();
+       ArrayList&amp;lt;node&amp;gt; visitedNodes = new ArrayList&amp;lt;&amp;gt;();
+       nodeStack.add(startNode);
+
+       depth = 0;
+
+       while(!nodeStack.isEmpty()){
+           if(depth &amp;lt;= limit) {
+               Node current = nodeStack.pop();
+               if (current.equals(goalNode)) {
+                   System.out.print(visitedNodes);
+                   System.out.println(&amp;quot;Goal node found&amp;quot;);
+                   return true;
+               } else {
+                   visitedNodes.add(current);
+                   nodeStack.addAll(current.getChildren());
+                   depth++;
+
+               }
+           } else {
+               System.out.println(&amp;quot;Goal Node not found within depth limit&amp;quot;);
+               return false;
+           }
+       }
+
+
+       return false;
+   }
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>An Introduction To Artificial Intelligence</title>
+      <link>/post/general/artificial-intelligence/introduction-to-artificial-intelligence/</link>
+      <pubDate>Sat, 15 Apr 2017 08:11:58 +0100</pubDate>
+      
+      <guid>/post/general/artificial-intelligence/introduction-to-artificial-intelligence/</guid>
+      <description>&lt;p&gt;This is lesson one of the &lt;a href=&#34;https://tutorialedge.net/course/artificial-intelligence&#34;&gt;Artificial Intelligence&lt;/a&gt; course on this website. &lt;/p&gt;
+
+&lt;h2&gt;What is Artificial Intelligence?&lt;/h2&gt;
+
+&lt;p&gt;Artificial Intelligence is a huge field of computer science that is focused primarily on building agents that think and perform actions independant from human interference. If you are or have ever been a gamer then you will have experienced artificial intelligence in action contained within the non-player characters that try to prevent you from winning the games.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Games&lt;/b&gt; are probably the most widely recognized users of Artificial Intelligence but the truth is that it’s used in a huge number of different things. Banks have long used things such as artificial neural networks in order to try and automate the detection of fraud and other illegal activities as well as in their pursuits at making money through High Frequency Trading. &lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;The Automotive industry&lt;/b&gt; is also investing billions into the creation of driverless cars and vehicles and recently we’ve seen huge steps forward. Driverless busses have been deployed in Sion with the aim “to go where it’s complicated, where the roads are too narrow or where financially it is too expensive for the state.”&lt;/p&gt;
+
+&lt;h5&gt;History of Artificial Intelligence&lt;/h5&gt;
+
+&lt;p&gt;Warren McCulloch and Walter Pitts were said to have been the first 2 individuals that started working on what is now recognized as Artificial Intelligence back in &lt;b&gt;1943&lt;/b&gt;. They essentially proposed a model of artificial neurons in which each was characterized as being on or off, essentially a ‘bit’ in today’s terms in which each neuron could be either 0 or 1.&lt;/p&gt;
+
+&lt;p&gt;In the &lt;b&gt;1950s&lt;/b&gt; the world was introduced to the neural network, which was the brainchild of 2 Harvard students; a Marvin Minsky and Dean Edmonds. Initially called the &lt;b&gt;SNARC&lt;/b&gt;, it used 3,000 vacuum tubes and an automatic pilot mechanism from a B-24 bomber to simulate a grand total of 40 neurons.&lt;/p&gt;
+
+&lt;p&gt;From the start, hugely important figures in the field underestimated exactly what it would take to develop a capable AI and multiple studies were performed in order to try and advance the field but to little avail. These studies were hugely important in the sense that they introduced the big players to each other but as of yet, 60 years later, whilst we have progressed hugely, we still don’t have a definitive solution to creating an AI.&lt;/p&gt;
+
+&lt;p&gt;Today the field of artificial intelligence has branched out into numerous sub-domains all solving different problems.&lt;/p&gt;
+
+&lt;h5&gt;Other Applications of Artificial Intelligence&lt;/h5&gt;
+
+&lt;p&gt;The following list is just a small subset of the areas where artificial intelligence is used:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Finance&lt;/li&gt;
+&lt;li&gt;Heavy Industry&lt;/li&gt;
+&lt;li&gt;Telephone Customer Services&lt;/li&gt;
+&lt;li&gt;Transportation&lt;/li&gt;
+&lt;li&gt;Aviation&lt;/li&gt;
+&lt;li&gt;Robotics&lt;/li&gt;
+&lt;li&gt;Speech Recognition&lt;/li&gt;
+&lt;/ol&gt; 
+
+&lt;p&gt;&lt;h5&gt;Branches of Artificial Intelligence&lt;/h2&gt;&lt;/p&gt;
+
+&lt;p&gt;Due to the size and complexity of the field, artificial intelligence has been split into a number of different subsections. This includes things such as neural networks, fuzzy systems and evolutionary computation. &lt;/p&gt; 
+</description>
+    </item>
+    
+    <item>
+      <title>What Is An Intelligent Agent</title>
+      <link>/post/general/artificial-intelligence/what-is-intelligent-agent/</link>
+      <pubDate>Sat, 15 Apr 2017 08:10:24 +0100</pubDate>
+      
+      <guid>/post/general/artificial-intelligence/what-is-intelligent-agent/</guid>
+      <description>&lt;p&gt;In Artificial Intelligence, Intelligent agents are the decision makers. They perceive their environment through a series of sensors and act upon this information using actuators.&lt;/p&gt;
+
+&lt;p&gt;A simple example of this is a robot hoover. Through a series of sensors, it can sense whether or not the floor is dirty and based off this information it will then decide whether or not to continue cleaning the floor.&lt;/p&gt;
+
+&lt;h2&gt;Intelligent Agents In Industry&lt;/h2&gt;
+
+&lt;h5&gt;Finance&lt;/h5&gt;
+
+&lt;p&gt;An example of a useful intelligent agent in the finance industry would be something that perceives the stock environment and then acts on this information in order to make trades and generate profit. AI trading systems have a huge advantage over traditional human traders as they are able to amalgamate huge sums of information in order to place their trades. &lt;/p&gt;
+
+&lt;p&gt;AI trading systems also have the huge advantage over traditional human traders as they are able to perform millions of calculations and predictions far quicker than a human could and thus they have a greater potential to perform better on the stock market.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

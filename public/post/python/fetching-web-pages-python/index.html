@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Fetching Web Pages In Python Using Urllib2</title>
+	
+	
+	
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/monokai.min.css">
+	<link rel="stylesheet" href="/css/materialize.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<meta name="generator" content="Hugo 0.19" />
+
+	
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+	<script src="/js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<script async>
+			(function (i, s, o, g, r, a, m) {
+					i['GoogleAnalyticsObject'] = r;
+					i[r] = i[r] || function () {
+							(i[r].q = i[r].q || []).push(arguments)
+					}, i[r].l = 1 * new Date();
+					a = s.createElement(o),
+					m = s.getElementsByTagName(o)[0];
+					a.async = 1;
+					a.src = g;
+					m.parentNode.insertBefore(a, m)
+			})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+			ga('create', 'UA-10255990-23', 'auto');
+			ga('send', 'pageview');
+	</script>
+</head>
+<body>
+
+	<header>
+		<nav>
+			<div class="nav-wrapper">
+				<a class="brand-logo" href="/">TutorialEdge.net</a>
+				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><a href="//about/">About</a></li>
+					<li><a href="//get-involved/">Get Involved</a></li>
+					<li><a href="//courses/">Courses</a></li>
+					<li><a href="//post/">Tutorials</a></li>
+				</ul>
+				<ul class="side-nav" id="mobile-demo">
+					<li><a href="//about/">About</a></li>
+					<li><a href="//get-involved/">Get Involved</a></li>
+					<li><a href="//courses/">Courses</a></li>
+					<li><a href="//post/">Tutorials</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+<div class="title-bar">
+	<div class="container">
+		<h1>Fetching Web Pages In Python Using Urllib2</h1>
+		<p>This tutorial teaches the reader how to create a python script that will fetch any given web page using the urllib2 python module.</p>
+		
+		<a href="/tags/python"><div class="chip">python</div></a>
+		
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col l2">
+			<div class="sidebar">
+     
+    <h3>python</h3>
+    <ul> 
+      
+        <li><a href="/post/python/python-multithreading-tutorial/">Python Multithreading Tutorial - Concurrent Programming</a></li>
+      
+        <li><a href="/post/python/udp-client-server-python/">UDP Client and Server Tutorial in Python</a></li>
+      
+        <li><a href="/post/python/calculating-keyword-density-python/">Calculating Keyword Density of a Web Page with Python</a></li>
+      
+        <li><a href="/post/python/fetching-web-pages-python/">Fetching Web Pages In Python Using Urllib2</a></li>
+      
+        <li><a href="/post/python/creating-twitter-bot-python/">Creating a Twitter Bot Using Python and the Twitter API</a></li>
+      
+        <li><a href="/post/python/removing-html-from-string/">Removing HTML Tags from a String with Python</a></li>
+      
+        <li><a href="/post/python/python-multiprocessing-tutorial/">Python Multiprocessing Tutorial</a></li>
+      
+    </ul>
+    
+
+</div> 
+		</div>
+		<div class="col l8">	
+			<article>
+				<div class="info">Author: Elliot Forbes | Posted at: 15.04.2017 09:47</div>
+				<div>
+					<p>In this tutorial I will be showing you how you can fetch the a webpage using the urllib2 python module. This is a relatively simple process that can be accomplished in 5 lines of code.</p>
+
+<h2>The Imports</h2>
+
+<p>To begin with we will need to import the urllib2 python module so that we can utilize it's functionality:</p>
+
+<pre><code class="language-py">import urllib2
+</code></pre>
+
+<h2>Fetching a Website</h2>
+
+<p>Once we've imported all the appropriate python modules we can move onto fetching our desired webpage. For the purpose of this example we'll be fetching this webpage and we can do that like so:</p>
+
+<pre><code class="language-py">req = urllib2.Request('http://www.tutorialedge.net/fetching-web-pages-with-python')
+response = urllib2.urlopen(req)
+the_page = response.read()
+# Here we print out the retrieved page's HTML to the console
+# once we've got this we can start performing some analysis of 
+# the webpage and do some cooler things.
+print(the_page)
+</code></pre>
+
+<p>Now in order to prevent being hit by 403 forbidden responses we need to define a set of headers for our HTTP request.</p>
+
+<pre><code class="language-py">import urllib2
+
+# create a variable which will hold our desired web page as a string
+site= &quot;http://tutorialedge.net&quot;
+# create the approprriate headers for our http request so that we wont run
+# into any 403 forbidden errors. All of this will be available at the tutorial
+# page that I will link to in the description below
+hdr = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11',
+       'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+       'Accept-Charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.3',
+       'Accept-Encoding': 'none',
+       'Accept-Language': 'en-US,en;q=0.8',
+       'Connection': 'keep-alive'}
+
+# Perform a HTTP request by passing in our desired URL and setting our headers to equal
+# the headers that we've defined above.
+req = urllib2.Request(site, headers=hdr)
+
+# 
+try:
+    # here we are going to open our desired page using urllib2.urlopen
+    # and passing in our request object as a parameter and as a means of protection we 
+    # will surround this with a try except so that, should the script run into any errors
+    # it will fail gracefully instead of just crashing.
+    page = urllib2.urlopen(req)
+except urllib2.HTTPError, e:
+    # print out the HTTPError
+    print e.fp.read()
+
+# lastly we will want to read the response which was generated by opening
+# the url and store it under content
+content = page.read()
+# and then print out this page.
+print content
+</code></pre>
+
+<h2>Video Tutorial</h2>
+
+<p><iframe allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/LTGhCtp2Scw" width="560"></iframe></p>
+
+<p> </p>
+
+<h2>Moving Forward</h2>
+
+<p>This tutorial will act as the base tutorial for quite a number of tutorials in which we will be calculating key SEO metrics such as keyword density. </p>
+
+				</div>
+				<div>
+					<div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://tutorialedge.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+				</div>
+			</article>
+		</div>
+
+		<div class="col l2">
+			<div class="wrapper">
+    <div class="container">
+      <img src="https://twitter.com/Elliot_F/profile_image?size=original" alt="Elliot Forbes" class="trophy" />
+      <h1>Elliot Forbes</h1>
+      <span class="score">Follow me:</span>
+  
+      <div class="buttons">
+          <a href="https://twitter.com/Elliot_F" target="_blank" class="button light">
+              <span><i class="ion ion-social-twitter"></i> Twitter</span>
+          </a>
+      </div>
+    </div>
+</div>
+
+		</div>
+		
+	</div>
+</div>
+
+<div class="join-us">
+	<div class="container">
+		<div class="row">
+			<div class="col l8">
+				<h5>Become a Contributor!</h5>
+				<p>Think you could improve the articles on this site? Feel free to submit a pull request to the sites github repo.</p>
+			</div>
+			<div class="col l4">
+				<a href="https://github.com/elliotforbes/tutorialedge-v2"><button class="btn valign">Fork Our Repo</button></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="page-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col l6 s12">
+				<h5>TutorialEdge.net</h5>
+				<p class="text-lighten-4">This site is dedicated to bringing you the highest quality courses designed to teach you the ins and outs of programming with various frameworks and programming languages.</p>
+			</div>
+			<div class="col l4 offset-l2 s12">
+				<h5>Links</h5>
+				<ul>
+					<li><a class="text-lighten-3" href="/tutorials">All Tutorials</a></li>
+					<li><a class="text-lighten-3" href="/books">Books</a></li>
+					<li><a class="text-lighten-3" href="/contact">Contact</a></li>
+					<li><a class="text-lighten-3" href="/courses">Courses</a></li>
+					<li><a class="text-lighten-3" href="/blog">Blog</a></li>
+					<li><a class="text-lighten-3" href="/about">About</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer-copyright">
+		<div class="container">
+		TutorialEdge © 2016 Copyright 
+		</div>
+	</div>
+</footer>
+
+<script>
+$(".button-collapse").sideNav();
+</script>

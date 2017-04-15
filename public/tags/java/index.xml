@@ -1,0 +1,1892 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java on TutorialEdge.net</title>
+    <link>/tags/java/index.xml</link>
+    <description>Recent content in Java on TutorialEdge.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Getting Started with LWJGL 3 and OpenGL</title>
+      <link>/post/java/lwjgl3/getting-started-java-lwjgl3/</link>
+      <pubDate>Sat, 15 Apr 2017 09:54:44 +0100</pubDate>
+      
+      <guid>/post/java/lwjgl3/getting-started-java-lwjgl3/</guid>
+      <description>&lt;p&gt;&lt;b&gt;&lt;i&gt;Note: This guide is still under construction so please refer back to it often for more articles.&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;
+
+&lt;p&gt;Welcome to the ultimate comprehensive guide to getting started with LWJGL 3 and OpenGL. My main goal for this part of the site is to create the ultimate primer from which game developers can refer to.&lt;/p&gt;
+
+&lt;h4&gt;Beginners Tutorials:&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://tutorialedge.net/setting-up-eclipse-with-lwgjl3-and-opengl&#34;&gt;Setting up Eclipse to use LWJGL3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tutorialedge.net/creating-game-window-tutorial-02-programming-2d-endless-runner&#34;&gt;Creating a Game Window with GLFW&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Beginners guide to Matrices and Vectors&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tutorialedge.net/lwjgl-3-fps-main-game-loop&#34;&gt;Creating a Game Loop&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Creating your First Triangle&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tutorialedge.net/initializing-opengl-with-lwjgl3-and-java&#34;&gt;Getting Started with OpenGL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Vertex Array Object and Vertex Buffer Objects&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Intermediate Tutorials&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://tutorialedge.net/getting-started-with-opengl-shaders&#34;&gt;Introduction to Shaders&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tutorialedge.net/lwjgl-3-orthographic-camera-tutorial&#34;&gt;Orthographic Camera Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Perspective Camera Tutorial&lt;/li&gt;
+&lt;li&gt;Input Handling Tutorial&lt;/li&gt;
+&lt;li&gt;Texturing with LWJGL 3&lt;/li&gt;
+&lt;li&gt;Getting Started with OpenAL and in-game Audio&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Advanced Tutorials&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ray Tracing with OpenGL&lt;/li&gt;
+&lt;li&gt;More to be Added...&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bridge Design Pattern Tutorial</title>
+      <link>/post/general/design-patterns/bridge-design-pattern/</link>
+      <pubDate>Sat, 15 Apr 2017 09:53:07 +0100</pubDate>
+      
+      <guid>/post/general/design-patterns/bridge-design-pattern/</guid>
+      <description>&lt;h2&gt;Intent&lt;/h2&gt;
+
+&lt;p&gt;The intent of the Bridge design pattern is to decouple an abstraction from its implementation so that the two can vary independently. This basically allows you to build upon an abstract class and allows you to build to very different concrete classes based upon this abstract class.&lt;/p&gt;
+
+&lt;h2&gt;Motivation&lt;/h2&gt;
+
+&lt;p&gt;When an abstraction can have one of several possible implementations, the usual way to accommodate them is to use inheritance. Traditional methods tend not to be flexible enough and thus the Bridge design pattern was conceived. &lt;/p&gt;
+
+&lt;p&gt;Now this can be hugely beneficial for those of you wishing to create multi-platform tools and games and need a way to design the code around the different operating systems code tweaks. &lt;/p&gt;
+
+&lt;h2&gt;When Should You Use This Pattern?&lt;/h2&gt;
+
+&lt;p&gt;You should typically use the Bridge pattern when:&lt;/p&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;You require run-time binding of the implementation.&lt;/li&gt;
+    &lt;li&gt;both the abstractions and their implementations should be extensible by subclassing.&lt;/li&gt;
+    &lt;li&gt;changes in the implementation of an abstraction should have no impact on clients; that is, their code should not have to be recompiled&lt;/li&gt;
+    &lt;li&gt;you want to share an implementation among multiple objects and this fact should be hidden from the client.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Implementation&lt;/h2&gt;
+
+&lt;p&gt;This code example showcases how you could implement the bridge design pattern in the context of a game programming scenario.&lt;/p&gt;
+
+&lt;h3&gt;Enemy Abstract Class&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;package Bridge;
+
+/**
+ * Enemy abstract class
+ */
+public abstract class Enemy {
+
+    protected Armour armour;
+
+    public Enemy(Armour armour){
+        this.armour = armour;
+    }
+
+    public abstract void addArmour();
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Archer Concrete Class&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;package Bridge;
+
+/**
+ * Archer Concrete Implementation
+ */
+public class Archer extends Enemy {
+
+    public Archer(Armour armour){
+        super(armour);
+    }
+
+    @Override
+    public void addArmour(){
+        armour.addArmour();
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Knight Concrete Class&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;package Bridge;
+
+/**
+ * Created by elliotforbes on 03/07/15.
+ */
+public class Knight extends Enemy {
+
+    public Knight(Armour armour){
+        super(armour);
+    }
+
+    public void addArmour(){
+        armour.addArmour();
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Armour Interface&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;package Bridge;
+
+/**
+ * Armour Interface
+ */
+public interface Armour {
+
+    public void addArmour();
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;LightArmour Concrete Class&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;package Bridge;
+
+/**
+ * Created by elliotforbes on 03/07/15.
+ */
+public class LightArmour implements Armour {
+
+    public void addArmour(){
+        System.out.println(&amp;quot;Light Armour Added&amp;quot;);
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;HeavyArmour Concrete Class&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;package Bridge;
+
+/**
+ * HeavyArmour Concrete Class
+ */
+public class HeavyArmour implements Armour {
+
+    public void addArmour(){
+        System.out.println(&amp;quot;Heavy Armour Added&amp;quot;);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Driver Class&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;package Bridge;
+
+/**
+ * In this class we create 2 new enemies of both
+ * type Knight and of type Archer respectively. 
+ * We pass in a HeavyArmour class to our Knight and
+ * a LightArmour class to our Archer.
+ * 
+ */
+public class Driver {
+
+    public static void main(String args[]){
+        System.out.println(&amp;quot;Bridge Design Pattern&amp;quot;);
+        Enemy knight = new Knight(new HeavyArmour());
+        Enemy archer = new Archer(new LightArmour());
+
+        knight.addArmour();
+        archer.addArmour();
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>LWJGL 3 Mouse Current Position Tutorial</title>
+      <link>/post/java/lwjgl3/lwjgl-3-mouse-current-position-tutorial/</link>
+      <pubDate>Sat, 15 Apr 2017 09:43:47 +0100</pubDate>
+      
+      <guid>/post/java/lwjgl3/lwjgl-3-mouse-current-position-tutorial/</guid>
+      <description>&lt;p&gt;In this tutorial I will be showing you how you can obtain the X and Y coordinates of the Mouse cursor in an applications window and print it out to the console.&lt;/p&gt;
+
+&lt;h2&gt;Creating a MouseHandler Class&lt;/h2&gt;
+
+&lt;p&gt;To begin with I recommend you create an &amp;lsquo;Input&amp;rsquo; package within your project as this is a good way to keep all Input Handler classes organized within your projects. Once you&amp;rsquo;ve created this package, right click on it and add a new class called MouseHandler. This class will extend the GLFWCursorPosCallback abstract class provided by the LWJGL3 framework.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package Input;
+
+import org.lwjgl.glfw.GLFWCursorPosCallback;
+
+// Our MouseHandler class extends the abstract class
+// abstract classes should never be instantiated so here
+// we create a concrete that we can instantiate
+public class MouseHandler extends GLFWCursorPosCallback {
+
+  @Override
+  public void invoke(long window, double xpos, double ypos) {
+    // TODO Auto-generated method stub
+    // this basically just prints out the X and Y coordinates 
+    // of our mouse whenever it is in our window
+    System.out.println(&amp;quot;X: &amp;quot; + xpos + &amp;quot; Y: &amp;quot; + ypos);
+  }	
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Making it Work&lt;/h2&gt;
+
+&lt;p&gt;Now that we&amp;rsquo;ve created our MouseHandler class we need to put in the following code just below our GLFW Window initialization so that our invoke method will be called every time the cursor&amp;rsquo;s position changes.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;glfwSetCursorPosCallback(window, mouseCallback = new MouseHandler());
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And that should be it all done, you should now be seeing the cursors position outputted to the console.&lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&#34;width: 100%; height: auto;&#34; src=&#34;/uploads/articles/cursor-pos-console.PNG&#34; /&gt;&lt;/p&gt;
+
+&lt;h2&gt;Main Class&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import org.lwjgl.Sys;
+import org.lwjgl.glfw.*;
+import org.lwjgl.opengl.*;
+
+import Input.KeyboardHandler;
+import Input.MouseHandler;
+
+import java.nio.ByteBuffer;
+ 
+
+import static org.lwjgl.glfw.Callbacks.*;
+import static org.lwjgl.glfw.GLFW.*;
+import static org.lwjgl.opengl.GL11.*;
+import static org.lwjgl.system.MemoryUtil.*;
+ 
+public class HelloWorld {
+ 
+  // We need to strongly reference callback instances.
+  private GLFWErrorCallback errorCallback;
+  private GLFWKeyCallback   keyCallback;
+  private GLFWCursorPosCallback mouseCallback;
+
+  // The window handle
+  private long window;
+
+  public void run() {
+    System.out.println(&amp;quot;Hello LWJGL &amp;quot; + Sys.getVersion() + &amp;quot;!&amp;quot;);
+
+    try {
+      init();
+      loop();
+
+      // Release window and window callbacks
+      glfwDestroyWindow(window);
+      keyCallback.release();
+    } finally {
+      // Terminate GLFW and release the GLFWerrorfun
+      glfwTerminate();
+      errorCallback.release();
+    }
+  }
+
+  private void init() {
+    // Setup an error callback. The default implementation
+    // will print the error message in System.err.
+    glfwSetErrorCallback(errorCallback = errorCallbackPrint(System.err));
+
+    // Initialize GLFW. Most GLFW functions will not work before doing this.
+    if ( glfwInit() != GL11.GL_TRUE )
+      throw new IllegalStateException(&amp;quot;Unable to initialize GLFW&amp;quot;);
+
+    // Configure our window
+    glfwDefaultWindowHints(); // optional, the current window hints are already the default
+    glfwWindowHint(GLFW_VISIBLE, GL_FALSE); // the window will stay hidden after creation
+    glfwWindowHint(GLFW_RESIZABLE, GL_TRUE); // the window will be resizable
+
+    int WIDTH = 300;
+    int HEIGHT = 300;
+
+    // Create the window
+    window = glfwCreateWindow(WIDTH, HEIGHT, &amp;quot;Hello World!&amp;quot;, NULL, NULL);
+    if ( window == NULL )
+      throw new RuntimeException(&amp;quot;Failed to create the GLFW window&amp;quot;);
+
+    // Setup a key callback. It will be called every time a key is pressed, repeated or released.
+    glfwSetKeyCallback(window, keyCallback = new KeyboardHandler());
+
+
+    glfwSetCursorPosCallback(window, mouseCallback = new MouseHandler());
+
+    // Get the resolution of the primary monitor
+    ByteBuffer vidmode = glfwGetVideoMode(glfwGetPrimaryMonitor());
+    // Center our window
+    glfwSetWindowPos(
+      window,
+      (GLFWvidmode.width(vidmode) - WIDTH) / 2,
+      (GLFWvidmode.height(vidmode) - HEIGHT) / 2
+    );
+
+    // Make the OpenGL context current
+    glfwMakeContextCurrent(window);
+    // Enable v-sync
+    glfwSwapInterval(1);
+
+    // Make the window visible
+    glfwShowWindow(window);
+  }
+  
+  public void update(){
+    if(KeyboardHandler.isKeyDown(GLFW_KEY_SPACE))
+      System.out.println(&amp;quot;Space Key Pressed&amp;quot;);
+  }
+
+  private void loop() {
+    // This line is critical for LWJGL&#39;s interoperation with GLFW&#39;s
+    // OpenGL context, or any context that is managed externally.
+    // LWJGL detects the context that is current in the current thread,
+    // creates the ContextCapabilities instance and makes the OpenGL
+    // bindings available for use.
+    GLContext.createFromCurrent();
+
+    // Set the clear color
+    glClearColor(1.0f, 0.0f, 0.0f, 0.0f);
+
+    // Run the rendering loop until the user has attempted to close
+    // the window or has pressed the ESCAPE key.
+    while ( glfwWindowShouldClose(window) == GL_FALSE ) {
+      glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // clear the framebuffer
+
+      glfwSwapBuffers(window); // swap the color buffers
+
+      // Poll for window events. The key callback above will only be
+      // invoked during this call.
+      glfwPollEvents();
+      
+      update();
+        
+    }
+  }
+
+  public static void main(String[] args) {
+    new HelloWorld().run();
+  }
+ 
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>LWJGL 3 Keyboard Input Handler Tutorial</title>
+      <link>/post/java/lwjgl3/lwjgl-3-keyboard-input-handler-tutorial/</link>
+      <pubDate>Sat, 15 Apr 2017 09:42:07 +0100</pubDate>
+      
+      <guid>/post/java/lwjgl3/lwjgl-3-keyboard-input-handler-tutorial/</guid>
+      <description>&lt;p&gt;This tutorial looks to demonstrate how you can extend the lightweight java game library in order to create your own input handlers which can be used in your games as a means for handling keyboard and mouse input.&lt;/p&gt;
+
+&lt;h2&gt;The Observer Design Pattern&lt;/h2&gt;
+
+&lt;p&gt;The programmers who developed LWJGL 3 have used an observer design pattern as a way to implement input. The works by having one part of the system listening for input through all the various input devices whilst also keeping a list of classes that should be notified every time an event takes place. This has been explained in more detail in a tutorial dedicated to the Observer Design Pattern which I recommend if you wish to help improve your overall understanding of how LWJGL 3 works.&lt;/p&gt;
+
+&lt;h2&gt;Creating a Keyboard Handler&lt;/h2&gt;
+
+&lt;p&gt;In order to keep the project tidy I recommend you create a new Package within your project and call it &#34;Input&#34; or something meaningful to that effect. Create a new class within this Package called KeyboardHandler. This KeyboardHandler class will look something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package Input;
+
+import org.lwjgl.glfw.GLFWKeyCallback;
+import static org.lwjgl.glfw.GLFW.*;
+
+public class KeyboardHandler extends GLFWKeyCallback{
+
+  public static boolean[] keys = new boolean[65536];
+
+  // The GLFWKeyCallback class is an abstract method that
+  // can&#39;t be instantiated by itself and must instead be extended
+  // 
+  @Override
+  public void invoke(long window, int key, int scancode, int action, int mods) {
+    // TODO Auto-generated method stub
+    keys[key] = action != GLFW_RELEASE;
+  }
+
+  // boolean method that returns true if a given key
+  // is pressed.
+  public static boolean isKeyDown(int keycode) {
+    return keys[keycode];
+  }
+	
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Making it Work&lt;/h2&gt;
+
+&lt;p&gt;Now that we&#39;ve got our input handler class it&#39;s time to register our new class as a listener in the class that deals with OpenGL and GLFW initialization as this is where we will have to register our newly built class as a listener. At the top of your class add an declaration of the GLFWKeyCallback class like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;// This prevents our window from crashing later on.
+private GLFWKeyCallback keyCallback;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now that we&#39;ve instantiated our keyCallBack class we can set this to equal our newly built KeyboardHandler class like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;// Sets our keycallback to equal our newly created Input class()
+glfwSetKeyCallback(window, keyCallback = new KeyboardHandler());		
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Checking it Works&lt;/h2&gt;
+
+&lt;p&gt;Now that we&#39;ve implemented our own KeyboardHandler class it&#39;s time to check to see if it works. We can do this by adding the following to our Update() function:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public void update(){
+  if(KeyboardHandler.isKeyDown(GLFW_KEY_SPACE))
+    System.out.println(&amp;quot;Space Key Pressed&amp;quot;);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Main Class&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import org.lwjgl.Sys;
+import org.lwjgl.glfw.*;
+import org.lwjgl.opengl.*;
+
+import Input.KeyboardHandler;
+
+import java.nio.ByteBuffer;
+ 
+
+import static org.lwjgl.glfw.Callbacks.*;
+import static org.lwjgl.glfw.GLFW.*;
+import static org.lwjgl.opengl.GL11.*;
+import static org.lwjgl.system.MemoryUtil.*;
+ 
+public class HelloWorld {
+ 
+    // We need to strongly reference callback instances.
+    private GLFWErrorCallback errorCallback;
+    private GLFWKeyCallback   keyCallback;
+ 
+    // The window handle
+    private long window;
+ 
+    public void run() {
+        System.out.println(&amp;quot;Hello LWJGL &amp;quot; + Sys.getVersion() + &amp;quot;!&amp;quot;);
+ 
+        try {
+            init();
+            loop();
+ 
+            // Release window and window callbacks
+            glfwDestroyWindow(window);
+            keyCallback.release();
+        } finally {
+            // Terminate GLFW and release the GLFWerrorfun
+            glfwTerminate();
+            errorCallback.release();
+        }
+    }
+ 
+    private void init() {
+        // Setup an error callback. The default implementation
+        // will print the error message in System.err.
+        glfwSetErrorCallback(errorCallback = errorCallbackPrint(System.err));
+ 
+        // Initialize GLFW. Most GLFW functions will not work before doing this.
+        if ( glfwInit() != GL11.GL_TRUE )
+            throw new IllegalStateException(&amp;quot;Unable to initialize GLFW&amp;quot;);
+ 
+        // Configure our window
+        glfwDefaultWindowHints(); // optional, the current window hints are already the default
+        glfwWindowHint(GLFW_VISIBLE, GL_FALSE); // the window will stay hidden after creation
+        glfwWindowHint(GLFW_RESIZABLE, GL_TRUE); // the window will be resizable
+ 
+        int WIDTH = 300;
+        int HEIGHT = 300;
+ 
+        // Create the window
+        window = glfwCreateWindow(WIDTH, HEIGHT, &amp;quot;Hello World!&amp;quot;, NULL, NULL);
+        if ( window == NULL )
+            throw new RuntimeException(&amp;quot;Failed to create the GLFW window&amp;quot;);
+ 
+        // Setup a key callback. It will be called every time a key is pressed, repeated or released.
+        glfwSetKeyCallback(window, keyCallback = new KeyboardHandler());
+ 
+        // Get the resolution of the primary monitor
+        ByteBuffer vidmode = glfwGetVideoMode(glfwGetPrimaryMonitor());
+        // Center our window
+        glfwSetWindowPos(
+            window,
+            (GLFWvidmode.width(vidmode) - WIDTH) / 2,
+            (GLFWvidmode.height(vidmode) - HEIGHT) / 2
+        );
+ 
+        // Make the OpenGL context current
+        glfwMakeContextCurrent(window);
+        // Enable v-sync
+        glfwSwapInterval(1);
+ 
+        // Make the window visible
+        glfwShowWindow(window);
+    }
+    
+    public void update(){
+    	if(KeyboardHandler.isKeyDown(GLFW_KEY_SPACE))
+    		System.out.println(&amp;quot;Space Key Pressed&amp;quot;);
+    }
+ 
+    private void loop() {
+        // This line is critical for LWJGL&#39;s interoperation with GLFW&#39;s
+        // OpenGL context, or any context that is managed externally.
+        // LWJGL detects the context that is current in the current thread,
+        // creates the ContextCapabilities instance and makes the OpenGL
+        // bindings available for use.
+        GLContext.createFromCurrent();
+ 
+        // Set the clear color
+        glClearColor(1.0f, 0.0f, 0.0f, 0.0f);
+ 
+        // Run the rendering loop until the user has attempted to close
+        // the window or has pressed the ESCAPE key.
+        while ( glfwWindowShouldClose(window) == GL_FALSE ) {
+            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // clear the framebuffer
+ 
+            glfwSwapBuffers(window); // swap the color buffers
+ 
+            // Poll for window events. The key callback above will only be
+            // invoked during this call.
+            glfwPollEvents();
+            
+            update();
+            
+        }
+    }
+ 
+    public static void main(String[] args) {
+        new HelloWorld().run();
+    }
+ 
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Video Tutorial&lt;/h2&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/_6b73ZxlQOg&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>LWJGL 3 Orthographic Camera Tutorial</title>
+      <link>/post/java/lwjgl3/lwjgl-3-orthographic-camera-tutorial/</link>
+      <pubDate>Sat, 15 Apr 2017 09:39:43 +0100</pubDate>
+      
+      <guid>/post/java/lwjgl3/lwjgl-3-orthographic-camera-tutorial/</guid>
+      <description>&lt;p&gt;This tutorial leads on from some of the topics covered in my previous tutorial : How Matrices are used in Game Development so if you haven’t got a good grounding in matrices then I suggest you check that out first. There are several YouTube videos out there that expertly cover the topic of matrices as well so check them out!&lt;/p&gt;
+
+&lt;h2&gt;Orthographic Projection Camera&lt;/h2&gt;
+
+&lt;p&gt;Orthographic cameras are a means of representing 3D points in our game world on a 2D monitor/screen. This basically means that you see objects moving away from the camera getting smaller and thus this is perfect for our 2D games. One of the key things you have to understand from the beginning is that there is no ‘physical’ camera object, the camera is basically represented by a matrix that we can translate, rotate or scale depending on however we need to move the camera.&lt;/p&gt;
+
+&lt;p&gt;In this tutorial we will be building the basic Orthographic projection matrix that is primarily used in 2D games. This orthographic matrix is one of the simplest camera matrices and doesn’t show any form of perspective to our objects in our scenes. Without any form of perspective we will never see objects getting smaller as they go further into the distance, but seeing as 2D games are only represented in terms of X and Y coordinates we don’t tend to worry about perspective in our scenes.&lt;/p&gt;
+
+&lt;p&gt;To create an orthographic matrix we will need 6 float variables:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;left&lt;/li&gt;
+&lt;li&gt;right&lt;/li&gt;
+&lt;li&gt;bottom&lt;/li&gt;
+&lt;li&gt;top&lt;/li&gt;
+&lt;li&gt;near&lt;/li&gt;
+&lt;li&gt;far&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;These will represent the positions of the clipping planes.&lt;/p&gt;
+
+&lt;h2&gt;Representing our Matrix in Code:&lt;/h2&gt;
+
+&lt;p&gt;I wont go into the specifics of how these matrices work as I’m pretty sure there are a hundred different YouTube videos that go to great lengths to describe these things, but I will go onto say that all of this code follows Column-major order just to avoid confusion.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;// Gives us our orthographic matrix
+  public static Matrix4f orthographic(float left, float right, float bottom, float top, float near, float far){
+  Matrix4f matrix = new Matrix4f();
+
+  matrix.elements[0 + 0 * 4] = 2.0f / (right - left);
+  matrix.elements[1 + 1 * 4] = 2.0f / (top - bottom);
+  matrix.elements[2 + 2 * 4] = 2.0f / (near - far);
+
+  matrix.elements[0 + 3 * 4] = (left + right) / (left - right);
+  matrix.elements[1 + 3 * 4] = (bottom + top) / (bottom - top);
+  matrix.elements[2 + 3 * 4] = (far + near) / (far - near);
+
+  matrix.elements[3 + 3 * 4] = 1.0f;
+
+  return matrix;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;By doing this we can now create a projection matrix in our initialization using this new method. In the demonstration code this is done like so in our main class:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Matrix4f pr_matrix = Matrix4f.orthographic(-10.0f, 10.0f, -10.0f * 9.0f / 16.0f, 10.0f * 9.0f / 16.0f, -10.0f, 10.0f);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Creating Camera Controls&lt;/h2&gt;
+
+&lt;p&gt;So now that we’ve got a matrix that will represent our projection matrix, we will also need some way of tracking and updating where our camera is in the world. We can do this by adding a Vector3f to our Camera class and calling it ‘position’. This will essentially store the coordinates of our camera and allow us to move the camera using the following update method:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public void update(){		
+  if(Input.isKeyDown(GLFW_KEY_W)){
+    position.y += 0.05f;
+  }
+  if(Input.isKeyDown(GLFW_KEY_S)){
+    position.y -= 0.05f;
+  }
+  if(Input.isKeyDown(GLFW_KEY_D)){
+    position.x += 0.05f;
+  }
+  if(Input.isKeyDown(GLFW_KEY_A)){
+    position.x -= 0.05f;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Updating Every Model in our Game&lt;/h2&gt;
+
+&lt;p&gt;The way that the game engine has been implemented is that every object currently uses the one shader which looks something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;#version 330 core
+
+layout ( location = 0 ) in vec4 position;
+layout ( location = 1 ) in vec2 tc;
+
+uniform mat4 pr_matrix;
+uniform mat4 vw_matrix;
+uniform mat4 ml_matrix = mat4(1.0);
+
+out DATA
+{
+	vec2 tc;
+} vs_out;
+
+void main()
+{
+	gl_Position = pr_matrix * vw_matrix * ml_matrix * position;
+	vs_out.tc = tc;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;By adding in the uniform mat4 variable vw_matrix, we can then pass our camera’s view matrix into our shader and multiply the gl_Position variable by the view matrix and update our camera.&lt;/p&gt;
+
+&lt;p&gt;In order for us to pass in our view matrix to our shader we have added the following line to our Main class.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Shader.shader1.setUniformMat4f(&amp;quot;vw_matrix&amp;quot;, Matrix4f.translate(camera.position));
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Conclusions&lt;/h2&gt;
+
+&lt;p&gt;So that should be all you need to get yourself up and running with the demonstration code and your own orthographic projection matrix! If you feel you need more detail on the subject then please leave a comment in the comments section below and I’ll try my best to expand upon the explanations already given!&lt;/p&gt;
+
+&lt;p&gt;You can find the repository for the example code here: &lt;a href=&#34;https://github.com/emforce/AlgebraTutorial&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>AABB Collision Detection Tutorial</title>
+      <link>/post/gamedev/aabb-collision-detection-tutorial/</link>
+      <pubDate>Sat, 15 Apr 2017 09:30:45 +0100</pubDate>
+      
+      <guid>/post/gamedev/aabb-collision-detection-tutorial/</guid>
+      <description>&lt;p&gt;AABB Collision Detection or &#34;Axis-Aligned Bounding Box&#34; Collision detection as it stands for is the simplest form, or one of the simplest forms of collision detection that you can implement in a 2D game. If you have an object that is axis-aligned, ie. not rotated and doesn&#39;t need tight collision detection then AABB collision detection is the route you are going to want to take.&lt;/p&gt;
+
+&lt;h2&gt;Implementing AABB Collision Detection in Java&lt;/h2&gt;
+
+&lt;p&gt;In order to be able to accurately perform Axis-Aligned Bounding Box collision detection you&#39;ll need at minimum the 4 following characteristics of the object you are wanting to make collidable.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;class player {
+  public int x = 5;
+  public int y = 5;
+  public int width = 50;
+  public int height = 50;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If we had 2 instantiated player objects then we could perform AABB collision detection using the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;if(player1.x &amp;lt; player2.x + player2.width &amp;amp;&amp;amp; 
+    player1.x + player1.width &amp;gt; player2.x &amp;amp;&amp;amp;
+    player1.y &amp;lt; player2.y + player2.height &amp;amp;&amp;amp; 
+    player1.y + player1.height &amp;gt; player2.y)
+{
+    System.out.println(&amp;quot;Collision Detected&amp;quot;);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;AABB is a very obvious and simple method to implement and is very useful in games where there are very few objects that could possibly collide. However should you wish to implement this form of collision detection in a game that features a huge number of collidable objects then this method will become far too computationally expensive and as such you will have to look at ways you can optimize these calculations.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Creating a Game Window using GLFW - LWJGL3</title>
+      <link>/post/java/lwjgl3/creating-game-window-lwjgl3-glfw/</link>
+      <pubDate>Sat, 15 Apr 2017 09:29:14 +0100</pubDate>
+      
+      <guid>/post/java/lwjgl3/creating-game-window-lwjgl3-glfw/</guid>
+      <description>&lt;h2&gt;Creating our Game Window&lt;/h2&gt;
+
+&lt;p&gt;So now that you’ve got the base project set up, you are going to want to start writing some code and making some magic happen on the screen.
+First of all you are going to want to create a new class and call it Main.java. This will be the class that contains vital things like the initialization code and the main game loop which we will be developing later on.&lt;/p&gt;
+
+&lt;p&gt;Once you’ve created the Main.java class you are going to want to write the following code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import static org.lwjgl.glfw.GLFW.*;
+
+public class Main implements Runnable{
+
+  private Thread thread;
+  public boolean running = true;
+
+  public static void Main(String args[]){
+    Main game = new Main();
+    game.start();
+  }
+
+  public void start(){
+    running = true;
+    thread = new Thread(this, &amp;quot;EndlessRunner&amp;quot;);
+    thread.start();
+  }
+
+  public void init(){
+    
+  }
+
+  public void update(){
+    
+  }
+
+  public void render(){
+    
+  }
+
+  @Override
+  public void run() {
+    init();
+    while(running){
+      update();
+      render();
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will form the main outline of our code and it’s a great place to start from. So far it’s all super simple stuff and all the code is really doing is starting our games thread, everything else still has to be fleshed out.&lt;/p&gt;
+
+&lt;h2&gt;Our Imports&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;import static org.lwjgl.glfw.GLFW.*; // allows us to create windows
+import static org.lwjgl.opengl.GL11.*; // gives us access to things like &amp;quot;GL_TRUE&amp;quot; which we&#39;ll need 
+import static org.lwjgl.system.MemoryUtil.*; // allows us to use &#39;NULL&#39; in our code, note this is slightly different from java&#39;s &#39;null&#39;
+import java.nio.ByteBuffer; // Used for getting the primary monitor later on.
+import org.lwjgl.glfw.GLFWvidmode; // again used for primary monitor stuff.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;These are the libraries we need to import in order for our basic window to be displayed.&lt;/p&gt;
+
+&lt;h2&gt;The init() function&lt;/h2&gt;
+
+&lt;p&gt;Our init function is where most of our initialization code will go for both the window and for OpenGL. It takes the following shape:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public void init(){
+  // Initializes our window creator library - GLFW 
+  // This basically means, if this glfwInit() doesn&#39;t run properlly
+  // print an error to the console
+  if(glfwInit() != GL_TRUE){
+    // Throw an error.
+    System.err.println(&amp;quot;GLFW initialization failed!&amp;quot;);
+  }
+  
+  // Allows our window to be resizable
+  glfwWindowHint(GLFW_RESIZABLE, GL_TRUE);
+  
+  // Creates our window. You&#39;ll need to declare private long window at the
+  // top of the class though. 
+  // We pass the width and height of the game we want as well as the title for
+  // the window. The last 2 NULL parameters are for more advanced uses and you
+  // shouldn&#39;t worry about them right now.
+  window = glfwCreateWindow(width, height, &amp;quot;Endless Runner&amp;quot;, NULL, NULL);
+
+  // This code performs the appropriate checks to ensure that the
+  // window was successfully created. 
+  // If not then it prints an error to the console
+  if(window == NULL){
+    // Throw an Error
+    System.err.println(&amp;quot;Could not create our Window!&amp;quot;);
+  }
+  
+  // creates a bytebuffer object &#39;vidmode&#39; which then queries 
+  // to see what the primary monitor is. 
+  ByteBuffer vidmode = glfwGetVideoMode(glfwGetPrimaryMonitor());
+  // Sets the initial position of our game window. 
+  glfwSetWindowPos(window, 100, 100);
+  // Sets the context of GLFW, this is vital for our program to work.
+  glfwMakeContextCurrent(window);
+  // finally shows our created window in all it&#39;s glory.
+  glfwShowWindow(window);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Update() and Render() functions&lt;/h2&gt;
+
+&lt;p&gt;Once we’ve successfully initialized both our window and GLFW we will now want to make sure that everything works correctly and that we’ll be able to get any input needed from the user.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public void update(){
+  // Polls for any window events such as the window closing etc.
+  glfwPollEvents();
+}
+
+public void render(){
+  // Swaps out our buffers
+  glfwSwapBuffers(window);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Our updated Game Loop&lt;/h2&gt;
+
+&lt;p&gt;Now that everything is in place you will want to implement the code that allows us to close the window. This can be done by adding the following 3 lines of code under our call to render(); in the main game loop as follows:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@Override
+public void run() {
+  // All our initialization code
+  init();
+  // Our main game loop
+  while(running){
+    update();
+    render();
+    // Checks to see if either the escape button or the
+    // red cross at the top were pressed.
+    // if so sets our boolean to false and closes the
+    // thread.
+    if(glfwWindowShouldClose(window) == GL_TRUE){
+      running = false;
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Compile&lt;/h2&gt;
+
+&lt;p&gt;Once you’ve done all that, try hitting the green ‘run as’ arrow button at the top of your Eclipse IDE or right clicking on your project and selecting ‘run as’ and then selecting ‘Java application’. If you’ve done everything correctly and have no errors then you should see a game window successfully appearing on your screen&lt;/p&gt;
+
+&lt;h2&gt;Full Source:&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;import static org.lwjgl.glfw.GLFW.*;
+import static org.lwjgl.opengl.GL11.*;
+import static org.lwjgl.system.MemoryUtil.*;
+import java.nio.ByteBuffer;
+import org.lwjgl.glfw.GLFWvidmode;
+
+public class Main implements Runnable{
+	
+  private Thread thread;
+  public boolean running = true;
+
+  private long window;
+
+  private int width = 1200, height = 800;
+
+  public static void main(String args[]){
+    Main game = new Main();
+    game.start();
+  }
+
+  public void start(){
+    running = true;
+    thread = new Thread(this, &amp;quot;EndlessRunner&amp;quot;);
+    thread.start();
+  }
+
+  public void init(){
+    // Initializes our window creator library - GLFW 
+    // This basically means, if this glfwInit() doesn&#39;t run properlly
+    // print an error to the console
+    if(glfwInit() != GL_TRUE){
+      // Throw an error.
+      System.err.println(&amp;quot;GLFW initialization failed!&amp;quot;);
+    }
+    
+    // Allows our window to be resizable
+    glfwWindowHint(GLFW_RESIZABLE, GL_TRUE);
+    
+    // Creates our window. You&#39;ll need to declare private long window at the
+    // top of the class though. 
+    // We pass the width and height of the game we want as well as the title for
+    // the window. The last 2 NULL parameters are for more advanced uses and you
+    // shouldn&#39;t worry about them right now.
+    window = glfwCreateWindow(width, height, &amp;quot;Endless Runner&amp;quot;, NULL, NULL);
+
+    // This code performs the appropriate checks to ensure that the
+    // window was successfully created. 
+    // If not then it prints an error to the console
+    if(window == NULL){
+      // Throw an Error
+      System.err.println(&amp;quot;Could not create our Window!&amp;quot;);
+    }
+    
+    // creates a bytebuffer object &#39;vidmode&#39; which then queries 
+    // to see what the primary monitor is. 
+    ByteBuffer vidmode = glfwGetVideoMode(glfwGetPrimaryMonitor());
+    // Sets the initial position of our game window. 
+    glfwSetWindowPos(window, 100, 100);
+    // Sets the context of GLFW, this is vital for our program to work.
+    glfwMakeContextCurrent(window);
+    // finally shows our created window in all it&#39;s glory.
+    glfwShowWindow(window);
+  }
+
+  public void update(){
+    // Polls for any window events such as the window closing etc.
+    glfwPollEvents();
+  }
+
+  public void render(){
+    // Swaps out our buffers
+    glfwSwapBuffers(window);
+  }
+
+  @Override
+  public void run() {
+    // All our initialization code
+    init();
+    // Our main game loop
+    while(running){
+      update();
+      render();
+      // Checks to see if either the escape button or the
+      // red cross at the top were pressed.
+      // if so sets our boolean to false and closes the
+      // thread.
+      if(glfwWindowShouldClose(window) == GL_TRUE){
+        running = false;
+      }
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>LWJGL 3 Main Game Loop Tutorial</title>
+      <link>/post/java/lwjgl3/lwjgl-3-fps-main-game-loop/</link>
+      <pubDate>Sat, 15 Apr 2017 09:29:14 +0100</pubDate>
+      
+      <guid>/post/java/lwjgl3/lwjgl-3-fps-main-game-loop/</guid>
+      <description>&lt;p&gt;The code featured below is an example of how you create a game loop that is limited to 60 frames per second. This is useful if you have implemented update functions that are bounded by the number of times they are called rather than based on time between updates. &lt;/p&gt;
+
+&lt;h2&gt;The Code&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;public void run(){
+	init();
+	long lastTime = System.nanoTime();
+	double delta = 0.0;
+	double ns = 1000000000.0 / 60.0;
+	long timer = System.currentTimeMillis();
+	int updates = 0;
+	int frames = 0;
+	while(running){
+		long now = System.nanoTime();
+		delta += (now - lastTime) / ns;
+		lastTime = now;
+		if (delta &amp;gt;= 1.0) {
+			update();
+			updates++;
+			delta--;
+		}
+		render();		
+		frames++;
+		if (System.currentTimeMillis() - timer &amp;gt; 1000) {
+			timer += 1000;
+			System.out.println(updates + &amp;quot; ups, &amp;quot; + frames + &amp;quot; fps&amp;quot;);
+			updates = 0;
+			frames = 0;
+		}
+		if(glfwWindowShouldClose(window) == GL_TRUE){
+			running = false;
+		}
+	}
+	
+	cleanup();
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Breadth First Search Algorithm Tutorial with Java</title>
+      <link>/post/general/artificial-intelligence/breadth-first-search-java/</link>
+      <pubDate>Sat, 15 Apr 2017 09:23:35 +0100</pubDate>
+      
+      <guid>/post/general/artificial-intelligence/breadth-first-search-java/</guid>
+      <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;This lesson is part of the course: &lt;a href=&#34;https://tutorialedge.net/course/artificial-intelligence&#34;&gt;Artificial Intelligence&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;Uninformed Search vs Informed / Heuristic Search&lt;/h2&gt;
+
+&lt;p&gt;The next couple of algorithms we will be covering in this Artificial Intelligence course can be classed as either:&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;uninformed or blind searches:&lt;/b&gt; in which our algorithms have no additional information about states beyond that provided in the problem definition.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Informed or Heuristic searches:&lt;/b&gt; in which our algorithms have some extra knowledge about the problem domain and can distinguish whether or not one non-goal state is “more promising” than another.&lt;/p&gt;
+
+&lt;h2&gt;Breadth First Search&lt;/h2&gt;
+
+&lt;p&gt;BFS is a simple strategy in which the root node is expanded first, then all the successors of the root node are expanded next, then their successors and so on until the best possible path has been found. Due to the fact that this strategy for graph traversal has no additional information about states beyond that provided in the problem definition, Breadth First Search is classed as an uninformed or blind search.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Breadth First Search Utilizes the queue data structure as opposed to the stack that Depth First Search uses.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;BFS uses a queue data structure which is a &#39;First in, First Out&#39; or FIFO data structure. This queue stores all the nodes that we have to explore and each time a node is explored it is added to our set of visited nodes.&lt;/p&gt;
+
+&lt;p&gt;If we were to conduct a breadth first search on the binary tree above then it would do the following:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Set Node 1 as the start Node&lt;/li&gt;
+&lt;li&gt;Add this Node to the Queue&lt;/li&gt;
+&lt;li&gt;Add this Node to the visited set&lt;/li&gt;
+&lt;li&gt;If this node is our goal node then return true, else add Node 2 and Node 3 to our Queue&lt;/li&gt;
+&lt;li&gt;Check Node 2 and if it isn&amp;rsquo;t add both Node 4 and Node 5 to our Queue. &lt;/li&gt;
+&lt;li&gt;Take the next node from our Queue which should be Node 3 and check that.&lt;/li&gt;
+&lt;li&gt;If Node 3 isn&amp;rsquo;t our goal node add Node 6 and Node 7 to our Queue.&lt;/li&gt;
+&lt;li&gt;Repeat until goal Node is found.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;If we stopped execution after Node 3 was checked then our Queue would look like this:&lt;/p&gt;
+
+&lt;p&gt;Node 4, Node 5, Node 7, Node 8.&lt;/p&gt;
+
+&lt;p&gt;As you can see, if you follow this algorithm through then you will recursively search every level of the binary tree going deeper and deeper until you find the shortest possible path.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://tutorialedge.net/uploads/breadth-first-search.png?v=123&#34; alt=&#34;breadth-first-search&#34; /&gt;&lt;/p&gt;
+
+&lt;h2&gt;How it Works&lt;/h2&gt;
+
+&lt;p&gt;Say we had a map of the London Underground, each station would represent a node which would itself have a smaller list of stations that are directly connected to it. The entire map of the London Underground represents our Graph and each of the stations on that graph represent a node.&lt;/p&gt;
+
+&lt;p&gt;For example, take Westminster station for example. This station could be represented as a node which would have: STATION 1, STATION 2 and STATION 3 in its list of child nodes.&lt;/p&gt;
+
+&lt;p&gt;We can represent this sort of structure like so in Java:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import java.lang.reflect.Array;
+import java.util.ArrayList;
+
+/**
+ * The Node class represents a station
+ * in this tutorial and will as such have
+ * a string representing the station&#39;s name.
+ * As well as an ArrayList of nodes that will store
+ * any instantiated nodes children.
+ */
+public class Node {
+
+    //    A Unique Identifier for our node
+    public String stationName;
+    //    An arraylist containing a list of Nodes that
+//    This node is directly connected to - It&#39;s child nodes.
+    Node leftChild;
+    Node rightChild;
+
+    public Node(String stationName, Node firstChild, Node secondChild){
+        this.stationName = stationName;
+        this.leftChild = firstChild;
+        this.rightChild = secondChild;
+    }
+
+    public ArrayList&amp;lt;node&amp;gt; getChildren(){
+        ArrayList&amp;lt;node&amp;gt; childNodes = new ArrayList&amp;lt;&amp;gt;();
+        if(this.leftChild != null)
+        {
+            childNodes.add(leftChild);
+        }
+        if(this.rightChild != null) {
+            childNodes.add(rightChild);
+        }
+        return childNodes;
+    }
+
+    //    An auxiliary function which allows
+//    us to remove any child nodes from
+//    our list of child nodes.
+    public boolean removeChild(Node n){
+        return false;
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Our Breadth First Search Class&lt;/h2&gt;
+
+&lt;p&gt;In this tutorial I will be implementing the breadth first searching algorithm as a class as this makes it far easier to swap in and out different graph traversal algorithms later on.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+
+/**
+ * basic breadth first search in java
+ */
+public class BreadthFirstSearch {
+
+    Node startNode;
+    Node goalNode;
+
+    public BreadthFirstSearch(Node start, Node goalNode){
+        this.startNode = start;
+        this.goalNode = goalNode;
+    }
+
+    public boolean compute(){
+
+        if(this.startNode.equals(goalNode)){
+            System.out.println(&amp;quot;Goal Node Found!&amp;quot;);
+            System.out.println(startNode);
+        }
+
+        Queue&amp;lt;node&amp;gt; queue = new LinkedList&amp;lt;&amp;gt;();
+        ArrayList&amp;lt;node&amp;gt; explored = new ArrayList&amp;lt;&amp;gt;();
+        queue.add(this.startNode);
+        explored.add(startNode);
+
+        while(!queue.isEmpty()){
+            Node current = queue.remove();
+            if(current.equals(this.goalNode)) {
+                System.out.println(explored);
+                return true;
+            }
+            else{
+                if(current.getChildren().isEmpty())
+                    return false;
+                else
+                    queue.addAll(current.getChildren());
+            }
+            explored.add(current);
+        }
+
+        return false;
+
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;The Results&lt;/h2&gt;
+
+&lt;p&gt;Whilst Breadth First Search can be useful in graph traversal algorithms, one of its flaws is that it finds the shallowest goal node or station which doesn’t necessarily mean it’s the most optimal solution. Breadth First Search is only every optimal if for instance you happen to be in a scenario where all actions have the same cost.&lt;/p&gt;
+
+&lt;p&gt;Breadth First graph traversal algorithms also happen to be very computationally demanding in the way that they calculate the shortest path. Take for instance if we have a binary tree of depth 10. The binary tree contains nodes which contain a maximum of 2 child nodes each, this is otherwise known as having a branching factor equal to 2.  if we wanted to compute the optimal path for this graph then we would have to traverse, in a worst case scenario, 512 distinct nodes. Given that on modern machines this isn’t exactly what we would consider demanding, imagine if we had a new graph that had 3 child nodes for every node and the same depth of 10. With this new graph we would have to traverse, in a worst case scenario, 19,683 different nodes. And given that this is only at depth 10 with 3 child nodes, you can easily extrapolate the numbers for yourself. With a branching factor of 10 and a depth of 16, it would take 350 years to compute the solution on an ordinary personal computer, give or take.&lt;/p&gt;
+
+&lt;h2&gt;Our Driver Class&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;/**
+ * Our main driver class which instantiates some example nodes
+ * and then performs the breadth first search upon these newly created
+ * nodes.
+ */
+public class Driver {
+
+    public static void main(String args[]){
+        Node station1 = new Node(&amp;quot;Westminster&amp;quot;, null, null);
+        Node station2 = new Node(&amp;quot;Waterloo&amp;quot;, station1, null);
+        Node station3 = new Node(&amp;quot;Trafalgar Square&amp;quot;, station1, station2);
+        Node station4 = new Node(&amp;quot;Canary Wharf&amp;quot;, station2, station3);
+        Node station5 = new Node(&amp;quot;London Bridge&amp;quot;, station4, station3);
+        Node station6 = new Node(&amp;quot;Tottenham Court Road&amp;quot;, station5, station4);
+
+        BreadthFirstSearch bfs = new BreadthFirstSearch(station6, station1);
+
+        if(bfs.compute())
+            System.out.print(&amp;quot;Path Found!&amp;quot;);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;If you found this tutorial useful or require further assistance then please let me know in the comments section below!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Depth First Search in Java</title>
+      <link>/post/general/artificial-intelligence/depth-first-search/</link>
+      <pubDate>Sat, 15 Apr 2017 09:23:35 +0100</pubDate>
+      
+      <guid>/post/general/artificial-intelligence/depth-first-search/</guid>
+      <description>
+
+&lt;h2&gt;Depth First Search&lt;/h2&gt;
+
+&lt;p&gt;DFS is another uninformed graph traversal algorithm which produces a non-optimal solution but can be useful for traversing quickly into deeper search domains. Depth first search is very similar to the previously covered breadth first search that we covered in this tutorial: &lt;a href=&#34;http://tutorialedge.net/breadth-first-search-with-java&#34;&gt;breadth first search in Java&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;How it Works&lt;/h2&gt;
+
+&lt;p&gt;With Depth first search you start at the top most node in a tree and then follow the left most branch until there exists no more leafs in that branch. At that point you will search the nearest ancestor with unexplored nodes until such time as you find the goal node.&lt;/p&gt;
+
+&lt;p&gt;If we take this binary tree as an example, the depth first search algorithm would do the following:&lt;/p&gt;
+
+&lt;ol&gt;
+    &lt;li&gt;Add Node 1 to the stack &lt;/li&gt;
+    &lt;li&gt;If Node 1 isn&#39;t the goal node then add Node 2 to the stack&lt;/li&gt;
+    &lt;li&gt;Check if Node 2 is the goal node and if not add Node 4 to the stack.&lt;/li&gt;
+    &lt;li&gt;If Node 4 isn&#39;t the goal node then add Node 8 to the stack. &lt;/li&gt;
+    &lt;li&gt;If node 8 isn&#39;t the goal node then go to the nearest ancestor with unexplored children.&lt;/li&gt;
+    &lt;li&gt;This happens to be Node 4, so we add Node 9 to the stack and check that.&lt;/li&gt;
+    &lt;li&gt;If this isn&#39;t the goal node then we travel to Node 2 and explore it&#39;s unexplored children, Node 5.&lt;/li&gt;
+    &lt;li&gt;and so on...&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;We continue to go down the left most nodes until we find the first path that reaches our goal node.&lt;/p&gt;
+
+&lt;h2&gt;AbstractSearch Class&lt;/h2&gt;
+
+&lt;p&gt;As a means of clearing up the code from all these tutorials I am going to add in an abstract class to which all of our graph traversal classes will extend and adhere to. The source code for this looks like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;/**
+ * AbstractSearch class so that we have a template
+ * that all future graph traversal algorithms must adhere to.
+ * this will make it far easier to &amp;quot;hot-swap&amp;quot; different algorithms
+ * out for testing later on.
+ */
+public abstract class AbstractSearch {
+
+    Node startNode;
+    Node goalNode;
+
+    public AbstractSearch(Node startNode, Node goalNode){
+        this.startNode = startNode;
+        this.goalNode = goalNode;
+    }
+
+    public abstract boolean execute();
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;depth-first-search-implementation&#34;&gt;Depth First Search Implementation&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import java.util.ArrayList;
+import java.util.Stack;
+
+/**
+ * depth first search implementation using a stack structure instead of a queue
+ * structure as exhibited in the breadth first search algorithm
+ */
+public class DepthFirstSearch extends AbstractSearch{
+
+    Node startNode;
+    Node goalNode;
+
+    public DepthFirstSearch(Node start, Node goalNode){
+        super(start, goalNode);
+        this.startNode = start;
+        this.goalNode = goalNode;
+    }
+
+    public boolean execute(){
+        if(this.startNode.equals(goalNode)){
+            System.out.println(&amp;quot;Goal Node Found at 0 depth&amp;quot;);
+            System.out.println(startNode);
+        }
+        Stack&amp;lt;node&amp;gt; nodeStack = new Stack&amp;lt;&amp;gt;();
+        ArrayList&amp;lt;node&amp;gt; visitedNodes = new ArrayList&amp;lt;&amp;gt;();
+
+        nodeStack.add(startNode);
+
+        while(!nodeStack.isEmpty()){
+            Node current = nodeStack.pop();
+            if(current.equals(goalNode)){
+                System.out.print(visitedNodes);
+                System.out.println(&amp;quot;Goal node found&amp;quot;);
+                return true;
+            }
+            else {
+                visitedNodes.add(current);
+                nodeStack.addAll(current.getChildren());
+            }
+        }
+        return false;
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Updating our Driver class&lt;/h2&gt;
+
+&lt;p&gt;Due to the fact we&#39;ve created an abstract search class we can now do something similar to this in our driver class:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/**
+ * Created by elliotforbes on 24/06/15.
+ */
+public class Driver {
+
+    public static void main(String args[]){
+        Node station1 = new Node(&amp;quot;Westminster&amp;quot;, null, null);
+        Node station2 = new Node(&amp;quot;Waterloo&amp;quot;, station1, null);
+        Node station3 = new Node(&amp;quot;Trafalgar Square&amp;quot;, station1, station2);
+        Node station4 = new Node(&amp;quot;Canary Wharf&amp;quot;, station2, station3);
+        Node station5 = new Node(&amp;quot;London Bridge&amp;quot;, station4, station3);
+        Node station6 = new Node(&amp;quot;Tottenham Court Road&amp;quot;, station5, station4);
+
+        // We instantiate searchAlgo as type AbstractSearch but we set it to equal
+        // our newly created DepthFirstSearch concrete class implementation
+        AbstractSearch searchAlgo = new DepthFirstSearch(station6, station1);
+
+        if(searchAlgo.execute())
+            System.out.print(&amp;quot;Path Found!&amp;quot;);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Depth Limited Search in Java</title>
+      <link>/post/general/artificial-intelligence/depth-limited-search-in-java/</link>
+      <pubDate>Sat, 15 Apr 2017 09:23:35 +0100</pubDate>
+      
+      <guid>/post/general/artificial-intelligence/depth-limited-search-in-java/</guid>
+      <description>&lt;h2&gt;About Depth Limited Searching&lt;/h2&gt;
+
+&lt;p&gt;Traditional depth first search could be deemed useless in infinite state spaces as they will continue to traverse down the leftmost branch infinitely. This essentially means that the path to the goal node might never be found, in order to combat this we can add a limit to the depth that our search recurses down the tree, this essentially transforms our depth first algorithm into a depth-limited algorithm.&lt;/p&gt;
+
+&lt;p&gt;This algorithm can fail in two different ways. First is that no goal node is found in the graph and the other is the cutoff type of failure in which no goal node is found within the set depth.&lt;/p&gt;
+
+&lt;h2&gt;Walkthrough&lt;/h2&gt;
+
+&lt;p&gt;This algorithm basically follows the same methods as the depth first search.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Node 1 is added to the stack
+
+&lt;ol&gt;
+&lt;li&gt;If Node 1 is not the goal node then add Node 2 to the stack&lt;/li&gt;
+&lt;li&gt;If Node 2 is not the goal node then add Node 4 to the stack&lt;/li&gt;
+&lt;li&gt;If Node 4 is not the goal node and depth limit has been reached then revert to nearest Node with unexplored children and add these to stack&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;continue until all nodes within depth limit have been searched or goal node has been found.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Depth First Search:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;For more information about the search based algorithm that this is based off, you can check out this tutorial here: &lt;a href=&#34;http://tutorialedge.net/depth-first-search-in-java&#34;&gt;Depth First Search in Java&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;The Implementation:&lt;/h2&gt;
+
+&lt;p&gt;Below you’ll find an implementation of a Depth-Limited search class which is built as an extension of the AbstractSearch java class.&lt;/p&gt;
+
+&lt;h2&gt;AbstractSearch Java Class:&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;/**
+* AbstractSearch.
+*/
+public abstract class AbstractSearch {
+
+   Node startNode;
+   Node goalNode;
+
+   public AbstractSearch(Node startNode, Node goalNode){
+       this.startNode = startNode;
+       this.goalNode = goalNode;
+   }
+
+   public abstract boolean execute();
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Depth Limited Search Class&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import java.util.ArrayList;
+import java.util.Stack;
+
+/**
+* Depth Limited Search Class
+*/
+public class DepthLimitedSearch extends AbstractSearch {
+
+   Node startNode;
+   Node goalNode;
+   int depth = 0;
+   int limit = 2;
+
+   public DepthLimitedSearch(Node start, Node goalNode){
+       super(start, goalNode);
+       this.startNode = start;
+       this.goalNode = goalNode;
+   }
+
+   public boolean execute(){
+       Stack&amp;lt;node&amp;gt; nodeStack = new Stack&amp;lt;&amp;gt;();
+       ArrayList&amp;lt;node&amp;gt; visitedNodes = new ArrayList&amp;lt;&amp;gt;();
+       nodeStack.add(startNode);
+
+       depth = 0;
+
+       while(!nodeStack.isEmpty()){
+           if(depth &amp;lt;= limit) {
+               Node current = nodeStack.pop();
+               if (current.equals(goalNode)) {
+                   System.out.print(visitedNodes);
+                   System.out.println(&amp;quot;Goal node found&amp;quot;);
+                   return true;
+               } else {
+                   visitedNodes.add(current);
+                   nodeStack.addAll(current.getChildren());
+                   depth++;
+
+               }
+           } else {
+               System.out.println(&amp;quot;Goal Node not found within depth limit&amp;quot;);
+               return false;
+           }
+       }
+
+
+       return false;
+   }
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Java Multithreading Tutorial Using Callable</title>
+      <link>/post/java/java-multithreading-tutorial-using-callable/</link>
+      <pubDate>Sat, 15 Apr 2017 08:42:15 +0100</pubDate>
+      
+      <guid>/post/java/java-multithreading-tutorial-using-callable/</guid>
+      <description>&lt;p&gt;In this tutorial I’ll be giving you a brief introduction to the world of concurrent programming using the Java programming language. By the end of this tutorial you should hopefully have a feel for what it takes to write simple, multi-threaded java programs and an understanding of how these can help improve the performance of your programs on multithreaded/multicore machines.&lt;/p&gt;
+
+&lt;h2&gt;Requirements&lt;/h2&gt;
+
+&lt;p&gt;In order to successfully complete this tutorial you will need to have Java 7 installed and running on your machine, as well as a method for editing and executing your Java code for which I would recommend the Eclipse or Intellij IDE.&lt;/p&gt;
+
+&lt;p&gt;You’ll also need a basic understanding of the Java programming language. Everything covered here will be built on top of a pre-existing Java background.&lt;/p&gt;
+
+&lt;h2&gt;Introduction - What is Concurrent Programming?&lt;/h2&gt;
+
+&lt;p&gt;“Concurrent computing is a form of computing in which several computations are executing during overlapping time periods - concurrently - instead of sequentially” - Wikipedia&lt;/p&gt;
+
+&lt;p&gt;What this essentially means for us is that we can have our programs utilizing more of the power that is contained within our CPUs by spreading the load evenly across multiple cores and threads. If you gave 1 worker 1,000,000 computations to work through and each computation took 1 minute, the fastest that worker could complete that task is in 1,000,000 minutes. If you had 100 workers working on that 1,000,000 computations then it should take roughly 100 times faster, this isn’t always the case with computers but we do see tremendous performance enhancements and far greater CPU utilization. &lt;/p&gt;
+
+&lt;p&gt;One thing to bear in mind is that we don’t have an infinite number of threads on a CPU and creating more and more threads could eventually start to severely hamper your program’s performance.&lt;/p&gt;
+
+&lt;h2&gt;Implementing this in Java&lt;/h2&gt;
+
+&lt;p&gt;There are multiple ways we can implement multithreading into our programs but the one I’m going to be focusing on in this tutorial is the Callable method. This method is advantageous over the Runnable and Thread methods as it allows you to see the results of execution.&lt;/p&gt;
+
+&lt;p&gt;We’ll start of with a basic Java class implementing Callable:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.tutorialedge.net;
+
+import java.util.concurrent.Callable;
+
+public class Worker implements Callable{
+	
+	String identifier;
+	
+	Worker(String identifier){
+		this.identifier = identifier;
+	}
+	
+	@Override
+	public String call() throws Exception {
+		System.out.println(&amp;quot;Worker ID: &amp;quot; + this.identifier);
+		
+		for(int i = 0; i &amp;lt; 10000; i++){
+			System.out.println(&amp;quot;ID: &amp;quot; + this.identifier + &amp;quot; ,Value: &amp;quot; + i);
+		}
+		
+		return null;
+	}
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Next thing we’ll do is create a main method which will run our workers for us. This will look something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.tutorialedge.net;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class Main {
+
+	public static void main(String[] args){
+		ExecutorService pool = Executors.newFixedThreadPool(4);
+		
+		Worker worker1 = new Worker(&amp;quot;1&amp;quot;);
+		Worker worker2 = new Worker(&amp;quot;2&amp;quot;);
+		Worker worker3 = new Worker(&amp;quot;3&amp;quot;);
+		Worker worker4 = new Worker(&amp;quot;4&amp;quot;);
+		
+		pool.submit(worker1);
+		pool.submit(worker2);
+		pool.submit(worker3);
+		pool.submit(worker4);
+		
+		pool.shutdown();
+		
+		System.out.println(&amp;quot;Hello World&amp;quot;);
+	}
+	
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Managing Game States With LWJGL 3</title>
+      <link>/post/java/lwjgl3/managing-game-state-with-lwjgl3/</link>
+      <pubDate>Sat, 15 Apr 2017 08:23:18 +0100</pubDate>
+      
+      <guid>/post/java/lwjgl3/managing-game-state-with-lwjgl3/</guid>
+      <description>&lt;p&gt;Managing game states effectively in any game can sometimes be tricky and if not done properly from the outset, can lead to a tangled mess of spaghetti code that’s almost unmaintainable. In this tutorial I’m hopefully going to be helping to prevent any of these problems from arising in your own personal game development projects. For the purpose of this tutorial I’ll be using Java and the OpenGL wrapper library LWJGL3 in order to demonstrate how to effectively manage game states.&lt;/p&gt;
+
+&lt;h2&gt;The Design&lt;/h2&gt;
+
+&lt;p&gt;So straight away I know I want to have a game that has a main menu, as well as the ability to pause and play and possibly a movie state that allows me to show in-game cinematics or something to that effect. So from this we’ll create the following states: MENU, PLAY, PAUSE, MOVIE&lt;p&gt;
+
+&lt;h2&gt;The Implementation&lt;/h2&gt;
+
+&lt;p&gt;In Java we can easily represent these states like so using an enum: &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;private enum State {
+    MENU, PLAY, PAUSE, MOVIE 
+};
+
+private static State gameState = State.MENU;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;After we’ve declared what states we want and initialized what state we are in on startup, we can then add some form of logic to our update and render functions that allow us to choose when and where to update and render different aspects of our game. &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;    public void update() {
+        handleInput();
+        
+        switch(gameState) {
+            case MENU:
+                // update all menu stuff
+                break;
+            case PLAY:
+                // update our player object and allow us to play
+                player1.update();
+                break;
+                
+            case PAUSE:
+                // stop updating our game objects and essentially do nothing
+                break;
+                
+            case MOVIE:
+                // Play any movie clips...
+                break;
+                
+            default:
+                break;  
+        }
+        
+    }
+    
+    public void render() {
+        
+        switch(gameState){
+            case MENU:
+                // Just show our background, we can add some cool menus and stuff
+                // here but for now I&#39;m keeping it simple.
+                bg.render();
+                break;
+            case PLAY:
+                // Render both our player and background and in update switch
+                // we enable player1.update()
+                bg.render();
+                player1.render();
+                break;
+            case PAUSE:
+                // Render our player and background but don&#39;t allow them to
+                // update
+                bg.render();
+                player1.render();
+                break;
+            case MOVIE:
+                // Play any movie clips...
+                break;
+            default:
+                // Switch cases should almost always have a default case
+                // this is so that it catches any unexpected values although.
+                break;
+        }
+        
+    }
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;h2&gt;Switching States&lt;/h2&gt;
+&lt;p&gt;As a means of switching states, I’ve created a simple method in my game class that checks to see whether any of the main keys I have defined for switching states have been pressed.&lt;/p&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public void handleInput(){
+		if(KeyboardHandler.isKeyDown(GLFW.GLFW_KEY_SPACE)){
+			gameState = State.PLAY;
+		}
+		if(KeyboardHandler.isKeyDown(GLFW.GLFW_KEY_P)){
+			System.err.println(&amp;quot;Pausing Play...&amp;quot;);
+			gameState = State.PAUSE;
+		}
+		if(KeyboardHandler.isKeyDown(GLFW.GLFW_KEY_R)){
+			gameState = State.PLAY;
+			System.err.println(&amp;quot;Resuming Play...&amp;quot;);
+		}
+		if(KeyboardHandler.isKeyDown(GLFW.GLFW_KEY_ESCAPE)){
+			gameState = State.MENU;
+		}
+	}
+
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>UDP Client Server Tutorial Java</title>
+      <link>/post/java/udp-client-server-tutorial-java/</link>
+      <pubDate>Sun, 09 Apr 2017 21:24:02 +0100</pubDate>
+      
+      <guid>/post/java/udp-client-server-tutorial-java/</guid>
+      <description>
+
+&lt;p&gt;In this tutorial we’ll be looking at how we can set up a UDP client and server using Java’s DatagramSocket’s.&lt;/p&gt;
+
+&lt;h2 id=&#34;udp-server&#34;&gt;UDP Server&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;package com.tutorialedge.server;
+
+import java.io.IOException;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
+import java.net.SocketException;
+
+import org.apache.log4j.Logger;
+
+import com.tutorialedge.driver.ServerDriver;
+
+public class Server implements Runnable{
+	final static Logger logger = Logger.getLogger(Server.class);
+	
+	private DatagramSocket serverSocket;
+	
+	private byte[] in;
+	private byte[] out;
+	
+	/*
+	 * Our constructor which instantiates our serverSocket
+	 */
+	public Server() throws SocketException{
+		serverSocket = new DatagramSocket(10000);
+	}
+
+	public void run() {
+		while(true){
+			try {
+				in = new byte[1024];
+				out = new byte[1024];
+				
+				/*
+				 * Create our inbound datagram packet
+				 */
+				DatagramPacket receivedPacket = new DatagramPacket(in, in.length);
+				serverSocket.receive(receivedPacket);
+				
+				/*
+				 * Get the data from the packet we&#39;ve just received
+				 * and transform it to uppercase.
+				 */
+				String text = new String(receivedPacket.getData());
+				out = text.toUpperCase().getBytes();
+				logger.info(&amp;quot;String Received: &amp;quot; + text);
+				
+				/*
+				 * Retrieve the IP Address and port number of the datagram packet
+				 * we&#39;ve just received
+				 */
+				InetAddress IPAddress = receivedPacket.getAddress();
+				int port = receivedPacket.getPort();
+				
+				/*
+				 * Create a DatagramPacket which will return our message back to the last system
+				 * that we received from
+				 */
+				DatagramPacket sendPacket = new DatagramPacket(in, in.length, IPAddress, port);
+				serverSocket.send(sendPacket);
+			} catch (IOException e) {
+				/*
+				 * Handle our servers exception
+				 */
+				logger.info(&amp;quot;Exception thrown: &amp;quot; + e.getLocalizedMessage());
+			}
+			
+		}
+	}
+	
+	
+	
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;udp-client&#34;&gt;UDP Client&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;package com.tutorialedge.client;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
+import java.net.SocketException;
+import java.net.UnknownHostException;
+
+import org.apache.log4j.Logger;
+
+import com.tutorialedge.server.Server;
+
+public class Client implements Runnable{
+	final static Logger logger = Logger.getLogger(Server.class);
+	
+	private BufferedReader inFromUser;
+	private DatagramSocket clientSocket;
+	private InetAddress IPAddress;
+	
+	/*
+	 * Our byte arrays that we&#39;ll use to read in and send out to our UDP server
+	 */
+	private byte[] outData;
+    private byte[] inData;
+	
+    /*
+     * Our Client constructor which instantiates our clientSocket
+     * and get&#39;s our IPAddress
+     */
+	public Client() throws SocketException, UnknownHostException{
+		clientSocket = new DatagramSocket();
+		IPAddress = InetAddress.getByName(&amp;quot;localhost&amp;quot;);
+		inFromUser = new BufferedReader(new InputStreamReader(System.in));
+	}
+	
+	private void shutdown(){
+		clientSocket.close();
+	}
+	
+	public void run() {
+		logger.info(&amp;quot;Client Started, Listening for Input:&amp;quot;);
+		/*
+		 * Start a while loop that will run until we kill the program, this will continuously
+		 * poll for user input and send it to the server.
+		 */
+		while(true){
+			try {
+				inData = new byte[1024];
+				outData = new byte[1024];
+				/*
+				 * First we read in the users input from the console.
+				 */
+				System.out.print(&amp;quot;&amp;gt; &amp;quot;);
+				String sentence = inFromUser.readLine();
+				outData = sentence.getBytes();
+				
+				/*
+				 * Next we create a datagram packet which will allow us send our message back to our datagram server
+				 */
+				DatagramPacket out = new DatagramPacket(outData, outData.length, IPAddress, 10000);
+				clientSocket.send(out);
+				
+				/*
+				 * Once we&#39;ve sent our message we create a second datagram packet which will
+				 * let us receive a response.
+				 */
+				DatagramPacket in = new DatagramPacket(inData, inData.length);
+				clientSocket.receive(in);
+				
+				/*
+				 * Finally we log the response from the server using log4j
+				 */
+				String modifiedSentence = new String(in.getData());
+				logger.info(&amp;quot;Server &amp;gt;&amp;quot; + modifiedSentence);
+				
+			} catch (IOException e) {
+				/*
+				 * Here we need to capture any exceptions thrown by our application
+				 */
+				logger.error(&amp;quot;Exception Thrown: &amp;quot; + e.getLocalizedMessage());
+			}
+		}
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;serverdriver-class&#34;&gt;ServerDriver Class&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;package com.tutorialedge.driver;
+
+import java.net.SocketException;
+
+import org.apache.log4j.Logger;
+
+import com.tutorialedge.server.Server;
+
+public class ServerDriver {
+	final static Logger logger = Logger.getLogger(ServerDriver.class);
+	
+	public static void main(String[] args) throws SocketException{
+		logger.info(&amp;quot;Networking Tutorial v0.01&amp;quot;);
+		new Thread(new Server()).start();
+	}
+	
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;clientdriver-class&#34;&gt;ClientDriver Class&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;package com.tutorialedge.driver;
+
+import java.net.SocketException;
+import java.net.UnknownHostException;
+
+import org.apache.log4j.Logger;
+
+import com.tutorialedge.client.Client;
+
+public class ClientDriver {
+	final static Logger logger = Logger.getLogger(ServerDriver.class);
+	
+	public static void main(String[] args) throws SocketException, UnknownHostException{
+		logger.info(&amp;quot;Starting Client...&amp;quot;);
+		new Thread(new Client()).start();
+	}
+	
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
