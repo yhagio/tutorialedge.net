@@ -76,10 +76,10 @@ nav .button-collapse .ion { color: white !important; }
     height: 150px;
     border-radius: 10px 10px 0px 0px;
     background-color: #333333;
-    background-image: url(http://www.invokemedia.com/wp-content/uploads/2015/07/angular.png);
-    background-size: auto 130%;
-    background-position: center center;
-    background-repeat: no-repeat;
+}
+.course-card .top-half img {
+  width: 150px;
+  height: auto;
 }
 .course-card .bottom-half {
   margin-left: 5%;
@@ -102,10 +102,7 @@ nav .button-collapse .ion { color: white !important; }
 }
 
 
-.wrapper {
-  margin: 63px auto;
-  z-index: 1;
-}
+.wrapper { margin: 63px auto; z-index: 1; }
 .wrapper .container {
   background-color: #fff;
   width: 100%;
@@ -117,9 +114,7 @@ nav .button-collapse .ion { color: white !important; }
   padding-top: 36px;
   padding-bottom: 36px;
 }
-.wrapper .trophy {
-  margin-bottom: 24px;
-}
+.wrapper .trophy { margin-bottom: 24px; }
 .wrapper h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
@@ -138,9 +133,9 @@ nav .button-collapse .ion { color: white !important; }
   letter-spacing: 1px;
   margin-bottom: 17px;
 }
-.wrapper img {
-  width: 80px;
-  height: 80px;
+.wrapper .container img {
+  width: 80px !important;
+  height: 80px !important;
   border-radius: 40px;
   margin: 0;
   padding: 0;
@@ -152,10 +147,7 @@ nav .button-collapse .ion { color: white !important; }
   padding: 0 15%;
   line-height: 24px;
 }
-.wrapper .buttons {
-  width: 100%;
-  text-align: center;
-}
+.wrapper .buttons { width: 100%; text-align: center; }
 .wrapper .buttons .button {
   display: block;
   text-decoration: none;
@@ -171,13 +163,8 @@ nav .button-collapse .ion { color: white !important; }
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
 }
-.wrapper .buttons .button:hover span {
-  border-bottom: 1px solid #fff;
-}
-.wrapper .buttons .button.light {
-  background-color: #4fc3f7;
-}
-
+.wrapper .buttons .button:hover span { border-bottom: 1px solid #fff; }
+.wrapper .buttons .button.light { background-color: #4fc3f7; }
 .about {
   width: 100%;
   padding: 40px;
@@ -194,11 +181,7 @@ nav .button-collapse .ion { color: white !important; }
     margin-top: 20px;
     color: #333;
 }
-.about p {
-      font-size: 18px;
-    color: #333;
-}
-
+.about p { font-size: 18px; color: #333; }
 .title-bar {
   text-align: center;
   width: 100%;
@@ -211,21 +194,17 @@ nav .button-collapse .ion { color: white !important; }
   font-weight: 600;
   line-height: 3.125rem;
 }
-.title-bar p {
-  color: white !important;
-}
+.title-bar p { color: white !important; }
 .title-bar .chip {
   background-color: #158DA0 !important;
   color: white !important;
 }
-
 .container article {
   background-color: white;
   padding: 20px;
   padding-top: 40px;
   padding-bottom: 40px;
 }
-
 article h1,h2,h3,h4,h5 {
     font-weight: 300;
     line-height: 1.2;
@@ -249,9 +228,8 @@ article pre {
     padding: 20px;
     background-color: #272822;
 }
-.sidebar {
-  padding: 20px;
-}
+.container img { width: 100%; height: auto; }
+.sidebar { padding: 20px; }
 .sidebar h3 {
   color: #262626;
   text-transform: uppercase;

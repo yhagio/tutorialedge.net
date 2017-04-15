@@ -12,11 +12,12 @@
 		{{ range $paginator.Pages }}
 			<div class="col l4">
 				<div class="card course-box">
-				{{ partial "summary.html" . }}
+					<p>{{ .Title }}</p>
 				</div>
 			</div>
 		{{ end }}
-		{{ partial "pagination.html" . }}
+		
 		</div>
+		{{ partial "pagination.html" . }}
 	</div>
 {{ partial "footer.html" . }}

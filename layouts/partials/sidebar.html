@@ -2,15 +2,7 @@
     {{ range $key, $value := .Params.series }} 
     <h3>{{ $value }}</h3>
     <ul> 
-      {{ range (index $.Site.Taxonomies.series $value) }}
-        <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a></li>
-      {{ end }}
-    </ul>
-    {{ end }}
-
-    {{ range $key, $value := .Params.tags }}
-    <ul>
-      {{ range (index $.Site.Taxonomies.tags $value ) }}
+      {{ range (first 10 (index $.Site.Taxonomies.series $value)) }}
         <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a></li>
       {{ end }}
     </ul>
