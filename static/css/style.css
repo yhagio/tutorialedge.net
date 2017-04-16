@@ -12,7 +12,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 nav { background-color: #2B3840; }
-nav .brand-logo { font-weight: 300; }
+nav .brand-logo { font-weight: 300; margin-left: 10px; }
+nav .button-collapse { margin-left: 10px; }
 nav li:first-child { border-left: 1px solid #3B4951; }
 nav li:not(:last-child) { border-right: 1px solid #3B4951; }
 nav .button-collapse .ion { color: white !important; }
@@ -54,8 +55,8 @@ nav .button-collapse .ion { color: white !important; }
 }
 
 .course-card {
-  width: 350px;
-  height: 220px;
+  width: 100%hugo;
+  height: auto;
   background-color: white;
   margin-bottom: 40px;
   border-radius: 10px;
