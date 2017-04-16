@@ -4,7 +4,7 @@ date = "2017-04-15T08:17:02+01:00"
 title = "Creating and Deleting Directories With NodeJS"
 desc = "In this tutorial I'll be showing you how to both create and delete directories using NodeJS"
 series = [ "nodejs" ]
-tags = ["xml", "javascript", "nodejs"]
+tags = [ "javascript", "nodejs"]
 author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++
