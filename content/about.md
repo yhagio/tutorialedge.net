@@ -14,7 +14,7 @@ It's undergone many changes since it was first created and overall I've probably
 
 ## The Code
 
-For those interested in what the code base looks like for the entire website then be sure to check out this github repo: https://github.com/elliotforbes/tutorialedge-v2
+For those interested in what the code base looks like for the entire website then be sure to check out this github repo: [TutorialEdge-V2](https://github.com/elliotforbes/tutorialedge-v2)
 
 ## The Growth
 
