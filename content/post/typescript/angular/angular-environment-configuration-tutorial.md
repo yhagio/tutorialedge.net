@@ -4,6 +4,7 @@ draft = true
 title = "Angular Multiple Environment Configuration Tutorial"
 desc = "In this tutorial we look at how we can easily define different application configuration for different environments."
 author = "Elliot Forbes"
+series = ["angular"]
 tags = ["angular", "typescript"]
 twitter = "https://twitter.com/Elliot_F"
 +++

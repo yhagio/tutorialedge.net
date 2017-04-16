@@ -5,6 +5,7 @@ draft = true
 desc = "Here we look at everything it takes to define your own Angular components."
 tags = ["angular", "typescript"]
 author = "Elliot Forbes"
+series = ["angular"]
 twitter = "https://twitter.com/Elliot_F"
 +++
 

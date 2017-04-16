@@ -5,6 +5,7 @@ title = "Angular Observables Tutorial using RxJS"
 desc = "In this tutorial we'll be looking at Angular 2 Observables, what they are and how we can use them in our Angular applications."
 author = "Elliot Forbes"
 tags = ["angular", "typescript"]
+series = ["angular"]
 twitter = "https://twitter.com/Elliot_F"
 +++
 

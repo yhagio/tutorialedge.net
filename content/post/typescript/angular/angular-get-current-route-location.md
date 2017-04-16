@@ -5,6 +5,7 @@ draft = true
 desc = "In this tutorial we examine ways to obtain the current URL route using the location service."
 author = "Elliot Forbes"
 tags = ["angular", "typescript"]
+series = ["angular"]
 twitter = "https://twitter.com/Elliot_F"
 +++
 

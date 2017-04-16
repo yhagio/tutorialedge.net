@@ -1,10 +1,11 @@
 +++
 draft = true
 date = "2017-04-09T20:55:22+01:00"
-title = "angular detecting route changes"
+title = "Angular Detecting Route Changes Within Your Application"
 desc = "In this tutorial we look at how we can subscribe to route change events within our Angular 2 applications."
 author = "Elliot Forbes"
 tags = ["angular", "typescript"]
+series = ["angular"]
 twitter = "https://twitter.com/Elliot_F"
 +++
 

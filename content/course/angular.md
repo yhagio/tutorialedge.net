@@ -19,48 +19,48 @@ Angular 2 is the latest iteration of the wildly successful Angular framework and
 
 Learn the fundamentals of Angular modules and how they are used in angular applications.
 
-* [Angular 2 Modules Tutorial](https://tutorialedge.net/angular-2-modules-tutorial)
+* [Angular 2 Modules Tutorial](https://tutorialedge.net/post/typescript/angular/angular-modules-tutorial/)
 
 #### Components 
 
 The web is moving towards more component based applications. Being able to define components once and reuse them multiple times throughout your applications is exceptionally useful. 
 
-* [Angular 2 Components Tutorial](https://tutorialedge.net/angular-2-components-tutorial)
+* [Angular 2 Components Tutorial](https://tutorialedge.net/post/typescript/angular/angular-components-tutorial/)
 
 #### Services
 
 If your applications interact with REST APIs at all then you'll want to utilize services within your application. In this section we look at how to build your own services that can be used throughout your site.
 
-* [Angular 2 Services Tutorial](https://tutorialedge.net/angular-2-services-tutorial)
+* [Angular 2 Services Tutorial](https://tutorialedge.net/post/typescript/angular/angular-services-tutorial/)
 
 #### Environment Configuration
 
 Easily configuring different applications for different environments is important. This section shows you exactly how we can do that:
 
-* [Angular Environment Configuration Tutorial](https://tutorialedge.net/angular-environment-configuration-tutorial)
+* [Angular Environment Configuration Tutorial](https://tutorialedge.net/post/typescript/angular/angular-environment-configuration-tutorial/)
 
 #### Routing
 
 Most Complicated Angular applications will require some form of routing. 
 
-* [Angular Routing Tutorial](https://tutorialedge.net/angular-routing-tutorial)
+* [Angular Routing Tutorial](https://tutorialedge.net/post/typescript/angular/angular-routing-tutorial/)
 
 #### Websockets
 
 Explore the power and versatility of using websockets in your angular applications. 
 
-* [Angular 2 Websockets Tutorial](https://tutorialedge.net/angular-2-websockets-tutorial)
+* [Angular 2 Websockets Tutorial](https://tutorialedge.net/post/typescript/angular/angular-websockets-tutorial/)
 
 #### Cookies
 
 Cookies can be very handy for developing certain types of application. They are used for a wide range of things such as authentication or even storing previous search history and favourites on large shopping sites. 
 
-* [Angular 2 Cookies Tutorial](https://tutorialedge.net/angular-2-cookies-tutorial)
+* [Angular 2 Cookies Tutorial](https://tutorialedge.net/post/typescript/angular/angular-cookies-tutorial/)
 
 #### Miscellaneous Tutorials
 
-* [Angular 2 Getting Current Route Using the Location Service](https://tutorialedge.net/angular-2-get-current-route-location)
-* [Angular 2 Detecting Route Changes](https://tutorialedge.net/angular-2-detecting-route-changes)
+* [Angular 2 Getting Current Route Using the Location Service](https://tutorialedge.net/post/typescript/angular/angular-get-current-route-location/)
+* [Angular 2 Detecting Route Changes](https://tutorialedge.net/post/typescript/angular/angular-detecting-route-changes/)
 
 # Example Angular 2 Applications:
 

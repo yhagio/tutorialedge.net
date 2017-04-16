@@ -4,6 +4,7 @@ draft = true
 title = "Angular Routing Tutorial"
 desc = "In this tutorial we look at how we can define routes in our Angular applications."
 author = "Elliot Forbes"
+series = ["angular"]
 tags = ["angular", "typescript"]
 twitter = "https://twitter.com/Elliot_F"
 +++

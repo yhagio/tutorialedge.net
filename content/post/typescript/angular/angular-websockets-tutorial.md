@@ -5,6 +5,7 @@ draft = true
 desc = "In this tutorial we look at how we can work with websockets and subjects in our Angular applications."
 author = "Elliot Forbes"
 tags = ["angular", "typescript"]
+series = ["angular"]
 twitter = "https://twitter.com/Elliot_F"
 +++
 

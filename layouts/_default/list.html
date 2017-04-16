@@ -10,11 +10,17 @@
 		<div class="row flexbox-courses">
 		{{ $paginator := .Paginate ( where .Data.Pages "Section" "post")  }}
 		{{ range $paginator.Pages }}
-			<div class="col l4">
-				<div class="card course-box">
-					<p>{{ .Title }}</p>
+			<div class="col l4 m6 s12">
+			<div class="card">
+				<div class="card-content">
+					<span class="card-title">{{ .Title }}</span>
+					<p>{{ .Params.desc }}</p>
+				</div>
+				<div class="card-action">
+					<a href="{{ .RelPermalink }}">Read More</a>
 				</div>
 			</div>
+		</div>
 		{{ end }}
 		
 		</div>

@@ -5,6 +5,7 @@ draft = true
 desc = "In this tutorial we look at how we can define and utilize services within Angular 2"
 author = "Elliot Forbes"
 tags = ["angular", "typescript"]
+series = ["angular"]
 twitter = "https://twitter.com/Elliot_F"
 +++
 
