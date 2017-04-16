@@ -20,11 +20,11 @@ image = "ai.png"
 <h2>Course Structure</h2>
 
 <ol>
-<li><a href="https://tutorialedge.net/an-intro-to-artificial-intelligence">An Introduction to Artificial Intelligence</a></li>
-<li><a href="https://tutorialedge.net/what-is-an-intelligent-agent">What is an Intelligent Agent?</a></li>
-<li><a href="https://tutorialedge.net/breadth-first-search-with-java">Breadth First Searching Algorithm</a></li>
-<li><a href="https://tutorialedge.net/depth-first-search-in-java">Depth First Searching Algorithm</a></li>
-<li><a href="https://tutorialedge.net/depth-limited-search-in-java">Depth Limited Searching Algorithm</a></li>
+<li><a href="https://tutorialedge.net/post/general/artificial-intelligence/introduction-to-artificial-intelligence/">An Introduction to Artificial Intelligence</a></li>
+<li><a href="https://tutorialedge.net/post/general/artificial-intelligence/what-is-intelligent-agent/">What is an Intelligent Agent?</a></li>
+<li><a href="https://tutorialedge.net/post/general/artificial-intelligence/breadth-first-search-java/">Breadth First Searching Algorithm</a></li>
+<li><a href="https://tutorialedge.net/post/general/artificial-intelligence/depth-first-search/">Depth First Searching Algorithm</a></li>
+<li><a href="https://tutorialedge.net/post/general/artificial-intelligence/depth-limited-search-in-java/">Depth Limited Searching Algorithm</a></li>
 </ol>
 
 
