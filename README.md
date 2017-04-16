@@ -1,30 +1,12 @@
-# Blank
+# TutorialEdge.net
 
-Blank — starter [Hugo](//gohugo.io/) theme for developers. Use it to make your own theme.
+I've been working on TutorialEdge.net as a hobby project since early 2015. Since then it's gone from only a handful of visitors per day to something that attracts hundreds of thousands of visitors per year. 
 
-[Live Demo](http://themes.gohugo.io/theme/blank/)
-
-![Blank theme screenshot](https://github.com/Vimux/blank/blob/master/images/splash.png)
-
-## Installation
-
-In your Hugo site `themes` directory, run:
-
-```
-$ git clone https://github.com/vimux/blank
-```
-
-Next, open `config.toml` in the base of the Hugo site and ensure the theme option is set to `blank`.
-
-```
-theme = "blank"
-```
-
-For more information read the official [setup guide](//gohugo.io/overview/installing/) of Hugo.
+The main aim for the site is for it to be a place that I can host tutorials and courses on any language and framework I choose and hopefully give back something to the programming community.  
 
 ## Contributing
 
-Have you found a bug or got an idea for a new feature? Feel free to use the [issue tracker](//github.com/Vimux/blank/issues) to let me know. Or make directly a [pull request](//github.com/Vimux/blank/pulls).
+Want to contribute to the site? Then fork this repo, make your changes and submit a pull request. I'll review the changes and merge them in so that they go live on the site. 
 
 ## License
 
