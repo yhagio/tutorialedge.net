@@ -9,13 +9,14 @@
 <div class="courses">
 	<div class="container">
 		<div class="row">
-			{{ range (where .Site.Pages "Section" "course") }}
+
+		{{ range (where .Site.Pages "Section" "course") }}
 			{{ if ne .Title "Courses" }}
 			<div class="col l4 m6 s12">
 				<a href="{{ .Permalink }}">
 					<div class="course-card">
 						<div class="top-half">
-							<img src="https://www.invokedigital.co/wp-content/uploads/2015/07/angular.png" alt="">
+							<img src="{{ .Site.BaseURL }}/images/{{ .Params.image }}" alt="">
 						</div>
 						<div class="bottom-half">
 						<div class="title">{{.Title}}</div>
@@ -29,7 +30,9 @@
 			{{ end }}
 			{{ end }}
 
+		</div>
+
 	</div>
 </div>
-</div>
+
 {{ partial "footer.html" . }}
