@@ -31,15 +31,15 @@ We’ll begin by creating some very simple Single Page Applications or SPAs and 
 
 Through this course we’ll be covering the following topics:
 
-* Expressions
-* Form Input
-* Http Requests 
-* Events
-* Factories
-* Services
-* Controllers
-* Directives
-* And more...
+1. Expressions
+2. Form Input
+3. Http Requests 
+4. Events
+5. Factories
+6. Services
+7. Controllers
+8. Directives
+9. And more...
 
 ## Scope and Scope Inheritance
  Scopes are what allow us to manipulate data in the backend controller and have that data reflected instantaneously in the frontend. Scopes provide APIs which what any objects we define and then when they detect changes, they propogate these changes through the system.
