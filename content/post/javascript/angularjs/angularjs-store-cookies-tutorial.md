@@ -12,7 +12,7 @@ twitter = "https://twitter.com/Elliot_F"
 In this tutorial we look at how you can store information in cookies in your AngularJS application. 
 
 
-A cookie is a small piece of data that’s typically sent from a website you may be viewing and stored by your web browser. We can use these cookies for a wide range of things, from storing the last viewed items of a visitor to authentication cookies. These cookies persist across requests and thus are advantageous over using parent components or services to store information between routes as is detailed here: [Passing Information Between Routes using Services](https://tutorialedge.net/passing-data-between-routes-angularjs)
+A cookie is a small piece of data that’s typically sent from a website you may be viewing and stored by your web browser. We can use these cookies for a wide range of things, from storing the last viewed items of a visitor to authentication cookies. These cookies persist across requests and thus are advantageous over using parent components or services to store information between routes as is detailed here: [Passing Information Between Routes using Services](https://tutorialedge.net/post/javascript/angularjs/passing-data-between-routes-angularjs/)
 
 
 <div class="github-link">The full source code for this tutorial can be found here: <a href="https://github.com/elliotforbes/angularjs-fundamentals">AngularJS Fundamentals Repo</a></div>
@@ -26,7 +26,7 @@ Specifying max-age is optional and without this the cookie will only last the sa
 ## Implementation
 
 
-In this tutorial I’ll be following a component based architecture style, if you are not familiar with components in AngularJS then I recommend you check our my other post: [Working with AngularJS Component Based Applications](https://tutorialedge.net/working-with-angularjs-component-applications).
+In this tutorial I’ll be following a component based architecture style, if you are not familiar with components in AngularJS then I recommend you check our my other post: [Working with AngularJS Component Based Applications](https://tutorialedge.net/post/javascript/angularjs/working-with-angularjs-component-applications/).
 
 
 Conversely you can also just lift the code from the controller and put it into your own existing controllers.

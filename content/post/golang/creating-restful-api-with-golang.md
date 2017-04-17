@@ -13,7 +13,7 @@ twitter = "https://twitter.com/Elliot_F"
 
 <p>REST is everywhere these days, from web sites to enterprise applications, the RESTful architecture style is a powerful way of providing communication between various moving by separate software components. Building REST APIs allow you to easily decouple both consumers and producers and are typically stateless by design. </p>
 
-> If you wish to learn more about the basics of REST APIs then check out <a href="https://tutorialedge.net/what-are-restful-apis">What Are RESTful APIs?</a>
+> If you wish to learn more about the basics of REST APIs then check out <a href="https://tutorialedge.net/post/general/what-is-a-rest-api/">What Are RESTful APIs?</a>
 
 <h4>JSON</h4>
 
@@ -29,7 +29,7 @@ twitter = "https://twitter.com/Elliot_F"
 
 <p>In order for a consumer to consume our API we’ll need to set up some form of server which will constantly listen on our local machine for now.</p>
 
-> If you want a more in-depth tutorial on how to create a go based web server then check out this tutorial here: <a href="http://tutorialedge.net/creating-a-simple-web-server-with-go-golang">Creating a Simple Web Server with Go(Lang)</a>
+> If you want a more in-depth tutorial on how to create a go based web server then check out this tutorial here: <a href="http://tutorialedge.net/post/golang/creating-simple-web-server-with-golang/">Creating a Simple Web Server with Go(Lang)</a>
 
 ~~~go
 package main

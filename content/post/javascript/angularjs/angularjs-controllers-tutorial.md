@@ -12,7 +12,7 @@ twitter = "https://twitter.com/Elliot_F"
 <p>AngularJS controllers are somewhat similar to classes in Object Oriented programming and as such you can define the functionality of your applications in these controllers. When a controller is attached to the DOM via the ng-controller directive it instantiates a new Controller object.</p>
 
 <div class="note">
-Check out my article on <a href="https://tutorialedge.net/working-with-angularjs-component-applications">Working with Components</a> and see how you should use controllers within a component based system.
+Check out my article on <a href="https://tutorialedge.net/post/javascript/angularjs/working-with-angularjs-component-applications/">Working with Components</a> and see how you should use controllers within a component based system.
 </div>
 
 <h2>Instantiating a Controller</h2>

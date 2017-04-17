@@ -43,4 +43,4 @@ We could expose our code and wrap it in an API so that whenever we navigated to 
 
 ## Taking it Further
 
-If you want to learn how to implement your own REST APIs then I suggest you have a look at my tutorial on [Writing RESTful APIs in Go](https://tutorialedge.net/creating-simple-restful-json-api-with-go)
+If you want to learn how to implement your own REST APIs then I suggest you have a look at my tutorial on [Writing RESTful APIs in Go](https://tutorialedge.net/post/golang/creating-restful-api-with-golang/)

@@ -4,6 +4,7 @@ date = "2017-04-09T21:28:15+01:00"
 title = "Golang MySQL Tutorial"
 desc = "In this tutorial I'll be demonstrating how we can work with MySQL databases using Go."
 series = [ "golang" ]
+tags = ["golang", "mysql"]
 author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++
@@ -162,4 +163,4 @@ log.Println(tag.Name)
 
 If you found this tutorial helpful or require more assistance then please don't hesitate to let me know in the comments section below:
 
-> Recommended Reading: [Creating a RESTful JSON api with Go](https://tutorialedge.net/creating-simple-restful-json-api-with-go)
+> Recommended Reading: [Creating a RESTful JSON api with Go](https://tutorialedge.net/post/golang/creating-restful-api-with-golang/)

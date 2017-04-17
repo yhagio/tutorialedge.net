@@ -4,6 +4,7 @@ title = "Concurrency With Golang Goroutines"
 draft = true
 desc = "In this tutorial we examine how we can build concurrent highly performant go programs using goroutines."
 series = [ "golang" ]
+tags = ["golang", "concurrency"]
 author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++

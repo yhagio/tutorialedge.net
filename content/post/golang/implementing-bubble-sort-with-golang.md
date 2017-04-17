@@ -4,6 +4,7 @@ title = "Implementing the Bubble Sort Algorithm using Golang"
 draft = true
 desc = "This tutorial demonstrates how one can implement their own version of bubble sort using the golang programming language"
 series = [ "golang" ]
+tags = ["golang"]
 author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++

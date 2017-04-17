@@ -28,7 +28,7 @@ twitter = "https://twitter.com/Elliot_F"
 
 <p><strong>Depth First Search:</strong></p>
 
-> For more information about the search based algorithm that this is based off, you can check out this tutorial here: <a href="http://tutorialedge.net/depth-first-search-in-java">Depth First Search in Java</a>
+> For more information about the search based algorithm that this is based off, you can check out this tutorial here: <a href="http://tutorialedge.net/post/general/artificial-intelligence/depth-first-search/">Depth First Search in Java</a>
 
 <h2>The Implementation:</h2>
 

@@ -9,7 +9,7 @@ author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++
 
-<p>Previously we've looked at how you can try to achieve concurrency with Python using multithreading, the tutorial of which can be found here: <a href="http://tutorialedge.net/asynchronous-programming-pythons-threading-module">Python Multithreading Tutorial</a></p>
+<p>Previously we've looked at how you can try to achieve concurrency with Python using multithreading, the tutorial of which can be found here: <a href="http://tutorialedge.net/post/python/python-multithreading-tutorial/">Python Multithreading Tutorial</a></p>
 
 <p>Now we are going to be having a look at how we can sidestep the limiting Global Interpreter Lock that effectively prevented our multithreaded applications from being truly concurrent by using the multiprocessing Python module. </p>
 

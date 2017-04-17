@@ -3,6 +3,7 @@ date = "2017-04-09T21:07:11+01:00"
 title = "Parsing JSON files With Golang"
 draft = true
 desc = "In this tutorial we examine the encoding/json go package and how to parse xml files."
+tags = ["golang"]
 series = [ "golang" ]
 author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
