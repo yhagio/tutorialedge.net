@@ -194,4 +194,4 @@ Open up the console and click the button a few times and you should see your app
 
 If you found this tutorial useful or wish to know more then please feel free to let me know in the comments section below.
 
-<div class="github-link">All source code for this tutorial can be found in this github repo: <a href="https://github.com/elliotforbes/angular-websockets">elliotforbes/angular-websockets</a></div>
+> All source code for this tutorial can be found in this github repo: [elliotforbes/angular-websockets](https://github.com/elliotforbes/angular-websockets)

@@ -17,33 +17,45 @@ nav .button-collapse { margin-left: 10px; }
 nav li:first-child { border-left: 1px solid #3B4951; }
 nav li:not(:last-child) { border-right: 1px solid #3B4951; }
 nav .button-collapse .ion { color: white !important; }
-.flexbox-courses {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  /* Safari */
-  justify-content: center;
-  -webkit-justify-content: space-between;
-  /* Safari */
-  justify-content: space-between;
-  -webkit-align-content: space-around;
-  /* Safari */
-  align-content: space-around;
-  -webkit-flex-wrap: wrap;
-  /* Safari */
-  flex-wrap: wrap;
+.pagination {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+.pagination .total-count { padding: 20px; }
+.pagination a {
+      color: #1bbbef;
+    text-decoration: none;
+    padding: 0.5em 1.5em;
+    border: 1px solid #1bbbef;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
 }
 
+.flexbox-courses {
+  display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-top: 15px;
+	padding: 1.5%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
 .courses {
   width: 100%;
   padding: 40px;
   width: 100%;
   padding: 40px;
+  margin-bottom: 20px;
   background-color: #fafafa !important;
   border-bottom: 1px solid #f6f4f4;
   text-align: center;
 }
-
 .courses h2 {
   color: #074E68 !important;
   font-size: 2.9375rem;
@@ -54,8 +66,9 @@ nav .button-collapse .ion { color: white !important; }
   margin-bottom: 40px;
 }
 
+
 .course-card {
-  width: 100%hugo;
+  width: 100%;
   height: auto;
   background-color: white;
   margin-bottom: 40px;
