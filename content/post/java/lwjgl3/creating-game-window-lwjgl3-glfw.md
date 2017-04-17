@@ -62,7 +62,7 @@ public class Main implements Runnable{
 
 <h2>Our Imports</h2>
 
-~~~
+~~~java
 import static org.lwjgl.glfw.GLFW.*; // allows us to create windows
 import static org.lwjgl.opengl.GL11.*; // gives us access to things like "GL_TRUE" which we'll need 
 import static org.lwjgl.system.MemoryUtil.*; // allows us to use 'NULL' in our code, note this is slightly different from java's 'null'
@@ -76,7 +76,7 @@ import org.lwjgl.glfw.GLFWvidmode; // again used for primary monitor stuff.
 
 <p>Our init function is where most of our initialization code will go for both the window and for OpenGL. It takes the following shape:</p>
 
-~~~
+~~~java
 public void init(){
   // Initializes our window creator library - GLFW 
   // This basically means, if this glfwInit() doesn't run properlly
@@ -120,7 +120,7 @@ public void init(){
 
 <p>Once we’ve successfully initialized both our window and GLFW we will now want to make sure that everything works correctly and that we’ll be able to get any input needed from the user.</p>
 
-~~~
+~~~java
 public void update(){
   // Polls for any window events such as the window closing etc.
   glfwPollEvents();
@@ -136,7 +136,7 @@ public void render(){
 
 <p>Now that everything is in place you will want to implement the code that allows us to close the window. This can be done by adding the following 3 lines of code under our call to render(); in the main game loop as follows:</p>
 
-~~~
+~~~java
 @Override
 public void run() {
   // All our initialization code
@@ -162,7 +162,7 @@ public void run() {
 
 <h2>Full Source:</h2>
 
-~~~
+~~~java
 import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.system.MemoryUtil.*;
