@@ -213,6 +213,10 @@ article h3 { font-size: 22px; }
 article h4 { font-size: 18px; }
 article h5 { font-size: 12px; }
 article .info { color: #999; font-size: 14px; padding: 0;}
+article ul li{
+  list-style-type: square !important;
+  margin-left: 20px;
+}
 article pre {
     border-left: 4px solid #074E68;
     position: relative;
