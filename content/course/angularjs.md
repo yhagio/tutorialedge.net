@@ -27,20 +27,6 @@ In this course I'll be demonstrating the absolute fundamentals to developing app
 
 We’ll begin by creating some very simple Single Page Applications or SPAs and then build up on these until we’ve covered everything you need in order to develop your own web applications using the AngularJS framework.
 
-#### Things We’ll Cover
-
-Through this course we’ll be covering the following topics:
-
-1. Expressions
-2. Form Input
-3. Http Requests 
-4. Events
-5. Factories
-6. Services
-7. Controllers
-8. Directives
-9. And more...
-
 ## Scope and Scope Inheritance
  Scopes are what allow us to manipulate data in the backend controller and have that data reflected instantaneously in the frontend. Scopes provide APIs which what any objects we define and then when they detect changes, they propogate these changes through the system.
 
