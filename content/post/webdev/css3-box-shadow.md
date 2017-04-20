@@ -9,7 +9,9 @@ author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++
 
-In this tutorial we'll be looking at how you can add a box shadow effect to elements of your website.
+In this tutorial we'll be looking at how you can add a box shadow effect to elements of your website. Box shadow can help turn elements of your website from flat structures to almost 3D like. 
+
+> It's worth checking out the material design documentation on [Elevation and Shadows](https://material.io/guidelines/material-design/elevation-shadows.html) 
 
 ## Output
 
@@ -24,6 +26,7 @@ This is what we'll be creating:
   box-shadow: 0px 0px 15px #888888;
   padding: 20px;
   margin: auto;
+  width: 50%;
 }
 </style>
 
@@ -43,6 +46,23 @@ In our css we then define our `.box` class and within that we set our box-shadow
 box-shadow: 0px 0px 15px #888888;
 ~~~
 
+box-shadow takes in the following parameters:
+
+~~~css
+box-shadow: h-shadow v-shadow blur spread color |inset|initial|inherit;
+~~~
+
+| Property | What It Does |
+| -------- | ------------ |
+| h-shadow | Specifies the horizontal position of the shadow relative to the element |
+| v-shadow | Specifies the vertical position of the shadow relative to the element |
+| blur     | The amount of bluring for our shadow |
+| spread   | The distance over which our shadow is spread |
+| color    | The color of our shadow |
+| inset    | Shadow goes from outer shadow to inner shadow |
+| initial  | Sets to default value |
+| inherit  | Inherits property from parent element |
+
 
 #### Full .box css
 
@@ -53,3 +73,37 @@ box-shadow: 0px 0px 15px #888888;
   margin: auto;
 }
 ~~~
+
+
+## Inner Shadow
+
+<div class="box-2">
+  <h2>Box Shadow Example</h2>
+</div>
+
+<style>
+.box-2 {
+  box-shadow: 0px 0px 15px #888888 inset;
+  padding: 20px;
+  margin: auto;
+  width: 50%;
+}
+</style>
+
+#### Code
+
+~~~html
+<div class="box-2">
+  <h2>Box Shadow Example</h2>
+</div>
+
+<style>
+.box-2 {
+  box-shadow: 0px 0px 15px #888888 inset;
+  padding: 20px;
+  margin: auto;
+  width: 50%;
+}
+</style>
+~~~
+
