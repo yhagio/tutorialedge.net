@@ -19,17 +19,19 @@ twitter = "https://twitter.com/Elliot_F"
 
 <p>In the below example you’ll see how we can utilize callbacks in order to access the data from stdout and stderr and subsequently view any errors and output our shell scripts output.</p>
 
-<pre><code class=”language-javascript”>
+~~~js
 var exec = require('child_process').exec, child;
 var testscript = exec('sh myscript.sh /directory');
 
 testscript.stdout.on('data', function(data){
     console.log(data); 
-    sendBackInfo();
+    // sendBackInfo();
 });
 
 testscript.stderr.on('data', function(data){
     console.log(data);
-    triggerErrorStuff(); 
+    // triggerErrorStuff(); 
 });
-</code></pre>
+
+
+~~~
