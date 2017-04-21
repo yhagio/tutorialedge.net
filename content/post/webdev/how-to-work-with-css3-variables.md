@@ -13,8 +13,6 @@ One of the main reasons that preprocessors like [SASS](http://sass-lang.com/) an
 
 Preprocessors also allow you to declare global variables such as colors which can be used at multiple points throughout your websites design. From a web developers perspective this is very powerful as it allows us to be lazier when it comes to color scheme changes. Typically with any website you'd have a core palate of colors that compliment each other well and describe numerous elements within your site. With Preprocessors you can declare these variables like so:
 
-#### SCSS
-
 ~~~less
 // SCSS
 $blue: blue;
@@ -61,7 +59,7 @@ div {
 
 ## Example
 
-In this example we are going to create a simple `--light-blue` variable that we'll reference within 2 distinct css rules. 
+In this example we are going to create a simple `--light-blue` variable that we'll reference within 2 distinct css rules. This should hopefully give you some basic idea of how powerful this could potentially be.
 
 ---------------------
 
@@ -93,7 +91,9 @@ lorem ipsum dolor sit.
 
 #### Source Code
 
-Below you'll find the full source code to the above example. Obviously the larger your css file and the more places that you use this distinct variable, the more worthwhile it's going to be for you if you ever need to quickly change colors on the fly.
+Now if we have a look at the full source code to the above example. You'll see our two html elements and the `style` tag below them which contains our CSS. We define the `--light-blue` variable in our :root element and then we reference this on the first line of the `.box` and `.text` rules for different properties.
+
+With these variables the larger your css file and the more places that you use this distinct variable, the more worthwhile it's going to be for you if you ever need to quickly change colors on the fly.
 
 ~~~html
 <div class="box"></div>
@@ -115,10 +115,13 @@ lorem ipsum dolor sit.
   margin: auto;
 }
 
-.circle {
+.text {
   color: var(--light-blue);
   text-align: center;
 }
 </style>
 ~~~
 
+## Overall
+
+This is definitely a huge addition for us as web developers and it's one that I'm going to be taking full advantage of in projects to come. I'm a huge fan of some of the features SASS and LESS provide us and having some of their core features slowly migrate into the standard CSS definition is a huge step forward. 
