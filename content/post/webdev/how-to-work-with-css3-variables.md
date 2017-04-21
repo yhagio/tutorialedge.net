@@ -37,6 +37,8 @@ Imagine we had 100 different elements in our site that all had to be this certai
 
 Thankfully, most major browsers have no added support for these new experimental variables. 
 
+> Mozilla Developer Network has an excellent post on using CSS variables which you can find here: [Using CSS Variables - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables#Browser_compatibility)
+
 #### Basic Usage
 
 ~~~css
