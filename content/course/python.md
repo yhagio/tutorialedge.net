@@ -7,7 +7,7 @@ layout = "simple"
 image = "logo-python.png"
 +++
 
-Python is without a doubt one of the best languages to learn if you are interested in programming. It's syntax is easy to follow for those with minimal programming experience and it's range of supporting libraries make it incredibly powerful if you want to do complex things like data science. 
+Python is without a doubt one of the best languages to learn if you are interested in programming. It's syntax is simpler to follow than say, that of say C or C++ for those with minimal programming experience and it's range of supporting libraries make it incredibly powerful if you want to do complex things like data science. 
 
 ## Tutorials
 

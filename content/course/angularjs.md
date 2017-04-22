@@ -97,7 +97,7 @@ In this section of the course we look at how we can effectively use AngularJS's 
 
 ## Project Structure
 
-The structure you choose for your project is hugely important. Having a clear, easy to follow structure from the get go can help you to no end further down the line. In this section of the course we look at the just how you should structure your angularjs applications so that they can be easily maintained and extended.
+The structure you choose for your project is hugely important. Having a clear, consise structure from the get go can help you to no end further down the line. In this section of the course we look at the just how you should structure your angularjs applications so that they can be easily maintained and extended.
 
 * [AngularJS Project Structure Tutorial](https://tutorialedge.net/post/javascript/angularjs/angularjs-project-structure-tutorial/)
 
