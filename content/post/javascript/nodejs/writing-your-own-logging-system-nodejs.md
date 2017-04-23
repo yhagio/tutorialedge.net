@@ -35,7 +35,7 @@ This is going to be a very simple logging system that has been made purely for d
 
 #### Our Simple Server
 
-Let’s create a very simple express based server that will serve as the base of our application. If you wish to read more about writing your own express based server then you can do so here: [Tutorial: Writing your own ExpressJS Server](https://tutorialedge.net/creating-simple-server-express-js).
+Let’s create a very simple express based server that will serve as the base of our application. If you wish to read more about writing your own express based server then you can do so here: [Tutorial: Writing your own ExpressJS Server](https://tutorialedge.net/post/javascript/nodejs/creating-a-webserver-with-nodejs/).
 
 #### router.js 
 

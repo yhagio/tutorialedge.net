@@ -9,7 +9,7 @@ author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++
 
-If you haven’t read my article on using a different architecture styles in your AngularJS applications then I recommend you check it out here: [Structuring AngularJS Applications](https://tutorialedge.net/angularjs-project-structure-tutorial) 
+If you haven’t read my article on using a different architecture styles in your AngularJS applications then I recommend you check it out here: [Structuring AngularJS Applications](https://tutorialedge.net/post/javascript/angularjs/angularjs-project-structure-tutorial/) 
 
 In this article we will be having a look at the key features present in my [AngularJS Admin Panel](https://github.com/emforce/Angular-Component-Admin-Panel) application. This application utilizes a component based architecture and follows some of the best practices outlined in Todd Motto’s [Style Guide](https://github.com/toddmotto/angular-styleguide)
 
@@ -29,7 +29,7 @@ This should pull the latest version of the code to your current working director
 
 This application currently uses gulp in order to minify and concatenate any and all files under our components directory into a bundle.js file. In order to include our new changes in this bundle.js file we need to run the ```gulp watch``` task whilst we are developing this code. Every time a code change is made within our components directory this watch task automatically calls our scripts task.
 
-For more information on using gulp to improve your angularjs development flow check out this tutorial: [Automating your AngularJS Workflow with Gulp](https://tutorialedge.net/automating-angularjs-workflow-with-gulp)
+For more information on using gulp to improve your angularjs development flow check out this tutorial: [Automating your AngularJS Workflow with Gulp](https://tutorialedge.net/post/javascript/angularjs/automating-your-angularjs-workflow-with-gulp/)
 
 ## The Structure
 

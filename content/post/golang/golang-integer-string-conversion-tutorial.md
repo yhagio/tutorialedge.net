@@ -4,6 +4,7 @@ title = "Golang Integer String Conversion Tutorial"
 draft = true
 desc = "In this tutorial we look at how we can convert String to integer and back again using the strconv golang package."
 series = [ "golang" ]
+tags = ["golang"]
 author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++

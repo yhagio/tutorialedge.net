@@ -27,7 +27,7 @@ GITHUB_CALLBACK_URL=https://yourapp.com/auth/github/callback
 
 <p>Next thing we need to do is add this to our config/services.php</p>
 
-~~~
+~~~php
 'github' => [
       'client_id' => env('GITHUB_ID'),
       'client_secret' => env('GITHUB_SECRET'),
@@ -47,7 +47,7 @@ composer require laravel/socialite
 
 Once this has successfully ran we then need to make some modifications to our config/app.php file. 
 
-~~~
+~~~php
 'providers' => [
 		…
   // add our new provider to the providers array 
@@ -55,7 +55,7 @@ Once this has successfully ran we then need to make some modifications to our co
 ],
 ~~~
 
-~~~
+~~~php
 'aliases' => [
   'Socialite' => 'Laravel\Socialite\Facades\Socialite',
 ],
@@ -65,7 +65,7 @@ Once this has successfully ran we then need to make some modifications to our co
 
 <p>In order for visitors to authenticate with github we are going to need a new route that they can navigate to that will trigger out authentication prompt. Navigate to your routes.php file and add the following routes: </p>
 
-~~~
+~~~php
 Route::get('auth/github', 'Auth\AuthController@redirectToProvider');
 Route::get('auth/github/callback', 'Auth\AuthController@handleProviderCallback');
 ~~~
@@ -76,7 +76,7 @@ Route::get('auth/github/callback', 'Auth\AuthController@handleProviderCallback')
 
 <p>Open up your AuthController.php file and add the following 3 functions: </p>
 
-~~~
+~~~php
 <?php    
 /**
   * Redirect the user to the GitHub authentication page.
@@ -145,7 +145,7 @@ private function findOrCreateUser($githubUser)
 
 <b>Pure SQL</b>
 
-~~~
+~~~sql
 ALTER TABLE users ADD github_id INT;
 ~~~
 
@@ -153,7 +153,7 @@ ALTER TABLE users ADD github_id INT;
 
 <p>Finally we need to update our User model. Open up app/User.php and change the following</p>
 
-~~~
+~~~php
 /**
 * The attributes that are mass assignable.
 *
@@ -162,8 +162,8 @@ ALTER TABLE users ADD github_id INT;
 protected $fillable = ['github_id','name', 'email', 'password'];
 ~~~
 
-<h2>Testing it All Works</h2>
+## Testing it All Works
 
-<p>Now that you’ve configured everything it’s time to check it all works. Navigate to http://yourapp.com/auth/github and you should hopefully be redirected to githubs authentication page on which you can allow your app to use your details. This should then return you to your ‘home’ route or whatever other route you wish to route them back to. </p>
+Now that you’ve configured everything it’s time to check it all works. Navigate to http://yourapp.com/auth/github and you should hopefully be redirected to githubs authentication page on which you can allow your app to use your details. This should then return you to your ‘home’ route or whatever other route you wish to route them back to.
 
-<p>If everything works then congratulations, you’ve now succesfully added github authentication to your Laravel application! </p>
+If everything works then congratulations, you’ve now succesfully added github authentication to your Laravel application! 

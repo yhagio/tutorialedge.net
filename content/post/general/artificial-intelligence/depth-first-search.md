@@ -11,7 +11,7 @@ twitter = "https://twitter.com/Elliot_F"
 
 <h2>Depth First Search</h2>
 
-<p>DFS is another uninformed graph traversal algorithm which produces a non-optimal solution but can be useful for traversing quickly into deeper search domains. Depth first search is very similar to the previously covered breadth first search that we covered in this tutorial: <a href="http://tutorialedge.net/breadth-first-search-with-java">breadth first search in Java</a></p>
+<p>DFS is another uninformed graph traversal algorithm which produces a non-optimal solution but can be useful for traversing quickly into deeper search domains. Depth first search is very similar to the previously covered breadth first search that we covered in this tutorial: <a href="http://tutorialedge.net/post/general/artificial-intelligence/breadth-first-search-java/">breadth first search in Java</a></p>
 
 <h2>How it Works</h2>
 
@@ -111,7 +111,7 @@ public class DepthFirstSearch extends AbstractSearch{
 
 <p>Due to the fact we've created an abstract search class we can now do something similar to this in our driver class:</p>
 
-~~~
+~~~java
 /**
  * Created by elliotforbes on 24/06/15.
  */

@@ -4,6 +4,7 @@ title = "Parsing XML Files With Golang"
 draft = true
 desc = "In this tutorial we examine how to read in files and unmarshal them using the xml package in go."
 series = [ "golang" ]
+tags = ["golang"]
 author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++

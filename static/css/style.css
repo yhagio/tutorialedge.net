@@ -229,7 +229,7 @@ article pre {
     padding: 20px;
     background-color: #272822;
 }
-article code {
+article p > code {
   background-color: #D7F9FD;
   border-radius: 5px;
   padding: 5px;

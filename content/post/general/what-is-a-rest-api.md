@@ -25,7 +25,7 @@ We can communicate with REST APIs using HTTP requests, much like you’d do to n
 
 Typically we send HTTP requests to an URL that we have defined in our REST API and it would either perform a given task for us or return a certain bit of data. Most APIs these days would return a response to us in the form of JSON. 
 
-<img src="https://tutorialedge.net/uploads/rest-api.png" alt="REST API Basics" />
+<img src="/uploads/rest-api.png" alt="REST API Basics" />
 
 ## A Simple Example
 
@@ -43,4 +43,4 @@ We could expose our code and wrap it in an API so that whenever we navigated to 
 
 ## Taking it Further
 
-If you want to learn how to implement your own REST APIs then I suggest you have a look at my tutorial on [Writing RESTful APIs in Go](https://tutorialedge.net/creating-simple-restful-json-api-with-go)
+If you want to learn how to implement your own REST APIs then I suggest you have a look at my tutorial on [Writing RESTful APIs in Go](https://tutorialedge.net/post/golang/creating-restful-api-with-golang/)
