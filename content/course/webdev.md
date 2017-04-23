@@ -15,11 +15,12 @@ For beginners wanting to learn how to program, HTML, CSS and Javascript offer a 
 
 ## Miscellaneous Tutorials
 
-* [An Introduction to Web Development](http://localhost:1313/post/webdev/introduction-to-web-development/)
+* [An Introduction to Web Development](/post/webdev/introduction-to-web-development/)
 
-## CSS3 Tutorials
+## CSS3 Beginners Tutorials
 
-* [CSS Border Radius Tutorial](http://localhost:1313/post/webdev/border-radius-tutorial/)
-* [How to work with CSS3 Variables](http://localhost:1313/post/webdev/how-to-work-with-css3-variables/)
-* [CSS3 Box Shadow Tutorial](http://localhost:1313/post/webdev/css3-box-shadow/)
-* [Equal Height Columns using Flex Box](http://localhost:1313/post/webdev/equal-height-columns-using-css/)
+* [The Difference Between Class and ID Selectors](/post/webdev/difference-between-class-id-selector-css/)
+* [CSS Border Radius Tutorial](/post/webdev/border-radius-tutorial/)
+* [How to work with CSS3 Variables](/post/webdev/how-to-work-with-css3-variables/)
+* [CSS3 Box Shadow Tutorial](/post/webdev/css3-box-shadow/)
+* [Equal Height Columns using Flex Box](/post/webdev/equal-height-columns-using-css/)
