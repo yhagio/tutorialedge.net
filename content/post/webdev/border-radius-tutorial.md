@@ -77,3 +77,56 @@ img.circle {
 }
 </style>
 ~~~
+
+## border-radius For Specific Corners
+
+There are times where you don't want every corner of your object to be rounded, thankfully we can utilize some of the more specific border-radius properties in order to allow us to only round certain corners. We can do this by setting the 4 specific properties:
+
+~~~css
+border-top-left-radius: 5px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 30px;
+~~~
+
+or we can pass in 4 distinct parameters to our `border-radius` property like so:
+
+~~~css
+border-radius: 10px 15px 20px 30px;
+~~~
+
+~~~html
+<div class="element">
+</div>
+
+<style>
+.element {
+  width: 100px;
+  height: 100px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 30px;
+  background-color: #074E68;
+  margin: auto;
+}
+</style>
+~~~
+
+#### Output
+
+<div class="element">
+</div>
+
+<style>
+.element {
+  width: 100px;
+  height: 100px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 30px;
+  background-color: #074E68;
+  margin: auto;
+}
+</style>
