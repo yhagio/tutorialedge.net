@@ -35,7 +35,7 @@ In order to start writing your own Go based systems you'll need to install it on
 * [Writing a Twitter Bot in Golang](/post/golang/writing-a-twitter-bot-golang/)
 * [Creating a RESTful API with Golang](/post/golang/creating-restful-api-with-golang/)
 * [Executing System Commands with Golang](/post/golang/executing-system-commands-with-golang/)
-* [Golang MySQL Tutorial](post/golang/golang-mysql-tutorial/)
+* [Golang MySQL Tutorial](/post/golang/golang-mysql-tutorial/)
 * [Golang Integer to String Conversion](/post/golang/golang-integer-string-conversion-tutorial/)
 * [Parsing XML Files with Golang](/post/golang/parsing-xml-with-golang/)
 * [Parsing JSON files with Golang](/post/golang/parsing-json-with-golang/)
