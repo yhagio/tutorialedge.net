@@ -178,7 +178,7 @@ nav .button-collapse .ion { color: white !important; }
     margin-top: 20px;
     color: #333;
 }
-.about p { font-size: 18px; color: #333; }
+.about p { font-size: 1em; color: #333; }
 .title-bar {
   text-align: center;
   width: 100%;
@@ -201,18 +201,21 @@ nav .button-collapse .ion { color: white !important; }
   padding: 20px;
   padding-top: 40px;
   padding-bottom: 40px;
+  font-size: 1.15em;
 }
 article h1,h2,h3,h4,h5 {
     font-weight: 600;
     line-height: 1.2;
     margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 5px solid #F1F4F9;
 }
 article h1 { font-size: 34px; }
 article h2 { font-size: 26px; }
 article h3 { font-size: 22px; }
 article h4 { font-size: 18px; }
 article h5 { font-size: 12px; }
-article .info { color: #999; font-size: 14px; padding: 0;}
+article .info { color: #999; font-size: 0.9em; padding: 0;}
 article ul li{
   list-style-type: square !important;
   margin-left: 20px;
