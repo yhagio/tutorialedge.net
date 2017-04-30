@@ -250,13 +250,11 @@ article blockquote {
 }
 
 .lesson {
-  width: 100%;
   border-bottom: 1px solid #F1F4F9;
   margin-bottom: 20px;
   padding: 20px;
 }
 .lesson-number {
-  width: 160px;
   text-align: center;
 }
 .lesson-number .circle {
@@ -275,7 +273,7 @@ article blockquote {
   border: none;
 }
 
-.container img { width: 100%; height: auto; }
+.container img { width: 80%; height: auto; margin: auto; display: block; }
 .sidebar { padding: 20px; }
 .sidebar h3 {
   color: #262626;
