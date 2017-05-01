@@ -13,9 +13,18 @@ Web Development is an incredibly fast paced and exciting area to dive into. We'v
 
 For beginners wanting to learn how to program, HTML, CSS and Javascript offer a very simple and instantly rewarding way to get your hands dirty and gain some form of experience. With web development you'll instantly see how your code impacts what is displayed in the browser and learning some basic javascript gives you an insight into how other programming languages work.
 
-## Miscellaneous Tutorials
+## Course
 
-* [An Introduction to Web Development](/post/webdev/introduction-to-web-development/)
+<div class="lesson row">
+  <div class="lesson-number col l2 m2 s12">
+    <div class="circle">1</div>
+  </div>
+  <div class="lesson-info col l10 m10 s12">
+    <a href="/post/webdev/introduction-to-web-development/"><h3>An Introduction to Web Development</h3></a>
+    <p>In this tutorial we dive into the fundamental principles of web development using HTML and CSS. </p>
+    <a href="/post/webdev/introduction-to-web-development/">Read Now</a>
+  </div>
+</div>
 
 ## CSS3 Beginners Tutorials
 
