@@ -179,7 +179,7 @@ Now that we've done that, in our `returnSingleArticle` function we can obtain th
 ~~~go
 func returnSingleArticle(w http.ResponseWriter, r *http.Request){
     vars := mux.Vars(r)
-    key := vars["key"]
+    key := vars["id"]
     
     fmt.Fprintf(w, "Key: " + key)
 }
