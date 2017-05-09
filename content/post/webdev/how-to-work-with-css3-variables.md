@@ -93,8 +93,6 @@ lorem ipsum dolor sit.
 
 Now if we have a look at the full source code to the above example. You'll see our two html elements and the `style` tag below them which contains our CSS. We define the `--light-blue` variable in our :root element and then we reference this on the first line of the `.box` and `.text` rules for different properties.
 
-With these variables the larger your css file and the more places that you use this distinct variable, the more worthwhile it's going to be for you if you ever need to quickly change colors on the fly.
-
 ~~~html
 <div class="box"></div>
 
@@ -123,5 +121,7 @@ lorem ipsum dolor sit.
 ~~~
 
 ## Overall
+
+With these variables the larger your css file and the more places that you use this distinct variable, the more worthwhile it's going to be for you if you ever need to quickly change colors on the fly.
 
 This is definitely a huge addition for us as web developers and it's one that I'm going to be taking full advantage of in projects to come. I'm a huge fan of some of the features SASS and LESS provide us and having some of their core features slowly migrate into the standard CSS definition is a huge step forward. 

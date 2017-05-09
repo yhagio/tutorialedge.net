@@ -139,4 +139,4 @@ Again run the server and navigate to http://localhost:8081/index.html and you sh
 
 <p>I hope you found this tutorial useful and if you did then please let me know in the comments section below! This is part one of a series of GoLang tutorials in which we play around with APIs and creating servers so stay tuned for more!</p>
 
-> Recommended Reading: If you wanted to say display a blog then connecting to a database is vital: [Go MySQL Tutorial](https://tutorialedge.net/go-mysql-tutorials)
+> Recommended Reading: If you wanted to say display a blog then connecting to a database is vital: [Go MySQL Tutorial](/post/golang/golang-mysql-tutorial/)
