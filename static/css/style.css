@@ -162,6 +162,7 @@ nav .button-collapse .ion { color: white !important; }
 }
 .wrapper .buttons .button:hover span { border-bottom: 1px solid #fff; }
 .wrapper .buttons .button.light { background-color: #4fc3f7; }
+.wrapper img {  margin: auto !important; }
 .about {
   width: 100%;
   padding: 40px;
@@ -275,6 +276,9 @@ article blockquote {
 
 .container img { width: 80%; height: auto; margin: auto; display: block; }
 .sidebar { padding: 20px; }
+.sidebar img {
+  margin: auto !important;
+}
 .sidebar h3 {
   color: #262626;
   text-transform: uppercase;
