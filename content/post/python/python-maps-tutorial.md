@@ -1,6 +1,6 @@
 +++
 date = "2017-05-24T07:57:51+01:00"
-title = "python maps tutorial"
+title = "Python Maps Tutorial"
 draft = true
 desc = "In this tutorial we cover the map function within the Python programming language"
 tags = ["python", "concurrency"]

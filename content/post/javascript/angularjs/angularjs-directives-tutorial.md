@@ -95,6 +95,7 @@ views/
 ~~~
 
 <h3>MyDirective.js</h3>
+
 ~~~
 var app = angular.module('myapp', []);
 
@@ -104,6 +105,7 @@ app.directive("mydirective", function() {
     }
 })
 ~~~
+
 <h3>DirectiveTemplate.html</h3>
 
 ~~~
