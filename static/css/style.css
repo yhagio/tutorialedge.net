@@ -16,15 +16,15 @@ h1, h2, h3, h4, h5, h6 {
     background: #546389;
     color: #fff;
 }
-ol {
+article ol {
   list-style-type: none;
 }
-ol li {
+article ol li {
   position: relative;
   margin-bottom: 10px;
   counter-increment: step-counter;
 }
-ol li:before {
+article ol li:before {
   content: counter(step-counter);
     margin: 0 10px 0 -40px;
     font-size: .8rem;
@@ -260,6 +260,8 @@ article blockquote {
   padding-right: 20px;
   background-color: #D7F9FD; 
 }
+
+
 
 .lesson {
   border-bottom: 1px solid #F1F4F9;
