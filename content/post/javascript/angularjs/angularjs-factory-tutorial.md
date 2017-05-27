@@ -7,6 +7,7 @@ tags = ["angularjs", "javascript"]
 series = [ "angularjs" ]
 author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
+
 +++
 
 ## What Are Factories

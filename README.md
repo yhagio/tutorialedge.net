@@ -17,11 +17,18 @@ The main aim for the site is for it to be a place that I can host tutorials and 
 
 #### NodeJS
 
+* Getting Started with NodeJS
 * Rate Limiting your NodeJS API
 * Encrypting and Decrypting Strings in NodeJS
 * Profiling your NodeJS REST API
 * Debugging your NodeJS program
 * Benchmarking your NodeJS REST API
+
+#### Python
+
+* Python Map Tutorial
+* Python Context Manager Tutorial
+* Python Lambda Function Tutorial
 
 > If you want to make a start on one of these tutorials then simply clone this repository and submit a pull request.
 

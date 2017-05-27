@@ -7,6 +7,7 @@ tags = ["angularjs", "javascript"]
 series = [ "angularjs" ]
 author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
+
 +++
 
 <p>AngularJS Official Docs on Data Binding can be found here: <a href="https://docs.angularjs.org/guide/databinding">AngularJS Data Binding</a></p>

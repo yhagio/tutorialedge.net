@@ -7,6 +7,9 @@ series = ["ai"]
 tags = ["ai"]
 author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
+bookTitle = "Programming Game AI by Example"
+bookImage = "game-ai-by-example.jpeg"
+bookLink = "http://amzn.to/2r74d8f"
 +++
 
 <p>This is lesson one of the <a href="https://tutorialedge.net/course/artificial-intelligence">Artificial Intelligence</a> course on this website. </p>

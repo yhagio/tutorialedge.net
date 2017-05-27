@@ -7,6 +7,7 @@ tags = ["angularjs", "javascript"]
 series = [ "angularjs" ]
 author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
+
 +++
 
 <p>The official documentation for AngularJS’s directives can be found here: <a href="https://docs.angularjs.org/guide/directive">AngularJS Directives</a></p>

@@ -7,6 +7,7 @@ tags = ["angularjs", "javascript"]
 series = [ "angularjs" ]
 author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
+
 +++
 
 <p>AngularJS controllers are somewhat similar to classes in Object Oriented programming and as such you can define the functionality of your applications in these controllers. When a controller is attached to the DOM via the ng-controller directive it instantiates a new Controller object.</p>

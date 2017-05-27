@@ -7,6 +7,9 @@ tags = ["ai"]
 desc = "Here we look at what intelligent agents are in the field of artificial intelligence"
 author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
+bookTitle = "Programming Game AI by Example"
+bookImage = "game-ai-by-example.jpeg"
+bookLink = "http://amzn.to/2r74d8f"
 +++
 
 <p>In Artificial Intelligence, Intelligent agents are the decision makers. They perceive their environment through a series of sensors and act upon this information using actuators.</p>
