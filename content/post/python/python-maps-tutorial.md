@@ -2,6 +2,7 @@
 date = "2017-05-24T07:57:51+01:00"
 title = "python maps tutorial"
 draft = true
+desc = "In this tutorial we cover the map function within the Python programming language"
 tags = ["python", "concurrency"]
 series = ["python"]
 author = "Elliot Forbes"

@@ -2,6 +2,7 @@
 date = "2017-05-27T11:13:46+01:00"
 title = "Getting Started With Hugo"
 draft = true
+desc = "In this tutorial we look at how you can get started writing your first hugo based website"
 series = ["hugo"]
 tags = ["golang", "hugo"]
 author = "Elliot Forbes"
