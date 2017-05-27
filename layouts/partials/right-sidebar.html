@@ -37,6 +37,15 @@
                         <img src="https://cdn.pcpartpicker.com/static/img/vendor-logos/logo_merchant_amazon.png" alt="">
                     </a>
                 </div>
+            {{ else }}
+                <img src="{{ .Site.BaseURL }}/books/golang.png" alt="">
+                <h1>The Go Programming Language</h1>
+                <hr/>
+                <div class="buy">
+                    <a href="http://amzn.to/2rJf3UF">
+                        <img src="https://cdn.pcpartpicker.com/static/img/vendor-logos/logo_merchant_amazon.png" alt="">
+                    </a>
+                </div>
             {{ end }}
         {{ else }}
             <img src="{{ .Site.BaseURL }}/books/golang.png" alt="">
