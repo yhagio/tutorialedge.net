@@ -21,3 +21,16 @@ Web Crawlers are incredibly interesting in the sense that they can do a huge hos
 
 The possibilities are truly endless. 
 
+## The Design
+
+The web crawler that we'll be building will take in the base url of a website and will try to crawl every subsequent linked page on that website. The process we'll be following for each page will look something like this:
+
+1. Request the HTML for the Page
+2. Parse the page for every link
+3. for every link in the returned list, check if it's already in the crawled list
+4. if it is then discard it, if not then add it to the list of links to be crawled.
+
+This will continue until the number of links to be crawled is zero and thus all pages of said website have been crawled.
+
+##  
+

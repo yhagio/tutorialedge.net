@@ -57,15 +57,15 @@ For the purpose of this tutorial we’ll be parsing the following json file. We'
 We’ll be using the os package in order to open up our users.xml file from our filesystem. 
 
 ~~~
-// Open our xmlFile
-xmlFile, err := os.Open("users.xml")
+// Open our jsonFile
+jsonFile, err := os.Open("users.json")
 // if we os.Open returns an error then handle it
 if err != nil {
 	fmt.Println(err)
 }
-fmt.Println("Successfully Opened users.xml")
-// defer the closing of our xmlFile so that we can parse it later on
-defer xmlFile.Close()
+fmt.Println("Successfully Opened users.json")
+// defer the closing of our jsonFile so that we can parse it later on
+defer jsonFile.Close()
 ~~~
 
 
