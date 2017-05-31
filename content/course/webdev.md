@@ -20,16 +20,16 @@ For beginners wanting to learn how to program, HTML, CSS and Javascript offer a 
     <div class="circle">1</div>
   </div>
   <div class="lesson-info col l10 m10 s12">
-    <a href="/post/webdev/introduction-to-web-development/"><h3>An Introduction to Web Development</h3></a>
+    <a href="/webdev/introduction-to-web-development/"><h3>An Introduction to Web Development</h3></a>
     <p>In this tutorial we dive into the fundamental principles of web development using HTML and CSS. </p>
-    <a href="/post/webdev/introduction-to-web-development/">Read Now</a>
+    <a href="/webdev/introduction-to-web-development/">Read Now</a>
   </div>
 </div>
 
 ## CSS3 Beginners Tutorials
 
-* [The Difference Between Class and ID Selectors](/post/webdev/difference-between-class-id-selector-css/)
-* [CSS Border Radius Tutorial](/post/webdev/border-radius-tutorial/)
-* [How to work with CSS3 Variables](/post/webdev/how-to-work-with-css3-variables/)
-* [CSS3 Box Shadow Tutorial](/post/webdev/css3-box-shadow/)
-* [Equal Height Columns using Flex Box](/post/webdev/equal-height-columns-using-css/)
+* [The Difference Between Class and ID Selectors](/webdev/difference-between-class-id-selector-css/)
+* [CSS Border Radius Tutorial](/webdev/border-radius-tutorial/)
+* [How to work with CSS3 Variables](/webdev/how-to-work-with-css3-variables/)
+* [CSS3 Box Shadow Tutorial](/webdev/css3-box-shadow/)
+* [Equal Height Columns using Flex Box](/webdev/equal-height-columns-using-css/)
