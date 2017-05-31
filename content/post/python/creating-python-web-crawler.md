@@ -32,5 +32,7 @@ The web crawler that we'll be building will take in the base url of a website an
 
 This will continue until the number of links to be crawled is zero and thus all pages of said website have been crawled.
 
-##  
+## Getting Started
+
+The first thing we'll need is 
 
