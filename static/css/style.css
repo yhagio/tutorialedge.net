@@ -42,6 +42,7 @@ article ol li:before {
 
 nav { background-color: #2B3840; }
 nav .brand-logo { font-weight: 300; margin-left: 10px; }
+nav img { width: 50px; height: 50px; float: left; margin-top: 5px; margin-right: 10px; }
 nav .button-collapse { margin-left: 10px; }
 nav li:first-child { border-left: 1px solid #3B4951; }
 nav li:not(:last-child) { border-right: 1px solid #3B4951; }
