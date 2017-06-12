@@ -34,7 +34,7 @@
 
 <div class="tutorials container">
 	<div class="row flexbox-courses">
-	{{ $paginator := .Paginate (where .Site.Pages "Type" "post") }}
+	{{ $paginator := .Paginate .Site.Pages }}
 	{{ range $paginator.Pages }}
 		<div class="col l4 m6 s12">
 			<div class="card">
