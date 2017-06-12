@@ -18,6 +18,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 article ol {
   list-style-type: none;
+  clear: both;
 }
 article ol li {
   position: relative;
@@ -216,7 +217,7 @@ article h1,h2,h3,h4,h5 {
     font-weight: 600;
     line-height: 1.2;
     margin-bottom: 10px;
-    text-align: center;
+    clear: both;
 }
 article h1 { font-size: 34px; }
 article h2 { font-size: 26px; }
@@ -262,6 +263,20 @@ article blockquote {
   background-color: #D7F9FD; 
 }
 
+article img.book-img {
+  float: left;
+  margin: 20px;
+}
+
+article .amazon-link {
+  margin: 20px 0px;
+    padding: 30px 20px 30px 100px;
+    background: #f8f8f8 url(../uploads/amazon.png) no-repeat 20px 50%;
+    background-size: 65px 60px;
+    background-repeat: no-repeat;
+    font-weight: bold; 
+    clear: both;
+}
 
 
 .lesson {
