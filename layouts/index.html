@@ -1,14 +1,11 @@
-{{ partial "header.html" . }}
-
-{{ partial "welcome-bar.html" . }}
+{{ partial "header.html" . }} {{ partial "welcome-bar.html" . }}
 
 <div class="courses">
 	<div class="container">
 		<h2>Top Courses</h2>
 		<div class="row">
 
-		{{ range (where .Site.Pages "Section" "course") }}
-			{{ if ne .Title "Courses" }}
+			{{ range (where .Site.Pages "Section" "course") }} {{ if ne .Title "Courses" }}
 			<div class="col l4 m6 s12">
 				<a href="{{ .Permalink }}">
 					<div class="course-card">
@@ -16,16 +13,15 @@
 							<img src="{{ .Site.BaseURL }}/images/{{ .Params.image }}" alt="">
 						</div>
 						<div class="bottom-half">
-						<div class="title">{{.Title}}</div>
-						<div class="subtitle">
-							Read Now
-						</div>
+							<div class="title">{{.Title}}</div>
+							<div class="subtitle">
+								Read Now
+							</div>
 						</div>
 					</div>
 				</a>
 			</div>
-			{{ end }}
-			{{ end }}
+			{{ end }} {{ end }}
 
 		</div>
 
@@ -34,20 +30,18 @@
 
 <div class="tutorials container">
 	<div class="row flexbox-courses">
-	{{ $paginator := .Paginate .Site.Pages }}
-	{{ range $paginator.Pages }}
+		{{ $paginator := .Paginate .Site.Pages }} {{ range $paginator.Pages }}
 		<div class="col l4 m6 s12">
-			<div class="card">
-				<div class="card-content">
-					<span class="card-title">{{ .Title }}</span>
-					<p>{{ .Params.desc }}</p>
+			<a href="{{ .RelPermalink }}" class="blog-list-article">
+				<div class="blog-list-article-date">12th August</div>
+				<div class="blog-list-article-category">Angular</div>
+				<div class="blog-list-article-content">
+					<div class="blog-list-article-title">{{ .Title }}</div>
+					<div class="blog-list-article-excerpt">{{ .Params.desc }}</div>
 				</div>
-				<div class="card-action">
-					<a href="{{ .RelPermalink }}">Read More</a>
-				</div>
-			</div>
+			</a>
 		</div>
-	{{ end }}
+		{{ end }}
 	</div>
 	<div class="clear"></div>
 	<div class="center-align">
@@ -55,6 +49,4 @@
 	</div>
 </div>
 
-{{ partial "about.html" . }}
-
-{{ partial "footer.html" . }}
+{{ partial "about.html" . }} {{ partial "footer.html" . }}
