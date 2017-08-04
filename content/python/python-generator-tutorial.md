@@ -13,14 +13,18 @@ In this tutorial I'm aiming to help demystify this concept of generators within 
 
 ## What Are Generators?
 
-Generators are functions that can return multiple values at different times. These essentially act as iterators that we can subsequently iterate over in a variety of different ways. In Python we would typically define a normal function like so:
+Generators are functions that can return multiple values at different times. These essentially act as iterators that we can subsequently iterate over in a variety of different ways. 
+
+Imagine we wanted to define a function that would return double the value of whatever we first passed into it. If we wanted to do this with normal python functions we would have to do something like this:
 
 ~~~python
 def my_func(x):
     return x*2
 ~~~
 
-However this function would return once and only once the value of `x` doubled. However with generators we could return multiple values of `x` at different times like so:
+However this function would return the value of `x` doubled only once. However with generators we could make it double every time we called the `next()` function on this particular generator. This is where the `yield` keyword comes into play. You can think of `yield` in a similar way to how you would think of `return` in a normal function. Except you can call `yield` as many times as you would like.
+
+Let's define a very simple generator that will double the value of whatever we pass into it a grand total of three times, so if we pass 2 into it, by the final call we should end up with a value of 16.
 
 ~~~python
 def my_generator(x):
@@ -31,7 +35,7 @@ def my_generator(x):
 
 ## Complete Code Snippet
 
-In this code example we'll be defining a generator function which will yield `x*2`, `x*4` and then `x*8` respectively. 
+Let's flesh this out into a full python script. In this we have our new generator function with it's 3 `yield` statements, below that we declare an instance of our generator by calling `mygen = my_generator(2)`. We then print out the `next(mygen)` value 3 different times to the console.
 
 ~~~python
 
@@ -49,7 +53,7 @@ print(next(mygen))
 
 #### Output
 
-The above code should then print out the following in the console:
+If we were then to run this code and call the `next()` function 3 times on this generator, you should see the value is doubled every time. The above code should then print out the following in the console:
 
 ~~~bash
 $ python3.6 generators.py
