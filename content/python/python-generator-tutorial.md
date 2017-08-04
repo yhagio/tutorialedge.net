@@ -29,3 +29,47 @@ def my_generator(x):
     yield x*8
 ~~~
 
+## Complete Code Snippet
+
+In this code example we'll be defining a generator function which will yield `x*2`, `x*4` and then `x*8` respectively. 
+
+~~~python
+
+def my_generator(x):
+    yield x*2
+    yield x*4
+    yield x*8
+
+mygen = my_generator(2)
+
+print(next(mygen))
+print(next(mygen))
+print(next(mygen))
+~~~
+
+#### Output
+
+The above code should then print out the following in the console:
+
+~~~bash
+$ python3.6 generators.py
+4
+8
+16
+~~~
+
+## StopIteration Error
+
+The StopIteration error is raised when a call to next() is made and there are no subsequent values to be yielded from our generator function. If we added a 4th call to `print(next(mygen))` in the previous sample then you should see an error like so print out:
+
+~~~bash
+ $ python3.6 generators.py
+4
+8
+16
+Traceback (most recent call last):
+  File "generators.py", line 12, in <module>
+    print(next(mygen))
+StopIteration
+FAIL
+~~~
