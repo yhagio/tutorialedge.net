@@ -13,14 +13,14 @@ In this tutorial I'm aiming to help demystify this concept of generators within 
 
 ## What Are Generators?
 
-Generators are functions that can return multiple values at different times. Let's Typically in Python we would define a function like so:
+Generators are functions that can return multiple values at different times. These essentially act as iterators that we can subsequently iterate over in a variety of different ways. In Python we would typically define a normal function like so:
 
 ~~~python
 def my_func(x):
     return x*2
 ~~~
 
-This function would return once and only once the value of `x` doubled. However with generators we could return multiple values of `x` at different times like so:
+However this function would return once and only once the value of `x` doubled. However with generators we could return multiple values of `x` at different times like so:
 
 ~~~python
 def my_generator(x):
@@ -73,3 +73,36 @@ Traceback (most recent call last):
 StopIteration
 FAIL
 ~~~
+
+## Infinite Generator
+
+We can implement an iterator that continues to yield values indefinitely by doing something like so:
+
+~~~python
+def my_generator(x):
+    x = 2
+    while True:
+        yield x*2
+        x = x*2
+        
+mygen = my_generator(2)
+
+print(next(mygen))
+print(next(mygen))
+print(next(mygen))
+print(next(mygen))
+~~~
+
+## Output
+
+We can then call the next() function as many times as we'd desire and we would then obtain an output that looks like so:
+
+~~~bash
+ $ python3.6 generators.py
+4
+8
+16
+32
+~~~
+
+> It's important to note that the physical limitations still apply and I'm sure you'd start to hit some form of limit for the above program if you called next() indefinitely.
