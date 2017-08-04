@@ -80,11 +80,11 @@ FAIL
 
 ## Infinite Generator
 
-We can implement an iterator that continues to yield values indefinitely by doing something like so:
+Let's now improve upon our original generator function. We can implement an iterator that continues to yield values indefinitely. This will keep a reference of what value `x` currently is and after every yield it will double that value. 
 
 ~~~python
 def my_generator(x):
-    x = 2
+    x = x
     while True:
         yield x*2
         x = x*2
@@ -99,7 +99,7 @@ print(next(mygen))
 
 ## Output
 
-We can then call the next() function as many times as we'd desire and we would then obtain an output that looks like so:
+We can then call the next() function as many times as we'd desire and we would then see our original value of `x` double with each subsequent call to our `next(mygen)` function. Try change the value passed in to `my_generator()` and experiment with the number of times you call `print(next(mygen))`.
 
 ~~~bash
  $ python3.6 generators.py
