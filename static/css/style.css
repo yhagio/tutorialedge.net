@@ -153,7 +153,6 @@ nav .button-collapse .ion {
     display: flex;
     height: 314px;
     width: 100%;
-    background: #F3F4F5;
     margin: 15px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -631,13 +630,15 @@ article .amazon-link {
   border: none;
 }
 
-@media only screen and (min-width: 993px) {
+@media only screen and (min-width: 486px) {
   .container {
       width: 95%;
   }
 }
-.container article {
-  width: 70%;
+@media only screen and (min-width: 768px) {
+  .container article {
+    width: 70%;
+  }
 }
 .container img {
   width: 80%;
