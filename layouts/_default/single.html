@@ -4,9 +4,8 @@
 	<div class="title-bar-container">
 		<div class="date">{{ .Date.Format "02.01.2006 15:04" }}</div>
 		<div class="category">
-			{{ range $key, $value := .Params.series }} 
-			<a href="/series/{{ $value }}">{{ $value }}</a>
-			{{ end }}
+			{{ range $key, $value := .Params.series }}
+			<a href="/series/{{ $value }}">{{ $value }}</a> {{ end }}
 		</div>
 		<h1>{{ .Title }}</h1>
 		<div class="tags">
@@ -24,6 +23,14 @@
 		<div class="info">Author: {{ .Params.author }}</div>
 		<div>
 			{{ .Content }}
+		</div>
+		<div>
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- left-sidebar -->
+			<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6782067367590597" data-ad-slot="4096707282" data-ad-format="auto"></ins>
+			<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
 		</div>
 		<div>
 			{{ partial "comments.html" . }}
