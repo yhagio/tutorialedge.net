@@ -7,3 +7,5 @@ baseURL = "https://tutorialedge.net"
     tag = "tags" 
     series = "series"
     course = "course"
+
+paginate = 9

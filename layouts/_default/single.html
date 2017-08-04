@@ -1,33 +1,33 @@
 {{ partial "header.html" . }}
+
 <div class="title-bar">
-	<div class="container">
+	<div class="title-bar-container">
+		<div class="date">{{ .Date.Format "02.01.2006 15:04" }}</div>
+		<div class="category">
+			{{ range $key, $value := .Params.series }} 
+			<a href="/series/{{ $value }}">{{ $value }}</a>
+			{{ end }}
+		</div>
 		<h1>{{ .Title }}</h1>
-		<p>{{ .Params.desc }}</p>
-		{{ range .Params.tags }}
-		<a href="/tags/{{ . }}"><div class="chip">{{ . }}</div></a>
-		{{ end }}
+		<div class="tags">
+			{{ range .Params.tags }}
+			<a href="/tags/{{ . }}">
+				<div class="chip">{{ . }}</div>
+			</a>
+			{{ end }}
+		</div>
 	</div>
 </div>
 
-<div class="row">
-	<div class="col l3 m3 s12">
-		{{ partial "sidebar.html" . }}
-	</div>
-	<div class="col l6 m9 s12">	
-		<article>
-			<div class="info">Author: {{ .Params.author }} | Posted at: {{ .Date.Format "02.01.2006 15:04" }}</div>
-			<div>
-				{{ .Content }}
-			</div>
-			<div>
-				{{ partial "comments.html" . }}
-			</div>
-		</article>
-	</div>
-
-	<div class="col l3 hide-on-med-and-down">
-		{{ partial "right-sidebar.html" .}}
-	</div>
-	
+<div class="container">
+	<article>
+		<div class="info">Author: {{ .Params.author }}</div>
+		<div>
+			{{ .Content }}
+		</div>
+		<div>
+			{{ partial "comments.html" . }}
+		</div>
+	</article>
 </div>
 {{ partial "footer.html" . }}

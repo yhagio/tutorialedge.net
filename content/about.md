@@ -4,8 +4,8 @@ title = "About"
 draft = true
 author = "Elliot Forbes"
 layout = "simple"
-
 +++
+
 ## The Story:
 
 Originally started in December of 2014 this site began as a side hobby of mine and has quickly grown into one of the most successful side projects I've ever worked upon. Since it's conception it's racked up well over 100,000 page views and it's still growing.

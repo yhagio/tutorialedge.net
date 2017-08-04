@@ -1,10 +1,8 @@
 body {
-  font-family: "Proxima Nova", "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-family: "Proxima Nova", "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+  color: #3D4C62;
   font-weight: 400;
   line-height: 1.75;
-  color: #0a0a0a;
-  box-sizing: border-box;
-  font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
@@ -47,7 +45,7 @@ article ol li:before {
 }
 
 nav {
-  background-color: #2B3840;
+  background-color: #14233C;
 }
 
 nav .brand-logo {
@@ -129,6 +127,7 @@ nav .button-collapse .ion {
   right: 30px;
 }
 
+
 .blog-list-article {
   height: 285px;
   position: relative;
@@ -152,6 +151,7 @@ nav .button-collapse .ion {
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex;
+    height: 314px;
     width: 100%;
     background: #F3F4F5;
     margin: 15px;
@@ -167,7 +167,7 @@ nav .button-collapse .ion {
 
 @media (min-width: 728px) {
   .blog-list-article {
-    width: 100%
+    width: 100%;
   }
 }
 
@@ -402,15 +402,50 @@ nav .button-collapse .ion {
 .title-bar {
   text-align: center;
   width: 100%;
-  padding: 20px;
-  background-color: #074E68;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #F3F4F5;
+  color: #14233C;
+}
+.title-bar-container {
+  position: relative;
+  height: 256px;
+  max-width: 736px;
+  margin: auto;
+}
+.title-bar .date {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+}
+.title-bar .category {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+.title-bar .category a {
+    background-color: #e8e9ec;
+        top: 30px;
+    padding: 9px 22px 8px;
+    border-radius: 5px;
+    font-weight: 600;
+        color: #3D4C62;
 }
 
 .title-bar h1 {
-  color: white !important;
-  font-size: 2.9375rem;
+  position: relative;
+  top: 40%;
+  transform: translateY(-60%);
+  font-size: 35px;
   font-weight: 600;
   line-height: 3.125rem;
+}
+.title-bar .tags {
+    position: absolute;
+    bottom: 40px;
+    width: 200px;
+    left:50%;
+    margin-left:-100px;
 }
 
 .title-bar p {
@@ -418,8 +453,9 @@ nav .button-collapse .ion {
 }
 
 .title-bar .chip {
-  background-color: #158DA0 !important;
+  background-color: #14233C !important;
   color: white !important;
+  margin-bottom: 10px;
 }
 
 .left-sidebar {
@@ -472,7 +508,10 @@ article {
   padding: 20px;
   padding-top: 40px;
   padding-bottom: 40px;
-  font-size: 1em;
+  font-size: 18px;
+  line-height: 30px;
+  margin: auto;
+  color: #3D4C62;
 }
 
 article h1, h2, h3, h4, h5 {
@@ -592,6 +631,14 @@ article .amazon-link {
   border: none;
 }
 
+@media only screen and (min-width: 993px) {
+  .container {
+      width: 95%;
+  }
+}
+.container article {
+  width: 70%;
+}
 .container img {
   width: 80%;
   height: auto;
@@ -600,7 +647,7 @@ article .amazon-link {
 }
 
 .welcome-bar {
-  background-color: #074E68;
+  background-color: #22798A;
   color: white;
   width: 100%;
   padding: 20px;
@@ -619,7 +666,7 @@ article .amazon-link {
 }
 
 .join-us {
-  background-color: #085A78;
+  background-color: #22798A;
   width: 100%;
   padding: 20px;
 }
@@ -643,11 +690,12 @@ article .amazon-link {
   display: block;
   width: 100%;
   margin-top: 20px;
-  background-color: #2199E8;
+  background-color: #fff;
+  color: #22798A;
 }
 
 footer.page-footer {
-  background-color: #074E68;
+  background-color: #14233C;
   color: #fff;
   margin-top: 0;
 }
