@@ -4,7 +4,7 @@ title = "The Top Books For Learning Angular"
 draft = true
 desc = "The definitive list of all the books you should buy if you want to master the art of programming Angular applications"
 author = "Elliot Forbes"
-tags = ["angular", "typescript"]
+tags = ["angular", "typescript", "books"]
 series = ["angular"]
 twitter = "https://twitter.com/Elliot_F"
 +++

@@ -591,6 +591,8 @@ article blockquote {
 
 article img.book-img {
   float: left;
+  width: 260px;
+  height: auto;
   margin: 20px;
 }
 
