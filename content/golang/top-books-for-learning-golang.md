@@ -22,7 +22,7 @@ The Go Programming language by Alan A. A. Donovan and Brian W. Kernighan is an a
 
 It's ideal for those of you who want to learn how to write idiomatic go in real-life situations and requires no prior knowledge of the language. 
 
-#### Book Covers
+#### The Book Covers
 
 * The Fundamentals of Go
 * Concurrency in Go
@@ -31,3 +31,17 @@ It's ideal for those of you who want to learn how to write idiomatic go in real-
 * Low-level programming
 
 <div class="amazon-link">Buy Now (US): <a href="http://amzn.to/2feFblR">The Go Programming Language</a></div>
+
+## Go in Action (1st Edition)
+
+<p><img alt="Go In Action" class="book-img" src="/books/go-in-action.jpg"/>Go in Action represents an excellent introduction to Google's own Go programming language. Within the confines of the 250 odd pages it manages to cover everything you need to get up and running with this language. All in all it complements the Go Programming Language book currently sitting in first position.</p>
+
+#### The Book Covers
+
+* A Quick start guide to go
+* The packages and tooling
+* Concurrency and Concurrency Patterns
+* The Standard Library
+* Testing and Benchmarking
+
+<div class="amazon-link">Buy Now (US): <a href="http://amzn.to/2vcRZOZ">Go in Action</a></div>
