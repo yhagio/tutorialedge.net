@@ -9,7 +9,7 @@ author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++
 
-> Currently under Construction
+In this article we look at some of the key concepts that everyone should bear in mind when designing RESTful APIs. 
 
 ## Versioning
 
@@ -61,10 +61,8 @@ When it comes to returning a response to whomever called your API then it's best
 5xx # Server Error status codes
 ~~~
 
+
 ## Discoverability
 
-> Under Construction
+When it comes to APIs, they should be easily navigable. If you are returning paginated results then ideally you should include a `next_page` key/value within your json that directs the user to the next page of results. 
 
-## Handling Errors
-
-> Under construction
