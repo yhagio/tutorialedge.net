@@ -27,7 +27,7 @@ The main aim for the site is for it to be a place that I can host tutorials and 
 #### Python
 
 * ~~Python Map Tutorial~~
-* Creating Your Own Python Decorators
+* ~~Creating Your Own Python Decorators~~
 * Getting Started with ThreadPoolExecutors
 * Getting Started with ProcessPoolExecutors
 * Building a Python REST API with Flask
