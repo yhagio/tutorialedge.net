@@ -36,6 +36,8 @@ It's ideal for those of you who want to learn how to write idiomatic go in real-
 
 <p><img alt="Go In Action" class="book-img" src="/books/go-in-action.jpg"/>Go in Action represents an excellent introduction to Google's own Go programming language. Within the confines of the 250 odd pages it manages to cover everything you need to get up and running with this language. All in all it complements the Go Programming Language book currently sitting in first position.</p>
 
+You'll spend time within this book building real-world applications such as web sites and servers and come away a proficient golang developer.
+
 #### The Book Covers
 
 * A Quick start guide to go
@@ -45,3 +47,32 @@ It's ideal for those of you who want to learn how to write idiomatic go in real-
 * Testing and Benchmarking
 
 <div class="amazon-link">Buy Now (US): <a href="http://amzn.to/2vcRZOZ">Go in Action</a></div>
+
+## Introducing Go
+
+<p><img alt="Introducing Go" src="/books/introducing-go.jpg" class="book-img"/>Introducing Go by Caleb Doxsey is a fantastic, affordable O'Reilly book that is ideal for those of you with no knowledge of the Go programming language. The book gives very simple examples that bring you up to speed quickly and concisely.</p>
+
+The book starts off with simple concepts and builds up to more advanced topics such as testing and concurrency. Overall, I'd recommend this book in conjunction with one of the above books as it is a quick and easy introduction to the language, good for getting up and running quickly but you may desire more in-depth coverage of the advanced topics once you are done. 
+
+#### The Book Covers
+
+* Getting started with Go
+* Go's Type System
+* Structs and Interfaces
+* Packages
+* Testing 
+* Concurrency
+
+<div class="amazon-link">Buy Now (US): <a href="http://amzn.to/2vSrzDx">Introducing Go</a></div>
+
+# Advanced Books
+
+In this section I'll be listing books which are more advanced in nature and cover material that may be unsuitable for those who have little-to-no experience with the go programming language
+
+## Network Programming with Go
+
+<p><img alt="Network programming with go" class="book-img" src="/books/network-programming-with-go.jpg"/>Network Programming with Go by Jan Newmarch is a book that I am currently reading and it's packed full of incredibly useful and in-depth information on topics such as the ISO/OSI protocol, low level concepts such as TCP/UDP, socket programming and much, much more. It's so far a little rough in edges with regards to typos but overlooking that it's a great read to get you up and running with Network programming using Golang.</p>
+
+<div class="amazon-link">Buy Now (US): <a href="http://amzn.to/2vvijEk">Network Programming with Go</a></div>
+
+> This list is under construction, more books will be added as and when I am able to read and review them. 

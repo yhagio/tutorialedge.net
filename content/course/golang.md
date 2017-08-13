@@ -27,6 +27,10 @@ The language itself is open source and incredibly powerful, with features like c
 
 In order to start writing your own Go based systems you'll need to install it on your local machine: [Download Go](https://golang.org/dl/) 
 
+## Top Resources
+
+If you are in need of some excellent books to cover the language in a greater depth then I highly recommend you check out my list of the [top books for learning golang](/golang/top-books-for-learning-golang/).
+
 ## Tutorials 
 
 * [Creating a Simple Web Server with Golang](/post/golang/creating-simple-web-server-with-golang/)
