@@ -45,6 +45,10 @@ I'd highly recommend this book to anyone willing to learn the Angular framework.
 
 <div class="amazon-link">Buy Now (US): <a href="http://amzn.to/2rnYiKo">ASP.NET Core and Angular 2</a></div>
 
+# Learning TypeScript
+
+The Angular framework is built using TypeScript and having a solid foundation in this language is important. In this section we'll be looking at books that focus purely on learning the TypeScript programming language.
+
 ## Pro TypeScript: Application-Scale JavaScript Development
 
 <p><img src="/books/pro-typescript.jpg" alt="Pro TypeScript" class="book-img"/>Whilst this book may not be focused on Angular, it's an incredible learning aide for someone who is new to the language and the framework. During my time working with the framework I've seen developers, myself included, who have struggled with issues that aren't Angular-centric that could have been solved if our underlying knowledge of the TypeScript language was stronger.</p>
