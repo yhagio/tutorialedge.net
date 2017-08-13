@@ -23,4 +23,36 @@ All in all, thanks to logging this took less than 30 minutes and your company on
 
 This example is exactly why you should pay attention to the way that your systems log what is going on and in this tutorial we'll be covering some of the best practices you can follow when it comes to implementing your own logging systems.
 
-## 
+## The Logging Module
+
+> The official documentation for the logging module can be found hereL [Official Docs](https://docs.python.org/3/library/logging.html)
+
+The Logging module is one of the best options you can leverage when implementing a logging system within your Python applications. It is very mature in terms of functionality and is the standard choice for enterprise programmers when it comes to logging.
+
+#### Controlling log statement structure
+
+With the Logging module, you have the power to dictate the exact structure of your logging messages. This is powerful as it allows you to do things like capture process/thread names with every log statement without having to explicitly state them within the message you want to log.  
+
+#### Creating a Simple File Logger
+
+In this example we'll be creating a very simple logger that will capture every INFO level log message to a my_app.log file within the same directory as our application.
+
+~~~python
+import logging
+
+logger = logging.getLogger('my_app')
+logger.setLevel(logging.INFO)
+
+fh = logging.FileHandler('my_app.log')
+fh.setLevel(logging.INFO)
+logger.addHandler(fh)
+
+def main():
+    logger.info("My First Log Statement")
+
+main()
+~~~
+
+Upon execution of this you should see a new `my_app.log` file appear within your directory and if you open that log file you should see `My First Log Statement` on line one of that file. 
+
+> It's important to note that the logger simply appends log statements to the end of this file and does not overwrite it.
