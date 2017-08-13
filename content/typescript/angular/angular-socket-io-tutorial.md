@@ -22,6 +22,7 @@ npm install @types/socket.io-client
 
 ## Turning Websockets into Observables
 
+RxJS provides us with a very simple way of 
 
 ~~~typescript
 connect() {
