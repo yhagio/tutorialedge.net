@@ -29,13 +29,47 @@ This example is exactly why you should pay attention to the way that your system
 
 The Logging module is one of the best options you can leverage when implementing a logging system within your Python applications. It is very mature in terms of functionality and is the standard choice for enterprise programmers when it comes to logging.
 
-### Formatting Your Log Statements
+
+## Formatting Your Log Statements
 
 With the Logging module, you have the power to dictate the exact structure of your logging messages. This is powerful as it allows you to do things like capture process/thread names with every log statement without having to explicitly state them within the message you want to log.  
 
+Within the `logging` module we can specify the format by doing something like so:
 
+~~~python
+import logging
+import logging.handlers as handlers
+import time
 
-#### Creating a Simple File Logger
+logger = logging.getLogger('my_app')
+logger.setLevel(logging.INFO)
+
+# Here we define our formatter
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+
+logHandler = handlers.TimedRotatingFileHandler('timed_app.log', when='M', interval=1, backupCount=2)
+logHandler.setLevel(logging.INFO)
+# Here we set our logHandler's formatter
+logHandler.setFormatter(formatter)
+
+logger.addHandler(logHandler)
+
+def main():
+    while True:
+        time.sleep(1)
+        logger.info("A Sample Log Statement")
+
+main()
+~~~
+
+This outputs log files that look like this:
+
+~~~bash
+2017-08-14 21:39:49,108 - my_app - INFO - A Sample Log Statement
+2017-08-14 21:39:50,112 - my_app - INFO - A Sample Log Statement
+~~~
+
+### Creating a Simple File Logger
 
 In this example we'll be creating a very simple logger that will capture every INFO level log message to a my_app.log file within the same directory as our application.
 
@@ -129,7 +163,3 @@ You may wonder what the point of this is, but as we move towards more micro-serv
 
 I'd recommend that if you go down this approach then you look at projects such as [vklochan/python-logstash](https://github.com/vklochan/python-logstash) which very easily allows you to integrate Logstash with your Python applications.
 
-
-## Use Appropriate Logging Levels
-
-## Logging Configuration
