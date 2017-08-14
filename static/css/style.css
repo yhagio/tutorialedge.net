@@ -77,17 +77,17 @@ nav .button-collapse .ion {
   color: white !important;
 }
 
-.pagination {
+.tutorials .pagination {
   width: 100%;
   text-align: center;
   padding: 20px;
 }
 
-.pagination .total-count {
+.tutorials .pagination .total-count {
   padding: 20px;
 }
 
-.pagination a {
+.tutorials .pagination a {
   color: #1bbbef;
   text-decoration: none;
   padding: 0.5em 1.5em;
@@ -452,7 +452,7 @@ nav .button-collapse .ion {
   color: white !important;
 }
 
-.title-bar .chip {
+.chip {
   background-color: #14233C !important;
   color: white !important;
   margin-bottom: 10px;
@@ -802,4 +802,100 @@ footer .footer-copyright {
 
 .wrapper img {
   margin: auto !important;
+}
+
+.search-bar {
+  background-color: #F3F4F5;
+  padding: 40px;
+}
+
+.search-results {
+  width:100%;
+  padding: 40px;
+  background-color: white;
+}
+
+.search-result {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.search-result h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0;
+  color: #1a0dab;
+}
+
+.search-result .url {
+  color: #006621;
+  margin: 0;
+  padding: 0;
+}
+
+.search-result .description {
+    color: #545454;
+    line-height: 1.0;
+    word-wrap: break-word;
+}
+
+
+.tags {
+  list-style: none;
+  margin: 0;
+  overflow: hidden; 
+  padding: 0;
+  margin-top: 5px;
+}
+
+.tags li {
+  float: left; 
+}
+
+.tag {
+  background: #eee;
+  border-radius: 3px 0 0 3px;
+  color: #999;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 20px 0 23px;
+  position: relative;
+  margin: 0 10px 10px 0;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+}
+
+.tag::before {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+  content: '';
+  height: 6px;
+  left: 10px;
+  position: absolute;
+  width: 6px;
+  top: 10px;
+}
+
+.tag::after {
+  background: #fff;
+  border-bottom: 13px solid transparent;
+  border-left: 10px solid #eee;
+  border-top: 13px solid transparent;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.tag:hover {
+  background-color: crimson;
+  color: white;
+}
+
+.tag:hover::after {
+   border-left-color: crimson; 
 }

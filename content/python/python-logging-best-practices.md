@@ -163,3 +163,49 @@ You may wonder what the point of this is, but as we move towards more micro-serv
 
 I'd recommend that if you go down this approach then you look at projects such as [vklochan/python-logstash](https://github.com/vklochan/python-logstash) which very easily allows you to integrate Logstash with your Python applications.
 
+## Use of Appropriate Log Levels
+
+When it comes to logging distinct events in your application, not everything will carry the same weight in terms of importance. You may for instance want to log fatal errors to be caught by a different log handler that stores these logs to a different file. This reduces the need to have to trim out all the fat from normal log statements and cut straight to where your application failed in the off chance that something critical has gone wrong.
+
+Previously in this article we looked at two distinct types of file handlers, the `TimedRotatingFileHandler` and the `RotatingFileHandler`. With these two distinct types of handler we can do things such as log all error messages to a rotating file, but all normal log files to a `TimedRotatingFileHandler` as we hope that we can expect far more of them than error messages.
+
+In this next example we are going to have a look at how we can split out two different log levels: `INFO` and `ERROR` to two distinct places. The default levels are `CRITICAL`, `ERROR`, `WARNING`, `INFO`, `DEBUG` and `NOTSET`.
+
+~~~python
+import logging
+import logging.handlers as handlers
+import time
+
+logger = logging.getLogger('my_app')
+logger.setLevel(logging.INFO)
+
+# Here we define our formatter
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+
+logHandler = handlers.TimedRotatingFileHandler('normal.log', when='M', interval=1, backupCount=0)
+logHandler.setLevel(logging.INFO)
+logHandler.setFormatter(formatter)
+
+errorLogHandler = handlers.RotatingFileHandler('error.log', maxBytes=5000, backupCount=0)
+errorLogHandler.setLevel(logging.ERROR)
+errorLogHandler.setFormatter(formatter)
+
+logger.addHandler(logHandler)
+logger.addHandler(errorLogHandler)
+
+def main():
+    while True:
+        time.sleep(1)
+        logger.info("A Sample Log Statement")
+        logger.error("An error log statement")
+
+main()
+~~~
+
+You should notice that 3 log files are created when you run this. The `error.log` will contain only logs that are of level `ERROR` or higher. The `normal.log` will contain a combination of all log messages logged out of our application.
+
+## Conclusion
+
+These are just a few things I feel are important when implementing your own logging system. As I said, these are just suggestions and in no way absolute laws, these are just what I've found works best.
+
+If you have any further suggestions please let me know in the comments section below! 

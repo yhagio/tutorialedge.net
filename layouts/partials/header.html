@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default " en-us " }}">
+<html ng-app="root" lang="{{ .Site.LanguageCode | default " en-us " }}">
 
 <head>
 	<meta charset="UTF-8">
@@ -27,7 +27,9 @@
 	<!-- Compiled and minified JavaScript -->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script async src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
-	<script src="{{ .Site.BaseURL }}/js/highlight.pack.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+	<script src="{{ .Site.BaseURL }}/js/dist/bundle.js"></script>
+	<script src="{{ .Site.BaseURL }}/js/dist/highlight.pack.js"></script>
 
 	<script>
 		hljs.initHighlightingOnLoad();
@@ -49,7 +51,7 @@
 	</script>
 </head>
 
-<body>
+<body ng-controller="RootController">
 
 	<header>
 		<nav>
@@ -57,6 +59,7 @@
 				<a class="brand-logo" href="{{ .Site.BaseURL }}"><img src="{{ .Site.BaseURL }}/images/logo.png" alt="{{ .Site.Title }}"> {{ .Site.Title }}</a>
 				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="ion ion-navicon-round"></i> </a>
 				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><a href="{{ .Site.BaseURL }}/search/">Search</a></li>
 					<li><a href="{{ .Site.BaseURL }}/about/">About</a></li>
 					<li><a href="{{ .Site.BaseURL }}/get-involved/">Get Involved</a></li>
 					<li><a href="{{ .Site.BaseURL }}/series/blog/">Blog</a></li>
@@ -64,6 +67,7 @@
 					<li><a href="{{ .Site.BaseURL }}/post/">Tutorials</a></li>
 				</ul>
 				<ul class="side-nav" id="mobile-demo">
+					<li><a href="{{ .Site.BaseURL }}/search/">Search</a></li>
 					<li><a href="{{ .Site.BaseURL }}/about/">About</a></li>
 					<li><a href="{{ .Site.BaseURL }}/get-involved/">Get Involved</a></li>
 					<li><a href="{{ .Site.BaseURL }}/series/blog/">Blog</a></li>
