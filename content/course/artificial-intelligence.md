@@ -17,7 +17,9 @@ image = "ai.png"
 
 <p>I’m going to start of by introducing concepts such as agents and rationality and then build up to implementing a number of highly-used Artificial Intelligence algorithms. </p>
 
-<h2>Course Structure</h2>
+## Core Concepts
+
+In this section of the course we cover some of the core concepts that you'll need to know in order to progress further into the world of Artificial Intelligence.
 
 <div class="row">
   <div class="col l6">
@@ -40,6 +42,13 @@ image = "ai.png"
           </div>
       </a>
   </div>
+</div>
+
+## Java Based AI Tutorials
+
+Now that we have a basic understanding for some of the concepts, it's time to look at how we can implement some basic Artificial intelligence algorithms using Java.
+
+<div class="row">
   <div class="col l6">
       <a href="/post/general/artificial-intelligence/breadth-first-search-java/" class="blog-list-article">
           <div class="blog-list-article-date">Beginner</div> 
@@ -72,7 +81,6 @@ image = "ai.png"
   </div>
 </div>
 
-<ol>
 
 
  
