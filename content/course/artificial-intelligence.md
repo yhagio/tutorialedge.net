@@ -19,14 +19,60 @@ image = "ai.png"
 
 <h2>Course Structure</h2>
 
-<ol>
-<li><a href="https://tutorialedge.net/post/general/artificial-intelligence/introduction-to-artificial-intelligence/">An Introduction to Artificial Intelligence</a></li>
-<li><a href="https://tutorialedge.net/post/general/artificial-intelligence/what-is-intelligent-agent/">What is an Intelligent Agent?</a></li>
-<li><a href="https://tutorialedge.net/post/general/artificial-intelligence/breadth-first-search-java/">Breadth First Searching Algorithm</a></li>
-<li><a href="https://tutorialedge.net/post/general/artificial-intelligence/depth-first-search/">Depth First Searching Algorithm</a></li>
-<li><a href="https://tutorialedge.net/post/general/artificial-intelligence/depth-limited-search-in-java/">Depth Limited Searching Algorithm</a></li>
-</ol>
+<div class="row">
+  <div class="col l6">
+      <a href="/post/general/artificial-intelligence/introduction-to-artificial-intelligence/" class="blog-list-article">
+          <div class="blog-list-article-date">Beginner</div> 
+          <div class="blog-list-article-category">Artificial Intelligence</div>
+          <div class="blog-list-article-content">
+              <div class="blog-list-article-title">An Introduction to Artificial Intelligence</div>
+               <!-- <div class="blog-list-article-excerpt"></div>  -->
+          </div>
+      </a>
+  </div>
+  <div class="col l6">
+      <a href="/post/general/artificial-intelligence/what-is-intelligent-agent/" class="blog-list-article">
+          <div class="blog-list-article-date">Beginner</div> 
+          <div class="blog-list-article-category">Artificial Intelligence</div>
+          <div class="blog-list-article-content">
+              <div class="blog-list-article-title">What is an Intelligent Agent</div>
+                <!-- <div class="blog-list-article-excerpt"></div>   -->
+          </div>
+      </a>
+  </div>
+  <div class="col l6">
+      <a href="/post/general/artificial-intelligence/breadth-first-search-java/" class="blog-list-article">
+          <div class="blog-list-article-date">Beginner</div> 
+          <div class="blog-list-article-category">Artificial Intelligence</div>
+          <div class="blog-list-article-content">
+              <div class="blog-list-article-title">Breadth First Search in Java</div>
+                <!-- <div class="blog-list-article-excerpt"></div>   -->
+          </div>
+      </a>
+  </div>
+  <div class="col l6">
+      <a href="/post/general/artificial-intelligence/depth-first-search/" class="blog-list-article">
+          <div class="blog-list-article-date">Beginner</div> 
+          <div class="blog-list-article-category">Artificial Intelligence</div>
+          <div class="blog-list-article-content">
+              <div class="blog-list-article-title">Depth First Search in Java</div>
+                <!-- <div class="blog-list-article-excerpt"></div>   -->
+          </div>
+      </a>
+  </div>
+  <div class="col l6">
+      <a href="/post/general/artificial-intelligence/depth-limited-search-in-java/" class="blog-list-article">
+          <div class="blog-list-article-date">Beginner</div> 
+          <div class="blog-list-article-category">Artificial Intelligence</div>
+          <div class="blog-list-article-content">
+              <div class="blog-list-article-title">Depth Limited Search in Java</div>
+                <!-- <div class="blog-list-article-excerpt"></div>   -->
+          </div>
+      </a>
+  </div>
+</div>
 
+<ol>
 
 
  
