@@ -15,104 +15,101 @@ Angular 2 is the latest iteration of the wildly successful Angular framework and
 
 ## Course
 
-<div class="lesson row">
-  <div class="lesson-number col l2 m2 s12">
-    <div class="circle">1</div>
+
+<div class="row">
+  <div class="col l6">
+      <a href="/post/typescript/angular/angular-modules-tutorial/" class="blog-list-article">
+          <div class="blog-list-article-date">Beginner</div> 
+          <div class="blog-list-article-category">Angular</div>
+          <div class="blog-list-article-content">
+              <div class="blog-list-article-title">Angular Modules</div>
+               <div class="blog-list-article-excerpt">Learn the fundamentals of Angular modules and how they are used in angular applications.</div> 
+          </div>
+      </a>
   </div>
-  <div class="lesson-info col l10 m10 s12">
-    <a href="/post/typescript/angular/angular-modules-tutorial/"><h3>Angular Modules</h3></a>
-    <p>Learn the fundamentals of Angular modules and how they are used in angular applications.</p>
-    <a href="/post/typescript/angular/angular-modules-tutorial/">Read Now</a>
+  <div class="col l6">
+      <a href="/post/typescript/angular/angular-components-tutorial/" class="blog-list-article">
+          <div class="blog-list-article-date">Beginner</div> 
+          <div class="blog-list-article-category">Angular</div>
+          <div class="blog-list-article-content">
+              <div class="blog-list-article-title">Angular Components</div>
+               <div class="blog-list-article-excerpt">The web is moving towards more component based applications. Being able to define components once and reuse them multiple times throughout your applications is exceptionally useful.</div> 
+          </div>
+      </a>
   </div>
+  <div class="col l6">
+      <a href="/post/typescript/angular/angular-services-tutorial/" class="blog-list-article">
+          <div class="blog-list-article-date">Beginner</div> 
+          <div class="blog-list-article-category">Angular</div>
+          <div class="blog-list-article-content">
+              <div class="blog-list-article-title">Angular Services</div>
+               <div class="blog-list-article-excerpt">If your applications interact with REST APIs at all then you'll want to utilize services within your application. In this section we look at how to build your own services that can be used throughout your site. </div> 
+          </div>
+      </a>
+  </div>
+  <div class="col l6">
+      <a href="/post/typescript/angular/angular-environment-configuration-tutorial/" class="blog-list-article">
+          <div class="blog-list-article-date">Beginner</div> 
+          <div class="blog-list-article-category">Angular</div>
+          <div class="blog-list-article-content">
+              <div class="blog-list-article-title">Angular Environment Configuration</div>
+               <div class="blog-list-article-excerpt">Easily configuring different applications for different environments is important. This section shows you exactly how we can do that:  </div> 
+          </div>
+      </a>
+  </div>
+  <div class="col l6">
+      <a href="/post/typescript/angular/angular-routing-tutorial/" class="blog-list-article">
+          <div class="blog-list-article-date">Beginner</div> 
+          <div class="blog-list-article-category">Angular</div>
+          <div class="blog-list-article-content">
+              <div class="blog-list-article-title">Angular Routing Tutorial</div>
+               <div class="blog-list-article-excerpt">Most Complicated Angular applications will require some form of routing.  </div> 
+          </div>
+      </a>
+  </div>
+  <div class="col l6">
+      <a href="/post/typescript/angular/angular-websockets-tutorial/" class="blog-list-article">
+          <div class="blog-list-article-date">Beginner</div> 
+          <div class="blog-list-article-category">Angular</div>
+          <div class="blog-list-article-content">
+              <div class="blog-list-article-title">Angular Websocket Tutorial</div>
+               <div class="blog-list-article-excerpt">Explore the power and versatility of using websockets in your angular applications. </div> 
+          </div>
+      </a>
+  </div>
+  <div class="col l6">
+      <a href="/post/typescript/angular/angular-cookies-tutorial/" class="blog-list-article">
+          <div class="blog-list-article-date">Beginner</div> 
+          <div class="blog-list-article-category">Angular</div>
+          <div class="blog-list-article-content">
+              <div class="blog-list-article-title">Angular Cookies Tutorial</div>
+               <div class="blog-list-article-excerpt">Explore the power and versatility of using websockets in your angular appCookies can be very handy for developing certain types of application. They are used for a wide range of things such as authentication or even storing previous search history and favourites on large shopping sites.</div> 
+          </div>
+      </a>
+  </div>
+  <div class="col l6">
+      <a href="/post/typescript/angular/angular-get-current-route-location/" class="blog-list-article">
+          <div class="blog-list-article-date">Beginner</div> 
+          <div class="blog-list-article-category">Angular</div>
+          <div class="blog-list-article-content">
+              <div class="blog-list-article-title">Getting the Current Route Using the Location Services</div>
+               <!-- <div class="blog-list-article-excerpt"></div>  -->
+          </div>
+      </a>
+  </div>
+  <div class="col l6">
+      <a href="/post/typescript/angular/angular-detecting-route-changes/" class="blog-list-article">
+          <div class="blog-list-article-date">Beginner</div> 
+          <div class="blog-list-article-category">Angular</div>
+          <div class="blog-list-article-content">
+              <div class="blog-list-article-title">Detecting Route Changes in Angular</div>
+               <!-- <div class="blog-list-article-excerpt"></div>  -->
+          </div>
+      </a>
+  </div>
+  
 </div>
 
-<div class="lesson row">
-  <div class="lesson-number col l2 m2 s12">
-    <div class="circle">2</div>
-  </div>
-  <div class="lesson-info col l10 m10 s12">
-    <a href="/post/typescript/angular/angular-components-tutorial/"><h3>Angular Components</h3></a>
-    <p>The web is moving towards more component based applications. Being able to define components once and reuse them multiple times throughout your applications is exceptionally useful. </p>
-    <a href="/post/typescript/angular/angular-components-tutorial/">Read Now</a>
-  </div>
-</div>
-
-<div class="lesson row">
-  <div class="lesson-number col l2 m2 s12">
-    <div class="circle">3</div>
-  </div>
-  <div class="lesson-info col l10 m10 s12">
-    <a href="/post/typescript/angular/angular-services-tutorial/"><h3>Angular Services</h3></a>
-    <p>If your applications interact with REST APIs at all then you'll want to utilize services within your application. In this section we look at how to build your own services that can be used throughout your site. </p>
-    <a href="/post/typescript/angular/angular-services-tutorial/">Read Now</a>
-  </div>
-</div>
-
-<div class="lesson row">
-  <div class="lesson-number col l2 m2 s12">
-    <div class="circle">4</div>
-  </div>
-  <div class="lesson-info col l10 m10 s12">
-    <a href="/post/typescript/angular/angular-environment-configuration-tutorial/"><h3>Angular Environment Configuration</h3></a>
-    <p>Easily configuring different applications for different environments is important. This section shows you exactly how we can do that: </p>
-    <a href="/post/typescript/angular/angular-environment-configuration-tutorial/">Read Now</a>
-  </div>
-</div>
-
-<div class="lesson row">
-  <div class="lesson-number col l2 m2 s12">
-    <div class="circle">5</div>
-  </div>
-  <div class="lesson-info col l10 m10 s12">
-    <a href="/post/typescript/angular/angular-routing-tutorial/"><h3>Angular Routing Tutorial</h3></a>
-    <p>Most Complicated Angular applications will require some form of routing.  </p>
-    <a href="/post/typescript/angular/angular-routing-tutorial/">Read Now</a>
-  </div>
-</div>
-
-<div class="lesson row">
-  <div class="lesson-number col l2 m2 s12">
-    <div class="circle">6</div>
-  </div>
-  <div class="lesson-info col l10 m10 s12">
-    <a href="/post/typescript/angular/angular-websockets-tutorial/"><h3>Angular Websockets Tutorial</h3></a>
-    <p>Explore the power and versatility of using websockets in your angular applications.</p>
-    <a href="/post/typescript/angular/angular-websockets-tutorial/">Read Now</a>
-  </div>
-</div>
-
-<div class="lesson row">
-  <div class="lesson-number col l2 m2 s12">
-    <div class="circle">7</div>
-  </div>
-  <div class="lesson-info col l10 m10 s12">
-    <a href="/post/typescript/angular/angular-cookies-tutorial/"><h3>Angular Cookies Tutorial</h3></a>
-    <p>Explore the power and versatility of using websockets in your angular appCookies can be very handy for developing certain types of application. They are used for a wide range of things such as authentication or even storing previous search history and favourites on large shopping sites. </p>
-    <a href="/post/typescript/angular/angular-cookies-tutorial/">Read Now</a>
-  </div>
-</div>
-
-<div class="lesson row">
-  <div class="lesson-number col l2 m2 s12">
-    <div class="circle">8</div>
-  </div>
-  <div class="lesson-info col l10 m10 s12">
-    <a href="/post/typescript/angular/angular-get-current-route-location/"><h3>Getting the Current Route Using the Location Services</h3></a>
-    <p></p>
-    <a href="/post/typescript/angular/angular-get-current-route-location/">Read Now</a>
-  </div>
-</div>
-
-<div class="lesson row">
-  <div class="lesson-number col l2 m2 s12">
-    <div class="circle">9</div>
-  </div>
-  <div class="lesson-info col l10 m10 s12">
-    <a href="/post/typescript/angular/angular-detecting-route-changes/"><h3>Detecting Route Changes in Angular</h3></a>
-    <p></p>
-    <a href="/post/typescript/angular/angular-detecting-route-changes/">Read Now</a>
-  </div>
-</div>
 
 # Example Angular 2 Applications:
 
