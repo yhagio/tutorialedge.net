@@ -33,13 +33,105 @@ If you are in need of some excellent books to cover the language in a greater de
 
 ## Tutorials 
 
-* [Creating a Simple Web Server with Golang](/post/golang/creating-simple-web-server-with-golang/)
-* [Reading in Console Input in Go](/post/golang/reading-console-input-golang/)
-* [Sending Email using Go and Mailgun](/post/golang/sending-email-using-go-and-mailgun/)
-* [Writing a Twitter Bot in Golang](/post/golang/writing-a-twitter-bot-golang/)
-* [Creating a RESTful API with Golang](/post/golang/creating-restful-api-with-golang/)
-* [Executing System Commands with Golang](/post/golang/executing-system-commands-with-golang/)
-* [Golang MySQL Tutorial](/post/golang/golang-mysql-tutorial/)
-* [Golang Integer to String Conversion](/post/golang/golang-integer-string-conversion-tutorial/)
-* [Parsing XML Files with Golang](/post/golang/parsing-xml-with-golang/)
-* [Parsing JSON files with Golang](/post/golang/parsing-json-with-golang/)
+<div class="row">
+    <div class="col l6">
+        <a href="/post/golang/creating-simple-web-server-with-golang/" class="blog-list-article">
+            <div class="blog-list-article-date">Beginner</div> 
+            <div class="blog-list-article-category">Golang</div>
+            <div class="blog-list-article-content">
+                <div class="blog-list-article-title">Creating a Simple Web Server with Golang</div>
+                <!-- <div class="blog-list-article-excerpt">lorem ipsum</div> -->
+            </div>
+        </a>
+    </div>
+    <div class="col l6">
+        <a href="/post/golang/reading-console-input-golang/" class="blog-list-article">
+            <div class="blog-list-article-date">Beginner</div> 
+            <div class="blog-list-article-category">Golang</div>
+            <div class="blog-list-article-content">
+                <div class="blog-list-article-title">Reading Console Input in Go</div>
+                <!-- <div class="blog-list-article-excerpt">lorem ipsum</div> -->
+            </div>
+        </a>
+    </div>
+    <div class="col l6">
+        <a href="/post/golang/sending-email-using-go-and-mailgun/" class="blog-list-article">
+            <div class="blog-list-article-date">Beginner</div> 
+            <div class="blog-list-article-category">Golang</div>
+            <div class="blog-list-article-content">
+                <div class="blog-list-article-title">Sending Email using Go and Mailgun</div>
+                <!-- <div class="blog-list-article-excerpt">lorem ipsum</div> -->
+            </div>
+        </a>
+    </div>
+    <div class="col l6">
+        <a href="/post/golang/writing-a-twitter-bot-golang/" class="blog-list-article">
+            <div class="blog-list-article-date">Beginner</div> 
+            <div class="blog-list-article-category">Golang</div>
+            <div class="blog-list-article-content">
+                <div class="blog-list-article-title">Writing a Twitter Bot in Golang</div>
+                <!-- <div class="blog-list-article-excerpt">lorem ipsum</div> -->
+            </div>
+        </a>
+    </div>
+    <div class="col l6">
+        <a href="/post/golang/creating-restful-api-with-golang/" class="blog-list-article">
+            <div class="blog-list-article-date">Beginner</div> 
+            <div class="blog-list-article-category">Golang</div>
+            <div class="blog-list-article-content">
+                <div class="blog-list-article-title">Creating a RESTful API with Golang</div>
+                <!-- <div class="blog-list-article-excerpt">lorem ipsum</div> -->
+            </div>
+        </a>
+    </div>
+    <div class="col l6">
+        <a href="/post/golang/executing-system-commands-with-golang/" class="blog-list-article">
+            <div class="blog-list-article-date">Beginner</div> 
+            <div class="blog-list-article-category">Golang</div>
+            <div class="blog-list-article-content">
+                <div class="blog-list-article-title">Executing System Commands with Golang</div>
+                <!-- <div class="blog-list-article-excerpt">lorem ipsum</div> -->
+            </div>
+        </a>
+    </div>
+    <div class="col l6">
+        <a href="/post/golang/golang-mysql-tutorial/" class="blog-list-article">
+            <div class="blog-list-article-date">Beginner</div> 
+            <div class="blog-list-article-category">Golang</div>
+            <div class="blog-list-article-content">
+                <div class="blog-list-article-title">Golang MySQL Tutorial</div>
+                <!-- <div class="blog-list-article-excerpt">lorem ipsum</div> -->
+            </div>
+        </a>
+    </div>
+    <div class="col l6">
+        <a href="/post/golang/golang-integer-string-conversion-tutorial/" class="blog-list-article">
+            <div class="blog-list-article-date">Beginner</div> 
+            <div class="blog-list-article-category">Golang</div>
+            <div class="blog-list-article-content">
+                <div class="blog-list-article-title">Golang Integer to String Conversion</div>
+                <!-- <div class="blog-list-article-excerpt">lorem ipsum</div> -->
+            </div>
+        </a>
+    </div>
+    <div class="col l6">
+        <a href="/post/golang/parsing-xml-with-golang/" class="blog-list-article">
+            <div class="blog-list-article-date">Beginner</div> 
+            <div class="blog-list-article-category">Golang</div>
+            <div class="blog-list-article-content">
+                <div class="blog-list-article-title">Parsing XML Files with Golang</div>
+                <!-- <div class="blog-list-article-excerpt">lorem ipsum</div> -->
+            </div>
+        </a>
+    </div>
+    <div class="col l6">
+        <a href="/post/golang/parsing-json-with-golang/" class="blog-list-article">
+            <div class="blog-list-article-date">Beginner</div> 
+            <div class="blog-list-article-category">Golang</div>
+            <div class="blog-list-article-content">
+                <div class="blog-list-article-title">Parsing JSON Files with Golang</div>
+                <!-- <div class="blog-list-article-excerpt">lorem ipsum</div> -->
+            </div>
+        </a>
+    </div>
+</div>

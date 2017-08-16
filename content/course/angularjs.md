@@ -27,98 +27,97 @@ In this course I'll be demonstrating the absolute fundamentals to developing app
 
 We’ll begin by creating some very simple Single Page Applications or SPAs and then build up on these until we’ve covered everything you need in order to develop your own web applications using the AngularJS framework.
 
-<div class="lesson row">
-  <div class="lesson-number col l2 m2 s12">
-    <div class="circle">1</div>
+<div class="row">
+  <div class="col l6">
+      <a href="/post/javascript/angularjs/angularjs-data-binding-tutorial/" class="blog-list-article">
+          <div class="blog-list-article-date">Beginner</div> 
+          <div class="blog-list-article-category">AngularJS</div>
+          <div class="blog-list-article-content">
+              <div class="blog-list-article-title">AngularJS Scope and Scope Inheritance</div>
+               <div class="blog-list-article-excerpt">Scopes are what allow us to manipulate data in the backend controller and have that data reflected instantaneously in the frontend. Scopes provide APIs which what any objects we define and then when they detect changes, they propogate these changes through the system. </div> 
+          </div>
+      </a>
   </div>
-  <div class="lesson-info col l10 m10 s12">
-    <a href="/post/javascript/angularjs/angularjs-data-binding-tutorial/"><h3>AngularJS Scope and Scope Inheritance</h3></a>
-    <p>Scopes are what allow us to manipulate data in the backend controller and have that data reflected instantaneously in the frontend. Scopes provide APIs which what any objects we define and then when they detect changes, they propogate these changes through the system. </p>
-    <a href="/post/javascript/angularjs/angularjs-data-binding-tutorial/">Read Now</a>
+  <div class="col l6">
+      <a href="/post/javascript/angularjs/angularjs-ng-model-in-ng-if-tutorial/" class="blog-list-article">
+          <div class="blog-list-article-date">Beginner</div> 
+          <div class="blog-list-article-category">AngularJS</div>
+          <div class="blog-list-article-content">
+              <div class="blog-list-article-title">AngularJS ng-if Child Scopes</div>
+               <div class="blog-list-article-excerpt"></div> 
+          </div>
+      </a>
   </div>
-</div>
-
-<div class="lesson row">
-  <div class="lesson-number col l2 m2 s12">
-    <div class="circle">2</div>
+  <div class="col l6">
+      <a href="/post/javascript/angularjs/angularjs-controllers-tutorial/" class="blog-list-article">
+          <div class="blog-list-article-date">Beginner</div> 
+          <div class="blog-list-article-category">AngularJS</div>
+          <div class="blog-list-article-content">
+              <div class="blog-list-article-title">AngularJS Controllers Tutorial</div>
+               <div class="blog-list-article-excerpt">Controllers are what we typically use to define our web application’s behavior. They should be used to manipulate our $scope objects and pull all of our applications together.</div> 
+          </div>
+      </a>
   </div>
-  <div class="lesson-info col l10 m10 s12">
-    <a href="/post/javascript/angularjs/angularjs-ng-model-in-ng-if-tutorial/"><h3>AngularJS ng-if Child Scopes</h3></a>
-    <p></p>
-    <a href="/post/javascript/angularjs/angularjs-ng-model-in-ng-if-tutorial/">Read Now</a>
+  <div class="col l6">
+      <a href="/post/javascript/angularjs/angularjs-directives-tutorial/" class="blog-list-article">
+          <div class="blog-list-article-date">Beginner</div> 
+          <div class="blog-list-article-category">AngularJS</div>
+          <div class="blog-list-article-content">
+              <div class="blog-list-article-title">AngularJS Directives Tutorial</div>
+               <div class="blog-list-article-excerpt">At a high level, directives are markers on a DOM element (such as an attribute, element name, comment or CSS class) that tell AngularJS's HTML compiler ($compile) to attach a specified behavior to that DOM element (e.g. via event listeners), or even to transform the DOM element and its children. </div> 
+          </div>
+      </a>
   </div>
-</div>
-
-<div class="lesson row">
-  <div class="lesson-number col l2 m2 s12">
-    <div class="circle">3</div>
+  <div class="col l6">
+      <a href="/post/javascript/angularjs/angularjs-event-handling-tutorial/" class="blog-list-article">
+          <div class="blog-list-article-date">Beginner</div> 
+          <div class="blog-list-article-category">AngularJS</div>
+          <div class="blog-list-article-content">
+              <div class="blog-list-article-title">AngularJS Event Handling Tutorial</div>
+               <div class="blog-list-article-excerpt">One of the best features of AngularJS is the fact it abstracts away from you all the complex event handling code that you would typically deal with using other frameworks such as JQuery. In this section of the course we look at the numerous ways you can easily handle events in your AngularJS Applications: </div> 
+          </div>
+      </a>
   </div>
-  <div class="lesson-info col l10 m10 s12">
-    <a href="/post/javascript/angularjs/angularjs-controllers-tutorial/"><h3>AngularJS Controllers Tutorial</h3></a>
-    <p>Controllers are what we typically use to define our web application’s behavior. They should be used to manipulate our $scope objects and pull all of our applications together.</p>
-    <a href="/post/javascript/angularjs/angularjs-controllers-tutorial/">Read Now</a>
+  <div class="col l6">
+      <a href="/post/javascript/angularjs/angularjs-form-validation-tutorial/" class="blog-list-article">
+          <div class="blog-list-article-date">Beginner</div> 
+          <div class="blog-list-article-category">AngularJS</div>
+          <div class="blog-list-article-content">
+              <div class="blog-list-article-title">AngularJS Form Validation Tutorial</div>
+               <div class="blog-list-article-excerpt">In this section we'll be looking at how we can effectively work with forms.</div> 
+          </div>
+      </a>
   </div>
-</div>
-
-<div class="lesson row">
-  <div class="lesson-number col l2 m2 s12">
-    <div class="circle">4</div>
+  <div class="col l6">
+      <a href="/post/javascript/angularjs/angularjs-filter-tutorial/" class="blog-list-article">
+          <div class="blog-list-article-date">Beginner</div> 
+          <div class="blog-list-article-category">AngularJS</div>
+          <div class="blog-list-article-content">
+              <div class="blog-list-article-title">AngularJS Filters Tutorial</div>
+               <div class="blog-list-article-excerpt">By definition filters select a subset of items from an array and returns it as a new array. For front-end applications this can be a very powerful tool that helps us to manipulate the data we've got into a format that suits our needs.</div> 
+          </div>
+      </a>
   </div>
-  <div class="lesson-info col l10 m10 s12">
-    <a href="/post/javascript/angularjs/angularjs-directives-tutorial/"><h3>AngularJS Directives Tutorial</h3></a>
-    <p>At a high level, directives are markers on a DOM element (such as an attribute, element name, comment or CSS class) that tell AngularJS's HTML compiler ($compile) to attach a specified behavior to that DOM element (e.g. via event listeners), or even to transform the DOM element and its children. </p>
-    <a href="/post/javascript/angularjs/angularjs-directives-tutorial/">Read Now</a>
+  <div class="col l6">
+      <a href="/post/javascript/angularjs/angularjs-filter-search-tutorial/" class="blog-list-article">
+          <div class="blog-list-article-date">Beginner</div> 
+          <div class="blog-list-article-category">AngularJS</div>
+          <div class="blog-list-article-content">
+              <div class="blog-list-article-title">AngularJS Filter Search Bar Tutorial</div>
+               <div class="blog-list-article-excerpt"></div> 
+          </div>
+      </a>
   </div>
-</div>
-
-<div class="lesson row">
-  <div class="lesson-number col l2 m2 s12">
-    <div class="circle">5</div>
+  <div class="col l6">
+      <a href="/post/javascript/angularjs/interacting-with-apis-using-http-angularjs/" class="blog-list-article">
+          <div class="blog-list-article-date">Beginner</div> 
+          <div class="blog-list-article-category">AngularJS</div>
+          <div class="blog-list-article-content">
+              <div class="blog-list-article-title">AngularJS $http Tutorial</div>
+               <div class="blog-list-article-excerpt">Here we'll look at how you can utilize AngularJS's $http Service in order to communicate with servers and REST APIs using the browsers XMLHttpRequest object or JSONP.</div> 
+          </div>
+      </a>
   </div>
-  <div class="lesson-info col l10 m10 s12">
-    <a href="/post/javascript/angularjs/angularjs-event-handling-tutorial/"><h3>AngularJS Event Handling Tutorial</h3></a>
-    <p>One of the best features of AngularJS is the fact it abstracts away from you all the complex event handling code that you would typically deal with using other frameworks such as JQuery. In this section of the course we look at the numerous ways you can easily handle events in your AngularJS Applications: </p>
-    <a href="/post/javascript/angularjs/angularjs-event-handling-tutorial/">Read Now</a>
-  </div>
-</div>
-
-<div class="lesson row">
-  <div class="lesson-number col l2 m2 s12">
-    <div class="circle">6</div>
-  </div>
-  <div class="lesson-info col l10 m10 s12">
-    <a href="/post/javascript/angularjs/angularjs-form-validation-tutorial/"><h3>AngularJS Form Validation Tutorial</h3></a>
-    <p>In this section we'll be looking at how we can effectively work with forms.</p>
-    <a href="/post/javascript/angularjs/angularjs-form-validation-tutorial/">Read Now</a>
-  </div>
-</div>
-
-
-<div class="lesson row">
-  <div class="lesson-number col l2 m2 s12">
-    <div class="circle">7</div>
-  </div>
-  <div class="lesson-info col l10 m10 s12">
-    <a href="/post/javascript/angularjs/angularjs-filter-tutorial/"><h3>AngularJS Filters Tutorial</h3></a>
-    <p>By definition filters select a subset of items from an array and returns it as a new array. For front-end applications this can be a very powerful tool that helps us to manipulate the data we've got into a format that suits our needs.</p>
-    <ul>
-    <li><a href="/post/javascript/angularjs/angularjs-filter-tutorial/">AngularJS Filter Tutorial</a></li>
-    <li><a href="/post/javascript/angularjs/angularjs-filter-search-tutorial/">AngularJS Filter Search Tutorial</a></li>
-    </ul>
-  </div>
-</div>
-
-
-<div class="lesson row">
-  <div class="lesson-number col l2 m2 s12">
-    <div class="circle">8</div>
-  </div>
-  <div class="lesson-info col l10 m10 s12">
-    <a href="/post/javascript/angularjs/interacting-with-apis-using-http-angularjs/"><h3>AngularJS $http Tutorial</h3></a>
-    <p>Here we'll look at how you can utilize AngularJS's $http Service in order to communicate with servers and REST APIs using the browsers XMLHttpRequest object or JSONP.</p>
-    <a href="/post/javascript/angularjs/interacting-with-apis-using-http-angularjs/">Read Now</a>
-  </div>
-</div>
 
 
 
