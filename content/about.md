@@ -24,3 +24,7 @@ Since it's inception the site's shown good growth and now exceeds 12,500 hits pe
 ## The 6 Month Plan
 
 My plan for the site is to hit the 100 complete tutorials milestone and get the new forum system up and running so that the site can continue to grow and provide help on all aspects of web development. I hope to build a thriving online community that will become the authority on all things web development related.
+
+## Get Involved
+
+Want to help contribute to a growing list of articles and tutorials and improve the open source eco-system? This site represents the perfect low barrier to entry for those willing to make their first open source commits. Simply pull the code locally, make some documentation changes and submit a pull request.
