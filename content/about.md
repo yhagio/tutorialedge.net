@@ -27,4 +27,4 @@ My plan for the site is to hit the 100 complete tutorials milestone and get the 
 
 ## Get Involved
 
-Want to help contribute to a growing list of articles and tutorials and improve the open source eco-system? This site represents the perfect low barrier to entry for those willing to make their first open source commits. Simply pull the code locally, make some documentation changes and submit a pull request.
+Want to help contribute to a growing list of articles and tutorials and improve the open source eco-system? This site represents the perfect low barrier to entry for those willing to make their first open source commits. Simply pull the code locally, make some documentation changes and submit a pull request. Check out the [get-involved](/get-involved/) page for more.
