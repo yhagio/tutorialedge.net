@@ -51,7 +51,7 @@
 			{{ end }}
 			{{ if .NextInSection }}
 			<div class="col l6">
-				<a href="{{ .RelPermalink }}" class="blog-list-article">
+				<a href="{{ .NextInSection.RelPermalink }}" class="blog-list-article">
 				<div class="blog-list-article-date">{{ .NextInSection.Date.Format "02 Jan 06" }}</div>
 				{{ range $key, $value := .NextInSection.Params.series }} 
 				<div class="blog-list-article-category">{{ $value }}</div>
