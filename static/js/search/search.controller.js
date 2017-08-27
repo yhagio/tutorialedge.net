@@ -20,7 +20,7 @@ function SearchController($http, $scope) {
 
         $http({
             method: 'POST',
-            url: 'http://127.0.0.1:9000/api/search',
+            url: '/api/search',
             headers: {
                 'Content-Type': 'application/json'
             },
