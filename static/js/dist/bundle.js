@@ -40,7 +40,7 @@ function SearchController($http, $scope) {
 
         $http({
             method: 'POST',
-            url: '//localhost:9000/api/search',
+            url: 'https://api.tutorialedge.net/search',
             headers: {
                 'Content-Type': 'application/json'
             },
