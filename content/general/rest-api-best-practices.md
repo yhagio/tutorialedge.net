@@ -11,6 +11,8 @@ twitter = "https://twitter.com/Elliot_F"
 
 In this article we look at some of the key concepts that everyone should bear in mind when designing RESTful APIs. These are based off my own experience with designing and building RESTful APIs in a number of projects and should be taken with a pinch of salt, I am in no way telling you that you *must* do it this way. I am merely 
 
+
+
 ## Versioning
 
 Versioning is incredibly important in pretty much every scenario, be it a personal project or an enterprise scale service that other teams will be interfacing with. 
