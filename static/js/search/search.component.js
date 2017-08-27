@@ -1,7 +1,10 @@
 var search = {
     templateUrl: '/js/search/search.html',
     controller: SearchController,
-    bindings: {}
+    bindings: {
+        results: '=?',
+        searchQuery: '=?'
+    }
 }
 
 angular.module('root')

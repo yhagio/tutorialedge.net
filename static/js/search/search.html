@@ -1,33 +1,32 @@
 <div class="search-bar">
     <div class="container">
-        <input ng-model="search" type="text" placeholder="Search Now...">
+        <input ng-model="$ctrl.searchQuery" ng-change="$ctrl.search(search)" type="text" placeholder="Search Now...">
     </div>
 </div>
 
 <div class="search-results">
     <div class="container">
-        <h4>Search Results</h4>
-        <div class="search-result">
-            <a href="#">
-                <h3>Search Result 1</h3>
+        <div class="result-stats">
+            <p>Page: <b>{{ page }}</b> of {{ $ctrl.pages }} Total of <b>{{ $ctrl.results.total_hits }}</b> Results returns in <b> {{ roundTook($ctrl.results.took) }}</b></p>
+        </div>
+        <div class="search-result" ng-repeat="result in $ctrl.results.hits">
+            <a href="{{ result.id }}">
+                <h3>{{ result.fields.Title }}</h3>
             </a>
-            <span class="url">http://localhost.com<br/></span>
-            <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate doloribus odio ut quaerat labore, perspiciatis libero dicta esse. Ea iusto, animi perferendis laboriosam praesentium, rerum amet architecto debitis sapiente dolor?</span>
+            <span class="url">https://tutorialedge.net{{ result.id }}<br/></span>
+            <span class="description">{{ result.fields.Body }}</span>
+            <span class="weight">Weight: {{ normalize(result.score) }}</span>
             <br/>
-            <div class="tags">
+            <!-- <div class="tags">
                 <a href="#"><div class="chip">achip 1</div></a>
                 <a href="#"><div class="chip">achip 1</div></a>
-            </div>
+            </div> -->
         </div>
         <div class="center-align">
             <ul class="pagination">
-                <li class="disabled"><a href="#!"><i class="ion ion-chevron-left"></i></a></li>
-                <li class="active"><a href="#!">1</a></li>
-                <li class="waves-effect"><a href="#!">2</a></li>
-                <li class="waves-effect"><a href="#!">3</a></li>
-                <li class="waves-effect"><a href="#!">4</a></li>
-                <li class="waves-effect"><a href="#!">5</a></li>
-                <li class="waves-effect"><a href="#!"><i class="ion ion-chevron-right"></i></a></li>
+                <li class="waves-effect"><a ng-click="prevPage()"><i class="ion ion-chevron-left"></i></a></li>
+                <li ng-repeat="page in range($ctrl.pages)" class="waves-effect"><a ng-click="setPage(page+1)">{{ page + 1 }}</a></li>
+                <li class="waves-effect"><a ng-click="nextPage()"><i class="ion ion-chevron-right"></i></a></li>
             </ul>
         </div>
     </div>

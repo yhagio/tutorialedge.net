@@ -819,7 +819,17 @@ footer .footer-copyright {
   margin-bottom: 20px;
   margin-top: 20px;
 }
-
+.search-result .description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 22px;
+  max-height: 44px;
+  padding-bottom: 5px;
+  color: #545454;
+}
 .search-result h3 {
   font-size: 18px;
   font-weight: 500;
@@ -835,11 +845,6 @@ footer .footer-copyright {
   padding: 0;
 }
 
-.search-result .description {
-    color: #545454;
-    line-height: 1.0;
-    word-wrap: break-word;
-}
 
 
 .tags {
