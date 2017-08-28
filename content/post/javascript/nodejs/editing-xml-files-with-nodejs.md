@@ -16,13 +16,7 @@ twitter = "https://twitter.com/Elliot_F"
 
 <h4>Reading in our XML File</h4>
 
-<p>In order for us to read in our XML file we will need to use the FS node package. You can install this by navigating to your command line and typing: </p>
-
-~~~c
-npm install fs --save-dev
-~~~
-
-<p>Once you’ve successfully installed this, create a new js file and type the following: </p>
+<p>Create a new js file and type the following: </p>
 
 ~~~js
 var fs = require('fs');
