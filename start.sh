@@ -1,1 +1,1 @@
-./rest-api/main > search.log &
+nohup ./rest-api/main > search.log &
