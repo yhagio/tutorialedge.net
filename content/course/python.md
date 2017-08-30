@@ -42,6 +42,16 @@ Python is without a doubt one of the best languages to learn if you are interest
             </div>
         </a>
     </div>
+    <div class="col l6">
+        <a href="/python/python-maps-tutorial/" class="blog-list-article">
+            <div class="blog-list-article-date">Beginner</div> 
+            <div class="blog-list-article-category">Python</div>
+            <div class="blog-list-article-content">
+                <div class="blog-list-article-title">Python Maps Tutorial</div>
+                <!-- <div class="blog-list-article-excerpt">lorem ipsum</div> -->
+            </div>
+        </a>
+    </div>
 </div>
 
 ## Intermediate Tutorials
@@ -88,6 +98,26 @@ Python is without a doubt one of the best languages to learn if you are interest
             <div class="blog-list-article-category">Python</div>
             <div class="blog-list-article-content">
                 <div class="blog-list-article-title">Python Multiprocessing Tutorial</div>
+                <!-- <div class="blog-list-article-excerpt">lorem ipsum</div> -->
+            </div>
+        </a>
+    </div>
+    <div class="col l6">
+        <a href="/python/python-decorators-tutorial/" class="blog-list-article">
+            <div class="blog-list-article-date">Advanced</div> 
+            <div class="blog-list-article-category">Python</div>
+            <div class="blog-list-article-content">
+                <div class="blog-list-article-title">Python Decorators Tutorial</div>
+                <!-- <div class="blog-list-article-excerpt">lorem ipsum</div> -->
+            </div>
+        </a>
+    </div>
+    <div class="col l6">
+        <a href="/python/python-generator-tutorial/" class="blog-list-article">
+            <div class="blog-list-article-date">Advanced</div> 
+            <div class="blog-list-article-category">Python</div>
+            <div class="blog-list-article-content">
+                <div class="blog-list-article-title">Python Generators Tutorial</div>
                 <!-- <div class="blog-list-article-excerpt">lorem ipsum</div> -->
             </div>
         </a>

@@ -11,4 +11,6 @@ twitter = "https://twitter.com/Elliot_F"
 
 > This tutorial was developed using Python version 3.6.
 
+
+
 > Under Construction - This is a placeholder for an article that is currently under construction
