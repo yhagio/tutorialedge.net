@@ -7,9 +7,13 @@ layout = "simple"
 image = "logo-python.png"
 +++
 
+> This course was built using Python 3.6. However some of the concepts will be applicable to earlier or later versions of Python.
+
 Python is without a doubt one of the best languages to learn if you are interested in programming. It's syntax is simpler to follow than say, that of say C or C++ for those with minimal programming experience and it's range of supporting libraries make it incredibly powerful if you want to do complex things like data science. 
 
 ## Beginner Tutorials
+
+In this section we'll look at some of the basics of the Python programming language. 
 
 <div class="row">
     <div class="col l6">
@@ -56,6 +60,8 @@ Python is without a doubt one of the best languages to learn if you are interest
 
 ## Intermediate Tutorials
 
+In this section of the course we'll be progressing into more intermediate level concepts such as logging best practices.
+
 <div class="row">
     <div class="col l6">
         <a href="/python/python-logging-best-practices/" class="blog-list-article">
@@ -90,6 +96,8 @@ Python is without a doubt one of the best languages to learn if you are interest
 </div>
 
 ## Advanced Tutorials
+
+In this section of the course we'll be looking at the more advanced parts of the Python programming language. 
 
 <div class="row">
     <div class="col l6">
@@ -133,3 +141,5 @@ Python is without a doubt one of the best languages to learn if you are interest
         </a>
     </div>
 </div>
+
+> If you found this course useful or require further assistance then please let me know in the comments section below. 
