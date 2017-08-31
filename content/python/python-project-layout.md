@@ -19,4 +19,40 @@ Not only that but by following the right structure from the outset we prevent ou
 
 When it comes to structuring your Python projects it makes sense to follow some semblance of structure or you will find yourself soon entangled in the heaps of spaghetti code that becomes a nightmare to work with. I can state as fact that it was my lack of structure that caused me a lot of pain and heartache when it came to writing my University dissertation project and if I knew then what I know now, I may have gotten a marginally better grade for far less work.
 
+### Structure
+
+For simple Python projects your projects structure should look something like this:
+
+~~~python
+mypackage/
+- mypackage.py
+- setup.py
+- requirements.txt
+- travis.yml
+- tests/
+~~~
+
+For more advanced ones however you'll tend to find it looking something like this:
+
+~~~python
+mypackage/
+- mypackage/
+- - mypackage.py
+- - module1/
+- - module2/
+- - module3/
+- tests/
+- - mypackage_test.py
+- bin/
+- - script1.sh
+- lib/
+- - lib1
+- doc/
+- - doc1.md
+- apidoc/
+- requirements.txt
+- setup.py
+- runtime.py
+~~~
+
 > Under Construction - This is a placeholder for an article that is currently under construction
