@@ -19,9 +19,9 @@ Not only that but by following the right structure from the outset we prevent ou
 
 When it comes to structuring your Python projects it makes sense to follow some semblance of structure or you will find yourself soon entangled in the heaps of spaghetti code that becomes a nightmare to work with. I can state as fact that it was my lack of structure that caused me a lot of pain and heartache when it came to writing my University dissertation project and if I knew then what I know now, I may have gotten a marginally better grade for far less work.
 
-### Structure
+### Simple Project Structure
 
-For simple Python projects your projects structure should look something like this:
+For simple Python projects your projects structure you can typically keep most, if not all of your source code contained within the one directory level like so:
 
 ~~~python
 mypackage/
@@ -31,6 +31,10 @@ mypackage/
 - travis.yml
 - tests/
 ~~~
+
+This keeps everything succinct and easy to navigate through but bear in mind that if your project starts to grow substantially then keeping everything in the one `mypackage.py` file is a bad idea. This is where you'll typically have to migrate to a more advanced project structure.
+
+### Advanced Project Structure
 
 For more advanced ones however you'll tend to find it looking something like this:
 
@@ -53,6 +57,11 @@ mypackage/
 - requirements.txt
 - setup.py
 - runtime.py
+- travis.yml
 ~~~
+
+The majority of your projects code will fall under the second `mypackage/` directory and will from there be split up into distinct modules. 
+
+We split all of our projects tests into a separate `tests/` directory as well as creating a `bin/` directory for any scripts that we want in our project.
 
 > Under Construction - This is a placeholder for an article that is currently under construction
