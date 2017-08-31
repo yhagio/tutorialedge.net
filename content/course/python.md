@@ -68,6 +68,16 @@ Python is without a doubt one of the best languages to learn if you are interest
         </a>
     </div>
     <div class="col l6">
+        <a href="/python/python-modules-tutorial/" class="blog-list-article">
+            <div class="blog-list-article-date">Intermediate</div> 
+            <div class="blog-list-article-category">Python</div>
+            <div class="blog-list-article-content">
+                <div class="blog-list-article-title">Python Modules Tutorial</div>
+                <!-- <div class="blog-list-article-excerpt">lorem ipsum</div> -->
+            </div>
+        </a>
+    </div>
+    <div class="col l6">
         <a href="/post/python/creating-twitter-bot-python/" class="blog-list-article">
             <div class="blog-list-article-date">Intermediate</div> 
             <div class="blog-list-article-category">Python</div>
