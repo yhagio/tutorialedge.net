@@ -98,7 +98,7 @@ func main() {
 
 Retrieving a set of results from the database is all well and good, but we need to be able to read these results or populating existing ```structs``` so that we can parse them and modify them easily. In order to parse a number of rows we can use the ```.Scan(args...)``` method which takes in any number of arguments and allows us to populate a composite object.
 
-~~~
+~~~go
 /*
  * Tag... - a very simple struct
  */
@@ -108,7 +108,7 @@ type Tag struct {
 }
 ~~~
 
-~~~
+~~~go
 func main() {
 	// Open up our database connection.
 	db, err := sql.Open("mysql", "root:pass1@tcp(127.0.0.1:3306)/tuts")
@@ -147,7 +147,7 @@ In this example we retrieved 2 columns from the tags database and then used .Sca
 
 Say we wanted to query a single row this time and had an ID and again wanted to populate our struct. We could do that like so:
 
-~~~
+~~~go
 var tag Tag
 // Execute the query
 err = db.QueryRow("SELECT id, name FROM tags where id = ?", 2).Scan(&tag.ID, &tag.Name)
@@ -163,4 +163,4 @@ log.Println(tag.Name)
 
 If you found this tutorial helpful or require more assistance then please don't hesitate to let me know in the comments section below:
 
-> Recommended Reading: [Creating a RESTful JSON api with Go](https://tutorialedge.net/post/golang/creating-restful-api-with-golang/)
+> Recommended Reading: [Creating a RESTful JSON api with Go](/golang/creating-restful-api-with-golang/)

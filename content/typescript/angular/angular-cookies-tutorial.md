@@ -13,7 +13,7 @@ twitter = "https://twitter.com/Elliot_F"
 
 Cookies are small packages of information that are typically stored by your browser and websites tend to use cookies for multiple things. Cookies persist across multiple requests and browser sessions should you set them to and they can be a great method for authentication in some web apps.
 
-> Check out my AngularJS 1.* tutorial on [storing information in cookies](https://tutorialedge.net/angularjs-store-cookie-tutorial)
+> Check out my AngularJS 1.* tutorial on [storing information in cookies](/javascript/angularjs/angularjs-store-cookies-tutorial/)
 
 ## Limitations of Cookies
 
@@ -33,7 +33,7 @@ This should download angular2-cookies to our project’s node_modules folder and
 
 Once we’ve successfully added angular2-cookie to our project we can set about using it. It’s recommended that you import the CookieService within your module file and then add it to your providers array like so:
 
-~~~
+~~~ts
 /*
  * Custom Libraries
  */
@@ -58,7 +58,7 @@ export class AppModule { }
 
 Then once we’ve added it as a provider we can utilize it in one of our component files like so:
 
-~~~
+~~~ts
 import { Component } from '@angular/core';
 import { CookieService } from 'angular2-cookie/core';
 
@@ -85,7 +85,7 @@ export class AppComponent {
 
 In order to set cookies using this library we would have to use the following method:
 
-~~~
+~~~ts
 // the put method takes in the name of the cookie and the value for that cookie.
 // if we wanted to define cookie options then we would pass in a third parameter to 
 // this method containing those options.
@@ -96,7 +96,7 @@ this._cookieService.put('test', 'test');
 
 Once we have successfully set a cookie, we can then retrieve that same cookie by using the ```.get(cookie)``` method like so:
 
-~~~
+~~~ts
 // This would retrieve the previously defined 'test' cookie 
 this._cookieService.get('test');
 ~~~

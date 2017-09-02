@@ -13,7 +13,7 @@ twitter = "https://twitter.com/Elliot_F"
 
 <h2>The Code</h2>
 
-~~~
+~~~java
 public void run(){
 	init();
 	long lastTime = System.nanoTime();

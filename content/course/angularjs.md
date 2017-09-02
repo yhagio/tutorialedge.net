@@ -29,7 +29,7 @@ We’ll begin by creating some very simple Single Page Applications or SPAs and 
 
 <div class="row">
   <div class="col l6">
-      <a href="/post/javascript/angularjs/angularjs-data-binding-tutorial/" class="blog-list-article">
+      <a href="/javascript/angularjs/angularjs-data-binding-tutorial/" class="blog-list-article">
           <div class="blog-list-article-date">Beginner</div> 
           <div class="blog-list-article-category">AngularJS</div>
           <div class="blog-list-article-content">
@@ -39,7 +39,7 @@ We’ll begin by creating some very simple Single Page Applications or SPAs and 
       </a>
   </div>
   <div class="col l6">
-      <a href="/post/javascript/angularjs/angularjs-ng-model-in-ng-if-tutorial/" class="blog-list-article">
+      <a href="/javascript/angularjs/angularjs-ng-model-in-ng-if-tutorial/" class="blog-list-article">
           <div class="blog-list-article-date">Beginner</div> 
           <div class="blog-list-article-category">AngularJS</div>
           <div class="blog-list-article-content">
@@ -49,7 +49,7 @@ We’ll begin by creating some very simple Single Page Applications or SPAs and 
       </a>
   </div>
   <div class="col l6">
-      <a href="/post/javascript/angularjs/angularjs-controllers-tutorial/" class="blog-list-article">
+      <a href="/javascript/angularjs/angularjs-controllers-tutorial/" class="blog-list-article">
           <div class="blog-list-article-date">Beginner</div> 
           <div class="blog-list-article-category">AngularJS</div>
           <div class="blog-list-article-content">
@@ -59,7 +59,7 @@ We’ll begin by creating some very simple Single Page Applications or SPAs and 
       </a>
   </div>
   <div class="col l6">
-      <a href="/post/javascript/angularjs/angularjs-directives-tutorial/" class="blog-list-article">
+      <a href="/javascript/angularjs/angularjs-directives-tutorial/" class="blog-list-article">
           <div class="blog-list-article-date">Beginner</div> 
           <div class="blog-list-article-category">AngularJS</div>
           <div class="blog-list-article-content">
@@ -69,7 +69,7 @@ We’ll begin by creating some very simple Single Page Applications or SPAs and 
       </a>
   </div>
   <div class="col l6">
-      <a href="/post/javascript/angularjs/angularjs-event-handling-tutorial/" class="blog-list-article">
+      <a href="/javascript/angularjs/angularjs-event-handling-tutorial/" class="blog-list-article">
           <div class="blog-list-article-date">Beginner</div> 
           <div class="blog-list-article-category">AngularJS</div>
           <div class="blog-list-article-content">
@@ -79,7 +79,7 @@ We’ll begin by creating some very simple Single Page Applications or SPAs and 
       </a>
   </div>
   <div class="col l6">
-      <a href="/post/javascript/angularjs/angularjs-form-validation-tutorial/" class="blog-list-article">
+      <a href="/javascript/angularjs/angularjs-form-validation-tutorial/" class="blog-list-article">
           <div class="blog-list-article-date">Beginner</div> 
           <div class="blog-list-article-category">AngularJS</div>
           <div class="blog-list-article-content">
@@ -89,7 +89,7 @@ We’ll begin by creating some very simple Single Page Applications or SPAs and 
       </a>
   </div>
   <div class="col l6">
-      <a href="/post/javascript/angularjs/angularjs-filter-tutorial/" class="blog-list-article">
+      <a href="/javascript/angularjs/angularjs-filter-tutorial/" class="blog-list-article">
           <div class="blog-list-article-date">Beginner</div> 
           <div class="blog-list-article-category">AngularJS</div>
           <div class="blog-list-article-content">
@@ -99,7 +99,7 @@ We’ll begin by creating some very simple Single Page Applications or SPAs and 
       </a>
   </div>
   <div class="col l6">
-      <a href="/post/javascript/angularjs/angularjs-filter-search-tutorial/" class="blog-list-article">
+      <a href="/javascript/angularjs/angularjs-filter-search-tutorial/" class="blog-list-article">
           <div class="blog-list-article-date">Beginner</div> 
           <div class="blog-list-article-category">AngularJS</div>
           <div class="blog-list-article-content">
@@ -109,7 +109,7 @@ We’ll begin by creating some very simple Single Page Applications or SPAs and 
       </a>
   </div>
   <div class="col l6">
-      <a href="/post/javascript/angularjs/interacting-with-apis-using-http-angularjs/" class="blog-list-article">
+      <a href="/javascript/angularjs/interacting-with-apis-using-http-angularjs/" class="blog-list-article">
           <div class="blog-list-article-date">Beginner</div> 
           <div class="blog-list-article-category">AngularJS</div>
           <div class="blog-list-article-content">
@@ -125,43 +125,43 @@ We’ll begin by creating some very simple Single Page Applications or SPAs and 
 
 In this section we'll examine how to create and use AngularJS Factories and Services.
 
-* [AngularJS Factory Tutorial](https://tutorialedge.net/post/javascript/angularjs/angularjs-factory-tutorial/)
+* [AngularJS Factory Tutorial](/javascript/angularjs/angularjs-factory-tutorial/)
 
 ## Routing
 
 AngularJS's routing functionality gives us the ability to have a single master page in which we dynamically load in the necessary views that we need. In this section we'll explore the power of the ng-view directive and the $routeProvider service.
 
-* [AngularJS Templating Tutorial using ng-view Directive](https://tutorialedge.net/post/javascript/angularjs/angularjs-template-tutorial-using-ng-view/)
+* [AngularJS Templating Tutorial using ng-view Directive](/javascript/angularjs/angularjs-template-tutorial-using-ng-view/)
 
 An interesting problem that comes up with regards to routing is how to pass data between route changes. Say for instance you want to pass form submission data to the next stage of an application, one of the best and easiest ways to do this is using a storage service. In this tutorial we look at exactly how we can implement this:
 
-* [Passing Data Between Routes in AngularJS](https://tutorialedge.net/post/javascript/angularjs/passing-data-between-routes-angularjs/)
+* [Passing Data Between Routes in AngularJS](/javascript/angularjs/passing-data-between-routes-angularjs/)
 
 ## AngularJS Promises
 
 In this section of the course we look at how we can effectively use AngularJS's $q promise service:
 
-* [AngularJS Promises Tutorial](https://tutorialedge.net/post/javascript/angularjs/angularjs-promises-tutorial/)
+* [AngularJS Promises Tutorial](/javascript/angularjs/angularjs-promises-tutorial/)
 
 ## Project Structure
 
 The structure you choose for your project is hugely important. Having a clear, consise structure from the get go can help you to no end further down the line. In this section of the course we look at the just how you should structure your angularjs applications so that they can be easily maintained and extended.
 
-* [AngularJS Project Structure Tutorial](https://tutorialedge.net/post/javascript/angularjs/angularjs-project-structure-tutorial/)
+* [AngularJS Project Structure Tutorial](/javascript/angularjs/angularjs-project-structure-tutorial/)
 
 ## Working with AngularJS Component Based Applications
 
 In this section of the course we look at how you can effectively work with an extend angularjs applications that follow a component based architecture. We see how to define our own component, controller and any necessary routes needed for a new page within an existing application.
 
-* [Effectively Working with Component Based AngularJS Applications](https://tutorialedge.net/post/javascript/angularjs/working-with-angularjs-component-applications/)
+* [Effectively Working with Component Based AngularJS Applications](/javascript/angularjs/working-with-angularjs-component-applications/)
 
 
 ## Automating Your AngularJS Workflow with Gulp
 
 This section of the course looks at the build tools we can use to make our life a little easier as AngularJS devs. 
 
-* [Automating your AngularJS Workflow with Gulp](https://tutorialedge.net/post/javascript/angularjs/automating-your-angularjs-workflow-with-gulp/)
+* [Automating your AngularJS Workflow with Gulp](/javascript/angularjs/automating-your-angularjs-workflow-with-gulp/)
 
 ## Miscellaneous Tutorials
 
-* [AngularJS Removing Duplicates from an Array](https://tutorialedge.net/post/javascript/angularjs/removing-duplicates-from-ng-repeat/)
+* [AngularJS Removing Duplicates from an Array](/javascript/angularjs/removing-duplicates-from-ng-repeat/)

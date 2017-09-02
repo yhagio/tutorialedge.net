@@ -15,7 +15,7 @@ In this article I'm going to be showing you how we can create a simple Golang ba
 
 <p>REST is everywhere these days, from web sites to enterprise applications, the RESTful architecture style is a powerful way of providing communication between various moving by separate software components. Building REST APIs allow you to easily decouple both consumers and producers and are typically stateless by design. </p>
 
-> If you wish to learn more about the basics of REST APIs then check out <a href="https://tutorialedge.net/post/general/what-is-a-rest-api/">What Are RESTful APIs?</a>
+> If you wish to learn more about the basics of REST APIs then check out <a href="/general/what-is-a-rest-api/">What Are RESTful APIs?</a>
 
 #### JSON
 
@@ -57,7 +57,7 @@ func main() {
 
 If we run this on our machine now, we should see our very simple API start up on port 8081 if it's not already been taken by another process. If we now navigate to `http://localhost:8081/` in our local browser we should see `Welcome to the HomePage!` print out on our screen. This means we have successfully created the base from which we'll build our REST API.
 
-> If you want a more in-depth tutorial on how to create a go based web server then check out this tutorial here: <a href="http://tutorialedge.net/post/golang/creating-simple-web-server-with-golang/">Creating a Simple Web Server with Go(Lang)</a>
+> If you want a more in-depth tutorial on how to create a go based web server then check out this tutorial here: <a href="/golang/creating-simple-web-server-with-golang/">Creating a Simple Web Server with Go(Lang)</a>
 
 ## Our Articles Structure
 
@@ -221,7 +221,7 @@ Under Construction
 
 ## Summary
 
-This example represents a very simple RESTful API written using Go. In real project, we'd typically tie this up with a database so that we were returning real values. For a tutorial on how to connect to a MySQL database using Go I'd recommend my [Go MySQL Tutorial](/post/golang/golang-mysql-tutorial/)
+This example represents a very simple RESTful API written using Go. In real project, we'd typically tie this up with a database so that we were returning real values. For a tutorial on how to connect to a MySQL database using Go I'd recommend my [Go MySQL Tutorial](/golang/golang-mysql-tutorial/)
 
 ## Real Life Examples
 

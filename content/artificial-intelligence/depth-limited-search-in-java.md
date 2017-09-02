@@ -31,7 +31,7 @@ bookLink = "http://amzn.to/2r74d8f"
 
 <p><strong>Depth First Search:</strong></p>
 
-> For more information about the search based algorithm that this is based off, you can check out this tutorial here: <a href="http://tutorialedge.net/post/general/artificial-intelligence/depth-first-search/">Depth First Search in Java</a>
+> For more information about the search based algorithm that this is based off, you can check out this tutorial here: <a href="/artificial-intelligence/depth-first-search/">Depth First Search in Java</a>
 
 <h2>The Implementation:</h2>
 

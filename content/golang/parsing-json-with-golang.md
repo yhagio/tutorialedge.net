@@ -25,7 +25,7 @@ I recommend you check out the official documentation for:  [Encoding/Json](https
 
 For the purpose of this tutorial we’ll be parsing the following json file. We'll be parsing nested elements, integers and arrays.  
 
-~~~
+~~~json
 {
   "users": [
     {
@@ -56,7 +56,7 @@ For the purpose of this tutorial we’ll be parsing the following json file. We'
 
 We’ll be using the os package in order to open up our users.xml file from our filesystem. 
 
-~~~
+~~~go
 // Open our jsonFile
 jsonFile, err := os.Open("users.json")
 // if we os.Open returns an error then handle it
@@ -73,7 +73,7 @@ defer jsonFile.Close()
 
 We'll be decoding JSON and populating these Go data structures by unmarshalling but first we'll need to define these data structures like so:
 
-~~~
+~~~go
 Import (
 	…
 	// import our encoding/json package
@@ -112,31 +112,29 @@ type Social struct {
 
 Once we've used the os.Open function to read our file into memory, we then have to convert it toa byte array using ioutil.ReadAll. Once it's in a byte array we can pass it to our json.Unmarshal() method.
 
-~~~
+~~~go
 // read our opened xmlFile as a byte array.
-	byteValue, _ := ioutil.ReadAll(jsonFile)
+byteValue, _ := ioutil.ReadAll(jsonFile)
 
 
-	// we initialize our Users array
-	var users Users
+// we initialize our Users array
+var users Users
 
 
-	// we unmarshal our byteArray which contains our
-	// jsonFile's content into 'users' which we defined above
-	json.Unmarshal(byteValue, &users)
+// we unmarshal our byteArray which contains our
+// jsonFile's content into 'users' which we defined above
+json.Unmarshal(byteValue, &users)
 
 
-	// we iterate through every user within our users array and
-	// print out the user Type, their name, and their facebook url
-	// as just an example
-	for i := 0; i < len(users.Users); i++ {
-		fmt.Println("User Type: " + users.Users[i].Type)
-		fmt.Println("User Age: " + strconv.Itoa(users.Users[i].Age))
-		fmt.Println("User Name: " + users.Users[i].Name)
-		fmt.Println("Facebook Url: " + users.Users[i].Social.Facebook)
-	}
-
-
+// we iterate through every user within our users array and
+// print out the user Type, their name, and their facebook url
+// as just an example
+for i := 0; i < len(users.Users); i++ {
+	fmt.Println("User Type: " + users.Users[i].Type)
+	fmt.Println("User Age: " + strconv.Itoa(users.Users[i].Age))
+	fmt.Println("User Name: " + users.Users[i].Name)
+	fmt.Println("Facebook Url: " + users.Users[i].Social.Facebook)
+}
 ~~~
 
 
@@ -144,7 +142,7 @@ Once we've used the os.Open function to read our file into memory, we then have 
 
 Below you'll find the full implementation of this tutorial.
 
-~~~
+~~~go
 package main
 
 
@@ -225,8 +223,6 @@ func main() {
 }
 ~~~
 
-
 ## Conclusion
-
 
 If you found this tutorial helpful or have anything else to add then please let me know in the comments section below.

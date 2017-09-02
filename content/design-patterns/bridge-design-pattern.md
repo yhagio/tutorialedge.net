@@ -36,7 +36,7 @@ twitter = "https://twitter.com/Elliot_F"
 
 <h3>Enemy Abstract Class</h3>
 
-~~~
+~~~java
 package Bridge;
 
 /**
@@ -57,7 +57,7 @@ public abstract class Enemy {
 
 <h3>Archer Concrete Class</h3>
 
-~~~
+~~~java
 package Bridge;
 
 /**
@@ -99,7 +99,7 @@ public class Knight extends Enemy {
 
 <h3>Armour Interface</h3>
 
-~~~
+~~~java
 package Bridge;
 
 /**
@@ -114,7 +114,7 @@ public interface Armour {
 
 <h3>LightArmour Concrete Class</h3>
 
-~~~
+~~~java
 package Bridge;
 
 /**
@@ -147,7 +147,7 @@ public class HeavyArmour implements Armour {
 
 <h3>Driver Class</h3>
 
-~~~
+~~~java
 package Bridge;
 
 /**

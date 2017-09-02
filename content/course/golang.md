@@ -35,7 +35,7 @@ If you are in need of some excellent books to cover the language in a greater de
 
 <div class="row">
     <div class="col l6">
-        <a href="/post/golang/creating-simple-web-server-with-golang/" class="blog-list-article">
+        <a href="/golang/creating-simple-web-server-with-golang/" class="blog-list-article">
             <div class="blog-list-article-date">Beginner</div> 
             <div class="blog-list-article-category">Golang</div>
             <div class="blog-list-article-content">
@@ -45,7 +45,7 @@ If you are in need of some excellent books to cover the language in a greater de
         </a>
     </div>
     <div class="col l6">
-        <a href="/post/golang/reading-console-input-golang/" class="blog-list-article">
+        <a href="/golang/reading-console-input-golang/" class="blog-list-article">
             <div class="blog-list-article-date">Beginner</div> 
             <div class="blog-list-article-category">Golang</div>
             <div class="blog-list-article-content">
@@ -55,7 +55,7 @@ If you are in need of some excellent books to cover the language in a greater de
         </a>
     </div>
     <div class="col l6">
-        <a href="/post/golang/sending-email-using-go-and-mailgun/" class="blog-list-article">
+        <a href="/golang/sending-email-using-go-and-mailgun/" class="blog-list-article">
             <div class="blog-list-article-date">Beginner</div> 
             <div class="blog-list-article-category">Golang</div>
             <div class="blog-list-article-content">
@@ -65,7 +65,7 @@ If you are in need of some excellent books to cover the language in a greater de
         </a>
     </div>
     <div class="col l6">
-        <a href="/post/golang/writing-a-twitter-bot-golang/" class="blog-list-article">
+        <a href="/golang/writing-a-twitter-bot-golang/" class="blog-list-article">
             <div class="blog-list-article-date">Beginner</div> 
             <div class="blog-list-article-category">Golang</div>
             <div class="blog-list-article-content">
@@ -75,7 +75,7 @@ If you are in need of some excellent books to cover the language in a greater de
         </a>
     </div>
     <div class="col l6">
-        <a href="/post/golang/creating-restful-api-with-golang/" class="blog-list-article">
+        <a href="/golang/creating-restful-api-with-golang/" class="blog-list-article">
             <div class="blog-list-article-date">Beginner</div> 
             <div class="blog-list-article-category">Golang</div>
             <div class="blog-list-article-content">
@@ -85,7 +85,7 @@ If you are in need of some excellent books to cover the language in a greater de
         </a>
     </div>
     <div class="col l6">
-        <a href="/post/golang/executing-system-commands-with-golang/" class="blog-list-article">
+        <a href="/golang/executing-system-commands-with-golang/" class="blog-list-article">
             <div class="blog-list-article-date">Beginner</div> 
             <div class="blog-list-article-category">Golang</div>
             <div class="blog-list-article-content">
@@ -95,7 +95,7 @@ If you are in need of some excellent books to cover the language in a greater de
         </a>
     </div>
     <div class="col l6">
-        <a href="/post/golang/golang-mysql-tutorial/" class="blog-list-article">
+        <a href="/golang/golang-mysql-tutorial/" class="blog-list-article">
             <div class="blog-list-article-date">Beginner</div> 
             <div class="blog-list-article-category">Golang</div>
             <div class="blog-list-article-content">
@@ -105,7 +105,7 @@ If you are in need of some excellent books to cover the language in a greater de
         </a>
     </div>
     <div class="col l6">
-        <a href="/post/golang/golang-integer-string-conversion-tutorial/" class="blog-list-article">
+        <a href="/golang/golang-integer-string-conversion-tutorial/" class="blog-list-article">
             <div class="blog-list-article-date">Beginner</div> 
             <div class="blog-list-article-category">Golang</div>
             <div class="blog-list-article-content">
@@ -115,7 +115,7 @@ If you are in need of some excellent books to cover the language in a greater de
         </a>
     </div>
     <div class="col l6">
-        <a href="/post/golang/parsing-xml-with-golang/" class="blog-list-article">
+        <a href="/golang/parsing-xml-with-golang/" class="blog-list-article">
             <div class="blog-list-article-date">Beginner</div> 
             <div class="blog-list-article-category">Golang</div>
             <div class="blog-list-article-content">
@@ -125,7 +125,7 @@ If you are in need of some excellent books to cover the language in a greater de
         </a>
     </div>
     <div class="col l6">
-        <a href="/post/golang/parsing-json-with-golang/" class="blog-list-article">
+        <a href="/golang/parsing-json-with-golang/" class="blog-list-article">
             <div class="blog-list-article-date">Beginner</div> 
             <div class="blog-list-article-category">Golang</div>
             <div class="blog-list-article-content">

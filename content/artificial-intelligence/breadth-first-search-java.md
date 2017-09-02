@@ -12,7 +12,7 @@ bookImage = "game-ai-by-example.jpeg"
 bookLink = "http://amzn.to/2r74d8f"
 +++
 
-> This lesson is part of the course: <a href="https://tutorialedge.net/course/artificial-intelligence">Artificial Intelligence</a>
+> This lesson is part of the course: <a href="/course/artificial-intelligence">Artificial Intelligence</a>
 
 <h2>Uninformed Search vs Informed / Heuristic Search</h2>
 
@@ -49,7 +49,7 @@ bookLink = "http://amzn.to/2r74d8f"
 
 <p>As you can see, if you follow this algorithm through then you will recursively search every level of the binary tree going deeper and deeper until you find the shortest possible path.</p>
 
-<img src="https://tutorialedge.net/uploads/breadth-first-search.png?v=123" alt="breadth-first-search" />
+<img src="/uploads/breadth-first-search.png?v=123" alt="breadth-first-search" />
 
 <h2>How it Works</h2>
 
