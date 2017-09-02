@@ -97,4 +97,4 @@ As you can see there are numerous ways to do this and the best solution depends 
 
 I hope you found this tutorial useful and if you have any further questions then please let me know in the comments section below!
 
-> If you enjoyed this post then you may like this one on [Calling System Commands in Go](https://tutorialedge.net/executing-system-commands-with-golang)
+> If you enjoyed this post then you may like this one on [Calling System Commands in Go](/golang/executing-system-commands-with-golang/)

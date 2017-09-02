@@ -15,7 +15,7 @@ I’ll be demonstrating how you can build a go based twitter bot that will be ab
 
 <h2>Connecting to Twitter</h2>
 
-<p>Just like with the <a href="https://tutorialedge.net/creating-python-twitter-bot-using-twitter-api">Python version of this tutorial</a>, you’ll have to create an app in twitter’s <a href=”https://apps.twitter.com/”>app control panel</a>. Once you’ve created a new application, it should present you with all the secret tokens and keys that you need in order to proceed.</p>
+<p>Just like with the <a href="/python/creating-python-twitter-bot-using-twitter-api">Python version of this tutorial</a>, you’ll have to create an app in twitter’s <a href=”https://apps.twitter.com/”>app control panel</a>. Once you’ve created a new application, it should present you with all the secret tokens and keys that you need in order to proceed.</p>
 
 <h2>Writing our Basic Go Twitter Bot</h2>
 

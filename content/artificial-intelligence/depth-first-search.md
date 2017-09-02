@@ -14,7 +14,7 @@ bookLink = "http://amzn.to/2r74d8f"
 
 <h2>Depth First Search</h2>
 
-<p>DFS is another uninformed graph traversal algorithm which produces a non-optimal solution but can be useful for traversing quickly into deeper search domains. Depth first search is very similar to the previously covered breadth first search that we covered in this tutorial: <a href="http://tutorialedge.net/post/general/artificial-intelligence/breadth-first-search-java/">breadth first search in Java</a></p>
+<p>DFS is another uninformed graph traversal algorithm which produces a non-optimal solution but can be useful for traversing quickly into deeper search domains. Depth first search is very similar to the previously covered breadth first search that we covered in this tutorial: <a href="/artificial-intelligence/breadth-first-search-java/">breadth first search in Java</a></p>
 
 <h2>How it Works</h2>
 

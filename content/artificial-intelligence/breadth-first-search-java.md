@@ -12,7 +12,7 @@ bookImage = "game-ai-by-example.jpeg"
 bookLink = "http://amzn.to/2r74d8f"
 +++
 
-> This lesson is part of the course: <a href="https://tutorialedge.net/course/artificial-intelligence">Artificial Intelligence</a>
+> This lesson is part of the course: <a href="/course/artificial-intelligence">Artificial Intelligence</a>
 
 <h2>Uninformed Search vs Informed / Heuristic Search</h2>
 

@@ -17,7 +17,7 @@ In this section we'll look at some of the basics of the Python programming langu
 
 <div class="row">
     <div class="col l6">
-        <a href="/post/python/calculating-keyword-density-python/" class="blog-list-article">
+        <a href="/python/calculating-keyword-density-python/" class="blog-list-article">
             <div class="blog-list-article-date">Beginner</div> 
             <div class="blog-list-article-category">Python</div>
             <div class="blog-list-article-content">
@@ -27,7 +27,7 @@ In this section we'll look at some of the basics of the Python programming langu
         </a>
     </div>
     <div class="col l6">
-        <a href="/post/python/fetching-web-pages-python/" class="blog-list-article">
+        <a href="/python/fetching-web-pages-python/" class="blog-list-article">
             <div class="blog-list-article-date">Beginner</div> 
             <div class="blog-list-article-category">Python</div>
             <div class="blog-list-article-content">
@@ -37,7 +37,7 @@ In this section we'll look at some of the basics of the Python programming langu
         </a>
     </div>
     <div class="col l6">
-        <a href="/post/python/removing-html-from-string/" class="blog-list-article">
+        <a href="/python/removing-html-from-string/" class="blog-list-article">
             <div class="blog-list-article-date">Beginner</div> 
             <div class="blog-list-article-category">Python</div>
             <div class="blog-list-article-content">
@@ -84,7 +84,7 @@ In this section of the course we'll be progressing into more intermediate level 
         </a>
     </div>
     <div class="col l6">
-        <a href="/post/python/creating-twitter-bot-python/" class="blog-list-article">
+        <a href="/python/creating-twitter-bot-python/" class="blog-list-article">
             <div class="blog-list-article-date">Intermediate</div> 
             <div class="blog-list-article-category">Python</div>
             <div class="blog-list-article-content">
@@ -101,7 +101,7 @@ In this section of the course we'll be looking at the more advanced parts of the
 
 <div class="row">
     <div class="col l6">
-        <a href="/post/python/python-multithreading-tutorial/" class="blog-list-article">
+        <a href="/python/python-multithreading-tutorial/" class="blog-list-article">
             <div class="blog-list-article-date">Advanced</div> 
             <div class="blog-list-article-category">Python</div>
             <div class="blog-list-article-content">
@@ -111,7 +111,7 @@ In this section of the course we'll be looking at the more advanced parts of the
         </a>
     </div>
     <div class="col l6">
-        <a href="/post/python/python-multiprocessing-tutorial/" class="blog-list-article">
+        <a href="/python/python-multiprocessing-tutorial/" class="blog-list-article">
             <div class="blog-list-article-date">Advanced</div> 
             <div class="blog-list-article-category">Python</div>
             <div class="blog-list-article-content">

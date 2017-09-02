@@ -113,7 +113,7 @@ func main() {
 <h2>Microservice 2 - REST API</h2>
 The second microservice will be a simple REST API that retrieves the tweets that have been stored in the database to anyone who queries it. 
 
-~~~
+~~~go
 package main
 
 import (

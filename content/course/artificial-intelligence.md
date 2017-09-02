@@ -23,7 +23,7 @@ In this section of the course we cover some of the core concepts that you'll nee
 
 <div class="row">
   <div class="col l6">
-      <a href="/post/general/artificial-intelligence/introduction-to-artificial-intelligence/" class="blog-list-article">
+      <a href="/artificial-intelligence/introduction-to-artificial-intelligence/" class="blog-list-article">
           <div class="blog-list-article-date">Beginner</div> 
           <div class="blog-list-article-category">Artificial Intelligence</div>
           <div class="blog-list-article-content">
@@ -33,7 +33,7 @@ In this section of the course we cover some of the core concepts that you'll nee
       </a>
   </div>
   <div class="col l6">
-      <a href="/post/general/artificial-intelligence/what-is-intelligent-agent/" class="blog-list-article">
+      <a href="/artificial-intelligence/what-is-intelligent-agent/" class="blog-list-article">
           <div class="blog-list-article-date">Beginner</div> 
           <div class="blog-list-article-category">Artificial Intelligence</div>
           <div class="blog-list-article-content">
@@ -50,7 +50,7 @@ Now that we have a basic understanding for some of the concepts, it's time to lo
 
 <div class="row">
   <div class="col l6">
-      <a href="/post/general/artificial-intelligence/breadth-first-search-java/" class="blog-list-article">
+      <a href="/artificial-intelligence/breadth-first-search-java/" class="blog-list-article">
           <div class="blog-list-article-date">Beginner</div> 
           <div class="blog-list-article-category">Artificial Intelligence</div>
           <div class="blog-list-article-content">
@@ -60,7 +60,7 @@ Now that we have a basic understanding for some of the concepts, it's time to lo
       </a>
   </div>
   <div class="col l6">
-      <a href="/post/general/artificial-intelligence/depth-first-search/" class="blog-list-article">
+      <a href="/artificial-intelligence/depth-first-search/" class="blog-list-article">
           <div class="blog-list-article-date">Beginner</div> 
           <div class="blog-list-article-category">Artificial Intelligence</div>
           <div class="blog-list-article-content">
@@ -70,7 +70,7 @@ Now that we have a basic understanding for some of the concepts, it's time to lo
       </a>
   </div>
   <div class="col l6">
-      <a href="/post/general/artificial-intelligence/depth-limited-search-in-java/" class="blog-list-article">
+      <a href="/artificial-intelligence/depth-limited-search-in-java/" class="blog-list-article">
           <div class="blog-list-article-date">Beginner</div> 
           <div class="blog-list-article-category">Artificial Intelligence</div>
           <div class="blog-list-article-content">

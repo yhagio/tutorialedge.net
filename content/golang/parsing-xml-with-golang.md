@@ -11,14 +11,11 @@ twitter = "https://twitter.com/Elliot_F"
 
 In this tutorial we look at how you can effectively read in an XML file from the file system and then parse this file using Go’s [“encoding/xml” Package](https://golang.org/pkg/encoding/xml/). We’ll look at how you can traverse multiple nested xml elements and then we’ll simply print this out to our terminal window.
 
-
 ## Our Example XML File
-
 
 So to begin with, we’ll need an xml file that we can traverse.
 
-
-~~~
+~~~xml
 <?xml version="1.0" encoding="UTF-8"?>
 <users>
   <user type="admin">
@@ -43,14 +40,11 @@ So to begin with, we’ll need an xml file that we can traverse.
 
 You’ll see the above xml has attributes set on the user tags, nested elements and if you are able to parse this then you should, by extension, be able to parse any xml file regardless of size.
 
-
 ## Reading in our File
-
 
 The first obstacle we’ll have to overcome is reading this file into memory. We can do this by using a combination of the “os” package and the “io/ioutil” package. 
 
-
-~~~
+~~~go
 package main
 
 
@@ -60,9 +54,7 @@ import (
 	"os"
 )
 
-
 func main() {
-
 
 	// Open our xmlFile
 	xmlFile, err := os.Open("users.xml")
@@ -71,23 +63,18 @@ func main() {
 		fmt.Println(err)
 	}
 
-
 	fmt.Println("Successfully Opened users.xml")
 	// defer the closing of our xmlFile so that we can parse it later on
 	defer xmlFile.Close()
 
-
 }
 ~~~
 
-
 ## Defining our Structs
-
 
 Before we can parse our xml file, we need to define some structs. We’ll have one to represent the complete list of users, one to represent our user and then one to represent our users social links.
 
-
-~~~
+~~~go
 import (
   ... 
   // remember to add encoding/xml to your list of imports
@@ -95,14 +82,12 @@ import (
 	...
 )
 
-
 // our struct which contains the complete
 // array of all Users in the file
 type Users struct {
 	XMLName xml.Name `xml:"users"`
 	Users   []User   `xml:"user"`
 }
-
 
 // the user struct, this contains our
 // Type attribute, our user's name and
@@ -115,7 +100,6 @@ type User struct {
 	Social  Social   `xml:"social"`
 }
 
-
 // a simple struct which contains all our
 // social links
 type Social struct {
@@ -126,32 +110,25 @@ type Social struct {
 }
 ~~~
 
-
 ## Unmarshalling Our XML
-
 
 So above we’ve seen how to load in our file into memory, in order to marshal it we need to convert this file to a byte array and then use the xml.Unmarshal method in order to populate our Users array.
 
-
-~~~
+~~~go
 // read our opened xmlFile as a byte array.
-	byteValue, _ := ioutil.ReadAll(xmlFile)
+byteValue, _ := ioutil.ReadAll(xmlFile)
 
-
-	// we initialize our Users array
-	var users Users
-	// we unmarshal our byteArray which contains our
-	// xmlFiles content into 'users' which we defined above
-	xml.Unmarshal(byteValue, &users)
+// we initialize our Users array
+var users Users
+// we unmarshal our byteArray which contains our
+// xmlFiles content into 'users' which we defined above
+xml.Unmarshal(byteValue, &users)
 ~~~
-
 
 ## Full Implementation
 
-
-~~~
+~~~go
 package main
-
 
 import (
 	"encoding/xml"
@@ -160,14 +137,12 @@ import (
 	"os"
 )
 
-
 // our struct which contains the complete
 // array of all Users in the file
 type Users struct {
 	XMLName xml.Name `xml:"users"`
 	Users   []User   `xml:"user"`
 }
-
 
 // the user struct, this contains our
 // Type attribute, our user's name and
@@ -180,7 +155,6 @@ type User struct {
 	Social  Social   `xml:"social"`
 }
 
-
 // a simple struct which contains all our
 // social links
 type Social struct {
@@ -190,9 +164,7 @@ type Social struct {
 	Youtube  string   `xml:"youtube"`
 }
 
-
 func main() {
-
 
 	// Open our xmlFile
 	xmlFile, err := os.Open("users.xml")
@@ -201,22 +173,18 @@ func main() {
 		fmt.Println(err)
 	}
 
-
 	fmt.Println("Successfully Opened users.xml")
 	// defer the closing of our xmlFile so that we can parse it later on
 	defer xmlFile.Close()
 
-
 	// read our opened xmlFile as a byte array.
 	byteValue, _ := ioutil.ReadAll(xmlFile)
-
 
 	// we initialize our Users array
 	var users Users
 	// we unmarshal our byteArray which contains our
 	// xmlFiles content into 'users' which we defined above
 	xml.Unmarshal(byteValue, &users)
-
 
 	// we iterate through every user within our users array and
 	// print out the user Type, their name, and their facebook url
@@ -227,12 +195,9 @@ func main() {
 		fmt.Println("Facebook Url: " + users.Users[i].Social.Facebook)
 	}
 
-
 }
 ~~~
 
-
 ## Conclusion
-
 
 I hope you found this tutorial beneficial, if you’ve got anything you wish to add then please do in the comments section below!

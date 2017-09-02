@@ -9,7 +9,7 @@ author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++
 
-> For a Tutorial on how to build a RESTful API in Go click [here](/post/golang/creating-restful-api-with-golang/)
+> For a Tutorial on how to build a RESTful API in Go click [here](/golang/creating-restful-api-with-golang/)
 
 In this tutorial I'm going to be demonstrating how we can consume an already running RESTful API using go. There are currently hundreds upon thousands of open REST APIs out there that are just waiting to be consumed and turned into something more meaningful. Todd Motto has put together quite an active repo on github that lists all the public APIs that are available for consumption by us and he's categorized them so that we can easily drill down to what we want to check out, you can find that [here](https://github.com/toddmotto/public-apis).
 

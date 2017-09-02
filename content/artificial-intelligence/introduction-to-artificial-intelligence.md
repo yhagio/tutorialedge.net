@@ -12,7 +12,7 @@ bookImage = "game-ai-by-example.jpeg"
 bookLink = "http://amzn.to/2r74d8f"
 +++
 
-<p>This is lesson one of the <a href="https://tutorialedge.net/course/artificial-intelligence">Artificial Intelligence</a> course on this website. </p>
+<p>This is lesson one of the <a href="/course/artificial-intelligence">Artificial Intelligence</a> course on this website. </p>
 
 <h2>What is Artificial Intelligence?</h2>
 
