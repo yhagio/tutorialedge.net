@@ -18,7 +18,7 @@ Angular 2 is the latest iteration of the wildly successful Angular framework and
 
 <div class="row">
   <div class="col l6">
-      <a href="/post/typescript/angular/angular-modules-tutorial/" class="blog-list-article">
+      <a href="/typescript/angular/angular-modules-tutorial/" class="blog-list-article">
           <div class="blog-list-article-date">Beginner</div> 
           <div class="blog-list-article-category">Angular</div>
           <div class="blog-list-article-content">
@@ -28,7 +28,7 @@ Angular 2 is the latest iteration of the wildly successful Angular framework and
       </a>
   </div>
   <div class="col l6">
-      <a href="/post/typescript/angular/angular-components-tutorial/" class="blog-list-article">
+      <a href="/typescript/angular/angular-components-tutorial/" class="blog-list-article">
           <div class="blog-list-article-date">Beginner</div> 
           <div class="blog-list-article-category">Angular</div>
           <div class="blog-list-article-content">
@@ -38,7 +38,7 @@ Angular 2 is the latest iteration of the wildly successful Angular framework and
       </a>
   </div>
   <div class="col l6">
-      <a href="/post/typescript/angular/angular-services-tutorial/" class="blog-list-article">
+      <a href="/typescript/angular/angular-services-tutorial/" class="blog-list-article">
           <div class="blog-list-article-date">Beginner</div> 
           <div class="blog-list-article-category">Angular</div>
           <div class="blog-list-article-content">
@@ -48,7 +48,7 @@ Angular 2 is the latest iteration of the wildly successful Angular framework and
       </a>
   </div>
   <div class="col l6">
-      <a href="/post/typescript/angular/angular-environment-configuration-tutorial/" class="blog-list-article">
+      <a href="/typescript/angular/angular-environment-configuration-tutorial/" class="blog-list-article">
           <div class="blog-list-article-date">Beginner</div> 
           <div class="blog-list-article-category">Angular</div>
           <div class="blog-list-article-content">
@@ -58,7 +58,7 @@ Angular 2 is the latest iteration of the wildly successful Angular framework and
       </a>
   </div>
   <div class="col l6">
-      <a href="/post/typescript/angular/angular-routing-tutorial/" class="blog-list-article">
+      <a href="/typescript/angular/angular-routing-tutorial/" class="blog-list-article">
           <div class="blog-list-article-date">Beginner</div> 
           <div class="blog-list-article-category">Angular</div>
           <div class="blog-list-article-content">
@@ -68,7 +68,7 @@ Angular 2 is the latest iteration of the wildly successful Angular framework and
       </a>
   </div>
   <div class="col l6">
-      <a href="/post/typescript/angular/angular-websockets-tutorial/" class="blog-list-article">
+      <a href="/typescript/angular/angular-websockets-tutorial/" class="blog-list-article">
           <div class="blog-list-article-date">Beginner</div> 
           <div class="blog-list-article-category">Angular</div>
           <div class="blog-list-article-content">
@@ -78,7 +78,7 @@ Angular 2 is the latest iteration of the wildly successful Angular framework and
       </a>
   </div>
   <div class="col l6">
-      <a href="/post/typescript/angular/angular-cookies-tutorial/" class="blog-list-article">
+      <a href="/typescript/angular/angular-cookies-tutorial/" class="blog-list-article">
           <div class="blog-list-article-date">Beginner</div> 
           <div class="blog-list-article-category">Angular</div>
           <div class="blog-list-article-content">
@@ -88,7 +88,7 @@ Angular 2 is the latest iteration of the wildly successful Angular framework and
       </a>
   </div>
   <div class="col l6">
-      <a href="/post/typescript/angular/angular-get-current-route-location/" class="blog-list-article">
+      <a href="/typescript/angular/angular-get-current-route-location/" class="blog-list-article">
           <div class="blog-list-article-date">Beginner</div> 
           <div class="blog-list-article-category">Angular</div>
           <div class="blog-list-article-content">
@@ -98,7 +98,7 @@ Angular 2 is the latest iteration of the wildly successful Angular framework and
       </a>
   </div>
   <div class="col l6">
-      <a href="/post/typescript/angular/angular-detecting-route-changes/" class="blog-list-article">
+      <a href="/typescript/angular/angular-detecting-route-changes/" class="blog-list-article">
           <div class="blog-list-article-date">Beginner</div> 
           <div class="blog-list-article-category">Angular</div>
           <div class="blog-list-article-content">

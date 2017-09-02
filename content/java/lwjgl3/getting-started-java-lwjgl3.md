@@ -16,10 +16,9 @@ twitter = "https://twitter.com/Elliot_F"
 <h4>Beginners Tutorials:</h4>
 
 <ul>
-<li><a href="http://tutorialedge.net/setting-up-eclipse-with-lwgjl3-and-opengl">Setting up Eclipse to use LWJGL3</a></li>
-<li><a href="http://tutorialedge.net/creating-game-window-tutorial-02-programming-2d-endless-runner">Creating a Game Window with GLFW</a></li>
+
 <li>Beginners guide to Matrices and Vectors</li>
-<li><a href="http://tutorialedge.net/lwjgl-3-fps-main-game-loop">Creating a Game Loop</a></li>
+<li><a href="/java/lwjgl3/lwjgl-3-fps-main-game-loop">Creating a Game Loop</a></li>
 <li>Creating your First Triangle</li>
 <li><a href="http://tutorialedge.net/initializing-opengl-with-lwjgl3-and-java">Getting Started with OpenGL</a></li>
 <li>Vertex Array Object and Vertex Buffer Objects</li>
