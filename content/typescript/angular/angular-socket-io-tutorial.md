@@ -9,7 +9,7 @@ author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++
 
-In this tutorial we are going to be looking at how we can build a realtime application using both Angular 4 and the Socket.io library. I've covered in the past how you can utilize raw websockets and convert them into observables using the RxJS library in a previous tutorial which can be found here: [Angular Websockets Tutorial](https://tutorialedge.net/post/typescript/angular/angular-websockets-tutorial/)
+In this tutorial we are going to be looking at how we can build a realtime application using both Angular 4 and the Socket.io library. I've covered in the past how you can utilize raw websockets and convert them into observables using the RxJS library in a previous tutorial which can be found here: [Angular Websockets Tutorial](/typescript/angular/angular-websockets-tutorial/)
 
 ## Installing Socket.IO
 
@@ -24,7 +24,7 @@ npm install @types/socket.io-client
 
 RxJS provides us with a very simple way of 
 
-~~~typescript
+~~~ts
 connect() {
     let ws = io(environment.ws_url);
 

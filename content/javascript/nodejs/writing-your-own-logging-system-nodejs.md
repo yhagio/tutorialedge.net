@@ -35,13 +35,13 @@ This is going to be a very simple logging system that has been made purely for d
 
 #### Our Simple Server
 
-Let’s create a very simple express based server that will serve as the base of our application. If you wish to read more about writing your own express based server then you can do so here: [Tutorial: Writing your own ExpressJS Server](https://tutorialedge.net/post/javascript/nodejs/creating-a-webserver-with-nodejs/).
+Let’s create a very simple express based server that will serve as the base of our application. If you wish to read more about writing your own express based server then you can do so here: [Tutorial: Writing your own ExpressJS Server](/javascript/nodejs/creating-a-webserver-with-nodejs/).
 
 #### router.js 
 
 First we’ll begin by creating a router which will act as our servers middleware for all requests:
 
-~~~
+~~~js
 var express = require('express');
 var router = new express.Router();
 
@@ -60,7 +60,7 @@ module.exports = router;
 
 And then we’ll create the server:
 
-~~~
+~~~js
 var express = require('express');
 var app = express();
 
@@ -84,7 +84,7 @@ Now that we’ve got a basic application running on port 3000, we can now begin 
 
 Create a new file called logger.js in your projects directory:
 
-~~~
+~~~js
 // Firstly we'll need to import the fs library
 var fs = require('fs');
 
@@ -131,7 +131,7 @@ Logger.error = function(msg) {
 
 Now that we’ve implemented our basic logging system we can go back into our router.js file and add the following:
 
-~~~
+~~~js
 var express = require('express');
 var router = new express.Router();
 // Here we import our Logger file and instantiate a logger object

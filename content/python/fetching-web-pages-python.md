@@ -24,7 +24,7 @@ import urllib2
 <p>Once we've imported all the appropriate python modules we can move onto fetching our desired webpage. For the purpose of this example we'll be fetching this webpage and we can do that like so:</p>
 
 ~~~py
-req = urllib2.Request('http://www.tutorialedge.net/post/python/fetching-web-pages-python/')
+req = urllib2.Request('http://www.tutorialedge.net/python/fetching-web-pages-python/')
 response = urllib2.urlopen(req)
 the_page = response.read()
 # Here we print out the retrieved page's HTML to the console

@@ -19,7 +19,7 @@ Generally the best language for anyone to start off with would be Python 3 and a
 
 > The latest version is currently 3.6.0 at the time of writing this and you can download this by navigating to the Python Download’s Page <a href="https://www.python.org/downloads/">Here.</a>
 
-In most languages we have this concept of libraries, which are essentially pre-written bits of code that we can easily add to our own code and use. Python is no exception and features thousands of already written libraries that can help you do things like write a web server, [build twitter-bots](https://tutorialedge.net/post/python/creating-twitter-bot-python/), [scrape the web](https://tutorialedge.net/post/python/fetching-web-pages-python/) and more.
+In most languages we have this concept of libraries, which are essentially pre-written bits of code that we can easily add to our own code and use. Python is no exception and features thousands of already written libraries that can help you do things like write a web server, [build twitter-bots](/python/creating-twitter-bot-python/), [scrape the web](/python/fetching-web-pages-python/) and more.
 
 ## What Should You Learn First?
 
