@@ -13,7 +13,7 @@ In this tutorial I'm aiming to help demystify this concept of generators within 
 
 ## What Are Generators?
 
-Generators are functions that can return multiple values at different times. These are iterators that we can subsequently iterate over in a variety of different ways. 
+Generators are functions that can return multiple values at different times. These are [iterators](/python/python-iterator-tutorial/) that we can subsequently iterate over in a variety of different ways. 
 
 Imagine we wanted to define a function that would return double the value of whatever we first passed into it. If we wanted to do this with normal python functions we would have to do something like this:
 
@@ -80,7 +80,7 @@ FAIL
 
 ## Infinite Generator
 
-Let's now improve upon our original generator function. We can implement an iterator that continues to yield values indefinitely. This will keep a reference of what value `x` currently is and after every yield it will double that value. 
+Let's now improve upon our original generator function. We can implement an [iterator](/python/python-iterator-tutorial/) that continues to yield values indefinitely. This will keep a reference of what value `x` currently is and after every yield it will double that value. 
 
 ~~~python
 def my_generator(x):
