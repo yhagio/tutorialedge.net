@@ -905,3 +905,20 @@ footer .footer-copyright {
 .tag:hover::after {
    border-left-color: crimson; 
 }
+
+.toc nav, nav ul, nav ul li, nav ul li a, nav ul li:first-child, nav ul li:not(:last-child) {
+   all: unset;
+}
+.toc {
+  background: #F3F4F5;
+  padding: 20px;
+  border-radius: 5px;
+}
+.toc h3 {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 5px;
+}
+.toc nav ul li {
+  display: block;
+}
