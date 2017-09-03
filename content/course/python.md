@@ -93,6 +93,16 @@ In this section of the course we'll be progressing into more intermediate level 
             </div>
         </a>
     </div>
+    <div class="col l6">
+        <a href="/python/debugging-with-pdb-python/" class="blog-list-article">
+            <div class="blog-list-article-date">Intermediate</div> 
+            <div class="blog-list-article-category">Python</div>
+            <div class="blog-list-article-content">
+                <div class="blog-list-article-title">Debugging Python Programs with the PDB</div>
+                <!-- <div class="blog-list-article-excerpt">lorem ipsum</div> -->
+            </div>
+        </a>
+    </div>
 </div>
 
 ## Advanced Tutorials
