@@ -906,7 +906,7 @@ footer .footer-copyright {
    border-left-color: crimson; 
 }
 
-.toc nav, nav ul, nav ul li, nav ul li a, nav ul li:first-child, nav ul li:not(:last-child) {
+.toc nav, .toc nav ul, .toc nav ul li, .toc nav ul li a, .toc nav ul li:first-child, .toc nav ul li:not(:last-child) {
    all: unset;
 }
 .toc {
