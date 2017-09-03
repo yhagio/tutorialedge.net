@@ -77,17 +77,17 @@ nav .button-collapse .ion {
   color: white !important;
 }
 
-.tutorials .pagination {
+.pagination {
   width: 100%;
   text-align: center;
   padding: 20px;
 }
 
-.tutorials .pagination .total-count {
+.pagination .total-count {
   padding: 20px;
 }
 
-.tutorials .pagination a {
+.pagination a {
   color: #1bbbef;
   text-decoration: none;
   padding: 0.5em 1.5em;
