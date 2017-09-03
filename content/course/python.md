@@ -56,6 +56,16 @@ In this section we'll look at some of the basics of the Python programming langu
             </div>
         </a>
     </div>
+    <div class="col l6">
+        <a href="/python/python-iterator-tutorial/" class="blog-list-article">
+            <div class="blog-list-article-date">Beginner</div> 
+            <div class="blog-list-article-category">Python</div>
+            <div class="blog-list-article-content">
+                <div class="blog-list-article-title">Python Iterators Tutorial</div>
+                <!-- <div class="blog-list-article-excerpt">lorem ipsum</div> -->
+            </div>
+        </a>
+    </div>
 </div>
 
 ## Intermediate Tutorials

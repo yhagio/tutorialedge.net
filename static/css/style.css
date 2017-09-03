@@ -917,6 +917,18 @@ footer .footer-copyright {
   padding: 0;
   padding-bottom: 5px;
 }
-.toc nav ul li {
+.toc ul {
+  margin: 0;
+padding: 0;
+}
+.toc nav ul li{
+  list-style: square;
   display: block;
 }
+.toc nav ul li a {
+  display: block;
+}
+.toc nav ul li ul li a:hover {
+  text-decoration: underline;
+}
+
