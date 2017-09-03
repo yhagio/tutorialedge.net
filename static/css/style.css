@@ -568,7 +568,7 @@ article pre {
 
 article p > code {
   padding: .3rem .5rem;
-  /* background: #F5F5F5; */
+  background-color: #F5F5F5; 
   margin: 0 .1rem;
   line-height: 1;
   font-family: "Source Code Pro", Monaco, Courier New, Courier, mono;
