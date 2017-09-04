@@ -19,7 +19,7 @@ It features around 70 extensive examples all showcasing different aspects of the
 
 Overall if you could only buy one book on Angular then this should be it. I thoroughly enjoyed working through the book and I'd definitely recommend it to others.
 
-#### Covers
+<h4>Covers</h4>
 
 1. Migrating Angular 1 Applications to Angular 2
 2. The fundamentals of Angular

@@ -13,8 +13,11 @@ Angular 2 is the latest iteration of the wildly successful Angular framework and
 
 > This course is built using a minimum of **Angular 2.2**. I've also focused on building these tutorials purely in Typescript.
 
-## Course
+## Auxiliary Resources
 
+If you are interested in buying books to aid in your learning of the Angular framework then I suggest you checkout my list of [Top Angular Programming Books](/typescript/angular/best-books-for-learning-angular/)
+
+## Course
 
 <div class="row">
   <div class="col l6">
