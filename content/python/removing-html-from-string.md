@@ -9,9 +9,9 @@ author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++
 
-<p>This tutorial will demonstrate two different methods as to how one can remove html tags from a string such as the one that we retrieved in my previous tutorial on <a href="http://tutorialedge.net/fetching-web-pages-with-python">fetching a web page using python.</a></p>
+<p>This tutorial will demonstrate two different methods as to how one can remove html tags from a string such as the one that we retrieved in my previous tutorial on <a href="/python/fetching-web-pages-with-python">fetching a web page using python.</a></p>
 
-<h2>Method 1</h2>
+## Method 1
 
 <p>This method will demonstrate a way that we can remove html tags from a string using regex strings. </p>
 
@@ -24,7 +24,7 @@ def remove_tags(text):
     return TAG_RE.sub('', text)
 ~~~
 
-<h2>Method 2</h2>
+## Method 2
 
 <p>This is another method we can use to remove html tags using functionality present in the Python Standard library so there is no need for any imports.</p>
 
@@ -33,7 +33,7 @@ def remove_tags(text):
     ''.join(xml.etree.ElementTree.fromstring(text).itertext())
 ~~~
 
-<h2>Conclusions</h2>
+## Conclusions
 
 <p>In the coming tutorials we will be learning how to calculate important seo metrics such as keyword density that will allow us to perform important seo analysis of competing sites to try and understand how they have achieved their success.</p>
 

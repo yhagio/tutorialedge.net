@@ -9,19 +9,19 @@ author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++
 
-<p>In this tutorial I will be showing you how to calculate the keyword density of a web page using the Python programming language. This will be a continuation of the previous tutorial in which we retrieved a web page using Pythons urllib2 Python module.</p>
+In this tutorial I will be showing you how to calculate the keyword density of a web page using the Python programming language. This will be a continuation of the previous tutorial in which we retrieved a web page using Pythons `urllib2` Python module.
 
-<h2>Keyword Density Calculation</h2>
+## Keyword Density Calculation
 
-<p>Keyword density is an easy metric to calculate as it has a relatively simple formula. The keyword density of a specific term is measured as the number of occurences of the chosen keyword over the total number of words in the body of text.</p>
+<p>Keyword density is an easy metric to calculate as it has a relatively simple formula. The keyword density of a specific term is measured as the number of occurrences of the chosen keyword over the total number of words in the body of text.</p>
 
-<h2>Implementation</h2>
+## Implementation
 
 <p>In the previous 2 tutorials I showed you how you could fetch a web page as well as strip html tags from a fetched web page separately. The next stage of this tutorial series is putting what we've learned together and then devising a method for counting the total number of words in our web page as well as counting the total number of occurrences of the chosen keyword.</p>
 
 <h3>Utilizing the Dictionary Data Structure</h3>
 
-<p>The easiest and fastest way to store our words as a list of words along with their respective occurences is to utilize Python's dictionary data structure. </p>
+<p>The easiest and fastest way to store our words as a list of words along with their respective occurrences is to utilize Python's dictionary data structure. </p>
 
 ~~~py
 # declaring a dictionary in python
@@ -30,7 +30,7 @@ word_list = {}
 
 <p>Now that we've got our dictionary structure defined we can loop through every word from our html document after it's had it's html tags removed.</p>
 
-<h2>Source Code</h2>
+## Source Code
 
 ~~~py
 import urllib2
@@ -77,7 +77,7 @@ def remove_tags(text):
 
 
 def main():
-    page = fetch_page("http://tutorialedge.net")
+    page = fetch_page("https://tutorialedge.net")
     wordsNoTags = remove_tags(page)
 
     word_list = {}

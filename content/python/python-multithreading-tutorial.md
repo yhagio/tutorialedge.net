@@ -19,7 +19,7 @@ Modern computers tend to feature a CPU that has multiple processing cores, each 
 1. Creating and Running Threads
 2. Teaching the Limitations of Python's threading implementation
 
-<h2>Creating Threads in Python</h2>
+## Creating Threads in Python
 
 <p>To begin with we are going to want to create a new file and call it worker.py, this will contain all our code for one of our threads. To begin with we are going to create a class in python and have it import and extend the threading module.</p>
 
@@ -55,7 +55,7 @@ def main():
 
 <p>That''s all the code you need to successfully create and instantiate a thread in python. If you can run python through your command line then open up a new terminal at your current folder and type ''python main.py''. You should hopefully see the output of the above program should no errors occur.</p>
 
-<h2>Exercise:</h2>
+## Exercise:
 
 <p>Try instantiating more threads by creating new Worker() objects and then start them:</p>
 
@@ -70,7 +70,7 @@ def main():
 
 <p>When you run this you should see output that looks something like this:  Notice that the outputted numbers are out of order, this basically shows you the precise order in which the threads have completed their tasks in and shows you the true power of asynchronous programming, multiple threads performing in parallel.</p>
 
-<h2>Limitation with Classic Python Threads</h2>
+## Limitation with Classic Python Threads
 
 One of the main problems with Python's classic implementation of threads is that they are not truly asynchronous. Performing tests on huge datasets show that the execution times of python threads is not entirely in parallel and you''ll often find execution times increasing adding multiple threads to programs as often performing these tasks synchronously will greatly reduce execution times. This is due to the way Global Interpreter Lock (GIL) works in Python, this basically ensures that only one line of python code can be compiled at one time. 
 
