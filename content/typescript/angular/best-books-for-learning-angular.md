@@ -45,6 +45,26 @@ I'd highly recommend this book to anyone willing to learn the Angular framework.
 
 <div class="amazon-link">Buy Now (US): <a href="http://amzn.to/2rnYiKo">ASP.NET Core and Angular 2</a></div>
 
+
+## ng-book: The Complete Guide to Angular 4
+
+<p><img src="/books/ng-book.jpg" alt="ng-book: The complete guide to Angular 4" />ng-book : The Complete Guide to Angular 4 does an excellent job of providing a number of high quality examples of how you can write solid Angular 4 code. From the reviews it has received so far it has been relatively well received and has obtained an average of 3.7/5 at the time of writing this. </p>
+
+<div class="amazon-link">Buy Now (US): <a href="http://amzn.to/2wBcRyF">ng-book: The Complete Guide to Angular 4</a></div>
+
+## Angular 2 Test-Driven Development
+
+> Currently Reading
+
+<div class="amazon-link">Buy Now (US): <a href="http://amzn.to/2gzweAt">Angular Test-Driven Development</a></div>
+
+
+## Pro Angular
+
+> To Read
+
+<div class="amazon-link">Buy Now (US): <a href="http://amzn.to/2wzfUsT">Pro Angular</a></div>
+
 # Learning TypeScript
 
 The Angular framework is built using TypeScript and having a solid foundation in this language is important. In this section we'll be looking at books that focus purely on learning the TypeScript programming language.
