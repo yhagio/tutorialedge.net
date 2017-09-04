@@ -48,7 +48,7 @@ I'd highly recommend this book to anyone willing to learn the Angular framework.
 
 ## ng-book: The Complete Guide to Angular 4
 
-<p><img src="/books/ng-book.jpg" alt="ng-book: The complete guide to Angular 4" />ng-book : The Complete Guide to Angular 4 does an excellent job of providing a number of high quality examples of how you can write solid Angular 4 code. From the reviews it has received so far it has been relatively well received and has obtained an average of 3.7/5 at the time of writing this. </p>
+<p><img src="/books/ng-book.jpg" alt="ng-book: The complete guide to Angular 4" class="book-img" />ng-book : The Complete Guide to Angular 4 does an excellent job of providing a number of high quality examples of how you can write solid Angular 4 code. From the reviews it has received so far it has been relatively well received and has obtained an average of 3.7/5 at the time of writing this. </p>
 
 <div class="amazon-link">Buy Now (US): <a href="http://amzn.to/2wBcRyF">ng-book: The Complete Guide to Angular 4</a></div>
 
