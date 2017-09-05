@@ -4,7 +4,7 @@ title = "Golang Websockets Tutorial"
 draft = true
 desc = "In this tutorial we'll look at how you can implement websockets in Golang"
 author = "Elliot Forbes"
-tags = ["golang", "books"]
+tags = ["golang", "websockets"]
 series = ["golang"]
 twitter = "https://twitter.com/Elliot_F"
 +++
