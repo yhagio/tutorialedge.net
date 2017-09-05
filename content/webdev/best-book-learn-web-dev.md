@@ -1,6 +1,6 @@
 +++
 date = "2017-09-05T18:07:38+01:00"
-title = "The Best Books to Learn Web Development"
+title = "The Best Books for Learning Web Development"
 draft = true
 series = ["webdev"]
 desc = "In this article we look at some of the best books you can buy to aid you in learning web development"
