@@ -11,7 +11,7 @@ twitter = "https://twitter.com/Elliot_F"
 
 ## What is Multithreading?
 
-Modern computers tend to feature a CPU that has multiple processing cores, each of these cores can run many threads simultaneously which, by proxy, gives us the ability to perform several tasks in parallel. Typically, you should only implement multiple threads when each thread you plan is completely independent of each other. So for instance in a game you would tend to create one thread for graphics processing, one for physics and one for networking. Each of these threads would be running and working with completely different data sets. This tutorial will hopefully show you how to get started with pythons ''threading'' module. 
+Modern computers tend to feature a CPU that has multiple processing cores, each of these cores can run many threads simultaneously which gives us the ability to perform several tasks concurrently. This tutorial will hopefully show you how to get started with Python's `threading` module.
 
 **Objectives:**
 
@@ -23,7 +23,7 @@ Modern computers tend to feature a CPU that has multiple processing cores, each 
 
 <p>To begin with we are going to want to create a new file and call it worker.py, this will contain all our code for one of our threads. To begin with we are going to create a class in python and have it import and extend the threading module.</p>
 
-~~~
+~~~python
 import threading
 
 class Worker(threading.Thread):
@@ -39,7 +39,7 @@ class Worker(threading.Thread):
 
 <p>Now that we have our worker class we can start work on our main class. Create a new python file and call it main.py and put the following code in:</p>
 
-~~~
+~~~python
 import threading 
 from worker import Worker
 
@@ -59,7 +59,7 @@ def main():
 
 <p>Try instantiating more threads by creating new Worker() objects and then start them:</p>
 
-~~~
+~~~python
     thread1 = Worker(1)
     thread2 = Worker(2)
     thread3 = Worker(3)
