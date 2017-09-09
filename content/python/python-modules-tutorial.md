@@ -35,57 +35,97 @@ widgettrader
 ...
 ~~~
 
-## Defining a Module
+## Defining a Simple Module
 
-Defining a module is relatively simple in Python, we can define a module by simply creating a folder with the desired name of your module and then adding a `__init__.py` file to that directory. 
+We'll start off by defining a very simple module that will exist in a `.py` file within the same directory as our `main.py` script that we'll be writing.
 
-So to continue the above example we would create our three distinct folders and add `__init__.py` files to all of them like so:
-
-~~~python
-widgettrader
-- widgettrader/
-- - analysis/
-- - - __init__.py
-- - trader/
-- - - __init__.py
-- - reports/
-- - - __init__.py
-- - widgettrader.py
-- setup.py
-- requirements.txt
-...
+~~~bash
+directory
+- main.py
+- testmodule.py
 ~~~
 
-Within one of our module directory we would then define a python file in the same name as that directory. So for the analysis module we would define `analysis.py` in which our code would live.
+Within this `testmodule.py` file we'll define a very simple function `test()` that will simply print `Hey, I'm a test!` like so:
 
-## Importing a Created Module
+~~~py
+# testmodule.py
+def test():
+    print("Hey, I'm a test!")
+~~~
 
-Once we've defined a new module, we need to be able to import it into the various places that need to use it. To use our existing project we can use the `import` statement in our `widgettrader.py` file. 
+Within our `main.py` file we can then import this `testmodule` as a module and use our newly defined `test()` method like so:
 
-If we wanted to define a function within one of these modules that is callable from anywhere that imports then we have to make sure we import it in our `__init__.py` file. Let's define a `Hello()` function in our `analysis` module's `analysis.py` file. 
+~~~py
+# main.py
+import testmodule
 
-~~~python
+def main():
+    testmodule.test()
+
+if __name__ == '__main__':
+    main()
+~~~
+
+That is all we need to define a very simple python module within our Python programs. 
+
+## Defining a Module Within a Sub-Directory
+
+In order to define a module that exists within a sub-directory in Python we need to follow a number of steps, in this example we'll be creating a module named `analysis`:
+
+* Create the `analysis/` directory
+* Within the `analysis/` directory add a new `__init__.py` file.
+* Create a new `analysis.py` file within the same `analysis` directory
+
+Once we have done this we would then define all of our `analysis` module's code within the `analysis.py` file. 
+
+~~~py
 # analysis/analysis.py
-def Hello():
-    print("Hello World")
+def my_analysis_func():
+    print("Executing Analysis")
 ~~~
 
-If we then tried to do something like this:
+We could then chose to either import this module directly in our `main.py` file like so:
 
-~~~python
-# widgettrader.py
+~~~py
+# main.py
+import analysis.analysis
+
+analysis.analysis.my_analysis_func()
+~~~
+
+Notice that when we call import we have to specify `analysis.analysis`. This is because our `analysis.py` file lives within the `analysis/` sub-directory. If we wanted to truncate this to just `import analysis` we could add the following line to our `analysis/__init__.py` file:
+
+~~~py
+# analysis/__init__.py
+from analysis.analysis import my_analysis_func
+~~~
+
+Our `main.py` code would then look like the following:
+
+~~~py
+# main.py
 import analysis
 
-analysis.Hello()
+analysis.my_analysis_func()
 ~~~
 
-You'll notice that it fails complaining that the `module` has no no attribute 'Hello'. To fix this we have to go into `analysis/__init__.py` and add the following:
+Which, I'm sure you'll agree is more succinct and cleaner to read overall. 
+
+### Difference Between a Python Module and a Python Package
+
+It has to be noted that there is a difference between a `Python module` and a `Python package`. The key thing to remember is that a `package` is a module that contains multiple modules. Whilst a normal `Python module` may be a single file or multiple files that are imported under one import.
+
+* A good example of a Python module would be our the `analysis` module that we defined in the previous section of this tutorial. 
+* A good example of a Python package would be the `xml` package. This include multiple sub modules such as the `xml.etree` module and an even deeper `xml.etree.ElementTree` module.  
+
+## Relative Path Imports
+
+Importing modules using their full path can be an arduous task and thankfully Python offers us the ability to import modules from using relative paths. If we continue our `analysis` module example from above, we could modify the `analysis/__init__.py` file to use relative imports like so:
 
 ~~~python
-# analysis/__init__.py
-from analysis import Hello
+# This would import the module which was 
+from .analysis import my_analysis_func
 ~~~
 
-When we next try to run our `widgettrader.py` program you should see that it successfully calls `analysis.Hello`.   
+This would mean that it would try and resolve the module from the relative path of the `__init__.py` file instead of having to specify the absolute path of the module like `analysis.analysis` as we had before. 
 
-> Under Construction - This is a placeholder for an article that is currently under construction. The official documentation can be found here: [Python Module](https://docs.python.org/3/tutorial/modules.html)
