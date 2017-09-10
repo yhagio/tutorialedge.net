@@ -78,4 +78,20 @@ HTTP Status Code: 200
 Pokemon Name: bulbasaur
 ~~~
 
+## Making POST Requests
+
+The requests library features methods for all of the `HTTP` verbs currently in use. If you wanted to make a simple `POST` request to an API endpoint then you can do that like so:
+
+~~~py
+req = requests.post('http://api/user', data=None, json=None)
+~~~ 
+
+This would work in exactly the same fashion as our previous `GET` request, however it features 2 additional keyword parameters:
+
+* `data` which can be populated with say a dictionary, a file or bytes that will be passed in the `HTTP` body of our `POST` request.  
+* `json` which can be populated with a json object that will be passed in the body of our `HTTP` request also.
+
+
+
+
 
