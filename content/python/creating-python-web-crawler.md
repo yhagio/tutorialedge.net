@@ -51,5 +51,11 @@ Within our `crawler` project. Create a new `crawler` module:
 - main.py
 ~~~
 
-We'll put the majority of our web-crawling logic within this `crawler` module.
+We'll put the majority of our web-crawling logic within this `crawler` module. Open up `crawler/crawler.py` and add the following code:
+
+~~~py
+# crawler/crawler.py
+def crawl(url):
+    print(url)
+~~~
 
