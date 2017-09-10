@@ -9,17 +9,17 @@ author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++
 
-<h2>Intent</h2>
+## Intent
 
 <p>The intent of the Bridge design pattern is to decouple an abstraction from its implementation so that the two can vary independently. This basically allows you to build upon an abstract class and allows you to build to very different concrete classes based upon this abstract class.</p>
 
-<h2>Motivation</h2>
+## Motivation
 
 <p>When an abstraction can have one of several possible implementations, the usual way to accommodate them is to use inheritance. Traditional methods tend not to be flexible enough and thus the Bridge design pattern was conceived. </p>
 
 <p>Now this can be hugely beneficial for those of you wishing to create multi-platform tools and games and need a way to design the code around the different operating systems code tweaks. </p>
 
-<h2>When Should You Use This Pattern?</h2>
+## When Should You Use This Pattern?
 
 <p>You should typically use the Bridge pattern when:</p>
 
@@ -30,7 +30,7 @@ twitter = "https://twitter.com/Elliot_F"
 	<li>you want to share an implementation among multiple objects and this fact should be hidden from the client.</li>
 </ul>
 
-<h2>Implementation</h2>
+## Implementation
 
 <p>This code example showcases how you could implement the bridge design pattern in the context of a game programming scenario.</p>
 
