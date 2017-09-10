@@ -14,7 +14,7 @@ bookLink = "http://amzn.to/2r74d8f"
 
 <p>This is lesson one of the <a href="/course/artificial-intelligence">Artificial Intelligence</a> course on this website. </p>
 
-<h2>What is Artificial Intelligence?</h2>
+## What is Artificial Intelligence?
 
 <p>Artificial Intelligence is a huge field of computer science that is focused primarily on building agents that think and perform actions independant from human interference. If you are or have ever been a gamer then you will have experienced artificial intelligence in action contained within the non-player characters that try to prevent you from winning the games.</p>
 
@@ -22,7 +22,7 @@ bookLink = "http://amzn.to/2r74d8f"
 
 <p><b>The Automotive industry</b> is also investing billions into the creation of driverless cars and vehicles and recently we’ve seen huge steps forward. Driverless busses have been deployed in Sion with the aim “to go where it’s complicated, where the roads are too narrow or where financially it is too expensive for the state.”</p>
 
-<h5>History of Artificial Intelligence</h5>
+### History of Artificial Intelligence
 
 <p>Warren McCulloch and Walter Pitts were said to have been the first 2 individuals that started working on what is now recognized as Artificial Intelligence back in <b>1943</b>. They essentially proposed a model of artificial neurons in which each was characterized as being on or off, essentially a ‘bit’ in today’s terms in which each neuron could be either 0 or 1.</p>
 
@@ -32,7 +32,7 @@ bookLink = "http://amzn.to/2r74d8f"
 
 <p>Today the field of artificial intelligence has branched out into numerous sub-domains all solving different problems.</p>
 
-<h5>Other Applications of Artificial Intelligence</h5>
+### Other Applications of Artificial Intelligence
 
 <p>The following list is just a small subset of the areas where artificial intelligence is used:</p>
 
@@ -46,6 +46,6 @@ bookLink = "http://amzn.to/2r74d8f"
 <li>Speech Recognition</li>
 </ol> 
 
-<h5>Branches of Artificial Intelligence</h2>
+### Branches of Artificial Intelligence
 
 <p>Due to the size and complexity of the field, artificial intelligence has been split into a number of different subsections. This includes things such as neural networks, fuzzy systems and evolutionary computation. </p> 

@@ -4,7 +4,7 @@ title = "What is a RESTful API?"
 draft = true
 desc = "In this tutorial we take a look at RESTful APIs - What are they and how can we use them?"
 series = ["beginner"]
-tags = ["beginner"]
+tags = ["beginner", "rest", "http"]
 author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++

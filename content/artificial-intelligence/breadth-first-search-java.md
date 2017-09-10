@@ -14,7 +14,7 @@ bookLink = "http://amzn.to/2r74d8f"
 
 > This lesson is part of the course: <a href="/course/artificial-intelligence">Artificial Intelligence</a>
 
-<h2>Uninformed Search vs Informed / Heuristic Search</h2>
+## Uninformed Search vs Informed / Heuristic Search
 
 <p>The next couple of algorithms we will be covering in this Artificial Intelligence course can be classed as either:</p>
 
@@ -22,7 +22,7 @@ bookLink = "http://amzn.to/2r74d8f"
 
 <p><b>Informed or Heuristic searches:</b> in which our algorithms have some extra knowledge about the problem domain and can distinguish whether or not one non-goal state is “more promising” than another.</p>
 
-<h2>Breadth First Search</h2>
+## Breadth First Search
 
 <p>BFS is a simple strategy in which the root node is expanded first, then all the successors of the root node are expanded next, then their successors and so on until the best possible path has been found. Due to the fact that this strategy for graph traversal has no additional information about states beyond that provided in the problem definition, Breadth First Search is classed as an uninformed or blind search.</p>
 
@@ -51,7 +51,7 @@ bookLink = "http://amzn.to/2r74d8f"
 
 <img src="/uploads/breadth-first-search.png?v=123" alt="breadth-first-search" />
 
-<h2>How it Works</h2>
+## How it Works
 
 <p>Say we had a map of the London Underground, each station would represent a node which would itself have a smaller list of stations that are directly connected to it. The entire map of the London Underground represents our Graph and each of the stations on that graph represent a node.</p>
 
@@ -107,7 +107,7 @@ public class Node {
 }
 ~~~
 
-<h2>Our Breadth First Search Class</h2>
+## Our Breadth First Search Class
 
 <p>In this tutorial I will be implementing the breadth first searching algorithm as a class as this makes it far easier to swap in and out different graph traversal algorithms later on.</p>
 
@@ -163,13 +163,13 @@ public class BreadthFirstSearch {
 }
 ~~~
 
-<h2>The Results</h2>
+## The Results
 
 <p>Whilst Breadth First Search can be useful in graph traversal algorithms, one of its flaws is that it finds the shallowest goal node or station which doesn’t necessarily mean it’s the most optimal solution. Breadth First Search is only every optimal if for instance you happen to be in a scenario where all actions have the same cost.</p>
 
 <p>Breadth First graph traversal algorithms also happen to be very computationally demanding in the way that they calculate the shortest path. Take for instance if we have a binary tree of depth 10. The binary tree contains nodes which contain a maximum of 2 child nodes each, this is otherwise known as having a branching factor equal to 2.  if we wanted to compute the optimal path for this graph then we would have to traverse, in a worst case scenario, 512 distinct nodes. Given that on modern machines this isn’t exactly what we would consider demanding, imagine if we had a new graph that had 3 child nodes for every node and the same depth of 10. With this new graph we would have to traverse, in a worst case scenario, 19,683 different nodes. And given that this is only at depth 10 with 3 child nodes, you can easily extrapolate the numbers for yourself. With a branching factor of 10 and a depth of 16, it would take 350 years to compute the solution on an ordinary personal computer, give or take.</p>
 
-<h2>Our Driver Class</h2>
+## Our Driver Class
 
 ~~~java
 /**

@@ -4,7 +4,7 @@ title = "RESTful API Design - Best Practices"
 draft = true
 desc = "In this article we look at the best practices for designing REST APIs"
 series = ["beginner"]
-tags = ["beginner"]
+tags = ["beginner", "rest", "http"]
 author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++
