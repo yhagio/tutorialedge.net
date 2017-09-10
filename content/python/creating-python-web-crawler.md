@@ -30,6 +30,26 @@ The web crawler that we'll be building will take in the base url of a website an
 3. for every link in the returned list, check if it's already in the crawled list
 4. if it is then discard it, if not then add it to the list of links to be crawled.
 
-This will continue until the number of links to be crawled is zero and thus all pages of said website have been crawled.
+This will continue until the number of links to be crawled is zero and thus all pages of said website have been crawled. 
 
+> Create a new directory called `crawler`. This is where our source code will go for the crawler we will be building.
+
+## Step 1 - Making Requests 
+
+The first problem we have to solve when it comes to building a web crawler is, how do we retrieve web pages in such a fashion that we can parse them? In order to accomplish this we'll be utilizing the `urllib2` package which will enable us to send http `GET` requests to a `URL` of choice and return the `html` of that given page. We'll then be able to parse that `html` for the appropriate `a` tags and continue crawling those links.
+
+> For more detail on the making requests check out [Fetching Web Pages in Python](/python/fetching-web-pages-python/).
+
+Within our `crawler` project. Create a new `crawler` module:
+
+~~~py
+# module structure
+- crawler/
+- - crawler/
+- - - __init__.py
+- - - crawler.py
+- main.py
+~~~
+
+We'll put the majority of our web-crawling logic within this `crawler` module.
 

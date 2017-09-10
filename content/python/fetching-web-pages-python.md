@@ -9,6 +9,8 @@ author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++
 
+> This tutorial was built using Python 2.7. This will not work for Python 3+
+
 In this tutorial I will be showing you how you can fetch the a webpage using the `urllib2` python module. This is a relatively simple process that can be accomplished in 5 lines of code.
 
 ## The Imports
