@@ -35,6 +35,12 @@ widgettrader
 ...
 ~~~
 
+## What is a Module in Python
+
+Before we go on to creating our own Python Modules, it's important to know exactly what a `module` is in Python.
+
+> A module can be defined as a file containing Python definitions and statements. The file name is the module name with the suffix `.py` appended.
+
 ## Defining a Simple Module
 
 We'll start off by defining a very simple module that will exist in a `.py` file within the same directory as our `main.py` script that we'll be writing.
