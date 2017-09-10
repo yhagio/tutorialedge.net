@@ -17,7 +17,7 @@ If you come from a pure Python background then you may have seen decorators feat
 
 Let's take a look at a real life example. In the below code we define a very simple Flask based program. This program features only one function `def hello():`, right above this function declaration you should see `@app.route("/")` which is an example of an `decorator`.     
 
-~~~Python
+~~~python
 from flask import Flask
 app = Flask(__name__)
 
@@ -84,3 +84,47 @@ Our call to `myFunction()` has successfully triggered our mutate decorator, whic
 ## Taking it further
 
 This is just a simple example of how you can write your own python decorators, if you found this tutorial useful or require further assistance then please let me know in the comments section below.
+
+## Losing Traceability
+
+When we utilize decorators in the above fashion you may notice an unintended side-affect where the function has been renamed to that of the decorator.
+
+~~~py
+>>> repr(myFunction)
+'<function mutate.<locals>.newmethod at 0x1022b8e18>'
+~~~
+
+If we decorate hundreds of functions with this `@mutate` decorator then you may find that your programs become slightly harder to debug as tools that are specifically designed for introspection will throw back incorrect function names like the above example.
+
+#### The Solution
+
+In order to fix this particular side-effect we can look to the `functools` module which is built-in to Python. We add `from functools import *` to the top of our file and within our decorator we add a second `@wraps()` decorator which takes in the original function as it's parameter. If we update our example code above to include this fix, it should then look like this:
+
+~~~py
+from functools import *
+
+def mutate(method):
+    @wraps(method)
+    def newmethod(*args, **kwargs):
+        print("Executing Method")
+        method(*args, **kwargs)
+        print("Finished Executing Method")
+    return newmethod
+
+@mutate
+def myFunction():
+    print("Hello")
+
+myFunction()
+~~~
+
+And when we again call `repr` on our function you'll see it outputs the correct name:
+
+~~~py
+>>> from main import *
+Executing Method
+Hello
+Finished Executing Method
+>>> repr(myFunction)
+'<function myFunction at 0x1022d3e18>'
+~~~
