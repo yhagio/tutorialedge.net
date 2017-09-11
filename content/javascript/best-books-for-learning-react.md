@@ -1,7 +1,7 @@
 +++
 draft = true
 date = "2017-09-11T18:53:10+01:00"
-title = "The Best Books For Learning React"
+title = "The Best Books For Learning React and React Native"
 desc = "The definitive list of all the books you should buy if you want to master the art of programming React applications"
 author = "Elliot Forbes"
 tags = ["react", "javascript", "books"]
