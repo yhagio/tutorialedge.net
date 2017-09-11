@@ -27,7 +27,7 @@ Overall if you could only buy one book on Angular then this should be it. I thor
 4. The best practices for writing Angular applications.  
 
 
-<div class="amazon-link">Buy Now (US): <a href="http://amzn.to/2rbwn1g">Angular 2 Cookbook</a></div>
+<div class="amazon-link">Buy Now: <a href="http://amzn.to/2rbwn1g">Angular 2 Cookbook</a></div>
 
 ## Angular 2 By Example
 
@@ -37,33 +37,36 @@ Throughout the rest of the book we are walked through building more and more adv
 
 I'd highly recommend this book to anyone willing to learn the Angular framework. 
 
-<div class="amazon-link">Buy Now (US): <a href="http://amzn.to/2sg9SLR">Angular 2 By Example</a></div>
+<div class="amazon-link">Buy Now: <a href="http://amzn.to/2sg9SLR">Angular 2 By Example</a></div>
 
 ## ASP.NET Core and Angular 2
 
 <p><img src="/books/asp-net-with-angular.jpg" alt="ASP.NET Core and Angular 2" class="book-img"/>ASP.NET Core and Angular 2 does a fantastic job of introducing Angular 2 to ASP.NET developers and showing them how they can build single page applications in conjunction with an ASP.NET core. </p>
 
-<div class="amazon-link">Buy Now (US): <a href="http://amzn.to/2rnYiKo">ASP.NET Core and Angular 2</a></div>
+<div class="amazon-link">Buy Now: <a href="http://amzn.to/2rnYiKo">ASP.NET Core and Angular 2</a></div>
 
 
 ## ng-book: The Complete Guide to Angular 4
 
 <p><img src="/books/ng-book.jpg" alt="ng-book: The complete guide to Angular 4" class="book-img" />ng-book : The Complete Guide to Angular 4 does an excellent job of providing a number of high quality examples of how you can write solid Angular 4 code. From the reviews it has received so far it has been relatively well received and has obtained an average of 3.7/5 at the time of writing this. </p>
 
-<div class="amazon-link">Buy Now (US): <a href="http://amzn.to/2wBcRyF">ng-book: The Complete Guide to Angular 4</a></div>
+<div class="amazon-link">Buy Now: <a href="http://amzn.to/2wBcRyF">ng-book: The Complete Guide to Angular 4</a></div>
 
-## Angular 2 Test-Driven Development
+## Angular Test-Driven Development
 
-> Currently Reading
+<p><img src="/books/angular-test-driven.jpg" alt="best books to learn angular" class="book-img" />Angular Test-Driven development focuses on how the testing strategies you should follow when building Angular applications. It covers in details things such as Karma for your unit-testing needs and the likes of Protractor for your end-to-end purposes. </p>
 
-<div class="amazon-link">Buy Now (US): <a href="http://amzn.to/2gzweAt">Angular Test-Driven Development</a></div>
+It also goes into detail how to set up your project to work seamlessly with Travis-CI so that you can automatically keep up to date with the state of all of your builds within your Angular app. Overall it's a good complementary book that would go well with some of the other books on offer in this list. Testing is an often neglected part of front-end development but having a decent foundation on how to construct your testing frameworks is necessary if you are building enterprise level applications using Angular.
 
+<div class="amazon-link">Buy Now: <a href="http://amzn.to/2gzweAt">Angular Test-Driven Development</a></div>
 
 ## Pro Angular
 
-> To Read
+<p><img src="/books/pro-angular.jpg" alt="best books for learning angular" class="book-img" /> The second edition of Pro Angular by Adam Freeman goes into detail on topics such as the MVC pattern. </p>
 
-<div class="amazon-link">Buy Now (US): <a href="http://amzn.to/2wzfUsT">Pro Angular</a></div>
+The book has been well received and is definitely an excellent choice if you have to buy just one Angular book.
+
+<div class="amazon-link">Buy Now: <a href="http://amzn.to/2wzfUsT">Pro Angular</a></div>
 
 # Learning TypeScript
 
@@ -75,4 +78,4 @@ The Angular framework is built using TypeScript and having a solid foundation in
 
 This book guides you through the language and brings you up to speed with everything you need in order to develop high quality TypeScript applications. 
 
-<div class="amazon-link">Buy Now (US): <a href="http://amzn.to/2sVbZ5M">Pro TypeScript: Application-Scale JavaScript Development</a></div>
+<div class="amazon-link">Buy Now: <a href="http://amzn.to/2sVbZ5M">Pro TypeScript: Application-Scale JavaScript Development</a></div>
