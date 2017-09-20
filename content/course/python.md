@@ -21,6 +21,26 @@ In this section we'll look at some of the basics of the Python programming langu
 
 <div class="row">
     <div class="col l6">
+        <a href="/python/getting-started-with-python/" class="blog-list-article">
+            <div class="blog-list-article-date">Beginner</div> 
+            <div class="blog-list-article-category">Python</div>
+            <div class="blog-list-article-content">
+                <div class="blog-list-article-title">Getting Started with Python</div>
+                <!-- <div class="blog-list-article-excerpt">lorem ipsum</div> -->
+            </div>
+        </a>
+    </div>
+    <div class="col l6">
+        <a href="/python/python-functions-and-variables/" class="blog-list-article">
+            <div class="blog-list-article-date">Beginner</div> 
+            <div class="blog-list-article-category">Python</div>
+            <div class="blog-list-article-content">
+                <div class="blog-list-article-title">Functions and Variables in Python</div>
+                <!-- <div class="blog-list-article-excerpt">lorem ipsum</div> -->
+            </div>
+        </a>
+    </div>
+    <div class="col l6">
         <a href="/python/calculating-keyword-density-python/" class="blog-list-article">
             <div class="blog-list-article-date">Beginner</div> 
             <div class="blog-list-article-category">Python</div>

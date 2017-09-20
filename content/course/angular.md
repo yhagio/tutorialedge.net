@@ -15,7 +15,7 @@ Angular 2 is the latest iteration of the wildly successful Angular framework and
 
 ## Auxiliary Resources
 
-If you are interested in buying books to aid in your learning of the Angular framework then I suggest you checkout my list of [Top Angular Programming Books](/typescript/angular/best-books-for-learning-angular/)
+If you are interested in buying books to aid in your learning of the Angular framework then I suggest you checkout my list of [The Top Angular Programming Books](/typescript/angular/best-books-for-learning-angular/)
 
 ## Course
 

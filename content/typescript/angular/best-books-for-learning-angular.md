@@ -11,6 +11,10 @@ twitter = "https://twitter.com/Elliot_F"
 
 > The books listed below might specifically state they are for Angular 2. However due to semantic versioning these will still be relevant if you are working with Angular 4+
 
+In this article we'll be covering some of the best books you can buy if you are wanting to learn the intricacies of the Angular framework. If you have been following my site for a while you'll know I am a huge advocate for the Angular framework. I was introduced to the world of AngularJS in my first position at my current company and I've gone on to specialize in frontend design and development using both the original AngularJS and Angular 2+. 
+
+Throughout my time using the framework I have had the pleasure of reading multiple books, articles and tutorials covering the framework and I thought I would share with you my list of favorite books.
+
 ## Angular 2 Cookbook
 
 <p><img alt="Angular 2 Cookbook" src="/books/angular-2-cookbook.jpeg" class="book-img" /> The second edition of the Angular 2 Cookbook by Matt Frisbie is a top-class book to buy if you are looking to learn the Angular framework. The book follows a cookbook approach with each recipe building upon knowledge gained from previous recipes and by the end of the book you should be a top-class Angular expert able to write highly performant code that follows current industry standards. </p>
