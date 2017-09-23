@@ -1,0 +1,16 @@
+version: 0.1
+
+environment_variables:
+  plaintext:
+    HUGO_VERSION: "0.27"
+
+phases:
+  install:
+    commands:
+      - curl -Ls https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz -o /tmp/hugo.tar.gz
+      - tar xf /tmp/hugo.tar.gz -C /tmp
+      - mv /tmp/hugo_${HUGO_VERSION}_linux_amd_64/hugo_${HUGO_VERSION}_linux_amd64 /usr/bin/hugo
+      - rm -rf /tmp/hugo*
+  build:
+    commands:
+      - hugo --buildDrafts
