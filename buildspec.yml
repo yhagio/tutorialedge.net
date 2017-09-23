@@ -9,7 +9,7 @@ phases:
     commands:
       - curl -Ls https://github.com/gohugoio/hugo/releases/download/v0.27.1/hugo_0.27.1_Linux-64bit.tar.gz -o /tmp/hugo.tar.gz
       - tar xf /tmp/hugo.tar.gz -C /tmp
-      - mv /tmp/hugo_$0.27.1_linux_amd_64/hugo_$0.27.1_linux_amd64 /usr/bin/hugo
+      - mv /tmp/hugo_0.27.1_linux_amd_64/hugo_0.27.1_linux_amd64 /usr/bin/hugo
       - rm -rf /tmp/hugo*
   build:
     commands:
