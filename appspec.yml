@@ -5,4 +5,4 @@ files:
     destination: /var/www/test
 hooks:
   Install:
-    - location: /home/ubuntu/scripts/deploy.sh
+    - location: scripts/deploy.sh
