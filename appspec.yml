@@ -4,5 +4,7 @@ files:
   - source: /
     destination: /var/www/test
 hooks:
-  Install:
+  BeforeInstall:
     - location: scripts/deploy.sh
+      timeout: 300
+      runas: root

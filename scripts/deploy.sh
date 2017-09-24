@@ -1,3 +1,4 @@
+#!/bin/bash
 ls 
 cd /var/www/test
 hugo --buildDrafts
