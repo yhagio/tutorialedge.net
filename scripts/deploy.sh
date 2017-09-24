@@ -1,6 +1,4 @@
 #!/bin/bash
 ls 
 cd /var/www/test
-hugo --buildDrafts
-cd public
-ls
+cat "Hello World" > test.log
