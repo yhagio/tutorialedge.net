@@ -50,5 +50,5 @@ Congratulations, you have embarked on your first step towards becoming a Python 
 
 In the next tutorial we'll be looking at how you can define functions and work with variables in Python and start to craft more complex and larger programs. 
 
-> **Next Tutorial** - [Functions and Variables in Python](/python/python-functions-and-variables/) 
+> **Next Tutorial in Series** - [Functions and Variables in Python](/python/python-functions-and-variables/) 
 
