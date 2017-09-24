@@ -9,6 +9,8 @@ author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++
 
+> This list is currently under construction
+
 In this article we will be looking at some of the best and most popular books you can buy should you wish to learn more about the art of game development. 
 
 Game development as a whole is quite a fragmented field, there are a wide number of game engines such as Unity and Unreal which abstract away the complexities of things like graphics rendering and physics engines and allow game developers to focus purely on game-play mechanics. In this guide however we shall be looking at the more low-level books which don't rely on one of these game engines.
