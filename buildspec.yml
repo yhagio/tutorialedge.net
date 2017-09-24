@@ -14,8 +14,9 @@ phases:
   build:
     commands:
       - hugo --buildDrafts
+      - ls
+      - pwd
 
 artifacts:
   files:
-    - '**/*'
-  base-directory: public/
+    - 'public/**/*'
