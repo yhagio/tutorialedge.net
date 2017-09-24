@@ -3,3 +3,6 @@ os: linux
 files:
   - source: /
     destination: /var/www/test
+hooks:
+  Install:
+    - location: /home/ubuntu/scripts/install.sh
