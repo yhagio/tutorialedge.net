@@ -131,7 +131,9 @@ nav .button-collapse .ion {
 .blog-list-article {
   height: 285px;
   position: relative;
-  display: block
+  display: block;
+  background: #F3F4F5;
+  margin-bottom: 20px;
 }
 
 .blog-list-article:nth-child(even) {
@@ -141,6 +143,8 @@ nav .button-collapse .ion {
 .blog-list-article:nth-child(n+7) {
   display: none
 }
+
+
 
 @media (min-width: 550px) {
   .blog-list-article {
