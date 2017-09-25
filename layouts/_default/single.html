@@ -40,7 +40,7 @@
 		<div class="row">
 			<h2>Related Posts</h2>
 			{{ if .PrevInSection }}
-			<div class="col l6">
+			<div class="col l6 s12">
 				<a href="{{ .PrevInSection.RelPermalink }}" class="blog-list-article">
 				<div class="blog-list-article-date">{{ .PrevInSection.Date.Format "02 Jan 06" }}</div>
 				{{ range $key, $value := .PrevInSection.Params.series }} 
@@ -54,7 +54,7 @@
 			</div>
 			{{ end }}
 			{{ if .NextInSection }}
-			<div class="col l6">
+			<div class="col l6 s12">
 				<a href="{{ .NextInSection.RelPermalink }}" class="blog-list-article">
 				<div class="blog-list-article-date">{{ .NextInSection.Date.Format "02 Jan 06" }}</div>
 				{{ range $key, $value := .NextInSection.Params.series }} 
@@ -67,6 +67,7 @@
 			</a>
 			</div>
 			{{ end }}
+			<div class="clear"></div>
 		</div>
 
 		<div>
