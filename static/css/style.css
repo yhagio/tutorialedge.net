@@ -654,7 +654,10 @@ article .amazon-link {
 }
 
 .welcome-bar {
-  background-color: #22798A;
+  background: #195c7d;
+  background: -moz-linear-gradient(left,#195c7d 1%,#0e3345 100%);
+  background: -webkit-linear-gradient(left,#195c7d 1%,#0e3345 100%);
+  background: linear-gradient(to right,#195c7d 1%,#0e3345 100%);
   color: white;
   width: 100%;
   padding: 20px;

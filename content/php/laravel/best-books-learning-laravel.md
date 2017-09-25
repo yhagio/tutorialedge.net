@@ -37,4 +37,30 @@ If you have to choose just one book to ground yourself then this should most cer
 
 <div class="amazon-link">Buy Now: <a href="http://amzn.to/2gYaQIU">Learning Laravel's Eloquent</a></div>
 
+## Learning PHP
+
+I believe at this point it's important to mention that whilst these books are very good resources for learning the Laravel ecosystem and how it works, they don't give you a good grounding on the underlying language. If you haven't got a good underlying knowledge of PHP then learning Laravel becomes a hell of a lot harder and you could end up inferring things that aren't quite right or doing things in an in-elegant way and possibly introducing a number of bugs to your Laravel based systems.
+
+The same could be said for any language and framework. If you are trying to learn a framework, ensure you know the language it is implemented in. 
+
+In this section of the article we are going to look at some of the top books you can buy should you wish to learn the inner workings of PHP.
+
+### PHP Cookbook: Solutions & Examples for PHP Programmers
+
+<p><img src="/books/php-cookbook.jpg" alt="php cookbook" class="book-img"/>The third edition of PHP Cookbook by David Sklar and Adam Trachtenberg introduces PHP 5.4 and 5.5 in true cookbook style. It presents a series of different programming recipes that the reader will work through in order to learn the fundamentals of PHP. </p>
+
+The book has received a very warm welcome on the likes of Amazon and has picked up a fairly decent set of reviews giving it an overall 4.4 out of 5 stars. If you are looking for a book that will cover the fundamentals then I would definitely recommend this one. It's recipe style approach makes for a refreshing change from the more standard approach.
+
+<h4>The Book Covers</h4>
+
+PHP Cookbook covers quite a number of different topics, not limited to:
+
+1. Basic Data Types: Strings, numbers, arrays, dates and times
+1. variables, functions, classes and objects
+1. The basics of web programming - cookies, forms, sessions and authentication
+1. Accessing databases using PDO, SQLite and more
+1. Advanced PHP concepts such as security, encryption, error handling, debugging and testing
+
+<div class="amazon-link">Buy Now: <a href="http://amzn.to/2xGdOZ3">PHP Cookbook: Solutions &amp; Examples for PHP Programmers</a></div>
+
 > If you enjoyed this article then you may also enjoy: [The Best Books for Learning Vue.JS](/javascript/best-books-learning-vuejs/)
