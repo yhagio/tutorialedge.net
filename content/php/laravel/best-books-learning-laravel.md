@@ -27,13 +27,34 @@ If you have to choose just one book to ground yourself then this should most cer
 
 ## Laravel 5 Essentials
 
-<p><img src="/books/laravel-5-essentials.jpg" alt="best books for learning laravel" class="book-img" /></p>
+<p><img src="/books/laravel-5-essentials.jpg" alt="best books for learning laravel" class="book-img" /> Laravel 5 Essentials provides a good introduction to the Laravel 5 framework and is intended for PHP developers who have no or little experience with the framework. </p>
+
+<h4>The Book Covers</h4>
+
+Martin Bean's Laravel 5 Essentials book covers the following topics:
+
+1. Setting up your Laravel development environment 
+1. A complete guide to building laravel applications from start to finish
+1. An introduction to the Eloquent ORM
+1. Creating and running migrations and seeds
+1. Working with Artisan 
 
 <div class="amazon-link">Buy Now: <a href="http://amzn.to/2gWRowq">Laravel 5 Essentials</a></div>
 
 ## Learning Laravel's Eloquent
 
-<p><img src="/books/learning-laravels-eloquent.jpg" alt="best books for learning laravel" class="book-img" /></p>
+<p><img src="/books/learning-laravels-eloquent.jpg" alt="best books for learning laravel" class="book-img" /> For a somewhat short book sitting at 150 pages in length, Francesco Malatesta's Learning Laravel's Eloquent does an excellent job of covering the inner workings of Eloquent and how it is used both with and without Laravel. </p>
+
+
+<h4>The Book Covers</h4>
+
+In the midst of this books 150 odd pages you will find chapters on the following topics:
+
+1. Setting up a new Laravel project and setting up database connections
+1. Creating and manipulating models within Laravel and the expressive syntax that accompanies them
+1. Defining complex relationships between these models
+1. Querying your database using relations
+1. Using the Eloquent ORM without Laravel
 
 <div class="amazon-link">Buy Now: <a href="http://amzn.to/2gYaQIU">Learning Laravel's Eloquent</a></div>
 
