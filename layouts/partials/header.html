@@ -4,12 +4,13 @@
 <head>
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-10255990-23"></script>
 	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments)};
-	gtag('js', new Date());
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments) };
+		gtag('js', new Date());
 
-	gtag('config', 'UA-10255990-23');
+		gtag('config', 'UA-10255990-23');
 	</script>
+
 
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,28 +39,38 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
 	<script src="{{ .Site.BaseURL }}/js/dist/bundle.js?v=3"></script>
 	<script src="{{ .Site.BaseURL }}/js/dist/highlight.pack.js"></script>
+	<!-- Start of Woopra Code -->
+	<script>
+		(function () {
+			var t, i, e, n = window, o = document, a = arguments, s = "script", r = ["config", "track", "identify", "visit", "push", "call", "trackForm", "trackClick"], c = function () { var t, i = this; for (i._e = [], t = 0; r.length > t; t++)(function (t) { i[t] = function () { return i._e.push([t].concat(Array.prototype.slice.call(arguments, 0))), i } })(r[t]) }; for (n._w = n._w || {}, t = 0; a.length > t; t++)n._w[a[t]] = n[a[t]] = n[a[t]] || new c; i = o.createElement(s), i.async = 1, i.src = "//static.woopra.com/js/w.js", e = o.getElementsByTagName(s)[0], e.parentNode.insertBefore(i, e)
+		})("woopra");
 
+		woopra.config({
+			domain: 'tutorialedge.net'
+		});
+		woopra.track();
+	</script>
+	<!-- End of Woopra Code -->
 	<script>
 		hljs.initHighlightingOnLoad();
 	</script>
 </head>
 
 <body ng-controller="RootController">
-
 	<header>
 		<nav>
 			<div class="nav-wrapper">
 				<a class="brand-logo" href="{{ .Site.BaseURL }}"><img src="{{ .Site.BaseURL }}/images/logo.png" alt="{{ .Site.Title }}"> {{ .Site.Title }}</a>
 				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="ion ion-navicon-round"></i> </a>
 				<ul id="nav-mobile" class="right hide-on-med-and-down">
-					 <li><a href="{{ .Site.BaseURL }}/search/">Search</a></li> 
+					<li><a href="{{ .Site.BaseURL }}/search/">Search</a></li>
 					<li><a href="{{ .Site.BaseURL }}/about/">About</a></li>
 					<li><a href="{{ .Site.BaseURL }}/get-involved/">Get Involved</a></li>
 					<li><a href="{{ .Site.BaseURL }}/series/blog/">Blog</a></li>
 					<li><a href="{{ .Site.BaseURL }}/courses/">Courses</a></li>
 				</ul>
 				<ul class="side-nav" id="mobile-demo">
-					 <li><a href="{{ .Site.BaseURL }}/search/">Search</a></li> 
+					<li><a href="{{ .Site.BaseURL }}/search/">Search</a></li>
 					<li><a href="{{ .Site.BaseURL }}/about/">About</a></li>
 					<li><a href="{{ .Site.BaseURL }}/get-involved/">Get Involved</a></li>
 					<li><a href="{{ .Site.BaseURL }}/series/blog/">Blog</a></li>
