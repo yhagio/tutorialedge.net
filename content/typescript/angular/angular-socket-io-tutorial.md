@@ -22,7 +22,9 @@ npm install @types/socket.io-client
 
 ## Turning Websockets into Observables
 
-RxJS provides us with a very simple way of 
+When communicating with these websockets we can use RxJS Subjects. These are both an Observable and an Observer so we can both listen to a websocket and send new messages to the websocket url that we will be interacting with. 
+
+Let's implement a service that will handle all our websocket communication. This will feature a method `connect()` which will return an instance of an RxJS Subject. We'll have to define both an Observer and and Observable first.
 
 ~~~ts
 connect() {
@@ -33,6 +35,8 @@ connect() {
             observer.next(data);
         });
     });
+
     return observable;
 }
 ~~~
+
