@@ -9,7 +9,7 @@ author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++
 
-> This tutorial has been taken and adapted from my book: [Learning Concurrency in Python](http://amzn.to/2x6Ojky)
+> This tutorial has been taken and adapted from my book: [Learning Concurrency in Python](https://www.packtpub.com/application-development/learning-concurrency-python)
 
 
 ## Creating a ThreadPoolExecutor

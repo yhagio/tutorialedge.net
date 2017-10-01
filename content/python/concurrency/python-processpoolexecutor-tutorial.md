@@ -9,7 +9,7 @@ author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++
 
-> This tutorial has been taken and adapted from my book: [Learning Concurrency in Python](http://amzn.to/2x6Ojky)
+> This tutorial has been taken and adapted from my book: [Learning Concurrency in Python](https://www.packtpub.com/application-development/learning-concurrency-python)
 
 `ProcessPoolExecutors` can be used and created in much the same way as your standard [ThreadPoolExecutors](/python/concurrency/python-threadpoolexecutor-tutorial/). It subclasses the Executor class the same way the `ThreadPoolExecutor` class does and thus features many of the same methods within it. 
 
