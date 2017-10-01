@@ -57,6 +57,7 @@ export class WebsocketService {
           this.socket.disconnect();
         }
     });
+<<<<<<< HEAD
     
     // We define our Observer which will listen to messages
     // from our other components and send messages back to our
