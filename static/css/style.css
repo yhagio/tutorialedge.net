@@ -576,7 +576,8 @@ article p > code {
   margin: 0 .1rem;
   line-height: 1;
   font-family: "Source Code Pro", Monaco, Courier New, Courier, mono;
-  font-size: .85rem;
+  font-weight: 600;
+  font-size: .95rem;
 }
 
 article blockquote {
@@ -642,7 +643,7 @@ article .amazon-link {
 }
 @media only screen and (min-width: 768px) {
   .container article {
-    width: 70%;
+    width: 80%;
   }
 }
 
