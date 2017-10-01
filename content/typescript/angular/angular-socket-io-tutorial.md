@@ -28,7 +28,7 @@ RxJS Subjects are both an `Observable` and an `Observer`. Using these Subjects w
 
 In this scenario we'll be creating both a Websocket service and a Chat service. The Websocket service will handle direct communication with the socket and the Chat service will expose a simple interface that our other components can easily interact with.
 
-~~~ts
+~~~js
 import { Injectable } from '@angular/core';
 import * as io from 'socket.io-client';
 import { Observable } from 'rxjs/Observable';
@@ -59,7 +59,6 @@ export class WebsocketService {
           this.socket.disconnect();
         }
     });
-<<<<<<< HEAD
     
     // We define our Observer which will listen to messages
     // from our other components and send messages back to our
@@ -80,7 +79,7 @@ export class WebsocketService {
 
 Once we've defined this websocket service we can then define a chat service that features just a constructor and one `sendMsg()` function that will be used to send messages to our socket.io server.
 
-~~~ts
+~~~js
 import { Injectable } from '@angular/core';
 import { WebsocketService } from './websocket.service';
 import { Observable, Subject } from 'rxjs/Rx';
@@ -112,7 +111,7 @@ export class ChatService {
 
 If we wanted to start using our newly crafted chat service we could something like this: 
 
-~~~ts
+~~~js
 import { Component, OnInit } from '@angular/core';
 import { ChatService } from './chat.service';
 
