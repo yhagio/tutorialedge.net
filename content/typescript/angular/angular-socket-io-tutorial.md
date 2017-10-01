@@ -1,5 +1,5 @@
 +++
-title = "Creating a Realtime App with Angular with Socket.io Tutorial"
+title = "Creating a Realtime App with Angular and Socket.io Tutorial"
 draft = true
 date = "2017-01-10T15:26:02+01:00"
 desc = "In this tutorial we are going to be using angular with socket.io"
