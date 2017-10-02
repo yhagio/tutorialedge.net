@@ -989,3 +989,19 @@ padding: 0;
   text-decoration: underline;
 }
 
+.github-banner {
+  border-top: 1px solid #f6f4f4;
+  background-color: #fafafa;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+}
+
+.github-banner img {
+  height: 180px;
+  width: auto;
+}
+
+.github-btn {
+  background-color: #24292E;
+}
