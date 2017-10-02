@@ -9,7 +9,9 @@ series = ["angular"]
 twitter = "https://twitter.com/Elliot_F"
 +++
 
-In this tutorial we’ll be looking at how you can implement very simple websockets in an Angular 2+ application. 
+In this tutorial we’ll be looking at how you can implement a very simple WebSockets based Angular 2+ application. 
+
+> You may also be interested in my tutorial: [Creating a Realtime App with Angular and Socket.io](/typescript/angular/angular-socket-io-tutorial/)
 
 ## Browser Compatibility
 
@@ -25,7 +27,7 @@ Simply put, RxJS allows us to listen to new messages from a websocket connection
 
 The best way to implement websockets in our angular applications would be to encapsulate our websockets and events in a service and then call that service in whatever components we wish to interact with a websocket. 
 
-<div class="note">If you are unfamiliar with services then please feel free to check out my tutorial on <a href="https://tutorialedge.net/angular-2-services-tutorial">Angular Services</a></div>
+> If you are unfamiliar with services then please feel free to check out my tutorial on [Angular Services](/typescript/angular/angular-services-tutorial/)
 
 ## Creating our Application
 

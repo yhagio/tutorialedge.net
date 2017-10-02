@@ -1,11 +1,10 @@
 languageCode = "en-us"
 title = "TutorialEdge.net"
 baseURL = "https://tutorialedge.net"
+paginate = 9
 
 [indexes] 
     category = "categories" 
     tag = "tags" 
     series = "series"
     course = "course"
-
-paginate = 9
