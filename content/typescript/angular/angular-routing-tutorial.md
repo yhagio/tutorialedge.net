@@ -15,23 +15,23 @@ Routing is practically essential in all larger Angular applications, it provides
 
 Routing in Angular 2+ has changed dramatically from the original AngularJS days where you would have to utilize the $routeProvider and typically define routes in a separate file to that of your module file.
 
->If you are interested, check out my [AngularJS 1.5 Routing Tutorial](https://tutorialedge.net/angularjs-template-tutorial-ng-view)
+> If you are interested, check out my [AngularJS 1.5 Routing Tutorial](https://tutorialedge.net/angularjs-template-tutorial-ng-view)
 
 ## Defining your First Routes
 
 The first thing that you need to do in order to add routing to your application is append the following tag to your index.html page:
 
-~~~
+~~~html
 <base href="/">
 ~~~
 
 This should be placed somewhere within your ```<head></head>``` tags. The ```<base href="/">``` tells the Angular router what is the static part of the URL. The router then only modifies the remaining part of the URL.
 
-<div class="note">Without the base href tag you will see errors like this: <a href="http://stackoverflow.com/questions/34535163/angular-2-router-no-base-href-set">Angular 2 Router no Base href set</a></div>
+> Without the base href tag you will see errors like this: <a href="http://stackoverflow.com/questions/34535163/angular-2-router-no-base-href-set">Angular 2 Router no Base href set</a>
 
 Now that we’ve set the our base href tag, we can then move on to defining some routes without your route module file or your ```app.module.ts``` file if you follow the standard convention.
 
-~~~
+~~~js
 import { RouterModule, Routes } from '@angular/router';
 // …
 const appRoutes: Routes = [
@@ -75,7 +75,7 @@ RouterModule.forRoot(appRoutes)
 
 Finally we need to define where we want our sub-pages html to render. We can do this by placing:
 
-~~~
+~~~html
 <router-outlet></router-outlet>
 ~~~
 
@@ -87,7 +87,7 @@ So now that we know how to define our own routes we could keep adding and adding
 
 In a sub-module of my application I can do the following:
 
-~~~
+~~~js
 import { RouterModule, Routes } from '@angular/router';
 // …
 // define all the routes I want for my blog component
@@ -122,7 +122,7 @@ RouterModule.forChild(blogRoutes)
 
 Now that we’ve defined our routes we need to provide a means to navigate between these routes in our html. If we were wanting to link to any other route in our application then we can use the following:
 
-~~~
+~~~html
 <a routerLink="/settings">Settings</a>
 ~~~
 
@@ -136,7 +136,7 @@ Should you wish to see a live example of Angular routing then feel free to check
 
 If you found this tutorial helpful or need further assistance then please do not hesitate to let me know in the comments section below. 
 
-<div class="note">Please check out the <a href="https://angular.io/docs/ts/latest/guide/router.html">official angular routing documentation</a> for more in-depth resources</div>
+> Please check out the <a href="https://angular.io/docs/ts/latest/guide/router.html">official angular routing documentation</a> for more in-depth resources
 
 #### Further Reading
 

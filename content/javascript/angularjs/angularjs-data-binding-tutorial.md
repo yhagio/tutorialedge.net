@@ -12,9 +12,7 @@ twitter = "https://twitter.com/Elliot_F"
 
 <p>AngularJS Official Docs on Data Binding can be found here: <a href="https://docs.angularjs.org/guide/databinding">AngularJS Data Binding</a></p>
 
-<div class="note">
-Please note that the use of scope is somewhat frowned upon. Check out my article on <a href="https://tutorialedge.net/working-with-angularjs-component-applications">Working with Components</a> and how you should use one way data-binding.
-</div>
+> Please note that the use of scope is somewhat frowned upon. Check out my article on <a href="https://tutorialedge.net/working-with-angularjs-component-applications">Working with Components</a> and how you should use one way data-binding.
 
 <h2>What is Data Binding?</h2>
 

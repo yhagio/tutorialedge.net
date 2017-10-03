@@ -11,8 +11,6 @@ twitter = "https://twitter.com/Elliot_F"
 
 The Observable Design pattern is an incredibly powerful paradigm that we can utilize in a wide array of different applications. In this tutorial we’ll be covering how you can implement your own observables in Angular. 
 
-<div class="note">Check out my tutorial on the <a href="https://tutorialedge.net/programming-design-concepts-observer-design-pattern">Observer Design Pattern here:</a></div>
-
 ## RxJS
 
 RxJS or reactive extensions is a set of libraries that are designed to help implement asynchronous and event-based programs and it’s necessary if you are wanting to perform Http requests or work with streams of information in Angular applications.
@@ -50,7 +48,7 @@ export declare class Subject<T> extends Observable<T> implements ISubscription {
 
 Below you’ll find the code for the WebsocketService which is included in this github repo.
 
-~~~
+~~~js
 import { Injectable } from '@angular/core';
 import * as Rx from 'rxjs/Rx';
 

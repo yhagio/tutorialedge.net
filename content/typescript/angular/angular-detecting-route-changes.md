@@ -9,7 +9,7 @@ series = ["angular"]
 twitter = "https://twitter.com/Elliot_F"
 +++
 
-<div class="note">This tutorial was built using Angular 2.2. Some of the features in this tutorial may not work for earlier/later versions.</div>
+> This tutorial was built using Angular 2.2. Some of the features in this tutorial may not work for earlier/later versions.
 
 Detecting whenever a route change happens in your application can be very useful for a multitude of reasons. For instance you may wish to store form data in a cookie in case they accidentally clicked on something they didn’t mean to.
 
@@ -17,7 +17,7 @@ In Angular 2 detecting this route change is relatively simple. If we have a comp
 
 In this example I’ve got a Top-Nav component which has subscribed to route changes so that in future it can determine what sub-navigation to show and so on:
 
-~~~
+~~~js
 import { Component, OnInit } from '@angular/core';
 // I import Location so that I can query the current path
 import { Location } from '@angular/common';

@@ -26,15 +26,12 @@ The main aim for the site is for it to be a place that I can host tutorials and 
 
 #### Python
 
-* ~~Python Map Tutorial~~
-* ~~Creating Your Own Python Decorators~~
 * Getting Started with ThreadPoolExecutors
 * Getting Started with ProcessPoolExecutors
 * Building a Python REST API with Flask
 * Testing your Python Programs
 * Python Context Manager Tutorial
 * Python Lambda Function Tutorial
-* ~~Python Debugging With PDB~~
 * Profiling Python with timeit
 
 > If you want to make a start on one of these tutorials then simply clone this repository and submit a pull request.

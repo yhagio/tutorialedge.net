@@ -9,11 +9,11 @@ series = ["angular"]
 twitter = "https://twitter.com/Elliot_F"
 +++
 
-<div class="note">This tutorial was built of the official Angular 2.2 release. </div>
+> This tutorial was built of the official Angular 2.2 release. 
 
 In this tutorial we’ll be examining what modules are in Angular 2.0 as well as how to define them, what the best practices are for using modules and what the differences are between 1.* Modules and 2.* modules.
 
-<div class="note">Official documentation for Angular 2 Modules can be found here: <a href="https://angular.io/docs/ts/latest/guide/ngmodule.html">Angular 2 Modules</a></div>
+> Official documentation for Angular 2 Modules can be found here: <a target="_blank" href="https://angular.io/docs/ts/latest/guide/ngmodule.html">Angular 2 Modules</a>
 
 ## What Are Modules?
 
@@ -21,7 +21,7 @@ Typically a module would contain all the code necessary for one cohesive piece o
 
 Being able to structure your application into a series of smaller blocks of functionality is highly advantageous as it allows for easy extendibility and maintainability further down the line. We can group things like components, directives and services into a single module and should we wish to use any of these things within another module, we would simply import that module at the top of our file like so:
 
-~~~
+~~~js
 // import OurService from the ourmodule folder
 import { OurService } from ./ourmodule/our.module';
 ~~~
@@ -47,10 +47,10 @@ Ever Angular application contains at least one route module. Without this your a
 Now we know every Angular application must have at the very least a root module. This is typically a class that has been decorated with @NgModule. @NgModule typically tells Angular how to compile and run module code. This root module acts as your applications main entry point.
 
 
-<div class="note">Note that it is considered best practice to include the app.module.ts file within your apps root directory.</div>
+> Note that it is considered best practice to include the app.module.ts file within your apps root directory.
 
 
-~~~
+~~~js
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
@@ -73,7 +73,7 @@ export class AppModule { }
 ~~~
 
 
-<div class="note">We can add our own custom components to the declarations array. Notice I’ve added TestComponent above. </div>
+> We can add our own custom components to the declarations array. Notice I’ve added TestComponent above. 
 
 ### The @NgModule Decorator
 
@@ -118,7 +118,7 @@ In order for us to use the UserComponent within our root AppModule that we defin
 import { UserModule, UserComponent } from './users/users.module';
 ~~~
 
-<div class="note">If we failed to add UserComponent to the list of exports in our UserModule file then we would be unable to import it in our root Module</div>
+> If we failed to add UserComponent to the list of exports in our UserModule file then we would be unable to import it in our root Module
 
 Once we've done this we can then utilize the <user></user> tags within any component that lies within our root AppModule.
 

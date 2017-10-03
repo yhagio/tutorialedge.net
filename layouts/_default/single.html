@@ -38,33 +38,67 @@
 		</div>
 
 		<div class="row">
+			<div>
+				<hr/>
+				<ul class="social-btns">
+					<li>
+						<a target="_blank" href="https://twitter.com/share?url={{ .Permalink }}" class="social-btn-dissolve twitter">
+							<i class="ion ion-social-twitter"></i>
+						</a>
+					</li>
+
+					<li>
+						<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" class="social-btn-dissolve facebook">
+							<i class="ion ion-social-facebook"></i>
+						</a>
+					</li>
+
+					<li>
+						<a target="_blank" href="https://plus.google.com/share?url={{ .Permalink }}" class="social-btn-dissolve google">
+							<i class="ion ion-social-googleplus"></i>
+						</a>
+					</li>
+
+					<li>
+						<a target="_blank" href="mailto:?&subject={{ .Title }}&body={{ .Permalink }}" class="social-btn-dissolve tumblr">
+							<i class="ion ion-ios-email"></i>
+						</a>
+					</li>
+					
+					<li>
+						<a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{ .Title }}&summary={{ .Params.desc }}" class="social-btn-dissolve linkedin">
+							<i class="ion ion-social-linkedin"></i>
+						</a>
+					</li>
+
+				</ul>
+			</div>
 			<h2>Related Posts</h2>
 			{{ if .PrevInSection }}
 			<div class="col l6 s12">
 				<a href="{{ .PrevInSection.RelPermalink }}" class="blog-list-article">
-				<div class="blog-list-article-date">{{ .PrevInSection.Date.Format "02 Jan 06" }}</div>
-				{{ range $key, $value := .PrevInSection.Params.series }} 
-				<div class="blog-list-article-category">{{ $value }}</div>
-				{{ end }}
-				<div class="blog-list-article-content">
-					<div class="blog-list-article-title">{{ .PrevInSection.Title }}</div>
-					<div class="blog-list-article-excerpt">{{ .PrevInSection.Params.desc }}</div>
-				</div>
-			</a>
+					<div class="blog-list-article-date">{{ .PrevInSection.Date.Format "02 Jan 06" }}</div>
+					{{ range $key, $value := .PrevInSection.Params.series }}
+					<div class="blog-list-article-category">{{ $value }}</div>
+					{{ end }}
+					<div class="blog-list-article-content">
+						<div class="blog-list-article-title">{{ .PrevInSection.Title }}</div>
+						<div class="blog-list-article-excerpt">{{ .PrevInSection.Params.desc }}</div>
+					</div>
+				</a>
 			</div>
-			{{ end }}
-			{{ if .NextInSection }}
+			{{ end }} {{ if .NextInSection }}
 			<div class="col l6 s12">
 				<a href="{{ .NextInSection.RelPermalink }}" class="blog-list-article">
-				<div class="blog-list-article-date">{{ .NextInSection.Date.Format "02 Jan 06" }}</div>
-				{{ range $key, $value := .NextInSection.Params.series }} 
-				<div class="blog-list-article-category">{{ $value }}</div>
-				{{ end }}
-				<div class="blog-list-article-content">
-					<div class="blog-list-article-title">{{ .NextInSection.Title }}</div>
-					<div class="blog-list-article-excerpt">{{ .NextInSection.Params.desc }}</div>
-				</div>
-			</a>
+					<div class="blog-list-article-date">{{ .NextInSection.Date.Format "02 Jan 06" }}</div>
+					{{ range $key, $value := .NextInSection.Params.series }}
+					<div class="blog-list-article-category">{{ $value }}</div>
+					{{ end }}
+					<div class="blog-list-article-content">
+						<div class="blog-list-article-title">{{ .NextInSection.Title }}</div>
+						<div class="blog-list-article-excerpt">{{ .NextInSection.Params.desc }}</div>
+					</div>
+				</a>
 			</div>
 			{{ end }}
 			<div class="clear"></div>
@@ -76,10 +110,11 @@
 	</article>
 </div>
 <script>
-	$('h2').each(function() { $(this).append(' <a href=#' + $(this).context.id + '><i class="ion ion-link"></i> </a>') })
-	$('h3').each(function() { $(this).append(' <a href=#' + $(this).context.id + '><i class="ion ion-link"></i> </a>') })
-	$('h4').each(function() { $(this).append(' <a href=#' + $(this).context.id + '><i class="ion ion-link"></i> </a>') })
-	$('h5').each(function() { $(this).append(' <a href=#' + $(this).context.id + '><i class="ion ion-link"></i> </a>') })
+	$('h2').each(function () { $(this).append(' <a href=#' + $(this).context.id + '><i class="ion ion-link"></i> </a>') })
+	$('h3').each(function () { $(this).append(' <a href=#' + $(this).context.id + '><i class="ion ion-link"></i> </a>') })
+	$('h4').each(function () { $(this).append(' <a href=#' + $(this).context.id + '><i class="ion ion-link"></i> </a>') })
+	$('h5').each(function () { $(this).append(' <a href=#' + $(this).context.id + '><i class="ion ion-link"></i> </a>') })
+
 </script>
 
 {{ partial "footer.html" . }}
