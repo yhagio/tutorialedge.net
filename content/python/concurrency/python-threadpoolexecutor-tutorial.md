@@ -79,3 +79,52 @@ I: 45
 Task Executed <Thread(<concurrent.futures.thread.ThreadPoolExecutor object at 0x102abf358>_1, started daemon 123145333858304)>
 Task Executed <Thread(<concurrent.futures.thread.ThreadPoolExecutor object at 0x102abf358>_0, started daemon 123145328603136)>
 ~~~
+
+## Context Manager
+
+The second and possibly most popular method of instantiating a ThreadPoolExecutor is using it as a context manager like so:
+
+~~~py
+with ThreadPoolExecutor(max_workers=3) as executor:
+~~~
+
+It does much the same job as the previous method we looked at but syntactically it looks better and can be advantageous to us as the developers in certain scenarios. 
+
+Context managers, if you haven’t encountered them before are an incredibly powerful concept with Python that allow us to write more syntactically beautiful code. 
+
+## Example
+
+This time we’ll be defining a different task that takes in a variable ‘n’ as input just to give you a simple demonstration of how we can do this. The task function just prints out that it’s processing ‘n’ and nothing more.
+
+Within our main function we utilize our ThreadPoolExecutor as a context manager and then call future = executor.submit(task, (n)) 3 times in order to give our threadpool something to do. 
+
+~~~py
+from concurrent.futures import ThreadPoolExecutor
+
+def task(n):
+ print("Processing {}".format(n))
+
+def main():
+ print("Starting ThreadPoolExecutor")
+ with ThreadPoolExecutor(max_workers=3) as executor:
+   future = executor.submit(task, (2))
+   future = executor.submit(task, (3))
+   future = executor.submit(task, (4))
+ print("All tasks complete")
+  
+if __name__ == '__main__':
+ main()
+~~~
+
+## Output
+
+When we execute the above program you should see that it prints out that we are starting out ThreadPoolExecutor before going on to execute the three distinct tasks we submit to it and then finally printing out that all tasks are complete. 
+
+~~~py
+ $ python3.6 01_threadPoolExe.py
+Starting ThreadPoolExecutor
+Processing 2
+Processing 3
+Processing 4
+All tasks complete
+~~~
