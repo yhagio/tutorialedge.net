@@ -15,7 +15,7 @@ In this tutorial we'll be building a very simple RESTful based API using [aio-li
 
 ## Getting Started with aiohttp
 
-Before we go into how we can use aiohttp to create a simple RESTful API, it's important to know exactly what the framework is and what it can do for us. To start with, it supports both the client and server side of HTTP protocol. It supports client and server websockets straight out the box which makes it ideal for working with libraries such as socketio. If you are interested in seeing how to implement a simple client/server socketio based solution check out this tutorial: [Python Socket.io with aiohttp Tutorial](/python/python-socket-io-tutorial/). 
+Before we go into how we can use aiohttp to create a simple RESTful API, it's important to know exactly what the framework is and what it can do for us. To start with, it features excellent support of the HTTP protocol as well as for websockets which makes it ideal for working with popular websocket libraries such as Socket.io. If you are interested in seeing how to implement a simple client/server socketio based solution check out this tutorial: [Python Socket.io with aiohttp Tutorial](/python/python-socket-io-tutorial/). 
 
 The key part of the aiohttp framework is that it works in an asynchronous manner, it can concurrently handle hundreds of requests per second without too much hassle. In comparison to frameworks such as flask, it's incredibly performant. 
 

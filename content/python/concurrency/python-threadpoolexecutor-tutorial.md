@@ -11,6 +11,13 @@ twitter = "https://twitter.com/Elliot_F"
 
 > This tutorial has been taken and adapted from my book: [Learning Concurrency in Python](https://www.packtpub.com/application-development/learning-concurrency-python)
 
+In this tutorial we'll be looking at Python's ThreadPoolExecutor. This was originally introduced into the language in version 3.2 and provides a simple high-level interface for asynchronously executing input/output bound tasks. 
+
+## Why Use a ThreadPoolExecutor?
+
+ThreadPoolExecutors provide a simple abstraction around spinning up multiple threads and using these threads to perform tasks in a concurrent fashion. Adding threading to your application can help to drastically improve the speed of your application when used in the right context. By using multiple threads we can speed up applications which face an input/output based bottleneck, a good example of this would be a web crawler. 
+
+Web crawlers typically do a lot of heavy i/o based tasks such as fetching and parsing websites, if we were to fetch every page in a synchronous fashion you would find the main bottleneck for your program would be the fetching of these pages from the internet. By using something like a ThreadPoolExecutor we can effectively mitigate this bottleneck by doing multiple fetches concurrently and processing each page as it returns. 
 
 ## Creating a ThreadPoolExecutor
 
