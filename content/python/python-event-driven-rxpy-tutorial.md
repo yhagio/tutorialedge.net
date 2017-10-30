@@ -3,7 +3,7 @@ date = "2017-10-14T11:30:25+01:00"
 title = "Python Event-Driven Programming with RxPY - Tutorial"
 draft = true
 desc = "In this tutorial we are going to look at how you can build event driven programs using RxPY in Python"
-tags = ["python", "rxpy"]
+tags = ["python", "rxpy", "concurrency"]
 series = [ "python" ]
 author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
@@ -91,3 +91,7 @@ Stock has an invalid price: ELLT
 This is just a very simple example of what could be done with `RxPY`, there are an almost infinite amount of different things you could do with this library. You could for instance have a Twitter bot scan for tweets based on a certain keyword and whenever a new tweet appears it could trigger an event. Or you could expand out this wonderfully complex trading algorithm shown above and create a system that has the potential to buy you a luxury yacht somewhere warm!
 
 If you enjoyed this tutorial then you may like my book on [Learning Concurrency in Python](https://www.packtpub.com/application-development/learning-concurrency-python) which covers the RxPY library in greater detail!
+
+## Video Tutorial
+
+<div style="position:relative;height:0;padding-bottom:56.3%"><iframe src="https://www.youtube.com/embed/tQA8I8yMxxM?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="639" height="360" frameborder="0" gesture="media" allowfullscreen></iframe></div>
