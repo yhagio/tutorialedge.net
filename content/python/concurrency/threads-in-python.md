@@ -71,3 +71,6 @@ myFirstThread = threading.Thread(target=myTask)
 myFirstThread.start()
 ~~~ 
 
+## Video Tutorial
+
+<div style="position:relative;height:0;padding-bottom:56.21%"><iframe src="https://www.youtube.com/embed/Ci1803KhtCM?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="641" height="360" frameborder="0" gesture="media" allowfullscreen></iframe></div>
