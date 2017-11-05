@@ -13,7 +13,7 @@ twitter = "https://twitter.com/Elliot_F"
 
 <div style="position:relative;height:0;padding-bottom:56.3%"><iframe src="https://www.youtube.com/embed/L3RyxVOLjz8?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="639" height="360" frameborder="0" gesture="media" allowfullscreen></iframe></div>
 
-> This tutorial was written on top of Python 3.6. This is taken from my book "Learning Concurrency in Python" if you wish to read up more on the library.
+> This tutorial was written on top of Python 3.6. This is taken from my book ["Learning Concurrency in Python"](https://www.packtpub.com/application-development/learning-concurrency-python) if you wish to read up more on the library.
 
 Asyncio became part of the Python ecosystem in version 3.4 and has since then become the basis for a huge number of Python libraries and frameworks due to it's impressive speed and ease of use. Asyncio allows you to easily write single-threaded concurrent programs that utilize something called coroutines, these coroutines are like a stripped down threads and don't come with the same inherit performance issues that your full-fat threads would typically come with. 
 
@@ -47,7 +47,7 @@ if __name__ == '__main__':
 
 When you run this you should see that our `myCoroutine()` successfully executes. Now at this point you must be asking, this doesn't give us anything but extra code, what's the fuss all about? Well for this example it doesn't provide much benefit, however in more complex scenarios, that's when we really see the true performance benefits.
 
-> I would recommend checking out my tutorial on Creating a REST API in aiohttp and Python. This provides a more complex example and is a good example as to how performant asyncio can be.
+> I would recommend checking out my tutorial on [Creating a REST API in aiohttp and Python](/python/create-rest-api-python-aiohttp/). This provides a more complex example and is a good example as to how performant asyncio can be.
 
 ## Coroutines
 
