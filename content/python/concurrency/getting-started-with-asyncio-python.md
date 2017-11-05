@@ -4,10 +4,14 @@ title = "Getting Started with Asyncio in Python"
 draft = true
 tags = ["python", "concurrency"]
 series = [ "python" ]
-desc = "In this article we cover everything you need to get up and running with Python and Async.io"
+desc = "In this article we cover everything you need to get up and running with Python and Asyncio"
 author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++
+
+## Video Tutorial
+
+<div style="position:relative;height:0;padding-bottom:56.3%"><iframe src="https://www.youtube.com/embed/L3RyxVOLjz8?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="639" height="360" frameborder="0" gesture="media" allowfullscreen></iframe></div>
 
 > This tutorial was written on top of Python 3.6. This is taken from my book "Learning Concurrency in Python" if you wish to read up more on the library.
 
@@ -147,6 +151,7 @@ Coroutine: 9, has successfully completed after 5 seconds
 ~~~
 
 Our coroutines go off and execute concurrently and finish execution at different times. It's important to note that these are not completed in the same order as they were submitted and if you were to time the execution of the above program, it would take just above 5 seconds to complete execution.
+
 
 ## Conclusion
 
