@@ -62,6 +62,92 @@ def myFunc2()
 
 The first method was introduced in Python 3.5 and I would tend to push you towards using this method over the latter. 
 
+## Futures
+
+Futures in asyncio are very much similar to the `Future` objects you would see within Python `ThreadPoolExecutors` or `ProcessPoolExecutors` and tt follows an almost identical implementation. Future objects are created with the intention that they will eventually be given a result some time in the future, hence the name. This is beneficial as it means that within your Python program you can go off and perform other tasks whilst you are waiting for your `Future` to return a result. 
+
+Thankfully working with Futures in asyncio is relatively easy thanks to the `ensure_future()` method which takes in a `coroutine` and returns the `Future` version of that `coroutine`. 
+
+~~~py
+import asyncio
+
+# Define a coroutine that takes in a future
+async def myCoroutine(future):
+    # simulate some 'work'
+    await asyncio.sleep(1)
+    # set the result of our future object
+    future.set_result("My Coroutine-turned-future has completed")
+
+async def main():
+    # define a future object
+    future = asyncio.Future()
+    # wait for the completion of our coroutine that we've
+    # turned into a future object using the ensure_future() function
+    await asyncio.ensure_future(myCoroutine(future))
+    # Print the result of our future
+    print(future.result())
+
+# Spin up a quick and simple event loop 
+# and run until completed
+loop = asyncio.get_event_loop()
+try:
+    loop.run_until_complete(main())
+finally:
+    loop.close()
+~~~
+
+If you were to run this you should see that our program successfully turns our `coroutine` into a `future` object and prints out the result. 
+
+## Multiple Coroutines
+
+Let's now try to take advantage of asyncio's ability to run multiple coroutines concurrently. This will hopefully give you some idea as to how powerful `asyncio` is and how you can use it to effectively create incredibly performant Python programs running on a single-thread. 
+
+Let's start by creating a simple coroutine that takes in an `id` as its primary parameter. This will generate a random integer called `process_length` and wait for that length of time. It will then print out it's `id` and how long it awaited for. 
+
+Next within our `main()` method we will generate 10 tasks that and then await these tasks completion using the `await asyncio.gather()` function, passing in our list of `tasks`. Finally we'll utilize the same event loop from the previous example in order to run our `asyncio` program.
+
+~~~py
+import asyncio
+import random
+
+async def myCoroutine(id):
+    process_time = random.randint(1,5)
+    await asyncio.sleep(process_time)
+    print("Coroutine: {}, has successfully completed after {} seconds".format(id, process_time))
+
+async def main():
+    tasks = []
+    for i in range(10):
+        tasks.append(asyncio.ensure_future(myCoroutine(i)))
+
+    await asyncio.gather(*tasks)
+
+
+loop = asyncio.get_event_loop()
+try:
+    loop.run_until_complete(main())
+finally:
+    loop.close()
+~~~  
+
+When you run this you should see something like so:
+
+~~~py
+ $ python3.6 getting-started-asyncio.py
+Coroutine: 4, has successfully completed after 1 seconds
+Coroutine: 7, has successfully completed after 2 seconds
+Coroutine: 8, has successfully completed after 2 seconds
+Coroutine: 0, has successfully completed after 3 seconds
+Coroutine: 1, has successfully completed after 3 seconds
+Coroutine: 2, has successfully completed after 4 seconds
+Coroutine: 6, has successfully completed after 4 seconds
+Coroutine: 3, has successfully completed after 5 seconds
+Coroutine: 5, has successfully completed after 5 seconds
+Coroutine: 9, has successfully completed after 5 seconds
+~~~
+
+Our coroutines go off and execute concurrently and finish execution at different times. It's important to note that these are not completed in the same order as they were submitted and if you were to time the execution of the above program, it would take just above 5 seconds to complete execution.
+
 ## Conclusion
 
 This was just a very quick and simple introduction to the `asyncio` framework. We'll be covering this framework in more detail in future tutorials.   
