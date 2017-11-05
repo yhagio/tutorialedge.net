@@ -3,8 +3,8 @@ date = "2017-11-05T17:42:45Z"
 title = "An Introduction to Face Recognition in Python"
 draft = true
 desc = "An absolute beginners introduction to writing face recognition software in Python"
-tags = ["python"]
-series = [ "python", "ai"]
+tags = ["python", "ai"]
+series = [ "python"]
 author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++
