@@ -86,6 +86,31 @@ A face is located at pixel location Top: 72, Left: 170, Bottom: 124, Right: 222
 A face is located at pixel location Top: 39, Left: 87, Bottom: 101, Right: 149
 ~~~
 
+## Checking if A Person Exists Within an Image
+
+Recognizing that an image contains multiple faces is pretty cool but we can actually take this one step further and determine who exists within an image. Say for instance you have a photo of a group of people, you could determine using the `face_recognition` library whether your friend `Alan` exists within that photo. 
+
+In order for this to work however you need at least one reference image of the people you are trying to identify.
+
+~~~py
+import face_recognition
+
+# Load in our reference image of Joe Biden
+known_image = face_recognition.load_image_file("biden.jpg")
+# Load in our image of a group of people
+unknown_image = face_recognition.load_image_file("unknown.jpg")
+
+# Create a biden encoding
+biden_encoding = face_recognition.face_encodings(known_image)[0]
+# create an encoding based off our group photo
+unknown_encoding = face_recognition.face_encodings(unknown_image)[0]
+
+# Compare the encodings and try to determine if Biden exists within a photo
+results = face_recognition.compare_faces([biden_encoding], unknown_encoding)
+# Print the results
+print(results)
+~~~
+
 ## Conclusion
 
 This was a fairly simple introduction to the art of facial recognition software and hopefully you found it both useful and interesting! 
