@@ -11,6 +11,12 @@ twitter = "https://twitter.com/Elliot_F"
 
 > This Tutorial was written using Python 3.6
 
+## Video Tutorial
+
+<div style="position:relative;height:0;padding-bottom:56.3%"><iframe src="https://www.youtube.com/embed/4adQVHuIfnw?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="639" height="360" frameborder="0" gesture="media" allowfullscreen></iframe></div>
+
+## Getting Started
+
 Decorators are a pretty cool concept that allow you to decorate functions and classes with a decorator and a new, transformed function or class will be returned. If you are coming from a Java background then you may have used decorators a lot in frameworks such as Spring and Jersey.
 
 If you come from a pure Python background then you may have seen decorators feature in frameworks such as flask. In flask you would typically define a function and then decorate it with things such as `@app.route("/my-endpoint")` in order to specify that this is the function that will be executed whenever the `/my-endpoint` is called from your app.
