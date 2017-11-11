@@ -13,6 +13,10 @@ twitter = "https://twitter.com/Elliot_F"
 
 In this tutorial we are going to be covering Asyncio's event loop. Some of the material for this tutorial was taken from my book: [Learning Concurrency in Python](https://www.packtpub.com/application-development/learning-concurrency-python).  
 
+## Video
+
+<div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/xWt5lpn8fN8?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="640" height="360" frameborder="0" gesture="media" allowfullscreen></iframe></div>
+
 ## The Event Loop 
 
 The main component of any asyncio based Python program has to be the underlying event loop. Within this event loop we can (from the official documentation): 
