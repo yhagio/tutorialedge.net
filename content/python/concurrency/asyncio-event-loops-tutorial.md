@@ -11,6 +11,8 @@ twitter = "https://twitter.com/Elliot_F"
 
 > This tutorial was built on top of Python 3.6.
 
+In this tutorial we are going to be covering Asyncio's event loop. Some of the material for this tutorial was taken from my book: [Learning Concurrency in Python](https://www.packtpub.com/application-development/learning-concurrency-python).  
+
 ## The Event Loop 
 
 The main component of any asyncio based Python program has to be the underlying event loop. Within this event loop we can (from the official documentation): 
@@ -27,7 +29,7 @@ Each of the requests made to our web server in the above example would be consid
 
 ## Getting Started
 
-Let's take a quick look at 
+Let's take a quick look at how you can define a very simple event loop. In order to instantiate an event loop we'll use `asyncio.get_event_loop()`, we'll then start a `try... finally` and within the body of our `try` we'll specify that we want our newly instantiated event loop to run until it has completed our `myCoroutine()` function.
 
 ~~~py
 import asyncio
@@ -44,3 +46,110 @@ try:
 finally:
     loop.close()
 ~~~
+
+## Running Options
+
+We have a number of options for running our event loops, we can either call `run_forever()` which will subsequently run our event loop until the `stop()` function is called, or we can call `run_until_complete(future)` and only run our event loop until whatever `future` object we've passed in has completed it's execution.
+
+### The run_until_complete() method
+
+Let's take a quick look at the `run_until_complete()` function. In this example we'll define our `myWork()` coroutine which we will then pass into our `run_until_complete` function and subsequently we should see our event loop run until this `myWork()` coroutine is finished it's execution.
+
+~~~py
+import asyncio
+import time
+
+async def myWork():
+    print("Starting Work")
+    time.sleep(5)
+    print("Finishing Work")
+
+loop = asyncio.get_event_loop()
+try:
+    loop.run_until_complete(myWork())
+finally:
+    loop.close()
+~~~
+
+Upon running this you should then see the following output:
+
+~~~py
+ $ python3.6 test.py
+Starting Work
+Finishing Work
+~~~
+
+### The run_forever() method
+
+The alternative way of starting up your event loop is to call the `run_forever()` method which will subsequently start your asyncio based event loop and have it run indefinitely until the program comes to an end or the `stop()` method is called. It should be noted that calling this causes our main thread to block indefinitely. 
+
+Let's take a look at a quick example which showcases the use of this method. We'll first define our `work()` coroutine which will feature a while loop that will run indefinitely and simply print out `Task Executed` in 1 second intervals. 
+
+~~~py
+import asyncio
+
+async def work():
+    while True:
+        await asyncio.sleep(1)
+        print("Task Executed")
+
+loop = asyncio.get_event_loop()
+try:
+    asyncio.async(work())
+    loop.run_forever()
+except KeyboardInterrupt:
+    pass
+finally:
+    print("Closing Loop")
+    loop.close()
+~~~ 
+
+## Running Multiple coroutines:
+
+If you wanted to run multiple coroutines indefinitely in parallel then you can do that by creating your `x` number of coroutines and have them run a while loop each. You would then call `asyncio.async(function())` in order to enqueue them onto the loop and they would run indefinitely after that point.
+
+~~~py
+import asyncio
+import time
+
+async def firstWorker():
+    while True:
+        await asyncio.sleep(1)
+        print("First Worker Executed")
+        
+async def secondWorker():
+    while True:
+        await asyncio.sleep(1)
+        print("Second Worker Executed")
+
+
+loop = asyncio.get_event_loop()
+try:
+    asyncio.async(firstWorker())
+    asyncio.async(secondWorker())
+    loop.run_forever()
+except KeyboardInterrupt:
+    pass
+finally:
+    print("Closing Loop")
+    loop.close()
+~~~
+
+This should output the following indefinitely:
+
+~~~py
+ $ python3.6 run-forever.py
+First Worker Executed
+Second Worker Executed
+First Worker Executed
+Second Worker Executed
+First Worker Executed
+Second Worker Executed
+~~~
+
+## Conclusion
+
+If you found this tutorial useful or you require more assistance then please feel free to leave a comment in the comments section below!
+
+
+
