@@ -141,11 +141,13 @@ Processing Task
 Completed All Tasks
 ~~~
 
-## Task Functions
+<!-- ## Task Functions
 
 So we've looks at how we can interact with individual tasks but let's now take a step back and look at how we can interact with them as a collective. 
 
 ### The as_completed() function
+
+
 
 ### The ensure_future() function
 
@@ -153,5 +155,10 @@ So we've looks at how we can interact with individual tasks but let's now take a
 
 ### The gather() function
 
-### The wait() function
+The `gather()` function 
 
+### The wait() function -->
+
+## Conclusion
+
+I hope you found this tutorial useful, if you require further assistance then please feel free to let me know in the comments section below!
