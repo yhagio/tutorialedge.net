@@ -170,7 +170,7 @@ finally:
 
 ### The gather() function
 
-The `gather()` function 
+The `gather()` function returns one single future that aggregates all of the results from the given coroutines or futures passed into it. You should note that the results aren't returned in the order they were submitted so if you care about order then you'll have to implement some admin functionality to reorder results.
 
 ~~~py
 import asyncio
@@ -191,6 +191,8 @@ finally:
 ~~~
 
 ### The wait() function
+
+The `wait()` function simply blocks until the Future instances passed into it complete, upon completion this will then returned a named 2-tuple of sets. The first set contains futures that have completed, the second gives the uncompleted futures. This can be useful in scenarios where you have to process a task within a given time, say you were making a number of REST API calls or pulling messages from a queue on a broker, if they failed to complete within the given `timeout` you could possibly try to process them in a different way. 
 
 ~~~py
 import asyncio
