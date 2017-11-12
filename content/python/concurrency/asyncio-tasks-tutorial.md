@@ -141,23 +141,74 @@ Processing Task
 Completed All Tasks
 ~~~
 
-<!-- ## Task Functions
+## Task Functions
 
 So we've looks at how we can interact with individual tasks but let's now take a step back and look at how we can interact with them as a collective. 
 
 ### The as_completed() function
 
+~~~py
+import asyncio
 
+async def myWorker(number):
+    return number * 2
 
-### The ensure_future() function
+async def main(coros):
+    for fs in asyncio.as_completed(coros):
+        print(await fs)
 
-### The wrap_future() function
+coros = [myWorker(1) for i in range(5)]
+
+try:
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(main(coros))
+except KeyboardInterrupt:
+    pass
+finally:
+    loop.close()
+~~~
 
 ### The gather() function
 
 The `gather()` function 
 
-### The wait() function -->
+~~~py
+import asyncio
+
+async def myWorker():
+    print("Hello World")
+
+async def main():
+    print("My Main")
+
+try:
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(asyncio.gather(*[myWorker() for i in range(5)]))
+except KeyboardInterrupt:
+    pass
+finally:
+    loop.close()
+~~~
+
+### The wait() function
+
+~~~py
+import asyncio
+
+async def myWorker():
+    print("Hello World")
+
+async def main():
+    print("My Main")
+
+try:
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(asyncio.wait([myWorker() for i in range(5)], timeout=2))
+except KeyboardInterrupt:
+    pass
+finally:
+    loop.close()
+~~~
 
 ## Conclusion
 
