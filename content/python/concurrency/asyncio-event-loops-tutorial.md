@@ -99,7 +99,7 @@ async def work():
 
 loop = asyncio.get_event_loop()
 try:
-    asyncio.async(work())
+    asyncio.ensure_future(work())
     loop.run_forever()
 except KeyboardInterrupt:
     pass
@@ -110,7 +110,7 @@ finally:
 
 ## Running Multiple coroutines:
 
-If you wanted to run multiple coroutines indefinitely in parallel then you can do that by creating your `x` number of coroutines and have them run a while loop each. You would then call `asyncio.async(function())` in order to enqueue them onto the loop and they would run indefinitely after that point.
+If you wanted to run multiple coroutines indefinitely in parallel then you can do that by creating your `x` number of coroutines and have them run a while loop each. You would then call `asyncio.ensure_future(function())` in order to enqueue them onto the loop and they would run indefinitely after that point.
 
 ~~~py
 import asyncio
@@ -129,8 +129,8 @@ async def secondWorker():
 
 loop = asyncio.get_event_loop()
 try:
-    asyncio.async(firstWorker())
-    asyncio.async(secondWorker())
+    asyncio.ensure_future(firstWorker())
+    asyncio.ensure_future(secondWorker())
     loop.run_forever()
 except KeyboardInterrupt:
     pass
