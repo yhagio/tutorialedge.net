@@ -83,12 +83,13 @@ We have been able to modify our program and change is runtime performance from `
 The entire Python file can be found below. 
 
 ~~~py
+import time
+
 def fib(n):
     if n <= 0:
         return 0
     if n == 1:
         return 1
-    print("Recursive Call")
     return fib(n-1) + fib(n-2)
 
 def fib_with_memo(n, memo):
@@ -97,17 +98,37 @@ def fib_with_memo(n, memo):
     if n == 1:
         return 1
     if n not in memo: 
-        print("Memoization Computed")
         memo[n] = fib_with_memo(n-1, memo) + fib_with_memo(n-2, memo)
 
     return memo[n]
 
 memo = {}
 
-print(fib(9))
-print(fib_with_memo(9, memo))
+start_time = time.time()
+print(fib(35))
+end_time = time.time()
+print("Total Time: {}".format(end_time - start_time))
+
+start_time = time.time()
+print(fib_with_memo(35, memo))
+end_time = time.time()
+print("Total Time: {}".format(end_time - start_time))
+
 print(memo)
 ~~~
+
+The outputs of this are:
+
+~~~py
+ $ python3.6 fibonacci.py
+9227465
+Total Time: 7.323758840560913
+9227465
+Total Time: 0.00010204315185546875
+{2: 1, 3: 2, 4: 3, 5: 5, 6: 8, 7: 13, 8: 21, 9: 34, 10: 55, 11: 89, 12: 144, 13: 233, 14: 377, 15: 610, 16: 987, 17: 1597, 18: 2584, 19: 4181, 20: 6765, 21: 10946, 22: 17711, 23: 28657, 24: 46368, 25: 75025,26: 121393, 27: 196418, 28: 317811, 29: 514229, 30: 832040, 31: 1346269, 32: 2178309, 33: 3524578, 34: 5702887, 35: 9227465}
+~~~
+
+As you can see the `memoized` version of the fibonacci function returns in a fraction of the time. 
 
 ## Conclusion
 
