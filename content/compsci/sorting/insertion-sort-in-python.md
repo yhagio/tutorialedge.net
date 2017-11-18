@@ -4,7 +4,7 @@ title = "Implementing The Insertion Sort Algorithm in Python"
 draft = true
 desc = "In This Tutorial we look at how you can implement the Insertion Sorting Algorithm in Python"
 tags = ["python", "algorithms"]
-series = ["python"]
+series = ["compsci"]
 author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++
