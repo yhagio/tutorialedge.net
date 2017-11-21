@@ -67,12 +67,15 @@ If we were to shift right twice on an odd number we would see the following:
 0100 # Output is 4 in binary. It has rounded down
 ~~~
 
-<!-- 
-### Logical Shift Right
 
-Logical shift rights -->
 
-<!-- ## Bitwise And
+## Bit Logical Operators 
+
+In this section of the tutorial we are going to take a look at the logical operators that can be used in conjunction with your bits.
+
+### Bitwise And
+
+Bitwise and will return a `1` if both values to the left and right of our `&` operator are `1`. This results in the following output when we try it across various different inputs.
 
 ~~~py
 >>> 1 & 1
@@ -85,7 +88,9 @@ Logical shift rights -->
 0
 ~~~
 
-## Bitwise Or
+### Bitwise Or
+
+Bitwise Or can be done using the `|` operator in Python and will return a `1` if either or *both* of our values are `1`.  
 
 ~~~py
 >>> 0 | 1
@@ -98,7 +103,9 @@ Logical shift rights -->
 1
 ~~~
 
-## Bitwise XOR
+### Bitwise XOR
+
+A Bitwise exclusive or `(XOR)` can be achieved using the `^` operator. This will return the following results:
 
 ~~~py
 >>> 1 ^ 1
@@ -109,4 +116,31 @@ Logical shift rights -->
 1
 >>> 0 ^ 0
 0
-~~~ -->
+~~~ 
+
+## Complex Bit Manipulation
+
+Now that we have covered the basics in Bit manipulation we can start to look at the more complex tasks such as setting a bit, clearing a bit or getting a bit. The vast majority of these tasks can be performed by first creating what we would call a `bit mask` and then using this with one of the logical operators that we have previously covered.
+
+A bit mask typically looks something like `0010000` and we can use this for doing things like setting, getting or clearing a bit in the `5th` bit position. If this doesn't make sense right now hopefully after the next few examples it will start to become clearer.
+
+
+### Setting a Bit
+
+~~~py
+def set_bit(position, binary):
+    # Create a bit mask based on the
+    # position passed in
+    # produces '10000' if we pass in position=4
+    # our bit in the '4th' position is set to 1
+    bit_mask = 1 << position 
+    # return our binary string or-ed with our mask
+    return bit_mask | binary
+
+# This should return 16
+print(set_bit(4, 00000000))
+~~~
+
+<!--### Getting a Bit
+
+### Clearing a Bit -->
