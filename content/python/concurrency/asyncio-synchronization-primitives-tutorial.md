@@ -1,6 +1,6 @@
 +++
 date = "2017-11-23T19:35:09Z"
-title = "Asyncio Synchronization Primitives Tutorial"
+title = "Asyncio Synchronization Primitives Tutorial - Queues and Locks"
 draft = true
 desc = "In this tutorial we look at the various synchronization primitives available to you in your Asyncio based programs."
 tags = ["python", "asyncio", "concurrency"]
@@ -10,6 +10,10 @@ twitter = "https://twitter.com/Elliot_F"
 +++
 
 > This tutorial was built on top of Python 3.6
+
+## Video Tutorial
+
+<div style="position:relative;height:0;padding-bottom:42.76%"><iframe src="https://www.youtube.com/embed/kMcwcJdIvHI?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="842" height="360" frameborder="0" gesture="media" allowfullscreen></iframe></div>
 
 In this tutorial we'll be looking at the various synchronization primitives available to you in your Asyncio programming adventures. We'll be taking a brief look at why these synchronization primitives are important and also the various ways you can use them within a simple Asyncio based program.
 
