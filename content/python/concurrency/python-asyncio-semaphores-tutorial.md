@@ -13,6 +13,10 @@ twitter = "https://twitter.com/Elliot_F"
 
 In this tutorial we'll be looking at `semaphores` and `bounded-semaphores` and how they work within the Asyncio framework. 
 
+## Video Tutorial
+
+<div style="position:relative;height:0;padding-bottom:56.3%"><iframe src="https://www.youtube.com/embed/uvM-JYnz1Mw?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="639" height="360" frameborder="0" gesture="media" allowfullscreen></iframe></div>
+
 ## What Are Semaphores?
 
 Semaphores were originally a key part of railway system architecture and it was the famous Dijkstra that translated this real-world concept into our computing world. 
