@@ -11,7 +11,21 @@ twitter = "https://twitter.com/Elliot_F"
 
 > This tutorial has been taken and adapted from my book: [Learning Concurrency in Python](https://www.packtpub.com/application-development/learning-concurrency-python)
 
-`ProcessPoolExecutors` can be used and created in much the same way as your standard [ThreadPoolExecutors](/python/concurrency/python-threadpoolexecutor-tutorial/). It subclasses the Executor class the same way the `ThreadPoolExecutor` class does and thus features many of the same methods within it. 
+In this tutorial we will be looking at how you can utilize multiple processors within your Python Programs. 
+
+## Multiprocessing vs Multithreading
+
+Knowing when and where to use multiple threads vs multiple processes is incredibly important if you are going to be working on highly performant Python programs. Misuse of either threads or processes could lead to your systems actually seeing performance degradation. 
+
+THere are typically 2 types of performance bottleneck for most programs, this is either an I/O bottleneck or a CPU-based bottleneck. 
+
+If your program spends more time waiting on file reads or network requests or any type of `I/O` task, then it is an `I/O` bottleneck and you should be looking at using threads to speed it up. 
+
+If your program spends more time in CPU based tasks over large datasets then it is a `CPU` bottleneck. In this scenario you *may* be better off using multiple processes in order to speed up your program. I say *may* as it's possible that a single-threaded Python program may be faster for CPU bound problems, it can depend on unknown factors such as the size of the problem set and so on.  
+
+## Getting Started 
+
+Let's take a look at `ProcessPoolExecutors`. `ProcessPoolExecutors` can be used and created in much the same way as your standard [ThreadPoolExecutors](/python/concurrency/python-threadpoolexecutor-tutorial/). It subclasses the Executor class the same way the `ThreadPoolExecutor` class does and thus features many of the same methods within it. 
 
 ## Creating a ProcessPoolExecutor
 
@@ -52,3 +66,7 @@ When we run this you should see that both our submitted tasks are executed as we
 Executing our Task on Process 40365
 Executing our Task on Process 40366
 ~~~
+
+## Conclusion
+
+If you found this tutorial useful or require further assistance then please do not hesitate to let me know in the comments section below!
