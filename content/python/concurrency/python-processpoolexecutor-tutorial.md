@@ -11,6 +11,12 @@ twitter = "https://twitter.com/Elliot_F"
 
 > This tutorial has been taken and adapted from my book: [Learning Concurrency in Python](https://www.packtpub.com/application-development/learning-concurrency-python)
 
+## Video Tutorial
+
+<div style="position:relative;height:0;padding-bottom:56.3%"><iframe src="https://www.youtube.com/embed/J7w_G6ZKzz4?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="639" height="360" frameborder="0" gesture="media" allowfullscreen></iframe></div>
+
+## Introduction
+
 In this tutorial we will be looking at how you can utilize multiple processors within your Python Programs. 
 
 ## Multiprocessing vs Multithreading
@@ -65,6 +71,36 @@ When we run this you should see that both our submitted tasks are executed as we
  $ python3.6 06_processPool.py
 Executing our Task on Process 40365
 Executing our Task on Process 40366
+~~~
+
+## Context Manager
+
+It should be noted that you can also write this in a more succinct fashion
+
+~~~py
+from concurrent.futures import ProcessPoolExecutor
+import os
+
+def task():
+    print("Executing our Task on Process: {}".format(os.getpid()))
+
+def main():
+#    executor = ProcessPoolExecutor(max_workers=3)
+    with ProcessPoolExecutor(max_workers=3) as executor:
+        task1 = executor.submit(task)
+        task2 = executor.submit(task)
+
+main()
+~~~
+
+## Output
+
+When you run this you should see exactly the same output as before:
+
+~~~py
+ $ python3.6 test.py
+Executing our Task on Process: 56335
+Executing our Task on Process: 56336
 ~~~
 
 ## Conclusion
