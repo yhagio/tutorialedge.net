@@ -13,7 +13,7 @@ In this article I'm going to be showing you how we can create a simple Golang ba
 
 ## REST Architectures
 
-<p>REST is everywhere these days, from web sites to enterprise applications, the RESTful architecture style is a powerful way of providing communication between various moving by separate software components. Building REST APIs allow you to easily decouple both consumers and producers and are typically stateless by design. </p>
+REST is everywhere these days, from web sites to enterprise applications, the RESTful architecture style is a powerful way of providing communication between separate software components. Building REST APIs allow you to easily decouple both consumers and producers and are typically stateless by design.
 
 > If you wish to learn more about the basics of REST APIs then check out <a href="/general/what-is-a-rest-api/">What Are RESTful APIs?</a>
 
