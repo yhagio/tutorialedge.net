@@ -21,11 +21,10 @@ Being able to write `C` extensions can come in handy in scenarios where the Pyth
 
 In this tutorial we'll be building a very simple `C` based Python module that will feature a number of different functions that should hopefully give you enough to get started. 
 
-We'll be creating 3 distinct functions:
+We'll be creating 2 distinct functions:
 
 * A `Hello World` function that simply performs a print.
 * A Simple Fibonacci Function that takes in a value `n`.
-* A Function that takes in an `Object` and modifies it
 
 ## Getting Started
 
