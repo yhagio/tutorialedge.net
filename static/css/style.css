@@ -1,13 +1,16 @@
 body {
-   font-family: "Proxima Nova", "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+   font-family: "ua-medium",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; 
   color: #3D4C62;
   font-weight: 400;
   line-height: 1.75;
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #545e6f;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Proxima Nova", "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "ua-medium",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   font-weight: 200;
   color: #333;
 }
@@ -175,6 +178,13 @@ nav .button-collapse .ion {
   }
 }
 
+.blog-list-article-image {
+  position: absolute;
+  top: 0px;
+  bottom: 20px;
+  background-color: #00B7D4;
+}
+
 .blog-list-article-date, .blog-list-article-category {
   position: absolute;
   top: 20px;
@@ -308,19 +318,21 @@ nav .button-collapse .ion {
   width: 100%;
   padding: 40px;
   margin-bottom: 20px;
-  background-color: #fafafa !important;
+  background-color: #F5F8F9 !important;
   border-bottom: 1px solid #f6f4f4;
   text-align: center;
 }
 
 .courses h2 {
-  color: #074E68 !important;
-  font-size: 2.9375rem;
-  font-weight: 400;
-  line-height: 3.125rem;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 40px;
+  font-size: 40px;
+  margin: 20px 0 32px;
+  color: #545e6f;
+  letter-spacing: -0.1px;
+  line-height: 45px;
+}
+
+.courses p {
+  margin-bottom: 60px;
 }
 
 .course-card {
@@ -343,17 +355,19 @@ nav .button-collapse .ion {
   width: 100%;
   height: 150px;
   border-radius: 10px 10px 0px 0px;
-  background-color: #333333;
+  background-color: #fff;
 }
 
 .course-card .top-half img {
   width: 150px;
   height: auto;
+  padding: 5px;
 }
 
 .course-card .bottom-half {
   margin-left: 5%;
   margin-top: 12px;
+  padding-bottom: 20px;
   width: 90%;
   text-align: center;
 }
@@ -372,7 +386,16 @@ nav .button-collapse .ion {
 .tutorials {
   padding-top: 40px;
   padding-bottom: 40px;
+  text-align: center;
 }
+.tutorials h2 {
+  font-size: 40px;
+  margin: 20px 0 32px;
+  color: #545e6f;
+  letter-spacing: -0.1px;
+  line-height: 45px;
+}
+
 
 .about {
   width: 100%;
@@ -445,13 +468,12 @@ nav .button-collapse .ion {
   line-height: 3.125rem;
 }
 .title-bar .tags {
-    position: absolute;
-    bottom: 40px;
-    width: 200px;
-    left:50%;
-    margin-left:-100px;
+  position: absolute;
+  bottom: 30px;
+  width: 300px;
+  left: 50%;
+  margin-left: -150px;
 }
-
 .title-bar p {
   color: white !important;
 }

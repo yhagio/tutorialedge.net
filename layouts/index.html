@@ -3,7 +3,8 @@
 <div class="courses">
 	<div class="container">
 		<div class="row">
-
+			<h2>All Courses</h2>
+			<p>Dive in to some of our in-depth courses that are all 100% free.</p>
 			{{ range (where .Site.Pages "Section" "course") }} {{ if ne .Title "Courses" }}
 			<div class="col l4 m6 s12">
 				<a href="{{ .Permalink }}">
@@ -28,6 +29,7 @@
 </div>
 
 <div class="tutorials container">
+	<h2>All Tutorials</h2>
 	<div class="row flexbox-courses">
 		{{ $paginator := .Paginate .Site.Pages }} {{ range $paginator.Pages }}
 		<div class="col l4 m6 s12">
@@ -37,6 +39,7 @@
 				<div class="blog-list-article-category">{{ $value }}</div>
 				{{ end }}
 				<div class="blog-list-article-content">
+					
 					<div class="blog-list-article-title">{{ .Title }}</div>
 					<div class="blog-list-article-excerpt">{{ .Params.desc }}</div>
 				</div>
