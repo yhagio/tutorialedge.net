@@ -2,10 +2,10 @@
 date = "2017-12-17T15:07:54Z"
 title = "The Top Programming Books for Learning Rust"
 draft = true
-desc = "The definitive list of all the books you should buy if you want to learn how to improve your beginner programming skills"
+desc = "The definitive list of all the books you should buy if you want to learn how to program using Rust"
 author = "Elliot Forbes"
-tags = ["general", "books"]
-series = ["general"]
+tags = ["rust", "books"]
+series = ["rust"]
 twitter = "https://twitter.com/Elliot_F"
 +++
 
