@@ -4,7 +4,7 @@ title = "Implementing The Bubble Sort in Python"
 draft = true
 desc = "In This Tutorial we look at how you can implement the Bubble Sorting Algorithm in Python"
 tags = ["python", "algorithms"]
-series = ["compsci"]
+series = ["algorithms"]
 author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++

@@ -4,7 +4,7 @@ title = "Data Structures - Binary Trees For Beginners"
 draft = true
 desc = "In This Tutorial we look at Binary Trees, we look at how they work and what problems they can solve"
 tags = ["python", "data-structures"]
-series = ["compsci"]
+series = ["data-structures"]
 author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++
