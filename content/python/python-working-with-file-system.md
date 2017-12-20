@@ -42,17 +42,30 @@ Let's see this in action in a directory that has 3 distinct files in it: `['test
 ('./', [], ['test2.txt', 'test.txt', 'main.py'])
 ~~~
 
-# Checking Whether File Or Directory?
+## Checking Whether File Or Directory?
 
 Being able to discern whether something is a file or directory can come in handy. Let's look at how you can check whether something is either a file or directory in Python.
 
 To do this we can use the `os.path.isfile()` function which returns `False` if it's a directory or `True` if it is indeed a file.
 
 ~~~py
+>>> import os
 >>> os.path.isfile("/")
 False
 >>> os.path.isfile("./main.py")
 True
+~~~
+
+## Checking if a File or Directory Exists
+
+If you wanted to check whether something exists on your current machine you can use the `os.path.exists()` function, passing in the file or directory you wish to check:
+
+~~~py
+>>> import os
+>>> os.path.exists("./main.py")
+True
+>>> os.path.exists("./dud.py")
+False
 ~~~
 
 ## Conclusion
