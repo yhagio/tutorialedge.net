@@ -49,6 +49,7 @@ article ol li:before {
 
 nav {
   background-color: #14233C;
+  box-shadow: none;
 }
 
 nav .brand-logo {
@@ -484,7 +485,10 @@ nav .button-collapse .ion {
   margin-bottom: 10px;
 }
 
+
 .left-sidebar {
+  width: 100%;
+  border-right: 1px solid #e6edfb;
   padding: 20px;
   padding-top: 40px;
 }
@@ -528,11 +532,17 @@ nav .button-collapse .ion {
 .left-sidebar ul li a:hover {
   text-decoration: underline;
 }
+.post_divider {
+  height: 1px;
+  background-color: #e6edfb;
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 39px;
+}
 
 article {
   background-color: white;
   padding: 20px;
-  padding-top: 40px;
   padding-bottom: 40px;
   font-size: 18px;
   line-height: 30px;
@@ -568,10 +578,17 @@ article h5 {
 }
 
 article .info {
-  color: #999;
-  font-size: 0.9em;
-  padding: 0;
-  text-align: center;
+  font-size: 14px;
+  height: 100%;
+  color: #8598b9;
+}
+article .info .ion {
+  font-size: 16px;
+  margin-right: 5px;
+}
+article .info .info-box {
+  float: left;
+  margin-right: 20px;
 }
 
 article ul li {
@@ -665,12 +682,13 @@ article .amazon-link {
 }
 @media only screen and (min-width: 768px) {
   .container article {
-    width: 80%;
+    width: 90%;
   }
 }
 
 .container img {
-  width: 80%;
+  width: 85%;
+  margin-top: 20px;
   height: auto;
   margin: auto;
   display: block;
@@ -808,9 +826,6 @@ footer .footer-copyright {
   background-color: #fff;
   text-align: center;
   height: auto;
-  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 10px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 10px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 10px;
   padding-top: 36px;
   padding-bottom: 36px;
 }
