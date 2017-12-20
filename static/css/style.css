@@ -488,14 +488,18 @@ nav .button-collapse .ion {
 
 .left-sidebar {
   width: 100%;
-  border-right: 1px solid #e6edfb;
-  padding: 20px;
   padding-top: 40px;
+  border-bottom: 1px solid #e6edfb;
+  border-right: 1px solid #e6edfb;
+  margin-left: -10px;
+  padding-bottom: 0;
 }
 
 .left-sidebar h3 {
   padding: 0;
   margin: 0;
+  padding-left: 40px;
+  margin-left: 40px;
 }
 
 .left-sidebar img {
@@ -516,11 +520,14 @@ nav .button-collapse .ion {
   font-size: 14px;
   font-weight: 400;
   list-style: none;
-  padding: 7px 0 7px 5px;
 }
 
 .left-sidebar ul li a {
   color: #000;
+  display: block;
+  background-color: #F9F9F9;
+  padding: 20px;
+  border-top: 1px solid #e6edfb;
   text-decoration: none;
   -webkit-transition: all 300ms ease-out;
   -moz-transition: all 300ms ease-out;

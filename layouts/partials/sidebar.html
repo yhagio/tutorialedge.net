@@ -3,7 +3,12 @@
     <h3>{{ $value }}</h3>
     <ul> 
       {{ range (index $.Site.Taxonomies.series $value) }}
-        <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a></li>
+        <li>
+          <a href="{{ .Page.RelPermalink }}"><b>{{ .Page.Title }}</b>
+          <br/>
+          {{ .Page.Date.Format "Jan 2, 2006" }}
+          </a>
+        </li>
       {{ end }}
     </ul>
     {{ end }}
