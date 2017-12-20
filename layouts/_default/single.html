@@ -1,35 +1,18 @@
 {{ partial "header.html" . }}
 
-
 <div class="content">
 	<div class="row">
 		<div class="col l3 m3 s12">
 			{{ partial "sidebar.html" . }}
 		</div>
 		<div class="col l9 m9 s12">
-			<!-- <div class="title-bar">
-				<div class="title-bar-container">
-					<div class="date">{{ .Date.Format "02.01.2006 15:04" }}</div>
-					<div class="category">
-						{{ range $key, $value := .Params.series }}
-						<a href="/series/{{ $value }}">{{ $value }}</a> {{ end }}
-					</div>
-							<div class="tags">
-								{{ range .Params.tags }}
-								<a href="/tags/{{ . }}">
-									<div class="chip">{{ . }}</div>
-								</a>
-								{{ end }}
-							</div>
-				</div>
-			</div> -->
 			<div class="container">
 				<article>
 					<h1>{{ .Title }}</h1>
 					
 					<div class="info">
 						<div class="info-box">
-							<i class="ion ion-person"></i> <a href="https://twitter.com/elliot_f">{{ .Params.author }}</a> 
+							<i class="ion ion-person"></i> <a href="https://twitter.com/elliot_f">{{ .Params.author }}</a>
 						</div>
 						<div class="info-box">
 							<i class="ion ion-ios-calendar"></i> {{ .Date.Format "02.01.2006 15:04" }}
@@ -61,7 +44,7 @@
 					
 					<div>
 						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-						<!-- left-sidebar -->
+						
 						<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6782067367590597" data-ad-slot="4096707282" data-ad-format="auto"></ins>
 						<script>
 							(adsbygoogle = window.adsbygoogle || []).push({});
