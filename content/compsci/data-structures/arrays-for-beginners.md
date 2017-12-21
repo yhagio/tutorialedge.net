@@ -45,6 +45,10 @@ As you can imagine this is a rather expensive task for larger arrays and can adv
 
 > Note: In some languages there exist implementations that will automatically handle array resizing. 
 
+## Arrays Used In Other Data Structures
+
+It should be noted that `arrays` can be used within other data structures. For example, you can implement `binary trees` as well as `hash tables` using `arrays`. I'll be covering exactly how this works in their respective tutorials.
+
 ## Conclusion
 
 I hope you found this tutorial useful! If you did or you require further assistance then please feel free to let me know in the comments section below or by tweeting me: [@Elliot_F](https://twitter.com/elliot_f).
