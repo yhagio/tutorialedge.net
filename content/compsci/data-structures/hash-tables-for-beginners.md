@@ -21,14 +21,12 @@ Hash tables with a high `Fill Factor` will tend to have a high number of collisi
 
 ## Hashing Algorithms
 
-
-
 ## Collision Handling
-
-
 
 ## Array Implementation
 
 ## LinkedList Implementation
 
-## 
+## Conclusion
+
+I hope you found this tutorial useful! If you require further assistance then please let me know in the comments section below or by tweeting me [@Elliot_F](https://twitter.com/elliot_f).
