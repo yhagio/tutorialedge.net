@@ -59,6 +59,25 @@ struct Greeting {
 }
 ~~~
 
+## Serializing
+
+Let's take a look at how we can serialize a `struct` to a `JSON` string:
+
+~~~rust
+let greeting = Greeting { status: "success", content: "Hello World" };
+let serialized = serde_json::to_string(&greeting).unwrap();
+println!("Serialized: {}", serialized);
+~~~
+
+## Deserializing
+
+If we conversely wanted to deserialize our `JSON` string and convert it back to a `Greeting` then we could do the following:
+
+~~~rust
+let deserialized: Greeting = serde_json::from_str(&serialized).unwrap();
+println!("Deserialized: {:?}", deserialized);
+~~~
+
 ## Sample Program
 
 Let's now put this all together and try and create a simple REST api that will return a JSON response. This `JSON` response will be serialized from the `resp` variable that we will follow the `Greeting` struct.
