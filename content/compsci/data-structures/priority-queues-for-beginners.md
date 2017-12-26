@@ -30,18 +30,18 @@ This same concept can be brought into our own data structures within our own sys
 Let's have a look at how we could implement a very simple `Priority Queue` in Python.
 
 ~~~py
-priority_queue = []
+from queue import PriorityQueue
 
-priority_queue.append((10,"Issue 1: Medium Priority"))
-priority_queue.append((5,"Issue 2: Low Priority"))
-priority_queue.append((25,"Issue 3: High Priority"))
-priority_queue.append((50,"Issue 4: Very High Priority"))
+priority_queue = PriorityQueue()
 
-# Every time we append something we have to sort our queue
-priority_queue.sort(reverse=False)
+priority_queue.put((10,"Issue 1: Medium Priority"))
+priority_queue.put((5,"Issue 2: Low Priority"))
+priority_queue.put((25,"Issue 3: High Priority"))
+priority_queue.put((50,"Issue 4: Very High Priority"))
 
-# Print out all items in our queue.
-print(priority_queue)
+while not priority_queue.empty():
+    (priority, value) = priority_queue.get()
+    print("{} Priority, {} Value".format(priority, value))
 ~~~
 
 ## Conclusion
