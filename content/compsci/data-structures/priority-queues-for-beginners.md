@@ -44,6 +44,16 @@ while not priority_queue.empty():
     print("{} Priority, {} Value".format(priority, value))
 ~~~
 
+This would output the following when run:
+
+~~~py
+ $ python3.6 test.py
+5 Priority, Issue 2: Low Priority Value
+10 Priority, Issue 1: Medium Priority Value
+25 Priority, Issue 3: High Priority Value
+50 Priority, Issue 4: Very High Priority Value
+~~~
+
 ## Conclusion
 
 I hope you found this tutorial useful! If you did or require further assistance then please do not hesitate to let me know in the comments section below or by tweeting me [@Elliot_F](https://twitter.com/elliot_f).
