@@ -11,7 +11,9 @@ twitter = "https://twitter.com/Elliot_F"
 
 > This tutorial was written using Python 3.6
 
-In this tutorial we'll be taking a look at the various ways you can work with the file system in Python. 
+Being able to work with the file system and do things like traverse directories or retrieve every file can be very handy in a number of different situations. 
+
+In this tutorial we'll be taking a look at the various ways you can work with the file system in Python. Hopefully this will give you a decent grasp of some of the cool things you can do very quickly and succinctly using the Python programming language. 
 
 ## Recursing Through Directories
 
@@ -67,6 +69,30 @@ True
 >>> os.path.exists("./dud.py")
 False
 ~~~
+
+## Creating Directories in Python
+
+Say you not only wanted to traverse directories but also wished to create your own. Well fear not, this is very possible using the `os.makedirs()` function.
+
+~~~py
+if not os.path.exists('my_dir'):
+    os.makedirs('my_dir')
+~~~
+
+This will first go ahead and check to see if the directory `my_dir` exists, if it doesn't exist then it will go ahead and call the `os.makedirs('my_dir')` in order to create our new directory for us. 
+
+It should be noted that this could potentially cause issues. If you were to create the directory after checking that the directory doesn't exist somewhere else, before your call to `os.makedirs('my_dir')` executes, you could see an `OSError` thrown. 
+
+For the most part however you should be ok using the method mentioned above. If you want to be extra careful and catch any potential exceptions then you can wrap you call to `os.makedirs('my_dir')` in a `try...except` like so:
+
+~~~py
+if not os.path.exists('my_dir'):
+    try:
+        os.makedirs('my_dir')
+    except OSError as e:
+        if e.errno != errno.EEXIST:
+            raise
+~~~ 
 
 ## Conclusion
 
