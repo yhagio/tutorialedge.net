@@ -134,3 +134,7 @@ Finished Executing Method
 >>> repr(myFunction)
 '<function myFunction at 0x1022d3e18>'
 ~~~
+
+## Conclusion
+
+Hopefully you found this tutorial on Python decorators useful! If you require further assistance then please feel free to let me know in the comments section below or by tweeting me: [@Elliot_F](https://twitter.com/elliot_f).
