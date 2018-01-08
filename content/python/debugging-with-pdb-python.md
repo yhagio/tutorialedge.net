@@ -63,7 +63,7 @@ if __name__ == '__main__':
 
 We've set a breakpoint on the second line of our `main()` function. This means that when we run the above program you should see execution stops at the point where `import pdb; pdb.set_trace()` is hit and the pdb interactive command line opens up. 
 
-~~~
+~~~py
  $ python3.6 simple.py
 This is my program
 > /location/to/simple.py(7)main()
@@ -73,7 +73,7 @@ This is my program
 
 The final line is where we'll be inputting our commands. Run the `n(ext)` command to go to the next line and then explore our `x` variable:
 
-~~~
+~~~py
 (Pdb) n
 > /location/to/simple.py(8)main()
 -> print(x)
@@ -84,4 +84,8 @@ The final line is where we'll be inputting our commands. Run the `n(ext)` comman
 (Pdb)
 ~~~
 
+## Conclusion
 
+In this tutorial we covered how you can get up and running using the python debugger, the `pdb` to walk through various sections of your Python code and try to gain real insight as to what it is doing. This insight will hopefully help you make more informed decisions as to what could have went wrong within your program!
+
+Hopefully you found this tutorial useful, if you did or you require further assistance then please let me know in the comments section below or by tweeting me : [@Elliot_F](https://twitter.com/elliot_f).
