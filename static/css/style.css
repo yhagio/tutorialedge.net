@@ -645,6 +645,21 @@ article img.book-img {
   margin: 20px;
 }
 
+article .book-placement {
+  border: 1px solid #cfd8dc;
+  padding: 20px;
+}
+
+article .book-placement img.book-img {
+  height: 120px;
+  width: auto;
+}
+
+article .book-placement h2 {
+  margin: 0;
+  padding: 0;
+}
+
 article .amazon-link {
   margin: 20px 0px;
   padding: 30px 20px 30px 100px;
