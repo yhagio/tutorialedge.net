@@ -1,110 +1,101 @@
 {{ partial "header.html" . }}
 
-<div class="content">
+<div class="title-bar">
+	<h1>{{ .Title }}</h1>
+</div>
+
+<div class="content container">
 	<div class="row">
-		<div class="col l3 m3 s12">
-			{{ partial "sidebar.html" . }}
-		</div>
-		<div class="col l9 m9 s12">
-			<div class="container">
-				<article>
-					<h1>{{ .Title }}</h1>
-					
-					<div class="info">
-						<div class="info-box">
-							<i class="ion ion-person"></i> <a href="https://twitter.com/elliot_f">{{ .Params.author }}</a>
-						</div>
-						<div class="info-box">
-							<i class="ion ion-ios-calendar"></i> {{ .Date.Format "02.01.2006 15:04" }}
-						</div>
-						<div class="info-box">
-							<i class="ion ion-clock"></i> {{ .ReadingTime }} Minutes
-						</div>
-						<div class="info-box">
-							<i class="ion ion-android-bookmark"></i> 
-							{{ range $key, $value := .Params.series }}
-							<a href="/series/{{ $value }}">{{ $value }}</a> {{ end }}
-						</div>
-						<div class="clear"></div>
-					</div>
-					
-					<div class="post_divider"></div>
-					
+		<article>
+			<!-- <div class="info">
+				<div class="info-box">
+					<i class="ion ion-person"></i>
+					<a href="https://twitter.com/elliot_f">{{ .Params.author }}</a>
+				</div>
+				<div class="info-box">
+					<i class="ion ion-ios-calendar"></i> {{ .Date.Format "02.01.2006 15:04" }}
+				</div>
+				<div class="info-box">
+					<i class="ion ion-clock"></i> {{ .ReadingTime }} Minutes
+				</div>
+				<div class="info-box">
+					<i class="ion ion-android-bookmark"></i>
+					{{ range $key, $value := .Params.series }}
+					<a href="/series/{{ $value }}">{{ $value }}</a> {{ end }}
+				</div>
+				<div class="clear"></div>
+			</div> -->
+
+			
+			<div class="col l3 m3 s12">
+				{{ partial "sidebar.html" . }}
+			</div>
+
+			<div class="col l9 m9 s12">
+				<div class="container">
+
 					<div>
-						<div class="toc">
+						<!-- <div class="toc">
 							<h3>Table Of Contents</h3>
 							{{.TableOfContents}}
-						</div>
+						</div> -->
 						<div class="post-content">
 							{{ .Content }}
 						</div>
 					</div>
 
 					<div class="post_divider"></div>
-					
-					<div>
-						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-						
-						<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6782067367590597" data-ad-slot="4096707282" data-ad-format="auto"></ins>
-						<script>
-							(adsbygoogle = window.adsbygoogle || []).push({});
-						</script>
-					</div>
-					
+
+
 					<div class="row">
 						<div>
 							<ul class="social-btns">
-								<li><a target="_blank" href="https://twitter.com/share?url={{ .Permalink }}" class="social-btn-dissolve twitter"><i class="ion ion-social-twitter"></i></a></li>
-								<li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" class="social-btn-dissolve facebook"><i class="ion ion-social-facebook"></i></a></li>
-								<li><a target="_blank" href="https://plus.google.com/share?url={{ .Permalink }}" class="social-btn-dissolve google"><i class="ion ion-social-googleplus"></i></a></li>
-								<li><a target="_blank" href="mailto:?&subject={{ .Title }}&body={{ .Permalink }}" class="social-btn-dissolve tumblr"><i class="ion ion-ios-email"></i></a></li>
-								<li><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{ .Title }}&summary={{ .Params.desc }}" class="social-btn-dissolve linkedin"><i class="ion ion-social-linkedin"></i></a></li>
+								<li>
+									<a target="_blank" href="https://twitter.com/share?url={{ .Permalink }}" class="social-btn-dissolve twitter">
+										<i class="ion ion-social-twitter"></i>
+									</a>
+								</li>
+								<li>
+									<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" class="social-btn-dissolve facebook">
+										<i class="ion ion-social-facebook"></i>
+									</a>
+								</li>
+								<li>
+									<a target="_blank" href="https://plus.google.com/share?url={{ .Permalink }}" class="social-btn-dissolve google">
+										<i class="ion ion-social-googleplus"></i>
+									</a>
+								</li>
+								<li>
+									<a target="_blank" href="mailto:?&subject={{ .Title }}&body={{ .Permalink }}" class="social-btn-dissolve tumblr">
+										<i class="ion ion-ios-email"></i>
+									</a>
+								</li>
+								<li>
+									<a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{ .Title }}&summary={{ .Params.desc }}"
+									 class="social-btn-dissolve linkedin">
+										<i class="ion ion-social-linkedin"></i>
+									</a>
+								</li>
 							</ul>
 						</div>
 
-						<div class="book-placement">
-							<h2>Introduction To Cloud Development Through Story</h2>
-							<p><img class="book-img" src="/books/an-intro-cloud-development.png"/>Hey Friends! I've just recently started working on my second book: <a href="https://leanpub.com/an-introduction-to-cloud-development">An Introduction to Cloud Development</a>! 20% of the profits of this book will go to supporting the Electornic Frontier Foundation who are fighting for causes such as Net Neutrality!  </p>
-							<a href="https://leanpub.com/an-introduction-to-cloud-development"><button class="btn btn-primary">Buy Now</button></a>
+						<div>
+							<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+							<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6782067367590597" data-ad-slot="4096707282" data-ad-format="auto"></ins>
+							<script>
+								(adsbygoogle = window.adsbygoogle || []).push({});
+							</script>
 						</div>
 
-						<h2>Related Posts</h2>
-						{{ if .PrevInSection }}
-						<div class="col l6 s12">
-							<a href="{{ .PrevInSection.RelPermalink }}" class="blog-list-article">
-								<div class="blog-list-article-date">{{ .PrevInSection.Date.Format "02 Jan 06" }}</div>
-								{{ range $key, $value := .PrevInSection.Params.series }}
-								<div class="blog-list-article-category">{{ $value }}</div>
-								{{ end }}
-								<div class="blog-list-article-content">
-									<div class="blog-list-article-title">{{ .PrevInSection.Title }}</div>
-									<div class="blog-list-article-excerpt">{{ .PrevInSection.Params.desc }}</div>
-								</div>
-							</a>
-						</div>
-						{{ end }} {{ if .NextInSection }}
-						<div class="col l6 s12">
-							<a href="{{ .NextInSection.RelPermalink }}" class="blog-list-article">
-								<div class="blog-list-article-date">{{ .NextInSection.Date.Format "02 Jan 06" }}</div>
-								{{ range $key, $value := .NextInSection.Params.series }}
-								<div class="blog-list-article-category">{{ $value }}</div>
-								{{ end }}
-								<div class="blog-list-article-content">
-									<div class="blog-list-article-title">{{ .NextInSection.Title }}</div>
-									<div class="blog-list-article-excerpt">{{ .NextInSection.Params.desc }}</div>
-								</div>
-							</a>
-						</div>
-						{{ end }}
-						<div class="clear"></div>
 					</div>
 
 					<div>
 						{{ partial "comments.html" . }}
 					</div>
-				</article>
+				</div>
 			</div>
-		</div>
+		</article>
 	</div>
 </div>
 <script>
@@ -112,5 +103,4 @@
 	$('.post-content h3').each(function () { $(this).append(' <a href=#' + $(this).context.id + '><i class="ion ion-link"></i> </a>') })
 	$('.post-content h4').each(function () { $(this).append(' <a href=#' + $(this).context.id + '><i class="ion ion-link"></i> </a>') })
 	$('.post-content h5').each(function () { $(this).append(' <a href=#' + $(this).context.id + '><i class="ion ion-link"></i> </a>') })
-</script> 
-{{ partial "footer.html" . }}
+</script> {{ partial "footer.html" . }}

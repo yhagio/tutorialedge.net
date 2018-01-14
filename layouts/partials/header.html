@@ -31,7 +31,7 @@
 	<link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
 	<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/materialize.min.css">
-	<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/style.css?v=5"> {{ if .RSSLink -}}
+	<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/style.css?v=7"> {{ if .RSSLink -}}
 	<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}">{{- end }} {{ .Hugo.Generator }}
 
 	<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -64,19 +64,28 @@
 				<a class="brand-logo" href="{{ .Site.BaseURL }}"><img src="{{ .Site.BaseURL }}/images/logo.png" alt="{{ .Site.Title }}"> {{ .Site.Title }}</a>
 				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="ion ion-navicon-round"></i> </a>
 				<ul id="nav-mobile" class="right hide-on-med-and-down">
-					<li><a href="{{ .Site.BaseURL }}/search/">Search</a></li>
-					<li><a href="{{ .Site.BaseURL }}/about/">About</a></li>
-					<li><a href="{{ .Site.BaseURL }}/get-involved/">Get Involved</a></li>
-					<li><a href="{{ .Site.BaseURL }}/series/blog/">Blog</a></li>
-					<li><a href="{{ .Site.BaseURL }}/courses/">Courses</a></li>
+					<li><a href="{{ .Site.BaseURL }}/search/"><i class="ion ion-search"></i>Search</a></li>
+					<li><a href="{{ .Site.BaseURL }}/about/"><i class="ion ion-help"></i>About</a></li>
+					<li><a href="{{ .Site.BaseURL }}/get-involved/"><i class="ion ion-alert"></i>Get Involved</a></li>
+					<li><a href="{{ .Site.BaseURL }}/series/blog/"><i class="ion ion-document-text"></i>Blog</a></li>
 				</ul>
 				<ul class="side-nav" id="mobile-demo">
 					<li><a href="{{ .Site.BaseURL }}/search/">Search</a></li>
 					<li><a href="{{ .Site.BaseURL }}/about/">About</a></li>
 					<li><a href="{{ .Site.BaseURL }}/get-involved/">Get Involved</a></li>
 					<li><a href="{{ .Site.BaseURL }}/series/blog/">Blog</a></li>
-					<li><a href="{{ .Site.BaseURL }}/courses/">Courses</a></li>
+				</ul>
+			</div>
+			<div class="nav-content">
+				<ul class="hide-on-med-and-down">
+					<li><a href="/course/python"><img src="/images/logo-python.png"/>Python</a></li>
+					<li><a href="/course/golang"><img src="/images/golang.png"/>Golang</a></li>
+					<li><a href="/course/angular"><img src="/images/angular.png"/>Angular</a></li>
+					<li><a href="/course/angularjs"><img src="/images/angularjs.svg"/>AngularJS</a></li>
+					<li><a href="/course/rust"><img src="/images/rust-logo.png"/>Rust</a></li>
+					<li><a href="/course/webdev"><img src="/images/logo.png"/>Web Development</a></li>
 				</ul>
 			</div>
 		</nav>
 	</header>
+	<div class="clear"></div>

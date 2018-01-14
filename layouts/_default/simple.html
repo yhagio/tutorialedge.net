@@ -1,35 +1,102 @@
 {{ partial "header.html" . }}
-<div class="title-bar">
-	<div class="title-bar-container">
-		<div class="date">{{ .Date.Format "02.01.2006 15:04" }}</div>
-		<div class="category">
-			
-			<a href="/">General</a>
-		</div>
-		<h1>{{ .Title }}</h1>
-		<div class="tags">
-			{{ range .Params.tags }}
-			<a href="/tags/{{ . }}">
-				<div class="chip">{{ . }}</div>
-			</a>
-			{{ end }}
-		</div>
-	</div>
-</div>
-<div class="container">
-	<div class="row">
-		<div class="col l12 m12 s12">	
-			<article>
-				<div class="info">Author: {{ .Params.author }}</div>
-				<div>
 
-					{{ .Content }}
+<div class="title-bar">
+	<h1>{{ .Title }}</h1>
+</div>
+
+<div class="content container">
+	<div class="row">
+		<!-- <div class="info">
+				<div class="info-box">
+					<i class="ion ion-person"></i>
+					<a href="https://twitter.com/elliot_f">{{ .Params.author }}</a>
 				</div>
-				<div>
-					{{ partial "comments.html" . }}
+				<div class="info-box">
+					<i class="ion ion-ios-calendar"></i> {{ .Date.Format "02.01.2006 15:04" }}
 				</div>
-			</article>
+				<div class="info-box">
+					<i class="ion ion-clock"></i> {{ .ReadingTime }} Minutes
+				</div>
+				<div class="info-box">
+					<i class="ion ion-android-bookmark"></i>
+					{{ range $key, $value := .Params.series }}
+					<a href="/series/{{ $value }}">{{ $value }}</a> {{ end }}
+				</div>
+				<div class="clear"></div>
+			</div> -->
+
+
+		<!-- <div class="col l3 m3 s12">
+				{{ partial "sidebar.html" . }}
+			</div> -->
+
+		<div class="col l12 m12 s12">
+			<div class="container">
+
+				<article>
+					<div class="post-content">
+						{{ .Content }}
+					</div>
+
+					<div class="post_divider"></div>
+
+					<div class="row">
+						<div>
+							<ul class="social-btns">
+								<li>
+									<a target="_blank" href="https://twitter.com/share?url={{ .Permalink }}" class="social-btn-dissolve twitter">
+										<i class="ion ion-social-twitter"></i>
+									</a>
+								</li>
+								<li>
+									<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" class="social-btn-dissolve facebook">
+										<i class="ion ion-social-facebook"></i>
+									</a>
+								</li>
+								<li>
+									<a target="_blank" href="https://plus.google.com/share?url={{ .Permalink }}" class="social-btn-dissolve google">
+										<i class="ion ion-social-googleplus"></i>
+									</a>
+								</li>
+								<li>
+									<a target="_blank" href="mailto:?&subject={{ .Title }}&body={{ .Permalink }}" class="social-btn-dissolve tumblr">
+										<i class="ion ion-ios-email"></i>
+									</a>
+								</li>
+								<li>
+									<a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{ .Title }}&summary={{ .Params.desc }}"
+									 class="social-btn-dissolve linkedin">
+										<i class="ion ion-social-linkedin"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<div>
+							<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+							<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6782067367590597" data-ad-slot="4096707282" data-ad-format="auto"></ins>
+							<script>
+								(adsbygoogle = window.adsbygoogle || []).push({});
+							</script>
+						</div>
+
+
+						<div class="clear"></div>
+					</div>
+
+					<div>
+						{{ partial "comments.html" . }}
+					</div>
+
+				</article>
+			</div>
 		</div>
 	</div>
 </div>
-{{ partial "footer.html" . }}
+<script>
+	$('.post-content h2').each(function () { $(this).append(' <a href=#' + $(this).context.id + '><i class="ion ion-link"></i> </a>') })
+	$('.post-content h3').each(function () { $(this).append(' <a href=#' + $(this).context.id + '><i class="ion ion-link"></i> </a>') })
+	$('.post-content h4').each(function () { $(this).append(' <a href=#' + $(this).context.id + '><i class="ion ion-link"></i> </a>') })
+	$('.post-content h5').each(function () { $(this).append(' <a href=#' + $(this).context.id + '><i class="ion ion-link"></i> </a>') })
+</script> {{ partial "footer.html" . }}

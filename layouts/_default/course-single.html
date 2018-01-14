@@ -1,26 +1,12 @@
 {{ partial "header.html" . }}
 <div class="title-bar">
-    <div class="title-bar-container">
-        <div class="date">{{ .Date.Format "02.01.2006 15:04" }}</div>
-        <div class="category">
-
-            <a href="/">General</a>
-        </div>
-        <h1>{{ .Title }}</h1>
-        <div class="tags">
-            {{ range .Params.tags }}
-            <a href="/tags/{{ . }}">
-                <div class="chip">{{ . }}</div>
-            </a>
-            {{ end }}
-        </div>
-    </div>
 </div>
 <div class="row">
     <div class="col l3 m4 s12">
         sidebar stuff
     </div>   
     <div class="col l9 m8 s12">
+            <h1>{{ .Title }}</h1>
         <article>
             <div class="info">Author: {{ .Params.author }}</div>
             <div>
