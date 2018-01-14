@@ -1,3 +1,7 @@
+#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+
 body {
    font-family: "ua-medium",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; 
   color: #3D4C62;
@@ -342,7 +346,7 @@ nav .button-collapse .ion {
   width: 100%;
   padding: 20px;
   margin-bottom: 20px;
-  background-color: #fff !important;
+  background-color: #F6F6F8 !important;
   text-align: center;
 }
 
@@ -528,6 +532,25 @@ nav .button-collapse .ion {
   padding-left: 0;
   padding-right: 0;
   padding-top: 10px;
+}
+
+.left-sidebar .collection-item a:hover {
+  z-index: 2;
+  color: #56CDFC;
+  background-color: white;
+  border-color: #E7E7EC;
+}
+
+.left-sidebar .collection-item:before {
+  background: #56CDFC;
+  content: '';
+  display: block;
+  height: 100%;
+  z-index: 3;
+  left: -15px;
+  position: absolute;
+  top: 0;
+  width: 3px;
 }
 
 .post_divider {
@@ -746,6 +769,14 @@ article .amazon-link {
 }
 .welcome-bar p {
   margin-bottom: 40px;
+}
+
+.features {
+  padding-bottom: 40px;
+}
+
+.features h4{
+  font-size:18px;
 }
 
 .join-us {
