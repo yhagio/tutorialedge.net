@@ -16,4 +16,4 @@ phases:
       - pwd
 artifacts:
   files:
-    - 'public/**/*'
+    - 'public*'
