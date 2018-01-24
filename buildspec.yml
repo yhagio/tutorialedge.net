@@ -1,9 +1,7 @@
 version: 0.1
-
 environment_variables:
   plaintext:
     HUGO_VERSION: "0.27"
-
 phases:
   install:
     commands:
@@ -16,7 +14,6 @@ phases:
       - hugo --buildDrafts
       - ls
       - pwd
-
 artifacts:
-  files:
-    - 'public/**/*'
+files:
+  - 'public/**/*'
