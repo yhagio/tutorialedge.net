@@ -20,4 +20,4 @@ phases:
 artifacts:
   files:
     - 'public/**/*'
-  base-directory: 'public'
+  base-directory: 'TutorialEdge-new/public'
