@@ -1,0 +1,22 @@
+{{ partial "header.html" . }}
+<div class="title-bar">
+</div>
+<div class="row">
+    <div class="col l3 m4 s12">
+        sidebar stuff
+    </div>   
+    <div class="col l9 m8 s12">
+            <h1>{{ .Title }}</h1>
+        <article>
+            <div class="info">Author: {{ .Params.author }}</div>
+            <div>
+
+                {{ .Content }}
+            </div>
+            <div>
+                {{ partial "comments.html" . }}
+            </div>
+        </article>
+    </div>
+</div>
+{{ partial "footer.html" . }}

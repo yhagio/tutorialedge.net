@@ -132,3 +132,9 @@ All tasks complete
 ## Video Tutorial
 
 <div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/h2L3-X1XUtU?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="640" height="360" frameborder="0" gesture="media" allowfullscreen></iframe></div>
+
+## Conclusion
+
+I hope this tutorial demystified the art of working with ThreadPoolExecutor's in Python. If you want to learn more about how threads work in Python then I recommend checking out my appropriately named tutorial: [Threads in Python](/python/concurrency/threads-in-python/).
+
+If you need any further assistance then please let me know by leaving a comment in the comments section below or by tweeting me: [@Elliot_F](https://twitter.com/elliot_f)! 

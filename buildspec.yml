@@ -15,5 +15,5 @@ phases:
       - ls
       - pwd
 artifacts:
-files:
-  - 'public/**/*'
+  files:
+    - 'public/**/*'

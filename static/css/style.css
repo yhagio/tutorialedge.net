@@ -1,13 +1,20 @@
+#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+
 body {
-   font-family: "Proxima Nova", "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+   font-family: "ua-medium",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; 
   color: #3D4C62;
   font-weight: 400;
   line-height: 1.75;
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #545e6f;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Proxima Nova", "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "ua-medium",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   font-weight: 200;
   color: #333;
 }
@@ -45,11 +52,19 @@ article ol li:before {
 }
 
 nav {
-  background-color: #14233C;
+  background-color: #fff;
+  box-shadow: none;
+  color: #3A292A;
+  border-bottom: 1px solid #EEE5E5;
+}
+
+nav ul li a {
+  color: #3A292A;
 }
 
 nav .brand-logo {
   font-weight: 300;
+  color: #3A292A;
   margin-left: 10px;
 }
 
@@ -65,16 +80,33 @@ nav .button-collapse {
   margin-left: 10px;
 }
 
-nav li:first-child {
-  border-left: 1px solid #3B4951;
-}
-
-nav li:not(:last-child) {
-  border-right: 1px solid #3B4951;
-}
 
 nav .button-collapse .ion {
-  color: white !important;
+  color: #3A292A !important;
+}
+
+.nav-wrapper {
+  border-bottom: 1px solid #EEE5E5;
+}
+.nav-wrapper i {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.nav-content {
+  width: 100%;
+  height: 64px;
+  background-color: #fff !important;
+  border-bottom: 1px solid #EEE5E5;
+}
+
+.nav-content ul li a {
+  color: #3A292A;
+}
+.nav-content ul li a img {
+  margin-top: 15px;
+  width: 30px;
+  height: 30px;
 }
 
 .pagination {
@@ -173,6 +205,13 @@ nav .button-collapse .ion {
   .blog-list-article {
     width: 100%;
   }
+}
+
+.blog-list-article-image {
+  position: absolute;
+  top: 0px;
+  bottom: 20px;
+  background-color: #00B7D4;
 }
 
 .blog-list-article-date, .blog-list-article-category {
@@ -304,23 +343,23 @@ nav .button-collapse .ion {
 
 .courses {
   width: 100%;
-  padding: 40px;
   width: 100%;
-  padding: 40px;
+  padding: 20px;
   margin-bottom: 20px;
-  background-color: #fafafa !important;
-  border-bottom: 1px solid #f6f4f4;
+  background-color: #F6F6F8 !important;
   text-align: center;
 }
 
 .courses h2 {
-  color: #074E68 !important;
-  font-size: 2.9375rem;
-  font-weight: 400;
-  line-height: 3.125rem;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 40px;
+  font-size: 40px;
+  margin: 20px 0 32px;
+  color: #545e6f;
+  letter-spacing: -0.1px;
+  line-height: 45px;
+}
+
+.courses p {
+  margin-bottom: 60px;
 }
 
 .course-card {
@@ -343,17 +382,19 @@ nav .button-collapse .ion {
   width: 100%;
   height: 150px;
   border-radius: 10px 10px 0px 0px;
-  background-color: #333333;
+  background-color: #fff;
 }
 
 .course-card .top-half img {
   width: 150px;
   height: auto;
+  padding: 5px;
 }
 
 .course-card .bottom-half {
   margin-left: 5%;
   margin-top: 12px;
+  padding-bottom: 20px;
   width: 90%;
   text-align: center;
 }
@@ -372,7 +413,16 @@ nav .button-collapse .ion {
 .tutorials {
   padding-top: 40px;
   padding-bottom: 40px;
+  text-align: center;
 }
+.tutorials h2 {
+  font-size: 40px;
+  margin: 20px 0 32px;
+  color: #545e6f;
+  letter-spacing: -0.1px;
+  line-height: 45px;
+}
+
 
 .about {
   width: 100%;
@@ -413,8 +463,6 @@ nav .button-collapse .ion {
 }
 .title-bar-container {
   position: relative;
-  height: 256px;
-  max-width: 736px;
   margin: auto;
 }
 .title-bar .date {
@@ -437,21 +485,17 @@ nav .button-collapse .ion {
 }
 
 .title-bar h1 {
-  position: relative;
-  top: 40%;
-  transform: translateY(-60%);
   font-size: 35px;
   font-weight: 600;
   line-height: 3.125rem;
 }
 .title-bar .tags {
-    position: absolute;
-    bottom: 40px;
-    width: 200px;
-    left:50%;
-    margin-left:-100px;
+  position: absolute;
+  bottom: 30px;
+  width: 300px;
+  left: 50%;
+  margin-left: -150px;
 }
-
 .title-bar p {
   color: white !important;
 }
@@ -462,60 +506,69 @@ nav .button-collapse .ion {
   margin-bottom: 10px;
 }
 
-.left-sidebar {
-  padding: 20px;
-  padding-top: 40px;
+.left-sidebar a {
+  color: #555;
+  font-size: 14px;
 }
-
-.left-sidebar h3 {
+.left-sidebar .collection {
+  border: none;
   padding: 0;
   margin: 0;
+  margin-top: 20px;
 }
 
-.left-sidebar img {
-  margin: auto !important;
+.left-sidebar .collection-item {
+  border: none;
+  padding: 0;
+  margin: 0;
+  border-left: none;
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  background-color: #fff;
+  border-bottom: 1px solid #E7E7EC;
+  border-right: none;
+  padding-bottom: 10px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 10px;
 }
 
-.left-sidebar h3 {
-  color: #262626;
-  text-transform: uppercase;
-  font-size: 14px;
-  font-weight: 700;
-  padding: 10px 0 10px 0;
-  letter-spacing: 1px;
-  clear: both;
+.left-sidebar .collection-item a:hover {
+  z-index: 2;
+  color: #56CDFC;
+  background-color: white;
+  border-color: #E7E7EC;
 }
 
-.left-sidebar ul li {
-  font-size: 14px;
-  font-weight: 400;
-  list-style: none;
-  padding: 7px 0 7px 5px;
+.left-sidebar .collection-item:before {
+  background: #56CDFC;
+  content: '';
+  display: block;
+  height: 100%;
+  z-index: 3;
+  left: -15px;
+  position: absolute;
+  top: 0;
+  width: 3px;
 }
 
-.left-sidebar ul li a {
-  color: #000;
-  text-decoration: none;
-  -webkit-transition: all 300ms ease-out;
-  -moz-transition: all 300ms ease-out;
-  -ms-transition: all 300ms ease-out;
-  -o-transition: all 300ms ease-out;
-  transition: all 300ms ease-out;
-}
-
-.left-sidebar ul li a:hover {
-  text-decoration: underline;
+.post_divider {
+  height: 1px;
+  background-color: #e6edfb;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 article {
+  font-size: 16px;
   background-color: white;
-  padding: 20px;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  font-size: 18px;
-  line-height: 30px;
-  margin: auto;
-  color: #3D4C62;
+  line-height: 1.6;
+  margin: 0;
+  padding: .5em 0;
+  font-weight: 400;
+  color: #606060;
 }
 
 article h1, h2, h3, h4, h5 {
@@ -546,10 +599,17 @@ article h5 {
 }
 
 article .info {
-  color: #999;
-  font-size: 0.9em;
-  padding: 0;
-  text-align: center;
+  font-size: 14px;
+  height: 100%;
+  color: #96989A;
+}
+article .info .ion {
+  font-size: 16px;
+  margin-right: 5px;
+}
+article .info .info-box {
+  float: left;
+  margin-right: 20px;
 }
 
 article ul li {
@@ -599,6 +659,21 @@ article img.book-img {
   margin: 20px;
 }
 
+article .book-placement {
+  border: 1px solid #cfd8dc;
+  padding: 20px;
+}
+
+article .book-placement img.book-img {
+  height: 120px;
+  width: auto;
+}
+
+article .book-placement h2 {
+  margin: 0;
+  padding: 0;
+}
+
 article .amazon-link {
   margin: 20px 0px;
   padding: 30px 20px 30px 100px;
@@ -642,38 +717,66 @@ article .amazon-link {
   }
 }
 @media only screen and (min-width: 768px) {
-  .container article {
-    width: 80%;
+  .container {
+    width: 90%;
   }
 }
 
+.terminal {
+  width: 60%;
+  margin: -11rem auto 3rem auto;
+  text-align: left;
+  color: white;
+  padding: 0 1rem;
+  border-radius: 4px;
+  background-color: #232323;
+  min-height: 285px;
+  animation: fadeUp 2s;
+  box-shadow: 0px 12px 36.8px 9.2px rgba(0, 0, 0, 0.1);
+}
+.terminal code {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #232323;
+  color: #e6e1dc;
+}
+.terminal span.name {
+  color: #cda869;
+}
+
 .container img {
-  width: 80%;
+  width: 85%;
+  margin-top: 20px;
   height: auto;
   margin: auto;
   display: block;
 }
 
 .welcome-bar {
-  background: #195c7d;
-  background: -moz-linear-gradient(left,#195c7d 1%,#0e3345 100%);
-  background: -webkit-linear-gradient(left,#195c7d 1%,#0e3345 100%);
-  background: linear-gradient(to right,#195c7d 1%,#0e3345 100%);
-  color: white;
+  background: #F7F7F9;
+  color: #3A292A;
   width: 100%;
-  padding: 20px;
+  padding: 2rem 0 10rem 0;
   text-align: center;
 }
 
 .welcome-bar h1 {
-  color: white !important;
+  color: #3A292A !important;
   font-size: 2.9375rem;
   font-weight: 600;
   line-height: 3.125rem;
 }
+.welcome-bar p {
+  margin-bottom: 40px;
+}
 
-.title-bar p {
-  color: white !important;
+.features {
+  padding-bottom: 40px;
+}
+
+.features h4{
+  font-size:18px;
 }
 
 .join-us {
@@ -786,9 +889,6 @@ footer .footer-copyright {
   background-color: #fff;
   text-align: center;
   height: auto;
-  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 10px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 10px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 10px;
   padding-top: 36px;
   padding-bottom: 36px;
 }

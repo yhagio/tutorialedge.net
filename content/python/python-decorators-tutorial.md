@@ -11,6 +11,8 @@ twitter = "https://twitter.com/Elliot_F"
 
 > This Tutorial was written using Python 3.6
 
+In this tutorial I am going to be demonstrating the wonderful concept that is Python decorators. 
+
 ## Video Tutorial
 
 <div style="position:relative;height:0;padding-bottom:56.3%"><iframe src="https://www.youtube.com/embed/7ipNLN9y-nc?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="639" height="360" frameborder="0" gesture="media" allowfullscreen></iframe></div>
@@ -36,7 +38,7 @@ If we were to run this program then you would see a very simple service start up
 
 ## First Class Citizens
 
-So how do we write our own decorators? We'll it turns out it's suprisingly simple. In Python functions and classes are considered first class citizens. This essentially means that they can be treated much the same as you would treat variables or objects within your python applications. We can do cool things like pass one function as an argument into another function like so:
+So how do we write our own decorators? We'll it turns out it's surprisingly simple. In Python functions and classes are considered first class citizens. This essentially means that they can be treated much the same as you would treat variables or objects within your python applications. We can do cool things like pass one function as an argument into another function like so:
 
 ~~~python
 def myFunction():
@@ -76,7 +78,9 @@ def myFunction():
 myFunction()
 ~~~
 
-when we execute this you should see the following output:
+> You'll notice that in the above code we have been able to define the `newmethod()` function within the body of the `mutate()` function. This is one of the benefits of functions being a first class citizen. 
+
+You should see that when we execute the above code you should see the following output:
 
 ~~~bash
  $ python3.6 decorators.py
@@ -89,7 +93,11 @@ Our call to `myFunction()` has successfully triggered our mutate decorator, whic
 
 ## Taking it further
 
-This is just a simple example of how you can write your own python decorators, if you found this tutorial useful or require further assistance then please let me know in the comments section below.
+This is just a simple example of how you can write your own python decorators, but there are hundreds of other uses for decorators within your Python applications. 
+
+For a pretty cool list of all the various different things you can do with decorators I suggest you check out the [Python Decorator Library](https://wiki.python.org/moin/PythonDecoratorLibrary). 
+
+If you have seen my post on [memoization](https://tutorialedge.net/compsci/memoization-for-beginners/) which is a cool performance optimization technique used in recursive programs then you might like their decorator example which automatically memoizes the results of said function for you: [Python Decorator Memoization](https://wiki.python.org/moin/PythonDecoratorLibrary#Memoize)
 
 ## Losing Traceability
 
@@ -134,3 +142,7 @@ Finished Executing Method
 >>> repr(myFunction)
 '<function myFunction at 0x1022d3e18>'
 ~~~
+
+## Conclusion
+
+Hopefully you found this tutorial on Python decorators useful! If you require further assistance then please feel free to let me know in the comments section below or by tweeting me: [@Elliot_F](https://twitter.com/elliot_f).

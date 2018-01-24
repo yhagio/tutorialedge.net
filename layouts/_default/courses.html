@@ -1,15 +1,10 @@
 {{ partial "header.html" . }}
 
 <div class="title-bar">
-	<div class="container">
-		<h1>{{ .Title }}</h1>
-	</div>
-</div>
+	<h1>{{ .Title }}</h1>	
 	
-<div class="courses">
 	<div class="container">
 		<div class="row">
-
 		{{ range (where .Site.Pages "Section" "course") }}
 			{{ if ne .Title "Courses" }}
 			<div class="col l4 m6 s12">
@@ -28,7 +23,7 @@
 				</a>
 			</div>
 			{{ end }}
-			{{ end }}
+		{{ end }}
 
 		</div>
 

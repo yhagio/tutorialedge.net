@@ -31,7 +31,7 @@
 	<link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
 	<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/materialize.min.css">
-	<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/style.css?v=2"> {{ if .RSSLink -}}
+	<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/style.css?v=8"> {{ if .RSSLink -}}
 	<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}">{{- end }} {{ .Hugo.Generator }}
 
 	<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -39,7 +39,9 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
 	<script src="{{ .Site.BaseURL }}/js/dist/bundle.js"></script>
 	<script src="{{ .Site.BaseURL }}/js/dist/highlight.pack.js"></script>
-	<!-- Start of Woopra Code -->
+	<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+
+
 	<script>
 		(function () {
 			var t, i, e, n = window, o = document, a = arguments, s = "script", r = ["config", "track", "identify", "visit", "push", "call", "trackForm", "trackClick"], c = function () { var t, i = this; for (i._e = [], t = 0; r.length > t; t++)(function (t) { i[t] = function () { return i._e.push([t].concat(Array.prototype.slice.call(arguments, 0))), i } })(r[t]) }; for (n._w = n._w || {}, t = 0; a.length > t; t++)n._w[a[t]] = n[a[t]] = n[a[t]] || new c; i = o.createElement(s), i.async = 1, i.src = "//static.woopra.com/js/w.js", e = o.getElementsByTagName(s)[0], e.parentNode.insertBefore(i, e)
@@ -54,6 +56,7 @@
 	<script>
 		hljs.initHighlightingOnLoad();
 	</script>
+	<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/f41d55ea3daf17874b3365e0b/fb46d22d1e84d293c8189d6e8.js");</script>
 </head>
 
 <body ng-controller="RootController">
@@ -63,19 +66,28 @@
 				<a class="brand-logo" href="{{ .Site.BaseURL }}"><img src="{{ .Site.BaseURL }}/images/logo.png" alt="{{ .Site.Title }}"> {{ .Site.Title }}</a>
 				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="ion ion-navicon-round"></i> </a>
 				<ul id="nav-mobile" class="right hide-on-med-and-down">
-					<li><a href="{{ .Site.BaseURL }}/search/">Search</a></li>
-					<li><a href="{{ .Site.BaseURL }}/about/">About</a></li>
-					<li><a href="{{ .Site.BaseURL }}/get-involved/">Get Involved</a></li>
-					<li><a href="{{ .Site.BaseURL }}/series/blog/">Blog</a></li>
-					<li><a href="{{ .Site.BaseURL }}/courses/">Courses</a></li>
+					<li><a href="{{ .Site.BaseURL }}/search/"><i class="ion ion-search"></i>Search</a></li>
+					<li><a href="{{ .Site.BaseURL }}/about/"><i class="ion ion-help"></i>About</a></li>
+					<li><a href="{{ .Site.BaseURL }}/get-involved/"><i class="ion ion-alert"></i>Get Involved</a></li>
+					<li><a href="{{ .Site.BaseURL }}/series/blog/"><i class="ion ion-document-text"></i>Blog</a></li>
 				</ul>
 				<ul class="side-nav" id="mobile-demo">
 					<li><a href="{{ .Site.BaseURL }}/search/">Search</a></li>
 					<li><a href="{{ .Site.BaseURL }}/about/">About</a></li>
 					<li><a href="{{ .Site.BaseURL }}/get-involved/">Get Involved</a></li>
 					<li><a href="{{ .Site.BaseURL }}/series/blog/">Blog</a></li>
-					<li><a href="{{ .Site.BaseURL }}/courses/">Courses</a></li>
+				</ul>
+			</div>
+			<div class="nav-content">
+				<ul class="hide-on-med-and-down">
+					<li><a href="/course/python"><img src="/images/logo-python.png"/>Python</a></li>
+					<li><a href="/course/golang"><img src="/images/golang.png"/>Golang</a></li>
+					<li><a href="/course/angular"><img src="/images/angular.png"/>Angular</a></li>
+					<li><a href="/course/angularjs"><img src="/images/angularjs.svg"/>AngularJS</a></li>
+					<li><a href="/course/rust"><img src="/images/rust-logo.png"/>Rust</a></li>
+					<li><a href="/course/webdev"><img src="/images/logo.png"/>Web Development</a></li>
 				</ul>
 			</div>
 		</nav>
 	</header>
+	<div class="clear"></div>

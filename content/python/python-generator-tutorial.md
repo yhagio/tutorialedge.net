@@ -9,6 +9,8 @@ author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++
 
+> This tutorial was built using Python 3.6
+
 In this tutorial I'm aiming to help demystify this concept of generators within the Python programming language. We'll look at what generators are and how we can utilize them within our python programs.
 
 ## What Are Generators?
@@ -110,3 +112,7 @@ We can then call the next() function as many times as we'd desire and we would t
 ~~~
 
 > It's important to note that the physical limitations still apply and I'm sure you'd start to hit some form of limit for the above program if you called next() indefinitely.
+
+## Conclusion
+
+Hopefully you found this tutorial useful! If you did or require further assistance then please let me know in the comments section below or by tweeting me [@Elliot_F](https://twitter.com/elliot_f).

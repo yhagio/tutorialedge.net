@@ -58,3 +58,7 @@ this produces the following output:
 ~~~python
 [4, 6, 8, 10, 12, 14, 16]
 ~~~
+
+## Conclusion
+
+Hopefully you found this tutorial useful! If you did or you require further assistance then please feel free to let me know in the comments section below or by tweeting me [@Elliot_F](https://twitter.com/elliot_f).
