@@ -15,5 +15,6 @@ phases:
       - ls
       - pwd
 artifacts:
+  base-directory: 'public'
   files:
-    - 'public*'
+    - '**/*'
