@@ -13,6 +13,10 @@ twitter = "https://twitter.com/Elliot_F"
 
 In this tutorial we are going to be looking at how we can build a realtime application using both Angular 4 and the Socket.io library. I've covered in the past how you can utilize raw websockets and convert them into observables using the RxJS library in a previous tutorial which can be found here: [Angular Websockets Tutorial](/typescript/angular/angular-websockets-tutorial/)
 
+## Video Tutorial
+
+<div style="position:relative;height:0;padding-bottom:42.76%"><iframe src="https://www.youtube.com/embed/n7OKfVwClE4?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="842" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+
 ## Installing Socket.IO
 
 In order to utilize the socket.io library we will first have to install it using the node package manager. We can do this by typing the following:
