@@ -11,13 +11,13 @@ twitter = "https://twitter.com/Elliot_F"
 
 > For a Tutorial on how to build a RESTful API in Go click [here](/golang/creating-restful-api-with-golang/)
 
-In this tutorial I'm going to be demonstrating how we can consume an already running RESTful API using go. There are currently hundreds upon thousands of open REST APIs out there that are just waiting to be consumed and turned into something more meaningful. Todd Motto has put together quite an active repo on github that lists all the public APIs that are available for consumption by us and he's categorized them so that we can easily drill down to what we want to check out, you can find that [here](https://github.com/toddmotto/public-apis).
+In this tutorial, I'm going to be demonstrating how we can consume an already running RESTful API using go. There are currently hundreds upon thousands of open REST APIs out there that are just waiting to be consumed and turned into something more meaningful. Todd Motto has put together quite an active repo on Github that lists all the public APIs that are available for consumption by us and he's categorized them so that we can easily drill down to what we want to check out, you can find that [here](https://github.com/toddmotto/public-apis).
 
-For the purpose of this tutorial though, I feel that we should use an already live API that we can easily test to see if it works in our browser. We'll be using the very popular [pokeapi](http://pokeapi.co/docsv2/) which is an API that exposes all the known information for everything pokemon related. A bit silly I know but it's a fully fledged API that follows standard naming conventions and requires no authentication so there is no barrier to entry.
+For the purpose of this tutorial though, I feel that we should use an already live API that we can easily test to see if it works in our browser. We'll be using the very popular [pokeapi](http://pokeapi.co/docsv2/) which is an API that exposes all the known information for everything Pokemon related. A bit silly I know but it's a fully fledged API that follows standard naming conventions and requires no authentication so there is no barrier to entry.
 
 ## Querying The API
 
-To get us started we are going to query for all the Pokemon from the original series. We'll be hitting the `http://pokeapi.co/api/v2/pokedex/kanto/` api endpoint that returns this. If you navigate to this endpoint in your browser you should see a huge JSON string printing out, this is the response we'll be expecting when our go program performs a `GET` request on this endpoint. 
+To get us started we are going to query for all the Pokemon from the original series. We'll be hitting the `http://pokeapi.co/api/v2/pokedex/kanto/` API endpoint that returns this. If you navigate to this endpoint in your browser you should see a huge JSON string printing out, this is the response we'll be expecting when our go program performs a `GET` request on this endpoint. 
 
 > When you open a web page in a browser, you are performing a `GET` request for that page. 
 
@@ -55,15 +55,15 @@ func main() {
 
 Within our `main` function we first query our API endpoint using `http.Get("http://pokeapi.co/api/v2/pokedex/kanto")`, we map the results of this into either `response` or `err` and then check to see if `err` is nil. If it is we exit.
 
-Below this we then perform the conversion of our response's body from bytes into something meaningful that can be printed out in the console. We first use `ioutil.ReadAll(response.Body)` to read in data from the incoming byte stream and then convert this `[]byte` response into a string using `string(responseData)` within our print statement.
+Below this, we then perform the conversion of our response's body from bytes into something meaningful that can be printed out in the console. We first use `ioutil.ReadAll(response.Body)` to read in data from the incoming byte stream and then convert this `[]byte` response into a string using `string(responseData)` within our print statement.
 
-If you run the above program you should see that it successfully performs a `GET` request on our API Endpoint and then prints all of our pokemon out in the console.  
+If you run the above program you should see that it successfully performs a `GET` request on our API Endpoint and then prints all of our Pokemon out in the console.  
 
 #### Creating a Pokemon Struct
 
-By knowing the structure of the JSON response that the above API endpoint gives us we can now map this into a series of `structs` that we can map our objects to. Below you'll see the a condensed version of the JSON. Within our JSON response we have a couple of `key-value` pairs, the first of which is the `name` of the region that the original pokemon reside in. `region` gives us a link to the API for gaining more information on that particular region etc. 
+By knowing the structure of the JSON response that the above API endpoint gives us we can now map this into a series of `structs` that we can map our objects to. Below you'll see the condensed version of the JSON. Within our JSON response, we have a couple of `key-value` pairs, the first of which is the `name` of the region that the original Pokemon reside in. `region` gives us a link to the API for gaining more information on that particular region etc. 
 
-The one we are interested most in is `pokemon_entries` which stores an array of all the pokemon that we want. 
+The one we are interested most in is `pokemon_entries` which stores an array of all the Pokemon that we want. 
 
 ~~~js
 {
@@ -122,7 +122,7 @@ fmt.Println(responseObject.Name)
 fmt.Println(len(responseObject.Pokemon))
 ~~~
 
-In the above code we declare a new `responseObject` variable which is of type `Response`. We then unmarshal our `responseData` into this object and to test that it all works we print out our `responseObject.Name` which should equat to `kanto`. We then print out the length of our Pokemon array to see if it matches our expectations, if it prints out 151 then we know we've done it right and we can now iterate over these pokemon.
+In the above code, we declare a new `responseObject` variable which is of type `Response`. We then unmarshal our `responseData` into this object and to test that it all works we print out our `responseObject.Name` which should equat to `kanto`. We then print out the length of our Pokemon array to see if it matches our expectations, if it prints out 151 then we know we've done it right and we can now iterate over these pokemon.
 
 ## Listing All Our Pokemon
 
@@ -202,6 +202,6 @@ func main() {
 
 ## Summary
 
-In this tutorial we've looked at how you can perform `GET` requests on `HTTP` endpoints and print out the plain text response of the response. We've then looked at how you can unmarshal the JSON response into struct objects that we can effectively work with as if they were normal objects.   
+In this tutorial, we've looked at how you can perform `GET` requests on `HTTP` endpoints and print out the plain text response of the response. We've then looked at how you can unmarshal the JSON response into struct objects that we can effectively work with as if they were normal objects.   
 
 > If you found this tutorial useful or require any further help then please let me know in the comments section below. If you think anything is missing then please feel free to make the changes yourself by submitting a pull request here: [tutorialedge-v2](https://github.com/elliotforbes/tutorialedge-v2)
