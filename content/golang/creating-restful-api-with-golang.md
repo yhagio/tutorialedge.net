@@ -233,7 +233,7 @@ This example represents a very simple RESTful API written using Go. In a real pr
 
 ## Full Source Code:
 
-~~~go
+~~~golang
 package main
 
 import (
