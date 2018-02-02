@@ -11,6 +11,10 @@ twitter = "https://twitter.com/Elliot_F"
 
 In this article, I'm going to be showing you how we can create a simple Golang based REST API that serves up a JSON based response whenever it is hit using a `HTTP` GET request.
 
+## Video Tutorial
+
+<div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/W5b64DXeP0o?ecver=2" width="640" height="360" frameborder="0" allow="autoplay; encrypted-media" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
+
 ## REST Architectures
 
 REST is everywhere these days, from websites to enterprise applications, the RESTful architecture style is a powerful way of providing communication between separate software components. Building REST APIs allow you to easily decouple both consumers and producers and are typically stateless by design.
