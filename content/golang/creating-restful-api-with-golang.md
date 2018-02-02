@@ -9,7 +9,7 @@ author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++
 
-In this article I'm going to be showing you how we can create a simple Golang based REST API that serves 
+In this article I'm going to be showing you how we can create a simple Golang based REST API that serves up a JSON based response whenever it is hit using a `HTTP` GET request.
 
 ## REST Architectures
 
