@@ -121,6 +121,22 @@ PASS
 ok      _/Users/elliot/Documents/Projects/tutorials/golang/go-testing-tutorial  0.007s
 ~~~
 
+## Verbose Test Output
+
+Sometimes you may wish to see exactly what tests are running and how long they took. Thankfully, this is available if you use the `-v` flag when running your tests like so:
+
+~~~c
+Elliots-MBP:go-testing-tutorial elliot$ go test -v
+=== RUN   TestCalculate
+--- PASS: TestCalculate (0.00s)
+=== RUN   TestTableCalculate
+--- PASS: TestTableCalculate (0.00s)
+PASS
+ok      _/Users/elliot/Documents/Projects/tutorials/golang/go-testing-tutorial  0.006s
+~~~
+
+You can see that both our normal test and our table test ran and passed and took less than `0.00s` to execute.
+
 ## Conclusion
 
 Hopefully you found this tutorial useful! If you require further assistance then please feel free to let me know in the comments section below. 
