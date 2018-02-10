@@ -13,6 +13,10 @@ Testing is hugely important in all software. Being able to ensure the correctnes
 
 By taking the time to adequately test your go programs you allow yourself to develop faster with a greater sense of confidence that what you are developing will continue to work when you release it to production.
 
+## Video Tutorial
+
+<div style="position:relative;height:0;padding-bottom:42.76%"><iframe src="https://www.youtube.com/embed/GlA57dHa5Rg?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="842" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+
 ## Introduction
 
 In this tutorial we are going to look at how you can develop and run tests for your go code using the `go test` command.  
