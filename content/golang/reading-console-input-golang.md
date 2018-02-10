@@ -9,11 +9,11 @@ author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++
 
-<p>This is a quick and simple tutorial on how to read in console text input into your Go (GoLang) program. In this tutorial we'll be creating the basis for a very simple shell that will take in all user input and simply echo it back to the user.</p>
+This is a quick and simple tutorial on how to read in console text input into your Go (GoLang) program. In this tutorial, we'll be creating the basis for a very simple shell that will take in all user input and simply echo it back to the user.
 
 ## Reading in Full Sentences
 
-We'll use Go's while loop equivalent of a for loop without any parameters to ensure our program continues on forever. In this example every time text is entered and then enter is pressed, we assign text to equal everything up to and including the ```\n``` special character. If we want to do comparison on the string that has just been entered then we can use the strings.Replace method in order to remove this trailing ```\n``` character with nothing and then do the comparison.
+We'll use Go's while loop equivalent of a for loop without any parameters to ensure our program continues on forever. In this example every time text is entered and then enter is pressed, we assign text to equal everything up to and including the ```\n``` special character. If we want to do a comparison on the string that has just been entered then we can use the strings.Replace method in order to remove this trailing ```\n``` character with nothing and then do the comparison.
 
 > If you want this to work on Windows Systems then you will have to do ```text = strings.Replace(text, "\r\n", "", -1)``` as windows uses a different line ending compared to unix systems.
 

@@ -17,7 +17,7 @@ In times where performance is important, being able to benchmark how your progra
 
 ## A Simple Benchmark
 
-Within Go, benchmarking tests can be written in conjunction with your standard unit tests. These benchmark functions should be prefixed by "Benchmark" followed by the function name, in the same manner, that you would prefix Test for your test functions.
+Within Go, benchmarking tests can be written in conjunction with your standard unit tests. These benchmark functions should be prefixed by "Benchmark" followed by the function name, in the same manner, that you would prefix Test for your test functions.#
 
 Let's take our code from our previous article on testing and try to write a simple benchmark function for that
 

@@ -9,11 +9,11 @@ author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++
 
-In this tutorial we'll be focusing on creating a very simple web server using the [net/http](https://golang.org/pkg/net/http/) package. If you've ever used something like Node's ExpressJS or Python's Tornado, then you should hopefully see some similarities to how things are handled. 
+In this tutorial, we'll be focusing on creating a very simple web server using the [net/http](https://golang.org/pkg/net/http/) package. If you've ever used something like Node's ExpressJS or Python's Tornado, then you should hopefully see some similarities to how things are handled. 
 
 ## Creating a Basic Web Server
 
-Ok, so to begin with we’ll create a very simple web server that will just return whatever the URL path is of your query. This will be a good base from which we can build on top of.
+Ok, so to begin with, we’ll create a very simple web server that will just return whatever the URL path is of your query. This will be a good base from which we can build on top of.
 
 ~~~go
 package main
@@ -40,15 +40,15 @@ func main() {
 }
 ~~~
 
-In the above code we essentially define two different Handlers. These handlers are what respond to any http request that match the string pattern we define as the first parameter. So essentially whenever a request is made for the home page or *http://localhost:8081/*, we'll see our first handler respond as the query matches that pattern.  
+In the above code, we essentially define two different Handlers. These handlers are what respond to any `HTTP` request that matches the string pattern we define as the first parameter. So essentially whenever a request is made for the home page or *http://localhost:8081/*, we'll see our first handler respond as the query matches that pattern.  
 
 ## Running Our Server
 
-Ok so now that we've created our own very simplistic server we can try running it by typing go run server.go into our console. This usually asks me for permission so accept that and then head over to your browser and head to http://localhost:8081/world. On this page you should hopefully see your query string echoed back to you in true "hello world" fashion.
+Ok so now that we've created our own very simplistic server we can try running it by typing go run server.go in to our console. Once this is done head over to your browser and head to http://localhost:8081/world. On this page, you should hopefully see your query string echoed back to you in true "hello world" fashion.
 
 ## Adding a bit of Complexity
 
-So now that we've got a basic web server set up, let's try incrementing a counter every time a specific url is hit. Due to the fact that the web server is asynchronous, we'll have to guard our counter using a mutex in order to prevent us from being hit with race-condition bugs.
+So now that we've got a basic web server set up, let's try incrementing a counter every time a specific URL is hit. Due to the fact that the web server is asynchronous, we'll have to guard our counter using a mutex in order to prevent us from being hit with race-condition bugs.
 
 ~~~go
 package main
@@ -94,7 +94,7 @@ Run this and then navigate to http://localhost:8081/increment and you should see
 
 ## Serving Static Files
 
-Ok, so now that we've set up a simple server in go, it's time to start serving some static files. Create a static folder within your project's directory and then create some simple html files. For this example I'm just serving back the following: 
+Ok, so now that we've set up a simple server in go, it's time to start serving some static files. Create a static folder within your project's directory and then create some simple HTML files. For this example I'm just serving back the following: 
 
 ~~~html
 <html>
@@ -107,7 +107,7 @@ Ok, so now that we've set up a simple server in go, it's time to start serving s
 </html>
 ~~~
 
-Once you've got this then we can then modify our web server code to use the http.ServeFile method. Essentially this will take in the url of the request made to the server, and if it contains say index.html then it would return the index.html file, rendered as html in the browser. If we were to create an edit.html page and send a request to http://localhost:8081/edit.html then it would return whatever html content you choose to put in that edit.html page.
+Once you've got this then we can then modify our web server code to use the http.ServeFile method. Essentially this will take in the url of the request made to the server, and if it contains say index.html then it would return the index.html file, rendered as HTML in the browser. If we were to create an edit.html page and send a request to http://localhost:8081/edit.html then it would return whatever HTML content you choose to put in that edit.html page.
 
 ~~~go
 package main
@@ -135,7 +135,7 @@ func main() {
 
 ## Checking it Works
 
-Again run the server and navigate to http://localhost:8081/index.html and you should hopefully see your very simple index.html file rendered in all it's glory.
+Again run the server and navigate to http://localhost:8081/index.html and you should hopefully see your very simple index.html file rendered in all its glory.
 
 <p>I hope you found this tutorial useful and if you did then please let me know in the comments section below! This is part one of a series of GoLang tutorials in which we play around with APIs and creating servers so stay tuned for more!</p>
 
