@@ -15,6 +15,10 @@ In this tutorial, we are going to look at how we can use the `Go-ORM` or `GORM` 
 
 They effectively reduce the complexity of our codebase in scenarios where you don't wish to work with `SQL` but need a database. 
 
+## Video Tutorial
+
+<div style="position:relative;height:0;padding-bottom:42.76%"><iframe src="https://www.youtube.com/embed/VAGodyl84OY?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="842" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+
 ## Installation
 
 In order to install the `jinzhu/gorm`, you will have to perform the following `go get` command:
