@@ -1,0 +1,25 @@
+service: tutorialedge-search
+
+frameworkVersion: ">=1.1.0 <2.0.0"
+
+provider:
+  name: aws
+  runtime: python3.6
+  region: eu-west-1
+
+functions:
+  search:
+    handler: search.search
+    events:
+      - http:
+          path: search
+          method: post
+          cors: true
+
+  index:
+    handler: index.index
+    events:
+      - http:
+          path: index
+          method: post
+          cors: true
