@@ -33,17 +33,13 @@ If you are in need of some excellent books to cover the language in a greater de
 
 ## Tutorials 
 
+* [Creating a Simple Web Server with Go](/golang/creating-simple-web-server-with-golang/)
+
+* [Reading Console Input in Go](/golang/reading-console-input-golang/)
+
+* [Sending Email using Go and Mailgun](/golang/sending-email-using-go-and-mailgun/)
+
 <div class="row">
-    <div class="col l6">
-        <a href="/golang/creating-simple-web-server-with-golang/" class="blog-list-article">
-            <div class="blog-list-article-date">Beginner</div> 
-            <div class="blog-list-article-category">Golang</div>
-            <div class="blog-list-article-content">
-                <div class="blog-list-article-title">Creating a Simple Web Server with Golang</div>
-                <!-- <div class="blog-list-article-excerpt">lorem ipsum</div> -->
-            </div>
-        </a>
-    </div>
     <div class="col l6">
         <a href="/golang/reading-console-input-golang/" class="blog-list-article">
             <div class="blog-list-article-date">Beginner</div> 

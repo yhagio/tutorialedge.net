@@ -19,6 +19,8 @@ If you are interested in buying books to aid in your learning of the Angular fra
 
 ## Course
 
+* [Angular Modules Tutorial](/typescript/angular/angular-modules-tutorial/)
+
 <div class="row">
   <div class="col l6">
       <a href="/typescript/angular/angular-modules-tutorial/" class="blog-list-article">
