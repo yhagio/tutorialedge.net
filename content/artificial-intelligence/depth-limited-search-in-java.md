@@ -39,7 +39,7 @@ bookLink = "http://amzn.to/2r74d8f"
 
 ## AbstractSearch Java Class:
 
-~~~java
+```java
 /**
 * AbstractSearch.
 */
@@ -56,11 +56,11 @@ public abstract class AbstractSearch {
    public abstract boolean execute();
 
 }
-~~~
+```
 
 ## Depth Limited Search Class
 
-~~~java
+```java
 import java.util.ArrayList;
 import java.util.Stack;
 
@@ -110,4 +110,4 @@ public class DepthLimitedSearch extends AbstractSearch {
        return false;
    }
 }
-~~~
+```

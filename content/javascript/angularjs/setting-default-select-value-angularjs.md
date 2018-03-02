@@ -11,9 +11,9 @@ twitter = "https://twitter.com/Elliot_F"
 
 <p>This is just a quick code snippet for those of you facing this slight problem when developing your applications using AngularJS 1.5. This works for those of you </p>
 
-~~~
+```html
 <select ng-model="selection" ng-init="selection ='The First Default Option'">
     <option>The First Default Option</option>
     <option>The Second non-default option</option>
   </select>
-~~~
+```

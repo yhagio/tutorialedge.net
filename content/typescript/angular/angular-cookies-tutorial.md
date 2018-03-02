@@ -21,11 +21,11 @@ Typically we can only store no more than 20 cookies per web server and no more t
 
 ## Setting Up
 
-In order to play about with cookies in Angular 2 we’ll have to install the ```angular2-cookie``` library by typing the following within our project:
+In order to play about with cookies in Angular 2 we’ll have to install the `angular2-cookie` library by typing the following within our project:
 
-~~~
+```bash
 npm install angular2-cookie --save
-~~~
+```
 
 This should download angular2-cookies to our project’s node_modules folder and also add it as a dependency to our project.
 
@@ -33,7 +33,7 @@ This should download angular2-cookies to our project’s node_modules folder and
 
 Once we’ve successfully added angular2-cookie to our project we can set about using it. It’s recommended that you import the CookieService within your module file and then add it to your providers array like so:
 
-~~~ts
+```ts
 /*
  * Custom Libraries
  */
@@ -54,11 +54,11 @@ import { CookieService } from 'angular2-cookie/services/cookies.service';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-~~~
+```
 
 Then once we’ve added it as a provider we can utilize it in one of our component files like so:
 
-~~~ts
+```ts
 import { Component } from '@angular/core';
 import { CookieService } from 'angular2-cookie/core';
 
@@ -79,27 +79,27 @@ export class AppComponent {
     return this._cookieService.get(key);
   }
 }
-~~~
+```
 
 ## Setting Cookies
 
 In order to set cookies using this library we would have to use the following method:
 
-~~~ts
+```ts
 // the put method takes in the name of the cookie and the value for that cookie.
 // if we wanted to define cookie options then we would pass in a third parameter to 
 // this method containing those options.
 this._cookieService.put('test', 'test');
-~~~
+```
 
 ## Retrieving Cookies
 
-Once we have successfully set a cookie, we can then retrieve that same cookie by using the ```.get(cookie)``` method like so:
+Once we have successfully set a cookie, we can then retrieve that same cookie by using the `.get(cookie)` method like so:
 
-~~~ts
+```ts
 // This would retrieve the previously defined 'test' cookie 
 this._cookieService.get('test');
-~~~
+```
 
 ## Conclusion
 

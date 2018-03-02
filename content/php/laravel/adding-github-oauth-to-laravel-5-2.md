@@ -19,21 +19,21 @@ twitter = "https://twitter.com/Elliot_F"
 
 <p>Once you’ve done that you should be redirected to a page that shows you the client ID and the secret. Copy these and add them to your .env file in your laravel 5 application: </p>
 
-~~~
+```t
 GITHUB_ID=abcd12345
 GITHUB_SECRET=abcdefg1234567
 GITHUB_CALLBACK_URL=https://yourapp.com/auth/github/callback
-~~~
+```
 
 <p>Next thing we need to do is add this to our config/services.php</p>
 
-~~~php
+```php
 'github' => [
       'client_id' => env('GITHUB_ID'),
       'client_secret' => env('GITHUB_SECRET'),
       'redirect' => env('GITHUB_CALLBACK_URL'),  
   ],
-~~~
+```
 
 <p>After you’ve done this we should be good to go and can proceed with installing Socialite and configuring our app.</p>
 
@@ -41,34 +41,34 @@ GITHUB_CALLBACK_URL=https://yourapp.com/auth/github/callback
 
 <p>In order for us to use Github’s authentication we are going to need to first add Socialite to our Laravel 5 project. We can do this by performing the following composer command:</p>
 
-~~~
+```bash
 composer require laravel/socialite
-~~~
+```
 
 Once this has successfully ran we then need to make some modifications to our config/app.php file. 
 
-~~~php
+```php
 'providers' => [
 		…
   // add our new provider to the providers array 
   'Laravel\Socialite\SocialiteServiceProvider',
 ],
-~~~
+```
 
-~~~php
+```php
 'aliases' => [
   'Socialite' => 'Laravel\Socialite\Facades\Socialite',
 ],
-~~~
+```
 
 <h2>Configuring our Routes</h2>
 
 <p>In order for visitors to authenticate with github we are going to need a new route that they can navigate to that will trigger out authentication prompt. Navigate to your routes.php file and add the following routes: </p>
 
-~~~php
+```php
 Route::get('auth/github', 'Auth\AuthController@redirectToProvider');
 Route::get('auth/github/callback', 'Auth\AuthController@handleProviderCallback');
-~~~
+```
 
 <p>Now that we’ve added these two routes, we now need to add the functions that they call whenever they are hit.</p>
 
@@ -76,7 +76,7 @@ Route::get('auth/github/callback', 'Auth\AuthController@handleProviderCallback')
 
 <p>Open up your AuthController.php file and add the following 3 functions: </p>
 
-~~~php
+```php
 <?php    
 /**
   * Redirect the user to the GitHub authentication page.
@@ -135,7 +135,7 @@ private function findOrCreateUser($githubUser)
         'avatar' => $githubUser->avatar
     ]);
     }
-~~~
+```
 
 <h2>Editing the Database Structure</h2>
 
@@ -145,22 +145,22 @@ private function findOrCreateUser($githubUser)
 
 <b>Pure SQL</b>
 
-~~~sql
+```sql
 ALTER TABLE users ADD github_id INT;
-~~~
+```
 
 <h3>Updating our Users Model</h2>
 
 <p>Finally we need to update our User model. Open up app/User.php and change the following</p>
 
-~~~php
+```php
 /**
 * The attributes that are mass assignable.
 *
 * @var array
 */
 protected $fillable = ['github_id','name', 'email', 'password'];
-~~~
+```
 
 ## Testing it All Works
 

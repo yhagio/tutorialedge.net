@@ -17,7 +17,7 @@ We will be utilizing the `vue-cli` in order to start our project off and then we
 
 Before I get started, it must be noted that you can get up and running really quickly with VueJS 2 in less than 30 lines of code. Below you will find a webpage that is a very simple VueJS page that simply prints out `Hello World` to the browser when hit.  
 
-~~~html
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +43,7 @@ Before I get started, it must be noted that you can get up and running really qu
     </script>
 </body>
 </html>
-~~~
+```
 
 It should be noted though that if you want to create more advanced VueJS applications then using the `vue-cli` going forward is recommended!
 
@@ -51,13 +51,13 @@ It should be noted though that if you want to create more advanced VueJS applica
 
 In order to get started, we'll first have to install the `vue-cli`. This can be done using `npm`:
 
-~~~
+```bash
 $ npm install -g vue-cli
-~~~
+```
 
 Once this has successfully run, you should now be able to run `vue` and it should return the following: 
 
-~~~
+```bash
 $ vue
 
   Usage: vue <command> [options]
@@ -75,7 +75,7 @@ $ vue
     list        list available official templates
     build       prototype a new project
     help [cmd]  display help for [cmd]
-~~~
+```
 
 Now that we have successfully verified our installation, we can begin our journey into creating VueJS based applications.
 
@@ -83,7 +83,7 @@ Now that we have successfully verified our installation, we can begin our journe
 
 In order to generate our first project, navigate to a new project directory and then run the `vue init webpack` command.
 
-~~~
+```bash
 $ vue init webpack
 
 ? Generate project in current directory? Yes
@@ -103,13 +103,13 @@ $ vue init webpack
 # Installing project dependencies ...
 # ========================
 ... (omitted for brevity)
-~~~
+```
 
 ## Running Your Application Locally
 
 Once you've successfully initiated your basic Vuejs project, it's time to run it locally and see it all working. You can do that by running the following command:
 
-~~~ 
+```bash
 $ npm run dev
 
 > starter-project@1.0.0 dev /Users/elliot/Documents/Projects/tutorials/vuejs
@@ -120,7 +120,7 @@ $ npm run dev
  DONE  Compiled successfully in 3736ms                                                                                                                                                                                          22:05:21
 
  I  Your application is running here: http://localhost:8080
-~~~
+```
 
 This will run a development server on `http://localhost:8080` and you will be able to navigate to this in your browser. You should hopefully see a fully function Vuejs application running within your browser. 
 
@@ -130,9 +130,9 @@ Now that you have your application up and running, you are free to explore the d
 
 Once you are happy with your application and want to deploy it to the likes of an AWS S3 bucket or to your production server, you will first have to build it by running this command:
 
-~~~
+```bash
 $ npm run build
-~~~
+```
 
 This will then create a `dist/` directory within your application's root directory. This `dist/` directory contains everything your application needs in order to run. You can then simply drop the files within this directory to your server or S3 bucket and it will be ready to go!
 

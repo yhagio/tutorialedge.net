@@ -30,7 +30,7 @@ We'll be creating 2 distinct functions:
 
 Let's dive into the `C` code. Open up the `.c` file that will contain your new module and add `#include <Python.h>` to the top. This will bring in the necessary `C` Python objects that will allow us to construct our module.
 
-~~~c
+```c
 #include <Python.h>
 
 // Function 1: A simple 'hello world' function
@@ -62,30 +62,30 @@ PyMODINIT_FUNC PyInit_myModule(void)
 {
     return PyModule_Create(&myModule);
 }
-~~~
+```
 
 ## Our setup.py File
 
 Thankfully Python includes some modules that make extending the language easier. Here we can specify the name of our module and pass in the necessay `.c` files that make up our module.
 
-~~~py
+```py
 from distutils.core import setup, Extension
 setup(name = 'myModule', version = '1.0',  \
    ext_modules = [Extension('myModule', ['test.c'])])
-~~~
+```
 
 ## Building and Installing our Module
 
 In order to `build` and `install` our newly created `C` module we have to do the following: 
 
-~~~
+```bash
 python setup.py build
 python setup.py install
-~~~
+```
 
 When run in succession you should see the following output. We can then start our Python interpreter and call our newly created module:
 
-~~~py
+```py
  $ python3.6 setup.py build
 running build
 running build_ext
@@ -111,13 +111,13 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> myModule.helloworld()
 Hello World
 >>>
-~~~
+```
 
 ## Our Fibonacci Function
 
 Let's now take a look at a more complex function that will take in a value `n` and then return the appropriate fibonacci number. We aren't going to do any fancy `memoization` here, it's going to be a plain old recursive function that features terrible performance. However it will show us how to both take in a value and return a value in our `C` module. 
 
-~~~c
+```c
 // Function 2: A C fibonacci implementation
 // this is nothing special and looks exactly
 // like a normal C version of fibonacci would look
@@ -140,15 +140,15 @@ static PyObject* fib(PyObject* self, PyObject* args)
     // return our computed fib number
     return Py_BuildValue("i", Cfib(n));
 }
-~~~
+```
 
 Again we should build and install this like we have done before. We can then test this out like so:
 
-~~~py
+```py
 >>> import myModule
 >>> myModule.fib(2)
 1
-~~~
+```
 
 ## Conclusion
 

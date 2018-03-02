@@ -37,15 +37,15 @@ The best way to implement WebSockets in our angular applications would be to enc
 
 Using the Angular CLI, create a new application by typing the following into the command line:
 
-~~~
+```bash
 ng new websocket_tutorial
-~~~
+```
 
 This should create a new, fully functioning Angular 2 application in which we shall implement our websocket based services. To ensure that it’s working type:
 
-~~~
+```bash
 ng serve
-~~~
+```
 
 And you should hopefully see the server successfully starting on port 4200. If you then navigate to localhost:4200 in your prefered web browser you should see ‘app works!’ displaying in your browser. Now that we’ve got our basic app up and running let’s move on to creating our websocket service.
 
@@ -53,13 +53,13 @@ And you should hopefully see the server successfully starting on port 4200. If y
 
 To get us started we’ll be creating a very simple service that will connect to any given URL and return an RxJS subject that we can subscribe to in other services/components in order to listen for any incoming messages from the connected socket. 
 
-~~~
+```bash
 ng g service websocket
-~~~
+```
 
 We’ll need to import * from the rxjs library at the top of our new service. This will allow us to create the subject that will both observe and be observable. This essentially means our subject will watch our websocket for any incoming messages and will broadcast these messages to any components that happen to be subscribing to this service.
 
-~~~
+```ts
 import { Injectable } from '@angular/core';
 import * as Rx from 'rxjs/Rx';
 
@@ -98,17 +98,17 @@ let observer = {
   }
 
 }
-~~~
+```
 
 Next what we want to do is to create a second service that will interface with our websockets and will act as a type of adapter which will adapt the output from our websocket into a form that we can easily work with in the frontend. Again create this service using the angular-cli:
 
-~~~
+```bash
 ng g service chat
-~~~
+```
 
 This should create a chat.service.ts within your root directory. In this file we are going to want to do something like so:
 
-~~~
+```ts
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs/Rx';
 import { WebsocketService } from './websocket.service';
@@ -136,13 +136,13 @@ export class ChatService {
 			});
 	}
 }
-~~~
+```
 
 ## Updating our App Component
 
 Finally we’ll want to update our app.component.ts file so that it imports our newly created chat service and allows us to push messages to this websocket:
 
-~~~
+```ts
 import { Component } from '@angular/core';
 import { WebsocketService } from './websocket.service';
 import { ChatService } from './chat.service';
@@ -173,24 +173,24 @@ export class AppComponent {
 	}
 
 }
-~~~
+```
 
 Finally we’ll need to update our html page for our app component so that we can actually use the sendMsg() function that we defined in our component file:
 
-~~~
+```html
 <!-- app.component.html -->
 <h1>
   Angular 2 WebSockets Tutorial
 </h1>
 
 <button (click)="sendMsg()">Send Message</button>
-~~~
+```
 
 Once these changes have been made, serve the application by going to the root directory and typing:
 
-~~~
+```bash
 ng serve
-~~~
+```
 
 And you should see the Angular 2 WebSockets tutorial and our ‘Send Message’ button rendered in your browser.
 

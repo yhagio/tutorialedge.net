@@ -618,16 +618,7 @@ article ul li {
 }
 
 article pre {
-  position: relative;
-  overflow: visible;
-  white-space: pre;
-  word-wrap: normal;
-  background-color: #F0F0F0;
-  margin-top: 20px;
-  font-size: 16px;
-  padding: 10px;
-  font-family: "Source Code Pro", Monaco, Courier New, Courier, mono;
-  font-weight: 200;
+  padding: 10px 20px;
 }
 
 article p > code {

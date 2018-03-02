@@ -17,19 +17,19 @@ Gulp is a task runner that allows you to define a series repeatable tasks that c
 
 Thankfully, Gulp is easily installable using npm.
 
-~~~
+```bash
 npm install --global gulp-cli
-~~~
+```
 
-Once this has successfully run, type ```gulp``` into your command line and you should be presented with a list of different options if it was installed successfully.
+Once this has successfully run, type `gulp` into your command line and you should be presented with a list of different options if it was installed successfully.
 
 ### Setting up your Project
 
-Now that we’ve got gulp-cli installed, we can begin by initializing npm using the ```npm init``` command. After we’ve done this we can add gulp to our project’s list of dependencies:
+Now that we’ve got gulp-cli installed, we can begin by initializing npm using the `npm init` command. After we’ve done this we can add gulp to our project’s list of dependencies:
 
-~~~
+```bash
 npm install --save-dev gulp
-~~~
+```
 
 ### Creating our Gulpfile.js
 
@@ -37,7 +37,7 @@ Now that we’ve got everything in place, we can begin to define our automated b
 
 Within this file we will begin by defining our first automated task:
 
-~~~
+```js
 // import the base gulp node module
 var gulp = require('gulp');
 
@@ -47,17 +47,17 @@ var gulp = require('gulp');
 gulp.task('default', function() {
   // place code for your default task here
 });
-~~~
+```
 
-If you navigate to your command line now, type ```gulp default``` and your default tasks should be run for you. Currently it does nothing so let’s expand its functionality a bit.
+If you navigate to your command line now, type `gulp default` and your default tasks should be run for you. Currently it does nothing so let’s expand its functionality a bit.
 
 ### Watching Files for Changes
 
 Having a defined task run every time we save a file in our IDE can be brilliant for our productivity. We’ll start by creating a simple watch task that prints hello whenever a file in our project changes.
 
-Gulp provides an API for us if we want to watch files, strangely enough called ```gulp.watch```. Let’s take a look at how we would use this:
+Gulp provides an API for us if we want to watch files, strangely enough called `gulp.watch`. Let’s take a look at how we would use this:
 
-~~~
+```js
 var gulp = require(‘gulp’);
 
 gulp.task('default', function(){
@@ -69,7 +69,7 @@ gulp.task('watch', function() {
   // perform the default task defined above.
   gulp.watch('src/**/*.js', ['default']);
 });
-~~~
+```
 
 ### Doing Something Useful
 
@@ -77,11 +77,11 @@ Ok, so we’ve got a task that automatically runs whenever one of our files chan
 
 We’ll first need to install a few new things to our project:
 
-~~~
+```bash
 npm install gulp-util gulp-concat gulp-notify gulp-uglify gulp-jshint gulp-sourcemaps
-~~~
+```
 
-~~~
+```js
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var concat = require('gulp-concat');
@@ -105,9 +105,9 @@ gulp.task('watch', function() {
   // Watch .js files
   gulp.watch('src/**/*.js', ['scripts']);
 });
-~~~
+```
 
-If we then run the ```gulp watch``` task in the command line then this will watch our javascript files, initialize sourcemaps, concat it into a bundle.js file and write everything to that file.
+If we then run the `gulp watch` task in the command line then this will watch our javascript files, initialize sourcemaps, concat it into a bundle.js file and write everything to that file.
 
 ### Taking it Further
 

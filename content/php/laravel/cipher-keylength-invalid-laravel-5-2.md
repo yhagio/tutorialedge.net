@@ -15,29 +15,29 @@ twitter = "https://twitter.com/Elliot_F"
 
 <p>Resolving the issue is relatively simple using php artisan, first ensure you have a .env file in the root of your project and then type the following in the command line: </p>
 
-~~~
+```bash
 php artisan key:generate
-~~~
+```
 
 <p>This should generate a key for you in square brackets. Copy this and paste the following into your .env file:</p>
 
-~~~
+```bash
 APP_KEY=base64:yourkeygoeshere
-~~~
+```
 
 <h2>Checking it works:</h2>
 
 <p>Once you’ve successfully set this, try navigating to your laravel application and you should see the welcome page. Check the logs by typing the following:</p>
 
-~~~
+```bash
 tail -100f storage/log/laravel.log
-~~~
+```
 
 <p>If this doesn’t change the next time you render a page then you have successfully resolved the issue.</p>
 
 <h2>The Stack Trace</h2>
 
-~~~
+```bash
 production.ERROR: exception 'RuntimeException' with message 'No supported encrypter found. The cipher and / or key length are invalid.' in /Users/elliotforbes/Documents/Projects/PersonalSite/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php:45
 Stack trace:
 #0 /Users/elliotforbes/Documents/Projects/PersonalSite/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php(25): Illuminate\Encryption\EncryptionServiceProvider->getEncrypterForKeyAndCipher(NULL, 'AES-256-CBC')
@@ -72,4 +72,4 @@ Stack trace:
 #29 /Users/elliotforbes/Documents/Projects/PersonalSite/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #30 /Users/elliotforbes/Documents/Projects/PersonalSite/server.php(21): require_once('/Users/elliotfo...')
 #31 {main}
-~~~
+```

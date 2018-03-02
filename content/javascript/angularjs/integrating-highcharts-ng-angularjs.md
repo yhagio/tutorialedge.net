@@ -21,7 +21,7 @@ This tutorial will be using the code from this github repo: <a href="https://git
 
 In order to be able to use highcharts-ng, you’ll need to add a script tag that imports the vanilla highchartsjs library:
 
-~~~
+```html
 <!DOCTYPE html>
 <html ng-app="root" ng-strict-di lang="en">
 <head>
@@ -38,17 +38,17 @@ In order to be able to use highcharts-ng, you’ll need to add a script tag that
   ...
 </body>
 </html>
-~~~
+```
 
-After we’ve imported the appropriate javascript files, we’ll then be able to add ```highcharts-ng``` to our modules array like so:
+After we’ve imported the appropriate javascript files, we’ll then be able to add `highcharts-ng` to our modules array like so:
 
-~~~
+```js
 angular.module('root', [
         ...
          'highcharts-ng'
         ...  
   ]);
-~~~
+```
 By adding this to our modules array, it means we’ll now be able to use and see Highcharts-ng in all of the components/controllers attached to our root module.
 
 ## Our Controller 
@@ -57,13 +57,13 @@ Now that we have everything set up in order to use highcharts-ng, we can start a
 
 Within your html file add to following:
 
-~~~
+```html
 <highchart id="chart1" config="$ctrl.chartConfig"></highchart>
-~~~
+```
 
 Once you have this, we’ll have to define our $ctrl.chartConfig object, we can do this in our Controller like so:
 
-~~~
+```js
 function HighchartsController(StatsService, $log, $timeout, $scope) {
     var ctrl = this;
 
@@ -113,11 +113,11 @@ function HighchartsController(StatsService, $log, $timeout, $scope) {
 
 angular.module('root')
     .controller('HighchartsController', HighchartsController);
-~~~
+```
 
 And finally we need to add the binding for our chartConfig object to our component:
 
-~~~
+```js
 var ourComponent = {
     ...
     controller: HighchartsController,
@@ -128,7 +128,7 @@ var ourComponent = {
 
 angular.module('root')
     .component('ourComponent', ourComponent);
-~~~
+```
 
 ## Pushing Dynamic Data to the Chart
 
@@ -136,7 +136,7 @@ Static charts can be pretty boring at times and having to refresh the page all t
 
 In the below code snippet you’ll see we are performing a shift on our data array to remove the first element and then pushing our own random value to the same data array every 2 seconds.
 
-~~~
+```
     ctrl.poll = function() {
         $timeout(function(){
             // Here is where you could poll a REST API or the websockets service for live data
@@ -152,7 +152,7 @@ In the below code snippet you’ll see we are performing a shift on our data arr
         $log.log("hello");
         ctrl.poll();
     }
-~~~
+```
 
 
 ## Summary

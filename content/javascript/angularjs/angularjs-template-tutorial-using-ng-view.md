@@ -31,7 +31,7 @@ In this tutorial we’ll be creating a simple shop with a home view, a categorie
 
 In the interest of brevity I've kept this as a single file but these could be split into multiple files if you so wished.
 
-~~~
+```js
 var testApp = angular.module('testApp', ['ngRoute']);
 
 testApp.config(function($routeProvider) {
@@ -77,13 +77,13 @@ testApp.controller('ShopController', function ($scope, $routeParams) {
     $scope.itemName = $routeParams.name;
 
 });
-~~~
+```
 
 ### Our Master Page:
 
 This is our master template. Here we can define our title, all of our asset imports as well as anything else that we want to feature on every page. In this instance, we'll want "My Amazing Web Store" featured at the top of every page of our application.
 
-~~~
+```html
 <html ng-app="testApp">
 <head>
     <title>AngularJS ng-if child scopes example</title>
@@ -99,13 +99,13 @@ This is our master template. Here we can define our title, all of our asset impo
     <script src="script.js"></script>
 </body>
 </html>
-~~~
+```
 
 ## Our Templates
 
 For brevity I've kept this in a single code block. You'll see below the contents of our three different html pages. As you can see we've only defined what is going to change whenever we look at these pages and haven't touched our master template. When viewing all of these routes you should see our h2 tag - My Amazing Web Store - featured at the top followed by each pages distinct html.
 
-~~~
+```html
 ... category.html
 <h2>{{ categoryName }}</h2>
 
@@ -128,13 +128,13 @@ For brevity I've kept this in a single code block. You'll see below the contents
 
 <p>{{ itemName }}</p>
 ...
-~~~
+```
 
 ## Displaying Custom Components
 
 The above method is great for displaying very simple routes that match to a page and a controller, but what happens if you have defined components? How do you display different components on different routes? Well we can actually make some slight modifications to one of our routes and pass the component like so:
 
-~~~
+```js
 // a very simple component that has a html template and a
 // controller bound to it.
 var OurComponent = {
@@ -152,7 +152,7 @@ $routeProvider
           template: '<our-component></our-component>'
       })
 ...
-~~~
+```
 
 ## Conclusion
 

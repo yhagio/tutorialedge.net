@@ -17,7 +17,7 @@ This tutorial will show you how you can filter out duplicates when using the ng-
 
 <p>We’ll start off with a very simple angular controller that will have a list of item names, some of which are duplicates.</p>
 
-~~~
+```js
 var testApp = angular.module('testApp', []);
 
 testApp.controller('testController' , function ($scope) {
@@ -36,11 +36,11 @@ testApp.controller('testController' , function ($scope) {
         { 'name' : "iPeed" }
         ];
 });
-~~~
+```
 
 Next we’ll introduce our index file that we will be using to showcase our simple list. To showcase our list we'll be using a very simple ng-repeat that iterates through the *list* array that we've defined within our controller
 
-~~~
+```html
 <html ng-app="testApp">
 <head>
     <title>AngularJS Removing Duplicates from ng-repeat</title>
@@ -55,7 +55,7 @@ Next we’ll introduce our index file that we will be using to showcase our simp
     <script src="script.js"></script>
 </body>
 </html>
-~~~
+```
 
 <p>You’ll see the ng-repeat directive that will at this time print out every item from our list, regardless of whether or not it is a duplicate.</p>
 
@@ -63,7 +63,7 @@ Next we’ll introduce our index file that we will be using to showcase our simp
 
 <p>Now that we’ve got some test data setup it’s time to write our filter. This will be written just above our controller declaration in our scripts.js file and will look a little something like this:</p>
 
-~~~
+```js
 var testApp = angular.module('testApp', []);
 
 // here we define our unique filter
@@ -110,15 +110,15 @@ testApp.controller('testController' , function ($scope) {
         { 'name' : "iPeed" }
         ];
 });
-~~~
+```
 
 <h2>Modifying our Index File</h2>
 
 Now that we’ve written our filter we need to add one slight modification to our ng-repeat code like so.
 
-~~~
+```html
 <li ng-repeat="item in list | unique : 'name'">{{item.name}}</li>
-~~~
+```
 
 <p>And that should be it removing all of our duplicates from our list from us. I hope you found this useful and if so then please share it around the world!</p>
 
@@ -126,6 +126,6 @@ Now that we’ve written our filter we need to add one slight modification to ou
 
 Removing duplicates from the list based on nested properties can be achieved by doing the following:
 
-~~~
+```html
 <li ng-repeat="item in list | unique:'name.nested_property'>{{item.name}}</li>
-~~~
+```

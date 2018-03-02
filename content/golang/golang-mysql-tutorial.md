@@ -58,7 +58,7 @@ func main() {
 
 <h4>Performing Basic SQL Commands</h4>
 
-```db.Query(sql)``` allows us to perform any SQL command we so desire. Simply construct the string and pass it in as a parameter.
+`db.Query(sql)` allows us to perform any SQL command we so desire. Simply construct the string and pass it in as a parameter.
 
 ~~~go
 package main
@@ -102,7 +102,7 @@ func main() {
 
 ## Populating Structs from Results
 
-Retrieving a set of results from the database is all well and good, but we need to be able to read these results or populating existing ```structs``` so that we can parse them and modify them easily. In order to parse a number of rows we can use the ```.Scan(args...)``` method which takes in any number of arguments and allows us to populate a composite object.
+Retrieving a set of results from the database is all well and good, but we need to be able to read these results or populating existing `structs` so that we can parse them and modify them easily. In order to parse a number of rows we can use the `.Scan(args...)` method which takes in any number of arguments and allows us to populate a composite object.
 
 ~~~go
 /*

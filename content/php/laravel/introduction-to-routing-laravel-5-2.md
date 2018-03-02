@@ -29,7 +29,7 @@ twitter = "https://twitter.com/Elliot_F"
 
 <p>Now that I’ve got a very simple plan of what I want on my blog, we can start creating the routes in which we want to display things. We’ll start with the home page route, open up <b>routes.php</b> under the <b>app/Http</b> directory and you should see the following:</p>
 
-~~~php
+```php
 <?php
 
 /*
@@ -46,7 +46,7 @@ twitter = "https://twitter.com/Elliot_F"
 Route::get('/', function () {
     return view('welcome');
 });
-~~~
+```
 
 <p>What this does is provides us with a very simple route that returns our <b>welcome.blade.php</b> as a view to the browser whenever a <b>GET</b> request is performed for <b>http://localhost:8000/</b> or the homepage of wherever you are hosting your application.</p>
 
@@ -58,7 +58,7 @@ Route::get('/', function () {
 
 <p><b>app.blade.php</b></p>
 
-~~~
+```html
 <html>
     <head>
         <title>ElliotForbes.co.uk</title>
@@ -75,17 +75,17 @@ Route::get('/', function () {
         
     </body>
 </html>
-~~~
+```
 
 <p><b>index.blade.php</b></p>
 
-~~~
+```html
 @extends('app')
 
 @section('content')
 <h2>Home Page</h2>
 @endsection
-~~~
+```
 
 <p>As you can see, nothing overly complicated here. Anything we want reflected in all pages of our site we put in our app.blade.php file. Page-specific content goes within their own blade files.</p>
 
@@ -95,20 +95,20 @@ Route::get('/', function () {
 
 <p>Open up <b>routes.php</b> within <b>app/Http</b> and we are going to change the route for our ‘/’ page.</p>
 
-~~~php
+```php
 Route::get('/', function () {
     // change this to return our index blade template rather than the defaul
     // welcome template
     return view('index');
 });
-~~~
+```
 
 <p>If you now navigate to your app in the browser you will now see your newly created index file rather than the old welcome page. Now that we’ve got the basics down, we can create the blade template for our contact and about pages and the routes to them. Below you’ll find an example of how we can create the route for our contact page.</p>
 
-~~~php
+```php
 Route::get('/blog', function () {
     return view('blog-home');
 });
-~~~
+```
 
 <p>Create the <b>blog-home.blade.php</b> blade template in the same directory as your <b>index.blade.php</b> and then navigate to your <b>http://localhost:8000/blog</b> and you should see your newly created blog template rendered in all it’s glory. </p>

@@ -14,7 +14,7 @@ Do you fancy contributing back to the site or writing a few of your own tutorial
 
 Authoring a new tutorial is simple with hugo. All you have to do is create a new `file.md` within the directory of your choice and then fill in the appropriate meta data at the top of the file:
 
-~~~ 
+```t
 +++
 date = "2017-04-15T09:47:01+01:00"
 title = "The title of your article"
@@ -25,7 +25,7 @@ series = ["python"]
 author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++
-~~~
+```
 
 #### Getting Recognition
 

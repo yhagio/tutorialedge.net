@@ -29,9 +29,9 @@ twitter = "https://twitter.com/Elliot_F"
 
 <p>Navigate to the root directory of your project and type the following in the console:</p>
 
-~~~
+```bash
 php artisan make:model Post
-~~~
+```
 
 
 <p>This should create a new Post.php class under your <b>app</b> directory.</p>

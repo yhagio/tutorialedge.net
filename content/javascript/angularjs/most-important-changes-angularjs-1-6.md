@@ -30,7 +30,7 @@ This will help to speed up the framework as a whole and is ultimately a good thi
 Regardless of the fact this was considered bad practice in Angular 1.5, you may still have some of these sprawled about your codebase, in 1.6 this callback function will be entirely removed and you will be forced to use the better practice for making http requests:
 
 
-~~~
+```js
 // this is the old way
 $http.get(‘oauth/clients’)
     .success(function onSuccess(response){
@@ -51,7 +51,7 @@ $http.get('oauth/clients')
         $log.log(response.status);
         $log.log(response.headers);
       });
-~~~
+```
 
 
 Note: the response object returned is different, if you are trying to access the data of your response, just append .data and you should see the new content.
@@ -63,14 +63,14 @@ Note: the response object returned is different, if you are trying to access the
 There have been some notable changes to ngModel, for instance you are no longer able to methods to $scope.$watch without some form of context. This essentially means you’ll have to wrap things in a function like so:
 
 
-~~~
+```js
 // old way with no context passed
 $scope.$watch('something', myNgModelCtrl.$render);
 // new way with context
 $scope.$watch('something', function() {
   myNgModelCtrl.$render();
 })
-~~~
+```
 
 
 ## Updates to jqLite

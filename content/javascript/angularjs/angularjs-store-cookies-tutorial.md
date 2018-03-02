@@ -38,12 +38,12 @@ Conversely you can also just lift the code from the controller and put it into y
 In your angular application you’ll need to add the following script tag to the head of your main html page and below your angular.js script tag:
 
 
-~~~
+```html
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
   ...
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-cookies.min.js"></script>
 </head>
-~~~
+```
 
 
 Ensure that the version of angular-cookies you are importing is the same version of angularjs that you are using within your application or you may run into issues.
@@ -55,10 +55,9 @@ Ensure that the version of angular-cookies you are importing is the same version
 In our controller we’ll have 2 main functions, one to get the cookies on page load and one to set the cookies on a button click. We’ll have to ensure that we import $cookies service to our controller:
 
 
-~~~
+```js
 function CookieController($log, $scope, $cookies) {
   var ctrl = this;
-
 
   ctrl.$onInit = function() {
     $log.log("Initialized cookie page");
@@ -66,24 +65,18 @@ function CookieController($log, $scope, $cookies) {
     $log.log(ctrl.storedCookie);  
   };
 
-
   ctrl.storeCookie = function(cookie) {
     $log.log(cookie);
     $cookies.put('favourite', cookie);
   };
 
-
-
-
 }
-
 
 CookieController.$inject = ['$log', '$scope', '$cookies'];
 
-
 angular.module('root')
   .controller('CookieController', CookieController);
-~~~
+```
 
 
 #### Our Html Page
@@ -92,7 +85,7 @@ angular.module('root')
 Our html page will consist of an input field and a button, when we enter a value into the input field and click our Store Cookie button, the ctrl.storeCookie function will be called within our controller which will store whatever is in our input field in a ‘favourite’ cookie. 
 
 
-~~~
+```html
 <div class="component">
   <div class="header">
     <h2>Cookies Demo</h2>
@@ -109,7 +102,7 @@ Our html page will consist of an input field and a button, when we enter a value
     </div>
   </div>
 </div>
-~~~
+```
 
 
 #### Our Component
@@ -118,7 +111,7 @@ Our html page will consist of an input field and a button, when we enter a value
 We’ll have a very simple component to tie everything together:
 
 
-~~~
+```js
 var cookies = {
   templateUrl: './app/components/cookies/cookies.html',
   controller: CookieController,
@@ -128,10 +121,9 @@ var cookies = {
   }
 }
 
-
 angular.module('root')
   .component('cookies', cookies);
-~~~
+```
 
 
 ## Conclusion

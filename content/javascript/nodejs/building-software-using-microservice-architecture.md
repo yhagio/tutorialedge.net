@@ -30,7 +30,7 @@ The first microservices we are going to be building is a twitter stream reader t
 
 You can find the full tutorial for how to build a twitter stream reader here. We however are going to be slightly modifying that code so that it queries our newly built <b>REST</b> API every time a tweet pops up:
 
-~~~js
+```js
 package main
 
 import (
@@ -108,12 +108,12 @@ func main() {
     fmt.Println("Go-Twitter Bot v0.01")
     configure()
 }
-~~~
+```
 
 <h2>Microservice 2 - REST API</h2>
 The second microservice will be a simple REST API that retrieves the tweets that have been stored in the database to anyone who queries it. 
 
-~~~
+```go
 package main
 
 import (
@@ -237,7 +237,7 @@ func main() {
     handleRequests()
     
 }
-~~~
+```
 
 <h2>Conclusion</h2>
 

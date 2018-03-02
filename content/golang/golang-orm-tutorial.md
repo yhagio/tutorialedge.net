@@ -23,9 +23,9 @@ They effectively reduce the complexity of our codebase in scenarios where you do
 
 In order to install the `jinzhu/gorm`, you will have to perform the following `go get` command:
 
-~~~
+```bash
 go get -u github.com/jinzhu/gorm
-~~~
+```
 
 After you've done this, you should be able to import the `jinzhu/gorm` into any of your go based projects.
 
@@ -35,14 +35,14 @@ Say, for instance, you wanted to write a go REST API that saved new users and th
 
 We could describe our users in a go `struct` like so:
 
-~~~go
+```go
 // Our User Struct
 type User struct {
 	gorm.Model
 	Name  string
 	Email string
 }
-~~~
+```
 
 Once we have defined our `User` model we can then go about exposing an API endpoint that could save new users to our `sqlite3` database. 
 
@@ -54,7 +54,7 @@ So, we are going to create a very simple API which features 4 distinct `CRUD` en
 
 With the help of our new `GORM`, the creation of these endpoints should be far simpler than they would have been, should we have went down a standard raw `SQL` route.
 
-~~~go
+```go
 package main
 
 import (
@@ -97,7 +97,7 @@ func main() {
 	// Handle Subsequent requests
 	handleRequests()
 }
-~~~
+```
 
 We can then start this new API by running `go run main.go`. This API represents the base from which we will build our `ORM` based solution.
 
@@ -109,7 +109,7 @@ The next step of our project is creating a database. For the purpose of this tut
 
 We can use `GORM` to automatically create the User table within our database by calling `db.AutoMigrate(&User{})`. This saves us the hassle of writing a table creation `SQL` script.
 
-~~~go
+```go
 // our initial migration function
 func initialMigration() {
 	db, err := gorm.Open("sqlite3", "test.db")
@@ -131,7 +131,7 @@ func main() {
 	
     handleRequests()
 }
-~~~
+```
 
 ### Updating our All Users Endpoint
 
@@ -139,7 +139,7 @@ Within our `allUsers()` function we basically want to query for all the `User` r
 
 We can query all of the users within our database by calling `db.Find(&users)`. 
 
-~~~go
+```go
 func allUsers(w http.ResponseWriter, r *http.Request) {
 	db, err := gorm.Open("sqlite3", "test.db")
 	if err != nil {
@@ -153,7 +153,7 @@ func allUsers(w http.ResponseWriter, r *http.Request) {
 
 	json.NewEncoder(w).Encode(users)
 }
-~~~
+```
 
 ### Updating our New User Endpoint
 
@@ -161,7 +161,7 @@ We now want to update our `newUser()` function so that it can insert new users i
 
 This will have to parse the path params of our endpoint and then use these path params to populate a new `User` object that we will then insert into our `sqlite` database by calling `db.Create(&User{Name: name, Email: email})` like so:
 
-~~~go
+```go
 func newUser(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("New User Endpoint Hit")
 
@@ -179,13 +179,13 @@ func newUser(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "New User Successfully Created")
 }
 
-~~~
+```
 
 ## Our Delete User Endpoint
 
 Our `deleteUser()` function will delete a user that matches the same `name` passed into it via a path parameter. It's rather basic and doesn't handle the cases where more than one user exists within the database with the same but it serves a good example in this project.
 
-~~~go
+```go
 func deleteUser(w http.ResponseWriter, r *http.Request) {
 	db, err := gorm.Open("sqlite3", "test.db")
 	if err != nil {
@@ -202,7 +202,7 @@ func deleteUser(w http.ResponseWriter, r *http.Request) {
 
 	fmt.Fprintf(w, "Successfully Deleted User")
 }
-~~~
+```
 
 ## Our Update User Endpoint
 
@@ -210,7 +210,7 @@ On the odd occasion that you need to update an existing `user` within your datab
 
 Once you have this user, you simply update the `User` object as you normally would a standard go object. Once you are happy with the object and your updates you then call `db.Save(&user)` to save any changes to the database.
 
-~~~go
+```go
 func updateUser(w http.ResponseWriter, r *http.Request) {
 	db, err := gorm.Open("sqlite3", "test.db")
 	if err != nil {
@@ -230,7 +230,7 @@ func updateUser(w http.ResponseWriter, r *http.Request) {
 	db.Save(&user)
 	fmt.Fprintf(w, "Successfully Updated User")
 }
-~~~
+```
 
 ## Full Source Code
 

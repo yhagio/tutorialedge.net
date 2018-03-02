@@ -59,7 +59,7 @@ bookLink = "http://amzn.to/2r74d8f"
 
 <p>We can represent this sort of structure like so in Java:</p>
 
-~~~java
+```java
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
@@ -75,7 +75,7 @@ public class Node {
     //    A Unique Identifier for our node
     public String stationName;
     //    An arraylist containing a list of Nodes that
-//    This node is directly connected to - It's child nodes.
+    //    This node is directly connected to - It's child nodes.
     Node leftChild;
     Node rightChild;
 
@@ -98,20 +98,20 @@ public class Node {
     }
 
     //    An auxiliary function which allows
-//    us to remove any child nodes from
-//    our list of child nodes.
+    //    us to remove any child nodes from
+    //    our list of child nodes.
     public boolean removeChild(Node n){
         return false;
     }
 
 }
-~~~
+```
 
 ## Our Breadth First Search Class
 
 <p>In this tutorial I will be implementing the breadth first searching algorithm as a class as this makes it far easier to swap in and out different graph traversal algorithms later on.</p>
 
-~~~java
+```java
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -161,7 +161,7 @@ public class BreadthFirstSearch {
     }
 
 }
-~~~
+```
 
 ## The Results
 
@@ -171,7 +171,7 @@ public class BreadthFirstSearch {
 
 ## Our Driver Class
 
-~~~java
+```java
 /**
  * Our main driver class which instantiates some example nodes
  * and then performs the breadth first search upon these newly created
@@ -193,7 +193,7 @@ public class Driver {
             System.out.print("Path Found!");
     }
 }
-~~~
+```
 
 ## Conclusion 
 

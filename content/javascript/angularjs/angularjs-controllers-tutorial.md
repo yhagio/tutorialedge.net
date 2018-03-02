@@ -13,11 +13,11 @@ twitter = "https://twitter.com/Elliot_F"
 
 > Check out my article on <a href="/javascript/angularjs/working-with-angularjs-component-applications/">Working with Components</a> and see how you should use controllers within a component based system.
 
-<h2>Instantiating a Controller</h2>
+## Instantiating a Controller
 
-<p>We’ll begin by creating a very simple controller that contains a function that we’ll call every time we click a button. We’ll also have a $scope variable that we will bind to somewhere on our HTML page so that we can see the effects of this function’s execution every time it is pressed.</p>
+We’ll begin by creating a very simple controller that contains a function that we’ll call every time we click a button. We’ll also have a $scope variable that we will bind to somewhere on our HTML page so that we can see the effects of this function’s execution every time it is pressed.
 
-~~~js
+```js
 var testApp = angular.module('testApp', []);
 
 testApp.controller('testController' , function ($scope) {
@@ -30,7 +30,7 @@ testApp.controller('testController' , function ($scope) {
     };
     
 });
-~~~
+```
 
 <p>Now that we’ve defined our controller, we need to create our button that will be able to call our newly defined function within our controller, we can do that like so:</p>
 

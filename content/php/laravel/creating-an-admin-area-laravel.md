@@ -23,9 +23,9 @@ twitter = "https://twitter.com/Elliot_F"
 
 <p>Open up your terminal and type the following in your projects root folder. </p>
 
-~~~
+```bash
 php artisan make:middleware AdminMiddleware
-~~~
+```
 
 <p>This will contain the code that will authenticate our user and ensure that they have the appropriate access levels.</p>
 
@@ -33,7 +33,7 @@ php artisan make:middleware AdminMiddleware
 
 <p>Once we've created our new AdminMiddleware we need to assign the middleware a short-hand key by opening up Kernel.php under App > Http and add the following line to your protected $routeMiddleware array.</p>
 
-~~~
+```php
 <?php
   /**
   * The application's route middleware.
@@ -47,21 +47,21 @@ php artisan make:middleware AdminMiddleware
         # LINE TO BE ADDED HERE:
         'admin' => 'App\Http\Middleware\AdminMiddleware',
   ];
-~~~
+```
 
 <h3>Utilizing our Middleware in our Route Options:</h3>
 
 <p>Now that we've created our middleware and assigned it a short-hand key in our kernel.php file we can start using it in our Routes.php file:</p>
 
-~~~
+```php
 Route::get('admin', ['middleware' => 'admin', 'uses' => 'AdminController@index']);
-~~~
+```
 
 <h2>Updating our AdminController</h2>
 
 <p>Our AdminController's index function mentioned in the route above will look something like this to return the index page:</p>
 
-~~~
+```php
 <?php
 
 namespace App\Http\Middleware;
@@ -94,7 +94,7 @@ class Authenticate
     }
   }
 }
-~~~
+```
 
 <h3>Testing it Works</h3>
 

@@ -17,7 +17,7 @@ twitter = "https://twitter.com/Elliot_F"
 
 <p>In this example I'll be showing you how to spawn multiple processes at once and each process will output the random number that they will compute using the random module.</p>
 
-~~~python
+```python
 from multiprocessing import Process, Queue
 import random
 
@@ -35,17 +35,17 @@ if __name__ == "__main__":
         
     for p in processes:
         p.join()
-~~~
+```
 
 <p>Running this should then print out an array of 4 different decimal numbers between 0 and 1 like so:</p>
 
-~~~
+```bash
 Elliots-MacBook-Pro:Networking elliotforbes$ python processing.py
 0.090906474002
 0.306163229303
 0.995446921388
 0.0320995066016
-~~~
+```
 
 ## Passing Data Between Processes
 
@@ -55,7 +55,7 @@ Elliots-MacBook-Pro:Networking elliotforbes$ python processing.py
 
 <p>Queue objects are a FIFO data structure that are thread and process safe which make them perfect for passing data between different processes without potentially corrupting data. Using them is relatively simple, we can expand:</p>
 
-~~~python
+```python
 from multiprocessing import Process, Queue
 import random
 
@@ -77,14 +77,14 @@ if __name__ == "__main__":
     results = [queue.get() for p in processes]
 
     print(results)
-~~~
+```
 
 <p>This should output the following:</p>
 
-~~~
+```bash
 Elliots-MacBook-Pro:Networking elliotforbes$ python processing.py
 [0.6756465745753756, 0.4104274331895341, 0.6733748532075048, 0.9494118991646461]
-~~~
+```
 
 ## Conclusion
 

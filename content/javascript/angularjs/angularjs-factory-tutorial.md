@@ -18,7 +18,7 @@ By using a factory object, we can standardise the way we interact with the REST 
 
 ## Implementing a Factory
 
-~~~
+```js
 var testApp = angular.module('testApp', []);
 
 testApp.factory('RestService', function($http) {
@@ -52,11 +52,11 @@ testApp.controller('testController' ,
     init();
 
 }]);
-~~~
+```
 
 ## Our Index Page
 
-~~~
+```html
 <html ng-app="testApp">
 <head>
     <title>AngularJS Services Tutorial</title>
@@ -68,4 +68,4 @@ testApp.controller('testController' ,
     <script src="scripts.js"></script>
 </body>
 </html>
-~~~
+```

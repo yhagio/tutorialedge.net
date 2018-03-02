@@ -19,13 +19,13 @@ It takes in a single argument which is a configuration object that generates a H
 
 This response object has multiple properties which we can easily parse.
 
-~~~
+```bash
 data - the response body
 status - the HTTP status code
 headers - Header getter function
 config - the configuration object used to generate the request
 statusText - the HTTP status text of the response
-~~~
+```
 
 <h2>Getting Started:</h2>
 
@@ -33,7 +33,7 @@ statusText - the HTTP status text of the response
 
 <p>Below you’ll find the source code for our simplistic index page.</p>
 
-~~~
+```html
 <html ng-app="testApp">
 <head>
     <title>AngularJS $Http service tutorial example</title>
@@ -48,13 +48,13 @@ statusText - the HTTP status text of the response
     <script src="script.js"></script>
 </body>
 </html>
-~~~
+```
 
 <h3>Our Controller:</h3>
 
 <p>So now that we’ve got our index page setup, we’ll have to define our controller and function in our script.js file. </p>
 
-~~~
+```js
 var testApp = angular.module('testApp', []);
 
 testApp.controller('testController' , function ($scope, $http) {
@@ -71,7 +71,7 @@ testApp.controller('testController' , function ($scope, $http) {
     };
     
 });
-~~~
+```
 
 <p>You’ll see that consuming RESTful APIs using GET requests only requires one $http.get request with the url of the API passed in as a parameter. What you intend to do with the results of this query is entirely up to yourself and depends on what is returned. If it were say a JSON object then you could bind that to a $scope variable and then print it all in your frontend.</p>
 
@@ -81,7 +81,7 @@ testApp.controller('testController' , function ($scope, $http) {
 
 <p>POST requests take an almost identical form to get requests and look like so:</p>
 
-~~~
+```js
 var testApp = angular.module('testApp', []);
 
 testApp.controller('testController' , function ($scope, $http) {
@@ -110,7 +110,7 @@ testApp.controller('testController' , function ($scope, $http) {
     };
     
 });
-~~~
+```
 
 ## Forcing Cache Refresh
 
@@ -118,7 +118,7 @@ One of the most annoying issues I've faced when I'm developing web applications 
 
 We can do that like so:
 
-~~~
+```js
 var testApp = angular.module('testApp', []);
 
 testApp.controller('testController' , function ($scope, $http) {
@@ -138,4 +138,4 @@ testApp.controller('testController' , function ($scope, $http) {
     };=
     
 });
-~~~
+```

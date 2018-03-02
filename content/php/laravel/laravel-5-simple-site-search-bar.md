@@ -15,21 +15,21 @@ twitter = "https://twitter.com/Elliot_F"
 
 <p>In order to complete this tutorial you'll have to set up your laravel 5 project to use the form facade. Add this to your composer.json file:</p>
 
-~~~php
+```php
 "require": {
     "laravelcollective/html": "~5.0"
 }
-~~~
+```
 
 <p>And then run the following composer command.</p>
 
-~~~
+```bash
 composer update
-~~~
+```
 
 <p>Finally we have to add it to our both the aliases array and the providers array found in config/app.php</p>
 
-~~~php
+```php
 'providers' => [
     ....
     'Collective\Html\HtmlServiceProvider',
@@ -43,13 +43,13 @@ composer update
     'Html' => 'Collective\Html\HtmlFacade',
     ....
 ],
-~~~
+```
 
 <h2>Creating the Form</h2>
 
 <p>To get things started we are going to need to create a form that will allow us to input our searches. </p>
 
-~~~php
+```php
 {!! Form::open(array('rout' => 'queries.search', 'class'=>'form navbar-form navbar-right searchform')) !!}
     {!! Form::text('search', null,
                            array('required',
@@ -58,21 +58,21 @@ composer update
      {!! Form::submit('Search',
                                 array('class'=>'btn btn-default')) !!}
  {!! Form::close() !!}
-~~~
+```
 
 <h2>Creating our Routes:</h2>
 
 <p>The way I’ve implemented the search function route in my project is to use a Route resource as I’m going to be storing the queries further down the line in order to get suggestions for new articles. Open up your routes.php file and add the following route:</p>
 
-~~~php
+```php
 Route::resource('queries', 'QueryController');
-~~~
+```
 
 <h2>Adding Search Functionality to our QueryController</h2>
 
 <p>So now we’ve created a form and updated our routes.php file we can add the search functionality to our controller. Create a new function that takes in a Request and call it search, like so:</p>
 
-~~~php
+```php
 public function search(Request $request)
 {
   // Gets the query string from our form submission 
@@ -84,7 +84,7 @@ public function search(Request $request)
   // returns a view and passes the view the list of articles and the original query.
   return view('page.search', compact('articles', 'query'));
  }
-~~~
+```
 
 <p>That’s all we need for very simplistic search functionality but now we need to be able to see these results.</p>
 
@@ -92,7 +92,7 @@ public function search(Request $request)
 
 <p>We’ve already set up our routes so but currently it doesn’t have a template it can use so we’ll implement that now. Create a new folder within your resources/views folder called page and then create search.blade.php within that folder. This will be the template that will be used whenever we want to list our results. I’m going to assume you’ve got an app.blade.php already implemented with sections for content.</p>
 
-~~~
+```php
 @if (count($articles) === 0)
 ... html showing no articles found
 @elseif (count($articles) >= 1)
@@ -101,7 +101,7 @@ public function search(Request $request)
     print article
     @endforeach
 @endif
-~~~
+```
 
 <h2>Conclusion</h2>
 

@@ -23,9 +23,9 @@ twitter = "https://twitter.com/Elliot_F"
 
 <p>We can easily create new middleware using artisan.</p>
 
-~~~
+```bash
 php artisan make:middleware AdMiddleware
-~~~
+```
 
 <p>After we’ve created a new middleware component, we then need to look at modifying the code to suit our needs.</p>
 
@@ -33,7 +33,7 @@ php artisan make:middleware AdMiddleware
 
 <p>After you’ve ran the make:middleware command you should see your new middleware file in app/http/middleware. Open this up and we’ll create a middleware that will get the request’s IP address and then determine what country that request came from.</p>
 
-~~~php
+```php
 <?php 
 namespace App\Http\Middleware;
 use Closure;
@@ -63,7 +63,7 @@ class AdMiddleware
     return $next($request);
   }
 }
-~~~
+```
 
 <p>This code basically takes in a request and as an example checks to see it’s location before deciding whether to display a US only ad or an advertisement suited for the rest of the world.
 This could be quite beneficial for those of you who want to build up a site that features amazon affiliate links from multiple countries.</p>
@@ -74,7 +74,7 @@ This could be quite beneficial for those of you who want to build up a site that
 
 <p>When registering your middleware you have 2 choices. First choice is that you add the middleware to be run on every request handled by your app. You can do that by opening up App\Http\Kernel.php and adding it to your $middleware array like so:</p>
 
-~~~php
+```php
 protected $middleware = [
   \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
   \App\Http\Middleware\EncryptCookies::class,
@@ -85,11 +85,11 @@ protected $middleware = [
 // our new class.
   \App\http\Middleware\AdMiddleware::class,
 ];
-~~~
+```
 
 <p>Second choice is to have the middleware run on registered routes only, you can register it like so:</p>
 
-~~~php
+```php
 <?php
 /**
   * The application's route middleware.
@@ -102,12 +102,12 @@ protected $routeMiddleware = [
     'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
     'ad' => \App\Http\Middleware\AdMiddleware::class,
 ];
-~~~
+```
 
 <p>And then add the middleware to the specific routes like so:</p>
 
-~~~php
+```php
 Route::get('/ip', ['middleware' => 'ad', function() {
     return "IP";
 }]);
-~~~
+```

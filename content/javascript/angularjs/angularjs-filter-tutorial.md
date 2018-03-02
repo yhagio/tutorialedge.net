@@ -25,7 +25,7 @@ Thankfully AngularJS has already defined the uppercase filter and included it as
 
 #### AppController.js
 
-~~~
+```js
 var myApp = angular.module('myApp',[]);
 
 myApp.controller('AppController', ['$scope', function($scope) {
@@ -33,11 +33,11 @@ myApp.controller('AppController', ['$scope', function($scope) {
     $scope.testVariable = "hello world!";
 
 }]);
-~~~
+```
 
 #### index.html
 
-~~~
+```html
 <!DOCTYPE html>
 <html ng-app="myApp">
     <head>
@@ -55,7 +55,7 @@ myApp.controller('AppController', ['$scope', function($scope) {
         <script src="AppController.js"></script>
     </body>
 </html>
-~~~
+```
 
 #### Defining your Own Filters
 
@@ -63,7 +63,7 @@ Defining your own filters is relatively simple, here we’ll modify our existing
 
 #### AppController.js
 
-~~~
+```js
 var myApp = angular.module('myApp',[]);
 
 // Register our filter within our application
@@ -85,11 +85,11 @@ myApp.controller('AppController', ['$scope', function($scope) {
     $scope.testVariable = "hello world!";
 
 }]);
-~~~
+```
 
 #### Index.html
 
-~~~
+```html
 <!DOCTYPE html>
 <html ng-app="myApp">
     <head>
@@ -107,4 +107,4 @@ myApp.controller('AppController', ['$scope', function($scope) {
         <script src="AppController.js"></script>
     </body>
 </html>
-~~~
+```

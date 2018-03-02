@@ -28,7 +28,7 @@ As a means of an example we’ll be creating 2 components, a 'route1' component 
 
 This storage service can be used throughout our application and will store whatever we want as long as the application isn’t refreshed in the browser. A service acts as the perfect storage solution in these situations as it follows the singleton design pattern. 
 
-~~~
+```js
 function StorageService($log) {
 
   // we create our service object
@@ -56,7 +56,7 @@ StorageService.$inject = ['$log'];
 
 angular.module('root')
   .factory('StorageService', StorageService);
-~~~
+```
 
 This is all we need for a very simple storage service, this can easily be extended with more variables and more methods to get and set things but for now this will do as an example.
 
@@ -64,7 +64,7 @@ This is all we need for a very simple storage service, this can easily be extend
 
 In this route provider we'll define our first and second route and pass in our the two components that we will be defining below:
 
-~~~
+```js
 function routeTestProvider($routeProvider){
     $routeProvider
       .when('/route1', {
@@ -78,34 +78,30 @@ routeTestProvider.$inject = ['$routeProvider'];
 
 angular.module('root')
   .config(routeTestProvider);
-~~~
+```
 
 #### Component 1
 
 This component will consist of 3 different files, our index.html file, our controller and our component file.
 
-~~~
+```js
 <div>
   <h2>Route 1 Page</h2>
 
-
   {{ $ctrl.storage }}
-
 
   <input type="text" class="form-control" ng-model="$ctlr.message" />
 
-
   <button class="btn btn-primary" ng-click="$ctrl.store($ctrl.message)"></button>
 
-
 </div>
-~~~
+```
 
 
 When you input something into the input box and click the store button, the contents of that button are pushed to the storage service and can be queried in our next view.
 
 
-~~~
+```js
 function Route1Controller($log, StorageService) {
   var ctrl = this;
 
@@ -130,7 +126,7 @@ Route1Controller.$inject = ['$log', 'StorageService'];
 // Bind this controller to our root module
 angular.module('root')
   .controller('Route1Controller', Route1Controller);
-~~~
+```
 
 Above you’ll see the $onInit function queries the StorageService as soon as the component loads. 
 
@@ -138,7 +134,7 @@ Above you’ll see the $onInit function queries the StorageService as soon as th
 
 Our second component is almost identical to our first, it'll perform exactly the same stuff as our first component but I wanted to differentiate them into two separate components to serve as a demonstration:
 
-~~~
+```js
 <div>
   <h2>Route 2 Page</h2>
 
@@ -153,11 +149,11 @@ Our second component is almost identical to our first, it'll perform exactly the
 
 
 </div>
-~~~
+```
 
 Our Route2 component will again be bound to the root module and will instead pass the Route2Controller and route2.html files. Other than that it's exactly the same.
 
-~~~
+```js
 var route2 = {
   templateUrl : 'app/components/cross-route-communication/route2/route2.html',
   controller: Route2Controller,
@@ -169,11 +165,11 @@ var route2 = {
 
 angular.module('root')
   .component('route2', route2);
-~~~
+```
 
 The Controller again gets passed our newly created StorageService and on the page's load, it queries this StorageService to see if there is anything there. As long as the page hasn't been reloaded since passing data from our route1 component, we should see whatever we entered in route1 being loaded straight of the bat.
 
-~~~
+```js
 function Route2Controller($log, StorageService) {
   var ctrl = this;
 
@@ -201,7 +197,7 @@ Route2Controller.$inject = ['$log', 'StorageService'];
 
 angular.module('root')
   .controller('Route2Controller', Route2Controller);
-~~~
+```
 
 ## Conclusion
 

@@ -17,16 +17,16 @@ In this tutorial we will be taking a look at bit manipulation and how you can us
 
 By shifting left we are essentially multiplying our original number by 2 * the number of times we shift left. 
 
-~~~py
+```py
 >>> 16 << 1 # 16 shifted left once = 16 * 2
 32
 >>> 16 << 2 # 16 shifted left twice = 16 * (2 * 2)
 64
-~~~
+```
 
 Let's now look at the binary representation for these numbers and how shifting left affects them.
 
-~~~py
+```py
 10000 # 16 in binary
 10000 << 1 # shift left once
 100000 # Returns 32 in binary, we have shifted one bit to the left
@@ -34,7 +34,7 @@ Let's now look at the binary representation for these numbers and how shifting l
 10000 # 16 in binary
 10000 << 2 # shift left twice
 1000000 # returns 64 in binary, we have shifted 2 bits to the left
-~~~
+```
 
 ## Shift Right
 
@@ -44,28 +44,28 @@ It should be noted that there are two distinct types of shift right. These are a
 
 Arithmetic shift rights essentially perform a division on whatever number was put into it. If we performed an arithmetic shift right on the value `16` in Python and shifted it right `1` then our output would be `8`. If we shifted right twice our output would be `4` as we are essentially dividing by 4.
 
-~~~py
+```py
 >>> 16 >> 1
 8
 >>> 16 >> 2
 4
-~~~
+```
 
 Let's take a look at the binary representation of these numbers:
 
-~~~py 
+```py 
 10000 # 16 in binary
 10000 >> 1 # 16 / 2
 01000 # 01000 = 8 in binary  
-~~~
+```
 
 If we were to shift right twice on an odd number we would see the following:
 
-~~~py
+```py
 1001 # 9 in binary
 1001 >> 1 # 9 / 2
 0100 # Output is 4 in binary. It has rounded down
-~~~
+```
 
 
 
@@ -77,7 +77,7 @@ In this section of the tutorial we are going to take a look at the logical opera
 
 Bitwise and will return a `1` if both values to the left and right of our `&` operator are `1`. This results in the following output when we try it across various different inputs.
 
-~~~py
+```py
 >>> 1 & 1
 1
 >>> 1 & 0
@@ -86,13 +86,13 @@ Bitwise and will return a `1` if both values to the left and right of our `&` op
 0
 >>> 0 & 0
 0
-~~~
+```
 
 ### Bitwise Or
 
 Bitwise Or can be done using the `|` operator in Python and will return a `1` if either or *both* of our values are `1`.  
 
-~~~py
+```py
 >>> 0 | 1
 1
 >>> 1 | 0
@@ -101,13 +101,13 @@ Bitwise Or can be done using the `|` operator in Python and will return a `1` if
 0
 >>> 1 | 1
 1
-~~~
+```
 
 ### Bitwise XOR
 
 A Bitwise exclusive or `(XOR)` can be achieved using the `^` operator. This will return the following results:
 
-~~~py
+```py
 >>> 1 ^ 1
 0
 >>> 1 ^ 0
@@ -116,7 +116,7 @@ A Bitwise exclusive or `(XOR)` can be achieved using the `^` operator. This will
 1
 >>> 0 ^ 0
 0
-~~~ 
+``` 
 
 ## Complex Bit Manipulation
 
@@ -127,7 +127,7 @@ A bit mask typically looks something like `0010000` and we can use this for doin
 
 ### Setting a Bit
 
-~~~py
+```py
 def set_bit(position, binary):
     # Create a bit mask based on the
     # position passed in
@@ -139,7 +139,7 @@ def set_bit(position, binary):
 
 # This should return 16
 print(set_bit(4, 00000000))
-~~~
+```
 
 <!--### Getting a Bit
 

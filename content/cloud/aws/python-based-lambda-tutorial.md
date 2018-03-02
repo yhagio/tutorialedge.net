@@ -17,9 +17,9 @@ In this tutorial, we are going to be writing a very simple Python based AWS Lamb
 
 In order to install the `serverless` CLI you can do the following:
 
-~~~bash
+```bash
 $ npm install serverless -g
-~~~    
+```    
 
 If you have set up your AWS credentials correctly with an account that has full permissions then you will now be able to deploy Lambda functions that sit behind an API gateway with ease.
 
@@ -27,18 +27,18 @@ If you have set up your AWS credentials correctly with an account that has full 
 
 Create a new directory in which you can add Python files. Within this new directory create a file called `simple.py` as well as a `serverless.yml` file. 
 
-~~~bash
+```bash
 # directory structure
 mydirectory/
 - simple.py
 - serverless.yml
-~~~
+```
 
 Open up the `simple.py` file and create a new function within this called `def hello(event, context):`. This `hello()` function will be the main entry point for our AWS Lambda function and when we call the endpoint, this is what will be executed. 
 
 Within this `hello()` function, we want to return the string `hello, world` back to anyone who calls said lambda function. 
 
-~~~py
+```py
 def hello(event, context):
 
     response = {
@@ -47,7 +47,7 @@ def hello(event, context):
     }
 
     return response
-~~~
+```
 
 ## Deploying Without Serverless
 
@@ -57,7 +57,7 @@ If you wished, you could deploy this without the serverless CLI, you could do so
 
 Within our `serverless.yml` file we will want to define how we want to expose our lambda function. Let's step through this line-by-line. 
 
-~~~yaml
+```yaml
 # we define the name our service
 service: hello-world
 
@@ -89,7 +89,7 @@ functions:
           method: get
           cors: true
           
-~~~
+```
 
 ## Deployment
 
@@ -97,7 +97,7 @@ Once we are happy with our function and we have our `serverless.yml` defined, we
 
 When we run this, you should see the following output:
 
-~~~yml
+```yml
 $ serverless deploy
 Serverless: Packaging service...
 Serverless: Excluding development dependencies...
@@ -124,7 +124,7 @@ endpoints:
   GET - https://9hqihpd4c2.execute-api.eu-west-1.amazonaws.com/dev/hello
 functions:
   hello: hello-world-dev-hello
-~~~
+```
 
 You should notice the `endpoints` list has a `GET` request endpoint that you should be able to navigate to now should you wish. When you open this up in a browser, you should see the words `hello, world` output to your browser.
 

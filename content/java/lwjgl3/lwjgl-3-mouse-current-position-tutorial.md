@@ -15,7 +15,7 @@ In this tutorial I will be showing you how you can obtain the X and Y coordinate
 
 To begin with I recommend you create an 'Input' package within your project as this is a good way to keep all Input Handler classes organized within your projects. Once you've created this package, right click on it and add a new class called MouseHandler. This class will extend the GLFWCursorPosCallback abstract class provided by the LWJGL3 framework. 
 
-~~~java
+```java
 package Input;
 
 import org.lwjgl.glfw.GLFWCursorPosCallback;
@@ -33,15 +33,15 @@ public class MouseHandler extends GLFWCursorPosCallback {
     System.out.println("X: " + xpos + " Y: " + ypos);
   }	
 }
-~~~
+```
 
 <h2>Making it Work</h2>
 
 Now that we've created our MouseHandler class we need to put in the following code just below our GLFW Window initialization so that our invoke method will be called every time the cursor's position changes.
 
-~~~
+```java
 glfwSetCursorPosCallback(window, mouseCallback = new MouseHandler());
-~~~
+```
 
 And that should be it all done, you should now be seeing the cursors position outputted to the console. 
 
@@ -49,7 +49,7 @@ And that should be it all done, you should now be seeing the cursors position ou
 
 <h2>Main Class</h2>
 
-~~~java
+```java
 import org.lwjgl.Sys;
 import org.lwjgl.glfw.*;
 import org.lwjgl.opengl.*;
@@ -175,4 +175,4 @@ public class HelloWorld {
   }
  
 }
-~~~
+```

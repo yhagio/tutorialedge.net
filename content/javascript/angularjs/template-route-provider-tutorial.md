@@ -15,14 +15,14 @@ twitter = "https://twitter.com/Elliot_F"
 
 <p>The structure of our project for this tutorial is going to look a little something like this:</p>
 
-~~~
+```bash
 index.html
 scripts.js
 view/
 -- home.html
 -- contact.html
 -- about.html
-~~~
+```
 
 <p>With our index.html being our master page in which we define all javascript dependencies and styling for things like the nav bar and footer etc. We would then typically put all of our page specific content in their own html files. This can be incredibly handy for times when you want to make a simple change to the header of your site that you want reflected across your whole site as it means you only have to make the change in one place.</p>
 
@@ -30,7 +30,7 @@ view/
 
 <p>In this tutorial we’ll define some relatively simple routes that each have their own defined controllers and templates.</p>
 
-~~~
+```js
 var testApp = angular.module('testApp', ['ngRoute']);
 
 testApp.config(function($routeProvider) {
@@ -60,11 +60,11 @@ testApp.controller('AboutController', function($scope) {
 testApp.controller('ContactController', function($scope) {
     $scope.contact = "You can't contact me, go away.";
 });
-~~~
+```
 
 <h3>Our Index.html Page:</h3>
 
-~~~
+```html
 <html ng-app="testApp">
 <head>
     <title>AngularJS ng-if child scopes example</title>
@@ -80,12 +80,12 @@ testApp.controller('ContactController', function($scope) {
     <script src="scripts.js"></script>
 </body>
 </html>
-~~~
+```
 
 <p>And finally our 3 pages, concatenated into one gist for brevity.</p>
 
 
-~~~
+```html
 <!-- OUR ABOUT.HTML -->
 {{about}}
 <!-- END OF ABOUT.HTML -->
@@ -97,4 +97,4 @@ testApp.controller('ContactController', function($scope) {
 <!-- OUR HOME.HTML -->
 {{home}}
 <!-- END OF HOME.HTML -->
-~~~
+```

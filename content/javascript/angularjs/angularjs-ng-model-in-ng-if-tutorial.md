@@ -17,7 +17,7 @@ twitter = "https://twitter.com/Elliot_F"
 
 <p>Our html page will look something like so:</p>
 
-~~~
+```html
 <html ng-app="testApp">
 <head>
     <title>AngularJS ng-if child scopes example</title>
@@ -38,14 +38,12 @@ twitter = "https://twitter.com/Elliot_F"
     <script src="script.js"></script>
 </body>
 </html>
-~~~
+```
 
 <p>And our controller looks something like this:</p>
 
-~~~
-
+```js
 var testApp = angular.module('testApp', []);
-
 testApp.controller('testController' , function ($scope) {
     
     $scope.isTrue = false;
@@ -53,4 +51,4 @@ testApp.controller('testController' , function ($scope) {
     $scope.name = "Elliot";
     
 });
-~~~
+```

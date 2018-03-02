@@ -33,7 +33,7 @@ twitter = "https://twitter.com/Elliot_F"
 
 <p>I wont go into the specifics of how these matrices work as I’m pretty sure there are a hundred different YouTube videos that go to great lengths to describe these things, but I will go onto say that all of this code follows Column-major order just to avoid confusion.</p>
 
-~~~java
+```java
 // Gives us our orthographic matrix
   public static Matrix4f orthographic(float left, float right, float bottom, float top, float near, float far){
   Matrix4f matrix = new Matrix4f();
@@ -50,19 +50,19 @@ twitter = "https://twitter.com/Elliot_F"
 
   return matrix;
 }
-~~~
+```
 
 <p>By doing this we can now create a projection matrix in our initialization using this new method. In the demonstration code this is done like so in our main class:</p>
 
-~~~java
+```java
 Matrix4f pr_matrix = Matrix4f.orthographic(-10.0f, 10.0f, -10.0f * 9.0f / 16.0f, 10.0f * 9.0f / 16.0f, -10.0f, 10.0f);
-~~~
+```
 
 <h2>Creating Camera Controls</h2>
 
 <p>So now that we’ve got a matrix that will represent our projection matrix, we will also need some way of tracking and updating where our camera is in the world. We can do this by adding a Vector3f to our Camera class and calling it ‘position’. This will essentially store the coordinates of our camera and allow us to move the camera using the following update method:</p>
 
-~~~java
+```java
 public void update(){		
   if(Input.isKeyDown(GLFW_KEY_W)){
     position.y += 0.05f;
@@ -77,13 +77,13 @@ public void update(){
     position.x -= 0.05f;
   }
 }
-~~~
+```
 
 <h2>Updating Every Model in our Game</h2>
 
 <p>The way that the game engine has been implemented is that every object currently uses the one shader which looks something like this:</p>
 
-~~~c
+```c
 #version 330 core
 
 layout ( location = 0 ) in vec4 position;
@@ -103,15 +103,15 @@ void main()
 	gl_Position = pr_matrix * vw_matrix * ml_matrix * position;
 	vs_out.tc = tc;
 }
-~~~
+```
 
 <p>By adding in the uniform mat4 variable vw_matrix, we can then pass our camera’s view matrix into our shader and multiply the gl_Position variable by the view matrix and update our camera.</p>
 
 <p>In order for us to pass in our view matrix to our shader we have added the following line to our Main class.</p>
 
-~~~
+```java
 Shader.shader1.setUniformMat4f("vw_matrix", Matrix4f.translate(camera.position));
-~~~
+```
 
 <h2>Conclusions</h2>
 

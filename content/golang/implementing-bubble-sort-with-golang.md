@@ -17,9 +17,9 @@ Bubble sort is a sorting algorithm that sequentially goes through an array n tim
 
 The time complexity for this algorithm is O(n^2) where n is the number of items being sorted. An example of a worst case scenario would be:
 
-~~~
+```go
 [9,8,7,6,5,4,3,2,1,0]
-~~~
+```
 
 In this case the entire array is backwards and as a result the bubble sorting algorithm would take 10 complete iterations through the array in order to sort this array.
 
@@ -29,7 +29,7 @@ In this case the entire array is backwards and as a result the bubble sorting al
 
 Go provides a very cool swapping mechanism using tuple assignment. We'll create a swapped boolean flag which will indicate whether our list is fully sorted. We'll then iterate through our list 10 times and check to see if the nth element is larger than the n+1th element. If it is we'll swap it using tuple assignment.
 
-~~~go
+```go
 package main
 
 import (
@@ -62,4 +62,4 @@ func main() {
     bubbleSort(toBeSorted)
     
 }
-~~~
+```

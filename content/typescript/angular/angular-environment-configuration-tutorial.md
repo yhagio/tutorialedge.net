@@ -29,7 +29,7 @@ The most popular answer to this is to move all of this configuration to a set of
 
 The default file is your `environment.ts` file which should look like so: 
 
-~~~
+```js
 // The file contents for the current environment will overwrite these during build.
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
@@ -38,7 +38,7 @@ The default file is your `environment.ts` file which should look like so:
 export const environment = {
   production: false
 };
-~~~
+```
 
 ## Adding Your Own Configuration
 
@@ -46,7 +46,7 @@ So in this example, we want to be able to easily switch between APIs depending o
 
 In our standard `environment.ts` file we can define the api location of our test REST API:
 
-~~~
+```js
 // The file contents for the current environment will overwrite these during build.
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
@@ -56,16 +56,16 @@ export const environment = {
   production: false,
   api_url: 'http://localhost:8000'
 };
-~~~
+```
 
 And in our `environment.prod.ts` file we can define our production REST API:
 
-~~~
+```ts
 export const environment = {
   production: true,
   api_url: 'http://localhost:9000'
 };
-~~~
+```
 
 ## Importing These Variables Where They Are Needed:
 
@@ -79,17 +79,17 @@ This then references whatever production file we need depending on the arguments
 
 The Angular CLI provides both a build and serve command for use that takes in an environment argument. Whenever we want to build our application for a specific environment we do the following:
 
-~~~
+```bash
 ng build -e prod
-~~~
+```
 
 And change `prod` to the environment that we want. Leaving it blank will default it to the standard test environment config. The built files in the dist folder can then be pushed up to wherever you are hosting your application. 
 
 If we wanted to run the serve command for our test environment we would then do:
 
-~~~ 
+```bash
 ng serve
-~~~
+```
 
 ## Conclusions
 

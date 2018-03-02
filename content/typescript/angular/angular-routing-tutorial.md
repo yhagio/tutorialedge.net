@@ -21,17 +21,17 @@ Routing in Angular 2+ has changed dramatically from the original AngularJS days 
 
 The first thing that you need to do in order to add routing to your application is append the following tag to your index.html page:
 
-~~~html
+```html
 <base href="/">
-~~~
+```
 
-This should be placed somewhere within your ```<head></head>``` tags. The ```<base href="/">``` tells the Angular router what is the static part of the URL. The router then only modifies the remaining part of the URL.
+This should be placed somewhere within your `<head></head>` tags. The `<base href="/">` tells the Angular router what is the static part of the URL. The router then only modifies the remaining part of the URL.
 
 > Without the base href tag you will see errors like this: <a href="http://stackoverflow.com/questions/34535163/angular-2-router-no-base-href-set">Angular 2 Router no Base href set</a>
 
-Now that we’ve set the our base href tag, we can then move on to defining some routes without your route module file or your ```app.module.ts``` file if you follow the standard convention.
+Now that we’ve set the our base href tag, we can then move on to defining some routes without your route module file or your `app.module.ts` file if you follow the standard convention.
 
-~~~js
+```js
 import { RouterModule, Routes } from '@angular/router';
 // …
 const appRoutes: Routes = [
@@ -63,21 +63,21 @@ const appRoutes: Routes = [
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-~~~
+```
  
 In this example I’ve imported the RouterModule and Routes from @angular/router and then I’ve defined my routes as appRoutes and passed in 4 different routes that all resolve to differing components.
 
 I’ve then ensured that these components lie within our AppModules declarations array and finally I’ve added the following line to the bottom of our imports array:
 
-~~~
+```ts
 RouterModule.forRoot(appRoutes)
-~~~
+```
 
 Finally we need to define where we want our sub-pages html to render. We can do this by placing:
 
-~~~html
+```html
 <router-outlet></router-outlet>
-~~~
+```
 
 In our app.component.html file. In my [example project](https://github.com/elliotforbes/angular-2-admin/blob/master/src/app/app.component.html) you’ll see that I’ve defined this below my app-top-nav which will remain constant for all pages throughout my application. 
 
@@ -87,7 +87,7 @@ So now that we know how to define our own routes we could keep adding and adding
 
 In a sub-module of my application I can do the following:
 
-~~~js
+```js
 import { RouterModule, Routes } from '@angular/router';
 // …
 // define all the routes I want for my blog component
@@ -110,23 +110,23 @@ export const blogRoutes:Routes = [
   ]
 })
 export class BlogModule { }
-~~~
+```
 
-Above you’ll see that it looks almost identical to our ```app.module.ts``` except for one key difference. Notice that in our module’s imports we’ve changed our RouterModule import to use the forChild method and we’ve passed in our sub-modules defined routes:
+Above you’ll see that it looks almost identical to our `app.module.ts` except for one key difference. Notice that in our module’s imports we’ve changed our RouterModule import to use the forChild method and we’ve passed in our sub-modules defined routes:
 
-~~~
+```ts
 RouterModule.forChild(blogRoutes)
-~~~
+```
 
 ## Navigation Between Routes in HTML
 
 Now that we’ve defined our routes we need to provide a means to navigate between these routes in our html. If we were wanting to link to any other route in our application then we can use the following:
 
-~~~html
+```html
 <a routerLink="/settings">Settings</a>
-~~~
+```
 
-The above ```<a/>``` tag would link to our settings page that we defined above.
+The above `<a/>` tag would link to our settings page that we defined above.
 
 ## A Live Example
 

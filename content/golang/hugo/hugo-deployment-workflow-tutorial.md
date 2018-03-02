@@ -38,7 +38,3 @@ cp -R public/* /var/www/html/
 ~~~
 
 Once you've got this set up, you can then freely make changes to your github repo and every time you do these changes will be built locally on your webserver and then will be pushed to overwrite your existing website, thus making your changes instantly live!
-
-## Using rsync
-
-> To Be Added 

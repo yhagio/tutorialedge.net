@@ -41,7 +41,7 @@ Let’s create a very simple express based server that will serve as the base of
 
 First we’ll begin by creating a router which will act as our servers middleware for all requests:
 
-~~~js
+```js
 var express = require('express');
 var router = new express.Router();
 
@@ -54,13 +54,13 @@ router.get('/', function(req, res) {
 });
 
 module.exports = router;
-~~~
+```
 
 #### app.js
 
 And then we’ll create the server:
 
-~~~js
+```js
 var express = require('express');
 var app = express();
 
@@ -71,12 +71,13 @@ app.use('/', router);
 app.listen(3000, function() {
   console.log("Now Listening on port 3000");
 });
-~~~
+```
 
 If you want to try this out then you can do so by typing:
-~~~
+
+```bash
 Node app.js
-~~~
+```
 
 ## Implementing Our Logging System
 
@@ -84,7 +85,7 @@ Now that we’ve got a basic application running on port 3000, we can now begin 
 
 Create a new file called logger.js in your projects directory:
 
-~~~js
+```js
 // Firstly we'll need to import the fs library
 var fs = require('fs');
 
@@ -125,13 +126,13 @@ Logger.error = function(msg) {
   var message = new Date().toISOString() + " : " + msg + "\n";
   errorStream.write(message);
 };
-~~~
+```
 
 ## Using our new Logging System:
 
 Now that we’ve implemented our basic logging system we can go back into our router.js file and add the following:
 
-~~~js
+```js
 var express = require('express');
 var router = new express.Router();
 // Here we import our Logger file and instantiate a logger object
@@ -149,4 +150,4 @@ router.get('/', function(req, res) {
 
 module.exports = router;
 
-~~~
+```

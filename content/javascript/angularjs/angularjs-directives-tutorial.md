@@ -22,7 +22,7 @@ twitter = "https://twitter.com/Elliot_F"
 
 <p>In this tutorial we’ll just be implementing a very simple directive that defines our mydir tag and returns some text:</p>
 
-~~~
+```js
 var testApp = angular.module('testApp', []);
 
 testApp.directive('mydir', function () {
@@ -30,11 +30,11 @@ testApp.directive('mydir', function () {
         template: 'This is my directive'
     };
 });
-~~~
+```
 
 <p>once we’ve added this to our scripts.js file we can then call this directive in our html file like so:</p>
 
-~~~
+```html
 <html ng-app="testApp">
 <head>
     <title>AngularJS ng-if child scopes example</title>
@@ -49,7 +49,7 @@ testApp.directive('mydir', function () {
     <script src="script.js"></script>
 </body>
 </html>
-~~~
+```
 
 <p>Open this up in a browser and you should see our text rendering in place of our mydir element.</p>
 
@@ -63,7 +63,7 @@ testApp.directive('mydir', function () {
 
 <p>Our App will take the following structure:</p>
 
-~~~
+```bash
 app/
 ---- controllers/
 -------- AppController.js
@@ -73,11 +73,11 @@ app/
 ------------ MyDirectiveTemplate.html
 views/
 ---- index.html
-~~~
+```
 
 <h3>Index.html</h3>
 
-~~~
+```html
 <html ng-app="myapp">
     <head>
         <title>TutorialEdge.net</title>
@@ -92,11 +92,11 @@ views/
         <script src="../components/MyDirective/MyDirective.js"></script>
     </body>
 </html>
-~~~
+```
 
 <h3>MyDirective.js</h3>
 
-~~~
+```js
 var app = angular.module('myapp', []);
 
 app.directive("mydirective", function() {
@@ -104,13 +104,13 @@ app.directive("mydirective", function() {
         templateUrl: '../components/MyDirective/DirectiveTemplate.html'
     }
 })
-~~~
+```
 
 <h3>DirectiveTemplate.html</h3>
 
-~~~
+```html
 <h2>Hello World!</h2>
-~~~
+```
 
 <h2>The Results</h2>
 

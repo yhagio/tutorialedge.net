@@ -55,12 +55,13 @@ The complete list of AngularJS events are as follows:
 These can be used by placing them on the object of your page and passing this directive the name of the function you wish to call or the code that you wish to execute. 
 
 
-~~~
+```html
 // passing it the code we wish to execute
 <div ng-click="console.log('hello world')"></div>
 // or the named function we wish to call
 <div ng-click="myNamedFunction()"></div>
-~~~
+```
+
 This shows the power of the AngularJS framework as it hides all the ugly DOM manipulation code and allows us to focus on implementing the business logic into our application.
 
 
@@ -68,7 +69,7 @@ This shows the power of the AngularJS framework as it hides all the ugly DOM man
 
 Below you'll find an array of how we can utilize these event handling directives in AngularJS. These are just some examples of how you could go about implementing these directives in your own Angular application.
 
-~~~
+```html
 <input class="form-control" ng-keydown="counter = counter + 1" placeholder="Keydown Change..."/>
 <input class="form-control" ng-keypress="counter = counter + 1" placeholder="Keypress change..."/>
 <button class="btn btn-primary" ng-click="counter = counter + 1">Click Me!</button>
@@ -79,4 +80,4 @@ Below you'll find an array of how we can utilize these event handling directives
 <p ng-mouseenter="counter = counter + 1">Mouse Enter event</p>
 <p ng-mouseleave="counter = counter + 1">Mouse Leave event</p>
 <input type="text" class="form-control" ng-paste="counter = counter + 1" placeholder="paste into me..."/>
-~~~
+```

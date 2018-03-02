@@ -36,7 +36,7 @@ twitter = "https://twitter.com/Elliot_F"
 
 <h3>Enemy Abstract Class</h3>
 
-~~~java
+```java
 package Bridge;
 
 /**
@@ -53,11 +53,11 @@ public abstract class Enemy {
     public abstract void addArmour();
 
 }
-~~~
+```
 
 <h3>Archer Concrete Class</h3>
 
-~~~java
+```java
 package Bridge;
 
 /**
@@ -75,11 +75,11 @@ public class Archer extends Enemy {
     }
 
 }
-~~~
+```
 
 <h3>Knight Concrete Class</h3>
 
-~~~
+```java
 package Bridge;
 
 /**
@@ -95,11 +95,11 @@ public class Knight extends Enemy {
         armour.addArmour();
     }
 }
-~~~
+```
 
 <h3>Armour Interface</h3>
 
-~~~java
+```java
 package Bridge;
 
 /**
@@ -110,11 +110,11 @@ public interface Armour {
     public void addArmour();
 
 }
-~~~
+```
 
 <h3>LightArmour Concrete Class</h3>
 
-~~~java
+```java
 package Bridge;
 
 /**
@@ -127,11 +127,11 @@ public class LightArmour implements Armour {
     }
 
 }
-~~~
+```
 
 <h3>HeavyArmour Concrete Class</h3>
 
-~~~
+```java
 package Bridge;
 
 /**
@@ -143,11 +143,11 @@ public class HeavyArmour implements Armour {
         System.out.println("Heavy Armour Added");
     }
 }
-~~~
+```
 
 <h3>Driver Class</h3>
 
-~~~java
+```java
 package Bridge;
 
 /**
@@ -169,4 +169,4 @@ public class Driver {
     }
 
 }
-~~~
+```

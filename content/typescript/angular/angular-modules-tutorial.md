@@ -21,14 +21,14 @@ Typically a module would contain all the code necessary for one cohesive piece o
 
 Being able to structure your application into a series of smaller blocks of functionality is highly advantageous as it allows for easy extendibility and maintainability further down the line. We can group things like components, directives and services into a single module and should we wish to use any of these things within another module, we would simply import that module at the top of our file like so:
 
-~~~js
+```ts
 // import OurService from the ourmodule folder
 import { OurService } from ./ourmodule/our.module';
-~~~
+```
 
 Ever Angular application contains at least one route module. Without this your angular application simply wouldn’t work. Modules were introduced in Angular 2's 5th Release candidate and Angular 2 offers in built modules such as the FormsModule, the HttpModule and the RouterModule. These standard modules can all be imported into our application and will allow us to do things like perform http calls or define routes within our application.
 
-~~~
+```bash
 // Notice how all of the sub modules and components are branched off the root module like a tree.
 -- Root Module
 ---- Users Module
@@ -38,7 +38,7 @@ Ever Angular application contains at least one route module. Without this your a
 ------ New/edit/delete/search article code
 ---- Statistics Module
 ------ All our code for gathering statistics and displaying them etc. 
-~~~  
+```  
 
 
 ## Our Main Module
@@ -50,7 +50,7 @@ Now we know every Angular application must have at the very least a root module.
 > Note that it is considered best practice to include the app.module.ts file within your apps root directory.
 
 
-~~~js
+```ts
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
@@ -70,7 +70,7 @@ import { TestComponent } from './test-component/test-component.component';
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
-~~~
+```
 
 
 > We can add our own custom components to the declarations array. Notice I’ve added TestComponent above. 
@@ -81,7 +81,7 @@ In order to define a module we need to first define a class within our applicati
 
 Defining your own new modules is relatively simple in Angular 2. Below you'll find the code needed to define your own UserModule module that contains a user component and also exports this component so that other modules can utilize it.
 
-~~~
+```ts
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { UserComponent } from './user.component';
@@ -98,11 +98,11 @@ import { UserComponent } from './user.component';
   ]
 })
 export class UserModule { }
-~~~
+```
 
 And next we'll define the very simple UserComponent that the above module references. This component will be bound to the 'user' html tag and will basically print out own h2 title that says 'User Component', exciting I know.
 
-~~~
+```ts
 import { Component } from '@angular/core';
 
 @Component({
@@ -110,13 +110,13 @@ import { Component } from '@angular/core';
   template: '<h2>User Component</h2>'
 })
 export class UserComponent { }
-~~~
+```
 
 In order for us to use the UserComponent within our root AppModule that we defined above we simply have to add the following to our list of imports at the top of our file.
 
-~~~
+```ts
 import { UserModule, UserComponent } from './users/users.module';
-~~~
+```
 
 > If we failed to add UserComponent to the list of exports in our UserModule file then we would be unable to import it in our root Module
 
@@ -130,7 +130,7 @@ In Angular 1.* we would typically have used the ng-app directive to bootstrap ou
 In Angular 2 this ng-app directive no longer exists and we have to resort to explicitly calling a bootstrap function and passing our root module to this function. 
 
 
- ~~~
+ ```ts
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 // we import our root module file, notice the lack of file-extension
 import { AppModule } from './app.module';
@@ -138,7 +138,7 @@ import { AppModule } from './app.module';
 
 // this compiles and launches our AngularJS Application for us
 platformBrowserDynamic().bootstrapModule(AppModule);
-~~~
+```
 
 ## Conclusion
 

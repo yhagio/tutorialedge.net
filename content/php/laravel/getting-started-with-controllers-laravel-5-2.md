@@ -22,13 +22,13 @@ twitter = "https://twitter.com/Elliot_F"
 
 <p>Thanks to the <b>php artisan</b> it’s incredibly easy for us to create a new controller in Laravel 5.2. As we will be building a blog, I want the name of this controller to be <b>BlogController</b>. So open up your command line and navigate to the root of your project. Once there type the following:</p>
 
-~~~
+```bash
 php artisan make:controller BlogController
-~~~
+```
 
 <p>This should create a new controller for us under <b>app/Http/Controllers</b>. Open this up and you should see the following: </p>
 
-~~~php
+```php
 <?php
 
 namespace App\Http\Controllers;
@@ -41,7 +41,7 @@ class BlogController extends Controller
 {
     //    
 }
-~~~
+```
 <p>Now that we have this we can go into our BlogController class definition and create a few functions. As we don’t yet have a model in place we want to just return a few static pages back to anyone who visits our site. </p>
 
 <h2>Adding our Blade Templates</h2>
@@ -52,48 +52,48 @@ class BlogController extends Controller
 
 <h6>single.blade.php</h6>
 
-~~~
+```html
 @extends('app')
 
 @section('content')
 <h2>Single Page</h2>
 @endsection
-~~~
+```
 
 <h6>index.blade.php</h6>
 
-~~~
+```html
 @extends('app')
 
 @section('content')
 <h2>Single Page</h2>
 @endsection
-~~~
+```
 
 <h6>about.blade.php</h6>
 
-~~~
+```html
 @extends('app')
 
 @section('content')
 <h2>About Page</h2>
 @endsection
-~~~
+```
 
 <h6>contact.blade.php</h6>
 
-~~~
+```html
 @extends('app')
 
 @section('content')
 <h2>Contact Page</h2>
 @endsection
-~~~
+```
 
 <h2>Returning our Blade Templates</h2>
 <p>Now that we’ve got something to return we can add the new functions to our BlogController class that will return our views to the frontend:</p>
 
-~~~
+```php
 public function index()
 {
     return view('index');
@@ -113,13 +113,13 @@ public function contact()
 {
     return view('contact');
 }
-~~~
+```
 
 <h2>Updating our Routes.php File</h2>
 
 <p>And finally, now that we’ve created our blade templates and added the appropriate functions to our BlogController we can now update our Routes.php file to use this new controller:</p>
 
-~~~php
+```php
 <?php
 
 /*
@@ -147,7 +147,7 @@ Route::get('/contact', 'BlogController@contact');
  * routes to avoid conflict
  */
 Route::get('/{slug}', 'BlogController@single');
-~~~
+```
 
 <h2>Testing it All Works</h2>
 

@@ -19,9 +19,9 @@ twitter = "https://twitter.com/Elliot_F"
 
 <p>PM2 doesn't require much configuration, if any, and if you've got NPM installed on your machine then installing PM2 is just a case of running the following command: </p>
 
-~~~
+```bash
 npm install pm2 -g
-~~~
+```
 
 <p>Once that's installed on your machine then you are then ready to go. </p>
 
@@ -29,9 +29,9 @@ npm install pm2 -g
 
 <p>Starting a node application that you want to keep running forever is as simple as this: </p>
 
-~~~
+```bash
 pm2 start app.js
-~~~
+```
 
 <h2>More Info</h2>
 

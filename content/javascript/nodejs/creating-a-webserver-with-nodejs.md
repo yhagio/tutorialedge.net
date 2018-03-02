@@ -28,15 +28,15 @@ Typically NodeJS includes the node package manager (NPM) by default so once you�
 
 Create a directory on your development machine and then navigate to that folder using the terminal. Once you are here we can initialize our project with npm:
 
-~~~
+```bash
 mpm init
-~~~
+```
 
 This should then ask you a series of questions that will be used in order to populate a package.json file that this command creates. These aren’t critically important and can be changed at a later date if needed.
 
 ## Installing ExpressJS
 
-Once you’ve initialized your project with npm we can then proceed to installing ExpressJS. ```npm install express --save```
+Once you’ve initialized your project with npm we can then proceed to installing ExpressJS. `npm install express --save`
 
 This command should install ExpressJS into a node_modules directory within your project and this will now allow us to make a start programming our simple web server.
 
@@ -44,7 +44,7 @@ This command should install ExpressJS into a node_modules directory within your 
 
 So to begin with you’ll want to create a new js file within your directory. We’ll call this server.js and it’s going to start off like so:
 
-~~~
+```js
 var express = require('express');
 
 var app = express();
@@ -60,13 +60,13 @@ var server = app.listen(3000, function () {
     
     console.log("GadgetEdge.net listening at http://%s:%s", host, port); 
 });
-~~~
+```
 
 Once you’ve got this in your server.js file we can test it out. Open up your terminal and navigate to your project’s directory and then run your server code:
 
-~~~
+```bash
 node server.js
-~~~
+```
 
 This should start the server and if we navigate to our browser and type: http://localhost:3000 you should see Hello World! Printed out.
 
@@ -78,7 +78,7 @@ First of all we are going to create a public directory within our project that w
 
 Next thing we need to do is point our express server to look at this new public directory. We can do this like so:
 
-~~~
+```js
 // this line allows us to use the expressjs module
 var express = require('express');
 
@@ -102,7 +102,7 @@ var server = app.listen(3000, function () {
     
     console.log("GadgetEdge.net listening at http://%s:%s", host, port); 
 });
-~~~
+```
 
 ## Checking it all works
 

@@ -25,7 +25,7 @@ Getting the current application path can be handy for scenarios where you want t
 
 In this example we’ll be working with a very simple ‘Top-Nav’ component that will simply assign a string variable to our current path every time a route change is observed. 
 
-~~~
+```ts
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
@@ -53,7 +53,7 @@ export class TopNavComponent implements OnInit {
   }
 
 }
-~~~
+```
 
 Notice that we have to import both Location and Router at the top of our component and then ask for them in the constructor of our component. Once we’ve asked for them, we can let Angular 2’s dependency injection work it’s magic and we’ll be able to subscribe to route changes as demonstrated above.
 

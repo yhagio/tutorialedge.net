@@ -17,7 +17,7 @@ twitter = "https://twitter.com/Elliot_F"
 
 <p>To get us started we’ll start with mocking up what our page will look like, this is just going to be a basic no-frills design to get us started but feel free to modify it to suit.</p>
 
-~~~html
+```html
 <!DOCTYPE html>
 <html ng-app="myApp">
 <head>
@@ -67,11 +67,11 @@ twitter = "https://twitter.com/Elliot_F"
   <script src="AppController.js"></script>
 </body>
 </html>
-~~~
+```
 
 <b>Our CSS</b>
 
-~~~
+```css
 .search-box{
     background-color: #f1f1f1;
     border-bottom: 1px solid #E5E5E5;
@@ -120,13 +120,13 @@ twitter = "https://twitter.com/Elliot_F"
         margin-bottom: 5px;
         padding-bottom: 2px;
 }
-~~~
+```
 
 <p>This is just basic html so far but let’s add some angularjs functionality to it and get all of our results listing in a google like manner. We’ll skip pagination as that’s going to be the subject of my next tutorial.</p>
 
 <p>To get us started we’ll just be listing everything from the following JSON array, however you could easily hook this up to a REST api that returns meaningful results if you wished too. We’ll create our own controller for this one-page application:</p>
 
-~~~
+```js
 var myApp = angular.module('myApp',[]);
 
 myApp.controller('SearchController', ['$scope', function($scope) {
@@ -139,7 +139,7 @@ myApp.controller('SearchController', ['$scope', function($scope) {
     ];
     
 }]);
-~~~
+```
 
 <p>Now that we’ve implemented that you should hopefully see the everything in our array listing on our search results page:</p>
 
@@ -149,11 +149,11 @@ myApp.controller('SearchController', ['$scope', function($scope) {
 
 <p>In order for us to make this list filter-able we simply have to add the following to our ng-repeat statement. </p>
 
-~~~
+```html
 <div class="result" ng-repeat="result in results | filter: query">
   <a href="#"><h2>{{result.title}}</h2></a>
   <p class="url">{{result.link}}</p>
   <p>{{result.content}}</p>
 </div>
 
-~~~
+```

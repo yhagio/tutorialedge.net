@@ -21,10 +21,10 @@ Without a dependency management tool, you may find yourself in a lot of pain whe
 
 Installation of the `dep` tool can be done using homebrew, like so:
 
-~~~
+```bash
 $ brew install dep
 $ brew upgrade dep
-~~~
+```
 
 Once these 2 commands have been run, you should have the `dep` CLI available to you within your terminal. 
 
@@ -42,13 +42,13 @@ When you call `dep init`, the tool does a few things:
 
 When it comes to creating a new project that relies upon `dep` you have a few options. The first and possibly best option is to create your project within your `$GOPATH`, much like you normally would, `cd` into that directory and then call `dep init`:
 
-~~~c
+```c
 $ mkdir -p $GOPATH/src/github.com/my/project
 $ cd $GOPATH/src/github.com/my/project
 $ dep init
 $ ls
 Gopkg.toml Gopkg.lock vendor/
-~~~
+```
 
 ### Gopkg.toml
 
@@ -84,15 +84,15 @@ The `dep ensure` command is quite possibly the most important command you will n
 
 If you want to add new dependencies to your project you can do so by calling the `dep ensure -add` command and specifying the source for the project.
 
-~~~go
+```go
 $ dep ensure -add github.com/foo/bar github.com/another/project ...
-~~~
+```
 
 #### Updating Dependencies
 
 Should you wish to update some of the dependencies within your project you can do that using the `-update` flag when calling `dep ensure`:
 
-~~~go
+```go
 // dry run testing an update
 $ dep ensure -update -n 
 // non-dry run
@@ -101,17 +101,17 @@ $ dep ensure -update
 $ dep ensure -update github.com/gorilla/mux 
 // updates to a specific version
 $ dep ensure -update github.com/gorilla/mux@1.0.0 
-~~~
+```
 
 ### dep status
 
 The `dep status` command reports the status of a project's dependencies:
 
-~~~go
+```go
 $ dep status
 // output
 ...
-~~~
+```
 
 ## Conclusion
 

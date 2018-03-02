@@ -39,7 +39,7 @@ bookLink = "http://amzn.to/2r74d8f"
 
 <p>As a means of clearing up the code from all these tutorials I am going to add in an abstract class to which all of our graph traversal classes will extend and adhere to. The source code for this looks like so:</p>
 
-~~~java
+```java
 /**
  * AbstractSearch class so that we have a template
  * that all future graph traversal algorithms must adhere to.
@@ -59,11 +59,11 @@ public abstract class AbstractSearch {
     public abstract boolean execute();
 
 }
-~~~
+```
 
 ## Depth First Search Implementation
 
-~~~java
+```java
 import java.util.ArrayList;
 import java.util.Stack;
 
@@ -108,13 +108,13 @@ public class DepthFirstSearch extends AbstractSearch{
     }
 
 }
-~~~
+```
 
 ## Updating our Driver class
 
 <p>Due to the fact we've created an abstract search class we can now do something similar to this in our driver class:</p>
 
-~~~java
+```java
 /**
  * Created by elliotforbes on 24/06/15.
  */
@@ -136,4 +136,4 @@ public class Driver {
             System.out.print("Path Found!");
     }
 }
-~~~
+```

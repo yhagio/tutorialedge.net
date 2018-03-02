@@ -13,7 +13,7 @@ twitter = "https://twitter.com/Elliot_F"
 
 <h2>Flex CSS</h2>
 
-~~~
+```css
 .list{
     display: flex;
     flex-wrap: wrap;
@@ -27,7 +27,7 @@ twitter = "https://twitter.com/Elliot_F"
 .list-content{
     padding: 1.5em;   
 }
-~~~
+```
 
 <p>So how does this work? In our .list class we use display: flex; which initiates flexbox for the outer element. In order for our inner-elements to all have the same height, we have to use display:flex; once again in our .list-item css class.</p>
 

@@ -33,14 +33,14 @@ In RxJS we are provided with these things known as Subjects. These are both obse
 
 Below you’ll find the declaration for RxJS’s Subject class. You should notice that it implements the Subscription interface and also extends the Observable class. 
 
-~~~
+```ts
 /**
  * @class Subject<T>
  */
 export declare class Subject<T> extends Observable<T> implements ISubscription {
 …
 }
-~~~ 
+``` 
 
 ## A Live Example:
 
@@ -48,7 +48,7 @@ export declare class Subject<T> extends Observable<T> implements ISubscription {
 
 Below you’ll find the code for the WebsocketService which is included in this github repo.
 
-~~~js
+```js
 import { Injectable } from '@angular/core';
 import * as Rx from 'rxjs/Rx';
 
@@ -89,7 +89,7 @@ export class WebsocketService {
   }
 
 }
-~~~
+```
 
 ## Conclusion
 

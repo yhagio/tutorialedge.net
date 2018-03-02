@@ -17,9 +17,9 @@ In order to do this conversion we’ll be using the <a href="https://www.npmjs.c
 
 Create a new project directory on your machine and open up this location in your terminal. Next we’ll want to install the <b>csvtojson</b> node module, you can do that by typing the following: 
 
-~~~
+```bash
 npm install csvtojson --save
-~~~
+```
 
 This should create a <b>node_modules</b> directory within your project which will contain all the dependencies that csvtojson requires.
 
@@ -27,7 +27,7 @@ This should create a <b>node_modules</b> directory within your project which wil
 
 Now that we’ve got everything set up we can begin implementation. Open up your project in your prefered text editor and create a new js file. Within this file add the following code.
 
-~~~
+```js
 //require the csvtojson converter class 
 var Converter = require("csvtojson").Converter;
 // create a new converter object
@@ -48,4 +48,4 @@ converter.fromFile("./path-to-your-file.csv",function(err,result){
     // log our json to verify it has worked
     console.log(json);
 });
-~~~
+```

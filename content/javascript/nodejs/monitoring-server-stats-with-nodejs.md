@@ -21,22 +21,22 @@ So initially we’ll write a script that gives us
 
 We’ll begin by creating a new directory on your local machine and run the following:
 
-~~~
+```bash
 npm install --local os-utils
-~~~
+```
 
 This will install the required npm package within the current working directory and will allow us to use it within our node script.
 
 Create a new file within this directory called index.js and within this file we are going to do the following:
 
-~~~
+```js
 // load the os-utils npm package to allow us to use it
 var osutils = require(‘os-utils’);
-~~~
+```
 
 Next we are going to start calling some of the os-utils functions to allow us to see the stats of our system. 
 
-~~~
+```js
 var osutils = require('os-utils');
 
 console.log("Platform: " + osutils.platform());
@@ -55,4 +55,4 @@ console.log("Free Memory: " + osutils.freemem() + "MB");
 console.log("Free Memory (%): " + osutils.freememPercentage());
 
 console.log("System Uptime: " + osutils.sysUptime() + "ms");
-~~~
+```
