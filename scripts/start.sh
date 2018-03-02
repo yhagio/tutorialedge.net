@@ -1,1 +1,0 @@
-nohup ./rest-api/main > search.log &
