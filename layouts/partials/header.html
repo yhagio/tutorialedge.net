@@ -34,14 +34,7 @@
 	<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/style.css"> {{ if .RSSLink -}}
 	<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}">{{- end }} {{ .Hugo.Generator }}
 
-	<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-	<script async src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
-	<script src="{{ .Site.BaseURL }}/js/dist/bundle.js"></script>
 	<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
-
-	<!-- End of Woopra Code -->
-	<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/f41d55ea3daf17874b3365e0b/fb46d22d1e84d293c8189d6e8.js");</script>
 </head>
 
 <body ng-controller="RootController">
