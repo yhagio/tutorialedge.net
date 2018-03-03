@@ -19,20 +19,20 @@ In this tutorial I will be showing you how to calculate the keyword density of 
 
 <p>In the previous 2 tutorials I showed you how you could fetch a web page as well as strip html tags from a fetched web page separately. The next stage of this tutorial series is putting what we've learned together and then devising a method for counting the total number of words in our web page as well as counting the total number of occurrences of the chosen keyword.</p>
 
-<h3>Utilizing the Dictionary Data Structure</h3>
+### Utilizing the Dictionary Data Structure
 
 <p>The easiest and fastest way to store our words as a list of words along with their respective occurrences is to utilize Python's dictionary data structure. </p>
 
-~~~py
+```py
 # declaring a dictionary in python
 word_list = {}
-~~~
+```
 
 <p>Now that we've got our dictionary structure defined we can loop through every word from our html document after it's had it's html tags removed.</p>
 
 ## Source Code
 
-~~~py
+```py
 import urllib2
 import re
 
@@ -92,5 +92,5 @@ def main():
 
 if __name__ == "__main__":
     main()
-~~~
+```
 

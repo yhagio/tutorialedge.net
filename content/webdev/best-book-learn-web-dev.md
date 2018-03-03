@@ -28,7 +28,7 @@ Whilst I am not typically a fan of jQuery and personally would opt for framework
 
 For the price of `$49.99` this may be somewhat pricey but I've seen it drop down to the low `$30s` on Amazon.com so I would encourage you to wait for a good deal. Saying that though, if you can afford to part with the full RRP then this book is definitely worth every penny.
 
-<h4>The Book Covers</h4>
+#### The Book Covers
 
 The book covers various topics such as:
 

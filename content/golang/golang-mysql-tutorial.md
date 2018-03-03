@@ -27,7 +27,7 @@ We’ll begin by connecting to a database we’ve set up on our local machine an
 
 #### Connecting to a MySQL database
 
-~~~go
+```go
 package main
 
 import (
@@ -54,13 +54,13 @@ func main() {
     defer db.Close()
     
 }
-~~~
+```
 
-<h4>Performing Basic SQL Commands</h4>
+#### Performing Basic SQL Commands
 
 `db.Query(sql)` allows us to perform any SQL command we so desire. Simply construct the string and pass it in as a parameter.
 
-~~~go
+```go
 package main
 
 import (
@@ -98,13 +98,13 @@ func main() {
     
     
 }
-~~~
+```
 
 ## Populating Structs from Results
 
 Retrieving a set of results from the database is all well and good, but we need to be able to read these results or populating existing `structs` so that we can parse them and modify them easily. In order to parse a number of rows we can use the `.Scan(args...)` method which takes in any number of arguments and allows us to populate a composite object.
 
-~~~go
+```go
 /*
  * Tag... - a very simple struct
  */
@@ -112,9 +112,9 @@ type Tag struct {
 	ID   int    `json:"id"`
 	Name string `json:"name"`
 }
-~~~
+```
 
-~~~go
+```go
 func main() {
 	// Open up our database connection.
 	db, err := sql.Open("mysql", "root:pass1@tcp(127.0.0.1:3306)/tuts")
@@ -143,7 +143,7 @@ func main() {
 	}
 
 }
-~~~
+```
 
 In this example we retrieved 2 columns from the tags database and then used .Scan to populate our tag object. 
 
@@ -153,7 +153,7 @@ In this example we retrieved 2 columns from the tags database and then used .Sca
 
 Say we wanted to query a single row this time and had an ID and again wanted to populate our struct. We could do that like so:
 
-~~~go
+```go
 var tag Tag
 // Execute the query
 err = db.QueryRow("SELECT id, name FROM tags where id = ?", 2).Scan(&tag.ID, &tag.Name)
@@ -163,7 +163,7 @@ if err != nil {
 
 log.Println(tag.ID)
 log.Println(tag.Name)
-~~~
+```
 
 ## Conclusion
 

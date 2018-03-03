@@ -34,7 +34,7 @@ twitter = "https://twitter.com/Elliot_F"
 
 <p>This code example showcases how you could implement the bridge design pattern in the context of a game programming scenario.</p>
 
-<h3>Enemy Abstract Class</h3>
+### Enemy Abstract Class
 
 ```java
 package Bridge;
@@ -55,7 +55,7 @@ public abstract class Enemy {
 }
 ```
 
-<h3>Archer Concrete Class</h3>
+### Archer Concrete Class
 
 ```java
 package Bridge;
@@ -77,7 +77,7 @@ public class Archer extends Enemy {
 }
 ```
 
-<h3>Knight Concrete Class</h3>
+### Knight Concrete Class
 
 ```java
 package Bridge;
@@ -97,7 +97,7 @@ public class Knight extends Enemy {
 }
 ```
 
-<h3>Armour Interface</h3>
+### Armour Interface
 
 ```java
 package Bridge;
@@ -112,7 +112,7 @@ public interface Armour {
 }
 ```
 
-<h3>LightArmour Concrete Class</h3>
+### LightArmour Concrete Class
 
 ```java
 package Bridge;
@@ -129,7 +129,7 @@ public class LightArmour implements Armour {
 }
 ```
 
-<h3>HeavyArmour Concrete Class</h3>
+### HeavyArmour Concrete Class
 
 ```java
 package Bridge;
@@ -145,7 +145,7 @@ public class HeavyArmour implements Armour {
 }
 ```
 
-<h3>Driver Class</h3>
+### Driver Class
 
 ```java
 package Bridge;

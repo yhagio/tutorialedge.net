@@ -34,7 +34,7 @@ testApp.controller('testController' , function ($scope) {
 
 <p>Now that we’ve defined our controller, we need to create our button that will be able to call our newly defined function within our controller, we can do that like so:</p>
 
-~~~html
+```html
 <html ng-app="testApp">
 <head>
     <title>AngularJS ng-if child scopes example</title>
@@ -54,15 +54,15 @@ testApp.controller('testController' , function ($scope) {
     <script src="script.js"></script>
 </body>
 </html>
-~~~
+```
 
 <p>Notice we’ve that we’ve added the ng-controller directive to our body html tag and added the name of our controller in there as well as added the ng-app directive to our outermost html tags. These two things are essential if we want this to run.</p>
 
-<h2>Scope Inheritance</h2>
+## Scope Inheritance
 
 <p>One very useful thing to note is that we can effectively achieve scope inheritance due to the fact each new ng-controller instantiation creates a new child scope. This essentially allows us to access scope variables declared higher up in the hierarchy and this can be quite useful if you are wanting to achieve less code duplication etc.</p>
 
-~~~js
+```js
 var testApp = angular.module('testApp', []);
 
 testApp.controller('testController' , function ($scope) {
@@ -79,9 +79,9 @@ testApp.controller('testController' , function ($scope) {
 testApp.controller('childTestController', function($scope) {
     $scope.yourNumber = 99;
 });
-~~~
+```
 
-~~~html
+```html
 <html ng-app="testApp">
 <head>
     <title>AngularJS ng-if child scopes example</title>
@@ -101,4 +101,4 @@ testApp.controller('childTestController', function($scope) {
     <script src="script.js"></script>
 </body>
 </html>
-~~~
+```

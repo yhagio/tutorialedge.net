@@ -11,7 +11,7 @@ twitter = "https://twitter.com/Elliot_F"
 
 In this tutorial I will be showing you how you can obtain the X and Y coordinates of the Mouse cursor in an applications window and print it out to the console.
 
-<h2>Creating a MouseHandler Class</h2>
+## Creating a MouseHandler Class
 
 To begin with I recommend you create an 'Input' package within your project as this is a good way to keep all Input Handler classes organized within your projects. Once you've created this package, right click on it and add a new class called MouseHandler. This class will extend the GLFWCursorPosCallback abstract class provided by the LWJGL3 framework. 
 
@@ -35,7 +35,7 @@ public class MouseHandler extends GLFWCursorPosCallback {
 }
 ```
 
-<h2>Making it Work</h2>
+## Making it Work
 
 Now that we've created our MouseHandler class we need to put in the following code just below our GLFW Window initialization so that our invoke method will be called every time the cursor's position changes.
 
@@ -47,7 +47,7 @@ And that should be it all done, you should now be seeing the cursors position ou
 
 <img style="width: 100%; height: auto;" src="/uploads/articles/cursor-pos-console.PNG" />
 
-<h2>Main Class</h2>
+## Main Class
 
 ```java
 import org.lwjgl.Sys;

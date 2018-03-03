@@ -11,9 +11,9 @@ twitter = "https://twitter.com/Elliot_F"
 
 <p>The code featured below is an example of how you create a game loop that is limited to 60 frames per second. This is useful if you have implemented update functions that are bounded by the number of times they are called rather than based on time between updates. </p>
 
-<h2>The Code</h2>
+## The Code
 
-~~~java
+```java
 public void run(){
 	init();
 	long lastTime = System.nanoTime();
@@ -46,4 +46,4 @@ public void run(){
 	
 	cleanup();
 }
-~~~
+```

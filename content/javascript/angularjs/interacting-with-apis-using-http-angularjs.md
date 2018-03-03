@@ -27,7 +27,7 @@ config - the configuration object used to generate the request
 statusText - the HTTP status text of the response
 ```
 
-<h2>Getting Started:</h2>
+## Getting Started:
 
 <p>To start us off we’ll be creating a very simple html page that features one button. This button, when clicked will call a function in an angular controller in the scripts.js file that will in turn perform a GET request using the GET shortcut method that AngularJS provides.</p> 
 
@@ -50,7 +50,7 @@ statusText - the HTTP status text of the response
 </html>
 ```
 
-<h3>Our Controller:</h3>
+### Our Controller:
 
 <p>So now that we’ve got our index page setup, we’ll have to define our controller and function in our script.js file. </p>
 

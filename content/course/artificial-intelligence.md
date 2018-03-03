@@ -11,7 +11,7 @@ image = "ai.png"
 
 <p>Being able to create a game that challenges you in different ways every time you play it guarantees you a longer shelf life that if you were to create something predictable that can be beaten easily by learning a few patterns.</p>
 
-<h2>Course Introduction</h2>
+## Course Introduction
 
 <p>Over this course I’m aiming to introduce you to key strategies used by game developers when implementing Artificial Intelligence systems into their own games. I’ll be covering popular algorithms such as the A* search algorithm, breadth first, depth first,  Alpha-beta pruning and more and hopefully give you a good grounding of the basics of artificial intelligence.</p>
 

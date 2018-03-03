@@ -11,7 +11,7 @@ twitter = "https://twitter.com/Elliot_F"
 
 <p>In this tutorial I'm going to be demonstrating how you can send mail with Go(Lang) and the mailgun api. Thankfully, mailgun's API is fantastic and sending mail is incredibly easy once you've set everything up properly.</p>
 
-<h2>Requirements</h2>
+## Requirements
 
 <ul>
 <li>You'll need a mailgun account with your own verified domains</li>
@@ -19,9 +19,9 @@ twitter = "https://twitter.com/Elliot_F"
 <li>Your Mailgun's Public API Key</li>
 </ul>
 
-<h2>Implementation</h2>
+## Implementation
 
-~~~go
+```go
 package main
 
 import (
@@ -44,4 +44,4 @@ func main(){
     SendSimpleMessage("postmaster@elliotforbes.co.uk", "key-12345671234567")
         
 }
-~~~
+```

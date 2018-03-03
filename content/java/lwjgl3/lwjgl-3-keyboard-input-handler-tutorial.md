@@ -11,15 +11,15 @@ twitter = "https://twitter.com/Elliot_F"
 
 <p>This tutorial looks to demonstrate how you can extend the lightweight java game library in order to create your own input handlers which can be used in your games as a means for handling keyboard and mouse input.</p>
 
-<h2>The Observer Design Pattern</h2>
+## The Observer Design Pattern
 
 <p>The programmers who developed LWJGL 3 have used an observer design pattern as a way to implement input. The works by having one part of the system listening for input through all the various input devices whilst also keeping a list of classes that should be notified every time an event takes place. This has been explained in more detail in a tutorial dedicated to the Observer Design Pattern which I recommend if you wish to help improve your overall understanding of how LWJGL 3 works.</p>
 
-<h2>Creating a Keyboard Handler</h2>
+## Creating a Keyboard Handler
 
 <p>In order to keep the project tidy I recommend you create a new Package within your project and call it "Input" or something meaningful to that effect. Create a new class within this Package called KeyboardHandler. This KeyboardHandler class will look something like this:</p>
 
-~~~java
+```java
 package Input;
 
 import org.lwjgl.glfw.GLFWKeyCallback;
@@ -45,38 +45,38 @@ public class KeyboardHandler extends GLFWKeyCallback{
   }
 	
 }
-~~~
+```
 
-<h2>Making it Work</h2>
+## Making it Work
 
 <p>Now that we've got our input handler class it's time to register our new class as a listener in the class that deals with OpenGL and GLFW initialization as this is where we will have to register our newly built class as a listener. At the top of your class add an declaration of the GLFWKeyCallback class like so:</p>
 
-~~~java
+```java
 // This prevents our window from crashing later on.
 private GLFWKeyCallback keyCallback;
-~~~
+```
 
 <p>Now that we've instantiated our keyCallBack class we can set this to equal our newly built KeyboardHandler class like so:</p>
 
-~~~java
+```java
 // Sets our keycallback to equal our newly created Input class()
 glfwSetKeyCallback(window, keyCallback = new KeyboardHandler());		
-~~~
+```
 
-<h2>Checking it Works</h2>
+## Checking it Works
 
 <p>Now that we've implemented our own KeyboardHandler class it's time to check to see if it works. We can do this by adding the following to our Update() function:</p>
 
-~~~java
+```java
 public void update(){
   if(KeyboardHandler.isKeyDown(GLFW_KEY_SPACE))
     System.out.println("Space Key Pressed");
 }
-~~~
+```
 
-<h2>Main Class</h2>
+## Main Class
 
-~~~java
+```java
 import org.lwjgl.Sys;
 import org.lwjgl.glfw.*;
 import org.lwjgl.opengl.*;
@@ -197,8 +197,8 @@ public class HelloWorld {
     }
  
 }
-~~~
+```
 
-<h2>Video Tutorial</h2>
+## Video Tutorial
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_6b73ZxlQOg" frameborder="0" allowfullscreen></iframe>

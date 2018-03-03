@@ -11,13 +11,13 @@ twitter = "https://twitter.com/Elliot_F"
 
 <p>In this tutorial I’ll be giving you a brief introduction to the world of concurrent programming using the Java programming language. By the end of this tutorial you should hopefully have a feel for what it takes to write simple, multi-threaded java programs and an understanding of how these can help improve the performance of your programs on multithreaded/multicore machines.</p>
 
-<h2>Requirements</h2>
+## Requirements
 
 <p>In order to successfully complete this tutorial you will need to have Java 7 installed and running on your machine, as well as a method for editing and executing your Java code for which I would recommend the Eclipse or Intellij IDE.</p>
 
 <p>You’ll also need a basic understanding of the Java programming language. Everything covered here will be built on top of a pre-existing Java background.</p>
 
-<h2>Introduction - What is Concurrent Programming?</h2>
+## Introduction - What is Concurrent Programming?
 
 <p>“Concurrent computing is a form of computing in which several computations are executing during overlapping time periods - concurrently - instead of sequentially” - Wikipedia</p>
 
@@ -25,13 +25,13 @@ twitter = "https://twitter.com/Elliot_F"
 
 <p>One thing to bear in mind is that we don’t have an infinite number of threads on a CPU and creating more and more threads could eventually start to severely hamper your program’s performance.</p>
 
-<h2>Implementing this in Java</h2>
+## Implementing this in Java
 
 <p>There are multiple ways we can implement multithreading into our programs but the one I’m going to be focusing on in this tutorial is the Callable method. This method is advantageous over the Runnable and Thread methods as it allows you to see the results of execution.</p>
 
 <p>We’ll start of with a basic Java class implementing Callable:</p>
 
-~~~java
+```java
 package com.tutorialedge.net;
 
 import java.util.concurrent.Callable;
@@ -56,11 +56,11 @@ public class Worker implements Callable{
 	}
 
 }
-~~~
+```
 
 <p>Next thing we’ll do is create a main method which will run our workers for us. This will look something like this:</p>
 
-~~~java
+```java
 package com.tutorialedge.net;
 
 import java.util.concurrent.ExecutorService;
@@ -87,6 +87,6 @@ public class Main {
 	}
 	
 }
-~~~
+```
 
 

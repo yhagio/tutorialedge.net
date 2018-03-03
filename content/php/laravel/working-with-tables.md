@@ -8,7 +8,7 @@ author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++
 
-<h2>Pre-Requisites</h2>
+## Pre-Requisites
 
 <p><b>Before we can get started</b> building our blog, we'll first need to set up a database on our machine that we can play around with for testing purposes.</p>
 
@@ -23,7 +23,7 @@ DB_PASSWORD=your_password</code></pre>
 
 <p>Test this connection out by performing <b>php artisan migrate</b> and if everything is configured correctly you should now see a users table within that database.</p>
 
-<h2>Creating our Database Tables:</h2>
+## Creating our Database Tables:
 
 <p>Over these tutorials we will be implementing the following components:</p>
 
@@ -37,7 +37,7 @@ DB_PASSWORD=your_password</code></pre>
 
 <p>For each of these things we’ll want to define some form of schema that can be used to store our data in our database. I’m purposefully leaving a few fields out of the initial design as it’ll let me demonstrate the power of migrations further down the line.</p>
 
-<h3>Posts</h3>
+### Posts
 
 <table class="striped">
         <thead>
@@ -92,7 +92,7 @@ DB_PASSWORD=your_password</code></pre>
         </tbody>
       </table>
 
-<h3>Comments</h3>
+### Comments
 
 
 <table class="striped">
@@ -138,7 +138,7 @@ DB_PASSWORD=your_password</code></pre>
 </tbody>
 </table>
 
-<h3>Tags</h3>
+### Tags
 
 <table class="striped">
         <thead>
@@ -171,7 +171,7 @@ DB_PASSWORD=your_password</code></pre>
 </tr>
 </tbody>
 </table>
-<h3>Post_Tag</h3>
+### Post_Tag
 
 <table class="striped">
         <thead>
@@ -205,7 +205,7 @@ DB_PASSWORD=your_password</code></pre>
 </tbody>
 </table>
 
-<h2>Creating our Migrations</h2>
+## Creating our Migrations
 
 <p>php artisan again comes in useful when creating migrations. For each of the tables we’ve defined above, we are going to want to create a migration that will create a table in the database.</p>
 
@@ -221,7 +221,7 @@ DB_PASSWORD=your_password</code></pre>
 
 <p>This should create 4 new php classes under <b>database/migrations</b> and it’s in these 4 new files that we are going to define our tables schema.</p>
 
- <h2>Defining our Schemas</h2>
+ ## Defining our Schemas
 
 <p>In each of these 4 new files we need to define the table structure for all of our tables. You’ll notice that the users table has already been defined for us.</p>
 
@@ -310,7 +310,7 @@ class CreatePostsTable extends Migration
 
 <pre><code class="language-markup">php artisan migrate</code></pre>
 
-<h2>Conclusions</h2>
+## Conclusions
 
 <p>If everything went smoothly with our migrations then you should have in place everything we need to start building our blog.</p> 
 

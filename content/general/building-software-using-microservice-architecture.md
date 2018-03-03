@@ -25,12 +25,13 @@ So we’ll be creating 2 services, one a *RESTful* api that persists tweets and 
 
 This could in theory be delivered as one monolithic application but say you wanted to add a service in the future that automatically favourited positive tweets then this separation would make it simple.
 
-<h2>Microservice 1 - Creating a Twitter Stream Reader in GoLang</h2>
+##Microservice 1 - Creating a Twitter Stream Reader in GoLang
+
 The first microservices we are going to be building is a twitter stream reader that will monitor a twitter stream for the words <b>“tutorialedge”</b>. When a tweet is found, it will be persisted to a database. 
 
 You can find the full tutorial for how to build a twitter stream reader here. We however are going to be slightly modifying that code so that it queries our newly built <b>REST</b> API every time a tweet pops up:
 
-~~~js
+```js
 package main
 
 import (
@@ -108,12 +109,13 @@ func main() {
     fmt.Println("Go-Twitter Bot v0.01")
     configure()
 }
-~~~
+```
 
-<h2>Microservice 2 - REST API</h2>
+##Microservice 2 - REST API
+
 The second microservice will be a simple REST API that retrieves the tweets that have been stored in the database to anyone who queries it. 
 
-~~~go
+```go
 package main
 
 import (
@@ -237,9 +239,10 @@ func main() {
     handleRequests()
     
 }
-~~~
+```
 
-<h2>Conclusion</h2>
+##Conclusion</h2
+>
 
 These two services are independent of each other and if one falls over then the other services aren't affected. This demonstrates the resiliency of the microservice based architecture and if performance becomes an issue, more instances of each service can be spun up.
 

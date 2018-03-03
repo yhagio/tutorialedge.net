@@ -9,14 +9,14 @@ author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++
 
-<h2>Creating our Game Window</h2>
+## Creating our Game Window
 
 <p>So now that you’ve got the base project set up, you are going to want to start writing some code and making some magic happen on the screen.
 First of all you are going to want to create a new class and call it Main.java. This will be the class that contains vital things like the initialization code and the main game loop which we will be developing later on.</p>
 
 <p>Once you’ve created the Main.java class you are going to want to write the following code:</p>
 
-~~~java
+```java
 import static org.lwjgl.glfw.GLFW.*;
 
 public class Main implements Runnable{
@@ -56,27 +56,27 @@ public class Main implements Runnable{
     }
   }
 }
-~~~
+```
 
 <p>This will form the main outline of our code and it’s a great place to start from. So far it’s all super simple stuff and all the code is really doing is starting our games thread, everything else still has to be fleshed out.</p>
 
-<h2>Our Imports</h2>
+## Our Imports
 
-~~~java
+```java
 import static org.lwjgl.glfw.GLFW.*; // allows us to create windows
 import static org.lwjgl.opengl.GL11.*; // gives us access to things like "GL_TRUE" which we'll need 
 import static org.lwjgl.system.MemoryUtil.*; // allows us to use 'NULL' in our code, note this is slightly different from java's 'null'
 import java.nio.ByteBuffer; // Used for getting the primary monitor later on.
 import org.lwjgl.glfw.GLFWvidmode; // again used for primary monitor stuff.
-~~~
+```
 
 <p>These are the libraries we need to import in order for our basic window to be displayed.</p>
 
-<h2>The init() function</h2>
+## The init() function
 
 <p>Our init function is where most of our initialization code will go for both the window and for OpenGL. It takes the following shape:</p>
 
-~~~java
+```java
 public void init(){
   // Initializes our window creator library - GLFW 
   // This basically means, if this glfwInit() doesn't run properlly
@@ -114,13 +114,13 @@ public void init(){
   // finally shows our created window in all it's glory.
   glfwShowWindow(window);
 }
-~~~
+```
 
-<h2>Update() and Render() functions</h2>
+## Update() and Render() functions
 
 <p>Once we’ve successfully initialized both our window and GLFW we will now want to make sure that everything works correctly and that we’ll be able to get any input needed from the user.</p>
 
-~~~java
+```java
 public void update(){
   // Polls for any window events such as the window closing etc.
   glfwPollEvents();
@@ -130,13 +130,13 @@ public void render(){
   // Swaps out our buffers
   glfwSwapBuffers(window);
 }
-~~~
+```
 
-<h2>Our updated Game Loop</h2>
+## Our updated Game Loop
 
 <p>Now that everything is in place you will want to implement the code that allows us to close the window. This can be done by adding the following 3 lines of code under our call to render(); in the main game loop as follows:</p>
 
-~~~java
+```java
 @Override
 public void run() {
   // All our initialization code
@@ -154,15 +154,15 @@ public void run() {
     }
   }
 }
-~~~
+```
 
-<h2>Compile</h2>
+## Compile
 
 <p>Once you’ve done all that, try hitting the green ‘run as’ arrow button at the top of your Eclipse IDE or right clicking on your project and selecting ‘run as’ and then selecting ‘Java application’. If you’ve done everything correctly and have no errors then you should see a game window successfully appearing on your screen</p>
 
-<h2>Full Source:</h2>
+## Full Source:
 
-~~~java
+```java
 import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.system.MemoryUtil.*;
@@ -255,4 +255,4 @@ public class Main implements Runnable{
     }
   }
 }
-~~~
+```
