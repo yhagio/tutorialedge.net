@@ -48,7 +48,7 @@
 			<h2>All Courses</h2>
 			<p>Dive in to some of our in-depth courses that are all 100% free.</p>
 		
-			{{ range (where .Site.Pages "Section" "course") }} {{ if ne .Title "Courses" }}
+			{{ range (where .Site.Pages "Section" "course") }} {{ if and (ne .Title "Course") (ne .Title "Courses") }} 
 			<div class="col l6 m6 s12">
 				<a href="{{ .Permalink }}">
 					<div class="course-card">
