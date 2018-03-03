@@ -10,6 +10,12 @@ image: "vuejs.png"
 
 > Currently Under Construction
 
+In the past few months, I have been playing about with VueJS 2 and in all honesty, I have been seriously loving it. It's a lighter alternative to the likes of a Angular and it is fleshed out enough to still be very fun and easy to use.
+
+In these tutorials, we shall be covering some of the basics of VueJS and how I managed to overcome some of the key challenges that a lot of frontend applications face using the framework.
+
 ## Beginner Tutorials
 
 * [Getting Started with VueJS 2](/javascript/vuejs/getting-started-with-vuejs/)
+
+* [VueJS HTTP Requests with Axios Tutorial](/javascript/vuejs/vuejs-http-requests-axios-tutorial/)
