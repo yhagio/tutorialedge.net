@@ -139,7 +139,6 @@ Whilst, I have just used the `POST` and `GET` HTTP verbs to demonstrate how you 
 - options
 ~~~
 
-
 ## Conclusion
 
 Hopefully, this article showed you everything you need in order to make `HTTP` requests within your VueJS applications. If you need further help then please let me know in the comments section below or by tweeting me: [@Elliot_F](https://twitter.com/elliot_f).
