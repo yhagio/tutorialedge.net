@@ -4,7 +4,7 @@ title = "Web Development"
 draft = true
 author = "Elliot Forbes"
 layout = "simple"
-image = "webdev.png"
+image = "logo.png"
 +++
 
 ## Introduction

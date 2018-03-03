@@ -1,5 +1,116 @@
 {{ partial "header.html" . }}
 
-<search></search>
+<div id="app">
+    <div class="search-bar">
+        <div class="container center">
+            <input v-model="searchQuery" type="text" placeholder="Search Now...">
+            <button class="btn btn-primary" v-on:click="search">Search Now</button>
+        </div>
+    </div>  
+
+    <div class="search-results">
+        <div class="container">
+            <div class="result-stats">
+                <!-- <p>Page: <b>{{ "{{ page }}" }}</b> of {{ "{{ pages }}" }} Total of <b>{{ "{{ total_hits }}"  }}</b></p> -->
+                <p>Top 10 Results</p>
+            </div>
+
+            <div class="search-result" v-for="result in results.hits">
+                <a href="{{ "{{ result.id }}" }}">
+                    <h3>{{ "{{ result.fields.Title }}" }}</h3>
+                </a>
+                <span class="url">https://tutorialedge.net{{ "{{ result.id }}" }}<br/></span>
+                <span class="description">{{ "{{ result.fields.Body }}" }}</span>
+                <span class="weight">Weight: {{ "{{ normalize(result.score) }}" }}</span>
+                <br/>
+            </div>
+
+            <div class="center-align">
+                <ul class="pagination">
+                    <li class="waves-effect"><a v-on:click="prevPage()"><i class="ion ion-chevron-left"></i></a></li>
+                    <li v-for="page in pages" class="waves-effect"><a v-on:click="setPage(page+1)">{{ "{{ page + 1 }}" }}</a></li>
+                    <li class="waves-effect"><a v-on:click="nextPage()"><i class="ion ion-chevron-right"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data() {
+            return {
+                results: {},
+                searchQuery: '',
+                pages: [],
+                page: 1,
+                total_hits: 0,
+                page_size: 20
+            }
+        },
+        methods: {
+            search: function (event) {
+                let data = {
+                    "query": { "boost": 1.0, "query": this.searchQuery },
+                    "highlight": { "fields": ["body"] },
+                    "from": this.page,
+                    "fields": ["*"]
+                };
+
+                axios({
+                    method: 'POST',
+                    url: 'https://api.tutorialedge.net/search',
+                    headers: { 'Content-Type': 'application/json' },
+                    data: data
+                }).then(function(response) {
+                    app.$nextTick(function() {
+                        console.log("hit")
+                        this.results = response.data;
+                        this.total_hits = response.data['total_hits'];
+                        this.pages = Math.ceil((response.data.total_hits / 10))
+                    })
+                }).catch(function(err) { console.log(err) })
+            },
+            prevPage: function () {
+                app.$nextTick(function() {
+                    this.page -= 1;
+                })
+                this.search()
+            },
+            nextPage: function () {
+                app.$nextTick(function() {
+                    this.page += 1
+                })
+                this.search()
+            },
+            setPage: function (page) {
+                app.$nextTick(function() {
+                    this.page = page
+                })
+                this.search()
+            },
+            range: function (count) {
+                for (var i = 0; i < count; i++) { this.pages.push(i) }
+                return pages
+            },
+            normalize: function (score) {
+                return Math.round((score) * 100) + "%"
+            },
+            roundTook: function (took) {
+                if (took < 1000 * 1000) {
+                    return "<1ms"
+                } else if (took < 1000 * 1000 * 1000) {
+                    return "" + Math.round(took / (1000* 1000)) + "ms"
+                } else {
+                    var roundMs = Math.round(took / (1000* 1000))
+                    return "" + roundMs / 1000 + "s"
+                }
+            }
+        }
+    })
+</script>
 
 {{ partial "footer.html" . }}
