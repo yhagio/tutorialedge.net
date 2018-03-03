@@ -136,6 +136,55 @@ $ npm run build
 
 This will then create a `dist/` directory within your application's root directory. This `dist/` directory contains everything your application needs in order to run. You can then simply drop the files within this directory to your server or S3 bucket and it will be ready to go!
 
+## Minor Changes To Get Started
+
+Now that we have our basic VueJS application up and running, it's time to make some simple edits to it just to get us started. Open up the `src/components/HelloWorld.vue` component and remove some of the default HTML code from the `<template/>` section like so:
+
+```js
+<template>
+  <div class="hello">
+    <h1>{{ msg }}</h1>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'HelloWorld',
+  data () {
+    return {
+      msg: 'Welcome to Your Vue.js App'
+    }
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+h1, h2 {
+  font-weight: normal;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
+}
+</style>
+```
+
+When you click save and have `npm run dev` running within the console, you should notice that it starts to rebuild everything for you. When you refresh `http://localhost:8080` you should see your changes reflected within the browser. 
+
+Congratulations, you have successfully built and subsequently edited your first VueJS application!
+
+## Further Reading
+
+Now that you have a simple VueJS application up and running on your local machine, it's time to try and figure out what everything means. We have made a few changes already but in order to learn more I would recommend having a look at my article on [VueJS Components](/javascript/vuejs/vuejs-components-tutorial/).
+
 ## Conclusion
 
 Hopefully, you found this tutorial helpful in getting started with Vuejs 2! If you did, or you require further assistance, then please let me know in the comments section below. 
