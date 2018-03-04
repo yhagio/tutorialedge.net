@@ -9,7 +9,8 @@ series: ["vuejs"]
 twitter: "https://twitter.com/Elliot_F"
 ---
 
-In this tutorial, we are going to look at how you can get up and running using VueJS 2 for a very simple web application. 
+In this tutorial, we are going to look at how you can setup your development environment so that you can get started writing your own VueJS . 
+
 
 We will be utilizing the `vue-cli` in order to start our project off and then we'll be diving in and making a few edits, before finally building it using the same `vue-cli`.
 
@@ -17,7 +18,7 @@ We will be utilizing the `vue-cli` in order to start our project off and then we
 
 Before I get started, it must be noted that you can get up and running really quickly with VueJS 2 in less than 30 lines of code. Below you will find a webpage that is a very simple VueJS page that simply prints out `Hello World` to the browser when hit.  
 
-```html
+```xml
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -140,13 +141,15 @@ This will then create a `dist/` directory within your application's root directo
 
 Now that we have our basic VueJS application up and running, it's time to make some simple edits to it just to get us started. Open up the `src/components/HelloWorld.vue` component and remove some of the default HTML code from the `<template/>` section like so:
 
-```js
+```xml
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
   </div>
 </template>
+```
 
+```html
 <script>
 export default {
   name: 'HelloWorld',
@@ -157,7 +160,9 @@ export default {
   }
 }
 </script>
+```
 
+```html
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h1, h2 {
