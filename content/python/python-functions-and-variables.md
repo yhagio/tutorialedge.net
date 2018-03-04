@@ -17,50 +17,50 @@ We would first want to define a variable to store our number, double it and then
 
 Open up visual studio code and create a new python file called double.py. In this double.py file you will want to add the following code:
 
-~~~py
+```py
 My_number = 2
 print(my_number)
 
 My_number = my_number * 2
 print(my_number)
-~~~
+```
 
 We start off by defining a new variable called `my_number` and setting this new variable to equal 2. After this we then print out the value of our variable using the `print` function and passing in what we wish to `print`, in this case we wish to print our `my_number` variable. 
 
 When you run this you should see the number 2 being printed out in the console.
 
-~~~py
+```py
 >>> my_number = 2
 >>> print(my_number)
 2
-~~~
+```
 
 
 After this we then re-assign our my_number variable to equal the current value of my_number times 2. This doubles our starting number. When we now run this program you should see the number 4 being printed out below our 2 value. 
 
-~~~py
+```py
 >>> my_number = 2
 >>> print(my_number)
 2
 >>> my_number = my_number * 2
 >>> print(my_number)
 4
-~~~
+```
 
 > **Exercise** - Try changing the my_number variable to a series of different numbers to test this out. 
 
 Now this example may work with numeric values, but what happens if we want to define a variable that stores something like a name? We can do that to simply by choosing a variable name such as first_name and then setting this to equal the string of our choice surrounded by quotes like so:
 
-~~~py
+```py
 First_name = "Elliot"
 print(first_name)
-~~~
+```
 
 We can then do cool things like printing out custom messages like this:
 
-~~~py
+```py
 print("Welcome: " + first_name) 
-~~~
+```
 
 This should then print out `Welcome: Elliot` to our console when we run it. 
 
@@ -70,22 +70,22 @@ So now that we’ve got a basic understanding of variables in Python, let’s no
 
 In order to define functions in python we can use the def keyword followed by the name of the function we wish to define like so:
 
-~~~py
+```py
 def double(my_number):
-~~~
+```
 
 This is known as a function declaration and it’s below this function declaration that we’ll define what we want our function to do. You should notice that we’ve included `(my_number)` beside our function, this is how we define what goes into every function. In this case we want it to take in a `my_number` variable which we will then go on to double within our function.
 
-~~~py
+```py
 def double(my_number):
     return my_number * 2
-~~~
+```
 
 > Note: we have used the `return` keyword which returns the value of `my_number * 2` whenever this function is called.
 
 If we then wished to use this function then we could do something like this:
 
-~~~py
+```py
 def double(my_number):
     return my_number * 2
 
@@ -94,7 +94,7 @@ def double(my_number):
 my_var = double(5)
 # print our new `my_var`
 print(my_var)
-~~~
+```
 
 > **Exercise** - Try implementing a triple function that takes in a `my_number` variable and returns triple this value.
 
@@ -102,9 +102,9 @@ print(my_var)
 
 In the previous example we defined a pretty small function that only featured one line of code within its body. It's important to note however that you can define many lines of code within your function and even call other functions from within your own function. There is also no rule that states you `must` return something from within your function. It could, for example, just perform a series of print statements like so:
 
-~~~py
+```py
 def test_function():
     print("Hello World")
     print("This is a multi-line function")
     print("that does not return anything")
-~~~
+```

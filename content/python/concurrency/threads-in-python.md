@@ -41,10 +41,10 @@ When people typically talk about multithreaded processors, they are typically re
 
 Before we go into creating a thread in Python, we should take a look at the Python Thread class constructor and see what we need to pass in:
 
-~~~py
+```py
 # Python Thread class Constructor
 def __init__(self, group=None, target=None, name=None, args=(), kwargs=None, verbose=None):
-~~~
+```
 
 It takes in five distinct parameters:
 
@@ -56,7 +56,7 @@ It takes in five distinct parameters:
 
 The key one to notice is the `target` parameter. In order to start a simple thread we need to be able to pass it something to run. Let's create a simple function which we'll then use to create our first thread like so:
 
-~~~py
+```py
 import threading
 
 # The simple function that will simply print hello world and 
@@ -69,7 +69,7 @@ def myTask():
 myFirstThread = threading.Thread(target=myTask)
 # We start out thread
 myFirstThread.start()
-~~~ 
+``` 
 
 ## Video Tutorial
 

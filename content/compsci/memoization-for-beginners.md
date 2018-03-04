@@ -17,7 +17,7 @@ Calculating Fibonacci in a recursive manner is quite possibly the best example I
 
 Imagine we had a function that computed the fibonacci number `n` like so:
 
-~~~py
+```py
 # Basic fibonacci function
 # 1 + 1 + 2 + 3 + 5 + 8 + 13
 def fib(n):
@@ -26,15 +26,15 @@ def fib(n):
     if n == 1:
         return 1
     return fib(n-1) + fib(n-2)
-~~~
+```
 
 When we then tried to run our `fib(7)` function it would then compute the following answer.
 
-~~~py
+```py
 >>> import fibonacci
 >>> fibonacci.fib(7)
 13
-~~~
+```
 
 Now the runtime complexity of this relatively simple function above would be `O(2^n)` which is incredibly inefficient as we start to compute larger and larger fibonacci numbers.
 
@@ -42,7 +42,7 @@ Now the runtime complexity of this relatively simple function above would be `O(
 
 Through the use of `memoization` we could effectively store the results of previous computations. In order to store our results we will use a `dict` in Python.
 
-~~~py
+```py
 def fib_with_memo(n, memo):
     if n <= 0:
         return 0
@@ -58,11 +58,11 @@ memo = {}
 
 print(fib_with_memo(9, memo))
 print(memo)
-~~~  
+```  
 
 When you run this you should get the following output. As you can see from the number of times `Memo Computed` is printed out, we have been able to effectively optimize the number of times we have to recursively call `fib()`. 
 
-~~~py
+```py
  $ python3.6 fibonacci.py
 Memo Computed
 Memo Computed
@@ -74,7 +74,7 @@ Memo Computed
 Memo Computed
 34
 {2: 1, 3: 2, 4: 3, 5: 5, 6: 8, 7: 13, 8: 21, 9: 34}
-~~~
+```
 
 We have been able to modify our program and change is runtime performance from `O(2^N)` to `O(N)` which is a huge saving.
 
@@ -82,7 +82,7 @@ We have been able to modify our program and change is runtime performance from `
 
 The entire Python file can be found below. 
 
-~~~py
+```py
 import time
 
 def fib(n):
@@ -115,18 +115,18 @@ end_time = time.time()
 print("Total Time: {}".format(end_time - start_time))
 
 print(memo)
-~~~
+```
 
 The outputs of this are:
 
-~~~py
+```py
  $ python3.6 fibonacci.py
 9227465
 Total Time: 7.323758840560913
 9227465
 Total Time: 0.00010204315185546875
 {2: 1, 3: 2, 4: 3, 5: 5, 6: 8, 7: 13, 8: 21, 9: 34, 10: 55, 11: 89, 12: 144, 13: 233, 14: 377, 15: 610, 16: 987, 17: 1597, 18: 2584, 19: 4181, 20: 6765, 21: 10946, 22: 17711, 23: 28657, 24: 46368, 25: 75025,26: 121393, 27: 196418, 28: 317811, 29: 514229, 30: 832040, 31: 1346269, 32: 2178309, 33: 3524578, 34: 5702887, 35: 9227465}
-~~~
+```
 
 As you can see the `memoized` version of the fibonacci function returns in a fraction of the time. 
 

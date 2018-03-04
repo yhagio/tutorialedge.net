@@ -15,7 +15,7 @@ In this tutorial we look at how you can effectively read in an XML file from the
 
 So to begin with, we’ll need an xml file that we can traverse.
 
-~~~xml
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <users>
   <user type="admin">
@@ -35,7 +35,7 @@ So to begin with, we’ll need an xml file that we can traverse.
     </social>
   </user>  
 </users>
-~~~
+```
 
 
 You’ll see the above xml has attributes set on the user tags, nested elements and if you are able to parse this then you should, by extension, be able to parse any xml file regardless of size.
@@ -44,7 +44,7 @@ You’ll see the above xml has attributes set on the user tags, nested elements 
 
 The first obstacle we’ll have to overcome is reading this file into memory. We can do this by using a combination of the “os” package and the “io/ioutil” package. 
 
-~~~go
+```go
 package main
 
 
@@ -68,13 +68,13 @@ func main() {
 	defer xmlFile.Close()
 
 }
-~~~
+```
 
 ## Defining our Structs
 
 Before we can parse our xml file, we need to define some structs. We’ll have one to represent the complete list of users, one to represent our user and then one to represent our users social links.
 
-~~~go
+```go
 import (
   ... 
   // remember to add encoding/xml to your list of imports
@@ -108,13 +108,13 @@ type Social struct {
 	Twitter  string   `xml:"twitter"`
 	Youtube  string   `xml:"youtube"`
 }
-~~~
+```
 
 ## Unmarshalling Our XML
 
 So above we’ve seen how to load in our file into memory, in order to marshal it we need to convert this file to a byte array and then use the xml.Unmarshal method in order to populate our Users array.
 
-~~~go
+```go
 // read our opened xmlFile as a byte array.
 byteValue, _ := ioutil.ReadAll(xmlFile)
 
@@ -123,11 +123,11 @@ var users Users
 // we unmarshal our byteArray which contains our
 // xmlFiles content into 'users' which we defined above
 xml.Unmarshal(byteValue, &users)
-~~~
+```
 
 ## Full Implementation
 
-~~~go
+```go
 package main
 
 import (
@@ -196,7 +196,7 @@ func main() {
 	}
 
 }
-~~~
+```
 
 ## Conclusion
 

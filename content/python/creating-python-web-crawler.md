@@ -32,20 +32,20 @@ The first problem we have to solve when it comes to building a web crawler is, h
 
 Within our `crawler` project. Create a new `crawler` module:
 
-~~~py
+```py
 # module structure
 - crawler/
 - - crawler/
 - - - __init__.py
 - - - crawler.py
 - main.py
-~~~
+```
 
 We'll put the majority of our web-crawling logic within this `crawler` module. Open up `crawler/crawler.py` and add the following code:
 
-~~~py
+```py
 # crawler/crawler.py
 def crawl(url):
     print(url)
-~~~
+```
 

@@ -37,9 +37,9 @@ Let's take a look at `ProcessPoolExecutors`. `ProcessPoolExecutors` can be used 
 
 The process for creating a `ProcessPoolExecutor` is almost identical to that of the `ThreadPoolExecutor` except for the fact that we have to specify we’ve imported that class from the concurrent.futures module and that we also instantiate our executor object like so:
  
-~~~py
+```py
 Executor = ProcessPoolExecutor(max_workers=3)
-~~~
+```
 
 ## Example
 
@@ -47,7 +47,7 @@ The below example features a very simple full example of how you can instantiate
 
 We’ll use the `os` module to find the current `PID` of each of the tasks that we execute within our pool.  
 
-~~~py
+```py
 from concurrent.futures import ProcessPoolExecutor
 import os
 
@@ -61,23 +61,23 @@ def main():
 
 if __name__ == '__main__':
     main()
-~~~
+```
 
 ## Output
 
 When we run this you should see that both our submitted tasks are executed as well as the Process IDs in which they were executed. This is a very simple example but it’s good at verifying that we are indeed running our tasks across multiple processes.
 
-~~~py
+```py
  $ python3.6 06_processPool.py
 Executing our Task on Process 40365
 Executing our Task on Process 40366
-~~~
+```
 
 ## Context Manager
 
 It should be noted that you can also write this in a more succinct fashion
 
-~~~py
+```py
 from concurrent.futures import ProcessPoolExecutor
 import os
 
@@ -91,17 +91,17 @@ def main():
         task2 = executor.submit(task)
 
 main()
-~~~
+```
 
 ## Output
 
 When you run this you should see exactly the same output as before:
 
-~~~py
+```py
  $ python3.6 test.py
 Executing our Task on Process: 56335
 Executing our Task on Process: 56336
-~~~
+```
 
 ## Conclusion
 

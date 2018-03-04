@@ -17,7 +17,7 @@ In this tutorial we'll be looking at what `iterators` are with Python. We'll als
 
 Iterators are cool in the sense that they allow us to step over every item in an array, object or file and perform work on each item. For example, we could take the string `test` and use an iterator to step over every character element within that string.
 
-~~~python
+```python
 >>> string = "test"
 
 >>> for character in string:
@@ -28,13 +28,13 @@ t
 e
 s
 t
-~~~
+```
 
 ## Iterables
 
 `Iterables` in Python represent something that we can actively iterate over. These are things like `lists`, `sets` and even `strings` as we've seen in the previous demonstration. If we wish to turn an `iterable` into an `iterator` then we can use the `iter` built in function which takes in the `iterable` like so:
 
-~~~python
+```python
 >>> string = "test"
 >>> iterator = iter(string)
 >>> iterator = iter(string)
@@ -46,13 +46,13 @@ e
 s
 >>> print(iterator.next())
 t
-~~~
+```
 
 ## The `next()` Method
 
 When we have an `iterator` object we can effectively step through it using the `next()` method. This will simply return the next element of the given `iterator` object, if no further elements exist in the `iterator` then a `StopIteration` exception will be raised:
 
-~~~python
+```python
 >>> iterator = iter(string)
 >>> print(iterator.next())
 t
@@ -66,6 +66,6 @@ t
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 StopIteration
-~~~
+```
 
 > Under Construction

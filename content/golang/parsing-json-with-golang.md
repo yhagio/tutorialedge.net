@@ -25,7 +25,7 @@ I recommend you check out the official documentation for:  [Encoding/Json](https
 
 For the purpose of this tutorial we’ll be parsing the following json file. We'll be parsing nested elements, integers and arrays.  
 
-~~~json
+```json
 {
   "users": [
     {
@@ -48,7 +48,7 @@ For the purpose of this tutorial we’ll be parsing the following json file. We'
     }
   ]
 }
-~~~
+```
 
 
 ## Reading the JSON File
@@ -56,7 +56,7 @@ For the purpose of this tutorial we’ll be parsing the following json file. We'
 
 We’ll be using the os package in order to open up our users.xml file from our filesystem. 
 
-~~~go
+```go
 // Open our jsonFile
 jsonFile, err := os.Open("users.json")
 // if we os.Open returns an error then handle it
@@ -66,14 +66,14 @@ if err != nil {
 fmt.Println("Successfully Opened users.json")
 // defer the closing of our jsonFile so that we can parse it later on
 defer jsonFile.Close()
-~~~
+```
 
 
 ## Defining our Structs
 
 We'll be decoding JSON and populating these Go data structures by unmarshalling but first we'll need to define these data structures like so:
 
-~~~go
+```go
 Import (
 	…
 	// import our encoding/json package
@@ -105,14 +105,14 @@ type Social struct {
 	Facebook string `json:"facebook"`
 	Twitter  string `json:"twitter"`
 }
-~~~
+```
 
 
 ## Unmarshalling our JSON
 
 Once we've used the os.Open function to read our file into memory, we then have to convert it toa byte array using ioutil.ReadAll. Once it's in a byte array we can pass it to our json.Unmarshal() method.
 
-~~~go
+```go
 // read our opened xmlFile as a byte array.
 byteValue, _ := ioutil.ReadAll(jsonFile)
 
@@ -135,14 +135,14 @@ for i := 0; i < len(users.Users); i++ {
 	fmt.Println("User Name: " + users.Users[i].Name)
 	fmt.Println("Facebook Url: " + users.Users[i].Social.Facebook)
 }
-~~~
+```
 
 
 ## Full Implementation
 
 Below you'll find the full implementation of this tutorial.
 
-~~~go
+```go
 package main
 
 
@@ -221,7 +221,7 @@ func main() {
 
 
 }
-~~~
+```
 
 ## Conclusion
 

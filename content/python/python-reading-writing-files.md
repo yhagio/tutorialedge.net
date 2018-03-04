@@ -19,14 +19,14 @@ There are multiple ways to create files in Python, but arguably the cleanest way
 
 #### Context Manager Approach
 
-~~~py
+```py
 def main():
     with open('test.txt', 'w') as file:
         file.write("THIS IS A TEST FILE")
 
 if __name__ == '__main__':
     main()
-~~~
+```
 
 What this does is open a file named `test.txt` in a context manager and returns this new file object to us as `file`. Within the bounds of this context manager we then call `file.write("THIS IS A TEST FILE")` which subsequently writes `THIS IS A TEST FILE` to our newly created file. Upon exiting our `with` statement the program then handles closing the file for us and we don't have to worry about anything else.
 
@@ -34,11 +34,11 @@ What this does is open a file named `test.txt` in a context manager and returns 
 
 However should you wish to do this in a manner that doesn't use a context manager then you can do something like so:
 
-~~~py
+```py
 file = open('test2.txt', 'w')
 file.write("This is a second test")
 file.close()
-~~~
+```
 
 The above code creates a new file called `test2.txt`, it then appends `This is a second test` to that file before closing the file by calling `file.close()`. It's important to note that by going down this route we have to handle the closing of these files ourself. Forgetting to do this can lead to complications such as:
 
@@ -72,24 +72,24 @@ It's not an uncommon use-case to want to iterate over a file in a line-by-line f
 
 Let's take for example a text file called `test3.txt` that contains the following:
 
-~~~py
+```py
 Line 1 - THIS IS A TEST FILE
 Line 2
 Line 3 - OMG THIS WORKS
-~~~
+```
 
 If we wished to iterate over this in a line-by-line fashion we could do something like so:
 
-~~~py
+```py
 with open('test.txt', 'r') as file:
     for line in file:
         print(line)
-~~~
+```
 
 This would then print out the following when we ran this program:
 
-~~~py
+```py
 Line 1 - THIS IS A TEST FILE
 Line 2
 Line 3 - OMG THIS WORKS
-~~~
+```

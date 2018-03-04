@@ -27,7 +27,7 @@ If you have a Jenkins instance running on the webserver that your site currently
 
 You can create a new job which watches your github repository for any changes. If any changes are made then it would then run something like the following in the build stage:
 
-~~~shell
+```shell
 # You will need the hugo binary somewhere on your webserver
 # build the website into the public/ directory
 /Path/To/hugo
@@ -35,6 +35,6 @@ You can create a new job which watches your github repository for any changes. I
 # Once you've built your website you can then copy all of these
 # files to where your website lives on your web server
 cp -R public/* /var/www/html/
-~~~
+```
 
 Once you've got this set up, you can then freely make changes to your github repo and every time you do these changes will be built locally on your webserver and then will be pushed to overwrite your existing website, thus making your changes instantly live!

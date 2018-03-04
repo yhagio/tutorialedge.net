@@ -23,13 +23,13 @@ Please note that some of these commands may not work on your operating system. I
 
 In order to check what operating system our code is running on we can use the runtime package and check the GOOS constant. This will return the operating system target:
 
-~~~go
+```go
     if runtime.GOOS == "windows" {
 		fmt.Println("Can't Execute this on a windows machine")
 	} else {
 		execute()
 	}
-~~~
+```
 
 The full list of GOOS variables can be found here: [Sys Package](https://golang.org/pkg/runtime/internal/sys/#GOOS).
 
@@ -37,7 +37,7 @@ The full list of GOOS variables can be found here: [Sys Package](https://golang.
 
 Below is the absolute bare essentials as to how to execute a system command, I've stripped out all the error handling just to keep it simple.
 
-~~~go
+```go
 package main
 
 import (
@@ -81,7 +81,7 @@ func main() {
 	}
 }
 
-~~~
+```
 
 ## Exit Codes
 

@@ -32,7 +32,7 @@ In this example we'll be creating a completely round circle object using nothing
 
 To get this to work, what I've done is create a `div` and attached the `.circle` class to that div. I've then defined this `.circle` within my css file and given it a height and width of 100px. I've then added `border-radius:100%;` to this class which gives it the shape of a perfect circle. 
 
-~~~html
+```html
 <div class="circle">
 </div>
 
@@ -45,7 +45,7 @@ To get this to work, what I've done is create a `div` and attached the `.circle`
   margin: auto;
 }
 </style>
-~~~
+```
 
 ## Circle Images
 
@@ -65,7 +65,7 @@ img.circle {
 
 #### Source Code:
 
-~~~html
+```html
 <img class="circle" src="https://twitter.com/Elliot_F/profile_image?size=original" alt="circle-image" /> 
 
 <style>
@@ -76,26 +76,26 @@ img.circle {
   margin: auto;
 }
 </style>
-~~~
+```
 
 ## border-radius For Specific Corners
 
 There are times where you don't want every corner of your object to be rounded, thankfully we can utilize some of the more specific border-radius properties in order to allow us to only round certain corners. We can do this by setting the 4 specific properties:
 
-~~~css
+```css
 border-top-left-radius: 5px;
 border-top-right-radius: 10px;
 border-bottom-left-radius: 20px;
 border-bottom-right-radius: 30px;
-~~~
+```
 
 or we can pass in 4 distinct parameters to our `border-radius` property like so:
 
-~~~css
+```css
 border-radius: 10px 15px 20px 30px;
-~~~
+```
 
-~~~html
+```html
 <div class="element">
 </div>
 
@@ -111,7 +111,7 @@ border-radius: 10px 15px 20px 30px;
   margin: auto;
 }
 </style>
-~~~
+```
 
 #### Output
 

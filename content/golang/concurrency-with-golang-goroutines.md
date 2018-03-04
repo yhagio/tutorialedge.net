@@ -27,7 +27,7 @@ By mapping hundreds or thousands of goroutines onto a single thread we don’t h
 As a means of demonstration, we’ll create a function that takes in an int value and prints a number to the console **n** times. We’ll also add a sleep function which will wait for a second before printing the second number:
 
 
-~~~go
+```go
 package main
 
 
@@ -62,7 +62,7 @@ func main() {
 
 
 }
-~~~
+```
 
 
 If you execute the code above you should see that it prints 0 to 9 twice in a row. Total execution time for this sequential program is just over 20 seconds.
@@ -74,7 +74,7 @@ If you execute the code above you should see that it prints 0 to 9 twice in a ro
 If we aren’t fussed about the order in which our program prints out the values 0 to **n** then we can speed this program up by using goroutines and making it asynchronous.
 
 
-~~~go
+```go
 package main
 
 
@@ -108,7 +108,7 @@ func main() {
 
 
 }
-~~~
+```
 
 
 The only thing we needed to change to our existing sequential go program was to add the ‘go’ keyword in front of our compute function invocation. Here we’ve essentially created two separate goroutines that should now execute in parallel. 

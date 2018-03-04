@@ -31,58 +31,58 @@ In this tutorial we'll be utilizing the `Serde` crate which can be found here: [
 
 In order to use this you will have to add the following to your `Cargo.toml`.
 
-~~~toml
+```toml
 [dependencies]
 serde = "*"
 serde_json = "*"
 serde_derive = "*"
-~~~
+```
 
 and then you will have to add this to your crate root:
 
-~~~rust
+```rust
 #[macro_use]
 extern crate serde_derive;
 extern crate serde;
 extern crate serde_json;
-~~~
+```
 
 ## Structs
 
 If you have ever used `Golang` then the concept of defining `struct`'s that will represent our `JSON` objects.
 
-~~~rust
+```rust
 #[derive(Serialize, Deserialize, Debug)]
 struct Greeting {
     status: String,
     content: String
 }
-~~~
+```
 
 ## Serializing
 
 Let's take a look at how we can serialize a `struct` to a `JSON` string:
 
-~~~rust
+```rust
 let greeting = Greeting { status: "success", content: "Hello World" };
 let serialized = serde_json::to_string(&greeting).unwrap();
 println!("Serialized: {}", serialized);
-~~~
+```
 
 ## Deserializing
 
 If we conversely wanted to deserialize our `JSON` string and convert it back to a `Greeting` then we could do the following:
 
-~~~rust
+```rust
 let deserialized: Greeting = serde_json::from_str(&serialized).unwrap();
 println!("Deserialized: {:?}", deserialized);
-~~~
+```
 
 ## Sample Program
 
 Let's now put this all together and try and create a simple REST api that will return a JSON response. This `JSON` response will be serialized from the `resp` variable that we will follow the `Greeting` struct.
 
-~~~rust
+```rust
 #[macro_use]
 extern crate serde_derive;
 extern crate serde;
@@ -110,7 +110,7 @@ fn main() {
 
     Iron::new(hello_world).http("localhost:3000").unwrap();
 }
-~~~
+```
  
 ## Conclusion
 

@@ -21,7 +21,7 @@ Bubble sort works by constantly iterating through an unsorted array and swapping
 
 Now that we have an appreciation for how the algorithm works, let's now take a look at how you would go about implementing this in the Python programming language.
 
-~~~py
+```py
 # Bubble Sort In Python
 # 
 # Performance Complexity = O(n^2)
@@ -41,11 +41,11 @@ def bubbleSort(my_list):
 my_list = [8,2,1,3,5,4]
 
 print(bubbleSort(my_list))
-~~~
+```
 
 ## Output
 
-~~~py
+```py
  $ python3.6 bubbleSort.py
 Swapped: 2 with 8
 Swapped: 1 with 8
@@ -55,7 +55,7 @@ Swapped: 4 with 8
 Swapped: 1 with 2
 Swapped: 4 with 5
 [1, 2, 3, 4, 5, 8]
-~~~
+```
 
 ## Conclusion
 

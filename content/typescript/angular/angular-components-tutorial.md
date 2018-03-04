@@ -27,7 +27,7 @@ When we split our applications into numerous components and sub-components we ar
 
 If you’ve come from an Angular 1.* background then you should find creating components to be a little bit simpler in Angular2. In Angular 2 we have done away with controllers and controller files and merged them straight into one single component file. In this component file we essentially define our controller as a class and then we annotate this class using the @Component({ … }) angular annotation.
 
-~~~ts
+```ts
 // first we have to import Component
 import { Component } from '@angular/core';
 
@@ -39,7 +39,7 @@ import { Component } from '@angular/core';
 })
 // we define our class
 export class UserComponent { }
-~~~
+```
 
 ## @Component Decorator
 
@@ -54,6 +54,6 @@ export class UserComponent { }
 
 If you've built your project using the Angular-CLI then creating new components that work straight away is easy:
 
-~~~bash
+```bash
 ng g component your_component_name
-~~~
+```

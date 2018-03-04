@@ -30,7 +30,7 @@ Whilst this typically runs with a performance of `O(n log n)`, it should be note
 
 Now that we understand the logic behind the quicksorting algorithm, it's time to implement this in Python. Below we'll be defining a `quicksort()` function which will take in an `array` as it's only parameter.  
 
-~~~py
+```py
 def quicksort(array):
 
     # We define our 3 arrays
@@ -61,17 +61,17 @@ def quicksort(array):
     
     else:  
         return array
-~~~
+```
 
 ## Testing it works
 
 We can test this by doing the following:
 
-~~~py
+```py
 >>> import quickSort
 >>> quickSort.quicksort([6,4,7,1,2,9,12,3])
 [1, 2, 3, 4, 6, 7, 9, 12]
-~~~
+```
 
 ## Conclusion
 

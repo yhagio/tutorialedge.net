@@ -17,15 +17,15 @@ twitter = "https://twitter.com/Elliot_F"
 
 This quick and easy technique shows how you can access all the elements of a list in reverse order.
 
-~~~py
+```py
 >>> my_list = [1,2,3,4,5]
 >>> my_list[::-1]
 [5, 4, 3, 2, 1]
-~~~
+```
 
 We can then treat our reversed list as an `iterator` and iterate through every element within this reversed list like so:
 
-~~~py
+```py
 >>> for el in my_list[::-1]:
 ...     print(el)
 ...
@@ -34,7 +34,7 @@ We can then treat our reversed list as an `iterator` and iterate through every e
 3
 2
 1
-~~~
+```
 
 ## Conclusion
 

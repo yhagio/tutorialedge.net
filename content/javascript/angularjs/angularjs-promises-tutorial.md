@@ -19,7 +19,7 @@ Essentially when you create a promise, you are ensuring that a certain order is 
 
 If you have written any AngularJS applications that call upon the $http service then you will have already had experience working with Promises. For example this is a promise:
 
-~~~js
+```js
 // We create our promise
 $http.get(‘api/status’)
     // that once complete will call either our success callback function
@@ -31,7 +31,7 @@ $http.get(‘api/status’)
         // handle our error
         $log.log(“Error Thrown”);
     });
-~~~
+```
 
 This is essentially what all promises look like in javascript, we create the promise and pass it two *callback* functions. A good analogy to describe this is as follows:
 
@@ -44,7 +44,7 @@ This is also a good example of one of the main benefits to Javascript asynchrono
 
 In code terms the above flow would look something like this:
 
-~~~js
+```js
 $http.get('api/cut/onions')
   .then(function success(response){
     // add them to the stew
@@ -55,7 +55,7 @@ $http.get('api/cut/onions')
 
 // continue cutting carrots whilst you wait for the promise to finish executing
 cutCarrots();
-~~~
+```
 
 However this is also an example of how things can go wrong in your applications, for instance. Because we don’t have any control over when a promise will finish, we could see weird side-effects from our code. For instance we could see the onions added to the stew before the carrots which might not be what we want.
 
@@ -63,7 +63,7 @@ However this is also an example of how things can go wrong in your applications,
 
 Thankfully, we have a way we can dictate when we want things done. This is where the $q service comes in. If we wanted to maintain the order in which things happen in the preparation of our stew we could do something like this:
 
-~~~js
+```js
 // first chop our onions
 $http.get('api/chop/onions')
   .then(function success(response){
@@ -77,13 +77,13 @@ $http.get('api/chop/onions')
   .then(function success(response){
     // serve our stew
   });
-~~~
+```
 
 ## Defining our Own Promises
 
 AngularJS's $q service allows to define our own promises. Below you'll find an example controller that contains the ctrl.ourPromise function, this function returns a promise object that we can chain like we have done in our ctrl.$onInit function.
 
-~~~js
+```js
 function TestController($q, $log){
   var ctrl = this;
   // our $onInit function shows exactly how we can
@@ -110,7 +110,7 @@ TestController.$inject = ['$q', '$log'];
 
 angular.module('root')
   .controller('TestController', TestController);
-~~~
+```
 
 ## Conclusion
 

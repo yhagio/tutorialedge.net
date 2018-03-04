@@ -23,7 +23,7 @@ In this scenario the code would be far too much for one file and as such breakin
 
 Our Python project structure would then look something like this:
 
-~~~python
+```python
 widgettrader
 - widgettrader/
 - - analysis/
@@ -33,7 +33,7 @@ widgettrader
 - setup.py
 - requirements.txt
 ...
-~~~
+```
 
 ## What is a Module in Python
 
@@ -45,23 +45,23 @@ Before we go on to creating our own Python Modules, it's important to know exact
 
 We'll start off by defining a very simple module that will exist in a `.py` file within the same directory as our `main.py` script that we'll be writing.
 
-~~~bash
+```bash
 directory
 - main.py
 - testmodule.py
-~~~
+```
 
 Within this `testmodule.py` file we'll define a very simple function `test()` that will simply print `Hey, I'm a test!` like so:
 
-~~~py
+```py
 # testmodule.py
 def test():
     print("Hey, I'm a test!")
-~~~
+```
 
 Within our `main.py` file we can then import this `testmodule` as a module and use our newly defined `test()` method like so:
 
-~~~py
+```py
 # main.py
 import testmodule
 
@@ -70,7 +70,7 @@ def main():
 
 if __name__ == '__main__':
     main()
-~~~
+```
 
 That is all we need to define a very simple python module within our Python programs. 
 
@@ -84,36 +84,36 @@ In order to define a module that exists within a sub-directory in Python we need
 
 Once we have done this we would then define all of our `analysis` module's code within the `analysis.py` file. 
 
-~~~py
+```py
 # analysis/analysis.py
 def my_analysis_func():
     print("Executing Analysis")
-~~~
+```
 
 We could then chose to either import this module directly in our `main.py` file like so:
 
-~~~py
+```py
 # main.py
 import analysis.analysis
 
 analysis.analysis.my_analysis_func()
-~~~
+```
 
 Notice that when we call import we have to specify `analysis.analysis`. This is because our `analysis.py` file lives within the `analysis/` sub-directory. If we wanted to truncate this to just `import analysis` we could add the following line to our `analysis/__init__.py` file:
 
-~~~py
+```py
 # analysis/__init__.py
 from analysis.analysis import my_analysis_func
-~~~
+```
 
 Our `main.py` code would then look like the following:
 
-~~~py
+```py
 # main.py
 import analysis
 
 analysis.my_analysis_func()
-~~~
+```
 
 Which, I'm sure you'll agree is more succinct and cleaner to read overall. 
 
@@ -128,10 +128,10 @@ It has to be noted that there is a difference between a `Python module` and a `P
 
 Importing modules using their full path can be an arduous task and thankfully Python offers us the ability to import modules from using relative paths. If we continue our `analysis` module example from above, we could modify the `analysis/__init__.py` file to use relative imports like so:
 
-~~~python
+```python
 # This would import the module which was 
 from .analysis import my_analysis_func
-~~~
+```
 
 This would mean that it would try and resolve the module from the relative path of the `__init__.py` file instead of having to specify the absolute path of the module like `analysis.analysis` as we had before. 
 

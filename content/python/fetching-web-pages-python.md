@@ -17,15 +17,15 @@ In this tutorial I will be showing you how you can fetch the a webpage using the
 
 To begin with we will need to import the `urllib2` python module so that we can utilize it's functionality:
 
-~~~py
+```py
 import urllib2
-~~~
+```
 
 ## Fetching a Website
 
 <p>Once we've imported all the appropriate python modules we can move onto fetching our desired webpage. For the purpose of this example we'll be fetching this webpage and we can do that like so:</p>
 
-~~~py
+```py
 req = urllib2.Request('http://www.tutorialedge.net/python/fetching-web-pages-python/')
 response = urllib2.urlopen(req)
 the_page = response.read()
@@ -33,11 +33,11 @@ the_page = response.read()
 # once we've got this we can start performing some analysis of 
 # the webpage and do some cooler things.
 print(the_page)
-~~~
+```
 
 <p>Now in order to prevent being hit by 403 forbidden responses we need to define a set of headers for our HTTP request.</p>
 
-~~~py
+```py
 import urllib2
 
 # create a variable which will hold our desired web page as a string
@@ -72,7 +72,7 @@ except urllib2.HTTPError, e:
 content = page.read()
 # and then print out this page.
 print content
-~~~
+```
 
 ## Video Tutorial
 

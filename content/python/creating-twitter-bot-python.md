@@ -17,9 +17,9 @@ Twitter bots are a fantastic way to drum up a bit of interest in your brand or w
 
 <p>To get started you will have to use the pip tool to install the Twitter library on your machine. To do so you can use the python pip package manager by typing the following into the terminal:</p>
 
-~~~c
+```c
 pip install python-twitter
-~~~
+```
 
 <p>Full installation instructions can be found on the Readme.md file found on github if needed.</p>
 
@@ -31,7 +31,7 @@ pip install python-twitter
 
 <p>The code for connecting to your Twitter account using this Bear's Python wrapper looks like so:</p>
 
-~~~py
+```py
 from twitter import Twitter, OAuth, TwitterHTTPError
 
 consumer_key = ''
@@ -41,7 +41,7 @@ access_token_secret = ''
 
 bot = Twitter(auth=OAuth(access_token_key, access_token_secret,
             consumer_key, consumer_secret))
-~~~
+```
 
 <p>Replace the strings 'consumer_key' etc. with the appropriate keys and secrets generated for you and you should have successfully connected to the Twitter RESTful API. Now that we've connected we can begin to do some interesting things such as retweeting followers or searching tweets.</p>
 
@@ -49,16 +49,16 @@ bot = Twitter(auth=OAuth(access_token_key, access_token_secret,
 
 <p>The first thing we need to do is create a function for searching for tweets, this function will return all recent tweets that have mentioned a specific string anywhere within the tweet.</p>
 
-~~~py
+```py
 def search_tweets(query, count=100):
     return bot.search.tweets(query=query, result_type='recent', count=count)
-~~~
+```
 
 ## Favoriting Tweets
 
 <p>So now that we've got the basic mechanisms in place to search for tweets, we now have to do something with them. The first interaction I'm going to show you how to do is favourite tweets.</p>
 
-~~~py
+```py
 def fav_tweet(tweet):
     try:
         result = t.favorites.create(_id=tweet['id'])
@@ -69,12 +69,12 @@ def fav_tweet(tweet):
     except TwitterHTTPError as e:
         print "Error: ", e
         return None
-~~~
+```
 ## Retweeting Tweets
 
 <p>Retweeting specific tweets is again very similar to favoriting tweets and can be useful if you want to, for instance, retweet all replies to any of the posts you make and try to improve your community presence. </p>
 
-~~~py
+```py
 def retweet_tweet(tweet):
     try:
         result = t.statuses.retweet._id(_id=tweet['id'])
@@ -83,13 +83,13 @@ def retweet_tweet(tweet):
     except TwitterHTTPError as e:
         print "Error: ", e
         return None
-~~~
+```
 
 ## Bringing it all together
 
 <p>Now that you've got an idea of how to favorite and retweet tweets, we can bring this together into a bot that constantly runs on a server or wherever else you choose to run it.</p>
 
-~~~py
+```py
 from twitter import Twitter, OAuth, TwitterHTTPError
 import time
 #enter the corresponding information from your Twitter application:
@@ -168,4 +168,4 @@ if __name__ == "__main__":
             auto_fav("IndieDev", 1)
         except Exception, e:
             print(e)
-~~~
+```

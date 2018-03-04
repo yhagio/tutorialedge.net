@@ -21,10 +21,10 @@ In this tutorial we are going to be looking at how we can build a realtime appli
 
 In order to utilize the socket.io library we will first have to install it using the node package manager. We can do this by typing the following:
 
-~~~js
+```js
 npm install socket.io-client
 npm install @types/socket.io-client
-~~~
+```
 
 ## Turning Websockets into RxJS Subjects
 
@@ -32,7 +32,7 @@ RxJS Subjects are both an `Observable` and an `Observer`. Using these Subjects w
 
 In this scenario we'll be creating both a Websocket service and a Chat service. The Websocket service will handle direct communication with the socket and the Chat service will expose a simple interface that our other components can easily interact with.
 
-~~~js
+```js
 import { Injectable } from '@angular/core';
 import * as io from 'socket.io-client';
 import { Observable } from 'rxjs/Observable';
@@ -79,11 +79,11 @@ export class WebsocketService {
   }
 
 }
-~~~
+```
 
 Once we've defined this websocket service we can then define a chat service that features just a constructor and one `sendMsg()` function that will be used to send messages to our socket.io server.
 
-~~~js
+```js
 import { Injectable } from '@angular/core';
 import { WebsocketService } from './websocket.service';
 import { Observable, Subject } from 'rxjs/Rx';
@@ -109,13 +109,13 @@ export class ChatService {
   }
 
 }
-~~~
+```
 
 ## Using our Chat Service
 
 If we wanted to start using our newly crafted chat service we could something like this: 
 
-~~~js
+```js
 import { Component, OnInit } from '@angular/core';
 import { ChatService } from './chat.service';
 
@@ -140,7 +140,7 @@ export class AppComponent implements OnInit{
   }
 
 }
-~~~
+```
 
 We could then create a simple button in our `./app.component.html` file which would call our `sendMessage()` function: `<button (click)="sendMessage()">Send Message</button>`. As long as you have specified your newly created services in the `app.module.ts` providers array you should hopefully now have an application that can send and receive messages from a `socket.io` based webserver.
 
@@ -148,7 +148,7 @@ We could then create a simple button in our `./app.component.html` file which wo
 
 In this tutorial we will be leveraging a very simple socket.io based `express` server which will listen on `http://localhost:5000` for all incoming websocket connections and upon receiving a connection it will print out that a user has connected. Create a new file called `app.js` and add the following code:
 
-~~~js
+```js
 let app = require('express')();
 let http = require('http').Server(app);
 let io = require('socket.io')(http);
@@ -176,7 +176,7 @@ io.on('connection', (socket) => {
 http.listen(5000, () => {
     console.log('started on port 5000');
 });
-~~~
+```
 
 > Before you run this code you will have to ensure the proper node dependencies are installed. You can do that by typing `npm i express http socket.io`. You can run this server by typing `node app.js`. 
 
@@ -184,11 +184,11 @@ http.listen(5000, () => {
 
 When you run this you should see our websocket server print out something like the below output. It first starts on port 5000, when we then open up our Angular client you should then see it log `user connected` and then every time we send a message from our client you see the contents of that message being outputted below.
 
-~~~bash
+```bash
  $ node app.js
 started on port 5000
 user connected
 Message Received: "Test Message"
 Message Received: "Test Message"
-~~~
+```
 

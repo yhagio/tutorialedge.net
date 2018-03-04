@@ -19,13 +19,13 @@ twitter = "https://twitter.com/Elliot_F"
 
 <p>Create a new file called index.js and add the following: </p>
 
-~~~js
+```js
 var fs = require('fs');
 
 fs.readFile('temp.txt', function(err, buf) {
   console.log(buf.toString());
 });
-~~~
+```
 
 <p>Create a temp.txt within the same directory and write in it anything you’d like. Run your script using node index.js and you should see in the console the contents of your file.</p>
 
@@ -33,17 +33,17 @@ fs.readFile('temp.txt', function(err, buf) {
 
 <p>We’ll step through this with comments.</p>
 
-~~~js
+```js
 var fs = require('fs');
-~~~
+```
 
 <p>This line does the job of importing the fs package and allowing us to utilize it within our own code.</p>
 
-~~~js
+```js
 fs.readFile('temp.txt', function(err, buf) {
   console.log(buf.toString());
 });
-~~~
+```
 
 <p>This calls the readFile function asynchronously and then prints the contents of the file to the console.</p>
 
@@ -51,13 +51,13 @@ fs.readFile('temp.txt', function(err, buf) {
 
 <p>If the above code hasn’t worked as expected and you are seeing a buffer being printed out in the terminal then it might be an idea to specify the files encoding. We can do this like so: </p>
 
-~~~js
+```js
 var fs = require('fs');
 
 fs.readFile('temp.txt', 'utf-8' ,function(err, buf) {
   console.log(buf.toString());
 });
-~~~
+```
 
 <h2 id=”writing-to-files”>Writing To Files</h2>
 
@@ -67,7 +67,7 @@ fs.readFile('temp.txt', 'utf-8' ,function(err, buf) {
 
 <p>Again create a new file within your current directory and call it write.js and then add the following javascript code:</p>
 
-~~~js
+```js
 var fs = require('fs');
 
 var data = "New File Contents";
@@ -76,7 +76,7 @@ fs.writeFile('temp.txt', data, function(err, data){
     if (err) console.log(err);
     console.log("Successfully Written to File.");
 });
-~~~
+```
 <p>Run this code by executing node write.js in the terminal and then open up temp.txt in your editor, you should now see the new contents of the file. </p>
 
 

@@ -47,7 +47,7 @@ With these 5 commands and a combination of your standard Python functions such a
 
 Let's have a look at how we can use this to effectively step over a very simple Python program.
 
-~~~python
+```python
 def compute(x, y):
     return x + y
 
@@ -59,21 +59,21 @@ def main():
 
 if __name__ == '__main__':
     main()
-~~~
+```
 
 We've set a breakpoint on the second line of our `main()` function. This means that when we run the above program you should see execution stops at the point where `import pdb; pdb.set_trace()` is hit and the pdb interactive command line opens up. 
 
-~~~py
+```py
  $ python3.6 simple.py
 This is my program
 > /location/to/simple.py(7)main()
 -> x = compute(2, 3)
 (Pdb) 
-~~~
+```
 
 The final line is where we'll be inputting our commands. Run the `n(ext)` command to go to the next line and then explore our `x` variable:
 
-~~~py
+```py
 (Pdb) n
 > /location/to/simple.py(8)main()
 -> print(x)
@@ -82,7 +82,7 @@ The final line is where we'll be inputting our commands. Run the `n(ext)` comman
 (Pdb) repr(x)
 '5'
 (Pdb)
-~~~
+```
 
 ## Conclusion
 

@@ -21,11 +21,11 @@ Arrays represent a collection of elements, these elements can be of different ty
 
 In many programming languages you are required to set the size of your array at the time of its instantiation. 
 
-~~~c
+```c
 // in C if we wanted an array with 10 elements
 // we could instantiation it like this:
 int array[10];
-~~~
+```
 
 ## Access Elements in Arrays
 

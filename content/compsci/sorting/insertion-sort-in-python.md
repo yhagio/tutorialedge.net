@@ -27,7 +27,7 @@ So the insertion sorting algorithm is a well known sorting algorithm that can so
 
 Implementing it in Python can be done like so:
 
-~~~py
+```py
 # Insertion Sort In Python
 # 
 # Performance Complexity = O(n^2)
@@ -52,11 +52,11 @@ def insertionSort(my_list):
 my_list = [8,2,1,3,5,4]
 
 print(insertionSort(my_list))      
-~~~
+```
 
 When executed this should give you the following output:
 
-~~~py
+```py
  $ python3.6 insertionSort.py
 Swapped 2 for 8
 [8, 8, 1, 3, 5, 4]
@@ -73,7 +73,7 @@ Swapped 4 for 8
 Swapped 8 for 5
 [1, 2, 3, 5, 5, 8]
 [1, 2, 3, 4, 5, 8]
-~~~
+```
 
 ## Conclusion
 

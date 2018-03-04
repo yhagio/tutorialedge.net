@@ -19,7 +19,7 @@ When it comes to implementing a `trie` we typically use a series of nested hash 
 
 Let's take a quick look at how we would implement a simple `trie` structure in Python. We'll define a `make_trie()` function which will take in a list of words and then from this list of words, it will create a `trie` structure.
 
-~~~py
+```py
 _end = '*'
 
 # takes in a list of words
@@ -46,20 +46,20 @@ def make_trie(*words):
 trie = make_trie('hi', 'hello', 'howdy')
 # print out our new trie 
 print(trie)
-~~~
+```
 
 If we then attempt to run this you will see that we create a `trie` that has one root element: `h`.  
 
-~~~py
+```py
  $ python3.6 trie.py
 {'h': {'i': {'*': '*'}, 'e': {'l': {'l': {'o': {'*': '*'}}}}, 'o': {'w': {'d': {'y': {'*': '*'}}}}}}
-~~~
+```
 
 ## Implementing a find_word() function
 
 So now that we have created a `trie` structure we need to implement a mechanism that checks to see if a word exists within our `trie`. 
 
-~~~py
+```py
 def find_word(trie, word):
     sub_trie = trie
     for letter in word:
@@ -72,13 +72,13 @@ def find_word(trie, word):
             return True
         else:
             return False
-~~~
+```
 
 ## Implementing an add_word() function
 
 If we wanted to implement a function that took in an existing `trie` and returned a new `trie` that contained a new word that has been passed in, we could do something similar to this: 
 
-~~~py
+```py
 def add_word(trie, word):
     # We want to catch if a word already
     # exists within our trie structure
@@ -102,14 +102,14 @@ def add_word(trie, word):
     temp_trie[_end] = _end
     # return our new trie object
     return temp_trie
-~~~
+```
 
 
 ## Complete Code Sample
 
 Below you'll find the complete code sample for this tutorial. I've fleshed this out into a Python class that you can use much like you would a `list` or a `queue`. 
 
-~~~py
+```py
 class Trie():
     
     def __init__(self):
@@ -168,7 +168,7 @@ print(my_trie.find_word("hi"))
 print(my_trie.find_word("how"))
 print(my_trie.find_word("head"))
 
-~~~
+```
 
 ## Conclusion
 

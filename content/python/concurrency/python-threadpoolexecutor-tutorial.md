@@ -23,17 +23,17 @@ Web crawlers typically do a lot of heavy i/o based tasks such as fetching and pa
 
 The first step we need to know is how we can define our own `ThreadPoolExecutor’s`. This is a rather simple one-liner which looks something like so:
 
-~~~py
+```py
 executor = ThreadPoolExecutor(max_workers=3) 
-~~~
+```
 
 Here we instantiate an instance of our `ThreadPoolExecutor` and pass in the maximum number of workers that we want it to have. In this case we’ve defined it as 3 which essentially means this thread pool will only have 3 concurrent threads that can process any jobs that we submit to it. 
 
 In order to give the threads within our `ThreadPoolExecutor` something to do we can call the submit() function which takes in a function as its primary parameter like so:
 
-~~~py
+```py
 executor.submit(myFunction())
-~~~
+```
 
 ## Example
 
@@ -41,7 +41,7 @@ In this example we put together both the creation of our `ThreadPoolExecutor` ob
 
 Below our defined task function we have our standard main function. It’s within this that we define our executor object in a similar fashion to above before then submitting two tasks to this new pool of threads.
 
-~~~py
+```py
 from concurrent.futures import ThreadPoolExecutor
 import threading
 import random
@@ -62,7 +62,7 @@ def main():
 
 if __name__ == '__main__':
     main()
-~~~
+```
 
 ## Output
 
@@ -70,7 +70,7 @@ If we were to execute our Python program above then we should see the rather bla
 
 We then utilize the `threading.current_thread()` function in order to determine which thread has performed this task. You should see that the two values outputted are distinct daemon threads. 
 
-~~~py
+```py
 $ python3.6 05_threadPool.py
 Executing our Task
 I: 45
@@ -78,15 +78,15 @@ Executing our Task
 I: 45
 Task Executed <Thread(<concurrent.futures.thread.ThreadPoolExecutor object at 0x102abf358>_1, started daemon 123145333858304)>
 Task Executed <Thread(<concurrent.futures.thread.ThreadPoolExecutor object at 0x102abf358>_0, started daemon 123145328603136)>
-~~~
+```
 
 ## Context Manager
 
 The second and possibly most popular method of instantiating a ThreadPoolExecutor is using it as a context manager like so:
 
-~~~py
+```py
 with ThreadPoolExecutor(max_workers=3) as executor:
-~~~
+```
 
 It does much the same job as the previous method we looked at but syntactically it looks better and can be advantageous to us as the developers in certain scenarios. 
 
@@ -98,7 +98,7 @@ This time we’ll be defining a different task that takes in a variable ‘n’ 
 
 Within our main function we utilize our ThreadPoolExecutor as a context manager and then call future = executor.submit(task, (n)) 3 times in order to give our threadpool something to do. 
 
-~~~py
+```py
 from concurrent.futures import ThreadPoolExecutor
 
 def task(n):
@@ -114,20 +114,20 @@ def main():
   
 if __name__ == '__main__':
  main()
-~~~
+```
 
 ## Output
 
 When we execute the above program you should see that it prints out that we are starting out ThreadPoolExecutor before going on to execute the three distinct tasks we submit to it and then finally printing out that all tasks are complete. 
 
-~~~py
+```py
  $ python3.6 01_threadPoolExe.py
 Starting ThreadPoolExecutor
 Processing 2
 Processing 3
 Processing 4
 All tasks complete
-~~~
+```
 
 ## Video Tutorial
 

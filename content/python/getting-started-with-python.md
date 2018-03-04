@@ -33,14 +33,14 @@ To get us started and give us a feel for the language we are going to create a c
 
 Your console should look something like this:
 
-~~~py
+```py
  $ python3.6
 Python 3.6.0 (v3.6.0:41df79263a11, Dec 22 2016, 17:23:13)
 [GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin
 Type "help", "copyright", "credits" or "license" for more information.
 >>> print('Hello World')
 Hello World
-~~~
+```
 
 When we press enter after writing this line of code python’s interactive shell will then read this and try to execute it to the best of its abilities. If everything has gone to plan then you should see `Hello World` successfully printed out below. 
 

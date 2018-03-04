@@ -19,9 +19,9 @@ Being able to interact with `HTTP` based RESTful APIs is an incredibly important
 
 Before we can get started with the `requests` library we'll have to install it. This can be done using `pip` like so:
 
-~~~py
+```py
 pip install requests
-~~~
+```
 
 ## Making GET Requests
 
@@ -31,7 +31,7 @@ To get us started we'll try and request `http://pokeapi.co/api/v2/pokemon/1/`. I
 
 Open up a new Python file and add the following code:
 
-~~~py
+```py
 import requests
 
 def main():
@@ -43,18 +43,18 @@ def main():
 
 if __name__ == '__main__':
     main()
-~~~
+```
 
 When you run this you should hopefully see the following output:
 
-~~~py
+```py
  $ python3.6 main.py
 200
-~~~
+```
 
 The `200` indicates a successful `HTTP` request. We can then start to do other things such as printing out the body of the `HTTP` response which would hold the same `JSON` that was outputted in the browser when we navigated to the same url. Let's expand our program to extract our pokemon's name and the `HTTP` headers that were returned:
 
-~~~py
+```py
 import requests
 import json
 
@@ -67,24 +67,24 @@ def main():
 
 if __name__ == '__main__':
     main()
-~~~
+```
 
 When you run this you should then see something like so output:
 
-~~~py
+```py
  $ python3.6 main.py
 HTTP Status Code: 200
 {'Date': 'Sun, 10 Sep 2017 11:57:10 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Set-Cookie': '__cfduid=d6fed90089a596b94eaad6b530d584ffa1505044630; expires=Mon, 10-Sep-18 11:57:10 GMT; path=/; domain=.pokeapi.co; HttpOnly', 'Vary': 'Accept-Encoding, Cookie', 'X-Frame-Options': 'SAMEORIGIN', 'Allow': 'GET, HEAD, OPTIONS', 'X-XSS-Protection': '1; mode=block', 'Content-Encoding': 'gzip', 'Server': 'cloudflare-nginx', 'CF-RAY': '39c2354985bc6b8b-LHR'}
 Pokemon Name: bulbasaur
-~~~
+```
 
 ## Making POST Requests
 
 The requests library features methods for all of the `HTTP` verbs currently in use. If you wanted to make a simple `POST` request to an API endpoint then you can do that like so:
 
-~~~py
+```py
 req = requests.post('http://api/user', data=None, json=None)
-~~~ 
+``` 
 
 This would work in exactly the same fashion as our previous `GET` request, however it features 2 additional keyword parameters:
 

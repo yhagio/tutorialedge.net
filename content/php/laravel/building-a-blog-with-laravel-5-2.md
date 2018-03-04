@@ -17,26 +17,26 @@ twitter = "https://twitter.com/Elliot_F"
 
 <p>Once you’ve installed and configured your environment it’s time to begin. Create the new project by creating a new directory on your machine and then typing the following in the terminal:</p>
 
-~~~c
+```c
 composer create-project laravel/laravel blog "5.1.*"
-~~~
+```
 
 <h2>Testing it all works:</h2>
 
 <p>Ensure that you set the correct permissions on the storage and bootstrap/cache directories within your new project. You can do this on mac easily by typing the following:</p>
 
-~~~c
+```c
 chmod -R 777 bootstrap/cache
 chmod -R 777 storage
-~~~
+```
 
 <h2>Running our Laravel project Locally:</h2>
 
 <p>Now that all permission have been set up you can now serve up your application by typing the following in the terminal:</p>
 
-~~~c
+```c
 php artisan serve --port=8080
-~~~
+```
 
 <p>Navigate to <a href="http://localhost:8080" target="_blank">http://localhost:8080</a> in your browser and, should everything have been set up correctly, you should see the laravel 5 default page.</p>
 

@@ -36,7 +36,7 @@ With the Logging module, you have the power to dictate the exact structure of yo
 
 Within the `logging` module we can specify the format by doing something like so:
 
-~~~python
+```python
 import logging
 import logging.handlers as handlers
 import time
@@ -60,20 +60,20 @@ def main():
         logger.info("A Sample Log Statement")
 
 main()
-~~~
+```
 
 This outputs log files that look like this:
 
-~~~bash
+```bash
 2017-08-14 21:39:49,108 - my_app - INFO - A Sample Log Statement
 2017-08-14 21:39:50,112 - my_app - INFO - A Sample Log Statement
-~~~
+```
 
 ### Creating a Simple File Logger
 
 In this example we'll be creating a very simple logger that will capture every INFO level log message to a my_app.log file within the same directory as our application.
 
-~~~python
+```python
 import logging
 
 logger = logging.getLogger('my_app')
@@ -87,7 +87,7 @@ def main():
     logger.info("My First Log Statement")
 
 main()
-~~~
+```
 
 Upon execution of this you should see a new `my_app.log` file appear within your directory and if you open that log file you should see `My First Log Statement` on line one of that file. 
 
@@ -105,7 +105,7 @@ In the logging module we have both the `RotatingFileHandler` class and the `Time
 
 A `RotatingFileHandler` allows us to rotate our log statements into a new file every time the current log file reaches a certain size. In this example we'll set it up so that when it reaches 500 bytes we'll rotate into a new file up to a maximum number of 2 backups. 
 
-~~~python
+```python
 import logging
 import logging.handlers as handlers
 import time
@@ -123,7 +123,7 @@ def main():
         logger.info("A Sample Log Statement")
 
 main()
-~~~
+```
 
 Upon execution of this you should notice that every time `app.log` exceeds 500 bytes, it is then closed and renamed `app.log.x` where the value of `x` increments till it reaches whatever we have set `backupCount` to. 
 
@@ -131,7 +131,7 @@ Upon execution of this you should notice that every time `app.log` exceeds 500 b
 
 `TimedRotatingFileHandler` allows us to capture log files by a time slice. 
 
-~~~python
+```python
 import logging
 import logging.handlers as handlers
 import time
@@ -149,7 +149,7 @@ def main():
         logger.info("A Sample Log Statement")
 
 main()
-~~~
+```
 
 Running this code will then create new log files every minute indefinitely. We can set the `backupCount` parameter on our `logHandler` instance and it will cap the number of log files we create. 
 
@@ -171,7 +171,7 @@ Previously in this article we looked at two distinct types of file handlers, the
 
 In this next example we are going to have a look at how we can split out two different log levels: `INFO` and `ERROR` to two distinct places. The default levels are `CRITICAL`, `ERROR`, `WARNING`, `INFO`, `DEBUG` and `NOTSET`.
 
-~~~python
+```python
 import logging
 import logging.handlers as handlers
 import time
@@ -200,7 +200,7 @@ def main():
         logger.error("An error log statement")
 
 main()
-~~~
+```
 
 You should notice that 3 log files are created when you run this. The `error.log` will contain only logs that are of level `ERROR` or higher. The `normal.log` will contain a combination of all log messages logged out of our application.
 

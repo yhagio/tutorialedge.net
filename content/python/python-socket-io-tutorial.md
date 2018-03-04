@@ -25,7 +25,7 @@ We'll be basing our `socket.io` server on an `aiohttp` based web server. You can
 
 In this example we'll be defining two methods, the `index()` method which will return a very simple `index.html` file, and a `print_message()` method which will be wrapped in an `@sio.on('message')` decorator. This decorator turns this function into a listener that will listen for events of type `message` and when these events occur it will then act upon said events. 
 
-~~~py
+```py
 from aiohttp import web
 import socketio
 
@@ -46,7 +46,7 @@ app.router.add_get('/', index)
 
 if __name__ == '__main__':
     web.run_app(app)
-~~~
+```
 
 If you were now to run this, as long as no other process is running on port `8080` you should have a fully functioning websocket server that utilizes `socket.io`. How do you interact with this though? You could write a frontend game that sends messages to and from the server every time a player makes a move, or you could write a chat interface that allows multiple clients to talk to each other. The possibilities are almost endless and I am definitely a fan of how powerful websockets are in comparison to simply polling a RESTful API constantly.   
 

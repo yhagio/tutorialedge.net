@@ -35,7 +35,7 @@ Each of the requests made to our web server in the above example would be consid
 
 Let's take a quick look at how you can define a very simple event loop. In order to instantiate an event loop we'll use `asyncio.get_event_loop()`, we'll then start a `try... finally` and within the body of our `try` we'll specify that we want our newly instantiated event loop to run until it has completed our `myCoroutine()` function.
 
-~~~py
+```py
 import asyncio
 
 # Define a coroutine that takes in a future
@@ -49,7 +49,7 @@ try:
     loop.run_until_complete(myCoroutine())
 finally:
     loop.close()
-~~~
+```
 
 ## Running Options
 
@@ -59,7 +59,7 @@ We have a number of options for running our event loops, we can either call `run
 
 Let's take a quick look at the `run_until_complete()` function. In this example we'll define our `myWork()` coroutine which we will then pass into our `run_until_complete` function and subsequently we should see our event loop run until this `myWork()` coroutine is finished it's execution.
 
-~~~py
+```py
 import asyncio
 import time
 
@@ -73,15 +73,15 @@ try:
     loop.run_until_complete(myWork())
 finally:
     loop.close()
-~~~
+```
 
 Upon running this you should then see the following output:
 
-~~~py
+```py
  $ python3.6 test.py
 Starting Work
 Finishing Work
-~~~
+```
 
 ### The run_forever() method
 
@@ -89,7 +89,7 @@ The alternative way of starting up your event loop is to call the `run_forever()
 
 Let's take a look at a quick example which showcases the use of this method. We'll first define our `work()` coroutine which will feature a while loop that will run indefinitely and simply print out `Task Executed` in 1 second intervals. 
 
-~~~py
+```py
 import asyncio
 
 async def work():
@@ -106,13 +106,13 @@ except KeyboardInterrupt:
 finally:
     print("Closing Loop")
     loop.close()
-~~~ 
+``` 
 
 ## Running Multiple coroutines:
 
 If you wanted to run multiple coroutines indefinitely in parallel then you can do that by creating your `x` number of coroutines and have them run a while loop each. You would then call `asyncio.ensure_future(function())` in order to enqueue them onto the loop and they would run indefinitely after that point.
 
-~~~py
+```py
 import asyncio
 import time
 
@@ -137,11 +137,11 @@ except KeyboardInterrupt:
 finally:
     print("Closing Loop")
     loop.close()
-~~~
+```
 
 This should output the following indefinitely:
 
-~~~py
+```py
  $ python3.6 run-forever.py
 First Worker Executed
 Second Worker Executed
@@ -149,7 +149,7 @@ First Worker Executed
 Second Worker Executed
 First Worker Executed
 Second Worker Executed
-~~~
+```
 
 ## Conclusion
 

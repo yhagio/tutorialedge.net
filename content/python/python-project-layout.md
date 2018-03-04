@@ -23,14 +23,14 @@ When it comes to structuring your Python projects it makes sense to follow some 
 
 For simple Python projects your projects structure you can typically keep most, if not all of your source code contained within the one directory level like so:
 
-~~~python
+```python
 mypackage/
 - mypackage.py
 - setup.py
 - requirements.txt
 - travis.yml
 - tests/
-~~~
+```
 
 This keeps everything succinct and easy to navigate through but bear in mind that if your project starts to grow substantially then keeping everything in the one `mypackage.py` file is a bad idea. This is where you'll typically have to migrate to a more advanced project structure.
 
@@ -38,7 +38,7 @@ This keeps everything succinct and easy to navigate through but bear in mind tha
 
 For more advanced ones however you'll tend to find it looking something like this:
 
-~~~python
+```python
 mypackage/
 - mypackage/
 - - mypackage.py
@@ -58,7 +58,7 @@ mypackage/
 - setup.py
 - runtime.py
 - travis.yml
-~~~
+```
 
 The majority of your projects code will fall under the second `mypackage/` directory and will from there be split up into distinct modules. 
 

@@ -29,7 +29,7 @@ What's special about this is that the 2 classes our `my_super_class` class inher
 
 What happens when we run this code?
 
-~~~py
+```py
 class awesome_class():
 
     def __init__(self): 
@@ -53,17 +53,17 @@ class my_super_class(awesome_class, not_so_awesome_class):
 
 my_class = my_super_class()
 my_class.test_func()
-~~~
+```
 
 #### Output
 
 When we run the above code you should see that the `__init__` function is called of our `my_super_class` class. It then calls the inherited `test_func(self)` function from the its inherited `awesome_class`.
 
-~~~py
+```py
  $ python3.6 test.py
 My Super Class
 This is my awesome class
-~~~
+```
 
 If we were to switch the order in which our `my_super_class` inherits then you'll see that the `test_func()` from the `not_so_awesome_class` is called instead. Key takeaway from this point is that ordering of inheritance matters.
 

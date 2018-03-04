@@ -18,7 +18,7 @@ twitter = "https://twitter.com/Elliot_F"
 
 <p>Below you’ll find a simple implementation of a controller that utilizes the Log function to log a message every time that function is hit:</p>
 
-~~~php
+```php
 <?php
 
 namespace App\Http\Controllers;
@@ -39,7 +39,7 @@ class TestlController extends Controller
     }
 }
 
-~~~
+```
 
 <p>If you create a route using this test function and hit this route, you should see the a new line with a timestamp and the message “this will print to the logs” appended to <b>storage/logs/laravel.log</b> every time.</p>
 

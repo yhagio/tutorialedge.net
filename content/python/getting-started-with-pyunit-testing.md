@@ -23,15 +23,15 @@ In this tutorial I am going to be showing you the basics of unit testing in Pyth
 
 Let's envision that we have a very simple python module that features a `calc_x()` function. 
 
-~~~py
+```py
 # mymodule.py file
 def calc_x(x):
     return x + 2
-~~~
+```
 
 If we wanted to test this using the `unittest` module we could do something like so:
 
-~~~py
+```py
 # mymodule
 import unittest
 import mymodule
@@ -43,20 +43,20 @@ class MyModuleTest(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-~~~
+```
 
 ## Output
 
 When we run this using `python3.6 test_mymodule.py` you should see the following output:
 
-~~~py
+```py
  $ python3.6 test_mymodule.py
 .
 ----------------------------------------------------------------------
 Ran 1 test in 0.000s
 
 OK
-~~~
+```
 
 ## Conclusion
 

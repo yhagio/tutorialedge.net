@@ -29,7 +29,7 @@ To get us started we are going to want to define an input stream that we'll subs
 
 Let's imagine that we are creating a stock trading system that will buy and sell stocks depending on their price. We could have an array of stocks like so:
 
-~~~py
+```py
 stocks = [
   { 'TCKR' : 'APPL', 'PRICE': 200},
   { 'TCKR' : 'GOOG', 'PRICE': 90},
@@ -37,11 +37,11 @@ stocks = [
   { 'TCKR' : 'MSFT', 'PRICE': 150},
   { 'TCKR' : 'INTL', 'PRICE': 70},
 ]
-~~~
+```
 
 We then want to create an `Observable` object that will emit events based on what the value of the stocks are. In this example we'll define a `buy_stock_events(observer)` function which will iterate over our `stocks` array and call the `on_next()` function whenever the stock price is greater than `100`.
 
-~~~py
+```py
 from rx import Observable
 
 stocks = [
@@ -62,15 +62,15 @@ def buy_stock_events(observer):
   observer.on_completed()
 
 source = Observable.create(buy_stock_events) 
-~~~
+```
 
 Once we have done this we can then subscribe to our `source` Observable object like so:
 
-~~~py
+```py
 source.subscribe(on_next=lambda value: print("Received Instruction to buy {0}".format(value)),
                 on_completed=lambda: print("Completed trades"),
                 on_error=lambda e: print(e))
-~~~
+```
 
 You'll notice that we are passing in 3 distinct `lambda` functions into our call to `subscribe()`. These 3 `lambda` functions are `on_next()` which is called whenever our Observable emits something, `on_completed()` which is called when our Observable has nothing else to give us, and `on_error()` which is called whenever there is an error emitted by our Observable.
 
@@ -78,13 +78,13 @@ You'll notice that we are passing in 3 distinct `lambda` functions into our call
 
 When you run this you should see that `APPL`, `TSLA` and `MSFT` all trigger our observer's `on_next()` function and a buy order is placed. However, when our Observable tries to process `ELLT` it calls `on_error()` as the stock price is set to `0`.
 
-~~~py
+```py
  $ python3.6 allLambda.py
 Received Instruction to buy APPL
 Received Instruction to buy TSLA
 Received Instruction to buy MSFT
 Stock has an invalid price: ELLT
-~~~
+```
 
 ## Conclusion
 

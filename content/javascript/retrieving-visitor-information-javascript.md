@@ -13,7 +13,7 @@ twitter = "https://twitter.com/Elliot_F"
 
 <h2>The Web Page</h2>
 
-~~~html
+```html
 <html>
     <head>
         <title>Analytics Engine Test Page</title>
@@ -25,11 +25,11 @@ twitter = "https://twitter.com/Elliot_F"
         <script src="analytics.js"></script>
     </body>
 </html>
-~~~
+```
 
 <h2>The JavaScript File</h2>
 
-~~~js
+```js
 console.log("Cookies: " + navigator.cookieEnabled);
 console.log("Browser Language: " + navigator.browserLanguage);
 console.log("Language: " + navigator.language);
@@ -38,7 +38,7 @@ console.log("Connection Speed: " + navigator.connectionSpeed);
 console.log("User Agent: " + navigator.userAgent);
 console.log("Webdriver: " + navigator.webdriver);
 console.log("Geolocation: " + navigator.geolocation);
-~~~
+```
 
 <h2>The End Result</h2>
 

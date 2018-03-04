@@ -15,7 +15,7 @@ In this tutorial, we'll be focusing on creating a very simple web server using t
 
 Ok, so to begin with, we’ll create a very simple web server that will just return whatever the URL path is of your query. This will be a good base from which we can build on top of.
 
-~~~go
+```go
 package main
 
 import (
@@ -38,7 +38,7 @@ func main() {
     log.Fatal(http.ListenAndServe(":8081", nil))
 
 }
-~~~
+```
 
 In the above code, we essentially define two different Handlers. These handlers are what respond to any `HTTP` request that matches the string pattern we define as the first parameter. So essentially whenever a request is made for the home page or *http://localhost:8081/*, we'll see our first handler respond as the query matches that pattern.  
 
@@ -50,7 +50,7 @@ Ok so now that we've created our own very simplistic server we can try running i
 
 So now that we've got a basic web server set up, let's try incrementing a counter every time a specific URL is hit. Due to the fact that the web server is asynchronous, we'll have to guard our counter using a mutex in order to prevent us from being hit with race-condition bugs.
 
-~~~go
+```go
 package main
 
 import (
@@ -88,7 +88,7 @@ func main() {
 
 }
 
-~~~
+```
 
 Run this and then navigate to http://localhost:8081/increment and you should see the current count which will be locked, incremented and then unlocked every time you make a request to that page.
 
@@ -96,7 +96,7 @@ Run this and then navigate to http://localhost:8081/increment and you should see
 
 Ok, so now that we've set up a simple server in go, it's time to start serving some static files. Create a static folder within your project's directory and then create some simple HTML files. For this example I'm just serving back the following: 
 
-~~~html
+```html
 <html>
     <head>
         <title>Hello World</title>
@@ -105,11 +105,11 @@ Ok, so now that we've set up a simple server in go, it's time to start serving s
         <h2>Hello World!</h2>
     </body>
 </html>
-~~~
+```
 
 Once you've got this then we can then modify our web server code to use the http.ServeFile method. Essentially this will take in the url of the request made to the server, and if it contains say index.html then it would return the index.html file, rendered as HTML in the browser. If we were to create an edit.html page and send a request to http://localhost:8081/edit.html then it would return whatever HTML content you choose to put in that edit.html page.
 
-~~~go
+```go
 package main
 
 import (
@@ -131,7 +131,7 @@ func main() {
 	log.Fatal(http.ListenAndServe(":8081", nil))
 
 }
-~~~
+```
 
 ## Checking it Works
 

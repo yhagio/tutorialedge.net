@@ -27,20 +27,20 @@ If you have seen any go projects before, you may have noticed that most, if not 
 
 This is not an accident. These are the files which contain all of the unit tests for the project and they test all of the code within their counterparts. 
 
-~~~c
+```c
 // An Example of how your project would be structured
 myproject/
 - calc.go
 - calc_test.go
 - main.go
 - main_test.go
-~~~
+```
 
 ### A Simple Test File
 
 Imagine we had a very simple go program that was made up of one file and featured a `calculate()` function. This `calculate()` function simply takes in 1 number and adds 2 to it. Nice and simple to get us up and running:
 
-~~~go
+```go
 package main
 
 import (
@@ -56,11 +56,11 @@ func Calculate(x int) (result int) {
 func main() {
 	fmt.Println("Hello World")
 }
-~~~
+```
 
 If we wished to test this we could create a `main_test.go` file within the same directory and write the following test:
 
-~~~go
+```go
 package main
 
 import (
@@ -72,29 +72,29 @@ func TestCalculate(t *testing.T) {
 		t.Error("Expected 2 + 2 to equal 4")
 	}
 }
-~~~
+```
 
 ### Running Our Tests
 
 Now that we have created our first go test, it's time to run this and see if our code behaves the way we expect it to. We can execute our tests by running:
 
-~~~go
+```go
 go test
-~~~
+```
 
 This should then output something similar to the following:
 
-~~~c
+```c
 Elliots-MBP:go-testing-tutorial elliot$ go test
 PASS
 ok      _/Users/elliot/Documents/Projects/tutorials/golang/go-testing-tutorial  0.007s
-~~~
+```
 
 ### Table Driven Testing
 
 Now that we are happy that one calculation works, we should look to improve confidence by adding a few extra test cases into our code. If we want to gradually build up a series of test cases that are always tested, we can leverage an `array` of tests like so:
 
-~~~go
+```go
 func TestTableCalculate(t *testing.T) {
 	var tests = []struct {
 		input    int
@@ -113,23 +113,23 @@ func TestTableCalculate(t *testing.T) {
 		}
 	}
 }
-~~~
+```
 
 Here we declare a struct that contains both an input and the expected value. We then iterate through the list of tests with our `for _, test := range tests` call and check to see that our function will always return the expected results, regardless of input.
 
 When we run our test suite now, we should see the same output as before:
 
-~~~c
+```c
 Elliots-MBP:go-testing-tutorial elliot$ go test
 PASS
 ok      _/Users/elliot/Documents/Projects/tutorials/golang/go-testing-tutorial  0.007s
-~~~
+```
 
 ## Verbose Test Output
 
 Sometimes you may wish to see exactly what tests are running and how long they took. Thankfully, this is available if you use the `-v` flag when running your tests like so:
 
-~~~c
+```c
 Elliots-MBP:go-testing-tutorial elliot$ go test -v
 === RUN   TestCalculate
 --- PASS: TestCalculate (0.00s)
@@ -137,7 +137,7 @@ Elliots-MBP:go-testing-tutorial elliot$ go test -v
 --- PASS: TestTableCalculate (0.00s)
 PASS
 ok      _/Users/elliot/Documents/Projects/tutorials/golang/go-testing-tutorial  0.006s
-~~~
+```
 
 You can see that both our normal test and our table test ran and passed and took less than `0.00s` to execute.
 

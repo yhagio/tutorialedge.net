@@ -30,7 +30,7 @@ It must be noted that once you get to about 2000 variables that you have to cons
 
 <p>Thanks to the hard work of the AngularJS team, data binding is incredibly simple to implement in your own applications. To demonstrate this we’ll start with a very basic application that allows us to dynamically change a name based off of an input box’s input.</p>
 
-~~~html
+```html
 <html ng-app="testApp">
 <head>
     <title>AngularJS ng-if child scopes example</title>
@@ -46,9 +46,9 @@ It must be noted that once you get to about 2000 variables that you have to cons
     <script src="script.js"></script>
 </body>
 </html>
-~~~
+```
 
-~~~js
+```js
 var testApp = angular.module('testApp', []);
 
 testApp.controller('testController' , function ($scope) {
@@ -56,7 +56,7 @@ testApp.controller('testController' , function ($scope) {
     $scope.name = "Elliot";
     
 });
-~~~
+```
 
 <p>The output for this small example can be seen below:</p>
 

@@ -33,7 +33,7 @@ Now that we have a basic understanding of what semaphores are let us now look at
 
 In this example we will create a simple instance of a semaphore and then create 3 worker functions that will try to acquire said semaphore. The initial value of this semaphore will be 2 and as such we will see 2 of our worker functions successfully acquire the semaphore before then releasing it and allowing our third worker to then acquire it.
 
-~~~py
+```py
 import asyncio
 import time 
 
@@ -53,13 +53,13 @@ loop = asyncio.get_event_loop()
 loop.run_until_complete(main(loop))
 print("All Workers Completed")
 loop.close()
-~~~
+```
 
 ### Output
 
 When we run this we should see that our first 2 workers are able to acquire the semaphore before then releasing it and allowing our third worker to then go on and acquire it for itself.
 
-~~~py
+```py
  $ python3.6 test.py
 Successfully acquired the semaphore
 Successfully acquired the semaphore
@@ -69,7 +69,7 @@ Successfully acquired the semaphore
 Releasing Semaphore
 Main Coroutine
 All Workers Completed
-~~~
+```
 
 ## Bounded Semaphores
 

@@ -34,23 +34,23 @@ This is what we'll be creating:
 
 For the above example we first define a div and attach the `.box` class to that div.
 
-~~~html
+```html
 <div class="box">
   <h2>Box Shadow Example</h2>
 </div>
-~~~
+```
 
 In our css we then define our `.box` class and within that we set our box-shadow attribute like so:
 
-~~~css
+```css
 box-shadow: 0px 0px 15px #888888;
-~~~
+```
 
 box-shadow takes in the following parameters:
 
-~~~css
+```css
 box-shadow: h-shadow v-shadow blur spread color |inset|initial|inherit;
-~~~
+```
 
 | Property | What It Does |
 | -------- | ------------ |
@@ -66,13 +66,13 @@ box-shadow: h-shadow v-shadow blur spread color |inset|initial|inherit;
 
 #### Full .box css
 
-~~~css
+```css
 .box {
   box-shadow: 0px 0px 15px #888888;
   padding: 20px;
   margin: auto;
 }
-~~~
+```
 
 
 ## Inner Shadow
@@ -92,7 +92,7 @@ box-shadow: h-shadow v-shadow blur spread color |inset|initial|inherit;
 
 #### Code
 
-~~~html
+```html
 <div class="box-2">
   <h2>Box Shadow Example</h2>
 </div>
@@ -105,5 +105,5 @@ box-shadow: h-shadow v-shadow blur spread color |inset|initial|inherit;
   width: 50%;
 }
 </style>
-~~~
+```
 

@@ -19,7 +19,7 @@ The `queue` data structure is typically used in scenarios where you want things 
 
 For example, imagine you had a system that dealt with user registrations to your site. You could enqueue any new requests from users to register to your site into a `queue`. Worker threads within your application would then monitor this `queue` and process new registrations as they come in.
 
-~~~py
+```py
 >>> import queue
 >>> my_q = queue.Queue()
 >>> my_q.put('first')
@@ -31,7 +31,7 @@ For example, imagine you had a system that dealt with user registrations to your
 'second'
 >>> my_q.get()
 'third'
-~~~ 
+``` 
 
 ## Conclusion
 

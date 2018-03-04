@@ -17,14 +17,14 @@ I'm going to start off by showing you sub-optimal project structures and then mo
 
 There are multiple ways we can structure applications and of course different structures are better suited for different applications. For incredibly simple PoCs and technical demos then you might be better suited to a flat structure that looks like so:
 
-~~~javascript
+```javascript
 Project Structure 
 -- index.html
 -- app.js
 -- angular.min.js
 -- controller.js
 -- service.js
-~~~
+```
 
 But this structure, if the app grows, becomes ungainly and your app.js, controller.js and service.js become packed with thousands of lines of code. 
 
@@ -39,7 +39,7 @@ But this structure, if the app grows, becomes ungainly and your app.js, controll
 
 Another well known way of structuring applications is to split applications up based on file type. This leads to a project structure like this:
 
-~~~javascript
+```javascript
 Project Structure 
 -- controllers
 -- services
@@ -47,7 +47,7 @@ Project Structure
 -- directives
 -- index.html
 -- app.js
-~~~
+```
 
 Now whilst this may seem to offer a nice structure, it essentially leaves you jumping around the project when adding a new feature to your application. Code for one piece of functionality is spread across multiple directories and as soon as your application grows, you’ll suddenly have a haystack of controllers to wade through.
 
@@ -64,7 +64,7 @@ A new style of structuring your application is to follow a component based appro
 
 This gives us a number of benefits including easy extendability and maintainability. Take for instance a very simple website admin application, the file structure for that if broken into components could look something like so:
 
-~~~javascript
+```javascript
 Project Structure 
 -- libs/
 -- src/
@@ -83,7 +83,7 @@ Project Structure
 ---- app.js
 ---- app.routes.js
 ---- index.html
-~~~ 
+``` 
 
 Notice how within our articles directory we have multiple sub-directories such as articles-edit
 And articles-new which would in theory contain all our code for creating new articles and editing them.

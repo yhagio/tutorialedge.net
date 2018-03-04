@@ -25,7 +25,7 @@ To get us started we are going to query for all the Pokemon from the original se
 
 So in order to mimic what we've just done in the browser in go, we'll have to write a program that looks like so:
 
-~~~go
+```go
 package main
 
 import (
@@ -51,7 +51,7 @@ func main() {
 	fmt.Println(string(responseData))
 
 }
-~~~
+```
 
 Within our `main` function we first query our API endpoint using `http.Get("http://pokeapi.co/api/v2/pokedex/kanto")`, we map the results of this into either `response` or `err` and then check to see if `err` is nil. If it is we exit.
 
@@ -65,7 +65,7 @@ By knowing the structure of the JSON response that the above API endpoint gives 
 
 The one we are interested most in is `pokemon_entries` which stores an array of all the Pokemon that we want. 
 
-~~~js
+```js
 {
   "name":"kanto",
   "region": {
@@ -87,11 +87,11 @@ The one we are interested most in is `pokemon_entries` which stores an array of 
     ... 
   ]
 }
-~~~  
+```  
 
 In Go we could map this out into 3 different structs, a `Response` struct that contains an array of Pokemon and a `Pokemon` struct to map these individual pokemon and a `PokemonSpecies` struct to access our Pokemon's name.
 
-~~~go
+```go
 // A Response struct to map the Entire Response
 type Response struct {
 	Name    string    `json:"name"`
@@ -108,19 +108,19 @@ type Pokemon struct {
 type PokemonSpecies struct {
 	Name string `json:"name"`
 }
-~~~
+```
 
 #### Unmarshalling our JSON 
 
 Now that we've defined these structs, we can Unmarshal the returned JSON string into a new variable. We can do this in our `main` function by adding these three lines to below where we print out our `responseData`.
 
-~~~go
+```go
 var responseObject Response
 json.Unmarshal(responseData, &responseObject)
 
 fmt.Println(responseObject.Name)
 fmt.Println(len(responseObject.Pokemon))
-~~~
+```
 
 In the above code, we declare a new `responseObject` variable which is of type `Response`. We then unmarshal our `responseData` into this object and to test that it all works we print out our `responseObject.Name` which should equat to `kanto`. We then print out the length of our Pokemon array to see if it matches our expectations, if it prints out 151 then we know we've done it right and we can now iterate over these pokemon.
 
@@ -128,7 +128,7 @@ In the above code, we declare a new `responseObject` variable which is of type `
 
 In order to list all of our pokemon we need to create a for loop that loops for every object in our `responseObjects` Pokemon array like so:
 
-~~~go
+```go
 var responseObject Response
 json.Unmarshal(responseData, &responseObject)
 
@@ -138,13 +138,13 @@ fmt.Println(len(responseObject.Pokemon))
 for i := 0; i < len(responseObject.Pokemon); i++ {
   fmt.Println(responseObject.Pokemon[i].Species.Name)
 }
-~~~
+```
 
 Running this now you should see that every Pokemon's name is listed in your console.
 
 ## Full Source Code
 
-~~~go
+```go
 package main
 
 import (
@@ -196,7 +196,7 @@ func main() {
 	}
 
 }
-~~~
+```
 
 
 

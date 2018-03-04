@@ -21,13 +21,13 @@ twitter = "https://twitter.com/Elliot_F"
 
 We can use the exec function to run a wide range of windows and unix commands and also pass any number of arguments to this command should we need to.
 
-~~~js
+```js
 const ls = spawn('ls', ['-lh', '/usr']);
-~~~
+```
 
 Whilst there may be times that we aren't interested in the output of any of the commands that we run, more often than not we need to capture the output so that we can check that everything worked well.
 
-~~~js
+```js
 const ls = spawn('ls', ['-lh', '/usr']);
 
 ls.stdout.on('data', function(data){
@@ -41,13 +41,13 @@ ls.stderr.on('data', function(data){
 ls.on('close', function (code){
   console.log(`child process exited with code ${code}`);
 });
-~~~
+```
 
 ## Executing Shell Scripts
 
 In the below example you’ll see how we can utilize callbacks in order to access the data from stdout and stderr and subsequently view any errors and output our shell scripts output.
 
-~~~js
+```js
 const exec = require('child_process').exec, child;
 const testscript = exec('sh myscript.sh /directory');
 
@@ -60,5 +60,5 @@ testscript.stderr.on('data', function(data){
     console.log(data);
     // triggerErrorStuff(); 
 });
-~~~
+```
 

@@ -15,7 +15,7 @@ Full documentation of the strconv package can be found here: [Strconv Package](h
 
 ## String to Integer Conversion
 
-~~~go
+```go
 func strToIntConversion() {
 	fmt.Println("String to Integer Value Conversion")
 
@@ -32,11 +32,11 @@ func strToIntConversion() {
 	fmt.Println(ourInteger + 1)
 
 }
-~~~
+```
 
 ## Integer to String Conversion
 
-~~~go
+```go
 func intToStringConversion() {
 	fmt.Println("integer to string conversion")
 
@@ -48,13 +48,13 @@ func intToStringConversion() {
 	fmt.Println(ourString)
 
 }
-~~~
+```
 
 ## Conclusion
 
 Full Source Code:
 
-~~~go
+```go
 package main
 
 import (
@@ -96,4 +96,4 @@ func main() {
 	strToIntConversion()
 	intToStringConversion()
 }
-~~~
+```

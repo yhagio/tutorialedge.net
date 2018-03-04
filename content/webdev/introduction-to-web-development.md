@@ -18,7 +18,7 @@ Since it's inception in the 90s the web has seen an explosion in the number and 
 
 HTML or Hyper text markup language as it more formally known is the language in which we define the structure of our web pages. Every webpage must follow this structure and it looks something like this:
 
-~~~html
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -28,7 +28,7 @@ HTML or Hyper text markup language as it more formally known is the language in 
     <h1>My New Website</h1>
   </body>
 </html>
-~~~
+```
 
 > Save the above file as index.html on your machine and then drag and drop that file into your preferred browser. 
 
@@ -40,33 +40,33 @@ The above code is made up of a series of `tags` which are most often opened `<ta
 
 The Doctype tag specifies that this document is of type html. We leave this in so that browsers can more easily work with our web pages.
 
-~~~html
+```html
 <!DOCTYPE html>
-~~~
+```
 
 The following `<html lang="en">` tag is the outter-most tag for every web site. It's meant to wrap around all of our html code as the root element. `lang="en"` specifies that the content within this `<html>` document is english. This can be changed to other languages to suit.
 
-~~~html
+```html
 <html lang="en">
 ...
 </html>
-~~~
+```
 
 The first tag to appear inside of our `<html lang="en">` tag is our `<head>` tag. This is where we do things such as file import and setting important meta-data about our site. In our `<head>` section we've  defined the `<title>` of our site which sets our webpage's tab name in modern browsers. 
 
-~~~html
+```html
 <head>
   <title>My Website</title>
 </head>
-~~~
+```
 
 #### Meta Data
 
 When we talk about meta data we are referring to the tags within our `<head>` section that describe our webpage. We can define things like the webpage's description that will get picked up by search engines as part of our meta data like so:
 
-~~~html
+```html
 <meta name="description" content="A cool description of what my webpage contains">
-~~~
+```
 
 ## Our Body Section
 
@@ -74,11 +74,11 @@ Finally we come to the `<body>` section of our webpage. It is within this sectio
 
 The `<h1>` tag that lies within our `<body>` tag is a header tag within which we would typically put the title of our content. These tags range from `<h1>` to `<h6>` and with no extra styling they decrement in size each time.
 
-~~~html
+```html
 <body>
   <h1>My New Website</h1>
 </body>
-~~~
+```
 
 ## Making Our Site Look Good - CSS
 
@@ -88,7 +88,7 @@ Cascading Style Sheets can be written either within our .html pages or they can 
 
 Say for instance we wanted to make our 'My New Website' header on our site a different colour. In order to do that we would have to define a rule for our h1 tag. Let's change the colour to blue by adding a style tag and a css rule for our `<h1>` tags to our `<head>` section of our website. 
 
-~~~html
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -103,6 +103,6 @@ Say for instance we wanted to make our 'My New Website' header on our site a dif
     <h1>My New Website</h1>
   </body>
 </html>
-~~~
+```
 
 If we tried refreshing our browser page then you should notice that our My New Website title is now rendered in a rather vibrant blue colour. 

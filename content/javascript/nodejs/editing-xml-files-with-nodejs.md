@@ -18,18 +18,18 @@ twitter = "https://twitter.com/Elliot_F"
 
 <p>Create a new js file and type the following: </p>
 
-~~~js
+```js
 var fs = require('fs');
 
 fs.readFile('test.xml', 'utf-8', function (data, err){
     if(err) console.log(err);
     console.log(data);    
 });       
-~~~
+```
 
 <p>Below you’ll find a sample xml file that we’ll be using:</p>
 
-~~~xml
+```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
     <graph>
@@ -51,19 +51,19 @@ fs.readFile('test.xml', 'utf-8', function (data, err){
         </node>
     </graph>
 </root>
-~~~
+```
 
 <h2>Converting Our XML Data to Json</h2>
 
 <p>Ok, so now that we’ve got the ability to read our xml files, we can then convert this to a far easier format to work with. The xml2js package is an excellent package that will take in any xml string and convert it to a json object. Again we can install this using the node package manager:</p>
 
-~~~c
+```c
 npm install xml2js --save-dev
-~~~
+```
 
 <p>Once this is installed, modify your existing code to use the parseString method like so: </p>
 
-~~~js
+```js
 var fs = require('fs'),
     parseString = require('xml2js').parseString;
 
@@ -78,7 +78,7 @@ fs.readFile('test.xml', 'utf-8', function (err, data){
         console.log(result); 
     });
 });       
-~~~
+```
 
 <p>If you run this you should see our newly created JSON object printed out in the console.</p>
 
@@ -86,7 +86,7 @@ fs.readFile('test.xml', 'utf-8', function (err, data){
 
 <p>JSON object manipulation is incredibly in javascript. I’m not going to go into depth about how we can edit it but as a means of demonstrating how we can edit the xml I’m going to change the name of the weight of the first node in our xml file. </p>
 
-~~~js
+```js
 var fs = require('fs'),
     parseString = require('xml2js').parseString;
 
@@ -106,13 +106,13 @@ fs.readFile('test.xml', 'utf-8', function (err, data){
                   
     });
 });       
-~~~
+```
 
 <h2>Converting to XML and Writing to FIle</h2>
 
 <p>Now that we’ve successfully edited our json, we can then convert it back to xml and finally write it to a file.</p>
 
-~~~js
+```js
 var fs = require('fs'),
     parseString = require('xml2js').parseString,
     xml2js = require('xml2js');
@@ -144,6 +144,6 @@ fs.readFile('test.xml', 'utf-8', function (err, data){
                   
     });
 });       
-~~~
+```
 
 <p>Run this and you should see our newly created and updated xml within the same directory as your node script.</p>

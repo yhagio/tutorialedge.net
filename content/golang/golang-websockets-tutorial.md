@@ -41,21 +41,21 @@ In order to implement websockets in Go we have a number of different options. I 
 
 We can install the package using the `go get` command like so:
 
-~~~bash
+```bash
 go get github.com/googollee/go-socket.io
-~~~
+```
 
 And then we can include it within our go programs like so:
 
-~~~go
+```go
 import "github.com/googollee/go-socket.io"
-~~~
+```
 
 #### Simple Server
 
 Let's have a look at the example code that the provide in the `readme.md` for the library that we are using. 
 
-~~~go
+```go
 package main
 
 import (
@@ -90,7 +90,7 @@ func main() {
 	log.Println("Serving at localhost:5000...")
 	log.Fatal(http.ListenAndServe(":5000", nil))
 }
-~~~
+```
 
 #### Breaking it down
 

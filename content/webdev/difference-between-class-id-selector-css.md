@@ -20,39 +20,39 @@ When I was initially learning HTML and CSS I was hit by this stumbling block a n
 
 In CSS we have this concept of selectors, in order for us to be able to style our html elements correctly, we have to ensure we use the right selector in the right place. Say, for example, we wanted to style all `<div>` elements that feature the *class* equal to `blue` with a blue background. We'd have to create a CSS rule that applies to the `.blue` selector.
 
-~~~css
+```css
 .blue {
   background-color: blue;
 }
-~~~
+```
 
 With this `.blue` rule above, only the following html element would be styled with a blue background.
 
-~~~html
+```html
 <div class="blue"></div>
-~~~
+```
 
 ## ID Selectors
 
 If we want to style a html component that features an `id` attribute that equals `blue` then we have to use the `#` id selector which will style the single element tagged with this id. 
 
-~~~css
+```css
 #blue {
   background-color: blue;
 }
-~~~
+```
 
 The above rule will only style the element with the attribute `id="blue"` like our `<div>` tag does below.
 
-~~~html
+```html
 <div id="blue"></div>
-~~~
+```
 
 <!--## Specificity
 
 These two different types of selector have differing levels of something we call specificity. It's important to note that when an element features both and there is a collision between the rules, the id selector will generally get its way. 
 
-~~~html
+```html
 <div id="yellow" class="blue"></div>
 
 <style>
@@ -69,7 +69,7 @@ These two different types of selector have differing levels of something we call
   background-color: yellow;
 }
 </style>
-~~~
+```
 
 #### Output 
 

@@ -35,7 +35,7 @@ In order for us to easily We can easily convert data structures in GO into JSON 
 
 To get started we will have to create a very simple server which can handle HTTP requests. To do this we'll create a new file called `main.go`. Within this `main.go` file we'll want to define 3 distinct functions. A `homePage` function that will handle all requests to our root URL, a `handleRequests` function that will match the URL path hit with a defined function and a `main` function which will kick off our API.
 
-~~~go
+```go
 package main
 
 import (
@@ -57,7 +57,7 @@ func handleRequests() {
 func main() {
     handleRequests()
 }
-~~~
+```
 
 If we run this on our machine now, we should see our very simple API start up on port 8081 if it's not already been taken by another process. If we now navigate to `http://localhost:8081/` in our local browser we should see `Welcome to the HomePage!` print out on our screen. This means we have successfully created the base from which we'll build our REST API.
 
@@ -69,7 +69,7 @@ We'll be creating a REST API that allows us to `CREATE`, `READ`, `UPDATE` and `D
 
 Before we can get started, we'll have to define our `Article` structure. Go has this concept of structs that are perfect for just this scenario. Let's create an `Article` struct that features a Title, a Description (desc) and Content like so:
 
-~~~go
+```go
 type Article struct {
     Title string `json:"Title"`
     Desc string `json:"desc"`
@@ -77,7 +77,7 @@ type Article struct {
 }
 
 type Articles []Article
-~~~
+```
 
 Our Struct contains the 3 properties we need to represent all of the articles on our site. In order for this to work, we'll also have to import the `"encoding/json"` package into our list of imports.
 
@@ -85,7 +85,7 @@ Our Struct contains the 3 properties we need to represent all of the articles on
 
 Now that we've set up our `Article` struct, we can start mocking up some API endpoints that we can hit to retrieve some data. We are going to create a new function named `returnAllArticles` that will do just that, return every article for our site. However, we don't yet have articles that we can send back so we'll have to mock them. 
 
-~~~go
+```go
 func returnAllArticles(w http.ResponseWriter, r *http.Request){
     articles := Articles{
         Article{Title: "Hello", Desc: "Article Description", Content: "Article Content"},
@@ -95,23 +95,23 @@ func returnAllArticles(w http.ResponseWriter, r *http.Request){
     
     json.NewEncoder(w).Encode(articles)
 }
-~~~
+```
 
 In the above function, we've created an array of articles each with their own title, description, and content. We then log the fact that this Endpoint has been hit and we then return the articles as JSON to the requester. `json.NewEncoder(w).Encode(article)` does the job of encoding our articles array into a JSON string and then writing as part of our response.
 
 Before this will work, we'll also need to add a new line to our `handleRequests` function that will map any calls to `http://localhost:8081/all` to our newly defined function. 
 
-~~~go
+```go
 func handleRequests() {
     http.HandleFunc("/", homePage)
     http.HandleFunc("/all", returnAllArticles)
     log.Fatal(http.ListenAndServe(":8081", nil))
 }
-~~~
+```
 
 Now that we've done this, run the code by typing `go run main.go` and then open up http://localhost:8081/all in your browser and you should see a JSON representation of your list of articles like so:
 
-~~~js
+```js
 [
     {
         "Title":"Hello",
@@ -123,7 +123,7 @@ Now that we've done this, run the code by typing `go run main.go` and then open 
         "content":"Article Content"
     }
 ]
-~~~
+```
 
 We've successfully defined our first API endpoint. 
 
@@ -133,7 +133,7 @@ Now the standard library is adequate at providing everything you need to get you
 
 #### Building our Router
 
-~~~go
+```go
 package main
 
 import (
@@ -157,37 +157,37 @@ func main() {
     fmt.Println("Rest API v2.0 - Mux Routers")
     handleRequests()
 }
-~~~
+```
 
 #### Path Variables
 
 So far so good, we’ve created a very simple REST API that returns a homepage and all our Articles. But what happens if we want to just view one article? Well, thanks to the gorilla mux router we can add variables to our paths and then pick and choose what articles we want to return based on these variables. Create a new route within your handleRequest function: 
 
-~~~go
+```go
 myRouter.HandleFunc("/article/{id}", returnSingleArticle)
-~~~
+```
 
 Notice that we've added `{id}` to our path. This will represent our id variable that we'll be able to use when we wish to return only the article that features that exact key. For now, our `Article` struct doesn't feature an Id property. Let's add that now:
 
-~~~go
+```go
 type Article struct {
 	Id 			int		 `json:"Id"`
 	Title   string `json:"Title"`
 	Desc    string `json:"desc"`
 	Content string `json:"content"`
 }
-~~~  
+```  
 
 Now that we've done that, in our `returnSingleArticle` function we can obtain this `{id}` value from our URL and we can return the article that matches this criteria. As we haven't stored our data anywhere we'll just be returning the Id that was passed to the browser.
 
-~~~go
+```go
 func returnSingleArticle(w http.ResponseWriter, r *http.Request){
     vars := mux.Vars(r)
     key := vars["id"]
     
     fmt.Fprintf(w, "Key: " + key)
 }
-~~~
+```
 
 If we navigate to `http://localhost:1000/article/1`after we've now run this, you should see `Key: 1` being printed out within the browser. 
 
@@ -195,7 +195,7 @@ If we navigate to `http://localhost:1000/article/1`after we've now run this, you
 
 In our route above we’ve created an `id` variable. We are then accessing this id variable within our `returnSingleArticle` function by creating a map called vars and then selecting the key value from this map. We are able to do this for however many variables we want to set in our path like so: 
 
-~~~go
+```go
 func returnSingleArticle(w http.ResponseWriter, r *http.Request){
     vars := mux.Vars(r)
     key := vars["key"]
@@ -215,7 +215,7 @@ func handleRequests() {
     myRouter.HandleFunc("/article/{key}/{var1}/{var2}/", returnSingleArticle)
     log.Fatal(http.ListenAndServe(":10000", myRouter))
 }
-~~~
+```
 
 When you run this and hit: http://localhost:10000/article/1/1/2/ you should see your 2 variables printing out in the console and the page should also return Key: 1.
 
@@ -233,7 +233,7 @@ This example represents a very simple RESTful API written using Go. In a real pr
 
 ## Full Source Code:
 
-~~~golang
+```golang
 package main
 
 import (
@@ -287,7 +287,7 @@ func handleRequests() {
 func main() {
 	handleRequests()
 }
-~~~
+```
 
 
 

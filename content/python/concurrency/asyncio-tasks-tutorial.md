@@ -25,7 +25,7 @@ In this section we’ll look at some of the key functions that we can use in ord
 
 One of the key things to note about tasks in Asyncio is that you don't directly create them, you instead use the `ensure_future()` function or the `AbstractEventLoop.create_task()` method. Let's take a quick look at how we can use a task generator function in order to generate 5 distinct tasks for our event loop to process.
 
-~~~py
+```py
 import asyncio
 import time
 
@@ -41,11 +41,11 @@ loop = asyncio.get_event_loop()
 loop.run_until_complete(myTaskGenerator())
 print("Completed All Tasks")
 loop.close()
-~~~
+```
 
 Upon running this you should see the following output in the console:
 
-~~~py
+```py
  $ python3.6 test.py
 Processing Task
 Processing Task
@@ -53,7 +53,7 @@ Processing Task
 Processing Task
 Processing Task
 Completed All Tasks
-~~~
+```
 
 Let's now take a look at how we can retrieve all of our tasks using the `all_tasks()` method. 
 
@@ -61,7 +61,7 @@ Let's now take a look at how we can retrieve all of our tasks using the `all_tas
 
 Being able to ascertain what tasks are currently pending can be important for systems in production needing to be able to anticipate things such as workload etc. The `all_tasks()` method gives us some incite as to what tasks are currently in a pending state before they are executed by our event loop. 
 
-~~~py
+```py
 import asyncio
 import time
 
@@ -79,11 +79,11 @@ loop = asyncio.get_event_loop()
 loop.run_until_complete(main())
 print("Completed All Tasks")
 loop.close()
-~~~
+```
 
 Running this should yield the following results. A set of 5 distinct tasks is printed our and you can see that they are all in a `pending` state.
 
-~~~py
+```py
  $ python3.6 test.py
 {<Task pending coro=<myTask() running at test.py:4>>, <Task pending coro=<myTask() running at test.py:4>>, <Task pending coro=<main() running at test.py:12> cb=[_run_until_complete_cb() at /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/asyncio/base_events.py:176]>, <Task pending coro=<myTask() running at test.py:4>>, <Task pending coro=<myTask() running at test.py:4>>, <Task pending coro=<myTask() running at test.py:4>>}
 Processing Task
@@ -92,13 +92,13 @@ Processing Task
 Processing Task
 Processing Task
 Completed All Tasks
-~~~
+```
 
 ### The cancel() function
 
 Being able to effectively cancel pending tasks can be useful in scenarios where you are rate limiting the number of tasks being executed, or if you are trying to perform a graceful shutdown of your application. Thankfully the asyncio API provides the necessary functionality for this to be done relatively easily.
 
-~~~py
+```py
 import asyncio
 import time
 
@@ -119,11 +119,11 @@ loop = asyncio.get_event_loop()
 loop.run_until_complete(main())
 print("Completed All Tasks")
 loop.close()
-~~~
+```
 
 This should then print out the following in the console. Note that all tasks apart from the `main()` task go from `pending` to `cancelling` once we've called `task.cancel()`.
 
-~~~py
+```py
  $ python3.6 test.py
 Processing Task
 <Task pending coro=<myTask() running at test.py:4>>
@@ -139,7 +139,7 @@ Processing Task
 <Task pending coro=<myTask() running at test.py:4>>
 <Task cancelling coro=<myTask() running at test.py:4>>
 Completed All Tasks
-~~~
+```
 
 ## Task Functions
 
@@ -147,7 +147,7 @@ So we've looks at how we can interact with individual tasks but let's now take a
 
 ### The as_completed() function
 
-~~~py
+```py
 import asyncio
 
 async def myWorker(number):
@@ -166,13 +166,13 @@ except KeyboardInterrupt:
     pass
 finally:
     loop.close()
-~~~
+```
 
 ### The gather() function
 
 The `gather()` function returns one single future that aggregates all of the results from the given coroutines or futures passed into it. You should note that the results aren't returned in the order they were submitted so if you care about order then you'll have to implement some admin functionality to reorder results.
 
-~~~py
+```py
 import asyncio
 
 async def myWorker():
@@ -188,13 +188,13 @@ except KeyboardInterrupt:
     pass
 finally:
     loop.close()
-~~~
+```
 
 ### The wait() function
 
 The `wait()` function simply blocks until the Future instances passed into it complete, upon completion this will then returned a named 2-tuple of sets. The first set contains futures that have completed, the second gives the uncompleted futures. This can be useful in scenarios where you have to process a task within a given time, say you were making a number of REST API calls or pulling messages from a queue on a broker, if they failed to complete within the given `timeout` you could possibly try to process them in a different way. 
 
-~~~py
+```py
 import asyncio
 
 async def myWorker():
@@ -210,7 +210,7 @@ except KeyboardInterrupt:
     pass
 finally:
     loop.close()
-~~~
+```
 
 ## Conclusion
 

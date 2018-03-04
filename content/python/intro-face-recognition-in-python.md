@@ -19,30 +19,30 @@ Face recognition software is awesome. The fact that we are able to write softwar
 
 In order to get started with the `face_recognition` library you will first have to install it, this can be done with a simple `pip` install command like so:
 
-~~~py
+```py
 pip3 install face_recognition
-~~~
+```
 
 ## A Simple Example
 
 Let's take a stock image with a number of people in it. If we wanted to automatically find all of the faces in an image, we could easily do that in 4 lines of code. This code will first take in an image and then will compute the locations of all faces using `face_recognition.face_locations(image)`. After we will simply print out the number of faces that were found.
 
-~~~py
+```py
 import face_recognition
 
 image = face_recognition.load_image_file("My_Image.png")
 face_locations = face_recognition.face_locations(image)
 print("I found {} face(s) in this photograph.".format(len(face_locations)))
-~~~ 
+``` 
 
 ![stock photo](/images/stock_people.jpg)
 
 If I were to run this against the image above I would get the following output:
 
-~~~py
+```py
  $ python3.6 simple.py
 I found 5 face(s) in this photograph.
-~~~
+```
 
 This is an example of face detection and you could potentially sync this up with something like a security camera and perform real-time analysis using this detection algorithm to see if someone has just walked into your house for example. 
 
@@ -52,7 +52,7 @@ A more complex example would be identifying the exact coordinates of each of the
 
 Say we wanted to take the example above a step further and store the faces that we've detected in our new security software. This can be done like so using the `face_recognition` library:
 
-~~~py
+```py
 from PIL import Image
 import face_recognition
 
@@ -76,11 +76,11 @@ for face_location in face_locations:
     face_image = image[top:bottom, left:right]
     pil_image = Image.fromarray(face_image)
     pil_image.show()
-~~~
+```
 
 Running this would give the following output and it would open the 5 temporary image files.
 
-~~~py
+```py
  $ python3.6 simple.py
 I found 5 face(s) in this photograph.
 A face is located at pixel location Top: 72, Left: 394, Bottom: 124, Right: 446
@@ -88,7 +88,7 @@ A face is located at pixel location Top: 32, Left: 467, Bottom: 94, Right: 529
 A face is located at pixel location Top: 72, Left: 285, Bottom: 124, Right: 337
 A face is located at pixel location Top: 72, Left: 170, Bottom: 124, Right: 222
 A face is located at pixel location Top: 39, Left: 87, Bottom: 101, Right: 149
-~~~
+```
 
 Pretty cool, huh? Again you could potentially run this across a series a video stream and capture all of the faces that appear within that video. 
 
@@ -102,7 +102,7 @@ Recognizing that an image contains multiple faces is pretty cool but we can actu
 
 In order for this to work however you need at least one reference image of the people you are trying to identify.
 
-~~~py
+```py
 import face_recognition
 
 # Load in our reference image of Joe Biden
@@ -119,7 +119,7 @@ unknown_encoding = face_recognition.face_encodings(unknown_image)[0]
 results = face_recognition.compare_faces([biden_encoding], unknown_encoding)
 # Print the results
 print(results)
-~~~
+```
 
 Large scale face recognition systems tend to build up big databases of people and their faces. As more faces get added to a database, checking to see who exists within a photo or series of photos becomes more expensive. 
 

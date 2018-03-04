@@ -23,7 +23,7 @@ Modern computers tend to feature a CPU that has multiple processing cores, each 
 
 <p>To begin with we are going to want to create a new file and call it worker.py, this will contain all our code for one of our threads. To begin with we are going to create a class in python and have it import and extend the threading module.</p>
 
-~~~python
+```python
 import threading
 
 class Worker(threading.Thread):
@@ -35,11 +35,11 @@ class Worker(threading.Thread):
     def run(self):
         for i in range(10):
            print(i)
-~~~
+```
 
 <p>Now that we have our worker class we can start work on our main class. Create a new python file and call it main.py and put the following code in:</p>
 
-~~~python
+```python
 import threading 
 from worker import Worker
 
@@ -51,7 +51,7 @@ def main():
 
   if __name__ == "__main__":  
       main()
-~~~
+```
 
 <p>That''s all the code you need to successfully create and instantiate a thread in python. If you can run python through your command line then open up a new terminal at your current folder and type ''python main.py''. You should hopefully see the output of the above program should no errors occur.</p>
 
@@ -59,14 +59,14 @@ def main():
 
 <p>Try instantiating more threads by creating new Worker() objects and then start them:</p>
 
-~~~python
+```python
     thread1 = Worker(1)
     thread2 = Worker(2)
     thread3 = Worker(3)
     thread1.start()
     thread2.start()
     thread3.start()
-~~~
+```
 
 <p>When you run this you should see output that looks something like this:  Notice that the outputted numbers are out of order, this basically shows you the precise order in which the threads have completed their tasks in and shows you the true power of asynchronous programming, multiple threads performing in parallel.</p>
 

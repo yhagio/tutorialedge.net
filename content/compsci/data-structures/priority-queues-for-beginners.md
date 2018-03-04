@@ -29,7 +29,7 @@ This same concept can be brought into our own data structures within our own sys
 
 Let's have a look at how we could implement a very simple `Priority Queue` in Python.
 
-~~~py
+```py
 from queue import PriorityQueue
 
 priority_queue = PriorityQueue()
@@ -42,17 +42,17 @@ priority_queue.put((50,"Issue 4: Very High Priority"))
 while not priority_queue.empty():
     (priority, value) = priority_queue.get()
     print("{} Priority, {} Value".format(priority, value))
-~~~
+```
 
 This would output the following when run:
 
-~~~py
+```py
  $ python3.6 test.py
 5 Priority, Issue 2: Low Priority Value
 10 Priority, Issue 1: Medium Priority Value
 25 Priority, Issue 3: High Priority Value
 50 Priority, Issue 4: Very High Priority Value
-~~~
+```
 
 ## Conclusion
 

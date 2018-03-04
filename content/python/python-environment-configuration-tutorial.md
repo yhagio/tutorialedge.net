@@ -21,11 +21,11 @@ In some scenarios you may have to pick up various environment variables from the
 
 Say we had a section of code that talks to a database. In `development` we would want it to talk to our `development`-only database, in `production` we would want it to talk to our larger `production` database. We may have code that looks like this:
 
-~~~python
+```python
 import MySQLdb
 
 db = MySQLdb.connect("localhost", "devuser", "devpass", "devdatabase")
-~~~ 
+``` 
 
 When we want to push to production you may want to update the connection details to your production database and credentials. But doing this every time you make a release to production can be time-consuming and error-prone. What happens if we forget when we are deploying and our `production` environment ends up hitting a `development` database? In some scenarios this could be disastrous and cost millions in damages. 
 
@@ -39,19 +39,19 @@ When our application starts up it would pick up our `db_username` and `db_passwo
 
 These are environment variables that can be read using the `os` module. If we wanted to read all of our environment variables we could use `os.environ` like so: 
 
-~~~py
+```py
 >>> import os
 >>> print(os.environ)
 environ({'VAR1': 'value1', ...})
-~~~
+```
 
 If we wanted to read in our `db_username` and `db_password` environment variables only then we could use the `os.getenv()` function. This takes in 2 parameters, the first being the name of the environment variable we wish to retrieve and the second being a `default` value that is returned if no environment variable can be found. 
 
-~~~py
+```py
 >>> import os
 >>> db_username = os.getenv('db_username', 'NULL')
 >>> db_password = os.getenv('db_password', 'NULL')
-~~~
+```
 
 This solution works if you can set distinct variables in the environments that you run your Python applications. However this approach could be difficult if you run on one shared machine without the use of virtual machines, containers or some other similar mechanism. 
 

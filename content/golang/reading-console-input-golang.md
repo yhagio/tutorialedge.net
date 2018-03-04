@@ -17,7 +17,7 @@ We'll use Go's while loop equivalent of a for loop without any parameters to ens
 
 > If you want this to work on Windows Systems then you will have to do `text = strings.Replace(text, "\r\n", "", -1)` as windows uses a different line ending compared to unix systems.
 
-~~~go
+```go
 package main
 
 import (
@@ -47,7 +47,7 @@ func main() {
 
 }
 
-~~~
+```
 
 You'll see in this example that whenever we enter the word "hi", our strings.Compare method will then return a 0 and it will print out hello back.
 
@@ -55,7 +55,7 @@ You'll see in this example that whenever we enter the word "hi", our strings.Com
 
 If you want to simply read one unicode character from the command line then I recommend you use bufio.ReadRune like so:
 
-~~~go
+```go
 reader := bufio.NewReader(os.Stdin)
 char, _, err := reader.ReadRune()
 
@@ -74,20 +74,20 @@ case 'a':
   fmt.Println("a Key Pressed")
   break
 }
-~~~ 
+``` 
 
 ## Using Bufio's Scanner
 
 A third way you could potentially read in input from the console in go is by creating a new scanner and passing os.Stdin just as we have done above creating new readers and then using scanner.Scan in order to read in from the console:
 
-~~~go
+```go
 func scanner() {
   scanner := bufio.NewScanner(os.Stdin)
   for scanner.Scan() {
     fmt.Println(scanner.Text())
   }
 }
-~~~
+```
 
 The above code will infinitely ask scan for input and echo back whatever is entered.
 

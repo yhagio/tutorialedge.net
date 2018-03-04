@@ -13,7 +13,7 @@ In this tutorial we’ll be looking at how we can set up a UDP client and server
 
 ## UDP Server
 
-~~~java
+```java
 package com.tutorialedge.server;
 
 import java.io.IOException;
@@ -87,11 +87,11 @@ public class Server implements Runnable{
 	
 	
 }
-~~~
+```
 
 ## UDP Client
 
-~~~java
+```java
 package com.tutorialedge.client;
 
 import java.io.BufferedReader;
@@ -179,11 +179,11 @@ public class Client implements Runnable{
 		}
 	}
 }
-~~~
+```
 
 ## ServerDriver Class
 
-~~~java
+```java
 package com.tutorialedge.driver;
 
 import java.net.SocketException;
@@ -201,11 +201,11 @@ public class ServerDriver {
 	}
 	
 }
-~~~
+```
 
 ## ClientDriver Class
 
-~~~java
+```java
 package com.tutorialedge.driver;
 
 import java.net.SocketException;
@@ -224,4 +224,4 @@ public class ClientDriver {
 	}
 	
 }
-~~~
+```

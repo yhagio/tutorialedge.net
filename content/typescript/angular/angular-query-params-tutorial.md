@@ -17,7 +17,7 @@ In this tutorial we are going to be taking a look at how you can extract informa
 
 Query Parameters or `query strings` as they are otherwise known enable us to pass in information to an application through the URL that we use to open said application. Imagine you were writing a social media application that feature hundreds of users. If you had a page that allowed you to view information on a single, specific user, you would typically pass in some form of identifier in your URL to let your application known which user to display. For example:
 
-~~~bash
+```bash
 # This would indicate that you wished to
 # view the user who's id was '1'
 http://myapp/user?id=1
@@ -25,7 +25,7 @@ http://myapp/user?id=1
 # view the user who's id was '2'
 http://myapp/user?id=2
 # ... and so on
-~~~
+```
 
 The advantage of this is that you only have to define one page in your application that displays user details and it will dynamically retrieve the details for whichever `id` was passed in via the url. 
 
@@ -33,7 +33,7 @@ The advantage of this is that you only have to define one page in your applicati
 
 In order to retrieve the query parameters present in our application's URL we can utilize `ActivatedRoutes`. 
 
-~~~js
+```js
 import { Component, OnInit } from '@angular/core';
 // We need to import 'ActivatedRoute' from '@angular/router' for this to work
 import { ActivatedRoute } from '@angular/router';
@@ -56,19 +56,19 @@ export class AppComponent implements OnInit {
     }
 
 }
-~~~ 
+``` 
 
 If we were then to navigate to say `http://localhost:4200/?version=1&id=2&name=elliot` for example we would then see the following outputted in our console:
 
-~~~js
+```js
 Object {version: "1", id: "2", name: "elliot"}
-~~~
+```
 
 ## Retrieving Specific Query Parameters
 
 If we then wanted to retrieve specific query parameters we could do something like so:
 
-~~~js
+```js
 ...
 export class AppComponent implements OnInit {
 
@@ -84,7 +84,7 @@ export class AppComponent implements OnInit {
   }
 
 }
-~~~
+```
 
 This would then set our components `id` variable to equal whatever the value of the `id` query parameter is when the component is loaded. So `http://localhost:4200/?id=testid` would set our `id` variable to `testid` to give an example.
 
@@ -92,24 +92,24 @@ This would then set our components `id` variable to equal whatever the value of 
 
 If we wanted to create a link that automatically included a series of query parameters then we can do so easily using the `[queryParams]` directive like so:
 
-~~~html
+```html
 <a [routerLink]="['user']" [queryParams]="{id: 2}">User 2</a>
-~~~
+```
 
 This would then automatically craft the url `/user?id=2` for us. This can save us a great deal of time and is a far cleaner solution than manually crafting `href` urls which could prove erroneous. You should note that you can pass any number of query parameters in through this method, you could also define an object within your component and pass that in and it would automatically expand this into a series of query parameters for you.
 
-~~~js
+```js
 // app.component.ts
 myObj = {
     "name": "elliot",
     "age" : 24
   };
-~~~
+```
 
 Our html link would then look something like so:
 
-~~~html
+```html
 <!-- app.component.html -->
 <a [routerLink]="['user']" [queryParams]="myObj">My User Object</a>
-~~~
+```
 

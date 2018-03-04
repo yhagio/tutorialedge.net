@@ -21,7 +21,7 @@ Within Go, benchmarking tests can be written in conjunction with your standard u
 
 Let's take our code from our previous article on testing and try to write a simple benchmark function for that
 
-~~~go
+```go
 package main
 
 import (
@@ -37,28 +37,28 @@ func Calculate(x int) (result int) {
 func main() {
     fmt.Println("Hello World")
 }
-~~~
+```
 
 If we wanted to benchmark our Calculate function then we would do something like so:
 
-~~~go
+```go
 func BenchmarkCalculate(b *testing.B) {
     for i := 0; i < b.N; i++ {
         Calculate(2)
     }
 }
-~~~
+```
 
 In order for us to run our new benchmark, we could simply run `go test -bench=.` and it would run all benchmarks within our package for us. This should return something like so:
 
-~~~c
+```c
 Elliots-MBP:go-testing-tutorial elliot$ go test -bench=.
 goos: darwin
 goarch: amd64
 BenchmarkCalculate-8    2000000000               0.30 ns/op
 PASS
 ok      _/Users/elliot/Documents/Projects/tutorials/golang/go-testing-tutorial  0.643s
-~~~
+```
 
 As you can see, it ran our `Calculate()` function `2000000000` times at a speed of `0.30 ns` per operation. The entire benchmark took just `0.653s` in order to run through. 
 

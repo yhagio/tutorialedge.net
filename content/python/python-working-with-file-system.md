@@ -21,20 +21,20 @@ In some situations you may need to recurse through directory after directory. Th
 
 In this example let's look at how we can walk through a directory and retrieve the names of all the files:
 
-~~~py
+```py
 # This will walk through EVERY file in your computer
 import os
 
 # You can change the "/" to a directory of your choice
 for file in os.walk("/"):
     print(file)
-~~~
+```
 
 #### Output
 
 Let's see this in action in a directory that has 3 distinct files in it: `['test2.txt, 'test.txt', 'main.py']`
 
-~~~py
+```py
 >>> import os
 >>> os.walk("./")
 <generator object walk at 0x10457c7d8>
@@ -42,7 +42,7 @@ Let's see this in action in a directory that has 3 distinct files in it: `['test
 ...     print(file)
 ...
 ('./', [], ['test2.txt', 'test.txt', 'main.py'])
-~~~
+```
 
 ## Checking Whether File Or Directory?
 
@@ -50,34 +50,34 @@ Being able to discern whether something is a file or directory can come in handy
 
 To do this we can use the `os.path.isfile()` function which returns `False` if it's a directory or `True` if it is indeed a file.
 
-~~~py
+```py
 >>> import os
 >>> os.path.isfile("/")
 False
 >>> os.path.isfile("./main.py")
 True
-~~~
+```
 
 ## Checking if a File or Directory Exists
 
 If you wanted to check whether something exists on your current machine you can use the `os.path.exists()` function, passing in the file or directory you wish to check:
 
-~~~py
+```py
 >>> import os
 >>> os.path.exists("./main.py")
 True
 >>> os.path.exists("./dud.py")
 False
-~~~
+```
 
 ## Creating Directories in Python
 
 Say you not only wanted to traverse directories but also wished to create your own. Well fear not, this is very possible using the `os.makedirs()` function.
 
-~~~py
+```py
 if not os.path.exists('my_dir'):
     os.makedirs('my_dir')
-~~~
+```
 
 This will first go ahead and check to see if the directory `my_dir` exists, if it doesn't exist then it will go ahead and call the `os.makedirs('my_dir')` in order to create our new directory for us. 
 
@@ -85,14 +85,14 @@ It should be noted that this could potentially cause issues. If you were to crea
 
 For the most part however you should be ok using the method mentioned above. If you want to be extra careful and catch any potential exceptions then you can wrap you call to `os.makedirs('my_dir')` in a `try...except` like so:
 
-~~~py
+```py
 if not os.path.exists('my_dir'):
     try:
         os.makedirs('my_dir')
     except OSError as e:
         if e.errno != errno.EEXIST:
             raise
-~~~ 
+``` 
 
 ## Conclusion
 

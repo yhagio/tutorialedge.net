@@ -25,7 +25,7 @@ In order to get started with asyncio we require one crucial component, that is a
 
 We can define an event loop that will simply execute on coroutine like so:
 
-~~~py
+```py
 import asyncio
 
 async def myCoroutine():
@@ -43,7 +43,7 @@ def main():
 
 if __name__ == '__main__':
     main()
-~~~
+```
 
 When you run this you should see that our `myCoroutine()` successfully executes. Now at this point you must be asking, this doesn't give us anything but extra code, what's the fuss all about? Well for this example it doesn't provide much benefit, however in more complex scenarios, that's when we really see the true performance benefits.
 
@@ -53,7 +53,7 @@ When you run this you should see that our `myCoroutine()` successfully executes.
 
 So these `coroutines` are essentially lightweight versions of your more traditional threads. By using these we essentially enable ourselves to write asynchronous programs that are very similar to threads but they run on top of a single thread. We can define `coroutines` in 2 distinct ways. 
 
-~~~py
+```py
 import asyncio
 
 async def myFunc1():
@@ -62,7 +62,7 @@ async def myFunc1():
 @asyncio.coroutine
 def myFunc2()
     print("Coroutine 2")
-~~~
+```
 
 The first method was introduced in Python 3.5 and I would tend to push you towards using this method over the latter. 
 
@@ -72,7 +72,7 @@ Futures in asyncio are very much similar to the `Future` objects you would see w
 
 Thankfully working with Futures in asyncio is relatively easy thanks to the `ensure_future()` method which takes in a `coroutine` and returns the `Future` version of that `coroutine`. 
 
-~~~py
+```py
 import asyncio
 
 # Define a coroutine that takes in a future
@@ -98,7 +98,7 @@ try:
     loop.run_until_complete(main())
 finally:
     loop.close()
-~~~
+```
 
 If you were to run this you should see that our program successfully turns our `coroutine` into a `future` object and prints out the result. 
 
@@ -110,7 +110,7 @@ Let's start by creating a simple coroutine that takes in an `id` as its primary 
 
 Next within our `main()` method we will generate 10 tasks that and then await these tasks completion using the `await asyncio.gather()` function, passing in our list of `tasks`. Finally we'll utilize the same event loop from the previous example in order to run our `asyncio` program.
 
-~~~py
+```py
 import asyncio
 import random
 
@@ -132,11 +132,11 @@ try:
     loop.run_until_complete(main())
 finally:
     loop.close()
-~~~  
+```  
 
 When you run this you should see something like so:
 
-~~~py
+```py
  $ python3.6 getting-started-asyncio.py
 Coroutine: 4, has successfully completed after 1 seconds
 Coroutine: 7, has successfully completed after 2 seconds
@@ -148,7 +148,7 @@ Coroutine: 6, has successfully completed after 4 seconds
 Coroutine: 3, has successfully completed after 5 seconds
 Coroutine: 5, has successfully completed after 5 seconds
 Coroutine: 9, has successfully completed after 5 seconds
-~~~
+```
 
 Our coroutines go off and execute concurrently and finish execution at different times. It's important to note that these are not completed in the same order as they were submitted and if you were to time the execution of the above program, it would take just above 5 seconds to complete execution.
 

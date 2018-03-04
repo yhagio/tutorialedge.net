@@ -136,7 +136,7 @@ Static charts can be pretty boring at times and having to refresh the page all t
 
 In the below code snippet you’ll see we are performing a shift on our data array to remove the first element and then pushing our own random value to the same data array every 2 seconds.
 
-```
+```js
     ctrl.poll = function() {
         $timeout(function(){
             // Here is where you could poll a REST API or the websockets service for live data

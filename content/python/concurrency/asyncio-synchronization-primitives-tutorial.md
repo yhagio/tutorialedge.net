@@ -33,7 +33,7 @@ In computing terms when we lock something, we essentially prevent someone else c
 
 In this example we are going to create a `asyncio.Lock()` instance and we are going to try to acquire this lock using `with await lock`. Once our worker has attained this lock we will then execute our critical section of code and then proceed to release the lock that we have just attained.
 
-~~~py
+```py
 import asyncio
 import time
 
@@ -61,13 +61,13 @@ loop = asyncio.get_event_loop()
 loop.run_until_complete(main())
 print("All Tasks Completed")
 loop.close()
-~~~
+```
 
 #### Output
 
 WHen we run this ywe should see that only one of our concurrently running workers is able to run at the one time.
 
-~~~py
+```py
  $ python3.6 synchronization.py
 Attempting to attain lock
 Currently Locked
@@ -76,7 +76,7 @@ Attempting to attain lock
 Currently Locked
 Unlocked Critical Section
 All Tasks Completed
-~~~
+```
 
 ## Queues 
 
@@ -86,7 +86,7 @@ When it comes to communicating in a synchronized fashion then asyncio provides i
 
 In this example we are going to create a `newsProducer()` coroutine and a `newsConsumer()` coroutine. The `newsProducer()` coroutine will push new news items onto our synchronized queue, the `newsConsumer()` coroutine will attempt to retrieve any items that have been pushed onto said queue and then print whenever it does get something. 
 
-~~~py
+```py
 import asyncio
 import random
 import time
@@ -116,13 +116,13 @@ except KeyboardInterrupt:
     pass
 finally:
     loop.close()
-~~~
+```
 
 #### Output
 
 When we then try to run this you should see that our producer pushes items onto our queue and then our consumers compete with one another in order to get anything put onto the queue. 
 
-~~~py
+```py
  $ python3.6 asyncio-queues.py
 <Queue maxsize=10>
 Consumer: 1 Attempting to get from queue
@@ -138,7 +138,7 @@ Putting news item onto queue
 Consumer: 1 consumed article with id: 4
 Consumer: 1 Attempting to get from queue
 Putting news item onto queue
-~~~
+```
 
 ## Conclusion
 

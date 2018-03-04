@@ -17,7 +17,7 @@ In Angular 2 detecting this route change is relatively simple. If we have a comp
 
 In this example I’ve got a Top-Nav component which has subscribed to route changes so that in future it can determine what sub-navigation to show and so on:
 
-~~~js
+```js
 import { Component, OnInit } from '@angular/core';
 // I import Location so that I can query the current path
 import { Location } from '@angular/common';
@@ -49,7 +49,7 @@ export class TopNavComponent implements OnInit {
   ngOnInit() { }
 
 }
-~~~
+```
 
 ## Conclusion
 

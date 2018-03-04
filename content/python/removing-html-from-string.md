@@ -15,23 +15,23 @@ twitter = "https://twitter.com/Elliot_F"
 
 <p>This method will demonstrate a way that we can remove html tags from a string using regex strings. </p>
 
-~~~py
+```py
 import re
 
 TAG_RE = re.compile(r'<[^>]+>')
 
 def remove_tags(text):
     return TAG_RE.sub('', text)
-~~~
+```
 
 ## Method 2
 
 <p>This is another method we can use to remove html tags using functionality present in the Python Standard library so there is no need for any imports.</p>
 
-~~~py
+```py
 def remove_tags(text):
     ''.join(xml.etree.ElementTree.fromstring(text).itertext())
-~~~
+```
 
 ## Conclusions
 

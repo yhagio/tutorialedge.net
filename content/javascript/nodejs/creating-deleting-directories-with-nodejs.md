@@ -15,9 +15,9 @@ twitter = "https://twitter.com/Elliot_F"
 
 In order to create a directory we’ll need first download the mkdirp npm package, we can do this like so: 
 
-~~~js
+```js
 npm install mkdirp --local
-~~~
+```
 
 This should install the mkdirp package as well as any of it’s dependencies in a node_modules directory within your current directory. Once this has completed we can then start using this new package.
 
@@ -25,7 +25,7 @@ If you wish to read up more about this package you check it’s code out here: <
 
 <h5>The Code</h5>
 
-~~~js
+```js
 // first we import our newly installed mkdirp
 // package so that we can use it further down
 var mkdirp = require('mkdirp');
@@ -39,29 +39,29 @@ mkdirp('test', function (err){
     // else print a success message.
     console.log("Successfully created test directory");
 });
-~~~
+```
 
 
 <h2>Deleting Directories in Node</h2>
 
 <strong>In order to delete directories using node we’ll use the rimraf package</strong> and we’ll need to again install this using the node package manager: 
 
-~~~js
+```js
 npm install rimraf --local
-~~~
+```
 
 Again, if you want to see the code for this package you can do so <a href=”https://github.com/isaacs/rimraf” target=”_blank”>here</a>
 
 ## The Code
 
-~~~js
+```js
 var rimraf = require('rimraf');
 
 rimraf('test', function(err){
     if (err) console.log(err);
     console.log("Successfully deleted a directory");
 });
-~~~
+```
 
 
 Run this using node delete.js and you should hopefully see the success message printed out in your console as well as the test directory we created in the first part of the tutorial deleted.
