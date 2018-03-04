@@ -22,3 +22,5 @@ In these tutorials, we shall be covering some of the basics of VueJS and how I m
 
 * [VueJS HTTP Requests with Axios Tutorial](/javascript/vuejs/vuejs-http-requests-axios-tutorial/)
 
+* [VueJS Event Handling Tutorial](/javascript/vuejs/vuejs-event-handling-tutorial/)
+
