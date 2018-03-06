@@ -18,8 +18,3 @@ functions:
 
   index:
     handler: index.index
-    events:
-      - http:
-          path: index
-          method: post
-          cors: true
