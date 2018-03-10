@@ -59,9 +59,28 @@ myAsyncFunction().then(x => console.log(x));
 
 We've managed to achieve the same result with our `myAsyncFunction` in 4 lines of code, as we had with 8 lines of code in our previous `myTraditionalFunction`. By utilizing the `async` and `await` keywords, we have been able to create a program that is far cleaner and more concise. 
 
-<!-- ## Improvements to Error Handling
+## Improvements to Error Handling
 
-Using both `async` and `await` reduces the number of `.catch()` calls we have to make in order to catch any errors.   -->
+Using both `async` and `await` improves the way we can deal with errors that occur inside of our promises. Let's take for example a program that crawls a page of a website and returns the response, using traditional error handling methods we would have to write additional `.catch()` blocks to catch any errors that our promises may throw.
+
+With the `await` keyword however, we can simply wrap our promise within a try catch like so: 
+
+```js
+const axios = require('axios')
+
+async function crawlPage(url) {
+    try {
+        let result = await axios.get(url);
+        console.log(result);
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+crawlPage("http://elliotforbes.co.uk");
+```
+
+This is far cleaner and simpler than using the `.catch()` block approach.
 
 ## Conclusion
 
