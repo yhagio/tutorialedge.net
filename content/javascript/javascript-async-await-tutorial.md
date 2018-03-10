@@ -77,10 +77,34 @@ async function crawlPage(url) {
     }
 }
 
-crawlPage("http://elliotforbes.co.uk");
+crawlPage("https://tutorialedge.net/");
 ```
 
-This is far cleaner and simpler than using the `.catch()` block approach.
+This is far cleaner and simpler than using the `.catch()` block approach. Let's flesh this sample out a little and create a very simple web crawler that can retrieve all of the links on a given page:
+
+```js
+const axios = require('axios')
+const cheerio = require('cheerio')
+
+async function crawlPage(url) {
+    try {
+        let result = await axios.get(url);
+
+        $ = cheerio.load(result.data);
+        links = $('a')
+        
+        $(links).each((i, link) => {
+            console.log(i)
+            console.log($(link).attr('href'))
+        })
+
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+crawlPage("https://tutorialedge.net/");
+```
 
 ## Conclusion
 
