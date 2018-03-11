@@ -9,10 +9,13 @@ series: ["vuejs"]
 twitter: "https://twitter.com/Elliot_F"
 ---
 
-In this tutorial, we are going to look at how you can setup your development environment so that you can get started writing your own VueJS . 
-
+In this tutorial, we are going to look at how you can setup your development environment so that you can get started writing your own VueJS. 
 
 We will be utilizing the `vue-cli` in order to start our project off and then we'll be diving in and making a few edits, before finally building it using the same `vue-cli`.
+
+## Video Tutorial
+
+<div style="position:relative;height:0;padding-bottom:56.3%"><iframe src="https://www.youtube.com/embed/ac5asCHm1G8?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="639" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 
 ## A Simple Vue App
 
