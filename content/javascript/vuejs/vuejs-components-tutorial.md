@@ -11,6 +11,12 @@ twitter: "https://twitter.com/Elliot_F"
 
 > This Tutorial builds off the starter application that we generated in the [Getting Started with VueJS](/javascript/vuejs/getting-started-with-vuejs/) article.
 
+## Video Tutorial
+
+<div style="position:relative;height:0;padding-bottom:42.76%"><iframe src="https://www.youtube.com/embed/5ounPLpSdeE?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="842" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+
+## Introduction
+
 In this tutorial, we are going to look at how you can work with components within your VueJS applications. We are going to start at looking at very simple components and then move on to your standard `.vue` file components.
 
 > The official documentation for VueJS components can be found here: [VueJS Components Guide](https://vuejs.org/v2/guide/components.html)
