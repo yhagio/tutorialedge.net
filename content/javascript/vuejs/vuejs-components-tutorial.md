@@ -33,6 +33,27 @@ Let's start off by creating a very simple component. We can register this global
 Vue.component('simple-component', {
     // All of my components options
 })
+
+// followed by my vue instance:
+var vue = new Vue({
+    ...
+})
+```
+
+Should you wish, we can also register components locally instead of globally as we have done above. This makes the component *only* available within the scope of another instance and/or component by registering it with the `components` instance option:
+
+```js
+var Child = {
+    template: '<div><h2>Hello World</h2></div>'
+}
+
+var app = new Vue({
+    components: {
+        'my-awesome-component': Child
+    }
+    // all my other vue instance code
+})
+
 ```
 
 Once we've registered our component, we can then drop it into our VueJS application with the `tagName`. 
@@ -44,9 +65,15 @@ Once we've registered our component, we can then drop it into our VueJS applicat
 </div>
 ```
 
-Now, whilst this is how you would define a basic component, I typically never use this method within my VueJS applications. If you are doing anything serious with VueJS then you will tend to find yourself using `.vue` files to encapsulate your components.
+### The Data Function
+
+In the previous tutorial, we created a Vue instance which featured a `data` object with a `msg` within it. One of the key things to note when starting to rearchitect your Vuejs to use components, is that `data` **must** be a function within your components. 
+
+You can certainly still define `data` as an object but you will see a number of error warnings in the console and a number of weird side effects in you application, such as one component impacting the data within another.
 
 ## Component.vue files
+
+Now, whilst this is how you would define a basic component, I typically never use this method within my VueJS applications. If you are doing anything serious with VueJS then you will tend to find yourself using `.vue` files to encapsulate your components.
 
 One of the coolest things about VueJS is the fact that you can define a component in one `.vue` file. This `.vue` file includes the HTML, the JavaScript and the CSS for this one component. If you are coming from an AngularJS or Angular background then you may be used to having a component defined as like 4 distinct files which can lead to thousands of files within your production applications. 
 
