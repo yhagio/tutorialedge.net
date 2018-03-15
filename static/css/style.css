@@ -620,16 +620,17 @@ article ul li {
 article pre {
   overflow: auto;
   padding: 10px 20px;
+
 }
 
 article p > code {
-  padding: .3rem .5rem;
-  background-color: #F5F5F5; 
-  margin: 0 .1rem;
-  line-height: 1;
-  font-family: "Source Code Pro", Monaco, Courier New, Courier, mono;
-  font-weight: 600;
-  font-size: .95rem;
+  padding: .2em;
+  margin: 0;
+  font-size: .85em;
+  font-family: 'Roboto Mono', Monaco, courier, monospace;
+-webkit-font-smoothing: initial;
+-moz-osx-font-smoothing: initial;
+background-color: #f8f8f8;
 }
 
 article blockquote {
