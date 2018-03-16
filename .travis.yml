@@ -5,6 +5,7 @@ install:
 - pip install Pygments
 script:
 - hugo --buildDrafts
+- mv appspec.yml public
 - mkdir temp
 - zip -r temp/app.zip public
 deploy:
