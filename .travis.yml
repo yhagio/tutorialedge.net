@@ -27,5 +27,6 @@ deploy:
   bundle_type: zip
   application: TutorialEdge
   deployment_group: TutorialEdgeDeployment
+  region: eu-west-1
   on:
     repo: elliotforbes/tutorialedge-v2
