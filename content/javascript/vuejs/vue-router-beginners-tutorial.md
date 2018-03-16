@@ -111,6 +111,10 @@ If we were to do this within a single `index.html` page then it would look somet
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+    <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
@@ -151,6 +155,27 @@ If we were to do this within a single `index.html` page then it would look somet
     </script>
 </body>
 </html>
+```
+
+And the final project should look something like so:
+
+![VueJS routing tutorial](https://s3-eu-west-1.amazonaws.com/tutorialedge.net/vuejs-routing-tutorial-01.png)
+
+I threw in a bit of css for this one:
+
+```css
+.center {
+    text-align: center;
+}
+.center a {
+    margin: 20px;
+}
+.center h2 {
+    margin-top: 40px;
+}
+.container {
+    margin-top: 80px;
+}
 ```
 
 ## Vue CLI Configuration

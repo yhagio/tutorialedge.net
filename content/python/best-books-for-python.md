@@ -19,7 +19,7 @@ Dive into Python is a perfect hands-on guide for experienced programmers to come
 
 ## Python Tricks: A Buffet of Awesome Python Features
 
-<p><img alt="Python Tricks" src="/books/python-tricks.jpg" class="book-img" />An excellent book that shows you some of the best practices you should follow when developing Python based applications. Dan Bader is an excellent Pythonista to follow if you are wishing to learn more about the Python ecosystem. </p>
+<p><img alt="Python Tricks" src="https://s3-eu-west-1.amazonaws.com/tutorialedge.net/books/python-tricks.jpg" class="book-img" />An excellent book that shows you some of the best practices you should follow when developing Python based applications. Dan Bader is an excellent Pythonista to follow if you are wishing to learn more about the Python ecosystem. </p>
 
 In its short lifespan it has achieved well over 100 incredibly positive reviews on Amazon and is highly recommended for all levels of Python programming. Beginners through advanced programmers will come away learning something new about the language. 
 
@@ -45,7 +45,7 @@ This book is, as the title suggests, is aimed at people who are entirely new to 
 
 ## Python Crash Course
 
-<p><img alt="Python Crash Course" src="/books/python-crash-course.jpg" class="book-img" />A fast paced but comprehensive introduction to programming with python, Python Crash Course is another superb book to add to your library and help you finally master Python. </p>
+<p><img alt="Python Crash Course" src="https://s3-eu-west-1.amazonaws.com/tutorialedge.net/books/python-crash-course.jpg" class="book-img" />A fast paced but comprehensive introduction to programming with python, Python Crash Course is another superb book to add to your library and help you finally master Python. </p>
 
 #### What it Covers
 

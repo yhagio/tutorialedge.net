@@ -15,7 +15,7 @@ In this article we are going to be taking a look at some of the best books you c
 
 ## Web Design with HTML, CSS, JavaScript and jQuery Set
 
-<p><img alt="Web Design with HTML, CSS, JavaScript and jQuery Set" src="/books/web-design-with-html.jpg" class="book-img" />
+<p><img alt="Web Design with HTML, CSS, JavaScript and jQuery Set" src="https://s3-eu-west-1.amazonaws.com/tutorialedge.net/books/web-design-with-html.jpg" class="book-img" />
 This set of 2 books that each cover HTML + CSS and Javascript and jQuery respectively are excellent primers into the world of web development. They are very well written and definitely look gorgeous and you can most definitely judge the book based of it's cover in this scenario. Overall these are excellent primers that get you up and running creating websites.</p>
 
 Whilst I am not typically a fan of jQuery and personally would opt for frameworks such as Angular and React, it is an excellent framework for people who don't necessarily need the full power of these javascript frameworks and instead just want to make gorgeous interactive websites.
@@ -24,7 +24,7 @@ Whilst I am not typically a fan of jQuery and personally would opt for framework
 
 ## Learning Web Design: A Beginner's Guide to HTML, CSS, JavaScript and Web Graphics
 
-<p><img alt="Best Books for Learning Web Development" src="/books/learning-web-design.jpg" class="book-img"/>Learning Web Design (4th Edition) by Jennifer Niederst Robbins is an outstanding book for beginners wishing to come up to speed with creating beautiful websites and has received hundreds of rave reviews from customers who have already bought the book. This is definitely a classic that would not be out of place in any web developers library.</p>
+<p><img alt="Best Books for Learning Web Development" src="https://s3-eu-west-1.amazonaws.com/tutorialedge.net/books/learning-web-design.jpg" class="book-img"/>Learning Web Design (4th Edition) by Jennifer Niederst Robbins is an outstanding book for beginners wishing to come up to speed with creating beautiful websites and has received hundreds of rave reviews from customers who have already bought the book. This is definitely a classic that would not be out of place in any web developers library.</p>
 
 For the price of `$49.99` this may be somewhat pricey but I've seen it drop down to the low `$30s` on Amazon.com so I would encourage you to wait for a good deal. Saying that though, if you can afford to part with the full RRP then this book is definitely worth every penny.
 
@@ -41,7 +41,7 @@ The book covers various topics such as:
 
 ## HTML and CSS: Design and Build Websites (1st Edition)
 
-<p><img alt="Top books for learning web development" src="/books/html-and-css.jpg" class="book-img"/>HTML and CSS by Jon Duckett focuses on introducing both HTML and CSS in an accessible way so that everyone in the experience spectrum can learn to build their own websites. </p>
+<p><img alt="Top books for learning web development" src="https://s3-eu-west-1.amazonaws.com/tutorialedge.net/books/html-and-css.jpg" class="book-img"/>HTML and CSS by Jon Duckett focuses on introducing both HTML and CSS in an accessible way so that everyone in the experience spectrum can learn to build their own websites. </p>
 
 The book itself has received over 1,000 customer ratings and is currently the #1 best seller on `Amazon.com` in the web design category which should attest to just how good the book is for beginners within the field.
 

@@ -15,7 +15,7 @@ In this article we will be looking at the best books you can buy to help you lea
 
 ## C In a Nutshell
 
-<p><img alt="C In A Nutshell" src="/books/c-in-a-nutshell.jpg" class="book-img" />C In a Nutshell is an absolutely fantastic book that covers just about everything you need to get up and running in <code>C</code>. </p>
+<p><img alt="C In A Nutshell" src="https://s3-eu-west-1.amazonaws.com/tutorialedge.net/books/c-in-a-nutshell.jpg" class="book-img" />C In a Nutshell is an absolutely fantastic book that covers just about everything you need to get up and running in <code>C</code>. </p>
 
 The `C` programming language is one that is incredibly powerful, incredibly small but also incredibly hard to master, `C In A Nutshell` does a very good job of covering the basics and getting you up and running. When it comes to recommending any `C` book then this one most certainly tops my list.
 

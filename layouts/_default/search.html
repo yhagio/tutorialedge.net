@@ -11,25 +11,25 @@
     <div class="search-results">
         <div class="container">
             <div class="result-stats">
-                <!-- <p>Page: <b>{{ "{{ page }}" }}</b> of {{ "{{ pages }}" }} Total of <b>{{ "{{ total_hits }}"  }}</b></p> -->
+                <p>Page: <b><% page %></b> of <% pages %> | Total Hits <b><% total_hits %></b></p>
                 <p>Top 10 Results</p>
             </div>
 
             <div class="search-result" v-for="result in results.hits">
-                <a href="{{ "{{ result.id }}" }}">
-                    <h3>{{ "{{ result.fields.Title }}" }}</h3>
+                <a v-bind:href="result.id">
+                    <h3><% result.fields.Title %></h3>
                 </a>
-                <span class="url">https://tutorialedge.net{{ "{{ result.id }}" }}<br/></span>
-                <span class="description">{{ "{{ result.fields.Body }}" }}</span>
-                <span class="weight">Weight: {{ "{{ normalize(result.score) }}" }}</span>
+                <span class="url">https://tutorialedge.net<% result.id %><br/></span>
+                <span class="description"><% result.fields.Body %></span>
+                <span class="weight">Weight: <% normalize(result.score) %></span>
                 <br/>
             </div>
 
             <div class="center-align">
                 <ul class="pagination">
-                    <li class="waves-effect"><a v-on:click="prevPage()"><i class="ion ion-chevron-left"></i></a></li>
-                    <li v-for="page in pages" class="waves-effect"><a v-on:click="setPage(page+1)">{{ "{{ page + 1 }}" }}</a></li>
-                    <li class="waves-effect"><a v-on:click="nextPage()"><i class="ion ion-chevron-right"></i></a></li>
+                    <li class="waves-effect"><a @click="prevPage()"><i class="ion ion-chevron-left"></i></a></li>
+                    <li v-for="page in pages" class="waves-effect"><a @click="setPage(page+1)"><% page %></a></li>
+                    <li class="waves-effect"><a @click="nextPage()"><i class="ion ion-chevron-right"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -41,11 +41,12 @@
 <script>
     var app = new Vue({
         el: '#app',
+        delimiters: ["<%","%>"],
         data() {
             return {
                 results: {},
                 searchQuery: '',
-                pages: [],
+                pages: 1,
                 page: 1,
                 total_hits: 0,
                 page_size: 20
@@ -77,20 +78,20 @@
             prevPage: function () {
                 app.$nextTick(function() {
                     this.page -= 1;
+                    this.search()
                 })
-                this.search()
             },
             nextPage: function () {
                 app.$nextTick(function() {
                     this.page += 1
+                    this.search()
                 })
-                this.search()
             },
             setPage: function (page) {
                 app.$nextTick(function() {
                     this.page = page
+                    this.search()
                 })
-                this.search()
             },
             range: function (count) {
                 for (var i = 0; i < count; i++) { this.pages.push(i) }

@@ -15,7 +15,7 @@ Rust is an incredibly fast systems programming language that is used by a very w
 
 ## Programming Rust: Fast, Safe Systems Development
 
-<p><img alt="Programming Rust: Fast, Safe Systems Development" src="/books/programming-rust.jpg" class="book-img" /> Programming Rust: Fast, Safe Systems Development (1st Edition) is a fantastic resource for those of you willing to pick up the relatively new language. The book explains the complexities of the language and how you can ensure your programs are free from things such as null pointer dereferences, double frees, dangling pointers and other such bugs. </p>
+<p><img alt="Programming Rust: Fast, Safe Systems Development" src="https://s3-eu-west-1.amazonaws.com/tutorialedge.net/books/programming-rust.jpg" class="book-img" /> Programming Rust: Fast, Safe Systems Development (1st Edition) is a fantastic resource for those of you willing to pick up the relatively new language. The book explains the complexities of the language and how you can ensure your programs are free from things such as null pointer dereferences, double frees, dangling pointers and other such bugs. </p>
 
 The authors; `Jim Blandy` and `Jason Orendorff` are both experienced systems programmers and are both very qualified to teach you the basics of the `Rust` programming language.
 
@@ -32,7 +32,7 @@ The authors; `Jim Blandy` and `Jason Orendorff` are both experienced systems pro
 
 ## Mastering Rust
 
-<p><img alt="Mastering Rust" src="/books/mastering-rust.jpg" class="book-img" /> Mastering Rust by <code>Vesa Kaihlavirta</code> is a new book which teaches you concepts such as concurrent programming and other intermediate to advanced programming concepts. It does this by using a series of real-world examples and explanations and showing you how to create scalable and reliable programs for your organization.</p>
+<p><img alt="Mastering Rust" src="https://s3-eu-west-1.amazonaws.com/tutorialedge.net/books/mastering-rust.jpg" class="book-img" /> Mastering Rust by <code>Vesa Kaihlavirta</code> is a new book which teaches you concepts such as concurrent programming and other intermediate to advanced programming concepts. It does this by using a series of real-world examples and explanations and showing you how to create scalable and reliable programs for your organization.</p>
 
 #### What it Covers
 
