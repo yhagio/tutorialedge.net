@@ -15,5 +15,6 @@ deploy:
   bucket: test-tutorialedge-v2
   local-dir: public
   acl: public_read
+  skip_cleanup: true
   on:
     repo: elliotforbes/tutorialedge-v2
