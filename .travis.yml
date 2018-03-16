@@ -21,7 +21,7 @@ deploy:
 - provider: codedeploy
   access_key_id: AKIAIN5O72B44O5TWFVA
   secret_access_key: *1
-  bucket: tutorialedge.net
+  bucket: s3://tutorialedge.net
   key: latest/app.zip
   bundle_type: zip
   application: TutorialEdge
