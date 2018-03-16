@@ -5,12 +5,14 @@ install:
 - pip install Pygments
 script:
 - hugo --buildDrafts
+- mkdir temp
+- zip -r temp/app.zip public
 deploy:
 - provider: s3
   access_key_id: AKIAIN5O72B44O5TWFVA
   secret_access_key: &1
     secure: hkXqc4nzsvgqRZNfNwhuZeOuwGQQ6ed6IgHNcjDUK07KjEjbu/NtzdRFSRhnTTnxEcBIw0XaXBhxGnO0i9qZ+QjJhxsg8ZwIDUFwFOKFP/PDtR/n+3OHHBLDQ81n7zQr+RLoFyM/5hfEx32L4fXN3zJWXtL5FASgw8523NkcbVLpClqF1+/OEElgSeFM8b3mU9NKGD0YD2O5ReGOhIeGy2JePS3xRqoX9xc429suEbdh6xDPM7Uww+khJMcmVciKWzqzbQiigumKsyX6Fd1b5MJADZ3oD1ln9UffAb+KDZUNjIFAc5WQKJJvPuu52y62IvTtsqZfp79JtnjaZSuLLZk7ZKTa+oNbBSYezMEuwK18ygJHLKmHmkv0EC4ltNSfgxR1icWQVHZwJd6ZHY+Tt8a19mHIc1OQ5RMfiZgFsu0MMW7npdkJk8cD7/8eRfunkKl3MkQXFa5WRD68GnIEOjhFqNe+NTJjsbZHtC7Od9opNzK1MQoTJx/WoE5kNC5QVlJNeNL77HM/P8AJsaoMZTfJyMLmjMErvn/25my20ePp7w+1c5B427V1cS/50UPTa0XRKZNHH/Uyf5YWA2g0AKXAZMHKDpI1KEE6EO12rlX47itk4ydr0fCHRw6+v5Pk2ufLyCjNqVQzp3sIiJ+Jg5XM/y6Nrjor17v4kQZxA9U=
-  local_dir: public
+  local_dir: temp
   skip_cleanup: true
   on: &2
     repo: elliotforbes/tutorialedge-v2
