@@ -1,11 +1,18 @@
 language: python
+env:
+  global:
+    # include $HOME/.local/bin for `aws`
+    - PATH=$HOME/.local/bin:$PATH
+
+before_install:
+- pip install --user awscli
 install:
 - wget https://github.com/gohugoio/hugo/releases/download/v0.31.1/hugo_0.31.1_Linux-64bit.deb
 - sudo dpkg -i hugo*.deb
 - pip install Pygments
 script:
 - hugo --buildDrafts
-- pip install --user awscli
+
 - aws s3 sync s3://test-tutorialedge-v2
 deploy:
 - provider: s3
