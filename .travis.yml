@@ -5,11 +5,6 @@ install:
 - pip install Pygments
 script:
 - hugo --buildDrafts
-before_deploy:
-- git status
-- git config --local user.name "elliotforbes"
-- git config --local user.email "emforce@live.com"
-- git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
 deploy:
   provider: s3
   access_key_id: AKIAIN5O72B44O5TWFVA
