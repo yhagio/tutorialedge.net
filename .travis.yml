@@ -6,6 +6,7 @@ install:
 script:
 - hugo --buildDrafts
 - pwd
+- ls
 deploy:
   provider: s3
   access_key_id: AKIAIN5O72B44O5TWFVA
