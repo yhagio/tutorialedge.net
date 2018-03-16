@@ -1,0 +1,13 @@
+language: hugo
+
+
+script:
+  - curl -Ls https://github.com/gohugoio/hugo/releases/download/v0.27.1/hugo_0.27.1_Linux-64bit.tar.gz -o /tmp/hugo.tar.gz
+  - tar xf /tmp/hugo.tar.gz -C /tmp
+  - mv /tmp/hugo /usr/bin/hugo
+  - rm -rf /tmp/hugo*
+  - hugo --buildDrafts
+  - ls
+  - pwd
+
+deploy:
