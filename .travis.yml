@@ -8,4 +8,20 @@ install:
 script:
   - hugo --buildDrafts
 
-# deploy:
+before_deploy:
+  - git config --local user.name "elliotforbes"
+  - git config --local user.email "emforce@live.com"
+  - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
+
+deploy:
+  provider: s3
+  access_key_id: 
+    secure: GfV0vJxhonIgt+kbAn9oF+b5NpmxOxau9zTigNU+tpjnFXnb6mW7sxp9qZht1WQu1iABXyDSIeTkOiRVz81fGilGTUGbB/dapUUMdUJHKyTxtaeq5XdchFVPN+riZYLKd+17QMOoKvBBMJqpEseOtCSMUdHt0JZXHnVaVtkTF/pSMXuxdMKjb44cKGKeDrKxGmnE0mNlj0gjYx60JQiDgFaP3KCDuUnLypV+cRGhHPOuKn6l/sYGos2Dj5VT87Q5C0rq8mg7C/qqntqOrCb1a3LNTCI47i7scyGyGgeZ5ggNx5D7wWsscX7NKxOyRAESa8nWvxfGKz3iRdqMEJaA85AR556oqLrmw7/AaaC43aeDWklzvGd6EhKP4BR8kfwlETqISFcpIR+dbaRLcREjKxFsI89Z1c/MJq3ma88YFPQAMOQSmdyi2bZBIaWoXzSW8NqhXobSHkVIi1RW9MbTeGPS5VVRY/g+utnjZpXa2f6Ubv8E6Q+zDhVfbV25uAwHSV7Tmv5HukpJp966YeEwojClb61hr3egJ38vFJqaZWWhxVlgzUlCfT2NxVstrQzm5VfsZ/hNxUEdTurJrcXvLlgBD7vO3+ruF8z0kdyBTt/1WrNTH2+jWJBGCtluxNZZ71atzp7KMZ1LQaIk/pvudjkjQFlItgUcNYTH9LQXbCs=
+  secret_access_key:
+    secure: qo88HdknYZRB91VC+nsDQzAveBvUn8d55uUuw2PSysTxsBG7cmnlEhcKh019WOicNAUP0ATkO03hwFpqq3kSLAnEd8kBqxAE7Gx1WqDVPzV4lCmHHVJcAZgD/UJnkM4ExSnbJomozHnHOyhPt9Ihmc8kPIeo1kMGiVOs1Czs8lc9w4IXHLu+/ImZp5okqAqYAvXWMbPPblMA7FwSgLGWrT5tn9DjXcoA6EGpyBs30m6bBaPqTDRdKFSq6Bz11NQp6gBfhJqBcs5xya4UUPXWvX7wa6WxalZL6lYguw7g0Wj2k71xyZqi7+DqBsbbD4wnkRBeyW3L6xVSLcC4yNNj+JQzRzDOxN9+Vfp1eBM53HGriYduPJ0ep1gOIuH8GAhBt+V++7WrzegUzZ59A27nQSayHBR2F6VjOLYG/NSAxokqaFrKaOdeblwZCa17h4zT9971nYQOFLNcslY7r13q+h9iITe6rjDz6q3cLNXnvOdoruwJMbojqZ9lQwn/7GoJXP1KPTlLJ9LO+JNzBP/Y+qfMcS9ylTpU6AqbzFv7VvU5cl+1UV+gQISmdjQAQCe8d/jZpJy7NSxvcL5Duc3kS0wy3gtgfYoWRnfuyNNMGl6fuaFMJhHi/s/QA72Oo5JfqZiRTDDi7bH9XbFVMIlW0uHjxCDp7M34oOvvwhE2Ty8=
+  bucket: test-tutorialedge-v2
+  local_dir: public
+  skip_cleanup: true
+  acl: public_read
+
+    
