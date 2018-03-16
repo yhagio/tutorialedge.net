@@ -6,7 +6,7 @@ install:
 script:
 - hugo --buildDrafts
 - mv appspec.yml public
-- mv -r scripts public
+- cp -r scripts public/
 - mkdir temp
 - zip -r temp/app.zip public
 deploy:
