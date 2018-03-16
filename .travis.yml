@@ -8,7 +8,7 @@ script:
 - mv appspec.yml public
 - cp -r scripts public/
 - mkdir temp
-- zip -r temp/app.zip public
+- zip -r temp/app.zip public/*
 deploy:
 - provider: s3
   access_key_id: AKIAIN5O72B44O5TWFVA
