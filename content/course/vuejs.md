@@ -24,3 +24,4 @@ In these tutorials, we shall be covering some of the basics of VueJS and how I m
 
 * [VueJS Event Handling Tutorial](/javascript/vuejs/vuejs-event-handling-tutorial/)
 
+* [VueJS Routing with the Vue Router](/javascript/vuejs/vue-router-beginners-tutorial/)
