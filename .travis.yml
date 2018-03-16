@@ -16,12 +16,12 @@ deploy:
   skip_cleanup: true
   on: &2
     repo: elliotforbes/tutorialedge-v2
-  bucket: tutorialedge.net
+  bucket: "tutorialedge.net"
   upload_dir: latest
 - provider: codedeploy
   access_key_id: AKIAIN5O72B44O5TWFVA
   secret_access_key: *1
-  bucket: s3://tutorialedge.net
+  bucket: "tutorialedge.net"
   key: latest/app.zip
   bundle_type: zip
   application: TutorialEdge
