@@ -27,6 +27,3 @@ deploy:
   application: TutorialEdge
   deployment_group: TutorialEdgeDeployment
   on: *2
-before_deploy:
-- mkdir -p public
-- mv app.zip public/app.zip
