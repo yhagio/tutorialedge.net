@@ -18,3 +18,14 @@ deploy:
   skip_cleanup: true
   on:
     repo: elliotforbes/tutorialedge-v2
+- provider: codedeploy
+  access_key_id: AKIAIN5O72B44O5TWFVA
+  secret_access_key:
+    secure: KimDTOqbcq0MkvGBqqeVsOfVZwdx3oHpSJKPsajjCgOCeoBUQdpwRLIak4KDOq8PWg5BUMNS6scl5eRHeqrWLNmMfgaO+gX6WGhtWbKgCSKvRBvM8E3dpbTqADaax9RBQgUpJmGyOPCI7oGsfmb7YrksLUAg3XOiI1Mi3AhVQNMTple07pQ1HcviJrOecXq8CrXv5Rm8iXonK/ZWvUXVMp1nnz08M+PeIm0AxVxWrta6rLImDEZbsgmAAl/LE68Dc6uqawn46XR+XSRLnXDpWXSX2YP6yTv4ZOxDmJalV5P/uH0xNS6k7VFA/mRi0hTXJumIev2saXm3PmMsonQPG+f6fVMWkErgZas2WfilLdyM/acWqCxMNJlBsDxt+FyKaEbgTgxRGlvqYhRxIEjNm1tl3R8KuBGktlz9FHLK7HQYESl26hfjdHZr7Q3lswh7cpcqeGJkQfStPGHM/PIWyhXsE0MTCG2ExxLtIuW/xFXf3npWTFnTzUQEGCSEWVotrb0FZO3BzTqH1hcQT2P8hrhfFunEYZ62LY8TMga/1wurP8hoSiY3d4ldRAQDNGsTqMwxAp5hMpKOPa7BTVEXERwtstD+mIp2ENJlxMlq9k+KwjhiAD9V0Y7KGi8ZgvmSD+Ip2T7XC7OETrKw5IK7D4zE9DsIt66lL/UUEYiFR70=
+  bucket: test-tutorialedge-v2
+  key: latest/app.zip
+  bundle_type: zip
+  application: TutorialEdge
+  deployment_group: TutorialEdgeDeployment
+  on:
+    repo: elliotforbes/tutorialedge-v2
