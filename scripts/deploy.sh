@@ -2,4 +2,4 @@
 cd /var/www/
 wget https://s3-eu-west-1.amazonaws.com/test-tutorialedge-v2/app.zip
 unzip app.zip -d temp
-cp -rf temp/* html/public/
+yes | cp -rf temp/* html/public/
