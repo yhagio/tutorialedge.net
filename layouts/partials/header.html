@@ -95,13 +95,23 @@
 				<li class="nav-item"><a class="nav-link" href="{{ .Site.BaseURL }}/get-involved/">Get Involved</a></li>
 				<li class="nav-item"><a class="nav-link" href="{{ .Site.BaseURL }}/series/blog/">Blog</a></li>
 				<li class="nav-item">
-					<a class="nav-link" href="{{ .Site.BaseURL }}/profile/">Login/Register</a>
+					<!-- <a class="nav-link" href="{{ .Site.BaseURL }}/profile/">Login/Register</a> -->
 				</li>
 			</ul>
-			<form class="form-inline my-2 my-lg-0">
-				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-				<a class="btn btn-outline-success my-2 my-sm-0" href="{{ .Site.BaseURL }}/search/?{[ searchQuery ]}">Search</a>
+			<form class="form-inline my-2 my-lg-0" id="searchbar">
+				<input class="form-control mr-sm-2" type="search" placeholder="Search" v-model="searchQuery" aria-label="Search">
+				<a class="btn btn-outline-success my-2 my-sm-0" v-bind:href="'{{ .Site.BaseURL }}/search/?query=' + searchQuery">Search</a>
 			</form>
 		</div>
 	</nav>
 	<div class="clear"></div>
+
+	<script>
+	new Vue({
+		el: '#searchbar',
+		delimiters: ["<%","%>"],
+		data: {
+			searchQuery: ''
+		}
+	})
+	</script>
