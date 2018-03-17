@@ -5,6 +5,7 @@ draft = true
 author = "Elliot Forbes"
 layout = "simple"
 image = "ai.png"
+series = ["ai"]
 +++
 
 <p>Artificial intelligence is a field that has interested me since the days that I started programming. It’s hard not to see the appeal of having a computer program that could effectively think for itself and perform automated tasks based off a series of events. It’s a field that has been highly utilized by the gaming industry in order to create NPC characters that think for themselves and ultimately create far more interesting games with longer replay-ability. </p>
@@ -43,44 +44,3 @@ In this section of the course we cover some of the core concepts that you'll nee
       </a>
   </div>
 </div>
-
-## Java Based AI Tutorials
-
-Now that we have a basic understanding for some of the concepts, it's time to look at how we can implement some basic Artificial intelligence algorithms using Java.
-
-<div class="row">
-  <div class="col l6">
-      <a href="/artificial-intelligence/breadth-first-search-java/" class="blog-list-article">
-          <div class="blog-list-article-date">Beginner</div> 
-          <div class="blog-list-article-category">Artificial Intelligence</div>
-          <div class="blog-list-article-content">
-              <div class="blog-list-article-title">Breadth First Search in Java</div>
-                <!-- <div class="blog-list-article-excerpt"></div>   -->
-          </div>
-      </a>
-  </div>
-  <div class="col l6">
-      <a href="/artificial-intelligence/depth-first-search/" class="blog-list-article">
-          <div class="blog-list-article-date">Beginner</div> 
-          <div class="blog-list-article-category">Artificial Intelligence</div>
-          <div class="blog-list-article-content">
-              <div class="blog-list-article-title">Depth First Search in Java</div>
-                <!-- <div class="blog-list-article-excerpt"></div>   -->
-          </div>
-      </a>
-  </div>
-  <div class="col l6">
-      <a href="/artificial-intelligence/depth-limited-search-in-java/" class="blog-list-article">
-          <div class="blog-list-article-date">Beginner</div> 
-          <div class="blog-list-article-category">Artificial Intelligence</div>
-          <div class="blog-list-article-content">
-              <div class="blog-list-article-title">Depth Limited Search in Java</div>
-                <!-- <div class="blog-list-article-excerpt"></div>   -->
-          </div>
-      </a>
-  </div>
-</div>
-
-
-
- 

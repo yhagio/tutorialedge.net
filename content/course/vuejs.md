@@ -3,6 +3,7 @@ title: "VueJS fundamentals"
 date: 2018-03-01T08:16:15Z
 draft: true
 layout: simple
+series: ["vuejs"]
 image: "vuejs.png"
 ---
 

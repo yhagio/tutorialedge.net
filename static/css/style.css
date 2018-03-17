@@ -287,7 +287,10 @@ nav .dropdown-menu img {
     display: none
   }
 }
-
+.post-content {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
 .courses {
   width: 100%;
   width: 100%;

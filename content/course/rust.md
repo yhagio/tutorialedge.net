@@ -4,5 +4,6 @@ title = "Rust Programming Course"
 draft = true
 author = "Elliot Forbes"
 layout = "simple"
+series = ["rust"]
 image = "rust-logo.png"
 +++
