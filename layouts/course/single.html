@@ -1,0 +1,37 @@
+{{ partial "header.html" . }}
+
+<div class="title-bar">
+	<h1>{{ .Title }}</h1>
+</div>
+
+<div class="content container">
+	<div class="post-content">
+		{{ .Content }}
+	</div>
+</div>
+
+<div class="course-videos">
+	<div class="row">
+		{{ range $key, $value := .Params.series }}
+			{{ range (index $.Site.Taxonomies.series $value) }}
+			<div class="col-sm-3">
+				<div class="card">
+					<img class="card-img-top" src="/uploads/go-orm-tutorial.png" alt="Card image cap">
+					<div class="card-body">
+						<a href="{{ .Page.Permalink }}">
+						<h5 class="card-title">{{ .Page.Title }}</h5>
+						</a>
+						<p class="card-text">{{ .Page.Params.desc }}</p>
+					</div>
+					<div class="card-footer">
+						<small class="text-muted">Published: {{ dateFormat "Monday, Jan 2, 2006" .Page.Date }} </small>
+					</div>
+				</div>
+			</div>
+			{{ end }}
+		{{ end }}
+	</div>
+</div>
+
+
+{{ partial "footer.html" . }}

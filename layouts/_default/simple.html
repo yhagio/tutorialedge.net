@@ -1,39 +1,15 @@
 {{ partial "header.html" . }}
 
 <div class="title-bar">
-	<h1>{{ .Title }}</h1>
+	<h1>{{ .Title }}</h1>	
 </div>
 
 <div class="content container">
 	<div class="row">
-		<!-- <div class="info">
-				<div class="info-box">
-					<i class="ion ion-person"></i>
-					<a href="https://twitter.com/elliot_f">{{ .Params.author }}</a>
-				</div>
-				<div class="info-box">
-					<i class="ion ion-ios-calendar"></i> {{ .Date.Format "02.01.2006 15:04" }}
-				</div>
-				<div class="info-box">
-					<i class="ion ion-clock"></i> {{ .ReadingTime }} Minutes
-				</div>
-				<div class="info-box">
-					<i class="ion ion-android-bookmark"></i>
-					{{ range $key, $value := .Params.series }}
-					<a href="/series/{{ $value }}">{{ $value }}</a> {{ end }}
-				</div>
-				<div class="clear"></div>
-			</div> -->
 
+		<div class="col-sm-12">
 
-		<!-- <div class="col l3 m3 s12">
-				{{ partial "sidebar.html" . }}
-			</div> -->
-
-		<div class="col l12 m12 s12">
-			<div class="container">
-
-				<article>
+				<aricle>
 					<div class="post-content">
 						{{ .Content }}
 					</div>
@@ -90,7 +66,6 @@
 					</div>
 
 				</article>
-			</div>
 		</div>
 	</div>
 </div>

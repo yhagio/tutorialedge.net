@@ -17,6 +17,7 @@ If you've frequented this site in the past you should hopefully have noticed a h
 
 The first and biggest reason I'm moving to a github based site is due to the ease with which I can make changes. I was writing in markdown with the old system so the writing style isn't going to change and leveraging the power of github when it comes to revision history is fantastic.
 
+
 #### Speed
 
 Laravel 5 is a great framework, I really respect what Taylor has been able to do with it but unfortunately I don't have the time to custom build my own CMS anymore. Initially I went down that path in order to teach myself how to do it but my focus is shifting and I'd rather spend the time writing articles for the site than dealing with all the extra stuff.

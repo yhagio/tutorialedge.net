@@ -9,7 +9,7 @@
 <div class="container">
 	<div class="row flexbox-courses">
 		{{ $paginator := .Paginate  .Data.Pages }} {{ range $paginator.Pages }}
-		<div class="col l4 m6 s12">
+		<div class="col-sm-4">
 			<a href="{{ .RelPermalink }}" class="blog-list-article">
 				<div class="blog-list-article-date">{{ .Date.Format "02 Jan 06" }}</div>
 				{{ range $key, $value := .Params.series }} 

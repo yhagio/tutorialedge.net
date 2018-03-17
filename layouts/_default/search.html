@@ -3,8 +3,12 @@
 <div id="app">
     <div class="search-bar">
         <div class="container center">
-            <input v-model="searchQuery" type="text" placeholder="Search Now...">
-            <button class="btn btn-primary" v-on:click="search">Search Now</button>
+            <div class="input-group">     
+                <input class="form-control" v-model="searchQuery" type="text" placeholder="Search Now...">
+            </div>
+            <div class="input-group">
+                <button class="btn btn-primary search-btn" v-on:click="search">Search</button>
+            </div>
         </div>
     </div>  
 
@@ -24,18 +28,17 @@
                 <span class="weight">Weight: <% normalize(result.score) %></span>
                 <br/>
             </div>
-
             <div class="center-align">
-                <ul class="pagination">
-                    <li class="waves-effect"><a @click="prevPage()"><i class="ion ion-chevron-left"></i></a></li>
-                    <li v-for="page in pages" class="waves-effect"><a @click="setPage(page+1)"><% page %></a></li>
-                    <li class="waves-effect"><a @click="nextPage()"><i class="ion ion-chevron-right"></i></a></li>
-                </ul>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li v-if="page >= 1" class="page-item"><a @click="prevPage()" class="page-link">Previous</a></li>
+                        <li v-for="page in pages" class="page-item"><a @click="setPage(page)" class="page-link"><% page %></a></li>
+                        <li v-if="page <= pages" class="page-item"><a @click="nextPage()" class="page-link">Next</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </div>
-
-    
 </div>
 
 <script>
@@ -52,6 +55,12 @@
                 page_size: 20
             }
         },
+        created: function() {
+            if (this.getQueryParam("query")) {
+                this.searchQuery = this.getQueryParam("query");
+                this.search();
+            }
+        },
         methods: {
             search: function (event) {
                 let data = {
@@ -60,7 +69,6 @@
                     "from": this.page,
                     "fields": ["*"]
                 };
-
                 axios({
                     method: 'POST',
                     url: 'https://api.tutorialedge.net/search',
@@ -68,12 +76,20 @@
                     data: data
                 }).then(function(response) {
                     app.$nextTick(function() {
-                        console.log("hit")
                         this.results = response.data;
                         this.total_hits = response.data['total_hits'];
                         this.pages = Math.ceil((response.data.total_hits / 10))
                     })
                 }).catch(function(err) { console.log(err) })
+            },
+            getQueryParam: function(variable) {
+                var query = window.location.search.substring(1);
+                var vars = query.split("&");
+                for (var i=0;i<vars.length;i++) {
+                    var pair = vars[i].split("=");
+                    if(pair[0] == variable){return pair[1];}
+                }
+                return(false);
             },
             prevPage: function () {
                 app.$nextTick(function() {

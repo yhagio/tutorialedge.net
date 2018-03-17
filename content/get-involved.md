@@ -31,3 +31,4 @@ twitter = "https://twitter.com/Elliot_F"
 
 In order to be recognized for your work you simply need to change the author field to your name and then post a link to your twitter page as shown above. For any pages you write you'll then see your name, your twitter profile picture and a link to your profile on the right hand sidebar.
 
+

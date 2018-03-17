@@ -19,11 +19,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #333;
 }
 
-::selection {
-  background: #546389;
-  color: #fff;
-}
-
 article ol {
   list-style-type: none;
   clear: both;
@@ -52,81 +47,48 @@ article ol li:before {
 }
 
 nav {
-  background-color: #fff;
   box-shadow: none;
-  color: #3A292A;
   border-bottom: 1px solid #EEE5E5;
 }
-
-nav ul li a {
-  color: #3A292A;
+.bg-primary {
+  background-color: #31475A !important;
 }
-
-nav .brand-logo {
-  font-weight: 300;
-  color: #3A292A;
-  margin-left: 10px;
+.btn-outline-success {
+  background-color: #33A3CD !important;
+  color: white !important;
+  border: 1px solid #33A3CD !important; 
+}
+nav.navbar ul li a {
+  color: white !important;
+}
+nav ul li .dropdown-menu a  {
+  color: black !important;
+}
+nav .navbar-brand span{
+  font-size: 1.8rem;
 }
 
 nav img {
   width: 50px;
   height: 50px;
-  float: left;
-  margin-top: 5px;
   margin-right: 10px;
 }
 
-nav .button-collapse {
-  margin-left: 10px;
+nav .dropdown-menu img {
+  width: 20px;
+  height: 20px;
+  margin-left: 0;
+  padding: 0;
 }
 
-
-nav .button-collapse .ion {
-  color: #3A292A !important;
-}
-
-.nav-wrapper {
-  border-bottom: 1px solid #EEE5E5;
-}
-.nav-wrapper i {
-  font-size: 16px;
-  margin-right: 5px;
-}
-
-.nav-content {
-  width: 100%;
-  height: 64px;
-  background-color: #fff !important;
-  border-bottom: 1px solid #EEE5E5;
-}
-
-.nav-content ul li a {
-  color: #3A292A;
-}
-.nav-content ul li a img {
-  margin-top: 15px;
-  width: 30px;
-  height: 30px;
-}
-
-.pagination {
+.paginate {
   width: 100%;
   text-align: center;
   padding: 20px;
 }
 
-.pagination .total-count {
+.paginate .total-count {
   padding: 20px;
-}
-
-.pagination a {
-  color: #1bbbef;
-  text-decoration: none;
-  padding: 0.5em 1.5em;
-  border: 1px solid #1bbbef;
-  -moz-border-radius: 100px;
-  -webkit-border-radius: 100px;
-  border-radius: 100px;
 }
 
 .flexbox-courses {
@@ -143,21 +105,6 @@ nav .button-collapse .ion {
   box-sizing: border-box;
 }
 
-.card {
-  background: #F3F4F5;
-  margin: 15px;
-  display: flex;
-  height: 314px;
-  border-radius: 5px;
-  box-shadow: none;
-}
-
-.card-content {
-  position: absolute;
-  bottom: 30px;
-  left: 30px;
-  right: 30px;
-}
 
 
 .blog-list-article {
@@ -456,10 +403,17 @@ nav .button-collapse .ion {
 .title-bar {
   text-align: center;
   width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   background-color: #F3F4F5;
   color: #14233C;
+}
+.title-bar h1 {
+  font-family: Raleway;
+  text-transform: none;
+  font-size: 58px;
+  line-height: 80px;
+  font-weight: 900;
 }
 .title-bar-container {
   position: relative;
@@ -541,7 +495,7 @@ nav .button-collapse .ion {
   border-color: #E7E7EC;
 }
 
-.left-sidebar .collection-item:before {
+.left-sidebar .collection-item:hover:before {
   background: #56CDFC;
   content: '';
   display: block;
@@ -560,71 +514,76 @@ nav .button-collapse .ion {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-
-article {
-  font-size: 16px;
-  background-color: white;
-  line-height: 1.6;
-  margin: 0;
-  padding: .5em 0;
-  font-weight: 400;
-  color: #606060;
+hr {
+  height: 1px;
+  margin: 2em 0;
+  border: 0;
+  background-color: transparent;
+  background-image: -webkit-linear-gradient(left, transparent, rgba(0,0,0,0.09) 10%, rgba(0,0,0,0.09) 90%, transparent);
+  background-image: linear-gradient(to right, transparent, rgba(0,0,0,0.09) 10%, rgba(0,0,0,0.09) 90%, transparent);
+}
+.content {
+  padding-top: 40px;
 }
 
-article h1, h2, h3, h4, h5 {
+.content h1, h2, h3, h4, h5 {
   font-weight: 600;
   line-height: 1.2;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   clear: both;
 }
 
-article h1 {
-  font-size: 34px;
+.content h1 small {
+  font-family: Raleway;
+  text-transform: none;
+  font-size: 22px;
+  line-height: 40px;
+  font-weight: 500;
 }
 
-article h2 {
+.content h2 {
   font-size: 26px;
 }
 
-article h3 {
+.content h3 {
   font-size: 22px;
 }
 
-article h4 {
+.content h4 {
   font-size: 18px;
 }
 
-article h5 {
+.content h5 {
   font-size: 16px;
 }
 
-article .info {
-  font-size: 14px;
+.post-info {
+  font-size: 0.95rem;
   height: 100%;
-  color: #96989A;
+  color: #516D76;
 }
-article .info .ion {
+.content .info .ion {
   font-size: 16px;
   margin-right: 5px;
 }
-article .info .info-box {
+.content .info .info-box {
   float: left;
   margin-right: 20px;
 }
 
-article ul li {
+.content ul li {
   list-style-type: square !important;
   margin-left: 20px;
 }
 
-article pre {
+.content pre {
   overflow: auto;
   padding: 10px 20px;
 
 }
 
-article p > code {
-  padding: .2em;
+.content p > code {
+  padding: .35em;
   margin: 0;
   font-size: .85em;
   font-family: 'Roboto Mono', Monaco, courier, monospace;
@@ -633,7 +592,7 @@ article p > code {
 background-color: #f8f8f8;
 }
 
-article blockquote {
+.content blockquote {
   border-left: 4px solid #1EC4D6;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -645,29 +604,29 @@ article blockquote {
   background-color: #D7F9FD;
 }
 
-article img.book-img {
+.content img.book-img {
   float: left;
   width: 260px;
   height: auto;
   margin: 20px;
 }
 
-article .book-placement {
+.content .book-placement {
   border: 1px solid #cfd8dc;
   padding: 20px;
 }
 
-article .book-placement img.book-img {
+.content .book-placement img.book-img {
   height: 120px;
   width: auto;
 }
 
-article .book-placement h2 {
+.content .book-placement h2 {
   margin: 0;
   padding: 0;
 }
 
-article .amazon-link {
+.content .amazon-link {
   margin: 20px 0px;
   padding: 30px 20px 30px 100px;
   background: #f8f8f8 url(../uploads/amazon.png) no-repeat 20px 50%;
@@ -677,42 +636,14 @@ article .amazon-link {
   clear: both;
 }
 
-.lesson {
-  border-bottom: 1px solid #F1F4F9;
+.course-videos {
+  background-color: #F3F4F5;
+  padding: 40px;
+}
+
+.course-videos .card {
+  background-color: white;
   margin-bottom: 20px;
-  padding: 20px;
-}
-
-.lesson-number {
-  text-align: center;
-}
-
-.lesson-number .circle {
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
-  background-color: #0288d1;
-  color: white;
-  padding-top: 12px;
-  font-size: 48px;
-  margin: auto;
-}
-
-.lesson-info h3 {
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-
-@media only screen and (min-width: 486px) {
-  .container {
-      width: 95%;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .container {
-    width: 90%;
-  }
 }
 
 .terminal {
@@ -870,6 +801,8 @@ footer .footer-copyright {
 }
 
 .clear {
+  width: 100%;
+  height: 1px;
   clear: both;
 }
 
@@ -962,6 +895,11 @@ footer .footer-copyright {
   width:100%;
   padding: 40px;
   background-color: white;
+}
+
+.search-btn {
+  margin: auto;
+  margin-top: 20px;
 }
 
 .search-result {
@@ -1060,6 +998,7 @@ footer .footer-copyright {
 .toc {
   background: #F3F4F5;
   padding: 20px;
+  margin-bottom: 20px;
   border-radius: 5px;
 }
 .toc h3 {

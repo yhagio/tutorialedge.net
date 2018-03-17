@@ -1,9 +1,9 @@
-<div class="pagination">
+<div class="paginate">
 {{ if .Paginator.HasPrev }}
-	<a href="{{ .Paginator.Prev.URL }}"><< Previous</a>
+	<a class="btn btn-primary" href="{{ .Paginator.Prev.URL }}"><< Previous Page</a>
 {{ end }}
 {{ if .Paginator.HasNext }}
-	<a href="{{ .Paginator.Next.URL }}">Next >></a>
+	<a class="btn btn-primary" href="{{ .Paginator.Next.URL }}">Next Page >></a>
 {{ end }}
 	<div class="total-count">
 		Showing Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}
