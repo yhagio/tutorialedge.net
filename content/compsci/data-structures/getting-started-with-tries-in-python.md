@@ -3,8 +3,8 @@ date = "2017-11-19T17:17:29Z"
 title = "Getting Started With Tries in Python"
 draft = true
 desc = "In This Tutorial we look at tries, we look at how they work and what problems they can solve"
-tags = ["python", "data-structures"]
-series = ["data-structures"]
+tags = ["python", "compsci"]
+series = ["compsci"]
 author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++

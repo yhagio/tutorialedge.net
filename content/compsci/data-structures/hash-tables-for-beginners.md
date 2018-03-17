@@ -3,8 +3,8 @@ draft = true
 date = "2017-11-19T08:57:29Z"
 title = "Data Structures - Hash Tables For Beginners"
 desc = "In This Tutorial we look at Hash Tables, we look at how they work and what problems they can solve"
-tags = ["python", "data-structures"]
-series = ["data-structures"]
+tags = ["python", "compsci"]
+series = ["compsci"]
 author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++

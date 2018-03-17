@@ -3,8 +3,8 @@ date = "2017-11-20T18:09:47Z"
 title = "Implementing Quicksort in Python"
 draft = true
 desc = "In This Tutorial we look at how you can implement the Quicksort Sorting Algorithm in Python"
-tags = ["python", "algorithms"]
-series = ["algorithms"]
+tags = ["python", "compsci"]
+series = ["compsci"]
 author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++

@@ -3,8 +3,8 @@ date = "2017-11-15T18:10:37Z"
 title = "Implementing The Bubble Sort in Python"
 draft = true
 desc = "In This Tutorial we look at how you can implement the Bubble Sorting Algorithm in Python"
-tags = ["python", "algorithms"]
-series = ["algorithms"]
+tags = ["python", "compsci"]
+series = ["compsci"]
 author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++
