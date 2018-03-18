@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="root" lang="{{ .Site.LanguageCode | default " en-us " }}">
+<html lang="{{ .Site.LanguageCode | default " en-us " }}">
 
 <head>
 	<script src="https://www.googletagmanager.com/gtag/js?id=UA-10255990-23"></script>
@@ -12,7 +12,6 @@
 	</script>
 
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -44,7 +43,6 @@
 </head>
 
 <body>
-
 	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 		<a class="navbar-brand" href="/"><img alt="tutorialedge logo" src="{{ .Site.BaseURL }}/images/logo.png" alt="{{ .Site.Title }}"> <span>TutorialEdge.net</span></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -55,11 +53,11 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+					<a class="nav-link dropdown-toggle" href="#" id="courseDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
 					 aria-expanded="false">
 						Courses
 					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<div class="dropdown-menu" aria-labelledby="courseDropdown">
 						<a class="dropdown-item" href="{{ .Site.BaseURL }}/course/artificial-intelligence/"><img alt="AI logo" src="/images/ai.png" />AI</a>
 						<a class="dropdown-item" href="{{ .Site.BaseURL }}/course/angular/"><img alt="angular logo" src="/images/angular.png" />Angular</a>
 						<a class="dropdown-item" href="{{ .Site.BaseURL }}/course/python/"><img alt="python logo" src="/images/logo-python.png"/>Python</a>
@@ -72,11 +70,11 @@
 					</div>
 				</li>
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+					<a class="nav-link dropdown-toggle" href="#" id="tutorialDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
 					 aria-expanded="false">
 						Tutorials
 					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<div class="dropdown-menu" aria-labelledby="tutorialDropdown">
 						<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/ai/">AI</a>
 						<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/angular/">Angular</a>
 						<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/angularjs/">AngularJS</a>

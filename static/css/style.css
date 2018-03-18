@@ -13,6 +13,14 @@ body {
   color: #545e6f;
 }
 
+#mc-embedded-subscribe {
+  background-color: #007bff !important;
+}
+
+body a {
+  color: #0467d1;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "ua-medium",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   font-weight: 200;
@@ -54,9 +62,9 @@ nav {
   background-color: #31475A !important;
 }
 .btn-outline-success {
-  background-color: #33A3CD !important;
-  color: white !important;
-  border: 1px solid #33A3CD !important; 
+  background-color: rgb(42, 191, 245) !important;
+  color: #31475A !important;
+  border: 1px solid  rgb(42, 191, 245) !important; 
 }
 nav.navbar ul li a {
   color: white !important;
@@ -164,7 +172,7 @@ nav .dropdown-menu img {
 .blog-list-article-date, .blog-list-article-category {
   position: absolute;
   top: 20px;
-  color: #A3AAB4;
+  color: #14233C;
   font-size: 16px;
   line-height: 20px;
   font-weight: 500
@@ -760,6 +768,12 @@ footer.page-footer .col {
   padding: 0;
   flex: 1;
 }
+footer a {
+  color: #fff;
+}
+footer a:hover {
+  color: #fff;
+}
 footer h5 {
   color: white;
 }
@@ -902,6 +916,7 @@ footer .footer-copyright {
 
 .search-btn {
   margin: auto;
+  background-color: rgb(12, 122, 161) !important;
   margin-top: 20px;
 }
 
