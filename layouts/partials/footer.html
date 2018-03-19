@@ -7,11 +7,11 @@
 			<div class="padded">
 				<h3>Courses</h3>
 				<ul>
-					<li><a href="/course/python/">Python</a></li>
-					<li><a href="/course/angular/">Angular</a></li>
-					<li><a href="/course/golang/">Golang</a></li>
-					<li><a href="course/artificial-intelligence/">Artificial Intelligence</a></li>
-					<li><a href="/course/webdev/">Web Development</a></li>
+					<li><a href="{{ .Site.BaseURL }}/course/python/">Python</a></li>
+					<li><a href="{{ .Site.BaseURL }}/course/angular/">Angular</a></li>
+					<li><a href="{{ .Site.BaseURL }}/course/golang/">Golang</a></li>
+					<li><a href="{{ .Site.BaseURL }}/course/artificial-intelligence/">Artificial Intelligence</a></li>
+					<li><a href="{{ .Site.BaseURL }}/course/webdev/">Web Development</a></li>
 				</ul>
 			</div>
 		</div>
@@ -20,15 +20,15 @@
 				<h3>Quick Links</h3>
 				
 				<ul>
-					<li><a href="/search/">Search Page</a></li>
-					<li><a href="/blog/">Blog</a></li>
-					<li><a href="/get-involved/">Get Involved</a></li>
+					<li><a href="{{ .Site.BaseURL }}/search/">Search Page</a></li>
+					<li><a href="{{ .Site.BaseURL }}/blog/">Blog</a></li>
+					<li><a href="{{ .Site.BaseURL }}/get-involved/">Get Involved</a></li>
 				</ul>
 				<h3>Suggested Resources</h3>
 				<ul>
-					<li><a href="/typescript/angular/best-books-for-learning-angular/">Top Angular Programming Books</a></li>
-					<li><a href="/python/best-books-for-python/">Top Python Programming Books</a></li>
-					<li><a href="/golang/top-books-for-learning-golang/">Top Golang Programming Books</a></li>
+					<li><a href="{{ .Site.BaseURL }}/typescript/angular/best-books-for-learning-angular/">Top Angular Programming Books</a></li>
+					<li><a href="{{ .Site.BaseURL }}/python/best-books-for-python/">Top Python Programming Books</a></li>
+					<li><a href="{{ .Site.BaseURL }}/golang/top-books-for-learning-golang/">Top Golang Programming Books</a></li>
 				</ul>
 			</div>
 		</div>
@@ -44,7 +44,7 @@
 		</div>
 		<div class="col l3 m12 s12 footer-special">
 			<div class="logo">
-				<a href="/"><img alt="tutorialedge logo" src="/images/logo.png"/> TutorialEdge.net</a>
+				<a href="{{ .Site.BaseURL }}/"><img alt="tutorialedge logo" src="/images/logo.png"/> TutorialEdge.net</a>
 			</div>
 			<div class="padded">
 				<p>TutorialEdge.net is a totally free programming tutorial site that has been built with the intention of helping as many people as possible learn to program. The site is also completely opensourced and you can contribue here: <a href="https://github.com/elliotforbes/tutorialedge-v2">elliotforbes/tutorialedge-v2</a>, any pull requests will be greatly appreciated!</p>
