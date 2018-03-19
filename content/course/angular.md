@@ -54,7 +54,6 @@ This project features a fleshed out Angular 2.2 admin dashboard.
 * Websocket Service that interacts with a live websocket server.
 * A Markdown based chat application. 
 
-
 #### Screenshot:
 
 ![Ng-chat](https://github.com/elliotforbes/ng-chat/raw/master/screenshot.png?raw=true)

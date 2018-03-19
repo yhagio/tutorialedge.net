@@ -30,3 +30,4 @@ In order to start writing your own Go based systems you'll need to install it on
 ## Top Resources
 
 If you are in need of some excellent books to cover the language in a greater depth then I highly recommend you check out my list of the [top books for learning golang](/golang/top-books-for-learning-golang/).
+
