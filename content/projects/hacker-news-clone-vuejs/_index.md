@@ -12,7 +12,7 @@ twitter: "https://twitter.com/Elliot_F"
 
 I've been playing a lot with VueJS over the past few months and I'm a huge fan of the framework. Thus, I thought the inaugural project for TutorialEdge should be a HackerNews clone using the framework. 
 
-We'll be integrating with a number of AWS services that we will cover enough to get us up and running, however, the main focus of this project series will be the frontend JavaScript code.
+We'll be integrating with the [HackerNews API](https://github.com/HackerNews/API) so that we can focus on the frontend JavaScript code and not have to worry about implementing the backend.
 
 ## The Goal
 
