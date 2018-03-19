@@ -4,6 +4,7 @@ date: 2018-03-01T12:26:40Z
 draft: false
 desc: "In this tutorial we are going to look at how you can work with animations and transitions in VueJS"
 author: "Elliot Forbes"
+weight: 6
 tags: ["vuejs", "animations", "transitions"]
 series: ["vuejs"]
 twitter: "https://twitter.com/Elliot_F"

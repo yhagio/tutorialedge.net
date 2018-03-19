@@ -3,6 +3,7 @@ date = "2017-09-18T19:47:29+01:00"
 title = "Getting Started With Python"
 draft = true
 desc = "An absolute beginners introduction to the Python programming language"
+weight = 1
 tags = ["python"]
 series = [ "python" ]
 author = "Elliot Forbes"

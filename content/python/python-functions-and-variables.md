@@ -4,6 +4,7 @@ title = "Functions and Variables in Python"
 draft = true
 desc = "In this tutorial we introduce the concept of both functions and variables and how we can use them in our Python programs"
 tags = ["python"]
+weight = 2
 series = [ "python" ]
 author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"

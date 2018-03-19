@@ -3,6 +3,7 @@ date = "2017-12-20T19:22:48Z"
 title = "Working with Lists in Python - Tutorial"
 draft = true
 desc = "In this tutorial we will look at how we can work with lists in Python"
+weight = 3
 tags = ["python"]
 series = [ "python" ]
 author = "Elliot Forbes"

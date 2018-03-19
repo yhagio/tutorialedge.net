@@ -5,6 +5,7 @@ draft = true
 desc = "In this tutorial we cover the map function within the Python programming language"
 tags = ["python", "concurrency"]
 series = ["python"]
+weight = 6
 author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++

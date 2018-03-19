@@ -5,6 +5,7 @@ draft = true
 desc = "In this tutorial we will be looking at the absolute basics of unit testing in python using PyUnit"
 tags = ["python", "testing"]
 series = [ "python"]
+weight = 14
 author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++

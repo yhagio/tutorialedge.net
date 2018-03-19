@@ -5,6 +5,7 @@ draft: true
 desc: "In this tutorial, we will be looking at how you can get started writing your own Python based AWS Lambda functions"
 author: "Elliot Forbes"
 tags: ["python", "aws"]
+weight: 20
 series: ["python"]
 twitter: "https://twitter.com/Elliot_F"
 ---

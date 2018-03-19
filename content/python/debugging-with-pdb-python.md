@@ -4,6 +4,7 @@ title = "Debugging with the Python Debugger - PDB "
 draft = true
 desc = "In this tutorial we look at how you can debug your Python programs with the python debugger - PDB"
 tags = ["python", "debugging"]
+weight = 7
 series = [ "python" ]
 author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"

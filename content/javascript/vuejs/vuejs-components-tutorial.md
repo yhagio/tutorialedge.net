@@ -4,6 +4,7 @@ date: 2018-03-01T12:26:40Z
 draft: true
 desc: "In this tutorial, we are going to be looking at how you can create your own components within a VueJS application"
 author: "Elliot Forbes"
+weight: 2
 tags: ["vuejs", "javascript"]
 series: ["vuejs"]
 twitter: "https://twitter.com/Elliot_F"

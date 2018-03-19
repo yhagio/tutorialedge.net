@@ -4,6 +4,7 @@ title = "Python Iterator Tutorial"
 draft = true
 desc = "In this tutorial we will look at how we can work with iterators in Python"
 tags = ["python"]
+weight = 13
 series = [ "python" ]
 author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"

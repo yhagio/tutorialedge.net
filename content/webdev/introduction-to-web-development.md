@@ -4,6 +4,7 @@ draft = true
 date = "2017-04-16T17:27:53+01:00"
 series = ["webdev"]
 desc = "In this tutorial we take a broad overview of the basics of web development."
+weight = 1
 tags = ["webdev", "css3", "html5"]
 author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"

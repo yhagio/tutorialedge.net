@@ -1,10 +1,11 @@
 ---
-title: "Getting Started With Vuejs 2"
+title: "Getting Started With VueJS"
 date: 2018-02-28T20:27:49Z
 draft: true
 desc: "In this tutorial, we are going to be looking at how you can get started with the Vuejs 2 framework for creating awesome web applications"
 author: "Elliot Forbes"
 tags: ["vuejs", "javascript"]
+weight: 1
 series: ["vuejs"]
 twitter: "https://twitter.com/Elliot_F"
 ---

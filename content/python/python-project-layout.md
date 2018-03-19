@@ -4,6 +4,7 @@ title = "Python Project Layout Best Practices"
 draft = true
 desc = "In this tutorial we'll be examining some of the best practices to follow when it comes to laying out your Python applications"
 tags = ["python"]
+weight = 9
 series = [ "python" ]
 author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"

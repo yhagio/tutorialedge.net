@@ -5,6 +5,7 @@ draft = true
 desc = "In this tutorial we'll be examining some of the best practices when it comes to logging in your Python applications"
 tags = ["python"]
 series = [ "python" ]
+weight = 10
 author = "Elliot Forbes"
 twitter = "https://twitter.com/Elliot_F"
 +++

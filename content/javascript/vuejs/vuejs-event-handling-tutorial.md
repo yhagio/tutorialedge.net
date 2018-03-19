@@ -4,6 +4,7 @@ date: 2018-03-04T15:03:41Z
 draft: true
 desc: "In this tutorial we are going to look at how you can successfully handle events within your VueJS applications."
 author: "Elliot Forbes"
+weight: 3
 tags: ["vuejs", "webdev"]
 series: ["vuejs"]
 twitter: "https://twitter.com/Elliot_F"

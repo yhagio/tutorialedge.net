@@ -4,6 +4,7 @@ date: 2018-03-01T12:36:54Z
 draft: true
 desc: "In this tutorial, we are going to be looking at how you perform HTTP requests within your VueJS application"
 author: "Elliot Forbes"
+weight: 4
 tags: ["vuejs", "javascript"]
 series: ["vuejs"]
 twitter: "https://twitter.com/Elliot_F"

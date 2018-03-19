@@ -950,7 +950,13 @@ footer .footer-copyright {
   padding: 0;
 }
 
-
+.list-group-image img {
+  width: 25px;
+  height: auto;
+}
+.list-group-item > .col-sm-11 > small {
+  color: #63768d;
+}
 
 .tags {
   list-style: none;
