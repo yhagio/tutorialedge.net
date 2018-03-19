@@ -140,5 +140,5 @@ If you found this tutorial helpful or need further assistance then please do not
 
 #### Further Reading
 
-* [Angular Detecting Route Changes](https://tutorialedge.net/angular-2-detecting-route-changes)
-* [Angular Getting Current Location using Location Provider](https://tutorialedge.net/angular-2-get-current-route-location)
+* [Angular Detecting Route Changes](/typescript/angular/angular-detecting-route-changes/)
+* [Angular Getting Current Location using Location Provider](/typescript/angular/angular-get-current-route-location/)
