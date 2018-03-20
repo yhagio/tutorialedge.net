@@ -13,7 +13,7 @@ twitter: "https://twitter.com/Elliot_F"
 
 > The documentation for the API we will be hitting can be found here: [HackerNews/API](https://github.com/HackerNews/API)
 
-
+In this part of the course, we will be updating our `Homepage` component that we defined in [Part 3](/projects/hacker-news-clone-vuejs/part-3-adding-a-few-routes/), so that it makes a couple of API requests to the HackerNews/API and renders the results in a nice fashion. 
 
 ## Installing axios
 
@@ -23,17 +23,9 @@ In order to add the `axios` library to your project type the following in your t
 $ yarn add axios
 ```
 
-This will add the library
+This will add the `axios` library to our project so that we can subsequently use it to perform our `HTTP` requests within our components.
 
-## Updating our Homepage Component
-
-```html
-<template>
-    <h2>Stuff In Here</h2>
-</template>
-```
-
-## Our REST API Response
+## Our REST API Calls
 
 In order to get the top stories from HackerNews we are going to be hitting the `https://hacker-news.firebaseio.com/v0/topstories.json` endpoint which will return an array of `id`'s that we can subsequently query to get further information. 
 
@@ -55,9 +47,46 @@ The returned JSON for an individual item looks like this:
 }
 ```
 
-## Rendering a list of Top Stories
+So, on our `Homepage` components initial load, we need to query the first API to retrieve the top 490 odd top stories, we then iterate through the first 10 or 20 or so and query the HackerNews API once again for the fleshed out details. 
 
+To get us started, we will need to open up our `src/components/Homepage.vue` component and then within the `<script>` element do the following:
 
+```js
+import axios from 'axios'
+export default {
+  name: 'Homepage',
+  data: function () {
+    return {
+      err: '',
+      stories: []
+    }
+  },
+  created: function () {
+    axios.get('https://hacker-news.firebaseio.com/v0/topstories.json')
+      .then((result) => { this.stories = result.data })
+      .catch((err) => { this.err = err })
+  }
+}
+```
+
+When we click save on this, you should see your application making a `HTTP` `GET` request to that endpoint and populating `stories` with an array of `ID`s that represent the top stories currently on HackerNews.
+
+## Updating our Homepage Component
+
+Now that we have successfully made a call to this REST API, let's show the results on our page. We want to create a new `<div>` element for every story returned for now, and we can achieve this by using the `v-for` directive like so:
+
+```html
+<template>
+    <div>
+        <h2>Homepage</h2>
+        <div v-for="story in stories" :key="story"><h2>{{ story }}</h2></div>
+    </div>
+</template>
+```
+
+When we save this now, you should see within your browser something that looks like this:
+
+![Our list of top stories!](https://s3-eu-west-1.amazonaws.com/tutorialedge.net/images/hackernews-clone/screenshot-05.png)
 
 ## Conclusion
 
