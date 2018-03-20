@@ -88,6 +88,67 @@ When we save this now, you should see within your browser something that looks l
 
 ![Our list of top stories!](https://s3-eu-west-1.amazonaws.com/tutorialedge.net/images/hackernews-clone/screenshot-05.png)
 
+## Fleshing out Our Stories
+
+Right now we are just displaying the `ID`s of the top stories on HackerNews, but how do we retrieve all the story information and show things like the title, the link, the score and so on?
+
+Let's flesh out our `created()` function and slice the `results` we get back from our initial `HTTP GET` request so that we are only dealing with the top 10. After we've done this, we want to iterate through these and make a subsequent `HTTP GET` request to the `/v0/item/` API endpoint to retrieve all the data. We'll then populate our `stories` array with the responses returned:
+
+```js
+import axios from 'axios'
+export default {
+  name: 'Homepage',
+  data: function () {
+    return {
+      err: '',
+      stories: []
+    }
+  },
+  created: function () {
+    axios.get('https://hacker-news.firebaseio.com/v0/topstories.json')
+      .then((result) => {
+        this.results = result.data.slice(0, 10)
+        this.results.forEach(element => {
+          axios.get('https://hacker-news.firebaseio.com/v0/item/' + element + '.json')
+            .then((result) => {
+              this.stories.push(result)
+            })
+            .catch((err) => {
+              console.log(err)
+            })
+        })
+      })
+      .catch((err) => { this.err = err })
+  }
+}
+```
+
+When we again click save on this, you should see our application goes from rendering a list of numbers to rendering a list of `JSON` objects like so:
+
+![this is pretty ugly](https://s3-eu-west-1.amazonaws.com/tutorialedge.net/images/hackernews-clone/screenshot-06.png)
+
+I wouldn't argue with you if you said this looked pretty ugly as it stands, let's change this to only render some of the vital information we want by modifying the `html` within our `v-for` directive:
+
+```html
+<template>
+    <div>
+        <h2>Homepage</h2>
+        <div v-for="story in stories" :key="story">
+          <h2>{{ story.data.title }}</h2>
+          <p>Type: {{ story.data.type }}</p>
+          <p>Link: {{ story.data.url }}</p>
+          <p>Score: {{ story.data.score }}</p>
+        </div>
+    </div>
+</template>
+```
+
+And the final result of these changes should end up looking similar to this:
+
+![Our somewhat better looking hackernew clone](https://s3-eu-west-1.amazonaws.com/tutorialedge.net/images/hackernews-clone/screenshot-07.png)
+
+Not the best, but it's a huge improvement over our previous version.
+
 ## Conclusion
 
 In this tutorial, we managed to integrate our application with the HackerNews API and get some of the top news items displayed within our application.  
