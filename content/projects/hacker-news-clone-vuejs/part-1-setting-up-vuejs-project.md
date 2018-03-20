@@ -17,27 +17,31 @@ We'll get a basic VueJS up and running and we'll also cover how you can build ou
 
 ## Installing the Vue CLI
 
-We'll be using version `3.0.0` of the `vue-cli` in order to create our initial project. You can install this by typing the following:
+We'll be using version `2.9.3` of the `vue-cli` in order to create our initial project. You can install this by typing the following:
 
 ```s
-$ yarn global add @vue/cli
+$ yarn global add vue-cli
 # or
-$ npm install -g @vue/cli
+$ npm install -g vue-cli
 ```
+
+> Note: At the time of writing this `vue-cli` 3.0.0 is currently in beta, I will update this when it goes to production! 
 
 Once you have done this, verify you have a working `vue-cli` by typing:
 
 ```s
 $ vue -V
-3.0.0-beta.6
+2.9.3
 ```
 
 ## Creating our Project
 
-Once we have successfully installed version `3.0.0` or above of the `vue-cli`, we can then go about creating our project by typing the following:
+Once we have successfully installed version `2.9.3` or above of the `vue-cli`, we can then go about creating our project by typing the following:
 
 ```s
-$ vue create hackernews-clone
+$ mkdir hackernews-clone
+$ cd hackernews-clone
+$ vue init webpack
 ```
 
 This will ask you a series of questions regarding how you project should be set up. 
@@ -46,10 +50,9 @@ This will ask you a series of questions regarding how you project should be set 
 2. Choose either Yarn or NPM, for this project I am using Yarn
 3. Everything else should be handled for you!
 
-Once we've done this we can navigate into our newly created project and run it locally by calling:
+Once we've done this we can run it locally by calling:
 
 ```s
-$ cd hackernews-clone
 $ yarn serve
 ```
 

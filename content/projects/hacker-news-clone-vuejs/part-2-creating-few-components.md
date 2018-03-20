@@ -21,9 +21,16 @@ Open up your project in a text editor of your choice and open the directory that
 
 ```html
 <template>
-  <nav>
-
-  </nav>
+    <div class="pure-menu pure-menu-horizontal">
+        <div class="container">
+        <a href="#" class="pure-menu-heading pure-menu-link">Home</a>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">News</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Sports</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Finance</a></li>
+        </ul>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -33,28 +40,30 @@ export default {
 </script>
 
 <style scoped>
-
+.pure-menu {
+    background-color: #E17842;
+}
+.pure-menu a {
+    color: white;
+}
 </style>
 ```
 
 The above code represents the bare-bones of our new `Navbar` component. We define the `HTML` we wish to render for our component within the `<template>` tags, we define all of our core component functionality, a.k.a. all of the JavaScript functions within the `<script>` tags. Finally, should we wish to add custom styling to our `Navbar` component, we can do so by placing the `css` within our `<style>` tags. You should notice we've added `scoped` to our style tag, this essentially ensures that the `css` we define within this component will only impact the `HTML` within our component.
 
-I've populated the `<template>` tags with a simple `<nav>` element just to get us started.
+I've populated the `<template>` tags with a simple navbar element stolen from the pure-css documentation page just to get us started.
 
 ## Registering our New Component
 
 So, now that we've defined our `Navbar.vue` component, it's time to register it within our application and start using it.
 
-Open up your `src/App.vue` component file and within the `<script>` tag, import your `Navbar` and add it to your `components` object like so:
+Open up your `src/App.vue` component file and within the `<script>` tag, import your `Navbar` and add it to a `components` object like so:
 
 ```js
-import HelloWorld from './components/HelloWorld.vue'
-import Navbar from './components/Navbar.vue'
-
+import Navbar from '@/components/Navbar'
 export default {
-  name: 'app',
+  name: 'App',
   components: {
-    HelloWorld,
     Navbar
   }
 }
@@ -76,14 +85,14 @@ Our finished `src/App.vue` file should look like this:
 <template>
   <div id="app">
     <navbar></navbar>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import Navbar from './components/Navbar.vue'
-
+import Navbar from '@/components/Navbar'
 export default {
-  name: 'app',
+  name: 'App',
   components: {
     Navbar
   }
@@ -98,7 +107,7 @@ export default {
 
 Pretty much every web application you see will utilize some form of `CSS` framework. Now, for this project, I'm choosing to use the Pure-CSS framework as it seems relatively lightweight whilst featuring essentials such as a grid system, and I haven't had much of a chance to play about with it yet. 
 
-In order to add a CSS framework to our project, open up the `public/index.html` page within your project and add:
+In order to add a CSS framework to our project, open up the `index.html` page within your project and add:
 
 ```html
 <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
@@ -110,7 +119,7 @@ To just below your `<title>` tag. Upon clicking the `cmd-s` you should see your 
 
 At this stage, your application should look something like this:
 
-![Our HackerNews clone as it stands](https://s3-eu-west-1.amazonaws.com/tutorialedge.net/images/hackernews-clone/screenshot-02.png)
+![Our HackerNews clone as it stands](https://s3-eu-west-1.amazonaws.com/tutorialedge.net/images/hackernews-clone/screenshot-03.png)
 
 ## Next Steps
 
