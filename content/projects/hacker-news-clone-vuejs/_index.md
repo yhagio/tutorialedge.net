@@ -21,3 +21,5 @@ The goal of this project is to show you everything it takes to build a complete,
 ## The Finished Product!
 
 The finished product from this project will look a little something like this:
+
+![The Semi-finished product](https://s3-eu-west-1.amazonaws.com/tutorialedge.net/images/hackernews-clone/screenshot-10.png)
