@@ -64,7 +64,9 @@ Let's disect what we have done here, so on the first and second lines, we have i
 
 Finally, we tell our Vue application to use the `vue-router` before then creating a new `Router` which contains all of ours applications routes. 
 
-Each of our routes is a combination of a path from which this component is accessible, the name of our path, and the component we wish to render when we hit this path.
+Each of our routes is a combination of a path, the name of our path, and the component we wish to render when we hit this path. Should we wish, we can also do cool stuff such as dynamic route matching which we will cover in more detail in part 5 of this project.
+
+> For more information our VueJS routing check out the official documentation or my tutorial: [VueJS Routing Tutorial](/javascript/vuejs/vue-router-beginners-tutorial/)
 
 ### Modifying Our Routes
 
@@ -95,3 +97,5 @@ When we navigate back our browser and view `http://localhost:8080/#/`, you shoul
 ## Conclusion
 
 In this tutorial, we managed to create a few more components within our VueJS application and set up the `vue router` which enables us to navigate between different components with ease. 
+
+Currently, this only renders the one route, but in the next couple of tutorials, we will be using this to dynamically render our components depending on the user's location within our application.

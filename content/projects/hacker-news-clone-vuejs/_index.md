@@ -10,16 +10,36 @@ author: "Elliot Forbes"
 twitter: "https://twitter.com/Elliot_F"
 ---
 
-I've been playing a lot with VueJS over the past few months and I'm a huge fan of the framework. Thus, I thought the inaugural project for TutorialEdge should be a HackerNews clone using the framework. 
+In this project series we are going to be building a simplistic version of HackerNews in VueJS from scratch. This will hopefully cover some of the key topics you will need to become familiar with if you wish to develop your own applications using the framework. 
 
-We'll be integrating with the [HackerNews API](https://github.com/HackerNews/API) so that we can focus on the frontend JavaScript code and not have to worry about implementing the backend.
+After playing a lot with VueJS over the past few months and I'm a huge fan of the framework. Thus, I thought it would be the perfect candidate to base the first ever project series for TutorialEdge on. I hope you enjoy this and find it worthwhile!
+
+Throughout this project we will be integrating with the [HackerNews API](https://github.com/HackerNews/API) so that we can focus on the frontend JavaScript code and not have to worry about implementing the backend.
 
 ## The Goal
 
-The goal of this project is to show you everything it takes to build a complete, fully functioning frontend application using the VueJS framework. We'll walk through everything from setting up your project, to setting up login/account management, and hitting APIs in order to retrieve any articles that may have been posted to our site.
+The goal of this project is to show you everything it takes to build a complete, fully functioning frontend application using the VueJS framework. We'll walk through everything from setting up your project, to hitting a few APIs in order to retrieve any articles and rendering these nicely on our site!
+
+We'll cover the following topics:
+
+* Setting up a VueJS project using the vue-cli
+* Creating your first component
+* An introduction to routing in your Single Page Application
+* Hitting API endpoints in your components
+* Dynamic routing in a Single Page Application
+
+If you wish for me to extend this or feel I should expand upon anything then please let me know by tweeting me: [@Elliot_F](https://twitter.com/elliot_f)
+
+## Github Source Code!
+
+The full source code for this project can be found here: [elliotforbes/hackernews-vuejs](https://github.com/elliotforbes/hackernews-vuejs)
+
+Feel free to steal this and use this for your own personal gain, but if you do end up making a million off it, I expect at least a beer if you ever stumble across me in the wild!
 
 ## The Finished Product!
 
-The finished product from this project will look a little something like this:
+After following this series through to completion, you should hopefully have a finished product that will look a little something like this:
 
 ![The Semi-finished product](https://s3-eu-west-1.amazonaws.com/tutorialedge.net/images/hackernews-clone/screenshot-10.png)
+
+Nothing too fancy I am sure you will agree, but a very decent starting point that developers new to the framework can extend and make their own!

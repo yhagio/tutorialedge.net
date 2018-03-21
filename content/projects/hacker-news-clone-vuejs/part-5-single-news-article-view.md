@@ -73,6 +73,7 @@ So, now that we've defined this route, we need to update our `Homepage` componen
 
 To do this, we'll use the `<router-link/>` component to wrap our stories' title like so:
 
+
 ```html
 <template>
     <div>
@@ -86,6 +87,10 @@ To do this, we'll use the `<router-link/>` component to wrap our stories' title 
     </div>
 </template>
 ```
+
+This `<router-link>` component effectively allows you to change your location within this Single Page Application without making a request for a new page. It effectively tells Vue that it want's to change location, Vue picks this up and matches the location against an existing route, and then displays the appropriate component assigned to that route.
+
+You could in theory do this with `<a>` tags, however, `<router-link>` provides a few more advanced features such as the ability to update the underlying web browser's history via API requests should we wish!
 
 When you save this and navigate to your application in the browser, you should see all of our storie's titles rendering as HTML links.
 
