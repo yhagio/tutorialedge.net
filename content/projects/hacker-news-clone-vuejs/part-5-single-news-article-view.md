@@ -164,6 +164,8 @@ Now that we've queried the appropriate API endpoints to retrieve the top level c
 
 If you were to save this and view it as it currently stands, it wouldn't look all that good. So, let's add some CSS to make things look a little nicer all around. Add the following CSS to the `<style scoped>` part of your `Single.vue` component:
 
+> These were taken from this codepen: [Comments](https://codepen.io/kavendish/pen/aOdopx)! I can't take credit for making it look nice!
+
 ```css
 
 .comment-wrap {
