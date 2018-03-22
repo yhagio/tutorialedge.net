@@ -1,7 +1,7 @@
 +++
 date = "2017-08-08T18:55:48+01:00"
 title = "Python Decorators Tutorial"
-desc = "In this tutorial we learn what Python Decorators are and how we can create our own"
+desc = "In this tutorial we learn what Python Decorators are and how we can create our own within our Python applications"
 draft = true
 weight = 11
 tags = ["python", "decorators"]
@@ -12,9 +12,11 @@ twitter = "https://twitter.com/Elliot_F"
 
 > This Tutorial was written using Python 3.6
 
-In this tutorial I am going to be demonstrating the wonderful concept that is Python decorators. 
+In this tutorial I am going to be demonstrating the wonderful concept that is Python decorators. We'll look at the various attributes of Python that make writing your own decorators fairly simple and then we'll cover some cool examples as to how you can use decorators to improve the performance of some types of applications.
 
 ## Video Tutorial
+
+If you prefer, feel free to check out the video version of this course, like and subscribe to my channel for more Python related video content!
 
 <div style="position:relative;height:0;padding-bottom:56.3%"><iframe src="https://www.youtube.com/embed/7ipNLN9y-nc?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="639" height="360" frameborder="0" gesture="media" allowfullscreen></iframe></div>
 
@@ -59,6 +61,34 @@ When you run this python program you should see the following output:
 ```
 
 Instead of printing out hello, it prints out that the `myFunction()` that we passed into `anotherFunction()` is of type `function` as well as it's name and it's address in memory. 
+
+## Nested Functions
+
+With functions being classed as objects within Python, we can start to do cool things such as nested functions.
+
+Imagine you had an application that parsed a message that was either in a `JSON` format or an `XML` format, you could define a `parse(type, message)` function that featured 2 nested functions, it would then execute and return the results from the appropriate function depending on the format.
+
+```py
+def parse(type, message):
+
+    def xml(message):
+        print("Parsing XML")
+
+    def json(message):
+        print("Parsing JSON")
+
+    if type == 'json':
+        return json(message)
+    else:
+        return xml(message)
+```
+
+When you run this and pass in `type='json'` and your message, it should return the following:
+
+```py
+>>> parse(type='json', message='my message')
+json
+```
 
 ## A Simple Decorator
 
@@ -145,5 +175,7 @@ Finished Executing Method
 ```
 
 ## Conclusion
+
+In this tutorial, we managed to cover a number of key things you'll need to know when working with decorators in Python. 
 
 Hopefully you found this tutorial on Python decorators useful! If you require further assistance then please feel free to let me know in the comments section below or by tweeting me: [@Elliot_F](https://twitter.com/elliot_f).
