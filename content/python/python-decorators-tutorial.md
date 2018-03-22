@@ -12,7 +12,7 @@ twitter = "https://twitter.com/Elliot_F"
 
 > This Tutorial was written using Python 3.6
 
-In this tutorial I am going to be demonstrating the wonderful concept that is Python decorators. We'll look at the various attributes of Python that make writing your own decorators fairly simple and then we'll cover some cool examples as to how you can use decorators to improve the performance of some types of applications.
+In this tutorial, I am going to be demonstrating the wonderful concept that is Python decorators. We'll look at the various attributes of Python that make writing your own decorators fairly simple and then we'll cover some cool examples as to how you can use decorators to improve the performance of some types of applications.
 
 ## Video Tutorial
 
@@ -24,7 +24,7 @@ If you prefer, feel free to check out the video version of this course, like and
 
 Decorators are a pretty cool concept that allow you to decorate functions and classes with a decorator and a new, transformed function or class will be returned. If you are coming from a Java background then you may have used decorators a lot in frameworks such as Spring and Jersey.
 
-If you come from a pure Python background then you may have seen decorators feature in frameworks such as flask. In flask you would typically define a function and then decorate it with things such as `@app.route("/my-endpoint")` in order to specify that this is the function that will be executed whenever the `/my-endpoint` is called from your app.
+If you come from a pure Python background then you may have seen decorators feature in frameworks such as flask. In flask, you would typically define a function and then decorate it with things such as `@app.route("/my-endpoint")` in order to specify that this is the function that will be executed whenever the `/my-endpoint` is called from your app.
 
 Let's take a look at a real life example. In the below code we define a very simple Flask based program. This program features only one function `def hello():`, right above this function declaration you should see `@app.route("/")` which is an example of an `decorator`.     
 
@@ -143,7 +143,7 @@ If we decorate hundreds of functions with this `@mutate` decorator then you may 
 
 #### The Solution
 
-In order to fix this particular side-effect we can look to the `functools` module which is built-in to Python. We add `from functools import *` to the top of our file and within our decorator we add a second `@wraps()` decorator which takes in the original function as it's parameter. If we update our example code above to include this fix, it should then look like this:
+In order to fix this particular side-effect, we can look to the `functools` module which is built-in to Python. We add `from functools import *` to the top of our file and within our decorator, we add a second `@wraps()` decorator which takes in the original function as it's parameter. If we update our example code above to include this fix, it should then look like this:
 
 ```py
 from functools import *
@@ -176,6 +176,6 @@ Finished Executing Method
 
 ## Conclusion
 
-In this tutorial, we managed to cover a number of key things you'll need to know when working with decorators in Python. 
+In this tutorial, we managed to cover a number of key things you'll need to know when working with decorators in Python. We covered the fact that in Python, functions are considered first class citizens, we also looked at how you could nest functions within other functions before finally looking at how you could create your own very simple decorators.
 
-Hopefully you found this tutorial on Python decorators useful! If you require further assistance then please feel free to let me know in the comments section below or by tweeting me: [@Elliot_F](https://twitter.com/elliot_f).
+Hopefully, you found this tutorial on Python decorators useful! If you require further assistance then please feel free to let me know in the comments section below or by tweeting me: [@Elliot_F](https://twitter.com/elliot_f).
