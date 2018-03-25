@@ -46,14 +46,21 @@ $ vue init webpack
 
 This will ask you a series of questions regarding how you project should be set up. 
 
-1. Choose ESLint + babel as option 1
-2. Choose either Yarn or NPM, for this project I am using Yarn
-3. Everything else should be handled for you!
+1. Choose `Y` to generate project in the current directory
+1. Leave the Project name as is.
+1. Leave the project description as is.
+1. Enter your name in the Author field.
+1. Choose Runtime + Compiler.
+1. Install vue-router = `Y`
+1. Use ESLint to lint your code = `Y` with the Standard lint settings.
+1. Set up unit test = `n` for now, we can add them later
+1. Choose no for e2e tests with Nightwatch
+1. Then select the package manager of your choice, I'll be using Yarnyar
 
 Once we've done this we can run it locally by calling:
 
 ```s
-$ yarn serve
+$ yarn run dev
 ```
 
 When you navigate to `http://localhost:8080` within your browser, you should see your newly created VueJS application running:
