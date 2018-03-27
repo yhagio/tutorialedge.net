@@ -16,6 +16,10 @@ After playing a lot with VueJS over the past few months and I'm a huge fan of th
 
 Throughout this project we will be integrating with the [HackerNews API](https://github.com/HackerNews/API) so that we can focus on the frontend JavaScript code and not have to worry about implementing the backend.
 
+## Video Tutorial
+
+<div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/AdGsg8kBVkM?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="640" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+
 ## The Goal
 
 The goal of this project is to show you everything it takes to build a complete, fully functioning frontend application using the VueJS framework. We'll walk through everything from setting up your project, to hitting a few APIs in order to retrieve any articles and rendering these nicely on our site!

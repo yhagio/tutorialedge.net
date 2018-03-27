@@ -15,6 +15,10 @@ In this first tutorial, we will be covering exactly how you set up your developm
 
 We'll get a basic VueJS up and running and we'll also cover how you can build our project so that you end up with files that are deployable to the likes of and S3 bucket, or a server that can serve your files.
 
+## Video Tutorial
+
+<div style="position:relative;height:0;padding-bottom:42.76%"><iframe src="https://www.youtube.com/embed/IezF9Gj4Pcc?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="842" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+
 ## Installing the Vue CLI
 
 We'll be using version `2.9.3` of the `vue-cli` in order to create our initial project. You can install this by typing the following:

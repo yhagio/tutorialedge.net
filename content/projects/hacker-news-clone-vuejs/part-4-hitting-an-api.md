@@ -15,6 +15,10 @@ twitter: "https://twitter.com/Elliot_F"
 
 In this part of the course, we will be updating our `Homepage` component that we defined in [Part 3](/projects/hacker-news-clone-vuejs/part-3-adding-a-few-routes/), so that it makes a couple of API requests to the HackerNews/API and renders the results in a nice fashion. 
 
+## Video Tutorial
+
+<div style="position:relative;height:0;padding-bottom:42.76%"><iframe src="https://www.youtube.com/embed/ZQvNMHf6hNA?list=PLzUGFf4GhXBLWueypt6avCKOCNt0675EQ&amp;ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="842" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+
 ## Installing axios
 
 In order to add the `axios` library to your project type the following in your terminal within your project:

@@ -13,6 +13,10 @@ twitter: "https://twitter.com/Elliot_F"
 
 In the previous tutorial, we managed to set up our base project and get it running on `http://localhost:8080`. We now have a base from which we can build up up our HackerNews clone.
 
+## Video Tutorial
+
+<div style="position:relative;height:0;padding-bottom:42.76%"><iframe src="https://www.youtube.com/embed/FX1s4XBO0D4?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="842" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+
 ## A Simple Navbar Component
 
 So, the first thing I always notice whenever I open up HackerNews is the iconic orange navbar at the top. This will undoubtedly have to feature in our own clone, and in order to add it, we'll have to create a `Navbar` component.

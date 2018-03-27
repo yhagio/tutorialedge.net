@@ -13,6 +13,10 @@ twitter: "https://twitter.com/Elliot_F"
 
 In the previous tutorial of this series, we created a simple `Navbar` component and added it to our application. In this tutorial, we are going to be creating a few more components and setting up a `vue-router` so that we can navigate between different views on our site.
 
+## Video Tutorial
+
+<div style="position:relative;height:0;padding-bottom:42.76%"><iframe src="https://www.youtube.com/embed/XLL2ufItDyM?list=PLzUGFf4GhXBLWueypt6avCKOCNt0675EQ&amp;ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="842" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+
 ## Our HomePage Component
 
 First thing we are going to need is a component that will show all of the most popular news stories currently on the real HackerNews site. Don't worry about where these posts are coming from just yet, we'll be solving that issue in the next tutorial when we start hitting the HackerNews API.
