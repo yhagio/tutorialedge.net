@@ -55,7 +55,7 @@ This will ask you a series of questions regarding how you project should be set 
 1. Use ESLint to lint your code = `Y` with the Standard lint settings.
 1. Set up unit test = `n` for now, we can add them later
 1. Choose no for e2e tests with Nightwatch
-1. Then select the package manager of your choice, I'll be using Yarnyar
+1. Then select the package manager of your choice, I'll be using Yarn
 
 Once we've done this we can run it locally by calling:
 
