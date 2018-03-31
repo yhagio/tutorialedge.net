@@ -22,7 +22,7 @@ In this part of the course, we will be updating our `Homepage` component that we
 ## Installing axios
 
 In order to add the `axios` library to your project type the following in your terminal within your project:
-
+d
 ```s
 $ yarn add axios
 ```
