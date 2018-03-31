@@ -1016,6 +1016,23 @@ footer .footer-copyright {
    border-left-color: crimson; 
 }
 
+.related-posts {
+  background-color: #F7F7F9;
+  width: 100%;
+  padding: 40px;
+}
+.related-posts .row {
+  overflow: visible;
+}
+.related-posts .card {
+  text-align: left;
+  border-radius: 7px;
+box-shadow: 2px 3px 7px 0 rgba(0,0,0,0.25);
+}
+.related-posts img {
+  padding: 40px;
+}
+
 .toc nav, .toc nav ul, .toc nav ul li, .toc nav ul li a, .toc nav ul li:first-child, .toc nav ul li:not(:last-child) {
    all: unset;
 }
