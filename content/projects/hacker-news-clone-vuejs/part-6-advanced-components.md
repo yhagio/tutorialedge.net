@@ -123,7 +123,7 @@ Nothing else within our `Homepage.vue` component needs to change. If you save al
 
 ## Why Break Up Our Application?
 
-So at this point, I think it's worthwhile covering why we have just made a smaller `Item.vue` component instead of just pushing all our code into one component. By doing this, we effectively enable ourselves to reuse various parts of our codebase in different places. 
+So at this point, I think it's worthwhile covering why we have just made a smaller `Item.vue` component instead of just pushing all our code into one component. By doing this, we effectively enable ourselves to reuse various parts of our codebase in different places. It also helps to break up a massive application into a series of smaller, easier to debug, digest and expand upon. 
 
 Let's see a perfect example of this now. Create a new component called `New.vue`, this is going to show off all of the newest articles available courtesy of the HackerNews API.
 
@@ -244,3 +244,6 @@ export default {
 
 So, in this tutorial, we looked at how we could further break up our growing application into more components and start passing information from a parent component, our `Homepage.vue` component, to individual `Item.vue` components. 
 
+We've covered some of the main benefits of breaking down a large, growing application into a series of smaller components. We also looked at how we could pass information between both a parent component and a series of child components using `props`.
+
+In the next tutorial, we are going to look at how we can manage state within our VueJS application using Vuex and improve the performance of our application by caching API results.
