@@ -44,6 +44,6 @@ Feel free to steal this and use this for your own personal gain, but if you do e
 
 After following this series through to completion, you should hopefully have a finished product that will look a little something like this:
 
-![The Semi-finished product](https://s3-eu-west-1.amazonaws.com/tutorialedge.net/images/hackernews-clone/screenshot-10.png)
+![The Semi-finished product](https://s3-eu-west-1.amazonaws.com/tutorialedge.net/images/hackernews-clone/screenshot-12.png)
 
 Nothing too fancy I am sure you will agree, but a very decent starting point that developers new to the framework can extend and make their own!
