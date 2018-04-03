@@ -13,21 +13,27 @@ twitter: "https://twitter.com/Elliot_F"
 
 > The documentation for the API we will be hitting can be found here: [HackerNews/API](https://github.com/HackerNews/API)
 
-In this part of the course, we will be updating our `Homepage` component that we defined in [Part 3](/projects/hacker-news-clone-vuejs/part-3-adding-a-few-routes/), so that it makes a couple of API requests to the HackerNews/API and renders the results in a nice fashion. 
+In most frontend web applications, you will need to start making `HTTP` requests in order to retrieve data from a database or get information from a RESTful API. Being able to do this is considered almost essential these days and thus, in this section of the course, we are going to look at how you can extend the HackerNews project in order to make `HTTP` requests out to the HackerNews API. 
+
+This will give us experience hitting a RESTful API through the use of HTTP requests and subsequently rendering the responses within one of our components. 
+
+In this part of the course, we will be updating our `Homepage.vue` single-page component that we defined in [Part 3](/projects/hacker-news-clone-vuejs/part-3-adding-a-few-routes/), so that it makes a series of API requests to the HackerNews/API and renders the results in a nice fashion. 
 
 ## Video Tutorial
+
+This tutorial is also available in video format, should you wish to support the series then you can do so by subscribing to my YouTube channel and hitting that like button on my videos!
 
 <div style="position:relative;height:0;padding-bottom:42.76%"><iframe src="https://www.youtube.com/embed/ZQvNMHf6hNA?list=PLzUGFf4GhXBLWueypt6avCKOCNt0675EQ&amp;ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="842" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 
 ## Installing axios
 
 In order to add the `axios` library to your project type the following in your terminal within your project:
-d
+
 ```s
 $ yarn add axios
 ```
 
-This will add the `axios` library to our project so that we can subsequently use it to perform our `HTTP` requests within our components.
+This will add the `axios` library to our project so that we can subsequently use it to perform our `HTTP` requests within our components. In the past, Vue.js natively supported sending `HTTP` requests, but that functionality has since been removed from the library in support of using pre-existing libraries such as `axios`. This is beneficial as it doesn't tie you into a Vue.js specific way of thinking when it comes to making these requests. Should you wish, you could also use the `axios` library within any other JavaScript based project with minimal fuss.
 
 ## Our REST API Calls
 
@@ -73,7 +79,7 @@ export default {
 }
 ```
 
-When we click save on this, you should see your application making a `HTTP` `GET` request to that endpoint and populating `stories` with an array of `ID`s that represent the top stories currently on HackerNews.
+When we click save on this, you should see your application making a `HTTP GET` request to that endpoint and populating `stories` with an array of `ID`s that represent the top stories currently on HackerNews. 
 
 ## Updating our Homepage Component
 
@@ -155,4 +161,8 @@ Not the best, but it's a huge improvement over our previous version.
 
 ## Conclusion
 
-In this tutorial, we managed to integrate our application with the HackerNews API and get some of the top news items displayed within our application.  
+In this tutorial, we managed to integrate our application with the HackerNews API and get some of the top news items displayed within our application. 
+
+As a slight caveat, it should be noted that whilst this method of calling APIs within your single-page components does get you up and running quickly, in more advanced projects, you may with to abstract this functionality into something like `vuex`. We will be covering this more in detail in [Part 7 - Managing State with Vuex](/projects/hacker-news-clone-vuejs/part-7-managing-state-with-vuex-vuejs/)
+
+> Check out the next tutorial in this series here: [Part 5 - Viewing Individual News Articles](/projects/hacker-news-clone-vuejs/part-5-single-news-article-view/)

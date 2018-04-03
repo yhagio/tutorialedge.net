@@ -281,10 +281,8 @@ Once you have made the above changes, you should see something like this render 
 
 ![The finished Product](https://s3-eu-west-1.amazonaws.com/tutorialedge.net/images/hackernews-clone/screenshot-10.png)
 
-This project is starting to look a little more polished, a little closer to being finished. However, there is still a lot to be improved upon. For instance, the way we are rendering that text isn't right, neither is the date format. And we can't see any child comments underneath the top comments listed.
+This project is starting to look a little more polished, a little closer to being finished. However, there is still a lot to be improved upon. For instance, the way we are rendering that text isn't right, neither is the date format. And we can't see any child comments underneath the top comments listed. 
 
-These snagging points represent some fairly good starting points for taking this project further and I encourage you to try them out for yourself, just to become more familiar with VueJS and the ecosystem.
+If you are enjoying the course so far then I would love to hear your feedback on twitter: [@Elliot_f](https://twitter.com/elliot_f). I'm also open to any constructive critiques you may have with regards to not only this project, but anything about this site!
 
-I'm hoping that this 5 part project helps to get you up and running creating your own VueJS projects and I would love to see how you take this project further! Please feel free to send me screenshots of your updated applications via twitter: [@Elliot_F](https://twitter.com/elliot_f).
-
-I'd also love to hear your feedback and anything you think I could do to improve this project!
+> The next tutorial in this series can be found here: [Part 6 - Advanced Components](/projects/hacker-news-clone-vuejs/part-6-advanced-components/)

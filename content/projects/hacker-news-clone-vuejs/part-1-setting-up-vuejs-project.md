@@ -13,7 +13,7 @@ twitter: "https://twitter.com/Elliot_F"
 
 In this first tutorial, we will be covering exactly how you set up your development machine so that we can start working on our HackerNews clone. 
 
-We'll get a basic VueJS up and running and we'll also cover how you can build our project so that you end up with files that are deployable to the likes of and S3 bucket, or a server that can serve your files.
+We'll get a basic VueJS application up and running and we'll also cover how you can build this simple project so that you end up with files that are deployable to the likes of and S3 bucket, or a server that can serve your files.
 
 ## Video Tutorial
 
@@ -71,6 +71,23 @@ When you navigate to `http://localhost:8080` within your browser, you should see
 
 ![VueJS up and running!](https://s3-eu-west-1.amazonaws.com/tutorialedge.net/images/hackernews-clone/screenshot-01.png)
 
+## Building Your Project
+
+Once you are happy with your project, you will need to build it using the `yarn run build` command. This will generate a `dist/` directory which will contain all of the necessary files needed in order for your application to run. If you are planning on deploying this application to a server or an AWS S3 bucket then you can certainly do so by simply pushing these files. 
+
+Once you have run `yarn run build` you should see your `dist/` directory look something like this:
+
+```s
+dist/
+- index.html
+- static/
+- - css/
+- - js/
+- - style.css 
+```
+
+Within the `dist/static/js/` directory you should see all of the minified, transpiled javascript files that your `index.html` file needs in order to run as a Vue.js application. You will be able to push this up to 
+
 ## Next Tutorial
 
-Excellent, we now have everything we need set up on our machine in order to build our HackerNews clone! In the next tutorial, we are going to start building up our VueJS project and adding a few components with their own styling. 
+Excellent, we now have everything we need set up on our machine in order to build our HackerNews clone! In the next tutorial, we are going to start building up our VueJS project and create our first single-page component with its' own styling. You can find that tutorial here: [Part 2 Creating a Few Components](/projects/hacker-news-clone-vuejs/part-2-creating-few-components/) 

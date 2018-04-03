@@ -47,3 +47,5 @@ After following this series through to completion, you should hopefully have a f
 ![The Semi-finished product](https://s3-eu-west-1.amazonaws.com/tutorialedge.net/images/hackernews-clone/screenshot-12.png)
 
 Nothing too fancy I am sure you will agree, but a very decent starting point that developers new to the framework can extend and make their own!
+
+> Check out the next tutorial in this series here: [Part 1 - Setting Up Your Development Environment](/projects/hacker-news-clone-vuejs/part-1-setting-up-vuejs-project/)

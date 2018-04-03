@@ -11,17 +11,23 @@ series: [ "hackernewsclone" ]
 twitter: "https://twitter.com/Elliot_F"
 ---
 
-In the previous tutorial, we managed to set up our base project and get it running on `http://localhost:8080`. We now have a base from which we can build up up our HackerNews clone.
+In the previous tutorial, we not only managed to set up our base project and get it running on `http://localhost:8080`, but we also managed to build it so that it's ready for deployment to production. We now have a strong base project from which we can build up up our HackerNews clone.
+
+In this tutorial, we are going to create our first Single Page component which will be our `Navbar.vue` component. I'll show you how you can subsequently register this component within your Vue application and we'll also look at how we can customize the way our component looks by using CSS that is only applied to said component.
+
+By the end of this tutorial, you should be comfortable building your own simple, single-page components within Vue.js.
 
 ## Video Tutorial
+
+This tutorial is available in video format. Should you wish to support the series then please subscribe and like the video on YouTube!
 
 <div style="position:relative;height:0;padding-bottom:42.76%"><iframe src="https://www.youtube.com/embed/FX1s4XBO0D4?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="842" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 
 ## A Simple Navbar Component
 
-So, the first thing I always notice whenever I open up HackerNews is the iconic orange navbar at the top. This will undoubtedly have to feature in our own clone, and in order to add it, we'll have to create a `Navbar` component.
+So, the first thing I always notice whenever I open up HackerNews is the iconic orange navbar at the top. This will undoubtedly have to feature in our own clone, and in order to add it, we'll have to create the `Navbar` component we talked about earlier.
 
-Open up your project in a text editor of your choice and open the directory that your project exists within. Create a `Navbav.vue` file within the `src/components/` directory and add the following:
+Open up your project in a text editor of your choice and open the directory that your project exists within. Create a `Navbav.vue` file within the `/src/components/` directory and add the following:
 
 ```html
 <template>
@@ -55,13 +61,17 @@ export default {
 
 The above code represents the bare-bones of our new `Navbar` component. We define the `HTML` we wish to render for our component within the `<template>` tags, we define all of our core component functionality, a.k.a. all of the JavaScript functions within the `<script>` tags. Finally, should we wish to add custom styling to our `Navbar` component, we can do so by placing the `css` within our `<style>` tags. You should notice we've added `scoped` to our style tag, this essentially ensures that the `css` we define within this component will only impact the `HTML` within our component.
 
-I've populated the `<template>` tags with a simple navbar element stolen from the pure-css documentation page just to get us started.
+I've populated the `<template>` tags with a simple navbar element stolen from the pure-css documentation page just to get us started. 
+
+> Most Vue.js single-page components follow this structure with a `<template>` section for your HTML, a `<script>` section for your components core code, and a `<style>` section for when you wish to customize the look of your component.
 
 ## Registering our New Component
 
-So, now that we've defined our `Navbar.vue` component, it's time to register it within our application and start using it.
+So, now that we've defined our `Navbar.vue` component, it's time to register it within our existing Vue.js application and start using it. As it stands, our `Vue.js` application doesn't have any reference to our new `Navbar.vue` component so we'll have to first `import` it into the component we wish to render it and then register it within the `components` property of our particular Vue.js component. 
 
-Open up your `src/App.vue` component file and within the `<script>` tag, import your `Navbar` and add it to a `components` object like so:
+In this case, we are going to be importing our `Navbar.vue` component into our `App.vue` component. We want our `Navbar.vue` component to be shown across every route of our application, so importing it into this `App.vue` component and rendering it in one place makes sense.
+
+Open up your `/src/App.vue` component file and within the `<script>` tag, import your `Navbar` and add it to a `components` object like so:
 
 ```js
 import Navbar from '@/components/Navbar'
@@ -73,7 +83,7 @@ export default {
 }
 ```
 
-Once we have imported and registered this new component, we can use it within our `App.vue`'s `HTML` by adding the `<navbar>` to our app and removing the `<helloworld>` tag from our `<template>` section.
+Once we have imported and registered this new component, we can use it within our `App.vue`'s `HTML` by adding the `<navbar>` to our app and removing the `<helloworld>` tag from our `<template>` section. 
 
 ```html
 <template>
@@ -83,13 +93,24 @@ Once we have imported and registered this new component, we can use it within ou
 </template>
 ```
 
+Our Vue.js application infers automatically that the `<navbar>` HTML tag corresponds to the `Navbar` component we have registered within our `components` property. However, should you wish to explicitly state the element you wish to correspond to a component, you can do so like this:
+
+```js
+import Navbar from '@/components/Navbar'
+export default {
+  name: 'App',
+  components: {
+    'navbar': Navbar
+  }
+}
+```
+
 Our finished `src/App.vue` file should look like this:
 
 ```html
 <template>
   <div id="app">
     <navbar></navbar>
-    <router-view/>
   </div>
 </template>
 
@@ -128,3 +149,5 @@ At this stage, your application should look something like this:
 ## Next Steps
 
 Now that we've defined a few, very simple components within our application, it's time to move on and start thinking about how we can show different views within our application. This is where the `vue router` will come into play!
+
+> Next Tutorial: [Part 3 - Adding Routes to our Vue.js Application](/projects/hacker-news-clone-vuejs/part-3-adding-a-few-routes/)

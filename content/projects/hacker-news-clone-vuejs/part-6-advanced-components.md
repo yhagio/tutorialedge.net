@@ -13,7 +13,6 @@ twitter: "https://twitter.com/Elliot_F"
 
 As we continue to build this HackerNews clone up, the code within some of our components is going to increasingly grow. We need to start splitting our application up into multiple smaller components and in order for us to do this, we'll first have to learn some new concepts such as passing data into components using props. 
 
-
 In this tutorial, we are going to create an `Item.vue` component that will render a single item within our `Homepage.vue` component. The finished product of this will look like this:
 
 ![](https://s3-eu-west-1.amazonaws.com/tutorialedge.net/images/hackernews-clone/screenshot-11.png)
@@ -247,4 +246,4 @@ So, in this tutorial, we looked at how we could further break up our growing app
 
 We've covered some of the main benefits of breaking down a large, growing application into a series of smaller components. We also looked at how we could pass information between both a parent component and a series of child components using `props`.
 
-In the next tutorial, we are going to look at how we can manage state within our VueJS application using Vuex and improve the performance of our application by caching API results.
+In the next tutorial, we are going to look at how we can manage state within our VueJS application using Vuex and improve the performance of our application by caching API results. You can see the next tutorial here: [Part 7 - Managing State with Vuex](/projects/hacker-news-clone-vuejs/part-7-managing-state-with-vuex-vuejs/)
