@@ -143,7 +143,7 @@ I wouldn't argue with you if you said this looked pretty ugly as it stands, let'
 <template>
     <div>
         <h2>Homepage</h2>
-        <div v-for="story in stories" :key="story">
+        <div v-for="story in stories" :key="story.id">
           <h2>{{ story.data.title }}</h2>
           <p>Type: {{ story.data.type }}</p>
           <p>Link: {{ story.data.url }}</p>
