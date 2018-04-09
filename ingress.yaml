@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: tutorialedge
+spec:
+  rules:
+  - host: tutorialedge.local
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: tutorialedge
+          servicePort: 80
+
