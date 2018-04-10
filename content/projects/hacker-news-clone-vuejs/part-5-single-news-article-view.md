@@ -15,6 +15,12 @@ In the previous tutorial, we looked at how we could show all of the latest Hacke
 
 In this tutorial, we'll be adding a new route to our VueJS application which will be able to render an individual story and the comments associated with it. 
 
+## Video Tutorial
+
+This tutorial is also available in video format, should you wish to support the series then you can do so by subscribing to my YouTube channel and hitting that like button on my videos! 
+
+<div style="position:relative;height:0;padding-bottom:42.76%"><iframe src="https://www.youtube.com/embed/weR4NFFgrOo?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="842" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+
 ## Our Single.vue Component
 
 First things first, we will need a new component. Create a new file within your `src/components` directory called `Single.vue`.
