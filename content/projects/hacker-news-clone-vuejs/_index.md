@@ -2,7 +2,7 @@
 title: "Building a HackerNews Clone in VueJS"
 date: 2018-03-19T11:05:52Z
 draft: true
-desc: "Executing system commands can be incredibly useful no matter what sort of software you are building, "
+desc: "In this series we look at how you can build your own HackerNews clone using Vue.JS "
 series: [ "hackernewsclone" ]
 tags: ["vuejs"]
 image: "vuejs.png"
