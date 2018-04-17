@@ -111,6 +111,7 @@ Our finished `src/App.vue` file should look like this:
 <template>
   <div id="app">
     <navbar></navbar>
+    <router-link/>
   </div>
 </template>
 
