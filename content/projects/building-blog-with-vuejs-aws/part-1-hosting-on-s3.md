@@ -39,6 +39,8 @@ This is a somewhat ambitious list of things we need to do, however, if we comple
 First things, first. We need something that we can deploy, let's create our base Vue.JS project using the `vue-cli` like so:
 
 ```s
+$ mkdir frontend
+$ cd frontend
 # assuming version 2.9.4 of the vue-cli 
 $ vue init webpack
 ```
@@ -116,33 +118,45 @@ npm run build
 cd dist/
 
 # Push to S3
-ls
+# We've still to do this
 ```
 
-and our `functions.sh` will look like this:
+and our `functions.sh` will look like this for now, we'll just be installing the `serverless` cli for now until we are ready to go ahead and build and deploy our own Lambda functions:
 
 ```s
 # we need to install the serverless cli
-npm -version
 npm install -g serverless
 
 # we navigate into the directory which contains
 # our serverless functions
-cd functions
+# cd functions
 
 # We deploy our functions up to our AWS account
-serverless deploy
+# this step we've still to implement
 ```
 
 #### Travis CI Environment Variables
 
-In order for this to work, we'll have to add our AWS credentials as environment variables to the project. We can do that within the UI that Travis.ci provides for us. We need to add the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` that you can obtain from your AWS account from the `IAM` section of your AWS console.
+In order for us to be able to deploy both our site to S3 and our functions to AWS Lambda, we'll have to add our AWS credentials as environment variables to the project. We can do that within the UI that Travis.ci provides for us. We need to add the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` that you can obtain from your AWS account from the `IAM` section of your AWS console.
 
 You should see your credentials look like this within your travis.ci project settings page: 
 
 ![Adding AWS credentials](https://s3-eu-west-1.amazonaws.com/tutorialedge.net/images/vuejs-blog-aws/screenshot-01.png)
 
 Now, whenever we commit a new change to our repo, we should see our travis build kick off and run through the two stages of our project's deployment that we've defined above.
+
+## Current State
+
+At this point in the tutorial, you should have a directory structure that looks like this:
+
+```s
+frontend/
+# all our Vue.JS frontend code
+deploy/
+- functions.sh
+- frontend.sh
+.travis.yml
+```
 
 ## Conclusion
 
