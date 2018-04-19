@@ -80,3 +80,5 @@ Let's break this configuration down so that we know what's going on:
 ## Next Steps
 
 We have now managed to write and deploy our first Lambda function! In the next few tutorials, we will be expanding our Lambda collection and start integrating with services such as DynamoDB.
+
+> Under Construction
