@@ -13,6 +13,10 @@ twitter: "https://twitter.com/Elliot_F"
 
 As we continue to build this HackerNews clone up, the code within some of our components is going to increasingly grow. We need to start splitting our application up into multiple smaller components and in order for us to do this, we'll first have to learn some new concepts such as passing data into components using props. 
 
+## Video Tutorial
+
+<div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/HMYVQjU2KJM?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="640" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+
 In this tutorial, we are going to create an `Item.vue` component that will render a single item within our `Homepage.vue` component. The finished product of this will look like this:
 
 ![](https://s3-eu-west-1.amazonaws.com/tutorialedge.net/images/hackernews-clone/screenshot-11.png)

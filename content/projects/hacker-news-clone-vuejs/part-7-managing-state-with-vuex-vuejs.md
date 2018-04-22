@@ -13,6 +13,20 @@ twitter: "https://twitter.com/Elliot_F"
 
 In this tutorial, we are going to be adding Vuex to our VueJS application. We'll be looking at how we can improve the performance of our application and persist data between route changes. 
 
+## Why Vuex?
+
+Vuex is a state management pattern + library for Vue.js applications. Essentially, it acts as a centralized store for all components in an application. 
+
+### Vuex Core Concepts
+
+Before we continue to flesh out our VueJS application, we should really ground ourselves with the core concepts of Vuex. There are 5 main concepts we'll need to get our heads round, `state`, `getters`, `mutations`, `actions`, and `modules`.
+
+* *State* : Our `state` contains everything we wish to store within our `Vue.js` application.  
+* *Actions* : Actions are what we call to interact with our state, these trigger `mutations` which in turn do any modifications necessary to our `state`.
+* *Mutations* : These perform the act of updating our applications `state`, they are triggered by `actions`. 
+* *Getters* : These are functions that return commonly computed results. Say for example you wanted to filter our list of articles to only show those with a score above `100`. You could define a `getter` once that would do just that. This result is then cached until the data it relies upon is changed and using `getters` are a good way to improve application performance.
+* *Modules* : `modules` allow us to split our more complex application's state into a series of smaller components, thus simplifying our state.   
+
 ## Installing Vuex
 
 First things first, we will have to install `vuex` using our package manager of choice. As I've been using yarn for this series, I'll be using yarn to install this package.
@@ -87,15 +101,6 @@ new Vue({
 })
 ```
 
-### Vuex Core Concepts
-
-Before we continue to flesh out our VueJS application, we should really ground ourselves with the core concepts of Vuex. There are 5 main concepts we'll need to get our heads round, `state`, `getters`, `mutations`, `actions`, and `modules`.
-
-* *State* : Our `state` contains everything we wish to store within our `Vue.js` application.  
-* *Actions* : Actions are what we call to interact with our state, these trigger `mutations` which in turn do any modifications necessary to our `state`.
-* *Mutations* : These perform the act of updating our applications `state`, they are triggered by `actions`. 
-* *Getters* : These are functions that return commonly computed results. Say for example you wanted to filter our list of articles to only show those with a score above `100`. You could define a `getter` once that would do just that. This result is then cached until the data it relies upon is changed and using `getters` are a good way to improve application performance.
-* *Modules* : `modules` allow us to split our more complex application's state into a series of smaller components, thus simplifying our state.   
 
 ## Vuex Basics
 
