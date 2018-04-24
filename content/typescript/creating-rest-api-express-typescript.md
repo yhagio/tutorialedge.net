@@ -1,5 +1,5 @@
 ---
-title: "Creating Rest Api Express Typescript"
+title: "Building a RESTful API using Express and Typescript"
 date: 2018-03-28T20:25:53+01:00
 draft: true
 desc: "In this tutorial, we look at how properly implement a tests within your go based systems using the go test tool"
@@ -9,7 +9,7 @@ series: ["typescript"]
 twitter: "https://twitter.com/Elliot_F"
 ---
 
-In this tutorial, we are going to be building a REST API using both `express` and TypeScript! This REST API will simply return the status 
+In this tutorial, we are going to be building a REST API using both `express` and TypeScript! This REST API will simply return a status depending on what API endpoint we hit using our HTTP Client. 
 
 ## Our Project Layout
 
