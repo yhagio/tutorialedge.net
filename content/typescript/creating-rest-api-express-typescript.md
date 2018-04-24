@@ -9,11 +9,22 @@ series: ["typescript"]
 twitter: "https://twitter.com/Elliot_F"
 ---
 
+
 In this tutorial, we are going to be building a REST API using both `express` and TypeScript! This REST API will simply return a status depending on what API endpoint we hit using our HTTP Client. 
+
+## Prerequisites
+
+You will require at least the following:
+
+* TypeScript 2.8.1
+* The Yarn Package Manager
+* ExpressJS
 
 ## Our Project Layout
 
 So within our project, we are going to create a couple of incredibly simple endpoints that will simply return a few simple strings, depending on what `HTTP` verb is used to hit said route.
+
+We'll be using the `tsc` compiler to transpile our TypeScript code back to normal JavaScript and then we'll be running this built code using `nodemon`. 
 
 ## Our app.ts File
 
@@ -57,7 +68,7 @@ export let awesome = (req: Request, res: Response) => {
 
 ## Our server.ts File
 
-Our `server.ts` file will act as the entry point for our REST API. This will kick off our application and start listening for incoming requests.
+Our `/src/server.ts` file will act as the entry point for our REST API. This will kick off our application and start listening for incoming requests.
 
 ```ts
 import app from './app'
@@ -119,6 +130,63 @@ This will continuously watch for changes and serve our application on port 3000 
 [ Node] [nodemon] starting `node dist/server.js`
 [ Node] App is running on http://localhost:3000 in development mode
 ```
+
+## Writing our Mocha Test Suite
+
+Now that we've written our simple TypeScript based RESTful API, we need to be able to programatically check that it works! What good is a production bit of software if we don't have a test suite for it!
+
+In order to test this REST API, we'll be using `mocha` and `chai`. You can install these dependencies like so:
+
+```s
+npm install chai mocha ts-node @types/chai @types/mocha --save-dev
+```
+
+Next, create a file called `./src/app.spec.ts` and add the following:
+
+```ts
+import app from './app';
+import * as chai from 'chai';
+import chaiHttp = require('chai-http');
+
+import 'mocha';
+
+chai.use(chaiHttp);
+const expect = chai.expect;
+
+describe('Hello API Request', () => {
+  it('should return hello on call', async () => {
+    return chai.request(app).get('/')
+      .then(res => {
+        chai.expect(res.text).to.eql('hello')
+      })
+  })
+})
+```
+
+You will also have to update the `package.json` to include a new `script` that will run our `mocha` tests for us:
+
+```json
+"test": "mocha -r ts-node/register src/**/*.spec.ts"
+```
+
+Now that we've create a simple test and updated our `package.json`, try running our incredible new test suite by calling `npm run test`:
+
+```s
+➜  express-api npm run test
+
+> express-api@1.0.0 test /Users/elliot/Documents/Projects/tutorials/typescript/express-api
+> mocha -r ts-node/register src/**/*.spec.ts
+
+
+
+  Hello API Request
+    ✓ should return hello on call
+
+
+  1 passing (68ms)
+```
+
+And Voila! We now have a working test suite that we can expand out and ensure that everything we write now works!
 
 ## Conclusion
 
