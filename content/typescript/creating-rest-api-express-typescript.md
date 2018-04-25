@@ -166,7 +166,7 @@ Now that we've written our simple TypeScript based RESTful API, we need to be ab
 In order to test this REST API, we'll be using `mocha` and `chai`. You can install these dependencies like so:
 
 ```s
-npm install chai mocha ts-node @types/chai @types/mocha --save-dev
+npm install chai mocha ts-node @types/chai @types/mocha chai-http @types/chai-http typescript --save-dev
 ```
 
 Next, create a file called `./src/app.spec.ts` and add the following:
