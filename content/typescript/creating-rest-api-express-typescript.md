@@ -31,14 +31,14 @@ We'll be using the `tsc` compiler to transpile our TypeScript code back to norma
 Let's begin by creating our `app.ts` file. Within this we are going to import the `express` node module and then set up our `express` server. This includes setting up a simple endpoint within our application that will simple return `Hi` whenever that route is hit. 
 
 ```ts
-import * as express from "express";
+import express = require("express");
 
 // Our Express APP config
 const app = express();
 app.set("port", process.env.PORT || 3000);
 
 // API Endpoints
-app.get('/', (res, request) => {
+app.get('/', (req, res) => {
     res.send("Hi")   
 })
 
