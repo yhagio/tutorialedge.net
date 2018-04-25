@@ -84,6 +84,34 @@ const server = app.listen(app.get("port"), () => {
 export default server;
 ```
 
+## Our tsconfig.json
+
+In order for out `tsc -w` command to run properly, we will have to define our TypeScript compiler options. Create a new `tsconfig.json` file within your root directory and add the following configuration:
+
+```json
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "esModuleInterop": false,
+        "target": "es6",
+        "noImplicitAny": true,
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "outDir": "dist",
+        "baseUrl": ".",
+        "paths": {
+            "*": [
+                "node_modules/",
+                "src/types/*"
+            ]
+        }
+    },
+    "include": [
+        "src/**/*"
+    ]
+}
+```
+
 ## Package.json
 
 Finally, we want to define our `package.json`. This will feature all of our dependencies and the scripts we will need in order to keep developing our application. 
