@@ -26,67 +26,44 @@ So within our project, we are going to create a couple of incredibly simple endp
 
 We'll be using the `tsc` compiler to transpile our TypeScript code back to normal JavaScript and then we'll be running this built code using `nodemon`. 
 
-## Our app.ts File
+## Package.json
 
-Let's begin by creating our `app.ts` file. Within this we are going to import the `express` node module and then set up our `express` server. This includes setting up a simple endpoint within our application that will simple return `Hi` whenever that route is hit. 
+We'll need to start by initializing our project using the `npm init` command. This will generate the initial version of our `package.json` and allow us to specify any dependencies and scripts our project may need. Once you've run through this basic initialization, let's add a few `scripts` to our `package.json` that will enable us to compile and run our TypeScript application:
 
-```ts
-import express = require("express");
-
-// Our Express APP config
-const app = express();
-app.set("port", process.env.PORT || 3000);
-
-// API Endpoints
-app.get('/', (req, res) => {
-    res.send("Hi")   
-})
-
-// export our app
-export default app;
-```
-
-## Our Status Controller
-
-Next, we will want to create a controller. We'll call this `./src/controllers/status.ts` within our application.
-
-```ts
-import { Request, Response } from 'express'
-
-export let hi = (req: Request, res: Response) => {
-    res.send("hello")
-}
-
-export let hello = (req: Request, res: Response) => {
-    res.send("how's it going?")
-}
-
-export let awesome = (req: Request, res: Response) => {
-    res.send("EVERYTHING IS AWESOME")
+```json
+"scripts": {
+    "watch-ts": "tsc -w",
+    "watch-node": "nodemon dist/server.js",
+    "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript, Node\" -c \"yello.bold, cyan.bold\" \"yarn run watch-ts\" \"yarn run watch-node\""
 }
 ```
 
-## Our server.ts File
+The key one to note is the `watch` script which will concurrently watch our typescript application for changes and subsequently run the built `server.js` file using `nodemon`. 
 
-Our `/src/server.ts` file will act as the entry point for our REST API. This will kick off our application and start listening for incoming requests.
-
-```ts
-import app from './app'
-
-const server = app.listen(app.get("port"), () => {
-    console.log(
-        "App is running on http://localhost:%d in %s mode",
-        app.get("port"),
-        app.get("env")
-    )
-});
-
-export default server;
+```js
+{
+  "name": "express-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "watch-ts": "tsc -w",
+    "watch-node": "nodemon dist/server.js",
+    "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript, Node\" -c \"yello.bold, cyan.bold\" \"yarn run watch-ts\" \"yarn run watch-node\""
+  },
+  "dependencies": {
+    "@types/express": "^4.11.1",
+    "concurrently": "^3.5.1",
+    "express": "^4.16.3"
+  }
+}
 ```
+
+Should we try to run our `watch` script by calling `npm run watch`, you should notice it fails. This is because we haven't yet specified our `tsconfig.json` and as such our `tsc -W` fails to execute. 
 
 ## Our tsconfig.json
 
-In order for out `tsc -w` command to run properly, we will have to define our TypeScript compiler options. Create a new `tsconfig.json` file within your root directory and add the following configuration:
+Create a new `tsconfig.json` file within your root directory and add the following configuration:
 
 ```json
 {
@@ -112,30 +89,80 @@ In order for out `tsc -w` command to run properly, we will have to define our Ty
 }
 ```
 
-## Package.json
+The key things to note in this `tsconfig.json` file are that we are using `commonjs` to resolve our node modules. We are also targetting `es6` as the ECMAScript version we wish to transpile our TypeScript code down to. `outDir` specifies the directory that our built JavaScript files will be pushed into and then `paths` specifies where to resolve the `node_modules` and the `types` that our project will require. 
 
-Finally, we want to define our `package.json`. This will feature all of our dependencies and the scripts we will need in order to keep developing our application. 
+Finally, within our `include` array, we specify all of the locations in which we will be building up our project. For the purpose of this tutorial, we'll be adding all of our code to a `src` directory and we want any `.ts` files underneath that directory to be included when our project is being rebuilt.
 
-The key one to note is the `watch` script which will concurrently watch our typescript application for changes and subsequently run the built `server.js` file using `nodemon`.
+## Initial Dependencies
 
-```js
-{
-  "name": "express-api",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "scripts": {
-    "watch-ts": "tsc -w",
-    "watch-node": "nodemon dist/server.js",
-    "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript, Node\" -c \"yello.bold, cyan.bold\" \"yarn run watch-ts\" \"yarn run watch-node\""
-  },
-  "dependencies": {
-    "@types/express": "^4.11.1",
-    "concurrently": "^3.5.1",
-    "express": "^4.16.3"
-  }
+Before we can start coding up our REST API, we'll need to install any dependencies we may be using. To do this, call the following `npm install` command:
+
+```s
+$ npm install express @types/express --save-dev
+```
+
+Now that we have these included within our project, we can start programming!
+
+## Our app.ts File
+
+Let's begin programming by creating our `app.ts` file. Within this we are going to import the `express` node module and then set up our `express` server. This includes setting up a simple endpoint within our application that will simple return `Hi` whenever that route is hit. 
+
+```ts
+import express = require("express");
+
+// Our Express APP config
+const app = express();
+app.set("port", process.env.PORT || 3000);
+
+// API Endpoints
+app.get('/', (req, res) => {
+    res.send("Hi")   
+})
+
+// export our app
+export default app;
+```
+
+## Our server.ts File
+
+Our `/src/server.ts` file will act as the entry point for our REST API. This will kick off our application and start listening for incoming requests. We'll first want to import the express application that we've defined within our `app.ts` file and then start up our server by calling `app.listen`, just as you normally would with a traditional ExpressJS server.
+
+```ts
+import app from './app'
+
+const server = app.listen(app.get("port"), () => {
+    console.log(
+        "App is running on http://localhost:%d in %s mode",
+        app.get("port"),
+        app.get("env")
+    )
+});
+
+export default server;
+```
+
+With this now added to our project, we can check that everything is working as expected by calling `npm run watch` and checking to see if our application builds and starts as we would expect it to. Once you have kicked off this `watch` script, you should be able to navigate to `http://localhost:3000/` within your browser or with your REST client of choice, and it should deliver `Hi` back to you. Awesome, we now have the base upon which we will be building the rest of our RESTful API!
+
+## Our Status Controller
+
+Now that we have our base API, we want to expand upon it a bit and create a few new API endpoints that we can interact with. We will want to create a new status controller that will return different status strings depending on what API endpoint is called. We'll call this `./src/controllers/status.ts` within our application and we will add the following:
+
+```ts
+import { Request, Response } from 'express'
+
+export let hi = (req: Request, res: Response) => {
+    res.send("hello")
+}
+
+export let hello = (req: Request, res: Response) => {
+    res.send("how's it going?")
+}
+
+export let awesome = (req: Request, res: Response) => {
+    res.send("EVERYTHING IS AWESOME")
 }
 ```
+
 
 ## Running our Build Server
 
