@@ -99,6 +99,10 @@ Finally we specify the image we wish to build our container from by appending `p
 docker run --name "py36-account-service" -d -p 9000:80 py36-account-service
 ```
 
+## Benefits
+
+The main benefits of Docker-izing the above Python program would be that if it is reliant on the particular version of Python we specified, another developer wouldn't have to worry about getting this installed on their machine. They would simply have to have `docker` installed on their machine and then they would run that above `docker run` command and their service would start up and be exposed on port 9000.
+
 ## Conclusion
 
 In this tutorial, we looked at what Docker is, and how you can use it to improve the way that you develop software. We created a really simple NodeJS project that used Docker and we launched this Docker application using the `docker run` command.
