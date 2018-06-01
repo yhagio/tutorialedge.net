@@ -29,7 +29,7 @@
 	<link async rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	 crossorigin="anonymous">
-	<link async rel="stylesheet" href="{{ .Site.BaseURL }}/css/style.css"> {{ if .RSSLink -}}
+	<link async rel="stylesheet" href="{{ .Site.BaseURL }}/css/style.css?v=1"> {{ if .RSSLink -}}
 	<link async href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}">{{- end }} {{ .Hugo.Generator }}
 	<link async href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -43,7 +43,7 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+	<nav class="navbar navbar-expand-lg bg-primary">
 		<a class="navbar-brand" href="/"><img alt="tutorialedge logo" src="{{ .Site.BaseURL }}/images/logo.png" alt="{{ .Site.Title }}"> <span>TutorialEdge.net</span></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 		 aria-expanded="false" aria-label="Toggle navigation">

@@ -3,14 +3,14 @@
 	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 
 body {
-   font-family: "ua-medium",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; 
+  font-family: "proxima-nova", "proxima-nova-all", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #3D4C62;
   font-weight: 400;
   line-height: 1.75;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #545e6f;
+  background-color: #f3f5f7;
 }
 
 #mc-embedded-subscribe {
@@ -21,10 +21,29 @@ body a {
   color: #0467d1;
 }
 
+.row {
+  max-width: 100%;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "ua-medium",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   font-weight: 200;
   color: #333;
+}
+
+.content {
+  background-color: white;
+  border-radius: 4px;
+  padding: 40px;
+  margin-top: -260px;
+  margin-bottom: 40px;
+  z-index: 100;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  outline: none;
+  box-shadow: 0 3px 8px 0 rgba(0,0,0,0.03);
+  border: 1px solid #d4dadf;
 }
 
 article ol {
@@ -56,10 +75,10 @@ article ol li:before {
 
 nav {
   box-shadow: none;
-  border-bottom: 1px solid #EEE5E5;
+  color: #123546;
 }
 .bg-primary {
-  background-color: #20232a !important;
+  background-color: #ffffff !important;
 }
 .btn-outline-success {
   background-color: rgb(42, 191, 245) !important;
@@ -67,19 +86,21 @@ nav {
   border: 1px solid  rgb(42, 191, 245) !important; 
 }
 nav.navbar ul li a {
-  color: white !important;
+  color: #123546 !important;
 }
 nav ul li .dropdown-menu a  {
   color: black !important;
 }
 nav .navbar-brand span{
-  font-size: 1.8rem;
+  color: #123546 !important;
+  font-size: 1.2rem;
 }
 
 nav img {
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  margin-top: -3px;
+  margin-right: 0px;
 }
 
 nav .dropdown-menu img {
@@ -296,28 +317,27 @@ nav .dropdown-menu img {
   }
 }
 .post-content {
-  padding-top: 20px;
   padding-bottom: 40px;
 }
 .courses {
   width: 100%;
   width: 100%;
   padding: 20px;
-  margin-bottom: 20px;
-  background-color: #F6F6F8 !important;
+  background-color: #fff !important;
   text-align: center;
 }
 
 .courses h2 {
   font-size: 40px;
   margin: 20px 0 32px;
-  color: #545e6f;
+  color: #005e7d;
   letter-spacing: -0.1px;
   line-height: 45px;
 }
 
 .courses p {
-  margin-bottom: 60px;
+  color: #8F919D;
+  margin-bottom: 40px;
 }
 
 .course-card {
@@ -372,6 +392,7 @@ nav .dropdown-menu img {
   padding-top: 40px;
   padding-bottom: 40px;
   text-align: center;
+  background-color: white;
 }
 .tutorials h2 {
   font-size: 40px;
@@ -406,71 +427,72 @@ nav .dropdown-menu img {
   color: #333;
 }
 
-.row {
-  max-width: 100%;
-  overflow: hidden;
-}
-
-.title-bar {
-  text-align: center;
+.color-bar {
   width: 100%;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #F3F4F5;
+  height: 340px;
+  background-color: #005e7d;
   color: #14233C;
+  z-index: -100;
 }
-.title-bar h1 {
-  font-family: Raleway;
-  text-transform: none;
-  font-size: 58px;
-  line-height: 80px;
-  font-weight: 900;
+.content h1 {
+  font-size: 33px;
+  line-height: 1.24;
+  font-weight: 400;
+  color: #3a3c4c;
+  margin: 0px;
+  margin-bottom: 20px;
+  padding: 0;
 }
-.title-bar-container {
-  position: relative;
-  margin: auto;
-}
-.title-bar .date {
-  position: absolute;
-  left: 20px;
-  top: 10px;
-}
-.title-bar .category {
-  position: absolute;
-  right: 20px;
-  top: 10px;
-}
-.title-bar .category a {
-    background-color: #e8e9ec;
-        top: 30px;
-    padding: 9px 22px 8px;
-    border-radius: 5px;
-    font-weight: 600;
-        color: #3D4C62;
-}
-
-.title-bar h1 {
-  font-size: 35px;
-  font-weight: 600;
-  line-height: 3.125rem;
-}
-.title-bar .tags {
-  position: absolute;
-  bottom: 30px;
-  width: 300px;
-  left: 50%;
-  margin-left: -150px;
-}
-.title-bar p {
-  color: white !important;
-}
-
 .chip {
   background-color: #14233C !important;
   color: white !important;
   margin-bottom: 10px;
 }
-
+.course-sidebar {
+  background-color: white;
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 40px;
+  z-index: 100;
+  margin-top: -260px;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  outline: none;
+  box-shadow: 0 3px 8px 0 rgba(0,0,0,0.03);
+  border: 1px solid #d4dadf;
+}
+.course-sidebar a {
+  display: block;
+}
+.course-sidebar h5 {
+  font-size: 18px;
+  font-weight: 200;
+}
+.course-sidebar img {
+  height: 30px !important;
+  width: 30px !important;
+  float: left;
+  margin-right: 10px;
+}
+.left-sidebar {
+  background-color: white;
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 40px;
+  z-index: 100;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  outline: none;
+  box-shadow: 0 3px 8px 0 rgba(0,0,0,0.03);
+  border: 1px solid #d4dadf;
+}
+.left-sidebar h4 {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
 .left-sidebar a {
   color: #555;
   font-size: 14px;
@@ -533,14 +555,12 @@ hr {
   background-image: -webkit-linear-gradient(left, transparent, rgba(0,0,0,0.09) 10%, rgba(0,0,0,0.09) 90%, transparent);
   background-image: linear-gradient(to right, transparent, rgba(0,0,0,0.09) 10%, rgba(0,0,0,0.09) 90%, transparent);
 }
-.content {
-  padding-top: 40px;
-}
 
 .content h1, h2, h3, h4, h5 {
   font-weight: 600;
   line-height: 1.2;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
+  margin-top: 20px;
   clear: both;
 }
 
@@ -569,9 +589,11 @@ hr {
 }
 
 .post-info {
-  font-size: 0.95rem;
-  height: 100%;
-  color: #516D76;
+  font-size: 16px;
+line-height: 1.35;
+margin-bottom: 17px;
+margin-top: 17px;
+color: #8F919D;
 }
 .content .info .ion {
   font-size: 16px;
@@ -589,8 +611,10 @@ hr {
 
 .content pre {
   overflow: auto;
-  padding: 10px 20px;
-
+  padding: 20px 40px;
+  margin-left: -40px;
+  margin-right: -40px;
+  margin-top: 20px;
 }
 
 .content p > code {
@@ -607,12 +631,13 @@ background-color: #f8f8f8;
   border-left: 4px solid #1EC4D6;
   margin-top: 20px;
   margin-bottom: 20px;
-  position: relative;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin-left: -41px;
+  margin-right: -40px;
+  padding: 20px 40px;
   background-color: #D7F9FD;
+}
+.content blockquote p {
+  margin: 0;
 }
 
 .content img.book-img {
@@ -689,15 +714,15 @@ background-color: #f8f8f8;
 }
 
 .welcome-bar {
-  background: #F7F7F9;
-  color: #3A292A;
+  background: #005e7d;
+  color: #fff;
   width: 100%;
   padding: 2rem 0 10rem 0;
   text-align: center;
 }
 
 .welcome-bar h1 {
-  color: #3A292A !important;
+  color: #fff !important;
   font-size: 2.9375rem;
   font-weight: 600;
   line-height: 3.125rem;
@@ -707,6 +732,7 @@ background-color: #f8f8f8;
 }
 
 .features {
+  padding-top: 40px;
   padding-bottom: 40px;
 }
 
@@ -1037,12 +1063,21 @@ box-shadow: 2px 3px 7px 0 rgba(0,0,0,0.25);
    all: unset;
 }
 .toc {
-  background: #F3F4F5;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 5px;
+  background-color: white;
+  border-radius: 4px;
+  padding: 30px;
+  height: auto;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  margin-bottom: 40px;
+  margin-top: -260px;
+  box-shadow: 0 3px 8px 0 rgba(0,0,0,0.03);
+  border: 1px solid #d4dadf;
 }
-.toc h3 {
+.toc h4 {
+  font-size: 18px;
+  font-weight: 800;
   margin: 0;
   padding: 0;
   padding-bottom: 5px;
