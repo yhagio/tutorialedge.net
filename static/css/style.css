@@ -46,18 +46,18 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid #d4dadf;
 }
 
-article ol {
+article .post-content ol {
   list-style-type: none;
   clear: both;
 }
 
-article ol li {
+article .post-content ol li {
   position: relative;
   margin-bottom: 10px;
   counter-increment: step-counter;
 }
 
-article ol li:before {
+article .post-content ol li:before {
   content: counter(step-counter);
   margin: 0 10px 0 -40px;
   font-size: .8rem;

@@ -6,8 +6,22 @@
 <div class="container">
 	<div class="row no-hidden">
 		<div class="col-sm-9">
+			
 			<article class="content">
-
+					<nav aria-label="breadcrumb">
+					{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
+					{{ $.Scratch.Add "path" .Site.BaseURL }}
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">home</a></li>
+						{{ range $index, $element := split $url "/" }}
+							{{ $.Scratch.Add "path" $element }}
+								{{ if ne $element "" }}
+								<li class="breadcrumb-item"><a href='{{ $.Scratch.Get "path" }}'>{{ . }}</a></li>
+								{{ $.Scratch.Add "path" "/" }}
+								{{ end }}
+						{{ end }}
+					</ol>
+					</nav>
 				<h1>{{ .Title }}</h1>
 				<div class="post-info">
 					<i class="ion ion-ios-calendar-outline"></i> {{ dateFormat "Monday, Jan 2, 2006" .Date }} |
@@ -52,12 +66,15 @@
 						</a>
 					</li>
 				</ul>
+
 				{{ partial "comments.html" .}}
+
 				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 				<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6782067367590597" data-ad-slot="4096707282" data-ad-format="auto"></ins>
 				<script>
 					(adsbygoogle = window.adsbygoogle || []).push({});
 				</script>
+
 			</article>
 		</div>
 
@@ -76,10 +93,4 @@
 </div>
 
 
-
-<script>
-	$('.post-content h2').each(function () { $(this).append(' <a href=#' + $(this).context.id + '><i class="ion ion-link"></i> </a>') })
-	$('.post-content h3').each(function () { $(this).append(' <a href=#' + $(this).context.id + '><i class="ion ion-link"></i> </a>') })
-	$('.post-content h4').each(function () { $(this).append(' <a href=#' + $(this).context.id + '><i class="ion ion-link"></i> </a>') })
-	$('.post-content h5').each(function () { $(this).append(' <a href=#' + $(this).context.id + '><i class="ion ion-link"></i> </a>') })
-</script> {{ partial "footer.html" . }}
+{{ partial "footer.html" . }}
