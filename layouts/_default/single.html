@@ -9,17 +9,12 @@
 			
 			<article class="content">
 					<nav aria-label="breadcrumb">
-					{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
-					{{ $.Scratch.Add "path" .Site.BaseURL }}
 					<ol class="breadcrumb">
 						<li class="breadcrumb-item"><a href="/">home</a></li>
-						{{ range $index, $element := split $url "/" }}
-							{{ $.Scratch.Add "path" $element }}
-								{{ if ne $element "" }}
-								<li class="breadcrumb-item"><a href='{{ $.Scratch.Get "path" }}'>{{ . }}</a></li>
-								{{ $.Scratch.Add "path" "/" }}
-								{{ end }}
-						{{ end }}
+						{{ if isset .Params "series" }}
+						<li class="breadcrumb-item"><a href="/{{ (index .Params.series 0) }}">{{ (index .Params.series 0) }}</a></li>
+						{{ end }}	
+						<li class="breadcrumb-item">{{ .Title }}</li>
 					</ol>
 					</nav>
 				<h1>{{ .Title }}</h1>
