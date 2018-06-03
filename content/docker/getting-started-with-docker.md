@@ -4,7 +4,7 @@ date: 2018-05-18T14:25:51+01:00
 draft: true
 desc: "In this tutorial, we are going to look at what docker is, why it is useful, and how you can get a simple Docker-based application up and running"
 author: "Elliot Forbes"
-tags: ["docker", ]
+tags: ["docker"]
 series: ["docker"]
 twitter: "https://twitter.com/Elliot_F"
 ---
