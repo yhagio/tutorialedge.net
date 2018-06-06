@@ -26,20 +26,21 @@
 	<meta name="description" content="{{ . }}">{{ end }} {{ with .Site.Params.author }}
 	<meta name="author" content="{{ . }}">{{ end }}
 
-	<link async rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-	 crossorigin="anonymous">
-	<link async rel="stylesheet" href="{{ .Site.BaseURL }}/css/style.css?v=1"> {{ if .RSSLink -}}
-	<link async href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}">{{- end }} {{ .Hugo.Generator }}
-	<link async href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link async rel="stylesheet" href="/css/ionicons.min.css">
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link async rel="stylesheet" href="{{ .Site.BaseURL }}/css/style.css"> 
+	{{ if .RSSLink -}}
+	<link async href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}">
+	{{- end }} 
+	{{ .Hugo.Generator }}
 
-	<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<link async href="/css/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+	<script src="/js/jquery-2.1.1.min.js"></script>
+	<script src="/js/jquery-3.2.1.slim.min.js"></script>
+	<script src="/js/popper.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/axios.min.js"></script>
+	<script src="/js/vue.min.js"></script>
 </head>
 
 <body>
@@ -100,8 +101,6 @@
 						<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/typescript/">TypeScript</a>
 						<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/vuejs/">VueJS</a>
 						<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/webdev/">Web Dev</a>
-						<!-- <div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#">Something else here</a> -->
 					</div>
 				</li>
 
@@ -109,7 +108,6 @@
 				<li class="nav-item"><a class="nav-link" href="{{ .Site.BaseURL }}/get-involved/">Get Involved</a></li>
 				<li class="nav-item"><a class="nav-link" href="{{ .Site.BaseURL }}/series/blog/">Blog</a></li>
 				<li class="nav-item">
-					<!-- <a class="nav-link" href="{{ .Site.BaseURL }}/profile/">Login/Register</a> -->
 				</li>
 			</ul>
 			<form class="form-inline my-2 my-lg-0" id="searchbar">
