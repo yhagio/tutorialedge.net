@@ -12,7 +12,7 @@
 					<ol class="breadcrumb">
 						<li class="breadcrumb-item"><a href="/">home</a></li>
 						{{ if isset .Params "series" }}
-						<li class="breadcrumb-item"><a href="/{{ (index .Params.series 0) }}">{{ (index .Params.series 0) }}</a></li>
+						<li class="breadcrumb-item"><a href="/tags/{{ (index .Params.series 0) }}">{{ (index .Params.series 0) }}</a></li>
 						{{ end }}	
 						<li class="breadcrumb-item">{{ .Title }}</li>
 					</ol>
