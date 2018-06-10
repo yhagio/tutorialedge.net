@@ -62,3 +62,8 @@ testscript.stderr.on('data', function(data){
 });
 ```
 
+## Conclusion
+
+Through this method I was able to wrap some pretty mundane and annoying scripts in an automated fashion and tie them together in a concise and automated fashion. This helped to reduce the amount of time spent configuring the scripts and allowed me to focus more on the results.
+
+I hope you found this tutorial useful, if you need anything further explained then please feel free to reach out to me in the comments section below!
