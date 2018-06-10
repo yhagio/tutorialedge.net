@@ -46,33 +46,25 @@ func compute(value int) {
 	}
 }
 
-
 func main() {
 	fmt.Println("Goroutine Tutorial")
-
 
   // sequential execution of our compute function 
 	compute(10)
 	compute(10)
 
-
   // we scan fmt for input and print that to our console
 	var input string
 	fmt.Scanln(&input)
 
-
 }
 ```
 
-
 If you execute the code above you should see that it prints 0 to 9 twice in a row. Total execution time for this sequential program is just over 20 seconds.
-
 
 ## Making our Program Asynchronous
 
-
 If we aren’t fussed about the order in which our program prints out the values 0 to **n** then we can speed this program up by using goroutines and making it asynchronous.
-
 
 ```go
 package main
@@ -83,7 +75,6 @@ import (
 	"time"
 )
 
-
 // notice we've not changed anything in this function 
 // when compared to our previous sequential program
 func compute(value int) {
@@ -93,10 +84,8 @@ func compute(value int) {
 	}
 }
 
-
 func main() {
 	fmt.Println("Goroutine Tutorial")
-
 
   // notice how we've added the 'go' keyword 
   // in front of both our compute function calls
@@ -110,8 +99,6 @@ func main() {
 }
 ```
 
-
 The only thing we needed to change to our existing sequential go program was to add the ‘go’ keyword in front of our compute function invocation. Here we’ve essentially created two separate goroutines that should now execute in parallel. 
-
 
 Try executing this in your browser and you should see 0,0,1,1,2,2… and so on up till ..9,9 print out in our console. And if you time this program’s execution then we are suddenly down to roughly 10 seconds.
