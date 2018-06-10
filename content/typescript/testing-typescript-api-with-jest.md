@@ -2,7 +2,7 @@
 title: "Testing Typescript Api With Jest and Supertest"
 date: 2018-06-09T22:48:26+01:00
 draft: true
-desc: "In this tutorial, we are going to look at how you can implement a testing framework for your TypeScript projects using Jest and Supertest
+desc: "In this tutorial, we are going to look at how you can implement a testing framework for your TypeScript projects using Jest and Supertest"
 author: "Elliot Forbes"
 tags: ["typescript", "jest"]
 series: ["typescript"]
