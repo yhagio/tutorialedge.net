@@ -2,7 +2,7 @@
 date = "2017-04-15T09:45:44+01:00"
 title = "Creating a Twitter Bot Using Python and the Twitter API"
 draft = true
-desc = "This tutorial teaches the user how they can build a twitter bot using both the Python progrmaming language and the RESTful Twitter Library. "
+desc = "This tutorial teaches the user how they can build a twitter bot using both the Python programming language and the RESTful Twitter Library. "
 tags = ["python"]
 series = ["python"]
 author = "Elliot Forbes"
