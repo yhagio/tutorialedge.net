@@ -32,5 +32,13 @@ Overall I would highly recommend picking up a copy of this book if you want to n
 <div class="amazon-link">Buy Now: <a href="http://amzn.to/2y4o232">Vue.js 2 Cookbook</a></div>
 
 
+## Vue.js 2 Design Patterns and Best Practices: Build enterprise-ready, modular Vue.js applications with Vuex and Nuxt
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/tutorialedge.net/books/vuejs-design-patterns-best-practices.jpg" alt="best books for learning vuejs" class="book-img" /></p>
+
+<div class="amazon-link">Buy Now: <a href="https://amzn.to/2MbLpPg">Vue.js 2 Design Patterns and Best Practices</a></div>
+
+
+
 > If you liked this article then you may also like: [The Best Books for Learning Laravel](/php/laravel/best-books-learning-laravel/)
 

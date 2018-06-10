@@ -19,6 +19,7 @@ Let's begin by creating a simple `async` function that will retrieve all of the 
 
 We'll use the `await` keyword to succinctly set our `result` variable as the response of our `GET` request. This saves us from having to do `.then()` and `.catch()` when handling the Promise returned by the `axios.get()` function call.
 
+
 ```js
 const axios = require('axios')
 const cheerio = require('cheerio')
