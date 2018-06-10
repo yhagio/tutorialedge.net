@@ -1,5 +1,5 @@
 ---
-title: "Working With Docker Nodejs"
+title: "Working With Docker and NodeJS - Tutorial"
 date: 2018-05-27T21:40:20+01:00
 draft: true
 desc: "In this tutorial, we are going to look at how you can dockerize a NodeJS application"
@@ -9,11 +9,13 @@ series: ["docker"]
 twitter: "https://twitter.com/Elliot_F"
 ---
 
+> The full source code for this tutorial can be found here: [TutorialEdge/Docker/node-docker](https://github.com/TutorialEdge/Docker/tree/master/node-docker)
+
 In this tutorial, we are going to be looking at how you can dockerize an existing NodeJS application and ultimately leverage the benefits of Docker. We'll be creating a Docker image that will dynamically pick up changes to a NodeJS application and automatically recompile and rerun our application without having to rebuild and re-run our docker image.
 
 ## Advantages of Docker
 
-Docker offers a number of massive advantages and can drastically the friction of deploying your application to multiple different systems. 
+Docker offers a number of massive advantages and can drastically reduce the friction of deploying your application to multiple platforms with minimal fuss. 
 
 New developers can easily pull down Docker-ized applications and run them with a couple of commands on their local machine. Application developers explicitly state within the `Dockerfile` everything that application needs in order to run.  
 
