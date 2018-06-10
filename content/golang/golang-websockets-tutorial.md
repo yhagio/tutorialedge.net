@@ -1,13 +1,13 @@
-+++
-date = "2017-08-23T19:29:11+01:00"
-title = "Golang Websockets Tutorial"
-draft = true
-desc = "In this tutorial we'll look at how you can implement websockets in Golang"
-author = "Elliot Forbes"
-tags = ["golang", "websockets"]
-series = ["golang"]
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+date: "2017-08-23T19:29:11+01:00"
+title: "Working with Websockets in Go - Tutorial"
+draft: true
+desc: "In this tutorial we'll look at how you can implement websockets in Golang"
+author: "Elliot Forbes"
+tags: ["golang", "websockets"]
+series: ["golang"]
+twitter: "https://twitter.com/Elliot_F"
+---
 
 > This tutorial was written using Go version 1.9 and [googollee/go-socket.io](https://github.com/googollee/go-socket.io)
 
@@ -62,34 +62,45 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/googollee/go-socket.io"
+	socketio "github.com/googollee/go-socket.io"
 )
 
 func main() {
+
 	server, err := socketio.NewServer(nil)
 	if err != nil {
 		log.Fatal(err)
 	}
+
 	server.On("connection", func(so socketio.Socket) {
+
 		log.Println("on connection")
+
 		so.Join("chat")
+
 		so.On("chat message", func(msg string) {
 			log.Println("emit:", so.Emit("chat message", msg))
 			so.BroadcastTo("chat", "chat message", msg)
 		})
+
 		so.On("disconnection", func() {
 			log.Println("on disconnect")
 		})
 	})
+
 	server.On("error", func(so socketio.Socket, err error) {
 		log.Println("error:", err)
 	})
 
 	http.Handle("/socket.io/", server)
-	http.Handle("/", http.FileServer(http.Dir("./asset")))
+
+	fs := http.FileServer(http.Dir("static"))
+	http.Handle("/", fs)
+
 	log.Println("Serving at localhost:5000...")
 	log.Fatal(http.ListenAndServe(":5000", nil))
 }
+
 ```
 
 #### Breaking it down
@@ -102,6 +113,50 @@ After that we then specify what we want to happen when we receive a `"chat messa
 
 Finally we define what should happen on `"disconnection"`, in this instance we simply just log the fact that one of our clients has disconnected. 
 
+## A Frontend Client
+
+Ok, so we have managed to flesh out our backend Go-based WebSocket server, but now it's time to get a simple frontend application up and running so that we can test what we have done works. 
+
+We'll start by creating a simple `index.html` within our project directory. 
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Go WebSocket Tutorial</title>
+</head>
+<body>
+  
+  <h2>Hello World</h2>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+  <script>
+    const socket = io('http://localhost:5000/socket.io/');
+  </script>
+        
+</body>
+</html>
+```
+
+When you then run your go websocket server by calling:
+
+```s
+$ go run main.go
+2018/06/10 07:54:06 Serving at localhost:5000...
+2018/06/10 07:54:15 on connection
+2018/06/10 07:54:16 on connection
+```
+
+This should then start running on `http://localhost:5000`. You should then be able to navigate to this URL within your browser and see new connections being made in the log output of your server. 
+
+You have now successfully built up a frontend that connects directly into your newly created backend websocket server! 
+
 ## Conclusion
+
+> The full source code for this project can be found on Github: [TutorialEdge/Go](https://github.com/TutorialEdge/Go/tree/master/go-websocket-tutorial)
 
 If you found this tutorial useful or require any further assistance then please feel free to let me know in the comments section below.
