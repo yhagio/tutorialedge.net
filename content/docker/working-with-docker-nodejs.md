@@ -13,6 +13,10 @@ twitter: "https://twitter.com/Elliot_F"
 
 In this tutorial, we are going to be looking at how you can dockerize an existing NodeJS application and ultimately leverage the benefits of Docker. We'll be creating a Docker image that will dynamically pick up changes to a NodeJS application and automatically recompile and rerun our application without having to rebuild and re-run our docker image.
 
+## Video Tutorial
+
+<div style="position:relative;height:0;padding-bottom:42.76%"><iframe src="https://www.youtube.com/embed/CsWoMpK3EtE?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="842" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+
 ## Advantages of Docker
 
 Docker offers a number of massive advantages and can drastically reduce the friction of deploying your application to multiple platforms with minimal fuss. 
@@ -74,13 +78,13 @@ FROM node:9-slim
 WORKDIR /app
 # We copy our package.json file to our 
 # app directory
-COPY package.json ./app
+COPY package.json /app
 # We then run npm install to install
 # express for our application
 RUN npm install
 # We then copy the rest of our application
 # to the app direcoty
-COPY . ./app
+COPY . /app
 # We start our application by calling
 # npm start.
 CMD ["npm", "start"]
@@ -115,6 +119,30 @@ This will start up a Docker container based off our `node-docker` docker image a
 ### Viewing running Docker Containers
 
 In order to view all of the running containers on your local machine, type `docker ps`. This should show our `node-docker` container running and the ports that it's listening to.
+
+## Automatically Picking up Changes
+
+The first thing we'll have to do in order for our running Docker container to pick up any changes is mount it to a directory on my host machine. We can achieve this by using the `-v` flag and specifying the current directory of my application and mapping that to the `/app` directory our application lives within in our docker container.
+
+We can also install and use the `nodemon` node_module in order to automatically watch for any changes to our source files and subsequently kick off our server with these incorporated changes.
+
+```s
+$ npm install --save nodemon
+```
+
+Now that `nodemon` is explicitly listed within our `package.json` as a dependency, we can go ahead and rebuild our docker image:
+
+```s
+$ docker build -t node-docker-tutorial .
+```
+
+We can then run this with the `-v` flag as mentioned before like so:
+
+```s
+$ docker run -it -p 9001:3000 -v $(pwd):/app node-docker-tutorial
+```
+
+If you now navigate to `http://localhost:9001` you should see your application up and running, if you then subsequently make any changes to the app, these changes will be picked up and automatically reran within our container! Awesome!
 
 ## Conclusion
 
