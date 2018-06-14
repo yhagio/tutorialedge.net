@@ -78,7 +78,6 @@ describe('GET / - a simple api endpoint', () => {
 
 In the above test suite we have used the `supertest` library to make a test request against our API endpoint `GET "/"`. This then awaits the response and tests this response to ensure it's what we expect.
 
-
 ### Running our Tests
 
 Now that we've got this test case written, let's try running our test suite by calling the following: 
