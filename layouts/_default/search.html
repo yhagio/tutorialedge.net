@@ -1,133 +1,75 @@
 {{ partial "header.html" . }}
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.css">
+
+
 <div id="app">
     <div class="search-bar">
         <div class="container center">
-            <div class="input-group">     
-                <input class="form-control" v-model="searchQuery" type="text" placeholder="Search Now...">
-            </div>
             <div class="input-group">
-                <button class="btn btn-primary search-btn" v-on:click="search">Search</button>
+                <input id="search-input" class="form-control" placeholder="Search for tutorials">
+                <!-- We use a specific placeholder in the input to guides users in their search. -->
             </div>
         </div>
-    </div>  
+    </div>
 
     <div class="search-results">
         <div class="container">
-            <div class="result-stats">
-                <p>Page: <b><% page %></b> of <% pages %> | Total Hits <b><% total_hits %></b></p>
-                <p>Top 10 Results</p>
-            </div>
-
-            <div class="search-result" v-for="result in results.hits">
-                <a v-bind:href="result.id">
-                    <h3><% result.fields.Title %></h3>
-                </a>
-                <span class="url">https://tutorialedge.net<% result.id %><br/></span>
-                <span class="description"><% result.fields.Body %></span>
-                <span class="weight">Weight: <% normalize(result.score) %></span>
-                <br/>
-            </div>
-            <div class="center-align">
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination">
-                        <li v-if="page >= 1" class="page-item"><a @click="prevPage()" class="page-link">Previous</a></li>
-                        <li v-for="page in pages" class="page-item"><a @click="setPage(page)" class="page-link"><% page %></a></li>
-                        <li v-if="page <= pages" class="page-item"><a @click="nextPage()" class="page-link">Next</a></li>
-                    </ul>
-                </nav>
-            </div>
+            <div id="hits"></div>
+            <div class="pagination" id="pagination"></div>
         </div>
     </div>
 </div>
 
-<script>
-    var app = new Vue({
-        el: '#app',
-        delimiters: ["<%","%>"],
-        data() {
-            return {
-                results: {},
-                searchQuery: '',
-                pages: 1,
-                page: 1,
-                total_hits: 0,
-                page_size: 20
-            }
-        },
-        created: function() {
-            if (this.getQueryParam("query")) {
-                this.searchQuery = this.getQueryParam("query");
-                this.search();
-            }
-        },
-        methods: {
-            search: function (event) {
-                let data = {
-                    "query": { "boost": 1.0, "query": this.searchQuery },
-                    "highlight": { "fields": ["body"] },
-                    "from": this.page,
-                    "fields": ["*"]
-                };
-                axios({
-                    method: 'POST',
-                    url: 'https://api.tutorialedge.net/search',
-                    headers: { 'Content-Type': 'application/json' },
-                    data: data
-                }).then(function(response) {
-                    app.$nextTick(function() {
-                        this.results = response.data;
-                        this.total_hits = response.data['total_hits'];
-                        this.pages = Math.ceil((response.data.total_hits / 10))
-                    })
-                }).catch(function(err) { console.log(err) })
-            },
-            getQueryParam: function(variable) {
-                var query = window.location.search.substring(1);
-                var vars = query.split("&");
-                for (var i=0;i<vars.length;i++) {
-                    var pair = vars[i].split("=");
-                    if(pair[0] == variable){return pair[1];}
-                }
-                return(false);
-            },
-            prevPage: function () {
-                app.$nextTick(function() {
-                    this.page -= 1;
-                    this.search()
-                })
-            },
-            nextPage: function () {
-                app.$nextTick(function() {
-                    this.page += 1
-                    this.search()
-                })
-            },
-            setPage: function (page) {
-                app.$nextTick(function() {
-                    this.page = page
-                    this.search()
-                })
-            },
-            range: function (count) {
-                for (var i = 0; i < count; i++) { this.pages.push(i) }
-                return pages
-            },
-            normalize: function (score) {
-                return Math.round((score) * 100) + "%"
-            },
-            roundTook: function (took) {
-                if (took < 1000 * 1000) {
-                    return "<1ms"
-                } else if (took < 1000 * 1000 * 1000) {
-                    return "" + Math.round(took / (1000* 1000)) + "ms"
-                } else {
-                    var roundMs = Math.round(took / (1000* 1000))
-                    return "" + roundMs / 1000 + "s"
-                }
-            }
-        }
-    })
-</script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.js"></script>
 
+<script>
+    var search = instantsearch({
+        // Replace with your own values
+        appId: 'HC4LXZHZ0P',
+        apiKey: 'c03dde5425f223cd11270e711db47c0c', // search only API key, no ADMIN key
+        indexName: 'TutorialEdge',
+        urlSync: true,
+        searchParameters: {
+            hitsPerPage: 10
+        }
+    });
+
+    // Add this after the previous JavaScript code
+    search.addWidget(
+        instantsearch.widgets.searchBox({
+            container: '#search-input'
+        })
+    );
+
+    search.addWidget(
+        instantsearch.widgets.hits({
+            container: '#hits',
+            templates: {
+                body: function(data) {
+                    return '<div>You have ' + data.nbHits + ' results, fetched in ' +
+                    data.processingTimeMS +'ms.</div>'
+                },
+                item: function(data) {
+                    console.log(data);
+                    return '<div class="search-result">' 
+                        + '<a href="' + data.permalink + '"><h3>' + data.title + '</h3></a>'
+                        + '<span class="url">' + data.permalink + '</span>'
+                        + '<span class="description">' + data.summary + '...</span>'
+                        + '<span class="weight">' + data.readingtime + ' minutes</span>'
+                        + '</div>';
+                },
+                empty: "We didn't find any results for the query"
+            }
+        })
+    );
+
+    search.addWidget(
+        instantsearch.widgets.pagination({
+            container: '#pagination'
+        })
+    );
+
+    search.start();
+</script> 
 {{ partial "footer.html" . }}

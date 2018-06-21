@@ -1,2 +1,4 @@
 public/
 *.deb
+.env
+node_modules/
