@@ -13,6 +13,11 @@ body {
   background-color: #f3f5f7;
 }
 
+.full-width {
+  width: 95%;
+  margin: auto;
+}
+
 #mc-embedded-subscribe {
   background-color: #007bff !important;
 }
