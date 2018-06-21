@@ -3,7 +3,6 @@ date = "2017-04-14T20:27:58+01:00"
 title = "Python Programming Course"
 draft = true
 author = "Elliot Forbes"
-layout = "simple"
 series = ["python"]
 image = "logo-python.png"
 +++
@@ -15,5 +14,3 @@ Python is without a doubt one of the best languages to learn if you are interest
 ## Auxiliary Resources
 
 If you are interested in buying books in order to aid your learning of Python then I highly recommend checking out my article on [The Top Books for Learning Python](/python/best-books-for-python/)
-
-

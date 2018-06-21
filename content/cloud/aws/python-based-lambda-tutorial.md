@@ -18,7 +18,7 @@ In this tutorial, we are going to be writing a very simple Python based AWS Lamb
 
 In order to install the `serverless` CLI you can do the following:
 
-```bash
+```s
 $ npm install serverless -g
 ```    
 
@@ -28,7 +28,7 @@ If you have set up your AWS credentials correctly with an account that has full 
 
 Create a new directory in which you can add Python files. Within this new directory create a file called `simple.py` as well as a `serverless.yml` file. 
 
-```bash
+```s
 # directory structure
 mydirectory/
 - simple.py
@@ -98,7 +98,7 @@ Once we are happy with our function and we have our `serverless.yml` defined, we
 
 When we run this, you should see the following output:
 
-```yml
+```s
 $ serverless deploy
 Serverless: Packaging service...
 Serverless: Excluding development dependencies...
@@ -131,5 +131,5 @@ You should notice the `endpoints` list has a `GET` request endpoint that you sho
 
 ## Conclusion
 
-Hopefully, you found this tutorial educational! If you require any further assistance then plesae feel free to let me know in the comments section below! 
+Hopefully, you found this tutorial educational! If you require any further assistance then please feel free to let me know in the comments section below! 
 
