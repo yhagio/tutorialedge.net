@@ -9,7 +9,7 @@
 			</div>
 			<div class="clear"></div>
 			{{ range (where .Site.Pages "Section" "course") }} {{ if and (ne .Title "Course") (ne .Title "Courses") }}
-			<div class="col-sm-6">
+			<div class="col-sm-3">
 				<a href="{{ .Permalink }}">
 					<div class="course-card">
 						<div class="top-half">
@@ -17,6 +17,9 @@
 						</div>
 						<div class="bottom-half">
 							<div class="title">{{.Title}}</div>
+						</div>
+						<div class="course-info">
+
 						</div>
 					</div>
 				</a>
@@ -31,34 +34,13 @@
 <div class="features">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-4">
-				<h4>YouTube Channel</h4>
-				<p>Fancy learning some of these concepts through watching videos? Check out my YouTube Channel:
-					<a href="https://www.youtube.com/tutorialedge">tutorialedge</a>. I'm going to be bringing loads of new videos out in the next few months!</p>
+			<div class="col-sm-6">
+				<img src="/images/youtube.png" alt="">
 			</div>
-			<div class="col-sm-4">
-				<h4>Follow On Twitter</h4>
-				<p>I'm active on twitter so if you want to get in touch with me you can! Tweet to me
-					<a href="https://twitter.com/elliot_f">@Elliot_f</a> and I'll get back to you as soon as I can!</p>
-			</div>
-			<div class="col-sm-4">
-				<h4>Open Source</h4>
-				<p>This site is entirely open sourced. If you wish to give back to the site or to learn how this site works then feel free
-					to check out:
-					<a href="https://github.com/elliotforbes/tutorialedge-v2">elliotforbes/tutorialedge-v2</a>.</p>
-				</div>
-				<div class="clear"></div>
-			<div class="col-sm-4">
-				<h4>New Book!</h4>
-				<p>If you are interested in learning more about the cloud and developing applications that are cloud native then I recommend
-					checking out my latest book:
-					<a href="https://leanpub.com/an-introduction-to-cloud-development">An Introduction To Cloud Development.</a>
-				</p>
-			</div>
-			<div class="col-sm-4">
-				<h4>Completely Free</h4>
-				<p>The best thing about this site is that it is completely free and will remain so forever. There should be no pay wall
-					to learning how to program and everyone from every background should be able to join the developer community.</p>
+			<div class="col-sm-6">
+				<h2>YouTube Channel</h2>
+				<p>Subscribe to my channel for Video Programming tutorials and walkthroughs:
+					<a href="https://www.youtube.com/tutorialedge">TutorialEdge</a>.</p>
 			</div>
 		</div>
 	</div>
@@ -71,18 +53,31 @@
 		<div class="row flexbox-courses">
 			{{ $paginator := .Paginate .Site.Pages }} {{ range $paginator.Pages }}
 			<div class="col-sm-4">
-				<a href="{{ .RelPermalink }}" class="blog-list-article">
-					<div class="blog-list-article-date">{{ .Date.Format "02 Jan 06" }}</div>
-					{{ range $key, $value := .Params.series }}
-					<div class="blog-list-article-category">{{ $value }}</div>
-					{{ end }}
-					<div class="blog-list-article-content">
+				<a href="{{ .Permalink }}">
+					<div class="course-card">
+						<div class="top-half">
+							{{ if isset .Params "image" }}
+							<img src="{{ .Site.BaseURL }}/images/{{ .Params.image }}" alt="{{ .Title }} Image">
+							{{ else }}
+							<img src="{{ .Site.BaseURL }}/images/logo.png" alt="{{ .Title }} Image">
+							{{ end }}
+						</div>
+						<div class="bottom-half">
+							<div class="title">{{.Title}}</div>
+							<div class="desc">{{ .Params.desc }}</div>
+						</div>
+						<div class="course-ino">
+							<div><i class="ion ion-social-twitter-outline"></i> {{ .Params.author }}</div>
+							<!-- {{ range $key, $value := .Params.series }}
+							<div>{{ $value }}</div>
+							{{ end }}
 
-						<div class="blog-list-article-title">{{ .Title }}</div>
-						<div class="blog-list-article-excerpt">{{ .Params.desc }}</div>
+							<div>{{ .Date.Format "02 Jan 06" }}</div> -->
+						</div>
 					</div>
 				</a>
 			</div>
+
 			{{ end }}
 		</div>
 		<div class="clear"></div>

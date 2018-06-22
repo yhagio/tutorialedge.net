@@ -1,37 +1,39 @@
-<div class="left-sidebar hide-on-small-only">
+<div id="sidebar">
+  <div class="left-sidebar hide-on-small-only">
 
-  <h4>Check Out My New Book!</h4>
+    <h4>Check Out My New Book!</h4>
 
-  <p>Interested in learning about Cloud? Check out my latest book:
-    <a href="https://leanpub.com/an-introduction-to-cloud-development/c/tutorialedge">An Introduction To Cloud Development</a>
-  </p>
-  <a href="https://leanpub.com/an-introduction-to-cloud-development/c/tutorialedge">
-    <img src="https://s3.amazonaws.com/titlepages.leanpub.com/an-introduction-to-cloud-development/hero?1518080184" alt="" style="max-height: 180px; width: auto;">
-  </a>
-</div>
+    <p>Interested in learning about Cloud? Check out my latest book:
+      <a href="https://leanpub.com/an-introduction-to-cloud-development/c/tutorialedge">An Introduction To Cloud Development</a>
+    </p>
+    <a href="https://leanpub.com/an-introduction-to-cloud-development/c/tutorialedge">
+      <img src="https://s3.amazonaws.com/titlepages.leanpub.com/an-introduction-to-cloud-development/hero?1518080184" alt="" style="max-height: 180px; width: auto;">
+    </a>
+  </div>
 
-<div class="left-sidebar hide-on-small-only">
-  <script src="https://apis.google.com/js/platform.js"></script>
-  <div class="g-ytsubscribe" data-channelid="UCwFl9Y49sWChrddQTD9QhRA" data-layout="full" data-count="default"></div>
-</div>
+  <div class="left-sidebar hide-on-small-only">
+    <script src="https://apis.google.com/js/platform.js"></script>
+    <div class="g-ytsubscribe" data-channelid="UCwFl9Y49sWChrddQTD9QhRA" data-layout="full" data-count="default"></div>
+  </div>
 
-<div class="left-sidebar hide-on-small-only">
-  <h4>Related Articles</h4>
-  {{ range $key, $value := .Params.series }}
-  <ul class="collection">
-    {{ range (index $.Site.Taxonomies.series $value) }}
-    <li class="collection-item">
-      <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
-    </li>
+  <div class="left-sidebar hide-on-small-only">
+    <h4>Related Articles</h4>
+    {{ range $key, $value := .Params.series }}
+    <ul class="collection">
+      {{ range (index $.Site.Taxonomies.series $value) }}
+      <li class="collection-item">
+        <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
+      </li>
+      {{ end }}
+    </ul>
     {{ end }}
-  </ul>
-  {{ end }}
-</div>
+  </div>
 
-<div class="left-sidebar hide-on-small-only">
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-				<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6782067367590597" data-ad-slot="4096707282" data-ad-format="auto"></ins>
-				<script>
-					(adsbygoogle = window.adsbygoogle || []).push({});
-				</script>
+  <div class="left-sidebar hide-on-small-only">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6782067367590597" data-ad-slot="4096707282" data-ad-format="auto"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
 </div>
