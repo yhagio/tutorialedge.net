@@ -6,6 +6,7 @@ desc: "In this tutorial, we are going to be creating a Websocket server using bo
 author: "Elliot Forbes"
 tags: ["typescript", "express"]
 series: ["typescript"]
+image: "typescript.png"
 twitter: "https://twitter.com/Elliot_F"
 ---
 

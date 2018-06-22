@@ -6,6 +6,7 @@ desc: "In this tutorial, we are going to look at how you can dockerize a NodeJS 
 author: "Elliot Forbes"
 tags: ["docker", "nodejs", "javascript"]
 series: ["docker"]
+image: "docker.png"
 twitter: "https://twitter.com/Elliot_F"
 ---
 

@@ -6,6 +6,7 @@ desc: "In this tutorial, we are going to look at how you can manage state within
 author: "Elliot Forbes"
 tags: ["vuejs", "javascript"]
 weight: 1
+image: "vuejs.png"
 series: ["vuejs"]
 twitter: "https://twitter.com/Elliot_F"
 ---

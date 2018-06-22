@@ -5,6 +5,7 @@ draft: true
 desc: "In this tutorial, we are going to be looking at the async and await keywords within your Typescript applications"
 author: "Elliot Forbes"
 tags: ["typescript"]
+image: "typescript.png"
 series: ["typescript"]
 twitter: "https://twitter.com/Elliot_F"
 ---

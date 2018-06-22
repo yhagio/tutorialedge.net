@@ -51,7 +51,7 @@
 	<div class="container">
 		<h2>All Tutorials</h2>
 		<div class="row flexbox-courses">
-			{{ $paginator := .Paginate .Site.Pages }} {{ range $paginator.Pages }}
+			{{ $paginator := .Paginate .Data.Pages.ByDate.Reverse }} {{ range $paginator.Pages }}
 			<div class="col-sm-4">
 				<a href="{{ .Permalink }}">
 					<div class="course-card">

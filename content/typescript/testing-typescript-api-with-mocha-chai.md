@@ -6,6 +6,7 @@ desc: "In this tutorial, we are going to look at how you can implement a testing
 author: "Elliot Forbes"
 tags: ["typescript", "mocha", "chai"]
 series: ["typescript"]
+image: "typescript.png"
 twitter: "https://twitter.com/Elliot_F"
 ---
 

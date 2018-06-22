@@ -6,14 +6,13 @@ desc: "In this tutorial, we are going to look at how you can work with MongoDB w
 author: "Elliot Forbes"
 tags: ["typescript", "mongodb"]
 series: ["typescript"]
+image: "typescript.png"
 twitter: "https://twitter.com/Elliot_F"
 ---
 
 ## Introduction
 
-In this tutorial, we are going to look at what it takes in order to connect to, and work with a mongodb instance within your TypeScript based application. 
-
-We'll be building a very simple REST API that will allow you to store, query, update and delete books from a book table within your MongoDB instance. This will hopefully cover everything you need to get a basic project up yourself for your own side projects.
+In this tutorial, we'll be building a very simple REST API that will allow you to store, query, update and delete books from a book table within your MongoDB instance. This will hopefully cover everything you need to get a basic project up yourself for your own side projects.
 
 ## Setting Up A MongoDB Database with Docker
 

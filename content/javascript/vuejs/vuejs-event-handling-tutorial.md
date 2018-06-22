@@ -7,6 +7,7 @@ author: "Elliot Forbes"
 weight: 3
 tags: ["vuejs", "webdev"]
 series: ["vuejs"]
+image: "vuejs.png"
 twitter: "https://twitter.com/Elliot_F"
 ---
 

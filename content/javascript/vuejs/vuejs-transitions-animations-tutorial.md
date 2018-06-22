@@ -7,6 +7,7 @@ author: "Elliot Forbes"
 weight: 6
 tags: ["vuejs", "animations", "transitions"]
 series: ["vuejs"]
+image: "vuejs.png"
 twitter: "https://twitter.com/Elliot_F"
 ---
 

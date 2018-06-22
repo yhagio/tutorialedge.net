@@ -6,6 +6,7 @@ desc: "In this tutorial, we look at how properly implement a tests within your g
 author: "Elliot Forbes"
 tags: ["typescript", "express"]
 series: ["typescript"]
+image: "typescript.png"
 twitter: "https://twitter.com/Elliot_F"
 ---
 

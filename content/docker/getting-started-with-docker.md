@@ -6,6 +6,7 @@ desc: "In this tutorial, we are going to look at what docker is, why it is usefu
 author: "Elliot Forbes"
 tags: ["docker"]
 series: ["docker"]
+image: "docker.png"
 twitter: "https://twitter.com/Elliot_F"
 ---
 

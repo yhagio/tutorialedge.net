@@ -6,6 +6,7 @@ desc: "In this tutorial, we are going to be looking at how you can get started w
 author: "Elliot Forbes"
 tags: ["vuejs", "javascript"]
 weight: 1
+image: "vuejs.png"
 series: ["vuejs"]
 twitter: "https://twitter.com/Elliot_F"
 ---

@@ -7,6 +7,7 @@ author: "Paul Halliday"
 tags: ["vuejs", "javascript"]
 weight: 1
 series: ["vuejs"]
+image: "vuejs.png"
 twitter: "https://twitter.com/paulhalliday_io"
 ---
 

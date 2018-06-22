@@ -391,10 +391,10 @@ nav .dropdown-menu img {
 }
 
 .course-card .title {
-  font-family: geomanist,-apple-system,BlinkMacSystemFont,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+
 font-weight: 500;
 font-size: 22px;
-color: rgba(38,41,58,.8);
+color: rgba(0,0,0,.9);
 line-height: 24px;
 -webkit-line-clamp: 3;
 -webkit-box-orient: vertical;
@@ -413,7 +413,6 @@ line-height: 24px;
 .tutorials h2 {
   font-size: 40px;
   margin: 20px 0 32px;
-  color: #545e6f;
   letter-spacing: -0.1px;
   line-height: 45px;
 }

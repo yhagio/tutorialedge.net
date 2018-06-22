@@ -5,6 +5,7 @@ title = "The Top Books for Learning to Program in Python"
 desc = "In this article we explore some of the best books available for learning Python in 2017."
 author = "Elliot Forbes"
 series = ["python"]
+image= "python-logo.png"
 tags = ["books", "python"]
 twitter = "https://twitter.com/Elliot_F"
 +++
