@@ -1249,3 +1249,15 @@ hr {
 .social-btn-dissolve.linkedin {
   background: #0077B5;
 }
+
+ol.breadcrumb {
+  background-color: white;
+  padding: 0;
+  margin: 0;
+}
+ol.breadcrumb li {
+  color: #b7c9cc;
+}
+ol.breadcrumb li a {
+  color: #738f93;
+}
