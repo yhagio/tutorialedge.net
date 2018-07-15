@@ -38,10 +38,6 @@ If we migrated our application to use websockets, we could reduce this to 100 TC
 
 These bi-directional connections could then be used to push status updates only when they start seeing issues. As such, you could find yourself drastically saving the amount of network traffic generated. 
 
-## Real-time Performance
-
-Stuff
-
 ## Scaffolding our Application
 
 To avoid any confusion, we'll be creating a blank react application using the `create-react-app` tool:
