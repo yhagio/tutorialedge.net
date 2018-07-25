@@ -7,9 +7,10 @@ image = "golang.png"
 series = ["golang"]
 +++
 
-## What is Go?
+## What is Go? 
 
 Go is an incredible language to learn if you want to develop incredibly fast and reliable systems. As of the 10th of November 2016 it passed it's 7th birthday and it continues to build pace within the programming ecosystem. 
+
 
 ## Features of the Language
 

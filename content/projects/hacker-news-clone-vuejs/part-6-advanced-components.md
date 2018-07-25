@@ -19,7 +19,7 @@ As we continue to build this HackerNews clone up, the code within some of our co
 
 In this tutorial, we are going to create an `Item.vue` component that will render a single item within our `Homepage.vue` component. The finished product of this will look like this:
 
-![](https://s3-eu-west-1.amazonaws.com/tutorialedge.net/images/hackernews-clone/screenshot-11.png)
+![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/hackernews-clone/screenshot-11.png)
 
 > Note: We will be stealing a lot of the design elements from the official HackerNews project: [vue-hackernews-2.0](https://github.com/vuejs/vue-hackernews-2.0)
 

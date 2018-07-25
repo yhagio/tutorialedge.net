@@ -161,7 +161,7 @@ If we were to do this within a single `index.html` page then it would look somet
 
 And the final project should look something like so:
 
-![VueJS routing tutorial](https://s3-eu-west-1.amazonaws.com/tutorialedge.net/vuejs-routing-tutorial-01.png)
+![VueJS routing tutorial](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/vuejs-routing-tutorial-01.png)
 
 I threw in a bit of css for this one:
 

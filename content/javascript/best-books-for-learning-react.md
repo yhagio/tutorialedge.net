@@ -13,42 +13,42 @@ twitter = "https://twitter.com/Elliot_F"
 
 ## Learning React Native
 
-<p><img src="https://s3-eu-west-1.amazonaws.com/tutorialedge.net/books/learning-react-native.jpg" alt="best books for learning react" class="book-img" /></p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/books/learning-react-native.jpg" alt="best books for learning react" class="book-img" /></p>
 
 <div class="amazon-link">Buy Now: <a href="http://amzn.to/2y0l3Zo">Learning React Native</a></div>
 
 ## Learning React
 
-<p><img src="https://s3-eu-west-1.amazonaws.com/tutorialedge.net/books/learning-react.jpg" alt="best books for learning react" class="book-img" /></p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/books/learning-react.jpg" alt="best books for learning react" class="book-img" /></p>
 
 <div class="amazon-link">Buy Now: <a href="http://amzn.to/2eQZNwY">Learning React: Functional Web Development with React and Redux</a></div>
 
 ## React Up & Running
 
-<p><img src="https://s3-eu-west-1.amazonaws.com/tutorialedge.net/books/react-up-and-running.jpg" alt="best books for learning react" class="book-img" /></p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/books/react-up-and-running.jpg" alt="best books for learning react" class="book-img" /></p>
 
 <div class="amazon-link">Buy Now: <a href="http://amzn.to/2wSU84h">React Up &amp; Running</a></div>
 
 ## Mastering React
 
-<p><img src="https://s3-eu-west-1.amazonaws.com/tutorialedge.net/books/mastering-react.jpg" alt="best books for learning react" class="book-img" /></p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/books/mastering-react.jpg" alt="best books for learning react" class="book-img" /></p>
 
 <div class="amazon-link">Buy Now: <a href="http://amzn.to/2y0fTgg">Mastering React</a></div>
 
 ## React and React Native
 
-<p><img src="https://s3-eu-west-1.amazonaws.com/tutorialedge.net/books/react-and-react-native.jpg" alt="best books for learning react" class="book-img" /></p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/books/react-and-react-native.jpg" alt="best books for learning react" class="book-img" /></p>
 
 <div class="amazon-link">Buy Now: <a href="http://amzn.to/2wVFtEA">React and React Native</a></div>
 
 ## React Native Cookbook
 
-<p><img src="https://s3-eu-west-1.amazonaws.com/tutorialedge.net/books/react-native-cookbook.jpg" alt="best books for learning react" class="book-img" /></p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/books/react-native-cookbook.jpg" alt="best books for learning react" class="book-img" /></p>
 
 <div class="amazon-link">Buy Now: <a href="http://amzn.to/2jj3nVF">React Native Cookbook</a></div>
 
 ## React.js Essentials
 
-<p><img src="https://s3-eu-west-1.amazonaws.com/tutorialedge.net/books/react-essentials.jpg" alt="best books for learning react" class="book-img" /></p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/books/react-essentials.jpg" alt="best books for learning react" class="book-img" /></p>
 
 <div class="amazon-link">Buy Now: <a href="http://amzn.to/2wVN1af">React.js Essentials</a></div>

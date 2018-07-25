@@ -17,7 +17,7 @@ In this article we'll be taking a look at the best books you can pick up should 
 
 ## Laravel Up & Running
 
-<p><img src="https://s3-eu-west-1.amazonaws.com/tutorialedge.net/books/laravel-up-and-running.jpg" alt="best books for learning laravel" class="book-img" />Laravel Up &amp; Running by Matt Stauffer is an absolutely incredible book for anyone wishing to learn how to navigate the ins-and-outs of the Laravel framework. </p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/books/laravel-up-and-running.jpg" alt="best books for learning laravel" class="book-img" />Laravel Up &amp; Running by Matt Stauffer is an absolutely incredible book for anyone wishing to learn how to navigate the ins-and-outs of the Laravel framework. </p>
 
 Matt Stauffer has delivered a very well written book that features a wealth of knowledge on the framework and presents excellent examples that are both informative and easy to understand. It's no surprise that his book has been very warmly received by the community and has achieved excellent overall ratings on the likes of Amazon with quite a number of people raving about how good it is.
 
@@ -27,7 +27,7 @@ If you have to choose just one book to ground yourself then this should most cer
 
 ## Laravel 5 Essentials
 
-<p><img src="https://s3-eu-west-1.amazonaws.com/tutorialedge.net/books/laravel-5-essentials.jpg" alt="best books for learning laravel" class="book-img" /> Laravel 5 Essentials provides a good introduction to the Laravel 5 framework and is intended for PHP developers who have no or little experience with the framework. </p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/books/laravel-5-essentials.jpg" alt="best books for learning laravel" class="book-img" /> Laravel 5 Essentials provides a good introduction to the Laravel 5 framework and is intended for PHP developers who have no or little experience with the framework. </p>
 
 <h4>The Book Covers</h4>
 
@@ -43,7 +43,7 @@ Martin Bean's Laravel 5 Essentials book covers the following topics:
 
 ## Learning Laravel's Eloquent
 
-<p><img src="https://s3-eu-west-1.amazonaws.com/tutorialedge.net/books/learning-laravels-eloquent.jpg" alt="best books for learning laravel" class="book-img" /> For a somewhat short book sitting at 150 pages in length, Francesco Malatesta's Learning Laravel's Eloquent does an excellent job of covering the inner workings of Eloquent and how it is used both with and without Laravel. </p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/books/learning-laravels-eloquent.jpg" alt="best books for learning laravel" class="book-img" /> For a somewhat short book sitting at 150 pages in length, Francesco Malatesta's Learning Laravel's Eloquent does an excellent job of covering the inner workings of Eloquent and how it is used both with and without Laravel. </p>
 
 
 <h4>The Book Covers</h4>
@@ -68,7 +68,7 @@ In this section of the article we are going to look at some of the top books you
 
 ### PHP Cookbook: Solutions & Examples for PHP Programmers
 
-<p><img src="https://s3-eu-west-1.amazonaws.com/tutorialedge.net/books/php-cookbook.jpg" alt="php cookbook" class="book-img"/>The third edition of PHP Cookbook by David Sklar and Adam Trachtenberg introduces PHP 5.4 and 5.5 in true cookbook style. It presents a series of different programming recipes that the reader will work through in order to learn the fundamentals of PHP. </p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/books/php-cookbook.jpg" alt="php cookbook" class="book-img"/>The third edition of PHP Cookbook by David Sklar and Adam Trachtenberg introduces PHP 5.4 and 5.5 in true cookbook style. It presents a series of different programming recipes that the reader will work through in order to learn the fundamentals of PHP. </p>
 
 The book has received a very warm welcome on the likes of Amazon and has picked up a fairly decent set of reviews giving it an overall 4.4 out of 5 stars. If you are looking for a book that will cover the fundamentals then I would definitely recommend this one. It's recipe style approach makes for a refreshing change from the more standard approach.
 

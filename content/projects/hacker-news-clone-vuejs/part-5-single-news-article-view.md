@@ -73,6 +73,8 @@ You should notice that the `path` that we've set for our `Single` component feat
 
 Within our `Single` component we will be able to retrieve this `:id` value and then make the appropriate REST API request to fetch that stories' comments and render them accordingly.
 
+
+
 ## Updating our Homepage Component
 
 So, now that we've defined this route, we need to update our `Homepage` component so that each story we retrieve links back to the appropriate `/story/:id` page within our application.
@@ -100,11 +102,11 @@ You could in theory do this with `<a>` tags, however, `<router-link>` provides a
 
 When you save this and navigate to your application in the browser, you should see all of our storie's titles rendering as HTML links.
 
-![Our Stories now have links](https://s3-eu-west-1.amazonaws.com/tutorialedge.net/images/hackernews-clone/screenshot-08.png)
+![Our Stories now have links](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/hackernews-clone/screenshot-08.png)
 
 When you subsequently click on a link, you should see it take you through to our newly defined `Single` component with the `ID` appended to the end of our URL like so:
 
-![Our single component](https://s3-eu-west-1.amazonaws.com/tutorialedge.net/images/hackernews-clone/screenshot-09.png)
+![Our single component](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/hackernews-clone/screenshot-09.png)
 
 ## Querying The Comments API
 
@@ -285,7 +287,7 @@ body {
 
 Once you have made the above changes, you should see something like this render out into your browser:
 
-![The finished Product](https://s3-eu-west-1.amazonaws.com/tutorialedge.net/images/hackernews-clone/screenshot-10.png)
+![The finished Product](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/hackernews-clone/screenshot-10.png)
 
 This project is starting to look a little more polished, a little closer to being finished. However, there is still a lot to be improved upon. For instance, the way we are rendering that text isn't right, neither is the date format. And we can't see any child comments underneath the top comments listed. 
 

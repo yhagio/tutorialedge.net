@@ -69,7 +69,7 @@ $ yarn run dev
 
 When you navigate to `http://localhost:8080` within your browser, you should see your newly created VueJS application running:
 
-![VueJS up and running!](https://s3-eu-west-1.amazonaws.com/tutorialedge.net/images/hackernews-clone/screenshot-01.png)
+![VueJS up and running!](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/hackernews-clone/screenshot-01.png)
 
 ## Building Your Project
 

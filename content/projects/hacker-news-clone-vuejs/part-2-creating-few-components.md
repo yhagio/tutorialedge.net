@@ -145,7 +145,7 @@ To just below your `<title>` tag. Upon clicking the `cmd-s` you should see your 
 
 At this stage, your application should look something like this:
 
-![Our HackerNews clone as it stands](https://s3-eu-west-1.amazonaws.com/tutorialedge.net/images/hackernews-clone/screenshot-03.png)
+![Our HackerNews clone as it stands](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/hackernews-clone/screenshot-03.png)
 
 ## Next Steps
 

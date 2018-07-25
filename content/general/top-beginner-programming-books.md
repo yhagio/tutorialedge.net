@@ -13,7 +13,7 @@ In this article we will be looking at the best books you can buy to help you lea
 
 ## Code Complete: 2
 
-<p><img alt="Code Complete: 2" src="https://s3-eu-west-1.amazonaws.com/tutorialedge.net/books/code-complete.jpg" class="book-img" />
+<p><img alt="Code Complete: 2" src="https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/books/code-complete.jpg" class="book-img" />
 This is without a doubt one of the best practical guides that any budding programmer should be reading in order to top up their programming skills. This book contains a massive number of practical points that touch upon a wide range of different topics. </p>
 
 This book should without a doubt be a part of any programmers library and it should be read cover to cover to try and absorb some of the exceptional tid-bits of knowledge present within it's covers.

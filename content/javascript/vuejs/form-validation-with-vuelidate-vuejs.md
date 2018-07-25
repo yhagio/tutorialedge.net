@@ -217,7 +217,7 @@ You can then add some styling to show the validation on the right and the form o
 
 If everything has gone as planned, you should get the following result:
 
-![vuejs form validation result](https://s3-eu-west-1.amazonaws.com/tutorialedge.net/images/javascript/vuejs/form-validation-image1.png)
+![vuejs form validation result](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/javascript/vuejs/form-validation-image1.png)
 
 ## Displaying form errors
 
@@ -277,7 +277,7 @@ You can then conditionally apply this class whenever the field is invalid and to
 
 This will then give you the following results whenever the field is invalid or valid:
 
-![vuejs form validation result](https://s3-eu-west-1.amazonaws.com/tutorialedge.net/images/javascript/vuejs/form-validation-image2.png)
+![vuejs form validation result](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/javascript/vuejs/form-validation-image2.png)
 
 Subsequently, you can then display an error message if this is the case. This can be done in numerous ways, depending on the type of message you want to show. You can use the `email` input as an example and show an error message when the `email` field has an invalid email address:
 

@@ -141,7 +141,7 @@ In order for us to be able to deploy both our site to S3 and our functions to AW
 
 You should see your credentials look like this within your travis.ci project settings page: 
 
-![Adding AWS credentials](https://s3-eu-west-1.amazonaws.com/tutorialedge.net/images/vuejs-blog-aws/screenshot-01.png)
+![Adding AWS credentials](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/vuejs-blog-aws/screenshot-01.png)
 
 Now, whenever we commit a new change to our repo, we should see our travis build kick off and run through the two stages of our project's deployment that we've defined above.
 
