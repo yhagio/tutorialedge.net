@@ -19,6 +19,8 @@ The application can be downloaded by cloning the [https://github.com/PacktPublis
 
 One way to start designing an application is by creating mock-ups of the user interfaces. The EveryNote app will look like the following mock-up:
 
+![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/javascript/vuejs/vuex-quickstart-image1.png)
+
 ### The EveryNote mock-up interface
 
 The EveryNote features are simple and well defined, so you can begin by picking a feature and starting to develop it.
@@ -336,6 +338,8 @@ Application code:
 ```
 
 The following is a screenshot of the result:
+
+![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/javascript/vuejs/vuex-quickstart-image2.png)
 
 ## List of notes
 
@@ -803,6 +807,8 @@ NoteEditor,
 ```
 
 After having added some CSS to the components and restyling the application a bit, it now looks like the following figure:
+
+![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/javascript/vuejs/vuex-quickstart-image3.png)
 
 ## EveryNote restyled
 
