@@ -8,7 +8,7 @@ tags: ["vuejs", "javascript"]
 weight: 1
 series: ["vuejs"]
 image: "vuejs.png"
-twitter: "https://twitter.com/paulhalliday_io"
+twitter: "https://amzn.to/2K4Ih5G"
 ---
 
 In this article, you’ll learn to develop an application to take notes, called `EveryNote`, from scratch. You’ll analyze and design the application, as well as preparing the folder structure for the project. After that, you’ll build the application incrementally through tests and code, providing a real-world Vuex development example. 
@@ -809,5 +809,5 @@ After having added some CSS to the components and restyling the application a bi
 You can download the code at this stage by typing the following:
 `git checkout step-2_create-notes`
 
-If you found this article helpful, you can explore more in Andrea Koutifaris’ Vuex Quick Start Guide. This book is the easiest way to get started with Vuex to improve your Vue.js application architecture and overall user experience.
+If you found this article helpful, you can explore more in Andrea Koutifaris’ [Vuex Quick Start Guide](https://amzn.to/2K4Ih5G). This book is the easiest way to get started with Vuex to improve your Vue.js application architecture and overall user experience.
 

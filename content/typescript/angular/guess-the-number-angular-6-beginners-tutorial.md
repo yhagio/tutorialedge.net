@@ -2,7 +2,7 @@
 title: "How to Create a Customary Hello Angular App – Guess the Number!"
 date: 2018-07-25T15:42:51+01:00
 draft: true
-desc: "earn how to create a customary Hello Angular App – Guess the Number! in this tutorial by Kevin Hennessy, a developer, team lead, and solutions architect, working on web-based projects, primarily using the Microsoft technology stack."
+desc: "Learn how to create a customary Hello Angular App – Guess the Number! in this tutorial by Kevin Hennessy, a developer, team lead, and solutions architect, working on web-based projects, primarily using the Microsoft technology stack."
 author: "Kevin Hennessy"
 tags: ["typescript", "angular"]
 series: ["typescript"]
@@ -303,6 +303,6 @@ The app should appear on your browser.
 
 If you glance at your component file and template, you should be mightily impressed with what you’ve achieved. You’re not writing any code to update the UI when the application is running. Still, everything works perfectly.
 
-If you found this article helpful, you can explore Angular 6 by Example - Third Edition. This book will help you harness the power of Angular components, router, forms, directives and much more to build professional-grade web apps with TypeScript.
+If you found this article helpful, you can explore [Angular 6 by Example - Third Edition](https://amzn.to/2LJU8uJ). This book will help you harness the power of Angular components, router, forms, directives and much more to build professional-grade web apps with TypeScript.
  
 
