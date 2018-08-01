@@ -18,6 +18,7 @@ deploy:
   bucket: tutorialedge.net
   local-dir: temp
   skip_cleanup: true
+  region: eu-west-1
   acl: public_read
   on:
     repo: elliotforbes/tutorialedge-v2
