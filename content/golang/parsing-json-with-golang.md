@@ -1,29 +1,43 @@
-+++
-date = "2017-04-09T21:07:11+01:00"
-title = "Parsing JSON files With Golang"
-draft = true
-desc = "In this tutorial we examine the encoding/json go package and how to parse xml files."
-tags = ["golang"]
-series = [ "golang" ]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+date: "2017-04-09T21:07:11+01:00"
+title: "Parsing JSON files With Golang"
+draft: true
+desc: "In this tutorial we examine the encoding/json go package and how to parse JSON files."
+tags: ["golang"]
+series: ["golang"]
+author: "Elliot Forbes"
+twitter: "https://twitter.com/Elliot_F"
+---
 
-JSON or Javascript Object Notation as it is short for, is a standard format for sending and receiving information. We could represent the same information with either XML or JSON, but JSON provides one advantage in the fact it is far more compact. This provides advantageous for situations where bandwidth is 
-In this tutorial we’ll be looking at how one can parse xml files from the local file system using Golang’s in-built ‘encoding/json’ package. 
+Welcome all, in this tutorial, we are going to be taking a look at how you can read in JSON files, or JSON HTTP responses and parse them to your hearts desire. 
 
-JSON is now the most popular message format available and you'll find that most RESTful APIs provide JSON responses due to the fact it's easily readable and most popular languages provide JSON support by default.
+JSON or Javascript Object Notation as it is short for, is a standard format for sending and receiving information. We could represent the same information with either XML or JSON, but JSON provides one advantage in the fact it is far more compact and in my personal experience, more readable. 
+
+JSON is now the most popular data format available and you'll find that most RESTful APIs provide JSON responses when you try to interface with them. Thus being able to work with it and parse it in Go is incredibly useful!  
 
 ## The Encoding/Json Package
 
+So, to get us started, we'll be leveraging the `encoding/json` standard library package in order to get us up and running. I highly recommend you check out the official documentation for this here:  [Encoding/Json](https://golang.org/pkg/encoding/json/). 
 
-I recommend you check out the official documentation for:  [Encoding/Json](https://golang.org/pkg/encoding/json/). 
+Let's start with a really simple Go program as our base, we'll build this out to showcase how to work with various different examples. Create a new file called `main.go`.
 
+```go
+package main
 
-## Our Sample JSON File
+import (
+	"fmt"
+)
 
+func main() {
+	fmt.Println("Hello World")
+}
+```
 
-For the purpose of this tutorial we’ll be parsing the following json file. We'll be parsing nested elements, integers and arrays.  
+And we can run this with a simple `go run main.go` call. This should return a simple `Hello World`.
+
+## Reading and Parsing a JSON File
+
+Let's try and read in a simple JSON file and then parse it. For the purpose of this tutorial we’ll be parsing the following json within our file. Copy this and save it into a `users.json` file within the same directory as your `main.go` file.
 
 ```json
 {
@@ -50,11 +64,11 @@ For the purpose of this tutorial we’ll be parsing the following json file. We'
 }
 ```
 
+This should be complex enough to test our skills and should allow us to transfer our skills to real world examples fairly easily. 
 
 ## Reading the JSON File
 
-
-We’ll be using the os package in order to open up our users.xml file from our filesystem. 
+We’ll be using the `os` package in order to open up our `users.json` file from our filesystem. 
 
 ```go
 // Open our jsonFile
@@ -68,26 +82,27 @@ fmt.Println("Successfully Opened users.json")
 defer jsonFile.Close()
 ```
 
+#### Parsing with Structs
 
-## Defining our Structs
+We have a few options when it comes to parsing the JSON that is contained within our `users.json` file. We could either unmarshal the JSON using a set of predefined structs, or we could unmarshal the JSON using a map[string]interface{} to parse our JSON into strings mapped against arbitrary data types.  
 
-We'll be decoding JSON and populating these Go data structures by unmarshalling but first we'll need to define these data structures like so:
+If you know the structure that you are expecting then I would recommend going down the verbose route and defining your structs like so:
 
 ```go
-Import (
+package main
+
+import (
 	…
 	// import our encoding/json package
 	“encoding/json”
 	…
 )
 
-
 // Users struct which contains
 // an array of users
 type Users struct {
 	Users []User `json:"users"`
 }
-
 
 // User struct which contains a name
 // a type and a list of social links
@@ -98,7 +113,6 @@ type User struct {
 	Social Social `json:"social"`
 }
 
-
 // Social struct which contains a
 // list of links
 type Social struct {
@@ -107,6 +121,7 @@ type Social struct {
 }
 ```
 
+Once we have these in place, we can use them to unmarshal our JSON.
 
 ## Unmarshalling our JSON
 
@@ -116,15 +131,12 @@ Once we've used the os.Open function to read our file into memory, we then have 
 // read our opened xmlFile as a byte array.
 byteValue, _ := ioutil.ReadAll(jsonFile)
 
-
 // we initialize our Users array
 var users Users
-
 
 // we unmarshal our byteArray which contains our
 // jsonFile's content into 'users' which we defined above
 json.Unmarshal(byteValue, &users)
-
 
 // we iterate through every user within our users array and
 // print out the user Type, their name, and their facebook url
@@ -136,7 +148,6 @@ for i := 0; i < len(users.Users); i++ {
 	fmt.Println("Facebook Url: " + users.Users[i].Social.Facebook)
 }
 ```
-
 
 ## Full Implementation
 
@@ -225,4 +236,4 @@ func main() {
 
 ## Conclusion
 
-If you found this tutorial helpful or have anything else to add then please let me know in the comments section below.
+Hopefully this tutorial helped to demystify the art of working with JSON in Golang. If you found this tutorial helpful or have anything else to add then please let me know in the comments section below. 
