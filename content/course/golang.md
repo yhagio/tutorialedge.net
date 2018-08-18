@@ -56,7 +56,7 @@ In this course, we are going to be covering a wide number of topics in order to 
 * Lesson 3 - Complex Data Types in Go
 * Lesson 4 - Variables in Go
 * Lesson 5 - Methods in Go
-* Lesson 6 - Functions in Go
+* Lesson 6 - [Functions in Go](/golang/go-functions-tutorial/)
 * Lesson 7 - Interfaces in Go
 * Lesson 8 - Packages in Go
 
