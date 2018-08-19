@@ -53,7 +53,7 @@ In this course, we are going to be covering a wide number of topics in order to 
 
 * Lesson 1 - Installing Go and Building your Go Application
 * Lesson 2 - [Basic Data Types Go](/golang/go-basic-types-tutorial/)
-* Lesson 3 - Complex Data Types in Go
+* Lesson 3 - [Complex Data Types in Go](/golang/go-complex-types-tutorial/)
 * Lesson 4 - Variables in Go
 * Lesson 5 - Methods in Go
 * Lesson 6 - [Functions in Go](/golang/go-functions-tutorial/)
