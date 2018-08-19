@@ -13,6 +13,10 @@ twitter: "https://twitter.com/Elliot_F"
 
 Websockets are something I find interesting in the sense that they provide us with an alternative option to communication between applications as opposed to the standard RESTful API solution. With Sockets we can do cool things such as real-time communication between thousands to hundreds of thousands of different clients without having to incur the expense of hundreds of thousands of RESTful API calls hitting our servers every minute. 
 
+## Video Tutorial
+
+<div style="position:relative;height:0;padding-bottom:47.08%"><iframe src="https://www.youtube.com/embed/ycgCMOWPgiw?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="765" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+
 ## Real Life Example
 
 To put things into perspective and show how important websockets can be. Imagine we had a chat application that got all the latest messages from a single server and pushed all new messages to that same server.
