@@ -66,12 +66,63 @@ This represents a mapping between a `string` data type and an `int` data type.
 
 #### Structs
 
-> Under Construction
+In Go, we have this concept of a `struct`. These `structs` allow us to create data types that are aggregates of other data types. 
+
+Say for instance, we had this concept of a `Person` within our application. We could create a person `struct`, that has a number of fields within it, we could for instance, have a `name` field which is of type `string` and an `age` field which is of type `int` like so:
 
 ```go
+// our Person struct
 type Person struct {
   name string
   age int
+}
+
+// declaring a new `Person`
+var myPerson Person
+```
+
+The advantage of using these `struct` is that we can effectively treat all of these values or `fields` as they are called as a single entity and modify that easily. 
+
+```go
+// declaring a new `elliot`
+elliot := Person{name: "Elliot", age: 24}
+
+// trying to roll back time to before I was injury prone
+elliot.age = 18
+```
+
+### Nested Structs
+
+Structs are incredibly extensible due to the fact we can create nested structs within our structs. For example, imagine we had a `Team` struct who had a number of people within that team:
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	type Person struct {
+		name string
+		age  int
+	}
+
+	// our Boss struct
+	type Team struct {
+		name    string
+		players [2]Person
+	}
+
+	// declaring an empty 'Boss'
+	var myTeam Team
+	fmt.Println(myTeam)
+
+	players := [...]Person{Person{name: "Forrest"}, Person{name: "Gordon"}}
+	// declaring a boss with employees
+	celtic := Team{name: "Celtic FC", players: players}
+  fmt.Println(celtic)
+  
 }
 ```
 
