@@ -57,8 +57,10 @@ In this course, we are going to be covering a wide number of topics in order to 
 * Lesson 4 - Variables in Go
 * Lesson 5 - Methods in Go
 * Lesson 6 - [Functions in Go](/golang/go-functions-tutorial/)
-* Lesson 7 - Interfaces in Go
+* Lesson 7 - [Interfaces in Go](/golang/go-interfaces-tutorial/)
 * Lesson 8 - Packages in Go
+* Lesson 9 - Modules in Go (Go 1.11)
+* Lesson 10 - [Concurrency in Go with goroutines](/golang/concurrency-with-golang-goroutines/)
 
 ## Supporting Me
 
