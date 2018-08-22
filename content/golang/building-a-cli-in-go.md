@@ -22,6 +22,12 @@ The overall aim of this particular tutorial is to give you an idea as to how you
 
 Golang is growing massively in popularity and we have seen large enterprise companies such as Hashicorp adopt the language for quite a number of different tools and systems. And for good reason, the design of Go lends itself incredibly well to these styles of application and the ability to cross-compile a binary executable for all major platforms easily is a massive win.
 
+## Video Tutorial
+
+If you prefer learning through the medium of video, then feel free to check out this tutorial here:
+
+<div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/i2p0Snwk4gc?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="640" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+
 ## Getting Started
 
 Let's create a new directory on our computer called `go-cli/` or something along those lines. We'll be creating a directory structure that will look like this for our project:
