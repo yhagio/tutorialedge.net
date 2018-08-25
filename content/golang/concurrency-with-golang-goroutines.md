@@ -12,6 +12,12 @@ twitter = "https://twitter.com/Elliot_F"
 
 Welcome all! In this tutorial, we are going to be looking at how you can use `goroutines` within you Go based programs and subsequently improve the performance with which your programs execute. 
 
+## Video Tutorial
+
+<div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/ARHXmR0_MGY?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="640" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+
+## Introduction
+
 Now, Go is an incredibly performant language that features a hell of a lot of great features that allow you to build incredibly fast applications. It redefines what it means to build concurrent programs by providing us with these `goroutines` and `channels`.
 
 Using goroutines is a very quick way to turn what would be a sequential program into a concurrent program without having to worry about things like creating threads or thread-pools. But, as with all concurrent programming, this comes with some dangers that must be considered before you run around slapping the `go` keyword in front of all your function calls.
