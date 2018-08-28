@@ -93,7 +93,7 @@ license that can be found in the LICENSE file.
 
 	</script>
 
-	<button onClick="run();" id="myButton" disabled>Run</button>
+	<button onClick="run();" id="runButton" disabled>Run</button>
 </body>
 </html>
 ```
