@@ -2,7 +2,7 @@
 title: "Learning Generics in Rust"
 date: 2018-09-01T14:52:49+01:00
 draft: true
-desc: "Learn generics in this tutorial by Andrew Johnson, a software developer who has worn many hats. Professionally, he has worked on projects written in C, C++, Java, Python, Ruby, JavaScript, Haskell, OCaml, and now Rust."
+desc: "Learn generics in this tutorial by Andrew Johnson, a software developer who has worn many hats."
 author: "Andrew Johnson"
 weight: 2
 tags: ["rust"]
