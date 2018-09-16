@@ -4,7 +4,7 @@
 
 body {
   font-family: "proxima-nova", "proxima-nova-all", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #3D4C62;
+  color: #4a4a4a;
   font-weight: 400;
   line-height: 1.75;
   text-rendering: optimizeLegibility;
@@ -47,6 +47,8 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   outline: none;
   box-shadow: 0 3px 8px 0 rgba(0,0,0,0.03);
+  font-size: 1.1rem;
+  line-height: 1.65;
 }
 
 
@@ -1102,4 +1104,23 @@ ol.breadcrumb li a {
 .course-progress-box button {
   font-weight: 700;
   padding: 10px 20px;
+}
+
+.badge {
+  background-color: white;
+  box-shadow: 0 14px 28px 0 rgba(115,143,147,.1);
+  padding: 20px 20px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.badge img {
+  width: 60px;
+  height: auto;
+}
+.badge h3 {
+  color: #738f93;
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 12px;
 }

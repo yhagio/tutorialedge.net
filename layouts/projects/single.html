@@ -1,48 +1,78 @@
 {{ partial "header.html" . }}
 
-<div class="color-bar">
+<div class="top-bar">
+	<h1>{{ .Title }}<br/><small class="post-info">
+		<i class="ion ion-ios-calendar-outline"></i> {{ dateFormat "Monday, Jan 2, 2006" .Date }} |
+		<i class="ion ion-social-twitter-outline"></i>
+		<a href="{{.Params.twitter }}">{{ .Params.author }}</a> |
+		<i class="ion ion-ios-clock-outline"></i> {{ .ReadingTime }} Minutes</small></h1>
 </div>
 
-<div class="container">
+
+<div class="full-width">
 	<div class="row no-hidden">
 		<div class="col-sm-9">
-			<div class="content">
-				<h1>{{ .Title }}</h1>
-				<div class="post-info">
-					<i class="ion ion-ios-calendar-outline"></i> {{ dateFormat "Monday, Jan 2, 2006" .Date }} |
-					<i class="ion ion-social-twitter-outline"></i>
-					<a href="{{.Params.twitter }}">{{ .Params.author }}</a> |
-					<i class="ion ion-ios-clock-outline"></i> {{ .ReadingTime }} Minutes
+			
+			<article class="content">
+				<div class="post-content">
+					<article>
+						{{ .Content }}
+					</article>
 				</div>
-				{{ .Content }}
 
-				<hr>
+				<div class="post_divider"></div>
+
+				<ul class="social-btns">
+					<li>
+						<a target="_blank" href="https://twitter.com/share?url={{ .Permalink }}" class="social-btn-dissolve twitter">
+							<i class="ion ion-social-twitter"></i>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" class="social-btn-dissolve facebook">
+							<i class="ion ion-social-facebook"></i>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://plus.google.com/share?url={{ .Permalink }}" class="social-btn-dissolve google">
+							<i class="ion ion-social-googleplus"></i>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="mailto:?&subject={{ .Title }}&body={{ .Permalink }}" class="social-btn-dissolve tumblr">
+							<i class="ion ion-ios-email"></i>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{ .Title }}&summary={{ .Params.desc }}"
+						class="social-btn-dissolve linkedin">
+							<i class="ion ion-social-linkedin"></i>
+						</a>
+					</li>
+				</ul>
+
 				{{ partial "comments.html" .}}
-			</div>
+
+			</article>
 		</div>
+
 
 		<div class="col-sm-3">
 
-			<div class="course-sidebar">
-					<h4>Course</h4>
-
-					{{ range $key, $value := .Params.series }} {{ range sort (index $.Site.Taxonomies.series $value) }}
-					<a href="{{ .Permalink }}">
-						<!-- <img src="/images/{{ $.Params.image }}" alt="{{ $.Title }} Logo"> -->
-						<h5>{{ .Title }}</h5>
-					</a>
-					<hr/>
-					{{ end }} {{ end }}
-
-
+			<div class="toc">
+				<h4>Table Of Contents</h4>
+				{{.TableOfContents}}
 			</div>
 
+			{{ partial "sidebar.html" . }}
 		</div>
 
 
 	</div>
 </div>
 
-
+<script>
+	// var sidebar = new StickySidebar('#sidebar', {topSpacing: 20});
+</script>
 
 {{ partial "footer.html" . }}
