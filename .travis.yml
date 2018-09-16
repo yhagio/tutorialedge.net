@@ -4,8 +4,6 @@ install:
 - sudo dpkg -i hugo*.deb
 script:
 - hugo --buildDrafts
-- mv appspec.yml public
-- cp -r scripts public/
 deploy:
   provider: s3
   access_key_id: AKIAIN5O72B44O5TWFVA
