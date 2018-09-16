@@ -1,40 +1,40 @@
 {{ partial "header.html" . }}
 
-<div class="color-bar">
-</div>
 
-<div class="container">
-	<div class="content">
-			<h1>{{ .Title }}</h1>
-			{{ .Content }}
-
-			<hr>
-			<h2 class="text-center">Tutorials</h2>
-			<br>
-			<div class="list-group">
-
-				{{ range $key, $value := .Params.series }} {{ range sort (index $.Site.Taxonomies.series $value) }}
-				<a href="{{ .Permalink }}" class="list-group-item list-group-item-action flex-column align-items-start">
-					<div class="row">
-						<div class="col-sm-1">
-							<img src="/images/{{ $.Params.image }}" alt="{{ $.Title }} Logo">
-						</div>
-						<div class="col-sm-11">
-							<div class="d-flex w-100 justify-content-between">
-								<h5 class="mb-1">{{ .Title }}</h5>
-								<small>
-									<i class="ion ion-ios-clock-outline"></i> {{ .ReadingTime }} Minutes</small>
-							</div>
-							<p class="mb-1">{{ .Page.Params.desc }}</p>
-							<small>Published: {{ dateFormat "Monday, Jan 2, 2006" .Page.Date }}</small>
-						</div>
-					</div>
-				</a>
-				{{ end }} {{ end }}
-			</div>
+<div class="top-bar">
+	<div class="container">
+		<h2>Course: {{.Title}}</h2>
 	</div>
 </div>
 
+<div class="course-outline">
+	<div class="container">
+		{{ .Content }}
+	</div>
+</div>
+
+<div class="container course-listing">
+	<h3>Course Lessons</h3>
+
+	<div class="row">
+		{{ range $key, $value := .Params.series }}
+		{{ range sort (index $.Site.Taxonomies.series $value) }}
+		<div class="col-lg-4">
+			<a href="{{ .Permalink }}">
+				<div class="course-progress-box">
+					<h2><small>Lesson | {{ .ReadingTime }} <i class="ion ion-ios-clock-outline"></i> </small><br />{{ .Title }}</h2>
+					<p>{{ .Page.Params.desc }}</p>
+					<p>Published: {{ dateFormat "Monday, Jan 2, 2006" .Page.Date }}</p>
+					<button class="btn btn-success">View Lesson</button>
+				</div>
+			</a>
+		</div>
+		{{ end }}
+		{{ end }}
+
+	</div>
+
+</div>
 
 
 {{ partial "footer.html" . }}

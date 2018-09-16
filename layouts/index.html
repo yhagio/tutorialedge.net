@@ -1,35 +1,30 @@
-{{ partial "header.html" . }} {{ partial "welcome-bar.html" . }}
+{{ partial "header.html" . }}
+<link rel="stylesheet" href="css/homepage.css">
+
+{{ partial "welcome-bar.html" . }}
 
 <div class="courses">
 	<div class="container">
 		<div class="row">
 			<div class="text-center col-sm-12">
 				<h2>All Courses</h2>
-				<p>Dive in to some of our in-depth courses that are all 100% free.</p>
+				<div class="clear"></div>
 			</div>
 			<div class="clear"></div>
 			{{ range (where .Site.Pages "Section" "course") }} {{ if and (ne .Title "Course") (ne .Title "Courses") }}
-			<div class="col-sm-3">
-				<a href="{{ .Permalink }}">
-					<div class="course-card">
-						<div class="top-half">
-							<img src="{{ .Site.BaseURL }}/images/{{ .Params.image }}" alt="{{ .Title }} Image">
+			<div class="col-sm-4">
+					<a href="{{ .Permalink }}">
+						<div class="course-progress-box">
+            <img src="{{ .Site.BaseURL }}/images/{{ .Params.image }}" alt="{{ .Title }} Image">
+							<h2><small>Course</small><br />{{ .Title }}</h2>
+							<button class="btn btn-success">View Course</button>
 						</div>
-						<div class="bottom-half">
-							<div class="title">{{.Title}}</div>
-						</div>
-						<div class="course-info">
-
-						</div>
-					</div>
-				</a>
-			</div>
+					</a>
+				</div>
 			{{ end }} {{ end }}
-
 		</div>
 	</div>
 </div>
-
 
 <div class="features">
 	<div class="container">
@@ -50,32 +45,18 @@
 <div class="tutorials">
 	<div class="container">
 		<h2>All Tutorials</h2>
-		<div class="row flexbox-courses">
+		<div class="row course-listing">
 			{{ $paginator := .Paginate .Data.Pages.ByDate.Reverse }} {{ range $paginator.Pages }}
 			<div class="col-sm-4">
 				<a href="{{ .Permalink }}">
-					<div class="course-card">
-						<div class="top-half">
-							{{ if isset .Params "image" }}
-							<img src="{{ .Site.BaseURL }}/images/{{ .Params.image }}" alt="{{ .Title }} Image">
-							{{ else }}
-							<img src="{{ .Site.BaseURL }}/images/logo.png" alt="{{ .Title }} Image">
-							{{ end }}
-						</div>
-						<div class="bottom-half">
-							<div class="title">{{.Title}}</div>
-							<div class="desc">{{ .Params.desc }}</div>
-						</div>
-						<div class="course-ino">
-							<div><i class="ion ion-social-twitter-outline"></i> {{ .Params.author }}</div>
-							<!-- {{ range $key, $value := .Params.series }}
-							<div>{{ $value }}</div>
-							{{ end }}
-
-							<div>{{ .Date.Format "02 Jan 06" }}</div> -->
-						</div>
+					<div class="course-progress-box">
+						<h2><small>Lesson | {{ .ReadingTime }} <i class="ion ion-ios-clock-outline"></i> </small><br />{{ .Title }}</h2>
+						<p>{{ .Params.desc }}</p>
+						<p>Published: {{ dateFormat "Monday, Jan 2, 2006" .Date }}</p>
+						<button class="btn btn-success">Continue Course</button>
 					</div>
 				</a>
+
 			</div>
 
 			{{ end }}

@@ -1,30 +1,19 @@
 {{ partial "header.html" . }}
 
-<div class="color-bar">
+<div class="top-bar">
+	<h1>{{ .Title }}<br/><small class="post-info">
+		<i class="ion ion-ios-calendar-outline"></i> {{ dateFormat "Monday, Jan 2, 2006" .Date }} |
+		<i class="ion ion-social-twitter-outline"></i>
+		<a href="{{.Params.twitter }}">{{ .Params.author }}</a> |
+		<i class="ion ion-ios-clock-outline"></i> {{ .ReadingTime }} Minutes</small></h1>
 </div>
+
 
 <div class="full-width">
 	<div class="row no-hidden">
 		<div class="col-sm-9">
 			
 			<article class="content">
-					<nav aria-label="breadcrumb">
-					<ol class="breadcrumb">
-						<li class="breadcrumb-item"><a href="/">home</a></li>
-						{{ if isset .Params "series" }}
-						<li class="breadcrumb-item"><a href="/tags/{{ (index .Params.series 0) }}">{{ (index .Params.series 0) }}</a></li>
-						{{ end }}	
-						<li class="breadcrumb-item">{{ .Title }}</li>
-					</ol>
-					</nav>
-				<h1>{{ .Title }}</h1>
-				<div class="post-info">
-					<i class="ion ion-ios-calendar-outline"></i> {{ dateFormat "Monday, Jan 2, 2006" .Date }} |
-					<i class="ion ion-social-twitter-outline"></i>
-					<a href="{{.Params.twitter }}">{{ .Params.author }}</a> |
-					<i class="ion ion-ios-clock-outline"></i> {{ .ReadingTime }} Minutes
-				</div>
-
 				<div class="post-content">
 					<article>
 						{{ .Content }}
@@ -69,6 +58,7 @@
 
 
 		<div class="col-sm-3">
+
 			<div class="toc">
 				<h4>Table Of Contents</h4>
 				{{.TableOfContents}}

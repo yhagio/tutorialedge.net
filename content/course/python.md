@@ -14,3 +14,4 @@ Python is without a doubt one of the best languages to learn if you are interest
 ## Auxiliary Resources
 
 If you are interested in buying books in order to aid your learning of Python then I highly recommend checking out my article on [The Top Books for Learning Python](/python/best-books-for-python/)
+

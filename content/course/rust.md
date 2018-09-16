@@ -7,3 +7,7 @@ layout = "simple"
 series = ["rust"]
 image = "rust-logo.png"
 +++
+
+##### Course Outline
+
+In this course, we are going to look at some of the fundamentals of the Rust programming language.

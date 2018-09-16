@@ -1,0 +1,34 @@
+
+nav.navbar ul li a {
+  color: #fff !important;
+}
+nav ul li .dropdown-menu a  {
+  color: black !important;
+}
+nav .navbar-brand span{
+  color: #fff !important;
+  font-size: 1.2rem;
+}
+
+nav img {
+  width: 30px;
+  height: 30px;
+  margin-top: -3px;
+  margin-right: 0px;
+}
+
+nav .dropdown-menu img {
+  width: 20px;
+  height: 20px;
+  margin-left: 0;
+  padding: 0;
+}
+
+.bg-primary {
+  background-color: #39424e !important;
+}
+.btn-outline-success {
+  background-color: #0d5ea6 !important;
+  color: #fff !important;
+  border: none;
+}

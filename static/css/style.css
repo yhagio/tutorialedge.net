@@ -10,7 +10,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f4f5f9;
+  background-color: #f5f7f9;
 }
 
 .full-width {
@@ -38,82 +38,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .content {
   background-color: white;
-  border-radius: 4px;
   padding: 40px;
-  margin-top: -260px;
   margin-bottom: 40px;
+  margin-top: 20px;
   z-index: 100;
   text-decoration: none;
   width: 100%;
   display: block;
   outline: none;
   box-shadow: 0 3px 8px 0 rgba(0,0,0,0.03);
-  border: 1px solid #d4dadf;
 }
 
-article .post-content ol {
-  list-style-type: none;
-  clear: both;
-}
-
-article .post-content ol li {
-  position: relative;
-  margin-bottom: 10px;
-  counter-increment: step-counter;
-}
-
-article .post-content ol li:before {
-  content: counter(step-counter);
-  margin: 0 10px 0 -40px;
-  font-size: .8rem;
-  color: #5e6e99;
-  padding: 0;
-  border: 1px solid rgba(10, 46, 74, .2);
-  border-radius: 100%;
-  height: 28px;
-  width: 28px;
-  display: inline-block;
-  text-align: center;
-  position: absolute;
-  top: -1px;
-}
-
-nav {
-  box-shadow: none;
-  color: #123546;
-}
-.bg-primary {
-  background-color: #ffffff !important;
-}
-.btn-outline-success {
-  background-color: rgb(42, 191, 245) !important;
-  color: #31475A !important;
-  border: 1px solid  rgb(42, 191, 245) !important; 
-}
-nav.navbar ul li a {
-  color: #123546 !important;
-}
-nav ul li .dropdown-menu a  {
-  color: black !important;
-}
-nav .navbar-brand span{
-  color: #123546 !important;
-  font-size: 1.2rem;
-}
-
-nav img {
-  width: 30px;
-  height: 30px;
-  margin-top: -3px;
-  margin-right: 0px;
-}
-
-nav .dropdown-menu img {
-  width: 20px;
-  height: 20px;
-  margin-left: 0;
-  padding: 0;
-}
 
 .paginate {
   width: 100%;
@@ -138,7 +73,6 @@ nav .dropdown-menu img {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
 
 
 .blog-list-article {
@@ -442,19 +376,13 @@ line-height: 24px;
   color: #333;
 }
 
-.color-bar {
-  width: 100%;
-  height: 340px;
-  background-color: #005e7d;
-  color: #14233C;
-  z-index: -100;
-}
 .content h1 {
   font-size: 33px;
   line-height: 1.24;
   font-weight: 400;
   color: #3a3c4c;
   margin: 0px;
+  margin-top: 0;
   margin-bottom: 20px;
   padding: 0;
 }
@@ -468,8 +396,8 @@ line-height: 24px;
   border-radius: 4px;
   padding: 20px;
   margin-bottom: 40px;
+  margin-top: 20px;
   z-index: 100;
-  margin-top: -260px;
   text-decoration: none;
   width: 100%;
   display: block;
@@ -490,9 +418,9 @@ line-height: 24px;
   float: left;
   margin-right: 10px;
 }
-.left-sidebar {
+
+.right-sidebar {
   background-color: white;
-  border-radius: 4px;
   padding: 20px;
   margin-bottom: 40px;
   z-index: 100;
@@ -501,25 +429,24 @@ line-height: 24px;
   display: block;
   outline: none;
   box-shadow: 0 3px 8px 0 rgba(0,0,0,0.03);
-  border: 1px solid #d4dadf;
 }
-.left-sidebar h4 {
+.right-sidebar h4 {
   font-size: 18px;
   font-weight: 800;
   margin-bottom: 10px;
 }
-.left-sidebar a {
+.right-sidebar a {
   color: #555;
   font-size: 14px;
 }
-.left-sidebar .collection {
+.right-sidebar .collection {
   border: none;
   padding: 0;
   margin: 0;
   margin-top: 20px;
 }
 
-.left-sidebar .collection-item {
+.right-sidebar .collection-item {
   border: none;
   padding: 0;
   margin: 0;
@@ -536,14 +463,14 @@ line-height: 24px;
   padding-top: 10px;
 }
 
-.left-sidebar .collection-item a:hover {
+.right-sidebar .collection-item a:hover {
   z-index: 2;
   color: #56CDFC;
   background-color: white;
   border-color: #E7E7EC;
 }
 
-.left-sidebar .collection-item:hover:before {
+.right-sidebar .collection-item:hover:before {
   background: #56CDFC;
   content: '';
   display: block;
@@ -583,7 +510,7 @@ hr {
   font-family: Raleway;
   text-transform: none;
   font-size: 22px;
-  line-height: 40px;
+  line-height: 20px;
   font-weight: 500;
 }
 
@@ -604,11 +531,11 @@ hr {
 }
 
 .post-info {
-  font-size: 16px;
+  font-size: 14px;
 line-height: 1.35;
+font-weight: 700;
 margin-bottom: 17px;
-margin-top: 17px;
-color: #8F919D;
+color: #738f93;
 }
 .content .info .ion {
   font-size: 16px;
@@ -726,160 +653,6 @@ background-color: #f8f8f8;
   height: auto;
   margin: auto;
   display: block;
-}
-
-.welcome-bar {
-  background: #005e7d;
-  color: #fff;
-  width: 100%;
-  padding: 1rem 0 10rem 0;
-  text-align: center;
-}
-
-.welcome-bar h1 {
-  color: #fff !important;
-  font-size: 2.9375rem;
-  font-weight: 600;
-  line-height: 3.125rem;
-}
-.welcome-bar p {
-  margin-bottom: 40px;
-}
-
-.features {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #005e7d;
-  text-align: left;
-}
-
-.features h2{
-  font-family: geomanist,-apple-system,BlinkMacSystemFont,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
-font-weight: 500;
-font-size: 52px;
-margin-top: 0;
-margin-bottom: 0;
-color: #fff;
-line-height: 64px;
-}
-.features img {
-  width: 220px;
-  height: auto;
-  padding: 0;
-}
-.features p {
-  font-size: 16px;
-color: #fff;
-line-height: 18px;
-margin-top: 16px;
-display: inline-block;
-}
-.features a {
-  color: #fff;
-  text-decoration: underline;
-}
-
-.join-us {
-  background-color: #22798A;
-  width: 100%;
-  padding: 20px;
-}
-
-.join-us h5 {
-  color: #fff;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 24px;
-  margin-bottom: 0;
-}
-
-.join-us p {
-  clear: both;
-  color: #fff;
-  font-size: 13px;
-  margin-bottom: 0;
-}
-
-.join-us button {
-  display: block;
-  width: 100%;
-  margin-top: 20px;
-  background-color: #fff;
-  color: #22798A;
-}
-
-footer.page-footer{
-  background-color: #303C42;
-  color: #fff;
-  padding-top: 0px !important;
-  padding-bottom: 0px !important;
-  margin-top: 0;
-}
-footer.page-footer h3 {
-  color: #fff;
-  font: 500 14px/16px Roboto,sans-serif;
-  margin: 0 0 8px;
-}
-footer.page-footer .row {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-  display: flex;
-}
-footer.page-footer .padded {
- padding: 40px;
-}
-footer.page-footer .col {
-  margin:0;
-  padding: 0;
-  flex: 1;
-}
-footer a {
-  color: #fff;
-}
-footer a:hover {
-  color: #fff;
-}
-footer h5 {
-  color: white;
-}
-footer .footer-special {
-  flex: 1;
-    background: #37424b;
-}
-footer .footer-special .logo{
-  width: 100%;
-  padding: 10px;
-  border-bottom: 1px solid #455a64;
-  display: block;
-}
-footer .footer-special .logo a {
-      margin: -6px 0 0;
-    max-width: 216px;
-    font-size: 26px;
-    color: white;
-    font-weight: 200;
-    width: 100%;
-    vertical-align: top;
-}
-footer .footer-special img {
-  width: 50px;
-  height: 50px;
-}
-
-footer ul li a {
-      color: #cfd8dc;
-    display: block;
-    padding: 4px 0;
-}
-footer p {
-  color: #cfd8dc;
-}
-
-footer .footer-copyright {
-  background-color: #455A64 !important;
-  color: #fafafa !important;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 .clear {
@@ -1103,16 +876,14 @@ box-shadow: 2px 3px 7px 0 rgba(0,0,0,0.25);
 }
 .toc {
   background-color: white;
-  border-radius: 4px;
   padding: 30px;
   height: auto;
   text-decoration: none;
   display: block;
   width: 100%;
   margin-bottom: 40px;
-  margin-top: -260px;
+  margin-top: 20px;
   box-shadow: 0 3px 8px 0 rgba(0,0,0,0.03);
-  border: 1px solid #d4dadf;
 }
 .toc h4 {
   font-size: 18px;
@@ -1260,4 +1031,75 @@ ol.breadcrumb li {
 }
 ol.breadcrumb li a {
   color: #738f93;
+}
+
+/* profile page */
+.top-bar {
+  width: 100%;
+  background-color: #fff;
+  padding: 25px;
+  border-bottom: 1px solid #E7E7EC;
+}
+.top-bar h1, .top-bar h2 {
+  font-family: var(--font-family-text);
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.course-listing h3{
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.course-outline {
+  background-color: white;
+  padding: 20px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.course-progress-box {
+  background-color: white;
+  box-shadow: 0 14px 28px 0 rgba(115,143,147,.4);
+  padding: 20px 20px;
+  margin-bottom: 40px;
+}
+
+.course-progress-box img {
+  width: 100px;
+  height: auto;
+}
+.course-progress-box p {
+  color: #738f93;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.course-listing a {
+  text-decoration: none !important;
+}
+
+.course-progress-box h2 {
+  margin: 0;
+  color: #39424e;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+.course-progress-box h2>small {
+  color: #738f93;
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.course-progress-box button {
+  font-weight: 700;
+  padding: 10px 20px;
 }

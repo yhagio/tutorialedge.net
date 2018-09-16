@@ -31,13 +31,27 @@ This represents a fairly standard set of endpoints that will allow give us *most
 
 For the purposes of this tutorial series, we'll be creating an Amazon Aurora DB instance which will be MySQL 5.6 compatible. This will cost roughly $30/month to run in a single-node configuration.
 
-Now, the lower cost option for spinning up a database could be to run an EC2 t2.micro instance and run MySQL on top of that. However, you then have to worry about things such as resiliency, automatic failover, monitoring and more. By buying into these managed services, we effectively trade our money for peace-of-mind. 
+Now, the "lower" cost option for spinning up a database could be to run an EC2 t2.micro instance and run MySQL on top of that. However, you then have to worry about things such as resiliency, automatic failover, monitoring and more. By buying into these managed services, we effectively trade our money for peace-of-mind. 
+
+And, whilst the absolute cost of the Amazon Aurora database might be higher than an MySQL database running atop of an EC2 instance, you have to bear in mind that you are paying for something that can grow to suit your applications high demands with no additional time invested on your part. 
 
 If our blog happens to go viral for any reason, Amazon Aurora will be able to handle the massive surge in traffic.
 
-## Under Construction
+## Creating our RDS Instance
 
+So, let's get started by creating our RDS instance. 
 
+## Our Lambda Functions
+
+### Insert Post
+
+### Get Post
+
+### Update Post
+
+### Delete Post
+
+### All Posts - Paginated
 
 ## Conclusion
 
