@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   outline: none;
   box-shadow: 0 3px 8px 0 rgba(0,0,0,0.03);
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.65;
 }
 
