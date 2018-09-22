@@ -1,13 +1,16 @@
-+++
-date = "2017-04-09T21:17:41+01:00"
-title = "Automating Your AngularJS Workflow With Gulp"
-draft = true
-desc = "This article looks at automating your angularjs workflow using the gulp task runner."
-tags = ["angularjs", "javascript"]
-series = [ "angularjs" ]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-09T21:17:41+01:00
+desc: This article looks at automating your angularjs workflow using the gulp task
+  runner.
+series:
+- angularjs
+tags:
+- angularjs
+- javascript
+title: Automating Your AngularJS Workflow With Gulp
+twitter: https://twitter.com/Elliot_F
+---
 
 ### Automate the Repeatable Things
 

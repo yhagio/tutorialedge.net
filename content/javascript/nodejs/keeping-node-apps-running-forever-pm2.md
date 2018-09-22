@@ -1,13 +1,18 @@
-+++
-date = "2017-04-15T08:38:40+01:00"
-title = "Keeping NodeJS Applications Running Forever Using PM2"
-draft = true
-desc = "This tutorial gives you a few different methods of keeping your nodejs applications alive and running forever, definitely a handy guide if you use Node in production environments."
-series = [ "nodejs" ]
-tags = ["pm2", "nodejs", "javascript"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T08:38:40+01:00
+desc: This tutorial gives you a few different methods of keeping your nodejs applications
+  alive and running forever, definitely a handy guide if you use Node in production
+  environments.
+series:
+- nodejs
+tags:
+- pm2
+- nodejs
+- javascript
+title: Keeping NodeJS Applications Running Forever Using PM2
+twitter: https://twitter.com/Elliot_F
+---
 
 <p>If you write an application that you need to keep running forever on your servers then this is the tutorial for you. </p>
 

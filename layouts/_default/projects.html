@@ -19,6 +19,7 @@
 	<div class="row">
 		{{ range $key, $value := .Params.series }}
 		{{ range sort (index $.Site.Taxonomies.series $value) }}
+		{{ if not .Params.homepage }}
 		<div class="col-lg-4">
 			<a href="{{ .Permalink }}">
 				<div class="course-progress-box">
@@ -29,6 +30,7 @@
 				</div>
 			</a>
 		</div>
+		{{ end }}
 		{{ end }}
 		{{ end }}
 

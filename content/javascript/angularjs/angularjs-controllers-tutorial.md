@@ -1,13 +1,16 @@
-+++
-date = "2017-04-15T09:10:12+01:00"
-title = "AngularJS Controllers Tutorial"
-draft = true
-desc = "this tutorial teaches the basics of angularjs controllers as well as introducing concepts such as constructor and scope inheritance within your angularjs application"
-tags = ["angularjs", "javascript"]
-series = [ "angularjs" ]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T09:10:12+01:00
+desc: this tutorial teaches the basics of angularjs controllers as well as introducing
+  concepts such as constructor and scope inheritance within your angularjs application
+series:
+- angularjs
+tags:
+- angularjs
+- javascript
+title: AngularJS Controllers Tutorial
+twitter: https://twitter.com/Elliot_F
+---
 
 <p>AngularJS controllers are somewhat similar to classes in Object Oriented programming and as such you can define the functionality of your applications in these controllers. When a controller is attached to the DOM via the ng-controller directive it instantiates a new Controller object.</p>
 

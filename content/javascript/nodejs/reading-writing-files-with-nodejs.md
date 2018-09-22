@@ -1,13 +1,16 @@
-+++
-date = "2017-04-15T08:20:02+01:00"
-title = "Reading and Writing Files With NodeJS"
-draft = true
-desc = "In this tutorial I’m going to be showing you exactly how we can read and write files on our local filesystem using NodeJS."
-series = [ "nodejs" ]
-tags = [ "javascript", "nodejs"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T08:20:02+01:00
+desc: In this tutorial I’m going to be showing you exactly how we can read and write
+  files on our local filesystem using NodeJS.
+series:
+- nodejs
+tags:
+- javascript
+- nodejs
+title: Reading and Writing Files With NodeJS
+twitter: https://twitter.com/Elliot_F
+---
 
 <p><strong>In this tutorial</strong> I’m going to be showing you exactly how we can read and write files on our local filesystem using NodeJS.</p>
 

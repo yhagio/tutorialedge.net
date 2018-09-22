@@ -1,14 +1,18 @@
 ---
-title: "Designing the EveryNote Web App with VueJS and Vuex"
+author: Andrea Koutifaris
 date: 2018-07-27T19:36:57+01:00
-draft: true
-desc: "Learn how to develop an application to take notes, called EveryNote, using Vuex in this tutorial by Andrea Koutifaris, a passionate programmer obsessed with good programming and test-driven development."
-author: "Andrea Koutifaris"
-tags: ["vuejs", "javascript"]
+desc: Learn how to develop an application to take notes, called EveryNote, using Vuex
+  in this tutorial by Andrea Koutifaris, a passionate programmer obsessed with good
+  programming and test-driven development.
+image: vuejs.png
+series:
+- vuejs
+tags:
+- vuejs
+- javascript
+title: Designing the EveryNote Web App with VueJS and Vuex
+twitter: https://amzn.to/2K4Ih5G
 weight: 1
-series: ["vuejs"]
-image: "vuejs.png"
-twitter: "https://amzn.to/2K4Ih5G"
 ---
 
 In this article, you’ll learn to develop an application to take notes, called `EveryNote`, from scratch. You’ll analyze and design the application, as well as preparing the folder structure for the project. After that, you’ll build the application incrementally through tests and code, providing a real-world Vuex development example. 

@@ -51,6 +51,10 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.65;
 }
 
+.content img {
+  width: 100%;
+}
+
 
 .paginate {
   width: 100%;
@@ -1069,6 +1073,12 @@ ol.breadcrumb li a {
   box-shadow: 0 14px 28px 0 rgba(115,143,147,.4);
   padding: 20px 20px;
   margin-bottom: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px -5px rgba(0,0,0,0.1);
+}
+a:hover .course-progress-box {
+  text-decoration: none;
 }
 
 .course-progress-box img {
@@ -1106,24 +1116,6 @@ ol.breadcrumb li a {
   padding: 10px 20px;
 }
 
-.badge {
-  background-color: white;
-  box-shadow: 0 14px 28px 0 rgba(115,143,147,.1);
-  padding: 20px 20px;
-  margin-bottom: 40px;
-  text-transform: uppercase;
-  text-align: center;
-}
-.badge img {
-  width: 60px;
-  height: auto;
-}
-.badge h3 {
-  color: #738f93;
-  font-weight: 400;
-  line-height: 1.4;
-  font-size: 12px;
-}
 a.youtube-subscribe {
   text-decoration: none;
   transition: 0.5s;

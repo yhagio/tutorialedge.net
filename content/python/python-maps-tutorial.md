@@ -1,14 +1,16 @@
-+++
-date = "2017-05-24T07:57:51+01:00"
-title = "Python Maps Tutorial"
-draft = true
-desc = "In this tutorial we cover the map function within the Python programming language"
-tags = ["python", "concurrency"]
-series = ["python"]
-weight = 6
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-05-24T07:57:51+01:00
+desc: In this tutorial we cover the map function within the Python programming language
+series:
+- python
+tags:
+- python
+- concurrency
+title: Python Maps Tutorial
+twitter: https://twitter.com/Elliot_F
+weight: 6
+---
 
 > This tutorial was built using Python 3.6
 

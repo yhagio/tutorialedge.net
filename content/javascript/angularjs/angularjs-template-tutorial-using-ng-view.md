@@ -1,13 +1,16 @@
-+++
-date = "2017-04-15T09:09:12+01:00"
-title = "AngularJS Templating Tutorial Using ng-view"
-draft = true
-desc = "In this tutorial I'll be showing you exactly how you can create you own templating system using angularjs's ng-view directive."
-tags = ["angularjs", "javascript"]
-series = [ "angularjs" ]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T09:09:12+01:00
+desc: In this tutorial I'll be showing you exactly how you can create you own templating
+  system using angularjs's ng-view directive.
+series:
+- angularjs
+tags:
+- angularjs
+- javascript
+title: AngularJS Templating Tutorial Using ng-view
+twitter: https://twitter.com/Elliot_F
+---
 
 Templating is fantastic for reducing the amount of code you have to maintain, if you have a defined structure to all of your webapp's pages then templating allows you to create one master page for this structure and then just replace pieces of the page with different content based on the url.
 

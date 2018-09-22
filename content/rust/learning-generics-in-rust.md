@@ -1,13 +1,15 @@
 ---
-title: "Learning Generics in Rust"
+author: Andrew Johnson
 date: 2018-09-01T14:52:49+01:00
-draft: true
-desc: "Learn generics in this tutorial by Andrew Johnson, a software developer who has worn many hats."
-author: "Andrew Johnson"
+desc: Learn generics in this tutorial by Andrew Johnson, a software developer who
+  has worn many hats.
+series:
+- rust
+tags:
+- rust
+title: Learning Generics in Rust
+twitter: https://twitter.com/TutorialEdge
 weight: 2
-tags: ["rust"]
-series: ["rust"]
-twitter: "https://twitter.com/TutorialEdge"
 ---
 
 Generics are a facility to write code for multiple contexts with different types, and parameterization allows the programmer to write code that makes fewer assumptions about the data structures and code segments involved in the code's definition. 

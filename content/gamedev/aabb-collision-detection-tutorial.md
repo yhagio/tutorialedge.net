@@ -1,13 +1,17 @@
-+++
-title = "AABB Collision Detection Tutorial"
-draft = true
-date = "2017-04-15T09:30:45+01:00"
-desc = "This tutorial demonstrates how one can implement 2D Collision detection using AABB method. This is demonstrated in Java using the LWJGL 3 framework but the concepts are transferrable to all languages and frameworks."
-series = ["gamedev"]
-tags = ["java", "gamedev"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T09:30:45+01:00
+desc: This tutorial demonstrates how one can implement 2D Collision detection using
+  AABB method. This is demonstrated in Java using the LWJGL 3 framework but the concepts
+  are transferrable to all languages and frameworks.
+series:
+- gamedev
+tags:
+- java
+- gamedev
+title: AABB Collision Detection Tutorial
+twitter: https://twitter.com/Elliot_F
+---
 
 <p>AABB Collision Detection or "Axis-Aligned Bounding Box" Collision detection as it stands for is the simplest form, or one of the simplest forms of collision detection that you can implement in a 2D game. If you have an object that is axis-aligned, ie. not rotated and doesn't need tight collision detection then AABB collision detection is the route you are going to want to take.</p>
 

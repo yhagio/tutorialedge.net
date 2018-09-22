@@ -1,13 +1,18 @@
-+++
-draft = true
-date = "2017-04-09T21:29:02+01:00"
-title = "Converting CSV to JSON using NodeJS"
-desc = "in this tutorial I'll be demonstrating how you can convert a csv file to JSON using NodeJS"
-series = [ "nodejs" ]
-tags = ["csv", "json", "nodejs", "javascript"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-09T21:29:02+01:00
+desc: in this tutorial I'll be demonstrating how you can convert a csv file to JSON
+  using NodeJS
+series:
+- nodejs
+tags:
+- csv
+- json
+- nodejs
+- javascript
+title: Converting CSV to JSON using NodeJS
+twitter: https://twitter.com/Elliot_F
+---
 
 In this tutorial I’m going to be showing you how we can create a NodeJS script that takes in a csv file and outputs the contents of that CSV file as JSON.
 

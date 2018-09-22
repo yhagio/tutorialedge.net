@@ -1,22 +1,24 @@
 ---
-title: "Advanced Go Testing Tutorial"
+author: Elliot Forbes
 date: 2018-08-29T21:57:53+01:00
-draft: true
-desc: "In this tutorial, we are going to be having a look at some more advanced Go testing practices that the core language developers use to test the language itself."
-author: "Elliot Forbes"
-weight: 2
-tags: ["golang", "testing"]
-series: ["golang"]
-twitter: "https://twitter.com/Elliot_F"
+desc: In this tutorial, we are going to be having a look at some more advanced Go
+  testing practices that the core language developers use to test the language itself.
+series:
+- golang
+tags:
+- beginner
+title: Advanced Go Testing Tutorial
+twitter: https://twitter.com/Elliot_F
+weight: 12
 ---
 
-Welcome fellow coders! In this tutorial, we are going to be taking a look at some of the more advanced testing practices used by the Go language developers in the official Golang/go repo. 
+Welcome fellow coders! In this tutorial, we are going to be taking a look at selection of more advanced testing practices used by the likes of the Go core language developers and in popular production-level tools.
 
 I feel this approach, of actually studying what has been done in a production system, will hopefully give you some insight into the best ways to test your own production-level Go programs. 
 
 > If you are entirely new to testing your Go-based programs, then I suggest you check out my other tutorial: [an introduction to testing in go](/golang/intro-testing-in-go/)
 
-## Achieving Good Coverage with Table Tests
+## Achieving Good Coverage with Table Driven Tests
 
 Let's start our journey in the `strings` package. If you have a look at the top of the `strings_test.go` file within `src/strings/` you should see a number of arrays defined and populated. 
 

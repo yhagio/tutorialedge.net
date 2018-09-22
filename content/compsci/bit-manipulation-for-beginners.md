@@ -1,13 +1,16 @@
-+++
-title = "Bit Manipulation For Beginners"
-draft = true
-date = "2017-11-18T17:42:32Z"
-desc = "In This Tutorial we look at bit manipulation and how you can use this to optimize your programs."
-tags = ["python", "compsci"]
-series = ["compsci"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-11-18T17:42:32Z
+desc: In This Tutorial we look at bit manipulation and how you can use this to optimize
+  your programs.
+series:
+- compsci
+tags:
+- python
+- compsci
+title: Bit Manipulation For Beginners
+twitter: https://twitter.com/Elliot_F
+---
 
 In this tutorial we will be taking a look at bit manipulation and how you can use it to optimize some of the different parts of your systems when you are programming.
 

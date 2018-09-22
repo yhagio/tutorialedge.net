@@ -1,13 +1,15 @@
-+++
-date = "2017-04-15T08:34:43+01:00"
-title = "Implementing the Bubble Sort Algorithm using Golang"
-draft = true
-desc = "This tutorial demonstrates how one can implement their own version of bubble sort using the golang programming language"
-series = [ "golang" ]
-tags = ["golang"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T08:34:43+01:00
+desc: This tutorial demonstrates how one can implement their own version of bubble
+  sort using the golang programming language
+series:
+- golang
+tags:
+- misc
+title: Implementing the Bubble Sort Algorithm using Golang
+twitter: https://twitter.com/Elliot_F
+---
 
 ## What Is Bubble Sort?
 

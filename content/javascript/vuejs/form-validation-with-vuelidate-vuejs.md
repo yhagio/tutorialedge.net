@@ -1,14 +1,17 @@
 ---
-title: "Form Validation With Vuelidate Vuejs"
+author: Paul Halliday
 date: 2018-06-07T19:36:57+01:00
-draft: true
-desc: "In this post, you'll use a third-party library named Vuelidate to perform model validation depending on a particular rule set"
-author: "Paul Halliday"
-tags: ["vuejs", "javascript"]
+desc: In this post, you'll use a third-party library named Vuelidate to perform model
+  validation depending on a particular rule set
+image: vuejs.png
+series:
+- vuejs
+tags:
+- vuejs
+- javascript
+title: Form Validation With Vuelidate Vuejs
+twitter: https://twitter.com/paulhalliday_io
 weight: 1
-series: ["vuejs"]
-image: "vuejs.png"
-twitter: "https://twitter.com/paulhalliday_io"
 ---
 
 > Learn how to validate forms using Vuelidate in this tutorial by Paul Halliday, the author of [Vue.js 2 Design Patterns and Best Practices](https://amzn.to/2JjyXiT).

@@ -1,13 +1,15 @@
-+++
-date = "2017-04-15T09:45:44+01:00"
-title = "Creating a Python Web Crawler"
-draft = true
-desc = "In this tutorial, we'll look at how you can build your own web crawler in Python "
-tags = ["python"]
-series = ["python"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T09:45:44+01:00
+desc: 'In this tutorial, we''ll look at how you can build your own web crawler in
+  Python '
+series:
+- python
+tags:
+- python
+title: Creating a Python Web Crawler
+twitter: https://twitter.com/Elliot_F
+---
 
 > This tutorial was built using Python 3.6 
 

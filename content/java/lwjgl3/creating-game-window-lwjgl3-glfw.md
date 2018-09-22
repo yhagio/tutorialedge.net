@@ -1,13 +1,17 @@
-+++
-date = "2017-04-15T09:29:14+01:00"
-title = "Creating a Game Window using GLFW - LWJGL3"
-draft = true
-desc = "This tutorial looks to demonstrate how one can initialize a window using the LWJGL 3 framework and OpenGL"
-tags = ["lwjgl3", "java", "gamedev"]
-series = ["lwjgl3"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T09:29:14+01:00
+desc: This tutorial looks to demonstrate how one can initialize a window using the
+  LWJGL 3 framework and OpenGL
+series:
+- lwjgl3
+tags:
+- lwjgl3
+- java
+- gamedev
+title: Creating a Game Window using GLFW - LWJGL3
+twitter: https://twitter.com/Elliot_F
+---
 
 ## Creating our Game Window
 

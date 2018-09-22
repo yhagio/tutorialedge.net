@@ -1,16 +1,19 @@
-+++
-date = "2017-04-15T09:23:35+01:00"
-title = "Breadth First Search Algorithm Tutorial with Java"
-draft = true
-desc = "This article looks to demonstrate how one can implement the depth first graph search algorithm using the java programming language. "
-series = ["ai"]
-tags = ["ai", "java"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-bookTitle = "Programming Game AI by Example"
-bookImage = "game-ai-by-example.jpeg"
-bookLink = "http://amzn.to/2r74d8f"
-+++
+---
+author: Elliot Forbes
+bookImage: game-ai-by-example.jpeg
+bookLink: http://amzn.to/2r74d8f
+bookTitle: Programming Game AI by Example
+date: 2017-04-15T09:23:35+01:00
+desc: 'This article looks to demonstrate how one can implement the depth first graph
+  search algorithm using the java programming language. '
+series:
+- ai
+tags:
+- ai
+- java
+title: Breadth First Search Algorithm Tutorial with Java
+twitter: https://twitter.com/Elliot_F
+---
 
 > This lesson is part of the course: <a href="/course/artificial-intelligence">Artificial Intelligence</a>
 

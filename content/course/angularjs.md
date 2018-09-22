@@ -1,12 +1,13 @@
-+++
-date = "2017-04-14T20:27:58+01:00"
-title = "AngularJS Fundamentals"
-draft = true
-author = "Elliot Forbes"
-layout = "simple"
-series = ["angularjs"]
-image = "angularjs.png"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-14T20:27:58+01:00
+homepage: true
+image: angularjs.png
+layout: simple
+series:
+- angularjs
+title: AngularJS
+---
 
 In this course I'll be demonstrating the absolute fundamentals to developing applications with AngularJS 1.X. We'll begin by creating a very simple admin application that will perform multiple tasks such as consuming RESTful APIs, Lazy Loading articles and more. 
 

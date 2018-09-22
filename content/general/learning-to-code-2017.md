@@ -1,13 +1,14 @@
-+++
-date = "2017-04-15T09:53:07+01:00"
-title = "Learning to Code in 2017"
-draft = true
-desc = "In this article we explore potential ways that you can learn to program in 2017."
-series = ["beginner"]
-tags = ["beginner"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T09:53:07+01:00
+desc: In this article we explore potential ways that you can learn to program in 2017.
+series:
+- beginner
+tags:
+- beginner
+title: Learning to Code in 2017
+twitter: https://twitter.com/Elliot_F
+---
 
 Programming has changed a hell of a lot in the last few years and we’ve seen multiple new languages pop up all addressing different problem sets and skill levels. The main goal for this article is clarifying some of the basic concepts and guiding you as to where to start if you are wanting to learn how to program in 2017.
 

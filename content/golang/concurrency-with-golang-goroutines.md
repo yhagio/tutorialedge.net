@@ -1,14 +1,16 @@
-+++
-date = "2017-04-09T21:06:27+01:00"
-title = "Concurrency With Golang Goroutines"
-draft = true
-desc = "In this tutorial we examine how we can build concurrent highly performant go programs using goroutines."
-series = [ "golang" ]
-tags = ["golang", "concurrency"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-
-+++
+---
+author: Elliot Forbes
+date: 2017-04-09T21:06:27+01:00
+desc: In this tutorial we examine how we can build concurrent highly performant go
+  programs using goroutines.
+series:
+- golang
+tags:
+- advanced
+title: Concurrency With Golang Goroutines
+twitter: https://twitter.com/Elliot_F
+weight: 22
+---
 
 Welcome all! In this tutorial, we are going to be looking at how you can use `goroutines` within you Go based programs and subsequently improve the performance with which your programs execute. 
 

@@ -1,13 +1,17 @@
-+++
-date = "2017-09-11T20:00:19+01:00"
-title = "The Best Books For Learning VueJS"
-draft = true
-series = ["vuejs"]
-desc = "In this article we look at some of the best books you can buy in order to nail the fundamentals of VueJS"
-tags = [ "vuejs", "javascript", "books"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-09-11T20:00:19+01:00
+desc: In this article we look at some of the best books you can buy in order to nail
+  the fundamentals of VueJS
+series:
+- vuejs
+tags:
+- vuejs
+- javascript
+- books
+title: The Best Books For Learning VueJS
+twitter: https://twitter.com/Elliot_F
+---
 
 [Vue.js](https://vuejs.org/) is a fantastic lightweight javascript framework that is ideal for building user interfaces in an incremental fashion. This means you don't need to start with a heavy full-fledged framework for what could be a small side-project.
 

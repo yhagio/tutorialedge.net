@@ -1,14 +1,17 @@
 ---
-title: "Vuejs HTTP Requests with Axios Tutorial"
+author: Elliot Forbes
 date: 2018-03-01T12:36:54Z
-draft: true
-desc: "In this tutorial, we are going to be looking at how you perform HTTP requests within your VueJS application"
-author: "Elliot Forbes"
+desc: In this tutorial, we are going to be looking at how you perform HTTP requests
+  within your VueJS application
+image: vuejs.png
+series:
+- vuejs
+tags:
+- vuejs
+- javascript
+title: Vuejs HTTP Requests with Axios Tutorial
+twitter: https://twitter.com/Elliot_F
 weight: 4
-tags: ["vuejs", "javascript"]
-series: ["vuejs"]
-image: "vuejs.png"
-twitter: "https://twitter.com/Elliot_F"
 ---
 
 > This Tutorial builds off the starter application that we generated in the [Getting Started with VueJS](/javascript/vuejs/getting-started-with-vuejs/) article.

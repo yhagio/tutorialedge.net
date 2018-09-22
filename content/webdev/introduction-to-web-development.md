@@ -1,14 +1,17 @@
-+++
-title = "An Introduction To Web Development"
-draft = true
-date = "2017-04-16T17:27:53+01:00"
-series = ["webdev"]
-desc = "In this tutorial we take a broad overview of the basics of web development."
-weight = 1
-tags = ["webdev", "css3", "html5"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-16T17:27:53+01:00
+desc: In this tutorial we take a broad overview of the basics of web development.
+series:
+- webdev
+tags:
+- webdev
+- css3
+- html5
+title: An Introduction To Web Development
+twitter: https://twitter.com/Elliot_F
+weight: 1
+---
 
 Since it's inception in the 90s the web has seen an explosion in the number and range of different web technologies used for building websites. However, if you have never created a website in your life then this can all be very daunting and initially offputting for someone wanting to take the plunge and get into web development seriously. In this introductory guide I'll be helping to demystify some of the key terms and concepts that every web developer should know or be aware of.
 

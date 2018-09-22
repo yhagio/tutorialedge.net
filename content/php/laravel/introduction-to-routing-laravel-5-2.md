@@ -1,13 +1,16 @@
-+++
-date = "2017-04-15T08:07:02+01:00"
-title = "Introduction To Routing in Laravel 5.2"
-draft = true
-desc = "In this tutorial I'll be demonstrating how you can create some very simple routes in laravel 5.2"
-tags = ["laravel-5.2", "php"]
-series = ["laravel-5.2"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T08:07:02+01:00
+desc: In this tutorial I'll be demonstrating how you can create some very simple routes
+  in laravel 5.2
+series:
+- laravel-5.2
+tags:
+- laravel-5.2
+- php
+title: Introduction To Routing in Laravel 5.2
+twitter: https://twitter.com/Elliot_F
+---
 
 <p>This tutorial is part 2 of the <a target=”_blank” href="https://tutorialedge.net/course/laravel-5">Building a Blog with Laravel 5.2</a> course.</p>
 

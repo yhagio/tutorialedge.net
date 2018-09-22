@@ -1,12 +1,15 @@
 ---
-title: "Golang ORM Tutorial"
+author: Elliot Forbes
 date: 2018-02-07T20:57:06Z
-draft: true
-desc: "In this tutorial, we look at how you can use the Go ORM or GORM to easily manage interactions with the database"
-author: "Elliot Forbes"
-tags: ["golang", "orm", "databases"]
-series: ["golang"]
-twitter: "https://twitter.com/Elliot_F"
+desc: In this tutorial, we look at how you can use the Go ORM or GORM to easily manage
+  interactions with the database
+series:
+- golang
+tags:
+- intermediate
+weight: 20
+title: Golang ORM Tutorial
+twitter: https://twitter.com/Elliot_F
 ---
 
 In this tutorial, we are going to look at how we can use the `Go-ORM` or `GORM` to interact with a `sqlite3` database in a simple manner. 

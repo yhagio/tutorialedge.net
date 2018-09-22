@@ -1,13 +1,16 @@
-+++
-date = "2017-04-15T08:40:42+01:00"
-title = "Retrieving Website Visitor Information Using Javascript"
-draft = true
-desc = "In this tutorial I'll be demonstrating how you can effectively retrieve all the information possible about any visitors to your website using a very simple javascript snippet"
-series = [ "javascript" ]
-tags = ["javascript"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T08:40:42+01:00
+desc: In this tutorial I'll be demonstrating how you can effectively retrieve all
+  the information possible about any visitors to your website using a very simple
+  javascript snippet
+series:
+- javascript
+tags:
+- javascript
+title: Retrieving Website Visitor Information Using Javascript
+twitter: https://twitter.com/Elliot_F
+---
 
 <p>In this tutorial I'll be demonstrating how you can retrieve key information about all your website visitors using a very simple javascript snippet. This could in theory be placed on all your website's pages and then returned to a REST API which then stores this information for you to analyse in the future. I thought this would be an interesting little snippet for those of you thinking of rolling your own google analytics-like tracking.</p>
 

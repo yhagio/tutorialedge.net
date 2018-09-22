@@ -1,16 +1,17 @@
-+++
-title = "An Introduction To Artificial Intelligence"
-draft = true
-date = "2017-04-15T08:11:58+01:00"
-desc = "The first lesson of the artificial intelligence course."
-series = ["ai"]
-tags = ["ai"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-bookTitle = "Programming Game AI by Example"
-bookImage = "game-ai-by-example.jpeg"
-bookLink = "http://amzn.to/2r74d8f"
-+++
+---
+author: Elliot Forbes
+bookImage: game-ai-by-example.jpeg
+bookLink: http://amzn.to/2r74d8f
+bookTitle: Programming Game AI by Example
+date: 2017-04-15T08:11:58+01:00
+desc: The first lesson of the artificial intelligence course.
+series:
+- ai
+tags:
+- ai
+title: An Introduction To Artificial Intelligence
+twitter: https://twitter.com/Elliot_F
+---
 
 <p>This is lesson one of the <a href="/course/artificial-intelligence">Artificial Intelligence</a> course on this website. </p>
 

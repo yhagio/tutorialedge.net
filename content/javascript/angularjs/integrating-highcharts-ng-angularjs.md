@@ -1,13 +1,17 @@
-+++
-title = "Integrating Highcharts-ng into your AngularJS Applications"
-draft = true
-date = "2017-04-09T21:14:45+01:00"
-desc = "Highcharts-ng is an angularjs wrapper around the exceptional highchartsjs library, in this tutorial we look into how we can easily integrate this into our angularjs applications"
-tags = ["angularjs", "javascript"]
-series = [ "angularjs" ]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-09T21:14:45+01:00
+desc: Highcharts-ng is an angularjs wrapper around the exceptional highchartsjs library,
+  in this tutorial we look into how we can easily integrate this into our angularjs
+  applications
+series:
+- angularjs
+tags:
+- angularjs
+- javascript
+title: Integrating Highcharts-ng into your AngularJS Applications
+twitter: https://twitter.com/Elliot_F
+---
 
 In this tutorial we’ll be having a look at how you can effectively implement highcharts.js into your angularjs applications. We’ll be following a component based architecture and enforcing things like one-way data-binding as is suggested in Todd Mottos [AngularJS Style Guide](https://github.com/toddmotto/angular-styleguide).
 

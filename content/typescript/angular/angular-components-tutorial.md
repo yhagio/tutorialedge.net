@@ -1,13 +1,15 @@
-+++
-date = "2017-04-09T21:04:56+01:00"
-title = "Angular Components Tutorial"
-draft = true
-desc = "Here we look at everything it takes to define your own Angular components."
-tags = ["angular", "typescript"]
-author = "Elliot Forbes"
-series = ["angular"]
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-09T21:04:56+01:00
+desc: Here we look at everything it takes to define your own Angular components.
+series:
+- angular
+tags:
+- angular
+- typescript
+title: Angular Components Tutorial
+twitter: https://twitter.com/Elliot_F
+---
 
 > This tutorial was created using Angular 2.2
 

@@ -1,14 +1,15 @@
-+++
-date = "2017-09-18T19:47:29+01:00"
-title = "Getting Started With Python"
-draft = true
-desc = "An absolute beginners introduction to the Python programming language"
-weight = 1
-tags = ["python"]
-series = [ "python" ]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-09-18T19:47:29+01:00
+desc: An absolute beginners introduction to the Python programming language
+series:
+- python
+tags:
+- python
+title: Getting Started With Python
+twitter: https://twitter.com/Elliot_F
+weight: 1
+---
 
 > This tutorial uses Python version 3.6
 

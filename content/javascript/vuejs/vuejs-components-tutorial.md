@@ -1,14 +1,17 @@
 ---
-title: "Vuejs Components Tutorial"
+author: Elliot Forbes
 date: 2018-03-01T12:26:40Z
-draft: true
-desc: "In this tutorial, we are going to be looking at how you can create your own components within a VueJS application"
-author: "Elliot Forbes"
+desc: In this tutorial, we are going to be looking at how you can create your own
+  components within a VueJS application
+image: vuejs.png
+series:
+- vuejs
+tags:
+- vuejs
+- javascript
+title: Vuejs Components Tutorial
+twitter: https://twitter.com/Elliot_F
 weight: 2
-tags: ["vuejs", "javascript"]
-series: ["vuejs"]
-image: "vuejs.png"
-twitter: "https://twitter.com/Elliot_F"
 ---
 
 > This Tutorial builds off the starter application that we generated in the [Getting Started with VueJS](/javascript/vuejs/getting-started-with-vuejs/) article.

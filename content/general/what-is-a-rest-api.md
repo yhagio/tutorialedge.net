@@ -1,13 +1,17 @@
-+++
-date = "2017-04-15T09:53:07+01:00"
-title = "What is a RESTful API?"
-draft = true
-desc = "In this tutorial we take a look at RESTful APIs - What are they and how can we use them?"
-series = ["beginner"]
-tags = ["beginner", "rest", "http"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T09:53:07+01:00
+desc: In this tutorial we take a look at RESTful APIs - What are they and how can
+  we use them?
+series:
+- beginner
+tags:
+- beginner
+- rest
+- http
+title: What is a RESTful API?
+twitter: https://twitter.com/Elliot_F
+---
 
 As a developer I spend a lot of time developing new or improving on existing RESTful APIs and one of the big questions I’ve been asked is - What is a REST API? 
 

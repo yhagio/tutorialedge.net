@@ -1,14 +1,17 @@
 ---
-title: "Getting Started With VueJS"
+author: Elliot Forbes
 date: 2018-02-28T20:27:49Z
-draft: true
-desc: "In this tutorial, we are going to be looking at how you can get started with the Vuejs 2 framework for creating awesome web applications"
-author: "Elliot Forbes"
-tags: ["vuejs", "javascript"]
+desc: In this tutorial, we are going to be looking at how you can get started with
+  the Vuejs 2 framework for creating awesome web applications
+image: vuejs.png
+series:
+- vuejs
+tags:
+- vuejs
+- javascript
+title: Getting Started With VueJS
+twitter: https://twitter.com/Elliot_F
 weight: 1
-image: "vuejs.png"
-series: ["vuejs"]
-twitter: "https://twitter.com/Elliot_F"
 ---
 
 In this tutorial, we are going to look at how you can setup your development environment so that you can get started writing your own VueJS. 

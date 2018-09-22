@@ -1,14 +1,17 @@
 ---
-title: "Vue Router Beginners Tutorial"
+author: Elliot Forbes
 date: 2018-03-14T19:12:49Z
-draft: true
-desc: "In this tutorial, we look at how you can use to vue-router within your VueJS applications."
-author: "Elliot Forbes"
+desc: In this tutorial, we look at how you can use to vue-router within your VueJS
+  applications.
+image: vuejs.png
+series:
+- vuejs
+tags:
+- vuejs
+- javascript
+title: Vue Router Beginners Tutorial
+twitter: https://twitter.com/Elliot_F
 weight: 5
-tags: ["vuejs", "javascript"]
-series: ["vuejs"]
-image: "vuejs.png"
-twitter: "https://twitter.com/Elliot_F"
 ---
 
 The vue-router within VueJS allows you to create powerful Single Page Applications with minimal fuss. On a traditional website, each distinct page would constitute a request to the server to load the relevant file. So when someone navigated to http://myapp.com/page-1.html, the `page-1.html` file would be served up. 

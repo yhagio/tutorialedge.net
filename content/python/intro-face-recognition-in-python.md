@@ -1,13 +1,15 @@
-+++
-date = "2017-11-05T17:42:45Z"
-title = "An Introduction to Face Recognition in Python"
-draft = true
-desc = "An absolute beginners introduction to writing face recognition software in Python"
-tags = ["python", "ai"]
-series = [ "python"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-11-05T17:42:45Z
+desc: An absolute beginners introduction to writing face recognition software in Python
+series:
+- python
+tags:
+- python
+- ai
+title: An Introduction to Face Recognition in Python
+twitter: https://twitter.com/Elliot_F
+---
 
 > This tutorial was written with Python 3.6, however the library used is compatible with versions 3.3 and above.
 

@@ -1,13 +1,17 @@
-+++
-date = "2017-09-10T12:27:56+01:00"
-title = "Making HTTP Requests in Python - Tutorial"
-draft = true
-desc = "In this tutorial we look at how we can make HTTP requests in Python using the Requests package."
-tags = ["python", "http", "rest"]
-series = [ "python" ]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-09-10T12:27:56+01:00
+desc: In this tutorial we look at how we can make HTTP requests in Python using the
+  Requests package.
+series:
+- python
+tags:
+- python
+- http
+- rest
+title: Making HTTP Requests in Python - Tutorial
+twitter: https://twitter.com/Elliot_F
+---
 
 > This Tutorial was built using Python 3.6 and the [Requests](http://docs.python-requests.org/en/master/) library
 

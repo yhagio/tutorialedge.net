@@ -1,13 +1,16 @@
-+++
-date = "2017-04-15T14:42:47+01:00"
-title = "Simple Laravel 5 Pagination"
-draft = true
-desc = "In this tutorial I will be demonstrating how to perform simple pagination using Laravel 5."
-tags = ["laravel-5.2", "php"]
-series = ["laravel-5.2"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T14:42:47+01:00
+desc: In this tutorial I will be demonstrating how to perform simple pagination using
+  Laravel 5.
+series:
+- laravel-5.2
+tags:
+- laravel-5.2
+- php
+title: Simple Laravel 5 Pagination
+twitter: https://twitter.com/Elliot_F
+---
 
 <p>Pagination is a way of splitting up content into several different pages and making content layout far more organized. A must for blogs who wish their front-pages to be small enough to load and yet big enough to showcase the most important tutorials.</p>
 

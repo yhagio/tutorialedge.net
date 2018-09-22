@@ -1,12 +1,13 @@
-+++
-date = "2017-04-14T20:27:58+01:00"
-title = "Web Development"
-draft = true
-author = "Elliot Forbes"
-layout = "simple"
-series = ["webdev"] 
-image = "logo.png"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-14T20:27:58+01:00
+homepage: true
+image: logo.png
+layout: simple
+series:
+- webdev
+title: Web Development
+---
 
 ## Introduction
 

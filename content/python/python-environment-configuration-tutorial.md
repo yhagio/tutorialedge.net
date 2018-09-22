@@ -1,13 +1,16 @@
-+++
-date = "2017-09-10T14:01:28+01:00"
-title = "Python Environment Configuration Tutorial"
-desc = "In this tutorial we evaluate the different ways to handle environment configuration in your Python Programs"
-draft = true
-tags = ["python", "configuration"]
-series = [ "python" ]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-09-10T14:01:28+01:00
+desc: In this tutorial we evaluate the different ways to handle environment configuration
+  in your Python Programs
+series:
+- python
+tags:
+- python
+- configuration
+title: Python Environment Configuration Tutorial
+twitter: https://twitter.com/Elliot_F
+---
 
 > This tutorial was written using Python 3.6
 

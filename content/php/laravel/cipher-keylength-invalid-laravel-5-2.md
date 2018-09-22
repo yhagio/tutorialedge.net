@@ -1,13 +1,16 @@
-+++
-date = "2017-04-15T08:08:41+01:00"
-title = "The Cipher and or Key Length are Invalid - laravel 5.2 Issue"
-draft = true
-desc = "Here we discus how to fix a common error that you may face with brand new installations of Laravel 5.2"
-tags = ["laravel-5.2", "php"]
-series = ["laravel-5.2"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T08:08:41+01:00
+desc: Here we discus how to fix a common error that you may face with brand new installations
+  of Laravel 5.2
+series:
+- laravel-5.2
+tags:
+- laravel-5.2
+- php
+title: The Cipher and or Key Length are Invalid - laravel 5.2 Issue
+twitter: https://twitter.com/Elliot_F
+---
 
 <p>One of the issues you may face with a new laravel 5.2 installation is where the Cipher and or Keylength is invalid.</p>
 

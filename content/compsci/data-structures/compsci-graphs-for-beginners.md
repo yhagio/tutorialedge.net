@@ -1,13 +1,16 @@
-+++
-date = "2017-12-20T22:02:28Z"
-title = "Data Structures - Graphs For Beginners"
-draft = true
-desc = "In This Tutorial we look at Graphs, we look at how they work and what problems they can solve"
-tags = ["python", "compsci"]
-series = ["compsci"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-12-20T22:02:28Z
+desc: In This Tutorial we look at Graphs, we look at how they work and what problems
+  they can solve
+series:
+- compsci
+tags:
+- python
+- compsci
+title: Data Structures - Graphs For Beginners
+twitter: https://twitter.com/Elliot_F
+---
 
 > Under Construction
 

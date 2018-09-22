@@ -1,13 +1,18 @@
-+++
-date = "2017-04-15T09:39:43+01:00"
-title = "LWJGL 3 Orthographic Camera Tutorial"
-draft = true
-desc = "This tutorial teaches the user how to create an orthographic projection camera using matrix translation and rotation with the LWJGL 3 framework."
-series = ["lwjgl3"]
-tags = ["gamedev", "java", "lwjgl3", "graphics"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T09:39:43+01:00
+desc: This tutorial teaches the user how to create an orthographic projection camera
+  using matrix translation and rotation with the LWJGL 3 framework.
+series:
+- lwjgl3
+tags:
+- gamedev
+- java
+- lwjgl3
+- graphics
+title: LWJGL 3 Orthographic Camera Tutorial
+twitter: https://twitter.com/Elliot_F
+---
 
 <p>This tutorial leads on from some of the topics covered in my previous tutorial : How Matrices are used in Game Development so if you haven’t got a good grounding in matrices then I suggest you check that out first. There are several YouTube videos out there that expertly cover the topic of matrices as well so check them out!</p>
 

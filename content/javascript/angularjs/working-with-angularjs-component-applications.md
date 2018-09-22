@@ -1,13 +1,16 @@
-+++
-date = "2017-04-09T21:15:58+01:00"
-title = "Working With AngularJS Component Based Applications"
-draft = true
-desc = "In this tutorial we look at how you can define your own components and effectively extend component based angularjs applications."
-tags = ["angularjs", "javascript"]
-series = [ "angularjs" ]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-09T21:15:58+01:00
+desc: In this tutorial we look at how you can define your own components and effectively
+  extend component based angularjs applications.
+series:
+- angularjs
+tags:
+- angularjs
+- javascript
+title: Working With AngularJS Component Based Applications
+twitter: https://twitter.com/Elliot_F
+---
 
 If you haven’t read my article on using a different architecture styles in your AngularJS applications then I recommend you check it out here: [Structuring AngularJS Applications](/javascript/angularjs/angularjs-project-structure-tutorial/) 
 

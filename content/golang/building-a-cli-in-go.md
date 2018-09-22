@@ -1,13 +1,15 @@
 ---
-title: "Building a Network Command Line Interface in Go"
+author: Elliot Forbes
 date: 2018-07-29T09:41:15+01:00
-draft: true
-desc: "In this tutorial, we are going to be building a very simple Command Line Interface or CLI in Go"
-author: "Elliot Forbes"
-weight: 8
-tags: ["golang"]
-series: ["golang"]
-twitter: "https://twitter.com/Elliot_F"
+desc: In this tutorial, we are going to be building a very simple Command Line Interface
+  or CLI in Go
+series:
+- golang
+tags:
+- intermediate
+title: Building a Network Command Line Interface in Go
+twitter: https://twitter.com/Elliot_F
+weight: 18
 ---
 
 In this article, we are going to be building a very simple Command Line Interface in Go using the `urfave/cli` package available on Github here: [https://github.com/urfave/cli](https://github.com/urfave/cli). 

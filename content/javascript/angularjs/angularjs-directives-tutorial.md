@@ -1,14 +1,15 @@
-+++
-date = "2017-04-15T09:08:03+01:00"
-title = "AngularJS Directives Tutorial"
-draft = true
-desc = "This tutorial showcases how one can define their own angularjs directives."
-tags = ["angularjs", "javascript"]
-series = [ "angularjs" ]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T09:08:03+01:00
+desc: This tutorial showcases how one can define their own angularjs directives.
+series:
+- angularjs
+tags:
+- angularjs
+- javascript
+title: AngularJS Directives Tutorial
+twitter: https://twitter.com/Elliot_F
+---
 
 <p>The official documentation for AngularJS’s directives can be found here: <a href="https://docs.angularjs.org/guide/directive">AngularJS Directives</a></p>
 

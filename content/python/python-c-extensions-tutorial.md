@@ -1,13 +1,15 @@
-+++
-draft = true
-date = "2017-12-01T21:32:19Z"
-title = "Creating Basic Python C Extensions - Tutorial"
-desc = "An absolute beginners introduction to writing face recognition software in Python"
-tags = ["python", "c"]
-series = [ "python"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-12-01T21:32:19Z
+desc: An absolute beginners introduction to writing face recognition software in Python
+series:
+- python
+tags:
+- python
+- c
+title: Creating Basic Python C Extensions - Tutorial
+twitter: https://twitter.com/Elliot_F
+---
 
 > This tutorial was built using Python 3.6. The official documentation can be found here: [Extending and Embedding the Python Interpreter](https://docs.python.org/3/extending/index.html)
 

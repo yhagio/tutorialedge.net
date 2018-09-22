@@ -1,13 +1,18 @@
-+++
-date = "2017-04-20T08:06:37+01:00"
-title = "CSS3 Border Radius Tutorial"
-draft = true
-series = ["webdev"]
-desc = "In this tutorial we look at how we implement curved borders on some of the elements within our html"
-tags = ["webdev", "css3", "html5", "border-radius"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-20T08:06:37+01:00
+desc: In this tutorial we look at how we implement curved borders on some of the elements
+  within our html
+series:
+- webdev
+tags:
+- webdev
+- css3
+- html5
+- border-radius
+title: CSS3 Border Radius Tutorial
+twitter: https://twitter.com/Elliot_F
+---
 
 Effective use of border-radius on some elements can remove the harshness of the square corners on some components. 
 

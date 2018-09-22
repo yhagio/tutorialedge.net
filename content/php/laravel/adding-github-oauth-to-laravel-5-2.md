@@ -1,13 +1,16 @@
-+++
-title = "Adding Github Registry and Authentication To Laravel 5.2"
-draft = true
-date = "2017-04-15T08:27:49+01:00"
-desc = "In this tutorial I'll be demonstrating to you how you can add github authentication to your Laravel 5 application."
-tags = ["laravel-5.2", "php"]
-series = ["laravel-5.2"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T08:27:49+01:00
+desc: In this tutorial I'll be demonstrating to you how you can add github authentication
+  to your Laravel 5 application.
+series:
+- laravel-5.2
+tags:
+- laravel-5.2
+- php
+title: Adding Github Registry and Authentication To Laravel 5.2
+twitter: https://twitter.com/Elliot_F
+---
 
 <p>As part of the ongoing work I’ve been doing on this site, I thought it would be a good idea to totally remove the traditional method of registering and logging in and instead replace that with github authentication. This actively reduces the risks that the site takes with regards to storing passwords and allows me to rely upon a relatively secure authentication method rather than having to roll my own.</p>
 

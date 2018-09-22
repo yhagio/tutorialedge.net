@@ -1,13 +1,15 @@
 ---
-title: "Go Protocol Buffer Tutorial"
+author: Elliot Forbes
 date: 2018-09-01T18:53:06+01:00
-draft: true
-desc: "In this tutorial, we are going to be taking a look at how you can use Protocol Buffers within your Go applications"
-author: "Elliot Forbes"
-weight: 2
-tags: ["golang"]
-series: ["golang"]
-twitter: "https://twitter.com/Elliot_F"
+desc: In this tutorial, we are going to be taking a look at how you can use Protocol
+  Buffers within your Go applications
+series:
+- golang
+tags:
+- advanced
+title: Go Protocol Buffer Tutorial
+twitter: https://twitter.com/Elliot_F
+weight: 28
 ---
 
 Welcome fellow coders! In this tutorial, we are going to be looking at how you can utilize the Protocol Buffers data format within your Go-based applications. We'll be covering what the data format is, and why it is an improvement over more traditional data formats such as XML or even JSON. And we'll dive into a simple example to get us up and running before trying our hands at a more complex example.

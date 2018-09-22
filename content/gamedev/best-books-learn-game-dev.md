@@ -1,13 +1,16 @@
-+++
-date = "2017-09-05T18:09:42+01:00"
-title = "The Best Books For Learning Game Development"
-draft = true
-series = ["gamedev"]
-desc = "In this article we look at some of the best books you can buy to aid you in learning web development"
-tags = ["gamedev", "books"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-09-05T18:09:42+01:00
+desc: In this article we look at some of the best books you can buy to aid you in
+  learning web development
+series:
+- gamedev
+tags:
+- gamedev
+- books
+title: The Best Books For Learning Game Development
+twitter: https://twitter.com/Elliot_F
+---
 
 > This list is currently under construction
 

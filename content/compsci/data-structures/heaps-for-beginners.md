@@ -1,12 +1,15 @@
-+++
-date = "2017-12-20T22:02:42Z"
-title = "Data Structures - Heaps For Beginners"
-draft = true
-desc = "In This Tutorial we look at heaps, we look at how they work and what problems they can solve"
-tags = ["python", "compsci"]
-series = ["compsci"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-12-20T22:02:42Z
+desc: In This Tutorial we look at heaps, we look at how they work and what problems
+  they can solve
+series:
+- compsci
+tags:
+- python
+- compsci
+title: Data Structures - Heaps For Beginners
+twitter: https://twitter.com/Elliot_F
+---
 
 > Under Construction

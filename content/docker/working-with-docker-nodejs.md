@@ -1,13 +1,16 @@
 ---
-title: "Working With Docker and NodeJS - Tutorial"
+author: Elliot Forbes
 date: 2018-05-27T21:40:20+01:00
-draft: true
-desc: "In this tutorial, we are going to look at how you can dockerize a NodeJS application"
-author: "Elliot Forbes"
-tags: ["docker", "nodejs", "javascript"]
-series: ["docker"]
-image: "docker.png"
-twitter: "https://twitter.com/Elliot_F"
+desc: In this tutorial, we are going to look at how you can dockerize a NodeJS application
+image: docker.png
+series:
+- docker
+tags:
+- docker
+- nodejs
+- javascript
+title: Working With Docker and NodeJS - Tutorial
+twitter: https://twitter.com/Elliot_F
 ---
 
 > The full source code for this tutorial can be found here: [TutorialEdge/Docker/node-docker](https://github.com/TutorialEdge/Docker/tree/master/node-docker)

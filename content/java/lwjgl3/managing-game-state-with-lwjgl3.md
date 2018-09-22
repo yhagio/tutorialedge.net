@@ -1,13 +1,18 @@
-+++
-date = "2017-04-15T08:23:18+01:00"
-title = "Managing Game States With LWJGL 3"
-draft = true
-desc = "This tutorial demonstrates how you can effectively manage what state your game is in using Java's enum and a few simple switch cases."
-series = ["lwjgl3"]
-tags = ["gamedev", "java", "lwjgl3", "graphics"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T08:23:18+01:00
+desc: This tutorial demonstrates how you can effectively manage what state your game
+  is in using Java's enum and a few simple switch cases.
+series:
+- lwjgl3
+tags:
+- gamedev
+- java
+- lwjgl3
+- graphics
+title: Managing Game States With LWJGL 3
+twitter: https://twitter.com/Elliot_F
+---
 
 <p>Managing game states effectively in any game can sometimes be tricky and if not done properly from the outset, can lead to a tangled mess of spaghetti code that’s almost unmaintainable. In this tutorial I’m hopefully going to be helping to prevent any of these problems from arising in your own personal game development projects. For the purpose of this tutorial I’ll be using Java and the OpenGL wrapper library LWJGL3 in order to demonstrate how to effectively manage game states.</p>
 

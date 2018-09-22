@@ -1,13 +1,16 @@
-+++
-draft = true
-date = "2017-04-09T21:28:15+01:00"
-title = "Golang MySQL Tutorial"
-desc = "In this tutorial I'll be demonstrating how we can work with MySQL databases using Go."
-series = [ "golang" ]
-tags = ["golang", "mysql"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-09T21:28:15+01:00
+desc: In this tutorial I'll be demonstrating how we can work with MySQL databases
+  using Go.
+series:
+- golang
+tags:
+- intermediate
+weight: 21
+title: Golang MySQL Tutorial
+twitter: https://twitter.com/Elliot_F
+---
 
 > In this tutorial I’ll be demonstrating how you can connect to a MySQL database and perform basic SQL statements using Go.
 

@@ -1,13 +1,17 @@
-+++
-title = "Creating a RESTful API with Python and aiohttp"
-draft = true
-date = "2017-10-28T11:50:27+01:00"
-desc = "This tutorial teaches you how to calculate the keyword density of a web page using the python programming language."
-tags = ["python", "http", "rest"]
-series = [ "python" ]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-10-28T11:50:27+01:00
+desc: This tutorial teaches you how to calculate the keyword density of a web page
+  using the python programming language.
+series:
+- python
+tags:
+- python
+- http
+- rest
+title: Creating a RESTful API with Python and aiohttp
+twitter: https://twitter.com/Elliot_F
+---
 
 > This tutorial was built on top of Python 3.6
 

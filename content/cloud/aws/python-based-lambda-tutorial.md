@@ -1,13 +1,16 @@
 ---
-title: "Python Based Lambda Tutorial"
+author: Elliot Forbes
 date: 2018-02-24T10:23:36Z
-draft: true
-desc: "In this tutorial, we will be looking at how you can get started writing your own Python based AWS Lambda functions"
-author: "Elliot Forbes"
-tags: ["python", "aws"]
+desc: In this tutorial, we will be looking at how you can get started writing your
+  own Python based AWS Lambda functions
+series:
+- python
+tags:
+- python
+- aws
+title: Python Based Lambda Tutorial
+twitter: https://twitter.com/Elliot_F
 weight: 20
-series: ["python"]
-twitter: "https://twitter.com/Elliot_F"
 ---
 
 If you've been following my [Medium Blog](https://medium.com/@elliot_f) recently, you'll know that I'm a huge fan of Serverless and I genuinely believe that it will start to seriously take off in terms of popularity in the years to come.

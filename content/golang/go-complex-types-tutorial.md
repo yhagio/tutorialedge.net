@@ -1,13 +1,15 @@
 ---
-title: "Go Composite Types Tutorial"
+author: Elliot Forbes
 date: 2018-07-14T22:24:26+01:00
-draft: true
-desc: "In this tutorial, we are going to look at the various composite types available in Go"
-author: "Elliot Forbes"
-weight: 2
-tags: ["golang"]
-series: ["golang"]
-twitter: "https://twitter.com/Elliot_F"
+desc: In this tutorial, we are going to look at the various composite types available
+  in Go
+series:
+- golang
+tags:
+- beginner
+title: Go Composite Types Tutorial
+twitter: https://twitter.com/Elliot_F
+weight: 3
 ---
 
 Welcome All! In this tutorial, we are going to be looking at the various different composite data types that are available in the Go programming language. 

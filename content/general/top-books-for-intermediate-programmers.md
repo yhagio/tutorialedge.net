@@ -1,13 +1,16 @@
-+++
-date = "2017-11-28T20:18:29Z"
-title = "The Top Books For Intermediate Level Programmers"
-draft = true
-desc = "The definitive list of all the books you should buy if you want to build on top of previous programming experience and become a true master."
-author = "Elliot Forbes"
-tags = ["general", "books"]
-series = ["general"]
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-11-28T20:18:29Z
+desc: The definitive list of all the books you should buy if you want to build on
+  top of previous programming experience and become a true master.
+series:
+- general
+tags:
+- general
+- books
+title: The Top Books For Intermediate Level Programmers
+twitter: https://twitter.com/Elliot_F
+---
 
 > This list is currently under construction, if you know of any books that are potentially missing from this list then please let me know in the comments section below!
 

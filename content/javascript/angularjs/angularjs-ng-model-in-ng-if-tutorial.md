@@ -1,13 +1,16 @@
-+++
-draft = true
-date = "2017-04-15T09:17:38+01:00"
-title = "AngularJS ng-model in ng-if Tutorial"
-desc = "A small helper tutorial for those struggling to use the ng-model directive within the ng-if directive in your angularjs app."
-tags = ["angularjs", "javascript"]
-series = [ "angularjs" ]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T09:17:38+01:00
+desc: A small helper tutorial for those struggling to use the ng-model directive within
+  the ng-if directive in your angularjs app.
+series:
+- angularjs
+tags:
+- angularjs
+- javascript
+title: AngularJS ng-model in ng-if Tutorial
+twitter: https://twitter.com/Elliot_F
+---
 
 <p>a quick tip for those trying to get the ng-model directive working in your angularjs application within ng-if.</p>
 

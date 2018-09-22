@@ -1,13 +1,17 @@
-+++
-date = "2017-04-15T09:43:47+01:00"
-title = "LWJGL 3 Mouse Current Position Tutorial"
-draft = true
-desc = "This tutorial looks to teach the programmer how to attain the mouse's current window position and print it out to the console."
-tags = ["lwjgl3", "java", "gamedev"]
-series = ["lwjgl3"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T09:43:47+01:00
+desc: This tutorial looks to teach the programmer how to attain the mouse's current
+  window position and print it out to the console.
+series:
+- lwjgl3
+tags:
+- lwjgl3
+- java
+- gamedev
+title: LWJGL 3 Mouse Current Position Tutorial
+twitter: https://twitter.com/Elliot_F
+---
 
 In this tutorial I will be showing you how you can obtain the X and Y coordinates of the Mouse cursor in an applications window and print it out to the console.
 

@@ -1,13 +1,16 @@
-+++
-draft = true
-date = "2017-11-19T08:57:29Z"
-title = "Data Structures - Hash Tables For Beginners"
-desc = "In This Tutorial we look at Hash Tables, we look at how they work and what problems they can solve"
-tags = ["python", "compsci"]
-series = ["compsci"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-11-19T08:57:29Z
+desc: In This Tutorial we look at Hash Tables, we look at how they work and what problems
+  they can solve
+series:
+- compsci
+tags:
+- python
+- compsci
+title: Data Structures - Hash Tables For Beginners
+twitter: https://twitter.com/Elliot_F
+---
 
 > This tutorial will use Python 3.6 to convey the concepts covered.
 

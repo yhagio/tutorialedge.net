@@ -1,14 +1,17 @@
 ---
-title: "Part 1 - Setting Up Our VueJS Project"
+author: Elliot Forbes
 date: 2018-03-19T16:24:13Z
-draft: true
-desc: "In this tutorial, we are going to be setting up our basic project that will form the base of our HackerNews clone"
-author: "Elliot Forbes"
-tags: ["vuejs", "javascript"]
-image: "vuejs.png"
+desc: In this tutorial, we are going to be setting up our basic project that will
+  form the base of our HackerNews clone
+image: vuejs.png
+series:
+- hackernewsclone
+tags:
+- vuejs
+- javascript
+title: Part 1 - Setting Up Our VueJS Project
+twitter: https://twitter.com/Elliot_F
 weight: 1
-series: [ "hackernewsclone" ]
-twitter: "https://twitter.com/Elliot_F"
 ---
 
 In this first tutorial, we will be covering exactly how you set up your development machine so that we can start working on our HackerNews clone. 

@@ -1,13 +1,15 @@
-+++
-draft = true
-date = "2017-04-15T14:41:31+01:00"
-title = "AngularJS Promises Tutorial"
-desc = "In this tutorial we examine the $q service and how we can chain promises."
-tags = ["angularjs", "javascript"]
-series = [ "angularjs" ]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T14:41:31+01:00
+desc: In this tutorial we examine the $q service and how we can chain promises.
+series:
+- angularjs
+tags:
+- angularjs
+- javascript
+title: AngularJS Promises Tutorial
+twitter: https://twitter.com/Elliot_F
+---
 
 In this tutorial we'll be looking at how to work with and define promises in AngularJS. For more information check out the official [AngularJS Documentation](https://docs.angularjs.org/api/ng/service/$q)
 

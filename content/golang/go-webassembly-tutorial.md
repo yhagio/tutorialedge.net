@@ -1,13 +1,15 @@
 ---
-title: "Go WebAssembly - Building a Calculator Tutorial"
+author: Elliot Forbes
 date: 2018-08-25T15:54:23+01:00
-draft: true
-desc: "In this tutorial, we are going to be looking at how you can compile your Go programs into WebAssembly"
-author: "Elliot Forbes"
-weight: 2
-tags: ["golang"]
-series: ["golang"]
-twitter: "https://twitter.com/Elliot_F"
+desc: In this tutorial, we are going to be looking at how you can compile your Go
+  programs into WebAssembly
+series:
+- golang
+tags:
+- advanced
+title: Go WebAssembly Tutorial - Building a Calculator Tutorial
+twitter: https://twitter.com/Elliot_F
+weight: 29
 ---
 
 Welcome All! With Go v1.11 having just been released with an experimental port to WebAssembly included, I thought it would be awesome to see how we can write our own Go programs that compile straight to WebAssembly! 

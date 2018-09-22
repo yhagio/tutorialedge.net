@@ -1,12 +1,16 @@
 ---
-title: "Building Real-time ReactJS Applications with Socket.Io - Tutorial"
+author: Elliot Forbes
 date: 2018-07-15T09:13:28+01:00
-draft: true
-desc: "In this tutorial, we are going to look at how you can create a realtime react application using socket.io"
-author: "Elliot Forbes"
-tags: ["javascript", "react", "socket.io"]
-series: ["react"]
-twitter: "https://twitter.com/Elliot_F"
+desc: In this tutorial, we are going to look at how you can create a realtime react
+  application using socket.io
+series:
+- react
+tags:
+- javascript
+- react
+- socket.io
+title: Building Real-time ReactJS Applications with Socket.Io - Tutorial
+twitter: https://twitter.com/Elliot_F
 ---
 
 In this article, we are going to be looking at how you can implement real-time websocket-based communication within your ReactJS web application.

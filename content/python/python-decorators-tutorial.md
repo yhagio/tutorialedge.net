@@ -1,14 +1,17 @@
-+++
-date = "2017-08-08T18:55:48+01:00"
-title = "Python Decorators Tutorial"
-desc = "In this tutorial we learn what Python Decorators are and how we can create our own within our Python applications"
-draft = true
-weight = 11
-tags = ["python", "decorators"]
-series = [ "python" ]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-08-08T18:55:48+01:00
+desc: In this tutorial we learn what Python Decorators are and how we can create our
+  own within our Python applications
+series:
+- python
+tags:
+- python
+- decorators
+title: Python Decorators Tutorial
+twitter: https://twitter.com/Elliot_F
+weight: 11
+---
 
 > This Tutorial was written using Python 3.6
 

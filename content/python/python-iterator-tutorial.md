@@ -1,14 +1,15 @@
-+++
-date = "2017-09-03T17:58:24+01:00"
-title = "Python Iterator Tutorial"
-draft = true
-desc = "In this tutorial we will look at how we can work with iterators in Python"
-tags = ["python"]
-weight = 13
-series = [ "python" ]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-09-03T17:58:24+01:00
+desc: In this tutorial we will look at how we can work with iterators in Python
+series:
+- python
+tags:
+- python
+title: Python Iterator Tutorial
+twitter: https://twitter.com/Elliot_F
+weight: 13
+---
 
 > This tutorial was built using Python 3.6
 

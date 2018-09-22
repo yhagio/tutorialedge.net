@@ -1,13 +1,16 @@
-+++
-date = "2017-04-15T08:46:33+01:00"
-title = "Creating A Simple Web Server With Golang"
-draft = true
-desc = "In this tutorial I'll be demonstrating how to create a very simple web server using Google's GoLang programming language."
-series = [ "golang" ]
-tags = ["golang", "server"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T08:46:33+01:00
+desc: In this tutorial I'll be demonstrating how to create a very simple web server
+  using Google's GoLang programming language.
+series:
+- golang
+tags:
+- intermediate
+title: Creating A Simple Web Server With Golang
+twitter: https://twitter.com/Elliot_F
+weight: 17
+---
 
 In this tutorial, we'll be focusing on creating a very simple web server using the [net/http](https://golang.org/pkg/net/http/) package. If you've ever used something like Node's ExpressJS or Python's Tornado, then you should hopefully see some similarities to how things are handled. 
 

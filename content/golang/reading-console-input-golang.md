@@ -1,13 +1,16 @@
-+++
-date = "2017-04-15T08:48:49+01:00"
-title = "Reading in Console Input in Golang"
-draft = true
-desc = "A quick and simple tutorial on how to read in console text input into your GoLang program. Excellent for simple shells and other command line driven tools."
-series = [ "golang" ]
-tags = ["golang"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T08:48:49+01:00
+desc: A quick and simple tutorial on how to read in console text input into your GoLang
+  program. Excellent for simple shells and other command line driven tools.
+series:
+- golang
+tags:
+- beginner
+title: Reading in Console Input in Golang
+twitter: https://twitter.com/Elliot_F
+weight: 8
+---
 
 This is a quick and simple tutorial on how to read in console text input into your Go (GoLang) program. In this tutorial, we'll be creating the basis for a very simple shell that will take in all user input and simply echo it back to the user.
 

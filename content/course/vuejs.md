@@ -1,10 +1,11 @@
 ---
-title: "VueJS fundamentals"
 date: 2018-03-01T08:16:15Z
-draft: true
+homepage: true
+image: vuejs.png
 layout: simple
-series: ["vuejs"]
-image: "vuejs.png"
+series:
+- vuejs
+title: VueJS fundamentals
 ---
 
 ##### Course Outline

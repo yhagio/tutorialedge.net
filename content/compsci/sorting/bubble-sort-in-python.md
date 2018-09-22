@@ -1,13 +1,16 @@
-+++
-date = "2017-11-15T18:10:37Z"
-title = "Implementing The Bubble Sort in Python"
-draft = true
-desc = "In This Tutorial we look at how you can implement the Bubble Sorting Algorithm in Python"
-tags = ["python", "compsci"]
-series = ["compsci"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-11-15T18:10:37Z
+desc: In This Tutorial we look at how you can implement the Bubble Sorting Algorithm
+  in Python
+series:
+- compsci
+tags:
+- python
+- compsci
+title: Implementing The Bubble Sort in Python
+twitter: https://twitter.com/Elliot_F
+---
 
 > This tutorial was built on top of Python 3.6
 

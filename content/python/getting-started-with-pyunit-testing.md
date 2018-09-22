@@ -1,14 +1,17 @@
-+++
-date = "2017-11-19T10:18:54Z"
-title = "Getting Started With PyUnit Testing"
-draft = true
-desc = "In this tutorial we will be looking at the absolute basics of unit testing in python using PyUnit"
-tags = ["python", "testing"]
-series = [ "python"]
-weight = 14
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-11-19T10:18:54Z
+desc: In this tutorial we will be looking at the absolute basics of unit testing in
+  python using PyUnit
+series:
+- python
+tags:
+- python
+- testing
+title: Getting Started With PyUnit Testing
+twitter: https://twitter.com/Elliot_F
+weight: 14
+---
 
 > This tutorial is currently under construction.
 

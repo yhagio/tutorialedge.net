@@ -1,14 +1,15 @@
-+++
-date = "2017-04-09T21:22:46+01:00"
-title = "AngularJS Factory Tutorial"
-draft = true
-desc = "In this tutorial we'll look at how we can implement factories in AngularJS"
-tags = ["angularjs", "javascript"]
-series = [ "angularjs" ]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-
-+++
+---
+author: Elliot Forbes
+date: 2017-04-09T21:22:46+01:00
+desc: In this tutorial we'll look at how we can implement factories in AngularJS
+series:
+- angularjs
+tags:
+- angularjs
+- javascript
+title: AngularJS Factory Tutorial
+twitter: https://twitter.com/Elliot_F
+---
 
 ## What Are Factories
 

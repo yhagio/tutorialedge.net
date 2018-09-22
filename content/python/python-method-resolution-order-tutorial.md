@@ -1,13 +1,14 @@
-+++
-date = "2017-12-18T11:23:34Z"
-title = "Python Method Resolution Order Tutorial"
-draft = true
-desc = "In this tutorial we will be taking a look at Python's Method Resolution Order."
-tags = ["python"]
-series = ["python"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-12-18T11:23:34Z
+desc: In this tutorial we will be taking a look at Python's Method Resolution Order.
+series:
+- python
+tags:
+- python
+title: Python Method Resolution Order Tutorial
+twitter: https://twitter.com/Elliot_F
+---
 
 Understanding the way and the order in which Python resolves functions is important. You need to know where your code is going to call, when you call it and things can get messy as soon as you start playing with classes inheriting from multiple other classes.
 

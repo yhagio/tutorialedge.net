@@ -1,12 +1,15 @@
-+++
-draft = true
-date = "2017-04-15T08:14:10+01:00"
-title = "Editing XML Files With NodeJS"
-series = [ "nodejs" ]
-tags = ["xml", "javascript", "nodejs"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T08:14:10+01:00
+series:
+- nodejs
+tags:
+- xml
+- javascript
+- nodejs
+title: Editing XML Files With NodeJS
+twitter: https://twitter.com/Elliot_F
+---
 
 <p>XML files are still widely used in enterprise programs and being able to manipulate xml files can be incredibly important.</p>
 

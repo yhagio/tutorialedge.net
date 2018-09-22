@@ -1,13 +1,15 @@
-+++
-date = "2017-04-15T08:44:00+01:00"
-title = "Sending Email Using Go And Mailgun"
-draft = true
-desc = "In this tutorial I'll be demonstrating how to send mail using Mailgun's API and Google's GoLang programming language."
-series = [ "golang" ]
-tags = ["golang", "email", "mailgun"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T08:44:00+01:00
+desc: In this tutorial I'll be demonstrating how to send mail using Mailgun's API
+  and Google's GoLang programming language.
+series:
+- golang
+tags:
+- misc
+title: Sending Email Using Go And Mailgun
+twitter: https://twitter.com/Elliot_F
+---
 
 <p>In this tutorial I'm going to be demonstrating how you can send mail with Go(Lang) and the mailgun api. Thankfully, mailgun's API is fantastic and sending mail is incredibly easy once you've set everything up properly.</p>
 

@@ -1,13 +1,15 @@
-+++
-date = "2017-04-15T09:45:44+01:00"
-title = "Creating a Twitter Bot Using Python and the Twitter API"
-draft = true
-desc = "This tutorial teaches the user how they can build a twitter bot using both the Python programming language and the RESTful Twitter Library. "
-tags = ["python"]
-series = ["python"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T09:45:44+01:00
+desc: 'This tutorial teaches the user how they can build a twitter bot using both
+  the Python programming language and the RESTful Twitter Library. '
+series:
+- python
+tags:
+- python
+title: Creating a Twitter Bot Using Python and the Twitter API
+twitter: https://twitter.com/Elliot_F
+---
 
 Twitter bots are a fantastic way to drum up a bit of interest in your brand or website and I've had fantastic results myself building up an audience for the Twitter account specifically for this website. This tutorial will hopefully cover everything it takes to construct your own twitter bot that utilizes the RESTful Twitter API. 
 

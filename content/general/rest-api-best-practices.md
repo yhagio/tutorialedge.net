@@ -1,13 +1,16 @@
-+++
-date = "2017-06-12T15:29:30+01:00"
-title = "RESTful API Design - Best Practices"
-draft = true
-desc = "In this article we look at the best practices for designing REST APIs"
-series = ["beginner"]
-tags = ["beginner", "rest", "http"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-06-12T15:29:30+01:00
+desc: In this article we look at the best practices for designing REST APIs
+series:
+- beginner
+tags:
+- beginner
+- rest
+- http
+title: RESTful API Design - Best Practices
+twitter: https://twitter.com/Elliot_F
+---
 
 In this article we look at some of the key concepts that everyone should bear in mind when designing RESTful APIs. These are based off my own experience with designing and building RESTful APIs in a number of projects and should be taken with a pinch of salt, I am in no way telling you that you *must* do it this way. I am merely 
 

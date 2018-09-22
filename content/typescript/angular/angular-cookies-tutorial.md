@@ -1,13 +1,15 @@
-+++
-date = "2016-02-14T16:11:58+05:30"
-draft = true
-title = "Angular Cookies Tutorial"
-desc = "In this tutorial we look at how we can use cookies in our Angular 2 Applications"
-author = "Elliot Forbes"
-tags = ["angular", "typescript"]
-series = ["angular"]
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2016-02-14T16:11:58+05:30
+desc: In this tutorial we look at how we can use cookies in our Angular 2 Applications
+series:
+- angular
+tags:
+- angular
+- typescript
+title: Angular Cookies Tutorial
+twitter: https://twitter.com/Elliot_F
+---
 
 > This tutorial was built using Angular 2.2. 
 

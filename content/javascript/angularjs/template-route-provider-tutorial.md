@@ -1,13 +1,17 @@
-+++
-draft = true
-date = "2017-04-15T09:04:56+01:00"
-title = "AngularJS Template Route Provider Tutorial"
-desc = "This tutorial showcases how one can effectively use AngularJS's routeProvider in order to create master pages and templates with which to build their own angularjs applications"
-tags = ["angularjs", "javascript"]
-series = [ "angularjs" ]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T09:04:56+01:00
+desc: This tutorial showcases how one can effectively use AngularJS's routeProvider
+  in order to create master pages and templates with which to build their own angularjs
+  applications
+series:
+- angularjs
+tags:
+- angularjs
+- javascript
+title: AngularJS Template Route Provider Tutorial
+twitter: https://twitter.com/Elliot_F
+---
 
 <p>This tutorial covers how you can utilize AngularJS’s $routeProvider in order to create a multiple page application that features one master page. The official documentation for Routing and multiple views can be found here: <a href="https://docs.angularjs.org/tutorial/step_07" target="_blank">https://docs.angularjs.org/tutorial/step_07 </a></p>
 

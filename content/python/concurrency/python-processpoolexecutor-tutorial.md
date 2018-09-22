@@ -1,13 +1,16 @@
-+++
-date = "2017-10-01T13:52:59+01:00"
-title = "Python ProcessPoolExecutor Tutorial"
-draft = true
-tags = ["python", "concurrency"]
-series = [ "python" ]
-desc = "In this article take a look at how you can use the ProcessPoolExecutor in Python to speed up your programs."
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-10-01T13:52:59+01:00
+desc: In this article take a look at how you can use the ProcessPoolExecutor in Python
+  to speed up your programs.
+series:
+- python
+tags:
+- python
+- concurrency
+title: Python ProcessPoolExecutor Tutorial
+twitter: https://twitter.com/Elliot_F
+---
 
 > This tutorial has been taken and adapted from my book: [Learning Concurrency in Python](https://www.packtpub.com/application-development/learning-concurrency-python)
 

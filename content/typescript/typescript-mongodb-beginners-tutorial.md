@@ -1,13 +1,16 @@
 ---
-title: "Typescript REST API And MongoDB Beginners Tutorial"
+author: Elliot Forbes
 date: 2018-06-10T19:56:37+01:00
-draft: true
-desc: "In this tutorial, we are going to look at how you can work with MongoDB within your TypeScript application"
-author: "Elliot Forbes"
-tags: ["typescript", "mongodb"]
-series: ["typescript"]
-image: "typescript.png"
-twitter: "https://twitter.com/Elliot_F"
+desc: In this tutorial, we are going to look at how you can work with MongoDB within
+  your TypeScript application
+image: typescript.png
+series:
+- typescript
+tags:
+- typescript
+- mongodb
+title: Typescript REST API And MongoDB Beginners Tutorial
+twitter: https://twitter.com/Elliot_F
 ---
 
 ## Introduction

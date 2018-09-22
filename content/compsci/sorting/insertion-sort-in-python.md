@@ -1,13 +1,16 @@
-+++
-date = "2017-11-15T18:12:50Z"
-title = "Implementing The Insertion Sort Algorithm in Python"
-draft = true
-desc = "In This Tutorial we look at how you can implement the Insertion Sorting Algorithm in Python"
-tags = ["python", "compsci"]
-series = ["compsci"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-11-15T18:12:50Z
+desc: In This Tutorial we look at how you can implement the Insertion Sorting Algorithm
+  in Python
+series:
+- compsci
+tags:
+- python
+- compsci
+title: Implementing The Insertion Sort Algorithm in Python
+twitter: https://twitter.com/Elliot_F
+---
 
 > This tutorial was built using Python 3.6
 

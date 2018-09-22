@@ -1,13 +1,16 @@
-+++
-date = "2017-04-15T14:31:36+01:00"
-title = "Most Important Changes to AngularJS in 1.6"
-draft = true
-tags = ["angularjs", "javascript"]
-desc = "In this article we look at the most important changes to AngularJS in the latest upcoming release version 1.6."
-series = [ "angularjs" ]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T14:31:36+01:00
+desc: In this article we look at the most important changes to AngularJS in the latest
+  upcoming release version 1.6.
+series:
+- angularjs
+tags:
+- angularjs
+- javascript
+title: Most Important Changes to AngularJS in 1.6
+twitter: https://twitter.com/Elliot_F
+---
 
 <div class="github-link">The changelog with the AngularJS 1.6 release notes can be found here: <a href="https://github.com/angular/angular.js/blob/master/CHANGELOG.md">AngularJS 1.6-RC.0</a></div>
 

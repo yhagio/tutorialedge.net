@@ -1,13 +1,16 @@
-+++
-draft = true
-date = "2017-04-15T08:17:02+01:00"
-title = "Creating and Deleting Directories With NodeJS"
-desc = "In this tutorial I'll be showing you how to both create and delete directories using NodeJS"
-series = [ "nodejs" ]
-tags = [ "javascript", "nodejs"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T08:17:02+01:00
+desc: In this tutorial I'll be showing you how to both create and delete directories
+  using NodeJS
+series:
+- nodejs
+tags:
+- javascript
+- nodejs
+title: Creating and Deleting Directories With NodeJS
+twitter: https://twitter.com/Elliot_F
+---
 
 <strong>In this tutorial I’ll be showing you how to create and delete directories using NodeJS</strong> and we’ll be using the mkdirp and the rimraf node package in order to achieve this.
 

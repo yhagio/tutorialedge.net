@@ -1,13 +1,17 @@
-+++
-draft = true
-date = "2017-09-11T19:16:03+01:00"
-title = "The Best Books For Learning Laravel"
-desc = "The definitive list of all the books you should buy if you want to master the art of programming Laravel applications"
-author = "Elliot Forbes"
-tags = ["laravel", "php", "books"]
-series = ["laravel"]
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-09-11T19:16:03+01:00
+desc: The definitive list of all the books you should buy if you want to master the
+  art of programming Laravel applications
+series:
+- laravel
+tags:
+- laravel
+- php
+- books
+title: The Best Books For Learning Laravel
+twitter: https://twitter.com/Elliot_F
+---
 
 Laravel 5 is an absolutely fantastic PHP based framework for building large websites. It's allows you to express your ideas and projects in syntactic beauty and features a massive, mature community around it that make development a hell of a lot easier thanks to bountiful online documentation, tutorials and offline resources such as the books I'll be outlining below. 
 

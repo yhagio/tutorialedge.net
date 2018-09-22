@@ -1,13 +1,16 @@
-+++
-date = "2017-11-28T18:04:33Z"
-title = "The Top Programming Books for Beginners"
-draft = true
-desc = "The definitive list of all the books you should buy if you want to learn how to improve your beginner programming skills"
-author = "Elliot Forbes"
-tags = ["general", "books"]
-series = ["general"]
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-11-28T18:04:33Z
+desc: The definitive list of all the books you should buy if you want to learn how
+  to improve your beginner programming skills
+series:
+- general
+tags:
+- general
+- books
+title: The Top Programming Books for Beginners
+twitter: https://twitter.com/Elliot_F
+---
 
 In this article we will be looking at the best books you can buy to help you learn the basics of computer programming. 
 

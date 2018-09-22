@@ -1,13 +1,17 @@
-+++
-title = "The Difference Between Class Selectors and ID Selectors in CSS"
-draft = true
-date = "2017-04-23T14:48:20+01:00"
-series = ["webdev"]
-desc = "In this tutorial we take a look at the exact differences between class selectors and id selectors in CSS"
-tags = ["webdev", "css3", "html5"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-23T14:48:20+01:00
+desc: In this tutorial we take a look at the exact differences between class selectors
+  and id selectors in CSS
+series:
+- webdev
+tags:
+- webdev
+- css3
+- html5
+title: The Difference Between Class Selectors and ID Selectors in CSS
+twitter: https://twitter.com/Elliot_F
+---
 
 If you are new to CSS then you'll probably have noticed that some rules have selectors that start with `#` and some that start with `.` and even some that have none at all. The difference between the two is that the `#` rule is an id selector and the `.` is a class selector. 
 

@@ -1,13 +1,15 @@
-+++
-date = "2016-02-14T16:11:58+05:30"
-draft = true
-title = "Migrating to Hugo"
-series = [ "blog" ]
-desc = "A quick look at why I choose to migrate the site from a Laravel 5 based system to hugo"
-tags = ["blog"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2016-02-14T16:11:58+05:30
+desc: A quick look at why I choose to migrate the site from a Laravel 5 based system
+  to hugo
+series:
+- blog
+tags:
+- blog
+title: Migrating to Hugo
+twitter: https://twitter.com/Elliot_F
+---
 
 If you've frequented this site in the past you should hopefully have noticed a huge change to the way the site looks and hopefully the speed at which the site serves content. Over the past 2 weeks I've been working with a static site tool, similar to that of Jekyll, called Hugo.
 

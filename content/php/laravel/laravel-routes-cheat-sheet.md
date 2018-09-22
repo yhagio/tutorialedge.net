@@ -1,13 +1,16 @@
-+++
-title = "Laravel 5.1 Routes Cheat Sheet"
-draft = true
-date = "2017-04-15T09:22:16+01:00"
-desc = "A simple primer on all the different ways to handle routes in laravel 5.1. We cover route groups, prefixes, middleware and simple routes."
-tags = ["laravel-5.2", "php"]
-series = ["laravel-5.2"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T09:22:16+01:00
+desc: A simple primer on all the different ways to handle routes in laravel 5.1. We
+  cover route groups, prefixes, middleware and simple routes.
+series:
+- laravel-5.2
+tags:
+- laravel-5.2
+- php
+title: Laravel 5.1 Routes Cheat Sheet
+twitter: https://twitter.com/Elliot_F
+---
 
 ## Static Pages:
 

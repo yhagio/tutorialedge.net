@@ -1,13 +1,16 @@
-+++
-draft = true
-date = "2017-04-09T20:55:22+01:00"
-title = "Angular Detecting Route Changes Within Your Application"
-desc = "In this tutorial we look at how we can subscribe to route change events within our Angular 2 applications."
-author = "Elliot Forbes"
-tags = ["angular", "typescript"]
-series = ["angular"]
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-09T20:55:22+01:00
+desc: In this tutorial we look at how we can subscribe to route change events within
+  our Angular 2 applications.
+series:
+- angular
+tags:
+- angular
+- typescript
+title: Angular Detecting Route Changes Within Your Application
+twitter: https://twitter.com/Elliot_F
+---
 
 > This tutorial was built using Angular 2.2. Some of the features in this tutorial may not work for earlier/later versions.
 

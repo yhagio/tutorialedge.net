@@ -1,14 +1,16 @@
-+++
-date = "2017-08-28T18:47:50+01:00"
-title = "Python Project Layout Best Practices"
-draft = true
-desc = "In this tutorial we'll be examining some of the best practices to follow when it comes to laying out your Python applications"
-tags = ["python"]
-weight = 9
-series = [ "python" ]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-08-28T18:47:50+01:00
+desc: In this tutorial we'll be examining some of the best practices to follow when
+  it comes to laying out your Python applications
+series:
+- python
+tags:
+- python
+title: Python Project Layout Best Practices
+twitter: https://twitter.com/Elliot_F
+weight: 9
+---
 
 > This tutorial was built using Python 3.6. It should also be noted that these are opinions and to be taken with a grain of salt.
 

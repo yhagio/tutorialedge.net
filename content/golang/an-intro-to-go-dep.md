@@ -1,12 +1,15 @@
 ---
-title: "An Intro to Go Dep"
+author: Elliot Forbes
 date: 2018-02-18T09:16:39Z
-draft: true
-desc: "In this tutorial, we are going to look at how you can get started using the go dep tool for your go projects."
-author: "Elliot Forbes"
-tags: ["golang", "dep"]
-series: ["golang"]
-twitter: "https://twitter.com/Elliot_F"
+desc: In this tutorial, we are going to look at how you can get started using the
+  go dep tool for your go projects.
+series:
+- golang
+tags:
+- intermediate
+title: An Intro to Go Dep
+twitter: https://twitter.com/Elliot_F
+weight: 13
 ---
 
 In this tutorial, we are going to look at how you can use the `Dep` tool in go to manage your Go's project dependencies.

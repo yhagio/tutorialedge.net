@@ -1,13 +1,16 @@
-+++
-date = "2017-11-20T18:09:47Z"
-title = "Implementing Quicksort in Python"
-draft = true
-desc = "In This Tutorial we look at how you can implement the Quicksort Sorting Algorithm in Python"
-tags = ["python", "compsci"]
-series = ["compsci"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-11-20T18:09:47Z
+desc: In This Tutorial we look at how you can implement the Quicksort Sorting Algorithm
+  in Python
+series:
+- compsci
+tags:
+- python
+- compsci
+title: Implementing Quicksort in Python
+twitter: https://twitter.com/Elliot_F
+---
 
 > This tutorial was built using Python 3.6
 

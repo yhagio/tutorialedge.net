@@ -1,13 +1,16 @@
-+++
-date = "2017-12-20T22:22:26Z"
-title = "Data Structures - Priority Queues For Beginners"
-draft = true
-desc = "In This Tutorial we look at priority queues, we look at how they work and what problems they can solve"
-tags = ["python", "compsci"]
-series = ["compsci"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-12-20T22:22:26Z
+desc: In This Tutorial we look at priority queues, we look at how they work and what
+  problems they can solve
+series:
+- compsci
+tags:
+- python
+- compsci
+title: Data Structures - Priority Queues For Beginners
+twitter: https://twitter.com/Elliot_F
+---
 
 > This article uses Python 3.6 in order to demonstrate some of the concepts.
 

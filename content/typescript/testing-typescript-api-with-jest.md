@@ -1,13 +1,16 @@
 ---
-title: "Testing Typescript Api With Jest and Supertest"
+author: Elliot Forbes
 date: 2018-06-09T22:48:26+01:00
-draft: true
-desc: "In this tutorial, we are going to look at how you can implement a testing framework for your TypeScript projects using Jest and Supertest"
-author: "Elliot Forbes"
-tags: ["typescript", "jest"]
-series: ["typescript"]
-image: "typescript.png"
-twitter: "https://twitter.com/Elliot_F"
+desc: In this tutorial, we are going to look at how you can implement a testing framework
+  for your TypeScript projects using Jest and Supertest
+image: typescript.png
+series:
+- typescript
+tags:
+- typescript
+- jest
+title: Testing Typescript Api With Jest and Supertest
+twitter: https://twitter.com/Elliot_F
 ---
 
 > We are going to be using the [very simple TypeScript API](/typescript/creating-rest-api-express-typescript/) we developed in a previous tutorial in order to learn about Jest Testing.

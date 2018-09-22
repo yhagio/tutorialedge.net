@@ -1,14 +1,17 @@
 ---
-title: "Vuejs Event Handling Tutorial"
+author: Elliot Forbes
 date: 2018-03-04T15:03:41Z
-draft: true
-desc: "In this tutorial we are going to look at how you can successfully handle events within your VueJS applications."
-author: "Elliot Forbes"
+desc: In this tutorial we are going to look at how you can successfully handle events
+  within your VueJS applications.
+image: vuejs.png
+series:
+- vuejs
+tags:
+- vuejs
+- webdev
+title: Vuejs Event Handling Tutorial
+twitter: https://twitter.com/Elliot_F
 weight: 3
-tags: ["vuejs", "webdev"]
-series: ["vuejs"]
-image: "vuejs.png"
-twitter: "https://twitter.com/Elliot_F"
 ---
 
 > The official documentation for VueJS event handling can be found here: [VueJS Event Handling](https://vuejs.org/v2/guide/events.html).

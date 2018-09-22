@@ -1,13 +1,17 @@
-+++
-date = "2017-10-14T11:30:25+01:00"
-title = "Python Event-Driven Programming with RxPY - Tutorial"
-draft = true
-desc = "In this tutorial we are going to look at how you can build event driven programs using RxPY in Python"
-tags = ["python", "rxpy", "concurrency"]
-series = [ "python" ]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-10-14T11:30:25+01:00
+desc: In this tutorial we are going to look at how you can build event driven programs
+  using RxPY in Python
+series:
+- python
+tags:
+- python
+- rxpy
+- concurrency
+title: Python Event-Driven Programming with RxPY - Tutorial
+twitter: https://twitter.com/Elliot_F
+---
 
 > This tutorial was built using Python 3.6
 

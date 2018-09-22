@@ -1,13 +1,16 @@
 ---
-title: "Building a HackerNews Clone in VueJS"
+author: Elliot Forbes
 date: 2018-03-19T11:05:52Z
-draft: true
-desc: "In this series we look at how you can build your own HackerNews clone using Vue.JS "
-series: [ "hackernewsclone" ]
-tags: ["vuejs"]
-image: "vuejs.png"
-author: "Elliot Forbes"
-twitter: "https://twitter.com/Elliot_F"
+desc: 'In this series we look at how you can build your own HackerNews clone using
+  Vue.JS '
+image: vuejs.png
+homepage: true
+series:
+- hackernewsclone
+tags:
+- vuejs
+title: Building a HackerNews Clone in VueJS
+twitter: https://twitter.com/Elliot_F
 ---
 
 ##### Project Outline

@@ -1,15 +1,20 @@
 ---
-title: "Reading And Writing To Files in Go"
+author: Elliot Forbes
 date: 2018-02-17T21:56:17Z
-draft: true
-desc: "In this tutorial, we are going to look at how you can read and write files on your local filesystem using Go"
-author: "Elliot Forbes"
-tags: ["golang", "filesystem"]
-series: ["golang"]
-twitter: "https://twitter.com/Elliot_F"
+desc: In this tutorial, we are going to look at how you can read and write files on
+  your local filesystem using Go
+series:
+- golang
+tags:
+- beginner
+title: Reading And Writing To Files in Go
+twitter: https://twitter.com/Elliot_F
+weight: 8
 ---
 
-Within this tutorial we are going to look at how you can effectively read and write to files within your filesystem using the go programming language. The method we are going to use to read and write to these files will be file format-agnostic. What this means is that you'll be able to use the techniques we'll be covering in order to read and write, `.txt`, `.csv`, `.xls` and so on, the only thing that differs for these files is the structure of the data that you write to each of these file types.
+Within this tutorial, we are going to look at how you can effectively read and write to files within your filesystem using the go programming language. 
+
+The method we are going to use to read and write to these files will be file format-agnostic. What this means is that you'll be able to use the techniques we'll be covering in order to read and write, `.txt`, `.csv`, `.xls` and so on, the only thing that differs for these files is the structure of the data that you write to each of these file types.
 
 ## Reading Files 
 
@@ -110,6 +115,13 @@ All the data I wish to write to a file
 ```
 
 ## Conclusion
+
+So, in this tutorial, we have successfully managed to both read and write to a series of different files using the Go Programming language. 
+
+#### Further Reading:
+
+* [Parsing JSON Files with Go](/golang/parsing-json-with-golang/)
+* [Parsing XML Files with Go](/golang/parsing-xml-with-goland/)
 
 Hopefully you found this tutorial useful, if you did, or if you require further help, then please do not hesitate to let me know in the comments section below!
 

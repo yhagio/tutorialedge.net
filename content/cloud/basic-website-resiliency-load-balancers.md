@@ -1,13 +1,16 @@
-+++
-title = "Basic Website Resiliency Patterns - Load Balancers"
-draft = true
-date = "2017-11-29T19:48:57Z"
-desc = "In this article we explore load balancers and how they can positively improve your websites and services reliability"
-series = ["cloud"]
-tags = ["cloud", "resiliency"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-11-29T19:48:57Z
+desc: In this article we explore load balancers and how they can positively improve
+  your websites and services reliability
+series:
+- cloud
+tags:
+- cloud
+- resiliency
+title: Basic Website Resiliency Patterns - Load Balancers
+twitter: https://twitter.com/Elliot_F
+---
 
 In this article we are going to be looking at the concept of load balancers. We'll be discussing what they are and how you can effectively use them to improve the reliability and resiliency of your websites and REST services and decrease downtime.
 

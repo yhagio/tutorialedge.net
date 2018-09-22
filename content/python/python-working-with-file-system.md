@@ -1,14 +1,17 @@
-+++
-title = "Working With The File System in Python"
-draft = true
-date = "2017-12-20T18:41:30Z"
-desc = "In this tutorial we evaluate the different ways you can work with the file system in Python"
-tags = ["python", "filesystem"]
-weight = 4
-series = [ "python" ]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-12-20T18:41:30Z
+desc: In this tutorial we evaluate the different ways you can work with the file system
+  in Python
+series:
+- python
+tags:
+- python
+- filesystem
+title: Working With The File System in Python
+twitter: https://twitter.com/Elliot_F
+weight: 4
+---
 
 > This tutorial was written using Python 3.6
 

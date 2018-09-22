@@ -1,13 +1,16 @@
-+++
-date = "2016-02-14T16:11:58+05:30"
-draft = true
-title = "Angular Multiple Environment Configuration Tutorial"
-desc = "In this tutorial we look at how we can easily define different application configuration for different environments."
-author = "Elliot Forbes"
-series = ["angular"]
-tags = ["angular", "typescript"]
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2016-02-14T16:11:58+05:30
+desc: In this tutorial we look at how we can easily define different application configuration
+  for different environments.
+series:
+- angular
+tags:
+- angular
+- typescript
+title: Angular Multiple Environment Configuration Tutorial
+twitter: https://twitter.com/Elliot_F
+---
 
 > This Tutorial is part of the Angular Fundamentals course which can be found here: [Angular Fundamentals](https://tutorialedge.net/course/angular-2-fundamentals)
 

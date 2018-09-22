@@ -1,13 +1,16 @@
-+++
-draft = true
-date = "2017-04-09T21:33:19+01:00"
-title = "Writing A Twitter Bot in Golang"
-desc = "In this tutorial I'll be demonstrating how you can implement a twitter bot using the go programming language"
-tags = ["golang", "go", "twitter"]
-series = [ "golang" ]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-09T21:33:19+01:00
+desc: In this tutorial I'll be demonstrating how you can implement a twitter bot using
+  the go programming language
+series:
+- golang
+tags:
+- intermediate
+weight: 19
+title: Writing A Twitter Bot in Golang
+twitter: https://twitter.com/Elliot_F
+---
 
 In this tutorial I’m going to be demonstrating how to build a twitter bot using <a href="https://github.com/dghubble/go-twitter">go-twitter</a>, a popular Go client library for the Twitter API.
 

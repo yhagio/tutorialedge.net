@@ -1,13 +1,16 @@
-+++
-date = "2018-01-21T11:22:33Z"
-title = "Creating Go Based Lambda Functions in AWS - Tutorial"
-draft = true
-desc = "In this tutorial we look at how you can go about creating your own Go based AWS Lambda functions."
-author = "Elliot Forbes"
-tags = ["aws", "go"]
-series = ["aws"]
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2018-01-21T11:22:33Z
+desc: In this tutorial we look at how you can go about creating your own Go based
+  AWS Lambda functions.
+series:
+- aws
+tags:
+- aws
+- go
+title: Creating Go Based Lambda Functions in AWS - Tutorial
+twitter: https://twitter.com/Elliot_F
+---
 
 If you haven't heard already AWS recently announced support for creating AWS Lambda functions using the Go programming language. As a huge fan of the language and of AWS itself I thought this would be the perfect opportunity to combine both and create a simple tutorial on how to create your own Lambda functions in Go.
 

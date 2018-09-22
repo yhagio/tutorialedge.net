@@ -1,13 +1,15 @@
 ---
-title: "Getting Started With Docker"
+author: Elliot Forbes
 date: 2018-05-18T14:25:51+01:00
-draft: true
-desc: "In this tutorial, we are going to look at what docker is, why it is useful, and how you can get a simple Docker-based application up and running"
-author: "Elliot Forbes"
-tags: ["docker"]
-series: ["docker"]
-image: "docker.png"
-twitter: "https://twitter.com/Elliot_F"
+desc: In this tutorial, we are going to look at what docker is, why it is useful,
+  and how you can get a simple Docker-based application up and running
+image: docker.png
+series:
+- docker
+tags:
+- docker
+title: Getting Started With Docker
+twitter: https://twitter.com/Elliot_F
 ---
 
 In this tutorial, we are going to be taking a look at what Docker is, why it's needed and how you can get up and running using Docker in your day-to-day development. 

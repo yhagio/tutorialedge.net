@@ -1,14 +1,17 @@
 ---
-title: "Part 1 - Setting Up Our CI/CD Pipeline to S3"
+author: Elliot Forbes
 date: 2018-03-19T16:24:13Z
-draft: true
-desc: "In this tutorial, we are going to look at how we can deploy our Vue.js application to S3 and set up our CI/CD pipeline"
-author: "Elliot Forbes"
-tags: ["vuejs", "javascript"]
-image: "vuejs.png"
+desc: In this tutorial, we are going to look at how we can deploy our Vue.js application
+  to S3 and set up our CI/CD pipeline
+image: vuejs.png
+series:
+- vuejsawsblog
+tags:
+- vuejs
+- javascript
+title: Part 1 - Setting Up Our CI/CD Pipeline to S3
+twitter: https://twitter.com/Elliot_F
 weight: 1
-series: [ "vuejsawsblog" ]
-twitter: "https://twitter.com/Elliot_F"
 ---
 
 If you know anything about me, you'll know I am incredibly lazy. This means that it's incredibly important to set up an automated deployment pipeline early in the project's development. 

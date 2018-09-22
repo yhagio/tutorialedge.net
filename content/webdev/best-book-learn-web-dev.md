@@ -1,13 +1,18 @@
-+++
-date = "2017-09-05T18:07:38+01:00"
-title = "The Best Books for Learning Web Development"
-draft = true
-series = ["webdev"]
-desc = "In this article we look at some of the best books you can buy to aid you in learning web development"
-tags = ["webdev", "css3", "html5", "books"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-09-05T18:07:38+01:00
+desc: In this article we look at some of the best books you can buy to aid you in
+  learning web development
+series:
+- webdev
+tags:
+- webdev
+- css3
+- html5
+- books
+title: The Best Books for Learning Web Development
+twitter: https://twitter.com/Elliot_F
+---
 
 In this article we are going to be taking a look at some of the best books you can buy if you are interested in learning more about the art of web development. 
 

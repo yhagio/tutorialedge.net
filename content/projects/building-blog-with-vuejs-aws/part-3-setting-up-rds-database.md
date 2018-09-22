@@ -1,14 +1,17 @@
 ---
-title: "Part 3 - Setting Up our RDS Database"
+author: Elliot Forbes
 date: 2018-07-24T21:19:40+01:00
-draft: true
-desc: "In this tutorial, we are going to be creating an RDS database instance which will store things such as our blog posts."
-author: "Elliot Forbes"
-tags: ["vuejs", "javascript"]
-image: "vuejs.png"
+desc: In this tutorial, we are going to be creating an RDS database instance which
+  will store things such as our blog posts.
+image: vuejs.png
+series:
+- vuejsawsblog
+tags:
+- vuejs
+- javascript
+title: Part 3 - Setting Up our RDS Database
+twitter: https://twitter.com/Elliot_F
 weight: 3
-series: [ "vuejsawsblog" ]
-twitter: "https://twitter.com/Elliot_F"
 ---
 
 ## Introduction

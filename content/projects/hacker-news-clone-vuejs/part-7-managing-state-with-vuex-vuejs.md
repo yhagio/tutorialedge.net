@@ -1,14 +1,17 @@
 ---
-title: "Part 7 - Managing State with Vuex in your VueJS Applications"
+author: Elliot Forbes
 date: 2018-03-19T16:24:13Z
-draft: true
-desc: "In this tutorial, we are going to look at how you can manage state within your VueJS applications using vuex"
-author: "Elliot Forbes"
-tags: ["vuejs", "javascript"]
-image: "vuejs.png"
+desc: In this tutorial, we are going to look at how you can manage state within your
+  VueJS applications using vuex
+image: vuejs.png
+series:
+- hackernewsclone
+tags:
+- vuejs
+- javascript
+title: Part 7 - Managing State with Vuex in your VueJS Applications
+twitter: https://twitter.com/Elliot_F
 weight: 7
-series: [ "hackernewsclone" ]
-twitter: "https://twitter.com/Elliot_F"
 ---
 
 In this tutorial, we are going to be adding Vuex to our VueJS application. We'll be looking at how we can improve the performance of our application and persist data between route changes. 

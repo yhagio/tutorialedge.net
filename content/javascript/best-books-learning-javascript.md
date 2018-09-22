@@ -1,13 +1,16 @@
-+++
-date = "2017-09-05T19:20:04+01:00"
-title = "The Best Books for Learning JavaScript"
-draft = true
-series = ["javascript"]
-desc = "In this article we look at some of the best books you can buy in order to nail the fundamentals of the JavaScript Programming Language"
-tags = [ "javascript", "books"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-09-05T19:20:04+01:00
+desc: In this article we look at some of the best books you can buy in order to nail
+  the fundamentals of the JavaScript Programming Language
+series:
+- javascript
+tags:
+- javascript
+- books
+title: The Best Books for Learning JavaScript
+twitter: https://twitter.com/Elliot_F
+---
 
 > Under Construction
 

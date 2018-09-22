@@ -1,16 +1,18 @@
-+++
-date = "2017-04-15T09:23:35+01:00"
-title = "Depth Limited Search in Java"
-draft = true
-desc = "depth limited search demonstrated in java programming language. "
-series = ["ai"]
-tags = ["ai", "java"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-bookTitle = "Programming Game AI by Example"
-bookImage = "game-ai-by-example.jpeg"
-bookLink = "http://amzn.to/2r74d8f"
-+++
+---
+author: Elliot Forbes
+bookImage: game-ai-by-example.jpeg
+bookLink: http://amzn.to/2r74d8f
+bookTitle: Programming Game AI by Example
+date: 2017-04-15T09:23:35+01:00
+desc: 'depth limited search demonstrated in java programming language. '
+series:
+- ai
+tags:
+- ai
+- java
+title: Depth Limited Search in Java
+twitter: https://twitter.com/Elliot_F
+---
 
 ## About Depth Limited Searching
 

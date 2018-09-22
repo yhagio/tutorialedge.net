@@ -1,13 +1,15 @@
-+++
-date = "2017-04-15T09:38:07+01:00"
-title = "Removing HTML Tags from a String with Python"
-draft = true
-desc = "this tutorial shows us how to remove the html tags from a retrieved html page. This will allow us to do cool stuff such as keyword density checking etc."
-tags = ["python"]
-series = ["python"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T09:38:07+01:00
+desc: this tutorial shows us how to remove the html tags from a retrieved html page.
+  This will allow us to do cool stuff such as keyword density checking etc.
+series:
+- python
+tags:
+- python
+title: Removing HTML Tags from a String with Python
+twitter: https://twitter.com/Elliot_F
+---
 
 <p>This tutorial will demonstrate two different methods as to how one can remove html tags from a string such as the one that we retrieved in my previous tutorial on <a href="/python/fetching-web-pages-with-python">fetching a web page using python.</a></p>
 

@@ -1,13 +1,17 @@
-+++
-date = "2017-04-15T08:50:41+01:00"
-title = "Getting Started With Shaders in OpenGL"
-draft = true
-desc = "In this tutorial I'll be teaching you all the fundamental concepts when it comes to dealing with shaders in the modern opengl rendering pipeline."
-series = [ "opengl" ]
-tags = [ "graphics", "gamedev", "opengl"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T08:50:41+01:00
+desc: In this tutorial I'll be teaching you all the fundamental concepts when it comes
+  to dealing with shaders in the modern opengl rendering pipeline.
+series:
+- opengl
+tags:
+- graphics
+- gamedev
+- opengl
+title: Getting Started With Shaders in OpenGL
+twitter: https://twitter.com/Elliot_F
+---
 
 <p>The modern OpenGL rendering pipeline rely heavily on shaders to process the huge amounts of data that a highly demanding program like a game requires. These shaders are typically written using the OpenGL Shading Language - GLSL, this language is very similar to C in syntax. </p>
 

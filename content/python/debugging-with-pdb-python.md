@@ -1,14 +1,17 @@
-+++
-date = "2017-09-02T13:35:28+01:00"
-title = "Debugging with the Python Debugger - PDB "
-draft = true
-desc = "In this tutorial we look at how you can debug your Python programs with the python debugger - PDB"
-tags = ["python", "debugging"]
-weight = 7
-series = [ "python" ]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-09-02T13:35:28+01:00
+desc: In this tutorial we look at how you can debug your Python programs with the
+  python debugger - PDB
+series:
+- python
+tags:
+- python
+- debugging
+title: 'Debugging with the Python Debugger - PDB '
+twitter: https://twitter.com/Elliot_F
+weight: 7
+---
 
 In this tutorial we'll be having a look at the Python Debugger, what it is and how you can use it to effectively debug your Python applications. 
 

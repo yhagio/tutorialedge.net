@@ -1,13 +1,15 @@
 ---
-title: "Async/Await in Typescript - Tutorial"
+author: Elliot Forbes
 date: 2018-06-19T20:29:57+01:00
-draft: true
-desc: "In this tutorial, we are going to be looking at the async and await keywords within your Typescript applications"
-author: "Elliot Forbes"
-tags: ["typescript"]
-image: "typescript.png"
-series: ["typescript"]
-twitter: "https://twitter.com/Elliot_F"
+desc: In this tutorial, we are going to be looking at the async and await keywords
+  within your Typescript applications
+image: typescript.png
+series:
+- typescript
+tags:
+- typescript
+title: Async/Await in Typescript - Tutorial
+twitter: https://twitter.com/Elliot_F
 ---
 
 In this tutorial, we are going to be looking at how you can use both the `async` and `await` keywords within your TypeScript application and subsequently improve the readibility and succinctness of your code.

@@ -1,14 +1,17 @@
 ---
-title: "Part 3 - Adding a Few Routes To Our App"
+author: Elliot Forbes
 date: 2018-03-19T16:24:13Z
-draft: true
-desc: "In this tutorial, we are going to setting up our application to use the vue router and add a few simple routes to our application."
-author: "Elliot Forbes"
-tags: ["vuejs", "javascript"]
-image: "vuejs.png"
+desc: In this tutorial, we are going to setting up our application to use the vue
+  router and add a few simple routes to our application.
+image: vuejs.png
+series:
+- hackernewsclone
+tags:
+- vuejs
+- javascript
+title: Part 3 - Adding a Few Routes To Our App
+twitter: https://twitter.com/Elliot_F
 weight: 3
-series: [ "hackernewsclone" ]
-twitter: "https://twitter.com/Elliot_F"
 ---
 
 In the previous tutorial of this series, we covered single page components and how you could build your own components and subsequently render them within your Vue.js application. We created a simple `Navbar` component and registered it within our `App.vue` component and subsequently rendered it within our application. 

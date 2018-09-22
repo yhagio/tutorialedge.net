@@ -1,13 +1,15 @@
-+++
-date = "2017-06-12T21:29:27+01:00"
-title = "The Top Books For Learning Golang"
-draft = true
-desc = "The definitive list of all the books you should buy if you want to master the art of programming Golang applications"
-author = "Elliot Forbes"
-tags = ["golang", "books"]
-series = ["golang"]
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-06-12T21:29:27+01:00
+desc: The definitive list of all the books you should buy if you want to master the
+  art of programming Golang applications
+series:
+- golang
+tags:
+- misc
+title: The Top Books For Learning Golang
+twitter: https://twitter.com/Elliot_F
+---
 
 Golang is an absolutely fantastic language developed by the very smart developers over at Google. It's a compiled language which is strongly typed which suits a lot of use cases where type inference in languages like Javascript and Python don't quite cut it. 
 

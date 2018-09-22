@@ -1,13 +1,17 @@
-+++
-date = "2017-04-16T16:50:07+01:00"
-title = "CSS3 Box Shadow Tutorial"
-draft = true
-series = ["webdev"]
-desc = "In this tutorial we look at how we can implement a css3 box shadow to components of our website."
-tags = ["webdev", "css3", "html5"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-16T16:50:07+01:00
+desc: In this tutorial we look at how we can implement a css3 box shadow to components
+  of our website.
+series:
+- webdev
+tags:
+- webdev
+- css3
+- html5
+title: CSS3 Box Shadow Tutorial
+twitter: https://twitter.com/Elliot_F
+---
 
 In this tutorial we'll be looking at how you can add a box shadow effect to elements of your website. Box shadow can help turn elements of your website from flat structures to almost 3D like. 
 

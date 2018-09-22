@@ -1,12 +1,15 @@
 ---
-title: "An Introduction to Testing in Go"
+author: Elliot Forbes
 date: 2018-02-09T17:27:18Z
-draft: true
-desc: "In this tutorial, we look at how properly implement a tests within your go based systems using the go test tool"
-author: "Elliot Forbes"
-tags: ["golang", "testing"]
-series: ["golang"]
-twitter: "https://twitter.com/Elliot_F"
+desc: In this tutorial, we look at how properly implement a tests within your go based
+  systems using the go test tool
+series:
+- golang
+tags:
+- beginner
+weight: 11
+title: An Introduction to Testing in Go
+twitter: https://twitter.com/Elliot_F
 ---
 
 Testing is hugely important in all software. Being able to ensure the correctness of your code and ensure that any changes you make don't end up breaking anything else in different parts of your codebase is hugely important.

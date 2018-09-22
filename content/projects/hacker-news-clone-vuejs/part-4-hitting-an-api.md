@@ -1,14 +1,17 @@
 ---
-title: "Part 4 - Hitting The HackerNews API"
+author: Elliot Forbes
 date: 2018-03-19T16:24:13Z
-draft: true
-desc: "In this tutorial, we are going to start hitting some APIs and showing some of the top stories on our HackerNews clone."
-author: "Elliot Forbes"
-tags: ["vuejs", "javascript"]
-image: "vuejs.png"
+desc: In this tutorial, we are going to start hitting some APIs and showing some of
+  the top stories on our HackerNews clone.
+image: vuejs.png
+series:
+- hackernewsclone
+tags:
+- vuejs
+- javascript
+title: Part 4 - Hitting The HackerNews API
+twitter: https://twitter.com/Elliot_F
 weight: 4
-series: [ "hackernewsclone" ]
-twitter: "https://twitter.com/Elliot_F"
 ---
 
 > The documentation for the API we will be hitting can be found here: [HackerNews/API](https://github.com/HackerNews/API)

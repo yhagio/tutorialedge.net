@@ -1,14 +1,16 @@
-+++
-date = "2017-08-13T17:06:57+01:00"
-title = "Python Logging Best Practices"
-draft = true
-desc = "In this tutorial we'll be examining some of the best practices when it comes to logging in your Python applications"
-tags = ["python"]
-series = [ "python" ]
-weight = 10
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-08-13T17:06:57+01:00
+desc: In this tutorial we'll be examining some of the best practices when it comes
+  to logging in your Python applications
+series:
+- python
+tags:
+- python
+title: Python Logging Best Practices
+twitter: https://twitter.com/Elliot_F
+weight: 10
+---
 
 In this tutorial we'll be looking at some of the best practices that you should be following when it comes to implementing logging in your Python programs. 
 

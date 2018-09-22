@@ -1,13 +1,16 @@
-+++
-date = "2017-10-31T22:00:56Z"
-title = "Threads in Python"
-draft = true
-tags = ["python", "concurrency"]
-series = [ "python" ]
-desc = "In this article take a look at how you can implement very basic threading in Python using Threads"
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-10-31T22:00:56Z
+desc: In this article take a look at how you can implement very basic threading in
+  Python using Threads
+series:
+- python
+tags:
+- python
+- concurrency
+title: Threads in Python
+twitter: https://twitter.com/Elliot_F
+---
 
 > This tutorial was written using Python 3.6. Some of the code may not be compatible with Python 2.7
 

@@ -1,13 +1,16 @@
-+++
-date = "2017-04-15T09:53:07+01:00"
-title = "Bridge Design Pattern Tutorial"
-draft = true
-desc = "This tutorial looks to demonstrate the capabilities of the Bridge design pattern and how one can implement this pattern using Java."
-series = ["design-patterns"]
-tags = ["design-patterns", "java"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T09:53:07+01:00
+desc: This tutorial looks to demonstrate the capabilities of the Bridge design pattern
+  and how one can implement this pattern using Java.
+series:
+- design-patterns
+tags:
+- design-patterns
+- java
+title: Bridge Design Pattern Tutorial
+twitter: https://twitter.com/Elliot_F
+---
 
 ## Intent
 

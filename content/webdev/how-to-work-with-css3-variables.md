@@ -1,13 +1,16 @@
-+++
-title = "How To Work With CSS3 Variables"
-draft = true
-date = "2017-04-21T19:53:46+01:00"
-series = ["webdev"]
-desc = "In this tutorial we look at how we can get started working with CSS3 variables"
-tags = ["webdev", "css3", "html5"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-21T19:53:46+01:00
+desc: In this tutorial we look at how we can get started working with CSS3 variables
+series:
+- webdev
+tags:
+- webdev
+- css3
+- html5
+title: How To Work With CSS3 Variables
+twitter: https://twitter.com/Elliot_F
+---
 
 One of the main reasons that preprocessors like [SASS](http://sass-lang.com/) and [LESS](http://lesscss.org/) have gained such huge popularity over the years is the fact that the help to bring order to your convoluted and messy CSS files. I've found myself too often ending up with 1,000 line css files where the header specific rules have migrated south towards the end of the document. With preprocessors you were able to leverage things like inheritance and it actually gave you a reason to structure your code in a cohesive format.
 

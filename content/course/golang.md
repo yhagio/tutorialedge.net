@@ -1,14 +1,16 @@
 ---
-title: "Golang"
+author: Elliot Forbes
 date: 2018-07-08T09:25:32+01:00
-draft: true
-desc: "In this tutorial, we are going to take a gentle look at what go is, and how to get started programming your own go programs"
-author: "Elliot Forbes"
-tags: ["golang"]
+desc: Learn the basics of Go and get started writing your own, highly performant Go programs.
+homepage: true
+image: golang.png
+series:
+- golang
+tags:
+- golang
+title: Golang
+twitter: https://twitter.com/Elliot_F
 weight: 100
-series: ["golang"]
-image: "golang.png"
-twitter: "https://twitter.com/Elliot_F"
 ---
 
 ##### Course Outline

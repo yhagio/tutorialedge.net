@@ -1,13 +1,17 @@
-+++
-draft = true
-date = "2017-09-11T18:53:10+01:00"
-title = "The Best Books For Learning React and React Native"
-desc = "The definitive list of all the books you should buy if you want to master the art of programming React applications"
-author = "Elliot Forbes"
-tags = ["react", "javascript", "books"]
-series = ["react"]
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-09-11T18:53:10+01:00
+desc: The definitive list of all the books you should buy if you want to master the
+  art of programming React applications
+series:
+- react
+tags:
+- react
+- javascript
+- books
+title: The Best Books For Learning React and React Native
+twitter: https://twitter.com/Elliot_F
+---
 
 > This List is Currently under Construction
 

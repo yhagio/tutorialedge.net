@@ -1,13 +1,17 @@
-+++
-date = "2017-04-09T21:03:26+01:00"
-title = "The Top Books For Learning Angular"
-draft = true
-desc = "The definitive list of all the books you should buy if you want to master the art of programming Angular applications"
-author = "Elliot Forbes"
-tags = ["angular", "typescript", "books"]
-series = ["angular"]
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-09T21:03:26+01:00
+desc: The definitive list of all the books you should buy if you want to master the
+  art of programming Angular applications
+series:
+- angular
+tags:
+- angular
+- typescript
+- books
+title: The Top Books For Learning Angular
+twitter: https://twitter.com/Elliot_F
+---
 
 > The books listed below might specifically state they are for Angular 2. However due to semantic versioning these will still be relevant if you are working with Angular 4+
 

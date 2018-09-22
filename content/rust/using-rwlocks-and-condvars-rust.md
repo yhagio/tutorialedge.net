@@ -1,13 +1,15 @@
 ---
-title: "Using RwLock and CondVars in Rust"
+author: Brian L. Troutwine
 date: 2018-09-01T15:09:49+01:00
-draft: true
-desc: "Learn how to use RwLock and CondVars in this tutorial by Brian L. Troutwine, a software engineer with an interest in low-latency and high-scale software."
-author: "Brian L. Troutwine"
+desc: Learn how to use RwLock and CondVars in this tutorial by Brian L. Troutwine,
+  a software engineer with an interest in low-latency and high-scale software.
+series:
+- rust
+tags:
+- rust
+title: Using RwLock and CondVars in Rust
+twitter: https://twitter.com/bltroutwine?lang=en
 weight: 2
-tags: ["rust"]
-series: ["rust"]
-twitter: "https://twitter.com/bltroutwine?lang=en"
 ---
 
 ## Read many, write exclusive locks – RwLock

@@ -1,13 +1,16 @@
-+++
-date = "2017-06-12T08:48:26+01:00"
-title = "Hugo Deployment Workflow Tutorial"
-draft = true
-desc = "In this tutorial we look at how you can implement an automatic deployment strategy for your hugo websites."
-series = ["hugo"]
-tags = ["golang", "hugo"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-06-12T08:48:26+01:00
+desc: In this tutorial we look at how you can implement an automatic deployment strategy
+  for your hugo websites.
+series:
+- hugo
+tags:
+- golang
+- hugo
+title: Hugo Deployment Workflow Tutorial
+twitter: https://twitter.com/Elliot_F
+---
 
 When developing websites with Hugo, having a solid automated deployment strategy can save you hundreds of hours of performing repetitive manual tasks. This site itself uses hugo and an automated deployment strategy in order to automatically deploy any changes made to it's underlying git repo: [elliotforbes/tutorialedge-v2](https://github.com/elliotforbes/tutorialedge-v2). Whenever I wish to make a change to any of the content on my site I follow these steps:
 

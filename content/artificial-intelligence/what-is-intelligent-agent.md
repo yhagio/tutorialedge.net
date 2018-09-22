@@ -1,16 +1,17 @@
-+++
-draft = true
-date = "2017-04-15T08:10:24+01:00"
-title = "What Is An Intelligent Agent"
-series = ["ai"]
-tags = ["ai"]
-desc = "Here we look at what intelligent agents are in the field of artificial intelligence"
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-bookTitle = "Programming Game AI by Example"
-bookImage = "game-ai-by-example.jpeg"
-bookLink = "http://amzn.to/2r74d8f"
-+++
+---
+author: Elliot Forbes
+bookImage: game-ai-by-example.jpeg
+bookLink: http://amzn.to/2r74d8f
+bookTitle: Programming Game AI by Example
+date: 2017-04-15T08:10:24+01:00
+desc: Here we look at what intelligent agents are in the field of artificial intelligence
+series:
+- ai
+tags:
+- ai
+title: What Is An Intelligent Agent
+twitter: https://twitter.com/Elliot_F
+---
 
 <p>In Artificial Intelligence, Intelligent agents are the decision makers. They perceive their environment through a series of sensors and act upon this information using actuators.</p>
 

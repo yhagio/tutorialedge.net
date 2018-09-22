@@ -1,13 +1,15 @@
-+++
-date = "2017-06-12T08:49:04+01:00"
-title = "Hugo Adding Images To Markdown Posts"
-draft = true
-desc = "In this tutorial we look at how you can add images to your hugo content pages"
-series = ["hugo"]
-tags = ["golang", "hugo"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-06-12T08:49:04+01:00
+desc: In this tutorial we look at how you can add images to your hugo content pages
+series:
+- hugo
+tags:
+- golang
+- hugo
+title: Hugo Adding Images To Markdown Posts
+twitter: https://twitter.com/Elliot_F
+---
 
 In this quick tutorial we are going to look at the various ways you can add images to your markdown content in hugo. 
 

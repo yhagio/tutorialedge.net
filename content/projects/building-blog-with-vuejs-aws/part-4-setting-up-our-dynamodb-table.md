@@ -1,14 +1,18 @@
 ---
-title: "Part 4 - Setting Up Our Dynamodb Table"
+author: Elliot Forbes
 date: 2018-04-20T12:31:40+01:00
-draft: true
-desc: "In this tutorial, we are going to define our first DynamoDB table and try inserting, deleting and updating blog posts into our table before finally updating our first lambda function"
-author: "Elliot Forbes"
-tags: ["vuejs", "javascript"]
-image: "vuejs.png"
+desc: In this tutorial, we are going to define our first DynamoDB table and try inserting,
+  deleting and updating blog posts into our table before finally updating our first
+  lambda function
+image: vuejs.png
+series:
+- vuejsawsblog
+tags:
+- vuejs
+- javascript
+title: Part 4 - Setting Up Our Dynamodb Table
+twitter: https://twitter.com/Elliot_F
 weight: 3
-series: [ "vuejsawsblog" ]
-twitter: "https://twitter.com/Elliot_F"
 ---
 
 In the previous tutorial, we managed to get our first Lambda tutorial up and running, however, it doesn't do anything too exciting as it stands. This is where Dynamo comes in, we need to create a DynamoDB table where we can store everything we need for our blog. This includes new blog posts, any comments, ratings, and whatever else we can think of!

@@ -1,13 +1,16 @@
-+++
-date = "2017-05-27T11:13:46+01:00"
-title = "Getting Started With Hugo"
-draft = true
-desc = "In this tutorial we look at how you can get started writing your first hugo based website"
-series = ["hugo"]
-tags = ["golang", "hugo"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-05-27T11:13:46+01:00
+desc: In this tutorial we look at how you can get started writing your first hugo
+  based website
+series:
+- hugo
+tags:
+- golang
+- hugo
+title: Getting Started With Hugo
+twitter: https://twitter.com/Elliot_F
+---
 
 Hugo is an incredibly popular static site generator written primarily in Go and it is currently running this site. With Hugo you would typically define all of your content in the form of markdown files. These markdown files are then parsed and combined with a number of template files and you are left with a fully functioning html page that you can easily host anywhere. There are a number of key advantages to this approach such as:
 
@@ -91,7 +94,7 @@ When we look at the contents of the `test.md` file you should see that it includ
 ```t
 +++
 title = "test"
-draft = true
+
 date = "2017-05-27T11:39:09+01:00"
 
 +++

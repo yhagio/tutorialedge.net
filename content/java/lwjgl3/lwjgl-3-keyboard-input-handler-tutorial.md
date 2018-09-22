@@ -1,13 +1,18 @@
-+++
-date = "2017-04-15T09:42:07+01:00"
-title = "LWJGL 3 Keyboard Input Handler Tutorial"
-draft = true
-desc = "This standalone tutorial looks to teach programmers how they can extend the LWJGL 3 library to create their own Input handlers which can be implemented into their own applications."
-tags = ["lwjgl3", "java", "gamedev"]
-series = ["lwjgl3"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T09:42:07+01:00
+desc: This standalone tutorial looks to teach programmers how they can extend the
+  LWJGL 3 library to create their own Input handlers which can be implemented into
+  their own applications.
+series:
+- lwjgl3
+tags:
+- lwjgl3
+- java
+- gamedev
+title: LWJGL 3 Keyboard Input Handler Tutorial
+twitter: https://twitter.com/Elliot_F
+---
 
 <p>This tutorial looks to demonstrate how you can extend the lightweight java game library in order to create your own input handlers which can be used in your games as a means for handling keyboard and mouse input.</p>
 

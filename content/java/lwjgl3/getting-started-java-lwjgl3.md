@@ -1,13 +1,17 @@
-+++
-date = "2017-04-15T09:54:44+01:00"
-title = "Getting Started with LWJGL 3 and OpenGL"
-draft = true
-desc = "This tutorial series will teach the users how they can build a 2D copy of the game Pong using the lightweight java game library and OpenGL"
-tags = ["lwjgl3", "java", "gamedev"]
-series = ["lwjgl3"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T09:54:44+01:00
+desc: This tutorial series will teach the users how they can build a 2D copy of the
+  game Pong using the lightweight java game library and OpenGL
+series:
+- lwjgl3
+tags:
+- lwjgl3
+- java
+- gamedev
+title: Getting Started with LWJGL 3 and OpenGL
+twitter: https://twitter.com/Elliot_F
+---
 
 <p><b><i>Note: This guide is still under construction so please refer back to it often for more articles.</i></b></p>
 

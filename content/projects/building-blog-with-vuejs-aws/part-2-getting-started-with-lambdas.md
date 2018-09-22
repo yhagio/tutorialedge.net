@@ -1,14 +1,17 @@
 ---
-title: "Part 2 - Getting Started With AWS Lambda"
+author: Elliot Forbes
 date: 2018-04-19T21:42:29+01:00
-draft: true
-desc: "In this tutorial, we are going to get up and running with some very simple Lambda functions and deploying them using the serverless api."
-author: "Elliot Forbes"
-tags: ["vuejs", "javascript"]
-image: "vuejs.png"
+desc: In this tutorial, we are going to get up and running with some very simple Lambda
+  functions and deploying them using the serverless api.
+image: vuejs.png
+series:
+- vuejsawsblog
+tags:
+- vuejs
+- javascript
+title: Part 2 - Getting Started With AWS Lambda
+twitter: https://twitter.com/Elliot_F
 weight: 2
-series: [ "vuejsawsblog" ]
-twitter: "https://twitter.com/Elliot_F"
 ---
 
 So, in the last tutorial, we managed to get a simple CI/CD pipeline up and running so that whenever we commit anything to our github repo, it automatically builds and deploys these changes to our "production" environment. 

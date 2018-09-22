@@ -1,13 +1,15 @@
-+++
-date = "2017-04-09T21:20:37+01:00"
-title = "AngularJS Form Validation Tutorial"
-draft = true
-desc = "In this tutorial we have a look at how to implement form validation using angularjs"
-tags = ["angularjs", "javascript"]
-series = [ "angularjs" ]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-09T21:20:37+01:00
+desc: In this tutorial we have a look at how to implement form validation using angularjs
+series:
+- angularjs
+tags:
+- angularjs
+- javascript
+title: AngularJS Form Validation Tutorial
+twitter: https://twitter.com/Elliot_F
+---
 
 In this tutorial I’m going to be demonstrating how we can implement form validation using the AngularJS framework. 
 

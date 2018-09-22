@@ -1,13 +1,15 @@
 ---
-title: "Go Basic Types Tutorial"
+author: Elliot Forbes
 date: 2018-07-14T22:24:26+01:00
-draft: true
-desc: "In this tutorial, we are going to look at the various basic data types available in Go"
-author: "Elliot Forbes"
+desc: In this tutorial, we are going to look at the various basic data types available
+  in Go
+series:
+- golang
+tags:
+- beginner
+title: Go Basic Types Tutorial
+twitter: https://twitter.com/Elliot_F
 weight: 2
-tags: ["golang"]
-series: ["golang"]
-twitter: "https://twitter.com/Elliot_F"
 ---
 
 In this tutorial, we are going to be looking at all of the basic data types available to us within the Go language. By the end of this tutorial, you should be comfortable with the various different types available within the language and hopefully some understanding as to how you can use these within your own Go programs.

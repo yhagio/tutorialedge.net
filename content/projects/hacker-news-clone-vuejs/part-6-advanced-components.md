@@ -1,14 +1,17 @@
 ---
-title: "Part 6 - Advanced Components"
+author: Elliot Forbes
 date: 2018-03-19T16:24:13Z
-draft: true
-desc: "In this tutorial, we are going to split out our application into more components and use some of the more advanced features such as props and transitions."
-author: "Elliot Forbes"
-tags: ["vuejs", "javascript"]
-image: "vuejs.png"
+desc: In this tutorial, we are going to split out our application into more components
+  and use some of the more advanced features such as props and transitions.
+image: vuejs.png
+series:
+- hackernewsclone
+tags:
+- vuejs
+- javascript
+title: Part 6 - Advanced Components
+twitter: https://twitter.com/Elliot_F
 weight: 6
-series: [ "hackernewsclone" ]
-twitter: "https://twitter.com/Elliot_F"
 ---
 
 As we continue to build this HackerNews clone up, the code within some of our components is going to increasingly grow. We need to start splitting our application up into multiple smaller components and in order for us to do this, we'll first have to learn some new concepts such as passing data into components using props. 

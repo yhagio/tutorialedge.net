@@ -1,13 +1,15 @@
-+++
-date = "2017-04-15T09:20:55+01:00"
-title = "Laravel 5 Middleware Tutorial"
-draft = true
-desc = "laravel 5 middleware tutorial"
-tags = ["laravel-5.2", "php"]
-series = ["laravel-5.2"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T09:20:55+01:00
+desc: laravel 5 middleware tutorial
+series:
+- laravel-5.2
+tags:
+- laravel-5.2
+- php
+title: Laravel 5 Middleware Tutorial
+twitter: https://twitter.com/Elliot_F
+---
 
 <p>This tutorial serves as a more expanded introduction to Laravel 5.1’s middleware than that of the documentation. I’ll be exploring a more expanded ins-and-outs of the middleware part of the framework.</p>
 

@@ -1,13 +1,15 @@
 ---
-title: "Go Functions Tutorial"
+author: Elliot Forbes
 date: 2018-07-14T22:23:10+01:00
-draft: true
-desc: "In this tutorial we'll look at what functions are in Golang and how you can use them in your programs"
-author: "Elliot Forbes"
-weight: 3
-tags: ["golang"]
-series: ["golang"]
-twitter: "https://twitter.com/Elliot_F"
+desc: In this tutorial we'll look at what functions are in Golang and how you can
+  use them in your programs
+series:
+- golang
+tags:
+- beginner
+title: Go Functions Tutorial
+twitter: https://twitter.com/Elliot_F
+weight: 4
 ---
 
 In this tutorial, we are going to be looking at Go's functions and hopefully, by the end of this tutorial, you will have a firm grasp as to what they are and how you can use them in your own projects.

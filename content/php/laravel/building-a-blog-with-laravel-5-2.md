@@ -1,13 +1,16 @@
-+++
-date = "2017-04-15T08:21:41+01:00"
-title = "Building A Blog With Laravel 5.2"
-draft = true
-desc = "In this series we'll be building our own Laravel 5.2 blog and fully functioning content management system"
-tags = ["laravel-5.2", "php"]
-series = ["laravel-5.2"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T08:21:41+01:00
+desc: In this series we'll be building our own Laravel 5.2 blog and fully functioning
+  content management system
+series:
+- laravel-5.2
+tags:
+- laravel-5.2
+- php
+title: Building A Blog With Laravel 5.2
+twitter: https://twitter.com/Elliot_F
+---
 
 <p>In this series we’ll be building a fully functioning blog using the Laravel 5.2 framework. We’ll iteratively build up our own content management system from the ground up and I’ll focus on demonstrating the best practices and by the end of this you’ll have a solid base for whatever projects you have in the pipeline.</p>
 

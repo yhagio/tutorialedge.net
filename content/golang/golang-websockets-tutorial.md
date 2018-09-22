@@ -1,12 +1,14 @@
 ---
-date: "2017-08-23T19:29:11+01:00"
-title: "Working with Websockets and Socket.IO in Go - Tutorial"
-draft: true
-desc: "In this tutorial we'll look at how you can implement websockets in Golang"
-author: "Elliot Forbes"
-tags: ["golang", "websockets"]
-series: ["golang"]
-twitter: "https://twitter.com/Elliot_F"
+author: Elliot Forbes
+date: 2017-08-23T19:29:11+01:00
+desc: In this tutorial we'll look at how you can implement websockets in Golang
+series:
+- golang
+tags:
+- advanced
+title: Working with Websockets and Socket.IO in Go - Tutorial
+weight: 26
+twitter: https://twitter.com/Elliot_F
 ---
 
 > This tutorial was written using Go version 1.9 and [googollee/go-socket.io](https://github.com/googollee/go-socket.io)

@@ -1,13 +1,16 @@
-+++
-date = "2017-04-15T08:47:48+01:00"
-title = "Executing System Commands With Golang"
-draft = true
-desc = "Executing system commands can be incredibly useful no matter what sort of software you are building, "
-series = [ "golang" ]
-tags = ["golang", "unix"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T08:47:48+01:00
+desc: 'Executing system commands can be incredibly useful no matter what sort of software
+  you are building, '
+series:
+- golang
+tags:
+- beginner
+weight: 8
+title: Executing System Commands With Golang
+twitter: https://twitter.com/Elliot_F
+---
 
 This tutorial is just a quick and simple tutorial as to how to execute system commands using Google's GoLang programming language.
 

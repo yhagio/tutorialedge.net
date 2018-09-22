@@ -1,12 +1,15 @@
 ---
-date: "2017-04-09T21:07:11+01:00"
-title: "Parsing JSON files With Golang"
-draft: true
-desc: "In this tutorial we examine the encoding/json go package and how to parse JSON files."
-tags: ["golang"]
-series: ["golang"]
-author: "Elliot Forbes"
-twitter: "https://twitter.com/Elliot_F"
+author: Elliot Forbes
+date: 2017-04-09T21:07:11+01:00
+desc: In this tutorial we examine the encoding/json go package and how to parse JSON
+  files.
+series:
+- golang
+tags:
+- beginner
+title: Parsing JSON files With Golang
+twitter: https://twitter.com/Elliot_F
+weight: 9
 ---
 
 Welcome all, in this tutorial, we are going to be taking a look at how you can read in JSON files, or JSON HTTP responses and parse them to your hearts desire. 
@@ -68,7 +71,7 @@ This should be complex enough to test our skills and should allow us to transfer
 
 ## Reading the JSON File
 
-We’ll be using the `os` package in order to open up our `users.json` file from our filesystem. 
+We’ll be using the `os` package in order to open up our `users.json` file from our filesystem. Once we have opened the file, we'll defer the closing of the file till the end of the function so that we can work with the data inside of it.
 
 ```go
 // Open our jsonFile
@@ -121,7 +124,7 @@ type Social struct {
 }
 ```
 
-Once we have these in place, we can use them to unmarshal our JSON.
+Once we have these in place, we can use them to unmarshal our JSON. 
 
 ## Unmarshalling our JSON
 
@@ -156,7 +159,6 @@ Below you'll find the full implementation of this tutorial.
 ```go
 package main
 
-
 import (
 	"encoding/json"
 	"fmt"
@@ -165,13 +167,11 @@ import (
 	"strconv"
 )
 
-
 // Users struct which contains
 // an array of users
 type Users struct {
 	Users []User `json:"users"`
 }
-
 
 // User struct which contains a name
 // a type and a list of social links
@@ -182,7 +182,6 @@ type User struct {
 	Social Social `json:"social"`
 }
 
-
 // Social struct which contains a
 // list of links
 type Social struct {
@@ -190,10 +189,7 @@ type Social struct {
 	Twitter  string `json:"twitter"`
 }
 
-
 func main() {
-
-
 	// Open our jsonFile
 	jsonFile, err := os.Open("users.json")
 	// if we os.Open returns an error then handle it
@@ -201,24 +197,19 @@ func main() {
 		fmt.Println(err)
 	}
 
-
 	fmt.Println("Successfully Opened users.json")
 	// defer the closing of our jsonFile so that we can parse it later on
 	defer jsonFile.Close()
 
-
 	// read our opened xmlFile as a byte array.
 	byteValue, _ := ioutil.ReadAll(jsonFile)
-
 
 	// we initialize our Users array
 	var users Users
 
-
 	// we unmarshal our byteArray which contains our
 	// jsonFile's content into 'users' which we defined above
 	json.Unmarshal(byteValue, &users)
-
 
 	// we iterate through every user within our users array and
 	// print out the user Type, their name, and their facebook url
@@ -229,7 +220,6 @@ func main() {
 		fmt.Println("User Name: " + users.Users[i].Name)
 		fmt.Println("Facebook Url: " + users.Users[i].Social.Facebook)
 	}
-
 
 }
 ```

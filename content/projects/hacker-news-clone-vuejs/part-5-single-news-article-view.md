@@ -1,14 +1,17 @@
 ---
-title: "Part 5 - Viewing Individual News Articles"
+author: Elliot Forbes
 date: 2018-03-19T16:24:13Z
-draft: true
-desc: "In this tutorial, we are going to add some more routes and components to our application to view individual news items and the comments"
-author: "Elliot Forbes"
-tags: ["vuejs", "javascript"]
-image: "vuejs.png"
+desc: In this tutorial, we are going to add some more routes and components to our
+  application to view individual news items and the comments
+image: vuejs.png
+series:
+- hackernewsclone
+tags:
+- vuejs
+- javascript
+title: Part 5 - Viewing Individual News Articles
+twitter: https://twitter.com/Elliot_F
 weight: 5
-series: [ "hackernewsclone" ]
-twitter: "https://twitter.com/Elliot_F"
 ---
 
 In the previous tutorial, we looked at how we could show all of the latest HackerNews stories on our `Homepage` component and showed information like the score and the URL of that story. Whilst this is pretty cool, it doesn't let us see the discussion going on around any of the stories, as we all know, this can be the best bit!

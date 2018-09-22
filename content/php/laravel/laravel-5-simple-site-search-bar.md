@@ -1,13 +1,16 @@
-+++
-date = "2017-04-15T09:26:20+01:00"
-title = "Laravel 5 Simple Site Search Bar Tutorial"
-draft = true
-desc = "Simple site search bar tutorial for those of you wishing to implement some simplistic form of search bar in your laravel 5 applications"
-tags = ["laravel-5.2", "php"]
-series = ["laravel-5.2"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T09:26:20+01:00
+desc: Simple site search bar tutorial for those of you wishing to implement some simplistic
+  form of search bar in your laravel 5 applications
+series:
+- laravel-5.2
+tags:
+- laravel-5.2
+- php
+title: Laravel 5 Simple Site Search Bar Tutorial
+twitter: https://twitter.com/Elliot_F
+---
 
 <p>Something that I’ve been working on recently on the site is the search bar functionality which allows people to effectively search every through every article on the site to find one that will help them the most. In this tutorial I’ll be documenting a few of the ways that you can implement a simple full site search using Laravel 5.</p>
 

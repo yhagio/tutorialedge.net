@@ -1,13 +1,16 @@
-+++
-date = "2017-11-18T16:10:25Z"
-title = "Memoization For Beginners"
-draft = true
-desc = "In This Tutorial we look at memoization and how you can use it to effectively optimize your recursive algorithms performance"
-tags = ["python", "compsci"]
-series = ["compsci"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-11-18T16:10:25Z
+desc: In This Tutorial we look at memoization and how you can use it to effectively
+  optimize your recursive algorithms performance
+series:
+- compsci
+tags:
+- python
+- compsci
+title: Memoization For Beginners
+twitter: https://twitter.com/Elliot_F
+---
 
 In this tutorial we are going to look at a concept in computer science called `memoization`. This is a really cool concept that allows us to optimize the runtime performance of some of our recursive algorithms by effectively caching the results of previous computations so that they don't have to be continuously re-computed. 
 

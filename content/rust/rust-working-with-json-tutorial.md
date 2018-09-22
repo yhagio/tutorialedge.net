@@ -1,13 +1,15 @@
-+++
-date = "2017-12-25T11:51:47Z"
-title = "Working with JSON in Rust - Tutorial"
-draft = true
-desc = "This tutorial shows you how you can work with JSON objects in Rust"
-tags = ["rust", "json"]
-series = [ "rust" ]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-12-25T11:51:47Z
+desc: This tutorial shows you how you can work with JSON objects in Rust
+series:
+- rust
+tags:
+- rust
+- json
+title: Working with JSON in Rust - Tutorial
+twitter: https://twitter.com/Elliot_F
+---
 
 > This tutorial was built using Rust Version: 1.22.1
 

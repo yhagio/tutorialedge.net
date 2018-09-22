@@ -1,13 +1,16 @@
-+++
-date = "2016-02-14T16:11:58+05:30"
-draft = true
-title = "Removing Duplicate Entries from ng-repeat in AngularJS"
-desc = "This article shows you how you can remove duplicates from a list printed our using ng-repeat in AngularJS using filters."
-tags = ["angularjs", "javascript"]
-series = [ "angularjs" ]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2016-02-14T16:11:58+05:30
+desc: This article shows you how you can remove duplicates from a list printed our
+  using ng-repeat in AngularJS using filters.
+series:
+- angularjs
+tags:
+- angularjs
+- javascript
+title: Removing Duplicate Entries from ng-repeat in AngularJS
+twitter: https://twitter.com/Elliot_F
+---
 
 > This tutorial was built using Angular 1.6. Earlier or later versions of the code may not work as intended.
 

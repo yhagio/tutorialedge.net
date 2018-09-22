@@ -1,14 +1,16 @@
-+++
-date = "2017-08-28T18:42:27+01:00"
-title = "Python Modules Tutorial"
-draft = true
-desc = "In this tutorial we'll be looking at Python modules. What they are and how we can create/import our own Python Modules."
-tags = ["python"]
-weight = 8
-series = [ "python" ]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-08-28T18:42:27+01:00
+desc: In this tutorial we'll be looking at Python modules. What they are and how we
+  can create/import our own Python Modules.
+series:
+- python
+tags:
+- python
+title: Python Modules Tutorial
+twitter: https://twitter.com/Elliot_F
+weight: 8
+---
 
 > This tutorial was developed using Python version 3.6.
 

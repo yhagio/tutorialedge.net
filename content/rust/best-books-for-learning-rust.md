@@ -1,13 +1,16 @@
-+++
-date = "2017-12-17T15:07:54Z"
-title = "The Top Programming Books for Learning Rust"
-draft = true
-desc = "The definitive list of all the books you should buy if you want to learn how to program using Rust"
-author = "Elliot Forbes"
-tags = ["rust", "books"]
-series = ["rust"]
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-12-17T15:07:54Z
+desc: The definitive list of all the books you should buy if you want to learn how
+  to program using Rust
+series:
+- rust
+tags:
+- rust
+- books
+title: The Top Programming Books for Learning Rust
+twitter: https://twitter.com/Elliot_F
+---
 
 In this article we will be looking at the best books you can buy to help you learn the basics of Rust Systems Development.
 

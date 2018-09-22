@@ -1,13 +1,16 @@
-+++
-title = "Creating a RESTful API With Golang"
-draft = true
-date = "2017-04-15T08:45:15+01:00"
-desc = "this tutorial demonstrates how you can create your own simple RESTful JSON api using Go(Lang)"
-series = [ "golang" ]
-tags = ["golang", "rest", "api"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T08:45:15+01:00
+desc: this tutorial demonstrates how you can create your own simple RESTful JSON api
+  using Go(Lang)
+series:
+- golang
+tags:
+- intermediate
+title: Creating a RESTful API With Golang
+twitter: https://twitter.com/Elliot_F
+weight: 16
+---
 
 In this article, I'm going to be showing you how we can create a simple Golang based REST API that serves up a JSON based response whenever it is hit using a `HTTP` GET request.
 

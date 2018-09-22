@@ -1,13 +1,16 @@
-+++
-title = "AngularJS Filter Search Tutorial"
-draft = true
-date = "2017-04-15T08:59:44+01:00"
-desc = "We look at how you can implement your own style of filter searching using AngularJS's filter directive"
-tags = ["angularjs", "javascript"]
-series = [ "angularjs" ]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T08:59:44+01:00
+desc: We look at how you can implement your own style of filter searching using AngularJS's
+  filter directive
+series:
+- angularjs
+tags:
+- angularjs
+- javascript
+title: AngularJS Filter Search Tutorial
+twitter: https://twitter.com/Elliot_F
+---
 
 <h3>Links:</h3>
 

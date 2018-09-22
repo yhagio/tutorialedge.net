@@ -1,12 +1,14 @@
 ---
-title: "An Introduction to Benchmarking Your Go Programs"
+author: Elliot Forbes
 date: 2018-02-10T08:48:40Z
-draft: true
-desc: "In this tutorial, we look at how you can effectively benchmark your go program."
-author: "Elliot Forbes"
-tags: ["golang", "benchmarking"]
-series: ["golang"]
-twitter: "https://twitter.com/Elliot_F"
+desc: In this tutorial, we look at how you can effectively benchmark your go program.
+series:
+- golang
+tags:
+- intermediate
+title: An Introduction to Benchmarking Your Go Programs
+twitter: https://twitter.com/Elliot_F
+weight: 14
 ---
 
 In this article, we are going to be having a look at benchmarking. More specifically, we are going to be looking at how you can benchmark your Go-based programs.  

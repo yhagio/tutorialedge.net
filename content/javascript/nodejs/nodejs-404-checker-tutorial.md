@@ -1,12 +1,15 @@
 ---
-title: "NodeJS 404 Checker Tutorial"
+author: Elliot Forbes
 date: 2018-03-11T14:08:54Z
-draft: true
-desc: "In this tutorial, we are going to create a nice and simple 404 checker for a given page using NodeJS"
-author: "Elliot Forbes"
-tags: ["nodejs", "javascript"]
-series: ["nodejs"]
-twitter: "https://twitter.com/Elliot_F"
+desc: In this tutorial, we are going to create a nice and simple 404 checker for a
+  given page using NodeJS
+series:
+- nodejs
+tags:
+- nodejs
+- javascript
+title: NodeJS 404 Checker Tutorial
+twitter: https://twitter.com/Elliot_F
 ---
 
 ## Introduction

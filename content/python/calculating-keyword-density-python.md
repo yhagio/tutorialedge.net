@@ -1,13 +1,15 @@
-+++
-date = "2017-04-15T09:47:55+01:00"
-title = "Calculating Keyword Density of a Web Page with Python"
-draft = true
-desc = "This tutorial teaches you how to calculate the keyword density of a web page using the python programming language."
-tags = ["python"]
-series = ["python"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T09:47:55+01:00
+desc: This tutorial teaches you how to calculate the keyword density of a web page
+  using the python programming language.
+series:
+- python
+tags:
+- python
+title: Calculating Keyword Density of a Web Page with Python
+twitter: https://twitter.com/Elliot_F
+---
 
 In this tutorial I will be showing you how to calculate the keyword density of a web page using the Python programming language. This will be a continuation of the previous tutorial in which we retrieved a web page using Pythons `urllib2` Python module.
 

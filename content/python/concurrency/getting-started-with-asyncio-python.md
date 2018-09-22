@@ -1,13 +1,16 @@
-+++
-date = "2017-11-04T15:20:50Z"
-title = "Getting Started with Asyncio in Python"
-draft = true
-tags = ["python", "concurrency"]
-series = [ "python" ]
-desc = "In this article we cover everything you need to get up and running with Python and Asyncio"
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-11-04T15:20:50Z
+desc: In this article we cover everything you need to get up and running with Python
+  and Asyncio
+series:
+- python
+tags:
+- python
+- concurrency
+title: Getting Started with Asyncio in Python
+twitter: https://twitter.com/Elliot_F
+---
 
 ## Video Tutorial
 

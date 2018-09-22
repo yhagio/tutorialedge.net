@@ -1,14 +1,17 @@
 ---
-title: "Part 2 - Creating a Few Components"
+author: Elliot Forbes
 date: 2018-03-19T16:24:13Z
-draft: true
-desc: "In this tutorial, we are going to be creating a few components to our HackerNews clone and fleshing out our project."
-author: "Elliot Forbes"
-tags: ["vuejs", "javascript"]
-image: "vuejs.png"
+desc: In this tutorial, we are going to be creating a few components to our HackerNews
+  clone and fleshing out our project.
+image: vuejs.png
+series:
+- hackernewsclone
+tags:
+- vuejs
+- javascript
+title: Part 2 - Creating a Few Components
+twitter: https://twitter.com/Elliot_F
 weight: 2
-series: [ "hackernewsclone" ]
-twitter: "https://twitter.com/Elliot_F"
 ---
 
 In the previous tutorial, we not only managed to set up our base project and get it running on `http://localhost:8080`, but we also managed to build it so that it's ready for deployment to production. We now have a strong base project from which we can build up up our HackerNews clone.

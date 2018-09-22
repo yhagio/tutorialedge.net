@@ -1,14 +1,17 @@
 ---
-title: "Part 5 - Getting Started With AWS Cognito"
+author: Elliot Forbes
 date: 2018-04-20T12:41:31+01:00
-draft: true
-desc: "In this tutorial, we are going to set up our Cognito user pools so that we can start to build admin panels that only select people can access."
-author: "Elliot Forbes"
-tags: ["vuejs", "javascript"]
-image: "vuejs.png"
+desc: In this tutorial, we are going to set up our Cognito user pools so that we can
+  start to build admin panels that only select people can access.
+image: vuejs.png
+series:
+- vuejsawsblog
+tags:
+- vuejs
+- javascript
+title: Part 5 - Getting Started With AWS Cognito
+twitter: https://twitter.com/Elliot_F
 weight: 4
-series: [ "vuejsawsblog" ]
-twitter: "https://twitter.com/Elliot_F"
 ---
 
 In the previous tutorial, we managed to get our DynamoDB table set up and populated with a couple of very simple posts. In this tutorial, we are going to set up a Cognito pool that will store all of the users that register for our Blog. We'll also be able to improve our Lambda endpoints so that they aren't open to the world, they require authentication before they start updating our database, this will stop unauthorized people potentially updating posts and doing malicious things.

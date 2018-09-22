@@ -1,12 +1,13 @@
-+++
-date = "2017-04-14T20:27:58+01:00"
-title = "Angular Fundamentals"
-draft = true
-author = "Elliot Forbes"
-series = ["angular"]
-layout = "simple"
-image = "angular.png"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-14T20:27:58+01:00
+homepage: true
+image: angular.png
+layout: simple
+series:
+- angular
+title: Angular
+---
 
 ##### Course Outline
 

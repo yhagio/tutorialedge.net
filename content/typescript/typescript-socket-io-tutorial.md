@@ -1,13 +1,16 @@
 ---
-title: "Getting Started with Typescript and Socket.Io - Tutorial"
+author: Elliot Forbes
 date: 2018-05-30T18:09:26+01:00
-draft: true
-desc: "In this tutorial, we are going to be creating a Websocket server using both TypeScript and socket.io."
-author: "Elliot Forbes"
-tags: ["typescript", "express"]
-series: ["typescript"]
-image: "typescript.png"
-twitter: "https://twitter.com/Elliot_F"
+desc: In this tutorial, we are going to be creating a Websocket server using both
+  TypeScript and socket.io.
+image: typescript.png
+series:
+- typescript
+tags:
+- typescript
+- express
+title: Getting Started with Typescript and Socket.Io - Tutorial
+twitter: https://twitter.com/Elliot_F
 ---
 
 In this tutorial, we are going to be looking at how you can build a websocket based server using both TypeScript and Socket.io.

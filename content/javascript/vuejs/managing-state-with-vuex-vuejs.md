@@ -1,14 +1,17 @@
 ---
-title: "Managing State With Vuex in Vuejs"
+author: Elliot Forbes
 date: 2018-03-31T19:06:13+01:00
-draft: true
-desc: "In this tutorial, we are going to look at how you can manage state within your VueJS application using Vuex"
-author: "Elliot Forbes"
-tags: ["vuejs", "javascript"]
+desc: In this tutorial, we are going to look at how you can manage state within your
+  VueJS application using Vuex
+image: vuejs.png
+series:
+- vuejs
+tags:
+- vuejs
+- javascript
+title: Managing State With Vuex in Vuejs
+twitter: https://twitter.com/Elliot_F
 weight: 1
-image: "vuejs.png"
-series: ["vuejs"]
-twitter: "https://twitter.com/Elliot_F"
 ---
 
 State management is something you will ultimately have to deal with as you create increasingly complex frontend applications. Thankfully, with the help of Vuex, this isn't as hard as you may think! 

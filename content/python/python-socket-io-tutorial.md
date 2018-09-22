@@ -1,13 +1,16 @@
-+++
-date = "2017-10-01T12:22:11+01:00"
-title = "Python Socket.io Tutorial"
-draft = true
-desc = "In this tutorial we will be covering how you can implement a socket.io based Python webserver."
-tags = ["python", "socket.io"]
-series = ["python"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-10-01T12:22:11+01:00
+desc: In this tutorial we will be covering how you can implement a socket.io based
+  Python webserver.
+series:
+- python
+tags:
+- python
+- socket.io
+title: Python Socket.io Tutorial
+twitter: https://twitter.com/Elliot_F
+---
 
 > This tutorial was written using Python version 3.6. Some of the code used is not compatible with version 2.
 

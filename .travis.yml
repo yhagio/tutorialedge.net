@@ -3,7 +3,7 @@ install:
 - wget https://github.com/gohugoio/hugo/releases/download/v0.34/hugo_0.34_Linux-64bit.deb
 - sudo dpkg -i hugo*.deb
 script:
-- hugo --buildDrafts
+- hugo
 deploy:
   provider: s3
   access_key_id: AKIAIN5O72B44O5TWFVA

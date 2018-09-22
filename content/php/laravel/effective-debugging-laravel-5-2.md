@@ -1,12 +1,14 @@
-+++
-date = "2017-04-15T08:05:46+01:00"
-title = "Effective Debugging of Laravel 5.2 Applications"
-draft = true
-tags = ["laravel-5.2", "php"]
-series = ["laravel-5.2"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T08:05:46+01:00
+series:
+- laravel-5.2
+tags:
+- laravel-5.2
+- php
+title: Effective Debugging of Laravel 5.2 Applications
+twitter: https://twitter.com/Elliot_F
+---
 
 <p>Knowing how to effectively debug problems with your laravel 5.2 application is vital if you are to combat problems and reduce the amount of errors within your application.</p>
 

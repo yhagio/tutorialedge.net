@@ -1,12 +1,14 @@
-+++
-date = "2017-04-15T08:01:33+01:00"
-title = "Working With Tables in Laravel 5.2"
-draft = true
-tags = ["laravel-5.2", "php"]
-series = ["laravel-5.2"]
-author = "Elliot Forbes"
-twitter = "https://twitter.com/Elliot_F"
-+++
+---
+author: Elliot Forbes
+date: 2017-04-15T08:01:33+01:00
+series:
+- laravel-5.2
+tags:
+- laravel-5.2
+- php
+title: Working With Tables in Laravel 5.2
+twitter: https://twitter.com/Elliot_F
+---
 
 ## Pre-Requisites
 
