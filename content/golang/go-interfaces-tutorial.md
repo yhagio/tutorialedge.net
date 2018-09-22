@@ -1,8 +1,7 @@
 ---
 author: Elliot Forbes
 date: 2018-07-14T22:24:26+01:00
-desc: In this tutorial, we are going to look at how you can create and use your own
-	Interfaces within the Go Programming Langauge
+desc: In this tutorial, we are going to look at how you can create and use your own Interfaces within the Go Programming Langauge
 draft: true
 series:
 - golang
