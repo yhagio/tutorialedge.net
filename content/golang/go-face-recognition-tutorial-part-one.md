@@ -10,9 +10,15 @@ twitter: https://twitter.com/Elliot_F
 weight: 31
 ---
 
-The whole area of Face Recognition is something I love reading about. Implementing one yourself makes you sound like you are Tony Stark and you can use them for a variety of different projects such as an automatic lock on your door, or building a surveillance system for your office.
+The whole area of Face Recognition is something I love reading about. Implementing a facial recognition system yourself makes you sound like you are Tony Stark and you can use them for a variety of different projects such as an automatic lock on your door, or building a surveillance system for your office to name but a few.
 
 In this tutorial, we are going to be building our own, really simple face recognition based system in Go using a few existing libraries. We'll start by doing simple face recognition on still images and seeing how that works and we'll then be expanding upon this to look into real-time face recognition on video feeds in part 2 of this mini-series.
+
+## Video Tutorial
+
+This tutorial is available in video format, should you wish to support me and my channel then please like and subscribe to my channel! 
+
+<div style="position:relative;height:0;padding-bottom:43.59%"><iframe src="https://www.youtube.com/embed/cLrRLA9y1i4?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="826" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 
 ## The Kagami/go-face package
 
@@ -36,6 +42,8 @@ $ sed -i '' 's/^Libs: .*/& -lblas -llapack/' /usr/local/lib/pkgconfig/dlib-1.pc
 ```
 
 ## Getting Started
+
+We'll first of all need to download the `kagami/go-face` package which can be done with the following `go get` command:
 
 ```s
 $ go get -u github.com/Kagami/go-face
