@@ -154,10 +154,40 @@ Sweet, so we're able to calculate the number of faces in an image, now what abou
 
 To do this, we'll need a number of reference photos. For example, if we wanted to be able to recognize Tony Stark out of a photo, we would need example photos tagged with his name. The recognition software would then be able to analyze photos for faces with his likeness and match them together.
 
-So, let's take our `tony-stark.jpg` as our reference image for Tony Stark and then see if we can identify if this image contains his face:
-
+So, let's take our `avengers-02.jpg` as our reference image for Tony Stark and then see if we can identify if this image contains his face:
 
 <img src="/images/tony-stark.jpg" style="width:25%; height: auto; margin: auto; display: block;"/>
+
+```go
+avengersImage := filepath.Join(dataDir, "avengers-02.jpeg")
+
+faces, err := rec.RecognizeFile(avengersImage)
+if err != nil {
+	log.Fatalf("Can't recognize: %v", err)
+}
+fmt.Println("Number of Faces in Image: ", len(faces))
+
+var samples []face.Descriptor
+var avengers []int32
+for i, f := range faces {
+	samples = append(samples, f.Descriptor)
+	// Each face is unique on that image so goes to its own category.
+	avengers = append(avengers, int32(i))
+}
+// Name the categories, i.e. people on the image.
+labels := []string{
+	"Dr Strange",
+	"Tony Stark",
+	"Bruce Banner",
+	"Wong",
+}
+// Pass samples to the recognizer.
+rec.SetSamples(samples, avengers)
+```
+
+So, in the above code, we've gone through all of the faces in order from left to right and labeled them with their appropriate names. Our recognition system can then use these reference samples to try and perform it's own facial recognition on subsequent files.
+
+Let's try testing out our recognition system with our existing image of Tony Stark and seeing if it's able to recognize this based of the face descriptor it generated from the `avengers-02.jpeg` file:
 
 ```go
 // Now let's try to classify some not yet known image.
