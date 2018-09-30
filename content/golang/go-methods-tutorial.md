@@ -49,6 +49,8 @@ func main() {
 
 ## Functions Vs Methods
 
+There's a subtle distinction between your traditional functions in Go and your Methods. Methods typically act upon a given object, i.e. `guitarist.Update()` 
+
 ```go
 func myFunction() {
   fmt.Println("This is a simple function")
