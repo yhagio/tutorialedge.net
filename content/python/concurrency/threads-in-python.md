@@ -16,7 +16,7 @@ twitter: https://twitter.com/Elliot_F
 
 In this tutorial we are going to take an in-depth look at threads in Python. We'll start by covering what they consist of, we'll then touch upon how you can define your own simple threads within your Python programs and finally we'll cover all of the ways you can work with these simple threads within a simple Python program.
 
-## What Are Threads?
+# What Are Threads?
 
 Threads are essentially just ordered streams of instructions. I.e. do this 5 times and then terminate. These can be scheduled to run by the operating system and can be run in parallel across multiple cores or concurrently across a single core. 
 
@@ -29,18 +29,18 @@ Threads typically live within a parent process, which we'll be covering later on
 
 Threads within an operating system are typically able to interact with shared resources, and communication is indeed possible between multiple threads. As they are able to share resources such as memory, they are also able to modify things in a concurrent or even parallel fashion. However, when two threads start modifying something in a concurrent fashion, it's important to note that if you do not put in place appropriate guards and checks within your code, you may see race conditions start to create issues. 
 
-## Types of Thread
+# Types of Thread
 
 There are two distinct types of thread. These are:
 
 1. User-level threads: These are the ones we can actively play with within our code etc.
 1. Kernel-level threads: These are very low-level threads that act on behalf of the operating system.
 
-## Multithreading
+# Multithreading
 
 When people typically talk about multithreaded processors, they are typically referring to a processor that can run multiple threads simultaneously. These would typically have 2 or more threads actively competing for execution time within a core and when one thread gives up or stops, the processing core then starts to execute another thread. It context switches between these threads very quickly and gives of the impression that the computer is running things in parallel.
 
-## Creating a Simple Thread
+# Creating a Simple Thread
 
 Before we go into creating a thread in Python, we should take a look at the Python Thread class constructor and see what we need to pass in:
 
@@ -74,6 +74,6 @@ myFirstThread = threading.Thread(target=myTask)
 myFirstThread.start()
 ``` 
 
-## Video Tutorial
+# Video Tutorial
 
 <div style="position:relative;height:0;padding-bottom:56.21%"><iframe src="https://www.youtube.com/embed/Ci1803KhtCM?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="641" height="360" frameborder="0" gesture="media" allowfullscreen></iframe></div>

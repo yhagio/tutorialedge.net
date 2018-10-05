@@ -16,13 +16,13 @@ Templating is fantastic for reducing the amount of code you have to maintain, if
 
 For instance, say we had a blog. If our blog had the same nav bar, the same header image, the same footer, then it makes sense to put this in one place instead of constantly repeating it throughout every page in your application. By defining all this in one page you then have the ability to update your entire application's design very quickly as opposed to making changes in what could potentially be hundreds of files.
 
-## The Templating Solution
+# The Templating Solution
 
 In this tutorial I’ll be introducing you to the ng-view angularjs directive. This directive is fantastic for creating multiple page applications that are fast and require no reloading providing a fluent motion through your web application.
 
 You can check out the official documentation for the ng-view directive here: https://docs.angularjs.org/api/ngRoute/directive/ngView
 
-## Basic Templating
+# Basic Templating
 
 <div class="github-link">
 Full source code is available here: <a href="https://github.com/elliotforbes/AngularJS-1.4.5-ngView">AngularJS ngView Directive</a>
@@ -30,7 +30,7 @@ Full source code is available here: <a href="https://github.com/elliotforbes/Ang
 
 In this tutorial we’ll be creating a simple shop with a home view, a categories view and a single view. 
 
-## Our Controllers
+# Our Controllers
 
 In the interest of brevity I've kept this as a single file but these could be split into multiple files if you so wished.
 
@@ -82,7 +82,7 @@ testApp.controller('ShopController', function ($scope, $routeParams) {
 });
 ```
 
-### Our Master Page:
+## Our Master Page:
 
 This is our master template. Here we can define our title, all of our asset imports as well as anything else that we want to feature on every page. In this instance, we'll want "My Amazing Web Store" featured at the top of every page of our application.
 
@@ -104,7 +104,7 @@ This is our master template. Here we can define our title, all of our asset impo
 </html>
 ```
 
-## Our Templates
+# Our Templates
 
 For brevity I've kept this in a single code block. You'll see below the contents of our three different html pages. As you can see we've only defined what is going to change whenever we look at these pages and haven't touched our master template. When viewing all of these routes you should see our h2 tag - My Amazing Web Store - featured at the top followed by each pages distinct html.
 
@@ -133,7 +133,7 @@ For brevity I've kept this in a single code block. You'll see below the contents
 ...
 ```
 
-## Displaying Custom Components
+# Displaying Custom Components
 
 The above method is great for displaying very simple routes that match to a page and a controller, but what happens if you have defined components? How do you display different components on different routes? Well we can actually make some slight modifications to one of our routes and pass the component like so:
 
@@ -157,6 +157,6 @@ $routeProvider
 ...
 ```
 
-## Conclusion
+# Conclusion
 
 If you found this article useful or have any further questions then please feel free to let me know in the comments section below.

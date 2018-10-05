@@ -34,13 +34,13 @@ We'd then be able to reference the variable names whenever we are setting say, t
 
 Imagine we had 100 different elements in our site that all had to be this certain shade of blue. With traditional CSS we'd have to manually go through every individual rule and alter the value to reflect the new shade of blue we want. This can be a nightmare when you have clients dithering between colors and you find yourself spending more time in tedious updates like this than actually developing.
 
-## CSS3 Variables Enter The Fold
+# CSS3 Variables Enter The Fold
 
 Thankfully, most major browsers have no added support for these new experimental variables. 
 
 > Mozilla Developer Network has an excellent post on using CSS variables which you can find here: [Using CSS Variables - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables#Browser_compatibility)
 
-#### Basic Usage
+## Basic Usage
 
 ```css
 :root {
@@ -60,7 +60,7 @@ div {
 }
 ```
 
-## Example
+# Example
 
 In this example we are going to create a simple `--light-blue` variable that we'll reference within 2 distinct css rules. This should hopefully give you some basic idea of how powerful this could potentially be.
 
@@ -92,7 +92,7 @@ lorem ipsum dolor sit.
 }
 </style>
 
-#### Source Code
+## Source Code
 
 Now if we have a look at the full source code to the above example. You'll see our two html elements and the `style` tag below them which contains our CSS. We define the `--light-blue` variable in our :root element and then we reference this on the first line of the `.box` and `.text` rules for different properties.
 
@@ -123,7 +123,7 @@ lorem ipsum dolor sit.
 </style>
 ```
 
-## Overall
+# Overall
 
 With these variables the larger your css file and the more places that you use this distinct variable, the more worthwhile it's going to be for you if you ever need to quickly change colors on the fly.
 

@@ -15,7 +15,7 @@ twitter: https://twitter.com/Elliot_F
 
 <p>AABB Collision Detection or "Axis-Aligned Bounding Box" Collision detection as it stands for is the simplest form, or one of the simplest forms of collision detection that you can implement in a 2D game. If you have an object that is axis-aligned, ie. not rotated and doesn't need tight collision detection then AABB collision detection is the route you are going to want to take.</p>
 
-## Implementing AABB Collision Detection in Java
+# Implementing AABB Collision Detection in Java
 
 <p>In order to be able to accurately perform Axis-Aligned Bounding Box collision detection you'll need at minimum the 4 following characteristics of the object you are wanting to make collidable.</p>
 

@@ -13,11 +13,11 @@ twitter: https://twitter.com/Elliot_F
 
 In this tutorial we'll be looking at how to work with and define promises in AngularJS. For more information check out the official [AngularJS Documentation](https://docs.angularjs.org/api/ng/service/$q)
 
-## What are Promises in Javascript?
+# What are Promises in Javascript?
 
 Essentially when you create a promise, you are ensuring that a certain order is followed in the execution of your code. Javascript is asynchronous by nature and in the execution of a method it’s not guaranteed what part of it will finish execution first. This is a big change if you are used to languages like Java and C++ where the order of execution is always exactly the same.
 
-## Example of a Promise
+# Example of a Promise
 
 If you have written any AngularJS applications that call upon the $http service then you will have already had experience working with Promises. For example this is a promise:
 
@@ -61,7 +61,7 @@ cutCarrots();
 
 However this is also an example of how things can go wrong in your applications, for instance. Because we don’t have any control over when a promise will finish, we could see weird side-effects from our code. For instance we could see the onions added to the stew before the carrots which might not be what we want.
 
-## Chaining Promises
+# Chaining Promises
 
 Thankfully, we have a way we can dictate when we want things done. This is where the $q service comes in. If we wanted to maintain the order in which things happen in the preparation of our stew we could do something like this:
 
@@ -81,7 +81,7 @@ $http.get('api/chop/onions')
   });
 ```
 
-## Defining our Own Promises
+# Defining our Own Promises
 
 AngularJS's $q service allows to define our own promises. Below you'll find an example controller that contains the ctrl.ourPromise function, this function returns a promise object that we can chain like we have done in our ctrl.$onInit function.
 
@@ -114,6 +114,6 @@ angular.module('root')
   .controller('TestController', TestController);
 ```
 
-## Conclusion
+# Conclusion
 
 If you spot any errors with this tutorial or wish to ask any further questions then let me know in the comments section below.

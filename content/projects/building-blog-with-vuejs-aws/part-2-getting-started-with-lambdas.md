@@ -18,7 +18,7 @@ So, in the last tutorial, we managed to get a simple CI/CD pipeline up and runni
 
 In this tutorial, we are going to continue to develop our blog and get started building up the first of our Lambda functions that we'll need to make our blog work. 
 
-## Our First Lambda Function
+# Our First Lambda Function
 
 We'll start by creating a `hello world` style lambda function that will later return a paginated list of blog posts. Once we've managed to successfully deploy this version 1 of the endpoint, we can then start working on integrating it with our DynamoDB table that we'll be creating later on in the series.
 
@@ -46,7 +46,7 @@ Let's break down the above code.
   * **callback** - The callback we will call when our function is ready to return
 * **line 5** - We call our `callback` function which returns a `statusCode`, any response `headers` and a `body`.
 
-## Serverless Config
+# Serverless Config
 
 Now that we have a simple Lambda function, let's attempt to deploy this using the serverless command line interface. Create a new `serverless.yml` file within a new `functions/` directory in the root of your project. You will then want to populate it with the following `yaml` configuration:
 
@@ -116,7 +116,7 @@ functions:
 
 You should notice that in the list of `endpoints` this deployment returns, we have a `GET` request and the url for that request. If we now hit that API endpoint, we should be able to see `Hello World` displaying within our browser!
 
-## Debugging your Lambda Functions
+# Debugging your Lambda Functions
 
 If you see any issues with this endpoint, it's worthwhile looking into how you can accurately debug what has gone wrong with the code you have written and deployed. In order to do that, we need to look at AWS CloudWatch which hosts all of the logs of our Lambda functions with no additional setup needed. In order to view these logs, you can either navigate to CloudWatch directly, or you can open up the Lambda console and select your newly deployed function, you can then click the `monitoring` tab at the top of the page and it will show you graphs that tell you things like invocation count, duration and any errors.
 
@@ -126,7 +126,7 @@ You should notice on each of these graph boxes, there is a link to `Jump to Logs
 
 ![CloudWatch Logs](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/vuejs-blog-aws/screenshot-03.png)
 
-## Next Steps
+# Next Steps
 
 We have now managed to write and deploy our first Lambda function! In the next few tutorials, we will be expanding our Lambda collection and start integrating with services such as DynamoDB and eventually GraphQL.
 

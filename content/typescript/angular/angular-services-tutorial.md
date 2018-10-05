@@ -25,7 +25,7 @@ Define all of the above **ONCE** in a service so that we could do something like
 Clearly it’s got to be the second way. It doesn’t take away the complexity of working with an API but it focuses it in one small place following the **DRY** principle. Having it in one place also makes maintenance far easier, say for instance v2 of your API was released and you had to move all of your apps over to that API? Well having it defined in on service would mean that you just have one place to update it from.
 
 
-## Defining a Service in Angular
+# Defining a Service in Angular
 
 
 In order to define a service, create a file called user.service.ts. Within this file we will then do the following:
@@ -50,7 +50,7 @@ export class UserService {
 }
 ```
 
-## Using our New Service
+# Using our New Service
 
 If we wanted to start using our UserService within one of our components we would first have to import that service and pass the path to that file and then Inject it through the constructor of our components class.
 
@@ -79,7 +79,7 @@ export class UserComponent {
 
 In this example we will simply print out the response from the service to the console.
 
-## Interacting with Http APIs
+# Interacting with Http APIs
 
 Typically services are used as an interface between your components and your outside RESTful APIs. If you are wanting to do some form of Http request then you'll have to first add the necessary imports and then within your function return a http request that maps the response and error into json.
 
@@ -135,10 +135,10 @@ export class ArticleComponent implements OnInit {
 
 Notice above that we import our newly defined ArticleService at the top and then ask for it as a parameter in our constructor. We then let our dependency injection do it's magic and then we are able to call any of that service's defined methods.
 
-## Video Tutorial
+# Video Tutorial
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/RJHNe1x5ov4" frameborder="0" allowfullscreen></iframe>
 
-## Conclusion
+# Conclusion
 
 If you found this tutorial helpful or require further assistance then please feel free to let me know in the comments section below.

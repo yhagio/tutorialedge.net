@@ -14,11 +14,11 @@ twitter: https://twitter.com/Elliot_F
 
 This is the first tutorial in a series in which we’ll be building up a website for a domain name I’ve been sitting on for a few years now. This is intended to show you everything it takes in order to program your own website using NodeJS and the new Angular2 framework. 
 
-## Creating a Simple Web Server Using NodeJS and ExpressJS.
+# Creating a Simple Web Server Using NodeJS and ExpressJS.
 
 So the very first thing we need for our site is the foundation and for this we can use a very simple ExpressJS server.
 
-### Prerequisites
+## Prerequisites
 
 Before we can begin this series you’ll need to make sure you have the following installed on your computer:
 
@@ -27,7 +27,7 @@ Before we can begin this series you’ll need to make sure you have the followin
 
 Typically NodeJS includes the node package manager (NPM) by default so once you’ve installed node on your machine, open up a terminal and test your installation. Type “npm” in your terminal and if everything has been configured correctly you should see the manual for npm printed out. 
 
-## Setting Up Our Project
+# Setting Up Our Project
 
 Create a directory on your development machine and then navigate to that folder using the terminal. Once you are here we can initialize our project with npm:
 
@@ -37,13 +37,13 @@ mpm init
 
 This should then ask you a series of questions that will be used in order to populate a package.json file that this command creates. These aren’t critically important and can be changed at a later date if needed.
 
-## Installing ExpressJS
+# Installing ExpressJS
 
 Once you’ve initialized your project with npm we can then proceed to installing ExpressJS. `npm install express --save`
 
 This command should install ExpressJS into a node_modules directory within your project and this will now allow us to make a start programming our simple web server.
 
-## Implementing our Server
+# Implementing our Server
 
 So to begin with you’ll want to create a new js file within your directory. We’ll call this server.js and it’s going to start off like so:
 
@@ -73,7 +73,7 @@ node server.js
 
 This should start the server and if we navigate to our browser and type: http://localhost:3000 you should see Hello World! Printed out.
 
-## Improving Our Server
+# Improving Our Server
 
 So now that we’ve got a basic server up and running we now need to improve it a bit and give it functionality like serving our html files as well as all our assets. 
 
@@ -107,6 +107,6 @@ var server = app.listen(3000, function () {
 });
 ```
 
-## Checking it all works
+# Checking it all works
 
 Once you’ve done all this, restart your server in the terminal by pressing ctrl-c or cmd-c and then restart it by running node server.js. Again navigate to localhost:3000 and you should see your index.html page rendered for you. Test the configuration by changing some of the css.

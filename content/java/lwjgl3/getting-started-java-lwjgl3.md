@@ -17,7 +17,7 @@ twitter: https://twitter.com/Elliot_F
 
 <p>Welcome to the ultimate comprehensive guide to getting started with LWJGL 3 and OpenGL. My main goal for this part of the site is to create the ultimate primer from which game developers can refer to.</p>
 
-#### Beginners Tutorials:
+## Beginners Tutorials:
 
 <ul>
 
@@ -28,7 +28,7 @@ twitter: https://twitter.com/Elliot_F
 <li>Vertex Array Object and Vertex Buffer Objects</li>
 </ul>
 
-#### Intermediate Tutorials
+## Intermediate Tutorials
 
 <ul>
 <li><a href="http://tutorialedge.net/getting-started-with-opengl-shaders">Introduction to Shaders</a></li>
@@ -39,7 +39,7 @@ twitter: https://twitter.com/Elliot_F
 <li>Getting Started with OpenAL and in-game Audio</li>
 </ul>
 
-#### Advanced Tutorials
+## Advanced Tutorials
 
 <ul>
 <li>Ray Tracing with OpenGL</li>

@@ -16,7 +16,7 @@ weight: 1
 
 State management is something you will ultimately have to deal with as you create increasingly complex frontend applications. Thankfully, with the help of Vuex, this isn't as hard as you may think! 
 
-## Installation
+# Installation
 
 In order to install `vuex`, you will have to use either `yarn` or `npm` like so:
 
@@ -27,7 +27,7 @@ $ npm install vuex
 $ yarn add vuex
 ```
 
-## Setting up Vuex
+# Setting up Vuex
 
 Once you have successfully installed Vuex in your VueJS application, you can set your application to use it by doing the following within your `main.js` file:
 
@@ -57,11 +57,11 @@ new Vue({
 
 We then have to define our `/src/store/index.js` file which will contain our `Vuex.Router()` object which we've imported and used in our `main.js` file above.
 
-## Core Concepts
+# Core Concepts
 
 So, there are 5 core concepts you will have to become familiar with if you wish to use `vuex` as your application's state management system.
 
-### State
+## State
 
 State is the object representation of your applications state. This could be as simple as this if we wanted to store a 'name' value within our application:
 
@@ -78,7 +78,7 @@ export const store = new Vuex.Store({
 
 If we wanted to make it more complex then we simply need to expand out our state object to store everything we need. This could be arrays, boolean values, nested objects or any of the 5 primitives types within JavaScript.
 
-### Mutations
+## Mutations
 
 Mutations within the `vuex` world allow us to update the `state` of our application. These are very similar to event handlers and each mutation has a string type and a handler. 
 
@@ -102,7 +102,7 @@ export const store = new Vuex.Store({
 })
 ```
 
-### Actions
+## Actions
 
 Actions allow us to `commit` mutations. What this means is that should we wish to update the `name` of our `state` object above, we would trigger an action using the `store.dispatch()` method and passing in the string name of the action we wish to call. 
 
@@ -143,7 +143,7 @@ Due to the way we have registered our `vuex` store within our application, you c
 this.$store.dispatch('updateName')
 ``` 
 
-### Getters
+## Getters
 
 There are some situations where we need to get compute a derived state based on stored state. For example, say we wanted the first initial of our `name` value that we have already stored, we could define a `Getter` that would compute this for us, cache the result and then return the result.
 
@@ -179,11 +179,11 @@ export const store = new Vuex.Store({
 
 If you are doing more expensive operations such as filtering a large list of objects then this starts to become more beneficial.
 
-### Modules
+## Modules
 
 > Still under construction
 
-## Conclusion
+# Conclusion
 
 Hopefully, you found this tutorial on `vuex` useful and it showed you everything you need in order to get started using it within your own Vue.js applications.
 

@@ -15,7 +15,7 @@ twitter: https://twitter.com/Elliot_F
 
 In this article, we are going to be looking at how you can implement real-time websocket-based communication within your ReactJS web application.
 
-## Why Websockets?
+# Why Websockets?
 
 I've covered this numerous times in previous articles on this site as to why we should use websockets within our applications. 
 
@@ -42,7 +42,7 @@ If we migrated our application to use websockets, we could reduce this to 100 TC
 
 These bi-directional connections could then be used to push status updates only when they start seeing issues. As such, you could find yourself drastically saving the amount of network traffic generated. 
 
-## Scaffolding our Application
+# Scaffolding our Application
 
 To avoid any confusion, we'll be creating a blank react application using the `create-react-app` tool:
 
@@ -56,7 +56,7 @@ Once this has gone away and successfully created our application, we can then pr
 $ yarn add socket.io-client
 ```
 
-## Our api.js File
+# Our api.js File
 
 Now that we have all of our dependencies installed and ready to go, it's time to define the file that will perform our websocket connection and also allow us to interact with the newly opened connection.
 
@@ -81,7 +81,7 @@ You'll notice within this that we have first imported the necessary `socket.io-c
 
 Below this we've then defined a `connect()` function which takes in a callback as a parameter. Within the body of this function we define what happens when our frontend client receives a socket.io message of type `chat`. In this case we simply log what was received and then call our inputted callback function, passing in the received message to that. 
 
-## Updating your App.js
+# Updating your App.js
 
 So, now that we have defined our `connect` function within our `api/index.js` file, we can start the process of connecting to our websocket endpoint and sending and receiving messages.
 
@@ -122,7 +122,7 @@ export default App;
 
 Once you've done this, save your file and reload your application within your browser. You should see within your console tab the words `hello world` returned when you make a successful connection to the backend websocket server.
 
-## Our Backend System
+# Our Backend System
 
 Our backend system is very simple, but can be extended to your heart's content. This will actually be the base for a new series that I'm building on creating a real-time chat application that runs on AWS. If you want to stay tuned to when this comes out then please feel free to follow me on twitter: [@Elliot_f](https://twiter.com/Elliot_f)
 
@@ -158,7 +158,7 @@ This will concurrently watch for any code changes, compiles our TypeScript files
 
 Once this is started and you are running your frontend application, you should be able to see `Hello World` being successfully logged in your browser inspector when you connect to the backend.
 
-## Conclusion
+# Conclusion
 
 So, hopefully this tutorial has been successful in getting you started with both React and Socket.io so that you can build up your own complex, awesome real-time applications. 
 

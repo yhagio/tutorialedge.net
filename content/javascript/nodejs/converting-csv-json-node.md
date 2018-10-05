@@ -18,7 +18,7 @@ In this tutorial I’m going to be showing you how we can create a NodeJS script
 
 In order to do this conversion we’ll be using the <a href="https://www.npmjs.com/package/csvtojson">csvtojson</a> node package. This package will do pretty much all the heavy lifting for us and having used it in production environments I can say that it’s remarkably easy to implement into a project.
 
-## Setting Up Your Project
+# Setting Up Your Project
 
 Create a new project directory on your machine and open up this location in your terminal. Next we’ll want to install the <b>csvtojson</b> node module, you can do that by typing the following: 
 
@@ -28,7 +28,7 @@ npm install csvtojson --save
 
 This should create a <b>node_modules</b> directory within your project which will contain all the dependencies that csvtojson requires.
 
-## Implementation
+# Implementation
 
 Now that we’ve got everything set up we can begin implementation. Open up your project in your prefered text editor and create a new js file. Within this file add the following code.
 

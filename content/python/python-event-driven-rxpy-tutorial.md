@@ -19,13 +19,13 @@ The reactive programming paradigm is something that I've always been interested
 
 Event based systems can dynamically react to different situations in smart ways and the [ReactiveX](https://github.com/ReactiveX) library enables to do this in a such a way that our code is succinct and easy to follow. 
 
-## Differences between Reactive and Event-Driven Programming
+# Differences between Reactive and Event-Driven Programming
 
 It should be noted that there are some subtle differences between both event-driven programming and that of reactive programming. Event-driven programming focuses on handling events such as, for example, a button click and is the paradigm that most operating systems are based upon. If you perform an action within an operating system, the `os` will treat that as an event and trigger the corresponding function for that action.
 
 Reactive programming on the other hand treats data passed into reactive systems as events. You could have a reactive system listen for stock price changes and only trigger an action to happen when a stock reaches a certain price. 
 
-## Working with RxPY
+# Working with RxPY
 
 In this tutorial we'll be exploring the [RxPY](https://github.com/ReactiveX/RxPY) library which is the most popular library currently available for writing reactive systems. 
 
@@ -78,7 +78,7 @@ source.subscribe(on_next=lambda value: print("Received Instruction to buy {0}".f
 
 You'll notice that we are passing in 3 distinct `lambda` functions into our call to `subscribe()`. These 3 `lambda` functions are `on_next()` which is called whenever our Observable emits something, `on_completed()` which is called when our Observable has nothing else to give us, and `on_error()` which is called whenever there is an error emitted by our Observable.
 
-## The Output
+# The Output
 
 When you run this you should see that `APPL`, `TSLA` and `MSFT` all trigger our observer's `on_next()` function and a buy order is placed. However, when our Observable tries to process `ELLT` it calls `on_error()` as the stock price is set to `0`.
 
@@ -90,12 +90,12 @@ Received Instruction to buy MSFT
 Stock has an invalid price: ELLT
 ```
 
-## Conclusion
+# Conclusion
 
 This is just a very simple example of what could be done with `RxPY`, there are an almost infinite amount of different things you could do with this library. You could for instance have a Twitter bot scan for tweets based on a certain keyword and whenever a new tweet appears it could trigger an event. Or you could expand out this wonderfully complex trading algorithm shown above and create a system that has the potential to buy you a luxury yacht somewhere warm!
 
 If you enjoyed this tutorial then you may like my book on [Learning Concurrency in Python](https://www.packtpub.com/application-development/learning-concurrency-python) which covers the RxPY library in greater detail!
 
-## Video Tutorial
+# Video Tutorial
 
 <div style="position:relative;height:0;padding-bottom:56.3%"><iframe src="https://www.youtube.com/embed/tQA8I8yMxxM?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="639" height="360" frameborder="0" gesture="media" allowfullscreen></iframe></div>

@@ -18,7 +18,7 @@ weight: 6
 
 In this tutorial, we are going to explore how we can use animations and transitions to make our VueJS web application really stand out from the crowd. 
 
-## A Simple Transition
+# A Simple Transition
 
 Let's start of by creating a few very simple transitions, these will simply fade in when a certain condition is met. I was watching Mission Impossible whilst writing this so the theme for this is a top secret mission. The finished product for this section is going to look something like this:
 
@@ -58,7 +58,7 @@ These all have a `v-if` directive attached to them to dictate when they are to s
 
 Let's break down what happens when one of our `<p>` elements appears/disappears. Vue will automatically listen for whether one of these elements has a CSS transition or animation applied. If it does then these CSS transition classes will be added/removed at the appropriate time.
 
-## Demo
+# Demo
 
 <div id="app">
     <div class="hello">
@@ -87,7 +87,7 @@ Let's break down what happens when one of our `<p>` elements appears/disappears.
     </div>
 </div>
 
-## Full Component Source
+# Full Component Source
 
 This is the full source code for the component with simple transitions:
 
@@ -176,7 +176,7 @@ h1 span {
 </style>
 ```
 
-## Conclusion
+# Conclusion
 
 That wraps up this tutorial! I hope you found it enlightening and educational! If you enjoyed it then please let me know in the comments section below! 
 

@@ -17,7 +17,7 @@ In this tutorial we'll be looking at how you can add a box shadow effect to elem
 
 > It's worth checking out the material design documentation on [Elevation and Shadows](https://material.io/guidelines/material-design/elevation-shadows.html) 
 
-## Output
+# Output
 
 This is what we'll be creating:
 
@@ -34,7 +34,7 @@ This is what we'll be creating:
 }
 </style>
 
-## Implementation
+# Implementation
 
 For the above example we first define a div and attach the `.box` class to that div.
 
@@ -68,7 +68,7 @@ box-shadow: h-shadow v-shadow blur spread color |inset|initial|inherit;
 | inherit  | Inherits property from parent element |
 
 
-#### Full .box css
+## Full .box css
 
 ```css
 .box {
@@ -79,7 +79,7 @@ box-shadow: h-shadow v-shadow blur spread color |inset|initial|inherit;
 ```
 
 
-## Inner Shadow
+# Inner Shadow
 
 <div class="box-2">
   <h2>Box Shadow Example</h2>
@@ -94,7 +94,7 @@ box-shadow: h-shadow v-shadow blur spread color |inset|initial|inherit;
 }
 </style>
 
-#### Code
+## Code
 
 ```html
 <div class="box-2">

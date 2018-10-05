@@ -16,7 +16,7 @@ In this tutorial we will be taking a look at bit manipulation and how you can us
 
 > In this tutorial we will be using Python 3.6 in order to demonstrate some of the concepts covered.
 
-## Shift Left
+# Shift Left
 
 By shifting left we are essentially multiplying our original number by 2 * the number of times we shift left. 
 
@@ -39,11 +39,11 @@ Let's now look at the binary representation for these numbers and how shifting l
 1000000 # returns 64 in binary, we have shifted 2 bits to the left
 ```
 
-## Shift Right
+# Shift Right
 
 It should be noted that there are two distinct types of shift right. These are arithmetic shift rights and logical shift rights.
 
-### Arithmetic Shift Right
+## Arithmetic Shift Right
 
 Arithmetic shift rights essentially perform a division on whatever number was put into it. If we performed an arithmetic shift right on the value `16` in Python and shifted it right `1` then our output would be `8`. If we shifted right twice our output would be `4` as we are essentially dividing by 4.
 
@@ -72,11 +72,11 @@ If we were to shift right twice on an odd number we would see the following:
 
 
 
-## Bit Logical Operators 
+# Bit Logical Operators 
 
 In this section of the tutorial we are going to take a look at the logical operators that can be used in conjunction with your bits.
 
-### Bitwise And
+## Bitwise And
 
 Bitwise and will return a `1` if both values to the left and right of our `&` operator are `1`. This results in the following output when we try it across various different inputs.
 
@@ -91,7 +91,7 @@ Bitwise and will return a `1` if both values to the left and right of our `&` op
 0
 ```
 
-### Bitwise Or
+## Bitwise Or
 
 Bitwise Or can be done using the `|` operator in Python and will return a `1` if either or *both* of our values are `1`.  
 
@@ -106,7 +106,7 @@ Bitwise Or can be done using the `|` operator in Python and will return a `1` if
 1
 ```
 
-### Bitwise XOR
+## Bitwise XOR
 
 A Bitwise exclusive or `(XOR)` can be achieved using the `^` operator. This will return the following results:
 
@@ -121,14 +121,14 @@ A Bitwise exclusive or `(XOR)` can be achieved using the `^` operator. This will
 0
 ``` 
 
-## Complex Bit Manipulation
+# Complex Bit Manipulation
 
 Now that we have covered the basics in Bit manipulation we can start to look at the more complex tasks such as setting a bit, clearing a bit or getting a bit. The vast majority of these tasks can be performed by first creating what we would call a `bit mask` and then using this with one of the logical operators that we have previously covered.
 
 A bit mask typically looks something like `0010000` and we can use this for doing things like setting, getting or clearing a bit in the `5th` bit position. If this doesn't make sense right now hopefully after the next few examples it will start to become clearer.
 
 
-### Setting a Bit
+## Setting a Bit
 
 ```py
 def set_bit(position, binary):
@@ -144,6 +144,6 @@ def set_bit(position, binary):
 print(set_bit(4, 00000000))
 ```
 
-<!--### Getting a Bit
+<!--## Getting a Bit
 
-### Clearing a Bit -->
+## Clearing a Bit -->

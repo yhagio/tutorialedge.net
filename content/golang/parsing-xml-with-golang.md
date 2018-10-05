@@ -14,7 +14,7 @@ weight: 10
 
 In this tutorial we look at how you can effectively read in an XML file from the file system and then parse this file using Go’s [“encoding/xml” Package](https://golang.org/pkg/encoding/xml/). We’ll look at how you can traverse multiple nested xml elements and then we’ll simply print this out to our terminal window.
 
-## Our Example XML File
+# Our Example XML File
 
 So to begin with, we’ll need an xml file that we can traverse.
 
@@ -43,7 +43,7 @@ So to begin with, we’ll need an xml file that we can traverse.
 
 You’ll see the above xml has attributes set on the user tags, nested elements and if you are able to parse this then you should, by extension, be able to parse any xml file regardless of size.
 
-## Reading in our File
+# Reading in our File
 
 The first obstacle we’ll have to overcome is reading this file into memory. We can do this by using a combination of the “os” package and the “io/ioutil” package. 
 
@@ -73,7 +73,7 @@ func main() {
 }
 ```
 
-## Defining our Structs
+# Defining our Structs
 
 Before we can parse our xml file, we need to define some structs. We’ll have one to represent the complete list of users, one to represent our user and then one to represent our users social links.
 
@@ -113,7 +113,7 @@ type Social struct {
 }
 ```
 
-## Unmarshalling Our XML
+# Unmarshalling Our XML
 
 So above we’ve seen how to load in our file into memory, in order to marshal it we need to convert this file to a byte array and then use the xml.Unmarshal method in order to populate our Users array.
 
@@ -128,7 +128,7 @@ var users Users
 xml.Unmarshal(byteValue, &users)
 ```
 
-## Full Implementation
+# Full Implementation
 
 ```go
 package main
@@ -201,6 +201,6 @@ func main() {
 }
 ```
 
-## Conclusion
+# Conclusion
 
 I hope you found this tutorial beneficial, if you’ve got anything you wish to add then please do in the comments section below!

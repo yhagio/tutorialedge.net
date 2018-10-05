@@ -17,17 +17,17 @@ twitter: https://twitter.com/Elliot_F
 
 In this tutorial, we are going to be looking at how you can dockerize an existing NodeJS application and ultimately leverage the benefits of Docker. We'll be creating a Docker image that will dynamically pick up changes to a NodeJS application and automatically recompile and rerun our application without having to rebuild and re-run our docker image.
 
-## Video Tutorial
+# Video Tutorial
 
 <div style="position:relative;height:0;padding-bottom:42.76%"><iframe src="https://www.youtube.com/embed/CsWoMpK3EtE?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="842" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 
-## Advantages of Docker
+# Advantages of Docker
 
 Docker offers a number of massive advantages and can drastically reduce the friction of deploying your application to multiple platforms with minimal fuss. 
 
 New developers can easily pull down Docker-ized applications and run them with a couple of commands on their local machine. Application developers explicitly state within the `Dockerfile` everything that application needs in order to run.  
 
-## Our NodeJS Application
+# Our NodeJS Application
 
 We are going to start off with a fairly simple, 6-line NodeJS Express.JS application that will simply serve `Hello World!` when it's `/` endpoint is hit with a `GET` request. 
 
@@ -69,7 +69,7 @@ If you are familiar with Node.js development, you'll know that the standard prac
 
 > We can test if our application works locally by calling `npm install` within our project directory and then subsequently calling `npm run start`. You should then be able to navigate to `http://localhost:3000/` and be greeted with `Hello World!` in your browser. 
 
-## Dockerizing our Application
+# Dockerizing our Application
 
 The aim of the game here is to get a docker image that is as thin as possible in terms of size and is still able to provide our application with everything it needs in order to run successfully.
 
@@ -98,7 +98,7 @@ Now, we've done two distinct `COPY` commands within our `Dockerfile`, and the re
 
 Docker automatically caches the results of each individual command so that they don't have to be fully run each time you wish to build a Docker image. By doing it this way, we can cache the results of our `npm install` command so that every time we build our Docker image, it doesn't constantly have to reinstall all our dependencies. This may not take a lot of time for this particular project, but for larger projects, this can become a massive time drain.
 
-### Building our Docker Image
+## Building our Docker Image
 
 Now that we have defined our `Dockerfile` within our application's directory, we can go about building our Docker image. We can do this by running the following `docker` command within our terminal.
 
@@ -108,7 +108,7 @@ Now that we have defined our `Dockerfile` within our application's directory, we
 
 This will subsequently run through the 6 steps outlined within our `Dockerfile` and build our complete Docker image. 
 
-### Running our Docker Image
+## Running our Docker Image
 
 Once our Docker image has been successfully built, we can then go about running one or more Docker containers based off this image by running the following command:
 
@@ -120,11 +120,11 @@ This will start up a Docker container based off our `node-docker` docker image a
 
 > It's important to note that whilst our Node.js application may be listening for requests on port `3000` within the code, by specifying `-p 9000:3000` we essentially map any requests to port `9000` from our host machine to the underlying docker container listening on port `3000`.
 
-### Viewing running Docker Containers
+## Viewing running Docker Containers
 
 In order to view all of the running containers on your local machine, type `docker ps`. This should show our `node-docker` container running and the ports that it's listening to.
 
-## Automatically Picking up Changes
+# Automatically Picking up Changes
 
 The first thing we'll have to do in order for our running Docker container to pick up any changes is mount it to a directory on my host machine. We can achieve this by using the `-v` flag and specifying the current directory of my application and mapping that to the `/app` directory our application lives within in our docker container.
 
@@ -148,7 +148,7 @@ $ docker run -it -p 9001:3000 -v $(pwd):/app node-docker-tutorial
 
 If you now navigate to `http://localhost:9001` you should see your application up and running, if you then subsequently make any changes to the app, these changes will be picked up and automatically reran within our container! Awesome!
 
-## Conclusion
+# Conclusion
 
 In this tutorial, we learned how to implement a docker container that perfectly wraps our NodeJS application. This Docker container is deployable anywhere that can run docker which is a massive advantage! No more worrying about the fact that "it works on my machine".
 

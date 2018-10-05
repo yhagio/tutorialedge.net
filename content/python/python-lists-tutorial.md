@@ -15,7 +15,7 @@ weight: 3
 
 > Under Construction
 
-## Reversing a List
+# Reversing a List
 
 This quick and easy technique shows how you can access all the elements of a list in reverse order.
 
@@ -38,6 +38,6 @@ We can then treat our reversed list as an `iterator` and iterate through every e
 1
 ```
 
-## Conclusion
+# Conclusion
 
 If you found this tutorial useful or require further assistance then please let me know in the comments section below or by tweeting me: [@Elliot_F](https://twitter.com/elliot_f).

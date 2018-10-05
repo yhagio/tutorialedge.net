@@ -15,7 +15,7 @@ weight: 5
 
 In this tutorial, we are going to look at what methods are and how they work within the confines of the Go programming language. 
 
-## A Simple Example
+# A Simple Example
 
 ```go
 package main
@@ -47,7 +47,7 @@ func main() {
 }
 ```
 
-## Functions Vs Methods
+# Functions Vs Methods
 
 There's a subtle distinction between your traditional functions in Go and your Methods. Methods typically act upon a given object, i.e. `guitarist.Update()` 
 
@@ -63,7 +63,7 @@ func (e myStruct) myMethod() {
 }
 ```
 
-## Conclusion
+# Conclusion
 
 In this tutorial, we learned what methods are and how they differ from functions in go. 
 

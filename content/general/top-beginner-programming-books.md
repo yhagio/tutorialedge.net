@@ -14,7 +14,7 @@ twitter: https://twitter.com/Elliot_F
 
 In this article we will be looking at the best books you can buy to help you learn the basics of computer programming. 
 
-## Code Complete: 2
+# Code Complete: 2
 
 <p><img alt="Code Complete: 2" src="https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/books/code-complete.jpg" class="book-img" />
 This is without a doubt one of the best practical guides that any budding programmer should be reading in order to top up their programming skills. This book contains a massive number of practical points that touch upon a wide range of different topics. </p>

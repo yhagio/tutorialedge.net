@@ -17,7 +17,7 @@ twitter: https://twitter.com/Elliot_F
 
 <p>Now we are going to be having a look at how we can sidestep the limiting Global Interpreter Lock that effectively prevented our multithreaded applications from being truly concurrent by using the multiprocessing Python module. </p>
 
-## A Simple Example:
+# A Simple Example:
 
 <p>In this example I'll be showing you how to spawn multiple processes at once and each process will output the random number that they will compute using the random module.</p>
 
@@ -51,7 +51,7 @@ Elliots-MacBook-Pro:Networking elliotforbes$ python processing.py
 0.0320995066016
 ```
 
-## Passing Data Between Processes
+# Passing Data Between Processes
 
 <p>When performing concurrent programming the best practice is usually to avoid sharing state as much as possible. However when you absolutely need to have some form of shared data then the multiprocessing module provides a couple of ways of doing so. </p>
 
@@ -90,6 +90,6 @@ Elliots-MacBook-Pro:Networking elliotforbes$ python processing.py
 [0.6756465745753756, 0.4104274331895341, 0.6733748532075048, 0.9494118991646461]
 ```
 
-## Conclusion
+# Conclusion
 
 <p>Overall Python's MultiProcessing module is brilliant for those of you wishing to sidestep the limitations of the Global Interpreter Lock that hampers the performance of the multi-threading in python. I hope this has been helpful, if you feel anything else needs added to this tutorial then let me know in the comments section below!</p>

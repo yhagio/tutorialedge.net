@@ -16,7 +16,7 @@ weight: 4
 
 In the previous tutorial, we managed to get our DynamoDB table set up and populated with a couple of very simple posts. In this tutorial, we are going to set up a Cognito pool that will store all of the users that register for our Blog. We'll also be able to improve our Lambda endpoints so that they aren't open to the world, they require authentication before they start updating our database, this will stop unauthorized people potentially updating posts and doing malicious things.
 
-## Step 1 - Setting up a Pool
+# Step 1 - Setting up a Pool
 
 So, the first thing we'll need to do is to provision a new User Pool within the Cognito service. We can do this by navigating to the Cognito service page and clicking "Manage Pools". Once we've done that, you should see a page that looks quite similar to this:
 
@@ -89,7 +89,7 @@ export default class CognitoAuth {
 }
 ```
 
-### Some Simple Functions
+## Some Simple Functions
 
 Let's now start to populate our `CognitoAuth` class with a couple of functions. We'll start by creating an `isAuthenticated()` method which will verify if a user is authenticated against the Cognito service, and a `configure()` method which we may need further down the line:
 
@@ -230,7 +230,7 @@ Vue.use(CognitoAuth, config)
 export default new CognitoAuth()
 ```
 
-## Our Register Component
+# Our Register Component
 
 ```html
 <template>
@@ -322,7 +322,7 @@ button i {
 
 ```
 
-## Our Confirm Component
+# Our Confirm Component
 
 ```html
 <template>
@@ -411,7 +411,7 @@ button i {
 </style>
 ```
 
-## Our Login Component
+# Our Login Component
 
 So, now that we've created our User Pool and built our service, let's now create a component within our VueJS application that will allow us to log in or register should we not already have an account.
 
@@ -514,7 +514,7 @@ button i {
 ```
 
 
-## Conclusion
+# Conclusion
 
 In this part of the course, we managed to successfully extend our project so that it interacts nicely with the AWS Cognito service. We have implemented full login/register functionality and consequently we can now start to build more of a community around our topic of choice.
 

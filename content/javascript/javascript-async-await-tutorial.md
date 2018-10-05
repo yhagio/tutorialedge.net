@@ -13,7 +13,7 @@ twitter: https://twitter.com/Elliot_F
 
 In this tutorial, we are going to have a look at how you can make your JavaScript programs more syntactically beautiful with the use of both the `async` and `await` keywords. Both of these keywords were introduced into Node in version 7.6. Hopefully, by the end of the tutorial, you will be going back to refactor all of your old NodeJS based applications to replace all of your chained callbacks and promises.
 
-## A Simple Introduction
+# A Simple Introduction
 
 Let us first have a look at how we would typically deal with functions that return promises without `async` or `await`. We'll create a `myPromise()` function which will just return a `Promise` like so:
 
@@ -61,7 +61,7 @@ myAsyncFunction().then(x => console.log(x));
 
 We've managed to achieve the same result with our `myAsyncFunction` in 4 lines of code, as we had with 8 lines of code in our previous `myTraditionalFunction`. By utilizing the `async` and `await` keywords, we have been able to create a program that is far cleaner and more concise. 
 
-## Improvements to Error Handling
+# Improvements to Error Handling
 
 Using both `async` and `await` improves the way we can deal with errors that occur inside of our promises. Let's take for example a program that crawls a page of a website and returns the response, using traditional error handling methods we would have to write additional `.catch()` blocks to catch any errors that our promises may throw.
 
@@ -108,6 +108,6 @@ async function crawlPage(url) {
 crawlPage("https://tutorialedge.net/");
 ```
 
-## Conclusion
+# Conclusion
 
 Hopefully, you found this tutorial useful and I've shown you the light when it comes to using `async` and `await` within your own JavaScript programs. I would love to hear your feedback so please feel free to reach out to me on twitter: [@Elliot_F](https://twitter.com/elliot_f).

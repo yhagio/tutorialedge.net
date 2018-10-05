@@ -15,11 +15,11 @@ twitter: https://twitter.com/Elliot_F
 
 In this tutorial we are going to take a look at how you can create a really simple Python module using the `C` programming language. I felt this was a good topic to cover as I personally struggled with finding succinct documentation that worked and showed me the basics. 
 
-## Why Are C Extensions Necessary?
+# Why Are C Extensions Necessary?
 
 Being able to write `C` extensions can come in handy in scenarios where the Python language becomes a bottleneck. Sometimes you require the raw performance of a low-level language like `C` in order to reduce things like response times and processing times.
 
-## The Basic Requirements
+# The Basic Requirements
 
 In this tutorial we'll be building a very simple `C` based Python module that will feature a number of different functions that should hopefully give you enough to get started. 
 
@@ -28,7 +28,7 @@ We'll be creating 2 distinct functions:
 * A `Hello World` function that simply performs a print.
 * A Simple Fibonacci Function that takes in a value `n`.
 
-## Getting Started
+# Getting Started
 
 Let's dive into the `C` code. Open up the `.c` file that will contain your new module and add `#include <Python.h>` to the top. This will bring in the necessary `C` Python objects that will allow us to construct our module.
 
@@ -66,7 +66,7 @@ PyMODINIT_FUNC PyInit_myModule(void)
 }
 ```
 
-## Our setup.py File
+# Our setup.py File
 
 Thankfully Python includes some modules that make extending the language easier. Here we can specify the name of our module and pass in the necessay `.c` files that make up our module.
 
@@ -76,7 +76,7 @@ setup(name = 'myModule', version = '1.0',  \
    ext_modules = [Extension('myModule', ['test.c'])])
 ```
 
-## Building and Installing our Module
+# Building and Installing our Module
 
 In order to `build` and `install` our newly created `C` module we have to do the following: 
 
@@ -115,7 +115,7 @@ Hello World
 >>>
 ```
 
-## Our Fibonacci Function
+# Our Fibonacci Function
 
 Let's now take a look at a more complex function that will take in a value `n` and then return the appropriate fibonacci number. We aren't going to do any fancy `memoization` here, it's going to be a plain old recursive function that features terrible performance. However it will show us how to both take in a value and return a value in our `C` module. 
 
@@ -152,6 +152,6 @@ Again we should build and install this like we have done before. We can then tes
 1
 ```
 
-## Conclusion
+# Conclusion
 
 Hopefully you found this tutorial useful and it clarifies the process of creating your own `C` based modules. If you feel like leaving some feedback or asking some further questions then please feel free to in the comments section below.

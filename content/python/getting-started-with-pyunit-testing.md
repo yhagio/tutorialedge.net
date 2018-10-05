@@ -23,7 +23,7 @@ If your tests adequately test that your code behaves the way you expect it to, w
 
 In this tutorial I am going to be showing you the basics of unit testing in Python.
 
-## Basic Tests
+# Basic Tests
 
 Let's envision that we have a very simple python module that features a `calc_x()` function. 
 
@@ -49,7 +49,7 @@ if __name__ == '__main__':
     unittest.main()
 ```
 
-## Output
+# Output
 
 When we run this using `python3.6 test_mymodule.py` you should see the following output:
 
@@ -62,6 +62,6 @@ Ran 1 test in 0.000s
 OK
 ```
 
-## Conclusion
+# Conclusion
 
 I hope you found this tutorial useful, if you wish to leave feedback or request more information then please let me know in the comments section below!

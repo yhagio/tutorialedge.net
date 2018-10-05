@@ -17,11 +17,11 @@ twitter: https://twitter.com/Elliot_F
 
 In this tutorial we are going to be covering Asyncio's event loop. Some of the material for this tutorial was taken from my book: [Learning Concurrency in Python](https://www.packtpub.com/application-development/learning-concurrency-python).  
 
-## Video
+# Video
 
 <div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/xWt5lpn8fN8?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="640" height="360" frameborder="0" gesture="media" allowfullscreen></iframe></div>
 
-## The Event Loop 
+# The Event Loop 
 
 The main component of any asyncio based Python program has to be the underlying event loop. Within this event loop we can (from the official documentation): 
 
@@ -35,7 +35,7 @@ A good example of this would be a simple web server, say we have an endpoint on 
 
 Each of the requests made to our web server in the above example would be considered a separate `event`. These events are then matched to a set function that we have predefined whenever a said event is triggered. 
 
-## Getting Started
+# Getting Started
 
 Let's take a quick look at how you can define a very simple event loop. In order to instantiate an event loop we'll use `asyncio.get_event_loop()`, we'll then start a `try... finally` and within the body of our `try` we'll specify that we want our newly instantiated event loop to run until it has completed our `myCoroutine()` function.
 
@@ -55,11 +55,11 @@ finally:
     loop.close()
 ```
 
-## Running Options
+# Running Options
 
 We have a number of options for running our event loops, we can either call `run_forever()` which will subsequently run our event loop until the `stop()` function is called, or we can call `run_until_complete(future)` and only run our event loop until whatever `future` object we've passed in has completed it's execution.
 
-### The run_until_complete() method
+## The run_until_complete() method
 
 Let's take a quick look at the `run_until_complete()` function. In this example we'll define our `myWork()` coroutine which we will then pass into our `run_until_complete` function and subsequently we should see our event loop run until this `myWork()` coroutine is finished it's execution.
 
@@ -87,7 +87,7 @@ Starting Work
 Finishing Work
 ```
 
-### The run_forever() method
+## The run_forever() method
 
 The alternative way of starting up your event loop is to call the `run_forever()` method which will subsequently start your asyncio based event loop and have it run indefinitely until the program comes to an end or the `stop()` method is called. It should be noted that calling this causes our main thread to block indefinitely. 
 
@@ -112,7 +112,7 @@ finally:
     loop.close()
 ``` 
 
-## Running Multiple coroutines:
+# Running Multiple coroutines:
 
 If you wanted to run multiple coroutines indefinitely in parallel then you can do that by creating your `x` number of coroutines and have them run a while loop each. You would then call `asyncio.ensure_future(function())` in order to enqueue them onto the loop and they would run indefinitely after that point.
 
@@ -155,7 +155,7 @@ First Worker Executed
 Second Worker Executed
 ```
 
-## Conclusion
+# Conclusion
 
 If you found this tutorial useful or you require more assistance then please feel free to leave a comment in the comments section below!
 

@@ -11,11 +11,11 @@ title: Implementing the Bubble Sort Algorithm using Golang
 twitter: https://twitter.com/Elliot_F
 ---
 
-## What Is Bubble Sort?
+# What Is Bubble Sort?
 
 Bubble sort is a sorting algorithm that sequentially goes through an array n times. Each time the algorithm runs through our array, it looks at the first element and then the second element, if the first element is larger than the second element then it swaps them, it then proceeds through the entire list performing this action.
 
-## Time Complexity
+# Time Complexity
 
 The time complexity for this algorithm is O(n^2) where n is the number of items being sorted. An example of a worst case scenario would be:
 
@@ -27,7 +27,7 @@ In this case the entire array is backwards and as a result the bubble sorting al
 
 *Best Case Scenario* - In the best case scenario the time complexity is O(n) where n is the number of items being sorted.
 
-## Implementation
+# Implementation
 
 Go provides a very cool swapping mechanism using tuple assignment. We'll create a swapped boolean flag which will indicate whether our list is fully sorted. We'll then iterate through our list 10 times and check to see if the nth element is larger than the n+1th element. If it is we'll swap it using tuple assignment.
 

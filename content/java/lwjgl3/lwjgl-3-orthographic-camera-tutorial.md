@@ -16,7 +16,7 @@ twitter: https://twitter.com/Elliot_F
 
 <p>This tutorial leads on from some of the topics covered in my previous tutorial : How Matrices are used in Game Development so if you haven’t got a good grounding in matrices then I suggest you check that out first. There are several YouTube videos out there that expertly cover the topic of matrices as well so check them out!</p>
 
-## Orthographic Projection Camera
+# Orthographic Projection Camera
 
 <p>Orthographic cameras are a means of representing 3D points in our game world on a 2D monitor/screen. This basically means that you see objects moving away from the camera getting smaller and thus this is perfect for our 2D games. One of the key things you have to understand from the beginning is that there is no ‘physical’ camera object, the camera is basically represented by a matrix that we can translate, rotate or scale depending on however we need to move the camera.</p>
 
@@ -34,7 +34,7 @@ twitter: https://twitter.com/Elliot_F
 
 <p>These will represent the positions of the clipping planes.</p>
 
-## Representing our Matrix in Code:
+# Representing our Matrix in Code:
 
 <p>I wont go into the specifics of how these matrices work as I’m pretty sure there are a hundred different YouTube videos that go to great lengths to describe these things, but I will go onto say that all of this code follows Column-major order just to avoid confusion.</p>
 
@@ -63,7 +63,7 @@ twitter: https://twitter.com/Elliot_F
 Matrix4f pr_matrix = Matrix4f.orthographic(-10.0f, 10.0f, -10.0f * 9.0f / 16.0f, 10.0f * 9.0f / 16.0f, -10.0f, 10.0f);
 ```
 
-## Creating Camera Controls
+# Creating Camera Controls
 
 <p>So now that we’ve got a matrix that will represent our projection matrix, we will also need some way of tracking and updating where our camera is in the world. We can do this by adding a Vector3f to our Camera class and calling it ‘position’. This will essentially store the coordinates of our camera and allow us to move the camera using the following update method:</p>
 
@@ -84,7 +84,7 @@ public void update(){
 }
 ```
 
-## Updating Every Model in our Game
+# Updating Every Model in our Game
 
 <p>The way that the game engine has been implemented is that every object currently uses the one shader which looks something like this:</p>
 
@@ -118,7 +118,7 @@ void main()
 Shader.shader1.setUniformMat4f("vw_matrix", Matrix4f.translate(camera.position));
 ```
 
-## Conclusions
+# Conclusions
 
 <p>So that should be all you need to get yourself up and running with the demonstration code and your own orthographic projection matrix! If you feel you need more detail on the subject then please leave a comment in the comments section below and I’ll try my best to expand upon the explanations already given!</p>
 

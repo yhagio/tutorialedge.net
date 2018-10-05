@@ -18,13 +18,13 @@ If you are developing serious applications there is a very good chance that you 
 
 Angular, or more specifically the angular-cli provides a very good mechanism for having multiple differing configuration files and for building these files easily into your finished build artefacts.
 
-## Why Is This Necessary
+# Why Is This Necessary
 
 Say for instance you are developing a new Administration dashboard for your website that interacts with a REST API that updates your articles. Now imagine you wanted to develop and test new features, without potentially breaking your existing application for people using your site. How would you test new features without impacting your existing application?
 
 This is where different environments will help, ideally you would have at minimum 2 environments. One testing environment which interacts with a test REST API and a test Database.
 
-## How Do You Manage the Configuration?	
+# How Do You Manage the Configuration?	
 
 So the most basic way of managing two different environments is to just change a variable or two every time you want to test or deploy something. But then what happens when our app becomes increasingly sophisticated and requires hundreds of different configuration variables?
 
@@ -43,7 +43,7 @@ export const environment = {
 };
 ```
 
-## Adding Your Own Configuration
+# Adding Your Own Configuration
 
 So in this example, we want to be able to easily switch between APIs depending on what environment we are in.
 
@@ -70,7 +70,7 @@ export const environment = {
 };
 ```
 
-## Importing These Variables Where They Are Needed:
+# Importing These Variables Where They Are Needed:
 
 So now that we’ve defined these variables, how do we reference these in our environment files? 
 
@@ -78,7 +78,7 @@ So typically we interact with APIs using services, in this example we’ll be in
 
 This then references whatever production file we need depending on the arguments we pass to our build or serve command.
 
-## Building For Different Environments
+# Building For Different Environments
 
 The Angular CLI provides both a build and serve command for use that takes in an environment argument. Whenever we want to build our application for a specific environment we do the following:
 
@@ -94,6 +94,6 @@ If we wanted to run the serve command for our test environment we would then do:
 ng serve
 ```
 
-## Conclusions
+# Conclusions
 
 If you found this tutorial useful then please be sure to let me know in the comments section below.

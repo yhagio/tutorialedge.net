@@ -165,7 +165,7 @@ ALTER TABLE users ADD github_id INT;
 protected $fillable = ['github_id','name', 'email', 'password'];
 ```
 
-## Testing it All Works
+# Testing it All Works
 
 Now that you’ve configured everything it’s time to check it all works. Navigate to http://yourapp.com/auth/github and you should hopefully be redirected to githubs authentication page on which you can allow your app to use your details. This should then return you to your ‘home’ route or whatever other route you wish to route them back to.
 

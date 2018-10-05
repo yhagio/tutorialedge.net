@@ -16,7 +16,7 @@ In this article we look at some of the key concepts that everyone should bear in
 
 
 
-## Versioning
+# Versioning
 
 Versioning is incredibly important in pretty much every scenario, be it a personal project or an enterprise scale service that other teams will be interfacing with. 
 
@@ -38,11 +38,11 @@ http://myservice.com/api/v2/my-api-endpoint
 
 By following this approach you are basically guarding yourself from breaking any other apps that are reliant on your API when you release your new changes. Any new applications would then use the /v2/ of the API and older apps have plenty of time to migrate to the new version in their own time. 
 
-## Naming Conventions
+# Naming Conventions
 
 When it comes to naming your API endpoints you should typically follow a convention where every endpoint is named the same noun, such as say 'tutorial' and you would then utilize the various different `HTTP` verbs when it comes to performing `CRUD` actions against these endpoints.
 
-#### Example
+## Example
 
 Say for instance we have an API that allows us to modify the `users` on our site. If we wanted a series of endpoints that would allow us to perform CRUD operations against these users then we should follow this convention:
 
@@ -54,7 +54,7 @@ GET http://myservice.com/api/v1/user # gets a single user
 ```
 
 
-## Use of HTTP Response Codes
+# Use of HTTP Response Codes
 
 When it comes to returning a response to whomever called your API then it's best to utilize the correct `HTTP` status codes. 
 
@@ -77,11 +77,11 @@ http://myservice.com/api/v1/article/1 # UPDATE Endpoint updates article '1'
 
 When a standard user calls `GET` on the first API you would typically return the json response as well as a `200 - OK` status code which indicates everything is ok. However, imagine that same user tries to update our article using the `UPDATE` endpoint. As the user isn't an administrator, we would want to return a different status code such as `401 - Unauthorized` which would indicate that the user does not have the sufficient level or permissions. Once the user becomes authorized as an admin and tries to `UPDATE` again to that same endpoint, we then return a `200 - OK` status which indicates they were successfully able to update the article.
 
-## Discoverability
+# Discoverability
 
 When it comes to APIs, they should be easily navigable. If you are returning paginated results then ideally you should include a `next_page` key/value within your json that directs the user to the next page of results. 
 
-## Rate Limiting
+# Rate Limiting
 
 We don't typically have unlimited resources when it comes to hosting RESTful APIs and sometimes we face users of our APIs that abuse them through overuse. If this happens then rate limiting your APIs can be an effective countermeasure that stops people from effectively DOSing your services. 
 

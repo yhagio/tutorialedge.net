@@ -12,7 +12,7 @@ twitter: https://twitter.com/Elliot_F
 weight: 2
 ---
 
-## Variables in Python
+# Variables in Python
 
 Let’s first have a look at variables. A variable is essentially a place where we can store the value of something for processing later on. Imagine you wanted to write a program that doubled a number for us, not the most exciting of programs I know but it is a good example. 
 
@@ -67,7 +67,7 @@ print("Welcome: " + first_name)
 
 This should then print out `Welcome: Elliot` to our console when we run it. 
 
-## Functions in Python
+# Functions in Python
 
 So now that we’ve got a basic understanding of variables in Python, let’s now move on to functions. If you’ve never encountered functions before then you can think of them as blocks of instructions, imagine you had a maths program that could either double or triple a number of your choice. You would want to define two distinct functions that would take in a number and either double or triple it. 
 
@@ -101,7 +101,7 @@ print(my_var)
 
 > **Exercise** - Try implementing a triple function that takes in a `my_number` variable and returns triple this value.
 
-#### Further Examples
+## Further Examples
 
 In the previous example we defined a pretty small function that only featured one line of code within its body. It's important to note however that you can define many lines of code within your function and even call other functions from within your own function. There is also no rule that states you `must` return something from within your function. It could, for example, just perform a series of print statements like so:
 

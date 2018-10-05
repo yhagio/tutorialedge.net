@@ -17,7 +17,7 @@ If you've been following my [Medium Blog](https://medium.com/@elliot_f) recently
 
 In this tutorial, we are going to be writing a very simple Python based AWS Lambda function that we'll then deploy using the [serverless.com](https://serverless.com/) CLI.
 
-## Installing Serverless
+# Installing Serverless
 
 In order to install the `serverless` CLI you can do the following:
 
@@ -27,7 +27,7 @@ $ npm install serverless -g
 
 If you have set up your AWS credentials correctly with an account that has full permissions then you will now be able to deploy Lambda functions that sit behind an API gateway with ease.
 
-## Our Function
+# Our Function
 
 Create a new directory in which you can add Python files. Within this new directory create a file called `simple.py` as well as a `serverless.yml` file. 
 
@@ -53,11 +53,11 @@ def hello(event, context):
     return response
 ```
 
-## Deploying Without Serverless
+# Deploying Without Serverless
 
 If you wished, you could deploy this without the serverless CLI, you could do so through using either the `aws-cli` or through the console and either uploading your lambda function as a `.zip` file or through the inline editor.
 
-## Our Serverless.yml File
+# Our Serverless.yml File
 
 Within our `serverless.yml` file we will want to define how we want to expose our lambda function. Let's step through this line-by-line. 
 
@@ -95,7 +95,7 @@ functions:
           
 ```
 
-## Deployment
+# Deployment
 
 Once we are happy with our function and we have our `serverless.yml` defined, we can deploy this function by calling `serverless deploy` within the same directory as our `simple.py` and `serverless.yml` file. 
 
@@ -132,7 +132,7 @@ functions:
 
 You should notice the `endpoints` list has a `GET` request endpoint that you should be able to navigate to now should you wish. When you open this up in a browser, you should see the words `hello, world` output to your browser.
 
-## Conclusion
+# Conclusion
 
 Hopefully, you found this tutorial educational! If you require any further assistance then please feel free to let me know in the comments section below! 
 

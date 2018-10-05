@@ -16,20 +16,20 @@ twitter: https://twitter.com/Elliot_F
 
 Hash Tables are a data structure that allow you to store key value pairs in such a way that allows for very quick lookup. 
 
-## Performance
+# Performance
 
 "Good" Hash Tables with minimal collisions allow you to perform inserts, finds and deletes in a constant amount of time, this can be expressed as `O(1)` in big-O notation. 
 
 Hash tables with a high `Fill Factor` will tend to have a high number of collisions and as the `Fill Factor` of your hash table increases, the performance of said hash table starts to degrade.
 
-## Hashing Algorithms
+# Hashing Algorithms
 
-## Collision Handling
+# Collision Handling
 
-## Array Implementation
+# Array Implementation
 
-## LinkedList Implementation
+# LinkedList Implementation
 
-## Conclusion
+# Conclusion
 
 I hope you found this tutorial useful! If you require further assistance then please let me know in the comments section below or by tweeting me [@Elliot_F](https://twitter.com/elliot_f).

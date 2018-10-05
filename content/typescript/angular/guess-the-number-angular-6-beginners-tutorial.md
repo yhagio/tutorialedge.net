@@ -22,13 +22,13 @@ This is how the game looks:
 
 ![Angular 6 Guess the Number](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/javascript/angular/guess-the-number-angular-6-01.png)
 
-## Building Guess the Number!
+# Building Guess the Number!
 
 With component-based design, you’ll start by looking at the UI and expected behavior, and then encapsulate all of this into a building block called component. This component is then hosted on your page. Within the component, you can separate the UI into a view and the behavior into a class, with the appropriate properties and methods needed to support the behavior.
 
 Okay, now identify the UI and behavior that you’ll need for your application.
 
-## Designing your first component
+# Designing your first component
 
 To determine what needs to go into your component, you’ll start by detailing the features that you want the app to support:
 
@@ -40,7 +40,7 @@ To determine what needs to go into your component, you’ll start by detailing t
 
 Now that you have your features, you can determine what you need to display to the user and what data you need to track. For the preceding feature set, the elements in parentheses denote the properties that will support those features and will need to be included in your component.
 
-## Developing your first component
+# Developing your first component
 
 Now that you have a design for your first component, you can start developing it using the Angular Command Line Interface (Angular CLI). The Angular CLI enables you to start building Angular applications and deploying them through a series of console commands. 
 
@@ -62,7 +62,7 @@ $ ng serve
 
 With the first command, the Angular CLI will create a new Angular project on your local machine (the `--inlineTemplate` flag creates a template within your component). With the second command, you are navigating to the directory that the Angular CLI has created for your new project. The third command launches the application, which you can view at `http://localhost:4200/`. If you do that you should see a standard default Angular page in the browser.
 
-## Installing Bootstrap
+# Installing Bootstrap
 
 There is one more step before you build out the specifics of your application. Add the Bootstrap library to enhance the look and feel of your application. First, stop the application by typing Ctrl + C in the Terminal from which it was launched and enter Y when asked if you want to terminate the batch job. Next, from the guessthenumber directory, enter the following command:
 
@@ -89,7 +89,7 @@ Add to that array the location of the bootstrap.min.css style sheet:
 ],
 ```
 
-## What do you have so far?
+# What do you have so far?
 
 If you take a look in the guessthenumber directory, where the Angular CLI has been created, you’ll see a large number of files. This may look overwhelming at first, but the important thing to understand is that the Angular CLI has generated all these files for you with just a few command line statements. In this way, it makes getting started with an Angular application much smoother and easier. It takes the grunt work out of the process and enables you to be able to build and serve your application with minimal effort. 
 
@@ -97,7 +97,7 @@ Before turning to build out the specifics of your application, take a look at on
 
 The example code is available on GitHub for downloading at https://github.com/chandermani/angular6byexample. It is organized in checkpoints that allow you to follow along step by step as you build your sample project. The branch to download is GitHub's Branch: checkpoint1.1. Look in the guessthenumber folder for the code covered here. If you are not using Git, download the snapshot of Checkpoint 1.1 (a ZIP file) from the following GitHub location: https://github.com/chandermani/angular6byexample/tree/checkpoint1.1. Refer to the readme.md file in the guessthenumber folder when setting up. the snapshot for the first time.
 
-## The host file - index.html
+# The host file - index.html
 
 Navigate to the src folder in the guessthenumber directory and open index.html. You will see the following: 
 
@@ -120,7 +120,7 @@ Navigate to the src folder in the guessthenumber directory and open index.html. 
 
 `index.html` is the host file for your application. It will be launched by the browser when the application is first run and will host the components in your application. If you have any exposure to web development, most of the HTML code in this file should look familiar. It has standard html, head, and body tags along with a couple of optional tags, one a meta tag for the viewport, which configures how the app will display in a mobile device, and the other a link to an Angular favicon image that will display on the tab in the browser in which the application is loaded.
 
-## Custom element
+# Custom element
 
 However, there is one more important tag on the page that may not look as familiar to you:
 
@@ -130,11 +130,11 @@ However, there is one more important tag on the page that may not look as famili
 
 This tag is a custom element. It instructs Angular where to inject the component that you build.
 
-## The component file
+# The component file
 
 Now turn to build out the specifics of your application. The Angular CLI has already given us a start by generating a component file for us. Of course, that file does not contain any of the particulars of your application, so you’ll have to modify it. To do this, navigate to the src folder in the app directory and open app.component.ts.
 
-## The import statement
+# The import statement
 
 At the top of the page, you will find the following line:
 
@@ -148,7 +148,7 @@ You'll notice that the location from which you’ll importing is not identified 
 
 These barrels combine several modules that are logically related. In this case, you’ll indicate that you want to import the core barrel module, which in turn brings in the Component module. 
 
-## Decorator
+# Decorator
 
 Next, replace the code block that starts with `@Component` with the following:
 
@@ -190,7 +190,7 @@ This setting tells Angular to inject this component into that tag on the HTML pa
 
 The decorator also has a property called template, and this property identifies the HTML markup for your component. Notice the use of backticks for rendering the template string over multiple lines. Alternatively, you can set a templateUrl property that would point to a separate file.
 
-## Defining the class
+# Defining the class
 
 Now replace the code block that begins with export class AppComponent with the following:
 
@@ -231,7 +231,7 @@ The initializeGame() method sets the starting values of the four properties in t
 
 The class holds one more method called verifyGuess(), which updates the deviation and noOfTries properties. This method is not being called from within the component class; instead, it will be called from the view. You'll also notice that your methods refer to properties in the same class by prepending this to them.
 
-## The module file
+# The module file
 
 Every Angular component must be contained within an Angular module. This means that at a minimum you must add at least one Angular module file to the root of your application. You can call this the root module. For a simple application like Guess the Number!, the root module may be the only module you’ll need. 
 
@@ -268,7 +268,7 @@ Finally, set the bootstrap property. This indicates the first component that wil
 
 With this configuration in place, you’re now ready to bootstrap your component.
 
-## Bootstrapping
+# Bootstrapping
 
 The class definition for AppComponent operates as a blueprint for the component, but the script inside it does not run until you’ve created an instance of the component. In order to run your application, you need something in your application that creates this instance. The process of doing that requires you to add code that bootstraps your component.
 
@@ -295,7 +295,7 @@ In the next lines of code, check to see if the constant environment in the envir
 
 Finally, call the platformBrowserDynamic().boostrapModule method with your AppModule as a parameter. The bootstrapModule method then creates a new instance of your AppModule component, which in turn initializes your AppComponent, which you’ve marked as the component to bootstrap. It does that by calling your component's constructor method.
 
-## You're up and running!
+# You're up and running!
 
 Well, the app is complete and ready to be tested! From the guessthenumber directory, type the following:
 

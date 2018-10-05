@@ -18,13 +18,13 @@ In the previous tutorial of this series, we covered single page components and h
 
 In this tutorial, we are going to be creating a few more single-page components and setting up a `vue-router` so that we can navigate between different views on our site. This will enable us to view the Top Stories on our `/` path, we'll then be expanding upon these routes as we progress through the rest of this series and start adding more components.
 
-## Video Tutorial
+# Video Tutorial
 
 This tutorial is available in a video format, should you wish to support the series then you can by subscribing to my channel and liking the video!
 
 <div style="position:relative;height:0;padding-bottom:42.76%"><iframe src="https://www.youtube.com/embed/XLL2ufItDyM?list=PLzUGFf4GhXBLWueypt6avCKOCNt0675EQ&amp;ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="842" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 
-## Our HomePage Component
+# Our HomePage Component
 
 First thing we are going to need is a component that will show all of the most popular news stories currently on the real HackerNews site. Don't worry about where these posts are coming from just yet, we'll be solving that issue in the next tutorial when we start hitting the HackerNews API.
 
@@ -47,7 +47,7 @@ export default {
 
 ```
 
-## Setting Up Our Vue Router
+# Setting Up Our Vue Router
 
 Thankfully, the `vue-cli` did most of the heavy lifting for us when it came to setting up the `router` within our application.  
 
@@ -79,7 +79,7 @@ Each of our routes is a combination of a path, the name of our path, and the com
 
 > For more information our VueJS routing check out the official documentation or my tutorial: [VueJS Routing Tutorial](/javascript/vuejs/vue-router-beginners-tutorial/)
 
-### Modifying Our Routes
+## Modifying Our Routes
 
 Let's modify the routes slightly so that we are pointing the `/` path to our newly defined `Homepage.vue` single-page component.
 
@@ -105,7 +105,7 @@ When we navigate back our browser and view `http://localhost:8080/#/`, you shoul
 
 ![Our updated view](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/hackernews-clone/screenshot-04.png)
 
-## Registering your Vue Router
+# Registering your Vue Router
 
 One key thing to note if you are setting up the `vue router` from scratch is that once you have created your `src/router/index.js` file and populated it with your JavaScript code, you will subsequently have to register this within your Vue.js application. You can do this by modifying your `src/main.js` file so that it first imports our `src/router/index.js` file and then registers it within our root Vue instance like so:
 
@@ -127,7 +127,7 @@ new Vue({
 })
 ```
 
-## Conclusion
+# Conclusion
 
 In this tutorial, we managed to create a few more components within our Vue.js application and set up the `vue router` which enables us to navigate between different components with ease. Currently, this only renders the one route, but in the next couple of tutorials, we will be using this to dynamically render our components depending on the user's location within our application. 
 

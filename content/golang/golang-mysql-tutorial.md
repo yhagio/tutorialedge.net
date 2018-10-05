@@ -14,21 +14,21 @@ twitter: https://twitter.com/Elliot_F
 
 > In this tutorial I’ll be demonstrating how you can connect to a MySQL database and perform basic SQL statements using Go.
 
-## Video Tutorial
+# Video Tutorial
 
 <div style="position:relative;height:0;padding-bottom:42.76%"><iframe src="https://www.youtube.com/embed/DWNozbk_fuk?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="842" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 
-## Text Tutorial
+# Text Tutorial
 
 In order to do this we’ll be using <a href=”https://github.com/go-sql-driver/mysql”>https://github.com/go-sql-driver/mysql</a> as our MySQL driver. Go-SQL-Driver is a lightweight and fast MySQL driver that supports connections over TCP/IPv4, TCP/IPv6, Unix domain sockets or custom protocols and features automatic handling of broken connections.
 
 > Github Repo: **[go-sql-driver/mysql](https://github.com/go-sql-driver/mysql)**
 
-## Implementation
+# Implementation
 
 We’ll begin by connecting to a database we’ve set up on our local machine and then go on to perform some basic insert and select statements.
 
-#### Connecting to a MySQL database
+## Connecting to a MySQL database
 
 ```go
 package main
@@ -59,7 +59,7 @@ func main() {
 }
 ```
 
-#### Performing Basic SQL Commands
+## Performing Basic SQL Commands
 
 `db.Query(sql)` allows us to perform any SQL command we so desire. Simply construct the string and pass it in as a parameter.
 
@@ -103,7 +103,7 @@ func main() {
 }
 ```
 
-## Populating Structs from Results
+# Populating Structs from Results
 
 Retrieving a set of results from the database is all well and good, but we need to be able to read these results or populating existing `structs` so that we can parse them and modify them easily. In order to parse a number of rows we can use the `.Scan(args...)` method which takes in any number of arguments and allows us to populate a composite object.
 
@@ -152,7 +152,7 @@ In this example we retrieved 2 columns from the tags database and then used .Sca
 
 > Note that if you retrieve 3 fields from the database and Scan only has 2 parameters, it will fail. They need to match up exactly.
 
-## Querying a Single Row
+# Querying a Single Row
 
 Say we wanted to query a single row this time and had an ID and again wanted to populate our struct. We could do that like so:
 
@@ -168,7 +168,7 @@ log.Println(tag.ID)
 log.Println(tag.Name)
 ```
 
-## Conclusion
+# Conclusion
 
 If you found this tutorial helpful or require more assistance then please don't hesitate to let me know in the comments section below:
 

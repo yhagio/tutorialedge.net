@@ -14,7 +14,7 @@ weight: 17
 
 In this tutorial, we'll be focusing on creating a very simple web server using the [net/http](https://golang.org/pkg/net/http/) package. If you've ever used something like Node's ExpressJS or Python's Tornado, then you should hopefully see some similarities to how things are handled. 
 
-## Creating a Basic Web Server
+# Creating a Basic Web Server
 
 Ok, so to begin with, we’ll create a very simple web server that will just return whatever the URL path is of your query. This will be a good base from which we can build on top of.
 
@@ -45,11 +45,11 @@ func main() {
 
 In the above code, we essentially define two different Handlers. These handlers are what respond to any `HTTP` request that matches the string pattern we define as the first parameter. So essentially whenever a request is made for the home page or *http://localhost:8081/*, we'll see our first handler respond as the query matches that pattern.  
 
-## Running Our Server
+# Running Our Server
 
 Ok so now that we've created our own very simplistic server we can try running it by typing go run server.go in to our console. Once this is done head over to your browser and head to http://localhost:8081/world. On this page, you should hopefully see your query string echoed back to you in true "hello world" fashion.
 
-## Adding a bit of Complexity
+# Adding a bit of Complexity
 
 So now that we've got a basic web server set up, let's try incrementing a counter every time a specific URL is hit. Due to the fact that the web server is asynchronous, we'll have to guard our counter using a mutex in order to prevent us from being hit with race-condition bugs.
 
@@ -95,7 +95,7 @@ func main() {
 
 Run this and then navigate to http://localhost:8081/increment and you should see the current count which will be locked, incremented and then unlocked every time you make a request to that page.
 
-## Serving Static Files
+# Serving Static Files
 
 Ok, so now that we've set up a simple server in go, it's time to start serving some static files. Create a static folder within your project's directory and then create some simple HTML files. For this example I'm just serving back the following: 
 
@@ -136,7 +136,7 @@ func main() {
 }
 ```
 
-## Checking it Works
+# Checking it Works
 
 Again run the server and navigate to http://localhost:8081/index.html and you should hopefully see your very simple index.html file rendered in all its glory.
 

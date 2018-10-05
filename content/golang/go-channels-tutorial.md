@@ -17,11 +17,11 @@ Welcome All! In this tutorial, we are going to be looking at how you can use cha
 
 > I would recommend having a look at my other tutorial on [goroutines](/golang/concurrency-with-golang-goroutines/) if you wish to learn more about goroutines.
 
-## Introduction
+# Introduction
 
 
 
 
-## Conclusion
+# Conclusion
 
 So, in this tutorial, we managed to learn about channels within Go. We looked at how we could use these channels in order to safely send and receive values between various asynchronous [goroutines](/golang/concurrency-with-golang-goroutines/).

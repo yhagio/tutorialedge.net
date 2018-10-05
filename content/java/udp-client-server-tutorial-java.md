@@ -15,7 +15,7 @@ twitter: https://twitter.com/Elliot_F
 
 In this tutorial we’ll be looking at how we can set up a UDP client and server using Java’s DatagramSocket’s. 
 
-## UDP Server
+# UDP Server
 
 ```java
 package com.tutorialedge.server;
@@ -93,7 +93,7 @@ public class Server implements Runnable{
 }
 ```
 
-## UDP Client
+# UDP Client
 
 ```java
 package com.tutorialedge.client;
@@ -185,7 +185,7 @@ public class Client implements Runnable{
 }
 ```
 
-## ServerDriver Class
+# ServerDriver Class
 
 ```java
 package com.tutorialedge.driver;
@@ -207,7 +207,7 @@ public class ServerDriver {
 }
 ```
 
-## ClientDriver Class
+# ClientDriver Class
 
 ```java
 package com.tutorialedge.driver;

@@ -14,7 +14,7 @@ twitter: https://twitter.com/Elliot_F
 
 <p>In this tutorial I will be showing you how we can create a frontend angularjs application that could interact with a RESTful API. In order for our Angular applications to be able to make API calls, we’ll have to use the $http service which gives us the ability to perform GET, POST, PUT and DELETE api calls, there are other types of calls but for now we’ll focus on these 4.</p>
 
-## AngularJS's $http
+# AngularJS's $http
 
 AngularJS's $http service allows us to communicate with other servers using the browsers XMLHttpRequest object or via JSONP.
 
@@ -30,7 +30,7 @@ config - the configuration object used to generate the request
 statusText - the HTTP status text of the response
 ```
 
-## Getting Started:
+# Getting Started:
 
 <p>To start us off we’ll be creating a very simple html page that features one button. This button, when clicked will call a function in an angular controller in the scripts.js file that will in turn perform a GET request using the GET shortcut method that AngularJS provides.</p> 
 
@@ -53,7 +53,7 @@ statusText - the HTTP status text of the response
 </html>
 ```
 
-### Our Controller:
+## Our Controller:
 
 <p>So now that we’ve got our index page setup, we’ll have to define our controller and function in our script.js file. </p>
 
@@ -115,7 +115,7 @@ testApp.controller('testController' , function ($scope, $http) {
 });
 ```
 
-## Forcing Cache Refresh
+# Forcing Cache Refresh
 
 One of the most annoying issues I've faced when I'm developing web applications is when you are receiving cached results for $http requests. One of the quickest ways to combat against this is to append the current datetime to your url so that it forces itself not to use the cached results.
 

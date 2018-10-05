@@ -18,7 +18,7 @@ twitter: https://twitter.com/Elliot_F
 
 In this tutorial, we'll be looking at how you can get a very simple test framework up and running for your TypesScript based API using the `mocha` and `chai` testing libraries.
 
-## Why Do We Test?
+# Why Do We Test?
 
 Being able to accurately test any application you build is hugely important for any software developer regardless of the technology stack they are working with. Having a test suite probe your system to ensure that it performs as expected when called into action helps to ensure that any new changes or bug-fixes to the code don't impact old functions and subsequently start causing reliant systems to fail.
 
@@ -26,7 +26,7 @@ I've seen it all too often where a developer comes in, makes a change, and tests
 
 Now, a developer could, in theory, test every part of his/her system manually before that change goes live, but this could end up taking a lot of time. In an ideal world, the developer would automate every test using a framework such as `chai` and `mocha` and then run the test suite once before then pushing the code into a higher level environment for further testing.
 
-## Installation
+# Installation
 
 Now that we have gotten the `why?` out of the way, let's see how we can go about implementing our own testing framework:
 
@@ -51,7 +51,7 @@ Once you have installed the above packages, you will have to add the `test` scri
 
 This will subsequently allow you to run `npm run test` within your project and it will walk through every test file that features `.spec.ts` in its filename.
 
-## A Simple Test
+# A Simple Test
 
 Ok, so we've got the necessary libraries installed, how do we then go about using these to test our codebase? 
 
@@ -78,13 +78,13 @@ describe('Hello API Request', () => {
 
 Let's dissect what has happened in the above code. We've called mocha's `describe` function which is essentially a wrapper around our suite of test cases. These individual test cases are denoted by the use of the `it()` function and we could have multiple function calls like this within a single `describe()` function body.
 
-### Testing Promises
+## Testing Promises
 
 Now, in the above code we managed to successfully test a promise by using the inbuilt `.request().get()` promise function within `chai`. When this returns we then dictate how that should have responded within our `.then()` promise return. 
 
 In this case we just expect our `/hello` GET endpoint to return `how's it going?`.
 
-### Running our Tests
+## Running our Tests
 
 Now that we've got this test case written, let's try running our test suite by calling the following: 
 
@@ -111,6 +111,6 @@ This should then return the following output:
 
 Excellent, we now have a running, incredibly simple testing framework that we can start to flesh out and use to test every other endpoint or function within our TypeScript based REST API.
 
-## Conclusion
+# Conclusion
 
 I hope you enjoyed this tutorial! If you found it useful and wish to learn more then please feel free to follow me on Twitter where I actively post new stuff: [@Elliot_f](https://twitter.com/elliot_f).

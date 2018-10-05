@@ -16,15 +16,15 @@ Testing is hugely important in all software. Being able to ensure the correctnes
 
 By taking the time to adequately test your go programs you allow yourself to develop faster with a greater sense of confidence that what you are developing will continue to work when you release it to production.
 
-## Video Tutorial
+# Video Tutorial
 
 <div style="position:relative;height:0;padding-bottom:42.76%"><iframe src="https://www.youtube.com/embed/GlA57dHa5Rg?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="842" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 
-## Introduction
+# Introduction
 
 In this tutorial we are going to look at how you can develop and run tests for your go code using the `go test` command.  
 
-### Go Test Files
+## Go Test Files
 
 If you have seen any go projects before, you may have noticed that most, if not all files within the project, feature a `FILE_test.go` counterpart within the same directory. 
 
@@ -39,7 +39,7 @@ myproject/
 - main_test.go
 ```
 
-### A Simple Test File
+## A Simple Test File
 
 Imagine we had a very simple go program that was made up of one file and featured a `calculate()` function. This `calculate()` function simply takes in 1 number and adds 2 to it. Nice and simple to get us up and running:
 
@@ -77,7 +77,7 @@ func TestCalculate(t *testing.T) {
 }
 ```
 
-### Running Our Tests
+## Running Our Tests
 
 Now that we have created our first go test, it's time to run this and see if our code behaves the way we expect it to. We can execute our tests by running:
 
@@ -93,7 +93,7 @@ PASS
 ok      _/Users/elliot/Documents/Projects/tutorials/golang/go-testing-tutorial  0.007s
 ```
 
-### Table Driven Testing
+## Table Driven Testing
 
 Now that we are happy that one calculation works, we should look to improve confidence by adding a few extra test cases into our code. If we want to gradually build up a series of test cases that are always tested, we can leverage an `array` of tests like so:
 
@@ -128,7 +128,7 @@ PASS
 ok      _/Users/elliot/Documents/Projects/tutorials/golang/go-testing-tutorial  0.007s
 ```
 
-## Verbose Test Output
+# Verbose Test Output
 
 Sometimes you may wish to see exactly what tests are running and how long they took. Thankfully, this is available if you use the `-v` flag when running your tests like so:
 
@@ -144,6 +144,6 @@ ok      _/Users/elliot/Documents/Projects/tutorials/golang/go-testing-tutorial  
 
 You can see that both our normal test and our table test ran and passed and took less than `0.00s` to execute.
 
-## Conclusion
+# Conclusion
 
 Hopefully you found this tutorial useful! If you require further assistance then please feel free to let me know in the comments section below. 

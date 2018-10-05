@@ -13,7 +13,7 @@ twitter: https://twitter.com/Elliot_F
 
 <p>This ended up being an interesting little problem for me during one of my programming sessions. Below you'll find a couple of different methods that you can use to pass hidden data to any form submission using AngularJS.</p>
 
-#### Method 1
+## Method 1
 
 ```html
 <input type="text" name="someData" ng-model="data" style="display: none;"/>

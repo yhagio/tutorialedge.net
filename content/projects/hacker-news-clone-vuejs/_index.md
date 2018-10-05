@@ -13,7 +13,7 @@ title: Building a HackerNews Clone in VueJS
 twitter: https://twitter.com/Elliot_F
 ---
 
-##### Project Outline
+### Project Outline
 
 The goal of this project is to show you everything it takes to build a complete, fully functioning frontend application using the VueJS framework. We'll walk through everything from setting up your project, to hitting a few APIs in order to retrieve any articles and rendering these nicely on our site!
 
@@ -29,7 +29,7 @@ We'll cover the following topics:
 
 If you wish for me to extend this or feel I should expand upon anything then please let me know by tweeting me: [@Elliot_F](https://twitter.com/elliot_f)
 
-##### Github Source Code!
+### Github Source Code!
 
 The full source code for this project can be found here: [elliotforbes/hackernews-vuejs](https://github.com/elliotforbes/hackernews-vuejs)
 

@@ -21,7 +21,7 @@ In times where performance is important, being able to benchmark how your progra
 
 In this tutorial, we are going to look at how we can perform standard benchmarking tests for very simple functions and then move on to more advanced examples before finally looking at how we can generate cool looking flame graphs.
 
-## A Simple Benchmark Test
+# A Simple Benchmark Test
 
 Within Go, benchmarking tests can be written in conjunction with your standard unit tests. These benchmark functions should be prefixed by "Benchmark" followed by the function name, in the same manner, that you would prefix Test for your test functions.
 
@@ -78,7 +78,7 @@ As you can see, it ran our `Calculate()` function `2,000,000,000` times at a spe
 
 Obviously, as more benchmarks are added to our suite, or the complexity of our functions increases, you should see these benchmarks taking longer and longer. 
 
-#### The -run Flag
+## The -run Flag
 
 In the above example, we ran our benchmarks in conjunction with our tests. This might not be ideal if you have a massive test suite and just want to validate performance improvements. If you want to specify that you *only* want to run your benchmark tests, then you can use the `-run` flag.
 
@@ -145,7 +145,7 @@ ok      _/Users/elliot/Documents/Projects/Tutorialedge/go-benchmarking-tutorial 
 
 And you'll see in the above output that only our `BenchmarkCalculate` function was triggered. As long as we keep a consistent naming convention for our benchmark functions, it should be fairly easy to specify a command that only tests them.
 
-## Increasing the Complexity.
+# Increasing the Complexity.
 
 Typically, you'll want to benchmark your programs with a variety of distinct inputs. You want to measure the performance characteristics of your program under a number of distinct, real-life scenarios.
 
@@ -184,7 +184,7 @@ ok      _/Users/elliot/Documents/Projects/Tutorialedge/go-benchmarking-tutorial 
 
 When writing your benchmark suites, it's worthwhile fleshing out multiple benchmarks like this just to give you a far more accurate representation.
 
-<!-- ## Generating Flame Graphs
+<!-- # Generating Flame Graphs
 
 Flame graphs are an excellent way to help identify potential hot spots in your code that are bottlenecks through cool visualizations. In order to generate these Flame graphs, we'll be using the [uber/go-torch](https://github.com/uber/go-torch).
 
@@ -193,11 +193,11 @@ These graphs look a little something like this:
 ![generated flame graph](http://uber.github.io/go-torch/meta.svg) -->
 
 
-## Conclusion
+# Conclusion
 
 Hopefully this article gave you some indication as to how you can go about implementing your own suite of benchmarks. If you require further assistance then please let me know in the comments section below!
 
-#### Further Reading:
+## Further Reading:
 
 * [Analyzing the performance of Go functions with benchmarks](https://medium.com/justforfunc/analyzing-the-performance-of-go-functions-with-benchmarks-60b8162e61c6)
 * [Practical Go Benchmarks](https://stackimpact.com/blog/practical-golang-benchmarks/)

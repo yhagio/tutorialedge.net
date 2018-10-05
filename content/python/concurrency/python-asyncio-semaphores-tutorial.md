@@ -17,11 +17,11 @@ twitter: https://twitter.com/Elliot_F
 
 In this tutorial we'll be looking at `semaphores` and `bounded-semaphores` and how they work within the Asyncio framework. 
 
-## Video Tutorial
+# Video Tutorial
 
 <div style="position:relative;height:0;padding-bottom:56.3%"><iframe src="https://www.youtube.com/embed/uvM-JYnz1Mw?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="639" height="360" frameborder="0" gesture="media" allowfullscreen></iframe></div>
 
-## What Are Semaphores?
+# What Are Semaphores?
 
 Semaphores were originally a key part of railway system architecture and it was the famous Dijkstra that translated this real-world concept into our computing world. 
 
@@ -31,7 +31,7 @@ Say we protected a block of code with a semaphore, and set the semaphore's initi
 
 At this point if another worker comes along and tries again it would be denied. The value of these semaphores is that they allow us to protect resources from being overused.
 
-## Implementation
+# Implementation
 
 Now that we have a basic understanding of what semaphores are let us now look at how we can work with them in our Asyncio based Python programs.
 
@@ -59,7 +59,7 @@ print("All Workers Completed")
 loop.close()
 ```
 
-### Output
+## Output
 
 When we run this we should see that our first 2 workers are able to acquire the semaphore before then releasing it and allowing our third worker to then go on and acquire it for itself.
 
@@ -75,10 +75,10 @@ Main Coroutine
 All Workers Completed
 ```
 
-## Bounded Semaphores
+# Bounded Semaphores
 
 There lies a very subtle difference between a normal `semaphore` and a `bounded-semaphore`. A bounded semaphore only differs in terms of not allowing more releases to be made than acquires. If it does exceed the value then a `ValueError` is raised.
 
-## Conclusion
+# Conclusion
 
 If you found this tutorial useful or require further assistance then please let me know in the comments section below.

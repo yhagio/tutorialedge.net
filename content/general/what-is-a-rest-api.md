@@ -17,7 +17,7 @@ As a developer I spend a lot of time developing new or improving on existing RES
 
 This tutorial will try to explain in layman’s terms what a REST API is and how we can utilize these APIs in order to build our own systems.
 
-## REST Basics
+# REST Basics
 
 **REST** - Representational State Transfer. 
 
@@ -31,7 +31,7 @@ Typically we send HTTP requests to an URL that we have defined in our REST API a
 
 <img src="/uploads/rest-api.png" alt="REST API Basics" />
 
-## A Simple Example
+# A Simple Example
 
 Imagine you wrote a bit of code that gives you the current weather conditions at your house. It reads the temperature, humidity and rainfall and stores them locally. How would we then expose this information in such a way that websites or other applications could view it? 
 
@@ -39,12 +39,12 @@ One answer to this question is by wrapping it in a RESTful API.
 
 We could expose our code and wrap it in an API so that whenever we navigated to say http://localhost:8000/api/weatherStats it would give us a JSON response that contained all the current weather stats.
 
-## Why Do We Do This?
+# Why Do We Do This?
 
 **Improved Code Reuse** - By exposing our code through REST APIs we essentially give ourselves a greater degree of flexibility. We can develop our software once and should we wish to use the same code again in a different project it would be easy, we could simply send HTTP requests to our API and we’ve reduced the need to duplicate our work efforts.
 
 **Always Available** - REST APIs are typically things that are running and available all the time. We make them very stable and as a result we can interact with them wherever we are in the world as long as we have internet connectivity.
 
-## Taking it Further
+# Taking it Further
 
 If you want to learn how to implement your own REST APIs then I suggest you have a look at my tutorial on [Writing RESTful APIs in Go](/golang/creating-restful-api-with-golang/)

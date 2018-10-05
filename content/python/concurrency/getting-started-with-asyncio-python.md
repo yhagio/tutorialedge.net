@@ -12,7 +12,7 @@ title: Getting Started with Asyncio in Python
 twitter: https://twitter.com/Elliot_F
 ---
 
-## Video Tutorial
+# Video Tutorial
 
 <div style="position:relative;height:0;padding-bottom:56.3%"><iframe src="https://www.youtube.com/embed/L3RyxVOLjz8?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="639" height="360" frameborder="0" gesture="media" allowfullscreen></iframe></div>
 
@@ -22,7 +22,7 @@ Asyncio became part of the Python ecosystem in version 3.4 and has since then be
 
 Asyncio also does a very good job of abstracting away from us the complexities of things such as multiplexing I/O access over sockets and it also simplifies our jobs by providing an arsenal of synchronization primitives that enable us to make our programs thread-safe. 
 
-## Getting Started
+# Getting Started
 
 In order to get started with asyncio we require one crucial component, that is an event loop. All asyncio based systems require an event loop, this is the crux of our programs performance. The event loop schedules our `asyncio.coroutines` and handles all of the heavy lifting. 
 
@@ -52,7 +52,7 @@ When you run this you should see that our `myCoroutine()` successfully executes.
 
 > I would recommend checking out my tutorial on [Creating a REST API in aiohttp and Python](/python/create-rest-api-python-aiohttp/). This provides a more complex example and is a good example as to how performant asyncio can be.
 
-## Coroutines
+# Coroutines
 
 So these `coroutines` are essentially lightweight versions of your more traditional threads. By using these we essentially enable ourselves to write asynchronous programs that are very similar to threads but they run on top of a single thread. We can define `coroutines` in 2 distinct ways. 
 
@@ -69,7 +69,7 @@ def myFunc2()
 
 The first method was introduced in Python 3.5 and I would tend to push you towards using this method over the latter. 
 
-## Futures
+# Futures
 
 Futures in asyncio are very much similar to the `Future` objects you would see within Python `ThreadPoolExecutors` or `ProcessPoolExecutors` and tt follows an almost identical implementation. Future objects are created with the intention that they will eventually be given a result some time in the future, hence the name. This is beneficial as it means that within your Python program you can go off and perform other tasks whilst you are waiting for your `Future` to return a result. 
 
@@ -105,7 +105,7 @@ finally:
 
 If you were to run this you should see that our program successfully turns our `coroutine` into a `future` object and prints out the result. 
 
-## Multiple Coroutines
+# Multiple Coroutines
 
 Let's now try to take advantage of asyncio's ability to run multiple coroutines concurrently. This will hopefully give you some idea as to how powerful `asyncio` is and how you can use it to effectively create incredibly performant Python programs running on a single-thread. 
 
@@ -156,6 +156,6 @@ Coroutine: 9, has successfully completed after 5 seconds
 Our coroutines go off and execute concurrently and finish execution at different times. It's important to note that these are not completed in the same order as they were submitted and if you were to time the execution of the above program, it would take just above 5 seconds to complete execution.
 
 
-## Conclusion
+# Conclusion
 
 This was just a very quick and simple introduction to the `asyncio` framework. We'll be covering this framework in more detail in future tutorials.   

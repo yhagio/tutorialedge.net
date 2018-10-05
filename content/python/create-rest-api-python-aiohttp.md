@@ -17,13 +17,13 @@ twitter: https://twitter.com/Elliot_F
 
 In this tutorial we'll be building a very simple RESTful based API using [aio-libs/aiohttp](https://github.com/aio-libs/aiohttp) which is an asynchronous http client/server framework. 
 
-## Getting Started with aiohttp
+# Getting Started with aiohttp
 
 Before we go into how we can use aiohttp to create a simple RESTful API, it's important to know exactly what the framework is and what it can do for us. To start with, it features excellent support of the HTTP protocol as well as for websockets which makes it ideal for working with popular websocket libraries such as Socket.io. If you are interested in seeing how to implement a simple client/server socketio based solution check out this tutorial: [Python Socket.io with aiohttp Tutorial](/python/python-socket-io-tutorial/). 
 
 The key part of the aiohttp framework is that it works in an asynchronous manner, it can concurrently handle hundreds of requests per second without too much hassle. In comparison to frameworks such as flask, it's incredibly performant. 
 
-#### Installing aiohttp
+## Installing aiohttp
 
 In order to install aiohttp you can run the following `pip` command:
 
@@ -31,7 +31,7 @@ In order to install aiohttp you can run the following `pip` command:
 pip install aiohttp
 ```
 
-## Writing a Simple API
+# Writing a Simple API
 
 To get us started writing a simple API we are going to write a handler function; `async def handle(request):` which will return a `json` based response whenever it is called. We'll then create an `app` object by calling `app = web.Application()` and then we'll set up our app's router and add a `GET` request endpoint that calls `handle` whenever `"/"` is hit. Finally we call `web.run_app(app)` in order to kick off our newly defined `aiohttp` API.
 
@@ -51,7 +51,7 @@ app.router.add_get('/', handle)
 web.run_app(app)
 ```
 
-## Testing our API
+# Testing our API
 
 We can then run our new REST API by calling `python app.py` which should start our app on `http://0.0.0.0` a.k.a `http://localhost` on port `8080` by default. 
 
@@ -63,7 +63,7 @@ We can then run our new REST API by calling `python app.py` which should start o
 
 When you navigate to `http://localhost:8080` you should see our `{"status": "success"}` being returned in the browser. 
 
-## POST Requests and Query Parameters
+# POST Requests and Query Parameters
 
 Now that we've successfully defined a very basic, single `endpoint` API we can now start to build on top of this and start exposing different routes that use different verbs. Let's create a simple `POST` request endpoint that takes in `name` via a query parameter. We'll want the final URL of this endpoint to look like so: `http://localhost:8080/user?name=elliot`. Let's define the handler function `new_user(request)` now.
 
@@ -102,6 +102,6 @@ Creating new user with name:  test
 
 You should also receive the same success json as well as a `200` status.
 
-## Video Tutorial
+# Video Tutorial
 
 <div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/Z784Mwm4VBg?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="640" height="360" frameborder="0" gesture="media" allowfullscreen></iframe></div>

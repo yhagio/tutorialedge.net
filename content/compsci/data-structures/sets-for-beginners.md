@@ -16,7 +16,7 @@ twitter: https://twitter.com/Elliot_F
 
 In this tutorial we are going to look at the `set` data structure in computer science and how you can leverage it within your applications. We'll be covering this concept using the Python programming language.
 
-## Introduction
+# Introduction
 
 A `set` is a data structure that can store any number of `unique` values in any order you so wish. Set's are different from [arrays](/compsci/data-structures/arrays-for-beginners) in the sense that they only allow non-repeated, unique values within them.
 
@@ -27,7 +27,7 @@ A `set` is a data structure that can store any number of `unique` values in any 
 {1, 2, 3, 4}
 ```
 
-## Adding Values to Sets
+# Adding Values to Sets
 
 When you try to add values to a `set` in Python, it will only insert the value if that value does not already exist within the set:
 
@@ -51,6 +51,6 @@ This means we can very easily use the `set` data-structure to parse all of the u
 {1, 2, 3, 4, 5, 6, 7} # prints out only the unique values
 ```
 
-## Conclusion
+# Conclusion
 
 Hopefully you found this article on the `set` data structure useful! If you require further help then please feel free to let me know in the comments section below or by tweeting me: [@Elliot_f](https://twitter.com/elliot_f).

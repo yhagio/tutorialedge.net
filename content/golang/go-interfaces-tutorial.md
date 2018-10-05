@@ -13,7 +13,7 @@ weight: 6
 
 Welcome all, in this tutorial, we are going to be taking a look at interfaces within the Go programming language. By the end of this tutorial, you should be well on your way to defining your own interfaces and working with existing ones that are currently out in the wild.
 
-## Interfaces
+# Interfaces
 
 So, what are interfaces? Why do we use them within Go? Well by defining an interface in Go, we essentially define a contract. If we define a type based off this `interface` then we are forced to implement all of the functions or methods defined within that `interface` type.
 
@@ -75,7 +75,7 @@ guitarists = append(guitarists, player)
 guitarists = append(guitarists, player2)
 ```
 
-## Return Values
+# Return Values
 
 In real-world examples, we would typically have more complex functions within our interfaces that featured return values. In Go, we can define these interfaces like so:
 
@@ -88,7 +88,7 @@ type Employee interface {
 }
 ```
 
-## Satisfying Interfaces
+# Satisfying Interfaces
 
 Say we wanted to create an array of all `Employee`'s in the firm. Within this array, we'd want all of our `Engineer`s. 
 
@@ -122,7 +122,7 @@ func main() {
 ```
 
 
-## Conclusion
+# Conclusion
 
 So, within this tutorial, we have successfully managed to uncover what interfaces are within Go and how we can implement them within our own Go-based programs. 
 

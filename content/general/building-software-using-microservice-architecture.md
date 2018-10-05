@@ -15,19 +15,19 @@ In this tutorial I’m going to be showing an example of how you could go about 
 
 I’m going to be discussing key things such as communication between services, asynchronous vs synchronous and most importantly managing your services. I’m going to be writing everything using Google’s Go(GoLang) programming language but these concepts will be transferable across to other language domains.
 
-## Why Should We Use Microservice Based Architecture?
+# Why Should We Use Microservice Based Architecture?
 
 Microservice based architecture isn’t a silver bullet that will solve all your problems, however, it does a very good job of simplifying the way you develop solutions. This architecture pattern effectively breaks up modules of your project into succinct pieces that can be scaled and reduced as needed. 
 
 It’s a style of architecture that allows teams to work independently on separate parts of a system with only the knowledge of another component’s interface. The architecture is flexible in the sense that modules can be replaced without impacting the picture and modules can be written in the programming language that best solves that particular problem. 
 
-## High-Level Overview
+# High-Level Overview
 
 So we’ll be creating 2 services, one a *RESTful* api that persists tweets and another a service that parses twitter for all tweets related to a certain topic. This could be beneficial if you wanted to automatically scrape twitter for tweets about your brand and possibly flag any tweets that are negative so that your PR team could contact them in person.
 
 This could in theory be delivered as one monolithic application but say you wanted to add a service in the future that automatically favourited positive tweets then this separation would make it simple.
 
-##Microservice 1 - Creating a Twitter Stream Reader in GoLang
+#Microservice 1 - Creating a Twitter Stream Reader in GoLang
 
 The first microservices we are going to be building is a twitter stream reader that will monitor a twitter stream for the words <b>“tutorialedge”</b>. When a tweet is found, it will be persisted to a database. 
 
@@ -113,7 +113,7 @@ func main() {
 }
 ```
 
-##Microservice 2 - REST API
+#Microservice 2 - REST API
 
 The second microservice will be a simple REST API that retrieves the tweets that have been stored in the database to anyone who queries it. 
 
@@ -243,7 +243,7 @@ func main() {
 }
 ```
 
-##Conclusion</h2
+#Conclusion</h2
 >
 
 These two services are independent of each other and if one falls over then the other services aren't affected. This demonstrates the resiliency of the microservice based architecture and if performance becomes an issue, more instances of each service can be spun up.

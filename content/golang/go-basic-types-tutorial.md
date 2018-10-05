@@ -16,7 +16,7 @@ In this tutorial, we are going to be looking at all of the basic data types avai
 
 This kind of material can be fairly dry and boring to learn so I'll try and spice things up and make it somewhat interesting whilst also covering the necessary basics.
 
-## Data Types
+# Data Types
 
 So, to get us started, it's important to know that there are 4 distinct categories of types within the Go programming language:
 
@@ -25,7 +25,7 @@ So, to get us started, it's important to know that there are 4 distinct categori
 * Reference Types - These are your pointers and slices
 * Interface Types - These are your standard interfaces
 
-## Integers
+# Integers
 
 The first basic type we will cover is the `Integer` type. 
 
@@ -88,13 +88,13 @@ func main() {
 
 This is due to the fact that the result of this particular operation has caused the signed integer to overflow. This is something to watch out for within your programs!
 
-## Standard int Type
+# Standard int Type
 
 If all of this verbosity in defining your integer values is too much, then you should know that for most of the time, you can default to just `int`. This `int` data type is typically either 32 bits in size or 64 bits depending on whether your underlying system is a 32-bit system or a 64-bit system. 
 
 For simplicity, it's best to default to this data type and you'll see this being the most widely used in the wild.
 
-#### Conversion of Types
+## Conversion of Types
 
 When it comes to working with multiple variables with different data types, you will more often than not have to cast your various integer variables to `int`. This will handle conversion from things like `uint8` and `int16` to a standard 32, or 64 bit signed int and from there you will be able to do things like addition, multiplication and subtraction.
 
@@ -112,7 +112,7 @@ people = men + women
 people = int(men) + int(women) 
 ```
 
-## Floating Point Numbers
+# Floating Point Numbers
 
 Next, we come to Floating Point numbers. These come in 2 distinct sizes, either `float32` or `float64` and allow you to work with exceptionally large numbers that don't fit inside a standard `int64` data type. 
 
@@ -132,7 +132,7 @@ fmt.Println(f+10) // 16777216
 fmt.Println(f+2000000) // 16777216
 ```
 
-#### Converting float to int and back again
+## Converting float to int and back again
 
 If you want to convert integers to floats or floats to int then you can achieve that by casting the variable as your desired data type.
 
@@ -146,13 +146,13 @@ var myfloat2 float64
 myint2 := int(myfloat2)
 ```
 
-## Complex Numbers
+# Complex Numbers
 
 Ok, so we've covered both integers and floating points, but there is another commonly overlooked numeric data type and that is the complex number data type. These, much like the floating point data type, come in 2 distinct sizes, you can either go for `complex64` or `complex128`. 
 
 > To be constructed
 
-## Booleans
+# Booleans
 
 Now that we've covered all the basic numeric data types, we can move on to the other basic data types available in Go. The first of which, is the bool, or *boolean* data type. 
 
@@ -181,7 +181,7 @@ if isTrue || isFalse {
 }
 ```
 
-## Strings
+# Strings
 
 Strings within the Go language are what we would call character slices. We can declare a new string variable using `string`: 
 
@@ -190,7 +190,7 @@ var myName string
 myName = "Elliot Forbes"
 ```
 
-## Constants
+# Constants
 
 Constants are our final basic data type within the Go language. They allow us to specify immutable values that will not change throughout the course of our programs execution.
 
@@ -198,7 +198,7 @@ Constants are our final basic data type within the Go language. They allow us to
 const meaningOfLife = 42
 ```
 
-## Conclusion
+# Conclusion
 
 So, we've managed to cover a lot in this tutorial and I'm hoping you enjoyed it! If you need any further help or would like to know more then please let me know in the comments section below!
 

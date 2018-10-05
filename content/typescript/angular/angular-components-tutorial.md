@@ -15,17 +15,17 @@ twitter: https://twitter.com/Elliot_F
 
 Most new frontend frameworks feature this concept of components and compartmentalizing blocks of code into distinct blocks that can be reused in multiple locations around your application. In Angular 2 we can do this by creating our own components.
 
-## What Are Components?
+# What Are Components?
 
 In Angular we can define these things we call components. These components are functional blocks of code that we can attach to html tags. Say for instance we are creating an application that mimics facebook, we want a to display a small widget on the side of the page that shows the current users current profile picture, as well as some other pieces of information. We could encapsulate all the functionality of this widget into a component. 
 
-### Why Are Components Used?
+## Why Are Components Used?
 
 When we split our applications into numerous components and sub-components we are essentially breaking down our problems into smaller and smaller problems. We create a loosely coupled system of components that can be easily changed and tested without potentially impacting anything else in our system. 
 
 > From a development point of view this is hugely beneficial, huge teams of developers can work on a single application without worrying about pushing other bugs into production. 
 
-## Creating a Simple Component
+# Creating a Simple Component
 
 If you’ve come from an Angular 1.* background then you should find creating components to be a little bit simpler in Angular2. In Angular 2 we have done away with controllers and controller files and merged them straight into one single component file. In this component file we essentially define our controller as a class and then we annotate this class using the @Component({ … }) angular annotation.
 
@@ -43,7 +43,7 @@ import { Component } from '@angular/core';
 export class UserComponent { }
 ```
 
-## @Component Decorator
+# @Component Decorator
 
 * *selector* - This defines what HTML tag we will bind to. In the above example we bind to the `<user></user>` tag.
 * *template* - In this we define what html we wish to render for this component. In the above component we are simply going to print out a very simple `<h2>` tag.
@@ -52,7 +52,7 @@ export class UserComponent { }
 * *directives* - If we want to access a directive then we would pass it into our component using this option.
 * *providers* - Here we pass in any services that we want to utilize within our component.
 
-## Creating Components using the Angular-CLI
+# Creating Components using the Angular-CLI
 
 If you've built your project using the Angular-CLI then creating new components that work straight away is easy:
 

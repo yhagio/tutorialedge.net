@@ -20,7 +20,7 @@ If you are new to CSS then you'll probably have noticed that some rules have sel
 
 When I was initially learning HTML and CSS I was hit by this stumbling block a number of times and knowing this distinction between class selectors and id selectors can save you a lot of time.
 
-## Class Selectors
+# Class Selectors
 
 In CSS we have this concept of selectors, in order for us to be able to style our html elements correctly, we have to ensure we use the right selector in the right place. Say, for example, we wanted to style all `<div>` elements that feature the *class* equal to `blue` with a blue background. We'd have to create a CSS rule that applies to the `.blue` selector.
 
@@ -36,7 +36,7 @@ With this `.blue` rule above, only the following html element would be styled wi
 <div class="blue"></div>
 ```
 
-## ID Selectors
+# ID Selectors
 
 If we want to style a html component that features an `id` attribute that equals `blue` then we have to use the `#` id selector which will style the single element tagged with this id. 
 
@@ -52,7 +52,7 @@ The above rule will only style the element with the attribute `id="blue"` like o
 <div id="blue"></div>
 ```
 
-<!--## Specificity
+<!--# Specificity
 
 These two different types of selector have differing levels of something we call specificity. It's important to note that when an element features both and there is a collision between the rules, the id selector will generally get its way. 
 
@@ -75,7 +75,7 @@ These two different types of selector have differing levels of something we call
 </style>
 ```
 
-#### Output 
+## Output 
 
 <div class="blue" id="green"></div>
 
@@ -95,6 +95,6 @@ These two different types of selector have differing levels of something we call
 }
 </style>-->
 
-## Summary
+# Summary
 
 If you found there was something lacking about this tutorial then please feel free to let me know in the comments section below! If you wish to make any changes to this particular tutorial then you can also submit a pull request to the github repo for the site here: [TutorialEdge-v2](https://github.com/elliotforbes/tutorialedge-v2)

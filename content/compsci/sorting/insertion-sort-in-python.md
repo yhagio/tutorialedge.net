@@ -16,7 +16,7 @@ twitter: https://twitter.com/Elliot_F
 
 In this tutorial we are going to be taking a look at the insertion sorting algorithm and how it works as well as how you can implement this algorithm in the Python programming language.
 
-## Insertion Sorting
+# Insertion Sorting
 
 So the insertion sorting algorithm is a well known sorting algorithm that can sort an unsorted array in a worst case time of `O(N^2)` time. It works by iterating through an array and sorting elements in a linear fashion. 
 
@@ -26,7 +26,7 @@ So the insertion sorting algorithm is a well known sorting algorithm that can so
 * Our sorted array now has 2 elements
 * The algorithm proceed to insert the next element into the correct position in our sorted array until the entire list has been sorted. 
 
-## Implementing it in Python
+# Implementing it in Python
 
 Implementing it in Python can be done like so:
 
@@ -78,6 +78,6 @@ Swapped 8 for 5
 [1, 2, 3, 4, 5, 8]
 ```
 
-## Conclusion
+# Conclusion
 
 If you found this tutorial useful or require further assistance then please let me know in the comments section below!

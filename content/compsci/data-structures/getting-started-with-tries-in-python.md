@@ -16,7 +16,7 @@ twitter: https://twitter.com/Elliot_F
 
 A `Trie` in computer science is a tree structure that allows you to do things such as very quick lookup of words within the english language. Typically if you were to write a word processor that did spell checks against words in a document, you would implement a `trie` and perform a very quick lookup to check whether or not the words in your word document are indeed valid words.
 
-## Implementing a Very Simple Trie
+# Implementing a Very Simple Trie
 
 When it comes to implementing a `trie` we typically use a series of nested hash tables. In Python the closest thing we have to a hash table is a `dict()` which enables us to store over 1 billion different key-value pairs, enough for the 172,000 currently employed in the English language. 
 
@@ -58,7 +58,7 @@ If we then attempt to run this you will see that we create a `trie` that has one
 {'h': {'i': {'*': '*'}, 'e': {'l': {'l': {'o': {'*': '*'}}}}, 'o': {'w': {'d': {'y': {'*': '*'}}}}}}
 ```
 
-## Implementing a find_word() function
+# Implementing a find_word() function
 
 So now that we have created a `trie` structure we need to implement a mechanism that checks to see if a word exists within our `trie`. 
 
@@ -77,7 +77,7 @@ def find_word(trie, word):
             return False
 ```
 
-## Implementing an add_word() function
+# Implementing an add_word() function
 
 If we wanted to implement a function that took in an existing `trie` and returned a new `trie` that contained a new word that has been passed in, we could do something similar to this: 
 
@@ -108,7 +108,7 @@ def add_word(trie, word):
 ```
 
 
-## Complete Code Sample
+# Complete Code Sample
 
 Below you'll find the complete code sample for this tutorial. I've fleshed this out into a Python class that you can use much like you would a `list` or a `queue`. 
 
@@ -173,6 +173,6 @@ print(my_trie.find_word("head"))
 
 ```
 
-## Conclusion
+# Conclusion
 
 If you found this tutorial useful then please let me know in the comments section below. Conversely if you need anything further explained then I will also be happy to give you additional help!

@@ -16,7 +16,7 @@ twitter: https://twitter.com/Elliot_F
 
 In this tutorial we are going to look at the `queue` data structure. We'll take a look at how this data structure can be used for various tasks and the various sort of things you can do with queues.
 
-## Introduction
+# Introduction
 
 The `queue` data structure is typically used in scenarios where you want things to be processed in the same order that they were inputted into a system.
 
@@ -36,6 +36,6 @@ For example, imagine you had a system that dealt with user registrations to your
 'third'
 ``` 
 
-## Conclusion
+# Conclusion
 
 Hopefully you found this article on the `queue` data structure useful! If you require further help then please feel free to let me know in the comments section below or by tweeting me: [@Elliot_f](https://twitter.com/elliot_f).

@@ -18,7 +18,7 @@ weight: 1
 
 In this post, you'll use a third-party library named Vuelidate to perform model validation depending on a particular rule set
 
-## Create a New Vue Project
+# Create a New Vue Project
 
 Create a playground project by running the following in your Terminal:
 
@@ -39,7 +39,7 @@ $ npm install vuelidate
 $ npm run dev
 ```
 
-## What is Vuelidate?
+# What is Vuelidate?
 
 `Vuelidate` is an open source, lightweight library that helps you perform model validation with a variety of validation contexts. Validation can be functionally composed and it also works well with other libraries such as `Moment`, `Vuex`, and more. As you've installed it in your project with `npm install vuelidate`, you now need to register it as a plugin within main.js:
 
@@ -59,7 +59,7 @@ new Vue({
 
 Adding the empty validations object to your main Vue instance bootstraps Vuelidate's `$v` throughout the project. This then allows you to use the `$v` object to gain information about the current state of your form within your Vue instance across all components.
 
-## Using Vuelidate
+# Using Vuelidate
 
 Now, create a basic form that allows you to input `firstName`, `lastName`, `email`, and `password`. This will allow you to add validation rules with Vuelidate and visualize them on screen:
 
@@ -222,7 +222,7 @@ If everything has gone as planned, you should get the following result:
 
 ![vuejs form validation result](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/javascript/vuejs/form-validation-image1.png)
 
-## Displaying form errors
+# Displaying form errors
 
 You can use the `$invalid` Boolean inside the `$v.model_name` object (where `model_name` is equal to `email`, `firstName`, `lastName`, or `password`) to display messages or change the look and feel of your form field(s). You can start by adding a new class named `error` that adds `redborder` around the input field:
 
@@ -376,7 +376,7 @@ You could even take this a step further and create your own wrapper component th
 </div>
 ```
 
-## Password validation
+# Password validation
 
 When creating user accounts, passwords tend to be entered twice and conform to a minimum length. Add another field and some more validation rules to enforce this:
 
@@ -499,7 +499,7 @@ As you now have appropriate password validation, you can add the new field and d
 </div>
 ```
 
-## Form submission
+# Form submission
 
 In case your form is invalid, you can disable the `Submit` button:
 

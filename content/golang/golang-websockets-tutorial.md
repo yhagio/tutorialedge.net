@@ -15,21 +15,21 @@ twitter: https://twitter.com/Elliot_F
 
 Websockets are something I find interesting in the sense that they provide us with an alternative option to communication between applications as opposed to the standard RESTful API solution. With Sockets we can do cool things such as real-time communication between thousands to hundreds of thousands of different clients without having to incur the expense of hundreds of thousands of RESTful API calls hitting our servers every minute. 
 
-## Video Tutorial
+# Video Tutorial
 
 <div style="position:relative;height:0;padding-bottom:47.08%"><iframe src="https://www.youtube.com/embed/ycgCMOWPgiw?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="765" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 
-## Real Life Example
+# Real Life Example
 
 To put things into perspective and show how important websockets can be. Imagine we had a chat application that got all the latest messages from a single server and pushed all new messages to that same server.
 
-#### REST API Approach
+## REST API Approach
 
 1. In order to attain real-time chat, you would have to poll the REST API that provides new messages every second. 
 1. This would equate to roughly 60 REST API calls per minute **per client**. 
 1. If we build a successful service and we start seeing more and more traffic hitting our application, our servers will start being inundated with handling the millions of REST API calls per minute. 
 
-## Socket Example
+# Socket Example
 
 If we then considered the scenario in which we used websockets instead of REST API calls:
 
@@ -39,11 +39,11 @@ If we then considered the scenario in which we used websockets instead of REST A
 
 With this method we have severely minimized the amount of network traffic hitting our server. We've saved costs on the number of instances of our server application that we need to run and we can essentially handle thousands more clients without too much effort.
 
-## Implementing a Golang Server
+# Implementing a Golang Server
 
 In order to implement websockets in Go we have a number of different options. I come from a frontend background and one of the most prevalent libraries for socket communication in the frontend is [socket-io](https://socket.io/) and as such we'll be using the Golang equivalent in order to ease integrating them together.
 
-#### Installing go-socket.io
+## Installing go-socket.io
 
 We can install the package using the `go get` command like so:
 
@@ -57,7 +57,7 @@ And then we can include it within our go programs like so:
 import "github.com/googollee/go-socket.io"
 ```
 
-#### Simple Server
+## Simple Server
 
 Let's have a look at the example code that the provide in the `readme.md` for the library that we are using. 
 
@@ -109,7 +109,7 @@ func main() {
 
 ```
 
-#### Breaking it down
+## Breaking it down
 
 So in the above code sample we do everything within our `main()` function. We first define a new `socketio` server instance by calling `socketio.NewServer(nil)` before defining what behaviors we want our socket server to have when connected to and when there is an error.
 
@@ -119,7 +119,7 @@ After that we then specify what we want to happen when we receive a `"chat messa
 
 Finally we define what should happen on `"disconnection"`, in this instance we simply just log the fact that one of our clients has disconnected. 
 
-## A Frontend Client
+# A Frontend Client
 
 Ok, so we have managed to flesh out our backend Go-based WebSocket server, but now it's time to get a simple frontend application up and running so that we can test what we have done works. 
 
@@ -161,7 +161,7 @@ This should then start running on `http://localhost:5000`. You should then be ab
 
 You have now successfully built up a frontend that connects directly into your newly created backend websocket server! 
 
-## Conclusion
+# Conclusion
 
 > The full source code for this project can be found on Github: [TutorialEdge/Go](https://github.com/TutorialEdge/Go/tree/master/go-websocket-tutorial)
 

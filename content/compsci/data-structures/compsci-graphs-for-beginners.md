@@ -21,18 +21,18 @@ If you are interested in going into something like Game Development then `graphs
 * Game developers typically use algorithms such as the `A* search algorithm` in order to implement basic AI within their games.   
 * Network Engineers widely use `Djikstra's Algorithm` in order to implement their network routing protocols.
 
-## Directed and Undirected
+# Directed and Undirected
 
 `Graphs` can come in two distinct flavours; `directed` and `undirected`. 
 
-#### Directed Graphs
+## Directed Graphs
 
 Directed Graphs feature a series of `nodes` where the path or `edge` between each node is only one-way. I.e. you cannot traverse from one `node` to a neighbouring connected `node` and return across the same `edge`.
 
-#### Un-directed Graphs  
+## Un-directed Graphs  
 
 Un-directed graphs feature a series of `nodes` where each path can be travelled both forwards and backwards. I.e. in a `graph` that contains 2 connected `nodes`, you can start at one `node`, travel to the other and then travel back to the original `node` across the same `edge`.
 
-## Conclusion
+# Conclusion
 
 I hope you found this tutorial somewhat informative and helpful! If you require further assistance then please feel free to leave a comment in the comments section below or tweet me [@Elliot_F](https://twitter.com/elliot_f).

@@ -10,7 +10,7 @@ twitter: https://twitter.com/Zaid_alq
 author: Zaid Sabih
 ---
 
-## Man-in-the-middle attacks
+# Man-in-the-middle attacks
 
 A man-in-the-middle (MITM) attack is one of the most dangerous and effective attacks that you can carry out in a network. You can only perform it once you’re connected to the network. 
 
@@ -22,7 +22,7 @@ The second security issue is that the clients can accept responses even if they 
 
 Now, you can just send a response without the device asking who the router is. You can simply tell the device that you’re the router, and because the devices trust anyone, they will trust you and start sending packets instead of sending the packets to the router.
 
-## ARP spoofing using arpspoof
+# ARP spoofing using arpspoof
 
 Now, check out how to run an actual ARP poisoning attack, redirect the flow of packets, and make it flow through your device. This section will talk about a tool called `arpspoof`, which is part of a suite called `dsniff`. 
 
@@ -60,7 +60,7 @@ The Windows device now thinks that the attacker device is the access point. Ever
 
 This will place your attacker device in the middle of the connection and you’ll be able to read the packets, modify them, or drop them.
 
-## ARP spoofing using MITMf
+# ARP spoofing using MITMf
 
 In this section, you’ll use a tool called MITMf, and as the name suggests, this tool allows you to run a number of MITM attacks. You’ll run the tool, see how to use it, and then do a basic ARP poisoning attack, exactly like in the previous section. 
 
@@ -100,6 +100,6 @@ Enter the Email Address as zaid@isecur1ty.org and 123456 as Password. Now, i
 
 So, basically, you can capture any username and password that is entered in the computer that you're ARP spoofing. You can also see all the URLs that the person has requested. So, here, you can see that they requested me.hack.me.
 
-## Conclusion
+# Conclusion
 
 If you found this article interesting, you can explore Zaid Sabih’s Learn Ethical Hacking from Scratch to learn how to hack systems like black hat hackers and secure them like security experts. [Learn Ethical Hacking from Scratch](https://amzn.to/2y1qmbU) starts with the basics of ethical hacking, moves on to showing how to practice hacking safely and legally, and then teaches how to detect, prevent, and secure systems from attacks.

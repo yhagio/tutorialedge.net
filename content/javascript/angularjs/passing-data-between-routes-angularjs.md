@@ -21,13 +21,13 @@ This tutorial will be using the code from this github repo: <a href="https://git
 
 If you want to see a working example of this then simply clone the repo to your local machine and run it. I typically use the npm module: live-server in order to run my applications: [link](https://github.com/tapio/live-server)
 
-## Implementation
+# Implementation
 
 The easiest way to implement cross route storage is to create a service and pass what you want to store to the service before you refresh your application. Our service will basically act as an in-memory cache for anything we wish to pass it and we can easily extend it to store as much as we'd like, for now however, we'll just be creating 2 methods and one variable to store things. 
 
 As a means of an example we’ll be creating 2 components, a 'route1' component and a 'route2' component. On each page we'll then have an input field in which you can enter anything you wish and a button to press in order to 'push' whatever is in that input field to our storage service. These can be accessed by going to http://app:port/#/route1 and http://app:port/#/route2 respectively.
 
-#### Our Storage Service
+## Our Storage Service
 
 This storage service can be used throughout our application and will store whatever we want as long as the application isn’t refreshed in the browser. A service acts as the perfect storage solution in these situations as it follows the singleton design pattern. 
 
@@ -63,7 +63,7 @@ angular.module('root')
 
 This is all we need for a very simple storage service, this can easily be extended with more variables and more methods to get and set things but for now this will do as an example.
 
-## Our RouteProvider:
+# Our RouteProvider:
 
 In this route provider we'll define our first and second route and pass in our the two components that we will be defining below:
 
@@ -83,7 +83,7 @@ angular.module('root')
   .config(routeTestProvider);
 ```
 
-#### Component 1
+## Component 1
 
 This component will consist of 3 different files, our index.html file, our controller and our component file.
 
@@ -133,7 +133,7 @@ angular.module('root')
 
 Above you’ll see the $onInit function queries the StorageService as soon as the component loads. 
 
-#### Our Second Component
+## Our Second Component
 
 Our second component is almost identical to our first, it'll perform exactly the same stuff as our first component but I wanted to differentiate them into two separate components to serve as a demonstration:
 
@@ -202,6 +202,6 @@ angular.module('root')
   .controller('Route2Controller', Route2Controller);
 ```
 
-## Conclusion
+# Conclusion
 
 If you found this tutorial useful or need a better explanation then let me know in the comments and I'll be glad to address your concerns.

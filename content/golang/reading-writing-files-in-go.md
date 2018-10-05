@@ -16,7 +16,7 @@ Within this tutorial, we are going to look at how you can effectively read and w
 
 The method we are going to use to read and write to these files will be file format-agnostic. What this means is that you'll be able to use the techniques we'll be covering in order to read and write, `.txt`, `.csv`, `.xls` and so on, the only thing that differs for these files is the structure of the data that you write to each of these file types.
 
-## Reading Files 
+# Reading Files 
 
 In order to read from files on your local filesystem, you'll have to use the `io/ioutil` module. You'll first have to pull of the contents of a file into memory by calling `ioutil.ReadFile("/path/to/my/file.ext")` which will take in the path to the file you wish to read in as it's only parameter. This will return either the `data` of the file, or an `err` which can be handled as you normally handle errors in go.
 
@@ -55,7 +55,7 @@ Once you have added this go code to your `main.go` file, try running it by calli
 this has all my content%
 ```
 
-## Writing Files
+# Writing Files
 
 In order to write content to files using Go, we'll again have to leverage the `io/ioutil` module. We'll first have to construct a byte array that represents the content we wish to store within our files. 
 
@@ -114,11 +114,11 @@ If you attempt to run this now by calling `go run main.go`, you should see that 
 All the data I wish to write to a file
 ```
 
-## Conclusion
+# Conclusion
 
 So, in this tutorial, we have successfully managed to both read and write to a series of different files using the Go Programming language. 
 
-#### Further Reading:
+## Further Reading:
 
 * [Parsing JSON Files with Go](/golang/parsing-json-with-golang/)
 * [Parsing XML Files with Go](/golang/parsing-xml-with-goland/)

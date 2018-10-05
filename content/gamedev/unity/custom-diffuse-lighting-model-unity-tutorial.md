@@ -6,6 +6,7 @@ series:
 - unity
 tags:
 - unity
+- gamedev
 twitter: https://twitter.com/jodoran
 author: John P. Doran
 ---
@@ -18,7 +19,7 @@ Shaders based on the Lambertian reflectance are classified as non-photorealistic
 
 The Lambertian lighting model provided by Unity is one of the more basic and efficient forms, which you can find in a lot of games even today. As it is already built into the Unity Surface Shader language, it is best to start with this first and build on it. 
 
-## Create a new shader
+# Create a new shader
 
 Start by carrying out the following steps:
 
@@ -89,7 +90,7 @@ The effect is even easier to see if you use cylinders:
 
 ![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/gamedev/unity/custom-diffuse-lighting-tutorial/image4-23.png)
 
-## How it works...
+# How it works...
 
 SimpleLambert forces Cg to look for a function called `LightingSimpleLambert()`. Note the Lighting at the beginning, which is omitted in the directive.
 
@@ -121,6 +122,6 @@ This basic Lambert is a great starting point when you are prototyping your shade
 
 Unity has provided you with a lighting model that has already taken the task of creating Lambert lighting for you. If you look at the `UnityCG.cginc` file found in your Unity's installation directory under the Data folder, you will notice that you have Lambert and `BlinnPhong` lighting models available for use. When you compile your shader with pragma surface surf Lambert, the shader utilizes Unity’s implementation of the Lambert Lighting function in the UnityCG.cginc file so that you don't have to write the code over and over again. 
 
-## Conclusion
+# Conclusion
 
 If you found this article interesting, you can explore [Unity 2018 Shaders and Effects Cookbook - Third Edition](https://amzn.to/2Iu9S0W) to bring realism to your games by mastering post-processing effects and advanced shading techniques in Unity 2018. Since their introduction to Unity, shaders have been seen as notoriously difficult to understand and implement in games. [Unity 2018 Shaders and Effects Cookbook - Third Edition](https://amzn.to/2Iu9S0W) changes that by giving you a recipe-based guide to creating shaders using Unity.

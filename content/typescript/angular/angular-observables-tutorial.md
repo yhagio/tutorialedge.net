@@ -14,23 +14,23 @@ twitter: https://twitter.com/Elliot_F
 
 The Observable Design pattern is an incredibly powerful paradigm that we can utilize in a wide array of different applications. In this tutorial we’ll be covering how you can implement your own observables in Angular. 
 
-## RxJS
+# RxJS
 
 RxJS or reactive extensions is a set of libraries that are designed to help implement asynchronous and event-based programs and it’s necessary if you are wanting to perform Http requests or work with streams of information in Angular applications.
 
-#### Examples of Observable Uses:
+## Examples of Observable Uses:
 
 * UI Events
 * Websocket Streams
 * Http Requests
 
-## What Are Streams
+# What Are Streams
 
 Streams are essentially a sequence of ongoing events ordered in time. Using RxJS we can specifically subscribe to each of these signals and act upon them whenever we get them. We can ‘Observe’ them and constantly watch them in the background by subscribing to ‘Subjects’. 
 
 > Streams emit 3 different types of signals: value, error and completed. We can subscribe to these individually and react to whenever one of these signals is given.
 
-## Subjects in RxJS
+# Subjects in RxJS
 
 In RxJS we are provided with these things known as Subjects. These are both observers and observable and can watch a stream of data for us. These subjects notify all the subscribers to these subjects of any updates. 
 
@@ -45,7 +45,7 @@ export declare class Subject<T> extends Observable<T> implements ISubscription {
 }
 ``` 
 
-## A Live Example:
+# A Live Example:
 
 <div class="github-link">If you want to see a live example of Angular observables then I recommend checking out : <a href="https://github.com/elliotforbes/ng-chat">elliotforbes/ng-chat</a>.</div>
 
@@ -94,6 +94,6 @@ export class WebsocketService {
 }
 ```
 
-## Conclusion
+# Conclusion
 
 If you found this tutorial helpful or require more information then please let me know in the comments section below.

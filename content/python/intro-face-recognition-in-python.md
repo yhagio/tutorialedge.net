@@ -17,7 +17,7 @@ Face recognition software is awesome. The fact that we are able to write softwar
 
 [ageitgey/face_recognition](https://github.com/ageitgey/face_recognition) is one such library and at the time of writing this it features well over `7,000` stars on github.
 
-## Setting up
+# Setting up
 
 In order to get started with the `face_recognition` library you will first have to install it, this can be done with a simple `pip` install command like so:
 
@@ -25,7 +25,7 @@ In order to get started with the `face_recognition` library you will first have 
 pip3 install face_recognition
 ```
 
-## A Simple Example
+# A Simple Example
 
 Let's take a stock image with a number of people in it. If we wanted to automatically find all of the faces in an image, we could easily do that in 4 lines of code. This code will first take in an image and then will compute the locations of all faces using `face_recognition.face_locations(image)`. After we will simply print out the number of faces that were found.
 
@@ -48,7 +48,7 @@ I found 5 face(s) in this photograph.
 
 This is an example of face detection and you could potentially sync this up with something like a security camera and perform real-time analysis using this detection algorithm to see if someone has just walked into your house for example. 
 
-## Identifying Faces
+# Identifying Faces
 
 A more complex example would be identifying the exact coordinates of each of the faces found and translating those coordinates into separate images. 
 
@@ -98,7 +98,7 @@ If you weren't interested in concepts such as face recognition which we'll be co
 
 This could be useful if you were trying to get real-time feedback on how well an attraction is doing at a museum or an amusement park!
 
-## Checking if A Person Exists Within an Image
+# Checking if A Person Exists Within an Image
 
 Recognizing that an image contains multiple faces is pretty cool but we can actually take this one step further and determine who exists within an image. Say for instance you have a photo of a group of people, you could determine using the `face_recognition` library whether your friend `Alan` exists within that photo. 
 
@@ -127,7 +127,7 @@ Large scale face recognition systems tend to build up big databases of people an
 
 This means we couldn't take a photo of everyone in the world and expect our software to be able to tell us in real-time who exists within any given photo. 
 
-## Conclusion
+# Conclusion
 
 This was a fairly simple introduction to the art of facial recognition software and hopefully you found it both useful and interesting. In this tutorial we managed to cover both face detection and face recognition. 
 

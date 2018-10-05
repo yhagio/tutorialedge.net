@@ -16,7 +16,7 @@ weight: 6
 
 As we continue to build this HackerNews clone up, the code within some of our components is going to increasingly grow. We need to start splitting our application up into multiple smaller components and in order for us to do this, we'll first have to learn some new concepts such as passing data into components using props. 
 
-## Video Tutorial
+# Video Tutorial
 
 <div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/HMYVQjU2KJM?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="640" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 
@@ -26,7 +26,7 @@ In this tutorial, we are going to create an `Item.vue` component that will rende
 
 > Note: We will be stealing a lot of the design elements from the official HackerNews project: [vue-hackernews-2.0](https://github.com/vuejs/vue-hackernews-2.0)
 
-## Item.vue
+# Item.vue
 
 The first thing we will need to do is to define our `Item.vue` component. This will take in a story and will render it for us using the `css` that we will define in the `<style>` tags.
 
@@ -90,7 +90,7 @@ Notice that we've used `props` within our component's `js`. This will allow us t
 
 Now that we have created this new component, we can go about updating our `Homepage.vue` component so that it uses our newly defined `Item.vue` component.
 
-## Updating our Homepage.vue
+# Updating our Homepage.vue
 
 Let us first modify our `<template>` tags so that we utilize our new `Item.vue` component. We'll still want to reuse the `v-for` VueJS directive in order to render an array of top items.
 
@@ -128,7 +128,7 @@ export default {
 
 Nothing else within our `Homepage.vue` component needs to change. If you save all of the changes you have just made then you should see your application rendering nicely in the browser.
 
-## Why Break Up Our Application?
+# Why Break Up Our Application?
 
 So at this point, I think it's worthwhile covering why we have just made a smaller `Item.vue` component instead of just pushing all our code into one component. By doing this, we effectively enable ourselves to reuse various parts of our codebase in different places. It also helps to break up a massive application into a series of smaller, easier to debug, digest and expand upon. 
 
@@ -181,7 +181,7 @@ export default {
 
 Again, this should look identical to our `Homepage.vue` component, except for the fact that we are hitting the `https://hacker=news.firebaseio.com/v0/newstories.json` API endpoint as opposed to the `topstories.json` endpoint.
 
-## Adding a 'New' Route
+# Adding a 'New' Route
 
 We need a new route to render our `New.vue` component, so fire open your `/src/router/index.js` and update it to have a route that maps to our `New` component like so:
 
@@ -215,7 +215,7 @@ export default new Router({
 })
 ```
 
-## Updating our Navbar.vue
+# Updating our Navbar.vue
 
 Finally, let's update our `Navbar.vue` component so that we have a link to not only our `Homepage`, but also to `/new` so that we can decide when we want to view new stories or top stories:
 
@@ -247,7 +247,7 @@ export default {
 </style>
 ```
 
-## Conclusion
+# Conclusion
 
 So, in this tutorial, we looked at how we could further break up our growing application into more components and start passing information from a parent component, our `Homepage.vue` component, to individual `Item.vue` components. 
 

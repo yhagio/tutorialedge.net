@@ -13,7 +13,7 @@ title: Creating a Game Window using GLFW - LWJGL3
 twitter: https://twitter.com/Elliot_F
 ---
 
-## Creating our Game Window
+# Creating our Game Window
 
 <p>So now that you’ve got the base project set up, you are going to want to start writing some code and making some magic happen on the screen.
 First of all you are going to want to create a new class and call it Main.java. This will be the class that contains vital things like the initialization code and the main game loop which we will be developing later on.</p>
@@ -64,7 +64,7 @@ public class Main implements Runnable{
 
 <p>This will form the main outline of our code and it’s a great place to start from. So far it’s all super simple stuff and all the code is really doing is starting our games thread, everything else still has to be fleshed out.</p>
 
-## Our Imports
+# Our Imports
 
 ```java
 import static org.lwjgl.glfw.GLFW.*; // allows us to create windows
@@ -76,7 +76,7 @@ import org.lwjgl.glfw.GLFWvidmode; // again used for primary monitor stuff.
 
 <p>These are the libraries we need to import in order for our basic window to be displayed.</p>
 
-## The init() function
+# The init() function
 
 <p>Our init function is where most of our initialization code will go for both the window and for OpenGL. It takes the following shape:</p>
 
@@ -120,7 +120,7 @@ public void init(){
 }
 ```
 
-## Update() and Render() functions
+# Update() and Render() functions
 
 <p>Once we’ve successfully initialized both our window and GLFW we will now want to make sure that everything works correctly and that we’ll be able to get any input needed from the user.</p>
 
@@ -136,7 +136,7 @@ public void render(){
 }
 ```
 
-## Our updated Game Loop
+# Our updated Game Loop
 
 <p>Now that everything is in place you will want to implement the code that allows us to close the window. This can be done by adding the following 3 lines of code under our call to render(); in the main game loop as follows:</p>
 
@@ -160,11 +160,11 @@ public void run() {
 }
 ```
 
-## Compile
+# Compile
 
 <p>Once you’ve done all that, try hitting the green ‘run as’ arrow button at the top of your Eclipse IDE or right clicking on your project and selecting ‘run as’ and then selecting ‘Java application’. If you’ve done everything correctly and have no errors then you should see a game window successfully appearing on your screen</p>
 
-## Full Source:
+# Full Source:
 
 ```java
 import static org.lwjgl.glfw.GLFW.*;

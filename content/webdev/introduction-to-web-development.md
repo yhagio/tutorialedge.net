@@ -15,10 +15,10 @@ weight: 1
 
 Since it's inception in the 90s the web has seen an explosion in the number and range of different web technologies used for building websites. However, if you have never created a website in your life then this can all be very daunting and initially offputting for someone wanting to take the plunge and get into web development seriously. In this introductory guide I'll be helping to demystify some of the key terms and concepts that every web developer should know or be aware of.
 
-## The Languages - HTML and CSS
+# The Languages - HTML and CSS
 
 
-### HTML - Hyper Text Markup language
+## HTML - Hyper Text Markup language
 
 HTML or Hyper text markup language as it more formally known is the language in which we define the structure of our web pages. Every webpage must follow this structure and it looks something like this:
 
@@ -38,9 +38,9 @@ HTML or Hyper text markup language as it more formally known is the language in 
 
 The above code is made up of a series of `tags` which are most often opened `<tag-name>` and then closed like so: `</tag-name>`. 
 
-## Line by Line 
+# Line by Line 
 
-#### Our Head Section
+## Our Head Section
 
 The Doctype tag specifies that this document is of type html. We leave this in so that browsers can more easily work with our web pages.
 
@@ -64,7 +64,7 @@ The first tag to appear inside of our `<html lang="en">` tag is our `<head>` tag
 </head>
 ```
 
-#### Meta Data
+## Meta Data
 
 When we talk about meta data we are referring to the tags within our `<head>` section that describe our webpage. We can define things like the webpage's description that will get picked up by search engines as part of our meta data like so:
 
@@ -72,7 +72,7 @@ When we talk about meta data we are referring to the tags within our `<head>` se
 <meta name="description" content="A cool description of what my webpage contains">
 ```
 
-## Our Body Section
+# Our Body Section
 
 Finally we come to the `<body>` section of our webpage. It is within this section that we write the code that defines how our webpage is structured. We can add as much as we like in here and it's typically a weird mix of your sites content and the structure of that content. 
 
@@ -84,7 +84,7 @@ The `<h1>` tag that lies within our `<body>` tag is a header tag within which we
 </body>
 ```
 
-## Making Our Site Look Good - CSS
+# Making Our Site Look Good - CSS
 
 So in the above section we've defined a very basic website. It doesn't do anything fancy just yet and it definitely doesn't look the best so the next thing we should have a look at is how we can style our website to look more attractive. This is where CSS or Cascading Style Sheets come into play. 
 

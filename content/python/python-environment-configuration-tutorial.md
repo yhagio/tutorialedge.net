@@ -20,7 +20,7 @@ In the most basic of scenarios we would typically have 2 main environments, `dev
 
 In some scenarios you may have to pick up various environment variables from the machine running your Python application. In this tutorial I'm going to be showing you the best ways to access these environment variables.
 
-## Basic Example
+# Basic Example
 
 Say we had a section of code that talks to a database. In `development` we would want it to talk to our `development`-only database, in `production` we would want it to talk to our larger `production` database. We may have code that looks like this:
 
@@ -34,7 +34,7 @@ When we want to push to production you may want to update the connection details
 
 So how do we do this using environment variables?
 
-## System Environment Variables
+# System Environment Variables
 
 If we had two distinct servers to run our Python applications, we could set the environment variables `db_username` and `db_password` on each of our servers. 
 
@@ -58,12 +58,12 @@ If we wanted to read in our `db_username` and `db_password` environment variable
 
 This solution works if you can set distinct variables in the environments that you run your Python applications. However this approach could be difficult if you run on one shared machine without the use of virtual machines, containers or some other similar mechanism. 
 
-## Docker
+# Docker
 
 If you haven't heard of Docker then I highly suggest you check it out. Essentially it's a containerization technology that allows you to wrap your applications in a container. This container features everything that your app needs to run and can subsequently be deployed on any operating system also running Docker.
 
 Within these containers you would typically set `environment` variables that contained things such as database `usernames` and `passwords`. Your application would then pick these up at runtime and use these credentials to connect to the appropriate database. 
 
-## Conclusion
+# Conclusion
 
 Hopefully this article helped to shed some light on how you would go about working with environment variables in your Python applications. If you found this tutorial useful or require further assistance then please let me know in the comments section below or by tweeting me: [@Elliot_F](https://twitter.com/elliot_f).

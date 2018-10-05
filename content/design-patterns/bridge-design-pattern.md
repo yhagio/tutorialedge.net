@@ -12,17 +12,17 @@ title: Bridge Design Pattern Tutorial
 twitter: https://twitter.com/Elliot_F
 ---
 
-## Intent
+# Intent
 
 <p>The intent of the Bridge design pattern is to decouple an abstraction from its implementation so that the two can vary independently. This basically allows you to build upon an abstract class and allows you to build to very different concrete classes based upon this abstract class.</p>
 
-## Motivation
+# Motivation
 
 <p>When an abstraction can have one of several possible implementations, the usual way to accommodate them is to use inheritance. Traditional methods tend not to be flexible enough and thus the Bridge design pattern was conceived. </p>
 
 <p>Now this can be hugely beneficial for those of you wishing to create multi-platform tools and games and need a way to design the code around the different operating systems code tweaks. </p>
 
-## When Should You Use This Pattern?
+# When Should You Use This Pattern?
 
 <p>You should typically use the Bridge pattern when:</p>
 
@@ -33,11 +33,11 @@ twitter: https://twitter.com/Elliot_F
 	<li>you want to share an implementation among multiple objects and this fact should be hidden from the client.</li>
 </ul>
 
-## Implementation
+# Implementation
 
 <p>This code example showcases how you could implement the bridge design pattern in the context of a game programming scenario.</p>
 
-### Enemy Abstract Class
+## Enemy Abstract Class
 
 ```java
 package Bridge;
@@ -58,7 +58,7 @@ public abstract class Enemy {
 }
 ```
 
-### Archer Concrete Class
+## Archer Concrete Class
 
 ```java
 package Bridge;
@@ -80,7 +80,7 @@ public class Archer extends Enemy {
 }
 ```
 
-### Knight Concrete Class
+## Knight Concrete Class
 
 ```java
 package Bridge;
@@ -100,7 +100,7 @@ public class Knight extends Enemy {
 }
 ```
 
-### Armour Interface
+## Armour Interface
 
 ```java
 package Bridge;
@@ -115,7 +115,7 @@ public interface Armour {
 }
 ```
 
-### LightArmour Concrete Class
+## LightArmour Concrete Class
 
 ```java
 package Bridge;
@@ -132,7 +132,7 @@ public class LightArmour implements Armour {
 }
 ```
 
-### HeavyArmour Concrete Class
+## HeavyArmour Concrete Class
 
 ```java
 package Bridge;
@@ -148,7 +148,7 @@ public class HeavyArmour implements Armour {
 }
 ```
 
-### Driver Class
+## Driver Class
 
 ```java
 package Bridge;

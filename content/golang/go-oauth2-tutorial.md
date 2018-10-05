@@ -18,7 +18,7 @@ This is without a doubt one of the most requested topics from commentors on my Y
 
 Security is without doubt a very important feature for any public and even private facing service or API and it's something that you need to pay a lot of attention to in order to get it right. 
 
-## The Theory
+# The Theory
 
 So, before we dive into how we can code this up, it's important to know how it works in the background. Typically, we have a `client` that will start by making an authorization request to the `resource owner`. The `resource owner` then either grants or denies this request. 
 
@@ -28,7 +28,7 @@ So, with that said, let's now look at how we can implement our own `authorizatio
 
 > If you are interested in seeing the RFC that Oauth2 implementations follow, you can find it here: [RFC-6749](https://tools.ietf.org/html/rfc6749)
 
-## A Simple Oauth2 Flow
+# A Simple Oauth2 Flow
 
 We'll start off by implementing a really simple server based on the example that they provide within their documentation. When we pass an `client id` and a `client secret` to our `authorization server` it should return us with our `access token` that'll look something like this:
 
@@ -94,9 +94,9 @@ func main() {
 }
 ```
 
-## Our Client
+# Our Client
 
-## Conclusion
+# Conclusion
 
 So, in this tutorial, we looked at how you could implement your own `authorization server` in Go. We then looked at how we could build a simple Go-based client that could subsequently make requests for `access tokens` to this server. 
 

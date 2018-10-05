@@ -38,13 +38,13 @@ widgettrader
 ...
 ```
 
-## What is a Module in Python
+# What is a Module in Python
 
 Before we go on to creating our own Python Modules, it's important to know exactly what a `module` is in Python.
 
 > A module can be defined as a file containing Python definitions and statements. The file name is the module name with the suffix `.py` appended.
 
-## Defining a Simple Module
+# Defining a Simple Module
 
 We'll start off by defining a very simple module that will exist in a `.py` file within the same directory as our `main.py` script that we'll be writing.
 
@@ -77,7 +77,7 @@ if __name__ == '__main__':
 
 That is all we need to define a very simple python module within our Python programs. 
 
-## Defining a Module Within a Sub-Directory
+# Defining a Module Within a Sub-Directory
 
 In order to define a module that exists within a sub-directory in Python we need to follow a number of steps, in this example we'll be creating a module named `analysis`:
 
@@ -120,14 +120,14 @@ analysis.my_analysis_func()
 
 Which, I'm sure you'll agree is more succinct and cleaner to read overall. 
 
-### Difference Between a Python Module and a Python Package
+## Difference Between a Python Module and a Python Package
 
 It has to be noted that there is a difference between a `Python module` and a `Python package`. The key thing to remember is that a `package` is a module that contains multiple modules. Whilst a normal `Python module` may be a single file or multiple files that are imported under one import.
 
 * A good example of a Python module would be our the `analysis` module that we defined in the previous section of this tutorial. 
 * A good example of a Python package would be the `xml` package. This include multiple sub modules such as the `xml.etree` module and an even deeper `xml.etree.ElementTree` module.  
 
-## Relative Path Imports
+# Relative Path Imports
 
 Importing modules using their full path can be an arduous task and thankfully Python offers us the ability to import modules from using relative paths. If we continue our `analysis` module example from above, we could modify the `analysis/__init__.py` file to use relative imports like so:
 

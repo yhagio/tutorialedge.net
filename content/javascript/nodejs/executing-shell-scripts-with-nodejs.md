@@ -21,7 +21,7 @@ twitter: https://twitter.com/Elliot_F
 
 <p>This module essentially creates a child process in which we can execute our shell script and also sets everything up for us so that we can utilize stdin, stdout and stderr within our NodeJS application. </p>
 
-## Executing Unix or Windows Commands
+# Executing Unix or Windows Commands
 
 We can use the exec function to run a wide range of windows and unix commands and also pass any number of arguments to this command should we need to.
 
@@ -47,7 +47,7 @@ ls.on('close', function (code){
 });
 ```
 
-## Executing Shell Scripts
+# Executing Shell Scripts
 
 In the below example you’ll see how we can utilize callbacks in order to access the data from stdout and stderr and subsequently view any errors and output our shell scripts output.
 
@@ -66,7 +66,7 @@ testscript.stderr.on('data', function(data){
 });
 ```
 
-## Conclusion
+# Conclusion
 
 Through this method I was able to wrap some pretty mundane and annoying scripts in an automated fashion and tie them together in a concise and automated fashion. This helped to reduce the amount of time spent configuring the scripts and allowed me to focus more on the results.
 

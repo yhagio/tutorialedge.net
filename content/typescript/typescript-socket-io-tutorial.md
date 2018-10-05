@@ -15,7 +15,7 @@ twitter: https://twitter.com/Elliot_F
 
 In this tutorial, we are going to be looking at how you can build a websocket based server using both TypeScript and Socket.io.
 
-## Websockets
+# Websockets
 
 Websockets are an awesome technology and I absolutely love playing around with them and creating real-time applications. I've used them for quite a number of different applications now in combination with other frontend frameworks such as Angular and Vue.JS. 
 
@@ -25,7 +25,7 @@ In this tutorial, we'll be using `express` as the backend web framework that our
 
 > The full source code for this repo can be found here: [TutorialEdge/TypeScript](https://github.com/TutorialEdge/TypeScript)
 
-## Introduction
+# Introduction
 
 We are going to start off by defining a really simple TypeScript based Express.js server that will listen on port 3000. Whenever a user hits `http://localhost:3000/` our REST API it will return a very simple `hello world`.
 
@@ -82,7 +82,7 @@ Once you've installed these libraries, we will need to define our `tsconfig.json
 }
 ```
 
-## Building our Project
+# Building our Project
 
 Now that we've set up our `tsconfig.json` file and we've got our `src/server.ts` file, we can attempt to build and subsequently run this app:
 
@@ -93,7 +93,7 @@ $ node dist/server.js
 
 Should there be no errors, this will kick off our server running on port `3000`. Attempt to hit this now by navigating to `http://localhost:3000` in your browser.
 
-## Automatically Rebuilding and Re-running
+# Automatically Rebuilding and Re-running
 
 Obviously, as we start to develop this out more, we don't want to have to perform the above commands every time we wish to test what we've done works. Let's install the `concurrently` node_module as well as `nodemon` to concurrently run our `tsc -w` and `nodemon dist/server.js` commands:
 
@@ -127,7 +127,7 @@ Now, within our `package.json` we'll wish to add the following `scripts`:
 
 Now, we can just run `yarn run watch` and it will automatically rebuild and rerun our TypeScript based project every time we make a change. This is invaluable as it saves you a lot of time in the long run.
 
-## Implementing our Websocket Endpoint
+# Implementing our Websocket Endpoint
 
 Now that we have a basic `express` server, let's add the code we'll need for our `socket.io` based endpoint.
 
@@ -169,10 +169,10 @@ const server = http.listen(3000, function(){
 
 Now, when we run our `yarn run watch` command, it should start up our incredibly simple websocket API. 
 
-## Testing This Works
+# Testing This Works
 
 > Under Construction
 
-## Conclusion
+# Conclusion
 
 In this tutorial, we've successfully managed to create a socket.io TypeScript server that can be connected to using a frontend in order to display any real-time events you wish.

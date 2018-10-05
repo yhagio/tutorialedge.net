@@ -15,7 +15,7 @@ twitter: https://twitter.com/Elliot_F
 
 In this tutorial I will be showing you how you can fetch the a webpage using the `urllib2` python module. This is a relatively simple process that can be accomplished in 5 lines of code.
 
-## The Imports
+# The Imports
 
 To begin with we will need to import the `urllib2` python module so that we can utilize it's functionality:
 
@@ -23,7 +23,7 @@ To begin with we will need to import the `urllib2` python module so that we can 
 import urllib2
 ```
 
-## Fetching a Website
+# Fetching a Website
 
 <p>Once we've imported all the appropriate python modules we can move onto fetching our desired webpage. For the purpose of this example we'll be fetching this webpage and we can do that like so:</p>
 
@@ -76,11 +76,11 @@ content = page.read()
 print content
 ```
 
-## Video Tutorial
+# Video Tutorial
 
 <p><iframe allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/LTGhCtp2Scw" width="560"></iframe></p>
 
 
-## Moving Forward
+# Moving Forward
 
 <p>This tutorial will act as the base tutorial for quite a number of tutorials in which we will be calculating key SEO metrics such as keyword density. </p>

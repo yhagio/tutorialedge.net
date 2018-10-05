@@ -19,7 +19,7 @@ Being able to work with the file system and do things like traverse directories 
 
 In this tutorial we'll be taking a look at the various ways you can work with the file system in Python. Hopefully this will give you a decent grasp of some of the cool things you can do very quickly and succinctly using the Python programming language. 
 
-## Recursing Through Directories
+# Recursing Through Directories
 
 In some situations you may need to recurse through directory after directory. This could be for any number of reasons. 
 
@@ -34,7 +34,7 @@ for file in os.walk("/"):
     print(file)
 ```
 
-#### Output
+## Output
 
 Let's see this in action in a directory that has 3 distinct files in it: `['test2.txt, 'test.txt', 'main.py']`
 
@@ -48,7 +48,7 @@ Let's see this in action in a directory that has 3 distinct files in it: `['test
 ('./', [], ['test2.txt', 'test.txt', 'main.py'])
 ```
 
-## Checking Whether File Or Directory?
+# Checking Whether File Or Directory?
 
 Being able to discern whether something is a file or directory can come in handy. Let's look at how you can check whether something is either a file or directory in Python.
 
@@ -62,7 +62,7 @@ False
 True
 ```
 
-## Checking if a File or Directory Exists
+# Checking if a File or Directory Exists
 
 If you wanted to check whether something exists on your current machine you can use the `os.path.exists()` function, passing in the file or directory you wish to check:
 
@@ -74,7 +74,7 @@ True
 False
 ```
 
-## Creating Directories in Python
+# Creating Directories in Python
 
 Say you not only wanted to traverse directories but also wished to create your own. Well fear not, this is very possible using the `os.makedirs()` function.
 
@@ -98,6 +98,6 @@ if not os.path.exists('my_dir'):
             raise
 ``` 
 
-## Conclusion
+# Conclusion
 
 If you found this tutorial useful or require further help then please feel free to let me know in the comments section below or message me [@Elliot_f](https://twitter.com/elliot_f).

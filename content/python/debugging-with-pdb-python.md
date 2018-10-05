@@ -21,17 +21,17 @@ Knowing how to debug your code is an incredibly important tool in any programmer
 
 The PDB is classed as an interactive source code debugger which can be used in a similar fashion to how you would use the REPL. 
 
-## Starting the Python Debugger
+# Starting the Python Debugger
 
 When it comes to starting the Python debugger we have 2 main options. We can either invoke the PDB from the start of our projects execution and step through it from the beginning by calling `python3 -m pdb main.py`, or we can add `import pdb; pdb.set_trace()` above the particular section of code we wish to debug in our Python application in the same way that you would typically set breakpoints. 
 
 For smaller programs the first option is fine but for massive Python systems I would tend to recommend going down the second route as this would execute everything up until we reach that particular section of code and then it would open up the PDB for us to work with.
 
-## Common Commands
+# Common Commands
 
 Becoming relatively proficient with the Python debugger requires knowledge of just a few of the many commands available. 
 
-#### Commands
+## Commands
 
 These commands can be entered either as their shorthand versions `s` or there full commands `step`.
 
@@ -47,7 +47,7 @@ These commands can be entered either as their shorthand versions `s` or there fu
 
 With these 5 commands and a combination of your standard Python functions such as `print()`, `repr()` and so on, you can effectively navigate through your Python programs and come to a decent understanding as to when and where in your program something has went wrong. 
 
-## Example
+# Example
 
 Let's have a look at how we can use this to effectively step over a very simple Python program.
 
@@ -88,7 +88,7 @@ The final line is where we'll be inputting our commands. Run the `n(ext)` comman
 (Pdb)
 ```
 
-## Conclusion
+# Conclusion
 
 In this tutorial we covered how you can get up and running using the python debugger, the `pdb` to walk through various sections of your Python code and try to gain real insight as to what it is doing. This insight will hopefully help you make more informed decisions as to what could have went wrong within your program!
 

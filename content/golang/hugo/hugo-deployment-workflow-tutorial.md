@@ -22,7 +22,7 @@ When developing websites with Hugo, having a solid automated deployment strategy
 
 And that's it. As soon as I've made the changes to my master branch on github, the deployment process I've defined picks these changes up and deploys them to my live website. In this tutorial we'll be looking at the various methods you could use in order to automatically deploy your own hugo websites.
 
-## Using Jenkins
+# Using Jenkins
 
 > [Jenkins](https://jenkins.io/) for those of you who have never used it before is a continuous integration/continuous deployment tool that is built for performing automated deployment tasks such as deploying a hugo website. 
 

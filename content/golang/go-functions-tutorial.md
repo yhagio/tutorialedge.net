@@ -16,7 +16,7 @@ In this tutorial, we are going to be looking at Go's functions and hopefully, by
 
 So, to make this interesting, we are going to be building a program a really simple command-line interface tool that we can extend to our hearts content. 
 
-## Function Declaration
+# Function Declaration
 
 The first thing we'll need to figure out is, how do you declare a function within a go program? Now, if you are en experienced programmer then this should be nothing new to you. We start off by using the `func` keyword and then specifying the name of the our function. 
 
@@ -83,7 +83,7 @@ func main() {
 }
 ```
 
-## Anonymous Functions
+# Anonymous Functions
 
 If you come from a Python background, you may be comfortable with anonymous functions, however, if you aren't then fear not! 
 
@@ -113,6 +113,6 @@ func main() {
 }
 ```
 
-## Conclusion
+# Conclusion
 
 So, in this article we managed to cover quite a fair bit on functions within the go programming language. Hopefully, you found this useful! If you require any further help or assistance then please feel free to let me know in the comments section below!

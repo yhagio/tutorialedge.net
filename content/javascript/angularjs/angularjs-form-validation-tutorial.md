@@ -15,7 +15,7 @@ In this tutorial I’m going to be demonstrating how we can implement form valid
 
 Form validation is a user experience designers best friend when ensuring application users are inputting the correct data into your form. If you had a web application that took in email addresses from prospective clients then you could employ form validation to ensure that they email addresses they are putting in look like standard email addresses. Or you could enforce passwords to follow certain strength guidelines etc.
 
-## Security
+# Security
 
 Form validation is something that can and should be used along with input validation in order to protect your applications from harmful attacks. If you are passing data back to a RESTful API for processing then you *must* ensure that you perform some form of input validation on the backend as well as the frontend. 
 
@@ -23,7 +23,7 @@ If you do not perform input validation on the backend then it’s possible hacke
 
 ![Javascript only form validation](http://i.imgur.com/GluNcro.jpg)
 
-## Implementation
+# Implementation
 
 We’ll start with a basic form:
 
@@ -76,7 +76,7 @@ myApp.controller('AppController', ['$scope', function($scope) {
 
 Now what this does is it takes in our username and password from our form and calls the register function that we have defined in our AppController. The register function essentially just logs out the inputted username and password to the console.
 
-## Adding Validation
+# Adding Validation
 
 In this example we’ll create 2 regexs, one for our usernames and one for our passwords. These aren’t especially secure regexs so I’d probably try to find something more secure.
 
@@ -105,7 +105,7 @@ We’ve also added ng-disabled to our button which will render the register butt
 </div>
 ```
 
-#### AppController.js
+## AppController.js
 
 ```js
 var myApp = angular.module('myApp',[]);

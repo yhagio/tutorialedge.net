@@ -17,7 +17,7 @@ In this tutorial we’ll be examining what modules are in Angular 2.0 as well as
 
 > Official documentation for Angular 2 Modules can be found here: <a target="_blank" href="https://angular.io/docs/ts/latest/guide/ngmodule.html">Angular 2 Modules</a>
 
-## What Are Modules?
+# What Are Modules?
 
 Typically a module would contain all the code necessary for one cohesive piece of functionality for your application. So say you were designing an admin dashboard for your website or application. You would have one root module and possibly a module for your articles section, a module for your users section, a module for your stats section and so on. 
 
@@ -43,7 +43,7 @@ Ever Angular application contains at least one route module. Without this your a
 ```  
 
 
-## Our Main Module
+# Our Main Module
 
 
 Now we know every Angular application must have at the very least a root module. This is typically a class that has been decorated with @NgModule. @NgModule typically tells Angular how to compile and run module code. This root module acts as your applications main entry point.
@@ -77,7 +77,7 @@ export class AppModule { }
 
 > We can add our own custom components to the declarations array. Notice I’ve added TestComponent above. 
 
-### The @NgModule Decorator
+## The @NgModule Decorator
 
 In order to define a module we need to first define a class within our application. After we've defined this class we would then have to decorate it with the @NgModule decorator. Within this we define our metadata for this module, this metadata declares what components, directives, services and so on belong in this module.
 
@@ -124,7 +124,7 @@ import { UserModule, UserComponent } from './users/users.module';
 
 Once we've done this we can then utilize the <user></user> tags within any component that lies within our root AppModule.
 
-## Bootstrapping
+# Bootstrapping
 
 
 In Angular 1.* we would typically have used the ng-app directive to bootstrap our angular application. This would act almost like a main function that would act as the starting point for all of our Angular code. 
@@ -142,6 +142,6 @@ import { AppModule } from './app.module';
 platformBrowserDynamic().bootstrapModule(AppModule);
 ```
 
-## Conclusion
+# Conclusion
 
 I hope you found this tutorial useful. If you want any further help or information then please let me know in the comments section below!

@@ -13,11 +13,11 @@ title: Typescript REST API And MongoDB Beginners Tutorial
 twitter: https://twitter.com/Elliot_F
 ---
 
-## Introduction
+# Introduction
 
 In this tutorial, we'll be building a very simple REST API that will allow you to store, query, update and delete books from a book table within your MongoDB instance. This will hopefully cover everything you need to get a basic project up yourself for your own side projects.
 
-## Setting Up A MongoDB Database with Docker
+# Setting Up A MongoDB Database with Docker
 
 For the purpose of this tutorial, I'm going to be using `docker` in order to quickly get a mongodb instance up and running on my local development machine. 
 
@@ -28,7 +28,7 @@ $ docker run --name my_mongo -d -p 127.0.0.1:27017:27017 mongo
 
 Note: If you already have a mongodb instance up and running then please feel free to ignore this step and carry on using your own instance.
 
-## Our TypeScript Application
+# Our TypeScript Application
 
 Our TypeScript application is going to simply expose a simple REST API that will allow us to perform basic CRUD on our MongoDB table. We'll be creating a table that will contain a list of technical books and some attributes about said books.
 
@@ -43,7 +43,7 @@ Our TypeScript application is going to simply expose a simple REST API that will
 
 Now, MongoDB is a non-relational database so if we wish to add new fields like an author, some comments or the book's rating then we can certainly do so in the future. This will be enough for us to get started with right now though.
 
-## Our Base REST API
+# Our Base REST API
 
 So, to get started, we'll need to create a very simple REST API that will expose 5 distinct API endpoints:
 
@@ -57,7 +57,7 @@ So, to get started, we'll need to create a very simple REST API that will expose
 
 This doesn't look too bad, 5 distinct endpoints, nothing we haven't done before!
 
-## Our Project File Structure
+# Our Project File Structure
 
 Let's have a look at the project structure for the REST API that we'll be building. We'll need a main entry point which will be our `app.ts` file, this will handle our API config and starting the server on a given port.
 
@@ -103,7 +103,7 @@ Within our `package.json` file we'll now have to add the following `scripts`:
 
 We can now build and run our application by typing `yarn run watch` into our terminal. At this stage, not a lot should happen, as we don't yet have any code! Let's go and fix this now!
 
-## Our app.ts File
+# Our app.ts File
 
 Let's start off by creating a really simple `express` based server that returns `hi` when we hit the `/`. 
 
@@ -126,7 +126,7 @@ If we save this and kick off our `yarn run watch` script, you should see that th
 
 Excellent, we now have a good base on top of which we can build our MongoDB based REST API!
 
-## Our book.ts File
+# Our book.ts File
 
 Ok, so let's start fleshing out our API and subsequently the functions within our `book.ts` file we want to expose.
 
@@ -180,7 +180,7 @@ const server = app.listen(app.get("port"), () => {
 
 Excellent, we have now defined all of the API Endpoints we had in mind. It's now time to work on integrating this with MongoDB!
 
-## Integrating with MongoDB
+# Integrating with MongoDB
 
 The first thing we'll need to do is import a new library that will allow us to not only connect to our MongoDB instance, but to also do cool things such as insert new books, query those books and whatever else we wish to do.
 
@@ -303,7 +303,7 @@ export let addBook = (req: Request, res: Response) => {
 }
 ```
 
-## Running our Project
+# Running our Project
 
 Now, we should be done with our programming section of this tutorial, it's time to run this and try and test it by throwing a few HTTP Requests at it. We can again run our REST API by calling the following command:
 
@@ -317,7 +317,7 @@ $ yarn run watch
 
 Once this is up and running, I encourage you to play around using something like Postman in order to hit your API with a number of different HTTP requests and do things like populate your database, update any entries and just get used to interacting with it in general.
 
-## Conclusion
+# Conclusion
 
 Hopefully you found this tutorial useful! If you did then I'd love to hear your feedback on twitter: [@Elliot_F](https://twitter.com/elliot_f). 
 

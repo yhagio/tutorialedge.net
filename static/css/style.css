@@ -387,7 +387,7 @@ line-height: 24px;
 }
 
 .content h1 {
-  font-size: 33px;
+  font-size: 1.75rem;
   line-height: 1.24;
   font-weight: 400;
   color: #3a3c4c;
@@ -512,16 +512,8 @@ hr {
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 10px;
-  margin-top: 20px;
+  margin-top: 0px;
   clear: both;
-}
-
-.content h1 small {
-  font-family: Raleway;
-  text-transform: none;
-  font-size: 22px;
-  line-height: 20px;
-  font-weight: 500;
 }
 
 .content h2 {
@@ -541,12 +533,17 @@ hr {
 }
 
 .post-info {
-  font-size: 14px;
-line-height: 1.35;
-font-weight: 700;
+  line-height: 1.35;
+  font-weight: 400;
+  font-size: 1rem;
 margin-bottom: 17px;
 color: #738f93;
 }
+.post-info {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
 .content .info .ion {
   font-size: 16px;
   margin-right: 5px;
@@ -556,9 +553,8 @@ color: #738f93;
   margin-right: 20px;
 }
 
-.content ul li {
+.content > ul li {
   list-style-type: square !important;
-  margin-left: 20px;
 }
 
 .content pre {
@@ -881,40 +877,24 @@ box-shadow: 2px 3px 7px 0 rgba(0,0,0,0.25);
   padding: 40px;
 }
 
-.toc nav, .toc nav ul, .toc nav ul li, .toc nav ul li a, .toc nav ul li:first-child, .toc nav ul li:not(:last-child) {
-   all: unset;
-}
 .toc {
-  background-color: white;
-  padding: 30px;
-  height: auto;
-  text-decoration: none;
-  display: block;
+  color: #999 !important;
+  padding: 20px;
+  background-color: #f6f6f6;
   width: 100%;
-  margin-bottom: 40px;
-  margin-top: 20px;
-  box-shadow: 0 3px 8px 0 rgba(0,0,0,0.03);
+  margin-bottom: 20px;
 }
 .toc h4 {
-  font-size: 18px;
-  font-weight: 800;
+  color: #999 !important;
+  font-size: 1.722656rem;
+  font-weight: 400;
   margin: 0;
   padding: 0;
   padding-bottom: 5px;
 }
-.toc ul {
-  margin: 0;
-padding: 0;
-}
-.toc nav ul li{
-  list-style: square;
-  display: block;
-}
-.toc nav ul li a {
-  display: block;
-}
-.toc nav ul li ul li a:hover {
-  text-decoration: underline;
+.toc ul li a {
+  color: #619ccd;
+  font-weight: 500;
 }
 
 .github-banner {
@@ -1123,6 +1103,8 @@ a:hover .course-progress-box {
 a.youtube-subscribe {
   text-decoration: none;
   transition: 0.5s;
+  display: block;
+  margin-top: 20px;
 }
 a.youtube-subscribe:hover {
   text-decoration: none;
@@ -1140,6 +1122,6 @@ a.youtube-subscribe:hover {
 }
 .youtube-subscribe img {
   width: 100%;
-  height: auto;
+  float: left;
   display: block;
 }

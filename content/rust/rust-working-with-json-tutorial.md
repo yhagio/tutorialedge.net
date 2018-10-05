@@ -13,13 +13,13 @@ twitter: https://twitter.com/Elliot_F
 
 > This tutorial was built using Rust Version: 1.22.1
 
-## Introduction
+# Introduction
 
 Most programming languages support `JSON` as part of the core language by default. It's an incredibly popular data format that is used in millions of different applications. 
 
 In this tutorial we'll be looking at how you can effectively work with JSON objects within our own Rust based systems. In order to do this we'll be creating a very simple [REST API](/general/what-is-a-rest-api) that will do a variety of different things with JSON objects. 
 
-## Serde
+# Serde
 
 In this tutorial we'll be utilizing the `Serde` crate which can be found here: [serde](https://serde.rs/). `Serde` is an awesome framework which can `Serialize` and `Deserialize` objects into a huge range of data formats including:
 
@@ -49,7 +49,7 @@ extern crate serde;
 extern crate serde_json;
 ```
 
-## Structs
+# Structs
 
 If you have ever used `Golang` then the concept of defining `struct`'s that will represent our `JSON` objects.
 
@@ -61,7 +61,7 @@ struct Greeting {
 }
 ```
 
-## Serializing
+# Serializing
 
 Let's take a look at how we can serialize a `struct` to a `JSON` string:
 
@@ -71,7 +71,7 @@ let serialized = serde_json::to_string(&greeting).unwrap();
 println!("Serialized: {}", serialized);
 ```
 
-## Deserializing
+# Deserializing
 
 If we conversely wanted to deserialize our `JSON` string and convert it back to a `Greeting` then we could do the following:
 
@@ -80,7 +80,7 @@ let deserialized: Greeting = serde_json::from_str(&serialized).unwrap();
 println!("Deserialized: {:?}", deserialized);
 ```
 
-## Sample Program
+# Sample Program
 
 Let's now put this all together and try and create a simple REST api that will return a JSON response. This `JSON` response will be serialized from the `resp` variable that we will follow the `Greeting` struct.
 
@@ -114,7 +114,7 @@ fn main() {
 }
 ```
  
-## Conclusion
+# Conclusion
 
 Hopefully you found this tutorial useful! If you did or require further assistance then please let me know in the comments section below or by tweeting me [@Elliot_F](https://twitter.com/elliot_f).
 

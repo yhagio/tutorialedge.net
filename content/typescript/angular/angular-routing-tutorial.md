@@ -19,7 +19,7 @@ Routing in Angular 2+ has changed dramatically from the original AngularJS days 
 
 > If you are interested, check out my [AngularJS 1.5 Routing Tutorial](https://tutorialedge.net/angularjs-template-tutorial-ng-view)
 
-## Defining your First Routes
+# Defining your First Routes
 
 The first thing that you need to do in order to add routing to your application is append the following tag to your index.html page:
 
@@ -83,7 +83,7 @@ Finally we need to define where we want our sub-pages html to render. We can do 
 
 In our app.component.html file. In my [example project](https://github.com/elliotforbes/angular-2-admin/blob/master/src/app/app.component.html) you’ll see that I’ve defined this below my app-top-nav which will remain constant for all pages throughout my application. 
 
-## Child Routes
+# Child Routes
 
 So now that we know how to define our own routes we could keep adding and adding them to our app.module.ts file forever right? Well what happens when we are working with an application that features hundreds or potentially thousands of sub-pages? Our app.module.ts would become un-maintainable and a giant mess of routes. Thankfully Angular provides a solution to this problem by allowing us to define child routes within sub-modules of our application.
 
@@ -120,7 +120,7 @@ Above you’ll see that it looks almost identical to our `app.module.ts` except 
 RouterModule.forChild(blogRoutes)
 ```
 
-## Navigation Between Routes in HTML
+# Navigation Between Routes in HTML
 
 Now that we’ve defined our routes we need to provide a means to navigate between these routes in our html. If we were wanting to link to any other route in our application then we can use the following:
 
@@ -130,17 +130,17 @@ Now that we’ve defined our routes we need to provide a means to navigate betwe
 
 The above `<a/>` tag would link to our settings page that we defined above.
 
-## A Live Example
+# A Live Example
 
 Should you wish to see a live example of Angular routing then feel free to checkout my Angular Admin repo: [Angular-2-Admin-Dashboard](https://github.com/elliotforbes/angular-2-admin.git)
 
-## Conclusion
+# Conclusion
 
 If you found this tutorial helpful or need further assistance then please do not hesitate to let me know in the comments section below. 
 
 > Please check out the <a href="https://angular.io/docs/ts/latest/guide/router.html">official angular routing documentation</a> for more in-depth resources
 
-#### Further Reading
+## Further Reading
 
 * [Angular Detecting Route Changes](/typescript/angular/angular-detecting-route-changes/)
 * [Angular Getting Current Location using Location Provider](/typescript/angular/angular-get-current-route-location/)

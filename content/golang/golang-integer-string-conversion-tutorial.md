@@ -15,7 +15,7 @@ In this tutorial we briefly look at how one can convert an integer to string and
 
 Full documentation of the strconv package can be found here: [Strconv Package](https://golang.org/pkg/strconv/)
 
-## String to Integer Conversion
+# String to Integer Conversion
 
 ```go
 func strToIntConversion() {
@@ -36,7 +36,7 @@ func strToIntConversion() {
 }
 ```
 
-## Integer to String Conversion
+# Integer to String Conversion
 
 ```go
 func intToStringConversion() {
@@ -52,7 +52,7 @@ func intToStringConversion() {
 }
 ```
 
-## Conclusion
+# Conclusion
 
 Full Source Code:
 

@@ -18,7 +18,7 @@ In this tutorial I’m going to be demonstrating how you can build a simple, yet
 
 In order to do this we’ll be using the os-utils package which can be found here: https://github.com/oscmejia/os-utils
 
-## Getting Started
+# Getting Started
 
 So initially we’ll write a script that gives us
 

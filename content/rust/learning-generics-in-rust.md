@@ -22,7 +22,7 @@ A major example of completely generic code is built-in container data structures
 
 Therefore, parameterization of containers allows the container and its methods to explicitly declare trait bounds that are expected from stored types. All other characteristics of the stored item will be parameterized.
 
-## Investigating generics
+# Investigating generics
 
 Generics refer to the practice of parameterizing classes in object-oriented programming (OOP) languages. Rust does not have an exact equivalent of classes. However, the concept of datatypes paired with a trait is very similar to a class if used in that sense. So, in Rust, generics would refer to the parameterization of datatypes and traits.
 Choosing a common example from OOP, look at the animal kingdom. In the following code, you can define some animals and the actions that they can take. First, define two animals:
@@ -128,7 +128,7 @@ impl<A: Animal, T: Toy> AnimalChasesToy<A, T> for AnimalChasingToy<A, T>
 
 At this point, you have defined a generic `struct` and `trait` that accepts types, knowing only some limited information regarding the traits of each object. Multiple traits or none can be specified to declare all expected interfaces. Multiple traits or lifetime bounds can be declared with the `'l + Trait1 + Trait2` syntax.
 
-## Investigating generalized algebraic datatypes
+# Investigating generalized algebraic datatypes
 
 Sometimes, it is desirable to have the type system carry more information than normal. If you look at the process of compilation, types occupy a space between the program code and the program executable. The code can take the form of text files before compilation or an abstract syntax tree such as those manipulated by Rust macros. Program executables consist of the resulting combination of all Rust primitives like expressions, functions, datatypes, traits, and so on.
 

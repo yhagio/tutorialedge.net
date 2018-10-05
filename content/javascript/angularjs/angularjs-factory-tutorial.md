@@ -11,13 +11,13 @@ title: AngularJS Factory Tutorial
 twitter: https://twitter.com/Elliot_F
 ---
 
-## What Are Factories
+# What Are Factories
 
 Services are essentially ways we can share code across our AngularJS applications. Say for instance you have an application that interacts with a RESTful API, you would typically create a factory which would return an object that contains all the functions necessary to interact with that API.
 
 By using a factory object, we can standardise the way we interact with the REST API and reduce the amount of duplicate code we have scattered around our application.
 
-## Implementing a Factory
+# Implementing a Factory
 
 ```js
 var testApp = angular.module('testApp', []);
@@ -55,7 +55,7 @@ testApp.controller('testController' ,
 }]);
 ```
 
-## Our Index Page
+# Our Index Page
 
 ```html
 <html ng-app="testApp">

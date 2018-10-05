@@ -12,7 +12,7 @@ twitter: https://twitter.com/bltroutwine?lang=en
 weight: 2
 ---
 
-## Read many, write exclusive locks – RwLock
+# Read many, write exclusive locks – RwLock
 
 Consider a situation where you have a resource that must be manipulated only a single thread at a time, but is safe to be queried by many—that is, you have many readers and only one writer. 
 
@@ -154,7 +154,7 @@ It will run for a while and print out the following:
 
 But what if every reader does not need to see every write, meaning that it's acceptable for a reader to miss writes so long as it does not miss all of the writes? You have options.
 
-## Blocking until conditions change – condvar
+# Blocking until conditions change – condvar
 
 One such option is a condvar, or CONDition VARiable. Condvars are a nifty way to block a thread, pending a change in some Boolean condition. One difficulty is that condvars are associated exclusively with mutexes, but in this example, you need not mind it all that much.
 

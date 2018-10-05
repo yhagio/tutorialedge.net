@@ -14,7 +14,7 @@ twitter: https://twitter.com/Elliot_F
 
 In this tutorial, we are going to be looking at how you can use both the `async` and `await` keywords within your TypeScript application and subsequently improve the readibility and succinctness of your code.
 
-## Introduction
+# Introduction
 
 If you have come from a Node.JS background, you'll most likely be familiar with something we know as Callback Hell. This is where you end up with code within your Node.JS applications that look akin to the Pyramids from ancient Giza. 
 
@@ -61,7 +61,7 @@ Now, this was certainly an improvement, however, this isn't all that much better
 
 Thankfully, this is what helped bring about both the `async` and the `await` keywords.
 
-## Async + Await Keywords
+# Async + Await Keywords
 
 The `async` keyword within a TypeScript program lets us define an *asynchronous function* like so:
 
@@ -114,7 +114,7 @@ Now, this should instantly highlight just how much better your application's cod
 
 The final result is far more terse, and far more readable for new developers coming into the codebase. 
 
-## Mixing in Raw Promises
+# Mixing in Raw Promises
 
 If you start working with the `async` and `await` keywords, you should note that you don't preclude the use of raw Promises within your TypeScript applications. 
 
@@ -144,7 +144,7 @@ When you execute this, you should see that the execution of the above array of a
 [ Node] Function: 3 executed
 ```
 
-## Conclusion
+# Conclusion
 
 Hopefully, this tutorial helped to clarify what the `async` and `await` keywords are and how they can help you to improve the way you write your TypeScript applications. 
 

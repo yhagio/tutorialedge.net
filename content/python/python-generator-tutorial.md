@@ -16,7 +16,7 @@ weight: 12
 
 In this tutorial I'm aiming to help demystify this concept of generators within the Python programming language. We'll look at what generators are and how we can utilize them within our python programs.
 
-## What Are Generators?
+# What Are Generators?
 
 Generators are functions that can return multiple values at different times. These are [iterators](/python/python-iterator-tutorial/) that we can subsequently iterate over in a variety of different ways. 
 
@@ -38,7 +38,7 @@ def my_generator(x):
     yield x*8
 ```
 
-## Complete Code Snippet
+# Complete Code Snippet
 
 Let's flesh this out into a full python script. In this we have our new generator function with it's 3 `yield` statements, below that we declare an instance of our generator by calling `mygen = my_generator(2)`. We then print out the `next(mygen)` value 3 different times to the console.
 
@@ -56,7 +56,7 @@ print(next(mygen))
 print(next(mygen))
 ```
 
-#### Output
+## Output
 
 If we were then to run this code and call the `next()` function 3 times on this generator, you should see the value is doubled every time. The above code should then print out the following in the console:
 
@@ -67,7 +67,7 @@ $ python3.6 generators.py
 16
 ```
 
-## StopIteration Error
+# StopIteration Error
 
 The StopIteration error is raised when a call to next() is made and there are no subsequent values to be yielded from our generator function. If we added a 4th call to `print(next(mygen))` in the previous sample then you should see an error like so print out:
 
@@ -83,7 +83,7 @@ StopIteration
 FAIL
 ```
 
-## Infinite Generator
+# Infinite Generator
 
 Let's now improve upon our original generator function. We can implement an [iterator](/python/python-iterator-tutorial/) that continues to yield values indefinitely. This will keep a reference of what value `x` currently is and after every yield it will double that value. 
 
@@ -102,7 +102,7 @@ print(next(mygen))
 print(next(mygen))
 ```
 
-## Output
+# Output
 
 We can then call the next() function as many times as we'd desire and we would then see our original value of `x` double with each subsequent call to our `next(mygen)` function. Try change the value passed in to `my_generator()` and experiment with the number of times you call `print(next(mygen))`.
 
@@ -116,6 +116,6 @@ We can then call the next() function as many times as we'd desire and we would t
 
 > It's important to note that the physical limitations still apply and I'm sure you'd start to hit some form of limit for the above program if you called next() indefinitely.
 
-## Conclusion
+# Conclusion
 
 Hopefully you found this tutorial useful! If you did or require further assistance then please let me know in the comments section below or by tweeting me [@Elliot_F](https://twitter.com/elliot_f).

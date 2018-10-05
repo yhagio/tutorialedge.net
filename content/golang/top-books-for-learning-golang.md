@@ -27,9 +27,9 @@ If you are completely new to Golang then this is the section to start in. The bo
 
 > If you are entirely new to programming then these may not be for you and I would recommend checking out some basic tutorials/books first before you try these out.
 
-## The Go Programming Language 
+# The Go Programming Language 
 
-#### Alan A. A. Donovan & Brian W. Kernignhan (*Addison-Wesley, 2015*)
+## Alan A. A. Donovan & Brian W. Kernignhan (*Addison-Wesley, 2015*)
 
 <img alt="The Go Programming Language" src="https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/books/the-go-programming-language.jpg" class="book-img" />
 
@@ -45,7 +45,7 @@ Chapter 11 then goes on to cover testing and is an excellent primer on writing t
 
 In the final chapters, the book goes into detail about complex topics such as Reflection as well as covering some of the low-level programming fundamentals such as foreign function interfaces (FFI) and calling out to C code.
 
-#### The Book Covers
+## The Book Covers
 
 * The Fundamentals of Go
 * Concurrency in Go
@@ -55,8 +55,8 @@ In the final chapters, the book goes into detail about complex topics such as Re
 
 <div class="amazon-link">View on Amazon: <a href="http://amzn.to/2feFblR">The Go Programming Language</a></div>
 
-## Go in Action (1st Edition)
-#### William Kennedy, Brian Ketelsen, Erik St. Martin (*Manning, 2015*)
+# Go in Action (1st Edition)
+## William Kennedy, Brian Ketelsen, Erik St. Martin (*Manning, 2015*)
 
 <img alt="Go In Action" class="book-img" src="https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/books/go-in-action.jpg"/>
 
@@ -64,7 +64,7 @@ Go in Action represents an excellent introduction to Google's own Go programming
 
 You'll spend time within this book building real-world applications such as web sites and servers and come away a proficient golang developer.
 
-#### The Book Covers
+## The Book Covers
 
 * A Quick start guide to go
 * The packages and tooling
@@ -74,8 +74,8 @@ You'll spend time within this book building real-world applications such as web 
 
 <div class="amazon-link">View on Amazon: <a href="http://amzn.to/2vcRZOZ">Go in Action</a></div>
 
-## Introducing Go
-#### Caleb Doxsey (*O'Reilly, 2016r*)
+# Introducing Go
+## Caleb Doxsey (*O'Reilly, 2016r*)
 
 <img alt="Introducing Go" src="https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/books/introducing-go.jpg" class="book-img"/>
 
@@ -83,7 +83,7 @@ Introducing Go by Caleb Doxsey is a fantastic, affordable O'Reilly book that is 
 
 The book starts off with simple concepts and builds up to more advanced topics such as testing and concurrency. Overall, I'd recommend this book in conjunction with one of the above books as it is a quick and easy introduction to the language, good for getting up and running quickly but you may desire more in-depth coverage of the advanced topics once you are done. 
 
-#### The Book Covers
+## The Book Covers
 
 * Getting started with Go
 * Go's Type System
@@ -98,8 +98,8 @@ The book starts off with simple concepts and builds up to more advanced topics s
 
 In this section I'll be listing books which are more advanced in nature and cover material that may be unsuitable for those who have little-to-no experience with the go programming language.
 
-## Concurrency in Go: Tools and Techniques for Developers
-#### Katherine Cox-Buday (*O'Reilly, 2017*)
+# Concurrency in Go: Tools and Techniques for Developers
+## Katherine Cox-Buday (*O'Reilly, 2017*)
 
 <img alt="Network programming with go" class="book-img" src="https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/books/concurrency-in-go.jpg"/>
 
@@ -114,8 +114,8 @@ Overall, it's an excellent primer to the world of concurrency and a great additi
 <div class="amazon-link">View on Amazon: <a href="https://amzn.to/2BWvSjM">Concurrency in Go: Tools and Techniques for Developers</a></div>
 
 
-## Network Programming with Go
-#### Jan Newmarch (*Apress, 2017*)
+# Network Programming with Go
+## Jan Newmarch (*Apress, 2017*)
 
 <img alt="Network programming with go" class="book-img" src="https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/books/network-programming-with-go.jpg"/>
 
@@ -125,7 +125,7 @@ Network Programming with Go by Jan Newmarch is a book that I am currently readin
 
 > This list is under construction, more books will be added as and when I am able to read and review them. 
 
-## Conclusion
+# Conclusion
 
 Hopefully, you found this list of the best books for learning Go useful! I am a huge fan of the language and would love to hear your comments as to how you got on with certain books and during your times trying out the language in the comments section below. 
 

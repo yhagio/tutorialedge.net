@@ -19,7 +19,7 @@ In this article we'll be taking a look at the best books you can pick up should 
 
 > If you have any suggestions for books that aren't on the list then please feel free to let me know in the comments section at the bottom of this article! 
 
-## Laravel Up & Running
+# Laravel Up & Running
 
 <p><img src="https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/books/laravel-up-and-running.jpg" alt="best books for learning laravel" class="book-img" />Laravel Up &amp; Running by Matt Stauffer is an absolutely incredible book for anyone wishing to learn how to navigate the ins-and-outs of the Laravel framework. </p>
 
@@ -29,7 +29,7 @@ If you have to choose just one book to ground yourself then this should most cer
 
 <div class="amazon-link">Buy Now: <a href="http://amzn.to/2wV6Iin">Laravel Up and Running</a></div>
 
-## Laravel 5 Essentials
+# Laravel 5 Essentials
 
 <p><img src="https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/books/laravel-5-essentials.jpg" alt="best books for learning laravel" class="book-img" /> Laravel 5 Essentials provides a good introduction to the Laravel 5 framework and is intended for PHP developers who have no or little experience with the framework. </p>
 
@@ -45,7 +45,7 @@ Martin Bean's Laravel 5 Essentials book covers the following topics:
 
 <div class="amazon-link">Buy Now: <a href="http://amzn.to/2gWRowq">Laravel 5 Essentials</a></div>
 
-## Learning Laravel's Eloquent
+# Learning Laravel's Eloquent
 
 <p><img src="https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/books/learning-laravels-eloquent.jpg" alt="best books for learning laravel" class="book-img" /> For a somewhat short book sitting at 150 pages in length, Francesco Malatesta's Learning Laravel's Eloquent does an excellent job of covering the inner workings of Eloquent and how it is used both with and without Laravel. </p>
 
@@ -62,7 +62,7 @@ In the midst of this books 150 odd pages you will find chapters on the following
 
 <div class="amazon-link">Buy Now: <a href="http://amzn.to/2gYaQIU">Learning Laravel's Eloquent</a></div>
 
-## Learning PHP
+# Learning PHP
 
 I believe at this point it's important to mention that whilst these books are very good resources for learning the Laravel ecosystem and how it works, they don't give you a good grounding on the underlying language. If you haven't got a good underlying knowledge of PHP then learning Laravel becomes a hell of a lot harder and you could end up inferring things that aren't quite right or doing things in an in-elegant way and possibly introducing a number of bugs to your Laravel based systems.
 
@@ -70,7 +70,7 @@ The same could be said for any language and framework. If you are trying to lear
 
 In this section of the article we are going to look at some of the top books you can buy should you wish to learn the inner workings of PHP.
 
-### PHP Cookbook: Solutions & Examples for PHP Programmers
+## PHP Cookbook: Solutions & Examples for PHP Programmers
 
 <p><img src="https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/books/php-cookbook.jpg" alt="php cookbook" class="book-img"/>The third edition of PHP Cookbook by David Sklar and Adam Trachtenberg introduces PHP 5.4 and 5.5 in true cookbook style. It presents a series of different programming recipes that the reader will work through in order to learn the fundamentals of PHP. </p>
 

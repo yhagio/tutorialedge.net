@@ -21,7 +21,7 @@ If you already follow a component based architecture, then it should should be v
 This tutorial will be using the code from this github repo: <a href="https://github.com/elliotforbes/angular-server-dashboard">AngularJS Highcharts</a>
 </div>
 
-## Setting Up
+# Setting Up
 
 In order to be able to use highcharts-ng, you’ll need to add a script tag that imports the vanilla highchartsjs library:
 
@@ -55,7 +55,7 @@ angular.module('root', [
 ```
 By adding this to our modules array, it means we’ll now be able to use and see Highcharts-ng in all of the components/controllers attached to our root module.
 
-## Our Controller 
+# Our Controller 
 
 Now that we have everything set up in order to use highcharts-ng, we can start adding highcharts charts to our application. 
 
@@ -134,7 +134,7 @@ angular.module('root')
     .component('ourComponent', ourComponent);
 ```
 
-## Pushing Dynamic Data to the Chart
+# Pushing Dynamic Data to the Chart
 
 Static charts can be pretty boring at times and having to refresh the page all the time can be time consuming. Fortunately dynamically updating our Highcharts charts in angular is easy. All you have to do is push that values you want into your chartConfig object and angular and highcharts handles the rest.
 
@@ -159,7 +159,7 @@ In the below code snippet you’ll see we are performing a shift on our data arr
 ```
 
 
-## Summary
+# Summary
 
 Open up your AngularJS Application and you should see your chart rendering in all it’s glory. If you found this tutorial useful then let me know in the comments section below.
 

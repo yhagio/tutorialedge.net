@@ -18,13 +18,13 @@ In the previous tutorial, we looked at how we could show all of the latest Hacke
 
 In this tutorial, we'll be adding a new route to our VueJS application which will be able to render an individual story and the comments associated with it. 
 
-## Video Tutorial
+# Video Tutorial
 
 This tutorial is also available in video format, should you wish to support the series then you can do so by subscribing to my YouTube channel and hitting that like button on my videos! 
 
 <div style="position:relative;height:0;padding-bottom:42.76%"><iframe src="https://www.youtube.com/embed/weR4NFFgrOo?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="842" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 
-## Our Single.vue Component
+# Our Single.vue Component
 
 First things first, we will need a new component. Create a new file within your `src/components` directory called `Single.vue`.
 
@@ -78,7 +78,7 @@ Within our `Single` component we will be able to retrieve this `:id` value and t
 
 
 
-## Updating our Homepage Component
+# Updating our Homepage Component
 
 So, now that we've defined this route, we need to update our `Homepage` component so that each story we retrieve links back to the appropriate `/story/:id` page within our application.
 
@@ -111,7 +111,7 @@ When you subsequently click on a link, you should see it take you through to our
 
 ![Our single component](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/hackernews-clone/screenshot-09.png)
 
-## Querying The Comments API
+# Querying The Comments API
 
 So, we have the story, we have our new component, how do we get our new component to retrieve all of the top-level comments for said story? 
 
@@ -152,7 +152,7 @@ export default {
 }
 ```
 
-## Updating our Template
+# Updating our Template
 
 Now that we've queried the appropriate API endpoints to retrieve the top level comments, it's time to display these in our `Single.vue` component. In order to do this we are going to add the following HTML:
 
@@ -251,7 +251,7 @@ If you were to save this and view it as it currently stands, it wouldn't look al
 }
 ```
 
-## Some Global Style Changes
+# Some Global Style Changes
 
 To polish this just a little bit more, let's add a `static/style.css` file to our project and populate it with the following CSS:
 
@@ -286,7 +286,7 @@ body {
   }
 ```
 
-## The Finished Product
+# The Finished Product
 
 Once you have made the above changes, you should see something like this render out into your browser:
 

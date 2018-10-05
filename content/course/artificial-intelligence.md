@@ -9,7 +9,7 @@ series:
 title: Artificial Intelligence
 ---
 
-##### Course Outline
+### Course Outline
 
 Over this course I’m aiming to introduce you to key strategies used by game developers when implementing Artificial Intelligence systems into their own games. I’ll be covering popular algorithms such as the A* search algorithm, breadth first, depth first,  Alpha-beta pruning and more and hopefully give you a good grounding of the basics of artificial intelligence.
 

@@ -12,7 +12,7 @@ title: NodeJS 404 Checker Tutorial
 twitter: https://twitter.com/Elliot_F
 ---
 
-## Introduction
+# Introduction
 
 In this tutorial, we'll be looking at how you can create a nice and simple 404 broken link checker in NodeJS using the `axios` library as well as `cheerio` and `is-relative-url`.
 
@@ -72,7 +72,7 @@ async function crawlPage(url) {
 ```
 
 
-## Full Source Code:
+# Full Source Code:
 
 The full source code for this tutorial can be found below:
 
@@ -118,6 +118,6 @@ async function crawlPage(url) {
 crawlPage("http://localhost:1313/");
 ```
 
-## Conclusion
+# Conclusion
 
 Hopefully, you found this tutorial useful, if you did then please feel free to let me know by tweeting me: [@Elliot_F](https://twitter.com/elliot_f). 

@@ -12,7 +12,7 @@ title: AngularJS Filter Tutorial
 twitter: https://twitter.com/Elliot_F
 ---
 
-## Introduction
+# Introduction
 
 Filters allow us to perform a number of incredibly useful things on bindings in views within our AngularJS applications. By definition filters select a subset of items from an array and returns it as a new array.
 
@@ -20,13 +20,13 @@ By employing filters we are able to easily manipulate entire arrays in the front
 
 The Official Documentation for filters can be found here: [AngularJS Filter Documentation](https://docs.angularjs.org/api/ng/filter/filter)
 
-## Capitalization
+# Capitalization
 
 Capitalization is a very simple way to demonstrate the powers of AngularJS filters. Here we select every element from the array provided and transform each element of that array into uppercase. 
 
 Thankfully AngularJS has already defined the uppercase filter and included it as standard so we can simply do the following:
 
-#### AppController.js
+## AppController.js
 
 ```js
 var myApp = angular.module('myApp',[]);
@@ -38,7 +38,7 @@ myApp.controller('AppController', ['$scope', function($scope) {
 }]);
 ```
 
-#### index.html
+## index.html
 
 ```html
 <!DOCTYPE html>
@@ -60,11 +60,11 @@ myApp.controller('AppController', ['$scope', function($scope) {
 </html>
 ```
 
-#### Defining your Own Filters
+## Defining your Own Filters
 
 Defining your own filters is relatively simple, here we’ll modify our existing AppController.js file to the following:
 
-#### AppController.js
+## AppController.js
 
 ```js
 var myApp = angular.module('myApp',[]);
@@ -90,7 +90,7 @@ myApp.controller('AppController', ['$scope', function($scope) {
 }]);
 ```
 
-#### Index.html
+## Index.html
 
 ```html
 <!DOCTYPE html>

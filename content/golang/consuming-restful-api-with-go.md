@@ -18,13 +18,13 @@ In this tutorial, I'm going to be demonstrating how we can consume an already ru
 
 For the purpose of this tutorial though, I feel that we should use an already live API that we can easily test to see if it works in our browser. We'll be using the very popular [pokeapi](http://pokeapi.co/docsv2/) which is an API that exposes all the known information for everything Pokemon related. A bit silly I know but it's a fully fledged API that follows standard naming conventions and requires no authentication so there is no barrier to entry.
 
-## Querying The API
+# Querying The API
 
 To get us started we are going to query for all the Pokemon from the original series. We'll be hitting the `http://pokeapi.co/api/v2/pokedex/kanto/` API endpoint that returns this. If you navigate to this endpoint in your browser you should see a huge JSON string printing out, this is the response we'll be expecting when our go program performs a `GET` request on this endpoint. 
 
 > When you open a web page in a browser, you are performing a `GET` request for that page. 
 
-## GET Request
+# GET Request
 
 So in order to mimic what we've just done in the browser in go, we'll have to write a program that looks like so:
 
@@ -62,7 +62,7 @@ Below this, we then perform the conversion of our response's body from bytes int
 
 If you run the above program you should see that it successfully performs a `GET` request on our API Endpoint and then prints all of our Pokemon out in the console.  
 
-#### Creating a Pokemon Struct
+## Creating a Pokemon Struct
 
 By knowing the structure of the JSON response that the above API endpoint gives us we can now map this into a series of `structs` that we can map our objects to. Below you'll see the condensed version of the JSON. Within our JSON response, we have a couple of `key-value` pairs, the first of which is the `name` of the region that the original Pokemon reside in. `region` gives us a link to the API for gaining more information on that particular region etc. 
 
@@ -113,7 +113,7 @@ type PokemonSpecies struct {
 }
 ```
 
-#### Unmarshalling our JSON 
+## Unmarshalling our JSON 
 
 Now that we've defined these structs, we can Unmarshal the returned JSON string into a new variable. We can do this in our `main` function by adding these three lines to below where we print out our `responseData`.
 
@@ -127,7 +127,7 @@ fmt.Println(len(responseObject.Pokemon))
 
 In the above code, we declare a new `responseObject` variable which is of type `Response`. We then unmarshal our `responseData` into this object and to test that it all works we print out our `responseObject.Name` which should equat to `kanto`. We then print out the length of our Pokemon array to see if it matches our expectations, if it prints out 151 then we know we've done it right and we can now iterate over these pokemon.
 
-## Listing All Our Pokemon
+# Listing All Our Pokemon
 
 In order to list all of our pokemon we need to create a for loop that loops for every object in our `responseObjects` Pokemon array like so:
 
@@ -145,7 +145,7 @@ for i := 0; i < len(responseObject.Pokemon); i++ {
 
 Running this now you should see that every Pokemon's name is listed in your console.
 
-## Full Source Code
+# Full Source Code
 
 ```go
 package main
@@ -203,7 +203,7 @@ func main() {
 
 
 
-## Summary
+# Summary
 
 In this tutorial, we've looked at how you can perform `GET` requests on `HTTP` endpoints and print out the plain text response of the response. We've then looked at how you can unmarshal the JSON response into struct objects that we can effectively work with as if they were normal objects.   
 

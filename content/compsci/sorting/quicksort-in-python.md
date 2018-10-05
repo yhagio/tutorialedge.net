@@ -29,7 +29,7 @@ The Quicksorting algorithm uses a `divide-and-conquer` approach and recursively 
 
 Whilst this typically runs with a performance of `O(n log n)`, it should be noted that the worst case performance for this algorithm is actually `O(N^2)` which occurs if you consistently choose the worst possible point in the array to `pivot` on. 
 
-## Implementing this in Python
+# Implementing this in Python
 
 Now that we understand the logic behind the quicksorting algorithm, it's time to implement this in Python. Below we'll be defining a `quicksort()` function which will take in an `array` as it's only parameter.  
 
@@ -66,7 +66,7 @@ def quicksort(array):
         return array
 ```
 
-## Testing it works
+# Testing it works
 
 We can test this by doing the following:
 
@@ -76,6 +76,6 @@ We can test this by doing the following:
 [1, 2, 3, 4, 6, 7, 9, 12]
 ```
 
-## Conclusion
+# Conclusion
 
 If you found this tutorial useful or require further assistance or info then please let me know in the comments section below!

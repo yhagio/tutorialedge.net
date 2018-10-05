@@ -14,7 +14,7 @@ weight: 8
 
 This is a quick and simple tutorial on how to read in console text input into your Go (GoLang) program. In this tutorial, we'll be creating the basis for a very simple shell that will take in all user input and simply echo it back to the user.
 
-## Reading in Full Sentences
+# Reading in Full Sentences
 
 We'll use Go's while loop equivalent of a for loop without any parameters to ensure our program continues on forever. In this example every time text is entered and then enter is pressed, we assign text to equal everything up to and including the `\n` special character. If we want to do a comparison on the string that has just been entered then we can use the strings.Replace method in order to remove this trailing `\n` character with nothing and then do the comparison.
 
@@ -54,7 +54,7 @@ func main() {
 
 You'll see in this example that whenever we enter the word "hi", our strings.Compare method will then return a 0 and it will print out hello back.
 
-## Reading Single UTF-8 Encoded Unicode Characters
+# Reading Single UTF-8 Encoded Unicode Characters
 
 If you want to simply read one unicode character from the command line then I recommend you use bufio.ReadRune like so:
 
@@ -79,7 +79,7 @@ case 'a':
 }
 ``` 
 
-## Using Bufio's Scanner
+# Using Bufio's Scanner
 
 A third way you could potentially read in input from the console in go is by creating a new scanner and passing os.Stdin just as we have done above creating new readers and then using scanner.Scan in order to read in from the console:
 
@@ -94,7 +94,7 @@ func scanner() {
 
 The above code will infinitely ask scan for input and echo back whatever is entered.
 
-## Conclusion 
+# Conclusion 
 
 As you can see there are numerous ways to do this and the best solution depends on your particular needs. If you are only needing single character input then use ReadRune() or if you are wanting to read in full new line delimited sentences then ReadString is the way to go.
 

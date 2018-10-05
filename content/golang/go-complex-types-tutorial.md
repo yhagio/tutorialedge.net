@@ -16,7 +16,7 @@ Welcome All! In this tutorial, we are going to be looking at the various differe
 
 If you haven't already, I'd suggest you check out my other tutorial in this course on [Basic Data Types](/golang/go-basic-types-tutorial/). You'll need to know about these basic data types in order to understand some of the composite data types. 
 
-## Arrays
+# Arrays
 
 Let's dive into our first Composite data type, the `array` and see how we can declare arrays and work with them.
 
@@ -37,7 +37,7 @@ fmt.Println(days[0]) // prints 'monday'
 fmt.Println(days[5]) // prints 'saturday'
 ```
 
-#### Slices
+## Slices
 
 The difference between slices and arrays in very subtle and it's something that has most definitely caught me out a few times in the past. Slices in Go allow you to access a subset of an underlying array's elements. 
 
@@ -50,7 +50,7 @@ fmt.Println(weekdays)
 // This returns: [Monday Tuesday Wednesday Thursday Friday]
 ```
 
-#### Maps
+## Maps
 
 Maps are Go's representation of hash tables, a data structure that allows you to map one arbitrary data type to another. For instance, let's create a map of YouTube channel names to the numbers of subscribers for that channel:
 
@@ -66,7 +66,7 @@ fmt.Println(youtubeSubscribers["MKBHD"]) // prints out 6580350
 
 This represents a mapping between a `string` data type and an `int` data type.
 
-#### Structs
+## Structs
 
 In Go, we have this concept of a `struct`. These `structs` allow us to create data types that are aggregates of other data types. 
 
@@ -93,7 +93,7 @@ elliot := Person{name: "Elliot", age: 24}
 elliot.age = 18
 ```
 
-### Nested Structs
+## Nested Structs
 
 Structs are incredibly extensible due to the fact we can create nested structs within our structs. For example, imagine we had a `Team` struct who had a number of people within that team:
 
@@ -128,7 +128,7 @@ func main() {
 }
 ```
 
-## Conclusion
+# Conclusion
 
 So, hopefully you found this tutorial useful and it has given you insight as to how you can use more advanced data types within your own Go programs. 
 
