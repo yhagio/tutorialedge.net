@@ -1,12 +1,13 @@
-#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
-	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+
 
 body {
   font-family: "proxima-nova", "proxima-nova-all", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #4a4a4a;
+  font-size: 1.125rem;
   font-weight: 400;
-  line-height: 1.75;
+  line-height: 1.5;
+  color: #222;
+  text-align: left;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -593,7 +594,7 @@ background-color: #f8f8f8;
 
 .content img.book-img {
   float: left;
-  width: 260px;
+  width: 23%;
   height: auto;
   margin: 20px;
 }
