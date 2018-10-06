@@ -1,23 +1,30 @@
 {{ partial "header.html" . }}
 
-<div class="color-bar">
-</div>
-
-<div class="container">
+<div class="full-width">
 	<div class="row no-hidden">
 		<div class="col-sm-9">
+
 			<article class="content">
-
-				<h1>{{ .Title }}</h1>
-				<div class="post-info">
-					<i class="ion ion-ios-calendar-outline"></i> {{ dateFormat "Monday, Jan 2, 2006" .Date }} |
-					<i class="ion ion-social-twitter-outline"></i>
-					<a href="{{.Params.twitter }}">{{ .Params.author }}</a> |
-					<i class="ion ion-ios-clock-outline"></i> {{ .ReadingTime }} Minutes
-				</div>
-
 				<div class="post-content">
 					<article>
+						<h1>{{ .Title }}</h1>
+
+						<div class="post-info">
+							<span><i class="ion ion-ios-calendar-outline"></i> {{ dateFormat "Jan 2, 2006" .Date }}</span>
+							<span><i class="ion ion-social-twitter-outline"></i>
+								<a href="{{.Params.twitter }}">{{ .Params.author }}</a></span>
+							<span><i class="ion ion-ios-clock-outline"></i> {{ .ReadingTime }} Minutes</span>
+							<span><i class="ion ion-pricetags"></i>
+								<span>
+								{{ range .Params.tags }}
+								<a href="/tags/{{.}}"><span class="badge badge-pill badge-info">{{ . }}</span></a>
+								{{ end }}
+							</span>
+						</div>
+						<div class="toc">
+							<h4>Table Of Contents</h4>
+							{{.TableOfContents}}
+						</div>
 						{{ .Content }}
 					</article>
 				</div>
@@ -47,27 +54,19 @@
 					</li>
 					<li>
 						<a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{ .Title }}&summary={{ .Params.desc }}"
-						class="social-btn-dissolve linkedin">
+						 class="social-btn-dissolve linkedin">
 							<i class="ion ion-social-linkedin"></i>
 						</a>
 					</li>
 				</ul>
+
 				{{ partial "comments.html" .}}
-				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-				<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6782067367590597" data-ad-slot="4096707282" data-ad-format="auto"></ins>
-				<script>
-					(adsbygoogle = window.adsbygoogle || []).push({});
-				</script>
+
 			</article>
 		</div>
 
 
 		<div class="col-sm-3">
-			<div class="toc">
-				<h4>Table Of Contents</h4>
-				{{.TableOfContents}}
-			</div>
-
 			{{ partial "sidebar.html" . }}
 		</div>
 
@@ -75,11 +74,8 @@
 	</div>
 </div>
 
-
-
 <script>
-	$('.post-content h2').each(function () { $(this).append(' <a href=#' + $(this).context.id + '><i class="ion ion-link"></i> </a>') })
-	$('.post-content h3').each(function () { $(this).append(' <a href=#' + $(this).context.id + '><i class="ion ion-link"></i> </a>') })
-	$('.post-content h4').each(function () { $(this).append(' <a href=#' + $(this).context.id + '><i class="ion ion-link"></i> </a>') })
-	$('.post-content h5').each(function () { $(this).append(' <a href=#' + $(this).context.id + '><i class="ion ion-link"></i> </a>') })
-</script> {{ partial "footer.html" . }}
+	// var sidebar = new StickySidebar('#sidebar', {topSpacing: 20});
+</script>
+
+{{ partial "footer.html" . }}
