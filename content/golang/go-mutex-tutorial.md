@@ -87,6 +87,10 @@ func main() {
 
 ```
 
+So, let's break down what we have done here. Within both our `deposit()` and our `withdraw()` functions, we have specified the first step should be to acquire the `mutex` using the `mutex.Lock()` method. 
+
+Each of our functions will block until it successfully acquires the Lock. Once successful, it will then proceed to enter it's `critical section` in which it reads and subsequently updates the account's balance. Once each function has performed it's task, it then proceeds to release the lock by calling the `mutex.Unlock()` method.
+
 When you execute this code, you should see the following output:
 
 ```plaintext
