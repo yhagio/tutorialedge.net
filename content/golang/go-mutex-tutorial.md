@@ -10,7 +10,6 @@ tags:
 title: Go Mutex Tutorial
 twitter: https://twitter.com/Elliot_F
 weight: 24
-draft: true
 ---
 
 The use of Go when programming highly concurrent applications doesn't preclude the possibility of you writing a system that features race conditions. These race conditions can cause unexpected issues with your systems that are both hard to debug and at times, even harder to fix. 
