@@ -13,9 +13,9 @@ twitter: https://twitter.com/Elliot_F
 
 Assertions are something that I genuinely feel the standard library in Go is missing. You can most definitely achieve the same results with the likes of `if` comparisons and whatever else, but it's not the cleanest way to write your test files.
 
-This is where the likes of [stretchr/testify](https://github.com/stretchr/testify) comes to save the day. This package has quickly become one of the most popular testing packages, if not *the* most popular testing package for Go developers around the world.
+This is where the likes of [stretchr/testify](https://github.com/stretchr/testify) comes in to save the day. This package has quickly become one of the most popular testing packages, if not *the* most popular testing package for Go developers around the world.
 
-It's elegant syntax allows you to write incredibly easy assertions that just make sense. 
+Its elegant syntax allows you to write incredibly easy assertions that just make sense. 
 
 # Getting Started
 
@@ -85,7 +85,7 @@ func TestCalculate(t *testing.T) {
 }
 ```
 
-Awesome, as you can see, we've managed to succinctly test for equality using the `assert.Equal` function. Straight away this looks like an improvement as we've got less lines of code to read over and we can clearly see what the test function is trying to achieve.
+Awesome, as you can see, we've managed to succinctly test for equality using the `assert.Equal` function. Straight away this looks like an improvement as we've got fewer lines of code to read over and we can clearly see what the test function is trying to achieve.
 
 ## Negative Test Cases and Nil Tests
 
@@ -136,13 +136,13 @@ func TestCalculate(t *testing.T) {
 }
 ```
 
-Notice the slight difference between how we called `assert.Equal()` in this example compared to the previous example. We've initialized assert using `assert.New(t)` and we are now able to call `assert.Equal()` multiple times, just passing in the input and the expected values as oppposed to having to pass `t` in as our first parameter every time. This isn't a big deal, but it certainly helps to make our tests look cleaner. 
+Notice the slight difference between how we called `assert.Equal()` in this example compared to the previous example. We've initialized assert using `assert.New(t)` and we are now able to call `assert.Equal()` multiple times, just passing in the input and the expected values as opposed to having to pass `t` in as our first parameter every time. This isn't a big deal, but it certainly helps to make our tests look cleaner. 
 
 # Mocking
 
 Another excellent feature of the `testify` package is it's mocking capabilities. Mocking effectively allows us to write replacement objects that mock the behaviors of certain objects in our code that we don't necessarily want to trigger every time we run our test suite.
 
-This could be, for example, an messaging service or an email service that fires off emails to clients whenever it's called. If we are actively developing our codebase, we might be running our tests hundreds of times per day, and we might not want to send out hundreds of emails and/or messages a day to clients as they may start to take umbridge.
+This could be, for example, a messaging service or an email service that fires off emails to clients whenever it's called. If we are actively developing our codebase, we might be running our tests hundreds of times per day, and we might not want to send out hundreds of emails and/or messages a day to clients as they may start to take umbrage.
 
 So, how do we go about mocking using the `testify` package?
 
@@ -283,7 +283,7 @@ Happy days, we've now been able to fully test a more complex project using mocks
 
 So, in the above example we mocked out all of the various methods ourselves, but in real-life examples, this may represent a hell of a lot of different methods and functions to mock. 
 
-Thankfully, this is where the [vektra/mockery](https://github.com/vektra/mockery) package comes in to save the day. 
+Thankfully, this is where the [vektra/mockery](https://github.com/vektra/mockery) package comes to our aide. 
 
 The mockery binary can take in the name of any `interfaces` you may have defined within your Go packages and it'll automatically output the generated mocks to `mocks/InterfaceName.go`. This is seriously handy when you want to save yourself a tonne of time and it's a tool I would highly recommend checking out!
 
