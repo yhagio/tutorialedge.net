@@ -1,8 +1,12 @@
 {{ partial "header.html" . }}
 
-<div class="full-width">
+<div class="container">
 	<div class="row no-hidden">
-		<div class="col-sm-9">
+		<div class="col-sm-4">
+			{{ partial "sidebar.html" . }}
+		</div>
+
+		<div class="col-sm-8">
 
 			<article class="content">
 				<div class="post-content">
@@ -15,10 +19,11 @@
 								<a href="{{.Params.twitter }}">{{ .Params.author }}</a></span>
 							<span><i class="ion ion-ios-clock-outline"></i> {{ .ReadingTime }} Minutes</span>
 							<span><i class="ion ion-pricetags"></i>
-								{{ range .Params.tags }}
-								<a href="/tags/{{.}}"><span class="badge badge-pill badge-info">{{ . }}</span></a>
-								{{ end }}
-							</span>
+								<span>
+									{{ range .Params.tags }}
+									<a href="/tags/{{.}}"><span class="badge badge-pill badge-info">{{ . }}</span></a>
+									{{ end }}
+								</span>
 						</div>
 						<div class="toc">
 							<h4>Table Of Contents</h4>
@@ -27,7 +32,6 @@
 						{{ .Content }}
 					</article>
 				</div>
-
 				<div class="post_divider"></div>
 
 				<ul class="social-btns">
@@ -59,16 +63,18 @@
 					</li>
 				</ul>
 
+			</div>
+<!-- 
+			<div class="content">
+				
+			</div> -->
+
+			<div class="content">
+				
 				{{ partial "comments.html" .}}
 
 			</article>
 		</div>
-
-
-		<div class="col-sm-3">
-			{{ partial "sidebar.html" . }}
-		</div>
-
 
 	</div>
 </div>

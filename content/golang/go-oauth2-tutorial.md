@@ -10,7 +10,6 @@ tags:
 title: Go Oauth2 Tutorial
 twitter: https://twitter.com/Elliot_F
 weight: 30
-draft: true
 ---
 
 Welcome fellow coders! In this tutorial, we are going to be taking a look at how you can implement your own OAuth2 Server and client using the [go-oauth2/oauth2](https://github.com/go-oauth2/oauth2) package.

@@ -575,6 +575,8 @@ color: #738f93;
 background-color: #f8f8f8;
 }
 
+
+
 .content blockquote {
   border-left: 4px solid #1EC4D6;
   margin-top: 20px;
@@ -1100,13 +1102,24 @@ a:hover .course-progress-box {
   padding: 10px 20px;
 }
 
-a.youtube-subscribe {
+.youtube-subscribe {
   text-decoration: none;
   transition: 0.5s;
   display: block;
   margin-top: 20px;
+  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
 }
-a.youtube-subscribe:hover {
+.youtube-subscribe img {
+  width: 20%;
+  display: block;
+  margin: auto;
+  height: auto;
+  margin-bottom: 10px;
+}
+.youtube-subscribe:hover {
   text-decoration: none;
   box-shadow: 0 14px 28px 0 rgba(115,143,147,.8);
 }
@@ -1120,8 +1133,17 @@ a.youtube-subscribe:hover {
   margin: 0;
   padding: 0;
 }
-.youtube-subscribe img {
-  width: 100%;
-  float: left;
+
+.email-signup {
+  background-color:#19354d;
+  color: #dbf0f3;
+  text-align: center;
+}
+.email-signup {
+  font-size: 14px;
+}
+
+.email-signup form {
   display: block;
+  margin-bottom: 20px;
 }

@@ -227,3 +227,10 @@ func main() {
 # Conclusion
 
 Hopefully this tutorial helped to demystify the art of working with JSON in Golang. If you found this tutorial helpful or have anything else to add then please let me know in the comments section below. 
+
+# Further Reading
+
+If you enjoyed this tutorial or found it useful, you may also enjoy some of my other articles on the site:
+
+* [Creating a RESTful API with Go](/golang/creating-restful-api-with-golang/)
+* [Creating a Simple Web Server with Go](/golang/creating-simple-web-server-with-golang/)
