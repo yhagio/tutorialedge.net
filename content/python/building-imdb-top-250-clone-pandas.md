@@ -2,11 +2,12 @@
 title: "Building an IMDB Top 250 Clone with Pandas"
 desc: "Learn how to build an IMDB Top 250 clone with Pandas in this article by Rounak Banik."
 date: 2018-10-21T19:20:13+01:00
-draft: true
 author: "Rounak Banik"
 twitter: https://twitter.com/rounak_banik
 series:
 - python
+tags:
+- "machine learning"
 ---
 
 The Internet Movie Database (IMDB) maintains a chart called the IMDB Top 250, which is a ranking of the top 250 movies according to a certain scoring metric. All the movies in this list are non-documentary, theatrical releases with a runtime of at least 45 minutes and over 250,000 ratings:
