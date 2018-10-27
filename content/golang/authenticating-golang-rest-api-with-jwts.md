@@ -12,7 +12,10 @@ twitter: https://twitter.com/elliot_f
 
 JWTs, or JSON Web Tokens as they are more formally known, are a compact, URL-safe means of representing claims to be transferred between two parties. This is essentially a confusing way of saying that JWTs allow you to transmit information from a client to the server in a stateless, but secure way.
 
-The standard uses either a secret, using the HMAC algorithm, or a public/private key pair using RSA or ECDSA. 
+
+# Introduction
+
+The JWT standard uses either a secret, using the HMAC algorithm, or a public/private key pair using RSA or ECDSA. 
 
 > **Note:** If you are interested in the formal definition of what JWTs are, then I recommend checking out the RFC: [RFC-7519](https://tools.ietf.org/html/rfc7519)
 
@@ -22,6 +25,12 @@ These are heavily used within Single-Page Applications (SPAs) as a means of secu
 * **Information Exchange** - The second use for JWTs is to securely transmit information between different systems. These JWTs can be signed using public/private key pairs so you can verify each system in this transaction in a secure manner and JWTs contain an anti-tamper mechanism as they are signed based off the header and the payload.
 
 So, if you haven't guessed by now, in this tutorial, we'll be looking at exactly what it takes to build a secure Go-based REST API that uses JSON Web Tokens to communicate! 
+
+# Video Tutorial
+
+This tutorial is available in a video format, if you want to support me and my work then please feel free to leave a like and subscribe to my channel for my content!
+
+<div style="position:relative;height:0;padding-bottom:56.3%"><iframe src="https://www.youtube.com/embed/-Scg9INymBs?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="639" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 
 # A Simple REST API
 
