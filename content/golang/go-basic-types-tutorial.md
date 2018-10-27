@@ -104,7 +104,7 @@ men = 5
 var women int16
 women = 6
 
-var people uint8
+var people int
 // this throws a compile error
 people = men + women 
 // this handles converting to a standard format
@@ -126,10 +126,10 @@ Let's have a look at how you would declare and work with floats now:
 ```go
 var maxFloat32 float32
 maxFloat32 = 16777216
-fmt.Println(f == f+10) // you would typically expect this to return false
+fmt.Println(maxFloat32 == maxFloat32+10) // you would typically expect this to return false
 // it returns true
-fmt.Println(f+10) // 16777216
-fmt.Println(f+2000000) // 16777216
+fmt.Println(maxFloat32+10) // 16777216
+fmt.Println(maxFloat32+2000000) // 16777216
 ```
 
 ## Converting float to int and back again
