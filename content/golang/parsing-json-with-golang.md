@@ -126,6 +126,57 @@ type Social struct {
 
 Once we have these in place, we can use them to unmarshal our JSON. 
 
+# Working with Unstructured Data
+
+Sometimes, going through the process of creating structs for everything can be somewhat time consuming and overly verbose for the problems you are trying to solve. In this instance, we can use standard `interfaces{}` in order to read in any JSON data:
+
+```go
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+	"io/ioutil"
+	"os"
+)
+
+func main() {
+
+	// Open our jsonFile
+	jsonFile, err := os.Open("users.json")
+	// if we os.Open returns an error then handle it
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Println("Successfully Opened users.json")
+	// defer the closing of our jsonFile so that we can parse it later on
+	defer jsonFile.Close()
+
+	byteValue, _ := ioutil.ReadAll(jsonFile)
+
+	var result map[string]interface{}
+	json.Unmarshal([]byte(byteValue), &result)
+
+	fmt.Println(result["users"])
+
+}
+
+```
+
+You can see in the above code, we've managed to open our `users.json` and parse the JSON much like we would normally do in other programming languages such as Python or JavaScript.
+
+When we run this, we should see that printing `result["users"]` results in a `map` being outputted to the console:
+
+```s
+$ go run main.go
+Successfully opened users.json
+[map[type:Reader age:23 social:map[facebook:https://facebook.com twitter:https://twitter.com] name:Elliot] map[name:Frasertype:Author age:17 social:map[facebook:https://facebook.com twitter:https://twitter.com]]]
+```
+
+If we wanted to traverse further down the tree, we could do that just as we normally would traverse down a `map` structure within Go, without having to define the struct types.
+
+> It is typically recommended to try and define the structs, if you happen to know the structure of the data coming back. 
+
 # Unmarshalling our JSON
 
 Once we've used the os.Open function to read our file into memory, we then have to convert it toa byte array using ioutil.ReadAll. Once it's in a byte array we can pass it to our json.Unmarshal() method.

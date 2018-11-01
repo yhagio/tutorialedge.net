@@ -55,7 +55,11 @@ Once you have added this go code to your `main.go` file, try running it by calli
 this has all my content%
 ```
 
-# Writing Files
+As you can see, we've successfully managed to read all of the data stored within our proprietary `localfile.data` file type. 
+
+# Writing Files to New Files
+
+Now that we've covered reading from files in Go, it's time to look at creating and writing to our own files!
 
 In order to write content to files using Go, we'll again have to leverage the `io/ioutil` module. We'll first have to construct a byte array that represents the content we wish to store within our files. 
 
@@ -114,9 +118,81 @@ If you attempt to run this now by calling `go run main.go`, you should see that 
 All the data I wish to write to a file
 ```
 
+# Writing to Existing Files
+
+What happens if we have an existing file that we want to write additional information to? 
+
+Let's take a look at that now.
+
+```go
+package main
+
+import (
+	"fmt"
+	"io/ioutil"
+	"os"
+)
+
+func main() {
+
+	mydata := []byte("All the data I wish to write to a file\n")
+
+	// the WriteFile method returns an error if unsuccessful
+	err := ioutil.WriteFile("myfile.data", mydata, 0777)
+	// handle this error
+	if err != nil {
+		// print it out
+		fmt.Println(err)
+	}
+
+	data, err := ioutil.ReadFile("myfile.data")
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	fmt.Print(string(data))
+
+	f, err := os.OpenFile("myfile.data", os.O_APPEND|os.O_WRONLY, 0600)
+	if err != nil {
+		panic(err)
+	}
+	defer f.Close()
+
+	if _, err = f.WriteString("new data that wasn't there originally\n"); err != nil {
+		panic(err)
+	}
+
+	data, err = ioutil.ReadFile("myfile.data")
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	fmt.Print(string(data))
+
+}
+```
+
+Now that you have added the new code, we can test it out by running our `main.go` file:
+
+```
+$ go run main.go
+All the data I wish to write to a file
+new data that wasn't there originally
+```
+
+And Voila! We have successfully managed to append to an existing file using `os.OpenFile` and the `f.WriteString()` method.
+
+## File Permissions
+
+It's incredibly important to understand the various different file permissions available to you when you are writing to new files. 
+
+> For more in-depth documentation about permissions, I would suggest checking out: [https://golang.org/pkg/os/#FileMode](https://golang.org/pkg/os/#FileMode)
+
 # Conclusion
 
-So, in this tutorial, we have successfully managed to both read and write to a series of different files using the Go Programming language. 
+If you understand the basics of reading and writing files in Go, then you have the basics down for reading and writing **any** filetype possible, be that CSV, PNG or some proprietary data format. All you need to know, is how this data is structured so that you can parse and modify to suit your needs.
+
+That's all we are going to cover in this tutorial, we've managed to look at reading and writing to a really simple data format. We then briefly looked at file permissions.
 
 ## Further Reading:
 

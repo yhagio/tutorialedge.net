@@ -6,41 +6,15 @@ I've been working on TutorialEdge.net as a hobby project since early 2015. Since
 
 The main aim for the site is for it to be a place that I can host tutorials and courses on any language and framework I choose and hopefully give back something to the programming community.  
 
-## Roadmap
+## Contribution Guide
 
-#### GoLang
+Contributions to the site are greatly appreciated, if you see a typo or something that isn't quite right and want to help improve the site for everyone then please feel free to submit a pull request.
 
-* Rate Limiting RESTful APIs
-* Encrypting and Decrypting Strings in GoLang
-* Concurrency in Go
-* Profiling your GoLang Programs
-* Debugging your GoLang Programs
-* Creating a Flame Graph of Your Go program
-
-#### NodeJS
-
-* Getting Started with NodeJS
-* Rate Limiting your NodeJS API
-* Encrypting and Decrypting Strings in NodeJS
-* Profiling your NodeJS REST API
-* Debugging your NodeJS program
-* Benchmarking your NodeJS REST API
-
-#### Python
-
-* Getting Started with ThreadPoolExecutors
-* Getting Started with ProcessPoolExecutors
-* Building a Python REST API with Flask
-* Testing your Python Programs
-* Python Context Manager Tutorial
-* Python Lambda Function Tutorial
-* Profiling Python with timeit
-
-> If you want to make a start on one of these tutorials then simply clone this repository and submit a pull request.
-
-## Contributing
-
-Want to contribute to the site? Then fork this repo, make your changes and submit a pull request. I'll review the changes and merge them in so that they go live on the site. 
+* Start off by forking the repository
+* Make any changes you have in mind
+* Submit a Pull Request from your forked version back into the original version of the site
+* I'll review it and approve it
+* It'll automatically go live in seconds!
 
 ## Contributors
 
