@@ -1147,3 +1147,16 @@ a:hover .course-progress-box {
   display: block;
   margin-bottom: 20px;
 }
+
+.featured-image {
+  background-color: white;
+  padding: white;
+  margin-top: 20px;
+  overflow:hidden;
+  max-height: 350px;
+}
+
+.featured-image img {
+  display: block;
+  width: 100%;
+}
