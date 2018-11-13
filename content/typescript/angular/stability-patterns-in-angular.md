@@ -3,9 +3,10 @@ title: "Stability Patterns in Angular"
 date: 2018-10-22T12:46:35+01:00
 desc: "In this tutorial, we'll will learn about stability patterns in Angular in this article by Mathieu Nayrolles"
 series:
-- Angular
+- angular
 tags:
-- Design patterns
+- angular
+- typescript
 author: Mathieu Nayrolles
 twitter: https://twitter.com/mathieunls
 ---
