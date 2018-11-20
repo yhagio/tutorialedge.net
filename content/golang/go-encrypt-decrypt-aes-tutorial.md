@@ -1,8 +1,7 @@
 ---
-title: "Go Encrypt Decrypt Aes Tutorial"
+title: "Go Encryption and Decryption using AES - Tutorial"
 date: 2018-11-20T07:56:42Z
-draft: true
-description: In this tutorial, we are going to look at building a face recognition system using Go
+description: In this tutorial, wwe are going to look at how you can do both encryption and decryption using AES in Go
 date: 2018-09-27T10:48:51+01:00
 series:
 - golang
