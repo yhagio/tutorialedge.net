@@ -12,8 +12,6 @@ twitter: https://twitter.com/Elliot_F
 weight: 34
 ---
 
-Encryption/Decryption is an awesome topic that I've always thought sounded soo cool. Whenever I hear it, I think of the character "Q" from James Bond and
-
 # Objectives
 
 By the end of this tutorial, you will be able to...
