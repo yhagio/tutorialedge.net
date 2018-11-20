@@ -235,6 +235,8 @@ Hopefully, this tutorial helped to demystify the art of securing your Go applica
 
 If you enjoyed this tutorial, then please let me know in the comments section below, or give this article a share across social media, it really helps me and my site!
 
+> If you want to keep track of when new Go articles are posted to the site, then please feel free to follow me on twitter for all the latest news: [@Elliot_F](https://twitter.com/elliot_f).
+
 ## Further Reading
 
 If you fancy reading up more on JSON Web Tokens and how they are used then I can thoroughly recommend the following articles:

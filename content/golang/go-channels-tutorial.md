@@ -212,3 +212,5 @@ This executes regardless as the send is now non-blocking
 So, in this fairly lengthy tutorial, we managed to learn about the various distinct types of channels within Go. We discovered the differences between both buffered and unbuffered channels and how we could use them to our advantage within our concurrent go programs. 
 
 If you enjoyed this tutorial, then please feel free to let me know in the comments section below. If you have any suggestions as to what I could do better then I would love to hear them in the comments section below!
+
+> If you want to keep track of when new Go articles are posted to the site, then please feel free to follow me on twitter for all the latest news: [@Elliot_F](https://twitter.com/elliot_f).

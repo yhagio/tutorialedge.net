@@ -197,6 +197,8 @@ These graphs look a little something like this:
 
 Hopefully this article gave you some indication as to how you can go about implementing your own suite of benchmarks. If you require further assistance then please let me know in the comments section below!
 
+> If you want to keep track of when new Go articles are posted to the site, then please feel free to follow me on twitter for all the latest news: [@Elliot_F](https://twitter.com/elliot_f).
+
 ## Further Reading:
 
 * [Analyzing the performance of Go functions with benchmarks](https://medium.com/justforfunc/analyzing-the-performance-of-go-functions-with-benchmarks-60b8162e61c6)

@@ -203,6 +203,8 @@ So, in this tutorial, we had a look at some of the more advanced testing techniq
 
 Hopefully, you found this useful and it gave you the insight needed to go off and improve your own go tests. If you found it useful, or have any further questions, then please don't hesitate to let me know in the comments section below! 
 
+> If you want to keep track of when new Go articles are posted to the site, then please feel free to follow me on twitter for all the latest news: [@Elliot_F](https://twitter.com/elliot_f).
+
 ## Further Reading
 
 If you enjoyed this, you may like my other articles on testing in Go:

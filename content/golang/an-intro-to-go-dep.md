@@ -119,3 +119,5 @@ $ dep status
 # Conclusion
 
 Hopefully, this tutorial has shown you everything you need to get started with the `dep` tool. If you require any further assistance then please do not hesitate to let me know in the comments section below! 
+
+> If you want to keep track of when new Go articles are posted to the site, then please feel free to follow me on twitter for all the latest news: [@Elliot_F](https://twitter.com/elliot_f).

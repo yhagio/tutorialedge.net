@@ -284,3 +284,5 @@ The complete source code for this tutorial can be found in Github: [Tutorialedge
 In this tutorial, we successfully managed to build a really simple face recognition system that works on still images. This will hopefully form the basis of the next part of this tutorial series, in which we look at how to do this in a real-time context on a video stream. 
 
 Hopefully you enjoyed this tutorial, if you did then please let me know in the comments section down below!
+
+> If you want to keep track of when new Go articles are posted to the site, then please feel free to follow me on twitter for all the latest news: [@Elliot_F](https://twitter.com/elliot_f).
