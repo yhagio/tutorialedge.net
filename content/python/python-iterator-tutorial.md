@@ -3,9 +3,8 @@ author: Elliot Forbes
 date: 2017-09-03T17:58:24+01:00
 desc: In this tutorial we will look at how we can work with iterators in Python
 series: python
-
 tags:
-
+- beginner
 title: Python Iterator Tutorial
 twitter: https://twitter.com/Elliot_F
 weight: 13
@@ -31,6 +30,12 @@ e
 s
 t
 ```
+
+{{< terminal >}}
+string = "test"
+for character in string:
+  print(character)
+{{< /terminal >}}
 
 # Iterables
 

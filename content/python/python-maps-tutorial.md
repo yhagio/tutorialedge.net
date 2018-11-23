@@ -3,9 +3,8 @@ author: Elliot Forbes
 date: 2017-05-24T07:57:51+01:00
 desc: In this tutorial we cover the map function within the Python programming language
 series: python
-
 tags:
-
+- beginner
 - concurrency
 title: Python Maps Tutorial
 twitter: https://twitter.com/Elliot_F

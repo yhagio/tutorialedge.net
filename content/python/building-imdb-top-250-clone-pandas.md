@@ -5,7 +5,6 @@ date: 2018-10-21T19:20:13+01:00
 author: "Rounak Banik"
 twitter: https://twitter.com/rounak_banik
 series: python
-
 tags:
 - "machine learning"
 ---

@@ -4,9 +4,9 @@ date: 2017-08-13T17:06:57+01:00
 desc: In this tutorial we'll be examining some of the best practices when it comes
   to logging in your Python applications
 series: python
-
 tags:
-
+- beginner
+- logging
 title: Python Logging Best Practices
 twitter: https://twitter.com/Elliot_F
 weight: 10

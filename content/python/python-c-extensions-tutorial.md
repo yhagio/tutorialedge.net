@@ -3,9 +3,8 @@ author: Elliot Forbes
 date: 2017-12-01T21:32:19Z
 desc: An absolute beginners introduction to writing face recognition software in Python
 series: python
-
 tags:
-
+- advanced
 - c
 title: Creating Basic Python C Extensions - Tutorial
 twitter: https://twitter.com/Elliot_F

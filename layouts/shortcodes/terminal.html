@@ -1,0 +1,76 @@
+<div class="code-terminal">
+  <div class="terminal-name">Enter Your Code</div> 
+  {{ .Inner }}
+  <div class="execute">
+    <button class="btn btn-outline-primary">Run</button>
+  </div>
+  <div class="output">
+    <span>></span>
+  </div>
+</div>
+
+<script>
+console.log("More")
+</script>
+
+<style>
+.code-terminal {
+  overflow: hidden;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.input {
+  background-color: #f6f6f6;
+  padding: 10px 20px;
+}
+.input textarea {
+  background-color: #f6f6f6;
+  color: black;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.execute {
+  background-color: #f6f6f6;
+  margin-top: -4px;
+  padding: 10px;
+}
+
+.terminal-name {
+  content: "Python";
+  background-color: #d8e3eb;
+  color: #5482a3;
+  font-size: 1rem;
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  text-indent: 1em;
+  padding: 0;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.code-terminal textarea {
+  /* background-color: blue; */
+  width: 100%;
+  border: none;
+  margin: 0;
+  padding: 0;
+} 
+
+.output {
+  color: white;
+  padding: 10px 20px;
+  background-color: #272822;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.output span {
+  color: #f92672; 
+  margin-right: 15px; 
+}
+</style>

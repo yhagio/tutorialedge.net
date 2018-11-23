@@ -3,9 +3,8 @@ author: Elliot Forbes
 date: 2017-12-18T11:23:34Z
 desc: In this tutorial we will be taking a look at Python's Method Resolution Order.
 series: python
-
 tags:
-
+- advanced
 title: Python Method Resolution Order Tutorial
 twitter: https://twitter.com/Elliot_F
 ---

@@ -4,9 +4,8 @@ date: 2017-09-18T19:19:39+01:00
 desc: In this tutorial we introduce the concept of both functions and variables and
   how we can use them in our Python programs
 series: python
-
 tags:
-
+- beginner
 title: Functions and Variables in Python
 twitter: https://twitter.com/Elliot_F
 weight: 2
