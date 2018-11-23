@@ -4,8 +4,7 @@ date: 2018-03-04T15:03:41Z
 desc: In this tutorial we are going to look at how you can successfully handle events
   within your VueJS applications.
 image: vuejs.png
-series:
-- vuejs
+series: vuejs
 tags:
 - vuejs
 - webdev

@@ -3,8 +3,8 @@ author: Elliot Forbes
 date: 2017-04-09T21:33:19+01:00
 desc: In this tutorial I'll be demonstrating how you can implement a twitter bot using
   the go programming language
-series:
-- golang
+series: golang
+
 tags:
 - intermediate
 weight: 19

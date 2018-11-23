@@ -4,8 +4,8 @@ date: 2018-10-06T14:50:30+01:00
 draft: true
 tags:
 - advanced
-series:
-- golang
+series: golang
+
 author: Elliot Forbes
 twitter: https://twitter.com/Elliot_f
 description: In this tutorial, we are going to be taking an in-depth look at the unsafe package in Go

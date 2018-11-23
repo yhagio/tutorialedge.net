@@ -4,8 +4,7 @@ date: 2017-04-15T09:30:45+01:00
 desc: This tutorial demonstrates how one can implement 2D Collision detection using
   AABB method. This is demonstrated in Java using the LWJGL 3 framework but the concepts
   are transferrable to all languages and frameworks.
-series:
-- gamedev
+series: gamedev
 tags:
 - java
 - gamedev

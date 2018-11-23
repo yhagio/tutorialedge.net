@@ -4,8 +4,7 @@ date: 2018-03-14T19:12:49Z
 desc: In this tutorial, we look at how you can use to vue-router within your VueJS
   applications.
 image: vuejs.png
-series:
-- vuejs
+series: vuejs
 tags:
 - vuejs
 - javascript

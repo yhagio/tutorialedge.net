@@ -4,10 +4,10 @@ date: 2017-04-09T21:14:45+01:00
 desc: Highcharts-ng is an angularjs wrapper around the exceptional highchartsjs library,
   in this tutorial we look into how we can easily integrate this into our angularjs
   applications
-series:
-- angularjs
+series: angularjs
+
 tags:
-- angularjs
+
 - javascript
 title: Integrating Highcharts-ng into your AngularJS Applications
 twitter: https://twitter.com/Elliot_F
@@ -101,7 +101,7 @@ function HighchartsController(StatsService, $log, $timeout, $scope) {
                 enableMouseTracking: true
             }
         },
-        series: [
+        series: angularjs [
             {   
                 name: 'Inbound',
                 data: [29.9, 71.5, 25.4, 43.2, 37.0, 33.0, 35.6, 48.5, 21.4, 19.1, 16.6, 54.4]

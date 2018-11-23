@@ -3,8 +3,7 @@ author: Elliot Forbes
 date: 2017-11-20T18:09:47Z
 desc: In This Tutorial we look at how you can implement the Quicksort Sorting Algorithm
   in Python
-series:
-- compsci
+series: compsci
 tags:
 - python
 - compsci

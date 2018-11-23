@@ -4,8 +4,7 @@ date: 2018-02-28T20:27:49Z
 desc: In this tutorial, we are going to be looking at how you can get started with
   the Vuejs 2 framework for creating awesome web applications
 image: vuejs.png
-series:
-- vuejs
+series: vuejs
 tags:
 - vuejs
 - javascript

@@ -3,8 +3,7 @@ author: Elliot Forbes
 date: 2017-04-15T08:50:41+01:00
 desc: In this tutorial I'll be teaching you all the fundamental concepts when it comes
   to dealing with shaders in the modern opengl rendering pipeline.
-series:
-- opengl
+series: opengl
 tags:
 - graphics
 - gamedev

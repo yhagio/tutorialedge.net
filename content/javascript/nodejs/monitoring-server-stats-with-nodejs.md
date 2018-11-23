@@ -3,8 +3,7 @@ author: Elliot Forbes
 date: 2017-04-09T21:25:15+01:00
 desc: In this tutorial we look at how we can observe key statistics such as free memory
   and cpu usage in Nodejs
-series:
-- nodejs
+series: nodejs
 tags:
 - javascript
 - nodejs

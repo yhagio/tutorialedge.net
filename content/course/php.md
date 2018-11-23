@@ -5,8 +5,7 @@ desc: Get up and running with PHP
 homepage: true
 draft: true
 image: php.png
-series:
-- php
+series: php
 tags:
 - php
 title: PHP

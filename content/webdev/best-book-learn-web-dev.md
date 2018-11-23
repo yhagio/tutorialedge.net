@@ -3,8 +3,7 @@ author: Elliot Forbes
 date: 2017-09-05T18:07:38+01:00
 desc: In this article we look at some of the best books you can buy to aid you in
   learning web development
-series:
-- webdev
+series: webdev
 tags:
 - webdev
 - css3

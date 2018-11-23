@@ -3,10 +3,10 @@ author: Elliot Forbes
 date: 2017-04-09T21:04:22+01:00
 desc: In this tutorial we look at how we can define and utilize services within Angular
   2
-series:
-- angular
+series: angular
+
 tags:
-- angular
+
 - typescript
 title: Angular Services Tutorial
 twitter: https://twitter.com/Elliot_F

@@ -3,8 +3,7 @@ author: Elliot Forbes
 date: 2017-11-28T18:04:33Z
 desc: The definitive list of all the books you should buy if you want to learn how
   to improve your beginner programming skills
-series:
-- general
+series: general
 tags:
 - general
 - books

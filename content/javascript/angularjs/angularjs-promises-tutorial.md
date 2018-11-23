@@ -2,10 +2,10 @@
 author: Elliot Forbes
 date: 2017-04-15T14:41:31+01:00
 desc: In this tutorial we examine the $q service and how we can chain promises.
-series:
-- angularjs
+series: angularjs
+
 tags:
-- angularjs
+
 - javascript
 title: AngularJS Promises Tutorial
 twitter: https://twitter.com/Elliot_F

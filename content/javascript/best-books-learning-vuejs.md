@@ -3,8 +3,7 @@ author: Elliot Forbes
 date: 2017-09-11T20:00:19+01:00
 desc: In this article we look at some of the best books you can buy in order to nail
   the fundamentals of VueJS
-series:
-- vuejs
+series: vuejs
 tags:
 - vuejs
 - javascript

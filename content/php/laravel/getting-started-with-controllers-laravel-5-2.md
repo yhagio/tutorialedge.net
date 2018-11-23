@@ -1,10 +1,10 @@
 ---
 author: Elliot Forbes
 date: 2017-04-15T08:04:33+01:00
-series:
-- laravel-5.2
+series: laravel-5.2
+
 tags:
-- laravel-5.2
+
 - php
 title: Getting Started With Controllers in Laravel 5.2
 twitter: https://twitter.com/Elliot_F

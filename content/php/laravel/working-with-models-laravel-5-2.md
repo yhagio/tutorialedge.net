@@ -3,10 +3,10 @@ author: Elliot Forbes
 date: 2017-04-09T21:34:10+01:00
 desc: In this tutorial we begin by looking at why our application needs models and
   then we look at how we can define our own.
-series:
-- laravel-5.2
+series: laravel-5.2
+
 tags:
-- laravel-5.2
+
 - php
 title: Working With Models in Laravel 5.2
 twitter: https://twitter.com/Elliot_F

@@ -4,8 +4,7 @@ date: 2017-04-14T20:27:58+01:00
 homepage: true
 image: rust-logo.png
 layout: simple
-series:
-- rust
+series: rust
 title: Rust
 ---
 

@@ -3,10 +3,10 @@ author: Elliot Forbes
 date: 2016-02-14T16:11:58+05:30
 desc: In this tutorial we look at how we can easily define different application configuration
   for different environments.
-series:
-- angular
+series: angular
+
 tags:
-- angular
+
 - typescript
 title: Angular Multiple Environment Configuration Tutorial
 twitter: https://twitter.com/Elliot_F

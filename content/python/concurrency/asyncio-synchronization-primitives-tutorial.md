@@ -3,10 +3,10 @@ author: Elliot Forbes
 date: 2017-11-23T19:35:09Z
 desc: In this tutorial we look at the various synchronization primitives available
   to you in your Asyncio based programs.
-series:
-- python
+series: python
+
 tags:
-- python
+
 - asyncio
 - concurrency
 title: Asyncio Synchronization Primitives Tutorial - Queues and Locks

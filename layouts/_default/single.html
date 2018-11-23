@@ -1,5 +1,26 @@
 {{ partial "header.html" . }}
 
+<div class="top-bar">
+	<div class="container">
+		<h1>
+			{{ .Title }}
+			<br /><small>{{ .Params.desc }}</small>
+		</h1>
+		<div class="post-info">
+			<span><i class="ion ion-ios-calendar-outline"></i> {{ dateFormat "Jan 2, 2006" .Date }}</span>
+			<span><i class="ion ion-social-twitter-outline"></i>
+				<a href="{{.Params.twitter }}">{{ .Params.author }}</a></span>
+			<span><i class="ion ion-ios-clock-outline"></i> {{ .ReadingTime }} Minutes</span>
+			<span><i class="ion ion-pricetags"></i>
+				<span>
+					{{ range .Params.tags }}
+					<a href="/tags/{{.}}"><span class="badge badge-pill badge-info">{{ . }}</span></a>
+					{{ end }}
+				</span>
+		</div>
+	</div>
+</div>
+
 <div class="container">
 	<div class="row no-hidden">
 		<div class="col-sm-4">
@@ -11,20 +32,6 @@
 
 				<div class="post-content">
 					<article>
-						<h1>{{ .Title }}</h1>
-
-						<div class="post-info">
-							<span><i class="ion ion-ios-calendar-outline"></i> {{ dateFormat "Jan 2, 2006" .Date }}</span>
-							<span><i class="ion ion-social-twitter-outline"></i>
-								<a href="{{.Params.twitter }}">{{ .Params.author }}</a></span>
-							<span><i class="ion ion-ios-clock-outline"></i> {{ .ReadingTime }} Minutes</span>
-							<span><i class="ion ion-pricetags"></i>
-								<span>
-									{{ range .Params.tags }}
-									<a href="/tags/{{.}}"><span class="badge badge-pill badge-info">{{ . }}</span></a>
-									{{ end }}
-								</span>
-						</div>
 						<div class="toc">
 							<h4>Table Of Contents</h4>
 							{{.TableOfContents}}
@@ -33,6 +40,8 @@
 					</article>
 				</div>
 				<div class="post_divider"></div>
+
+				{{ partial "suggestion.html" . }}
 
 				<ul class="social-btns">
 					<li>
@@ -62,18 +71,11 @@
 						</a>
 					</li>
 				</ul>
-
-			</div>
-<!-- 
-			<div class="content">
-				
-			</div> -->
-
-			<div class="content">
-				
-				{{ partial "comments.html" .}}
-
 			</article>
+		</div>
+
+		<div class="content">
+			{{ partial "comments.html" .}}
 		</div>
 
 	</div>

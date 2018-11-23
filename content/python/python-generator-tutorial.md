@@ -3,10 +3,10 @@ author: Elliot Forbes
 date: 2017-06-12T15:26:02+01:00
 desc: In this tutorial we look at what generators are within Python and how we can
   use them
-series:
-- python
+series: python
+
 tags:
-- python
+
 title: Python Generators Tutorial
 twitter: https://twitter.com/Elliot_F
 weight: 12

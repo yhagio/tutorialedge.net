@@ -3,8 +3,7 @@ author: Elliot Forbes
 date: 2016-02-14T16:11:58+05:30
 desc: A quick look at why I choose to migrate the site from a Laravel 5 based system
   to hugo
-series:
-- blog
+series: blog
 tags:
 - blog
 title: Migrating to Hugo

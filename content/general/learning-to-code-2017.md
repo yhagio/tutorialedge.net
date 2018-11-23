@@ -2,8 +2,7 @@
 author: Elliot Forbes
 date: 2017-04-15T09:53:07+01:00
 desc: In this article we explore potential ways that you can learn to program in 2017.
-series:
-- beginner
+series: beginner
 tags:
 - beginner
 title: Learning to Code in 2017

@@ -3,10 +3,10 @@ author: Elliot Forbes
 date: 2017-11-11T13:06:32Z
 desc: In this tutorial we look at the various ways you can define and work with tasks
   in Asyncio.
-series:
-- python
+series: python
+
 tags:
-- python
+
 - asyncio
 - concurrency
 title: Asyncio Tasks Tutorial

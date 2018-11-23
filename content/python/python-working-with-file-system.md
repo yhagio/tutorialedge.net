@@ -3,10 +3,10 @@ author: Elliot Forbes
 date: 2017-12-20T18:41:30Z
 desc: In this tutorial we evaluate the different ways you can work with the file system
   in Python
-series:
-- python
+series: python
+
 tags:
-- python
+
 - filesystem
 title: Working With The File System in Python
 twitter: https://twitter.com/Elliot_F

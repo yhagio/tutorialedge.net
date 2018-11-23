@@ -4,8 +4,7 @@ date: 2018-03-28T20:25:53+01:00
 desc: In this tutorial, we look at how properly implement a tests within your go based
   systems using the go test tool
 image: typescript.png
-series:
-- typescript
+series: typescript
 tags:
 - typescript
 - express

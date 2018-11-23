@@ -3,8 +3,7 @@ author: Elliot Forbes
 date: 2017-09-05T19:20:04+01:00
 desc: In this article we look at some of the best books you can buy in order to nail
   the fundamentals of the JavaScript Programming Language
-series:
-- javascript
+series: javascript
 tags:
 - javascript
 - books

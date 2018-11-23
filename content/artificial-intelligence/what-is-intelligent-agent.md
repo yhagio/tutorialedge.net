@@ -5,8 +5,7 @@ bookLink: http://amzn.to/2r74d8f
 bookTitle: Programming Game AI by Example
 date: 2017-04-15T08:10:24+01:00
 desc: Here we look at what intelligent agents are in the field of artificial intelligence
-series:
-- ai
+series: ai
 tags:
 - ai
 title: What Is An Intelligent Agent

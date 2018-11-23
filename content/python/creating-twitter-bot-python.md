@@ -3,10 +3,10 @@ author: Elliot Forbes
 date: 2017-04-15T09:45:44+01:00
 desc: 'This tutorial teaches the user how they can build a twitter bot using both
   the Python programming language and the RESTful Twitter Library. '
-series:
-- python
+series: python
+
 tags:
-- python
+
 title: Creating a Twitter Bot Using Python and the Twitter API
 twitter: https://twitter.com/Elliot_F
 ---

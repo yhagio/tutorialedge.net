@@ -3,8 +3,7 @@ author: Elliot Forbes
 date: 2018-01-21T11:22:33Z
 desc: In this tutorial we look at how you can go about creating your own Go based
   AWS Lambda functions.
-series:
-- aws
+series: cloud
 tags:
 - aws
 - go

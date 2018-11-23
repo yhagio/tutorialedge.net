@@ -3,8 +3,7 @@ author: Elliot Forbes
 date: 2017-04-15T09:54:44+01:00
 desc: This tutorial series will teach the users how they can build a 2D copy of the
   game Pong using the lightweight java game library and OpenGL
-series:
-- lwjgl3
+series: lwjgl3
 tags:
 - lwjgl3
 - java

@@ -3,10 +3,10 @@ author: Elliot Forbes
 date: 2017-04-09T20:52:33+01:00
 desc: In this tutorial we look at how we can work with websockets and subjects in
   our Angular applications.
-series:
-- angular
+series: angular
+
 tags:
-- angular
+
 - typescript
 title: Angular Websockets Tutorial
 twitter: https://twitter.com/Elliot_F

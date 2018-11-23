@@ -6,15 +6,29 @@
   </div>
 
   <div class="right-sidebar hide-on-small-only">
-    <h4>Related Articles</h4>
-    {{ range $key, $value := .Params.series }}
-    <ul class="collection">
-      {{ range (index $.Site.Taxonomies.series $value) }}
-      <li class="collection-item">
-        <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
-      </li>
+    {{ range $taxonomyname, $taxonomy := .Site.Taxonomies.tags }}
+
+      {{ $scratch := newScratch }}
+      {{ range $taxonomy }}
+        {{ if eq $.Params.series .Params.series }}
+          {{ if not (in ($scratch.Get "tags") $taxonomyname) }}
+            {{if not (eq $taxonomyname .Params.series) }}
+              {{ $scratch.Add "tags" (slice $taxonomyname) }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
       {{ end }}
-    </ul>
+
+      {{ range $scratch.Get "tags" }}
+      <h4 style="text-transform: uppercase;">{{ . }}</h4>
+      <ul class="collection">
+      {{ range sort $taxonomy }}
+        {{ if eq $.Params.series .Params.series }}
+          <li class="collection-item"><a href="{{.Permalink}}">{{ .Title }}</a></li>
+        {{ end }}
+      {{ end }} 
+    </ul> 
+      {{ end }}
     {{ end }}
   </div>
 

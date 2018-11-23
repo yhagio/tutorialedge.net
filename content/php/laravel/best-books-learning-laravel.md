@@ -3,8 +3,7 @@ author: Elliot Forbes
 date: 2017-09-11T19:16:03+01:00
 desc: The definitive list of all the books you should buy if you want to master the
   art of programming Laravel applications
-series:
-- laravel
+series: laravel-5.2
 tags:
 - laravel
 - php

@@ -3,8 +3,8 @@ author: Elliot Forbes
 date: 2017-04-09T21:09:39+01:00
 desc: In this tutorial we look at how we can convert String to integer and back again
   using the strconv golang package.
-series:
-- golang
+series: golang
+
 tags:
 - misc
 title: Golang Integer String Conversion Tutorial

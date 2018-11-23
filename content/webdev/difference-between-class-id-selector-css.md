@@ -3,8 +3,7 @@ author: Elliot Forbes
 date: 2017-04-23T14:48:20+01:00
 desc: In this tutorial we take a look at the exact differences between class selectors
   and id selectors in CSS
-series:
-- webdev
+series: webdev
 tags:
 - webdev
 - css3

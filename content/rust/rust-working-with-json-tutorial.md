@@ -2,8 +2,7 @@
 author: Elliot Forbes
 date: 2017-12-25T11:51:47Z
 desc: This tutorial shows you how you can work with JSON objects in Rust
-series:
-- rust
+series: rust
 tags:
 - rust
 - json

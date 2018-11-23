@@ -4,8 +4,7 @@ date: 2018-06-07T19:36:57+01:00
 desc: In this post, you'll use a third-party library named Vuelidate to perform model
   validation depending on a particular rule set
 image: vuejs.png
-series:
-- vuejs
+series: vuejs
 tags:
 - vuejs
 - javascript

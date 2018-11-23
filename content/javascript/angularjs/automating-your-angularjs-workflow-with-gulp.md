@@ -3,10 +3,10 @@ author: Elliot Forbes
 date: 2017-04-09T21:17:41+01:00
 desc: This article looks at automating your angularjs workflow using the gulp task
   runner.
-series:
-- angularjs
+series: angularjs
+
 tags:
-- angularjs
+
 - javascript
 title: Automating Your AngularJS Workflow With Gulp
 twitter: https://twitter.com/Elliot_F

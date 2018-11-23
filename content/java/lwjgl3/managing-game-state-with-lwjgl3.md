@@ -3,8 +3,7 @@ author: Elliot Forbes
 date: 2017-04-15T08:23:18+01:00
 desc: This tutorial demonstrates how you can effectively manage what state your game
   is in using Java's enum and a few simple switch cases.
-series:
-- lwjgl3
+series: lwjgl3
 tags:
 - gamedev
 - java

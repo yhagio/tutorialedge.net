@@ -3,10 +3,10 @@ author: Elliot Forbes
 date: 2017-10-01T12:22:11+01:00
 desc: In this tutorial we will be covering how you can implement a socket.io based
   Python webserver.
-series:
-- python
+series: python
+
 tags:
-- python
+
 - socket.io
 title: Python Socket.io Tutorial
 twitter: https://twitter.com/Elliot_F

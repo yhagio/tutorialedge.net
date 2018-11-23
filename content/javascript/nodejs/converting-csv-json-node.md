@@ -1,10 +1,8 @@
 ---
 author: Elliot Forbes
 date: 2017-04-09T21:29:02+01:00
-desc: in this tutorial I'll be demonstrating how you can convert a csv file to JSON
-  using NodeJS
-series:
-- nodejs
+desc: in this tutorial I'll be demonstrating how you can convert a csv file to JSON using NodeJS
+series: nodejs
 tags:
 - csv
 - json

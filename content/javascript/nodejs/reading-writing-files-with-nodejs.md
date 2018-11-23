@@ -3,8 +3,7 @@ author: Elliot Forbes
 date: 2017-04-15T08:20:02+01:00
 desc: In this tutorial I’m going to be showing you exactly how we can read and write
   files on our local filesystem using NodeJS.
-series:
-- nodejs
+series: nodejs
 tags:
 - javascript
 - nodejs

@@ -2,8 +2,8 @@
 author: Elliot Forbes
 date: 2017-08-23T19:29:11+01:00
 desc: In this tutorial we'll look at how you can implement websockets in Golang
-series:
-- golang
+series: golang
+
 tags:
 - advanced
 title: Working with Websockets and Socket.IO in Go - Tutorial

@@ -3,10 +3,8 @@ author: Elliot Forbes
 date: 2017-12-17T15:07:54Z
 desc: The definitive list of all the books you should buy if you want to learn how
   to program in C
-series:
-- C
+series: C
 tags:
-- C
 - books
 title: The Top Programming Books for Learning C
 twitter: https://twitter.com/Elliot_F

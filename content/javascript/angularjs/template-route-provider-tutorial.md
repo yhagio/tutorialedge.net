@@ -4,10 +4,10 @@ date: 2017-04-15T09:04:56+01:00
 desc: This tutorial showcases how one can effectively use AngularJS's routeProvider
   in order to create master pages and templates with which to build their own angularjs
   applications
-series:
-- angularjs
+series: angularjs
+
 tags:
-- angularjs
+
 - javascript
 title: AngularJS Template Route Provider Tutorial
 twitter: https://twitter.com/Elliot_F

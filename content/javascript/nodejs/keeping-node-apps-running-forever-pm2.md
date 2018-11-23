@@ -4,8 +4,7 @@ date: 2017-04-15T08:38:40+01:00
 desc: This tutorial gives you a few different methods of keeping your nodejs applications
   alive and running forever, definitely a handy guide if you use Node in production
   environments.
-series:
-- nodejs
+series: nodejs
 tags:
 - pm2
 - nodejs

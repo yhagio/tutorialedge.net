@@ -3,10 +3,10 @@ author: Elliot Forbes
 date: 2017-11-24T13:39:00Z
 desc: In this tutorial we look at semaphores and bounded semaphores and how we can
   utilize them within our Python programs
-series:
-- python
+series: python
+
 tags:
-- python
+
 - asyncio
 - concurrency
 title: Asyncio Semaphores and Bounded Semaphores Tutorial

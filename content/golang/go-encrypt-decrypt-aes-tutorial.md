@@ -3,8 +3,8 @@ title: "Go Encryption and Decryption using AES - Tutorial"
 date: 2018-11-20T07:56:42Z
 description: In this tutorial, wwe are going to look at how you can do both encryption and decryption using AES in Go
 date: 2018-09-27T10:48:51+01:00
-series:
-- golang
+series: golang
+
 tags:
 - advanced
 author: Elliot Forbes

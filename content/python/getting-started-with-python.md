@@ -2,10 +2,10 @@
 author: Elliot Forbes
 date: 2017-09-18T19:47:29+01:00
 desc: An absolute beginners introduction to the Python programming language
-series:
-- python
+series: python
+
 tags:
-- python
+
 title: Getting Started With Python
 twitter: https://twitter.com/Elliot_F
 weight: 1

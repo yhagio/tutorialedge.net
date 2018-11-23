@@ -3,8 +3,7 @@ author: Elliot Forbes
 date: 2017-11-18T16:10:25Z
 desc: In This Tutorial we look at memoization and how you can use it to effectively
   optimize your recursive algorithms performance
-series:
-- compsci
+series: compsci
 tags:
 - python
 - compsci

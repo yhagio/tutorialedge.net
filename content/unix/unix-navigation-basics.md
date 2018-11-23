@@ -2,8 +2,7 @@
 author: Elliot Forbes
 date: 2017-04-09T21:06:27+01:00
 desc: Everything you need to navigate your way through a unix system
-series:
-- unix
+series: unix
 title: Unix Navigation Basics
 twitter: https://twitter.com/Elliot_F
 ---

@@ -3,10 +3,10 @@ author: Elliot Forbes
 date: 2017-10-28T11:50:27+01:00
 desc: In this tutorial we look at the various ways you can define and work with event
   loops in Asyncio.
-series:
-- python
+series: python
+
 tags:
-- python
+
 - asyncio
 - concurrency
 title: Asyncio Event Loops Tutorial

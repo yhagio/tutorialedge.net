@@ -1,10 +1,8 @@
 ---
 author: Elliot Forbes
 date: 2017-09-05T18:09:42+01:00
-desc: In this article we look at some of the best books you can buy to aid you in
-  learning web development
-series:
-- gamedev
+desc: In this article we look at some of the best books you can buy to aid you in learning web development
+series: gamedev
 tags:
 - gamedev
 - books

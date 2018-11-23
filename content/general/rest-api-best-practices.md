@@ -2,8 +2,7 @@
 author: Elliot Forbes
 date: 2017-06-12T15:29:30+01:00
 desc: In this article we look at the best practices for designing REST APIs
-series:
-- beginner
+series: beginner
 tags:
 - beginner
 - rest

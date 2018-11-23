@@ -4,8 +4,7 @@ date: 2017-04-15T08:40:42+01:00
 desc: In this tutorial I'll be demonstrating how you can effectively retrieve all
   the information possible about any visitors to your website using a very simple
   javascript snippet
-series:
-- javascript
+series: javascript
 tags:
 - javascript
 title: Retrieving Website Visitor Information Using Javascript

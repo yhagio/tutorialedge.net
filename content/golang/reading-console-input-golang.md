@@ -3,8 +3,8 @@ author: Elliot Forbes
 date: 2017-04-15T08:48:49+01:00
 desc: A quick and simple tutorial on how to read in console text input into your GoLang
   program. Excellent for simple shells and other command line driven tools.
-series:
-- golang
+series: golang
+
 tags:
 - beginner
 title: Reading in Console Input in Golang

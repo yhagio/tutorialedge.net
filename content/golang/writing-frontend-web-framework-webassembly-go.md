@@ -2,8 +2,8 @@
 title: "Writing a Frontend Web Framework with WebAssembly And Go"
 date: 2018-10-28T10:28:34Z
 desc: "In this tutorial, we are going to look at building a really simple frontend web framework using WebAssembly and Go"
-series:
-- golang
+series: golang
+
 tags:
 - advanced
 author: Elliot Forbes

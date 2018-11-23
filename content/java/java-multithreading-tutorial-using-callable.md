@@ -3,8 +3,7 @@ author: Elliot Forbes
 date: 2017-04-15T08:42:15+01:00
 desc: 'in this tutorial I''ll be showing you exactly how to create a multithreaded
   java program using Callable. '
-series:
-- java
+series: java
 tags:
 - java
 - multithreading

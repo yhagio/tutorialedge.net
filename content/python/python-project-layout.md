@@ -3,10 +3,10 @@ author: Elliot Forbes
 date: 2017-08-28T18:47:50+01:00
 desc: In this tutorial we'll be examining some of the best practices to follow when
   it comes to laying out your Python applications
-series:
-- python
+series: python
+
 tags:
-- python
+
 title: Python Project Layout Best Practices
 twitter: https://twitter.com/Elliot_F
 weight: 9

@@ -3,10 +3,10 @@ author: Elliot Forbes
 date: 2016-02-14T16:11:58+05:30
 desc: This article shows you how you can remove duplicates from a list printed our
   using ng-repeat in AngularJS using filters.
-series:
-- angularjs
+series: angularjs
+
 tags:
-- angularjs
+
 - javascript
 title: Removing Duplicate Entries from ng-repeat in AngularJS
 twitter: https://twitter.com/Elliot_F

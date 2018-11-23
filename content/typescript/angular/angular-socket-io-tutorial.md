@@ -2,10 +2,10 @@
 author: Elliot Forbes
 date: 2017-01-10T15:26:02+01:00
 desc: In this tutorial we are going to be using angular with socket.io
-series:
-- angular
+series: angular
+
 tags:
-- angular
+
 - socket.io
 title: Creating a Realtime App with Angular and Socket.io Tutorial
 twitter: https://twitter.com/Elliot_F

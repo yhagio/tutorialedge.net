@@ -3,10 +3,10 @@ author: Elliot Forbes
 date: 2017-04-15T09:10:12+01:00
 desc: this tutorial teaches the basics of angularjs controllers as well as introducing
   concepts such as constructor and scope inheritance within your angularjs application
-series:
-- angularjs
+series: angularjs
+
 tags:
-- angularjs
+
 - javascript
 title: AngularJS Controllers Tutorial
 twitter: https://twitter.com/Elliot_F

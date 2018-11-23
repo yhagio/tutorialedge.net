@@ -5,8 +5,7 @@ desc: Learn how to develop an application to take notes, called EveryNote, using
   in this tutorial by Andrea Koutifaris, a passionate programmer obsessed with good
   programming and test-driven development.
 image: vuejs.png
-series:
-- vuejs
+series: vuejs
 tags:
 - vuejs
 - javascript

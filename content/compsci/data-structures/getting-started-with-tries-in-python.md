@@ -3,8 +3,7 @@ author: Elliot Forbes
 date: 2017-11-19T17:17:29Z
 desc: In This Tutorial we look at tries, we look at how they work and what problems
   they can solve
-series:
-- compsci
+series: compsci
 tags:
 - python
 - compsci

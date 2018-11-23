@@ -3,10 +3,10 @@ author: Elliot Forbes
 date: 2017-04-15T08:59:44+01:00
 desc: We look at how you can implement your own style of filter searching using AngularJS's
   filter directive
-series:
-- angularjs
+series: angularjs
+
 tags:
-- angularjs
+
 - javascript
 title: AngularJS Filter Search Tutorial
 twitter: https://twitter.com/Elliot_F

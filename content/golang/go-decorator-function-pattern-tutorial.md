@@ -1,8 +1,8 @@
 ---
 title: "Go Decorator Function Pattern Tutorial"
 date: 2018-10-20T21:34:14+01:00
-series:
-- golang
+series: golang
+
 tags:
 - intermediate
 author: Elliot Forbes

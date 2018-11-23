@@ -3,8 +3,8 @@ author: Elliot Forbes
 date: 2017-04-09T21:07:11+01:00
 desc: In this tutorial we examine the encoding/json go package and how to parse JSON
   files.
-series:
-- golang
+series: golang
+
 tags:
 - beginner
 title: Parsing JSON files With Golang

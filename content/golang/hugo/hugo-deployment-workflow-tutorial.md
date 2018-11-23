@@ -3,10 +3,8 @@ author: Elliot Forbes
 date: 2017-06-12T08:48:26+01:00
 desc: In this tutorial we look at how you can implement an automatic deployment strategy
   for your hugo websites.
-series:
-- hugo
+series: hugo
 tags:
-- golang
 - hugo
 title: Hugo Deployment Workflow Tutorial
 twitter: https://twitter.com/Elliot_F

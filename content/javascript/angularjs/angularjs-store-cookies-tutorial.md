@@ -3,10 +3,10 @@ author: Elliot Forbes
 date: 2017-04-09T21:11:31+01:00
 desc: In this tutorial we look at how we can use the $cookie service in angularjs
   in order to store information across requests.
-series:
-- angularjs
+series: angularjs
+
 tags:
-- angularjs
+
 - javascript
 title: How To Store Information in Cookies in AngularJS
 twitter: https://twitter.com/Elliot_F

@@ -2,10 +2,10 @@
 author: Elliot Forbes
 date: 2017-12-20T19:22:48Z
 desc: In this tutorial we will look at how we can work with lists in Python
-series:
-- python
+series: python
+
 tags:
-- python
+
 title: Working with Lists in Python - Tutorial
 twitter: https://twitter.com/Elliot_F
 weight: 3

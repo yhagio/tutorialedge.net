@@ -3,8 +3,7 @@ author: Elliot Forbes
 date: 2017-04-20T08:06:37+01:00
 desc: In this tutorial we look at how we implement curved borders on some of the elements
   within our html
-series:
-- webdev
+series: webdev
 tags:
 - webdev
 - css3

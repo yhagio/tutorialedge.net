@@ -4,8 +4,8 @@ desc: "Learn how to build an IMDB Top 250 clone with Pandas in this article by R
 date: 2018-10-21T19:20:13+01:00
 author: "Rounak Banik"
 twitter: https://twitter.com/rounak_banik
-series:
-- python
+series: python
+
 tags:
 - "machine learning"
 ---

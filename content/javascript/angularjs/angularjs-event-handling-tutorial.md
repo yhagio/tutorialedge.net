@@ -3,10 +3,10 @@ author: Elliot Forbes
 date: 2017-04-09T21:13:59+01:00
 desc: In this tutorial we explore some of the ways we can handle browser and document
   events in our AngularJS applications
-series:
-- angularjs
+series: angularjs
+
 tags:
-- angularjs
+
 - javascript
 title: AngularJS Event Handling Tutorial
 twitter: https://twitter.com/Elliot_F

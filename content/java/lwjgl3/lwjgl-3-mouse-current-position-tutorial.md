@@ -3,8 +3,7 @@ author: Elliot Forbes
 date: 2017-04-15T09:43:47+01:00
 desc: This tutorial looks to teach the programmer how to attain the mouse's current
   window position and print it out to the console.
-series:
-- lwjgl3
+series: lwjgl3
 tags:
 - lwjgl3
 - java

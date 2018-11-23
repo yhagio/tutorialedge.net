@@ -5,11 +5,9 @@ desc: Learn how to create a customary Hello Angular App – Guess the Number! in
   tutorial by Kevin Hennessy, a developer, team lead, and solutions architect, working
   on web-based projects, primarily using the Microsoft technology stack.
 image: typescript.png
-series:
-- typescript
+series: angular
 tags:
 - typescript
-- angular
 title: How to Create a Customary Hello Angular App – Guess the Number!
 twitter: https://twitter.com/TutorialEdge
 ---

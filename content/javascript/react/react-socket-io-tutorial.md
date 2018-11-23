@@ -3,8 +3,7 @@ author: Elliot Forbes
 date: 2018-07-15T09:13:28+01:00
 desc: In this tutorial, we are going to look at how you can create a realtime react
   application using socket.io
-series:
-- react
+series: react
 tags:
 - javascript
 - react

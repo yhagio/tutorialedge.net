@@ -5,8 +5,7 @@ desc: In this tutorial we are going to look at how you can work with animations 
   transitions in VueJS
 draft: false
 image: vuejs.png
-series:
-- vuejs
+series: vuejs
 tags:
 - vuejs
 - animations

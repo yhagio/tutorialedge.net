@@ -3,10 +3,10 @@ author: Elliot Forbes
 date: 2017-10-01T13:52:59+01:00
 desc: In this article take a look at how you can use the ProcessPoolExecutor in Python
   to speed up your programs.
-series:
-- python
+series: python
+
 tags:
-- python
+
 - concurrency
 title: Python ProcessPoolExecutor Tutorial
 twitter: https://twitter.com/Elliot_F

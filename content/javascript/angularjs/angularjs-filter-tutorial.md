@@ -3,10 +3,10 @@ author: Elliot Forbes
 date: 2017-04-09T21:22:03+01:00
 desc: In this tutorial we define exactly what filters are, how we can use existing
   filters and finally how we can implement our own filters.
-series:
-- angularjs
+series: angularjs
+
 tags:
-- angularjs
+
 - javascript
 title: AngularJS Filter Tutorial
 twitter: https://twitter.com/Elliot_F

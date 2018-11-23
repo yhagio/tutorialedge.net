@@ -3,8 +3,7 @@ author: Elliot Forbes
 date: 2017-12-20T22:03:08Z
 desc: In This Tutorial we look at arrays, we look at how they work and what problems
   they can solve
-series:
-- compsci
+series: compsci
 tags:
 - python
 - compsci

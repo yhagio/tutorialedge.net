@@ -4,8 +4,7 @@ date: 2018-07-08T09:25:32+01:00
 desc: Learn the basics of Go and get started writing your own, highly performant Go programs.
 homepage: true
 image: golang.png
-series:
-- golang
+series: golang
 tags:
 - golang
 title: Golang

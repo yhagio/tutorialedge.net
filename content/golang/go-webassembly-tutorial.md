@@ -3,8 +3,8 @@ author: Elliot Forbes
 date: 2018-08-25T15:54:23+01:00
 desc: In this tutorial, we are going to be looking at how you can compile your Go
   programs into WebAssembly
-series:
-- golang
+series: golang
+
 tags:
 - advanced
 title: Go WebAssembly Tutorial - Building a Calculator Tutorial

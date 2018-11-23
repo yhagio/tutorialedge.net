@@ -4,10 +4,10 @@ date: 2017-04-15T09:28:06+01:00
 desc: We take a look at how you can side-step the Global Interpreter Lock by using
   sub-processes instead of threads and effectively achieve both local and remote concurrency
   in your Python programs.
-series:
-- python
+series: python
+
 tags:
-- python
+
 - concurrency
 title: Python Multiprocessing Tutorial
 twitter: https://twitter.com/Elliot_F

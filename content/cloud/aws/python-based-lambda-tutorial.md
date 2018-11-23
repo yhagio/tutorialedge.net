@@ -3,8 +3,7 @@ author: Elliot Forbes
 date: 2018-02-24T10:23:36Z
 desc: In this tutorial, we will be looking at how you can get started writing your
   own Python based AWS Lambda functions
-series:
-- python
+series: python
 tags:
 - python
 - aws

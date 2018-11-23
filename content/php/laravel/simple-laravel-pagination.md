@@ -3,10 +3,10 @@ author: Elliot Forbes
 date: 2017-04-15T14:42:47+01:00
 desc: In this tutorial I will be demonstrating how to perform simple pagination using
   Laravel 5.
-series:
-- laravel-5.2
+series: laravel-5.2
+
 tags:
-- laravel-5.2
+
 - php
 title: Simple Laravel 5 Pagination
 twitter: https://twitter.com/Elliot_F

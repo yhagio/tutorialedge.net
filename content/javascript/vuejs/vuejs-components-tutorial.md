@@ -4,8 +4,7 @@ date: 2018-03-01T12:26:40Z
 desc: In this tutorial, we are going to be looking at how you can create your own
   components within a VueJS application
 image: vuejs.png
-series:
-- vuejs
+series: vuejs
 tags:
 - vuejs
 - javascript

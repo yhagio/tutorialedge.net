@@ -2,8 +2,7 @@
 title: "Creating a Custom Diffuse Lighting Model in Unity - Tutorial"
 date: 2018-10-01T18:49:06+01:00
 description: Learn how to create a custom diffuse lighting model in this tutorial by John P. Doran, a passionate and seasoned technical game designer and software engineer.
-series:
-- unity
+series: unity
 tags:
 - unity
 - gamedev

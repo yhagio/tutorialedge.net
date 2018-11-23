@@ -3,8 +3,7 @@ author: Elliot Forbes
 date: 2017-04-15T09:53:07+01:00
 desc: In this tutorial we take a look at RESTful APIs - What are they and how can
   we use them?
-series:
-- beginner
+series: beginner
 tags:
 - beginner
 - rest

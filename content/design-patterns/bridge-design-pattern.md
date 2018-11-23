@@ -3,8 +3,7 @@ author: Elliot Forbes
 date: 2017-04-15T09:53:07+01:00
 desc: This tutorial looks to demonstrate the capabilities of the Bridge design pattern
   and how one can implement this pattern using Java.
-series:
-- design-patterns
+series: design-patterns
 tags:
 - design-patterns
 - java

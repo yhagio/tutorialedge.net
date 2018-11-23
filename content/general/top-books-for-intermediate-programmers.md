@@ -3,8 +3,7 @@ author: Elliot Forbes
 date: 2017-11-28T20:18:29Z
 desc: The definitive list of all the books you should buy if you want to build on
   top of previous programming experience and become a true master.
-series:
-- general
+series: general
 tags:
 - general
 - books

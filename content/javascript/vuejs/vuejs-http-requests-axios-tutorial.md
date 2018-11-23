@@ -4,8 +4,7 @@ date: 2018-03-01T12:36:54Z
 desc: In this tutorial, we are going to be looking at how you perform HTTP requests
   within your VueJS application
 image: vuejs.png
-series:
-- vuejs
+series: vuejs
 tags:
 - vuejs
 - javascript

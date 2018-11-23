@@ -3,10 +3,8 @@ author: Elliot Forbes
 date: 2017-04-15T08:21:41+01:00
 desc: In this series we'll be building our own Laravel 5.2 blog and fully functioning
   content management system
-series:
-- laravel-5.2
+series: laravel-5.2
 tags:
-- laravel-5.2
 - php
 title: Building A Blog With Laravel 5.2
 twitter: https://twitter.com/Elliot_F

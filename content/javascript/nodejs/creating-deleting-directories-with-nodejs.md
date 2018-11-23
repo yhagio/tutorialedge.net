@@ -1,10 +1,8 @@
 ---
 author: Elliot Forbes
 date: 2017-04-15T08:17:02+01:00
-desc: In this tutorial I'll be showing you how to both create and delete directories
-  using NodeJS
-series:
-- nodejs
+desc: In this tutorial I'll be showing you how to both create and delete directories using NodeJS
+series: nodejs
 tags:
 - javascript
 - nodejs

@@ -3,8 +3,8 @@ title: "Improving Your Go Tests and Mocks With Testify"
 date: 2018-10-13T09:53:51+01:00
 desc: This tutorial demonstrates how one can implement their own version of bubble
   sort using the golang programming language
-series:
-- golang
+series: golang
+
 tags:
 - misc
 author: Elliot Forbes

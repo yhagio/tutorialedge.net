@@ -1,8 +1,7 @@
 ---
 author: Elliot Forbes
 date: 2017-04-15T08:14:10+01:00
-series:
-- nodejs
+series: nodejs
 tags:
 - xml
 - javascript

@@ -2,10 +2,10 @@
 author: Elliot Forbes
 date: 2017-09-03T17:58:24+01:00
 desc: In this tutorial we will look at how we can work with iterators in Python
-series:
-- python
+series: python
+
 tags:
-- python
+
 title: Python Iterator Tutorial
 twitter: https://twitter.com/Elliot_F
 weight: 13

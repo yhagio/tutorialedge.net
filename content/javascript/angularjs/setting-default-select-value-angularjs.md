@@ -3,10 +3,10 @@ author: Elliot Forbes
 date: 2017-04-15T08:37:21+01:00
 desc: This is just a quick little code snippet showing how you can set an angularjs
   select box to a certain value on pageload
-series:
-- angularjs
+series: angularjs
+
 tags:
-- angularjs
+
 - javascript
 title: Setting a Default Value for Select Elements in AngularJS
 twitter: https://twitter.com/Elliot_F

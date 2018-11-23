@@ -3,8 +3,7 @@ author: Elliot Forbes
 date: 2017-11-18T17:42:32Z
 desc: In This Tutorial we look at bit manipulation and how you can use this to optimize
   your programs.
-series:
-- compsci
+series: compsci
 tags:
 - python
 - compsci

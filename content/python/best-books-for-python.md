@@ -4,11 +4,9 @@ date: 2016-02-14T16:11:58+05:30
 desc: In this article we explore some of the best books available for learning Python
   in 2017.
 image: python-logo.png
-series:
-- python
+series: python
 tags:
 - books
-- python
 title: The Top Books for Learning to Program in Python
 twitter: https://twitter.com/Elliot_F
 ---

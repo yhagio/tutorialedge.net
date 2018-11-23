@@ -4,8 +4,7 @@ date: 2018-06-10T19:56:37+01:00
 desc: In this tutorial, we are going to look at how you can work with MongoDB within
   your TypeScript application
 image: typescript.png
-series:
-- typescript
+series: typescript
 tags:
 - typescript
 - mongodb

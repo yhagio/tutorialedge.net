@@ -4,8 +4,7 @@ date: 2017-04-15T09:42:07+01:00
 desc: This standalone tutorial looks to teach programmers how they can extend the
   LWJGL 3 library to create their own Input handlers which can be implemented into
   their own applications.
-series:
-- lwjgl3
+series: lwjgl3
 tags:
 - lwjgl3
 - java

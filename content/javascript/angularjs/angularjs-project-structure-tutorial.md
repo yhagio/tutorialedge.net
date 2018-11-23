@@ -3,10 +3,10 @@ author: Elliot Forbes
 date: 2017-04-09T21:18:27+01:00
 desc: In this tutorial we look at the numerous different ways you can structure your
   angularjs applications as well as the pros and cons to each structure
-series:
-- angularjs
+series: angularjs
+
 tags:
-- angularjs
+
 - javascript
 title: AngularJS Project Structure Tutorial
 twitter: https://twitter.com/Elliot_F

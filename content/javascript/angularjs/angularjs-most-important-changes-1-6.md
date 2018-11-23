@@ -3,10 +3,10 @@ author: Elliot Forbes
 date: 2017-04-09T21:12:25+01:00
 desc: In this article we look at the most important changes to AngularJS in the latest
   upcoming release version 1.6.
-series:
-- angularjs
+series: angularjs
+
 tags:
-- angularjs
+
 - javascript
 title: angularjs most important changes 1 6
 twitter: https://twitter.com/Elliot_F

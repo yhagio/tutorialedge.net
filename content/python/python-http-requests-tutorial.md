@@ -3,10 +3,10 @@ author: Elliot Forbes
 date: 2017-09-10T12:27:56+01:00
 desc: In this tutorial we look at how we can make HTTP requests in Python using the
   Requests package.
-series:
-- python
+series: python
+
 tags:
-- python
+
 - http
 - rest
 title: Making HTTP Requests in Python - Tutorial

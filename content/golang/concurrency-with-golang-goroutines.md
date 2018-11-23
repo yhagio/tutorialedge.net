@@ -3,8 +3,8 @@ author: Elliot Forbes
 date: 2017-04-09T21:06:27+01:00
 desc: In this tutorial we examine how we can build concurrent highly performant go
   programs using goroutines.
-series:
-- golang
+series: golang
+
 tags:
 - advanced
 title: Concurrency With Golang Goroutines

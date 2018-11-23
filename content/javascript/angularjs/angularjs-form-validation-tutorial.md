@@ -2,10 +2,10 @@
 author: Elliot Forbes
 date: 2017-04-09T21:20:37+01:00
 desc: In this tutorial we have a look at how to implement form validation using angularjs
-series:
-- angularjs
+series: angularjs
+
 tags:
-- angularjs
+
 - javascript
 title: AngularJS Form Validation Tutorial
 twitter: https://twitter.com/Elliot_F

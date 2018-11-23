@@ -3,8 +3,8 @@ author: Elliot Forbes
 date: 2017-04-15T08:45:15+01:00
 desc: this tutorial demonstrates how you can create your own simple RESTful JSON api
   using Go(Lang)
-series:
-- golang
+series: golang
+
 tags:
 - intermediate
 title: Creating a RESTful API With Golang

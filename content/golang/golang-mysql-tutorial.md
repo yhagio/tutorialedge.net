@@ -3,8 +3,8 @@ author: Elliot Forbes
 date: 2017-04-09T21:28:15+01:00
 desc: In this tutorial I'll be demonstrating how we can work with MySQL databases
   using Go.
-series:
-- golang
+series: golang
+
 tags:
 - intermediate
 weight: 21

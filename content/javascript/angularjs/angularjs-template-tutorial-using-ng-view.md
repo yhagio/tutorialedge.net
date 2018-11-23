@@ -3,10 +3,10 @@ author: Elliot Forbes
 date: 2017-04-15T09:09:12+01:00
 desc: In this tutorial I'll be showing you exactly how you can create you own templating
   system using angularjs's ng-view directive.
-series:
-- angularjs
+series: angularjs
+
 tags:
-- angularjs
+
 - javascript
 title: AngularJS Templating Tutorial Using ng-view
 twitter: https://twitter.com/Elliot_F

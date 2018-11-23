@@ -3,10 +3,10 @@ author: Elliot Forbes
 date: 2017-04-15T09:16:16+01:00
 desc: This first lesson of the Angularjs course looks to teach how useful data binding
   is when using AngularJS
-series:
-- angularjs
+series: angularjs
+
 tags:
-- angularjs
+
 - javascript
 title: AngularJS Data Binding Tutorial
 twitter: https://twitter.com/Elliot_F

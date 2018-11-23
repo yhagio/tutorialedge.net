@@ -1,10 +1,10 @@
 ---
 author: Elliot Forbes
 date: 2017-04-15T08:01:33+01:00
-series:
-- laravel-5.2
+series: laravel-5.2
+
 tags:
-- laravel-5.2
+
 - php
 title: Working With Tables in Laravel 5.2
 twitter: https://twitter.com/Elliot_F

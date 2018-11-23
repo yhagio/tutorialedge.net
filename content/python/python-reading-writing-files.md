@@ -3,10 +3,10 @@ author: Elliot Forbes
 date: 2017-09-10T08:59:29+01:00
 desc: In this tutorial we'll be looking at how you can manipulate and read from files
   using the Python programming language.
-series:
-- python
+series: python
+
 tags:
-- python
+
 title: Reading and Writing Files In Python
 twitter: https://twitter.com/Elliot_F
 weight: 5

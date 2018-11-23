@@ -3,8 +3,8 @@ author: Elliot Forbes
 date: 2017-04-15T08:46:33+01:00
 desc: In this tutorial I'll be demonstrating how to create a very simple web server
   using Google's GoLang programming language.
-series:
-- golang
+series: golang
+
 tags:
 - intermediate
 title: Creating A Simple Web Server With Golang

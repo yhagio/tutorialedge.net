@@ -4,8 +4,7 @@ date: 2018-03-31T19:06:13+01:00
 desc: In this tutorial, we are going to look at how you can manage state within your
   VueJS application using Vuex
 image: vuejs.png
-series:
-- vuejs
+series: vuejs
 tags:
 - vuejs
 - javascript

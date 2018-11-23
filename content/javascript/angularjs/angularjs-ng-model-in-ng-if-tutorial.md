@@ -3,10 +3,10 @@ author: Elliot Forbes
 date: 2017-04-15T09:17:38+01:00
 desc: A small helper tutorial for those struggling to use the ng-model directive within
   the ng-if directive in your angularjs app.
-series:
-- angularjs
+series: angularjs
+
 tags:
-- angularjs
+
 - javascript
 title: AngularJS ng-model in ng-if Tutorial
 twitter: https://twitter.com/Elliot_F

@@ -3,8 +3,7 @@ author: Elliot Forbes
 date: 2017-04-15T08:26:02+01:00
 desc: In this tutorial I'll be showing you how you can execute terminal commands and
   shell scripts from within your nodejs application.
-series:
-- nodejs
+series: nodejs
 tags:
 - unix
 - javascript

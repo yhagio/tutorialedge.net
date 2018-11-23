@@ -3,8 +3,7 @@ author: Elliot Forbes
 date: 2017-04-09T21:26:14+01:00
 desc: In this tutorial we discuss how to implement a very simple logging system using
   nodejs
-series:
-- nodejs
+series: nodejs
 tags:
 - javascript
 - nodejs

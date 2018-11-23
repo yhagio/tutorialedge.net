@@ -3,10 +3,10 @@ author: Elliot Forbes
 date: 2017-10-28T11:50:27+01:00
 desc: This tutorial teaches you how to calculate the keyword density of a web page
   using the python programming language.
-series:
-- python
+series: python
+
 tags:
-- python
+
 - http
 - rest
 title: Creating a RESTful API with Python and aiohttp

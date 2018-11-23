@@ -3,8 +3,7 @@ author: Elliot Forbes
 date: 2017-09-11T18:53:10+01:00
 desc: The definitive list of all the books you should buy if you want to master the
   art of programming React applications
-series:
-- react
+series: react
 tags:
 - react
 - javascript

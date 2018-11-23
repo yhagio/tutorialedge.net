@@ -4,8 +4,7 @@ date: 2018-05-30T18:09:26+01:00
 desc: In this tutorial, we are going to be creating a Websocket server using both
   TypeScript and socket.io.
 image: typescript.png
-series:
-- typescript
+series: typescript
 tags:
 - typescript
 - express

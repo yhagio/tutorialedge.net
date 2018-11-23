@@ -2,10 +2,10 @@
 author: Elliot Forbes
 date: 2017-04-15T09:08:03+01:00
 desc: This tutorial showcases how one can define their own angularjs directives.
-series:
-- angularjs
+series: angularjs
+
 tags:
-- angularjs
+
 - javascript
 title: AngularJS Directives Tutorial
 twitter: https://twitter.com/Elliot_F

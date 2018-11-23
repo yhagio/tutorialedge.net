@@ -3,8 +3,7 @@ author: Elliot Forbes
 date: 2017-12-20T22:22:37Z
 desc: In This Tutorial we look at sets, we look at how they work and what problems
   they can solve
-series:
-- compsci
+series: compsci
 tags:
 - python
 - compsci

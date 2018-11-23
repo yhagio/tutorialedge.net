@@ -4,8 +4,8 @@ date: 2018-10-16T20:10:30+01:00
 draft: true
 weight: 36
 desc: In this tutorial, we look at how you can build a solid CI pipeline with Travis for your Go Projects
-series:
-- golang
+series: golang
+
 tags:
 - advanced
 author: Elliot Forbes

@@ -3,8 +3,7 @@ author: Elliot Forbes
 date: 2017-04-15T09:29:14+01:00
 desc: 'This tutorial demonstrates how to build a game loop which provides consistent
   time between updates across all computers by using Java''s '
-series:
-- lwjgl3
+series: lwjgl3
 tags:
 - lwjgl3
 - java

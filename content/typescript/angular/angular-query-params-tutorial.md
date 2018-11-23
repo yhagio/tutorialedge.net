@@ -3,10 +3,10 @@ author: Elliot Forbes
 date: 2017-10-02T19:47:19+01:00
 desc: In this tutorial we look at how you can extract query parameters from within
   your Angular application
-series:
-- angular
+series: angular
+
 tags:
-- angular
+
 - typescript
 title: Angular Query Parameters Tutorial
 twitter: https://twitter.com/Elliot_F

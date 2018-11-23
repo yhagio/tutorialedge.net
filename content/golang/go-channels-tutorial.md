@@ -3,8 +3,8 @@ author: Elliot Forbes
 date: 2018-08-25T14:47:06+01:00
 desc: In this tutorial, we are going to look at how you can use channels in your Go
   programs
-series:
-- golang
+series: golang
+
 tags:
 - advanced
 title: Go Channels Tutorial

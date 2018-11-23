@@ -3,10 +3,8 @@ author: Elliot Forbes
 date: 2017-05-27T11:13:46+01:00
 desc: In this tutorial we look at how you can get started writing your first hugo
   based website
-series:
-- hugo
+series: hugo
 tags:
-- golang
 - hugo
 title: Getting Started With Hugo
 twitter: https://twitter.com/Elliot_F

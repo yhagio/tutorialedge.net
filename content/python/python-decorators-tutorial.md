@@ -3,10 +3,10 @@ author: Elliot Forbes
 date: 2017-08-08T18:55:48+01:00
 desc: In this tutorial we learn what Python Decorators are and how we can create our
   own within our Python applications
-series:
-- python
+series: python
+
 tags:
-- python
+
 - decorators
 title: Python Decorators Tutorial
 twitter: https://twitter.com/Elliot_F

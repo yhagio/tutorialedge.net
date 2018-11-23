@@ -3,10 +3,10 @@ author: Elliot Forbes
 date: 2017-04-09T21:13:23+01:00
 desc: In this tutorial we look at how we can store information between routes using
   services in our angularjs applications.
-series:
-- angularjs
+series: angularjs
+
 tags:
-- angularjs
+
 - javascript
 title: Passing Data Between Routes in AngularJS
 twitter: https://twitter.com/Elliot_F

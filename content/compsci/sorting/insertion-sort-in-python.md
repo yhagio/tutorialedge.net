@@ -3,8 +3,7 @@ author: Elliot Forbes
 date: 2017-11-15T18:12:50Z
 desc: In This Tutorial we look at how you can implement the Insertion Sorting Algorithm
   in Python
-series:
-- compsci
+series: compsci
 tags:
 - python
 - compsci

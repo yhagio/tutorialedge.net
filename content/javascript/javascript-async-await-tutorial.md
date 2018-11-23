@@ -3,8 +3,7 @@ author: Elliot Forbes
 date: 2018-03-10T20:59:31Z
 desc: In this tutorial, we are going to have a look at how you can use async/await
   within your JavaScript applications.
-series:
-- javascript
+series: javascript
 tags:
 - javascript
 title: Javascript Async Await Tutorial

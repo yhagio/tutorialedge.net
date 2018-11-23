@@ -3,8 +3,8 @@ author: Elliot Forbes
 date: 2017-04-09T21:07:45+01:00
 desc: In this tutorial we examine how to read in files and unmarshal them using the
   xml package in go.
-series:
-- golang
+series: golang
+
 tags:
 - beginner
 title: Parsing XML Files With Golang

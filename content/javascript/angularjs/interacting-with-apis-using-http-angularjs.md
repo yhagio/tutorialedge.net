@@ -3,10 +3,10 @@ author: Elliot Forbes
 date: 2017-04-15T09:03:47+01:00
 desc: 'This tutorial deals with how we can interact with APIs using AngularJS''s built
   in $http service. '
-series:
-- angularjs
+series: angularjs
+
 tags:
-- angularjs
+
 - javascript
 title: Interacting With RESTful APIs Using $http in AngularJS
 twitter: https://twitter.com/Elliot_F

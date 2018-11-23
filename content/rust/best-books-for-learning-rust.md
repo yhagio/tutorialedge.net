@@ -3,8 +3,7 @@ author: Elliot Forbes
 date: 2017-12-17T15:07:54Z
 desc: The definitive list of all the books you should buy if you want to learn how
   to program using Rust
-series:
-- rust
+series: rust
 tags:
 - rust
 - books

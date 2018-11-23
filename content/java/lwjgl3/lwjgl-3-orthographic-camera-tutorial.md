@@ -3,8 +3,7 @@ author: Elliot Forbes
 date: 2017-04-15T09:39:43+01:00
 desc: This tutorial teaches the user how to create an orthographic projection camera
   using matrix translation and rotation with the LWJGL 3 framework.
-series:
-- lwjgl3
+series: lwjgl3
 tags:
 - gamedev
 - java
