@@ -31,12 +31,6 @@ s
 t
 ```
 
-{{< terminal >}}
-string = "test"
-for character in string:
-  print(character)
-{{< /terminal >}}
-
 # Iterables
 
 `Iterables` in Python represent something that we can actively iterate over. These are things like `lists`, `sets` and even `strings` as we've seen in the previous demonstration. If we wish to turn an `iterable` into an `iterator` then we can use the `iter` built in function which takes in the `iterable` like so:
