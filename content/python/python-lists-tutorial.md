@@ -14,6 +14,7 @@ weight: 3
 
 > Under Construction
 
+
 # Reversing a List
 
 This quick and easy technique shows how you can access all the elements of a list in reverse order.

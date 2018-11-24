@@ -1,6 +1,11 @@
 <div class="code-terminal">
-  <div class="terminal-name">Enter Your Code</div> 
-  {{ .Inner }}
+
+  <div class="terminal-window">
+    <pre><code>
+      {{ .Inner }}
+    </code></pre>
+  </div>
+  
   <div class="execute">
     <button class="btn btn-outline-primary">Run</button>
   </div>
@@ -14,6 +19,7 @@ console.log("More")
 </script>
 
 <style>
+
 .code-terminal {
   overflow: hidden;
   display: block;
