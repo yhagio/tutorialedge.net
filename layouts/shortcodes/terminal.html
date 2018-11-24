@@ -1,40 +1,118 @@
 <div class="code-terminal">
-
+  <div class=fakeMenu>
+    <div class="fakeButtons fakeClose"></div>
+    <div class="fakeButtons fakeMinimize"></div>
+    <div class="fakeButtons fakeZoom"></div>
+  </div>
   <div class="terminal-window">
-    <pre><code>
-      {{ .Inner }}
-    </code></pre>
+    <textarea id="code" rows="5">{{ .Inner }}</textarea>
   </div>
   
-  <div class="execute">
-    <button class="btn btn-outline-primary">Run</button>
-  </div>
-  <div class="output">
-    <span>></span>
+  <div class="controls">
+    <div class="execute">
+      <button onclick="executeCodeSnippet({{- .Get 0 -}})" class="btn btn-outline-primary"><i class="ion ion-ios-play-outline"></i> Run</button>
+    </div>
+    <div id="output" class="output collapse"></div>
   </div>
 </div>
 
 <script>
-console.log("More")
+
+function executeCodeSnippet(language) {
+  console.log(language);
+  var code = document.getElementById("code").value;
+
+  switch (language) {
+    case "python":
+      console.log("sending python for execution");
+      sendCodeToLambda("https://43xaudt448.execute-api.eu-west-1.amazonaws.com/dev/executePython", code);
+      break;
+    default:
+      console.log("Unsupported Language");
+  }
+}
+
+function sendCodeToLambda(url, code) {
+  fetch(url, {
+    method: 'POST',
+    headers: {
+      "Content-Type": "text/plain"
+    },
+    body: code,
+  }).then(function (resp) {
+    return resp.text();
+  }).then(function(data) {
+    console.log(data);
+    var e = document.createElement("span");
+    e.innerHTML = '>';
+    document.getElementById("output").classList.remove("collapse");
+    document.getElementById("output").appendChild(e);
+    document.getElementById("output").append(data);
+    document.getElementById("output").appendChild(document.createElement('br'));
+  }).catch(console.log);
+}
+
+var textarea = document.querySelector('textarea');
+
+textarea.addEventListener('keydown', autosize);
+             
+function autosize(){
+  var el = this;
+  setTimeout(function(){
+    el.style.cssText = 'height:auto; padding:0';
+    // for box-sizing other than "content-box" use:
+    // el.style.cssText = '-moz-box-sizing:content-box';
+    el.style.cssText = 'height:' + el.scrollHeight + 'px';
+  },0);
+}
+
 </script>
 
 <style>
+
+
+.fakeButtons {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  position: relative;
+  top: 3px;
+  left: 10px;
+  background-color: #ff3b47;
+  border-color: #9d252b;
+  display: inline-block;
+}
+
+.fakeMinimize {
+  left: 20px;
+  background-color: #ffc100;
+  border-color: #9d802c;
+}
+
+.fakeZoom {
+  left: 30px;
+  background-color: #00d742;
+  border-color: #049931;
+}
+
+.fakeMenu {
+  width: 100%;
+  box-sizing: border-box;
+  height: 35px;
+  background-color: #d7d7d7;
+  margin: 0 auto;
+  padding-bottom: 10px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
 
 .code-terminal {
   overflow: hidden;
   display: block;
   margin-top: 20px;
   margin-bottom: 20px;
-}
-.input {
-  background-color: #f6f6f6;
-  padding: 10px 20px;
-}
-.input textarea {
-  background-color: #f6f6f6;
-  color: black;
-  box-sizing: border-box;
-  padding: 10px;
 }
 
 .execute {
@@ -56,17 +134,20 @@ console.log("More")
   padding: 0;
   text-indent: 1em;
   padding: 0;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
 }
 
-.code-terminal textarea {
-  /* background-color: blue; */
+.terminal-window textarea {
+  background-color: #33485e;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
   width: 100%;
   border: none;
-  margin: 0;
-  padding: 0;
+  display:block;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  padding: 5px 20px;
 } 
+
 
 .output {
   color: white;

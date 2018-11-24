@@ -14,6 +14,10 @@ weight: 3
 
 > Under Construction
 
+{{< terminal python >}}my_list = [1, 2, 3, 4]
+my_list[::-1]
+print(my_list)
+{{< /terminal >}}
 
 # Reversing a List
 
