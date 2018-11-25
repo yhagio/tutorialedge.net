@@ -27,6 +27,11 @@ My_number = my_number * 2
 print(my_number)
 ```
 
+{{< terminal 0 python >}}my_number = 2
+print(my_number)
+{{< /terminal >}}
+
+
 We start off by defining a new variable called `my_number` and setting this new variable to equal 2. After this we then print out the value of our variable using the `print` function and passing in what we wish to `print`, in this case we wish to print our `my_number` variable. 
 
 When you run this you should see the number 2 being printed out in the console.

@@ -26,6 +26,10 @@
   });
 
   function executeCodeSnippet(id, language) {
+    var e = document.createElement("span");
+    e.innerHTML = '>';
+    document.getElementById("output-" + id).classList.remove("collapse");
+
     var code = document.getElementById("editor" + id).innerText;
     switch (language) {
       case "python":

@@ -37,6 +37,7 @@ class Worker(threading.Thread):
            print(i)
 ```
 
+
 <p>Now that we have our worker class we can start work on our main class. Create a new python file and call it main.py and put the following code in:</p>
 
 ```python
