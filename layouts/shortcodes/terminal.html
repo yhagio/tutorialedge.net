@@ -1,18 +1,13 @@
 <div class="code-terminal">
-  <div class=fakeMenu>
-    <div class="fakeButtons fakeClose"></div>
-    <div class="fakeButtons fakeMinimize"></div>
-    <div class="fakeButtons fakeZoom"></div>
-  </div>
   <div class="terminal-window">
-    <div id="editor">{{ .Inner }}</div>
+    <div id="editor{{- .Get 0 -}}">{{ .Inner }}</div>
   </div>
   
   <div class="controls">
     <div class="execute">
-      <button onclick="executeCodeSnippet({{- .Get 0 -}})" class="btn btn-outline-primary"><i class="ion ion-ios-play-outline"></i> Run</button>
+      <button onclick="executeCodeSnippet({{- .Get 0 -}}, {{- .Get 1 -}})" class="btn btn-outline-primary"><i class="ion ion-ios-play-outline"></i> Run</button>
     </div>
-    <div id="output" class="output collapse"></div>
+    <div id="output-{{- .Get 0 -}}" class="output collapse"></div>
   </div>
 </div>
 
@@ -21,62 +16,45 @@
 <script src="/js/ace/theme-monokai.js"  type="text/javascript" charset="utf-8"></script>
 
 <script>
-var editor = ace.edit("editor");
-editor.setTheme("ace/theme/monokai");
-editor.getSession().setMode("ace/mode/python");
 
-function executeCodeSnippet(language) {
-  console.log(language);
-  var code = document.getElementById("editor").innerText;
-  console.log(code);
-  switch (language) {
-    case "python":
-      console.log("sending python for execution");
-      sendCodeToLambda("https://43xaudt448.execute-api.eu-west-1.amazonaws.com/dev/executePython", code);
-      break;
-    default:
-      console.log("Unsupported Language");
+  var editor = ace.edit("editor{{- .Get 0 -}}");
+  console.log(editor);
+  editor.setTheme("ace/theme/monokai");
+  editor.getSession().setMode("ace/mode/python");
+
+  function executeCodeSnippet(id, language) {
+    var code = document.getElementById("editor" + id).innerText;
+    switch (language) {
+      case "python":
+        sendCodeToLambda(id, "https://43xaudt448.execute-api.eu-west-1.amazonaws.com/dev/executePython", code);
+        break;
+      default:
+        console.log("Unsupported Language");
+    }
   }
-}
 
-function sendCodeToLambda(url, code) {
-  fetch(url, {
-    method: 'POST',
-    headers: {
-      "Content-Type": "text/plain"
-    },
-    body: code,
-  }).then(function (resp) {
-    return resp.text();
-  }).then(function(data) {
-    console.log(data);
-    var e = document.createElement("span");
-    e.innerHTML = '>';
-    document.getElementById("output").classList.remove("collapse");
-    document.getElementById("output").appendChild(e);
-    document.getElementById("output").append(data);
-    document.getElementById("output").appendChild(document.createElement('br'));
-  }).catch(console.log);
-}
-
-var textarea = document.querySelector('textarea');
-
-textarea.addEventListener('keydown', autosize);
-             
-function autosize(){
-  var el = this;
-  setTimeout(function(){
-    el.style.cssText = 'height:auto; padding:0';
-    // for box-sizing other than "content-box" use:
-    // el.style.cssText = '-moz-box-sizing:content-box';
-    el.style.cssText = 'height:' + el.scrollHeight + 'px';
-  },0);
-}
-
+  function sendCodeToLambda(id, url, code) {
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        "Content-Type": "text/plain"
+      },
+      body: code,
+    }).then(function (resp) {
+      return resp.text();
+    }).then(function(data) {
+      var e = document.createElement("span");
+      e.innerHTML = '>';
+      document.getElementById("output-" + id).classList.remove("collapse");
+      document.getElementById("output-" + id).appendChild(e);
+      document.getElementById("output-" + id).append(data);
+      document.getElementById("output-" + id).appendChild(document.createElement('br'));
+    }).catch(console.log);
+  }
 </script>
 
 <style>
-#editor { 
+#editor{{- .Get 0 -}} { 
   width: 100%;
   height: 200px;
   font-size: 16px;
@@ -126,6 +104,7 @@ function autosize(){
   border-radius: 5px;
   margin-bottom: 20px;
   background-color: #272822;
+  box-shadow: 0 5px 15px -5px rgba(0,0,0,0.2);
 }
 
 .execute {
