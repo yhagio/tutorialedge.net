@@ -5,7 +5,7 @@
     <div class="fakeButtons fakeZoom"></div>
   </div>
   <div class="terminal-window">
-    <textarea id="code" rows="5">{{ .Inner }}</textarea>
+    <div id="editor">{{ .Inner }}</div>
   </div>
   
   <div class="controls">
@@ -16,12 +16,19 @@
   </div>
 </div>
 
+<script src="/js/ace/ace.js"  type="text/javascript" charset="utf-8"></script>
+<script src="/js/ace/mode-python.js"  type="text/javascript" charset="utf-8"></script>
+<script src="/js/ace/theme-monokai.js"  type="text/javascript" charset="utf-8"></script>
+
 <script>
+var editor = ace.edit("editor");
+editor.setTheme("ace/theme/monokai");
+editor.getSession().setMode("ace/mode/python");
 
 function executeCodeSnippet(language) {
   console.log(language);
-  var code = document.getElementById("code").value;
-
+  var code = document.getElementById("editor").innerText;
+  console.log(code);
   switch (language) {
     case "python":
       console.log("sending python for execution");
@@ -69,6 +76,12 @@ function autosize(){
 </script>
 
 <style>
+#editor { 
+  width: 100%;
+  height: 200px;
+  font-size: 16px;
+  line-height: 32px;
+}
 
 
 .fakeButtons {
@@ -102,9 +115,7 @@ function autosize(){
   height: 35px;
   background-color: #d7d7d7;
   margin: 0 auto;
-  padding-bottom: 10px;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
+  margin-bottom: 10px;
 }
 
 
@@ -112,7 +123,9 @@ function autosize(){
   overflow: hidden;
   display: block;
   margin-top: 20px;
+  border-radius: 5px;
   margin-bottom: 20px;
+  background-color: #272822;
 }
 
 .execute {
@@ -120,33 +133,6 @@ function autosize(){
   margin-top: -4px;
   padding: 10px;
 }
-
-.terminal-name {
-  content: "Python";
-  background-color: #d8e3eb;
-  color: #5482a3;
-  font-size: 1rem;
-  display: block;
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 0;
-  text-indent: 1em;
-  padding: 0;
-}
-
-.terminal-window textarea {
-  background-color: #33485e;
-  font-family: 'Source Sans Pro', sans-serif;
-  color: white;
-  width: 100%;
-  border: none;
-  display:block;
-  font-size: 18px;
-  letter-spacing: 1.5px;
-  padding: 5px 20px;
-} 
 
 
 .output {

@@ -28,7 +28,7 @@ def double(x):
   return x * 2
 ```
 
-With the use of maps we would have to do something like so in order to multiply every element:
+Without the use of maps we would have to do something like so in order to multiply every element:
 
 ```python
 for value in values:
@@ -40,6 +40,15 @@ but with maps we can be far more succinct:
 ```python
 results = list(map(double, values))
 ```
+
+{{< terminal python >}}values = [2,3,4,5,6,7]
+
+def double(x):
+  return x * 2
+
+results = list(map(double, values))
+print(results)
+{{< /terminal >}}
 
 ## Complete Example
 
