@@ -41,7 +41,7 @@ but with maps we can be far more succinct:
 results = list(map(double, values))
 ```
 
-{{< terminal python >}}values = [2,3,4,5,6,7]
+{{< terminal 0 python >}}values = [2,3,4,5,6,7]
 
 def double(x):
   return x * 2
