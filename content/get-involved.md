@@ -1,8 +1,9 @@
 ---
 author: Elliot Forbes
 date: 2017-04-14T20:28:13+01:00
-layout: simple
 series: misc
+tags:
+- misc
 title: Get Involved
 twitter: https://twitter.com/Elliot_F
 ---

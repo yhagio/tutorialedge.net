@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode | default " en-us " }}">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,12 +19,12 @@
 
 	<link async rel="stylesheet" href="/css/ionicons.min.css">
 	<link async rel="stylesheet" href="/css/bootstrap.min.css">
-	<link async rel="stylesheet" href="{{ .Site.BaseURL }}/css/header.css"> 
-	<link async rel="stylesheet" href="{{ .Site.BaseURL }}/css/style.css"> 
-	<link async rel="stylesheet" href="{{ .Site.BaseURL }}/css/footer.css"> 
+	<link async rel="stylesheet" href="{{ .Site.BaseURL }}/css/header.css">
+	<link async rel="stylesheet" href="{{ .Site.BaseURL }}/css/style.css">
+	<link async rel="stylesheet" href="{{ .Site.BaseURL }}/css/footer.css">
 	{{ if .RSSLink -}}
 	<link async href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}">
-	{{- end }} 
+	{{- end }}
 	{{ .Hugo.Generator }}
 
 	<script src="/js/jquery-3.2.1.slim.min.js"></script>
@@ -36,75 +37,85 @@
 
 <body>
 	<nav class="navbar navbar-expand-lg bg-primary">
-		<a class="navbar-brand" href="/"><img alt="tutorialedge logo" src="{{ .Site.BaseURL }}/images/logo.png" alt="{{ .Site.Title }}"> <span>TutorialEdge.net</span></a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-		 aria-expanded="false" aria-label="Toggle navigation">
+		<a class="navbar-brand" href="/"><img alt="tutorialedge logo" src="{{ .Site.BaseURL }}/images/logo.png" alt="{{ .Site.Title }}">
+			<span>TutorialEdge.net</span></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+		 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<i class="ion-navicon-round"></i>
 		</button>
 
 		<div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="courseDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-					 aria-expanded="false">
+					<a class="nav-link dropdown-toggle" href="#" id="courseDropdown" role="button" data-toggle="dropdown"
+					 aria-haspopup="true" aria-expanded="false">
 						Courses
 					</a>
 					<div class="dropdown-menu" aria-labelledby="courseDropdown">
 						<a class="dropdown-item" href="{{ .Site.BaseURL }}/course/artificial-intelligence/"><img alt="AI logo" src="/images/ai.png" />AI</a>
 						<a class="dropdown-item" href="{{ .Site.BaseURL }}/course/angular/"><img alt="angular logo" src="/images/angular.png" />Angular</a>
-						<a class="dropdown-item" href="{{ .Site.BaseURL }}/course/python/"><img alt="python logo" src="/images/logo-python.png"/>Python</a>
+						<a class="dropdown-item" href="{{ .Site.BaseURL }}/course/python/"><img alt="python logo" src="/images/logo-python.png" />Python</a>
 						<a class="dropdown-item" href="{{ .Site.BaseURL }}/course/golang/"><img alt="golang logo" src="/images/golang.png" />Golang</a>
 						<a class="dropdown-item" href="{{ .Site.BaseURL }}/course/rust/"><img alt="rust logo" src="/images/rust-logo.png" />Rust</a>
 						<a class="dropdown-item" href="{{ .Site.BaseURL }}/course/vuejs/"><img alt="vuejs logo" src="/images/vuejs.png" />VueJS</a>
-						<a class="dropdown-item" href="{{ .Site.BaseURL }}/course/webdev/"><img alt="webdev logo" src="/images/logo.png" />Web Dev</a>
+						<a class="dropdown-item" href="{{ .Site.BaseURL }}/course/webdev/"><img alt="webdev logo" src="/images/logo.png" />Web
+							Dev</a>
 						<!-- <div class="dropdown-divider"></div>
 						<a class="dropdown-item" href="#">Something else here</a> -->
 					</div>
 				</li>
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="courseDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-					 aria-expanded="false">
+					<a class="nav-link dropdown-toggle" href="#" id="courseDropdown" role="button" data-toggle="dropdown"
+					 aria-haspopup="true" aria-expanded="false">
 						Projects
 					</a>
 					<div class="dropdown-menu" aria-labelledby="courseDropdown">
-						<a class="dropdown-item" href="{{ .Site.BaseURL }}/projects/hacker-news-clone-vuejs/"><img alt="VueJS logo" src="/images/vuejs.png" />HackerNews Clone in VueJS</a>
-						<a class="dropdown-item" href="{{ .Site.BaseURL }}/projects/building-blog-with-vuejs-aws/"><img alt="VueJS logo" src="/images/vuejs.png" />Building a VueJS Blog on AWS</a>
+						<a class="dropdown-item" href="{{ .Site.BaseURL }}/projects/hacker-news-clone-vuejs/"><img alt="VueJS logo" src="/images/vuejs.png" />HackerNews
+							Clone in VueJS</a>
+						<a class="dropdown-item" href="{{ .Site.BaseURL }}/projects/building-blog-with-vuejs-aws/"><img alt="VueJS logo"
+							 src="/images/vuejs.png" />Building a VueJS Blog on AWS</a>
 					</div>
 				</li>
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="tutorialDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-					 aria-expanded="false">
+					<a class="nav-link dropdown-toggle" href="#" id="tutorialDropdown" role="button" data-toggle="dropdown"
+					 aria-haspopup="true" aria-expanded="false">
 						Tutorials
 					</a>
-					<div class="dropdown-menu" aria-labelledby="tutorialDropdown">
-						<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/ai/">AI</a>
-						<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/angular/">Angular</a>
-						<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/angularjs/">AngularJS</a>
-						<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/cloud/">Cloud</a>
-						<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/compsci/">Comp Sci</a>
-						<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/docker/">Docker</a>
-						<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/gamedev/">GameDev</a>
-						<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/golang/">Golang</a>
-						<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/java/">Java</a>
-						<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/nodejs/">NodeJS</a>
-						<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/php/">PHP</a>
-						<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/python/">Python</a>
-						<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/rust/">Rust</a>
-						<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/typescript/">TypeScript</a>
-						<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/vuejs/">VueJS</a>
-						<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/webdev/">Web Dev</a>
+					<div class="dropdown-menu dropdown-menu-mega" aria-labelledby="tutorialDropdown">
+						<div class="row">
+							<div class="col-sm-6">
+								<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/ai/">AI</a>
+								<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/angular/">Angular</a>
+								<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/angularjs/">AngularJS</a>
+								<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/cloud/">Cloud</a>
+								<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/compsci/">Comp Sci</a>
+								<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/docker/">Docker</a>
+								<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/gamedev/">GameDev</a>
+								<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/golang/">Golang</a>
+							</div>
+							<div class="col-sm-6">
+								<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/java/">Java</a>
+								<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/nodejs/">NodeJS</a>
+								<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/php/">PHP</a>
+								<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/python/">Python</a>
+								<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/rust/">Rust</a>
+								<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/typescript/">TypeScript</a>
+								<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/vuejs/">VueJS</a>
+								<a class="dropdown-item" href="{{ .Site.BaseURL }}/tags/webdev/">Web Dev</a>
+							</div>
+						</div>
 					</div>
 				</li>
 
 				<li class="nav-item"><a class="nav-link" href="{{ .Site.BaseURL }}/about/">About Us</a></li>
 				<li class="nav-item"><a class="nav-link" href="{{ .Site.BaseURL }}/get-involved/">Get Involved</a></li>
-				<li class="nav-item"><a class="nav-link" href="{{ .Site.BaseURL }}/series/blog/">Blog</a></li>
+				<!-- <li class="nav-item"><a class="nav-link" href="{{ .Site.BaseURL }}/series/blog/">Blog</a></li> -->
 				<li class="nav-item">
 				</li>
 			</ul>
 			<ul class="navbar-nav my-2 ">
-				<!-- <li class="nav-item" ><a class="nav-link" href="/profile"><i class="ion-person"></i> Login / Register</a></li> -->
-				<li class="nav-item" ><a class="nav-link" href="/search"><i class="ion-search"></i> Search</a></li>
+				<li class="nav-item" ><a class="nav-link" href="/profile"><i class="ion-person"></i> Login / Register</a></li>
+				<li class="nav-item"><a class="nav-link" href="/search"><i class="ion-search"></i> Search</a></li>
 			</ul>
 			<!-- </form> -->
 		</div>
@@ -112,11 +123,11 @@
 	<div class="clear"></div>
 
 	<script>
-	new Vue({
-		el: '#searchbar',
-		delimiters: ["<%","%>"],
-		data: {
-			searchQuery: ''
-		}
-	})
+		new Vue({
+			el: '#searchbar',
+			delimiters: ["<%", "%>"],
+			data: {
+				searchQuery: ''
+			}
+		})
 	</script>

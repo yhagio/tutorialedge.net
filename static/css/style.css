@@ -326,7 +326,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   width: 100%;
   padding: 20px;
-  background-color: #f4f5f9 !important;
   text-align: center;
 }
 
@@ -483,16 +482,24 @@ line-height: 24px;
   margin-right: 10px;
 }
 
-.right-sidebar {
-  background-color: #f6f6f6;
-  padding: 20px;
-  margin-bottom: 40px;
+.email-signup {
+  margin-bottom: 60px;
   z-index: 100;
   text-decoration: none;
   width: 100%;
   display: block;
   outline: none;
-  box-shadow: 0 3px 8px 0 rgba(0,0,0,0.08);
+}
+
+.right-sidebar {
+  background-color: #f6f6f6;
+  padding: 20px;
+  margin-bottom: 20px;
+  z-index: 100;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  outline: none;
 }
 .right-sidebar h4 {
   font-size: 18px;
@@ -1087,6 +1094,9 @@ ol.breadcrumb li a {
   padding: 25px;
   border-bottom: 1px solid #E7E7EC;
 }
+.white-bg{
+  background-color: #fff;
+}
 .top-bar h1 {
   font-size: 36px;
   font-weight: 700 !important;
@@ -1114,6 +1124,9 @@ ol.breadcrumb li a {
   font-size: 18px;
   line-height: 1.4;
   margin-bottom: 20px;
+}
+.dropdown-menu-mega {
+  width: 400px;
 }
 
 .course-outline {
@@ -1201,20 +1214,6 @@ a:hover .course-progress-box {
   font-size: 16px;
   margin: 0;
   padding: 0;
-}
-
-.email-signup {
-  background-color:#19354d;
-  color: #dbf0f3;
-  text-align: center;
-}
-.email-signup {
-  font-size: 14px;
-}
-
-.email-signup form {
-  display: block;
-  margin-bottom: 20px;
 }
 
 .featured-image {
