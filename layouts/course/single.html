@@ -13,31 +13,32 @@
 	</div>
 </div>
 
-<div class="container course-listing">
-	<h3>Course Lessons</h3>
+<div class="course-listing">
+	<div class="container">
+		<h3>Course Lessons</h3>
 
-	<div class="row">
-		
-		{{ range sort (index $.Site.Taxonomies.series .Params.series) }}
-		{{ if not .Params.homepage }}
-		<div class="col-lg-4">
-			<a href="{{ .Permalink }}">
-				<div class="course-progress-box">
-					<h2><small><b>Lesson</b> {{ .Params.Weight }} | <b>Time</b> {{ .ReadingTime }} <i class="ion ion-ios-clock-outline"></i> </small><br />{{ .Title }}</h2>
-					{{ range .Params.tags }}
-					<span class="badge badge-pill badge-info">{{ . }}</span>
-					{{ end }}
-					<br/>
-					<p>{{ .Page.Params.desc }}</p>
-					<button class="btn btn-success">Continue Course</button>
-				</div>
-			</a>
+		<div class="row">
+
+			{{ range sort (index $.Site.Taxonomies.series .Params.series) }}
+			{{ if not .Params.homepage }}
+			<div class="col-lg-4">
+				<a href="{{ .Permalink }}">
+					<div class="course-progress-box">
+						<h2><small><b>Lesson</b> {{ .Params.Weight }} | <b>Time</b> {{ .ReadingTime }} <i class="ion ion-ios-clock-outline"></i>
+							</small><br />{{ .Title }}</h2>
+						{{ range .Params.tags }}
+						<span class="badge badge-pill badge-info">{{ . }}</span>
+						{{ end }}
+						<br />
+						<p>{{ .Page.Params.desc }}</p>
+						<button class="btn btn-success">Continue Course</button>
+					</div>
+				</a>
+			</div>
+			{{ end }}
+			{{ end }}
 		</div>
-		{{ end }}
-		{{ end }}
-
 	</div>
-
 </div>
 
 
