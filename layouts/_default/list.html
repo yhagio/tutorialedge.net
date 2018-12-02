@@ -1,26 +1,35 @@
 {{ partial "header.html" . }}
 
-<div class="color-bar"></div>
+<div class="top-bar">
+	<div class="container">
+		<h2>{{.Title}}</h2>
+	</div>
+</div>
 
-<div class="content container">
-	<h1>{{ .Title }}</h1>
-	<div class="row flexbox-courses">
-		{{ $paginator := .Paginate  .Data.Pages }} {{ range $paginator.Pages }}
-		<div class="col-sm-4">
-			<a href="{{ .RelPermalink }}" class="blog-list-article">
-				<div class="blog-list-article-date">{{ .Date.Format "02 Jan 06" }}</div>
-				<div class="blog-list-article-category">{{ .Params.series }}</div>
-				<div class="blog-list-article-content">
-					<div class="blog-list-article-title">{{ .Title }}</div>
-					<div class="blog-list-article-excerpt">{{ .Params.desc }}</div>
-				</div>
-			</a>
+<div class="course-listing">
+	<div class="container">
+		<div class="row">
+			{{ $paginator := .Paginate .Data.Pages }} {{ range $paginator.Pages }}
+			<div class="col-sm-4">
+				<a href="{{ .RelPermalink }}">
+					<div class="course-progress-box">
+						<h2><small><b>Lesson</b> {{ .Params.Weight }} | <b>Time</b> {{ .ReadingTime }} <i class="ion ion-ios-clock-outline"></i>
+							</small><br />{{ .Title }}</h2>
+						{{ range .Params.tags }}
+						<span class="badge badge-pill badge-info">{{ . }}</span>
+						{{ end }}
+						<br />
+						<p>{{ .Params.desc }}</p>
+						<button class="btn btn-success">Continue Course</button>
+					</div>
+				</a>
+			</div>
+			{{ end }}
 		</div>
-		{{ end }}
+		<div class="center-align">
+			{{ partial "pagination.html" . }}
+		</div>
+		<div class="clear"></div>
 	</div>
-	<div class="center-align">
-		{{ partial "pagination.html" . }}
-	</div>
-	<div class="clear"></div>
 </div>
 {{ partial "footer.html" . }}

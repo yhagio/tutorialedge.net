@@ -4,7 +4,7 @@ date: 2018-07-08T09:25:32+01:00
 desc: Get up and running with PHP
 homepage: true
 draft: true
-image: php.png
+image: php.svg
 series: php
 tags:
 - php

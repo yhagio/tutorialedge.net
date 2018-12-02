@@ -2,3 +2,7 @@ public/
 *.deb
 .env
 node_modules/
+.vscode/
+
+package-lock.json
+yarn-error.log

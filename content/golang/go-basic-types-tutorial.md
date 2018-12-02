@@ -66,6 +66,8 @@ var myint int8
 myint = 2500
 ```
 
+
+
 The Go compiler will fail to run or build the program and will output the fact that 2500 overflows `int8`. However, if you were to overflow the integer at runtime, then you may start seeing odd results. For example, try running this program and examine the output:
 
 ```go
