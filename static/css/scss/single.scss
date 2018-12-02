@@ -24,6 +24,14 @@
     margin: 0;
   }
 
+  p {
+    margin-top: 20px;
+  }
+
+  ul li {
+    list-style: square;
+  }
+
   .post-info {
     line-height: 1.35;
     font-weight: 400;
@@ -98,7 +106,7 @@ article {
     border-radius: 15px;
   }
   .highlight {
-    border-bottom: 20px;
+    margin-bottom: 20px;
   }
 
   .highlight div {
@@ -115,12 +123,14 @@ article {
   }
 
   blockquote {
-    border-left: 4px solid #1EC4D6;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 20px 40px;
-    background-color: #D7F9FD;
-  }
+    background: #f2f6fa;
+    font-size: 17px;
+    font-size: 1.0625rem;
+    padding: 20px 24px;
+    border-radius: .5625rem;
+    margin-top: 24px;
+
+}
   
   blockquote p {
     margin: 0;
@@ -155,6 +165,7 @@ article {
 
   .helpful-post {
     border: 1px solid rgba(0,0,0,.1);
+    background-color: #f2f6fa;
     margin: 32px 0 40px;
     padding: 40px;
     border-radius: 3px;
@@ -200,13 +211,13 @@ article {
 .toc {
   color: #999 !important;
   padding: 20px;
-  background-color: #f6f6f6;
+  background: #f2f6fa;
   width: 100%;
   margin-bottom: 20px;
   margin-top: 40px;
   
   h4 {
-    color: #999 !important;
+    color: #333 !important;
     font-size: 1.2rem;
     font-weight: 400;
     margin: 0;
@@ -216,6 +227,7 @@ article {
 
   ul {
     padding-left: 25px;
+    list-style: square;
   }
 
   ul li a {
