@@ -18,7 +18,6 @@
 <script>
 
   var editor = ace.edit("editor{{- .Get 0 -}}");
-  console.log(editor);
   editor.setTheme("ace/theme/monokai");
   editor.getSession().setMode("ace/mode/python");
   editor.setOptions({

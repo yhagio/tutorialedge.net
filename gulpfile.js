@@ -12,29 +12,13 @@ let paths = {
     // Compiled files will end up in whichever folder it's found in (partials are not compiled)
     dest: "static/dist/",
     destFile: "style.css",
-  },
-  scripts: {
-    src: "static/js/**/*.js",
-    dest: "/static/dist/",
-    destFile: "all.js",
   }
 };
 
 function watch() {
   buildCSS();
-  buildJS();
   gulp.watch(paths.styles.src, buildCSS);
-  gulp.watch(paths.scripts.src, buildJS);
 }
-
-function buildJS() {
-  return (
-    gulp
-      .src(paths.scripts.src)
-      .pipe(gulp.dest(paths.scripts.dest))
-  )
-}
-
 
 function buildCSS() {
   return (
