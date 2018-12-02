@@ -93,8 +93,15 @@ article {
 
   pre {
     overflow: auto;
-    padding: 20px 40px;
+    padding: 10px;
     margin-top: 20px;
+    border-radius: 15px;
+  }
+  .highlight {
+    border-bottom: 20px;
+  }
+
+  .highlight div {
     border-radius: 15px;
   }
 
@@ -103,7 +110,7 @@ article {
     -webkit-border-radius: 2px;
     border-radius: 2px;
     color: #333;
-    background: #EEEEEE;
+    background-color: rgba(27,31,35,.1);
     font-size: 1.6rem;
   }
 

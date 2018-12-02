@@ -1,8 +1,15 @@
 languageCode = "en-us"
 title = "TutorialEdge.net"
 baseURL = "https://tutorialedge.net"
+
+# only return 9 items per page
 paginate = 9
+
+# Syntax highlighting stuff
 pygmentsCodeFences = true
+pygmentsOptions = "linenos=table"
+
+# index for algolia
 [indexes] 
     category = "categories" 
     tag = "tags" 
