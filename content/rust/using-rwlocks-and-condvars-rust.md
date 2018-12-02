@@ -4,6 +4,7 @@ date: 2018-09-01T15:09:49+01:00
 desc: Learn how to use RwLock and CondVars in this tutorial by Brian L. Troutwine,
   a software engineer with an interest in low-latency and high-scale software.
 series: rust
+image: rust-logo.png
 tags:
 - rust
 title: Using RwLock and CondVars in Rust

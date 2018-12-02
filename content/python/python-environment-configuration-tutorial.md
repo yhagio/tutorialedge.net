@@ -4,6 +4,7 @@ date: 2017-09-10T14:01:28+01:00
 desc: In this tutorial we evaluate the different ways to handle environment configuration
   in your Python Programs
 series: python
+image: python-logo.png
 tags:
 - configuration
 title: Python Environment Configuration Tutorial

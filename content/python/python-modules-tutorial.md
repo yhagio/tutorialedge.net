@@ -4,6 +4,7 @@ date: 2017-08-28T18:42:27+01:00
 desc: In this tutorial we'll be looking at Python modules. What they are and how we
   can create/import our own Python Modules.
 series: python
+image: python-logo.png
 tags:
 - beginner
 title: Python Modules Tutorial

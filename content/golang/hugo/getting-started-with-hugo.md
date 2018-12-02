@@ -4,6 +4,7 @@ date: 2017-05-27T11:13:46+01:00
 desc: In this tutorial we look at how you can get started writing your first hugo
   based website
 series: hugo
+image: golang.png
 tags:
 - hugo
 title: Getting Started With Hugo

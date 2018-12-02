@@ -4,9 +4,8 @@ date: 2017-04-09T21:03:26+01:00
 desc: The definitive list of all the books you should buy if you want to master the
   art of programming Angular applications
 series: angular
-
+image: angular.png
 tags:
-
 - typescript
 - books
 title: The Top Books For Learning Angular

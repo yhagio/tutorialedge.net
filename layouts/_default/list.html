@@ -13,13 +13,11 @@
 			<div class="col-sm-4">
 				<a href="{{ .RelPermalink }}">
 					<div class="course-progress-box">
+						{{ if .Params.image }}
+						<img src="{{ .Site.BaseURL }}/images/{{ .Params.image }}" alt="{{ .Title }} Image">
+						{{ end }}
 						<h2><small><b>Lesson</b> {{ .Params.Weight }} | <b>Time</b> {{ .ReadingTime }} <i class="ion ion-ios-clock-outline"></i>
 							</small><br />{{ .Title }}</h2>
-						{{ range .Params.tags }}
-						<span class="badge badge-pill badge-info">{{ . }}</span>
-						{{ end }}
-						<br />
-						<p>{{ .Params.desc }}</p>
 						<button class="btn btn-success">Continue Course</button>
 					</div>
 				</a>

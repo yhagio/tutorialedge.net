@@ -4,6 +4,7 @@ date: 2017-08-28T18:47:50+01:00
 desc: In this tutorial we'll be examining some of the best practices to follow when
   it comes to laying out your Python applications
 series: python
+image: python-logo.png
 tags:
 - intermediate
 title: Python Project Layout Best Practices

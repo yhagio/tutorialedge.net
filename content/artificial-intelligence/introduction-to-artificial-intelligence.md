@@ -6,6 +6,7 @@ bookTitle: Programming Game AI by Example
 date: 2017-04-15T08:11:58+01:00
 desc: The first lesson of the artificial intelligence course.
 series: ai
+image: ai.png
 tags:
 - ai
 title: An Introduction To Artificial Intelligence

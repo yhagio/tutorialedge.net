@@ -4,6 +4,7 @@ date: 2017-04-15T09:19:19+01:00
 desc: In this tutorial we'll be taking a look at how we can easily create equal height
   columns using CSS and HTML and a new feature of CSS, the Flex Box.
 series: webdev
+image: logo.png
 tags:
 - html
 - css

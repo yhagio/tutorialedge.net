@@ -4,6 +4,7 @@ date: 2017-04-15T09:38:07+01:00
 desc: this tutorial shows us how to remove the html tags from a retrieved html page.
   This will allow us to do cool stuff such as keyword density checking etc.
 series: python
+image: python-logo.png
 tags:
 - beginner
 title: Removing HTML Tags from a String with Python

@@ -4,6 +4,7 @@ date: 2017-11-29T19:48:57Z
 desc: In this article we explore load balancers and how they can positively improve
   your websites and services reliability
 series: cloud
+image: cloud.png
 tags:
 - resiliency
 title: Basic Website Resiliency Patterns - Load Balancers

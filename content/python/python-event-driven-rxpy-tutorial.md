@@ -4,6 +4,7 @@ date: 2017-10-14T11:30:25+01:00
 desc: In this tutorial we are going to look at how you can build event driven programs
   using RxPY in Python
 series: python
+image: python-logo.png
 tags:
 - rxpy
 - concurrency

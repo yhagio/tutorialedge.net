@@ -4,7 +4,7 @@ date: 2017-04-09T20:55:22+01:00
 desc: In this tutorial we look at how we can subscribe to route change events within
   our Angular 2 applications.
 series: angular
-
+image: angular.png
 tags:
 
 - typescript

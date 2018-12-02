@@ -4,6 +4,7 @@ date: 2017-04-15T08:21:41+01:00
 desc: In this series we'll be building our own Laravel 5.2 blog and fully functioning
   content management system
 series: laravel-5.2
+image: laravel.png
 tags:
 - php
 title: Building A Blog With Laravel 5.2

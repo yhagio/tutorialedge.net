@@ -3,6 +3,7 @@ author: Elliot Forbes
 date: 2018-02-10T08:48:40Z
 desc: In this tutorial, we look at how you can effectively benchmark your go program.
 series: golang
+image: golang.png
 tags:
 - intermediate
 title: An Introduction to Benchmarking Your Go Programs

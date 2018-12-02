@@ -3,9 +3,8 @@ author: Elliot Forbes
 date: 2017-04-15T09:20:55+01:00
 desc: laravel 5 middleware tutorial
 series: laravel-5.2
-
+image: laravel.png
 tags:
-
 - php
 title: Laravel 5 Middleware Tutorial
 twitter: https://twitter.com/Elliot_F

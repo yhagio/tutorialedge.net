@@ -4,6 +4,7 @@ date: 2018-09-01T14:52:49+01:00
 desc: Learn generics in this tutorial by Andrew Johnson, a software developer who
   has worn many hats.
 series: rust
+image: rust-logo.png
 tags:
 - rust
 title: Learning Generics in Rust

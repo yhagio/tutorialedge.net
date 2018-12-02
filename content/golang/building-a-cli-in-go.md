@@ -4,7 +4,7 @@ date: 2018-07-29T09:41:15+01:00
 desc: In this tutorial, we are going to be building a very simple Command Line Interface
   or CLI in Go
 series: golang
-
+image: golang.png
 tags:
 - intermediate
 title: Building a Network Command Line Interface in Go

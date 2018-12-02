@@ -4,7 +4,7 @@ date: 2018-08-25T14:21:04+01:00
 desc: In this tutorial, we are going to look at how you can use mutexes in your Go
   programs
 series: golang
-
+image: golang.png
 tags:
 - advanced
 title: Go Mutex Tutorial

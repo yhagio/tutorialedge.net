@@ -2,6 +2,7 @@
 title: "Writing Mobile Apps in Go"
 date: 2018-10-27T12:08:17+01:00
 draft: true
+image: golang.png
 ---
 
 # Setup

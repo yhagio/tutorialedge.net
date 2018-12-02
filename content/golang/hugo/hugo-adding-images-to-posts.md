@@ -3,6 +3,7 @@ author: Elliot Forbes
 date: 2017-06-12T08:49:04+01:00
 desc: In this tutorial we look at how you can add images to your hugo content pages
 series: hugo
+image: golang.png
 tags:
 - hugo
 title: Hugo Adding Images To Markdown Posts

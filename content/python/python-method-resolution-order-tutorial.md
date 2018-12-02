@@ -3,6 +3,7 @@ author: Elliot Forbes
 date: 2017-12-18T11:23:34Z
 desc: In this tutorial we will be taking a look at Python's Method Resolution Order.
 series: python
+image: python-logo.png
 tags:
 - advanced
 title: Python Method Resolution Order Tutorial

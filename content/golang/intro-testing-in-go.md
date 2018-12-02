@@ -4,7 +4,7 @@ date: 2018-02-09T17:27:18Z
 desc: In this tutorial, we look at how properly implement a tests within your go based
   systems using the go test tool
 series: golang
-
+image: golang.png
 tags:
 - beginner
 weight: 11

@@ -4,6 +4,7 @@ date: 2017-12-20T18:41:30Z
 desc: In this tutorial we evaluate the different ways you can work with the file system
   in Python
 series: python
+image: python-logo.png
 tags:
 - beginner
 - filesystem

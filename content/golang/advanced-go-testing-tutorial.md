@@ -4,6 +4,7 @@ date: 2018-08-29T21:57:53+01:00
 desc: In this tutorial, we are going to be having a look at some more advanced Go
   testing practices that the core language developers use to test the language itself.
 series: golang
+image: golang.png
 tags:
 - beginner
 title: Advanced Go Testing Tutorial

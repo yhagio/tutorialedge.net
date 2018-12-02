@@ -3,6 +3,7 @@ author: Elliot Forbes
 date: 2017-05-24T07:57:51+01:00
 desc: In this tutorial we cover the map function within the Python programming language
 series: python
+image: python-logo.png
 tags:
 - beginner
 - concurrency

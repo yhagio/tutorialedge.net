@@ -4,6 +4,7 @@ date: 2017-04-15T08:27:49+01:00
 desc: In this tutorial I'll be demonstrating to you how you can add github authentication
   to your Laravel 5 application.
 series: laravel-5.2
+image: laravel.png
 tags:
 - php
 title: Adding Github Registry and Authentication To Laravel 5.2

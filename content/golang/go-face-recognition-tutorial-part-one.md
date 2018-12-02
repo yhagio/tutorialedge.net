@@ -3,7 +3,7 @@ title: "Go Face Recognition Tutorial - Part 1"
 description: In this tutorial, we are going to look at building a face recognition system using Go
 date: 2018-09-27T10:48:51+01:00
 series: golang
-
+image: golang.png
 tags:
 - advanced
 twitter: https://twitter.com/Elliot_F

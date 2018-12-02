@@ -4,6 +4,7 @@ date: 2017-11-19T10:18:54Z
 desc: In this tutorial we will be looking at the absolute basics of unit testing in
   python using PyUnit
 series: python
+image: python-logo.png
 tags:
 - intermediate
 - testing

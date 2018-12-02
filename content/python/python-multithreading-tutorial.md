@@ -3,6 +3,7 @@ author: Elliot Forbes
 date: 2017-04-15T09:55:57+01:00
 desc: Explore the python multithreading module and the power of asynchronous programming
 series: python
+image: python-logo.png
 tags:
 - concurrency
 title: Python Multithreading Tutorial - Concurrent Programming

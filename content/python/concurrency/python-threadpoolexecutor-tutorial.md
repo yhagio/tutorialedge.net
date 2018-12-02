@@ -4,9 +4,8 @@ date: 2017-10-01T13:36:48+01:00
 desc: In this article take a look at how you can use the ThreadPoolExecutor in Python
   to speed up your programs.
 series: python
-
+image: python-logo.png
 tags:
-
 - concurrency
 title: Python ThreadPoolExecutor Tutorial
 twitter: https://twitter.com/Elliot_F

@@ -3,6 +3,7 @@ author: Elliot Forbes
 date: 2017-04-21T19:53:46+01:00
 desc: In this tutorial we look at how we can get started working with CSS3 variables
 series: webdev
+image: logo.png
 tags:
 - webdev
 - css3

@@ -4,7 +4,7 @@ date: 2018-02-17T21:56:17Z
 desc: In this tutorial, we are going to look at how you can read and write files on
   your local filesystem using Go
 series: golang
-
+image: golang.png
 tags:
 - beginner
 title: Reading And Writing To Files in Go

@@ -4,6 +4,7 @@ date: 2017-11-30T21:21:51Z
 desc: In this article we explore load balancers and how they can positively improve
   your websites and services reliability
 series: cloud
+image: cloud.png
 tags:
 - resiliency
 title: An Introduction To Autoscaling Your Website or Service

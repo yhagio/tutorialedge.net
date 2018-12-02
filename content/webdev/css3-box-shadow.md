@@ -4,6 +4,7 @@ date: 2017-04-16T16:50:07+01:00
 desc: In this tutorial we look at how we can implement a css3 box shadow to components
   of our website.
 series: webdev
+image: logo.png
 tags:
 - webdev
 - css3

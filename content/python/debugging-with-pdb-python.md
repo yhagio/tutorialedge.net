@@ -4,6 +4,7 @@ date: 2017-09-02T13:35:28+01:00
 desc: In this tutorial we look at how you can debug your Python programs with the
   python debugger - PDB
 series: python
+image: python-logo.png
 tags:
 - debugging
 title: 'Debugging with the Python Debugger - PDB '

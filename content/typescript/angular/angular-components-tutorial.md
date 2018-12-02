@@ -3,9 +3,8 @@ author: Elliot Forbes
 date: 2017-04-09T21:04:56+01:00
 desc: Here we look at everything it takes to define your own Angular components.
 series: angular
-
+image: angular.png
 tags:
-
 - typescript
 title: Angular Components Tutorial
 twitter: https://twitter.com/Elliot_F

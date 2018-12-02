@@ -4,9 +4,8 @@ date: 2017-04-09T20:56:49+01:00
 desc: In this tutorial we examine ways to obtain the current URL route using the location
   service.
 series: angular
-
+image: angular.png
 tags:
-
 - typescript
 title: Angular Get Current Route using the Location Service
 twitter: https://twitter.com/Elliot_F

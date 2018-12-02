@@ -4,9 +4,8 @@ date: 2017-04-15T09:26:20+01:00
 desc: Simple site search bar tutorial for those of you wishing to implement some simplistic
   form of search bar in your laravel 5 applications
 series: laravel-5.2
-
+image: laravel.png
 tags:
-
 - php
 title: Laravel 5 Simple Site Search Bar Tutorial
 twitter: https://twitter.com/Elliot_F

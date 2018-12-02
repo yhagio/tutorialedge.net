@@ -4,9 +4,8 @@ date: 2017-04-15T09:35:37+01:00
 desc: This tutorial teaches you how to utilize route middleware in order to authenticate
   admin users for a backend of a laravel 5 site.
 series: laravel-5.2
-
+image: laravel.png
 tags:
-
 - php
 title: Creating an Admin Area with Laravel 5
 twitter: https://twitter.com/Elliot_F

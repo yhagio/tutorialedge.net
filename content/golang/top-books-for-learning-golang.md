@@ -4,7 +4,7 @@ date: 2017-06-12T21:29:27+01:00
 desc: The definitive list of all the books you should buy if you want to master the
   art of programming Golang applications
 series: golang
-
+image: golang.png
 tags:
 - misc
 title: The Top Books For Learning Golang

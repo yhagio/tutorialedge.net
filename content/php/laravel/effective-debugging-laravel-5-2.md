@@ -2,9 +2,8 @@
 author: Elliot Forbes
 date: 2017-04-15T08:05:46+01:00
 series: laravel-5.2
-
+image: laravel.png
 tags:
-
 - php
 title: Effective Debugging of Laravel 5.2 Applications
 twitter: https://twitter.com/Elliot_F

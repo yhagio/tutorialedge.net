@@ -4,6 +4,7 @@ date: 2017-04-15T09:49:35+01:00
 desc: This tutorial shows the user how to construct a UDP based client and server
   application
 series: python
+image: python-logo.png
 tags:
 - networking
 title: UDP Client and Server Tutorial in Python

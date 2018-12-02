@@ -4,7 +4,7 @@ date: 2018-07-14T22:23:10+01:00
 desc: In this tutorial we'll look at what methods are in Golang and how you can use
   them in your programs
 series: golang
-
+image: golang.png
 tags:
 - beginner
 draft: true

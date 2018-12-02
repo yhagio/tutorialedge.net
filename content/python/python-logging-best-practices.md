@@ -4,6 +4,7 @@ date: 2017-08-13T17:06:57+01:00
 desc: In this tutorial we'll be examining some of the best practices when it comes
   to logging in your Python applications
 series: python
+image: python-logo.png
 tags:
 - beginner
 - logging

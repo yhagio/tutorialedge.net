@@ -3,6 +3,7 @@ author: Elliot Forbes
 date: 2017-12-01T21:32:19Z
 desc: An absolute beginners introduction to writing face recognition software in Python
 series: python
+image: python-logo.png
 tags:
 - advanced
 - c

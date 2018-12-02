@@ -3,6 +3,7 @@ title: "The Min-Max Algorithm in Java"
 date: 2018-11-28T11:50:17Z
 description: Learn the min-max algorithm and how to implement it in this tutorial by Nisheeth Joshi, a researcher and the author of Hands-On Artificial Intelligence with Java for Beginners.
 series: ai
+image: ai.png
 tags:
 - ai
 author: Nisheeth Joshi

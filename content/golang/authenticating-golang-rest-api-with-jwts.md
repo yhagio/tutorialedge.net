@@ -3,6 +3,7 @@ title: "Securing Your Go REST APIs With JWTs"
 date: 2018-10-22T19:26:44+01:00
 desc: "In this tutorial, we are going to look at how you can secure your Go REST APIs with JSON Web Tokens"
 series: golang
+image: golang.png
 tags:
 - advanced
 author: Elliot Forbes

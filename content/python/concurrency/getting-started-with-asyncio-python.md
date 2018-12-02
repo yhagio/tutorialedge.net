@@ -4,9 +4,8 @@ date: 2017-11-04T15:20:50Z
 desc: In this article we cover everything you need to get up and running with Python
   and Asyncio
 series: python
-
+image: python-logo.png
 tags:
-
 - concurrency
 title: Getting Started with Asyncio in Python
 twitter: https://twitter.com/Elliot_F

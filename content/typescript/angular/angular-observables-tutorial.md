@@ -4,9 +4,8 @@ date: 2016-02-14T16:11:58+05:30
 desc: In this tutorial we'll be looking at Angular 2 Observables, what they are and
   how we can use them in our Angular applications.
 series: angular
-
+image: angular.png
 tags:
-
 - typescript
 title: Angular Observables Tutorial using RxJS
 twitter: https://twitter.com/Elliot_F

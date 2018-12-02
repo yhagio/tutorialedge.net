@@ -3,9 +3,8 @@ author: Elliot Forbes
 date: 2017-04-09T21:05:28+01:00
 desc: In this tutorial we look at modules within Angular 2.
 series: angular
-
+image: angular.png
 tags:
-
 - typescript
 title: Angular Modules Tutorial
 twitter: https://twitter.com/Elliot_F
