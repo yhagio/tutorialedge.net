@@ -24,13 +24,13 @@ This tutorial is available in video format, should you wish to support me and my
 
 For the basis of this tutorial, we'll be using the [kagami/go-face](https://github.com/Kagami/go-face) package which wraps around the dlib machine learning toolkit!
 
-> Kagami actually wrote about how he went about writing this package. It's definitely an interesting read and you can find it here: https://hackernoon.com/face-recognition-with-go-676a555b8a7e
+> **Note -** Kagami actually wrote about how he went about writing this package. It's definitely an interesting read and you can find it here: https://hackernoon.com/face-recognition-with-go-676a555b8a7e
 
 ## The dlib toolkit
 
 The Dlib toolkit is built in C++ and is incredible at both face and object recognition/detection. According to its documentation, it scores around 99.4% accuracy on detecting labeled faces in the Wild benchmark which is incredible and it's the reason why so many other third-party libraries utilize it as their base. 
 
-> I've covered the Dlib toolkit's Python library - face_recognition in a previous tutorial. If you want to check out the python equivalent of this tutorial, here it is: [An introduction to Face Recognition in Python](https://tutorialedge.net/python/intro-face-recognition-in-python/)
+> **Note -** I've covered the Dlib toolkit's Python library - face_recognition in a previous tutorial. If you want to check out the python equivalent of this tutorial, here it is: [An introduction to Face Recognition in Python](https://tutorialedge.net/python/intro-face-recognition-in-python/)
 
 # Setup
 
@@ -285,4 +285,4 @@ In this tutorial, we successfully managed to build a really simple face recognit
 
 Hopefully you enjoyed this tutorial, if you did then please let me know in the comments section down below!
 
-> If you want to keep track of when new Go articles are posted to the site, then please feel free to follow me on twitter for all the latest news: [@Elliot_F](https://twitter.com/elliot_f).
+> **Note -** If you want to keep track of when new Go articles are posted to the site, then please feel free to follow me on twitter for all the latest news: [@Elliot_F](https://twitter.com/elliot_f).

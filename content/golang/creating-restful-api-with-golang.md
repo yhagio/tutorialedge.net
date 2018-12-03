@@ -22,13 +22,13 @@ In this article, I'm going to be showing you how we can create a simple Golang b
 
 REST is everywhere these days, from websites to enterprise applications, the RESTful architecture style is a powerful way of providing communication between separate software components. Building REST APIs allow you to easily decouple both consumers and producers and are typically stateless by design.
 
-> If you wish to learn more about the basics of REST APIs then check out <a href="/general/what-is-a-rest-api/">What Are RESTful APIs?</a>
+> **Note -** If you wish to learn more about the basics of REST APIs then check out <a href="/general/what-is-a-rest-api/">What Are RESTful APIs?</a>
 
 ## JSON
 
 For the purpose of this tutorial I’ll be using JavaScript Object Notation as a means of sending and receiving all information and thankfully Go comes with some excellent support for encoding and decoding these formats using the standard library package, encoding/json. 
 
-> For more information on the encoding/json package check out the official documentation: <a href="https://golang.org/pkg/encoding/json/" target="_blank">encoding/json</a>
+> **Note -** For more information on the encoding/json package check out the official documentation: <a href="https://golang.org/pkg/encoding/json/" target="_blank">encoding/json</a>
 
 ## Marshalling
 
@@ -64,7 +64,7 @@ func main() {
 
 If we run this on our machine now, we should see our very simple API start up on port 8081 if it's not already been taken by another process. If we now navigate to `http://localhost:8081/` in our local browser we should see `Welcome to the HomePage!` print out on our screen. This means we have successfully created the base from which we'll build our REST API.
 
-> If you want a more in-depth tutorial on how to create a go based web server then check out this tutorial here: <a href="/golang/creating-simple-web-server-with-golang/">Creating a Simple Web Server with Go(Lang)</a>
+> **Note -** If you want a more in-depth tutorial on how to create a go based web server then check out this tutorial here: <a href="/golang/creating-simple-web-server-with-golang/">Creating a Simple Web Server with Go(Lang)</a>
 
 # Our Articles Structure
 

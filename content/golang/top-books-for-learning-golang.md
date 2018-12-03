@@ -25,7 +25,7 @@ In this article we are going to step through some of the top books you can buy i
 
 If you are completely new to Golang then this is the section to start in. The books below are gentle introductions to the language and should help to get you started on your Golang journey.
 
-> If you are entirely new to programming then these may not be for you and I would recommend checking out some basic tutorials/books first before you try these out.
+> **Note -** If you are entirely new to programming then these may not be for you and I would recommend checking out some basic tutorials/books first before you try these out.
 
 ## The Go Programming Language 
 

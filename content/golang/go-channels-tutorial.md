@@ -20,7 +20,7 @@ They are incredibly handy and can help you craft incredibly high performance, hi
 
 The ability to craft concurrent systems so easily is something that drew me to the language in the first place, and I have to say, it's been an absolute delight so far.
 
-> I would recommend having a look at my other tutorial on [goroutines](/golang/concurrency-with-golang-goroutines/) if you wish to learn more about goroutines.
+> **Note -** I would recommend having a look at my other tutorial on [goroutines](/golang/concurrency-with-golang-goroutines/) if you wish to learn more about goroutines.
 
 # The Theory
 
@@ -62,7 +62,7 @@ func main() {
 
 Let's disect what happened here. In our `main()` function, we called `values := make(chan int)`, this call effectively created our new channel so that we could subsequently use it within our `CalculateValue` goroutine. 
 
-> We used `make` when instantiating our `values` channel as, like maps and slices, channels must be created before use.
+> **Note -** We used `make` when instantiating our `values` channel as, like maps and slices, channels must be created before use.
 
 After we created out channel, we then called `defer close(values)` which deferred the closing of our channel until the end of our `main()` function's execution. This is typically considered best practice to ensure that we tidy up after ourselves.
 
@@ -70,7 +70,7 @@ After our call to `defer`, we go on to kick off our single goroutine: `Calculate
 
 Jumping back into our `main()` function, we then call `value := <-values` which receives a value from our `values` channel.
 
-> Notice how when we execute this program, it doesn't immediately terminate. This is because the act of sending to and receiving from a channel are blocking. Our `main()` function blocks until it receives a value from our channel.
+> **Note -** Notice how when we execute this program, it doesn't immediately terminate. This is because the act of sending to and receiving from a channel are blocking. Our `main()` function blocks until it receives a value from our channel.
 
 Upon execution of this code, you should see the output look something like this:
 
@@ -213,4 +213,4 @@ So, in this fairly lengthy tutorial, we managed to learn about the various disti
 
 If you enjoyed this tutorial, then please feel free to let me know in the comments section below. If you have any suggestions as to what I could do better then I would love to hear them in the comments section below!
 
-> If you want to keep track of when new Go articles are posted to the site, then please feel free to follow me on twitter for all the latest news: [@Elliot_F](https://twitter.com/elliot_f).
+> **Note -** If you want to keep track of when new Go articles are posted to the site, then please feel free to follow me on twitter for all the latest news: [@Elliot_F](https://twitter.com/elliot_f).

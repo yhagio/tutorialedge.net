@@ -245,7 +245,7 @@ In the second part of the tutorial, we looked at a more realistic example as to 
 
 If you enjoyed this tutorial, then please feel free to share the article far an wide, it really helps the site and I'd be very appreciative! If you have any questions and/or comments then please let me know in the comments section down below!
 
-> If you want to keep track of when new Go articles are posted to the site, then please feel free to follow me on twitter for all the latest news: [@Elliot_F](https://twitter.com/elliot_f).
+> **Note -** If you want to keep track of when new Go articles are posted to the site, then please feel free to follow me on twitter for all the latest news: [@Elliot_F](https://twitter.com/elliot_f).
 
 ## Further Reading
 

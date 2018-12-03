@@ -49,7 +49,7 @@ type User struct {
 
 Once we have defined our `User` model we can then go about exposing an API endpoint that could save new users to our `sqlite3` database. 
 
-> If you want to know how you can develop your own Go based REST API, check out my other Go Tutorial: [Building a RESTful API in Go](/golang/creating-restful-api-with-golang/)
+> **Note -** If you want to know how you can develop your own Go based REST API, check out my other Go Tutorial: [Building a RESTful API in Go](/golang/creating-restful-api-with-golang/)
 
 # Our API
 
@@ -108,7 +108,7 @@ We can then start this new API by running `go run main.go`. This API represents 
 
 The next step of our project is creating a database. For the purpose of this tutorial, we are going to use a `sqlite3` database due to its ease of use and setup. 
 
-> Note: You can swap to using another database technology fairly easily using the `GORM` by switching dialects.
+> **Note -** You can swap to using another database technology fairly easily using the `GORM` by switching dialects.
 
 We can use `GORM` to automatically create the User table within our database by calling `db.AutoMigrate(&User{})`. This saves us the hassle of writing a table creation `SQL` script.
 

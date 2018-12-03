@@ -175,7 +175,7 @@ Successfully opened users.json
 
 If we wanted to traverse further down the tree, we could do that just as we normally would traverse down a `map` structure within Go, without having to define the struct types.
 
-> It is typically recommended to try and define the structs, if you happen to know the structure of the data coming back. 
+> **Note -** It is typically recommended to try and define the structs, if you happen to know the structure of the data coming back. 
 
 # Unmarshalling our JSON
 

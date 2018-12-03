@@ -36,7 +36,7 @@ So AES, or the Advanced Encryption Standard, is a symmetric key encryption algor
 
 If you are wanting to use encryption within any of your programs and aren't quite sure about how they all differ, then AES is definitely the safest option to choose from due to both it's efficiency and ease of use.
 
-> I'll be covering other encryption techniques in future tutorials, so make sure that you follow me on twitter: [@Elliot_f](https://twitter.com/elliot_f)
+> **Note -** I'll be covering other encryption techniques in future tutorials, so make sure that you follow me on twitter: [@Elliot_f](https://twitter.com/elliot_f)
 
 ## Symmetric Key Encryption
 
@@ -210,4 +210,4 @@ So, in this tutorial we have successfully covered a number of cool concepts such
 
 I had a lot of fun writing this and hopefully you enjoyed it! If you did, or if you have any feedback, then I would love to hear it in the comments section below!
 
-> If you want to keep track of when new Go articles are posted to the site, then please feel free to follow me on twitter for all the latest news: [@Elliot_F](https://twitter.com/elliot_f).
+> **Note -** If you want to keep track of when new Go articles are posted to the site, then please feel free to follow me on twitter for all the latest news: [@Elliot_F](https://twitter.com/elliot_f).

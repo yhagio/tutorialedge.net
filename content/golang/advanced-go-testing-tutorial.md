@@ -16,7 +16,7 @@ Welcome fellow coders! In this tutorial, we are going to be taking a look at sel
 
 I feel this approach, of actually studying what has been done in a production system, will hopefully give you some insight into the best ways to test your own production-level Go programs. 
 
-> If you are entirely new to testing your Go-based programs, then I suggest you check out my other tutorial: [an introduction to testing in go](/golang/intro-testing-in-go/)
+> **Note -** If you are entirely new to testing your Go-based programs, then I suggest you check out my other tutorial: [an introduction to testing in go](/golang/intro-testing-in-go/)
 
 # Achieving Good Coverage with Table Driven Tests
 
@@ -165,7 +165,7 @@ The reason for this? It helps you to avoid cyclic imports. In some scenarios, yo
 
 # Differentiate your Unit and Integration Tests
 
-> I originally found out about this tip from: [Go Advanced Tips Tricks](https://medium.com/@povilasve/go-advanced-tips-tricks-a872503ac859)
+> **Note -** I originally found out about this tip from: [Go Advanced Tips Tricks](https://medium.com/@povilasve/go-advanced-tips-tricks-a872503ac859)
 
 If you are writing tests for large enterprise Go systems then you'll more than likely have a set of both `integration` and `unit` tests ensuring the validity of your system. 
 
@@ -203,7 +203,7 @@ So, in this tutorial, we had a look at some of the more advanced testing techniq
 
 Hopefully, you found this useful and it gave you the insight needed to go off and improve your own go tests. If you found it useful, or have any further questions, then please don't hesitate to let me know in the comments section below! 
 
-> If you want to keep track of when new Go articles are posted to the site, then please feel free to follow me on twitter for all the latest news: [@Elliot_F](https://twitter.com/elliot_f).
+> **Note -** If you want to keep track of when new Go articles are posted to the site, then please feel free to follow me on twitter for all the latest news: [@Elliot_F](https://twitter.com/elliot_f).
 
 ## Further Reading
 

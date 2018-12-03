@@ -18,7 +18,7 @@ I've been doing one or two domain migrations across various hosting providers re
 
 The overall aim of this particular tutorial is to give you an idea as to how you can build your own CLIs that could do a wide variety of other things such as network monitoring, image manipulation and so on. 
 
-> The full code for this tutorial can be found here: [TutorialEdge/Go/go-cli-tutorial](https://github.com/TutorialEdge/Go/tree/master/go-cli-tutorial)
+> **Note -** The full code for this tutorial can be found here: [TutorialEdge/Go/go-cli-tutorial](https://github.com/TutorialEdge/Go/tree/master/go-cli-tutorial)
 
 # Popular Projects
 
@@ -43,7 +43,7 @@ go-cli/
 - ...
 ```
 
-> This structure follows the widely accepted [Go project layout](https://github.com/golang-standards/project-layout) guide available on Github. 
+> **Note -** This structure follows the widely accepted [Go project layout](https://github.com/golang-standards/project-layout) guide available on Github. 
 
 # Getting Into The Code
 

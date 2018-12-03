@@ -15,7 +15,7 @@ In this article, we are going to be having a look at benchmarking. More specific
 
 In times where performance is important, being able to benchmark how your program performs and analyze where potential bottlenecks are, is really valuable. By understanding where these bottlenecks lie, we can more effectively determine where to focus our efforts in order to improve the performance of our systems.
 
-> It's important to note that performance tweaking should typically be done after the system is up and running. 
+> **Note -** It's important to note that performance tweaking should typically be done after the system is up and running. 
 
 > *"Premature optimization is the root of all evil"* - Donald Knuth  
 

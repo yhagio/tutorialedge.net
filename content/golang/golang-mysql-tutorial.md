@@ -12,7 +12,7 @@ title: Golang MySQL Tutorial
 twitter: https://twitter.com/Elliot_F
 ---
 
-> In this tutorial I’ll be demonstrating how you can connect to a MySQL database and perform basic SQL statements using Go.
+> **Note -** In this tutorial I’ll be demonstrating how you can connect to a MySQL database and perform basic SQL statements using Go.
 
 # Video Tutorial
 
@@ -150,7 +150,7 @@ func main() {
 
 In this example we retrieved 2 columns from the tags database and then used .Scan to populate our tag object. 
 
-> Note that if you retrieve 3 fields from the database and Scan only has 2 parameters, it will fail. They need to match up exactly.
+> **Note -** If you retrieve 3 fields from the database and Scan only has 2 parameters, it will fail. They need to match up exactly.
 
 # Querying a Single Row
 
@@ -172,4 +172,4 @@ log.Println(tag.Name)
 
 If you found this tutorial helpful or require more assistance then please don't hesitate to let me know in the comments section below:
 
-> Recommended Reading: [Creating a RESTful JSON api with Go](/golang/creating-restful-api-with-golang/)
+> **Recommended Reading:** [Creating a RESTful JSON api with Go](/golang/creating-restful-api-with-golang/)

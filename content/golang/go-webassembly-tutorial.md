@@ -18,7 +18,7 @@ So, in this article, we are going to be building a really simple calculator to g
 
 This will hopefully show you what it takes to write and compile your own Go-based programs for your frontend applications. 
 
-> If you haven't guessed from the opening line, Go v1.11 will be required in order for this tutorial to work!
+> **Note -** If you haven't guessed from the opening line, Go v1.11 will be required in order for this tutorial to work!
 
 # Video Tutorial
 

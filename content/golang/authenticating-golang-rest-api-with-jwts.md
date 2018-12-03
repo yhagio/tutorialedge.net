@@ -17,7 +17,7 @@ JWTs, or JSON Web Tokens as they are more formally known, are a compact, URL-saf
 
 The JWT standard uses either a secret, using the HMAC algorithm, or a public/private key pair using RSA or ECDSA. 
 
-> **Note:** If you are interested in the formal definition of what JWTs are, then I recommend checking out the RFC: [RFC-7519](https://tools.ietf.org/html/rfc7519)
+> **Note -** If you are interested in the formal definition of what JWTs are, then I recommend checking out the RFC: [RFC-7519](https://tools.ietf.org/html/rfc7519)
 
 These are heavily used within Single-Page Applications (SPAs) as a means of secure communications as they allow us to do two key things:
 
@@ -142,7 +142,7 @@ Let's break this down. We've created a really simple API that feature a solitary
 
 If this is a valid token, we then serve the protected endpoint.
 
-> **Note** - This example uses decorators, if you aren't comfortable with the concept of decorators in Go then I recommend you check out my other article here: [Getting Started with Decorators in Go](/golang/go-decorator-function-pattern-tutorial/)
+> **Note -** This example uses decorators, if you aren't comfortable with the concept of decorators in Go then I recommend you check out my other article here: [Getting Started with Decorators in Go](/golang/go-decorator-function-pattern-tutorial/)
 
 ## Our Client
 
@@ -235,7 +235,7 @@ Hopefully, this tutorial helped to demystify the art of securing your Go applica
 
 If you enjoyed this tutorial, then please let me know in the comments section below, or give this article a share across social media, it really helps me and my site!
 
-> If you want to keep track of when new Go articles are posted to the site, then please feel free to follow me on twitter for all the latest news: [@Elliot_F](https://twitter.com/elliot_f).
+> **Note -** If you want to keep track of when new Go articles are posted to the site, then please feel free to follow me on twitter for all the latest news: [@Elliot_F](https://twitter.com/elliot_f).
 
 ## Further Reading
 

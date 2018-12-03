@@ -80,7 +80,7 @@ In each of these we could specify an `init()` function which would perform the t
 
 Whenever we then call a function in our `database` package, it would then use the connection pool that we set up in our `init()` function.  
 
-> It's incredibly important to note that you cannot rely upon the order of execution of your `init()` functions. It's instead better to focus on writing your systems in such a way that the order does not matter.
+> **Note -** It's incredibly important to note that you cannot rely upon the order of execution of your `init()` functions. It's instead better to focus on writing your systems in such a way that the order does not matter.
 
 # Order of Initialization
 
@@ -88,7 +88,7 @@ For more complex systems, you may have more than one file making up any given pa
 
 When it comes to the order of the initialization, a few things are taken into consideration. Things in Go are typically initialized in the order in declaration order but explicitly after any variables they may depend on. This means that, should you have 2 files `a.go` and `b.go` in the same package, if the initialization of anything in `a.go` depends on things in `b.go` they will be initialized first.
 
-> A more in-depth overview of the order of initialization in Go can be found in the official docs: [Package Initialization](https://golang.org/ref/spec#Package_initialization)
+> **Note -** A more in-depth overview of the order of initialization in Go can be found in the official docs: [Package Initialization](https://golang.org/ref/spec#Package_initialization)
 
 The key point to note from this is this order of declaration can lead to scenarios such as this:
 

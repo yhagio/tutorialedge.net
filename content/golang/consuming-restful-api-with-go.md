@@ -12,7 +12,7 @@ twitter: https://twitter.com/Elliot_F
 weight: 15
 ---
 
-> For a Tutorial on how to build a RESTful API in Go click [here](/golang/creating-restful-api-with-golang/)
+> **Note -** For a Tutorial on how to build a RESTful API in Go click [here](/golang/creating-restful-api-with-golang/)
 
 In this tutorial, I'm going to be demonstrating how we can consume an already running RESTful API using go. There are currently hundreds upon thousands of open REST APIs out there that are just waiting to be consumed and turned into something more meaningful. Todd Motto has put together quite an active repo on Github that lists all the public APIs that are available for consumption by us and he's categorized them so that we can easily drill down to what we want to check out, you can find that [here](https://github.com/toddmotto/public-apis).
 
@@ -22,7 +22,7 @@ For the purpose of this tutorial though, I feel that we should use an already li
 
 To get us started we are going to query for all the Pokemon from the original series. We'll be hitting the `http://pokeapi.co/api/v2/pokedex/kanto/` API endpoint that returns this. If you navigate to this endpoint in your browser you should see a huge JSON string printing out, this is the response we'll be expecting when our go program performs a `GET` request on this endpoint. 
 
-> When you open a web page in a browser, you are performing a `GET` request for that page. 
+> **Note -** When you open a web page in a browser, you are performing a `GET` request for that page. 
 
 # GET Request
 
@@ -207,4 +207,4 @@ func main() {
 
 In this tutorial, we've looked at how you can perform `GET` requests on `HTTP` endpoints and print out the plain text response of the response. We've then looked at how you can unmarshal the JSON response into struct objects that we can effectively work with as if they were normal objects.   
 
-> If you found this tutorial useful or require any further help then please let me know in the comments section below. If you think anything is missing then please feel free to make the changes yourself by submitting a pull request here: [tutorialedge-v2](https://github.com/elliotforbes/tutorialedge-v2)
+> **Note -** If you found this tutorial useful or require any further help then please let me know in the comments section below. If you think anything is missing then please feel free to make the changes yourself by submitting a pull request here: [tutorialedge-v2](https://github.com/elliotforbes/tutorialedge-v2)

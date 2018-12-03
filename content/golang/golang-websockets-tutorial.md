@@ -11,7 +11,7 @@ weight: 26
 twitter: https://twitter.com/Elliot_F
 ---
 
-> This tutorial was written using Go version 1.9 and [googollee/go-socket.io](https://github.com/googollee/go-socket.io)
+> **Note -** This tutorial was written using Go version 1.9 and [googollee/go-socket.io](https://github.com/googollee/go-socket.io)
 
 Websockets are something I find interesting in the sense that they provide us with an alternative option to communication between applications as opposed to the standard RESTful API solution. With Sockets we can do cool things such as real-time communication between thousands to hundreds of thousands of different clients without having to incur the expense of hundreds of thousands of RESTful API calls hitting our servers every minute. 
 
@@ -163,6 +163,6 @@ You have now successfully built up a frontend that connects directly into your n
 
 # Conclusion
 
-> The full source code for this project can be found on Github: [TutorialEdge/Go](https://github.com/TutorialEdge/Go/tree/master/go-websocket-tutorial)
+> **Note -** The full source code for this project can be found on Github: [TutorialEdge/Go](https://github.com/TutorialEdge/Go/tree/master/go-websocket-tutorial)
 
 If you found this tutorial useful or require any further assistance then please feel free to let me know in the comments section below.

@@ -186,7 +186,7 @@ And Voila! We have successfully managed to append to an existing file using `os.
 
 It's incredibly important to understand the various different file permissions available to you when you are writing to new files. 
 
-> For more in-depth documentation about permissions, I would suggest checking out: [https://golang.org/pkg/os/#FileMode](https://golang.org/pkg/os/#FileMode)
+> **Note -** For more in-depth documentation about permissions, I would suggest checking out: [https://golang.org/pkg/os/#FileMode](https://golang.org/pkg/os/#FileMode)
 
 # Conclusion
 

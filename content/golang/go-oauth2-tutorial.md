@@ -26,7 +26,7 @@ With this `authorization grant` the `client` then passes this to the `authorizat
 
 So, with that said, let's now look at how we can implement our own `authorization server` using this go-oauth2/oauth2 package.
 
-> If you are interested in seeing the RFC that Oauth2 implementations follow, you can find it here: [RFC-6749](https://tools.ietf.org/html/rfc6749)
+> **Note -** If you are interested in seeing the RFC that Oauth2 implementations follow, you can find it here: [RFC-6749](https://tools.ietf.org/html/rfc6749)
 
 # A Simple Oauth2 Flow
 

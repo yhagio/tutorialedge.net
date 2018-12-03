@@ -18,7 +18,7 @@ This is a quick and simple tutorial on how to read in console text input into yo
 
 We'll use Go's while loop equivalent of a for loop without any parameters to ensure our program continues on forever. In this example every time text is entered and then enter is pressed, we assign text to equal everything up to and including the `\n` special character. If we want to do a comparison on the string that has just been entered then we can use the strings.Replace method in order to remove this trailing `\n` character with nothing and then do the comparison.
 
-> If you want this to work on Windows Systems then you will have to do `text = strings.Replace(text, "\r\n", "", -1)` as windows uses a different line ending compared to unix systems.
+> **Note -** If you want this to work on Windows Systems then you will have to do `text = strings.Replace(text, "\r\n", "", -1)` as windows uses a different line ending compared to unix systems.
 
 ```go
 package main
@@ -100,4 +100,4 @@ As you can see there are numerous ways to do this and the best solution depends 
 
 I hope you found this tutorial useful and if you have any further questions then please let me know in the comments section below!
 
-> If you enjoyed this post then you may like this one on [Calling System Commands in Go](/golang/executing-system-commands-with-golang/)
+> **Note -** If you enjoyed this post then you may like this one on [Calling System Commands in Go](/golang/executing-system-commands-with-golang/)
