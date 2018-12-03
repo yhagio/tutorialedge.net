@@ -4,6 +4,7 @@ date: 2017-04-15T09:29:14+01:00
 desc: This tutorial looks to demonstrate how one can initialize a window using the
   LWJGL 3 framework and OpenGL
 series: lwjgl3
+image: lwjgl.jpg
 tags:
 - lwjgl3
 - java

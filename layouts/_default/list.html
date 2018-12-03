@@ -15,6 +15,8 @@
 					<div class="course-progress-box">
 						{{ if .Params.image }}
 						<img src="{{ .Site.BaseURL }}/images/{{ .Params.image }}" alt="{{ .Title }} Image">
+						{{ else }}
+						<img src="{{ .Site.BaseURL }}/images/logo.png" alt="{{ .Title }} Image">
 						{{ end }}
 						<h2><small><b>Lesson</b> {{ .Params.Weight }} | <b>Time</b> {{ .ReadingTime }} <i class="ion ion-ios-clock-outline"></i>
 							</small><br />{{ .Title }}</h2>
