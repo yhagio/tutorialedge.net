@@ -1,7 +1,6 @@
 ---
 title: "Building a Solid Continuous Integration Pipeline with TravisCI for Your Go Projects"
 date: 2018-10-16T20:10:30+01:00
-draft: true
 weight: 36
 desc: In this tutorial, we look at how you can build a solid CI pipeline with Travis for your Go Projects
 series: golang
@@ -12,11 +11,11 @@ author: Elliot Forbes
 twitter: https://twitter.com/Elliot_f
 ---
 
-For those who don't know, we are currently half-way through [Hacktoberfest](https://hacktoberfest.digitalocean.com/) which is an event that helps to support thousands of different Open Source projects. Usually, I tend to get caught up in other projects or can't find the time or make up a hundred other excuses for not taking part. 
+So, I recently partook in [Hacktoberfest](https://hacktoberfest.digitalocean.com/) which is an event that helps to support thousands of different Open Source projects. Usually, I tend to get caught up in other projects or can't find the time or make up a hundred other excuses for not taking part.
 
 This year however, is different, and I've made an attempt at doing more Open Source work just so I can earn myself a free t-shirt. And also to force myself to improve my Go programming skills and contribute back to a community I'm incredibly grateful for. But mostly for the t-shirt...
 
-So, through my travels, one thing seemed to be prevalent across multiple high-quality projects and that was they had a solid CI/CD pipeline for making changes to their codebase. If you look at the likes of  
+So, through my travels, one thing seemed to be prevalent across multiple high-quality projects and that was they had a solid **continuous integration**, and sometimes **continuous deployment** pipeline that is triggered whenever somebody makes changes to their codebase. 
 
 # The Benefits of a CI/CD Pipeline
 
@@ -42,6 +41,16 @@ Now, the process for making any changes to our Go package will be slightly more 
 
 # Step 1 - Setting up Travis-CI
 
+The very first thing we will have to do, is to set up travis to work with our open-source project. You'll have to register an account with them if you haven't already, from there, you'll then be able to find the project you want to enable and you can toggle it:
+
+![Setup Travis](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/golang/go-ci-pipeline/screenshot-04.png)
+
+This will then take you to a build page for your repository, which will look a little something like this, but with no builds:
+
+![travis homepage](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/golang/go-ci-pipeline/screenshot-05.png)
+
+Once you have successfully set this up, it's time to go about adding a `.travis.yml` file to the root of your project. When you add this, Travis-CI will automatically see this and execute whatever pipeline you define within it:
+
 ```yaml
 # .travis.yml
 language: go
@@ -54,20 +63,9 @@ go:
   - "1.10"
   - "1.11"
   - tip
-
-script:
-  - ./.travis.gofmt.sh
 ```
 
-```sh
-#!/bin/bash
-
-if [ -n "$(gofmt -l .)" ]; then
-  echo "Go code is not formatted:"
-  gofmt -d .
-  exit 1
-fi
-```
+Now, with everything on the travis side setup, we can move on to triggering our pipeline and adding more functionality to it. Right now it doesn't do an awful lot, so let's change that!
 
 # Step 2 - Trigger with a Pull Request
 
@@ -100,7 +98,6 @@ go:
   - tip
 
 script:
-  - ./.travis.gofmt.sh
   - go test -v -race $(go list ./... | grep -v vendor)
 ```
 
@@ -140,6 +137,75 @@ func TestCalculation(t *testing.T) {
 
 When we try and run this test locally, we see that all tests pass. Awesome, 
 
+# Step 4 - Auto Formatting our Code
+
+Now that we've got our tests automatically running on a code change, it's time to add automatic formatting using gofmt. 
+
+> **Note -** If you want to learn more about the `gofmt` tool, you can read up on it here: [gofmt](https://golang.org/cmd/gofmt/)
+
+Let's update our `.travis.yml` file to include a gofmt step in our script. We'll do this prior to running our test suite as any failures at the format stage make the tests passing or failing irrelevant.
+
+Create a new file called `.travis.gofmt.sh` within your project's root directory and add the following:
+
+```sh
+#!/bin/bash
+
+if [ -n "$(gofmt -l .)" ]; then
+  echo "Go code is not formatted:"
+  gofmt -d .
+  exit 1
+fi
+```
+
+If you are unfamiliar with scripting, this essentially goes away and runs the `gofmt` command with the -d flag in the current directory. If this fails, it will throw exit code 1 and the build will ultimately fail.
+
+We then need to update our `.travis.yml` file to run this new shell script like so:
+
+```yml
+language: go
+
+sudo: false
+
+go:
+  - "1.8"
+  - "1.9"
+  - "1.10"
+  - "1.11"
+  - tip
+
+script:
+  - ./.travis.gofmt.sh
+  - go test -v -race $(go list ./... | grep -v vendor)
+```
+
+
+# Step 5 - Setting up Reviewers in Github
+
+Finally, should all of our tests and formatting checks pass, we need to set up some reviewers for our project that will be able to manually verify that we aren't adding malicious code or extending the project in a way that is unsuitable.
+
+In order to do this, we need to go to the `Settings` tab within our github project and check the box that asks `Require pull request reviews before merging`:
+
+![setting up reviewers](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/golang/go-ci-pipeline/screenshot-01.png)
+
+You'll also want to check the `Require status cheks to pass before merging` option to ensure that the pipeline we have put in place is actively enforced for every pull request.
+
+After this is done, we've successfully pulled together a really simple and effective continuous integration pipeline for our Go project. 
+
+# Step 6 - Testing it All Works
+
+Now that everything is in place, it is time to test it all works. Create a new branch on your project and open a new pull request to `master` from your branch.
+
+![branch to master](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/golang/go-ci-pipeline/screenshot-02.png)
+
+This will then go off, and attempt to run our travis-CI pipeline:
+
+![travis-ci](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/golang/go-ci-pipeline/screenshot-03.png)
+
+And finally, you will be able to merge (if approved) into master:
+
+![merge to master](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/golang/go-ci-pipeline/screenshot-04.png)
+
+If you have set up your branch rules correctly, any outsiders attempting to submit a PR into your project will have to be reviewed and approved over and above passing the travis pipeline before they can get their changes into master.
 
 # Conclusion
 
