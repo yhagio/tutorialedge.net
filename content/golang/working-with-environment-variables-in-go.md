@@ -1,13 +1,13 @@
 ---
 title: "Working With Environment Variables in Go"
 date: 2018-12-04T16:15:42Z
-draft: true
 desc: The definitive list of all the books you should buy if you want to master the
   art of programming Golang applications
 series: golang
 image: golang.png
 tags:
 - intermediate
+author: Elliot Forbes
 twitter: https://twitter.com/Elliot_F
 ---
 
@@ -151,6 +151,20 @@ func main() {
 We could start this application with our `FEATURE_TOGGLE` environment variable set to `TRUE` which would enable our "Exciting New Feature", however, should we notice an issue with this new feature after running it in production, we can kill the process and change the environment variable to `FALSE` before quickly restarting our application.
 
 In a distributed system, this downtime should see our application instance being taken out of a load balancer group whilst it's down and then being re-added to the load balancer group when it is brought back up.
+
+# Setup Of Environment Variables
+
+In more complex applications, you may have tens, if not hundreds of different environment variables that need to be set prior to application startup. 
+
+Now, there are a number of different techniques when it comes to managing these environment variables. This is something that has a "fuzzy" answer unfortunately, different organizations have different security criteria that mean some perfectly valid solutions aren't fit for them.
+
+> **Note -** Securing your credentials is something that requires a lot of consideration and time to ensure you get it right. These are only suggestions, but the onus is on you to go and research the solution that is right for your team.
+
+* **git-crypt** - [AGWA/git-crypt](https://github.com/AGWA/git-crypt) - Allows transparent encryption/decryption of files in a git repo, with this you can encrypt a bash file which sets up your config and decrypt it when you need to run it -
+* **AWS SSM** - [https://aws.amazon.com/secrets-manager/](https://aws.amazon.com/secrets-manager/) - If you are working on AWS specific kit, this allows you to manage credentials through a service -
+* **Within your CI/CD Tool** - [Example - https://travis-ci.org/](https://travis-ci.org/) - Inject your environment credentials once into their service and allow them to inject it into your build jobs automatically with the only manual stage happening 
+
+These are just a few potential suggestions, hopefully they give you some indication as to how to handle this in a production environment in a secure fashion.
 
 # Conclusion
 
