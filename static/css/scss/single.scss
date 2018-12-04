@@ -120,12 +120,12 @@ article {
   }
 
   p > code {
-    padding: 2px 8px;
-    -webkit-border-radius: 2px;
-    border-radius: 2px;
-    color: #333;
-    background-color: rgba(27,31,35,.1);
-    font-size: 1.6rem;
+    font-size: 80%;
+    padding: 2px 3px;
+    border-radius: 3px;
+    background-color: #fafafa;
+    border: 1px solid #e6e6e6;
+    color: inherit;
   }
 
   blockquote {
