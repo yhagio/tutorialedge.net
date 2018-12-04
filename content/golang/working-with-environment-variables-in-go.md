@@ -11,7 +11,7 @@ author: Elliot Forbes
 twitter: https://twitter.com/Elliot_F
 ---
 
-As you start to build ever more complex Go-based applications, we start to face challenges when it comes to safely introducing new features, or handling credentials for the likes of databases, or brokers. 
+As we start to build ever more complex Go-based applications, we start to face challenges when it comes to safely introducing new features, or handling credentials for the likes of databases, or brokers. 
 
 Using environment variables is an excellent way to simplify a number of different aspects such as handling credentials across various different environments, as well as simplifying the implementation of feature flags in your system.
 
