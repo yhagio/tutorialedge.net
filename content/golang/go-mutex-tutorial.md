@@ -6,7 +6,7 @@ desc: In this tutorial, we are going to look at how you can use mutexes in your 
 series: golang
 image: golang.png
 tags:
-- advanced
+- concurrency
 title: Go Mutex Tutorial
 twitter: https://twitter.com/Elliot_F
 weight: 24

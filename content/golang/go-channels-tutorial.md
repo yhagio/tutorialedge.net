@@ -1,12 +1,11 @@
 ---
 author: Elliot Forbes
 date: 2018-08-25T14:47:06+01:00
-desc: In this tutorial, we are going to look at how you can use channels in your Go
-  programs
+desc: In this tutorial, we are going to look at how you can use channels in your Go programs
 series: golang
 image: golang.png
 tags:
-- advanced
+- concurrency
 title: Go Channels Tutorial
 twitter: https://twitter.com/Elliot_F
 weight: 25

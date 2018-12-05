@@ -6,7 +6,7 @@ desc: In this tutorial we examine how we can build concurrent highly performant 
 series: golang
 image: golang.png
 tags:
-- advanced
+- concurrency
 title: Concurrency With Golang Goroutines
 twitter: https://twitter.com/Elliot_F
 weight: 22
