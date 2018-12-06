@@ -12,11 +12,11 @@ title: Executing System Commands With Golang
 twitter: https://twitter.com/Elliot_F
 ---
 
-This tutorial is just a quick and simple tutorial as to how to execute system commands using Google's GoLang programming language.
+> **Last Updated -** 6th December, 2018
 
-# Official Documentation
+In this tutorial, we are going to be taking a look at the `os/exec` package in the standard library and how we can use this to successfully execute system commands within our Go applications.
 
-The official documentation for executing system commands can be found under the exec package: [Exec Package](https://golang.org/pkg/os/exec/). 
+> **Note -** The official documentation for executing system commands can be found under the exec package: [os/exec package](https://golang.org/pkg/os/exec/). 
 
 # Cross Compatibility Issues
 
@@ -92,4 +92,8 @@ func main() {
 
 # Conclusion
 
+So, in this tutorial, we looked at how we could leverage the `os/exec` package in Go to execute system commands within our Go programs. 
+
 If you found this tutorial useful or wish to ask anything extra then please feel free to do so in the comments section below!
+
+> **Note -** If you want to keep up to date with the latest articles and updates on the site then please feel free to follow me on twitter: [@Elliot_f](https://twitter.com/elliot_f)
