@@ -15,8 +15,9 @@ In this tutorial, we are going to be looking at `Variadic Functions` in Go. We'l
 
 # Variadic Functions
 
-There are times, when we do not know how many string arguments we will require for our functions. 
+There are times, when we do not know how many string arguments we will require for our functions. This is where `variadic functions` come into play. 
 
+Variadic functions allow us to define functions that take in an arbitrary number of arguments. This prevents us having to code against every possible variation of input length and this concept transfers across a wide number of different languages such as Python and in Java.
 
 ```go
 package main
@@ -40,6 +41,8 @@ If we attempt to run this, we should see that our call to `fmt.Println()` will p
 $ go run main.go
 [hello world]
 ```
+
+> **Note -** Variadic Functions are not limited to strings, we can use any variation of composite or basic types. 
 
 # Production Examples
 
