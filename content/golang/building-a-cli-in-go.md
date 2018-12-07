@@ -303,3 +303,4 @@ As you can see, all of our commands have been successfully listed in the COMMAND
 
 So, in this tutorial we've managed to successfully build a really simple, yet effective CLI using the `urface/cli` package from Github. The CLI can be cross-compiled for any of the major operating systems with minimal fuss and it features all the functionality that you would expect from a production-grade command line interface.
 
+> **Note -** If you want to keep up to date with the latest articles and updates on the site then please feel free to follow me on twitter: [@Elliot_f](https://twitter.com/elliot_f)

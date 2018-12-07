@@ -116,3 +116,9 @@ func main() {
 # Conclusion
 
 So, in this article we managed to cover quite a fair bit on functions within the go programming language. Hopefully, you found this useful! If you require any further help or assistance then please feel free to let me know in the comments section below!
+
+> **Note -** If you want to keep up to date with the latest articles and updates on the site then please feel free to follow me on twitter: [@Elliot_f](https://twitter.com/elliot_f)
+
+## Further Reading
+
+* [Go Variadic Function Tutorial](/golang/go-variadic-function-tutorial/)

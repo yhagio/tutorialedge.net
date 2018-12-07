@@ -134,3 +134,4 @@ So, hopefully you found this tutorial useful and it has given you insight as to 
 
 If you found it useful or require more information then please let me know in the comments section below!
 
+> **Note -** If you want to keep up to date with the latest articles and updates on the site then please feel free to follow me on twitter: [@Elliot_f](https://twitter.com/elliot_f)
