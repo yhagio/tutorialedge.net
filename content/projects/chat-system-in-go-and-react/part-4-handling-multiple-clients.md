@@ -13,11 +13,16 @@ twitter: https://twitter.com/Elliot_F
 
 > **Note -** This post is part 4 of a series on building a chat application in Go with ReactJS. You can find part 3 here - [Part 3 - Designing Our Frontend](/projects/chat-system-in-go-and-react/part-3-designing-our-frontend/)
 
-It's time to implement the ability to handle multiple clients and broadcast any received messages to every connected client. By the end of this part of the series, we'll have implemented a Pool mechanism that will effectively allow us to track how many connections we have into our WebSocket server. We'll also be able to broadcast any received messages to all connections within our connection pool.
+It's time to implement the ability to handle multiple clients and broadcast any received messages to every connected client. By the end of this part of the series we'll have:
+
+* implemented a Pool mechanism that will effectively allow us to track how many connections we have into our WebSocket server. 
+* We'll also be able to broadcast any received messages to all connections within our connection pool.
+* We'll also be able to inform any existing clients when another client connects or disconnects.
 
 Our application will look a little like this by the end of this part of the tutorial:
 
-![SCREENSHOT HERE]()
+![Chat Application Screenshot](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/chat-app-go-react/screenshot-01.png)
+
 
 # House Cleaning our Backend
 
@@ -319,7 +324,22 @@ func Upgrade(w http.ResponseWriter, r *http.Request) (*websocket.Conn, error) {
 
 # Testing it Works
 
-![SCREENSHOT HERE]()
+![Chat Application Screenshot](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/chat-app-go-react/screenshot-01.png)
+
+```s
+$ go run main.go
+Distributed Chat App v0.01
+WebSocket Endpoint Hit
+Size of Connection Pool:  1
+&{ 0xc0000f46e0 0xc0000a8340 {0 0}}
+WebSocket Endpoint Hit
+Size of Connection Pool:  2
+&{ 0xc0000f46e0 0xc0000a8340 {0 0}}
+&{ 0xc000164000 0xc0000a8340 {0 0}}
+Message Received: {Type:1 Body:hello}
+Sending message to all clients in Pool
+Message Received: {Type:1 Body:hello}
+```
 
 # Conclusion
 

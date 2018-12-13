@@ -38,4 +38,4 @@ The best part about this course is that it is entirely free. By keeping this cou
 
 By the end of this course, you should have an application that looks something like this:
 
-![]()
+![Chat Application Screenshot](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/chat-app-go-react/screenshot-01.png)
