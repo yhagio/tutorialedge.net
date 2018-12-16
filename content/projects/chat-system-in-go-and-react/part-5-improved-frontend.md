@@ -100,7 +100,10 @@ This message is just displayed as is, in JSON format, with no additional styling
 
 ## Our Message Component
 
+Let's start off by defining our `Message.jsx` file. This component is going to take in the message it needs to display through a `prop`. It'll then parse this `prop` called `message` and store it in the components `state` which we can then use within our `render` function.
+
 ```jsx
+// src/components/Message/Message.jsx
 import React, { Component } from 'react';
 import './Message.scss';
 
@@ -126,11 +129,16 @@ class Message extends Component {
 export default Message;
 ```
 
+And, as always, we'll need to define an `index.js` file to make it visible throughout the rest of our project:
+
 ```js
+// src/components/Message/index.js
 import Message from './Message.jsx'
 
 export default Message;
 ```
+
+Now, on to our component's styling. This will be fairly rudimentary and just display the message in a box for now with some `box-shadow` set to make it stand out and give our chat a bit of visual depth.
 
 ```css
 .Message {
@@ -150,9 +158,32 @@ export default Message;
 }
 ```
 
+## Updating our Chat History Component
+
+Now that we've created this `Message` component, we can start using this within our `ChatHistory` component. In order to do this, we'll need to update our `render()` function like so:
+
+```jsx
+render() {
+  console.log(this.props.chatHistory);
+  const messages = this.props.chatHistory.map(msg => <Message message={msg.data} />);
+
+  return (
+    <div className='ChatHistory'>
+      <h2>Chat History</h2>
+      {messages}
+    </div>
+  );
+};
+```
+
+On `line 3`, you'll see we've updated our `.map` function to return a `<Message />` component with the message `prop` set to our `msg.data`. This will subsequently pass in the JSON string to every message component and it will then be able to parse and render that, as it wishes.
+
+If we save everything, we should then see that, whenever we receive a new message from our WebSocket endpoint, it renders nicely within our `ChatHistory` component!
 
 # Conclusion
 
-So, 
+So, in this tutorial, we improved upon our existing frontend design and implemented the ability to send custom messages back to our backend WebSocket server. 
+
+In the next part of this course, we are going to take this further and add authorization to our application using Auth0.
 
 > **Enjoying This Series?** - If you are enjoying this series, or have any feedback, I would love to hear it on twitter and see your progress in the form of screenshots! - [@Elliot_f](https://twitter.com/elliot_f). 
