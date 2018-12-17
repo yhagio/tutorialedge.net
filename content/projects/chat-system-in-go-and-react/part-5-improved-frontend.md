@@ -184,6 +184,4 @@ If we save everything, we should then see that, whenever we receive a new messag
 
 So, in this tutorial, we improved upon our existing frontend design and implemented the ability to send custom messages back to our backend WebSocket server. 
 
-In the next part of this course, we are going to take this further and add authorization to our application using Auth0.
-
 > **Enjoying This Series?** - If you are enjoying this series, or have any feedback, I would love to hear it on twitter and see your progress in the form of screenshots! - [@Elliot_f](https://twitter.com/elliot_f). 

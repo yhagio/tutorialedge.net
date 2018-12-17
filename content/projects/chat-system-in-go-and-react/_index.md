@@ -26,9 +26,9 @@ As we go, I'll be introducing more and more advanced Go techniques and how they 
 
 * Initial Setup 
 * WebSockets in Go with gorilla/websocket
-* Authentication with OAuth2 using Auth0
 * Frontend Development with ReactJS
-* CockroachDB
+* Docker and Deploying your Application
+* Building a CI/CD pipeline for ongoing rapid development and testing
 
 ## Entirely Free
 
