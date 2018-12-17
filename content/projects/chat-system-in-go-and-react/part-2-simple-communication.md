@@ -277,4 +277,6 @@ So, thus concludes part 2 of this series. We've been able to create a really sim
 
 This step, is a critical first step in developing our application and now that we have the basics up and running, we can start to look at implementing basic chat functionality and making our app useful!
 
+Check out the next part of this series here: [Part 3 - Improving our Frontend](/projects/chat-system-in-go-and-react/part-3-designing-our-frontend/)
+
 > **Enjoying This Series?** - If you are enjoying this series, or have any feedback, I would love to hear it on twitter and see your progress in the form of screenshots! - [@Elliot_f](https://twitter.com/elliot_f). 

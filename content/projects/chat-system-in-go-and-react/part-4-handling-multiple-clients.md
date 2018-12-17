@@ -19,16 +19,14 @@ It's time to implement the ability to handle multiple clients and broadcast any 
 * We'll also be able to broadcast any received messages to all connections within our connection pool.
 * We'll also be able to inform any existing clients when another client connects or disconnects.
 
-Our application will look a little like this by the end of this part of the tutorial:
+Our application will look a little like this by the end of this part of the course:
 
 ![Chat Application Screenshot](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/chat-app-go-react/screenshot-01.png)
 
 
-# House Cleaning our Backend
+# A Bit of House Cleaning For our Backend
 
-So, before we go any further and extend our backend, we need to do a bit of house cleaning. 
-
-We'll need to run the following commands in order to continue progress:
+So, before we go any further and extend our backend, we need to do a bit of house cleaning. We'll be using go's new experimental modules in order to manage our application's dependencies and ensure that we have the right version of our packages downloaded when we go to build and run our application.
 
 ```s
 $ cd backend
@@ -40,17 +38,24 @@ This should initialize go modules within our backend project and it means we can
 
 Once, you've run these commands, you should notice that this has automatically generated two new files within your `backend/` directory. These should be the `go.mod` and the `go.sum` files.
 
+* **go.mod** - This file is a bit like your standard `package.json` in a NodeJS project. It basically details all of the packages and versions required by our project in order to build and run. In this instance, it should just contain 1 `require` statement for `github.com/gorilla/websocket`
+* **go.sum** - This file is used for validation purposes, it contains the expected cryptographic checksums of the content of specific module versions for your application.
+
 > **Note -** For more information on the new experimental Go modules feature, check out the official Wiki page: [Go Modules](https://github.com/golang/go/wiki/Modules)
 
 # Splitting out our Websocket Code
 
-Ideally, your `main.go` file should just be an entry point into your Go application, it should be fairly minimal and call out to other packages within your project. 
+Now that we've done that necessary bit of house-cleaning, we can move on to improving our codebase. We're going to be splitting up some of our application into sub-packages for easier development.
+
+Now, ideally, your `main.go` file should just be an entry point into your Go application, it should be fairly minimal and call out to other packages within your project. 
 
 > **Note -** We'll be basing our project layout on the unofficial standard for Go projects - [golang-standards/project-layout](https://github.com/golang-standards/project-layout)
 
 Let's create a new directory called `pkg/` within our backend directory. Within this, we'll want to create another directory called `websocket/` which will contain a `websocket.go` file.
 
-We'll be moving a lot of our WebSocket specific code that we currently have in our `main.go` file into this new `websocket.go` file. One key thing to note though, is that when we copy over our functions, we'll need to capitalize first letter of each function that we want to make visible to the rest of our project.
+We'll be moving a lot of our WebSocket specific code that we currently have in our `main.go` file into this new `websocket.go` file. 
+
+> **Note -** One key thing to note though, is that when we copy over our functions, we'll need to capitalize first letter of each function that we want to make visible to the rest of our project.
 
 ```go
 package websocket
@@ -122,7 +127,7 @@ func Writer(conn *websocket.Conn) {
 }
 ```
 
-We'll then want to update our `main.go` file to call out to this new package:
+Now that we've created this new `websocket` package, we'll then want to update our `main.go` file to call out to this new package. We'll first have to add a new import to our list of imports at the top of our file, and then we can call the functions within that package by prepending the calls with `websocket.` like so:
 
 ```go
 package main
@@ -184,14 +189,25 @@ In order to do this, we'll need to consider how we are handling connections in t
 
 ## Using Channels
 
-We're going to be working on a system that features a lot of concurrent connections, therefore, it makes sense to use channels to communicate across multiple goroutines in a synchronized manner.
+We're going to be working on a system that features a lot of concurrent connections. For each of these concurrent connections, a new `goroutine` is spun up for the duration of that connection. This means that we have to worry about communication across these concurrent `goroutines` and ensure that whatever we are doing, is thread-safe. 
+
+This means that, when we are implementing a `Pool` structure further down the line, we'll have to consider either using a `sync.Mutex` to mutually exclude `goroutines` from simultaneously accessing/modifying our data, or we can use `channels`.
+
+For this project, I think we'll be better off using `channels` and using them to communicate in a safe fashion across these multiple, concurrent `goroutines`.
 
 > **Note -** If you wish to learn more about channels in Go, you can check out my other article here: [Go Channels Tutorial](/golang/go-channels-tutorial/)
 
-By employing Channels, we can ensure that we can safely modify certain aspects of our 
-
-
 ## Client.go
+
+Let's start off by creating a new file called `Client.go`, this will live within our `pkg/websocket` directory and within it we'll define a `Client` struct which contain the following:
+
+* **ID** - a uniquely identifiably string for a particular connection
+* **Conn** - a pointer to a `websocket.Conn` object
+* **Pool** - a pointer to the Pool which this client will be part of
+
+We'll also define a `Read()` method which will constantly listen in for new messages coming through on this `Client`'s websocket connection. 
+
+If there are any messages, it will pass these messages to the Pool's `Broadcast` channel which subsequently broadcasts the received message to every client within the pool.
 
 ```go
 package websocket
@@ -208,7 +224,6 @@ type Client struct {
 	ID   string
 	Conn *websocket.Conn
 	Pool *Pool
-	mu   sync.Mutex
 }
 
 type Message struct {
@@ -235,7 +250,13 @@ func (c *Client) Read() {
 }
 ```
 
+Awesome, now that we've defined our Client within our code, we can move on to implementing our Pool. 
+
 ## Pool Struct
+
+We'll create a new file within the same directory as our `client.go` file and our `websocket.go` file called `pool.go`
+
+Let's start off by defining a `Pool` struct which will contain all of the `channels` we need for concurrent communication, as well as a `map` of clients.
 
 ```go
 package websocket
@@ -259,7 +280,14 @@ func NewPool() *Pool {
 }
 ```
 
-> **Note -** We need to ensure that only one point of our application has the ability to write to our WebSocket connections or we'll face concurrent write issues.
+We need to ensure that only one point of our application has the ability to write to our WebSocket connections or we'll face concurrent write issues. So, let's define our `Start()` method which will constantly listen for anything passed to any of our `Pool`'s channels and then, if anything is received into one of these channels, it'll act accordingly.
+
+* **Register** - Our register channel will send out `New User Joined...` to all of the clients within this pool when a new client connects.
+* **Unregister** - Will unregister a user and notify the pool when a client disconnects.
+* **Clients** - a map of clients to a boolean value. We can use the boolean value to dictate active/inactive but not disconnected further down the line based on browser focus. 
+* **Broadcast** - a channel which, when it is passed a message, will loop through all clients in the pool and send the message through the socket connection.
+
+Let's code this up now:
 
 ```go
 func (pool *Pool) Start() {
@@ -295,6 +323,8 @@ func (pool *Pool) Start() {
 
 ## Websocket.go
 
+Awesome, let's make some more small changes to our `websocket.go` file and remove some of the no-longer necessary functions and methods:
+
 ```go
 package websocket
 
@@ -322,25 +352,73 @@ func Upgrade(w http.ResponseWriter, r *http.Request) (*websocket.Conn, error) {
 }
 ```
 
+# Updating our main.go file:
+
+And finally, we'll need to update our `main.go` file to create a new `Client` on every connection and to register that client with a `Pool`:
+
+```go
+package main
+
+import (
+	"fmt"
+	"net/http"
+
+	"github.com/TutorialEdge/realtime-chat-go-react/pkg/websocket"
+)
+
+func serveWs(pool *websocket.Pool, w http.ResponseWriter, r *http.Request) {
+	fmt.Println("WebSocket Endpoint Hit")
+	conn, err := websocket.Upgrade(w, r)
+	if err != nil {
+		fmt.Fprintf(w, "%+v\n", err)
+	}
+
+	client := &websocket.Client{
+		Conn: conn,
+		Pool: pool,
+	}
+
+	pool.Register <- client
+	client.Read()
+}
+
+func setupRoutes() {
+	pool := websocket.NewPool()
+	go pool.Start()
+
+	http.HandleFunc("/ws", func(w http.ResponseWriter, r *http.Request) {
+		serveWs(pool, w, r)
+	})
+}
+
+func main() {
+	fmt.Println("Distributed Chat App v0.01")
+	setupRoutes()
+	http.ListenAndServe(":8080", nil)
+}
+```
+
 # Testing it Works
 
-![Chat Application Screenshot](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/chat-app-go-react/screenshot-01.png)
+Now that we've made all of the necessary changes, we should be in a great place to test what we've done and ensure everything is working as intended. 
+
+Kick off your backend application:
 
 ```s
 $ go run main.go
 Distributed Chat App v0.01
-WebSocket Endpoint Hit
-Size of Connection Pool:  1
-&{ 0xc0000f46e0 0xc0000a8340 {0 0}}
-WebSocket Endpoint Hit
-Size of Connection Pool:  2
-&{ 0xc0000f46e0 0xc0000a8340 {0 0}}
-&{ 0xc000164000 0xc0000a8340 {0 0}}
-Message Received: {Type:1 Body:hello}
-Sending message to all clients in Pool
-Message Received: {Type:1 Body:hello}
 ```
 
+If you open up `http://localhost:3000` in a couple of browser tabs, you should notice that these connect automatically to our backend WebSocket server and we can now send and receive messages from other clients connected within the same `Pool`!
+
+![Chat Application Screenshot](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/chat-app-go-react/screenshot-01.png)
+
 # Conclusion
+
+So, in this part of the series, we managed to implement a way to handle multiple clients and broadcast messages to everyone connected in the connection pool. 
+
+Now things are starting to get a bit more interesting. We can start adding in cool new features such as custom messages in the next part of this series.
+
+Check out the next part of this series here: [Part 5 - Improving the Frontend](/projects/chat-system-in-go-and-react/part-5-improved-frontend/)
 
 > **Enjoying This Series?** - If you are enjoying this series, or have any feedback, I would love to hear it on twitter and see your progress in the form of screenshots! - [@Elliot_f](https://twitter.com/elliot_f). 

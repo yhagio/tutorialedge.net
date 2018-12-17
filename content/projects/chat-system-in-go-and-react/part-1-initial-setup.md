@@ -81,8 +81,8 @@ README.md
 yarn.lock
 ```
 
-# Next Steps
+# Conclusion
 
 Awesome, we've successfully setup both our frontend and our backend pieces of our project and we can get cracking on adding cool functionality.
 
-* [Part 2](#)
+Check out the next part of this series here: [Part 2 - Simple Communication](/projects/chat-system-in-go-and-react/part-2-simple-communication/)
