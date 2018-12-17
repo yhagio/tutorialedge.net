@@ -21,7 +21,7 @@ So, let's dive in!
 
 # A Chat Input Component
 
-Let's start off by creating a new `component` within our `frontend/` React project. This component will encapsulate all of the logic behind taking a users' text input and then sending it off to our WebSocket endpoint to then be broadcast to others.
+Let's start off by creating a new `component` within our `frontend/` React project. This component will essentially just render an `<input/>` and then listen for any `onKeyDown` events. When a key press is registered whilst the focus is within the `<input/>` element, it will trigger whatever function we'll pass to this component later on.
 
 ```jsx
 import React, { Component } from 'react';
@@ -42,6 +42,8 @@ class ChatInput extends Component {
 export default ChatInput;
 ```
 
+We'll then define a bit of styling for our new input component. This will be fairly simple for now: 
+
 ```css
 .ChatInput {
   width: 95%;
@@ -61,6 +63,8 @@ export default ChatInput;
 }
 ```
 
+With our component and our styles defined, we just need to export it.
+
 ```js
 import ChatInput from './ChatInput.jsx'
 
@@ -69,14 +73,7 @@ export default ChatInput;
 
 ## Updating our App.js
 
-```js
-send(event) {
-  if(event.keyCode === 13) {
-    sendMsg(event.target.value);
-    event.target.value = "";
-  }
-}
-```
+Ok, so we've created our `ChatInput` component, we can update our `App.js` component so that it uses this newly created component and pass in the already defined `send()` function to said component.
 
 ```jsx
 render() {
@@ -90,7 +87,22 @@ render() {
 }
 ```
 
+We've passed in the defined `send()` function, which for now simply sends a simple `"Hello"` to our WebSocket endpoint. Let's update this now so that it takes in the context for the event that triggered it. 
+
+By passing in this `event`, we'll be able to query if the key pressed was the `Enter` key, if it is, we'll be able to send the value of our `<input/>` field to our WebSocket endpoint and then subsequently clear that `<input/>`:
+
+```js
+send(event) {
+  if(event.keyCode === 13) {
+    sendMsg(event.target.value);
+    event.target.value = "";
+  }
+}
+```
+
 ## Trying it out
+
+Now that we've created our `ChatInput` component, we can test it out. Run your Go WebSocket server and your frontend, try sending some custom messages and see if everything works as expected.
 
 # Improving Our Chat History Component
 
@@ -183,5 +195,7 @@ If we save everything, we should then see that, whenever we receive a new messag
 # Conclusion
 
 So, in this tutorial, we improved upon our existing frontend design and implemented the ability to send custom messages back to our backend WebSocket server. 
+
+Check out the next part of this series here: [Part 6 - Docker-izing your Backend](/projects/chat-system-in-go-and-react/part-6-dockerizing-your-backend/)
 
 > **Enjoying This Series?** - If you are enjoying this series, or have any feedback, I would love to hear it on twitter and see your progress in the form of screenshots! - [@Elliot_f](https://twitter.com/elliot_f). 
