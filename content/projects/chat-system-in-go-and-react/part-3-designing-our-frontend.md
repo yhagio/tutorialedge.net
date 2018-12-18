@@ -17,7 +17,8 @@ In this part of the series, we're going to be looking at improving our frontend 
 
 By the end of this part of the series, you should have a really solid looking frontend which looks a little something like this:
 
-![IMAGE GOES HERE]()
+![Chat Application Screenshot](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/chat-app-go-react/screenshot-02.png)
+
 
 # Component Based Approach
 
@@ -248,7 +249,7 @@ render() {
 
 When we compile and run both our `frontend` and `backend`, we should see that whenever we hit the `send message` button on our frontend, it continues to send a message across our WebSocket connection to our backend, our backend then echoes it back to the frontend and it's rendered successfully within our `ChatHistory` component!
 
-![SCREENSHOT HERE]()
+![Chat Application Screenshot](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/chat-app-go-react/screenshot-02.png)
 
 # Conclusion
 

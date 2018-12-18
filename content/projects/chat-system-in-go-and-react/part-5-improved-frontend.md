@@ -192,6 +192,8 @@ On `line 3`, you'll see we've updated our `.map` function to return a `<Message 
 
 If we save everything, we should then see that, whenever we receive a new message from our WebSocket endpoint, it renders nicely within our `ChatHistory` component!
 
+![Chat Application Screenshot](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/chat-app-go-react/screenshot-02.png)
+
 # Conclusion
 
 So, in this tutorial, we improved upon our existing frontend design and implemented the ability to send custom messages back to our backend WebSocket server. 

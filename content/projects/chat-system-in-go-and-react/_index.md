@@ -12,11 +12,13 @@ title: Building a Chat Application in Go with ReactJS
 twitter: https://twitter.com/Elliot_F
 ---
 
-In this project, we'll be looking at building a chat system using both Go for our backend and React.JS for our Frontend.
-
 # Goals for the Course
 
-This course will help to cement Go concepts and techniques and give you real-world experience of developing your own applications written in the language.
+In this project, we'll be looking at building a chat system using both Go for our Backend and React.JS for our Frontend.
+
+This course will help to cement concurrent Go concepts and techniques and give you real-world experience of developing a more complex Go application and hopefully get you comfortable writing idiomatic Go programs.
+
+## The Approach
 
 We'll be building this chat application up piece-by-piece, experimenting as we go to ensure that the course remains enjoyable and rewarding throughout. 
 
@@ -26,9 +28,10 @@ As we go, I'll be introducing more and more advanced Go techniques and how they 
 
 * Initial Setup 
 * WebSockets in Go with gorilla/websocket
+* Goroutines and Concurrency Basics
+* Safe Concurrent Communication
 * Frontend Development with ReactJS
 * Docker and Deploying your Application
-* Building a CI/CD pipeline for ongoing rapid development and testing
 
 ## Entirely Free
 

@@ -19,17 +19,22 @@ We'll start off this course by setting up both of our projects. Once we've got t
 
 If you are familiar with Go, this step is fairly easy, we'll want to start off by creating a new directory called `backend` within our project directory. 
 
-This `backend` directory will house all of our Go code for this project.
-
-We'll then want to initialize our project by calling:
+This `backend` directory will house all of our Go code for this project. We'll then want to initialize our project by calling:
 
 ```s
 $ cd backend
 $ GOMODDULES=on
-$ go mod init github.com/tutorialedge/chat-app/backend
+$ go mod init github.com/TutorialEdge/realtime-chat-go-react
 ```
 
-This will add a `go.mod` file to our project and should set us up nicely for when we want to start adding some code.
+This should initialize go modules within our backend project and it means we can start fleshing out our project and making it a proper Go application.
+
+Once, you've run these commands, you should notice that this has automatically generated two new files within your `backend/` directory. These should be the `go.mod` and the `go.sum` files.
+
+* **go.mod** - This file is a bit like your standard `package.json` in a NodeJS project. It basically details all of the packages and versions required by our project in order to build and run.
+* **go.sum** - This file is used for validation purposes, it contains the expected cryptographic checksums of the content of specific module versions for your application.
+
+> **Note -** For more information on the new experimental Go modules feature, check out the official Wiki page: [Go Modules](https://github.com/golang/go/wiki/Modules)
 
 ## Validating Everything Works
 
@@ -54,7 +59,7 @@ $ go run main.go
 Chat App v0.01
 ```
 
-If that worked successfully, we can then move on to setting up our Frontend application.
+Awesome, if that worked successfully, we can then move on to setting up our Frontend application. 
 
 # Setting Up Our React Frontend
 

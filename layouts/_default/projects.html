@@ -3,7 +3,18 @@
 
 <div class="top-bar">
 	<div class="container">
-		<h2>Course: {{.Title}}</h2>
+		<div class="row">
+			<div class="col-sm-2">
+					{{ if .Params.image }}
+					<img src="{{ .Site.BaseURL }}/images/{{ .Params.image }}" alt="{{ .Title }} Image">
+				{{ else }}
+					<img src="{{ .Site.BaseURL }}/images/logo.png" alt="{{ .Title }} Image">
+				{{ end }}
+			</div>
+			<div class="col-sm-10">
+				<h1>Course: {{.Title}}</h1>
+			</div>
+		</div>
 	</div>
 </div>
 

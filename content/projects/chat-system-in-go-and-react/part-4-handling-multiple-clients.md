@@ -24,25 +24,6 @@ Our application will look a little like this by the end of this part of the cour
 ![Chat Application Screenshot](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/chat-app-go-react/screenshot-01.png)
 
 
-# A Bit of House Cleaning For our Backend
-
-So, before we go any further and extend our backend, we need to do a bit of house cleaning. We'll be using go's new experimental modules in order to manage our application's dependencies and ensure that we have the right version of our packages downloaded when we go to build and run our application.
-
-```s
-$ cd backend
-$ GOMODULES=on
-$ go mod init github.com/TutorialEdge/realtime-chat-go-react
-```
-
-This should initialize go modules within our backend project and it means we can start fleshing out our project and making it a proper Go application.
-
-Once, you've run these commands, you should notice that this has automatically generated two new files within your `backend/` directory. These should be the `go.mod` and the `go.sum` files.
-
-* **go.mod** - This file is a bit like your standard `package.json` in a NodeJS project. It basically details all of the packages and versions required by our project in order to build and run. In this instance, it should just contain 1 `require` statement for `github.com/gorilla/websocket`
-* **go.sum** - This file is used for validation purposes, it contains the expected cryptographic checksums of the content of specific module versions for your application.
-
-> **Note -** For more information on the new experimental Go modules feature, check out the official Wiki page: [Go Modules](https://github.com/golang/go/wiki/Modules)
-
 # Splitting out our Websocket Code
 
 Now that we've done that necessary bit of house-cleaning, we can move on to improving our codebase. We're going to be splitting up some of our application into sub-packages for easier development.

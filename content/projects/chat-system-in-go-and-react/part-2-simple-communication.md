@@ -57,15 +57,33 @@ This will run on `http://localhost:8080` and can be started by calling `go run m
  
 # The WebSocket Protocol
 
-Excellent, we've got a really simple server up and running, but how can we extend this so that it uses WebSockets? 
+Before we start fleshing this out, it's worthwhile covering the theory behind how this will work. 
 
-Well, we need to create a new endpoint and upgrade the connection from standard 
+WebSockets basically offer us duplex communication from a non-trusted source to a server that we own across a TCP socket connection. This essentially means that, instead of continually polling our web server for updates and having to perform TCP handshakes every time we poll, we can maintain a single TCP socket connection and then send and listen to messages on that.
+
+This drastically reduces the amount of network overhead that is required for the likes of any real-time application and it allows us to maintain an incredible amount of clients on a single server instance.
+
+## The Cons
+
+WebSockets definitely come with a few cons that are worth considering. As soon as you introduce state, it becomes more complex with regards to scaling up your application across multiple instances. 
+
+You have to consider options such as storing your state in message brokers, or in databases/memory caches that can scale in parallel with your application instances.
+
+## The Implementation
+
+When it comes to implementing a WebSocket endpoint, we need to create a new endpoint and then upgrade the connection from a standard HTTP endpoint to a long-lasting WebSocket connection.
+
+Thankfully, the `gorilla/websocket` package features the functionality we need in order to easily upgrade a HTTP connection to a WebSocket connection with minimal fuss.
 
 > **Note -** You can read more about the official WebSocket protocol here: [RFC-6455](https://tools.ietf.org/html/rfc6455)
 
 # Creating a WebSocket Endpoint
 
 Now that we have covered the theory, let's look at how we can do it in practice. Let's create a new endpoint `/ws` which we will convert from a standard `http` endpoint to a `ws` endpoint.
+
+This endpoint will do 3 things, it'll check the origin of our incoming `HTTP` request and then just return `true` to open up our endpoint to every client. We'll then attempt to upgrade the connection using a defined `upgrader`.
+
+Finally, we'll start listening for incoming messages and simply print them out and echo them back to the same connection. This will allow us to verify that our frontend can connect and send/receive messages from our newly created WebSocket endpoint:
 
 ```go
 package main
@@ -99,10 +117,12 @@ func reader(conn *websocket.Conn) {
 		}
     // print out that message for clarity
 		fmt.Println(string(p))
+
 		if err := conn.WriteMessage(messageType, p); err != nil {
 			log.Println(err)
 			return
 		}
+
 	}
 }
 
@@ -142,54 +162,7 @@ func main() {
 
 ```
 
-Excellent, we now have a working WebSocket server that we can connect to and send messages to. 
-
-## Writing Back to Our WebSocket
-
-Slowly, but surely, we are making progress and building up something pretty cool. But, one way connections aren't all that useful just yet, we need to have some way of communicating back to whoever is connected to us.
-
-Let's create a `writer` function that will take in a pointer to our WebSocket connection. This will allow us to send messages back across our WebSocket connection. 
-
-```go
-func writer(conn *websocket.Conn) {
-	for {
-		fmt.Println("Sending")
-		messageType, r, err := conn.NextReader()
-		if err != nil {
-			fmt.Println(err)
-			return
-		}
-		w, err := conn.NextWriter(messageType)
-		if err != nil {
-			fmt.Println(err)
-			return
-		}
-		if _, err := io.Copy(w, r); err != nil {
-			fmt.Println(err)
-			return
-		}
-		if err := w.Close(); err != nil {
-			fmt.Println(err)
-			return
-		}
-	}
-}
-
-func serveWs(w http.ResponseWriter, r *http.Request) {
-	upgrader.CheckOrigin = func(r *http.Request) bool { return true }
-	fmt.Println(r.Host)
-
-	ws, err := upgrader.Upgrade(w, r, nil)
-	if err != nil {
-		log.Println(err)
-  }
-  // add this line to our serveWs endpoint function
-  go writer(ws)
-	reader(ws)
-}
-```
-
-Excellent, we can now run this using `go run main.go`.
+If everything goes to plan, you should be able to run this by calling `go run main.go` and it will automatically kick off our server. 
 
 # Client
 
@@ -267,7 +240,7 @@ class App extends Component {
 export default App;
 ```
 
-Upon successfully compiling this, we should see in our browser a solitary button element, and if you open up your browser console, you should also see that it has been able to successfully connect to our backend WebSocket server running on `localhost:8080`.
+Upon successfully compiling this, we should see in our browser a solitary button element, and if you open up your browser console, you should also see that it has been able to successfully connect to our backend WebSocket server running on `http://localhost:8080`.
 
 > **Question -** What happens when you click this button? What Output do you see in the console of your browser and in the console of your backend?
 
