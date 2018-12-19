@@ -4,6 +4,7 @@ date: 2017-12-20T21:29:28Z
 desc: In This Tutorial we look at Binary Trees, we look at how they work and what
   problems they can solve
 series: compsci
+draft: true
 tags:
 - python
 - compsci
