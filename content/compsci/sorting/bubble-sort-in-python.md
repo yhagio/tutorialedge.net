@@ -11,7 +11,7 @@ title: Implementing The Bubble Sort in Python
 twitter: https://twitter.com/Elliot_F
 ---
 
-> This tutorial was built on top of Python 3.6
+> **Note -** This tutorial was built on top of Python 3.6
 
 In this tutorial we are going to be taking a quick look at the bubble sort sorting algorithm. This algorithm is another very well known sorting algorithm that is quite often referenced in technical interviews. It is amongst the worst performing sorting algorithm with an average and a worst case sorting complexity of `O(N^2)`.
 
@@ -30,14 +30,24 @@ Now that we have an appreciation for how the algorithm works, let's now take a l
 # Space Complexity = O(n)
 
 def bubbleSort(my_list):
+    # default the swapped variable to true
     swapped = True
+    # kick off our sorting loop
     while swapped:
+        # set swapped to false
         swapped = False
+        # for every element in your list
         for i in range(len(my_list)-1):
+            # if this element is greater than the next
+            # element
             if my_list[i] > my_list[i+1]:
+                # swap the values
                 my_list[i], my_list[i+1] = my_list[i+1], my_list[i]
+                # print out that we've swapepd these values
                 print("Swapped: {} with {}".format(my_list[i], my_list[i+1]))
+                # set swapped to true
                 swapped = True
+    # finish up by returning our swapped list
     return my_list
 
 my_list = [8,2,1,3,5,4]
@@ -46,6 +56,8 @@ print(bubbleSort(my_list))
 ```
 
 # Output
+
+When we go to run this in our terminal, we should see that it successfully swaps a number of elements in our list until there are no more swaps to do and it will return a sorted list.
 
 ```py
  $ python3.6 bubbleSort.py
@@ -61,4 +73,6 @@ Swapped: 4 with 5
 
 # Conclusion
 
-If you found this tutorial useful or require further help then please feel free to let me know in the comments section below!
+Awesome! So, in this tutorial, we looked at how you could successfully implement the Bubble Sort algorithm in Python. 
+
+> **Note -** If you found this tutorial useful or require further help then please feel free to let me know in the comments section below!
