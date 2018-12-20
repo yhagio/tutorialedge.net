@@ -13,7 +13,45 @@ weight: 6
 
 Welcome all, in this tutorial, we are going to be taking a look at interfaces within the Go programming language. By the end of this tutorial, you should be well on your way to defining your own interfaces and working with existing ones that are currently out in the wild.
 
-# Interfaces
+# Basic Example
+
+If you are new to Go, you may be seeing `interface{}` a lot in code snippets and tutorials. This can be fairly daunting seeing this at first if you don't know what interfaces are in Go and what they are used for. 
+
+Typically, if you see a function or a method that expects an empty interface, then you can typically pass anything into this function/method.
+
+Let's see an example of this in action:
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+func myFunc(a interface{}) {
+	fmt.Println(a)
+}
+
+func main() {
+	var my_age int
+	my_age = 25
+	
+	myFunc(my_age)
+}
+```
+
+If we then go to run this then we should see that it runs successfully and prints out our integer value:
+
+```s
+$ go run main.go
+25
+```
+
+## Why is this Useful?
+
+By defining a function that takes in an `interface{}`, we essentially give ourselves the flexibility to pass in anything we want. It's a Go programmers way of saying, this function takes in something, but I don't necessarily care about its type. 
+
+# Defining Interfaces
 
 So, what are interfaces? Why do we use them within Go? Well by defining an interface in Go, we essentially define a contract. If we define a type based off this `interface` then we are forced to implement all of the functions or methods defined within that `interface` type.
 
@@ -121,9 +159,10 @@ func main() {
 }
 ```
 
-
 # Conclusion
 
 So, within this tutorial, we have successfully managed to uncover what interfaces are within Go and how we can implement them within our own Go-based programs. 
 
 Hopefully, you found this tutorial useful and if you did then please let me know in the comments section below!
+
+> **Note -** If you want to keep track of when new Go articles are posted to the site, then please feel free to follow me on twitter for all the latest news: [@Elliot_F](https://twitter.com/elliot_f).
