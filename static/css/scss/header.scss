@@ -40,6 +40,8 @@ nav .dropdown-menu img {
 .dropdown-item {
   padding: 10px 20px !important;
 }
+@media (min-width: 756px) {
 .dropdown-menu-mega {
   width: 600px !important;
+}
 }
