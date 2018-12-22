@@ -42,6 +42,6 @@ console.log("Webdriver: " + navigator.webdriver);
 console.log("Geolocation: " + navigator.geolocation);
 ```
 
-<h2>The End Result</h2>
+# Conclusion
 
-<p>If you visit this web page in your browser of choice and open up the console, you should see just about everything you can see about yourself displayed in the console. </p>
+If you visit this web page in your browser of choice and open up the console, you should see just about everything you can see about yourself displayed in the console.

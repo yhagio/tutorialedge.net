@@ -5,6 +5,7 @@ desc: This tutorial gives you a few different methods of keeping your nodejs app
   alive and running forever, definitely a handy guide if you use Node in production
   environments.
 series: nodejs
+image: node.png
 tags:
 - pm2
 - nodejs

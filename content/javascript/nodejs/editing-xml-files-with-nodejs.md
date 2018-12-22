@@ -2,6 +2,8 @@
 author: Elliot Forbes
 date: 2017-04-15T08:14:10+01:00
 series: nodejs
+desc: In this tutorial, we're going to be looking at how you can edit XML files using NodeJS
+image: node.png
 tags:
 - xml
 - javascript
