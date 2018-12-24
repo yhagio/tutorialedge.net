@@ -170,8 +170,50 @@ Now, when we run our `yarn run watch` command, it should start up our incredibly
 
 # Testing This Works
 
-> Under Construction
+Now that we've implemented the server, let's implement a really clean and simple `./client/index.html` page that we can serve. This will simply contain a single `<button />` element that, when hit, will `emit` a new `message` event to the WebSocket connection which simply contains `HELLO WORLD`:
+
+```html
+<!-- ./client/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+  <button onClick="sendMsg()">Hit Me</button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+  <script>
+    const socket = io('http://localhost:3000');
+    
+    function sendMsg() {
+      socket.emit("message", "HELLO WORLD");
+    }
+  </script>
+</body>
+</html>
+```
+
+When we try and hit `http://localhost:3000` in our browser, we should see our `index.html` page rendering our button. We should see, in our server logs, that a new user has connected as we've triggered the `connection` event.
+
+## Listening for Messages
+
+So, in the above `index.html` we emit a `message` of `Hello World`. If we want to listen to this within our server, we can add the following code:
+
+```ts
+io.on('message'), function(message: any) {
+  console.log(message)
+});
+```
+
+If we kill our server and restart, we should see that whenever our client's `<button/>` element is clicked, it will emit a `message` that will be logged out by our server side! 
 
 # Conclusion
 
 In this tutorial, we've successfully managed to create a socket.io TypeScript server that can be connected to using a frontend in order to display any real-time events you wish.
+
+> **Note -** If you want to keep track of when new articles are posted to the site, then please feel free to follow me on twitter for all the latest news: [@Elliot_F](https://twitter.com/elliot_f).
