@@ -1,34 +1,36 @@
 .top-bar {
   width: 100%;
-  background-color: #f6f6f6;
+  background: #232c3b;
   padding: 25px;
+  padding-top: 40px;
   border-bottom: 1px solid #E7E7EC;
+  color: white;
 
   img {
-    display: block;
     width: auto;
     height: 100px;
-    margin: auto;
+    margin-right: 40px;
   }
+
 
   h1 {
     font-size: 36px;
     font-weight: 700 !important;
     line-height: 1.4;
+    color: white;
   } 
   
   h1 small {
     font-size: 16px;
-    color: rgba(0,0,0,.54);
     font-weight: 500;
   }
 
   h2 {
     line-height: 1.4;
-    font-size: 26px;
+    font-size: 3rem;
     font-weight: 700;
     letter-spacing: 0;
-    margin: 0;
+    color: white;
   }
 
   p {
@@ -45,9 +47,12 @@
     font-size: 1rem;
     margin-top: 0;
     margin-bottom: 17px;
-    color: #738f93;
+    color: white;
     display: grid;
     grid-template-columns: auto auto auto auto;
+    a {
+      color: white;
+    }
   }
 }
 

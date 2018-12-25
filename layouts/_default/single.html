@@ -2,30 +2,13 @@
 
 <div class="top-bar">
 	<div class="container">
-		<div class="row">
-			<div class="col-sm-2">
-				{{ if .Params.image }}
-					<img src="{{ .Site.BaseURL }}/images/{{ .Params.image }}" alt="{{ .Title }} Image">
-				{{ else }}
-					<img src="{{ .Site.BaseURL }}/images/logo.png" alt="{{ .Title }} Image">
-				{{ end }}
-			</div>
-			<div class="col-sm-10">
-				<h1>{{ .Title }}</h1>
-				<div class="post-info">
-					<span><i class="ion ion-ios-calendar-outline"></i> {{ dateFormat "Jan 2, 2006" .Date }}</span>
-					<span><i class="ion ion-social-twitter-outline"></i>
-						<a href="{{.Params.twitter }}">{{ .Params.author }}</a></span>
-					<span><i class="ion ion-ios-clock-outline"></i> {{ .ReadingTime }} Minutes</span>
-					<span><i class="ion ion-pricetags"></i>
-						<span>
-							{{ range .Params.tags }}
-							<a href="/tags/{{.}}"><span class="badge badge-pill badge-info">{{ . }}</span></a>
-							{{ end }}
-						</span>
-				</div>
-			</div>
-		</div>
+		<h1>
+		{{ if .Params.image }}
+		<img src="{{ .Site.BaseURL }}/images/{{ .Params.image }}" alt="{{ .Title }} Image">
+		{{ else }}
+		<img src="{{ .Site.BaseURL }}/images/logo.png" alt="{{ .Title }} Image">
+		{{ end }}
+		{{ .Title }}</h1>
 	</div>
 </div>
 
