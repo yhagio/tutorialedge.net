@@ -52,6 +52,16 @@
   margin-bottom: 17px;
   background-color: #fff;
   color: #143650;
+  
+  img {
+    width: 35px;
+    height: 35px;
+    margin: -10px;
+    margin-right: 5px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 5px 10px -5px rgba(0,0,0,.4);
+  }
   .post-info-inner {
     display: grid;
     grid-template-columns: auto auto auto auto;

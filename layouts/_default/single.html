@@ -15,7 +15,11 @@
 	<div class="container">
 		<div class="post-info-inner">
 			<span>
+				{{ if .Params.authorImage }}
+				<img src="{{ .Params.authorImage }}" alt="{{ .Params.author }}" />
+				{{ else }}
 				<i class="ion ion-social-twitter"></i>
+				{{ end }}
 				<a href="{{.Params.twitter }}">{{ .Params.author }}</a>
 			</span>
 			<span>
