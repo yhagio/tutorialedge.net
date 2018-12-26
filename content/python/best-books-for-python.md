@@ -9,6 +9,7 @@ tags:
 - books
 title: The Top Books for Learning to Program in Python
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 Python is one of the most popular programming languages on the planet. It’s widely regarded as one of the best languages to learn first if you are wanting to get into computer programming. 

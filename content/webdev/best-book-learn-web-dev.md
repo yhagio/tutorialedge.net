@@ -12,6 +12,7 @@ tags:
 - books
 title: The Best Books for Learning Web Development
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 In this article we are going to be taking a look at some of the best books you can buy if you are interested in learning more about the art of web development. 

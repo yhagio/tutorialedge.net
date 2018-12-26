@@ -8,6 +8,7 @@ series: golang
 image: golang.png
 author: Elliot Forbes
 twitter: https://twitter.com/Elliot_f
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 description: In this tutorial, we are going to be taking an in-depth look at the unsafe package in Go
 weight: 32
 ---

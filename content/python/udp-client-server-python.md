@@ -9,6 +9,7 @@ tags:
 - networking
 title: UDP Client and Server Tutorial in Python
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 <p>In this tutorial I'll be showing you exactly how you can set up your own UDP chat server using CPython 3.3 and Python's Socket module. The end product will be a server that listens for all connections and messages over a specific port and prints out any messages to the console. This could be extended in the future to create a chat server that subsequently broadcasts any messages received to all parties listening for responses.</p>

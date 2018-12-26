@@ -8,6 +8,7 @@ tags:
 - books
 title: The Top Programming Books for Learning C
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 > This list is still under construction

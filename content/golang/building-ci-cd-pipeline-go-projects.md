@@ -9,6 +9,7 @@ tags:
 - advanced
 author: Elliot Forbes
 twitter: https://twitter.com/Elliot_f
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 So, I recently partook in [Hacktoberfest](https://hacktoberfest.digitalocean.com/) which is an event that helps to support thousands of different Open Source projects. Usually, I tend to get caught up in other projects or can't find the time or make up a hundred other excuses for not taking part.

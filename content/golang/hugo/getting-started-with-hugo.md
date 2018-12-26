@@ -9,6 +9,7 @@ tags:
 - hugo
 title: Getting Started With Hugo
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 Hugo is an incredibly popular static site generator written primarily in Go and it is currently running this site. With Hugo you would typically define all of your content in the form of markdown files. These markdown files are then parsed and combined with a number of template files and you are left with a fully functioning html page that you can easily host anywhere. There are a number of key advantages to this approach such as:

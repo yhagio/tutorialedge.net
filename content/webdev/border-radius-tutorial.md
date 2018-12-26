@@ -12,6 +12,7 @@ tags:
 - border-radius
 title: CSS3 Border Radius Tutorial
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 Effective use of border-radius on some elements can remove the harshness of the square corners on some components. 

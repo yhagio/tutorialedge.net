@@ -11,6 +11,7 @@ tags:
 - html5
 title: CSS3 Box Shadow Tutorial
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 In this tutorial we'll be looking at how you can add a box shadow effect to elements of your website. Box shadow can help turn elements of your website from flat structures to almost 3D like. 

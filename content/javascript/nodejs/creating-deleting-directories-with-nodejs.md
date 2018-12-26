@@ -9,6 +9,7 @@ tags:
 - nodejs
 title: Creating and Deleting Directories With NodeJS
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 <strong>In this tutorial I’ll be showing you how to create and delete directories using NodeJS</strong> and we’ll be using the mkdirp and the rimraf node package in order to achieve this.

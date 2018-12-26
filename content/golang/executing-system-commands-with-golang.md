@@ -10,6 +10,7 @@ tags:
 weight: 8
 title: Executing System Commands With Golang
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 > **Last Updated -** 6th December, 2018

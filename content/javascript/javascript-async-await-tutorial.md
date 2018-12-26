@@ -8,6 +8,7 @@ tags:
 - javascript
 title: Javascript Async Await Tutorial
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 In this tutorial, we are going to have a look at how you can make your JavaScript programs more syntactically beautiful with the use of both the `async` and `await` keywords. Both of these keywords were introduced into Node in version 7.6. Hopefully, by the end of the tutorial, you will be going back to refactor all of your old NodeJS based applications to replace all of your chained callbacks and promises.

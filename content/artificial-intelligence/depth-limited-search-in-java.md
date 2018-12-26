@@ -12,6 +12,7 @@ tags:
 - java
 title: Depth Limited Search in Java
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 # About Depth Limited Searching

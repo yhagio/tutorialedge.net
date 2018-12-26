@@ -9,6 +9,7 @@ tags:
 - typescript
 title: Angular Multiple Environment Configuration Tutorial
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 > This Tutorial is part of the Angular Fundamentals course which can be found here: [Angular Fundamentals](https://tutorialedge.net/course/angular-2-fundamentals)

@@ -8,6 +8,7 @@ tags:
 - advanced
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 JWTs, or JSON Web Tokens as they are more formally known, are a compact, URL-safe means of representing claims to be transferred between two parties. This is essentially a confusing way of saying that JWTs allow you to transmit information from a client to the server in a stateless, but secure way.

@@ -11,6 +11,7 @@ tags:
 - flexbox
 title: Equal Height Columns in a Row using Flex Box
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 <p>In this tutorial I'll be showcasing how we can achieve equal heights on our columns using the CSS and HTML. More specifically I'll be demonstrating the Flex Box feature of CSS which allows us to create these equal height columns without resorting to a nasty javascript workaround.</p>

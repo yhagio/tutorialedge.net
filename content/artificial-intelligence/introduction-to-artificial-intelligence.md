@@ -11,6 +11,7 @@ tags:
 - ai
 title: An Introduction To Artificial Intelligence
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 <p>This is lesson one of the <a href="/course/artificial-intelligence">Artificial Intelligence</a> course on this website. </p>

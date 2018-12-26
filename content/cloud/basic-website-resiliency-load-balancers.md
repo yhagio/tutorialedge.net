@@ -9,6 +9,7 @@ tags:
 - resiliency
 title: Basic Website Resiliency Patterns - Load Balancers
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 In this article we are going to be looking at the concept of load balancers. We'll be discussing what they are and how you can effectively use them to improve the reliability and resiliency of your websites and REST services and decrease downtime.

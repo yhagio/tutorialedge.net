@@ -11,6 +11,7 @@ tags:
 - ai
 title: What Is An Intelligent Agent
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 <p>In Artificial Intelligence, Intelligent agents are the decision makers. They perceive their environment through a series of sensors and act upon this information using actuators.</p>

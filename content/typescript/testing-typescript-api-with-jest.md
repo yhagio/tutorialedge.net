@@ -10,6 +10,7 @@ tags:
 - jest
 title: Testing Typescript Api With Jest and Supertest
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 > We are going to be using the [very simple TypeScript API](/typescript/creating-rest-api-express-typescript/) we developed in a previous tutorial in order to learn about Jest Testing.

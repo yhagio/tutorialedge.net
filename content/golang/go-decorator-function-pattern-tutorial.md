@@ -7,6 +7,7 @@ tags:
 - intermediate
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 desc: In this tutorial, we are going to be looking at how you can implement your own decorator functions in Go.
 ---
 

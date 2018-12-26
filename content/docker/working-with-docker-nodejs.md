@@ -10,6 +10,7 @@ tags:
 - javascript
 title: Working With Docker and NodeJS - Tutorial
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 > The full source code for this tutorial can be found here: [TutorialEdge/Docker/node-docker](https://github.com/TutorialEdge/Docker/tree/master/node-docker)

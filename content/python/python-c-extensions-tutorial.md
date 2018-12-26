@@ -9,6 +9,7 @@ tags:
 - c
 title: Creating Basic Python C Extensions - Tutorial
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 > This tutorial was built using Python 3.6. The official documentation can be found here: [Extending and Embedding the Python Interpreter](https://docs.python.org/3/extending/index.html)

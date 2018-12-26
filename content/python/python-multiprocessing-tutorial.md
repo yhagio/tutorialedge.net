@@ -10,6 +10,7 @@ tags:
 - concurrency
 title: Python Multiprocessing Tutorial
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 > **Last Updated:** 1st December, 2018

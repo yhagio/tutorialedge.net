@@ -10,6 +10,7 @@ tags:
 weight: 20
 title: Golang ORM Tutorial
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 In this tutorial, we are going to look at how we can use the `Go-ORM` or `GORM` to interact with a `sqlite3` database in a simple manner. 

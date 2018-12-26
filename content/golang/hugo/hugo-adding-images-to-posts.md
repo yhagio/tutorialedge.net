@@ -8,6 +8,7 @@ tags:
 - hugo
 title: Hugo Adding Images To Markdown Posts
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 In this quick tutorial we are going to look at the various ways you can add images to your markdown content in hugo. 

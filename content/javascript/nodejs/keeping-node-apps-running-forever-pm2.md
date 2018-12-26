@@ -12,6 +12,7 @@ tags:
 - javascript
 title: Keeping NodeJS Applications Running Forever Using PM2
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 <p>If you write an application that you need to keep running forever on your servers then this is the tutorial for you. </p>

@@ -10,6 +10,7 @@ tags:
 weight: 21
 title: Golang MySQL Tutorial
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 As you continue your Golang learning journey, it becomes almost inevitable that you will have to interact with some form of database. 

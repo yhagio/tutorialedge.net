@@ -5,6 +5,7 @@ desc: In this tutorial, we are going to look at the various composite types avai
   in Go
 series: golang
 image: golang.png
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 tags:
 - beginner
 title: Go Composite Types Tutorial

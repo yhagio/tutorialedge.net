@@ -8,6 +8,7 @@ tags:
 - ai
 author: Nisheeth Joshi
 twitter: https://twitter.com/nisheeth_joshi
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 In order to understand the min-max algorithm, you should get familiar with game playing and game trees. Game playing can be classified as game trees. What is a game tree? A tree is made of a **root** node, and a root node has child nodes; each child node is subdivided into multiple children.

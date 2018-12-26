@@ -4,6 +4,7 @@ date: 2018-12-08T13:33:45Z
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
 series: golang
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 tags:
 - intermediate
 desc: In this tutorial, we are going to be looking at closures and how you can use them within your own Go applications.

@@ -9,6 +9,7 @@ tags:
 - misc
 title: The Top Books For Learning Golang
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 Go is a language that has drastically grown in popularity over the past few years. We've seen companies such as HashiCorp adopt it as their primary language of choice for all of their projects and with good reason. It's undoubtedly an absolutely fantastic language to develop with. 

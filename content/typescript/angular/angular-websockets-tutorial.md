@@ -9,6 +9,7 @@ tags:
 - typescript
 title: Angular Websockets Tutorial
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 In this tutorial we’ll be looking at how you can implement a very simple WebSockets based Angular application. 

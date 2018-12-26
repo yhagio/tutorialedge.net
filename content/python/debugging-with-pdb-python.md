@@ -9,6 +9,7 @@ tags:
 - debugging
 title: 'Debugging with the Python Debugger - PDB '
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 weight: 7
 ---
 

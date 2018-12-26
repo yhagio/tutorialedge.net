@@ -9,6 +9,7 @@ tags:
 - typescript
 title: Angular Query Parameters Tutorial
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 In this tutorial we are going to be taking a look at how you can extract information from query parameters from within your application's URL and subsequently utilize this information in your Angular based application.

@@ -8,6 +8,7 @@ tags:
 - socket.io
 title: Creating a Realtime App with Angular and Socket.io Tutorial
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 > The full source code for this tutorial can be found here: [elliotforbes/angular-socket-io-example](https://github.com/elliotforbes/angular-socket-io-example)

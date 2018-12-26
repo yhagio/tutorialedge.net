@@ -9,6 +9,7 @@ tags:
 - beginner
 title: Go Basic Types Tutorial
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 weight: 2
 ---
 
@@ -65,8 +66,6 @@ It should be noted that if you try and assign a larger value to an int than it c
 var myint int8
 myint = 2500
 ```
-
-
 
 The Go compiler will fail to run or build the program and will output the fact that 2500 overflows `int8`. However, if you were to overflow the integer at runtime, then you may start seeing odd results. For example, try running this program and examine the output:
 

@@ -9,6 +9,7 @@ tags:
 - misc
 author: Elliot Forbes
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 Assertions are something that I genuinely feel the standard library in Go is missing. You can most definitely achieve the same results with the likes of `if` comparisons and whatever else, but it's not the cleanest way to write your test files.

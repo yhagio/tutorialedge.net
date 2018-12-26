@@ -6,10 +6,10 @@ desc: In this tutorial we look at how we can subscribe to route change events wi
 series: angular
 image: angular.png
 tags:
-
 - typescript
 title: Angular Detecting Route Changes Within Your Application
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 > This tutorial was built using Angular 2.2. Some of the features in this tutorial may not work for earlier/later versions.

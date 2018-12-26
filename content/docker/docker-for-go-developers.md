@@ -9,6 +9,7 @@ tags:
 - docker
 title: Docker for Go Developers
 twitter: https://twitter.com/Elliot_F
+
 ---
 
 In this course, we are going to be taking a look at just about everything you need to get up and running with Docker as a Go developer.

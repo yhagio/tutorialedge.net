@@ -10,6 +10,7 @@ tags:
 - books
 title: The Top Books For Learning Angular
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 > The books listed below might specifically state they are for Angular 2. However due to semantic versioning these will still be relevant if you are working with Angular 4+

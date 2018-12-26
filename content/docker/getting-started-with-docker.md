@@ -9,6 +9,7 @@ tags:
 - docker
 title: Getting Started With Docker
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 In this tutorial, we are going to be taking a look at what Docker is, why it's needed and how you can get up and running using Docker in your day-to-day development. 

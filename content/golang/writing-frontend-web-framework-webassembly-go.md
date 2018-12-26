@@ -8,6 +8,7 @@ tags:
 - advanced
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 JavaScript Frontend frameworks have undoubtedly helped to push the boundaries of what was previously possible in the context of a browser. Ever more complex applications have come out built on top of the likes of React, Angular and VueJS to name but a few and there's the well known joke about how a new frontend framework seems to come out every day.

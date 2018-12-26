@@ -9,6 +9,7 @@ tags:
 - concurrency
 title: Threads in Python
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 > This tutorial was written using Python 3.6. Some of the code may not be compatible with Python 2.7

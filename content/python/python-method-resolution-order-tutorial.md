@@ -8,6 +8,7 @@ tags:
 - advanced
 title: Python Method Resolution Order Tutorial
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 Understanding the way and the order in which Python resolves functions is important. You need to know where your code is going to call, when you call it and things can get messy as soon as you start playing with classes inheriting from multiple other classes.

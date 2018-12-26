@@ -9,6 +9,7 @@ tags:
 - resiliency
 title: An Introduction To Autoscaling Your Website or Service
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 In this article we are going to look at `autoscalers`. We are going to look at how they work and how they can enable your service to dynamically grow and shrink to cope with variable demands.

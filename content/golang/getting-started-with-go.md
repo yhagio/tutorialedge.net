@@ -10,6 +10,7 @@ image: golang.png
 series: golang
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 # Getting Started

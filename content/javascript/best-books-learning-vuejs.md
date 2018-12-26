@@ -10,6 +10,7 @@ tags:
 - books
 title: The Best Books For Learning VueJS
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 [Vue.js](https://vuejs.org/) is a fantastic lightweight javascript framework that is ideal for building user interfaces in an incremental fashion. This means you don't need to start with a heavy full-fledged framework for what could be a small side-project.

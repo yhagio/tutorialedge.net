@@ -9,6 +9,7 @@ tags:
 - intermediate
 author: Elliot Forbes
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 As we start to build ever more complex Go-based applications, we start to face challenges when it comes to safely introducing new features, or handling credentials for the likes of databases, or brokers. 
