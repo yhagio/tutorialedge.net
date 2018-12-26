@@ -1,11 +1,11 @@
 .top-bar {
   width: 100%;
-  background: #232c3b;
+  background: #143650;
   padding: 25px;
   padding-top: 40px;
   border-bottom: 1px solid #E7E7EC;
   color: white;
-
+  
   img {
     width: auto;
     height: 100px;
@@ -41,19 +41,32 @@
     list-style: square;
   }
 
-  .post-info {
-    line-height: 1.35;
-    font-weight: 400;
-    font-size: 1rem;
-    margin-top: 0;
-    margin-bottom: 17px;
-    color: white;
+}
+
+.post-info {
+  line-height: 1.35;
+  box-shadow: 0 5px 10px -5px rgba(0,0,0,.4);
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top: -1px;
+  margin-bottom: 17px;
+  background-color: #fff;
+  color: #143650;
+  .post-info-inner {
     display: grid;
     grid-template-columns: auto auto auto auto;
-    a {
-      color: white;
-    }
+    text-align: center;
+    padding: 20px;
   }
+  a {
+    color: #143650;
+  }
+
+  .badge-info {
+    background-color: #143650 !important;
+  }
+
+
 }
 
 article {

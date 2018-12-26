@@ -3,12 +3,34 @@
 <div class="top-bar">
 	<div class="container">
 		<h1>
-		{{ if .Params.image }}
-		<img src="{{ .Site.BaseURL }}/images/{{ .Params.image }}" alt="{{ .Title }} Image">
-		{{ else }}
-		<img src="{{ .Site.BaseURL }}/images/logo.png" alt="{{ .Title }} Image">
-		{{ end }}
-		{{ .Title }}</h1>
+			{{ if .Params.image }}
+			<img src="{{ .Site.BaseURL }}/images/{{ .Params.image }}" alt="{{ .Title }} Image">
+			{{ else }}
+			<img src="{{ .Site.BaseURL }}/images/logo.png" alt="{{ .Title }} Image">
+			{{ end }}
+			{{ .Title }}</h1>
+	</div>
+</div>
+<div class="post-info">
+	<div class="container">
+		<div class="post-info-inner">
+			<span>
+				<i class="ion ion-social-twitter"></i>
+				<a href="{{.Params.twitter }}">{{ .Params.author }}</a>
+			</span>
+			<span>
+					<i class="ion ion-ios-clock"></i> {{ .ReadingTime }} Minutes
+			</span>
+			<span>
+					<i class="ion ion-ios-calendar"></i> {{ dateFormat "Jan 2, 2006" .Date }}
+			</span>
+			<span>
+				<i class="ion ion-pricetags"></i> 
+				{{ range .Params.tags }}
+				<a href="/tags/{{.}}"><span class="badge badge-pill badge-info">{{ . }}</span></a>
+				{{ end }}
+			</span>
+		</div>
 	</div>
 </div>
 
