@@ -1,75 +1,71 @@
 {{ partial "header.html" . }}
 
+<div class="top-bar">
+	<div class="container">
+		<h1>
+			{{ if .Params.image }}
+			<img src="{{ .Site.BaseURL }}/images/{{ .Params.image }}" alt="{{ .Title }} Image">
+			{{ else }}
+			<img src="{{ .Site.BaseURL }}/images/logo.png" alt="{{ .Title }} Image">
+			{{ end }}
+			{{ .Title }}</h1>
+	</div>
+</div>
+<div class="post-info">
+	<div class="container">
+		<div class="post-info-inner">
+			<span>
+				{{ if .Params.authorImage }}
+				<img src="{{ .Params.authorImage }}" alt="{{ .Params.author }}" />
+				{{ else }}
+				<i class="ion ion-social-twitter"></i>
+				{{ end }}
+				<a href="{{.Params.twitter }}">{{ .Params.author }}</a>
+			</span>
+			<span>
+					<i class="ion ion-ios-clock"></i> {{ .ReadingTime }} Minutes
+			</span>
+			<span>
+					<i class="ion ion-ios-calendar"></i> {{ dateFormat "Jan 2, 2006" .Date }}
+			</span>
+			<span>
+				<i class="ion ion-pricetags"></i> 
+				{{ range .Params.tags }}
+				<a href="/tags/{{.}}"><span class="badge badge-pill badge-info">{{ . }}</span></a>
+				{{ end }}
+			</span>
+		</div>
+	</div>
+</div>
+
 <div class="container">
 	<div class="row no-hidden">
-		<div class="col-sm-9">
+		<div class="col-sm-4">
 
-			<article class="content">
-				<div class="post-content">
-					<article>
-						<h1>{{ .Title }}</h1>
+			<div class="toc">
+				<h4>Table Of Contents</h4>
+				{{.TableOfContents}}
+			</div>
 
-						<div class="post-info">
-							<span><i class="ion ion-ios-calendar-outline"></i> {{ dateFormat "Jan 2, 2006" .Date }}</span>
-							<span><i class="ion ion-social-twitter-outline"></i>
-								<a href="{{.Params.twitter }}">{{ .Params.author }}</a></span>
-							<span><i class="ion ion-ios-clock-outline"></i> {{ .ReadingTime }} Minutes</span>
-							<span><i class="ion ion-pricetags"></i>
-								<span>
-								{{ range .Params.tags }}
-								<a href="/tags/{{.}}"><span class="badge badge-pill badge-info">{{ . }}</span></a>
-								{{ end }}
-							</span>
-						</div>
-						<div class="toc">
-							<h4>Table Of Contents</h4>
-							{{.TableOfContents}}
-						</div>
-						{{ .Content }}
-					</article>
-				</div>
-
-				<div class="post_divider"></div>
-
-				<ul class="social-btns">
-					<li>
-						<a target="_blank" href="https://twitter.com/share?url={{ .Permalink }}" class="social-btn-dissolve twitter">
-							<i class="ion ion-social-twitter"></i>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" class="social-btn-dissolve facebook">
-							<i class="ion ion-social-facebook"></i>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="https://plus.google.com/share?url={{ .Permalink }}" class="social-btn-dissolve google">
-							<i class="ion ion-social-googleplus"></i>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="mailto:?&subject={{ .Title }}&body={{ .Permalink }}" class="social-btn-dissolve tumblr">
-							<i class="ion ion-ios-email"></i>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{ .Title }}&summary={{ .Params.desc }}"
-						 class="social-btn-dissolve linkedin">
-							<i class="ion ion-social-linkedin"></i>
-						</a>
-					</li>
-				</ul>
-
-				{{ partial "comments.html" .}}
-
-			</article>
-		</div>
-
-
-		<div class="col-sm-3">
 			{{ partial "sidebar.html" . }}
 		</div>
 
+		<div class="col-sm-8">
+			<article class="content">
+
+				{{ .Content }}
+
+				<div class="post_divider"></div>
+
+				{{ partial "suggestion.html" . }}
+
+				{{ partial "social-share.html" . }}
+			</article>
+		</div>
+
+		<div class="content">
+			{{ partial "comments.html" .}}
+		</div>
 
 	</div>
 </div>
