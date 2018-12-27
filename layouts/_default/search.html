@@ -1,27 +1,116 @@
 {{ partial "header.html" . }}
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch-theme-algolia.min.css">
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4"></script>
 
 
-<div id="app">
-    <div class="search-bar">
-        <div class="container center">
+<div class="course-listing padding">
+    <div class="row">
+
+        <div class="col-sm-3">
+            <div class="filter">
+                <h3>Language/Skill</h3>
+                <div id="refinement-list">
+                </div>
+                <h3>Tags</h3>
+                <div id="tag-list">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-9 search">
             <div class="input-group">
                 <input id="search-input" class="form-control" placeholder="Search for tutorials">
                 <!-- We use a specific placeholder in the input to guides users in their search. -->
             </div>
-        </div>
-    </div>
-
-    <div class="search-results">
-        <div class="container">
+            <h3>Results</h3>
             <div id="hits"></div>
             <div class="pagination" id="pagination"></div>
         </div>
     </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.js"></script>
+<style>
+    .padding {
+        padding: 40px;
+    }
+    .filter {
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 5px 15px -5px rgba(0,0,0,.1);
+    }
+
+
+    .search {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .input-group {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .ais-search-input {
+        width: 100% !important;
+    }
+
+    .filters {
+        background-color: white;
+    }
+
+    .ais-hits {
+        display: grid;
+        grid: auto-flow dense / 1fr 1fr 1fr;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-column-gap: 40px;
+    }
+
+    .ais-refinement-list--item:hover {
+        background-color: #f6f6f6;
+        cursor: pointer;
+    }
+
+    .ais-refinement-list--item {
+        min-height: 35px;
+        padding: .25rem .25rem .25rem .25rem;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    .ais-refinement-list--label {
+        display: grid;
+        grid: auto-flow dense / 1fr 5fr 1fr;
+        grid-auto-columns: 1fr 5fr 1fr;
+    }
+
+    .ais-refinement-list--count {
+        background-color: #f6f6f6;
+        color: #3d4852;
+        font-size: .75rem;
+        margin-left: auto;
+        align-items: center;
+        color: #4d545d;
+        font-size: 15px;
+        line-height: 16px;
+        padding-left: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 10px;
+        white-space: nowrap;
+        border-radius: 20px;
+    }
+
+    .filter h3 {
+        color: #22292f;
+        letter-spacing: 0;
+        line-height: 1;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin: 1em 0;
+    }
+</style>
+
 
 <script>
     var search = instantsearch({
@@ -31,32 +120,52 @@
         indexName: 'TutorialEdge',
         urlSync: true,
         searchParameters: {
-            hitsPerPage: 10
+            hitsPerPage: 18
         }
     });
 
+    search.addWidget(
+        instantsearch.widgets.refinementList({
+            container: '#refinement-list',
+            attributeName: 'section'
+        })
+    );
+    search.addWidget(
+        instantsearch.widgets.refinementList({
+            container: '#tag-list',
+            attributeName: 'tags'
+        })
+    );
     // Add this after the previous JavaScript code
     search.addWidget(
         instantsearch.widgets.searchBox({
             container: '#search-input'
-        })
+        }),
     );
 
     search.addWidget(
         instantsearch.widgets.hits({
             container: '#hits',
             templates: {
-                body: function(data) {
+                body: function (data) {
                     return '<div>You have ' + data.nbHits + ' results, fetched in ' +
-                    data.processingTimeMS +'ms.</div>'
+                        data.processingTimeMS + 'ms.</div>'
                 },
-                item: function(data) {
-                    return '<div class="search-result">' 
-                        + '<a href="' + data.permalink + '"><h3>' + data.title + '</h3></a>'
-                        + '<span class="url">' + data.permalink + '</span>'
-                        + '<span class="description">' + data.summary + '...</span>'
-                        + '<span class="weight">' + data.readingtime + ' minutes</span>'
-                        + '</div>';
+                item: function (data) {
+                    return '<a href="' + data.permalink + '">'
+                        + '<div class="course-progress-box">'
+                        + '<img src="/images/logo.png" alt="' + data.title + 'Image">'
+                        + '<h2><small>Lesson</small><br />' + data.title + '</h2>'
+                        + '<button class="btn btn-success">View Article</button>'
+                        + '</div>'
+                        + '</a>';
+
+                    // return '<div class="search-result">'
+                    //     + '<a href="' + data.permalink + '"><h3>' + data.title + '</h3></a>'
+                    //     + '<span class="url">' + data.permalink + '</span>'
+                    //     + '<span class="description">' + data.summary + '...</span>'
+                    //     + '<span class="weight">' + data.readingtime + ' minutes</span>'
+                    //     + '</div>';
                 },
                 empty: "We didn't find any results for the query"
             }
@@ -70,5 +179,5 @@
     );
 
     search.start();
-</script> 
+</script>
 {{ partial "footer.html" . }}

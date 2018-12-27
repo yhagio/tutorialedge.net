@@ -21,7 +21,7 @@ pygmentsOptions = "linenos=table"
     mediaType = "application/json"
     notAlternative = true
 [params.algolia]
-    vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink", "description"]
+    vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink", "description", "image"]
     params = ["categories", "tags"]
 [outputs]
     home = ["HTML", "RSS", "Algolia"]
