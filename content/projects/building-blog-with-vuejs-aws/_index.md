@@ -20,13 +20,3 @@ twitter: https://twitter.com/Elliot_F
 Throughout this tutorial series, we are going to be covering a wide variety of different topics on both Vue.JS and the underlying AWS service 
 
 * Building the frontend
-* Setting up A Cognito Pool
-* Authenticated Routes in Vue.JS with AWS Cognito
-* Configuring DynamoDB
-* Getting Started with AWS Lambda
-* CRUD Lambda Endpoints
-* Authenticated Lambda Endpoints with Cognito
-* Creating a GraphQL Lambda Endpoint
-* Working with GraphQL in Vue.JS
-* Deploying your frontend to S3
-
