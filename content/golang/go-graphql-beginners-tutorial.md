@@ -1,5 +1,5 @@
 ---
-title: "Go Graphql Beginners Tutorial"
+title: "Go GraphQL Beginners Tutorial"
 date: 2018-12-27T18:46:19Z
 desc: In this tutorial, we are going to be looking at how you can work with GraphQL in your Go programs.
 author: Elliot Forbes
