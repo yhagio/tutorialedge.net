@@ -1,7 +1,7 @@
 ---
 title: "Go GraphQL Beginners Tutorial"
 date: 2018-12-27T18:46:19Z
-desc: In this tutorial, we are going to be looking at how you can work with GraphQL in your Go programs.
+desc: In this tutorial, we are going to be looking at how you can work with GraphQL in our Go programs.
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
 series: golang
@@ -11,7 +11,7 @@ tags:
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
-Welcome fellow Gophers! In this tutorial, we are going to be looking at how you can interact with a GraphQL server within your Go-based programs. By the end of this tutorial, you should hopefully know how to do the following:
+Welcome fellow Gophers! In this tutorial, we are going to be looking at how we can interact with a GraphQL server within our Go-based programs. By the end of this tutorial, we should hopefully know how to do the following:
 
 * The basics of GraphQL
 * Build a Simple GraphQL Server in Go
@@ -23,17 +23,17 @@ We'll be focused on the data-retrieval side of GraphQL in this tutorial and we'l
 
 Ok, so before we dive in, we should really cover the basics of GraphQL. How does using it benefit us as developers?
 
-Well, consider working with systems that handles hundreds of thousands, if not millions of requests per day. Traditionally, you would hit an API that fronts your database and you would be returned a massive JSON response that contains a lot of redundant information that we might not necessarily need.
+Well, consider working with systems that handles hundreds of thousands, if not millions of requests per day. Traditionally, we would hit an API that fronts our database and we would be returned a massive JSON response that contains a lot of redundant information that we might not necessarily need.
 
-If you are working with applications at a massive scale, sending redundant data can be costly and choke your network bandwidth.
+If we are working with applications at a massive scale, sending redundant data can be costly and choke our network bandwidth.
 
-GraphQL essentially allows you to cut down the noise and describe the data that you wish to retrieve from your APIs so that you are retrieving *only* what you require for your current task/view/whatever. 
+GraphQL essentially allows us to cut down the noise and describe the data that we wish to retrieve from our APIs so that we are retrieving *only* what we require for our current task/view/whatever. 
 
 This is just one example of the many benefits the technology provides us. Hopefully, in the coming tutorial series, we'll see a few more of these benefits up front.
 
-# Query Language for your API, NOT your Database
+# Query Language for our API, NOT our Database
 
-One important thing to note is that GraphQL is not a query language like your traditional SQL. It is an abstraction that lies in-front of your APIs and is **not** tied to any specific database or storage engine. 
+One important thing to note is that GraphQL is not a query language like our traditional SQL. It is an abstraction that lies in-front of our APIs and is **not** tied to any specific database or storage engine. 
 
 This is actually really cool. We can stand up a GraphQL server that interacts with existing services and then build around this new GraphQL server instead of having to worry about modifying existing REST APIs.
 
@@ -367,7 +367,7 @@ $ go run ./...
 {"data":{"list":[{"author":{"Name":"Elliot Forbes","Tutorials":[1]},"comments":[{"body":"First Comment"}],"id":1,"title":"Go GraphQL Tutorial"}]}}
 ```
 
-As you can see, our query has returned all of our tutorials, in a JSON form that looks very much like the structure of our initial Query. 
+As we can see, our query has returned all of our tutorials, in a JSON form that looks very much like the structure of our initial Query. 
 
 Let's now try a query against our `tutorial` schema:
 
@@ -394,7 +394,7 @@ $ go run ./...
 
 Perfect, it looks like we've gotten both our `list` and our `tutorial` schema working as expected.
 
-> **Challenge -** Try updating the list of tutorials within our `populate()` function so that it returns more tutorials. Once you've done this, play around with the queries and help yourself become more familiar with them.
+> **Challenge -** Try updating the list of tutorials within our `populate()` function so that it returns more tutorials. Once we've done this, play around with the queries and try to become more familiar with them.
 
 # Conclusion
 
