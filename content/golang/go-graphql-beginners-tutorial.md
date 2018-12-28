@@ -398,6 +398,8 @@ Perfect, it looks like we've gotten both our `list` and our `tutorial` schema wo
 
 # Conclusion
 
+> **Note -** The full source code for this tutorial can be found here: [main.go](https://gist.github.com/elliotforbes/9b8400ef5154eb3420e409aeffe39633)
+
 That's all we'll be covering in this initial tutorial. We've managed to successfully set up a simple GraphQL server that is backed by an in-memory data-store. 
 
 In the next tutorial, we'll be looking at GraphQL mutations and changing our data-source to use a NoSQL database.
