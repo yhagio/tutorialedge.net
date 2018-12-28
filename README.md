@@ -20,6 +20,7 @@ Contributions to the site are greatly appreciated, if you see a typo or somethin
 
 * [ElliotForbes(me)](https://github.com/elliotforbes)
 * [Vietstone](https://github.com/vietstone)
+* [Stevenson Jean-Pierre](https://github.com/Sjeanpierre)
 
 ## License
 
