@@ -23,9 +23,9 @@ We'll be focused on the data-retrieval side of GraphQL in this tutorial and we'l
 
 Ok, so before we dive in, we should really cover the basics of GraphQL. How does using it benefit us as developers?
 
-Well, consider working with systems that handles hundreds of thousands, if not millions of requests per day. Traditionally, we would hit an API that fronts our database and we would be returned a massive JSON response that contains a lot of redundant information that we might not necessarily need.
+Well, consider working with systems that handle hundreds of thousands, if not millions of requests per day. Traditionally, we would hit an API that fronts our database and it would  return a massive JSON response that contains a lot of redundant information that we might not necessarily need.
 
-If we are working with applications at a massive scale, sending redundant data can be costly and choke our network bandwidth.
+If we are working with applications at a massive scale, sending redundant data can be costly and choke our network bandwidth due to payload size.
 
 GraphQL essentially allows us to cut down the noise and describe the data that we wish to retrieve from our APIs so that we are retrieving *only* what we require for our current task/view/whatever. 
 
@@ -33,7 +33,7 @@ This is just one example of the many benefits the technology provides us. Hopefu
 
 # Query Language for our API, NOT our Database
 
-One important thing to note is that GraphQL is not a query language like our traditional SQL. It is an abstraction that lies in-front of our APIs and is **not** tied to any specific database or storage engine. 
+One important thing to note is that GraphQL is not a query language like our traditional SQL. It is an abstraction that sits in-front of our APIs and is **not** tied to any specific database or storage engine. 
 
 This is actually really cool. We can stand up a GraphQL server that interacts with existing services and then build around this new GraphQL server instead of having to worry about modifying existing REST APIs.
 
@@ -60,7 +60,7 @@ This would then return a response, if given a valid `ID`, that would look someth
 
 Now, say we wanted to create a widget that listed the top 5 posts written by said author. We could hit the `/author/:id` endpoint to retrieve all of the posts written by that author and then make subsequent calls to retrieve each of the top 5 posts. Or, we could craft an entirely new endpoint which returns this data for us.
 
-Neither solution sounds particularly appealing, and this highlights where the RESTful approach starts to present a few cracks. 
+Neither solution sounds particularly appealing as they create an unneeded amount of request or return too much data, and this highlights where the RESTful approach starts to present a few cracks. 
 
 This is where GraphQL comes into play. With GraphQL, we can define the exact structure of the data we want returned in the Query. So if we wanted the above information, we could create a query that looked something like so:
 
