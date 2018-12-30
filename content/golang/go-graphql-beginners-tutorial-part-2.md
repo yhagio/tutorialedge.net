@@ -309,7 +309,7 @@ If we wanted to simplify our development work further, there is the option of us
 
 > **Note -** If you haven't encountered ORMs before or how you would use them in Go, I recommend checking out my other tutorial: [Go ORM Tutorial](/golang/golang-orm-tutorial/)
 
-By using an ORM to handle the database retrieval / update model, we can somewhat simplify our code and continue to expand our API purely in Go. Again, I've created a reference implementation of this that you can view here: [elliotforbes/go-graphql-tutorial/orm-example.go](https://github.com/elliotforbes/go-graphql-tutorial/blob/master/orm-example.go) 
+By using an ORM to handle the database retrieval / update model, we can somewhat simplify our code and continue to expand our API purely in Go. Again, I've created a reference implementation of this that you can view here: [elliotforbes/go-graphql-tutorial/orm-example.go](https://github.com/elliotforbes/go-graphql-tutorial/blob/2f59dec01e88ec9e839eef45293d256afa73b55c/orm-example.go) 
 
 # Conclusion
 
