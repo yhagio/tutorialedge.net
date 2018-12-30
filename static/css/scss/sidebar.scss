@@ -111,7 +111,9 @@
 .youtube-subscribe {
   background-color: #de4141;
   color: white;
-
+  a {
+    color: white !important;
+  }
   &:hover {
     text-decoration: none;
     box-shadow: 0 14px 28px 0 rgba(115,143,147,.8);
