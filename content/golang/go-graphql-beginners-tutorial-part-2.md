@@ -11,7 +11,7 @@ tags:
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
-> **Note -** This tutorial is part of a 2-part mini-series on GraphQL, the first part of this tutorial can be found here: [Go GraphQL Beginners Tutorial - Part 1](http://localhost:1313/golang/go-graphql-beginners-tutorial/)
+> **Note -** This tutorial is part of a 2-part mini-series on GraphQL, the first part of this tutorial can be found here: [Go GraphQL Beginners Tutorial - Part 1](/golang/go-graphql-beginners-tutorial/)
 
 Welcome fellow Gophers! In this tutorial, we are going to be expanding upon the work we did in our previous GraphQL Go tutorial and looking at mutations and implementing proper data-sources behind our GraphQL API.
 
