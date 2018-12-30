@@ -402,6 +402,6 @@ Perfect, it looks like we've gotten both our `list` and our `tutorial` schema wo
 
 That's all we'll be covering in this initial tutorial. We've managed to successfully set up a simple GraphQL server that is backed by an in-memory data-store. 
 
-In the next tutorial, we'll be looking at GraphQL mutations and changing our data-source to use a NoSQL database.
+In the next tutorial, we'll be looking at GraphQL mutations and changing our data-source to use a NoSQL database. The next part of this tutorial series can be found here: [Go GraphQL Beginners Tutorial - Part 2](/golang/go-graphql-beginners-tutorial-part-2/)
 
 > **Note -** If you want to keep track of when new Go articles are posted to the site, then please feel free to follow me on twitter for all the latest news: [@Elliot_F](https://twitter.com/elliot_f).
