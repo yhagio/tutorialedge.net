@@ -12,6 +12,11 @@ tags:
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
+The Event-driven programming paradigm is something that I've always thought was really interesting, and I've used it in the past with RxPy, the Python equivalent of this particular library we'll be using here. 
+
+The main beauty of event driven programs are their simplicity. You can model events coming in to the system and define subscribers to these events that trigger and handle them accordingly.
+
+
 
 # Conclusion
 
