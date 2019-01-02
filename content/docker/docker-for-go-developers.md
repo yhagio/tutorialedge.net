@@ -107,10 +107,56 @@ It would be a royal pain in the butt if we had to build our docker image and re-
 This effectively allows us to share data between both our host machine (our laptop) and our running docker container. 
 
 ```s
-$ docker run -it -p 8080:8080 -v ~/static:~/static my-go-image
+$ docker run -it -p 8080:8080 -v $(pwd)/static:/app/static my-go-image
 ```
 
 Now, if we make any changes to any of our `/static` directory files, we should see those changes being automatically reflected within our running docker container.
+
+If we update our Go code to serve files from a `/static` directory and create a new `index.html` within that directory, we should be able to verify this works:
+
+```go
+package main
+
+import (
+	"log"
+	"net/http"
+)
+
+func main() {
+
+	http.Handle("/", http.FileServer(http.Dir("./static")))
+
+	log.Fatal(http.ListenAndServe(":8080", nil))
+
+}
+```
+
+We can then create our `/static/index.html`:
+
+```html
+<!-- /static/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>test</title>
+</head>
+<body>
+    <h1>Does Stuff</h1>
+</body>
+</html>
+```
+
+Before finally building our image and running it using the `-v` volume flag:
+
+```s
+$ docker build -t my-go-image .
+$ docker run -it -p 8080:8080 -v $(pwd)/static:/app/static my-go-image
+```
+
+Now, when you navigate to `http://localhost:8080` you should see our newly created `index.html` being served back to us. 
+
+> **Try it Yourself -** Try updating the `index.html` file and changing the `<h1/>` tag contents on `line 7`. Then refresh your browser window.
+
 
 # Conclusion
 
