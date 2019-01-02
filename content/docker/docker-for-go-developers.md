@@ -20,6 +20,35 @@ By the end of this tutorial, we will have covered the following topics:
 * Mounting Volumes in Docker
 * Auto-build on changes
 
+# Our Basic Go Program
+
+For the purpose of this tutorial, we'll be using the code from my [go WebServer tutorial](/golang/creating-simple-web-server-with-golang/)
+
+```go
+package main
+
+import (
+	"fmt"
+	"html"
+	"log"
+	"net/http"
+)
+
+func main() {
+
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintf(w, "Hello, %q", html.EscapeString(r.URL.Path))
+	})
+
+	http.HandleFunc("/hi", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintf(w, "Hi")
+	})
+
+	log.Fatal(http.ListenAndServe(":8080", nil))
+
+}
+```
+
 # A Simple Example
 
 Let's start by creating a simple `Dockerfile` that will allow us to run a very simple Go program that runs on port 8080. 
