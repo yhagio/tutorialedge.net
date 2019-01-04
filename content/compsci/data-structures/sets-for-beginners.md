@@ -15,15 +15,36 @@ twitter: https://twitter.com/Elliot_F
 
 In this tutorial we are going to look at the `set` data structure in computer science and how you can leverage it within your applications. We'll be covering this concept using the Python programming language.
 
+# Sets in Mathematics
+
+Understanding Sets and basic Set Theory in Mathematics is a fundamental skill. The idea of a *Set* has been translated directly from mathematics into programming languages such as Python, and with this Set data structure, comes some incredibly useful functions such as `union()`, `issubset()`, `intersection()`, `isdisjoint()` that have also been translated directly over from Mathematics.
+
+*Sets* aren't just a fundamental skill in Mathematics, throughout your programming career you will likely encounter a wide number of different problems that can be far more easily solved with the use of Sets. 
+
 # Introduction
 
 A `set` is a data structure that can store any number of `unique` values in any order you so wish. Set's are different from [arrays](/compsci/data-structures/arrays-for-beginners) in the sense that they only allow non-repeated, unique values within them.
 
+Thankfully, programming languages tend to have the ability to convert the likes of an `array` into a `set` with minimal fuss. 
+
+Let's take a look at an example of this in Python. We'll start off by defining `an_array` which will contain a number of repeated elements. 
+
+We can then create a set using the `set()` function and pass in our `an_array`. This will automatically create a set of the unique values in our array for us. We can then view these unique values by printing out the contents of our set.
+
 ```py
->>> an_array = [1,2,2,3,4] # repeated values
->>> a_set = set({1,2,3,4}) # non-repeated, unique values
+>>> an_array = [1,2,2,3,3,4] # repeated values
+>>> a_set = set(an_array) # non-repeated, unique values
 >>> a_set
 {1, 2, 3, 4}
+```
+
+This can also be used for strings:
+
+```py
+>>> my_string = "hello world, my name is elliot"
+>>> char_set = set(my_string)
+>>> char_set
+{'r', ' ', 'a', 'i', 't', 'e', 'l', 'd', 'y', 'o', 's', 'n', 'm', 'h', ',', 'w'}
 ```
 
 # Adding Values to Sets
