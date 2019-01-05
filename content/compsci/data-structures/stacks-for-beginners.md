@@ -17,12 +17,16 @@ In this tutorial, we are going to be taking a look at stacks in Computer Science
 
 # Stacks - The Theory
 
-When working with stacks, we have the ability to perform two main actions. We can:
+I think the best way to imagine the stack data structure is to imagine a stack of pancakes. Typically, when you add a new pancake, it has to go on to the top of the existing pile. If you want to conversely eat a pancake from the stack, you have to pop the top one off and into your mouth. 
+
+From this, we can see that when we are working with stacks, we have the ability to perform two main actions. We can:
 
 * **Push** - add a new element to the top of the collection
 * **Pop** - remove the top element from our collection
 
-This makes it a somewhat interesting and quite easy *abstract data type* to implement as there isn't a whole lot to them.
+This makes it a somewhat interesting and quite easy *abstract data type* to implement as there isn't a whole lot to them. 
+
+Some implementations may include the functionality to `peek` the top element of our stack, but it isn't absolutely necessary. This is akin to peeking at the top pancake in our pile and inspecting it.
 
 # A Simple Array Based Example
 
