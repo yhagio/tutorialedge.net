@@ -51,7 +51,10 @@ If we walk this through, our `push` function takes in an element and appends it 
 
 > **Note -** - This is an incredibly basic, non-thread safe implementation of a `stack`. If you wanted to make it thread-safe, you would have to use locks around your `append` and `pop` calls to ensure these are done in a thread-safe manner.
 
+
+
 # Conclusion
 
 Hopefully you found this tutorial useful. If you have any suggestions as to how this could be improved then I would love to hear them in the suggestions section down below.
 
+> **Note -** If you want to keep track of when new articles are posted to the site, then please feel free to follow me on twitter for all the latest news: [@Elliot_F](https://twitter.com/elliot_f).
