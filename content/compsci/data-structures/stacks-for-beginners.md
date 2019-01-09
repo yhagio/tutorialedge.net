@@ -49,9 +49,7 @@ class Stack:
 
 If we walk this through, our `push` function takes in an element and appends it to the end of our `elements` array. In our `pop` function, we simply return the last element of our `elements` array.
 
-> **Note -** - This is an incredibly basic, non-thread safe implementation of a `stack`. If you wanted to make it thread-safe, you would have to use locks around your `append` and `pop` calls to ensure these are done in a thread-safe manner.
-
-
+> **Note -** - This is an incredibly basic, non-thread safe implementation of a `stack`. 
 
 # Conclusion
 
