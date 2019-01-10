@@ -6,7 +6,7 @@ desc: In this tutorial, we are going to look at how you can read and write files
 series: golang
 image: golang.png
 tags:
-- beginner
+- filesystem
 title: Reading And Writing To Files in Go
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
@@ -33,17 +33,16 @@ import (
 )
 
 func main() {
-  // read in the contents of the localfile.data
-  // 
+	// read in the contents of the localfile.data
 	data, err := ioutil.ReadFile("localfile.data")
-  // if our program was unable to read the file
-  // print out the reason why it can't
-  if err != nil {
+	// if our program was unable to read the file
+	// print out the reason why it can't
+	if err != nil {
 		fmt.Println(err)
 	}
 
-  // if it was successful in reading the file then
-  // print out the contents as a string
+	// if it was successful in reading the file then
+	// print out the contents as a string
 	fmt.Print(string(data))
 
 }

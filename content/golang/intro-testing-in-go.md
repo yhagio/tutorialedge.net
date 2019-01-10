@@ -6,7 +6,7 @@ desc: In this tutorial, we look at how properly implement a tests within your go
 series: golang
 image: golang.png
 tags:
-- beginner
+- testing
 weight: 11
 title: An Introduction to Testing in Go
 twitter: https://twitter.com/Elliot_F

@@ -5,7 +5,7 @@ desc: In this tutorial, we look at how you can effectively benchmark your go pro
 series: golang
 image: golang.png
 tags:
-- intermediate
+- testing
 title: An Introduction to Benchmarking Your Go Programs
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg

@@ -6,7 +6,7 @@ desc: In this tutorial, we are going to be having a look at some more advanced G
 series: golang
 image: golang.png
 tags:
-- beginner
+- testing
 title: Advanced Go Testing Tutorial
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
