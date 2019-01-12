@@ -27,7 +27,7 @@ So, in this tutorial, I thought it would be a good idea to build the base of an 
 
 I'm warning you now though that these are going to be incredibly simple and nowhere near production ready. If this is article is somewhat popular, I'll hopefully be taking it forward however, and trying to build something that meets the requirements of a semi-decent frontend framework.
 
-> **Github:** The full source code of this project can be found here: [elliotforbes/oak](https://github.com/elliotforbes/oak). If you fancy contributing to the project, feel free, I'd be happy to get any pull requests!
+> **Github:** The full source code of this project can be found here: [elliotforbes/go-webassembly-framework](https://github.com/elliotforbes/go-webassembly-framework). If you fancy contributing to the project, feel free, I'd be happy to get any pull requests!
 
 
 # Starting Point
@@ -59,7 +59,7 @@ license that can be found in the LICENSE file.
 </html>
 ```
 
-You'll notice these have 2 `js` files being imported at the top, these allow us to execute our finished WebAssembly binary. The first of which is about 414 lines long so, in the interest of keeping this tutorial readable, I recommend you download it from here: [https://github.com/elliotforbes/oak/blob/master/examples/blog/static/wasm_exec.js](https://github.com/elliotforbes/oak/blob/master/examples/blog/static/wasm_exec.js)
+You'll notice these have 2 `js` files being imported at the top, these allow us to execute our finished WebAssembly binary. The first of which is about 414 lines long so, in the interest of keeping this tutorial readable, I recommend you download it from here: [https://github.com/elliotforbes/go-webassembly-framework/blob/master/examples/blog/static/wasm_exec.js](https://github.com/elliotforbes/go-webassembly-framework/blob/master/examples/blog/static/wasm_exec.js)
 
 The second is our `entrypoint.js` file. This will fetch and run the `lib.wasm` that we'll be building very shortly.  
 
@@ -181,7 +181,7 @@ package components
 import (
 	"syscall/js"
 
-	"github.com/elliotforbes/oak"
+	"github.com/elliotforbes/go-webassembly-framework"
 )
 
 type AboutComponent struct{}
@@ -225,7 +225,7 @@ package router
 import (
 	"syscall/js"
 
-	"github.com/elliotforbes/oak/component"
+	"github.com/elliotforbes/go-webassembly-framework/component"
 )
 
 type Router struct {
@@ -280,9 +280,9 @@ Awesome, so we've got a really simple router up and running now, if we wanted to
 package main
 
 import (
-	"github.com/elliotforbes/oak"
-	"github.com/elliotforbes/oak/examples/blog/components"
-	"github.com/elliotforbes/oak/router"
+	"github.com/elliotforbes/go-webassembly-framework"
+	"github.com/elliotforbes/go-webassembly-framework/examples/blog/components"
+	"github.com/elliotforbes/go-webassembly-framework/router"
 )
 
 func main() {
@@ -303,7 +303,7 @@ func main() {
 
 # A Full Example
 
-With all of this put together, we can start building really simple web applications that feature components and routing. If you want to see a couple of examples as to how this works, then check out the examples within the official repo: [elliotforbes/oak/examples](https://github.com/elliotforbes/oak/tree/master/examples)
+With all of this put together, we can start building really simple web applications that feature components and routing. If you want to see a couple of examples as to how this works, then check out the examples within the official repo: [elliotforbes/go-webassembly-framework/examples](https://github.com/elliotforbes/go-webassembly-framework/tree/master/examples)
 
 # Challenges Going Forward
 
@@ -319,4 +319,4 @@ If you enjoyed this tutorial, then please feel free to share it to your friends,
 
 I'm also on YouTube, so feel free to subscribe to my channel for more Go content! - [TutorialEdge](https://youtube.com/tutorialedge).
 
-> The full source code for the Oak framework can be found here: [github.com/elliotforbes/oak](https://github.com/elliotforbes/oak/). Feel free to submit PRs!
+> The full source code for the Oak framework can be found here: [github.com/elliotforbes/go-webassembly-framework](https://github.com/elliotforbes/go-webassembly-framework/). Feel free to submit PRs!
