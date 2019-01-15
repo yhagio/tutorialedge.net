@@ -1,7 +1,6 @@
 ---
 title: "Working with Temporary Files and Directories in Go 1.11"
 date: 2019-01-10T11:21:58Z
-draft: true
 desc: In this tutorial, we are going to be looking at how you can create and work with temp files and directories in Go 1.11
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
