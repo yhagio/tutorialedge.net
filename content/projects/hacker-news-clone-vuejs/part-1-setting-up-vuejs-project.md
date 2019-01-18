@@ -12,6 +12,7 @@ tags:
 title: Part 1 - Setting Up Our VueJS Project
 twitter: https://twitter.com/Elliot_F
 weight: 1
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 In this first tutorial, we will be covering exactly how you set up your development machine so that we can start working on our HackerNews clone. 

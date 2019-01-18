@@ -12,6 +12,7 @@ tags:
 title: Part 6 - Advanced Components
 twitter: https://twitter.com/Elliot_F
 weight: 6
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 As we continue to build this HackerNews clone up, the code within some of our components is going to increasingly grow. We need to start splitting our application up into multiple smaller components and in order for us to do this, we'll first have to learn some new concepts such as passing data into components using props. 

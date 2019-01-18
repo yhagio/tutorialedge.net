@@ -9,6 +9,7 @@ tags:
 - golang
 title: Part 4 - Handling Multiple Clients
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 > **Note -** This post is part 4 of a series on building a chat application in Go with ReactJS. You can find part 3 here - [Part 3 - Designing Our Frontend](/projects/chat-system-in-go-and-react/part-3-designing-our-frontend/)

@@ -12,6 +12,7 @@ tags:
 title: Part 3 - Adding a Few Routes To Our App
 twitter: https://twitter.com/Elliot_F
 weight: 3
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 In the previous tutorial of this series, we covered single page components and how you could build your own components and subsequently render them within your Vue.js application. We created a simple `Navbar` component and registered it within our `App.vue` component and subsequently rendered it within our application. 

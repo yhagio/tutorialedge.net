@@ -9,6 +9,7 @@ tags:
 - golang
 title: Part 1 - Initial Setup
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 We'll start off this course by setting up both of our projects. Once we've got the fairly boring setup out of the way, we can begin to add new functionality and build up our application and see some positive results!

@@ -9,6 +9,7 @@ tags:
 - golang
 title: Part 2 - Simple Communication
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 > **Note -** This post is part 2 of a series on building a chat application in Go with ReactJS. You can find part 1 here - [Part 1 - Initial Setup](/projects/chat-system-in-go-and-react/part-1-initial-setup/)

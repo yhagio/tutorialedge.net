@@ -1,15 +1,16 @@
 ---
 author: Elliot Forbes
-date: 2018-03-19T11:05:52Z
-desc: 'In this series, we'll be looking at how you can build your own Face Recognition systems in Go'
+date: 2018-06-09T22:48:26+01:00
+desc: In this course, we are going to look at how you can implement your own face recognitions in
 image: golang.png
-homepage: true
 draft: true
-series: gofacerecognition
+series: 
+- gofacerecognition
 tags:
-- golang
-title: Building a Face Recognition Systems in Go
+- Face Recognition
+title: Face Recognition in Go
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 ### Project Outline

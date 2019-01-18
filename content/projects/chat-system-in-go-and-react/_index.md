@@ -10,6 +10,7 @@ tags:
 - golang
 title: Building a Chat Application in Go with ReactJS
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 # Goals for the Course

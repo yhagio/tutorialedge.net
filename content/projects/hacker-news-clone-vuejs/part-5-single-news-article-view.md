@@ -12,6 +12,7 @@ tags:
 title: Part 5 - Viewing Individual News Articles
 twitter: https://twitter.com/Elliot_F
 weight: 5
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 In the previous tutorial, we looked at how we could show all of the latest HackerNews stories on our `Homepage` component and showed information like the score and the URL of that story. Whilst this is pretty cool, it doesn't let us see the discussion going on around any of the stories, as we all know, this can be the best bit!

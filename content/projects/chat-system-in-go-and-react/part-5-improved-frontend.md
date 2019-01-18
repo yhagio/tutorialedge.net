@@ -9,6 +9,7 @@ tags:
 - golang
 title: Part 5 - Improving the Frontend
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 > **Note -** This post is part 5 of a series on building a chat application in Go with ReactJS. You can find part 4 here - [Part 4 - Handling Multiple Clients](/projects/chat-system-in-go-and-react/part-4-handling-multiple-clients/)

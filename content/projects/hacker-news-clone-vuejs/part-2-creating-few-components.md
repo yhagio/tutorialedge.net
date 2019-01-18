@@ -12,6 +12,7 @@ tags:
 title: Part 2 - Creating a Few Components
 twitter: https://twitter.com/Elliot_F
 weight: 2
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 In the previous tutorial, we not only managed to set up our base project and get it running on `http://localhost:8080`, but we also managed to build it so that it's ready for deployment to production. We now have a strong base project from which we can build up up our HackerNews clone.

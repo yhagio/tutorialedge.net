@@ -9,6 +9,7 @@ tags:
 - golang
 title: Part 3 - Designing our Frontend
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 > **Note -** This post is part 3 of a series on building a chat application in Go with ReactJS. You can find part 2 here - [Part 2 - Simple Communication](/projects/chat-system-in-go-and-react/part-2-simple-communication/)
