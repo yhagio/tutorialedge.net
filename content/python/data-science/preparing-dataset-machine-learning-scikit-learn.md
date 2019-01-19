@@ -1,14 +1,13 @@
 ---
 title: "Preparing a Dataset for Machine Learning with scikit-learn"
 date: 2019-01-19T10:53:22Z
-draft: true
 desc: Learn how to prepare a dataset for machine learning with scikit-learn in this article by Kevin Jolly, a data scientist who works as a statistical analyst with a digital healthcare start-up
 author: Kevin Jolly
 twitter: https://twitter.com/imkevinjolly
 series: python
 image: python-logo.png
 tags:
-- beginner
+- data-science
 authorImage: https://pbs.twimg.com/profile_images/868147892795588608/iAnFiiiE_400x400.jpg
 ---
 
