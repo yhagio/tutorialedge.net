@@ -20,6 +20,33 @@ In this part of the series, we are going to be implementing the Go code that wil
 
 For each pixel within our image, we'll want to calculate a value for that pixel that is based on it's neighboring pixels. 
 
+Let's take for example a 3x3 square of pixels that looks like this:
+
+```
+ 9 |  8  | 2
+---|-----|---
+ 2 |  6  | 6
+---|-----|---
+ 1 |  9  | 2 
+```
+
+The goal is to convert that pixel neighbourhood into greyscale pixel values. We can do this by comparing each of the individual pixel values against the central pixel value.
+
+If the neighbouring pixel value is greater than or equal to the central pixel value `6`, we replace the value with a `1`, if it is less than our central pixel value `6`, we replace it with a `0`.
+
+Once we have these values, we can convert the central pixel into a binary number starting from the top left pixel clock-wise. 
+
+* `9` - is greater than 6 so is converted to `1`
+* `8` - is greater than 6 so is converted to `1`
+* `2` - is less than 6 so is converted to `0`
+* `4` - is less than 6 so is converted to `0`
+* `2` - is less than 6 so is converted to `0`
+* `9` - is greater than 6 so is converted to `1`
+* `1` - is less than 6 so is converted to `0`
+* `2` - is less than 6 so is converted to `0`
+
+Therefore, we end up with the binary string `11000100` which equates to the decimal number `35` in this particular example.
+
 # Initializing Our Project
 
 Before any programming can be done, we'll need to get our workspace sorted out. We can do that by creating a new folder on our local machine and running the following commands.
@@ -55,9 +82,164 @@ $ go run main.go
 Hello World
 ```
 
-# Implementing the Test Cases
+# Implementation
 
-Now that we have our initial project setup out of the way we can begin implementing our Face Recognition algorithm.
+Let's dive into the implementation of our LBP algorithm. We'll start off by creating a really simple helper function that will take in 2 integer values and return either a `1` if the value is greater than or equal to the `threshold`, or a `0`, if it is less than the `threshold`. 
+
+Now this `threshold` will represent the center pixel if we refer back to our simple example.
+
+```go
+package lbp
+
+// GetBinaryValue function used to get a binary value as a string based on a threshold.
+// Return "1" if the value is equal or higher than the threshold or "0" otherwise.
+func GetBinaryValue(value, threshold int) string {
+	if value >= threshold {
+		return "1"
+	} else {
+		return "0"
+	}
+}
+
+```
+
+It's going to be critical that we test these things early and often to ensure that, not only do we understand the concepts, but that the code we have written is correct.
+
+Let's create a new file in the same directory as our `pkg/lbp/lpb.go` file called `lbp_test.go`. Within this file, we'll want to import our `lbp` package from our project, and we'll want to define a `TestCase` struct.
+
+
+
+```go
+package lbp_test
+
+import (
+    "testing"
+
+    "github.com/elliotforbes/go-face-recognition/pkg/lbp"
+	"github.com/stretchr/testify/assert"
+)
+
+type BinaryValueTestCase struct {
+	Value     int
+	Threshold int
+	Output    string
+}
+
+func TestGetBinaryValue(t *testing.T) {
+	var tests = []BinaryValueTestCase{
+		{9, 6, "1"},
+		{8, 6, "1"},
+		{2, 6, "0"},
+		{6, 6, "1"},
+		{2, 6, "0"},
+		{9, 6, "1"},
+		{1, 6, "0"},
+		{2, 6, "0"},
+	}
+
+	for _, test := range tests {
+		assert.Equal(t, test.Output, lbp.GetBinaryValue(test.Value, test.Threshold))
+	}
+}
+
+```
+
+> **Note -** We'll be using the `stretchr/testify` package in order to assert the equality of our input and outputs in our test cases.
+
+At this point of our journey, we should have a folder structure that looks something like this:
+
+```
+pkg/
+- lbp/
+- - lpb.go
+- - lbp_test.go
+main.go
+go.mod
+go.sum
+```
+
+And at this point, we should be able to run `go test ./...` to run our newly implemented test:
+
+```s
+$  go test ./... -v
+?       github.com/elliotforbes/go-face-recognition     [no test files]
+=== RUN   TestGetBinaryValue
+--- PASS: TestGetBinaryValue (0.00s)
+PASS
+ok      github.com/elliotforbes/go-face-recognition/pkg/lbp     0.014s
+```
+
+As you can see from our `-v` verbose output, we have successfully run our `TestGetBinaryValue` test function. 
+
+# Calculating Binary Strings
+
+Let's move on to calculating full binary strings for a grid of 3x3 pixels. We'll start off by implementing the test that will ensure whatever we implement is correct.
+
+Once again, open `lbp_test.go` and below our existing code, we'll want to add a new test function, `TestGetBinaryString`. This test function will pass in a predefined grid of 9 pixels to the `GetBinaryString` function that we are about to implement, and it will verify the expected output and the actual output are equal:
+
+```go
+func TestGetBinaryString(t *testing.T) {
+	testCase := [][]uint8{
+		{9, 8, 2},
+		{2, 6, 6},
+		{1, 9, 2},
+	}
+
+	expectedString := "11010100"
+	assert.Equal(t, expectedString, lbp.GetBinaryString(testCase))
+}
+
+```
+
+Now, we can open up our `lbp.go` file and implement our `GetBinaryString` function.
+
+```go
+func GetBinaryString(pixels [][]uint8) string {
+    return ""
+}
+```
+
+Let's break down what this function will have to do. 
+
+Given a grid of 3x3 pixels, this will calculate the binary value of each of the neighbouring pixels starting from the top-left corner clockwise. It will concatenate the binary value in that order and give us a binary string representation.
+
+We can implement this really simply by hard-coding the order in which it calculates the binary values like so:
+
+```go
+// GetBinaryString takes in a grid of 3x3 pixels and computes
+// a binary string from this grid
+func GetBinaryString(pixels [][]uint8) string {
+	binaryString := ""
+	binaryString += GetBinaryValue(int(pixels[0][0]), int(pixels[1][1]))
+	binaryString += GetBinaryValue(int(pixels[0][1]), int(pixels[1][1]))
+	binaryString += GetBinaryValue(int(pixels[0][2]), int(pixels[1][1]))
+	binaryString += GetBinaryValue(int(pixels[1][2]), int(pixels[1][1]))
+	binaryString += GetBinaryValue(int(pixels[2][2]), int(pixels[1][1]))
+	binaryString += GetBinaryValue(int(pixels[2][1]), int(pixels[1][1]))
+	binaryString += GetBinaryValue(int(pixels[2][0]), int(pixels[1][1]))
+	binaryString += GetBinaryValue(int(pixels[1][0]), int(pixels[1][1]))
+	return binaryString
+}
+
+```
+
+Now that we've attempted to implement it, let's verify that the output matches our expected output:
+
+```s
+$ go test ./... -v
+?       github.com/elliotforbes/go-face-recognition     [no test files]
+=== RUN   TestGetBinaryValue
+--- PASS: TestGetBinaryValue (0.00s)
+=== RUN   TestGetBinaryString
+--- PASS: TestGetBinaryString (0.00s)
+PASS
+ok      github.com/elliotforbes/go-face-recognition/pkg/lbp     0.014s
+```
+
+Awesome, we now have 2 passing test functions!
+
+
+## UNDER CONSTRUCTION
 
 # Next Part of the Series
 
