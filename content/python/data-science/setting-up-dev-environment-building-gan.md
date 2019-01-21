@@ -1,5 +1,5 @@
 ---
-title: "Setting Up Dev Environment Building Gan"
+title: "Setting Up Dev Environment Building a Genetic Adversarial Network"
 date: 2019-01-19T11:11:06Z
 desc: Learn what it takes to set up the development environment you need to get started with Generative Adversarial Networks
 author: Josh Kalin

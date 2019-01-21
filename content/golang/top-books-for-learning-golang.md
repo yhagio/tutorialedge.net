@@ -1,13 +1,12 @@
 ---
 author: Elliot Forbes
 date: 2017-06-12T21:29:27+01:00
-desc: The definitive list of all the books you should buy if you want to master the
-  art of programming Golang applications
+desc: The definitive list of the best books you can buy whether you are a beginner, intermediate or advanced golang developer
 series: golang
 image: golang.png
 tags:
 - misc
-title: The Top Books For Learning Golang
+title: The Best Books For Learning Golang
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
