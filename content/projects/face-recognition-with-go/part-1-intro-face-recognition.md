@@ -46,6 +46,6 @@ However, the goal for this course is to try and give you a deeper insight into w
 
 # Next Part of the Series
 
-
+This was just a quick and simple introduction to the world of face recognition.
 
 * [Part 2 - Local Binary Patterns](/projects/face-recognition-with-go/part-2-local-binary-patterns/)

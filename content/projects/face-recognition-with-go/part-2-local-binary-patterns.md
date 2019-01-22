@@ -223,6 +223,8 @@ func GetBinaryString(pixels [][]uint8) string {
 
 ```
 
+> **Note -** In choosing this approach, I've certainly simplified the code, but I've also made
+
 Now that we've attempted to implement it, let's verify that the output matches our expected output:
 
 ```s
@@ -236,10 +238,11 @@ PASS
 ok      github.com/elliotforbes/go-face-recognition/pkg/lbp     0.014s
 ```
 
-Awesome, we now have 2 passing test functions!
+Awesome, we now have 2 working tests validating what we have implemented is correct.
 
+# Taking an Image as Input
 
-## UNDER CONSTRUCTION
+The next step we'll want to implement is the ability to read in a given image so that we can then transform this into 
 
 # Next Part of the Series
 

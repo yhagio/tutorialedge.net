@@ -88,7 +88,7 @@ defer jsonFile.Close()
 
 ## Parsing with Structs
 
-We have a few options when it comes to parsing the JSON that is contained within our `users.json` file. We could either unmarshal the JSON using a set of predefined structs, or we could unmarshal the JSON using a map[string]interface{} to parse our JSON into strings mapped against arbitrary data types.  
+We have a few options when it comes to parsing the JSON that is contained within our `users.json` file. We could either unmarshal the JSON using a set of predefined structs, or we could unmarshal the JSON using a `map[string]interface{}` to parse our JSON into strings mapped against arbitrary data types.  
 
 If you know the structure that you are expecting then I would recommend going down the verbose route and defining your structs like so:
 
@@ -126,6 +126,33 @@ type Social struct {
 ```
 
 Once we have these in place, we can use them to unmarshal our JSON. 
+
+
+# Unmarshalling our JSON
+
+Once we've used the os.Open function to read our file into memory, we then have to convert it toa byte array using ioutil.ReadAll. Once it's in a byte array we can pass it to our json.Unmarshal() method.
+
+```go
+// read our opened xmlFile as a byte array.
+byteValue, _ := ioutil.ReadAll(jsonFile)
+
+// we initialize our Users array
+var users Users
+
+// we unmarshal our byteArray which contains our
+// jsonFile's content into 'users' which we defined above
+json.Unmarshal(byteValue, &users)
+
+// we iterate through every user within our users array and
+// print out the user Type, their name, and their facebook url
+// as just an example
+for i := 0; i < len(users.Users); i++ {
+	fmt.Println("User Type: " + users.Users[i].Type)
+	fmt.Println("User Age: " + strconv.Itoa(users.Users[i].Age))
+	fmt.Println("User Name: " + users.Users[i].Name)
+	fmt.Println("Facebook Url: " + users.Users[i].Social.Facebook)
+}
+```
 
 # Working with Unstructured Data
 
@@ -177,32 +204,6 @@ Successfully opened users.json
 If we wanted to traverse further down the tree, we could do that just as we normally would traverse down a `map` structure within Go, without having to define the struct types.
 
 > **Note -** It is typically recommended to try and define the structs, if you happen to know the structure of the data coming back. 
-
-# Unmarshalling our JSON
-
-Once we've used the os.Open function to read our file into memory, we then have to convert it toa byte array using ioutil.ReadAll. Once it's in a byte array we can pass it to our json.Unmarshal() method.
-
-```go
-// read our opened xmlFile as a byte array.
-byteValue, _ := ioutil.ReadAll(jsonFile)
-
-// we initialize our Users array
-var users Users
-
-// we unmarshal our byteArray which contains our
-// jsonFile's content into 'users' which we defined above
-json.Unmarshal(byteValue, &users)
-
-// we iterate through every user within our users array and
-// print out the user Type, their name, and their facebook url
-// as just an example
-for i := 0; i < len(users.Users); i++ {
-	fmt.Println("User Type: " + users.Users[i].Type)
-	fmt.Println("User Age: " + strconv.Itoa(users.Users[i].Age))
-	fmt.Println("User Name: " + users.Users[i].Name)
-	fmt.Println("Facebook Url: " + users.Users[i].Social.Facebook)
-}
-```
 
 # Full Implementation
 

@@ -16,8 +16,12 @@ The Event-driven programming paradigm is something that I've always thought was 
 
 The main beauty of event driven programs are their simplicity. You can model events coming in to the system and define subscribers to these events that trigger and handle them accordingly.
 
+# A Simple Example
 
+# 
 
 # Conclusion
+
+So, in this tutorial we managed to cover how to write event-driven programs in Go using RxGo. 
 
 > **Note -** If you want to keep track of when new Go articles are posted to the site, then please feel free to follow me on twitter for all the latest news: [@Elliot_F](https://twitter.com/elliot_f).
