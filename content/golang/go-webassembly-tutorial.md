@@ -104,7 +104,7 @@ license that can be found in the LICENSE file.
 We'll also need the `wasm_exec.js` file which can be found [here](https://github.com/golang/go/blob/master/misc/wasm/wasm_exec.js). Download that and save it alongside your `index.html`.
 
 ```html
-$ wget https://github.com/golang/go/blob/master/misc/wasm/wasm_exec.js
+$ wget https://raw.githubusercontent.com/golang/go/master/misc/wasm/wasm_exec.js
 ```
 
 And, we also have a simple `net/http` based file server, again stolen from [here](https://github.com/golang/go/wiki/WebAssembly), to serve up our `index.html` and our various other WebAssembly files:
