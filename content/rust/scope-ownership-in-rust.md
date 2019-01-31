@@ -1,15 +1,14 @@
 ---
 title: "Scope and Ownership in Rust"
 date: 2019-01-30T14:36:39Z
-draft: true
 desc: Learn about the scope and ownership in Rust in this guest post by Daniel Arbuckle, the author of Rust Quick Start Guide.
-author: Elliot Forbes
-twitter: https://twitter.com/elliot_f
+author: Daniel Arbuckle
+twitter: https://amzn.to/2GfjZaH
 series: rust
 image: rust-logo.png
 tags:
 - beginner
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://tutorialedge.net/images/logo.png
 ---
 
 In Rust, every data value has a single owning scope—no more, no less. So, what's a scope? The easy answer is that a scope is the place where a block expression stores its variables. Scopes are not directly represented in the source code, but a scope begins when a block expression begins, with a `{` symbol, and ends when the block expression ends, with `}` (or when a `return` statement is run before the block reaches its end). The scope is the chunk of memory where the block's variables are stored.
@@ -24,7 +23,7 @@ Like most programming languages, Rust uses a **stack** to handle memory manage
 
 We can think of a stack as a pile of boxes. If we want to remove the stuff stored in the top box, we can just take it down and look inside. However, if we want to remove the stuff stored in one of the boxes underneath, we first have to remove the boxes above it. Here's a diagram of what I'm talking about, with access to the boxes underneath blocked by the ones above them:
 
-### IMAGE HERE
+![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/rust/image1-17.png)
 
 When a Rust block expression starts, it makes a note of how tall the stack is and, when the block ends, it removes things from the stack until the stack is of the same height as it was to begin with. In between, when the block needs to store a new value, it pushes that value onto the stack.
 
@@ -87,9 +86,9 @@ pub fn uncertain_ownership(switch: bool) {
 
 When we try to compile the `uncertain_ownership` function, we get output like this from the compiler:
 
-### IMAGE HERE
+![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/rust/image2-19.png)
 
 # Conclusion
 
 As far as the compiler is concerned, if we could have moved the value before using it, we don't get to use it.
-Hope you enjoyed reading this article. If you’d like to get up and running with Rust, Rust Quick Start Guide is your one-stop guide! Rust is an emerging programming language applicable to areas such as embedded programming, network programming, system programming, and web development. This book will take you from the basics of Rust to the point where your code compiles and does what you intend!
+Hope you enjoyed reading this article. If you’d like to get up and running with Rust, [Rust Quick Start Guide](https://amzn.to/2GfjZaH) is your one-stop guide! Rust is an emerging programming language applicable to areas such as embedded programming, network programming, system programming, and web development. This book will take you from the basics of Rust to the point where your code compiles and does what you intend!
