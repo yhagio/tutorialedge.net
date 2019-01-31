@@ -584,4 +584,4 @@ The result of adding the previous code can be seen in this screenshot:
 
 # Conclusion
 
-If you found this article helpful and would like to get started with Vue.js, Vue.js Quick Start Guide is the most ideal book for you to learn how to build amazing and complex reactive web applications easily using Vue.js
+If you found this article helpful and would like to get started with Vue.js, [Vue.js Quick Start Guide](https://amzn.to/2sXauVF) is the most ideal book for you to learn how to build amazing and complex reactive web applications easily using Vue.js
