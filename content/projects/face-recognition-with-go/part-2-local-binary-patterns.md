@@ -14,6 +14,7 @@ twitter: https://twitter.com/Elliot_F
 weight: 3
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
+
 In this part of the series, we are going to be implementing the Go code that will perform the task of converting an image from a combination of RGB pixels into a black and white scale representation of the image as a collection of *Local Binary Patterns*.
 
 # The Theory
@@ -46,6 +47,8 @@ Once we have these values, we can convert the central pixel into a binary number
 * `2` - is less than 6 so is converted to `0`
 
 Therefore, we end up with the binary string `11000100` which equates to the decimal number `35` in this particular example.
+
+> **Note -** This is an example of an 8-neighbourhood LBP with a radius of 1, you can increase the radius to get higher quality matches at the expense of more computational cost
 
 # Initializing Our Project
 

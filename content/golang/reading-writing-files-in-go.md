@@ -13,6 +13,8 @@ authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_4
 weight: 8
 ---
 
+> **Note -** If you are interested in working with JSON in Go, you may also like my other tutorial - [Go JSON Tutorial](/golang/go-json-tutorial/)
+
 Within this tutorial, we are going to look at how you can effectively read and write to files within your filesystem using the go programming language. 
 
 The method we are going to use to read and write to these files will be file format-agnostic. What this means is that you'll be able to use the techniques we'll be covering in order to read and write, `.txt`, `.csv`, `.xls` and so on, the only thing that differs for these files is the structure of the data that you write to each of these file types.
