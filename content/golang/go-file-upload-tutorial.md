@@ -19,6 +19,10 @@ Thankfully, the task of dealing with image uploading in Go is fairly simple and,
 
 > **Note -** You can read more about the TempFile api in my other tutorial here: [Go Temporary Files and Directories](/golang/temporary-files-directories-go-111/)
 
+# Video Tutorial
+
+<iframe width="1489" height="846" src="https://www.youtube.com/embed/9UraWiKDgrU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 # The Implementation
 
 We'll start off by creating a really simple HTTP server using the `net/http` package. This will feature just the one solitary endpoint which will be our `/upload` endpoint.
