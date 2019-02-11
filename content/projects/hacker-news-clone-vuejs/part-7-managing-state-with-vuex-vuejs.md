@@ -46,7 +46,7 @@ Once we have successfully installed `vuex` we can go ahead and start using this 
 
 # Setting up a Store
 
-The first thing we need to do is to create a new directory `/src/store/`. This will contain the code for our store that our application will rely upon.
+The first thing we need to do is to create a new directory `/src/store.js`. This will contain the code for our store that our application will rely upon.
 
 Let's create a new file `index.js` within this directory. In this file we will be creating a `store` object that will be of type `Vuex.Store({})`. Within this object we are going to define a `state` property as well as a `mutations` property. 
 
@@ -88,33 +88,30 @@ Now that we've created our basic vuex store, we need to ensure our Vue instance 
 
 ```js
 import Vue from 'vue'
-import App from './App'
+import App from './App.vue'
+import store from './store'
 import router from './router'
-/* Here we import our store from our newly defined index.js file */
-import { store } from './store/index.js'
 
 Vue.config.productionTip = false
 
-/* eslint-disable no-new */
 new Vue({
-  el: '#app',
   router,
-  store: store, /* Here we ensure our Vue instance uses our store */
-  components: { App },
-  template: '<App/>'
-})
+  store: store,
+  render: h => h(App)
+}).$mount('#app')
+
 ```
 
 
 # Vuex Basics
 
-Now that we've set up our application to use our newly defined store, let's test to see if it all works. Open your `Homepage.vue` component file and then within your `created: function()` block, add: 
+Now that we've set up our application to use our newly defined store, let's test to see if it all works. Open your `Home.vue` component file and then within your `created: function()` block, add: 
 
 ```js
 console.log(this.$store.state.articles)
 ```
 
-Now, when you refresh your page, you should see an empty array print out in the console. We've been able to successfully create a store, and then query said store from a component within our application.
+Now, when you refresh your page, you should see an empty array print out in the console. We've been able to successfully create a store, and then query said store from a component within our applicatiostoren.
 
 Currently, this doesn't really provide much extra value on top of what we already have. Let us change this now by adding a few `actions` to our store. These will actually perform the API requests needed to retrieve all articles and comments etc.
 
@@ -132,7 +129,7 @@ import mutations from './mutations.js'
 
 Vue.use(Vuex)
 
-export const store = new Vuex.Store({
+export default new Vuex.Store({
   state: {
     topStories: [],
     newStories: []
@@ -206,7 +203,7 @@ export default {
 
 # Updating our Homepage.vue and our New.vue Components
 
-Now that we've defined everything we need with regards to our `actions`, `mutations` and `store`, it's time to update our `Homepage.vue` and `New.vue` components so that they retrieve the topStories from the store or trigger a `fetch_top/new_stories` action should the store not contain any stories.
+Now that we've defined everything we need with regards to our `actions`, `mutations` and `store`, it's time to update our `Home.vue` and `New.vue` components so that they retrieve the topStories from the store or trigger a `fetch_top/new_stories` action should the store not contain any stories.
 
 ## New.vue component
 

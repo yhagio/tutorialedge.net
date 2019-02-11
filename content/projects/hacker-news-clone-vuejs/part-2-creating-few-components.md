@@ -100,7 +100,7 @@ Once we have imported and registered this new component, we can use it within ou
 Our Vue.js application infers automatically that the `<navbar>` HTML tag corresponds to the `Navbar` component we have registered within our `components` property. However, should you wish to explicitly state the element you wish to correspond to a component, you can do so like this:
 
 ```js
-import Navbar from '@/components/Navbar'
+import Navbar from './components/Navbar'
 export default {
   name: 'App',
   components: {
@@ -137,7 +137,7 @@ export default {
 
 Pretty much every web application you see will utilize some form of `CSS` framework. Now, for this project, I'm choosing to use the Pure-CSS framework as it seems relatively lightweight whilst featuring essentials such as a grid system, and I haven't had much of a chance to play about with it yet. 
 
-In order to add a CSS framework to our project, open up the `index.html` page within your project and add:
+In order to add a CSS framework to our project, open up the `public/index.html` page within your project and add:
 
 ```html
 <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">

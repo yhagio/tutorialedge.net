@@ -27,7 +27,7 @@ This tutorial is also available in video format, should you wish to support the 
 
 # Our Single.vue Component
 
-First things first, we will need a new component. Create a new file within your `src/components` directory called `Single.vue`.
+First things first, we will need a new component. Create a new file within your `src/views` directory called `Single.vueSin`.
 
 ```html
 <template>
@@ -47,7 +47,7 @@ export default {
 </style>
 ```
 
-Next, we will need to create a new route in our `vue router`. Extend your `index.js` file within the `src/router/` directory so that it imports our newly defined `Single` component and so that it has a new `/story` path which will render our component.
+Next, we will need to create a new route in our `vue router`. Extend your `router.js` file within the `src/` directory so that it imports our newly defined `Single` component and so that it has a new `/story` path which will render our component.
 
 ```js
 import Vue from 'vue'
@@ -81,7 +81,7 @@ Within our `Single` component we will be able to retrieve this `:id` value and t
 
 # Updating our Homepage Component
 
-So, now that we've defined this route, we need to update our `Homepage` component so that each story we retrieve links back to the appropriate `/story/:id` page within our application.
+So, now that we've defined this route, we need to update our `Home.vue` component so that each story we retrieve links back to the appropriate `/story/:id` page within our application.
 
 To do this, we'll use the `<router-link/>` component to wrap our stories' title like so:
 
@@ -114,7 +114,7 @@ When you subsequently click on a link, you should see it take you through to our
 
 # Querying The Comments API
 
-So, we have the story, we have our new component, how do we get our new component to retrieve all of the top-level comments for said story? 
+So, we have the story, we have our new component, how do we get our new component to retrieve all of the top-level comments for said story?
 
 The answer? Another series of RESTful API calls within our component's `created()` lifecycle hook.
 
@@ -254,7 +254,7 @@ If you were to save this and view it as it currently stands, it wouldn't look al
 
 # Some Global Style Changes
 
-To polish this just a little bit more, let's add a `static/style.css` file to our project and populate it with the following CSS:
+To polish this just a little bit more, let's add some styles to our root level `App.vue` component:
 
 ```css
 body {

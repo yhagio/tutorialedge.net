@@ -61,14 +61,14 @@ The returned JSON for an individual item looks like this:
 }
 ```
 
-So, on our `Homepage` components initial load, we need to query the first API to retrieve the top 490 odd top stories, we then iterate through the first 10 or 20 or so and query the HackerNews API once again for the fleshed out details. 
+So, on our `Home` components initial load, we need to query the first API to retrieve the top 490 odd top stories, we then iterate through the first 10 or 20 or so and query the HackerNews API once again for the fleshed out details. 
 
-To get us started, we will need to open up our `src/components/Homepage.vue` component and then within the `<script>` element do the following:
+To get us started, we will need to open up our `src/views/Home.vue` component and then within the `<script>` element do the following:
 
 ```js
 import axios from 'axios'
 export default {
-  name: 'Homepage',
+  name: 'home',
   data: function () {
     return {
       err: '',
@@ -111,7 +111,7 @@ Let's flesh out our `created()` function and slice the `results` we get back fro
 ```js
 import axios from 'axios'
 export default {
-  name: 'Homepage',
+  name: 'home',
   data: function () {
     return {
       err: '',

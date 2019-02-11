@@ -25,55 +25,74 @@ We'll get a basic VueJS application up and running and we'll also cover how you 
 
 # Installing the Vue CLI
 
-We'll be using version `2.9.3` of the `vue-cli` in order to create our initial project. You can install this by typing the following:
+We'll be using version `3.4.0` of the `vue-cli` in order to create our initial project. You can install this by typing the following:
 
 ```s
-$ yarn global add vue-cli
+$ yarn global add @vue/cli
 # or
-$ npm install -g vue-cli
+$ yarn global add @vue/cli
 ```
-
-> Note: At the time of writing this `vue-cli` 3.0.0 is currently in beta, I will update this when it goes to production! 
 
 Once you have done this, verify you have a working `vue-cli` by typing:
 
 ```s
-$ vue -V
-2.9.3
+$ vue --version
+3.4.0
 ```
 
 # Creating our Project
 
-Once we have successfully installed version `2.9.3` or above of the `vue-cli`, we can then go about creating our project by typing the following:
+Once we have successfully installed version `3.4.0` or above of the `vue-cli`, we can then go about creating our project by typing the following:
 
 ```s
-$ mkdir hackernews-clone
-$ cd hackernews-clone
-$ vue init webpack
+$ vue create hn-clone
+Vue CLI v3.4.0
+? Please pick a preset: (use arrow keys)
+> default (babel, eslint)
+  Manually select features
 ```
 
-This will ask you a series of questions regarding how you project should be set up. 
-
-1. Choose `Y` to generate project in the current directory
-1. Leave the Project name as is.
-1. Leave the project description as is.
-1. Enter your name in the Author field.
-1. Choose Runtime + Compiler.
-1. Install vue-router = `Y`
-1. Use ESLint to lint your code = `Y` with the Standard lint settings.
-1. Set up unit test = `n` for now, we can add them later
-1. Choose no for e2e tests with Nightwatch
-1. Then select the package manager of your choice, I'll be using Yarn
-
-Once we've done this we can run it locally by calling:
+Select the `default` option and the `vue-cli` should go away and instantiate the project for us. We'll then be able to navigate into our newly created project and start it using yarn:
 
 ```s
-$ yarn run dev
+$ cd hn-clone
+$ yarn serve
+ DONE  Compiled successfully in 3281ms                                                                                                                     21:12:44
+
+  App running at:
+  - Local:   http://localhost:8080/
+  - Network: http://192.168.1.234:8080/
+
+  Note that the development build is not optimized.
+  To create a production build, run yarn build.
 ```
 
-When you navigate to `http://localhost:8080` within your browser, you should see your newly created VueJS application running:
+This will kick off a development server on our local machine that we will then be able to navigate to in our browser - `http://localhost:8080`. When you navigate to `http://localhost:8080` within your browser, you should see your newly created VueJS application running:
 
 ![VueJS up and running!](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/hackernews-clone/screenshot-01.png)
+
+# Project Structure
+
+If we open up the newly created `hn-clone` directory within a code editor of choice, we should see a number of files and directories automatically created for us. These are the core files of our web application and it is from this base that we'll be able to build our HackerNews clone.
+
+```s
+node_modules/
+public/
+ - favicon.ico
+ - index.html
+src/
+ - assets/
+ - components/
+ - App.vue
+ - main.js
+.gitignore
+babel.config.js
+package.json
+README.md
+yarn.lock
+```
+
+The key directory that we'll want to concern ourselves with is the `src/` directory. This is where most of our application source code will live and we'll be adding a few new components under here in the next parts of this series.
 
 # Building Your Project
 
@@ -83,11 +102,11 @@ Once you have run `yarn run build` you should see your `dist/` directory look so
 
 ```s
 dist/
+- css/
+- img/
+- js/
+- favicon.ico 
 - index.html
-- static/
-- - css/
-- - js/
-- - style.css 
 ```
 
 Within the `dist/static/js/` directory you should see all of the minified, transpiled javascript files that your `index.html` file needs in order to run as a Vue.js application. You will be able to push this up to 

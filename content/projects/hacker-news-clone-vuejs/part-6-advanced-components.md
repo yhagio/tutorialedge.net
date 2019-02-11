@@ -87,11 +87,11 @@ export default {
 </style>
 ```
 
-Notice that we've used `props` within our component's `js`. This will allow us to pass in a `story` object further down the line from a parent component such as our `Homepage.vue` component.
+Notice that we've used `props` within our component's `js`. This will allow us to pass in a `story` object further down the line from a parent component such as our `Home.vue` component.
 
-Now that we have created this new component, we can go about updating our `Homepage.vue` component so that it uses our newly defined `Item.vue` component.
+Now that we have created this new component, we can go about updating our `Home.vue` component so that it uses our newly defined `Item.vue` component.
 
-# Updating our Homepage.vue
+# Updating our Home.vue
 
 Let us first modify our `<template>` tags so that we utilize our new `Item.vue` component. We'll still want to reuse the `v-for` VueJS directive in order to render an array of top items.
 
@@ -105,13 +105,13 @@ We use `:story` to bind an individual `story` object to each of our `Item` compo
 </template>
 ```
 
-This looks a lot more succinct and is positively far better than just having our `Homepage.vue` component constantly grow on us. 
+This looks a lot more succinct and is positively far better than just having our `Home.vue` component constantly grow on us. 
 
-Now that we've done this, we need to import our `Item` component and register it within our `Homepage` component. We can do this like so:
+Now that we've done this, we need to import our `Item` component and register it within our `Home` component. We can do this like so:
 
 ```ts
 import axios from 'axios'
-import Item from '@/components/Item'
+import Item from '@/views/Item.vue'
 
 export default {
   name: 'Homepage',
@@ -124,10 +124,10 @@ export default {
       stories: []
     }
   },
-  // ... the rest of our Homepage.vue component 
+  // ... the rest of our Home.vue component 
 ```
 
-Nothing else within our `Homepage.vue` component needs to change. If you save all of the changes you have just made then you should see your application rendering nicely in the browser.
+Nothing else within our `Home.vue` component needs to change. If you save all of the changes you have just made then you should see your application rendering nicely in the browser.
 
 # Why Break Up Our Application?
 
@@ -145,11 +145,12 @@ Within our `<template>` tags I want you to add the following:
 </template>
 ```
 
-You may notice that this is identical to the code we currently have in our `Homepage.vue` component and you would be 100% right. We now want to update our `<script>` element to look like this:
+You may notice that this is identical to the code we currently have in our `Home.vue` component and you would be 100% right. We now want to update our `<script>` element to look like this:
 
 ```js
 import axios from 'axios'
-import Item from '@/components/Item'
+import Item from '@/views/Item.vue'
+
 export default {
   name: 'New',
   components: {
@@ -180,7 +181,7 @@ export default {
 }
 ```
 
-Again, this should look identical to our `Homepage.vue` component, except for the fact that we are hitting the `https://hacker=news.firebaseio.com/v0/newstories.json` API endpoint as opposed to the `topstories.json` endpoint.
+Again, this should look identical to our `Home.vue` component, except for the fact that we are hitting the `https://hacker=news.firebaseio.com/v0/newstories.json` API endpoint as opposed to the `topstories.json` endpoint.
 
 # Adding a 'New' Route
 
@@ -189,9 +190,9 @@ We need a new route to render our `New.vue` component, so fire open your `/src/r
 ```js
 import Vue from 'vue'
 import Router from 'vue-router'
-import Homepage from '@/components/Homepage'
-import New from '@/components/New'
-import Single from '@/components/Single'
+import Home from './views/Home.vue'
+import Single from './views/Single.vue'
+import New from './views/New.vue'
 
 Vue.use(Router)
 
@@ -250,7 +251,7 @@ export default {
 
 # Conclusion
 
-So, in this tutorial, we looked at how we could further break up our growing application into more components and start passing information from a parent component, our `Homepage.vue` component, to individual `Item.vue` components. 
+So, in this tutorial, we looked at how we could further break up our growing application into more components and start passing information from a parent component, our `Home.vue` component, to individual `Item.vue` components. 
 
 We've covered some of the main benefits of breaking down a large, growing application into a series of smaller components. We also looked at how we could pass information between both a parent component and a series of child components using `props`.
 
