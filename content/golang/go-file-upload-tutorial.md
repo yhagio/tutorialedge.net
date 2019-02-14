@@ -21,7 +21,7 @@ Thankfully, the task of dealing with image uploading in Go is fairly simple and,
 
 # Video Tutorial
 
-<iframe width="1920" height="957" src="https://www.youtube.com/embed/0sRjYzL_oYs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< youtube id="0sRjYzL_oYs" autoplay="false" >}}
 
 # The Implementation
 
