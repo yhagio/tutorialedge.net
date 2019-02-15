@@ -339,6 +339,18 @@ article {
     }
   }
 
+  h2, h3, h4, h5 {
+    &:before {
+      top: -32px;
+      left: 0px;
+      width: 100%;
+      height: 1px;
+      content: " ";
+      position: absolute;
+      background-color: rgb(230, 236, 241);
+    }
+  }
+
   p > code {
     padding: .35em;
     margin: 0;
