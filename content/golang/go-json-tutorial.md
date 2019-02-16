@@ -15,6 +15,10 @@ Welcome fellow Gophers! In this tutorial, we are going to be taking a comprehens
 
 JSON, or JavaScript Object Notation, is without a doubt the most popular data format for sending and receiving data across the web. All major languages support the data format by default and Go is no different.
 
+# Video Tutorial
+
+{{< youtube id="Osm5SCw6gPU" autoplay="false" >}}
+
 # Marshalling JSON
 
 Let's start off by taking a look at how we can Marshal JSON in Go. Marshalling effectively allows us to convert our Go objects into JSON strings. 
@@ -221,5 +225,7 @@ This can be a handy tip if you are in a tight squeeze, however, if you do know t
 
 
 # Conclusion
+
+Hopefully you enjoyed this tutorial and found it useful, if you have any suggestions as to how I can make this better, I'd love to hear them in the suggestions box below!
 
 > **Note -** If you want to keep track of when new Go articles are posted to the site, then please feel free to follow me on twitter for all the latest news: [@Elliot_F](https://twitter.com/elliot_f).
