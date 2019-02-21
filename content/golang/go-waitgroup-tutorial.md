@@ -21,6 +21,10 @@ In this tutorial, we are going to be covering the following:
 
 By the end of this, you should have a solid grasp as to how to employ `WaitGroups` within your own concurrent Go applications.
 
+# Video Tutorial 
+
+{{< youtube id="0BPSR-W4GSY" autoplay="false" >}}
+
 # Understanding WaitGroups
 
 Let's dive straight in and look at what a `WaitGroup` is and what problem it solves for us.
