@@ -22,6 +22,10 @@ The ability to craft concurrent systems so easily is something that drew me to t
 
 > **Note -** I would recommend having a look at my other tutorial on [goroutines](/golang/concurrency-with-golang-goroutines/) if you wish to learn more about goroutines.
 
+# Video Tutorial
+
+{{< youtube id="e4bu9g-bYtg" autoplay="false" >}}
+
 # The Theory
 
 The idea of channels isn't anything new, as like many of Go's concurrency features, these concepts have been brought forward from the likes of Hoare's Communicating Sequential Processes (1978), CSP for short, and even from the likes of Dijkstra's guarded commands (1975). 
@@ -91,13 +95,9 @@ Calculated Random Value: {} 7
 
 So, instantiating and using channels in your Go programs looks fairly straightforward so far, but what about in more complex scenarios? 
 
-# Multiple goroutines Example
+<!-- # Multiple goroutines Example
 
-Let's now take a look at how we can construct our Go programs to use `channels` in conjunction with a number of different `goroutines` and build up the complexity a bit. 
-
-# Avoiding Deadlock Panic!
-
-There may be times where you see your Go program exit in a state of panic due to a misuse of these channels. You 
+Let's now take a look at how we can construct our Go programs to use `channels` in conjunction with a number of different `goroutines` and build up the complexity a bit.  -->
 
 # Unbuffered Channels
 
