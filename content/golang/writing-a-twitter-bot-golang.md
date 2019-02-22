@@ -81,6 +81,12 @@ Awesome, now that we've got our foundation sorted, let's start building up the r
 The first thing we'll need, is a way to communicate with the twitter API in such a way that it knows who we are. We can create a simple `struct` called `Credentials` which will store our consumer and access tokens for authentication later on.
 
 ```go
+import (
+	// other imports
+	"github.com/dghubble/go-twitter/twitter"
+	"github.com/dghubble/oauth1"
+)
+
 // Credentials stores all of our access/consumer tokens
 // and secret keys needed for authentication against
 // the twitter REST API.
