@@ -22,10 +22,10 @@ We would first want to define a variable to store our number, double it and then
 Open up visual studio code and create a new python file called double.py. In this double.py file you will want to add the following code:
 
 ```py
-My_number = 2
+my_number = 2
 print(my_number)
 
-My_number = my_number * 2
+my_number = my_number * 2
 print(my_number)
 ```
 
@@ -61,7 +61,7 @@ After this we then re-assign our my_number variable to equal the current value o
 Now this example may work with numeric values, but what happens if we want to define a variable that stores something like a name? We can do that to simply by choosing a variable name such as first_name and then setting this to equal the string of our choice surrounded by quotes like so:
 
 ```py
-First_name = "Elliot"
+first_name = "Elliot"
 print(first_name)
 ```
 
