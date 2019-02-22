@@ -1,7 +1,7 @@
 languageCode = "en-us"
 title = "TutorialEdge.net"
 baseURL = "https://tutorialedge.net"
-
+relativeUrls = true
 # only return 9 items per page
 paginate = 9
 
