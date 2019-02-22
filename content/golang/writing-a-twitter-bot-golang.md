@@ -32,13 +32,13 @@ This should create a `go.mod` file within our directory and we should be good to
 
 # Connecting to Twitter
 
-<p>Just like with the <a href="/python/creating-python-twitter-bot-using-twitter-api">Python version of this tutorial</a>, you’ll have to create an app in twitter’s <a href=”https://apps.twitter.com/”>app control panel</a>. Once you’ve created a new application, it should present you with all the secret tokens and keys that you need in order to proceed.</p>
+<p>Just like with the <a href="/content/python/creating-twitter-bot-python.md">Python version of this tutorial</a>, you’ll have to create an app in twitter’s <a href=”https://apps.twitter.com/”>app control panel</a>. Once you’ve created a new application, it should present you with all the secret tokens and keys that you need in order to proceed.</p>
 
 # Environment Variables
 
 So, once we've created a new application within the twitter apps dashboard, we'll have our credentials and we'll be ready to start coding up our app.
 
-We **never** want to hard-code credentials into our application's source code in case we accidentally commit these credentials into github or somewhere public. Instead, we'll want to set these as environment variables on our local machine and retrieve the credentials from there. 
+We **never** want to hard-code credentials into our application's source code in case we accidentally commit these credentials into github or somewhere public. Instead, we'll want to set these as environment variables on our local machine and retrieve the credentials from there.
 
 We can export these environment variables like so on MacOS:
 
@@ -55,7 +55,7 @@ Once we've done this, we'll be able to pick these values up safely within our co
 
 # Writing our Basic Go Twitter Bot
 
-Once you’ve got all the access tokens and secret tokens ready, it’s time to start implementing our Bot. 
+Once you’ve got all the access tokens and secret tokens ready, it’s time to start implementing our Bot.
 
 Let's start off the process by creating a really simple `main.go` file within our working directory:
 
@@ -124,7 +124,7 @@ func getClient(creds *Credentials) (*twitter.Client, error) {
 
 ```
 
-Perfect, we now have a means of connecting to the twitter API and validating whether the credentials we have used have worked. 
+Perfect, we now have a means of connecting to the twitter API and validating whether the credentials we have used have worked.
 
 We'll want to update our `main()` function to create a `Credentials` struct and retrieve a new client for us using our newly implemented function:
 
@@ -134,7 +134,7 @@ func main() {
 	creds := Credentials{
 		AccessToken:       os.Getenv("ACCESS_TOKEN"),
 		AccessTokenSecret: os.Getenv("ACCESS_TOKEN_SECRET"),
-		ConsumerKey:       os.Getenv("CONSUMER_TOKEN"),
+		ConsumerKey:       os.Getenv("CONSUMER_KEY"),
 		ConsumerSecret:    os.Getenv("CONSUMER_SECRET"),
 	}
 
@@ -147,7 +147,7 @@ func main() {
     }
 
     // Print out the pointer to our client
-    // for now so it doesn't throw errors 
+    // for now so it doesn't throw errors
     fmt.Printf("%+v\n", client)
 
 }
