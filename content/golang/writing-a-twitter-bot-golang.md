@@ -134,7 +134,7 @@ func main() {
 	creds := Credentials{
 		AccessToken:       os.Getenv("ACCESS_TOKEN"),
 		AccessTokenSecret: os.Getenv("ACCESS_TOKEN_SECRET"),
-		ConsumerKey:       os.Getenv("CONSUMER_TOKEN"),
+		ConsumerKey:       os.Getenv("CONSUMER_KEY"),
 		ConsumerSecret:    os.Getenv("CONSUMER_SECRET"),
 	}
 
