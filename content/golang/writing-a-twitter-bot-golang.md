@@ -32,7 +32,7 @@ This should create a `go.mod` file within our directory and we should be good to
 
 # Connecting to Twitter
 
-<p>Just like with the <a href="/content/python/creating-twitter-bot-python.md">Python version of this tutorial</a>, you’ll have to create an app in twitter’s <a href=”https://apps.twitter.com/”>app control panel</a>. Once you’ve created a new application, it should present you with all the secret tokens and keys that you need in order to proceed.</p>
+<p>Just like with the <a href="/python/creating-twitter-bot-python/">Python version of this tutorial</a>, you’ll have to create an app in twitter’s <a href=”https://apps.twitter.com/”>app control panel</a>. Once you’ve created a new application, it should present you with all the secret tokens and keys that you need in order to proceed.</p>
 
 # Environment Variables
 
