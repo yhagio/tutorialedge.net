@@ -1,7 +1,6 @@
 ---
-title: "Building a Realtime Youtube Subscriber Monitor in Go"
+title: "Building a Real-time YouTube Subscriber Monitor in Go"
 date: 2019-02-23T09:45:55Z
-draft: true
 desc:  In this tutorial, we'll be building a realtime websocket based YouTube Subscriber monitor in Go!
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
