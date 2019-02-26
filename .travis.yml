@@ -16,3 +16,4 @@ deploy:
   acl: public_read
   on:
     repo: elliotforbes/tutorialedge-v2
+    branch: master
