@@ -4,24 +4,28 @@
   "description": "![Build Status](https://travis-ci.org/elliotforbes/tutorialedge-v2.svg?branch=master)",
   "main": "webpack.conf.js",
   "dependencies": {
-    "atomic-algolia": "^0.3.15",
-    "autoprefixer": "^9.3.1",
-    "cssnano": "^4.1.7",
+    "atomic-algolia": "^0.3.17",
+    "autoprefixer": "^9.4.9",
+    "concurrently": "^4.1.0",
+    "cssnano": "^4.1.10",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^3.0.1",
     "gulp-postcss": "^8.0.0",
-    "gulp-sourcemaps": "^2.6.4",
-    "node": "^10.0.0",
-    "webpack": "^4.26.1"
+    "gulp-sourcemaps": "^2.6.5",
+    "node": "^10.15.1",
+    "webpack": "^4.29.5"
   },
   "devDependencies": {
     "gulp": "^4.0.0",
     "gulp-sass": "^4.0.2",
-    "node-sass": "^4.10.0"
+    "node-sass": "^4.11.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "algolia": "atomic-algolia"
+    "algolia": "atomic-algolia",
+    "server": "hugo server --buildDrafts",
+    "gulp": "gulp watch",
+    "start": "concurrently \"npm:server\" \"npm:gulp\""
   },
   "repository": {
     "type": "git",
