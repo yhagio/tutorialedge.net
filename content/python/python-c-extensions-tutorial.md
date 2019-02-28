@@ -1,51 +1,65 @@
 ---
 author: Elliot Forbes
 date: 2017-12-01T21:32:19Z
-desc: An absolute beginners introduction to writing face recognition software in Python
+desc:
+  An absolute beginners introduction to writing face recognition software in
+  Python
 series: python
 image: python-logo.png
 tags:
-- advanced
-- c
+  - advanced
+  - c
 title: Creating Basic Python C Extensions - Tutorial
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
-> This tutorial was built using Python 3.6. The official documentation can be found here: [Extending and Embedding the Python Interpreter](https://docs.python.org/3/extending/index.html)
+> This tutorial was built using Python 3.6. The official documentation can be
+> found here:
+> [Extending and Embedding the Python Interpreter](https://docs.python.org/3/extending/index.html)
 
-In this tutorial we are going to take a look at how you can create a really simple Python module using the `C` programming language. I felt this was a good topic to cover as I personally struggled with finding succinct documentation that worked and showed me the basics. 
+In this tutorial we are going to take a look at how you can create a really
+simple Python module using the `C` programming language. I felt this was a good
+topic to cover as I personally struggled with finding succinct documentation
+that worked and showed me the basics.
 
 # Why Are C Extensions Necessary?
 
-Being able to write `C` extensions can come in handy in scenarios where the Python language becomes a bottleneck. Sometimes you require the raw performance of a low-level language like `C` in order to reduce things like response times and processing times.
+Being able to write `C` extensions can come in handy in scenarios where the
+Python language becomes a bottleneck. Sometimes you require the raw performance
+of a low-level language like `C` in order to reduce things like response times
+and processing times.
 
 # The Basic Requirements
 
-In this tutorial we'll be building a very simple `C` based Python module that will feature a number of different functions that should hopefully give you enough to get started. 
+In this tutorial we'll be building a very simple `C` based Python module that
+will feature a number of different functions that should hopefully give you
+enough to get started.
 
 We'll be creating 2 distinct functions:
 
-* A `Hello World` function that simply performs a print.
-* A Simple Fibonacci Function that takes in a value `n`.
+- A `Hello World` function that simply performs a print.
+- A Simple Fibonacci Function that takes in a value `n`.
 
 # Getting Started
 
-Let's dive into the `C` code. Open up the `.c` file that will contain your new module and add `#include <Python.h>` to the top. This will bring in the necessary `C` Python objects that will allow us to construct our module.
+Let's dive into the `C` code. Open up the `.c` file that will contain your new
+module and add `#include <Python.h>` to the top. This will bring in the
+necessary `C` Python objects that will allow us to construct our module.
 
 ```c
 #include <Python.h>
 
 // Function 1: A simple 'hello world' function
-static PyObject* helloworld(PyObject* self, PyObject* args) 
-{   
+static PyObject* helloworld(PyObject* self, PyObject* args)
+{
     printf("Hello World\n");
     return Py_None;
 }
 
 // Our Module's Function Definition struct
 // We require this `NULL` to signal the end of our method
-// definition 
+// definition
 static PyMethodDef myMethods[] = {
     { "helloworld", helloworld, METH_NOARGS, "Prints Hello World" },
     { NULL, NULL, 0, NULL }
@@ -69,7 +83,9 @@ PyMODINIT_FUNC PyInit_myModule(void)
 
 # Our setup.py File
 
-Thankfully Python includes some modules that make extending the language easier. Here we can specify the name of our module and pass in the necessay `.c` files that make up our module.
+Thankfully Python includes some modules that make extending the language easier.
+Here we can specify the name of our module and pass in the necessay `.c` files
+that make up our module.
 
 ```py
 from distutils.core import setup, Extension
@@ -79,14 +95,16 @@ setup(name = 'myModule', version = '1.0',  \
 
 # Building and Installing our Module
 
-In order to `build` and `install` our newly created `C` module we have to do the following: 
+In order to `build` and `install` our newly created `C` module we have to do the
+following:
 
 ```bash
 python setup.py build
 python setup.py install
 ```
 
-When run in succession you should see the following output. We can then start our Python interpreter and call our newly created module:
+When run in succession you should see the following output. We can then start
+our Python interpreter and call our newly created module:
 
 ```py
  $ python3.6 setup.py build
@@ -118,7 +136,11 @@ Hello World
 
 # Our Fibonacci Function
 
-Let's now take a look at a more complex function that will take in a value `n` and then return the appropriate fibonacci number. We aren't going to do any fancy `memoization` here, it's going to be a plain old recursive function that features terrible performance. However it will show us how to both take in a value and return a value in our `C` module. 
+Let's now take a look at a more complex function that will take in a value `n`
+and then return the appropriate fibonacci number. We aren't going to do any
+fancy `memoization` here, it's going to be a plain old recursive function that
+features terrible performance. However it will show us how to both take in a
+value and return a value in our `C` module.
 
 ```c
 // Function 2: A C fibonacci implementation
@@ -137,7 +159,7 @@ static PyObject* fib(PyObject* self, PyObject* args)
 {
     // instantiate our `n` value
     int n;
-    // if our `n` value 
+    // if our `n` value
     if(!PyArg_ParseTuple(args, "i", &n))
         return NULL;
     // return our computed fib number
@@ -145,7 +167,8 @@ static PyObject* fib(PyObject* self, PyObject* args)
 }
 ```
 
-Again we should build and install this like we have done before. We can then test this out like so:
+Again we should build and install this like we have done before. We can then
+test this out like so:
 
 ```py
 >>> import myModule
@@ -155,4 +178,7 @@ Again we should build and install this like we have done before. We can then tes
 
 # Conclusion
 
-Hopefully you found this tutorial useful and it clarifies the process of creating your own `C` based modules. If you feel like leaving some feedback or asking some further questions then please feel free to in the comments section below.
+Hopefully you found this tutorial useful and it clarifies the process of
+creating your own `C` based modules. If you feel like leaving some feedback or
+asking some further questions then please feel free to in the comments section
+below.

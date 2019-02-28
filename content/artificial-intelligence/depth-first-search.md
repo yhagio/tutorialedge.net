@@ -4,13 +4,14 @@ bookImage: game-ai-by-example.jpeg
 bookLink: http://amzn.to/2r74d8f
 bookTitle: Programming Game AI by Example
 date: 2017-04-15T09:23:35+01:00
-desc: 'This article looks to demonstrate how one can implement the depth first graph
-  search algorithm using the java programming language. '
+desc:
+  "This article looks to demonstrate how one can implement the depth first graph
+  search algorithm using the java programming language. "
 series: ai
 image: ai.png
 tags:
-- ai
-- java
+  - ai
+  - java
 title: Depth First Search in Java
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg

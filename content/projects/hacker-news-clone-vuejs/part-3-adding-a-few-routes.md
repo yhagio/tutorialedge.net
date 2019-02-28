@@ -1,109 +1,135 @@
 ---
 author: Elliot Forbes
 date: 2018-03-19T16:24:13Z
-desc: In this tutorial, we are going to setting up our application to use the vue
+desc:
+  In this tutorial, we are going to setting up our application to use the vue
   router and add a few simple routes to our application.
 image: vuejs.png
 series:
-- hackernewsclone
+  - hackernewsclone
 tags:
-- vuejs
-- javascript
+  - vuejs
+  - javascript
 title: Part 3 - Adding a Few Routes To Our App
 twitter: https://twitter.com/Elliot_F
 weight: 3
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
-In the previous tutorial of this series, we covered single page components and how you could build your own components and subsequently render them within your Vue.js application. We created a simple `Navbar` component and registered it within our `App.vue` component and subsequently rendered it within our application. 
+In the previous tutorial of this series, we covered single page components and
+how you could build your own components and subsequently render them within your
+Vue.js application. We created a simple `Navbar` component and registered it
+within our `App.vue` component and subsequently rendered it within our
+application.
 
-In this tutorial, we are going to be creating a few more single-page components and setting up a `vue-router` so that we can navigate between different views on our site. This will enable us to view the Top Stories on our `/` path, we'll then be expanding upon these routes as we progress through the rest of this series and start adding more components.
+In this tutorial, we are going to be creating a few more single-page components
+and setting up a `vue-router` so that we can navigate between different views on
+our site. This will enable us to view the Top Stories on our `/` path, we'll
+then be expanding upon these routes as we progress through the rest of this
+series and start adding more components.
 
 # Video Tutorial
 
-This tutorial is available in a video format, should you wish to support the series then you can by subscribing to my channel and liking the video!
+This tutorial is available in a video format, should you wish to support the
+series then you can by subscribing to my channel and liking the video!
 
 <div style="position:relative;height:0;padding-bottom:42.76%"><iframe src="https://www.youtube.com/embed/XLL2ufItDyM?list=PLzUGFf4GhXBLWueypt6avCKOCNt0675EQ&amp;ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="842" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 
-
 # Setting Up Our Vue Router
 
-With the new version of the `vue-cli` we'll have to first add the router to our project before we can go about setting up routes. We can do that like so:
+With the new version of the `vue-cli` we'll have to first add the router to our
+project before we can go about setting up routes. We can do that like so:
 
 ```s
 $ vue add router
 ? Use history mode for router? (Requires proper server setup for index fallback in production) (Y/n) Y
 ```
 
-Now, this is going to modify some of our existing files and the structure of some of our components. But don't worry, these changes actually simplify things for us in the long run.
+Now, this is going to modify some of our existing files and the structure of
+some of our components. But don't worry, these changes actually simplify things
+for us in the long run.
 
-You should notice that a new file called `src/router.js` has been created for us. It is within this file that we'll define the various routes for our application and it should look like this initially:
+You should notice that a new file called `src/router.js` has been created for
+us. It is within this file that we'll define the various routes for our
+application and it should look like this initially:
 
 ```js
-import Vue from 'vue'
-import Router from 'vue-router'
-import Home from './views/Home.vue'
+import Vue from "vue";
+import Router from "vue-router";
+import Home from "./views/Home.vue";
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
-      name: 'home',
+      path: "/",
+      name: "home",
       component: Home
     },
     {
-      path: '/about',
-      name: 'about',
+      path: "/about",
+      name: "about",
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      component: () =>
+        import(/* webpackChunkName: "about" */ "./views/About.vue")
     }
   ]
-})
-
+});
 ```
 
-Let's dig in to what is going on here. So on lines `1-2` we should see the imports of the necessary `vue` and `vue-router` packages. Below that however, it will have imported the `Home` view from a newly generated `src/views/Home.vue` component file. 
+Let's dig in to what is going on here. So on lines `1-2` we should see the
+imports of the necessary `vue` and `vue-router` packages. Below that however, it
+will have imported the `Home` view from a newly generated `src/views/Home.vue`
+component file.
 
-It is within this generated file that we'll be displaying the top articles that you would traditionally see on the homepage of HackerNews. 
+It is within this generated file that we'll be displaying the top articles that
+you would traditionally see on the homepage of HackerNews.
 
-Finally, we tell our Vue application to use the `vue-router` - `router` before then creating a new `Router` which contains all of ours applications routes. 
+Finally, we tell our Vue application to use the `vue-router` - `router` before
+then creating a new `Router` which contains all of ours applications routes.
 
-Each of our routes is a combination of a path, the name of our path, and the component we wish to render when we hit this path. Should we wish, we can also do cool stuff such as dynamic route matching which we will cover in more detail in part 5 of this project.
+Each of our routes is a combination of a path, the name of our path, and the
+component we wish to render when we hit this path. Should we wish, we can also
+do cool stuff such as dynamic route matching which we will cover in more detail
+in part 5 of this project.
 
-> For more information our VueJS routing check out the official documentation or my tutorial: [VueJS Routing Tutorial](/javascript/vuejs/vue-router-beginners-tutorial/)
+> For more information our VueJS routing check out the official documentation or
+> my tutorial:
+> [VueJS Routing Tutorial](/javascript/vuejs/vue-router-beginners-tutorial/)
 
 # Modifying our Home.vue View Component
 
-Now, the autogenerated `Home.vue` component will look a little something like this:
+Now, the autogenerated `Home.vue` component will look a little something like
+this:
 
 ```html
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img alt="Vue logo" src="../assets/logo.png" />
+    <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/Homepage.vue'
+  // @ is an alias to /src
+  import HelloWorld from "@/components/Homepage.vue";
 
-export default {
-  name: 'home',
-  components: {
-    HelloWorld
-  }
-}
+  export default {
+    name: "home",
+    components: {
+      HelloWorld
+    }
+  };
 </script>
 ```
 
-We'll want to modify it ever so slightly to remove the import of the `HelloWorld` component and just render `Home Page` for now like so:
+We'll want to modify it ever so slightly to remove the import of the
+`HelloWorld` component and just render `Home Page` for now like so:
 
 ```html
 <template>
@@ -113,13 +139,15 @@ We'll want to modify it ever so slightly to remove the import of the `HelloWorld
 </template>
 
 <script>
-export default {
-  name: 'home',
-}
+  export default {
+    name: "home"
+  };
 </script>
 ```
 
-If you now have a look at the `App.vue` component, you should see that our `Navbar` component has been removed by the `vue` cli. It has instead been replaced by the following:
+If you now have a look at the `App.vue` component, you should see that our
+`Navbar` component has been removed by the `vue` cli. It has instead been
+replaced by the following:
 
 ```html
 <template>
@@ -128,83 +156,100 @@ If you now have a look at the `App.vue` component, you should see that our `Navb
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
-<style>
-</style>
-
+<style></style>
 ```
 
-The newly added `<router-link>` components essentially act as anchor tags within our VueJS application. It's the job of the `<router-view/>` component to render the appropriate component for the current path within the application. 
+The newly added `<router-link>` components essentially act as anchor tags within
+our VueJS application. It's the job of the `<router-view/>` component to render
+the appropriate component for the current path within the application.
 
-So, if we are on the homepage of our application, or `/`, we'll want to display our `Home.vue` component. If we are on `/about`, then the `<router-view/>` component will show the `About.vue` component that has been automatically generated for us.
+So, if we are on the homepage of our application, or `/`, we'll want to display
+our `Home.vue` component. If we are on `/about`, then the `<router-view/>`
+component will show the `About.vue` component that has been automatically
+generated for us.
 
 ## Updating our Navbar.vue Component
 
-Let's steal the new `<router-link>` components from our `App.vue` file and place them within our `src/components/Navbar.vue` component file that we created earlier on in the series:
+Let's steal the new `<router-link>` components from our `App.vue` file and place
+them within our `src/components/Navbar.vue` component file that we created
+earlier on in the series:
 
 ```html
 <template>
-    <div class="pure-menu pure-menu-horizontal">
-        <div class="container">
-        <router-link to="/" class="pure-menu-heading pure-menu-link">Home</router-link>
-        <ul class="pure-menu-list">
-            <li class="pure-menu-item"><router-link class="pure-menu-link" to="/about">About</router-link></li>
-        </ul>
-        </div>
+  <div class="pure-menu pure-menu-horizontal">
+    <div class="container">
+      <router-link to="/" class="pure-menu-heading pure-menu-link"
+        >Home</router-link
+      >
+      <ul class="pure-menu-list">
+        <li class="pure-menu-item">
+          <router-link class="pure-menu-link" to="/about">About</router-link>
+        </li>
+      </ul>
     </div>
+  </div>
 </template>
 
 <script>
-export default {
-  name: 'Navbar'
-}
+  export default {
+    name: "Navbar"
+  };
 </script>
 
 <style scoped>
-.pure-menu {
-    background-color: #E17842;
-}
-.pure-menu a {
+  .pure-menu {
+    background-color: #e17842;
+  }
+  .pure-menu a {
     color: white;
-}
+  }
 </style>
 ```
 
-And finally, we'll update our `App.vue` component to once again import and render this `Navbar.vue` component:
+And finally, we'll update our `App.vue` component to once again import and
+render this `Navbar.vue` component:
 
 ```html
 <template>
   <div id="app">
     <navbar></navbar>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
 <script>
-import Navbar from '@/components/Navbar'
-export default {
-  name: 'App',
-  components: {
-    Navbar
-  }
-}
+  import Navbar from "@/components/Navbar";
+  export default {
+    name: "App",
+    components: {
+      Navbar
+    }
+  };
 </script>
 
-<style>
-</style>
-
+<style></style>
 ```
 
-Awesome, now when we navigate back our browser and view `http://localhost:8080/#/`, you should now see our Homepage `<h2>Homepage</h2>` being rendered in all its glory.
+Awesome, now when we navigate back our browser and view
+`http://localhost:8080/#/`, you should now see our Homepage `<h2>Homepage</h2>`
+being rendered in all its glory.
 
 ![Our updated view](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/hackernews-clone/screenshot-04.png)
 
-
 # Conclusion
 
-In this tutorial, we managed to create a few more components within our Vue.js application and set up the `vue router` which enables us to navigate between different components with ease. Currently, this only renders the one route, but in the next couple of tutorials, we will be using this to dynamically render our components depending on the user's location within our application. 
+In this tutorial, we managed to create a few more components within our Vue.js
+application and set up the `vue router` which enables us to navigate between
+different components with ease. Currently, this only renders the one route, but
+in the next couple of tutorials, we will be using this to dynamically render our
+components depending on the user's location within our application.
 
-In the next tutorial, we are going to look at how we can extend this `Homepage.vue` component so that it starts hitting the HackerNews API and starts to retrieve all of the Top Stories currently trending on the site. You can find that tutorial here: [Part 4 - Hitting an API](/projects/hacker-news-clone-vuejs/part-4-hitting-an-api/)
+In the next tutorial, we are going to look at how we can extend this
+`Homepage.vue` component so that it starts hitting the HackerNews API and starts
+to retrieve all of the Top Stories currently trending on the site. You can find
+that tutorial here:
+[Part 4 - Hitting an API](/projects/hacker-news-clone-vuejs/part-4-hitting-an-api/)

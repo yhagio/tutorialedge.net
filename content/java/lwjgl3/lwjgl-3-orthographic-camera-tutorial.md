@@ -1,15 +1,16 @@
 ---
 author: Elliot Forbes
 date: 2017-04-15T09:39:43+01:00
-desc: This tutorial teaches the user how to create an orthographic projection camera
+desc:
+  This tutorial teaches the user how to create an orthographic projection camera
   using matrix translation and rotation with the LWJGL 3 framework.
 series: lwjgl3
 image: lwjgl.jpg
 tags:
-- gamedev
-- java
-- lwjgl3
-- graphics
+  - gamedev
+  - java
+  - lwjgl3
+  - graphics
 title: LWJGL 3 Orthographic Camera Tutorial
 twitter: https://twitter.com/Elliot_F
 ---
@@ -23,7 +24,6 @@ twitter: https://twitter.com/Elliot_F
 <p>In this tutorial we will be building the basic Orthographic projection matrix that is primarily used in 2D games. This orthographic matrix is one of the simplest camera matrices and doesn’t show any form of perspective to our objects in our scenes. Without any form of perspective we will never see objects getting smaller as they go further into the distance, but seeing as 2D games are only represented in terms of X and Y coordinates we don’t tend to worry about perspective in our scenes.</p>
 
 <p>To create an orthographic matrix we will need 6 float variables:</p>
-
 
 1. left
 2. right
@@ -68,7 +68,7 @@ Matrix4f pr_matrix = Matrix4f.orthographic(-10.0f, 10.0f, -10.0f * 9.0f / 16.0f,
 <p>So now that we’ve got a matrix that will represent our projection matrix, we will also need some way of tracking and updating where our camera is in the world. We can do this by adding a Vector3f to our Camera class and calling it ‘position’. This will essentially store the coordinates of our camera and allow us to move the camera using the following update method:</p>
 
 ```java
-public void update(){		
+public void update(){
   if(Input.isKeyDown(GLFW_KEY_W)){
     position.y += 0.05f;
   }

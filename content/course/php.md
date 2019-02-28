@@ -7,7 +7,7 @@ draft: true
 image: php.svg
 series: php
 tags:
-- php
+  - php
 title: PHP
 twitter: https://twitter.com/Elliot_F
 weight: 100
@@ -15,4 +15,5 @@ weight: 100
 
 ### Course Outline
 
-In this course, we are going to be taking a look at how you can get started with PHP. 
+In this course, we are going to be taking a look at how you can get started with
+PHP.

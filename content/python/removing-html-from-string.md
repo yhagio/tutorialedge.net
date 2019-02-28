@@ -1,12 +1,13 @@
 ---
 author: Elliot Forbes
 date: 2017-04-15T09:38:07+01:00
-desc: this tutorial shows us how to remove the html tags from a retrieved html page.
+desc:
+  this tutorial shows us how to remove the html tags from a retrieved html page.
   This will allow us to do cool stuff such as keyword density checking etc.
 series: python
 image: python-logo.png
 tags:
-- beginner
+  - beginner
 title: Removing HTML Tags from a String with Python
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
@@ -41,4 +42,3 @@ def remove_tags(text):
 <p>In the coming tutorials we will be learning how to calculate important seo metrics such as keyword density that will allow us to perform important seo analysis of competing sites to try and understand how they have achieved their success.</p>
 
 <p>The methods for tag removal can be found here: http://stackoverflow.com/questions/9662346/python-code-to-remove-html-tags-from-a-string</p>
-

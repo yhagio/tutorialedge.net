@@ -1,43 +1,62 @@
 ---
 author: Elliot Forbes
 date: 2018-09-10T20:04:14+01:00
-desc: In this tutorial, we are going to look at how you can use mutexes in your Go
+desc:
+  In this tutorial, we are going to look at how you can use mutexes in your Go
   programs
 series: golang
 image: golang.png
 tags:
-- advanced
+  - advanced
 title: Go Oauth2 Tutorial
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 weight: 30
 ---
 
-Welcome fellow coders! In this tutorial, we are going to be taking a look at how you can implement your own OAuth2 Server and client using the [go-oauth2/oauth2](https://github.com/go-oauth2/oauth2) package.
+Welcome fellow coders! In this tutorial, we are going to be taking a look at how
+you can implement your own OAuth2 Server and client using the
+[go-oauth2/oauth2](https://github.com/go-oauth2/oauth2) package.
 
-This is without a doubt one of the most requested topics from commentors on my YouTube videos and it's certainly something that I myself find incredibly interesting. 
+This is without a doubt one of the most requested topics from commentors on my
+YouTube videos and it's certainly something that I myself find incredibly
+interesting.
 
-Security is without doubt a very important feature for any public and even private facing service or API and it's something that you need to pay a lot of attention to in order to get it right. 
+Security is without doubt a very important feature for any public and even
+private facing service or API and it's something that you need to pay a lot of
+attention to in order to get it right.
 
 # The Theory
 
-So, before we dive into how we can code this up, it's important to know how it works in the background. Typically, we have a `client` that will start by making an authorization request to the `resource owner`. The `resource owner` then either grants or denies this request. 
+So, before we dive into how we can code this up, it's important to know how it
+works in the background. Typically, we have a `client` that will start by making
+an authorization request to the `resource owner`. The `resource owner` then
+either grants or denies this request.
 
-With this `authorization grant` the `client` then passes this to the `authorization server` which will grant back an `access token`. It is with this granted `access token` that our `client` can then access a protected resource such as an API or a service.
+With this `authorization grant` the `client` then passes this to the
+`authorization server` which will grant back an `access token`. It is with this
+granted `access token` that our `client` can then access a protected resource
+such as an API or a service.
 
-So, with that said, let's now look at how we can implement our own `authorization server` using this go-oauth2/oauth2 package.
+So, with that said, let's now look at how we can implement our own
+`authorization server` using this go-oauth2/oauth2 package.
 
-> **Note -** If you are interested in seeing the RFC that Oauth2 implementations follow, you can find it here: [RFC-6749](https://tools.ietf.org/html/rfc6749)
+> **Note -** If you are interested in seeing the RFC that Oauth2 implementations
+> follow, you can find it here: [RFC-6749](https://tools.ietf.org/html/rfc6749)
 
 # A Simple Oauth2 Flow
 
-We'll start off by implementing a really simple server based on the example that they provide within their documentation. When we pass an `client id` and a `client secret` to our `authorization server` it should return us with our `access token` that'll look something like this:
+We'll start off by implementing a really simple server based on the example that
+they provide within their documentation. When we pass an `client id` and a
+`client secret` to our `authorization server` it should return us with our
+`access token` that'll look something like this:
 
 ```js
 {"access_token":"Z_1QUVC5M_EOCESISKW8AQ","expires_in":7200,"scope":"read","token_type":"Bearer"}
 ```
 
-So, let's dive into our server implementation and see if we can decipher what's going on:
+So, let's dive into our server implementation and see if we can decipher what's
+going on:
 
 ```go
 package main
@@ -194,20 +213,34 @@ func outputHTML(w http.ResponseWriter, req *http.Request, filename string) {
 
 # Our Client
 
-Now that we have our server implementation done and dusted, we can focus on building up our client. This will use the `golang.org/x/oauth2` standard package for authenticating.
+Now that we have our server implementation done and dusted, we can focus on
+building up our client. This will use the `golang.org/x/oauth2` standard package
+for authenticating.
 
-We'll be defining a really simple server using `net/http` which features 2 endpoints:
+We'll be defining a really simple server using `net/http` which features 2
+endpoints:
 
-* `/` - The root or homepage of our client
-* `/oauth2` - The route which successfully authenticated clients will be automatically redirected to.
+- `/` - The root or homepage of our client
+- `/oauth2` - The route which successfully authenticated clients will be
+  automatically redirected to.
 
-We'll start by defining our `oauth2.Config{}` object which will contain our `ClientID` or `ClientSecret`. Our OAuth2 server implementation already has a note of these two variables and should they not match, we won't be able to retrieve access tokens from our server.
+We'll start by defining our `oauth2.Config{}` object which will contain our
+`ClientID` or `ClientSecret`. Our OAuth2 server implementation already has a
+note of these two variables and should they not match, we won't be able to
+retrieve access tokens from our server.
 
-It'll also take in a string of `Scopes` which define the scope of our access token, these scopes can define various different levels of access to a given resource. For example, we could provide define a `Read-Only` scope which just provides the client read-only access to our underlying resource.
+It'll also take in a string of `Scopes` which define the scope of our access
+token, these scopes can define various different levels of access to a given
+resource. For example, we could provide define a `Read-Only` scope which just
+provides the client read-only access to our underlying resource.
 
-Next, we define the `RedirectURL` which specifies an endpoint that our Authorization server should redirect to upon successful authentication. We'll want this handled by our `/oauth2` endpoint.
+Next, we define the `RedirectURL` which specifies an endpoint that our
+Authorization server should redirect to upon successful authentication. We'll
+want this handled by our `/oauth2` endpoint.
 
-Finally, we specify `oauth2.Endpoint` which takes in the `AuthURL` and `TokenURL` that will point towards our authorization and token endpoints that we defined previously on our server.
+Finally, we specify `oauth2.Endpoint` which takes in the `AuthURL` and
+`TokenURL` that will point towards our authorization and token endpoints that we
+defined previously on our server.
 
 ```go
 package main
@@ -265,7 +298,7 @@ func Authorize(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
-	
+
 	e := json.NewEncoder(w)
 	e.SetIndent("", "  ")
 	e.Encode(*token)
@@ -290,21 +323,32 @@ func main() {
 }
 ```
 
-So, we've managed to build up our client. Let's try and run this and see what happens. 
+So, we've managed to build up our client. Let's try and run this and see what
+happens.
 
 ```
 go run main.go
 2018/10/20 13:25:22 Client is running at 9094 port.
 ```
 
-Now, whenever you hit `localhost:9094` within your browser, you should see it automatically redirect to your running server implementation, `localhost:9096/login`. We'll then provide our credentials `admin` and `admin` for demonstration purposes, and this will prompt us to grant access to our client.
+Now, whenever you hit `localhost:9094` within your browser, you should see it
+automatically redirect to your running server implementation,
+`localhost:9096/login`. We'll then provide our credentials `admin` and `admin`
+for demonstration purposes, and this will prompt us to grant access to our
+client.
 
-When we click `Allow` it will automatically redirect us back to our Client application `/oauth2` endpoint, but it will return a JSON string containing our `access_token`, `refresh_token`, `token_type` and when our tokens will expire.
+When we click `Allow` it will automatically redirect us back to our Client
+application `/oauth2` endpoint, but it will return a JSON string containing our
+`access_token`, `refresh_token`, `token_type` and when our tokens will expire.
 
 Awesome, we have a fully working Oauth2 flow implemented.
 
 # Conclusion
 
-So, in this tutorial, we looked at how you could implement your own `authorization server` in Go. We then looked at how we could build a simple Go-based client that could subsequently make requests for `access tokens` to this server. 
+So, in this tutorial, we looked at how you could implement your own
+`authorization server` in Go. We then looked at how we could build a simple
+Go-based client that could subsequently make requests for `access tokens` to
+this server.
 
-Hopefully, you found this tutorial useful! If you did then please feel free to let me know in the comments section below!
+Hopefully, you found this tutorial useful! If you did then please feel free to
+let me know in the comments section below!

@@ -1,20 +1,23 @@
 ---
 author: Elliot Forbes
 date: 2017-04-15T09:16:16+01:00
-desc: This first lesson of the Angularjs course looks to teach how useful data binding
-  is when using AngularJS
+desc:
+  This first lesson of the Angularjs course looks to teach how useful data
+  binding is when using AngularJS
 series: angularjs
 
 tags:
-
-- javascript
+  - javascript
 title: AngularJS Data Binding Tutorial
 twitter: https://twitter.com/Elliot_F
 ---
 
 <p>AngularJS Official Docs on Data Binding can be found here: <a href="https://docs.angularjs.org/guide/databinding">AngularJS Data Binding</a></p>
 
-> Please note that the use of scope is somewhat frowned upon. Check out my article on <a href="https://tutorialedge.net/working-with-angularjs-component-applications">Working with Components</a> and how you should use one way data-binding.
+> Please note that the use of scope is somewhat frowned upon. Check out my
+> article on
+> <a href="https://tutorialedge.net/working-with-angularjs-component-applications">Working
+> with Components</a> and how you should use one way data-binding.
 
 <h2>What is Data Binding?</h2>
 
@@ -22,11 +25,19 @@ twitter: https://twitter.com/Elliot_F
 
 # How Does it Work?
 
-AngularJS utilizes it's own mechanism very similar to Dirty Checking. Essentially AngularJS iterates through a list of variables and checks to see whether or not the value of that variable has changed. If a variable has changed then it goes and performs the DOM manipulation required. 
+AngularJS utilizes it's own mechanism very similar to Dirty Checking.
+Essentially AngularJS iterates through a list of variables and checks to see
+whether or not the value of that variable has changed. If a variable has changed
+then it goes and performs the DOM manipulation required.
 
 ## Performance Issues
 
-It must be noted that once you get to about 2000 variables that you have to consistently watch you might start seeing noticeable differences in your apps performance. If you are dealing with incredibly complex sets of data then try and limit the amount of variables that you have consistently being watched and possibly break it down these sets into subsets which can be viewed on different pages.
+It must be noted that once you get to about 2000 variables that you have to
+consistently watch you might start seeing noticeable differences in your apps
+performance. If you are dealing with incredibly complex sets of data then try
+and limit the amount of variables that you have consistently being watched and
+possibly break it down these sets into subsets which can be viewed on different
+pages.
 
 <h2>How Do We Implement It?</h2>
 
@@ -34,29 +45,26 @@ It must be noted that once you get to about 2000 variables that you have to cons
 
 ```html
 <html ng-app="testApp">
-<head>
+  <head>
     <title>AngularJS ng-if child scopes example</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-</head>
-<body ng-controller="testController">
-    
+  </head>
+  <body ng-controller="testController">
     <div>
-       <input type="text" ng-model="name" />
-        {{name}}
+      <input type="text" ng-model="name" />
+      {{name}}
     </div>
-    
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
 ```
 
 ```js
-var testApp = angular.module('testApp', []);
+var testApp = angular.module("testApp", []);
 
-testApp.controller('testController' , function ($scope) {
-    
-    $scope.name = "Elliot";
-    
+testApp.controller("testController", function($scope) {
+  $scope.name = "Elliot";
 });
 ```
 

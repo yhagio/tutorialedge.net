@@ -1,34 +1,44 @@
 ---
 title: "Building a Real-time YouTube Subscriber Monitor in Go"
 date: 2019-02-23T09:45:55Z
-desc:  In this tutorial, we'll be building a realtime websocket based YouTube Subscriber monitor in Go!
+desc:
+  In this tutorial, we'll be building a realtime websocket based YouTube
+  Subscriber monitor in Go!
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
 series: golang
 image: golang.png
 tags:
-- beginner
+  - beginner
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
-Hi Everyone! In this tutorial, we are going to be having a bit of fun and we are going to be creating a real-time YouTube stats monitoring system in Go.
+Hi Everyone! In this tutorial, we are going to be having a bit of fun and we are
+going to be creating a real-time YouTube stats monitoring system in Go.
 
-So, we are going to be looking at a number of different topics within this tutorial such as creating a WebSocket server and using WebSockets to communicate in real-time with a frontend application, as well as how you can interact with an existing REST API to get the subscriber stats we need.
+So, we are going to be looking at a number of different topics within this
+tutorial such as creating a WebSocket server and using WebSockets to communicate
+in real-time with a frontend application, as well as how you can interact with
+an existing REST API to get the subscriber stats we need.
 
 # Getting Started
 
-First things first, we'll want to create a new directory to work in. I'll be calling mine `youtube-stats/`. 
+First things first, we'll want to create a new directory to work in. I'll be
+calling mine `youtube-stats/`.
 
-Within this new project directory, we'll want to run the following command to initialize our project using go modules. 
+Within this new project directory, we'll want to run the following command to
+initialize our project using go modules.
 
 ```s
 $ go mod init github.com/elliotforbes/youtube-stats
 
 ```
 
-> **Note -** You'll have to have set up your computer to use the new Go 1.11 Modules - [Go Modules Wiki](https://github.com/golang/go/wiki/Modules)
+> **Note -** You'll have to have set up your computer to use the new Go 1.11
+> Modules - [Go Modules Wiki](https://github.com/golang/go/wiki/Modules)
 
-Within this new directory, we'll be creating our `main.go` file which will be the main entry point to our Go program.
+Within this new directory, we'll be creating our `main.go` file which will be
+the main entry point to our Go program.
 
 ```go
 package main
@@ -42,7 +52,9 @@ func main() {
 }
 ```
 
-Let's go ahead and create a simple `net/http` based server that runs on `http://localhost:8080`. This will act as the base for our WebSocket server that our frontend client will connect to in order to get the stats in real time.
+Let's go ahead and create a simple `net/http` based server that runs on
+`http://localhost:8080`. This will act as the base for our WebSocket server that
+our frontend client will connect to in order to get the stats in real time.
 
 ```go
 package main
@@ -75,52 +87,80 @@ func main() {
 }
 ```
 
-We can then open up a terminal and run this using `go run main.go`. Once you have started this up, try navigating to `http://localhost:8080` within your browser and you should hopefully see `Hello World` printed out in the browser!
+We can then open up a terminal and run this using `go run main.go`. Once you
+have started this up, try navigating to `http://localhost:8080` within your
+browser and you should hopefully see `Hello World` printed out in the browser!
 
-Awesome, so we now have a solid base that we can build on top of! 
+Awesome, so we now have a solid base that we can build on top of!
 
 # The YouTube API
 
-Being able to interact with the YouTube API is going to be a crucial part of this mini-project. In order to connect to this API, we'll need to first create a project within the [Google Developers Console](https://console.developers.google.com/).
+Being able to interact with the YouTube API is going to be a crucial part of
+this mini-project. In order to connect to this API, we'll need to first create a
+project within the
+[Google Developers Console](https://console.developers.google.com/).
 
-> **Note -** If you haven't used the API before, you may have to enable the YouTube V3 Data API
+> **Note -** If you haven't used the API before, you may have to enable the
+> YouTube V3 Data API
 
-Once we have created a project, we can then create a new API Key within the credentials section of the developer dashboard. 
+Once we have created a project, we can then create a new API Key within the
+credentials section of the developer dashboard.
 
 ## API Endpoint
 
-The API that we are going to be interacting with is the `channels/list` API which can be found here - https://developers.google.com/youtube/v3/docs/channels/list#try-it. This should return all of the statistics of our channel as well as things like the description and a few other bits of information.
+The API that we are going to be interacting with is the `channels/list` API
+which can be found here -
+https://developers.google.com/youtube/v3/docs/channels/list#try-it. This should
+return all of the statistics of our channel as well as things like the
+description and a few other bits of information.
 
-Using our API Key, we can construct a request to this API Endpoint and test to see if everything works with a simple curl command. Replace the `API-KEY` section of this command with your own API Key and then try running this command in your terminal.
+Using our API Key, we can construct a request to this API Endpoint and test to
+see if everything works with a simple curl command. Replace the `API-KEY`
+section of this command with your own API Key and then try running this command
+in your terminal.
 
 ```s
-$ curl -i -G -d "id=UCwFl9Y49sWChrddQTD9QhRA&part=snippet%2CcontentDetails%2Cstatistics&key=API-KEY" https://www.googleapis.com/youtube/v3/channels 
+$ curl -i -G -d "id=UCwFl9Y49sWChrddQTD9QhRA&part=snippet%2CcontentDetails%2Cstatistics&key=API-KEY" https://www.googleapis.com/youtube/v3/channels
 ```
 
-If everything has worked as expected, we should see a fairly large JSON object printing out in our terminal which contains everything we need!
+If everything has worked as expected, we should see a fairly large JSON object
+printing out in our terminal which contains everything we need!
 
-> **Tip -** curl is a fantastic tool for testing API endpoints and I honestly wish I'd invested more time learning it when I just started my career. A simple curl command can save you a lot of time debugging.
+> **Tip -** curl is a fantastic tool for testing API endpoints and I honestly
+> wish I'd invested more time learning it when I just started my career. A
+> simple curl command can save you a lot of time debugging.
 
 ## Authentication
 
-So, as we are going to be using an API Key that is from our own personal Google accounts, we want to ensure that we aren't exposing these to the rest of the world if we commit our project to Git. An excellent way of preventing this from happening is from never hard coding any credentials and to use environment variables. 
+So, as we are going to be using an API Key that is from our own personal Google
+accounts, we want to ensure that we aren't exposing these to the rest of the
+world if we commit our project to Git. An excellent way of preventing this from
+happening is from never hard coding any credentials and to use environment
+variables.
 
-Let's set the `YOUTUBE_KEY` and `CHANNEL_ID` environment variables using the `export` command on MacOS like so:
+Let's set the `YOUTUBE_KEY` and `CHANNEL_ID` environment variables using the
+`export` command on MacOS like so:
 
 ```s
 $ export YOUTUBE_KEY=YOUR-KEY-FROM-DEVELOPER-CONSOLE
-$ export CHANNEL_ID=UCwFl9Y49sWChrddQTD9QhRA 
+$ export CHANNEL_ID=UCwFl9Y49sWChrddQTD9QhRA
 ```
 
-Now that we've done that, we can use the `os.Getenv()` function in order to retrieve these values whenever we need them in our code base.
+Now that we've done that, we can use the `os.Getenv()` function in order to
+retrieve these values whenever we need them in our code base.
 
 ## Retrieving our Stats
 
-Now that we've got our API key, we've got an API that we can hit and we are seeing a 200 response from that API through curl, we can start coding up our `youtube` package which will handle all of our application's interaction with the YouTube API. 
+Now that we've got our API key, we've got an API that we can hit and we are
+seeing a 200 response from that API through curl, we can start coding up our
+`youtube` package which will handle all of our application's interaction with
+the YouTube API.
 
-Create a new directory within your project called `youtube`, and within that create a new file called `youtube.go`. 
+Create a new directory within your project called `youtube`, and within that
+create a new file called `youtube.go`.
 
-We'll want to define a `GetSubscribers()` function which will return an `Items` struct that we can later Marshal into JSON.
+We'll want to define a `GetSubscribers()` function which will return an `Items`
+struct that we can later Marshal into JSON.
 
 ```go
 package youtube
@@ -193,17 +233,19 @@ func GetSubscribers() (Items, error) {
 	if err != nil {
 		return Items{}, err
 	}
-    // we only care about the first Item in our 
+    // we only care about the first Item in our
     // Items array, so we just send that back
 	return response.Items[0], nil
 }
 ```
 
-Awesome, we now have something that is able to hit the YouTube API in a self-contained package that we can reference in other parts of our project. 
+Awesome, we now have something that is able to hit the YouTube API in a
+self-contained package that we can reference in other parts of our project.
 
 # Setting up a WebSocket Endpoint
 
-The next step will be to expose the stats that we are able to retrieve from the YouTube API via a WebSocket endpoint.
+The next step will be to expose the stats that we are able to retrieve from the
+YouTube API via a WebSocket endpoint.
 
 ```go
 // websocket.go
@@ -229,11 +271,11 @@ var upgrader = websocket.Upgrader{
 // The Upgrade function will take in an incoming request and upgrade the request
 // into a websocket connection
 func Upgrade(w http.ResponseWriter, r *http.Request) (*websocket.Conn, error) {
-    // this line allows other origin hosts to connect to our 
+    // this line allows other origin hosts to connect to our
     // websocket server
     upgrader.CheckOrigin = func(r *http.Request) bool { return true }
 
-    // creates our websocket connection 
+    // creates our websocket connection
 	ws, err := upgrader.Upgrade(w, r, nil)
 	if err != nil {
 		log.Println(err)
@@ -244,7 +286,11 @@ func Upgrade(w http.ResponseWriter, r *http.Request) (*websocket.Conn, error) {
 }
 ```
 
-We'll then want to create a `Writer` function that will take in the pointer to our recently opened WebSocket connection - `websocket.Conn`. This will subsequently start calling `youtube.GetSubscribers()` from our newly defined `youtube` package every 5 seconds using a really handy ticker from the `time` package:
+We'll then want to create a `Writer` function that will take in the pointer to
+our recently opened WebSocket connection - `websocket.Conn`. This will
+subsequently start calling `youtube.GetSubscribers()` from our newly defined
+`youtube` package every 5 seconds using a really handy ticker from the `time`
+package:
 
 ```go
 // websocket.go
@@ -280,11 +326,14 @@ func Writer(conn *websocket.Conn) {
 }
 ```
 
-Now that we have that in place, we'll just need to create a new endpoint on our server to call these two functions and we should be good to go!
+Now that we have that in place, we'll just need to create a new endpoint on our
+server to call these two functions and we should be good to go!
 
 # Our New Endpoint
 
-Finally, we'll want to update our `main.go` file to expose our new WebSocket API endpoint. We'll do this by adding a new route to our `setupRoutes()` function called `/stats` which will map to a `stats` function that we'll be defining.
+Finally, we'll want to update our `main.go` file to expose our new WebSocket API
+endpoint. We'll do this by adding a new route to our `setupRoutes()` function
+called `/stats` which will map to a `stats` function that we'll be defining.
 
 ```go
 package main
@@ -329,75 +378,102 @@ func main() {
 }
 ```
 
-And that should be everything we need for our server to work! We can now try running this by calling `go run main.go` and it should kick off our server once again on `http://localhost:8080`.
+And that should be everything we need for our server to work! We can now try
+running this by calling `go run main.go` and it should kick off our server once
+again on `http://localhost:8080`.
 
 # The Frontend
 
-The final piece of the puzzle is the frontend. We'll be creating an incredibly simple frontend `index.html` page in this case just to highlight how you can interact with our WebSocket server. 
+The final piece of the puzzle is the frontend. We'll be creating an incredibly
+simple frontend `index.html` page in this case just to highlight how you can
+interact with our WebSocket server.
 
-> **Note -** If you want to spice things up a bit and introduce a framework such as React then it might be worthwhile checking out my course on building a [Real-time Chat Application with React and Go](https://tutorialedge.net/projects/chat-system-in-go-and-react/)
+> **Note -** If you want to spice things up a bit and introduce a framework such
+> as React then it might be worthwhile checking out my course on building a
+> [Real-time Chat Application with React and Go](https://tutorialedge.net/projects/chat-system-in-go-and-react/)
 
-So, we are going to need add some JavaScript which will first open a WebSocket connection for us and then listen for `onopen` events, `onerror` events and `onmessage` events. 
+So, we are going to need add some JavaScript which will first open a WebSocket
+connection for us and then listen for `onopen` events, `onerror` events and
+`onmessage` events.
 
-* `onopen` - will be triggered when the WebSocket connection is successfully established.
-* `onerror` - will be triggered if there are any errors connecting to our WebSocket server
-* `onmessage` - will be triggered when we receive a message from our WebSocket server.
+- `onopen` - will be triggered when the WebSocket connection is successfully
+  established.
+- `onerror` - will be triggered if there are any errors connecting to our
+  WebSocket server
+- `onmessage` - will be triggered when we receive a message from our WebSocket
+  server.
 
-The one we care most about will be the `onmessage` event handler as we'll want to take in the subscriber stats from that event as a `JSON` object. We'll then want to populate our `<h1 id="subs">` element on our page with the subscriber count:
+The one we care most about will be the `onmessage` event handler as we'll want
+to take in the subscriber stats from that event as a `JSON` object. We'll then
+want to populate our `<h1 id="subs">` element on our page with the subscriber
+count:
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <title>Document</title>
-</head>
-<body>
-    
+  </head>
+  <body>
     <div class="container">
-        <h2>YouTube Subscribers</h2>
-        <h1 id="subs"></h1>
+      <h2>YouTube Subscribers</h2>
+      <h1 id="subs"></h1>
     </div>
 
     <script>
-        let subscribers = {};
-        const websocket = new WebSocket("ws://localhost:8080/stats");
-        
-        websocket.onopen = function (event) {
-            console.log("Successfully connected to websocket server");
-        }
+      let subscribers = {};
+      const websocket = new WebSocket("ws://localhost:8080/stats");
 
-        websocket.onerror = function (error) {
-            console.log("Error connecting to websocket server")
-            console.log(error);
-        }
+      websocket.onopen = function(event) {
+        console.log("Successfully connected to websocket server");
+      };
 
-        websocket.onmessage = function (event) {
-            // parse the event data sent from our websocket server
-            subscribers = JSON.parse(event.data);
-            // populate our `sub` element with the total subscriber counter for our
-            // channel
-            document.getElementById("subs").innerText = subscribers.statistics.subscriberCount;
-        }
-        
+      websocket.onerror = function(error) {
+        console.log("Error connecting to websocket server");
+        console.log(error);
+      };
+
+      websocket.onmessage = function(event) {
+        // parse the event data sent from our websocket server
+        subscribers = JSON.parse(event.data);
+        // populate our `sub` element with the total subscriber counter for our
+        // channel
+        document.getElementById("subs").innerText =
+          subscribers.statistics.subscriberCount;
+      };
     </script>
-    
-</body>
+  </body>
 </html>
 ```
 
-Awesome, we should have everything in place for our Real-time monitoring system to work! If you open this `index.html` page in your browser, you should see that it connects to our server. Our server will then start calling the YouTube API every 5 seconds and will send the results back to our frontend `index.html` page for it to render out!
+Awesome, we should have everything in place for our Real-time monitoring system
+to work! If you open this `index.html` page in your browser, you should see that
+it connects to our server. Our server will then start calling the YouTube API
+every 5 seconds and will send the results back to our frontend `index.html` page
+for it to render out!
 
 # Conclusion
 
-In this tutorial, we covered a few cool topics such as WebSocket communication using the `gorilla/mux` package as well as handling JSON responses from an API. 
+In this tutorial, we covered a few cool topics such as WebSocket communication
+using the `gorilla/mux` package as well as handling JSON responses from an API.
 
-This was a really fun project for me to build up and I hope you enjoyed following it along! If you have any suggestions or comments on this project, then I'd love to hear them through the suggestions box below.
+This was a really fun project for me to build up and I hope you enjoyed
+following it along! If you have any suggestions or comments on this project,
+then I'd love to hear them through the suggestions box below.
 
-If you want to support the work that I do then feel free to share my work with your friends and family! Every little bit helps! :)
+If you want to support the work that I do then feel free to share my work with
+your friends and family! Every little bit helps! :)
 
-> **Note -** If you want to keep track of when new Go articles are posted to the site, then please feel free to follow me on twitter for all the latest news: [@Elliot_F](https://twitter.com/elliot_f).
+> **Note -** If you want to keep track of when new Go articles are posted to the
+> site, then please feel free to follow me on twitter for all the latest news:
+> [@Elliot_F](https://twitter.com/elliot_f).

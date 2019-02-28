@@ -1,14 +1,15 @@
 ---
 author: Elliot Forbes
 date: 2017-04-15T09:29:14+01:00
-desc: This tutorial looks to demonstrate how one can initialize a window using the
+desc:
+  This tutorial looks to demonstrate how one can initialize a window using the
   LWJGL 3 framework and OpenGL
 series: lwjgl3
 image: lwjgl.jpg
 tags:
-- lwjgl3
-- java
-- gamedev
+  - lwjgl3
+  - java
+  - gamedev
 title: Creating a Game Window using GLFW - LWJGL3
 twitter: https://twitter.com/Elliot_F
 ---
@@ -40,15 +41,15 @@ public class Main implements Runnable{
   }
 
   public void init(){
-    
+
   }
 
   public void update(){
-    
+
   }
 
   public void render(){
-    
+
   }
 
   @Override
@@ -68,7 +69,7 @@ public class Main implements Runnable{
 
 ```java
 import static org.lwjgl.glfw.GLFW.*; // allows us to create windows
-import static org.lwjgl.opengl.GL11.*; // gives us access to things like "GL_TRUE" which we'll need 
+import static org.lwjgl.opengl.GL11.*; // gives us access to things like "GL_TRUE" which we'll need
 import static org.lwjgl.system.MemoryUtil.*; // allows us to use 'NULL' in our code, note this is slightly different from java's 'null'
 import java.nio.ByteBuffer; // Used for getting the primary monitor later on.
 import org.lwjgl.glfw.GLFWvidmode; // again used for primary monitor stuff.
@@ -82,36 +83,36 @@ import org.lwjgl.glfw.GLFWvidmode; // again used for primary monitor stuff.
 
 ```java
 public void init(){
-  // Initializes our window creator library - GLFW 
+  // Initializes our window creator library - GLFW
   // This basically means, if this glfwInit() doesn't run properlly
   // print an error to the console
   if(glfwInit() != GL_TRUE){
     // Throw an error.
     System.err.println("GLFW initialization failed!");
   }
-  
+
   // Allows our window to be resizable
   glfwWindowHint(GLFW_RESIZABLE, GL_TRUE);
-  
+
   // Creates our window. You'll need to declare private long window at the
-  // top of the class though. 
+  // top of the class though.
   // We pass the width and height of the game we want as well as the title for
   // the window. The last 2 NULL parameters are for more advanced uses and you
   // shouldn't worry about them right now.
   window = glfwCreateWindow(width, height, "Endless Runner", NULL, NULL);
 
   // This code performs the appropriate checks to ensure that the
-  // window was successfully created. 
+  // window was successfully created.
   // If not then it prints an error to the console
   if(window == NULL){
     // Throw an Error
     System.err.println("Could not create our Window!");
   }
-  
-  // creates a bytebuffer object 'vidmode' which then queries 
-  // to see what the primary monitor is. 
+
+  // creates a bytebuffer object 'vidmode' which then queries
+  // to see what the primary monitor is.
   ByteBuffer vidmode = glfwGetVideoMode(glfwGetPrimaryMonitor());
-  // Sets the initial position of our game window. 
+  // Sets the initial position of our game window.
   glfwSetWindowPos(window, 100, 100);
   // Sets the context of GLFW, this is vital for our program to work.
   glfwMakeContextCurrent(window);
@@ -174,7 +175,7 @@ import java.nio.ByteBuffer;
 import org.lwjgl.glfw.GLFWvidmode;
 
 public class Main implements Runnable{
-	
+
   private Thread thread;
   public boolean running = true;
 
@@ -194,36 +195,36 @@ public class Main implements Runnable{
   }
 
   public void init(){
-    // Initializes our window creator library - GLFW 
+    // Initializes our window creator library - GLFW
     // This basically means, if this glfwInit() doesn't run properlly
     // print an error to the console
     if(glfwInit() != GL_TRUE){
       // Throw an error.
       System.err.println("GLFW initialization failed!");
     }
-    
+
     // Allows our window to be resizable
     glfwWindowHint(GLFW_RESIZABLE, GL_TRUE);
-    
+
     // Creates our window. You'll need to declare private long window at the
-    // top of the class though. 
+    // top of the class though.
     // We pass the width and height of the game we want as well as the title for
     // the window. The last 2 NULL parameters are for more advanced uses and you
     // shouldn't worry about them right now.
     window = glfwCreateWindow(width, height, "Endless Runner", NULL, NULL);
 
     // This code performs the appropriate checks to ensure that the
-    // window was successfully created. 
+    // window was successfully created.
     // If not then it prints an error to the console
     if(window == NULL){
       // Throw an Error
       System.err.println("Could not create our Window!");
     }
-    
-    // creates a bytebuffer object 'vidmode' which then queries 
-    // to see what the primary monitor is. 
+
+    // creates a bytebuffer object 'vidmode' which then queries
+    // to see what the primary monitor is.
     ByteBuffer vidmode = glfwGetVideoMode(glfwGetPrimaryMonitor());
-    // Sets the initial position of our game window. 
+    // Sets the initial position of our game window.
     glfwSetWindowPos(window, 100, 100);
     // Sets the context of GLFW, this is vital for our program to work.
     glfwMakeContextCurrent(window);

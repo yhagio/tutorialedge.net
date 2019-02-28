@@ -1,19 +1,24 @@
 ---
 author: Elliot Forbes
 date: 2017-04-09T21:07:45+01:00
-desc: In this tutorial we examine how to read in files and unmarshal them using the
+desc:
+  In this tutorial we examine how to read in files and unmarshal them using the
   xml package in go.
 series: golang
 image: golang.png
 tags:
-- beginner
+  - beginner
 title: Parsing XML Files With Golang
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 twitter: https://twitter.com/Elliot_F
 weight: 10
 ---
 
-In this tutorial we look at how you can effectively read in an XML file from the file system and then parse this file using Go’s [“encoding/xml” Package](https://golang.org/pkg/encoding/xml/). We’ll look at how you can traverse multiple nested xml elements and then we’ll simply print this out to our terminal window.
+In this tutorial we look at how you can effectively read in an XML file from the
+file system and then parse this file using Go’s
+[“encoding/xml” Package](https://golang.org/pkg/encoding/xml/). We’ll look at
+how you can traverse multiple nested xml elements and then we’ll simply print
+this out to our terminal window.
 
 # Our Example XML File
 
@@ -29,7 +34,7 @@ So to begin with, we’ll need an xml file that we can traverse.
       <twitter>https://twitter.com</twitter>
       <youtube>https://youtube.com</youtube>
     </social>
-  </user>  
+  </user>
   <user type="reader">
     <name>Fraser</name>
     <social>
@@ -37,16 +42,19 @@ So to begin with, we’ll need an xml file that we can traverse.
       <twitter>https://twitter.com</twitter>
       <youtube>https://youtube.com</youtube>
     </social>
-  </user>  
+  </user>
 </users>
 ```
 
-
-You’ll see the above xml has attributes set on the user tags, nested elements and if you are able to parse this then you should, by extension, be able to parse any xml file regardless of size.
+You’ll see the above xml has attributes set on the user tags, nested elements
+and if you are able to parse this then you should, by extension, be able to
+parse any xml file regardless of size.
 
 # Reading in our File
 
-The first obstacle we’ll have to overcome is reading this file into memory. We can do this by using a combination of the “os” package and the “io/ioutil” package. 
+The first obstacle we’ll have to overcome is reading this file into memory. We
+can do this by using a combination of the “os” package and the “io/ioutil”
+package.
 
 ```go
 package main
@@ -76,11 +84,13 @@ func main() {
 
 # Defining our Structs
 
-Before we can parse our xml file, we need to define some structs. We’ll have one to represent the complete list of users, one to represent our user and then one to represent our users social links.
+Before we can parse our xml file, we need to define some structs. We’ll have one
+to represent the complete list of users, one to represent our user and then one
+to represent our users social links.
 
 ```go
 import (
-  ... 
+  ...
   // remember to add encoding/xml to your list of imports
 	"encoding/xml"
 	...
@@ -116,7 +126,9 @@ type Social struct {
 
 # Unmarshalling Our XML
 
-So above we’ve seen how to load in our file into memory, in order to marshal it we need to convert this file to a byte array and then use the xml.Unmarshal method in order to populate our Users array.
+So above we’ve seen how to load in our file into memory, in order to marshal it
+we need to convert this file to a byte array and then use the xml.Unmarshal
+method in order to populate our Users array.
 
 ```go
 // read our opened xmlFile as a byte array.
@@ -204,4 +216,5 @@ func main() {
 
 # Conclusion
 
-I hope you found this tutorial beneficial, if you’ve got anything you wish to add then please do in the comments section below!
+I hope you found this tutorial beneficial, if you’ve got anything you wish to
+add then please do in the comments section below!
