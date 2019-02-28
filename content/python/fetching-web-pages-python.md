@@ -1,12 +1,13 @@
 ---
 author: Elliot Forbes
 date: 2017-04-15T09:47:01+01:00
-desc: This tutorial teaches the reader how to create a python script that will fetch
+desc:
+  This tutorial teaches the reader how to create a python script that will fetch
   any given web page using the urllib2 python module.
 series: python
 image: python-logo.png
 tags:
-- beginner
+  - beginner
 title: Fetching Web Pages In Python Using Urllib2
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
@@ -14,11 +15,14 @@ authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_4
 
 > This tutorial was built using Python 2.7. This will not work for Python 3+
 
-In this tutorial I will be showing you how you can fetch the a webpage using the `urllib2` python module. This is a relatively simple process that can be accomplished in 5 lines of code.
+In this tutorial I will be showing you how you can fetch the a webpage using the
+`urllib2` python module. This is a relatively simple process that can be
+accomplished in 5 lines of code.
 
 # The Imports
 
-To begin with we will need to import the `urllib2` python module so that we can utilize it's functionality:
+To begin with we will need to import the `urllib2` python module so that we can
+utilize it's functionality:
 
 ```py
 import urllib2
@@ -33,7 +37,7 @@ req = urllib2.Request('http://www.tutorialedge.net/python/fetching-web-pages-pyt
 response = urllib2.urlopen(req)
 the_page = response.read()
 # Here we print out the retrieved page's HTML to the console
-# once we've got this we can start performing some analysis of 
+# once we've got this we can start performing some analysis of
 # the webpage and do some cooler things.
 print(the_page)
 ```
@@ -59,10 +63,10 @@ hdr = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML,
 # the headers that we've defined above.
 req = urllib2.Request(site, headers=hdr)
 
-# 
+#
 try:
     # here we are going to open our desired page using urllib2.urlopen
-    # and passing in our request object as a parameter and as a means of protection we 
+    # and passing in our request object as a parameter and as a means of protection we
     # will surround this with a try except so that, should the script run into any errors
     # it will fail gracefully instead of just crashing.
     page = urllib2.urlopen(req)
@@ -80,7 +84,6 @@ print content
 # Video Tutorial
 
 <p><iframe allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/LTGhCtp2Scw" width="560"></iframe></p>
-
 
 # Moving Forward
 

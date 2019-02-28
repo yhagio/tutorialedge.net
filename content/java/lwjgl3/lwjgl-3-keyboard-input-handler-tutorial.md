@@ -1,15 +1,16 @@
 ---
 author: Elliot Forbes
 date: 2017-04-15T09:42:07+01:00
-desc: This standalone tutorial looks to teach programmers how they can extend the
-  LWJGL 3 library to create their own Input handlers which can be implemented into
-  their own applications.
+desc:
+  This standalone tutorial looks to teach programmers how they can extend the
+  LWJGL 3 library to create their own Input handlers which can be implemented
+  into their own applications.
 series: lwjgl3
 image: lwjgl.jpg
 tags:
-- lwjgl3
-- java
-- gamedev
+  - lwjgl3
+  - java
+  - gamedev
 title: LWJGL 3 Keyboard Input Handler Tutorial
 twitter: https://twitter.com/Elliot_F
 ---
@@ -36,7 +37,7 @@ public class KeyboardHandler extends GLFWKeyCallback{
 
   // The GLFWKeyCallback class is an abstract method that
   // can't be instantiated by itself and must instead be extended
-  // 
+  //
   @Override
   public void invoke(long window, int key, int scancode, int action, int mods) {
     // TODO Auto-generated method stub
@@ -48,7 +49,7 @@ public class KeyboardHandler extends GLFWKeyCallback{
   public static boolean isKeyDown(int keycode) {
     return keys[keycode];
   }
-	
+
 }
 ```
 
@@ -65,7 +66,7 @@ private GLFWKeyCallback keyCallback;
 
 ```java
 // Sets our keycallback to equal our newly created Input class()
-glfwSetKeyCallback(window, keyCallback = new KeyboardHandler());		
+glfwSetKeyCallback(window, keyCallback = new KeyboardHandler());
 ```
 
 # Checking it Works
@@ -89,29 +90,29 @@ import org.lwjgl.opengl.*;
 import Input.KeyboardHandler;
 
 import java.nio.ByteBuffer;
- 
+
 
 import static org.lwjgl.glfw.Callbacks.*;
 import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.system.MemoryUtil.*;
- 
+
 public class HelloWorld {
- 
+
     // We need to strongly reference callback instances.
     private GLFWErrorCallback errorCallback;
     private GLFWKeyCallback   keyCallback;
- 
+
     // The window handle
     private long window;
- 
+
     public void run() {
         System.out.println("Hello LWJGL " + Sys.getVersion() + "!");
- 
+
         try {
             init();
             loop();
- 
+
             // Release window and window callbacks
             glfwDestroyWindow(window);
             keyCallback.release();
@@ -121,32 +122,32 @@ public class HelloWorld {
             errorCallback.release();
         }
     }
- 
+
     private void init() {
         // Setup an error callback. The default implementation
         // will print the error message in System.err.
         glfwSetErrorCallback(errorCallback = errorCallbackPrint(System.err));
- 
+
         // Initialize GLFW. Most GLFW functions will not work before doing this.
         if ( glfwInit() != GL11.GL_TRUE )
             throw new IllegalStateException("Unable to initialize GLFW");
- 
+
         // Configure our window
         glfwDefaultWindowHints(); // optional, the current window hints are already the default
         glfwWindowHint(GLFW_VISIBLE, GL_FALSE); // the window will stay hidden after creation
         glfwWindowHint(GLFW_RESIZABLE, GL_TRUE); // the window will be resizable
- 
+
         int WIDTH = 300;
         int HEIGHT = 300;
- 
+
         // Create the window
         window = glfwCreateWindow(WIDTH, HEIGHT, "Hello World!", NULL, NULL);
         if ( window == NULL )
             throw new RuntimeException("Failed to create the GLFW window");
- 
+
         // Setup a key callback. It will be called every time a key is pressed, repeated or released.
         glfwSetKeyCallback(window, keyCallback = new KeyboardHandler());
- 
+
         // Get the resolution of the primary monitor
         ByteBuffer vidmode = glfwGetVideoMode(glfwGetPrimaryMonitor());
         // Center our window
@@ -155,21 +156,21 @@ public class HelloWorld {
             (GLFWvidmode.width(vidmode) - WIDTH) / 2,
             (GLFWvidmode.height(vidmode) - HEIGHT) / 2
         );
- 
+
         // Make the OpenGL context current
         glfwMakeContextCurrent(window);
         // Enable v-sync
         glfwSwapInterval(1);
- 
+
         // Make the window visible
         glfwShowWindow(window);
     }
-    
+
     public void update(){
     	if(KeyboardHandler.isKeyDown(GLFW_KEY_SPACE))
     		System.out.println("Space Key Pressed");
     }
- 
+
     private void loop() {
         // This line is critical for LWJGL's interoperation with GLFW's
         // OpenGL context, or any context that is managed externally.
@@ -177,30 +178,30 @@ public class HelloWorld {
         // creates the ContextCapabilities instance and makes the OpenGL
         // bindings available for use.
         GLContext.createFromCurrent();
- 
+
         // Set the clear color
         glClearColor(1.0f, 0.0f, 0.0f, 0.0f);
- 
+
         // Run the rendering loop until the user has attempted to close
         // the window or has pressed the ESCAPE key.
         while ( glfwWindowShouldClose(window) == GL_FALSE ) {
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // clear the framebuffer
- 
+
             glfwSwapBuffers(window); // swap the color buffers
- 
+
             // Poll for window events. The key callback above will only be
             // invoked during this call.
             glfwPollEvents();
-            
+
             update();
-            
+
         }
     }
- 
+
     public static void main(String[] args) {
         new HelloWorld().run();
     }
- 
+
 }
 ```
 

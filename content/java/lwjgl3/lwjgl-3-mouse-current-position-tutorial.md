@@ -1,23 +1,30 @@
 ---
 author: Elliot Forbes
 date: 2017-04-15T09:43:47+01:00
-desc: This tutorial looks to teach the programmer how to attain the mouse's current
+desc:
+  This tutorial looks to teach the programmer how to attain the mouse's current
   window position and print it out to the console.
 series: lwjgl3
 image: lwjgl.jpg
 tags:
-- lwjgl3
-- java
-- gamedev
+  - lwjgl3
+  - java
+  - gamedev
 title: LWJGL 3 Mouse Current Position Tutorial
 twitter: https://twitter.com/Elliot_F
 ---
 
-In this tutorial I will be showing you how you can obtain the X and Y coordinates of the Mouse cursor in an applications window and print it out to the console.
+In this tutorial I will be showing you how you can obtain the X and Y
+coordinates of the Mouse cursor in an applications window and print it out to
+the console.
 
 # Creating a MouseHandler Class
 
-To begin with I recommend you create an 'Input' package within your project as this is a good way to keep all Input Handler classes organized within your projects. Once you've created this package, right click on it and add a new class called MouseHandler. This class will extend the GLFWCursorPosCallback abstract class provided by the LWJGL3 framework. 
+To begin with I recommend you create an 'Input' package within your project as
+this is a good way to keep all Input Handler classes organized within your
+projects. Once you've created this package, right click on it and add a new
+class called MouseHandler. This class will extend the GLFWCursorPosCallback
+abstract class provided by the LWJGL3 framework.
 
 ```java
 package Input;
@@ -32,22 +39,25 @@ public class MouseHandler extends GLFWCursorPosCallback {
   @Override
   public void invoke(long window, double xpos, double ypos) {
     // TODO Auto-generated method stub
-    // this basically just prints out the X and Y coordinates 
+    // this basically just prints out the X and Y coordinates
     // of our mouse whenever it is in our window
     System.out.println("X: " + xpos + " Y: " + ypos);
-  }	
+  }
 }
 ```
 
 # Making it Work
 
-Now that we've created our MouseHandler class we need to put in the following code just below our GLFW Window initialization so that our invoke method will be called every time the cursor's position changes.
+Now that we've created our MouseHandler class we need to put in the following
+code just below our GLFW Window initialization so that our invoke method will be
+called every time the cursor's position changes.
 
 ```java
 glfwSetCursorPosCallback(window, mouseCallback = new MouseHandler());
 ```
 
-And that should be it all done, you should now be seeing the cursors position outputted to the console. 
+And that should be it all done, you should now be seeing the cursors position
+outputted to the console.
 
 <img style="width: 100%; height: auto;" src="/uploads/articles/cursor-pos-console.PNG" />
 
@@ -62,15 +72,15 @@ import Input.KeyboardHandler;
 import Input.MouseHandler;
 
 import java.nio.ByteBuffer;
- 
+
 
 import static org.lwjgl.glfw.Callbacks.*;
 import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.system.MemoryUtil.*;
- 
+
 public class HelloWorld {
- 
+
   // We need to strongly reference callback instances.
   private GLFWErrorCallback errorCallback;
   private GLFWKeyCallback   keyCallback;
@@ -141,7 +151,7 @@ public class HelloWorld {
     // Make the window visible
     glfwShowWindow(window);
   }
-  
+
   public void update(){
     if(KeyboardHandler.isKeyDown(GLFW_KEY_SPACE))
       System.out.println("Space Key Pressed");
@@ -168,15 +178,15 @@ public class HelloWorld {
       // Poll for window events. The key callback above will only be
       // invoked during this call.
       glfwPollEvents();
-      
+
       update();
-        
+
     }
   }
 
   public static void main(String[] args) {
     new HelloWorld().run();
   }
- 
+
 }
 ```

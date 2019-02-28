@@ -4,12 +4,12 @@ bookImage: game-ai-by-example.jpeg
 bookLink: http://amzn.to/2r74d8f
 bookTitle: Programming Game AI by Example
 date: 2017-04-15T09:23:35+01:00
-desc: 'depth limited search demonstrated in java programming language. '
+desc: "depth limited search demonstrated in java programming language. "
 series: ai
 image: ai.png
 tags:
-- ai
-- java
+  - ai
+  - java
 title: Depth Limited Search in Java
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
@@ -25,16 +25,20 @@ authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_4
 
 <p>This algorithm basically follows the same methods as the depth first search.</p>
 
-
 1. Node 1 is added to the stack
-  1. If Node 1 is not the goal node then add Node 2 to the stack
-  2. If Node 2 is not the goal node then add Node 4 to the stack
-  3. If Node 4 is not the goal node and depth limit has been reached then revert to nearest Node with unexplored children and add these to stack
-2. continue until all nodes within depth limit have been searched or goal node has been found.
+1. If Node 1 is not the goal node then add Node 2 to the stack
+1. If Node 2 is not the goal node then add Node 4 to the stack
+1. If Node 4 is not the goal node and depth limit has been reached then revert
+   to nearest Node with unexplored children and add these to stack
+1. continue until all nodes within depth limit have been searched or goal node
+   has been found.
 
 <p><strong>Depth First Search:</strong></p>
 
-> For more information about the search based algorithm that this is based off, you can check out this tutorial here: <a href="/artificial-intelligence/depth-first-search/">Depth First Search in Java</a>
+> For more information about the search based algorithm that this is based off,
+> you can check out this tutorial here:
+> <a href="/artificial-intelligence/depth-first-search/">Depth First Search in
+> Java</a>
 
 # The Implementation:
 

@@ -5,7 +5,7 @@ desc: laravel 5 middleware tutorial
 series: laravel-5.2
 image: laravel.png
 tags:
-- php
+  - php
 title: Laravel 5 Middleware Tutorial
 twitter: https://twitter.com/Elliot_F
 ---
@@ -35,7 +35,7 @@ php artisan make:middleware AdMiddleware
 <p>After you’ve ran the make:middleware command you should see your new middleware file in app/http/middleware. Open this up and we’ll create a middleware that will get the request’s IP address and then determine what country that request came from.</p>
 
 ```php
-<?php 
+<?php
 namespace App\Http\Middleware;
 use Closure;
 class AdMiddleware
@@ -51,16 +51,16 @@ class AdMiddleware
   {
     // Test to see if the requesters have an ip address.
     if($request->ip() == null){
-        throw new \Exception("IP ADDRESS NOT SET");   
-    } 
+        throw new \Exception("IP ADDRESS NOT SET");
+    }
     $country=file_get_contents('http://api.hostip.info/get_html.php?ip=' . $request->ip());
     echo $country;
     if(strpos($country, "UNITED STATES")){
-        throw new \Exception("NOT FOR YOUR EYES, NSA");   
+        throw new \Exception("NOT FOR YOUR EYES, NSA");
     } else {
-        return redirect("index");   
+        return redirect("index");
     }
-    
+
     return $next($request);
   }
 }

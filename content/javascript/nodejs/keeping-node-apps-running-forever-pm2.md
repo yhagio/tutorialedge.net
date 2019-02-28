@@ -1,15 +1,16 @@
 ---
 author: Elliot Forbes
 date: 2017-04-15T08:38:40+01:00
-desc: This tutorial gives you a few different methods of keeping your nodejs applications
-  alive and running forever, definitely a handy guide if you use Node in production
-  environments.
+desc:
+  This tutorial gives you a few different methods of keeping your nodejs
+  applications alive and running forever, definitely a handy guide if you use
+  Node in production environments.
 series: nodejs
 image: node.png
 tags:
-- pm2
-- nodejs
-- javascript
+  - pm2
+  - nodejs
+  - javascript
 title: Keeping NodeJS Applications Running Forever Using PM2
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg

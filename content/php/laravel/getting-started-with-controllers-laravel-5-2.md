@@ -4,7 +4,7 @@ date: 2017-04-15T08:04:33+01:00
 series: laravel-5.2
 image: laravel.png
 tags:
-- php
+  - php
 title: Getting Started With Controllers in Laravel 5.2
 twitter: https://twitter.com/Elliot_F
 ---
@@ -40,9 +40,10 @@ use App\Http\Requests;
 
 class BlogController extends Controller
 {
-    //    
+    //
 }
 ```
+
 <p>Now that we have this we can go into our BlogController class definition and create a few functions. As we don’t yet have a model in place we want to just return a few static pages back to anyone who visits our site. </p>
 
 <h2>Adding our Blade Templates</h2>
@@ -54,9 +55,7 @@ class BlogController extends Controller
 <h6>single.blade.php</h6>
 
 ```html
-@extends('app')
-
-@section('content')
+@extends('app') @section('content')
 <h2>Single Page</h2>
 @endsection
 ```
@@ -64,9 +63,7 @@ class BlogController extends Controller
 <h6>index.blade.php</h6>
 
 ```html
-@extends('app')
-
-@section('content')
+@extends('app') @section('content')
 <h2>Single Page</h2>
 @endsection
 ```
@@ -74,9 +71,7 @@ class BlogController extends Controller
 <h6>about.blade.php</h6>
 
 ```html
-@extends('app')
-
-@section('content')
+@extends('app') @section('content')
 <h2>About Page</h2>
 @endsection
 ```
@@ -84,9 +79,7 @@ class BlogController extends Controller
 <h6>contact.blade.php</h6>
 
 ```html
-@extends('app')
-
-@section('content')
+@extends('app') @section('content')
 <h2>Contact Page</h2>
 @endsection
 ```
@@ -104,7 +97,7 @@ public function single()
 {
     return view('single');
 }
-    
+
 public function about()
 {
     return view('about');

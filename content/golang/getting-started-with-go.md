@@ -2,9 +2,11 @@
 title: "Getting Started With Go"
 date: 2018-09-22T15:23:16+01:00
 weight: 1
-desc: In this tutorial, we are going to get you up and running with Go so that you can go off and write your own Go programs.
+desc:
+  In this tutorial, we are going to get you up and running with Go so that you
+  can go off and write your own Go programs.
 tags:
-- beginner
+  - beginner
 image: golang.png
 series: golang
 author: Elliot Forbes
@@ -12,21 +14,35 @@ twitter: https://twitter.com/elliot_f
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
-Go is an absolutely incredible language to build a wide variety of different applications in. From command-line interfaces to distributed microsystems and even cloud platforms, its' simplicity and concurrency baked in makes it a powerful choice of language for many development teams.
+Go is an absolutely incredible language to build a wide variety of different
+applications in. From command-line interfaces to distributed microsystems and
+even cloud platforms, its' simplicity and concurrency baked in makes it a
+powerful choice of language for many development teams.
 
-In this tutorial, I will be embarking on a mission to help get you up and running with the language so that you can go off and build ever-more brilliant applications and help push forward technology.
+In this tutorial, I will be embarking on a mission to help get you up and
+running with the language so that you can go off and build ever-more brilliant
+applications and help push forward technology.
 
-We'll be focusing on getting a really simple `Hello World` style application up and running. Once you've got everything working correctly, we can start the rest of our journey learning the more complex aspects of the language such as functions, methods, and eventually things like concurrency and reflection.
+We'll be focusing on getting a really simple `Hello World` style application up
+and running. Once you've got everything working correctly, we can start the rest
+of our journey learning the more complex aspects of the language such as
+functions, methods, and eventually things like concurrency and reflection.
 
 # Getting Started
 
-Let's dive in with getting everything installed and writing an incredibly simple program to get our toes wet.
- 
-You'll first want to go to the official [Getting Started page](https://golang.org/doc/install) which will contain a link to install the various different versions of Go currently available.
+Let's dive in with getting everything installed and writing an incredibly simple
+program to get our toes wet.
 
-At this point, we'll want to install the latest version, which, at the time of writing this is `go 1.11.4`. 
+You'll first want to go to the official
+[Getting Started page](https://golang.org/doc/install) which will contain a link
+to install the various different versions of Go currently available.
 
-Installing this using the `Installed` kind should add the official Go binary to your machine's `PATH`. With this done, we should be able to run `go version` within a terminal:
+At this point, we'll want to install the latest version, which, at the time of
+writing this is `go 1.11.4`.
+
+Installing this using the `Installed` kind should add the official Go binary to
+your machine's `PATH`. With this done, we should be able to run `go version`
+within a terminal:
 
 ```s
 $ go version
@@ -35,16 +51,21 @@ go version go1.11 darwin/amd64
 
 If this works correctly, we are all set to start writing our own Go programs.
 
-Let's open up our code editor of choice and then create a new directory in which our `Hello World` project will reside.
+Let's open up our code editor of choice and then create a new directory in which
+our `Hello World` project will reside.
 
-Within this directory, we'll create a new file called `main.go` which will contain our relatively simple Go program. We'll also want to open up a terminal at this directory location and run the following commands:
+Within this directory, we'll create a new file called `main.go` which will
+contain our relatively simple Go program. We'll also want to open up a terminal
+at this directory location and run the following commands:
 
 ```s
 $ GOMODULES11=ON
 $ go mod init github.com/hello/world
 ```
 
-This will initialize our project and allow us the ability to separate our Go code into sub-packages in the future. It'll also allow us to retrieve any external dependencies we may want with minimal fuss.
+This will initialize our project and allow us the ability to separate our Go
+code into sub-packages in the future. It'll also allow us to retrieve any
+external dependencies we may want with minimal fuss.
 
 Now, within our `main.go` file, we'll want to add the following code:
 
@@ -71,26 +92,35 @@ func main() {
 
 ```
 
-And that's all you need! Once you've added these 5 lines of code, we can set about running and compiling this using our `go` binary which is now on our `PATH`.
+And that's all you need! Once you've added these 5 lines of code, we can set
+about running and compiling this using our `go` binary which is now on our
+`PATH`.
 
 ```s
 $ go run main.go
 Hello World
 ```
 
-If we wanted to compile this into a binary executable, we can do so by again using the `go` binary like so:
+If we wanted to compile this into a binary executable, we can do so by again
+using the `go` binary like so:
 
 ```s
 $ go build main.go
 $ ./main
 ```
 
-> **Congratulations -** You have successfully written, run and compiled your first Go application!
+> **Congratulations -** You have successfully written, run and compiled your
+> first Go application!
 
 # Conclusion
 
-So, in this simple tutorial, we managed to successfully start our journey into the world of Go development. 
+So, in this simple tutorial, we managed to successfully start our journey into
+the world of Go development.
 
-If you are interested in further improving your Go skills, I recommend checking out the next article in this series on the basic types available in Go - [Go Basic Types Tutorial](/golang/go-basic-types-tutorial/)
+If you are interested in further improving your Go skills, I recommend checking
+out the next article in this series on the basic types available in Go -
+[Go Basic Types Tutorial](/golang/go-basic-types-tutorial/)
 
-> **Note -** If you want to keep track of when new Go articles are posted to the site, then please feel free to follow me on twitter for all the latest news: [@Elliot_F](https://twitter.com/elliot_f).
+> **Note -** If you want to keep track of when new Go articles are posted to the
+> site, then please feel free to follow me on twitter for all the latest news:
+> [@Elliot_F](https://twitter.com/elliot_f).

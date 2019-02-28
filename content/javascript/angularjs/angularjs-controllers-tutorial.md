@@ -1,37 +1,42 @@
 ---
 author: Elliot Forbes
 date: 2017-04-15T09:10:12+01:00
-desc: this tutorial teaches the basics of angularjs controllers as well as introducing
-  concepts such as constructor and scope inheritance within your angularjs application
+desc:
+  this tutorial teaches the basics of angularjs controllers as well as
+  introducing concepts such as constructor and scope inheritance within your
+  angularjs application
 series: angularjs
 
 tags:
-
-- javascript
+  - javascript
 title: AngularJS Controllers Tutorial
 twitter: https://twitter.com/Elliot_F
 ---
 
 <p>AngularJS controllers are somewhat similar to classes in Object Oriented programming and as such you can define the functionality of your applications in these controllers. When a controller is attached to the DOM via the ng-controller directive it instantiates a new Controller object.</p>
 
-> Check out my article on <a href="/javascript/angularjs/working-with-angularjs-component-applications/">Working with Components</a> and see how you should use controllers within a component based system.
+> Check out my article on
+> <a href="/javascript/angularjs/working-with-angularjs-component-applications/">Working
+> with Components</a> and see how you should use controllers within a component
+> based system.
 
 # Instantiating a Controller
 
-We’ll begin by creating a very simple controller that contains a function that we’ll call every time we click a button. We’ll also have a $scope variable that we will bind to somewhere on our HTML page so that we can see the effects of this function’s execution every time it is pressed.
+We’ll begin by creating a very simple controller that contains a function that
+we’ll call every time we click a button. We’ll also have a \$scope variable that
+we will bind to somewhere on our HTML page so that we can see the effects of
+this function’s execution every time it is pressed.
 
 ```js
-var testApp = angular.module('testApp', []);
+var testApp = angular.module("testApp", []);
 
-testApp.controller('testController' , function ($scope) {
-    
-    $scope.myNumber = 1;
-    
-    $scope.go = function() {
-        $scope.myNumber = $scope.myNumber + 1;
-        console.log("hit");
-    };
-    
+testApp.controller("testController", function($scope) {
+  $scope.myNumber = 1;
+
+  $scope.go = function() {
+    $scope.myNumber = $scope.myNumber + 1;
+    console.log("hit");
+  };
 });
 ```
 
@@ -39,23 +44,22 @@ testApp.controller('testController' , function ($scope) {
 
 ```html
 <html ng-app="testApp">
-<head>
+  <head>
     <title>AngularJS ng-if child scopes example</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-</head>
-<body ng-controller="testController">
-    
+  </head>
+  <body ng-controller="testController">
     <div>
-        {{myNumber}}
-        <!--
+      {{myNumber}}
+      <!--
             by using the ng-click directive we can call the function 
             go() that we've declared in our testController.
         -->
-        <button ng-click="go()">Add One!</button>
+      <button ng-click="go()">Add One!</button>
     </div>
-    
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
 ```
 
@@ -66,42 +70,38 @@ testApp.controller('testController' , function ($scope) {
 <p>One very useful thing to note is that we can effectively achieve scope inheritance due to the fact each new ng-controller instantiation creates a new child scope. This essentially allows us to access scope variables declared higher up in the hierarchy and this can be quite useful if you are wanting to achieve less code duplication etc.</p>
 
 ```js
-var testApp = angular.module('testApp', []);
+var testApp = angular.module("testApp", []);
 
-testApp.controller('testController' , function ($scope) {
-    
-    $scope.myNumber = 1;
-    
-    $scope.go = function() {
-        $scope.myNumber = $scope.myNumber + 1;
-        console.log("hit");
-    };
-    
+testApp.controller("testController", function($scope) {
+  $scope.myNumber = 1;
+
+  $scope.go = function() {
+    $scope.myNumber = $scope.myNumber + 1;
+    console.log("hit");
+  };
 });
 
-testApp.controller('childTestController', function($scope) {
-    $scope.yourNumber = 99;
+testApp.controller("childTestController", function($scope) {
+  $scope.yourNumber = 99;
 });
 ```
 
 ```html
 <html ng-app="testApp">
-<head>
+  <head>
     <title>AngularJS ng-if child scopes example</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-</head>
-<body ng-controller="testController">
-    
+  </head>
+  <body ng-controller="testController">
     <div>
-        {{myNumber}}
+      {{myNumber}}
     </div>
-    
+
     <div ng-controller="childTestController">
-        {{yourNumber}}
+      {{yourNumber}}
     </div>
-    
-    
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
 ```

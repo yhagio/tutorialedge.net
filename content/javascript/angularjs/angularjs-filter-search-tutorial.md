@@ -1,13 +1,13 @@
 ---
 author: Elliot Forbes
 date: 2017-04-15T08:59:44+01:00
-desc: We look at how you can implement your own style of filter searching using AngularJS's
-  filter directive
+desc:
+  We look at how you can implement your own style of filter searching using
+  AngularJS's filter directive
 series: angularjs
 
 tags:
-
-- javascript
+  - javascript
 title: AngularJS Filter Search Tutorial
 twitter: https://twitter.com/Elliot_F
 ---
@@ -23,105 +23,114 @@ twitter: https://twitter.com/Elliot_F
 ```html
 <!DOCTYPE html>
 <html ng-app="myApp">
-<head>
-  <title>Google Search Like Functionality</title>
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-</head>
-<body ng-controller="SearchController">
-    
-  <div class="search-box">
-      <div class="row">
-          <div class="col-lg-4"></div>
-          <div class="col-lg-4">
-              <h2>TutorialEdge Search: {{query}}</h2>
-              <form class="form">
-                  <input class="form-control" type="text" ng-model="query" ng-change="updateValue()">
-              </form>
-          </div>
-          <div class="col-lg-4"></div>
-      </div>
-  </div>
+  <head>
+    <title>Google Search Like Functionality</title>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="bootstrap.min.css"
+      integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
 
-  <div class="search-results">
-      <div class="container">          
-          <div class="result" ng-repeat="result in results | filter: query">
-              <a href="#"><h2>{{result.title}}</h2></a>
-              <p class="url">{{result.link}}</p>
-              <p>{{result.content}}</p>
-          </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  </head>
+  <body ng-controller="SearchController">
+    <div class="search-box">
+      <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+          <h2>TutorialEdge Search: {{query}}</h2>
+          <form class="form">
+            <input
+              class="form-control"
+              type="text"
+              ng-model="query"
+              ng-change="updateValue()"
+            />
+          </form>
+        </div>
+        <div class="col-lg-4"></div>
       </div>
-  </div>
-  
-  <div class="footer">
+    </div>
+
+    <div class="search-results">
       <div class="container">
-          <p class="info">
-              Full Source Code for this example can be found here: Github Link
-          </p>
-          <p class="info">
-              Original Tutorial Link: http://tutorialedge.net
-          </p>
+        <div class="result" ng-repeat="result in results | filter: query">
+          <a href="#"><h2>{{result.title}}</h2></a>
+          <p class="url">{{result.link}}</p>
+          <p>{{result.content}}</p>
+        </div>
       </div>
-  </div>
-  
-  <script src="AppController.js"></script>
-</body>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <p class="info">
+          Full Source Code for this example can be found here: Github Link
+        </p>
+        <p class="info">
+          Original Tutorial Link: http://tutorialedge.net
+        </p>
+      </div>
+    </div>
+
+    <script src="AppController.js"></script>
+  </body>
 </html>
 ```
 
 <b>Our CSS</b>
 
 ```css
-.search-box{
-    background-color: #f1f1f1;
-    border-bottom: 1px solid #E5E5E5;
-    margin-bottom: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    text-align: center;
+.search-box {
+  background-color: #f1f1f1;
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
 }
 
-.search-box h2{
-    color: #4285F4;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 10px;
+.search-box h2 {
+  color: #4285f4;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
 }
 
 .search-box input {
-    border-radius: 0;
+  border-radius: 0;
 }
 
-.result h2{
-    font-size: 18px;
-        display: block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-text-overflow: ellipsis;
-    white-space: nowrap;
+.result h2 {
+  font-size: 18px;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.result p{
-    color: #545454;
-    font-size: small;
-    font-family: arial,sans-serif;
+.result p {
+  color: #545454;
+  font-size: small;
+  font-family: arial, sans-serif;
 }
-.result{
-    padding-bottom: 20px;
-    border-bottom: 1px solid #E5E5E5;
+.result {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
 }
 
-.result p.url{
-        color: #006621;
-    font-style: normal;
-        font-size: 15px;
-        font-weight: bold;
-        padding-top: 0px;
-        margin-bottom: 5px;
-        padding-bottom: 2px;
+.result p.url {
+  color: #006621;
+  font-style: normal;
+  font-size: 15px;
+  font-weight: bold;
+  padding-top: 0px;
+  margin-bottom: 5px;
+  padding-bottom: 2px;
 }
 ```
 
@@ -130,18 +139,35 @@ twitter: https://twitter.com/Elliot_F
 <p>To get us started we’ll just be listing everything from the following JSON array, however you could easily hook this up to a REST api that returns meaningful results if you wished too. We’ll create our own controller for this one-page application:</p>
 
 ```js
-var myApp = angular.module('myApp',[]);
+var myApp = angular.module("myApp", []);
 
-myApp.controller('SearchController', ['$scope', function($scope) {
-    
+myApp.controller("SearchController", [
+  "$scope",
+  function($scope) {
     $scope.results = [
-        { title : "Cars", link: "http://tutorialedge.net", content: "lorem ipsum doler fox pixel"},
-        { title : "Boats", link: "http://tutorialedge.net", content: "lorem ipsum doler cat pixel"},
-        { title : "Vans", link: "http://tutorialedge.net", content: "lorem ipsum doler pig pixel"},
-        { title : "Limos", link: "http://tutorialedge.net", content: "lorem ipsum doler pixel"}
+      {
+        title: "Cars",
+        link: "http://tutorialedge.net",
+        content: "lorem ipsum doler fox pixel"
+      },
+      {
+        title: "Boats",
+        link: "http://tutorialedge.net",
+        content: "lorem ipsum doler cat pixel"
+      },
+      {
+        title: "Vans",
+        link: "http://tutorialedge.net",
+        content: "lorem ipsum doler pig pixel"
+      },
+      {
+        title: "Limos",
+        link: "http://tutorialedge.net",
+        content: "lorem ipsum doler pixel"
+      }
     ];
-    
-}]);
+  }
+]);
 ```
 
 <p>Now that we’ve implemented that you should hopefully see the everything in our array listing on our search results page:</p>
@@ -158,5 +184,4 @@ myApp.controller('SearchController', ['$scope', function($scope) {
   <p class="url">{{result.link}}</p>
   <p>{{result.content}}</p>
 </div>
-
 ```

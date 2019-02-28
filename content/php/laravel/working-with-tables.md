@@ -4,7 +4,7 @@ date: 2017-04-15T08:01:33+01:00
 series: laravel-5.2
 image: laravel.png
 tags:
-- php
+  - php
 title: Working With Tables in Laravel 5.2
 twitter: https://twitter.com/Elliot_F
 ---
@@ -53,6 +53,7 @@ DB_PASSWORD=your_password</code></pre>
           <tr>
             <td>id</td>
             <td>integer</td>
+
 <td>unique, increments</td>
           </tr>
           <tr>
@@ -95,7 +96,6 @@ DB_PASSWORD=your_password</code></pre>
 
 ## Comments
 
-
 <table class="striped">
         <thead>
           <tr>
@@ -109,6 +109,7 @@ DB_PASSWORD=your_password</code></pre>
           <tr>
             <td>id</td>
             <td>integer</td>
+
 <td>unique, increments</td>
           </tr>
           <tr>
@@ -154,6 +155,7 @@ DB_PASSWORD=your_password</code></pre>
           <tr>
             <td>id</td>
             <td>integer</td>
+
 <td>unique, increments</td>
           </tr>
           <tr>
@@ -187,6 +189,7 @@ DB_PASSWORD=your_password</code></pre>
           <tr>
             <td>post_id</td>
             <td>integer</td>
+
 <td>n/a</td>
           </tr>
           <tr>
@@ -222,7 +225,7 @@ DB_PASSWORD=your_password</code></pre>
 
 <p>This should create 4 new php classes under <b>database/migrations</b> and it’s in these 4 new files that we are going to define our tables schema.</p>
 
- # Defining our Schemas
+# Defining our Schemas
 
 <p>In each of these 4 new files we need to define the table structure for all of our tables. You’ll notice that the users table has already been defined for us.</p>
 
@@ -291,7 +294,6 @@ class CreatePostsTable extends Migration
         });
     }</code></pre>
 
-
 <pre><code class="language-php">public function up()
     {
         Schema::create('post_tag', function (Blueprint $table){
@@ -313,7 +315,7 @@ class CreatePostsTable extends Migration
 
 # Conclusions
 
-<p>If everything went smoothly with our migrations then you should have in place everything we need to start building our blog.</p> 
+<p>If everything went smoothly with our migrations then you should have in place everything we need to start building our blog.</p>
 
 <p>In the next lesson I'm going to be demonstrating how to implement some basic routes in Laravel 5.2</p>
 

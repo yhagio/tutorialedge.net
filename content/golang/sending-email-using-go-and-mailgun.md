@@ -1,12 +1,13 @@
 ---
 author: Elliot Forbes
 date: 2017-04-15T08:44:00+01:00
-desc: In this tutorial I'll be demonstrating how to send mail using Mailgun's API
+desc:
+  In this tutorial I'll be demonstrating how to send mail using Mailgun's API
   and Google's GoLang programming language.
 series: golang
 image: golang.png
 tags:
-- misc
+  - misc
 title: Sending Email Using Go And Mailgun
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
@@ -45,6 +46,6 @@ func SendSimpleMessage(domain, apiKey string) (string, error) {
 
 func main(){
     SendSimpleMessage("postmaster@elliotforbes.co.uk", "key-12345671234567")
-        
+
 }
 ```

@@ -1,13 +1,13 @@
 ---
 author: Elliot Forbes
 date: 2017-04-15T09:17:38+01:00
-desc: A small helper tutorial for those struggling to use the ng-model directive within
-  the ng-if directive in your angularjs app.
+desc:
+  A small helper tutorial for those struggling to use the ng-model directive
+  within the ng-if directive in your angularjs app.
 series: angularjs
 
 tags:
-
-- javascript
+  - javascript
 title: AngularJS ng-model in ng-if Tutorial
 twitter: https://twitter.com/Elliot_F
 ---
@@ -22,36 +22,33 @@ twitter: https://twitter.com/Elliot_F
 
 ```html
 <html ng-app="testApp">
-<head>
+  <head>
     <title>AngularJS ng-if child scopes example</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-</head>
-<body ng-controller="testController">
-    
+  </head>
+  <body ng-controller="testController">
     <div ng-if="isFalse">
-        {{$parent.name}}
+      {{$parent.name}}
     </div>
-    
+
     <p>{{name}}</p>
-    
+
     <div ng-if="isTrue">
-        <p>{{$parent.name}}</p>
+      <p>{{$parent.name}}</p>
     </div>
-    
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
 ```
 
 <p>And our controller looks something like this:</p>
 
 ```js
-var testApp = angular.module('testApp', []);
-testApp.controller('testController' , function ($scope) {
-    
-    $scope.isTrue = false;
-    
-    $scope.name = "Elliot";
-    
+var testApp = angular.module("testApp", []);
+testApp.controller("testController", function($scope) {
+  $scope.isTrue = false;
+
+  $scope.name = "Elliot";
 });
 ```

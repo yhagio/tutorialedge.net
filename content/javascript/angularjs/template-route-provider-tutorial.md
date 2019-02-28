@@ -1,14 +1,14 @@
 ---
 author: Elliot Forbes
 date: 2017-04-15T09:04:56+01:00
-desc: This tutorial showcases how one can effectively use AngularJS's routeProvider
-  in order to create master pages and templates with which to build their own angularjs
-  applications
+desc:
+  This tutorial showcases how one can effectively use AngularJS's routeProvider
+  in order to create master pages and templates with which to build their own
+  angularjs applications
 series: angularjs
 
 tags:
-
-- javascript
+  - javascript
 title: AngularJS Template Route Provider Tutorial
 twitter: https://twitter.com/Elliot_F
 ---
@@ -35,34 +35,34 @@ view/
 <p>In this tutorial we’ll define some relatively simple routes that each have their own defined controllers and templates.</p>
 
 ```js
-var testApp = angular.module('testApp', ['ngRoute']);
+var testApp = angular.module("testApp", ["ngRoute"]);
 
 testApp.config(function($routeProvider) {
-    $routeProvider
-        .when('/', {
-            templateUrl : 'views/home.html',
-            controller  : 'testController'
-        })
-        .when('/about', {
-            templateUrl : 'views/about.html',
-            controller  : 'AboutController'
-        })
-        .when('/contact', {
-            templateUrl : 'views/contact.html',
-            controller  : 'ContactController'
-        });
+  $routeProvider
+    .when("/", {
+      templateUrl: "views/home.html",
+      controller: "testController"
+    })
+    .when("/about", {
+      templateUrl: "views/about.html",
+      controller: "AboutController"
+    })
+    .when("/contact", {
+      templateUrl: "views/contact.html",
+      controller: "ContactController"
+    });
 });
 
-testApp.controller('testController' , function ($scope) {
-   $scope.home = "This is the homepage";
+testApp.controller("testController", function($scope) {
+  $scope.home = "This is the homepage";
 });
 
-testApp.controller('AboutController', function($scope) {
-    $scope.about = "You are awesome";
+testApp.controller("AboutController", function($scope) {
+  $scope.about = "You are awesome";
 });
 
-testApp.controller('ContactController', function($scope) {
-    $scope.contact = "You can't contact me, go away.";
+testApp.controller("ContactController", function($scope) {
+  $scope.contact = "You can't contact me, go away.";
 });
 ```
 
@@ -70,24 +70,22 @@ testApp.controller('ContactController', function($scope) {
 
 ```html
 <html ng-app="testApp">
-<head>
+  <head>
     <title>AngularJS ng-if child scopes example</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.min.js"></script>
-</head>
-<body ng-controller="testController">
-    
+  </head>
+  <body ng-controller="testController">
     <h2>Routing Tutorial</h2>
-    
+
     <div ng-view></div>
-    
+
     <script src="scripts.js"></script>
-</body>
+  </body>
 </html>
 ```
 
 <p>And finally our 3 pages, concatenated into one gist for brevity.</p>
-
 
 ```html
 <!-- OUR ABOUT.HTML -->

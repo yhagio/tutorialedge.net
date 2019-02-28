@@ -8,7 +8,7 @@ desc: The first lesson of the artificial intelligence course.
 series: ai
 image: ai.png
 tags:
-- ai
+  - ai
 title: An Introduction To Artificial Intelligence
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
@@ -46,8 +46,8 @@ authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_4
 <li>Aviation</li>
 <li>Robotics</li>
 <li>Speech Recognition</li>
-</ol> 
+</ol>
 
 ## Branches of Artificial Intelligence
 
-<p>Due to the size and complexity of the field, artificial intelligence has been split into a number of different subsections. This includes things such as neural networks, fuzzy systems and evolutionary computation. </p> 
+<p>Due to the size and complexity of the field, artificial intelligence has been split into a number of different subsections. This includes things such as neural networks, fuzzy systems and evolutionary computation. </p>

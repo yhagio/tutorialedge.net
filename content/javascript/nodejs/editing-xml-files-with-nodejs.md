@@ -2,12 +2,14 @@
 author: Elliot Forbes
 date: 2017-04-15T08:14:10+01:00
 series: nodejs
-desc: In this tutorial, we're going to be looking at how you can edit XML files using NodeJS
+desc:
+  In this tutorial, we're going to be looking at how you can edit XML files
+  using NodeJS
 image: node.png
 tags:
-- xml
-- javascript
-- nodejs
+  - xml
+  - javascript
+  - nodejs
 title: Editing XML Files With NodeJS
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
@@ -24,12 +26,12 @@ authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_4
 <p>Create a new js file and type the following: </p>
 
 ```js
-var fs = require('fs');
+var fs = require("fs");
 
-fs.readFile('test.xml', 'utf-8', function (data, err){
-    if(err) console.log(err);
-    console.log(data);    
-});       
+fs.readFile("test.xml", "utf-8", function(data, err) {
+  if (err) console.log(err);
+  console.log(data);
+});
 ```
 
 <p>Below you’ll find a sample xml file that we’ll be using:</p>
@@ -69,20 +71,20 @@ npm install xml2js --save-dev
 <p>Once this is installed, modify your existing code to use the parseString method like so: </p>
 
 ```js
-var fs = require('fs'),
-    parseString = require('xml2js').parseString;
+var fs = require("fs"),
+  parseString = require("xml2js").parseString;
 
-fs.readFile('test.xml', 'utf-8', function (err, data){
-    if(err) console.log(err);
-    // we log out the readFile results    
-    console.log(data);
-    // we then pass the data to our method here
-    parseString(data, function(err, result){
-        if(err) console.log(err);
-        // here we log the results of our xml string conversion
-        console.log(result); 
-    });
-});       
+fs.readFile("test.xml", "utf-8", function(err, data) {
+  if (err) console.log(err);
+  // we log out the readFile results
+  console.log(data);
+  // we then pass the data to our method here
+  parseString(data, function(err, result) {
+    if (err) console.log(err);
+    // here we log the results of our xml string conversion
+    console.log(result);
+  });
+});
 ```
 
 <p>If you run this you should see our newly created JSON object printed out in the console.</p>
@@ -92,25 +94,24 @@ fs.readFile('test.xml', 'utf-8', function (err, data){
 <p>JSON object manipulation is incredibly in javascript. I’m not going to go into depth about how we can edit it but as a means of demonstrating how we can edit the xml I’m going to change the name of the weight of the first node in our xml file. </p>
 
 ```js
-var fs = require('fs'),
-    parseString = require('xml2js').parseString;
+var fs = require("fs"),
+  parseString = require("xml2js").parseString;
 
-fs.readFile('test.xml', 'utf-8', function (err, data){
-    if(err) console.log(err);
-    // we log out the readFile results    
-    console.log(data);
-    // we then pass the data to our method here
-    parseString(data, function(err, result){
-        if(err) console.log(err);
-        // here we log the results of our xml string conversion
-        console.log(result); 
-        // save our json to a variable
-        var json = result;
-        // edit the first node’s weight and set it to 99
-        json.root.graph[0].node[0].weight = "99";
-                  
-    });
-});       
+fs.readFile("test.xml", "utf-8", function(err, data) {
+  if (err) console.log(err);
+  // we log out the readFile results
+  console.log(data);
+  // we then pass the data to our method here
+  parseString(data, function(err, result) {
+    if (err) console.log(err);
+    // here we log the results of our xml string conversion
+    console.log(result);
+    // save our json to a variable
+    var json = result;
+    // edit the first node’s weight and set it to 99
+    json.root.graph[0].node[0].weight = "99";
+  });
+});
 ```
 
 <h2>Converting to XML and Writing to FIle</h2>
@@ -118,37 +119,36 @@ fs.readFile('test.xml', 'utf-8', function (err, data){
 <p>Now that we’ve successfully edited our json, we can then convert it back to xml and finally write it to a file.</p>
 
 ```js
-var fs = require('fs'),
-    parseString = require('xml2js').parseString,
-    xml2js = require('xml2js');
+var fs = require("fs"),
+  parseString = require("xml2js").parseString,
+  xml2js = require("xml2js");
 
-fs.readFile('test.xml', 'utf-8', function (err, data){
-    if(err) console.log(err);
-    // we log out the readFile results    
-    console.log(data);
-    // we then pass the data to our method here
-    parseString(data, function(err, result){
-        if(err) console.log(err);
-        // here we log the results of our xml string conversion
-        console.log(result); 
-        
-        var json = result;
-        
-        json.root.graph[0].node[0].weight = "99";
-        
-        // create a new builder object and then convert
-        // our json back to xml.
-        var builder = new xml2js.Builder();
-        var xml = builder.buildObject(json);
-        
-        fs.writeFile('edited-test.xml', xml, function(err, data){
-            if (err) console.log(err);
-            
-            console.log("successfully written our update xml to file");
-        })
-                  
+fs.readFile("test.xml", "utf-8", function(err, data) {
+  if (err) console.log(err);
+  // we log out the readFile results
+  console.log(data);
+  // we then pass the data to our method here
+  parseString(data, function(err, result) {
+    if (err) console.log(err);
+    // here we log the results of our xml string conversion
+    console.log(result);
+
+    var json = result;
+
+    json.root.graph[0].node[0].weight = "99";
+
+    // create a new builder object and then convert
+    // our json back to xml.
+    var builder = new xml2js.Builder();
+    var xml = builder.buildObject(json);
+
+    fs.writeFile("edited-test.xml", xml, function(err, data) {
+      if (err) console.log(err);
+
+      console.log("successfully written our update xml to file");
     });
-});       
+  });
+});
 ```
 
 <p>Run this and you should see our newly created and updated xml within the same directory as your node script.</p>

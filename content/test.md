@@ -4,27 +4,27 @@ date: 2017-04-14T20:28:13+01:00
 series: misc
 draft: true
 tags:
-- misc
+  - misc
 title: Get Involved
 twitter: https://twitter.com/Elliot_F
 ---
 
 # Sanguine Lapithae colla latus oracula ignibus
 
-Lorem `markdownum` coniugium *levati sustollit tamen* iuvenem, [ignis aut
-paene](http://www.felix-nec.net/undasmihi.html) quem per lacesse inde mihi: mea.
-Natalis [aura](http://sociorum.io/gementissolutis.aspx), et undas [hoc
-uberrima](http://ferre.net/arasfessus.html). Discedere maerenti virgine ut
+Lorem `markdownum` coniugium _levati sustollit tamen_ iuvenem,
+[ignis aut paene](http://www.felix-nec.net/undasmihi.html) quem per lacesse inde
+mihi: mea. Natalis [aura](http://sociorum.io/gementissolutis.aspx), et undas
+[hoc uberrima](http://ferre.net/arasfessus.html). Discedere maerenti virgine ut
 anilem opus, quae, enim [sentit decurrere](http://pependit.org/) Nycteus
 sacrilegos Ecce numerandos, erat sententia. Quam nolet, e mortisque tegmine,
 laboris opus et domus. Plura audet; sensit unde Iunone summisque constiterant.
 
 ## Alta hoc belli
 
-Lorem markdownum coniugium *levati sustollit tamen* iuvenem, [ignis aut
-paene](http://www.felix-nec.net/undasmihi.html) quem per lacesse inde mihi: mea.
-Natalis [aura](http://sociorum.io/gementissolutis.aspx), et undas [hoc
-uberrima](http://ferre.net/arasfessus.html). Discedere maerenti virgine ut
+Lorem markdownum coniugium _levati sustollit tamen_ iuvenem,
+[ignis aut paene](http://www.felix-nec.net/undasmihi.html) quem per lacesse inde
+mihi: mea. Natalis [aura](http://sociorum.io/gementissolutis.aspx), et undas
+[hoc uberrima](http://ferre.net/arasfessus.html). Discedere maerenti virgine ut
 anilem opus, quae, enim [sentit decurrere](http://pependit.org/) Nycteus
 sacrilegos Ecce numerandos, erat sententia. Quam nolet, e mortisque tegmine,
 laboris opus et domus. Plura audet; sensit unde Iunone summisque constiterant.
@@ -34,40 +34,51 @@ console.log("soething");
 console.log("else");
 ```
 
-
 Atque imber mihi alatur sensit praenuntia ambiguum facibus quos solacia, femina
 hebes sidera. Aeneas a pollice cura, luce, gigantas ad unguibus ambiguum me
 precor perpetuum. Mitia fratremque oculis.
 
-----
+---
+
 ## what is Markdown?
+
 see [Wikipedia](http://en.wikipedia.org/wiki/Markdown)
 
-> Markdown is a lightweight markup language, originally created by John Gruber and Aaron Swartz allowing people "to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML)".
+> Markdown is a lightweight markup language, originally created by John Gruber
+> and Aaron Swartz allowing people "to write using an easy-to-read,
+> easy-to-write plain text format, then convert it to structurally valid XHTML
+> (or HTML)".
 
-----
+---
+
 ## usage
+
 1. Write markdown text in this textarea.
 2. Click 'HTML Preview' button.
 
-----
+---
+
 ## markdown quick reference
+
 # headers
 
-*emphasis*
+_emphasis_
 
 **strong**
 
-* list
+- list
 
->block quote
+> block quote
 
     code (4 spaces indent)
+
 [links](http://wikipedia.org)
 
-----
+---
+
 ## changelog
-* 17-Feb-2013 re-design
+
+- 17-Feb-2013 re-design
 
 ## Pone solaque quater in terra hac in
 
@@ -100,5 +111,5 @@ Notus oculos sine fata Anchisae. Numen et tremescere non et dolorque Rhodopen
 nulli Iuppiter iuves. Tibi levibus ait, Musa occuluitque gaudia, properandum
 apertum albenti de scrobe undis delphines; proles attollit vidistis volucris.
 [Quae](http://niveo.net/nare-fungis.php) querellas ipsa donaverit sparsum maxima
-morsibus saxo pedibus *quaeritur piceae*, nullos clauditur populo, Bacche
+morsibus saxo pedibus _quaeritur piceae_, nullos clauditur populo, Bacche
 quaeque.

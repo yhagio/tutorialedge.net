@@ -1,12 +1,13 @@
 ---
 author: Elliot Forbes
 date: 2017-04-15T09:49:35+01:00
-desc: This tutorial shows the user how to construct a UDP based client and server
+desc:
+  This tutorial shows the user how to construct a UDP based client and server
   application
 series: python
 image: python-logo.png
 tags:
-- networking
+  - networking
 title: UDP Client and Server Tutorial in Python
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
@@ -53,7 +54,7 @@ clientSock.sendto(Message, (UDP_IP_ADDRESS, UDP_PORT_NO))
 ```py
 # Again we import the necessary socket python module
 import socket
-# Here we define the UDP IP address as well as the port number that we have 
+# Here we define the UDP IP address as well as the port number that we have
 # already defined in the client python script.
 UDP_IP_ADDRESS = "127.0.0.1"
 UDP_PORT_NO = 6789

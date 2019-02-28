@@ -8,8 +8,9 @@ image: golang.png
 # Setup
 
 1. Install Androind NDK
-2. 
+2.
 
 ```
 
 gomobile init -ndk ~/Library/Android/sdk/ndk/
+```

@@ -1,11 +1,13 @@
 ---
 author: Elliot Forbes
 date: 2017-04-15T09:55:57+01:00
-desc: Explore the python multithreading module and the power of asynchronous programming
+desc:
+  Explore the python multithreading module and the power of asynchronous
+  programming
 series: python
 image: python-logo.png
 tags:
-- concurrency
+  - concurrency
 title: Python Multithreading Tutorial - Concurrent Programming
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
@@ -13,10 +15,12 @@ authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_4
 
 # What is Multithreading?
 
-Modern computers tend to feature a CPU that has multiple processing cores, each of these cores can run many threads simultaneously which gives us the ability to perform several tasks concurrently. This tutorial will hopefully show you how to get started with Python's `threading` module.
+Modern computers tend to feature a CPU that has multiple processing cores, each
+of these cores can run many threads simultaneously which gives us the ability to
+perform several tasks concurrently. This tutorial will hopefully show you how to
+get started with Python's `threading` module.
 
 **Objectives:**
-
 
 1. Creating and Running Threads
 2. Teaching the Limitations of Python's threading implementation
@@ -39,11 +43,10 @@ class Worker(threading.Thread):
            print(i)
 ```
 
-
 <p>Now that we have our worker class we can start work on our main class. Create a new python file and call it main.py and put the following code in:</p>
 
 ```python
-import threading 
+import threading
 from worker import Worker
 
 def main():
@@ -52,7 +55,7 @@ def main():
     # This is the code needed to run our newly created thread
     thread1.start()
 
-  if __name__ == "__main__":  
+  if __name__ == "__main__":
       main()
 ```
 
@@ -75,6 +78,13 @@ def main():
 
 # Limitation with Classic Python Threads
 
-One of the main problems with Python's classic implementation of threads is that they are not truly asynchronous. Performing tests on huge datasets show that the execution times of python threads is not entirely in parallel and you''ll often find execution times increasing adding multiple threads to programs as often performing these tasks synchronously will greatly reduce execution times. This is due to the way Global Interpreter Lock (GIL) works in Python, this basically ensures that only one line of python code can be compiled at one time. 
+One of the main problems with Python's classic implementation of threads is that
+they are not truly asynchronous. Performing tests on huge datasets show that the
+execution times of python threads is not entirely in parallel and you''ll often
+find execution times increasing adding multiple threads to programs as often
+performing these tasks synchronously will greatly reduce execution times. This
+is due to the way Global Interpreter Lock (GIL) works in Python, this basically
+ensures that only one line of python code can be compiled at one time.
 
-> More about the GIL can be found here: <a href="https://wiki.python.org/moin/GlobalInterpreterLock">https://wiki.python.org/moin/GlobalInterpreterLock</a>
+> More about the GIL can be found
+> here: <a href="https://wiki.python.org/moin/GlobalInterpreterLock">https://wiki.python.org/moin/GlobalInterpreterLock</a>

@@ -1,13 +1,14 @@
 ---
 author: Elliot Forbes
 date: 2017-04-15T09:30:45+01:00
-desc: This tutorial demonstrates how one can implement 2D Collision detection using
-  AABB method. This is demonstrated in Java using the LWJGL 3 framework but the concepts
-  are transferrable to all languages and frameworks.
+desc:
+  This tutorial demonstrates how one can implement 2D Collision detection using
+  AABB method. This is demonstrated in Java using the LWJGL 3 framework but the
+  concepts are transferrable to all languages and frameworks.
 series: gamedev
 tags:
-- java
-- gamedev
+  - java
+  - gamedev
 title: AABB Collision Detection Tutorial
 twitter: https://twitter.com/Elliot_F
 ---
@@ -30,9 +31,9 @@ class player {
 <p>If we had 2 instantiated player objects then we could perform AABB collision detection using the following:</p>
 
 ```java
-if(player1.x < player2.x + player2.width && 
+if(player1.x < player2.x + player2.width &&
     player1.x + player1.width > player2.x &&
-    player1.y < player2.y + player2.height && 
+    player1.y < player2.y + player2.height &&
     player1.y + player1.height > player2.y)
 {
     System.out.println("Collision Detected");
@@ -40,4 +41,3 @@ if(player1.x < player2.x + player2.width &&
 ```
 
 <p>AABB is a very obvious and simple method to implement and is very useful in games where there are very few objects that could possibly collide. However should you wish to implement this form of collision detection in a game that features a huge number of collidable objects then this method will become far too computationally expensive and as such you will have to look at ways you can optimize these calculations.</p>
-

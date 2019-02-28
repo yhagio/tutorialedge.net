@@ -1,12 +1,13 @@
 ---
 author: Elliot Forbes
 date: 2017-04-15T08:40:42+01:00
-desc: In this tutorial I'll be demonstrating how you can effectively retrieve all
-  the information possible about any visitors to your website using a very simple
-  javascript snippet
+desc:
+  In this tutorial I'll be demonstrating how you can effectively retrieve all
+  the information possible about any visitors to your website using a very
+  simple javascript snippet
 series: javascript
 tags:
-- javascript
+  - javascript
 title: Retrieving Website Visitor Information Using Javascript
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
@@ -18,15 +19,14 @@ authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_4
 
 ```html
 <html>
-    <head>
-        <title>Analytics Engine Test Page</title>
-    </head>
-    <body>
-        
-        <h1>This is my test webpage</h1>
-        
-        <script src="analytics.js"></script>
-    </body>
+  <head>
+    <title>Analytics Engine Test Page</title>
+  </head>
+  <body>
+    <h1>This is my test webpage</h1>
+
+    <script src="analytics.js"></script>
+  </body>
 </html>
 ```
 
@@ -45,4 +45,6 @@ console.log("Geolocation: " + navigator.geolocation);
 
 # Conclusion
 
-If you visit this web page in your browser of choice and open up the console, you should see just about everything you can see about yourself displayed in the console.
+If you visit this web page in your browser of choice and open up the console,
+you should see just about everything you can see about yourself displayed in the
+console.

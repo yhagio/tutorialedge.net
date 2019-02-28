@@ -1,12 +1,13 @@
 ---
 author: Elliot Forbes
 date: 2017-04-15T08:35:56+01:00
-desc: Another useful code snippet for those of you dealing with angularjs applications.
+desc:
+  Another useful code snippet for those of you dealing with angularjs
+  applications.
 series: angularjs
 
 tags:
-
-- javascript
+  - javascript
 title: Using Hidden Input in a Form in AngularJS
 twitter: https://twitter.com/Elliot_F
 ---
@@ -16,5 +17,5 @@ twitter: https://twitter.com/Elliot_F
 ## Method 1
 
 ```html
-<input type="text" name="someData" ng-model="data" style="display: none;"/>
+<input type="text" name="someData" ng-model="data" style="display: none;" />
 ```

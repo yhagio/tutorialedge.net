@@ -1,13 +1,14 @@
 ---
 author: Elliot Forbes
 date: 2017-04-15T08:50:41+01:00
-desc: In this tutorial I'll be teaching you all the fundamental concepts when it comes
-  to dealing with shaders in the modern opengl rendering pipeline.
+desc:
+  In this tutorial I'll be teaching you all the fundamental concepts when it
+  comes to dealing with shaders in the modern opengl rendering pipeline.
 series: opengl
 tags:
-- graphics
-- gamedev
-- opengl
+  - graphics
+  - gamedev
+  - opengl
 title: Getting Started With Shaders in OpenGL
 twitter: https://twitter.com/Elliot_F
 ---
@@ -48,7 +49,7 @@ twitter: https://twitter.com/Elliot_F
 // here we specify the version using #version
 #version 330 core
 
-// our shader programs entry point, this is the same for 
+// our shader programs entry point, this is the same for
 // every shader program we will be writing.
 void main()
 {

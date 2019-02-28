@@ -1,21 +1,27 @@
 ---
 author: Elliot Forbes
 date: 2018-02-24T10:23:36Z
-desc: In this tutorial, we will be looking at how you can get started writing your
+desc:
+  In this tutorial, we will be looking at how you can get started writing your
   own Python based AWS Lambda functions
 series: python
 image: cloud.png
 tags:
-- python
-- aws
+  - python
+  - aws
 title: Python Based Lambda Tutorial
 twitter: https://twitter.com/Elliot_F
 weight: 20
 ---
 
-If you've been following my [Medium Blog](https://medium.com/@elliot_f) recently, you'll know that I'm a huge fan of Serverless and I genuinely believe that it will start to seriously take off in terms of popularity in the years to come.
+If you've been following my [Medium Blog](https://medium.com/@elliot_f)
+recently, you'll know that I'm a huge fan of Serverless and I genuinely believe
+that it will start to seriously take off in terms of popularity in the years to
+come.
 
-In this tutorial, we are going to be writing a very simple Python based AWS Lambda function that we'll then deploy using the [serverless.com](https://serverless.com/) CLI.
+In this tutorial, we are going to be writing a very simple Python based AWS
+Lambda function that we'll then deploy using the
+[serverless.com](https://serverless.com/) CLI.
 
 # Installing Serverless
 
@@ -23,13 +29,16 @@ In order to install the `serverless` CLI you can do the following:
 
 ```s
 $ npm install serverless -g
-```    
+```
 
-If you have set up your AWS credentials correctly with an account that has full permissions then you will now be able to deploy Lambda functions that sit behind an API gateway with ease.
+If you have set up your AWS credentials correctly with an account that has full
+permissions then you will now be able to deploy Lambda functions that sit behind
+an API gateway with ease.
 
 # Our Function
 
-Create a new directory in which you can add Python files. Within this new directory create a file called `simple.py` as well as a `serverless.yml` file. 
+Create a new directory in which you can add Python files. Within this new
+directory create a file called `simple.py` as well as a `serverless.yml` file.
 
 ```s
 # directory structure
@@ -38,9 +47,13 @@ mydirectory/
 - serverless.yml
 ```
 
-Open up the `simple.py` file and create a new function within this called `def hello(event, context):`. This `hello()` function will be the main entry point for our AWS Lambda function and when we call the endpoint, this is what will be executed. 
+Open up the `simple.py` file and create a new function within this called
+`def hello(event, context):`. This `hello()` function will be the main entry
+point for our AWS Lambda function and when we call the endpoint, this is what
+will be executed.
 
-Within this `hello()` function, we want to return the string `hello, world` back to anyone who calls said lambda function. 
+Within this `hello()` function, we want to return the string `hello, world` back
+to anyone who calls said lambda function.
 
 ```py
 def hello(event, context):
@@ -55,11 +68,14 @@ def hello(event, context):
 
 # Deploying Without Serverless
 
-If you wished, you could deploy this without the serverless CLI, you could do so through using either the `aws-cli` or through the console and either uploading your lambda function as a `.zip` file or through the inline editor.
+If you wished, you could deploy this without the serverless CLI, you could do so
+through using either the `aws-cli` or through the console and either uploading
+your lambda function as a `.zip` file or through the inline editor.
 
 # Our Serverless.yml File
 
-Within our `serverless.yml` file we will want to define how we want to expose our lambda function. Let's step through this line-by-line. 
+Within our `serverless.yml` file we will want to define how we want to expose
+our lambda function. Let's step through this line-by-line.
 
 ```yaml
 # we define the name our service
@@ -78,7 +94,6 @@ provider:
 
 # We define our list of functions
 functions:
-
   # our hello function
   hello:
     # the file name and the function that
@@ -87,17 +102,18 @@ functions:
     # We define the event we wish to trigger this with
     events:
       # in this case a simple HTTP GET Request
-      # with CORS enabled 
+      # with CORS enabled
       - http:
           path: hello
           method: get
           cors: true
-          
 ```
 
 # Deployment
 
-Once we are happy with our function and we have our `serverless.yml` defined, we can deploy this function by calling `serverless deploy` within the same directory as our `simple.py` and `serverless.yml` file. 
+Once we are happy with our function and we have our `serverless.yml` defined, we
+can deploy this function by calling `serverless deploy` within the same
+directory as our `simple.py` and `serverless.yml` file.
 
 When we run this, you should see the following output:
 
@@ -130,9 +146,11 @@ functions:
   hello: hello-world-dev-hello
 ```
 
-You should notice the `endpoints` list has a `GET` request endpoint that you should be able to navigate to now should you wish. When you open this up in a browser, you should see the words `hello, world` output to your browser.
+You should notice the `endpoints` list has a `GET` request endpoint that you
+should be able to navigate to now should you wish. When you open this up in a
+browser, you should see the words `hello, world` output to your browser.
 
 # Conclusion
 
-Hopefully, you found this tutorial educational! If you require any further assistance then please feel free to let me know in the comments section below! 
-
+Hopefully, you found this tutorial educational! If you require any further
+assistance then please feel free to let me know in the comments section below!
