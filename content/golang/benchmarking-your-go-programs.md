@@ -18,7 +18,7 @@ In times where performance is important, being able to benchmark how your progra
 
 > **Note -** It's important to note that performance tweaking should typically be done after the system is up and running. 
 
-> *"Premature optimization is the root of all evil"* - Donald Knuth  
+> _"Premature optimization is the root of all evil"_ - Donald Knuth  
 
 In this tutorial, we are going to look at how we can perform standard benchmarking tests for very simple functions and then move on to more advanced examples before finally looking at how we can generate cool looking flame graphs.
 
