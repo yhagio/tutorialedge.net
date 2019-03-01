@@ -11,7 +11,7 @@ tags:
 
 Originally started in December of 2014 this site began as a side hobby of mine
 and has quickly grown into one of the most successful side projects I've ever
-worked upon. Since it's conception it's racked up well over 100,000 page views
+worked upon. Since its conception it's racked up well over 1,000,000 page views
 and it's still growing.
 
 It's undergone many changes since it was first created and overall I've probably
@@ -28,7 +28,7 @@ then be sure to check out this github repo:
 
 # The Growth
 
-Since it's inception the site's shown good growth and now exceeds 12,500 hits
+Since its inception the site's shown good growth and now exceeds 12,500 hits
 per month and the growth doesn't seem to be slowing down. My main aim for the
 site is to become one of the best free resources on the web for learning how to
 program using various new and emeging frameworks such as Laravel 5 for web
