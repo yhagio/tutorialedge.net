@@ -4,19 +4,21 @@ bookImage: game-ai-by-example.jpeg
 bookLink: http://amzn.to/2r74d8f
 bookTitle: Programming Game AI by Example
 date: 2017-04-15T09:23:35+01:00
-desc: 'This article looks to demonstrate how one can implement the depth first graph
-  search algorithm using the java programming language. '
+desc:
+  "This article looks to demonstrate how one can implement the depth first graph
+  search algorithm using the java programming language. "
 series: ai
 image: ai.png
 tags:
-- ai
-- java
+  - ai
+  - java
 title: Breadth First Search Algorithm Tutorial with Java
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
-> This lesson is part of the course: <a href="/course/artificial-intelligence">Artificial Intelligence</a>
+> This lesson is part of the course:
+> <a href="/course/artificial-intelligence">Artificial Intelligence</a>
 
 # Uninformed Search vs Informed / Heuristic Search
 
@@ -30,22 +32,22 @@ authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_4
 
 <p>BFS is a simple strategy in which the root node is expanded first, then all the successors of the root node are expanded next, then their successors and so on until the best possible path has been found. Due to the fact that this strategy for graph traversal has no additional information about states beyond that provided in the problem definition, Breadth First Search is classed as an uninformed or blind search.</p>
 
-> Breadth First Search Utilizes the queue data structure as opposed to the stack that Depth First Search uses.
+> Breadth First Search Utilizes the queue data structure as opposed to the stack
+> that Depth First Search uses.
 
 <p>BFS uses a queue data structure which is a 'First in, First Out' or FIFO data structure. This queue stores all the nodes that we have to explore and each time a node is explored it is added to our set of visited nodes.</p>
 
 <p>If we were to conduct a breadth first search on the binary tree above then it would do the following:</p>
 
-
 1. Set Node 1 as the start Node
 2. Add this Node to the Queue
 3. Add this Node to the visited set
-4. If this node is our goal node then return true, else add Node 2 and Node 3 to our Queue
-5. Check Node 2 and if it isn't add both Node 4 and Node 5 to our Queue. 
+4. If this node is our goal node then return true, else add Node 2 and Node 3 to
+   our Queue
+5. Check Node 2 and if it isn't add both Node 4 and Node 5 to our Queue.
 6. Take the next node from our Queue which should be Node 3 and check that.
 7. If Node 3 isn't our goal node add Node 6 and Node 7 to our Queue.
 8. Repeat until goal Node is found.
-
 
 <p>If we stopped execution after Node 3 was checked then our Queue would look like this:</p>
 
@@ -199,6 +201,7 @@ public class Driver {
 }
 ```
 
-# Conclusion 
+# Conclusion
 
-If you found this tutorial useful or require further assistance then please let me know in the comments section below!
+If you found this tutorial useful or require further assistance then please let
+me know in the comments section below!

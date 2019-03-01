@@ -1,12 +1,13 @@
 ---
 author: Elliot Forbes
 date: 2017-04-15T09:53:07+01:00
-desc: This tutorial looks to demonstrate the capabilities of the Bridge design pattern
-  and how one can implement this pattern using Java.
+desc:
+  This tutorial looks to demonstrate the capabilities of the Bridge design
+  pattern and how one can implement this pattern using Java.
 series: design-patterns
 tags:
-- design-patterns
-- java
+  - design-patterns
+  - java
 title: Bridge Design Pattern Tutorial
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
@@ -155,10 +156,10 @@ package Bridge;
 
 /**
  * In this class we create 2 new enemies of both
- * type Knight and of type Archer respectively. 
+ * type Knight and of type Archer respectively.
  * We pass in a HeavyArmour class to our Knight and
  * a LightArmour class to our Archer.
- * 
+ *
  */
 public class Driver {
 

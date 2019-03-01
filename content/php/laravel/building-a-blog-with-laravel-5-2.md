@@ -1,12 +1,13 @@
 ---
 author: Elliot Forbes
 date: 2017-04-15T08:21:41+01:00
-desc: In this series we'll be building our own Laravel 5.2 blog and fully functioning
-  content management system
+desc:
+  In this series we'll be building our own Laravel 5.2 blog and fully
+  functioning content management system
 series: laravel-5.2
 image: laravel.png
 tags:
-- php
+  - php
 title: Building A Blog With Laravel 5.2
 twitter: https://twitter.com/Elliot_F
 ---
@@ -15,7 +16,11 @@ twitter: https://twitter.com/Elliot_F
 
 <h2>Creating our Project</h2>
 
-<p.In order to create our project we’ll first need to install composer and laravel. The official docs have an excellent guide as to how you can install everything on your local machine which you can find here: <a target=”_blank” href="https://laravel.com/docs/5.1/installation">Laravel 5.1 Installation</a></p>
+<p.In order to create our project we’ll first need to install composer and
+laravel. The official docs have an excellent guide as to how you can install
+everything on your local machine which you can find here:
+<a target=”_blank” href="https://laravel.com/docs/5.1/installation">Laravel 5.1
+Installation</a></p>
 
 <p>Once you’ve installed and configured your environment it’s time to begin. Create the new project by creating a new directory on your machine and then typing the following in the terminal:</p>
 

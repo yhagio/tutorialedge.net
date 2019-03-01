@@ -1,13 +1,14 @@
 ---
 author: Elliot Forbes
 date: 2017-09-11T18:53:10+01:00
-desc: The definitive list of all the books you should buy if you want to master the
+desc:
+  The definitive list of all the books you should buy if you want to master the
   art of programming React applications
 series: react
 tags:
-- react
-- javascript
-- books
+  - react
+  - javascript
+  - books
 title: The Best Books For Learning React and React Native
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg

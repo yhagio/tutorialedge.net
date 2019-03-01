@@ -1,12 +1,13 @@
 ---
 author: Elliot Forbes
 date: 2017-04-15T09:22:16+01:00
-desc: A simple primer on all the different ways to handle routes in laravel 5.1. We
+desc:
+  A simple primer on all the different ways to handle routes in laravel 5.1. We
   cover route groups, prefixes, middleware and simple routes.
 series: laravel-5.2
 image: laravel.png
 tags:
-- php
+  - php
 title: Laravel 5.1 Routes Cheat Sheet
 twitter: https://twitter.com/Elliot_F
 ---
@@ -16,7 +17,7 @@ twitter: https://twitter.com/Elliot_F
 <p>Static pages are just simple pages that don’t necessarily change too much. A good example of pages that would typically fall under this umbrella are your About and Contact us pages. These routes point back to views that have already been created in your resources/views folder. I.e resources/views/contact.blade.php would be the file for our contact view returned below.</p>
 
 ```php
-Route::get(‘/contact’, function() 
+Route::get(‘/contact’, function()
 {
     return view(‘contact’);
 });
@@ -70,7 +71,7 @@ Route::group(['as' => 'admin::', 'prefix' => 'admin'], function () {
    Route::get('dashboard', ['as' => 'dashboard', function () {
        return "hello";
    }]);
-   
+
    Route::get('users', ['as'=>'users', function() {
        return "users";
    }]);
@@ -86,7 +87,7 @@ Route::group(['as' => 'admin::', 'prefix' => 'admin', 'middleware'=>'auth'], fun
    Route::get('dashboard', ['as' => 'dashboard', function () {
        return "hello";
    }]);
-   
+
    Route::get('users', ['as'=>'users', function() {
        return "users";
    }]);

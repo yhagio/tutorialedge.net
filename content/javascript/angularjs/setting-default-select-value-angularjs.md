@@ -1,13 +1,13 @@
 ---
 author: Elliot Forbes
 date: 2017-04-15T08:37:21+01:00
-desc: This is just a quick little code snippet showing how you can set an angularjs
+desc:
+  This is just a quick little code snippet showing how you can set an angularjs
   select box to a certain value on pageload
 series: angularjs
 
 tags:
-
-- javascript
+  - javascript
 title: Setting a Default Value for Select Elements in AngularJS
 twitter: https://twitter.com/Elliot_F
 ---
@@ -16,7 +16,7 @@ twitter: https://twitter.com/Elliot_F
 
 ```html
 <select ng-model="selection" ng-init="selection ='The First Default Option'">
-    <option>The First Default Option</option>
-    <option>The Second non-default option</option>
-  </select>
+  <option>The First Default Option</option>
+  <option>The Second non-default option</option>
+</select>
 ```

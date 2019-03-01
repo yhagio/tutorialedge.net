@@ -1,45 +1,72 @@
 ---
 author: Elliot Forbes
 date: 2017-08-13T17:06:57+01:00
-desc: In this tutorial we'll be examining some of the best practices when it comes
+desc:
+  In this tutorial we'll be examining some of the best practices when it comes
   to logging in your Python applications
 series: python
 image: python-logo.png
 tags:
-- beginner
-- logging
+  - beginner
+  - logging
 title: Python Logging Best Practices
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 weight: 10
 ---
 
-In this tutorial we'll be looking at some of the best practices that you should be following when it comes to implementing logging in your Python programs. 
+In this tutorial we'll be looking at some of the best practices that you should
+be following when it comes to implementing logging in your Python programs.
 
 > This article was written against Python version 3.6
 
 # Why Do We Need Logging?
 
-Logging is an incredibly important feature of any application as it gives both programmers and people supporting the application key insight into what their systems are doing. Without proper logging we have no real idea as to why our applications fail and no real recourse for fixing these applications. 
+Logging is an incredibly important feature of any application as it gives both
+programmers and people supporting the application key insight into what their
+systems are doing. Without proper logging we have no real idea as to why our
+applications fail and no real recourse for fixing these applications.
 
-Imagine you were working on an incredibly important application that your company relied upon in order to generate income. Now imagine that somehow, at say 3am in the morning on a Saturday night, your application has fallen over and the company stops generating income. In this scenario logging is your best ally in finding out what went wrong. The very first thing you'll do when you log in is to check the error logs for your application and ascertain exactly what and where failed. In this particular instance you quickly spot that this is a memory issue and that you need to increase the amount of RAM on the machine running your system. You quickly start up a new AWS EC2 instance with slightly more RAM and deploy your app and suddenly your company is back online. 
+Imagine you were working on an incredibly important application that your
+company relied upon in order to generate income. Now imagine that somehow, at
+say 3am in the morning on a Saturday night, your application has fallen over and
+the company stops generating income. In this scenario logging is your best ally
+in finding out what went wrong. The very first thing you'll do when you log in
+is to check the error logs for your application and ascertain exactly what and
+where failed. In this particular instance you quickly spot that this is a memory
+issue and that you need to increase the amount of RAM on the machine running
+your system. You quickly start up a new AWS EC2 instance with slightly more RAM
+and deploy your app and suddenly your company is back online.
 
-All in all, thanks to logging this took less than 30 minutes and your company only lost a minimal amount of money in that time. Without appropriate logging you may have found yourself scratching your head for hours into the break of day and become more and more stressed as your company loses more and more money.
+All in all, thanks to logging this took less than 30 minutes and your company
+only lost a minimal amount of money in that time. Without appropriate logging
+you may have found yourself scratching your head for hours into the break of day
+and become more and more stressed as your company loses more and more money.
 
-This example is exactly why you should pay attention to the way that your systems log what is going on and in this tutorial we'll be covering some of the best practices you can follow when it comes to implementing your own logging systems.
+This example is exactly why you should pay attention to the way that your
+systems log what is going on and in this tutorial we'll be covering some of the
+best practices you can follow when it comes to implementing your own logging
+systems.
 
 # The Logging Module
 
-> The official documentation for the logging module can be found hereL [Official Docs](https://docs.python.org/3/library/logging.html)
+> The official documentation for the logging module can be found hereL
+> [Official Docs](https://docs.python.org/3/library/logging.html)
 
-The Logging module is one of the best options you can leverage when implementing a logging system within your Python applications. It is very mature in terms of functionality and is the standard choice for enterprise programmers when it comes to logging.
-
+The Logging module is one of the best options you can leverage when implementing
+a logging system within your Python applications. It is very mature in terms of
+functionality and is the standard choice for enterprise programmers when it
+comes to logging.
 
 # Formatting Your Log Statements
 
-With the Logging module, you have the power to dictate the exact structure of your logging messages. This is powerful as it allows you to do things like capture process/thread names with every log statement without having to explicitly state them within the message you want to log.  
+With the Logging module, you have the power to dictate the exact structure of
+your logging messages. This is powerful as it allows you to do things like
+capture process/thread names with every log statement without having to
+explicitly state them within the message you want to log.
 
-Within the `logging` module we can specify the format by doing something like so:
+Within the `logging` module we can specify the format by doing something like
+so:
 
 ```python
 import logging
@@ -76,7 +103,9 @@ This outputs log files that look like this:
 
 ## Creating a Simple File Logger
 
-In this example we'll be creating a very simple logger that will capture every INFO level log message to a my_app.log file within the same directory as our application.
+In this example we'll be creating a very simple logger that will capture every
+INFO level log message to a my_app.log file within the same directory as our
+application.
 
 ```python
 import logging
@@ -94,21 +123,33 @@ def main():
 main()
 ```
 
-Upon execution of this you should see a new `my_app.log` file appear within your directory and if you open that log file you should see `My First Log Statement` on line one of that file. 
+Upon execution of this you should see a new `my_app.log` file appear within your
+directory and if you open that log file you should see `My First Log Statement`
+on line one of that file.
 
-> It's important to note that the logger simply appends log statements to the end of this file and does not overwrite it.
+> It's important to note that the logger simply appends log statements to the
+> end of this file and does not overwrite it.
 
 # Rolling Log Files
 
-If you are developing long running services such that are up 24/7 then it may be a good idea to split up the log files generated by these services into appropriate time-based files. 
+If you are developing long running services such that are up 24/7 then it may be
+a good idea to split up the log files generated by these services into
+appropriate time-based files.
 
-You could for instance start a new log file for every day of the week. This saves you from having to load and parse one massive log file in the eventuality that things go askew. It also mitigates the dangers of you losing all of your logs as they are stored in multiple files as opposed to one. 
+You could for instance start a new log file for every day of the week. This
+saves you from having to load and parse one massive log file in the eventuality
+that things go askew. It also mitigates the dangers of you losing all of your
+logs as they are stored in multiple files as opposed to one.
 
-In the logging module we have both the `RotatingFileHandler` class and the `TimedRotatingFileHandler` class. 
+In the logging module we have both the `RotatingFileHandler` class and the
+`TimedRotatingFileHandler` class.
 
 ## RotatingFileHandler
 
-A `RotatingFileHandler` allows us to rotate our log statements into a new file every time the current log file reaches a certain size. In this example we'll set it up so that when it reaches 500 bytes we'll rotate into a new file up to a maximum number of 2 backups. 
+A `RotatingFileHandler` allows us to rotate our log statements into a new file
+every time the current log file reaches a certain size. In this example we'll
+set it up so that when it reaches 500 bytes we'll rotate into a new file up to a
+maximum number of 2 backups.
 
 ```python
 import logging
@@ -130,11 +171,13 @@ def main():
 main()
 ```
 
-Upon execution of this you should notice that every time `app.log` exceeds 500 bytes, it is then closed and renamed `app.log.x` where the value of `x` increments till it reaches whatever we have set `backupCount` to. 
+Upon execution of this you should notice that every time `app.log` exceeds 500
+bytes, it is then closed and renamed `app.log.x` where the value of `x`
+increments till it reaches whatever we have set `backupCount` to.
 
 ## TimedRotatingFileHandler
 
-`TimedRotatingFileHandler` allows us to capture log files by a time slice. 
+`TimedRotatingFileHandler` allows us to capture log files by a time slice.
 
 ```python
 import logging
@@ -156,25 +199,50 @@ def main():
 main()
 ```
 
-Running this code will then create new log files every minute indefinitely. We can set the `backupCount` parameter on our `logHandler` instance and it will cap the number of log files we create. 
+Running this code will then create new log files every minute indefinitely. We
+can set the `backupCount` parameter on our `logHandler` instance and it will cap
+the number of log files we create.
 
 # External Services
 
-For some more serious enterprise level projects, implementing your own logging systems may not be sufficient and you may have to interface with external logging services such as LogStash. These services do the job of collecting, parsing and transforming the logged output of your application for you. 
+For some more serious enterprise level projects, implementing your own logging
+systems may not be sufficient and you may have to interface with external
+logging services such as LogStash. These services do the job of collecting,
+parsing and transforming the logged output of your application for you.
 
-You may wonder what the point of this is, but as we move towards more micro-service based solutions, the storing of log files everywhere and searching through them when things go wrong is just not feasible. Imagine you had 10 instances of a service deployed on 10 distinct servers. Having to work through all 10 of these log files would be a nightmare should you encounter an issue. The only real solution is to have the instances of your service output your logs to something such as Logstash so that you can far more easily trawl through an aggregated view of your logs.
+You may wonder what the point of this is, but as we move towards more
+micro-service based solutions, the storing of log files everywhere and searching
+through them when things go wrong is just not feasible. Imagine you had 10
+instances of a service deployed on 10 distinct servers. Having to work through
+all 10 of these log files would be a nightmare should you encounter an issue.
+The only real solution is to have the instances of your service output your logs
+to something such as Logstash so that you can far more easily trawl through an
+aggregated view of your logs.
 
 ## Python and Logstash
 
-I'd recommend that if you go down this approach then you look at projects such as [vklochan/python-logstash](https://github.com/vklochan/python-logstash) which very easily allows you to integrate Logstash with your Python applications.
+I'd recommend that if you go down this approach then you look at projects such
+as [vklochan/python-logstash](https://github.com/vklochan/python-logstash) which
+very easily allows you to integrate Logstash with your Python applications.
 
 # Use of Appropriate Log Levels
 
-When it comes to logging distinct events in your application, not everything will carry the same weight in terms of importance. You may for instance want to log fatal errors to be caught by a different log handler that stores these logs to a different file. This reduces the need to have to trim out all the fat from normal log statements and cut straight to where your application failed in the off chance that something critical has gone wrong.
+When it comes to logging distinct events in your application, not everything
+will carry the same weight in terms of importance. You may for instance want to
+log fatal errors to be caught by a different log handler that stores these logs
+to a different file. This reduces the need to have to trim out all the fat from
+normal log statements and cut straight to where your application failed in the
+off chance that something critical has gone wrong.
 
-Previously in this article we looked at two distinct types of file handlers, the `TimedRotatingFileHandler` and the `RotatingFileHandler`. With these two distinct types of handler we can do things such as log all error messages to a rotating file, but all normal log files to a `TimedRotatingFileHandler` as we hope that we can expect far more of them than error messages.
+Previously in this article we looked at two distinct types of file handlers, the
+`TimedRotatingFileHandler` and the `RotatingFileHandler`. With these two
+distinct types of handler we can do things such as log all error messages to a
+rotating file, but all normal log files to a `TimedRotatingFileHandler` as we
+hope that we can expect far more of them than error messages.
 
-In this next example we are going to have a look at how we can split out two different log levels: `INFO` and `ERROR` to two distinct places. The default levels are `CRITICAL`, `ERROR`, `WARNING`, `INFO`, `DEBUG` and `NOTSET`.
+In this next example we are going to have a look at how we can split out two
+different log levels: `INFO` and `ERROR` to two distinct places. The default
+levels are `CRITICAL`, `ERROR`, `WARNING`, `INFO`, `DEBUG` and `NOTSET`.
 
 ```python
 import logging
@@ -207,10 +275,16 @@ def main():
 main()
 ```
 
-You should notice that 3 log files are created when you run this. The `error.log` will contain only logs that are of level `ERROR` or higher. The `normal.log` will contain a combination of all log messages logged out of our application.
+You should notice that 3 log files are created when you run this. The
+`error.log` will contain only logs that are of level `ERROR` or higher. The
+`normal.log` will contain a combination of all log messages logged out of our
+application.
 
 # Conclusion
 
-These are just a few things I feel are important when implementing your own logging system. As I said, these are just suggestions and in no way absolute laws, these are just what I've found works best.
+These are just a few things I feel are important when implementing your own
+logging system. As I said, these are just suggestions and in no way absolute
+laws, these are just what I've found works best.
 
-If you have any further suggestions please let me know in the comments section below! 
+If you have any further suggestions please let me know in the comments section
+below!

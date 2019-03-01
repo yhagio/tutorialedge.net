@@ -1,20 +1,27 @@
 ---
 author: Elliot Forbes
 date: 2017-04-15T09:45:44+01:00
-desc: 'This tutorial teaches the user how they can build a twitter bot using both
-  the Python programming language and the RESTful Twitter Library. '
+desc:
+  "This tutorial teaches the user how they can build a twitter bot using both
+  the Python programming language and the RESTful Twitter Library. "
 series: python
 image: python-logo.png
 tags:
-- intermediate
+  - intermediate
 title: Creating a Twitter Bot Using Python and the Twitter API
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
-Twitter bots are a fantastic way to drum up a bit of interest in your brand or website and I've had fantastic results myself building up an audience for the Twitter account specifically for this website. This tutorial will hopefully cover everything it takes to construct your own twitter bot that utilizes the RESTful Twitter API. 
+Twitter bots are a fantastic way to drum up a bit of interest in your brand or
+website and I've had fantastic results myself building up an audience for the
+Twitter account specifically for this website. This tutorial will hopefully
+cover everything it takes to construct your own twitter bot that utilizes the
+RESTful Twitter API.
 
-> The source code for this Python wrapper for the Twitter API can be found here: <a href="https://github.com/bear/python-twitter">Github: Bear's Python-Twitter Wrapper</a>
+> The source code for this Python wrapper for the Twitter API can be found here:
+> <a href="https://github.com/bear/python-twitter">Github: Bear's Python-Twitter
+> Wrapper</a>
 
 # Getting Started
 
@@ -73,6 +80,7 @@ def fav_tweet(tweet):
         print "Error: ", e
         return None
 ```
+
 # Retweeting Tweets
 
 <p>Retweeting specific tweets is again very similar to favoriting tweets and can be useful if you want to, for instance, retweet all replies to any of the posts you make and try to improve your community presence. </p>
@@ -126,7 +134,7 @@ def fav_tweet(tweet):
     except TwitterHTTPError as e:
         print "Error: ", e
         return None
-    
+
 def retweet_tweet(tweet):
     try:
         result = t.statuses.retweet._id(_id=tweet['id'])
@@ -135,7 +143,7 @@ def retweet_tweet(tweet):
     except TwitterHTTPError as e:
         print "Error: ", e
         return None
-    
+
 def auto_fav(q, count):
     result = search_tweets(q, count)
     a = result['statuses'][0]['user']['screen_name']
@@ -146,7 +154,7 @@ def auto_fav(q, count):
             success += 1
     print "We Favorited a total of %i out of %i tweets" % (success,
           len(result['statuses']))
-    
+
 def auto_retweet(q, count):
     result = search_tweets(q, count)
     a = result['statuses'][0]['user']['screen_name']
@@ -157,7 +165,7 @@ def auto_retweet(q, count):
             success += 1
         time.sleep(10)
     print "We Favorited a total of %i out of %i tweets" % (success, len(result['statuses']))
-    
+
 if __name__ == "__main__":
     while(1):
         try:
@@ -165,8 +173,8 @@ if __name__ == "__main__":
             auto_retweet("IndieDev", 1)
             auto_retweet("ScreenshotSaturday", 1)
         except Exception, e:
-            print(e)   
-        
+            print(e)
+
         try:
             auto_fav("IndieDev", 1)
         except Exception, e:

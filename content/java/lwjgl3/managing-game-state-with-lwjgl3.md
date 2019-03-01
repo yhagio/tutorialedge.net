@@ -1,15 +1,16 @@
 ---
 author: Elliot Forbes
 date: 2017-04-15T08:23:18+01:00
-desc: This tutorial demonstrates how you can effectively manage what state your game
+desc:
+  This tutorial demonstrates how you can effectively manage what state your game
   is in using Java's enum and a few simple switch cases.
 series: lwjgl3
 image: lwjgl.jpg
 tags:
-- gamedev
-- java
-- lwjgl3
-- graphics
+  - gamedev
+  - java
+  - lwjgl3
+  - graphics
 title: Managing Game States With LWJGL 3
 twitter: https://twitter.com/Elliot_F
 ---
@@ -26,7 +27,7 @@ twitter: https://twitter.com/Elliot_F
 
 ```java
 private enum State {
-    MENU, PLAY, PAUSE, MOVIE 
+    MENU, PLAY, PAUSE, MOVIE
 };
 
 private static State gameState = State.MENU;
@@ -34,10 +35,10 @@ private static State gameState = State.MENU;
 
 <p>After we’ve declared what states we want and initialized what state we are in on startup, we can then add some form of logic to our update and render functions that allow us to choose when and where to update and render different aspects of our game. </p>
 
-```java	
+```java
 	public void update() {
 		handleInput();
-		
+
 		switch(gameState) {
 			case MENU:
 				// update all menu stuff
@@ -46,23 +47,23 @@ private static State gameState = State.MENU;
 				// update our player object and allow us to play
 				player1.update();
 				break;
-				
+
 			case PAUSE:
 				// stop updating our game objects and essentially do nothing
 				break;
-				
+
 			case MOVIE:
 				// Play any movie clips...
 				break;
-				
+
 			default:
-				break;	
+				break;
 		}
-		
+
 	}
-	
+
 	public void render() {
-		
+
 		switch(gameState){
 			case MENU:
 				// Just show our background, we can add some cool menus and stuff
@@ -89,12 +90,13 @@ private static State gameState = State.MENU;
 				// this is so that it catches any unexpected values although.
 				break;
 		}
-		
+
 	}
 
 ```
 
 # Switching States
+
 <p>As a means of switching states, I’ve created a simple method in my game class that checks to see whether any of the main keys I have defined for switching states have been pressed.</p>
 
 ```java

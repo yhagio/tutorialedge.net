@@ -1,9 +1,21 @@
 language: python
+
+# install Hugo binary
 install:
 - wget https://github.com/gohugoio/hugo/releases/download/v0.51/hugo_0.51_Linux-64bit.deb
 - sudo dpkg -i hugo*.deb
-script:
-- hugo
+
+# Multi-stage build process
+jobs:
+  include:
+    - stage: test
+      script:
+      - echo "Hello World"
+    - stage: build
+      script:
+      - hugo
+
+# Deploy the finished product to the production S3 bucket for tutorialedge
 deploy:
   provider: s3
   access_key_id: AKIAIN5O72B44O5TWFVA

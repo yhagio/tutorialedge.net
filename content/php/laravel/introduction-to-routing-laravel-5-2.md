@@ -1,12 +1,13 @@
 ---
 author: Elliot Forbes
 date: 2017-04-15T08:07:02+01:00
-desc: In this tutorial I'll be demonstrating how you can create some very simple routes
-  in laravel 5.2
+desc:
+  In this tutorial I'll be demonstrating how you can create some very simple
+  routes in laravel 5.2
 series: laravel-5.2
 image: laravel.png
 tags:
-- php
+  - php
 title: Introduction To Routing in Laravel 5.2
 twitter: https://twitter.com/Elliot_F
 ---
@@ -62,29 +63,25 @@ Route::get('/', function () {
 
 ```html
 <html>
-    <head>
-        <title>ElliotForbes.co.uk</title>
-    </head>
-    <body>
-        
-        <h2>Our Nav Goes here</h2>
-        
-        @yield('content')        
-        
-        <div class="footer">
-            <h2>Our Footer Stuff Goes here</h2>
-        </div>
-        
-    </body>
+  <head>
+    <title>ElliotForbes.co.uk</title>
+  </head>
+  <body>
+    <h2>Our Nav Goes here</h2>
+
+    @yield('content')
+
+    <div class="footer">
+      <h2>Our Footer Stuff Goes here</h2>
+    </div>
+  </body>
 </html>
 ```
 
 <p><b>index.blade.php</b></p>
 
 ```html
-@extends('app')
-
-@section('content')
+@extends('app') @section('content')
 <h2>Home Page</h2>
 @endsection
 ```

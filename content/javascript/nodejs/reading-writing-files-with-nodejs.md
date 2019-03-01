@@ -1,13 +1,14 @@
 ---
 author: Elliot Forbes
 date: 2017-04-15T08:20:02+01:00
-desc: In this tutorial I’m going to be showing you exactly how we can read and write
+desc:
+  In this tutorial I’m going to be showing you exactly how we can read and write
   files on our local filesystem using NodeJS.
 series: nodejs
 image: node.png
 tags:
-- javascript
-- nodejs
+  - javascript
+  - nodejs
 title: Reading and Writing Files With NodeJS
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
@@ -24,9 +25,9 @@ authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_4
 <p>Create a new file called index.js and add the following: </p>
 
 ```js
-var fs = require('fs');
+var fs = require("fs");
 
-fs.readFile('temp.txt', function(err, buf) {
+fs.readFile("temp.txt", function(err, buf) {
   console.log(buf.toString());
 });
 ```
@@ -38,13 +39,13 @@ fs.readFile('temp.txt', function(err, buf) {
 <p>We’ll step through this with comments.</p>
 
 ```js
-var fs = require('fs');
+var fs = require("fs");
 ```
 
 <p>This line does the job of importing the fs package and allowing us to utilize it within our own code.</p>
 
 ```js
-fs.readFile('temp.txt', function(err, buf) {
+fs.readFile("temp.txt", function(err, buf) {
   console.log(buf.toString());
 });
 ```
@@ -56,9 +57,9 @@ fs.readFile('temp.txt', function(err, buf) {
 <p>If the above code hasn’t worked as expected and you are seeing a buffer being printed out in the terminal then it might be an idea to specify the files encoding. We can do this like so: </p>
 
 ```js
-var fs = require('fs');
+var fs = require("fs");
 
-fs.readFile('temp.txt', 'utf-8' ,function(err, buf) {
+fs.readFile("temp.txt", "utf-8", function(err, buf) {
   console.log(buf.toString());
 });
 ```
@@ -72,16 +73,14 @@ fs.readFile('temp.txt', 'utf-8' ,function(err, buf) {
 <p>Again create a new file within your current directory and call it write.js and then add the following javascript code:</p>
 
 ```js
-var fs = require('fs');
+var fs = require("fs");
 
 var data = "New File Contents";
 
-fs.writeFile('temp.txt', data, function(err, data){
-    if (err) console.log(err);
-    console.log("Successfully Written to File.");
+fs.writeFile("temp.txt", data, function(err, data) {
+  if (err) console.log(err);
+  console.log("Successfully Written to File.");
 });
 ```
+
 <p>Run this code by executing node write.js in the terminal and then open up temp.txt in your editor, you should now see the new contents of the file. </p>
-
-
-

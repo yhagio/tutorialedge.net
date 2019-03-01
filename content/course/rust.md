@@ -10,4 +10,5 @@ title: Rust
 
 ### Course Outline
 
-In this course, we are going to look at some of the fundamentals of the Rust programming language.
+In this course, we are going to look at some of the fundamentals of the Rust
+programming language.

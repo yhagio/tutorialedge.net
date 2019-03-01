@@ -1,18 +1,22 @@
 ---
 author: Elliot Forbes
 date: 2017-04-15T09:47:55+01:00
-desc: This tutorial teaches you how to calculate the keyword density of a web page
+desc:
+  This tutorial teaches you how to calculate the keyword density of a web page
   using the python programming language.
 series: python
 image: python-logo.png
 tags:
-- intermediate
+  - intermediate
 title: Calculating Keyword Density of a Web Page with Python
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
-In this tutorial I will be showing you how to calculate the keyword density of a web page using the Python programming language. This will be a continuation of the previous tutorial in which we retrieved a web page using Pythons `urllib2` Python module.
+In this tutorial I will be showing you how to calculate the keyword density of a
+web page using the Python programming language. This will be a continuation of
+the previous tutorial in which we retrieved a web page using Pythons `urllib2`
+Python module.
 
 # Keyword Density Calculation
 
@@ -58,10 +62,10 @@ def fetch_page(siteURL):
     # the headers that we've defined above.
     req = urllib2.Request(site, headers=hdr)
 
-    # 
+    #
     try:
         # here we are going to open our desired page using urllib2.urlopen
-        # and passing in our request object as a parameter and as a means of protection we 
+        # and passing in our request object as a parameter and as a means of protection we
         # will surround this with a try except so that, should the script run into any errors
         # it will fail gracefully instead of just crashing.
         page = urllib2.urlopen(req)
@@ -96,4 +100,3 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-

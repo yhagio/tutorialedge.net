@@ -5,8 +5,7 @@ desc: This tutorial showcases how one can define their own angularjs directives.
 series: angularjs
 
 tags:
-
-- javascript
+  - javascript
 title: AngularJS Directives Tutorial
 twitter: https://twitter.com/Elliot_F
 ---
@@ -24,12 +23,12 @@ twitter: https://twitter.com/Elliot_F
 <p>In this tutorial we’ll just be implementing a very simple directive that defines our mydir tag and returns some text:</p>
 
 ```js
-var testApp = angular.module('testApp', []);
+var testApp = angular.module("testApp", []);
 
-testApp.directive('mydir', function () {
-    return {
-        template: 'This is my directive'
-    };
+testApp.directive("mydir", function() {
+  return {
+    template: "This is my directive"
+  };
 });
 ```
 
@@ -37,18 +36,17 @@ testApp.directive('mydir', function () {
 
 ```html
 <html ng-app="testApp">
-<head>
+  <head>
     <title>AngularJS ng-if child scopes example</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-</head>
-<body ng-controller="testController">
-    
+  </head>
+  <body ng-controller="testController">
     <h2>Directives Tutorial</h2>
-    
+
     <mydir></mydir>
-    
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
 ```
 
@@ -80,31 +78,31 @@ views/
 
 ```html
 <html ng-app="myapp">
-    <head>
-        <title>TutorialEdge.net</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
-    </head>
-    <body>
-        <h2>Introduction to AngularJS Templates</h2>
-        
-        <mydirective></mydirective>
-        
-        <script src="../controllers/MainController.js"></script>
-        <script src="../components/MyDirective/MyDirective.js"></script>
-    </body>
+  <head>
+    <title>TutorialEdge.net</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+  </head>
+  <body>
+    <h2>Introduction to AngularJS Templates</h2>
+
+    <mydirective></mydirective>
+
+    <script src="../controllers/MainController.js"></script>
+    <script src="../components/MyDirective/MyDirective.js"></script>
+  </body>
 </html>
 ```
 
 <h3>MyDirective.js</h3>
 
 ```js
-var app = angular.module('myapp', []);
+var app = angular.module("myapp", []);
 
 app.directive("mydirective", function() {
-    return {
-        templateUrl: '../components/MyDirective/DirectiveTemplate.html'
-    }
-})
+  return {
+    templateUrl: "../components/MyDirective/DirectiveTemplate.html"
+  };
+});
 ```
 
 <h3>DirectiveTemplate.html</h3>

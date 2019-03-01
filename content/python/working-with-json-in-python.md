@@ -6,4 +6,3 @@ image: python-logo.png
 ---
 
 # Introduction
-

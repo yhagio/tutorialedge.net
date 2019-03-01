@@ -1,12 +1,13 @@
 ---
 author: Elliot Forbes
 date: 2017-04-15T09:26:20+01:00
-desc: Simple site search bar tutorial for those of you wishing to implement some simplistic
-  form of search bar in your laravel 5 applications
+desc:
+  Simple site search bar tutorial for those of you wishing to implement some
+  simplistic form of search bar in your laravel 5 applications
 series: laravel-5.2
 image: laravel.png
 tags:
-- php
+  - php
 title: Laravel 5 Simple Site Search Bar Tutorial
 twitter: https://twitter.com/Elliot_F
 ---
@@ -77,12 +78,12 @@ Route::resource('queries', 'QueryController');
 ```php
 public function search(Request $request)
 {
-  // Gets the query string from our form submission 
+  // Gets the query string from our form submission
   $query = Request::input('search');
-  // Returns an array of articles that have the query string located somewhere within 
+  // Returns an array of articles that have the query string located somewhere within
   // our articles titles. Paginates them so we can break up lots of search results.
   $articles = DB::table('articles')->where('title', 'LIKE', '%' . $query . '%')->paginate(10);
-      
+
   // returns a view and passes the view the list of articles and the original query.
   return view('page.search', compact('articles', 'query'));
  }
