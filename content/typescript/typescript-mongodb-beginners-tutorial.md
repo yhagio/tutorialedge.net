@@ -248,7 +248,7 @@ export const BookSchema = new mongoose.Schema({
   author: { type: String, required: true }
 });
 
-const Book = mongoose.model("Book", BookSchema);
+const Book = mongoose.model<IBook>("Book", BookSchema);
 export default Book;
 ```
 
