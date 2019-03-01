@@ -28,7 +28,7 @@ then be sure to check out this github repo:
 
 # The Growth
 
-Since it's inception the site's shown good growth and now exceeds 12,500 hits
+Since its inception the site's shown good growth and now exceeds 12,500 hits
 per month and the growth doesn't seem to be slowing down. My main aim for the
 site is to become one of the best free resources on the web for learning how to
 program using various new and emeging frameworks such as Laravel 5 for web
