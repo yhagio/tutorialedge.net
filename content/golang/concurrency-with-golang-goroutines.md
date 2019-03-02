@@ -213,5 +213,5 @@ So, in this tutorial, we learned how we can get started developing concurrent
 applications in Go. We looked at what Goroutines are and how we can use them to
 speed up various parts of our systems and create performant applications.
 
-Hopefully, you found this tutorial useful, if you did then please let me know in
+Hopefully, you found this tutorial useful, if you did then please let me know in 
 the comments section below!
