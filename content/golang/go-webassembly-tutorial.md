@@ -124,12 +124,10 @@ license that can be found in the LICENSE file.
 </html>
 ```
 
-We'll also need the `wasm_exec.js` file which can be found
-[here](https://github.com/golang/go/blob/master/misc/wasm/wasm_exec.js).
-Download that and save it alongside your `index.html`.
+We'll also need to copy the `wasm_exec.js` file from `misc/wasm`.
 
 ```html
-$ wget https://raw.githubusercontent.com/golang/go/master/misc/wasm/wasm_exec.js
+$ cp "$(go env GOROOT)/misc/wasm/wasm_exec.js" .
 ```
 
 And, we also have a simple `net/http` based file server, again stolen from
