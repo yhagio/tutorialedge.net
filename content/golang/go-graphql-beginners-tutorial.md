@@ -483,7 +483,7 @@ successfully set up a simple GraphQL server that is backed by an in-memory
 data-store.
 
 In the next tutorial, we'll be looking at GraphQL mutations and changing our
-data-source to use a NoSQL database. The next part of this tutorial series can
+data-source to use a SQL database. The next part of this tutorial series can
 be found here:
 [Go GraphQL Beginners Tutorial - Part 2](/golang/go-graphql-beginners-tutorial-part-2/)
 
