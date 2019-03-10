@@ -5,7 +5,6 @@ class Search {
     * articles of the site
     */
     constructor() {
-        console.log("hi");
         // constrain this to only run on the /search/ page
         if (window.location.pathname == '/search/') {
             let search = instantsearch({

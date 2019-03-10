@@ -6,6 +6,5 @@ export default class Utils {
     checkBrowser() {
         let ua = navigator.userAgent.toLowerCase();
         var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-        if (is_safari) alert("Safari");
     }
 }
