@@ -31,7 +31,7 @@ In this tutorial, we are going to create an `Item.vue` component that will
 render a single item within our `Homepage.vue` component. The finished product
 of this will look like this:
 
-![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/hackernews-clone/screenshot-11.png)
+![](https://images.tutorialedge.net/images/hackernews-clone/screenshot-11.png)
 
 > Note: We will be stealing a lot of the design elements from the official
 > HackerNews project:

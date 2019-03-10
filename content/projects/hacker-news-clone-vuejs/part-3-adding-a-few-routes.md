@@ -238,7 +238,7 @@ Awesome, now when we navigate back our browser and view
 `http://localhost:8080/#/`, you should now see our Homepage `<h2>Homepage</h2>`
 being rendered in all its glory.
 
-![Our updated view](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/hackernews-clone/screenshot-04.png)
+![Our updated view](https://images.tutorialedge.net/images/hackernews-clone/screenshot-04.png)
 
 # Conclusion
 

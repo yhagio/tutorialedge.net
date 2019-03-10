@@ -237,7 +237,7 @@ on the left:
 
 If everything has gone as planned, you should get the following result:
 
-![vuejs form validation result](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/javascript/vuejs/form-validation-image1.png)
+![vuejs form validation result](https://images.tutorialedge.net/images/javascript/vuejs/form-validation-image1.png)
 
 # Displaying form errors
 
@@ -307,7 +307,7 @@ touched using `v-bind:class`:
 This will then give you the following results whenever the field is invalid or
 valid:
 
-![vuejs form validation result](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/javascript/vuejs/form-validation-image2.png)
+![vuejs form validation result](https://images.tutorialedge.net/images/javascript/vuejs/form-validation-image2.png)
 
 Subsequently, you can then display an error message if this is the case. This
 can be done in numerous ways, depending on the type of message you want to show.

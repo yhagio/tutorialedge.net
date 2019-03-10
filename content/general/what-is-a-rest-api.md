@@ -40,7 +40,7 @@ Typically we send HTTP requests to an URL that we have defined in our REST API
 and it would either perform a given task for us or return a certain bit of data.
 Most APIs these days would return a response to us in the form of JSON.
 
-<img src="/uploads/rest-api.png" alt="REST API Basics" />
+<img src="https://images.tutorialedge.net/uploads/rest-api.png" alt="REST API Basics" />
 
 # A Simple Example
 

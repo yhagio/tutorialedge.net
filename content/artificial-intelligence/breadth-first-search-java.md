@@ -55,7 +55,7 @@ authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_4
 
 <p>As you can see, if you follow this algorithm through then you will recursively search every level of the binary tree going deeper and deeper until you find the shortest possible path.</p>
 
-<img src="/uploads/breadth-first-search.png?v=123" alt="breadth-first-search" />
+<img src="https://images.tutorialedge.net/uploads/breadth-first-search.png?v=123" alt="breadth-first-search" />
 
 # How it Works
 

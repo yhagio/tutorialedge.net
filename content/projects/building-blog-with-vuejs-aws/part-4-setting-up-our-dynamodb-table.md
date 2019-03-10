@@ -34,7 +34,7 @@ comments. We have a number of methods we can use when it comes to defining our
 table, we can do it either programmatically or via the web interface. For the
 purpose of this tutorial, we'll be using the web interface.
 
-![Create Table DynamoDB](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/vuejs-blog-aws/screenshot-04.png)
+![Create Table DynamoDB](https://images.tutorialedge.net/images/vuejs-blog-aws/screenshot-04.png)
 
 We want our table to be able to store the post's title, the body, a description,
 and finally a slug which will allow us to navigate to the page within our Vue.JS
@@ -48,7 +48,7 @@ Primary key and `posted` as our sort key.
 By doing this, we allow ourselves incredibly quick lookups of individual blog
 posts based off the `slug` we provide and we can also filter.
 
-![Create Table DynamoDB](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/vuejs-blog-aws/screenshot-05.png)
+![Create Table DynamoDB](https://images.tutorialedge.net/images/vuejs-blog-aws/screenshot-05.png)
 
 This will then go ahead and create our table for us. Once this is done we can
 then start playing with it and putting in some of our blog's content.
@@ -65,7 +65,7 @@ table.
 Try inserting a few items into our new table that feature a `title`, a `body`, a
 `description`, and a `slug`.
 
-![Create Table DynamoDB](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/vuejs-blog-aws/screenshot-08.png)
+![Create Table DynamoDB](https://images.tutorialedge.net/images/vuejs-blog-aws/screenshot-08.png)
 
 # Step 3 - Updating our Lambda Function
 

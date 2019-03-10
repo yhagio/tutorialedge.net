@@ -141,7 +141,7 @@ so:
 When we save this now, you should see within your browser something that looks
 like this:
 
-![Our list of top stories!](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/hackernews-clone/screenshot-05.png)
+![Our list of top stories!](https://images.tutorialedge.net/images/hackernews-clone/screenshot-05.png)
 
 # Fleshing out Our Stories
 
@@ -193,7 +193,7 @@ export default {
 When we again click save on this, you should see our application goes from
 rendering a list of numbers to rendering a list of `JSON` objects like so:
 
-![this is pretty ugly](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/hackernews-clone/screenshot-06.png)
+![this is pretty ugly](https://images.tutorialedge.net/images/hackernews-clone/screenshot-06.png)
 
 I wouldn't argue with you if you said this looked pretty ugly as it stands,
 let's change this to only render some of the vital information we want by
@@ -215,7 +215,7 @@ modifying the `html` within our `v-for` directive:
 
 And the final result of these changes should end up looking similar to this:
 
-![Our somewhat better looking hackernew clone](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/hackernews-clone/screenshot-07.png)
+![Our somewhat better looking hackernew clone](https://images.tutorialedge.net/images/hackernews-clone/screenshot-07.png)
 
 Not the best, but it's a huge improvement over our previous version.
 

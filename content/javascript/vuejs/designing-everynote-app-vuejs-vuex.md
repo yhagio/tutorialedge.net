@@ -33,7 +33,7 @@ https://github.com/PacktPublishing/Vuex-Quick-Start-Guide/tree/master/chapter-4.
 One way to start designing an application is by creating mock-ups of the user
 interfaces. The EveryNote app will look like the following mock-up:
 
-![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/javascript/vuejs/vuex-quickstart-image1.png)
+![](https://images.tutorialedge.net/images/javascript/vuejs/vuex-quickstart-image1.png)
 
 ## The EveryNote mock-up interface
 
@@ -383,7 +383,7 @@ Application code:
 
 The following is a screenshot of the result:
 
-![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/javascript/vuejs/vuex-quickstart-image2.png)
+![](https://images.tutorialedge.net/images/javascript/vuejs/vuex-quickstart-image2.png)
 
 # List of notes
 
@@ -864,7 +864,7 @@ Now add NoteEditor to App.vue
 After having added some CSS to the components and restyling the application a
 bit, it now looks like the following figure:
 
-![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/javascript/vuejs/vuex-quickstart-image3.png)
+![](https://images.tutorialedge.net/images/javascript/vuejs/vuex-quickstart-image3.png)
 
 # EveryNote restyled
 

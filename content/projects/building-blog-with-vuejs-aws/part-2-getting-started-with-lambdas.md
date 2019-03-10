@@ -154,14 +154,14 @@ up the Lambda console and select your newly deployed function, you can then
 click the `monitoring` tab at the top of the page and it will show you graphs
 that tell you things like invocation count, duration and any errors.
 
-![Monitoring Tab Lambda](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/vuejs-blog-aws/screenshot-02.png)
+![Monitoring Tab Lambda](https://images.tutorialedge.net/images/vuejs-blog-aws/screenshot-02.png)
 
 You should notice on each of these graph boxes, there is a link to
 `Jump to Logs` at the top right. If you click on this, you will be taken to the
 CloudWatch logs and you can dive in and see things like stack traces if things
 have gone wrong:
 
-![CloudWatch Logs](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/vuejs-blog-aws/screenshot-03.png)
+![CloudWatch Logs](https://images.tutorialedge.net/images/vuejs-blog-aws/screenshot-03.png)
 
 # Next Steps
 

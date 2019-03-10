@@ -23,7 +23,7 @@ chat application.
 By the end of this part of the series, you should have a really solid looking
 frontend which looks a little something like this:
 
-![Chat Application Screenshot](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/chat-app-go-react/screenshot-01.png)
+![Chat Application Screenshot](https://images.tutorialedge.net/images/chat-app-go-react/screenshot-01.png)
 
 # Component Based Approach
 
@@ -305,7 +305,7 @@ a message across our WebSocket connection to our backend, our backend then
 echoes it back to the frontend and it's rendered successfully within our
 `ChatHistory` component!
 
-![Chat Application Screenshot](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/chat-app-go-react/screenshot-01.png)
+![Chat Application Screenshot](https://images.tutorialedge.net/images/chat-app-go-react/screenshot-01.png)
 
 # Conclusion
 

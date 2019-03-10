@@ -17,7 +17,7 @@ learn the basics of computer programming.
 
 # Code Complete: 2
 
-<p><img alt="Code Complete: 2" src="https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/books/code-complete.jpg" class="book-img" />
+<p><img alt="Code Complete: 2" src="https://images.tutorialedge.net/books/code-complete.jpg" class="book-img" />
 This is without a doubt one of the best practical guides that any budding programmer should be reading in order to top up their programming skills. This book contains a massive number of practical points that touch upon a wide range of different topics. </p>
 
 This book should without a doubt be a part of any programmers library and it

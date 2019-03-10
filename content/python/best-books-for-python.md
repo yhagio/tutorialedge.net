@@ -28,7 +28,7 @@ to have close at hand when programming.
 
 # Python Tricks: A Buffet of Awesome Python Features
 
-<p><img alt="Python Tricks" src="https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/books/python-tricks.jpg" class="book-img" />An excellent book that shows you some of the best practices you should follow when developing Python based applications. Dan Bader is an excellent Pythonista to follow if you are wishing to learn more about the Python ecosystem. </p>
+<p><img alt="Python Tricks" src="https://images.tutorialedge.net/books/python-tricks.jpg" class="book-img" />An excellent book that shows you some of the best practices you should follow when developing Python based applications. Dan Bader is an excellent Pythonista to follow if you are wishing to learn more about the Python ecosystem. </p>
 
 In its short lifespan it has achieved well over 100 incredibly positive reviews
 on Amazon and is highly recommended for all levels of Python programming.
@@ -66,7 +66,7 @@ that chapter as well as a set of questions for you to test your knowledge.
 
 # Python Crash Course
 
-<p><img alt="Python Crash Course" src="https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/books/python-crash-course.jpg" class="book-img" />A fast paced but comprehensive introduction to programming with python, Python Crash Course is another superb book to add to your library and help you finally master Python. </p>
+<p><img alt="Python Crash Course" src="https://images.tutorialedge.net/books/python-crash-course.jpg" class="book-img" />A fast paced but comprehensive introduction to programming with python, Python Crash Course is another superb book to add to your library and help you finally master Python. </p>
 
 ## What it Covers
 

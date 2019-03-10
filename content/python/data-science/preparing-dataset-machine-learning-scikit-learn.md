@@ -65,7 +65,7 @@ df.head()
 
 This produces an output as illustrated in the following screenshot:
 
-![jupter notebook output screenshot](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/python/data-science/preparing-dataset-machine-learning/image1-17.png)
+![jupter notebook output screenshot](https://images.tutorialedge.net/images/python/data-science/preparing-dataset-machine-learning/image1-17.png)
 
 # Dropping features that are redundant
 
@@ -223,7 +223,7 @@ the `concat` method from `pandas`.
 The ordinal `type` column is then dropped from the dataframe as this column is
 now redundant post one hot encoding. The final dataframe now looks like this:
 
-![jupter notebook output screenshot](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/python/data-science/preparing-dataset-machine-learning/image2-19.png)
+![jupter notebook output screenshot](https://images.tutorialedge.net/images/python/data-science/preparing-dataset-machine-learning/image2-19.png)
 
 # Missing values
 
@@ -239,7 +239,7 @@ df.isnull().any()
 
 This produces this output:
 
-![jupter notebook output screenshot](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/python/data-science/preparing-dataset-machine-learning/image3-21.png)
+![jupter notebook output screenshot](https://images.tutorialedge.net/images/python/data-science/preparing-dataset-machine-learning/image3-21.png)
 
 Here we note that every column has some amount of missing values. Missing values
 can be handled in a variety of ways, such as the following:

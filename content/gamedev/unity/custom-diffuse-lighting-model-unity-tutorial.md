@@ -20,7 +20,7 @@ explains the mathematics involved along with the implementation. The following
 diagram shows the same geometry rendered with a standard shader (right) and a
 diffuse Lambert one (left):
 
-![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/gamedev/unity/custom-diffuse-lighting-tutorial/image1-17.png)
+![](https://images.tutorialedge.net/images/gamedev/unity/custom-diffuse-lighting-tutorial/image1-17.png)
 
 Shaders based on the Lambertian reflectance are classified as
 non-photorealistic; no object in the real world looks like this. However,
@@ -48,7 +48,7 @@ Start by carrying out the following steps:
 1. When your assets have been set up in Unity, you should have a scene that
    resembles the following screenshot:
 
-![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/gamedev/unity/custom-diffuse-lighting-tutorial/image2-19.png)
+![](https://images.tutorialedge.net/images/gamedev/unity/custom-diffuse-lighting-tutorial/image2-19.png)
 
 Achieving the Lambertian Reflectance The Lambertian reflectance can
 be achieved with the following changes to the shader: Begin by replacing the
@@ -113,11 +113,11 @@ half4 LightingSimpleLambert (SurfaceOutput s, half3 lightDir,
 Save your script and return to the Unity editor. You should notice that it looks
 somewhat different than what it was before:
 
-![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/gamedev/unity/custom-diffuse-lighting-tutorial/image3-21.png)
+![](https://images.tutorialedge.net/images/gamedev/unity/custom-diffuse-lighting-tutorial/image3-21.png)
 
 The effect is even easier to see if you use cylinders:
 
-![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/gamedev/unity/custom-diffuse-lighting-tutorial/image4-23.png)
+![](https://images.tutorialedge.net/images/gamedev/unity/custom-diffuse-lighting-tutorial/image4-23.png)
 
 # How it works...
 
@@ -140,7 +140,7 @@ Lambertian model makes the same assumption; if the light hits a triangle at a
 less light is reflected back to you. This concept is shown in the following
 diagram:
 
-![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/gamedev/unity/custom-diffuse-lighting-tutorial/image5-25.png)
+![](https://images.tutorialedge.net/images/gamedev/unity/custom-diffuse-lighting-tutorial/image5-25.png)
 
 This simple concept has to be translated into a mathematical form. In vector
 algebra, the angle between two unit vectors can be calculated via
@@ -154,12 +154,12 @@ surface. L indicates the light direction (called `lightDir` in the shader) a
 is normal to the surface. The light is reflected with the same angle with which
 it hits the surface:
 
-![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/gamedev/unity/custom-diffuse-lighting-tutorial/image6-27.png)
+![](https://images.tutorialedge.net/images/gamedev/unity/custom-diffuse-lighting-tutorial/image6-27.png)
 
 The Lambertian reflectance simply uses the `NdotL` dot product as a
 multiplicative coefficient for the intensity of light:
 
-![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/gamedev/unity/custom-diffuse-lighting-tutorial/image7-29.png)
+![](https://images.tutorialedge.net/images/gamedev/unity/custom-diffuse-lighting-tutorial/image7-29.png)
 
 When `N` and `L` are parallel, all the light is reflected back to the source,
 causing the geometry to appear brighter. The `_LightColor0` variable contains

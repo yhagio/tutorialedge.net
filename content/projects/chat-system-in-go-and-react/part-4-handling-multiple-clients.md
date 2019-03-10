@@ -30,7 +30,7 @@ series we'll have:
 Our application will look a little like this by the end of this part of the
 course:
 
-![Chat Application Screenshot](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/chat-app-go-react/screenshot-01.png)
+![Chat Application Screenshot](https://images.tutorialedge.net/images/chat-app-go-react/screenshot-01.png)
 
 # Splitting out our Websocket Code
 
@@ -455,7 +455,7 @@ notice that these connect automatically to our backend WebSocket server and we
 can now send and receive messages from other clients connected within the same
 `Pool`!
 
-![Chat Application Screenshot](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/chat-app-go-react/screenshot-01.png)
+![Chat Application Screenshot](https://images.tutorialedge.net/images/chat-app-go-react/screenshot-01.png)
 
 # Conclusion
 

@@ -203,7 +203,7 @@ application reload on `http://localhost:8080` with a slightly different style.
 
 At this stage, your application should look something like this:
 
-![Our HackerNews clone as it stands](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/hackernews-clone/screenshot-03.png)
+![Our HackerNews clone as it stands](https://images.tutorialedge.net/images/hackernews-clone/screenshot-03.png)
 
 # Next Steps
 

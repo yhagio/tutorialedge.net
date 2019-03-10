@@ -24,7 +24,7 @@ computer-generated number in as few tries as possible.
 
 This is how the game looks:
 
-![Angular 6 Guess the Number](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/javascript/angular/guess-the-number-angular-6-01.png)
+![Angular 6 Guess the Number](https://images.tutorialedge.net/images/javascript/angular/guess-the-number-angular-6-01.png)
 
 # Building Guess the Number!
 
