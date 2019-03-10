@@ -2,17 +2,13 @@
 author: Elliot Forbes
 date: 2017-04-14T20:28:13+01:00
 series: misc
-draft: true
 tags:
   - misc
 title: Get Involved
 twitter: https://twitter.com/Elliot_F
 ---
 
-<picture>
-  <source srcset="/images/ai.webp">
-  <img src="/images/ai.png" alt="AI">
-</picture>
+![](/images/ai.webp)
 
 # Sanguine Lapithae colla latus oracula ignibus
 

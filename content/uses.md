@@ -23,7 +23,7 @@ I'm constantly getting questions on what software/plugins/hardware I use to reco
 
 # Recording Setup
 
-* _Blue Yeti Microphone_ - 
+* _Blue Yeti Microphone_ -
 * _Isolation Stand_
 * _Mic Stand_
 * _ScreenFlow 8_

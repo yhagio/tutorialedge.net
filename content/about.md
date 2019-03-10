@@ -11,7 +11,7 @@ tags:
 
 Originally started in December of 2014 this site began as a side hobby of mine
 and has quickly grown into one of the most successful side projects I've ever
-worked upon. Since it's conception it's racked up well over 100,000 page views
+worked upon. Since its conception it's racked up well over 1,000,000 page views
 and it's still growing.
 
 It's undergone many changes since it was first created and overall I've probably
