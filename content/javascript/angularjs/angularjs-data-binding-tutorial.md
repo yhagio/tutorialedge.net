@@ -70,4 +70,4 @@ testApp.controller("testController", function($scope) {
 
 <p>The output for this small example can be seen below:</p>
 
-<img src="http://tutorialedge.nethttps://images.tutorialedge.net/uploads/databinding.gif" alt="angularjs data binding"/>
+<img src="https://images.tutorialedge.net/uploads/databinding.gif" alt="angularjs data binding"/>
