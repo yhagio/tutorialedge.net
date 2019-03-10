@@ -1,48 +1,46 @@
 {{ partial "header.html" . }}
 
 <div class="top-bar profile">
-    <div class="container">
-        <h2>Login / Register</h2>
-        <p>Join the thousands of developers currently registered on the site!</p>
-    </div>
+  <div class="container">
+    <h2>Login / Register</h2>
+    <p>Join the thousands of developers currently registered on the site!</p>
+  </div>
 </div>
 
-<div class="course-listing">
-    <div class="container">
-        <div class="row">
+<div class="content">
+  <div id="loading">
+    <img src="images/logo.png" alt="Loading spinner" />
+  </div>
 
-            <div class="col-lg-6 offset-lg-3">
-                <div class="course-progress-box login-box">
-                    <h2>Login/Register</h2>
-                        <form>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp" placeholder="Enter email">
-                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with
-                                    anyone else.</small>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1"
-                                    placeholder="Password">
-                            </div>
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                            </div>
-                            <br/>
-                            <button type="submit" class="btn btn-success">Submit</button>
-                        </form>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Auth0 - JavaScript</a>
 
+        <button id="btn-home-view" class="btn btn-primary btn-margin">
+          Home
+        </button>
+        <button id="qsLoginBtn" class="btn btn-primary btn-margin">
+          Log In
+        </button>
 
-                </div>
-                <div class="clear"></div>
-            </div>
-
-        </div>
+        <button id="qsLogoutBtn" class="btn btn-primary btn-margin">
+          Log Out
+        </button>
+      </div>
     </div>
-</div>
+  </nav>
 
+  <main class="container">
+    <!-- home view -->
+    <div id="home-view">
+      <h4>Hello</h4>
+    </div>
+
+    <div id="login-view">
+      <h4>Hi</h4>
+    </div>
+  </main>
+</div>
 
 {{ partial "footer.html" . }}

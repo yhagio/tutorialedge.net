@@ -9,6 +9,11 @@ title: Get Involved
 twitter: https://twitter.com/Elliot_F
 ---
 
+<picture>
+  <source srcset="/images/ai.webp">
+  <img src="/images/ai.png" alt="AI">
+</picture>
+
 # Sanguine Lapithae colla latus oracula ignibus
 
 Lorem `markdownum` coniugium _levati sustollit tamen_ iuvenem,

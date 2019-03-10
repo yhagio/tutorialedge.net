@@ -1,20 +1,22 @@
-import Profile from './profile'
-import Search from './search';
-import Login from './login';
+import axios from "axios";
+import Search from "./search/search.js";
+import Profile from "./profile/profile.js";
+import Utils from "./utils/utils.js";
 
-// kicks off search and the profile system
-function init() {
-    console.log(window.location.pathname);
-    if(window.location.pathname === '/search/') {
-        let search = new Search();
+class Main {
+  constructor() {
+    // load in site utility script
+    this.utils = new Utils();
+
+    // match corresponding script to 
+    if (window.location.pathname === "/search/") {
+      this.search = new Search();
     }
-    if(window.location.pathname === '/login/') {
-        let login = new Login();
+    if (window.location.pathname === "/profile/") {
+      this.profile = new Profile();
     }
-    if(window.location.pathname === '/profile/') {
-        let profile = new Profile();
-    }
+  }
 }
 
 // main entry point
-init();
+let main = new Main();
