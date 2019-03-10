@@ -222,7 +222,7 @@ If we save everything, we should then see that, whenever we receive a new
 message from our WebSocket endpoint, it renders nicely within our `ChatHistory`
 component!
 
-![Chat Application Screenshot](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/chat-app-go-react/screenshot-02.png)
+![Chat Application Screenshot](https://images.tutorialedge.net/images/chat-app-go-react/screenshot-02.png)
 
 # Conclusion
 

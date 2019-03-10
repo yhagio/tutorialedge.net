@@ -201,7 +201,7 @@ something like so:
 
 And the final project should look something like so:
 
-![VueJS routing tutorial](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/vuejs-routing-tutorial-01.png)
+![VueJS routing tutorial](https://images.tutorialedge.net/vuejs-routing-tutorial-01.png)
 
 I threw in a bit of css for this one:
 

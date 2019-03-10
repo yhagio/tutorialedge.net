@@ -80,7 +80,7 @@ be able to navigate to in our browser - `http://localhost:8080`. When you
 navigate to `http://localhost:8080` within your browser, you should see your
 newly created VueJS application running:
 
-![VueJS up and running!](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/hackernews-clone/screenshot-01.png)
+![VueJS up and running!](https://images.tutorialedge.net/images/hackernews-clone/screenshot-01.png)
 
 # Project Structure
 

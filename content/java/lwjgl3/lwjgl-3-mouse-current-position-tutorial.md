@@ -59,7 +59,7 @@ glfwSetCursorPosCallback(window, mouseCallback = new MouseHandler());
 And that should be it all done, you should now be seeing the cursors position
 outputted to the console.
 
-<img style="width: 100%; height: auto;" src="/uploads/articles/cursor-pos-console.PNG" />
+<img style="width: 100%; height: auto;" src="https://images.tutorialedge.net/uploads/articles/cursor-pos-console.PNG" />
 
 # Main Class
 

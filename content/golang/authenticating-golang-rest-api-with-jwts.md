@@ -108,7 +108,7 @@ work:
 Our architecture diagram is going to end up looking a little something like
 this:
 
-![architecture-diagram](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/golang/go-jwt-tutorial/diagram-01.png)
+![architecture-diagram](https://images.tutorialedge.net/images/golang/go-jwt-tutorial/diagram-01.png)
 
 ## Our Server
 

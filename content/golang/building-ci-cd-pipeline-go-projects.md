@@ -81,12 +81,12 @@ open-source project. You'll have to register an account with them if you haven't
 already, from there, you'll then be able to find the project you want to enable
 and you can toggle it:
 
-![Setup Travis](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/golang/go-ci-pipeline/screenshot-04.png)
+![Setup Travis](https://images.tutorialedge.net/images/golang/go-ci-pipeline/screenshot-04.png)
 
 This will then take you to a build page for your repository, which will look a
 little something like this, but with no builds:
 
-![travis homepage](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/golang/go-ci-pipeline/screenshot-05.png)
+![travis homepage](https://images.tutorialedge.net/images/golang/go-ci-pipeline/screenshot-05.png)
 
 Once you have successfully set this up, it's time to go about adding a
 `.travis.yml` file to the root of your project. When you add this, Travis-CI
@@ -256,7 +256,7 @@ In order to do this, we need to go to the `Settings` tab within our github
 project and check the box that asks
 `Require pull request reviews before merging`:
 
-![setting up reviewers](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/golang/go-ci-pipeline/screenshot-01.png)
+![setting up reviewers](https://images.tutorialedge.net/images/golang/go-ci-pipeline/screenshot-01.png)
 
 You'll also want to check the `Require status cheks to pass before merging`
 option to ensure that the pipeline we have put in place is actively enforced for
@@ -270,15 +270,15 @@ effective continuous integration pipeline for our Go project.
 Now that everything is in place, it is time to test it all works. Create a new
 branch on your project and open a new pull request to `master` from your branch.
 
-![branch to master](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/golang/go-ci-pipeline/screenshot-02.png)
+![branch to master](https://images.tutorialedge.net/images/golang/go-ci-pipeline/screenshot-02.png)
 
 This will then go off, and attempt to run our travis-CI pipeline:
 
-![travis-ci](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/golang/go-ci-pipeline/screenshot-03.png)
+![travis-ci](https://images.tutorialedge.net/images/golang/go-ci-pipeline/screenshot-03.png)
 
 And finally, you will be able to merge (if approved) into master:
 
-![merge to master](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/golang/go-ci-pipeline/screenshot-04.png)
+![merge to master](https://images.tutorialedge.net/images/golang/go-ci-pipeline/screenshot-04.png)
 
 If you have set up your branch rules correctly, any outsiders attempting to
 submit a PR into your project will have to be reviewed and approved over and

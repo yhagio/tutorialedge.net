@@ -27,7 +27,7 @@ systems.
 > **Note -** It's important to note that performance tweaking should typically
 > be done after the system is up and running.
 
-> _"Premature optimization is the root of all evil"_ - Donald Knuth
+> _"Premature optimization is the root of all evil"_ - Donald Knuth  
 
 In this tutorial, we are going to look at how we can perform standard
 benchmarking tests for very simple functions and then move on to more advanced

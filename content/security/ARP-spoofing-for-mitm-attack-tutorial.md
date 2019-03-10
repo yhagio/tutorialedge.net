@@ -60,13 +60,13 @@ Now insert the IP address for the access point, which is `10.0.2.1`. You’ll t
 the access point that the client IP address has your MAC address, so basically,
 you’ll tell the access point that you are the target client:
 
-![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/security/image1-17.png)
+![](https://images.tutorialedge.net/images/security/image1-17.png)
 
 After this, you’ll have to run arpspoof again, and instead of telling the access
 point that you are the target client, you’ll tell the client that you are the
 access point. So you’ll need to flip the IPs:
 
-![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/security/image2-19.png)
+![](https://images.tutorialedge.net/images/security/image2-19.png)
 
 By running the above commands you’ll fool the access point and the client, and
 you’ll let the packets flow through your device. Since Windows is the target
@@ -75,13 +75,13 @@ Windows machine, it will show you the ARP table. You can see in the following
 screenshot that the IP address for the access point is `10.0.2.1` and its MAC
 address is `52-54-00-12-35-00`. This is stored in the ARP table:
 
-![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/security/image3-21.png)
+![](https://images.tutorialedge.net/images/security/image3-21.png)
 
 Now, once you perform the attack, you’ll see that the MAC
 address `08-00-27-0b-91-66` for the target access point will change and it will
 be the attacker's MAC address:
 
-![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/security/image4-23.png)
+![](https://images.tutorialedge.net/images/security/image4-23.png)
 
 You’ll also need to enable IP forwarding so that when the packets flow through
 your device they don't get dropped. This way, each packet that goes through your
@@ -119,12 +119,12 @@ virtual card.
 If you do ifconfig just to see your interfaces, you'll see that you have
 the eth0 card connected to the internal network at 10.0.2.15:
 
-![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/security/image5-25.png)
+![](https://images.tutorialedge.net/images/security/image5-25.png)
 
 Now, go to the Windows machine and run arp -a to see your MAC address. You’ll
 see that the the gateway is at 10.0.2.1 and the MAC address ends with 35-00:
 
-![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/security/image6-27.png)
+![](https://images.tutorialedge.net/images/security/image6-27.png)
 
 Now, run the ARP poisoning attack and see whether the MAC address changes and
 whether you can become the MITM.
@@ -142,14 +142,14 @@ The interface specifies your virtual interface, but you can specify your
 wireless card if it's connected to the wireless network. So, hit Enter to get
 the tool running:
 
-![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/security/image7-29.png)
+![](https://images.tutorialedge.net/images/security/image7-29.png)
 
 Now go to the Windows machine, run arp -a, and see whether you’ve managed to
 become the center of the connection. In the next screenshot, you can see that
 the MAC address has changed from 35-00 to 91-66, and it is the same MAC address
 as the virtual interface that you have in Kali, so it ends with 91-66:
 
-![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/security/image8-31.png)
+![](https://images.tutorialedge.net/images/security/image8-31.png)
 
 So, this means that you're the MITM at the moment, and the tool automatically
 starts a sniffer for you. So, instead of arpspoof, which only places you in the
@@ -164,7 +164,7 @@ Enter the Email Address as zaid@isecur1ty.org and 123456 as Password. Now, i
 you go back to the MITMf console, you’ll see that the username and password have
 been captured:
 
-![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/security/image9-33.png)
+![](https://images.tutorialedge.net/images/security/image9-33.png)
 
 So, basically, you can capture any username and password that is entered in the
 computer that you're ARP spoofing. You can also see all the URLs that the person

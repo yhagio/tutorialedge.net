@@ -73,7 +73,7 @@ on your system.
 
 The following is an example of the nvidia-smi command:
 
-![nvidia-smi-command](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/python/data-science/setting-dev-env-building-gan/image1-17.png)
+![nvidia-smi-command](https://images.tutorialedge.net/images/python/data-science/setting-dev-env-building-gan/image1-17.png)
 
 The output of nvidia-smi will show your GPU any processes you have running and
 the current driver version installed.
@@ -83,7 +83,7 @@ the current driver version installed.
 The following is an Nvidia-Docker hierarchy that you need to understand before
 installing it:
 
-![nvidia-docker](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/python/data-science/setting-dev-env-building-gan/image2-19.png)
+![nvidia-docker](https://images.tutorialedge.net/images/python/data-science/setting-dev-env-building-gan/image2-19.png)
 
 What is Docker? According to the Docker website, the keyword for it
 is lightweight. Docker containers running on a single machine share that
@@ -213,7 +213,7 @@ docker run --runtime=nvidia --rm nvidia/cuda nvidia-smi Your output should look
 similar to the nvidia-smi command example we showed in the Installing NVIDIA
 driver for your GPU section:
 
-![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/python/data-science/setting-dev-env-building-gan/image3-21.png)
+![](https://images.tutorialedge.net/images/python/data-science/setting-dev-env-building-gan/image3-21.png)
 
 Now you're ready to move onto actually building a development environment.
 

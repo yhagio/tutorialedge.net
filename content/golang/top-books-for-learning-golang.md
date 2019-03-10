@@ -49,7 +49,7 @@ started on your Golang journey.
 
 ### Alan A. A. Donovan & Brian W. Kernignhan (_Addison-Wesley, 2015_)
 
-<img alt="The Go Programming Language" src="https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/books/the-go-programming-language.jpg" class="book-img" />
+<img alt="The Go Programming Language" src="https://images.tutorialedge.net/books/the-go-programming-language.jpg" class="book-img" />
 
 The Go Programming language by Alan A. A. Donovan and Brian W. Kernighan is an
 absolutely fantastic book that I would highly recommend to everyone wanting to
@@ -93,7 +93,7 @@ such as foreign function interfaces (FFI) and calling out to C code.
 
 ### William Kennedy, Brian Ketelsen, Erik St. Martin (_Manning, 2015_)
 
-<img alt="Go In Action" class="book-img" src="https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/books/go-in-action.jpg"/>
+<img alt="Go In Action" class="book-img" src="https://images.tutorialedge.net/books/go-in-action.jpg"/>
 
 Go in Action represents an excellent introduction to Google's own Go programming
 language. Within the confines of the 250 odd pages it manages to cover
@@ -121,7 +121,7 @@ different.
 
 ### Caleb Doxsey (_O'Reilly, 2016r_)
 
-<img alt="Introducing Go" src="https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/books/introducing-go.jpg" class="book-img"/>
+<img alt="Introducing Go" src="https://images.tutorialedge.net/books/introducing-go.jpg" class="book-img"/>
 
 Introducing Go by Caleb Doxsey is a fantastic, affordable O'Reilly book that is
 ideal for those of you with no knowledge of the Go programming language. The
@@ -200,7 +200,7 @@ with the go programming language.
 
 ### Katherine Cox-Buday (_O'Reilly, 2017_)
 
-<img alt="Network programming with go" class="book-img" src="https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/books/concurrency-in-go.jpg"/>
+<img alt="Network programming with go" class="book-img" src="https://images.tutorialedge.net/books/concurrency-in-go.jpg"/>
 
 If you are interested in building the highest-of-performance Go based
 applications, this book is for you. It helps you ground yourself in the

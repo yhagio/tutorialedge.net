@@ -50,7 +50,7 @@ course free, it'll mean more people can enjoy it and learn from it.
 By the end of this course, you should have an application that looks something
 like this:
 
-![Chat Application Screenshot](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/chat-app-go-react/screenshot-02.png)
+![Chat Application Screenshot](https://images.tutorialedge.net/images/chat-app-go-react/screenshot-02.png)
 
 ## Under Construction
 

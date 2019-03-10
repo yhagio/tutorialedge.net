@@ -130,13 +130,13 @@ browser's history via API requests should we wish!
 When you save this and navigate to your application in the browser, you should
 see all of our storie's titles rendering as HTML links.
 
-![Our Stories now have links](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/hackernews-clone/screenshot-08.png)
+![Our Stories now have links](https://images.tutorialedge.net/images/hackernews-clone/screenshot-08.png)
 
 When you subsequently click on a link, you should see it take you through to our
 newly defined `Single` component with the `ID` appended to the end of our URL
 like so:
 
-![Our single component](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/hackernews-clone/screenshot-09.png)
+![Our single component](https://images.tutorialedge.net/images/hackernews-clone/screenshot-09.png)
 
 # Querying The Comments API
 
@@ -333,7 +333,7 @@ body {
 Once you have made the above changes, you should see something like this render
 out into your browser:
 
-![The finished Product](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/hackernews-clone/screenshot-10.png)
+![The finished Product](https://images.tutorialedge.net/images/hackernews-clone/screenshot-10.png)
 
 This project is starting to look a little more polished, a little closer to
 being finished. However, there is still a lot to be improved upon. For instance,

@@ -21,6 +21,10 @@ tutorial such as creating a WebSocket server and using WebSockets to communicate
 in real-time with a frontend application, as well as how you can interact with
 an existing REST API to get the subscriber stats we need.
 
+# Video Tutorial
+
+{{< youtube id="n3BQLHtsrkM" autoplay="false" >}}
+
 # Getting Started
 
 First things first, we'll want to create a new directory to work in. I'll be

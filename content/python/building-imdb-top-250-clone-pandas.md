@@ -17,7 +17,7 @@ The Internet Movie Database (IMDB) maintains a chart called the IMDB Top
 metric. All the movies in this list are non-documentary, theatrical releases
 with a runtime of at least 45 minutes and over 250,000 ratings:
 
-![IMDB Recommender system](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/python/recommender-system-python/image1-17.png)
+![IMDB Recommender system](https://images.tutorialedge.net/images/python/recommender-system-python/image1-17.png)
 
 This chart can be considered the simplest of recommenders. It doesn't take into
 consideration the tastes of a particular user nor does it try to deduce
@@ -103,7 +103,7 @@ Mathematically, it can be represented as follows:
 
 Weighted Rating (WR) =
 
-![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/python/recommender-system-python/image2-19.png)
+![](https://images.tutorialedge.net/images/python/recommender-system-python/image2-19.png)
 
 The following apply:
 
@@ -219,7 +219,7 @@ q_movies['score'] = q_movies.apply(weighted_rating, axis=1)
 There is just one step left. You now need to sort your DataFrame on the basis of
 the score you just computed and output the list of top movies:
 
-![Our Recommendation system](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/python/recommender-system-python/image3-21.png)
+![Our Recommendation system](https://images.tutorialedge.net/images/python/recommender-system-python/image3-21.png)
 
 And voila! You have just built your recommender. Congratulations!
 
@@ -358,7 +358,7 @@ OUTPUT:
 <class 'list'>
 ```
 
-![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/python/recommender-system-python/image4-23.png)
+![](https://images.tutorialedge.net/images/python/recommender-system-python/image4-23.png)
 
 You now have all the tools required to convert the genres feature into the
 Python dictionary format.
@@ -480,7 +480,7 @@ def build_chart(gen_df, percentile=0.8):
 You may want recommendations for animated movies between 30 minutes and 2 hours
 in length, and released anywhere between 1990 and 2005. See the results:
 
-![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/python/recommender-system-python/image5-25.png)
+![](https://images.tutorialedge.net/images/python/recommender-system-python/image5-25.png)
 
 You can see that the movies that it outputs satisfy all the conditions you
 passed in as input. Since you applied IMDB's metric, you can also observe that

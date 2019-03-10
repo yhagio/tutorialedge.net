@@ -30,7 +30,7 @@ Cognito service. We can do this by navigating to the Cognito service page and
 clicking "Manage Pools". Once we've done that, you should see a page that looks
 quite similar to this:
 
-![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/vuejs-blog-aws/screenshot-09.png)
+![](https://images.tutorialedge.net/images/vuejs-blog-aws/screenshot-09.png)
 
 You'll notice the blue `Create a user pool` button in the top right hand corner,
 click on it and we'll walk through the options.
@@ -38,12 +38,12 @@ click on it and we'll walk through the options.
 First, we'll specify the name, in this case I've gone for a reasonably apt name:
 `vuejs-blog-aws`:
 
-![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/vuejs-blog-aws/screenshot-10.png)
+![](https://images.tutorialedge.net/images/vuejs-blog-aws/screenshot-10.png)
 
 Next, we'll want to click on the `Review defaults` button below where it asks
 how we wish to create our pool.
 
-![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/vuejs-blog-aws/screenshot-11.png)
+![](https://images.tutorialedge.net/images/vuejs-blog-aws/screenshot-11.png)
 
 The standard settings are perfect for what we are trying to achieve, so lets
 leave everything as it stands and click create at the bottom of the page.
@@ -52,12 +52,12 @@ We should then see our console go off and provision the pool for us. If
 everything went to plan then you should see a screen similar to the one below,
 it'll contain our Pool ID and it's ARN.
 
-![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/vuejs-blog-aws/screenshot-12.png)
+![](https://images.tutorialedge.net/images/vuejs-blog-aws/screenshot-12.png)
 
 Finally, we'll want to add an `App Client` to our user pool so that we can start
 to interact with the cognito service from our frontend blog:
 
-![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/vuejs-blog-aws/screenshot-13.png)
+![](https://images.tutorialedge.net/images/vuejs-blog-aws/screenshot-13.png)
 
 Once, we've done this, we should be good to move onto the next part of our
 project and create authenticated Routes and a sign-in.

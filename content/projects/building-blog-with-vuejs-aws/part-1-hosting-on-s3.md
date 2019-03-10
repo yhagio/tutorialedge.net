@@ -183,7 +183,7 @@ obtain from your AWS account from the `IAM` section of your AWS console.
 You should see your credentials look like this within your travis.ci project
 settings page:
 
-![Adding AWS credentials](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/vuejs-blog-aws/screenshot-01.png)
+![Adding AWS credentials](https://images.tutorialedge.net/images/vuejs-blog-aws/screenshot-01.png)
 
 Now, whenever we commit a new change to our repo, we should see our travis build
 kick off and run through the two stages of our project's deployment that we've

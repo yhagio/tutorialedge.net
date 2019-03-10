@@ -448,7 +448,7 @@ like this:
 Adding the previous code to our HTML, with the JS updates already in place as
 described earlier, we will get the following result:
 
-![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/javascript/vuejs/components-templates-props/image1-17.png)
+![](https://images.tutorialedge.net/images/javascript/vuejs/components-templates-props/image1-17.png)
 
 We have added a single card component in our JS; however, as we can see in the
 previous example, we can now reuse it in our HTML as many times as needed.
@@ -647,7 +647,7 @@ And here is the HTML:
 
 The result of adding the previous code can be seen in this screenshot:
 
-![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/javascript/vuejs/components-templates-props/image2-19.png)
+![](https://images.tutorialedge.net/images/javascript/vuejs/components-templates-props/image2-19.png)
 
 # Conclusion
 

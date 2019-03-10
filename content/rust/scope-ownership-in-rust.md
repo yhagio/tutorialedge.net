@@ -44,7 +44,7 @@ want to remove the stuff stored in one of the boxes underneath, we first have to
 remove the boxes above it. Here's a diagram of what I'm talking about, with
 access to the boxes underneath blocked by the ones above them:
 
-![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/rust/image1-17.png)
+![](https://images.tutorialedge.net/images/rust/image1-17.png)
 
 When a Rust block expression starts, it makes a note of how tall the stack is
 and, when the block ends, it removes things from the stack until the stack is of
@@ -151,7 +151,7 @@ pub fn uncertain_ownership(switch: bool) {
 When we try to compile the `uncertain_ownership` function, we get output like
 this from the compiler:
 
-![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/rust/image2-19.png)
+![](https://images.tutorialedge.net/images/rust/image2-19.png)
 
 # Conclusion
 

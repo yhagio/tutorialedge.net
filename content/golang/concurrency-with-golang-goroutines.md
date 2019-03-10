@@ -215,3 +215,9 @@ speed up various parts of our systems and create performant applications.
 
 Hopefully, you found this tutorial useful, if you did then please let me know in 
 the comments section below!
+
+## Further Reading
+
+* - [Go sync.WaitGroup Tutorial](/golang/go-waitgroup-tutorial/)
+* - [Go Mutex Tutorial](/golang/go-mutex-tutorial/)
+* - [Go Channels Tutorial](/golang/go-channels-tutorial/)

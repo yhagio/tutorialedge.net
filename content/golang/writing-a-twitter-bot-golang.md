@@ -206,7 +206,7 @@ log.Printf("%+v\n", tweet)
 And, if everything goes to plan, we should see that a new tweet from our account
 has popped up on our timelines:
 
-![](https://s3-eu-west-1.amazonaws.com/images.tutorialedge.net/images/golang/go-twitter-bot/tweet.png)
+![](https://images.tutorialedge.net/images/golang/go-twitter-bot/tweet.png)
 
 # Searching Tweets
 
