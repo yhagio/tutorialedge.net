@@ -1,0 +1,18 @@
+{{ if eq .Params.author "Elliot Forbes" }}
+<div class="author-container">
+  <div class="author-image">
+    <img src="{{ .Params.authorImage }}" alt="{{ .Params.author }}" />
+  </div>
+  <div class="author-info">
+    <h2>
+      {{ .Params.author }}<br />
+      <small
+        >Twitter: <a href="https://twitter.com/elliot_f">@Elliot_f</a></small
+      >
+    </h2>
+    <p>
+      Hey, I'm Elliot and I've been working on TutorialEdge for the last 4 years! If you have any tips or suggestions as to how I can make it better, please let me know in the suggestion box below!
+    </p>
+  </div>
+</div>
+{{ end }}

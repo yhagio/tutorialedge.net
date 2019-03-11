@@ -52,19 +52,17 @@
 
 		<div class="col-sm-8">
 			<article class="content">
-
 				{{ .Content }}
-
-				<div class="post_divider"></div>
-
-				{{ partial "suggestion.html" . }}
-
-				{{ partial "social-share.html" . }}
 			</article>
+
+			
+			{{ partial "author.html" . .Params }}
+			
+			{{ partial "suggestion.html" . }}
 		</div>
 
 		<div class="content">
-			{{ partial "comments.html" .}}
+			<!-- {{ partial "comments.html" . }} -->
 		</div>
 
 	</div>
