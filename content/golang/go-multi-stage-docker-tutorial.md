@@ -119,7 +119,7 @@ Now that we've covered the basic concepts, let's take a look at how we could def
 multi-stage Dockerfile that will first compile our application and subsequently run our
 application in a lightweight Docker `alpine` image.
 
-For the purpose of this tutorial, we'll be stealing the code from my new [Go WebSockets Tutorial](/golang/go-websockets-tutorial/) as this demonstrates downloading dependencies and is a non-trivial example and thus closer to a _real_ Go application than a standard `hello world` example.
+For the purpose of this tutorial, we'll be stealing the code from my new [Go WebSockets Tutorial](/golang/go-websocket-tutorial/) as this demonstrates downloading dependencies and is a non-trivial example and thus closer to a _real_ Go application than a standard `hello world` example.
 
 Create a new file within your project's directory called `main.go` and add the following code:
 
