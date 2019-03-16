@@ -21,18 +21,20 @@ By the end of this tutorial, we will have covered the following concepts:
 * How we can build simple multi-stage Dockerfiles for our Go Apps
 
 Docker is a seriously power containerization technology that can be used to easily spin up
-isolated and reproducible environments in which our applications can be built and run.
+isolated and reproducible environments in which our applications can be built and run. 
+It's growing in popularity and more and more cloud service providers are providing native
+docker support to allow you to easily deploy your containerized apps for the world to see!
 
 > _**Note**_ - This tutorial is a follow up to my previous Go + Docker tutorial which can be found here: [Containerizing Your Go Applications with Docker](/golang/go-docker-tutorial/)
 
-# The Need for Multi-Stage Dockerfiles
+# What is The Need for Multi-Stage Dockerfiles?
 
 In order to see why multi-stage Dockerfiles are useful, we'll be creating a simple Dockerfile that 
 features one stage to both build and run our application, and a second Dockerfile which features
 both a builder stage and a production stage. 
 
 Once we've created these two distinct Dockerfiles, we should be able to compare them and hopefully
-see for ourselves just how multi-stage Dockerfiles can improve things!
+see for ourselves just how multi-stage Dockerfiles are preferred over their simpler counterparts!
 
 So, In my previous tutorial, we created a really simple Docker image in which our Go application was both built and run from. This `Dockerfile` looked something like this:
 
@@ -59,13 +61,15 @@ RUN go build -o main .
 CMD ["/app/main"]
 ```
 
-We can create an image from this Dockerfile by calling the `docker build` command like so:
+And with this we could subsequently build our Docker image using a very simple `docker build`
+command:
 
 ```s
 $ docker build -t go-simple .
 ```
 
-Let's check to see if this command has successfully created our new image by calling the `docker images` command in our terminal:
+This would create an image and store it within our local docker image repository and would end up
+looking something like this:
 
 ```s
 $ docker images
@@ -73,9 +77,9 @@ REPOSITORY              TAG                 IMAGE ID            CREATED         
 go-simple               latest              761b9dd5f9a4        4 seconds ago       793MB
 ```
 
-Awesome, we have our `go-simple` docker image up and ready to use. You should hopefully notice that
-last column states that the size of this image is 793MBs in size. This is absolutely massive
-for something that builds and runs a very simple Go application. 
+You should hopefully notice that last column states that the size of this image 
+is 793MBs in size. This is absolutely massive for something that builds and runs 
+a very simple Go application. 
 
 Within this image will be all the packages and dependencies that are needed to both compile and run
 our Go applications. With multi-stage dockerfiles, we can actually reduce the size of these images
@@ -83,13 +87,14 @@ dramatically by splitting things up into two distinct stages.
 
 # A Simple Multi-Stage Dockerfile
 
-Using multi-stage Dockerfiles, we can deconstruct the tasks of building and running our
-Go applications into different stages. Typically we start off with a large image which
+Using multi-stage Dockerfiles, we can pick apart the tasks of building and running our
+Go applications into different stages. Typically, we start off with a large image which
 includes all of the necessary dependencies, packages, etc. needed to compile the binary
-executable of our Go application.
+executable of our Go application. This would be classed as our `builder` stage.
 
 We then take a far more lightweight image for our `run` stage which includes only what is
-absolutely needed in order to run a binary executable. 
+absolutely needed in order to run a binary executable. This would typically be classed as
+a `production` stage or something similar.
 
 ```Dockerfile
 # We use the larger image which includes
@@ -107,7 +112,7 @@ CMD ["./main"]
 ```
 
 By doing it this way, we benefit from a consistent build stage and we benefit from having
-absolutely tiny final images in which our application will run.
+absolutely tiny images in which our application will run in a production environment.
 
 > **Note** - In the above _psuedo-Dockerfile_, I've aliased my images using the `AS` keyword. 
 This can help us differentiate different stages of our Dockerfile and we can use the `--target`
@@ -198,7 +203,6 @@ func main() {
 This can be run locally outside of a docker container using Go version 1.11 and by calling
 `go run ./...`
 
-
 Next, we'll create a `Dockerfile` in the same directory as our `main.go` file above. This will feature a `builder` stage and a `production` stage which will be built from two distinct base 
 images:
 
@@ -233,18 +237,14 @@ standard `docker build` command:
 $ docker build -t go-multi-stage .
 ```
 
-Now, when we compare the sizes of the finished images, we should see a dramatic difference between
-our simple docker image versus our go-multi-stage image. We can attempt to run this by calling
-`docker run`:
+Now, when we compare the sizes of our simple image against our multi-stage image, we should see a dramatic difference in sizes. Our previous, `go-simple` image was roughly 800MB in size, whereas
+this multi-stage image is about 1/80th the size.
 
 ```s
 $ docker images
 REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
 go-multi-stage          latest              12dd51472827        24 seconds ago      12.3MB
 ```
-
-We should see that the new size of this image is around `12.3MB` in size which is massively
-different to our original image which was `793MB` in size!
 
 If we want to try running this to verify it all works, we can do so using the following `docker run` command:
 
@@ -255,6 +255,10 @@ $ docker run -d -p 8080:8080 go-multi-stage
 This will kick off our docker container running in `-d` detached mode and we should be able to
 open up `http://localhost:8080` in our browser and see our Go application returning the 
 `Hello World` message back to us!
+
+> **Exercise** - copy the `index.html` from the [Go WebSockets Tutorial](/golang/go-websocket-tutorial/) and open that in a browser, you should see that it connects into
+our containerized Go application and you should be able to view the logs using the 
+`docker logs` command.
 
 # Conclusion
 
