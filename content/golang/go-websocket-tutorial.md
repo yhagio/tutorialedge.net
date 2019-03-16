@@ -340,6 +340,8 @@ a simple WebSocket based application in Go!
 
 So, hopefully you enjoyed this tutorial and found it useful! I'm hoping this highlighted some of the main benefits of using WebSockets within your own Go applications!
 
+> **Source Code** - The full source code for this tutorial can be found here: [Go-Websocket-Tutorial](https://github.com/TutorialEdge/Go/tree/master/go-websocket-tutorial)
+
 ## Further Reading
 
 If you enjoyed this article, you may like my tutorial series which utilizes WebSockets to build a Real-Time chat application using both React and Golang. It covers how you would pool 
