@@ -22,6 +22,10 @@ By the end of this tutorial, we should have covered the following:
 For the purpose of this tutorial, we'll be working with the `gorilla/websocket` package
 as I've used it personally in a few production applications to great success.
 
+# Video Tutorial
+
+{{< youtube id="dniVs0xKYKk" autoplay="false" >}}
+
 # WebSockets - What Are They?
 
 So I've covered this a few times in a number of different tutorials, but it's always
@@ -53,7 +57,7 @@ Once this has been done, we can go ahead and define our `main.go` file in which 
 
 ```go
 // main.go
-package go
+package main
 
 import "fmt"
 
