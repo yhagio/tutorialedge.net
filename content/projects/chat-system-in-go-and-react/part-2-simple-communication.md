@@ -135,7 +135,13 @@ import (
 // this will require a Read and Write buffer size
 var upgrader = websocket.Upgrader{
 	ReadBufferSize:  1024,
-	WriteBufferSize: 1024,
+  WriteBufferSize: 1024,
+
+  // We'll need to check the origin of our connection
+  // this will allow us to make requests from our React
+  // development server to here.
+  // For now, we'll do no checking and just allow any connection
+  CheckOrigin: func(r *http.Request) bool { return true },
 }
 
 // define a reader which will listen for
@@ -162,11 +168,6 @@ func reader(conn *websocket.Conn) {
 
 // define our WebSocket endpoint
 func serveWs(w http.ResponseWriter, r *http.Request) {
-  // We'll need to check the origin of our connection
-  // this will allow us to make requests from our React
-  // development server to here.
-  // For now, we'll do no checking and just allow any connection
-  upgrader.CheckOrigin = func(r *http.Request) bool { return true }
 	fmt.Println(r.Host)
 
   // upgrade this connection to a WebSocket
