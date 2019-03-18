@@ -25,7 +25,7 @@ Here's a photo of my setup as it stands today:
 * [_Visual Studio Code_](https://code.visualstudio.com/) - My editor of choice for pretty much everything from Node,
  to Python, to Golang. It's an excellent bit of software that can be extended to suit 
  pretty much everyone's needs.
-    * _Cobolt3 Theme_ - Courtesy of Wes Bos, the Cobolt3 Theme looks incredible. 
+    * _Cobolt2 Theme_ - Courtesy of Wes Bos, the Cobolt2 Theme looks incredible. 
 * [_iTerm2_](https://www.iterm2.com/) - My Terminal of choice which has awesome features such as tabs and split 
 screen capabilities for running multiple things side by side!
 * [_Alfred 3_](https://www.alfredapp.com/) - I've just started working with Alfred but find it an excellent tool for
