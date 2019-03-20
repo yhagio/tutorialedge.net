@@ -60,3 +60,55 @@
 
   }
 </script>
+
+
+<div class="share-buttons">
+    <ul class="social-btns">
+      <li>
+        <a
+          target="_blank"
+          href="https://twitter.com/share?url={{ .Permalink }}"
+          class="social-btn-dissolve twitter"
+        >
+          <i class="ion ion-social-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a
+          target="_blank"
+          href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}"
+          class="social-btn-dissolve facebook"
+        >
+          <i class="ion ion-social-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a
+          target="_blank"
+          href="https://plus.google.com/share?url={{ .Permalink }}"
+          class="social-btn-dissolve google"
+        >
+          <i class="ion ion-social-googleplus"></i>
+        </a>
+      </li>
+      <li>
+        <a
+          target="_blank"
+          href="mailto:?&subject={{ .Title }}&body={{ .Permalink }}"
+          class="social-btn-dissolve tumblr"
+        >
+          <i class="ion ion-ios-email"></i>
+        </a>
+      </li>
+      <li>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{ .Title }}&summary={{ .Params.desc }}"
+          class="social-btn-dissolve linkedin"
+        >
+          <i class="ion ion-social-linkedin"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  

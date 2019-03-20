@@ -1,0 +1,32 @@
+.comments-section {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-bottom: 3em;
+    background: #fff;
+    color: #333;
+    font-size: 16px;
+    .new-comment {
+        .avatar {
+            flex: 1;
+            display: inline-block;
+            position: relative;
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+        }
+        textarea {
+            flex: 9;
+            background-color: #fafbfc;
+            border: 1px solid #efefef;
+            width: 100%;
+            overflow: hidden;
+            overflow-wrap: break-word;
+            padding: 1em 1.2em;
+        }
+    }
+
+    .comment {
+
+    }
+}
