@@ -1,8 +1,7 @@
 ---
 author: Elliot Forbes
 date: 2018-07-14T22:24:26+01:00
-desc:
-  In this tutorial, we are going to look at the various composite types
+desc: In this tutorial, we are going to look at the various composite types
   available in Go
 series: golang
 image: golang.png
@@ -135,18 +134,18 @@ func main() {
 		age  int
 	}
 
-	// our Boss struct
+	// our Team struct
 	type Team struct {
 		name    string
 		players [2]Person
 	}
 
-	// declaring an empty 'Boss'
+	// declaring an empty 'Team'
 	var myTeam Team
 	fmt.Println(myTeam)
 
 	players := [...]Person{Person{name: "Forrest"}, Person{name: "Gordon"}}
-	// declaring a boss with employees
+	// declaring a team with players
 	celtic := Team{name: "Celtic FC", players: players}
   fmt.Println(celtic)
 
