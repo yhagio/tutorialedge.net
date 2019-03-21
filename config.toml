@@ -7,7 +7,7 @@ paginate = 9
 
 # Syntax highlighting stuff
 pygmentsCodeFences = true
-pygmentsOptions = "linenos=table"
+# pygmentsOptions = "linenos=table"
 
 # index for algolia
 [indexes] 
