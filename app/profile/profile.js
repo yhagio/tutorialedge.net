@@ -8,10 +8,6 @@ export default class Profile {
     // }
   }
 
-  logout() {
-
-  }
-
   isLoggedIn() {
     if(document.cookie.indexOf("jwt-token") >= 0) {
       // 1. Validate Users' JWT-Token
