@@ -38,7 +38,7 @@
 	</div>
 </div>
 
-<div class="container">
+<div class="container-fluid container-wrapper">
 	<div class="row no-hidden">
 		<div class="col-sm-4">
 
@@ -54,17 +54,17 @@
 			<article class="content">
 				{{ .Content }}
 			</article>
-
+			
+			<!-- {{ partial "suggestion.html" . }} -->
 			
 			{{ partial "author.html" . .Params }}
-			
-			{{ partial "suggestion.html" . }}
 		</div>
+	</div>
+</div>
 
-		<div class="content">
-			<!-- {{ partial "comments.html" . }} -->
-		</div>
-
+<div class="comments">
+	<div class="container">
+		{{ partial "comments.html" . }}
 	</div>
 </div>
 

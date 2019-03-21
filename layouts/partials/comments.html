@@ -11,19 +11,24 @@
 </script>
 
 <div class="author">
-    <h3>{{ .Page }}</h3>
+    <!-- <h3>{{ .Page }}</h3> -->
 </div>
 
 <div class="comments-section">
-    <div><i class="fa fa-comments"></i></div>
+    <h2><i class="ion ion-android-chat"></i> Comments Section</h2>
     <div class="new-comment">
         <div class="avatar">
             <img src="https://s3.amazonaws.com/codementor/assets/images/avatar/default.png" alt="default avatar">
         </div>
-        <div>
-            <textarea>
-            </textarea>
+        <div class="comment-input">
+            <textarea placeholder="Leave a reply"></textarea>
+            <br/>
+            <div class="comment-actions hidden">
+                <p class="float-left markdown-support"><i class="ion ion-social-markdown"></i> Markdown Supported!</p>
+                <button class="btn btn-primary float-right" disabled>Submit</button>
+            </div>
         </div>
+
     </div>
     <div class="comment">
 
