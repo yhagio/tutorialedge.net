@@ -48,6 +48,26 @@
     }
 
     .comment {
+        margin-top: 20px;
+        display: flex;
+        .author{
+            flex: 1;
+            img {
+                border-radius: 100%;
+                color: white;
+                display: block;
+                width: 75px;
+                margin: auto;
+                margin-top: 15px;
+                height: 75px;
+            }
+        }
+        .comment-body {
+            flex: 5;
+            background-color: white;
+            border: 1px solid #efefef;
+            padding: 40px;
+        }
     }
   }
 }

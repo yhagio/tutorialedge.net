@@ -1,9 +1,6 @@
-export default class Auth {
-    constructor() {
-
+export function isLoggedIn() {
+    if(typeof Cookies.get("jwt-token") !== 'undefined') {
+        return true;
     }
-
-    static isAuthenticated() {
-
-    }
-} 
+    return false;
+}

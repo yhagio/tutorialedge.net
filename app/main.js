@@ -1,17 +1,9 @@
-import Profile from "./profile/profile.js";
+import { initComments } from './comments/comments.js';
 
-class Main {
-  constructor() {
-    // load in site utility script
-    // match corresponding script to 
-    if (window.location.pathname === "/search/") {
-      this.search = new Search();
-    }
-    if (window.location.pathname === "/profile/") {
-      this.profile = new Profile();
-    }
+document.addEventListener("DOMContentLoaded", function(event) {
+  let commentsSection = document.getElementById("comments-section")
+  if(typeof commentsSection !== 'undefined') {
+    initComments();
   }
-}
-
-// main entry point
-let main = new Main();
+});
+  
