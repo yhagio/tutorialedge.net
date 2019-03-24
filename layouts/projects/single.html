@@ -23,13 +23,13 @@
 				<a href="{{.Params.twitter }}">{{ .Params.author }}</a>
 			</span>
 			<span>
-				<i class="ion ion-ios-clock"></i> {{ .ReadingTime }} Minutes
+					<i class="ion ion-ios-clock"></i> {{ .ReadingTime }} Minutes
 			</span>
 			<span>
-				<i class="ion ion-ios-calendar"></i> {{ dateFormat "Jan 2, 2006" .Date }}
+					<i class="ion ion-ios-calendar"></i> {{ dateFormat "Jan 2, 2006" .Date }}
 			</span>
 			<span>
-				<i class="ion ion-pricetags"></i>
+				<i class="ion ion-pricetags"></i> 
 				{{ range .Params.tags }}
 				<a href="/tags/{{.}}"><span class="badge badge-pill badge-info">{{ . }}</span></a>
 				{{ end }}
@@ -55,13 +55,15 @@
 				{{ .Content }}
 			</article>
 		</div>
-
-		<div class="content">
-			{{ partial "comments.html" .}}
-		</div>
-
 	</div>
 </div>
+
+<div class="comments">
+	<div class="container">
+		{{ partial "comments.html" . }}
+	</div>
+</div>
+	
 
 
 {{ partial "footer.html" . }}

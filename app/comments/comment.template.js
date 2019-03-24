@@ -1,13 +1,14 @@
 export default function commentTemplate(comment) {
+    console.log(comment);
     return `<div class="comment">
             <div class="author">
                 <div class="icon">
-                    <img src="https://images.tutorialedge.net/images/logo.png" alt="">
+                    <img src="${comment.comment.picture}" alt="">
                 </div>
             </div>
             <div class="comment-body">
-                <h4>${comment.author}<br/> <small>${comment.date}</small></h4>
-                ${comment.body}
+                <h4>${comment.comment.author}<br/> <small>${comment.comment.date}</small></h4>
+                ${comment.comment.body}
             </div>
         </div>
         `

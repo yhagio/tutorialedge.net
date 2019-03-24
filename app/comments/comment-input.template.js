@@ -5,7 +5,7 @@ export default function commentInput(user) {
             <img src="${user.user.picture}" alt="default avatar">
         </div>
         <div class="comment-input" id="comment-input">
-            <textarea placeholder="Leave a reply"></textarea>
+            <textarea id="comment-body" placeholder="Leave a reply"></textarea>
             <br/>
             <div class="comment-actions hidden">
                 <button id="comment" class="btn btn-primary float-right">
