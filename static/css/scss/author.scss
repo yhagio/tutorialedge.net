@@ -2,7 +2,8 @@
     display: flex;
     border-top: 1px solid rgb(230, 236, 241);
     padding-top: 40px;
-
+    padding-bottom: 40px;
+    width: 100%;
     .author-image {
         flex: 1;
         > img {

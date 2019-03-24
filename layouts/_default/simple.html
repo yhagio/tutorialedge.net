@@ -52,26 +52,18 @@
 
 		<div class="col-sm-8">
 			<article class="content">
-
 				{{ .Content }}
-
-				<div class="post_divider"></div>
-
-				{{ partial "suggestion.html" . }}
-
-				{{ partial "social-share.html" . }}
 			</article>
 		</div>
-
-		<div class="content">
-			{{ partial "comments.html" .}}
-		</div>
-
 	</div>
 </div>
 
-<script>
-	// var sidebar = new StickySidebar('#sidebar', {topSpacing: 20});
-</script>
+<div class="comments">
+	<div class="container">
+		{{ partial "comments.html" . }}
+	</div>
+</div>
+	
+
 
 {{ partial "footer.html" . }}

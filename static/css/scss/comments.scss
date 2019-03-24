@@ -1,32 +1,73 @@
-.comments-section {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+.comments {
+  background-color: #f8f8f8;
+  width: 100%;
+  padding-bottom: 40px;
+  border-top: 1px solid rgb(230, 236, 241);
+  h2 {
+      padding-bottom: 20px;
+  }
+  .comments-section {
     margin-bottom: 3em;
-    background: #fff;
     color: #333;
     font-size: 16px;
+    width: 100%;
+
+    padding-top: 40px;
     .new-comment {
-        .avatar {
-            flex: 1;
-            display: inline-block;
-            position: relative;
-            width: 40px;
-            height: 40px;
-            border-radius: 100%;
+      display: flex;
+      .avatar {
+        flex: 1;
+        display: inline-block;
+        position: relative;
+
+        img {
+          border-radius: 100%;
+          width: 60px;
+          height: 60px;
+          display: block;
+          margin: auto;
+          margin-top: 15px;
         }
+      }
+      .comment-input {
+        flex: 6;
         textarea {
-            flex: 9;
-            background-color: #fafbfc;
-            border: 1px solid #efefef;
-            width: 100%;
-            overflow: hidden;
-            overflow-wrap: break-word;
-            padding: 1em 1.2em;
+          background-color: #fff;
+          border: 1px solid #efefef;
+          width: 100%;
+          overflow: hidden;
+          overflow-wrap: break-word;
+          padding: 1em 1.2em;
         }
+
+        .markdown-support {
+            color: #777;
+        }
+
+      }
     }
 
     .comment {
-
+        margin-top: 20px;
+        display: flex;
+        .author{
+            flex: 1;
+            img {
+                border-radius: 100%;
+                color: white;
+                display: block;
+                width: 75px;
+                margin: auto;
+                margin-top: 15px;
+                height: 75px;
+            }
+        }
+        .comment-body {
+            flex: 5;
+            background-color: white;
+            border: 1px solid #efefef;
+            padding: 40px;
+        }
     }
+  }
 }

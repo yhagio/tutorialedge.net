@@ -23,6 +23,7 @@ In order to explain this better, let's think about a real-world example where a
 normal queueing system may not be the best idea. Let's imagine you were
 implementing a queuing system for a hospital's Accident and Emergency ward.
 
+
 If you were to use a traditional queue for people coming into the ward then you
 would see people with gunshot wounds or serious issues having to wait behind
 people who may require nothing more than an x-ray and possibly a cast over a

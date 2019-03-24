@@ -7,7 +7,7 @@ twitter: https://twitter.com/elliot_f
 series: golang
 image: golang.png
 tags:
-- docker
+  - docker
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
@@ -17,11 +17,11 @@ your production Go applications.
 
 By the end of this tutorial, we will have covered the following concepts:
 
-* What Multi-stage Dockerfiles are.
-* How we can build simple multi-stage Dockerfiles for our Go Apps
+- What Multi-stage Dockerfiles are.
+- How we can build simple multi-stage Dockerfiles for our Go Apps
 
 Docker is a seriously power containerization technology that can be used to easily spin up
-isolated and reproducible environments in which our applications can be built and run. 
+isolated and reproducible environments in which our applications can be built and run.
 It's growing in popularity and more and more cloud service providers are providing native
 docker support to allow you to easily deploy your containerized apps for the world to see!
 
@@ -29,9 +29,9 @@ docker support to allow you to easily deploy your containerized apps for the wor
 
 # What is The Need for Multi-Stage Dockerfiles?
 
-In order to see why multi-stage Dockerfiles are useful, we'll be creating a simple Dockerfile that 
+In order to see why multi-stage Dockerfiles are useful, we'll be creating a simple Dockerfile that
 features one stage to both build and run our application, and a second Dockerfile which features
-both a builder stage and a production stage. 
+both a builder stage and a production stage.
 
 Once we've created these two distinct Dockerfiles, we should be able to compare them and hopefully
 see for ourselves just how multi-stage Dockerfiles are preferred over their simpler counterparts!
@@ -49,7 +49,7 @@ RUN mkdir /app
 # We copy everything in the root directory
 # into our /app directory
 ADD . /app
-# We specify that we now wish to execute 
+# We specify that we now wish to execute
 # any further commands inside our /app
 # directory
 WORKDIR /app
@@ -77,13 +77,13 @@ REPOSITORY              TAG                 IMAGE ID            CREATED         
 go-simple               latest              761b9dd5f9a4        4 seconds ago       793MB
 ```
 
-You should hopefully notice that last column states that the size of this image 
-is 793MBs in size. This is absolutely massive for something that builds and runs 
-a very simple Go application. 
+You should hopefully notice that last column states that the size of this image
+is 793MBs in size. This is absolutely massive for something that builds and runs
+a very simple Go application.
 
 Within this image will be all the packages and dependencies that are needed to both compile and run
 our Go applications. With multi-stage dockerfiles, we can actually reduce the size of these images
-dramatically by splitting things up into two distinct stages. 
+dramatically by splitting things up into two distinct stages.
 
 # A Simple Multi-Stage Dockerfile
 
@@ -98,12 +98,12 @@ a `production` stage or something similar.
 
 ```Dockerfile
 # We use the larger image which includes
-# all of the dependencies that we need to 
+# all of the dependencies that we need to
 # compile our program
 FROM bigImageWithEverything AS Builder
 RUN go build -o main ./...
 
-# We then define a secondary stage which 
+# We then define a secondary stage which
 # is built off a far smaller image which
 # has the absolute bare minimum needed to
 # run our binary executable application
@@ -114,13 +114,13 @@ CMD ["./main"]
 By doing it this way, we benefit from a consistent build stage and we benefit from having
 absolutely tiny images in which our application will run in a production environment.
 
-> **Note** - In the above _psuedo-Dockerfile_, I've aliased my images using the `AS` keyword. 
-This can help us differentiate different stages of our Dockerfile and we can use the `--target`
-flag to build specific stages.
+> **Note** - In the above _psuedo-Dockerfile_, I've aliased my images using the `AS` keyword.
+> This can help us differentiate different stages of our Dockerfile and we can use the `--target`
+> flag to build specific stages.
 
 # A Real-Life Example
 
-Now that we've covered the basic concepts, let's take a look at how we could define a real 
+Now that we've covered the basic concepts, let's take a look at how we could define a real
 multi-stage Dockerfile that will first compile our application and subsequently run our
 application in a lightweight Docker `alpine` image.
 
@@ -199,11 +199,11 @@ func main() {
 }
 ```
 
-> **Note** - I have initialized this project to use go modules using the `go mod init` command. 
-This can be run locally outside of a docker container using Go version 1.11 and by calling
-`go run ./...`
+> **Note** - I have initialized this project to use go modules using the `go mod init` command.
+> This can be run locally outside of a docker container using Go version 1.11 and by calling
+> `go run ./...`
 
-Next, we'll create a `Dockerfile` in the same directory as our `main.go` file above. This will feature a `builder` stage and a `production` stage which will be built from two distinct base 
+Next, we'll create a `Dockerfile` in the same directory as our `main.go` file above. This will feature a `builder` stage and a `production` stage which will be built from two distinct base
 images:
 
 ```Dockerfile
@@ -253,17 +253,17 @@ $ docker run -d -p 8080:8080 go-multi-stage
 ```
 
 This will kick off our docker container running in `-d` detached mode and we should be able to
-open up `http://localhost:8080` in our browser and see our Go application returning the 
+open up `http://localhost:8080` in our browser and see our Go application returning the
 `Hello World` message back to us!
 
 > **Exercise** - copy the `index.html` from the [Go WebSockets Tutorial](/golang/go-websocket-tutorial/) and open that in a browser, you should see that it connects into
-our containerized Go application and you should be able to view the logs using the 
-`docker logs` command.
+> our containerized Go application and you should be able to view the logs using the
+> `docker logs` command.
 
 # Conclusion
 
 To wrap things up, in this tutorial, we looked at how we could define a really simple Dockerfile
-which creates a heavy Docker image. We then looked at how we could optimize this by using 
+which creates a heavy Docker image. We then looked at how we could optimize this by using
 multi-stage `Dockerfile`s which left us with incredibly lightweight images.
 
 If you enjoyed this tutorial, or if you have any comments/feedback/suggestions, then I'd love to hear them in the suggestion box below!
