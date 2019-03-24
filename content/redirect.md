@@ -12,9 +12,9 @@ twitter: https://twitter.com/Elliot_F
     const urlParams = new URLSearchParams(window.location.search);
     const token = urlParams.get('token');
     console.log(token);
-    Cookies.set("jwt-token", token);
+    Cookies.set("jwt-token", token, { secure: true });
     console.log(Cookies.get("jwt-token"));
-    
+
     var redirect_url = Cookies.get("redirect_url");
     // console.log(redirect_url);
     if(typeof redirect_url !== 'undefined') {
