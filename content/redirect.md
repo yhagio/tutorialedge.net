@@ -14,7 +14,6 @@ twitter: https://twitter.com/Elliot_F
     console.log(token);
     Cookies.set("jwt-token", token, { secure: true });
     console.log(Cookies.get("jwt-token"));
-
     var redirect_url = Cookies.get("redirect_url");
     // console.log(redirect_url);
     if(typeof redirect_url !== 'undefined') {
