@@ -15,5 +15,5 @@ deploy:
   region: eu-west-1
   acl: public_read
   on:
-    repo: elliotforbes/tutorialedge-v2
+    repo: elliotforbes/tutorialedge.net
     branch: master
