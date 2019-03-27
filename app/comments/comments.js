@@ -49,7 +49,8 @@ async function submitComment(user) {
             await axios.post("https://api.tutorialedge.net/api/v1/comments/" + pageId, {
                 body: commentBody,
                 author: user.user.displayName,
-                user: user
+                user: user,
+                path: window.location.pathname
             },
             {
                 headers: { Authorization: "Bearer " + Cookies.get("jwt-token")}
