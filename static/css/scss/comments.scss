@@ -7,33 +7,31 @@
       padding-bottom: 20px;
   }
 
-
-  #comment-login {
+  .comment-login {
     background-color: white;
     padding: 40px;
     margin-bottom: 40px;
     border: 1px solid #efefef;
-    .comment-login {
-      display: flex;
-      width: 100%;
-      h2 {
-        padding: 0;
-      }
-      .image {
-        flex: 1;
-        img {
-          width: 125px;
-          height: auto;
-          display: block;
-          margin: auto;
-        }
-      }
-      .register {
-        flex: 3;
-        // background-color: blue;
+    display: flex;
+    width: 100%;
+    h2 {
+      padding: 0;
+    }
+    .image {
+      flex: 1;
+      img {
+        width: 125px;
+        height: auto;
+        display: block;
+        margin: auto;
       }
     }
+    .register {
+      flex: 3;
+      // background-color: blue;
+    }
   }
+
 
   .comments-section {
     margin-bottom: 3em;
