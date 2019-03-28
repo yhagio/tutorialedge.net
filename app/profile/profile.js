@@ -3,9 +3,6 @@ import Auth from '../auth/auth.js';
 
 export default class Profile {
   constructor() {
-    // if(!this.isLoggedIn()) {
-    //   window.location.replace('http://localhost:3000/login');
-    // }
   }
 
   isLoggedIn() {

@@ -1,5 +1,4 @@
 export default function commentTemplate(comment) {
-    console.log(comment);
     return `<div class="comment">
             <div class="author">
                 <div class="icon">

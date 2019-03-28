@@ -34,6 +34,12 @@ export async function initComments() {
 async function getComments() {
     let pageId = document.getElementById('page-id').innerHTML;
     let response = await axios.get("https://api.tutorialedge.net/api/v1/comments/" + pageId)
+    if(response.data.length === 0) {
+        let emptyComments = "<h4>Be the first to comment!</h4>"
+        emptyComments += "<p>Let me know what you thought of this tutorial. Your feedback on these tutorials can impact the wider community and help others overcome their own challenges.</p>"
+        return emptyComments;
+    }
+
     let comments = response.data.map((comment) => {
         return commentTemplate({comment: comment })
     })
@@ -41,7 +47,6 @@ async function getComments() {
 }
 
 async function submitComment(user) {
-    console.log(user);
     let pageId = document.getElementById('page-id').innerHTML;  
     let commentBody = document.getElementById('comment-body').value;  
     try {

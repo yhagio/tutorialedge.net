@@ -14,10 +14,23 @@ authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_4
 weight: 6
 ---
 
-Welcome all, in this tutorial, we are going to be taking a look at interfaces
-within the Go programming language. By the end of this tutorial, you should be
-well on your way to defining your own interfaces and working with existing ones
-that are currently out in the wild.
+[![Travis Build Status](https://travis-ci.org/TutorialEdge/go-interfaces-tutorial.svg?branch=master)](https://github.com/TutorialEdge/go-interfaces-tutorial)
+
+Welcome all, in this tutorial we are going to be taking a look at interfaces
+within the Go programming language.
+
+By the end of this tutorial, we'll have covered the following topics:
+
+* The Basics of Interfaces
+* Defining Your Own Interfaces
+
+There will be a number of challenges at the end of this tutorial that you are free
+to try and complete on your own machine to try and validate some of the topics we have
+covered in this tutorial. If you appreciate this method of learning then please
+feel free to let me know in the comments section below!
+
+> **Github Source Code** - The full source code for this tutorial can be found here: 
+[TutorialEdge/Go-Interfaces-Tutorial](https://github.com/TutorialEdge/go-interfaces-tutorial)
 
 # Basic Example
 
