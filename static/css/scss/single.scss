@@ -3,23 +3,22 @@
   background: #143650;
   padding: 25px;
   padding-top: 40px;
-  border-bottom: 1px solid #E7E7EC;
+  border-bottom: 1px solid #e7e7ec;
   color: white;
-  
+
   img {
     width: auto;
     height: 100px;
     margin-right: 40px;
   }
 
-
   h1 {
     font-size: 36px;
     font-weight: 700 !important;
     line-height: 1.4;
     color: white;
-  } 
-  
+  }
+
   h1 small {
     font-size: 16px;
     font-weight: 500;
@@ -40,7 +39,6 @@
   ul li {
     list-style: square;
   }
-
 }
 
 .post-info {
@@ -52,7 +50,7 @@
   background-color: #f1f1f1;
   color: #4d545d;
   font-weight: 500;
-  
+
   img {
     width: 35px;
     height: 35px;
@@ -60,7 +58,7 @@
     margin-right: 5px;
     border-radius: 50%;
     border: 2px solid #fff;
-    box-shadow: 0 5px 10px -5px rgba(0,0,0,.4);
+    box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.4);
   }
   .post-info-inner {
     display: grid;
@@ -84,6 +82,11 @@
 }
 
 article {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.62;
+  color: #3b454e;
+
   h1 {
     font-size: 1.75rem;
     line-height: 1.24;
@@ -94,7 +97,7 @@ article {
     margin-bottom: 20px;
     padding: 0;
   }
-  
+
   .amazon-link {
     margin: 20px 0px;
     padding: 30px 20px 30px 100px;
@@ -107,7 +110,7 @@ article {
   .book-placement img.book-img {
     height: 120px;
     width: auto;
-  }  
+  }
   .book-placement h2 {
     margin: 0;
     padding: 0;
@@ -128,8 +131,8 @@ article {
     max-width: 100%;
     display: block;
     margin: auto;
-  }  
-  
+  }
+
   .post_divider {
     height: 1px;
     background-color: #e6edfb;
@@ -162,7 +165,7 @@ article {
 
   p > code {
     color: #d14;
-    padding: .25em;
+    padding: 0.25em;
     word-wrap: break-word;
   }
 
@@ -171,14 +174,13 @@ article {
     font-size: 17px;
     font-size: 1.0625rem;
     padding: 20px 24px;
-    border-radius: .5625rem;
-    border-top-left-radius: .1625rem;
-    border-bottom-left-radius: .1625rem;
+    border-radius: 0.5625rem;
+    border-top-left-radius: 0.1625rem;
+    border-bottom-left-radius: 0.1625rem;
     margin-top: 24px;
     border-left: 4px solid #143650;
+  }
 
-}
-  
   blockquote p {
     margin: 0;
   }
@@ -188,8 +190,20 @@ article {
     margin: 2em 0;
     border: 0;
     background-color: transparent;
-    background-image: -webkit-linear-gradient(left, transparent, rgba(0,0,0,0.09) 10%, rgba(0,0,0,0.09) 90%, transparent);
-    background-image: linear-gradient(to right, transparent, rgba(0,0,0,0.09) 10%, rgba(0,0,0,0.09) 90%, transparent);
+    background-image: -webkit-linear-gradient(
+      left,
+      transparent,
+      rgba(0, 0, 0, 0.09) 10%,
+      rgba(0, 0, 0, 0.09) 90%,
+      transparent
+    );
+    background-image: linear-gradient(
+      to right,
+      transparent,
+      rgba(0, 0, 0, 0.09) 10%,
+      rgba(0, 0, 0, 0.09) 90%,
+      transparent
+    );
   }
 
   .github-banner {
@@ -199,16 +213,15 @@ article {
     height: auto;
     padding: 20px;
   }
-  
+
   .github-banner img {
     height: 180px;
     width: auto;
   }
-  
+
   .github-btn {
-    background-color: #24292E;
+    background-color: #24292e;
   }
-  
 }
 
 .toc {
@@ -220,7 +233,7 @@ article {
   padding-left: 20px;
   margin-top: 40px;
   margin-bottom: 40px;
-  
+
   i {
     padding-right: 5px;
   }
@@ -274,9 +287,15 @@ article {
   width: 100%;
   display: block;
   outline: none;
-  font-size: 1rem;
+  font-size: 20px;
+  font-size: 1.15rem;
+  color: #3b454e;
   line-height: 1.65;
   
+  .anchorjs-link {
+    color: #FF5231;
+  }
+
   h1 {
     font-size: 1.75rem;
     line-height: 1.24;
@@ -298,7 +317,10 @@ article {
     }
   }
 
-  h2, h3, h4, h5 {
+  h2,
+  h3,
+  h4,
+  h5 {
     &:before {
       top: -32px;
       left: 0px;
@@ -309,15 +331,14 @@ article {
       background-color: rgb(230, 236, 241);
     }
   }
-
-  p > code {
-    padding: .35em;
-    font-family: 'Roboto Mono', Monaco, courier, monospace;
-    -webkit-font-smoothing: initial;
-    -moz-osx-font-smoothing: initial;
-  }
+}
+p > code {
+  padding: 0.35em;
+  font-family: "Roboto Mono", Monaco, courier, monospace;
+  -webkit-font-smoothing: initial;
+  -moz-osx-font-smoothing: initial;
 }
 
-.white-bg{
+.white-bg {
   background-color: #fff;
 }
