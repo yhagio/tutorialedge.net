@@ -331,12 +331,19 @@ article {
       background-color: rgb(230, 236, 241);
     }
   }
-}
-p > code {
-  padding: 0.35em;
-  font-family: "Roboto Mono", Monaco, courier, monospace;
-  -webkit-font-smoothing: initial;
-  -moz-osx-font-smoothing: initial;
+  p > code {
+    padding: 0.35em;
+    font-family: "Roboto Mono", Monaco, courier, monospace;
+    -webkit-font-smoothing: initial;
+    -moz-osx-font-smoothing: initial;
+    font-size: 0.9rem;
+    background: #f0f0f0;
+    color: #ef3b7d;
+    border-radius: 2px;
+    font-family: Operator Mono SSm A,Operator Mono SSm B,Consolas,monospace;
+    display: inline-block;
+    padding: 1px 6px;
+  }
 }
 
 .white-bg {
