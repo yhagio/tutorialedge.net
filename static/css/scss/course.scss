@@ -1,15 +1,29 @@
 .course-listing {
   background-color: #f6f6f6;
-  padding-top: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  .courses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .course-progress-box {
+      flex: 1 1 26%;
+      margin: 20px;
+      background-color: #fff;
+      padding-top: 20px;
+
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    .course-listing h3 {
+      font-size: 18px;
+      line-height: 1.4;
+      margin-bottom: 20px;
+    }
+  }
 }
-
-.course-listing h3{
-  font-size: 18px;
-  line-height: 1.4;
-  margin-bottom: 20px;
-}
-
-
 .course-outline {
   background-color: white;
   padding: 20px;

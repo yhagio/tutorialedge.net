@@ -9,6 +9,7 @@ tags:
   - python
   - compsci
 title: Data Structures - Arrays for Beginners
+image: logo.png
 twitter: https://twitter.com/Elliot_F
 ---
 

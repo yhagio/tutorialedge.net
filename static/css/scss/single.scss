@@ -149,8 +149,12 @@ article {
   }
 
   pre {
+    background-color: #2a3644 !important;
     overflow: auto;
-    padding: 10px;
+    padding: 30px;
+    margin: 0;
+    overflow: auto;
+    border-radius: 8px;
     margin-top: 20px;
     border-radius: 15px;
   }
@@ -159,8 +163,10 @@ article {
   }
 
   .highlight pre {
-    border-radius: 5px;
-    padding: 20px;
+    padding: 30px;
+    margin: 0;
+    overflow: auto;
+    border-radius: 8px;
   }
 
   p > code {
@@ -204,6 +210,44 @@ article {
       rgba(0, 0, 0, 0.09) 90%,
       transparent
     );
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    margin: 3.2rem 0 0;
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    font-size: 1.35rem;
+    vertical-align: top;
+    -webkit-overflow-scrolling: touch;
+    align-self: flex-start;
+  }
+  th {
+    padding: 12px;
+    border-bottom: 3px solid #edf3f8;
+    text-align: left;
+    color: #343f44;
+    font-weight: 600;
+    font-size: 1.35rem;
+    line-height: 1.65em;
+    letter-spacing: .2px;
+  }
+  tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+  }
+
+  td {
+    min-width: 150px;
+    padding: 14px;
+    border-bottom: 1px solid #edf3f8;
+    border-right: 1px solid #edf3f8;
+    vertical-align: top;
+    text-align: left;
+    line-height: 1.6em;
   }
 
   .github-banner {
@@ -291,9 +335,9 @@ article {
   font-size: 1.15rem;
   color: #3b454e;
   line-height: 1.65;
-  
+
   .anchorjs-link {
-    color: #FF5231;
+    color: #ff5231;
   }
 
   h1 {
@@ -340,7 +384,7 @@ article {
     background: #f0f0f0;
     color: #ef3b7d;
     border-radius: 2px;
-    font-family: Operator Mono SSm A,Operator Mono SSm B,Consolas,monospace;
+    font-family: Operator Mono SSm A, Operator Mono SSm B, Consolas, monospace;
     display: inline-block;
     padding: 1px 6px;
   }

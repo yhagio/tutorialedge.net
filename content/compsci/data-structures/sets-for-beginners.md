@@ -5,6 +5,7 @@ desc:
   In This Tutorial we look at sets, we look at how they work and what problems
   they can solve
 series: compsci
+image: logo.png
 tags:
   - python
   - compsci

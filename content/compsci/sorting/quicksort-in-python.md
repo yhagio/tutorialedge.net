@@ -5,6 +5,7 @@ desc:
   In This Tutorial we look at how you can implement the Quicksort Sorting
   Algorithm in Python
 series: compsci
+image: logo.png
 tags:
   - python
   - compsci

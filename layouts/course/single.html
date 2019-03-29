@@ -16,25 +16,18 @@
 <div class="course-listing">
 	<div class="container">
 		<h3>Course Lessons</h3>
-
-		<div class="row">
-
+		<div class="courses">
 			{{ range sort (index $.Site.Taxonomies.series .Params.series) }}
 			{{ if not .Params.homepage }}
-			<div class="col-lg-4">
-				<a href="{{ .Permalink }}">
-					<div class="course-progress-box">
-						<h2><small><b>Lesson</b> {{ .Params.Weight }} | <b>Time</b> {{ .ReadingTime }} <i class="ion ion-ios-clock-outline"></i>
-							</small><br />{{ .Title }}</h2>
-						{{ range .Params.tags }}
-						<span class="badge badge-pill badge-info">{{ . }}</span>
-						{{ end }}
-						<br />
-						<p>{{ .Page.Params.desc }}</p>
-						<button class="btn btn-success">Continue Course</button>
-					</div>
-				</a>
-			</div>
+			<a class="course-progress-box" href="{{ .Permalink }}">
+				<img src="https://images.tutorialedge.net/images/{{ .Params.image }}" alt="{{ .Params.desc }}" />
+				<h2>{{ .Title }}</h2>
+				{{ range .Params.tags }}
+				<span class="badge badge-pill badge-info">{{ . }}</span>
+				{{ end }}
+				<hr/>
+				<p>{{ .Params.desc }}</p>
+			</a>
 			{{ end }}
 			{{ end }}
 		</div>

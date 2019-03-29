@@ -6,6 +6,7 @@ desc:
   problems they can solve
 series: compsci
 draft: true
+image: logo.png
 tags:
   - python
   - compsci
