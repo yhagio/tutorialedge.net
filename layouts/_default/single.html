@@ -48,22 +48,29 @@
   </div>
 </div>
 
-<div class="container container-wrapper">
-  <div class="row no-hidden">
-    <div class="col-sm-4">
-      <div class="toc">
-        <h4><i class="ion ion-ios-list-outline"></i> Table Of Contents</h4>
-        {{.TableOfContents}}
+<div class="container-fluid">
+  <div class="content-container">
+    <div class="row">
+      <div class="col-sm-3 d-block">
+        <div class="sidebar">
+          {{ partial "sidebar.html" . }}
+        </div>
       </div>
 
-      {{ partial "sidebar.html" . }}
-    </div>
-
-    <div class="col-sm-8">
-      <article class="content">
-        {{ .Content }}
-      </article>
-      {{ partial "author.html" . .Params }}
+      <div class="col-sm-7">
+        <article class="content">
+          {{ .Content }}
+          {{ partial "author.html" . .Params }}
+        </article>
+      </div>
+      <div class="col-sm-2 hidden-md-down">
+        <div class="toc">
+          <div class="toc-wrapper">
+            <h4><i class="ion ion-ios-list-outline"></i> Table Of Contents</h4>
+            {{.TableOfContents}}
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -81,7 +88,9 @@
       visible: "always",
       placement: "left"
     };
-    anchors.add(".content h1, .content h2, .content h3, .content h4, .content h5, .content h6");
+    anchors.add(
+      ".content h1, .content h2, .content h3, .content h4, .content h5, .content h6"
+    );
   });
 </script>
 {{ partial "footer.html" . }}
