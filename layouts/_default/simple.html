@@ -1,99 +1,69 @@
 {{ partial "header.html" . }}
 
 <div class="top-bar">
-  <div class="container">
-    <h1>
-      {{ if .Params.image }}
-      <img
-        src="https://images.tutorialedge.net/images/{{ .Params.image }}"
-        alt="{{ .Title }} Image"
-      />
-      {{ else }}
-      <img
-        src="https://images.tutorialedge.net/images/logo.png"
-        alt="{{ .Title }} Image"
-      />
-      {{ end }}
-      {{ .Title }}
-    </h1>
-  </div>
+	<div class="container">
+		<h1>
+			{{ if .Params.image }}
+			<img src="https://images.tutorialedge.net/images/{{ .Params.image }}" alt="{{ .Title }} Image">
+			{{ else }}
+			<img src="https://images.tutorialedge.net/images/logo.png" alt="{{ .Title }} Image">
+			{{ end }}
+			{{ .Title }}</h1>
+	</div>
 </div>
 <div class="post-info">
-  <div class="container">
-    <div class="post-info-inner">
-      <span>
-        {{ if .Params.authorImage }}
-        <img src="{{ .Params.authorImage }}" alt="{{ .Params.author }}" />
-        {{ else }}
-        <i class="ion ion-social-twitter"></i>
-        {{ end }}
-        <a href="{{.Params.twitter }}">{{ .Params.author }}</a>
-      </span>
-      <span>
-        <i class="ion ion-ios-clock"></i> {{ .ReadingTime }} Minutes
-      </span>
-      <span>
-        <i class="ion ion-ios-calendar"></i>
-        {{ dateFormat "Jan 2, 2006" .Date }}
-      </span>
-      <span>
-        <i class="ion ion-pricetags"></i>
-        {{ range.Params.tags }}
-        <a href="/tags/{{.}}"
-          ><span class="badge badge-pill badge-info">{{ . }}</span></a
-        >
-        {{ end }}
-      </span>
-    </div>
-  </div>
+	<div class="container">
+		<div class="post-info-inner">
+			<span>
+				{{ if .Params.authorImage }}
+				<img src="{{ .Params.authorImage }}" alt="{{ .Params.author }}" />
+				{{ else }}
+				<i class="ion ion-social-twitter"></i>
+				{{ end }}
+				<a href="{{.Params.twitter }}">{{ .Params.author }}</a>
+			</span>
+			<span>
+					<i class="ion ion-ios-clock"></i> {{ .ReadingTime }} Minutes
+			</span>
+			<span>
+					<i class="ion ion-ios-calendar"></i> {{ dateFormat "Jan 2, 2006" .Date }}
+			</span>
+			<span>
+				<i class="ion ion-pricetags"></i> 
+				{{ range .Params.tags }}
+				<a href="/tags/{{.}}"><span class="badge badge-pill badge-info">{{ . }}</span></a>
+				{{ end }}
+			</span>
+		</div>
+	</div>
 </div>
 
-<div class="container-fluid">
-  <div class="content-container">
-    <div class="row">
-      <div class="col-sm-3 d-block">
-        <div class="sidebar">
-          {{ partial "sidebar.html" . }}
-        </div>
-      </div>
+<div class="container">
+	<div class="row no-hidden">
+		<div class="col-sm-4">
 
-      <div class="col-sm-7">
-        <article class="content">
-          {{ .Content }}
-          {{ partial "author.html" . .Params }}
-        </article>
-      </div>
-      <div class="col-sm-2 hidden-md-down">
-        <div id="right-sidebar">
-          <div class="toc">
-            <h4><i class="ion ion-ios-list-outline"></i> Table Of Contents</h4>
-            {{.TableOfContents}}
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+			<div class="toc">
+				<h4>Table Of Contents</h4>
+				{{.TableOfContents}}
+			</div>
+
+			{{ partial "sidebar.html" . }}
+		</div>
+
+		<div class="col-sm-8">
+			<article class="content">
+				{{ .Content }}
+			</article>
+		</div>
+	</div>
 </div>
 
 <div class="comments">
-  <div class="container">
-    {{ partial "comments.html" . }}
-  </div>
+	<div class="container">
+		{{ partial "comments.html" . }}
+	</div>
 </div>
+	
 
-<script src="/js/sticky-sidebar.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.0/anchor.min.js"></script>
-<script>
-  // Add anchors on DOMContentLoaded
-  document.addEventListener("DOMContentLoaded", function(event) {
-    var sidebar = new StickySidebar("#right-sidebar", { topSpacing: 20 });
-    anchors.options = {
-      visible: "always",
-      placement: "left"
-    };
-    anchors.add(
-      ".content h1, .content h2, .content h3, .content h4, .content h5, .content h6"
-    );
-  });
-</script>
+
 {{ partial "footer.html" . }}
