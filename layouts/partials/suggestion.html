@@ -1,0 +1,87 @@
+<div class="helpful-post">
+  <hr/>
+  <div id="suggestion-input" class="row">
+    <!-- Was this helpful button group -->
+    <div class="col-lg-12">
+      <h5>Was This Post Helpful?</h5>
+
+      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-outline-primary active">
+          <input type="radio" name="options" id="helpful" required /><i
+            class="ion ion-checkmark-round"
+          ></i>
+          Yes
+        </label>
+        <label class="btn btn-outline-danger">
+          <input type="radio" mame="options" id="nothelpful" /><i
+            class="ion ion-close-round"
+          ></i>
+          No
+        </label>
+      </div>
+    </div>
+
+    <div class="col-lg-12" id="suggestionBox">
+      <br />
+      <textarea
+        placeholder="Do you have any suggestions as to how we can make it better?"
+        class="form-control"
+        name="suggestion"
+        id="suggestion"
+        cols="30"
+        rows="5"
+      ></textarea>
+      <br />
+      <button onclick="submitFeedback()" class="btn btn-outline-primary">
+        Submit Feedback
+      </button>
+    </div>
+  </div>
+  <div id="output"></div>
+
+  <hr/>
+
+  <!-- GITHUB Pull Request Stuff -->
+  <div class="col-lg-12">
+    <span class="helpful">
+      <i class="ion ion-social-github"></i>
+      <a href="https://github.com/elliotforbes/tutorialedge.net">
+        Edit on Github</a></span>
+  </div>
+  <!-- END of Github PR -->
+</div>
+
+<script>
+  function submitFeedback() {
+    var data = {
+      message: document.getElementById("suggestion").value,
+      url: window.location.href,
+      helpful: document
+        .getElementById("helpful")
+        .parentNode.classList.contains("active"),
+      nothelpful: document
+        .getElementById("nothelpful")
+        .parentNode.classList.contains("active")
+    };
+
+    fetch(
+      "https://43xaudt448.execute-api.eu-west-1.amazonaws.com/dev/suggestion",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        body: JSON.stringify(data)
+      }
+    )
+      .then(function(response) {
+        document.getElementById("suggestion-input").classList.add("collapse");
+        document
+          .getElementById("output")
+          .append("Thank You For Your Feedback!");
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+  }
+</script>
