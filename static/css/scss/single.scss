@@ -82,8 +82,8 @@
 }
 
 article {
-  font-size: 20px;
-  font-size: 1.25rem;
+  margin: 2.4rem 0 0;
+  font-size: 1.45rem;
   line-height: 1.62;
   color: #3b454e;
 
@@ -331,10 +331,12 @@ article {
   width: 100%;
   display: block;
   outline: none;
-  font-size: 20px;
-  font-size: 1.15rem;
+  font-size: 1rem;
   color: #3b454e;
   line-height: 1.65;
+  p {
+    font-size: 1rem;
+  }
 
   .anchorjs-link {
     color: #ff5231;
