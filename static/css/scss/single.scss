@@ -376,17 +376,14 @@ article {
     }
   }
   p > code {
-    padding: 0.35em;
-    font-family: "Roboto Mono", Monaco, courier, monospace;
-    -webkit-font-smoothing: initial;
-    -moz-osx-font-smoothing: initial;
-    font-size: 0.9rem;
-    background: #f0f0f0;
-    color: #ef3b7d;
-    border-radius: 2px;
+    padding: .3em .4em;
+    border-radius: .3em;
+    white-space: normal;
+    background: #e5eff5;
+    text-shadow: none;
+    color: #343f44;
+    font-size: .9em;
     font-family: Operator Mono SSm A, Operator Mono SSm B, Consolas, monospace;
-    display: inline-block;
-    padding: 1px 6px;
   }
 }
 
