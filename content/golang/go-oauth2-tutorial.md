@@ -26,6 +26,9 @@ Security is without doubt a very important feature for any public and even
 private facing service or API and it's something that you need to pay a lot of
 attention to in order to get it right.
 
+> **Note** - The full github repository for this tutorial can be found here:
+[TutorialEdge/go-oauth-tutorial](https://github.com/TutorialEdge/go-oauth-tutorial)
+
 # The Theory
 
 So, before we dive into how we can code this up, it's important to know how it
@@ -326,8 +329,8 @@ func main() {
 So, we've managed to build up our client. Let's try and run this and see what
 happens.
 
-```
-go run main.go
+```command
+$ go run main.go
 2018/10/20 13:25:22 Client is running at 9094 port.
 ```
 
