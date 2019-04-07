@@ -84,7 +84,7 @@ And the full program would look like this:
 package main
 
 import (
-	"fmt"
+    "fmt"
 )
 
 func myfunction(firstName string, lastName string) (string) {
@@ -93,10 +93,10 @@ func myfunction(firstName string, lastName string) (string) {
 }
 
 func main() {
-	fmt.Println("Hello World")
+    fmt.Println("Hello World")
 
-	fullName := myfunction("Elliot", "Forbes")
-	fmt.Println(fullName)
+    fullName := myfunction("Elliot", "Forbes")
+    fmt.Println(fullName)
 }
 ```
 
@@ -113,7 +113,7 @@ with any errors return within the original function block that calls our functio
 package main
 
 import (
-	"fmt"
+    "fmt"
 )
 
 func myfunction(firstName string, lastName string) (string, error) {

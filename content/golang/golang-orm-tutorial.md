@@ -51,9 +51,9 @@ We could describe our users in a go `struct` like so:
 ```go
 // Our User Struct
 type User struct {
-	gorm.Model
-	Name  string
-	Email string
+    gorm.Model
+    Name  string
+    Email string
 }
 ```
 
@@ -78,44 +78,44 @@ route.
 package main
 
 import (
-	"fmt"
-	"log"
-	"net/http"
+    "fmt"
+    "log"
+    "net/http"
 
-	"github.com/gorilla/mux"
+    "github.com/gorilla/mux"
 )
 
 func allUsers(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "All Users Endpoint Hit")
+    fmt.Fprintf(w, "All Users Endpoint Hit")
 }
 
 func newUser(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "New User Endpoint Hit")
+    fmt.Fprintf(w, "New User Endpoint Hit")
 }
 
 func deleteUser(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Delete User Endpoint Hit")
+    fmt.Fprintf(w, "Delete User Endpoint Hit")
 }
 
 func updateUser(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Update User Endpoint Hit")
+    fmt.Fprintf(w, "Update User Endpoint Hit")
 }
 
 func handleRequests() {
-	myRouter := mux.NewRouter().StrictSlash(true)
-	myRouter.HandleFunc("/users", allUsers).Methods("GET")
-	myRouter.HandleFunc("/user/{name}", deleteUser).Methods("DELETE")
-	myRouter.HandleFunc("/user/{name}/{email}", updateUser).Methods("PUT")
-	myRouter.HandleFunc("/user/{name}/{email}", newUser).Methods("POST")
-	log.Fatal(http.ListenAndServe(":8081", myRouter))
+    myRouter := mux.NewRouter().StrictSlash(true)
+    myRouter.HandleFunc("/users", allUsers).Methods("GET")
+    myRouter.HandleFunc("/user/{name}", deleteUser).Methods("DELETE")
+    myRouter.HandleFunc("/user/{name}/{email}", updateUser).Methods("PUT")
+    myRouter.HandleFunc("/user/{name}/{email}", newUser).Methods("POST")
+    log.Fatal(http.ListenAndServe(":8081", myRouter))
 }
 
 
 func main() {
-	fmt.Println("Go ORM Tutorial")
+    fmt.Println("Go ORM Tutorial")
 
-	// Handle Subsequent requests
-	handleRequests()
+    // Handle Subsequent requests
+    handleRequests()
 }
 ```
 
@@ -138,22 +138,22 @@ creation `SQL` script.
 ```go
 // our initial migration function
 func initialMigration() {
-	db, err := gorm.Open("sqlite3", "test.db")
-	if err != nil {
-		fmt.Println(err.Error())
-		panic("failed to connect database")
-	}
-	defer db.Close()
+    db, err := gorm.Open("sqlite3", "test.db")
+    if err != nil {
+        fmt.Println(err.Error())
+        panic("failed to connect database")
+    }
+    defer db.Close()
 
-	// Migrate the schema
-	db.AutoMigrate(&User{})
+    // Migrate the schema
+    db.AutoMigrate(&User{})
 }
 
 func main() {
-	fmt.Println("Go ORM Tutorial")
+    fmt.Println("Go ORM Tutorial")
 
     // Add the call to our new initialMigration function
-	initialMigration()
+    initialMigration()
 
     handleRequests()
 }
@@ -169,17 +169,17 @@ We can query all of the users within our database by calling `db.Find(&users)`.
 
 ```go
 func allUsers(w http.ResponseWriter, r *http.Request) {
-	db, err := gorm.Open("sqlite3", "test.db")
-	if err != nil {
-		panic("failed to connect database")
-	}
-	defer db.Close()
+    db, err := gorm.Open("sqlite3", "test.db")
+    if err != nil {
+        panic("failed to connect database")
+    }
+    defer db.Close()
 
-	var users []User
-	db.Find(&users)
-	fmt.Println("{}", users)
+    var users []User
+    db.Find(&users)
+    fmt.Println("{}", users)
 
-	json.NewEncoder(w).Encode(users)
+    json.NewEncoder(w).Encode(users)
 }
 ```
 
@@ -196,20 +196,20 @@ so:
 
 ```go
 func newUser(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("New User Endpoint Hit")
+    fmt.Println("New User Endpoint Hit")
 
-	db, err := gorm.Open("sqlite3", "test.db")
-	if err != nil {
-		panic("failed to connect database")
-	}
-	defer db.Close()
+    db, err := gorm.Open("sqlite3", "test.db")
+    if err != nil {
+        panic("failed to connect database")
+    }
+    defer db.Close()
 
-	vars := mux.Vars(r)
-	name := vars["name"]
-	email := vars["email"]
+    vars := mux.Vars(r)
+    name := vars["name"]
+    email := vars["email"]
 
-	db.Create(&User{Name: name, Email: email})
-	fmt.Fprintf(w, "New User Successfully Created")
+    db.Create(&User{Name: name, Email: email})
+    fmt.Fprintf(w, "New User Successfully Created")
 }
 
 ```
@@ -223,20 +223,20 @@ serves a good example in this project.
 
 ```go
 func deleteUser(w http.ResponseWriter, r *http.Request) {
-	db, err := gorm.Open("sqlite3", "test.db")
-	if err != nil {
-		panic("failed to connect database")
-	}
-	defer db.Close()
+    db, err := gorm.Open("sqlite3", "test.db")
+    if err != nil {
+        panic("failed to connect database")
+    }
+    defer db.Close()
 
-	vars := mux.Vars(r)
-	name := vars["name"]
+    vars := mux.Vars(r)
+    name := vars["name"]
 
-	var user User
-	db.Where("name = ?", name).Find(&user)
-	db.Delete(&user)
+    var user User
+    db.Where("name = ?", name).Find(&user)
+    db.Delete(&user)
 
-	fmt.Fprintf(w, "Successfully Deleted User")
+    fmt.Fprintf(w, "Successfully Deleted User")
 }
 ```
 
@@ -253,23 +253,23 @@ you then call `db.Save(&user)` to save any changes to the database.
 
 ```go
 func updateUser(w http.ResponseWriter, r *http.Request) {
-	db, err := gorm.Open("sqlite3", "test.db")
-	if err != nil {
-		panic("failed to connect database")
-	}
-	defer db.Close()
+    db, err := gorm.Open("sqlite3", "test.db")
+    if err != nil {
+        panic("failed to connect database")
+    }
+    defer db.Close()
 
-	vars := mux.Vars(r)
-	name := vars["name"]
-	email := vars["email"]
+    vars := mux.Vars(r)
+    name := vars["name"]
+    email := vars["email"]
 
-	var user User
-	db.Where("name = ?", name).Find(&user)
+    var user User
+    db.Where("name = ?", name).Find(&user)
 
-	user.Email = email
+    user.Email = email
 
-	db.Save(&user)
-	fmt.Fprintf(w, "Successfully Updated User")
+    db.Save(&user)
+    fmt.Fprintf(w, "Successfully Updated User")
 }
 ```
 

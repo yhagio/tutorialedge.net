@@ -113,8 +113,8 @@ syntax="proto3";
 package main;
 
 message Person {
-	  string name = 1;
-	  int32 age = 2;
+      string name = 1;
+      int32 age = 2;
 }
 ```
 
@@ -135,40 +135,40 @@ print out the wire encoded format that stores our `protobuf` object.
 package main
 
 import (
-	"fmt"
-	"log"
+    "fmt"
+    "log"
 
-	"github.com/golang/protobuf/proto"
+    "github.com/golang/protobuf/proto"
 )
 
 func main() {
 
-	elliot := &Person{
-		Name: "Elliot",
-		Age:  24,
-	}
+    elliot := &Person{
+        Name: "Elliot",
+        Age:  24,
+    }
 
-	data, err := proto.Marshal(elliot)
-	if err != nil {
-		log.Fatal("marshaling error: ", err)
-	}
+    data, err := proto.Marshal(elliot)
+    if err != nil {
+        log.Fatal("marshaling error: ", err)
+    }
 
   // printing out our raw protobuf object
-	fmt.Println(data)
+    fmt.Println(data)
 
   // let's go the other way and unmarshal
   // our byte array into an object we can modify
   // and use
-	newElliot := &Person{}
-	err = proto.Unmarshal(data, newElliot)
-	if err != nil {
-		log.Fatal("unmarshaling error: ", err)
+    newElliot := &Person{}
+    err = proto.Unmarshal(data, newElliot)
+    if err != nil {
+        log.Fatal("unmarshaling error: ", err)
   }
 
   // print out our `newElliot` object
   // for good measure
   fmt.Println(newElliot.GetAge())
-	fmt.Println(newElliot.GetName())
+    fmt.Println(newElliot.GetName())
 
 }
 ```
@@ -206,8 +206,8 @@ message SocialFollowers {
 }
 
 message Person {
-	  string name = 1;
-	  int32 age = 2;
+      string name = 1;
+      int32 age = 2;
     SocialFollowers socialFollowers = 3;
 }
 ```
@@ -225,43 +225,43 @@ object with `SocialFollowers`:
 package main
 
 import (
-	"fmt"
-	"log"
+    "fmt"
+    "log"
 
-	"github.com/golang/protobuf/proto"
+    "github.com/golang/protobuf/proto"
 )
 
 func main() {
 
-	elliot := Person{
-		Name: "Elliot",
-		Age:  24,
-		SocialFollowers: &SocialFollowers{
-			Youtube: 2500,
-			Twitter: 1400,
-		},
-	}
+    elliot := Person{
+        Name: "Elliot",
+        Age:  24,
+        SocialFollowers: &SocialFollowers{
+            Youtube: 2500,
+            Twitter: 1400,
+        },
+    }
 
-	data, err := proto.Marshal(&elliot)
-	if err != nil {
-		log.Fatal("marshaling error: ", err)
-	}
+    data, err := proto.Marshal(&elliot)
+    if err != nil {
+        log.Fatal("marshaling error: ", err)
+    }
 
-	// let's go the other way and unmarshal
-	// our protocol buffer into an object we can modify
-	// and use
-	newElliot := &Person{}
-	err = proto.Unmarshal(data, newElliot)
-	if err != nil {
-		log.Fatal("unmarshaling error: ", err)
-	}
+    // let's go the other way and unmarshal
+    // our protocol buffer into an object we can modify
+    // and use
+    newElliot := &Person{}
+    err = proto.Unmarshal(data, newElliot)
+    if err != nil {
+        log.Fatal("unmarshaling error: ", err)
+    }
 
-	// print out our `newElliot` object
-	// for good measure
-	fmt.Println(newElliot.GetName())
-	fmt.Println(newElliot.GetAge())
-	fmt.Println(newElliot.SocialFollowers.GetTwitter())
-	fmt.Println(newElliot.SocialFollowers.GetYoutube())
+    // print out our `newElliot` object
+    // for good measure
+    fmt.Println(newElliot.GetName())
+    fmt.Println(newElliot.GetAge())
+    fmt.Println(newElliot.SocialFollowers.GetTwitter())
+    fmt.Println(newElliot.SocialFollowers.GetYoutube())
 
 }
 ```

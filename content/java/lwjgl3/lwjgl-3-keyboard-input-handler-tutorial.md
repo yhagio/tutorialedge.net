@@ -167,8 +167,8 @@ public class HelloWorld {
     }
 
     public void update(){
-    	if(KeyboardHandler.isKeyDown(GLFW_KEY_SPACE))
-    		System.out.println("Space Key Pressed");
+        if(KeyboardHandler.isKeyDown(GLFW_KEY_SPACE))
+            System.out.println("Space Key Pressed");
     }
 
     private void loop() {

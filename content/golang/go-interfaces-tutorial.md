@@ -47,18 +47,18 @@ Let's see an example of this in action:
 package main
 
 import (
-	"fmt"
+    "fmt"
 )
 
 func myFunc(a interface{}) {
-	fmt.Println(a)
+    fmt.Println(a)
 }
 
 func main() {
-	var my_age int
-	my_age = 25
+    var my_age int
+    my_age = 25
 
-	myFunc(my_age)
+    myFunc(my_age)
 }
 ```
 
@@ -104,35 +104,35 @@ package main
 import "fmt"
 
 type Guitarist interface {
-	// PlayGuitar prints out "Playing Guitar"
-	// to the terminal
-	PlayGuitar()
+    // PlayGuitar prints out "Playing Guitar"
+    // to the terminal
+    PlayGuitar()
 }
 
 type BaseGuitarist struct {
-	Name string
+    Name string
 }
 
 type AcousticGuitarist struct {
-	Name string
+    Name string
 }
 
 func (b BaseGuitarist) PlayGuitar() {
-	fmt.Printf("%s plays the Bass Guitar\n", b.Name)
+    fmt.Printf("%s plays the Bass Guitar\n", b.Name)
 }
 
 func (b AcousticGuitarist) PlayGuitar() {
-	fmt.Printf("%s plays the Acoustic Guitar\n", b.Name)
+    fmt.Printf("%s plays the Acoustic Guitar\n", b.Name)
 }
 
 func main() {
-	var player BaseGuitarist
-	player.Name = "Paul"
-	player.PlayGuitar()
+    var player BaseGuitarist
+    player.Name = "Paul"
+    player.PlayGuitar()
 
-	var player2 AcousticGuitarist
-	player2.Name = "Ringo"
-	player2.PlayGuitar()
+    var player2 AcousticGuitarist
+    player2.Name = "Ringo"
+    player2.PlayGuitar()
 }
 ```
 
@@ -153,10 +153,10 @@ interfaces like so:
 
 ```go
 type Employee interface {
-	Name() string
-	Language() string
-	Age() int
-	Random() (string, error)
+    Name() string
+    Language() string
+    Age() int
+    Random() (string, error)
 }
 ```
 
@@ -172,26 +172,26 @@ Now, in order for this to work, we'd need our `Engineer` type to satisfy the
 package main
 
 type Employee interface {
-	Language() string
-	Age() int
-	Random() (string, error)
+    Language() string
+    Age() int
+    Random() (string, error)
 }
 
 type Engineer struct {
-	Name string
+    Name string
 }
 
 func (e *Engineer) Language() string {
-	return e.Name + " programs in Go"
+    return e.Name + " programs in Go"
 }
 
 func main() {
-	// This will throw an error
-	var programmers []Employee
-	elliot := Engineer{Name: "Elliot"}
-	// Engineer does not implement the Employee interface
-	// you'll need to implement Age() and Random()
-	programmers = append(programmers, elliot)
+    // This will throw an error
+    var programmers []Employee
+    elliot := Engineer{Name: "Elliot"}
+    // Engineer does not implement the Employee interface
+    // you'll need to implement Age() and Random()
+    programmers = append(programmers, elliot)
 }
 ```
 

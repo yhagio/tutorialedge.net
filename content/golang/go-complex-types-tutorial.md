@@ -125,28 +125,28 @@ of people within that team:
 package main
 
 import (
-	"fmt"
+    "fmt"
 )
 
 func main() {
-	type Person struct {
-		name string
-		age  int
-	}
+    type Person struct {
+        name string
+        age  int
+    }
 
-	// our Team struct
-	type Team struct {
-		name    string
-		players [2]Person
-	}
+    // our Team struct
+    type Team struct {
+        name    string
+        players [2]Person
+    }
 
-	// declaring an empty 'Team'
-	var myTeam Team
-	fmt.Println(myTeam)
+    // declaring an empty 'Team'
+    var myTeam Team
+    fmt.Println(myTeam)
 
-	players := [...]Person{Person{name: "Forrest"}, Person{name: "Gordon"}}
-	// declaring a team with players
-	celtic := Team{name: "Celtic FC", players: players}
+    players := [...]Person{Person{name: "Forrest"}, Person{name: "Gordon"}}
+    // declaring a team with players
+    celtic := Team{name: "Celtic FC", players: players}
   fmt.Println(celtic)
 
 }

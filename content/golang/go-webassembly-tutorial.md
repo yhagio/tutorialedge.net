@@ -59,7 +59,7 @@ functional and cooler:
 package main
 
 func main() {
-	println("Hello World")
+    println("Hello World")
 }
 ```
 
@@ -138,20 +138,20 @@ And, we also have a simple `net/http` based file server, again stolen from
 package main
 
 import (
-	"flag"
-	"log"
-	"net/http"
+    "flag"
+    "log"
+    "net/http"
 )
 
 var (
-	listen = flag.String("listen", ":8080", "listen address")
-	dir    = flag.String("dir", ".", "directory to serve")
+    listen = flag.String("listen", ":8080", "listen address")
+    dir    = flag.String("dir", ".", "directory to serve")
 )
 
 func main() {
-	flag.Parse()
-	log.Printf("listening on %q...", *listen)
-	log.Fatal(http.ListenAndServe(*listen, http.FileServer(http.Dir(*dir))))
+    flag.Parse()
+    log.Printf("listening on %q...", *listen)
+    log.Fatal(http.ListenAndServe(*listen, http.FileServer(http.Dir(*dir))))
 }
 ```
 
@@ -183,27 +183,27 @@ the console what the result is as well:
 ```go
 
 func add(i []js.Value) {
-	js.Global().Set("output", js.ValueOf(i[0].Int()+i[1].Int()))
-	println(js.ValueOf(i[0].Int() + i[1].Int()).String())
+    js.Global().Set("output", js.ValueOf(i[0].Int()+i[1].Int()))
+    println(js.ValueOf(i[0].Int() + i[1].Int()).String())
 }
 
 func subtract(i []js.Value) {
-	js.Global().Set("output", js.ValueOf(i[0].Int()-i[1].Int()))
-	println(js.ValueOf(i[0].Int() - i[1].Int()).String())
+    js.Global().Set("output", js.ValueOf(i[0].Int()-i[1].Int()))
+    println(js.ValueOf(i[0].Int() - i[1].Int()).String())
 }
 
 func registerCallbacks() {
-	js.Global().Set("add", js.NewCallback(add))
-	js.Global().Set("subtract", js.NewCallback(subtract))
+    js.Global().Set("add", js.NewCallback(add))
+    js.Global().Set("subtract", js.NewCallback(subtract))
 }
 
 func main() {
-	c := make(chan struct{}, 0)
+    c := make(chan struct{}, 0)
 
-	println("WASM Go Initialized")
-	// register functions
-	registerCallbacks()
-	<-c
+    println("WASM Go Initialized")
+    // register functions
+    registerCallbacks()
+    <-c
 }
 ```
 
@@ -256,10 +256,10 @@ elements and then add the values of these elements like so:
 
 ```go
 func add(i []js.Value) {
-	value1 := js.Global().Get("document").Call("getElementById", i[0].String()).Get("value").String()
-	value2 := js.Global().Get("document").Call("getElementById", i[1].String()).Get("value").String()
-	js.Global().Set("output", value1+value2)
-	println(value1 + value2)
+    value1 := js.Global().Get("document").Call("getElementById", i[0].String()).Get("value").String()
+    value2 := js.Global().Get("document").Call("getElementById", i[1].String()).Get("value").String()
+    js.Global().Set("output", value1+value2)
+    println(value1 + value2)
 }
 ```
 
@@ -280,14 +280,14 @@ What have we forgotten? We need to parse these string values as int values:
 
 ```go
 func add(i []js.Value) {
-	value1 := js.Global().Get("document").Call("getElementById", i[0].String()).Get("value").String()
-	value2 := js.Global().Get("document").Call("getElementById", i[1].String()).Get("value").String()
+    value1 := js.Global().Get("document").Call("getElementById", i[0].String()).Get("value").String()
+    value2 := js.Global().Get("document").Call("getElementById", i[1].String()).Get("value").String()
 
-	int1, _ := strconv.Atoi(value1)
-	int2, _ := strconv.Atoi(value2)
+    int1, _ := strconv.Atoi(value1)
+    int2, _ := strconv.Atoi(value2)
 
-	js.Global().Set("output", int1+int2)
-	println(int1 + int2)
+    js.Global().Set("output", int1+int2)
+    println(int1 + int2)
 }
 ```
 
@@ -306,13 +306,13 @@ output the results to:
 
 ```go
 func add(i []js.Value) {
-	value1 := js.Global().Get("document").Call("getElementById", i[0].String()).Get("value").String()
-	value2 := js.Global().Get("document").Call("getElementById", i[1].String()).Get("value").String()
+    value1 := js.Global().Get("document").Call("getElementById", i[0].String()).Get("value").String()
+    value2 := js.Global().Get("document").Call("getElementById", i[1].String()).Get("value").String()
 
-	int1, _ := strconv.Atoi(value1)
-	int2, _ := strconv.Atoi(value2)
+    int1, _ := strconv.Atoi(value1)
+    int2, _ := strconv.Atoi(value2)
 
-	js.Global().Get("document").Call("getElementById", i[2].String()).Set("value", int1+int2)
+    js.Global().Get("document").Call("getElementById", i[2].String()).Set("value", int1+int2)
 }
 ```
 
@@ -322,13 +322,13 @@ Finally, let's update our subtract method:
 
 ```go
 func subtract(i []js.Value) {
-	value1 := js.Global().Get("document").Call("getElementById", i[0].String()).Get("value").String()
-	value2 := js.Global().Get("document").Call("getElementById", i[1].String()).Get("value").String()
+    value1 := js.Global().Get("document").Call("getElementById", i[0].String()).Get("value").String()
+    value2 := js.Global().Get("document").Call("getElementById", i[1].String()).Get("value").String()
 
-	int1, _ := strconv.Atoi(value1)
-	int2, _ := strconv.Atoi(value2)
+    int1, _ := strconv.Atoi(value1)
+    int2, _ := strconv.Atoi(value2)
 
-	js.Global().Get("document").Call("getElementById", i[2].String()).Set("value", int1-int2)
+    js.Global().Get("document").Call("getElementById", i[2].String()).Set("value", int1-int2)
 }
 ```
 

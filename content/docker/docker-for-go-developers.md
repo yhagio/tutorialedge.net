@@ -30,23 +30,23 @@ For the purpose of this tutorial, we'll be using the code from my
 package main
 
 import (
-	"fmt"
-	"html"
-	"log"
-	"net/http"
+    "fmt"
+    "html"
+    "log"
+    "net/http"
 )
 
 func main() {
 
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "Hello, %q", html.EscapeString(r.URL.Path))
-	})
+    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+        fmt.Fprintf(w, "Hello, %q", html.EscapeString(r.URL.Path))
+    })
 
-	http.HandleFunc("/hi", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "Hi")
-	})
+    http.HandleFunc("/hi", func(w http.ResponseWriter, r *http.Request) {
+        fmt.Fprintf(w, "Hi")
+    })
 
-	log.Fatal(http.ListenAndServe(":8080", nil))
+    log.Fatal(http.ListenAndServe(":8080", nil))
 
 }
 ```
@@ -144,15 +144,15 @@ new `index.html` within that directory, we should be able to verify this works:
 package main
 
 import (
-	"log"
-	"net/http"
+    "log"
+    "net/http"
 )
 
 func main() {
 
-	http.Handle("/", http.FileServer(http.Dir("./static")))
+    http.Handle("/", http.FileServer(http.Dir("./static")))
 
-	log.Fatal(http.ListenAndServe(":8080", nil))
+    log.Fatal(http.ListenAndServe(":8080", nil))
 
 }
 ```

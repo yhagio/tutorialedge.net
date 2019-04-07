@@ -79,28 +79,28 @@ WebSocket endpoint that we'll be creating:
 package main
 
 import (
-	"fmt"
-	"log"
-	"net/http"
+    "fmt"
+    "log"
+    "net/http"
 )
 
 func homePage(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Home Page")
+    fmt.Fprintf(w, "Home Page")
 }
 
 func wsEndpoint(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello World")
+    fmt.Fprintf(w, "Hello World")
 }
 
 func setupRoutes() {
-	http.HandleFunc("/", homePage)
-	http.HandleFunc("/ws", wsEndpoint)
+    http.HandleFunc("/", homePage)
+    http.HandleFunc("/ws", wsEndpoint)
 }
 
 func main() {
-	fmt.Println("Hello World")
-	setupRoutes()
-	log.Fatal(http.ListenAndServe(":8080", nil))
+    fmt.Println("Hello World")
+    setupRoutes()
+    log.Fatal(http.ListenAndServe(":8080", nil))
 }
 ```
 
@@ -123,8 +123,8 @@ information such as the Read and Write buffer size for our WebSocket connection:
 // We'll need to define an Upgrader
 // this will require a Read and Write buffer size
 var upgrader = websocket.Upgrader{
-	ReadBufferSize:  1024,
-	WriteBufferSize: 1024,
+    ReadBufferSize:  1024,
+    WriteBufferSize: 1024,
 }
 ```
 
@@ -159,9 +159,9 @@ func wsEndpoint(w http.ResponseWriter, r *http.Request) {
 
     // upgrade this connection to a WebSocket
     // connection
-	ws, err := upgrader.Upgrade(w, r, nil)
-	if err != nil {
-		log.Println(err)
+    ws, err := upgrader.Upgrade(w, r, nil)
+    if err != nil {
+        log.Println(err)
     }
 
 }
@@ -179,22 +179,22 @@ our call to `upgrader.Upgrade`:
 // new messages being sent to our WebSocket
 // endpoint
 func reader(conn *websocket.Conn) {
-	for {
+    for {
     // read in a message
-		messageType, p, err := conn.ReadMessage()
-		if err != nil {
-			log.Println(err)
-			return
-		}
+        messageType, p, err := conn.ReadMessage()
+        if err != nil {
+            log.Println(err)
+            return
+        }
     // print out that message for clarity
-		fmt.Println(string(p))
+        fmt.Println(string(p))
 
-		if err := conn.WriteMessage(messageType, p); err != nil {
-			log.Println(err)
-			return
-		}
+        if err := conn.WriteMessage(messageType, p); err != nil {
+            log.Println(err)
+            return
+        }
 
-	}
+    }
 }
 ```
 
@@ -206,9 +206,9 @@ func wsEndpoint(w http.ResponseWriter, r *http.Request) {
 
     // upgrade this connection to a WebSocket
     // connection
-	ws, err := upgrader.Upgrade(w, r, nil)
-	if err != nil {
-		log.Println(err)
+    ws, err := upgrader.Upgrade(w, r, nil)
+    if err != nil {
+        log.Println(err)
     }
     // helpful log statement to show connections
     log.Println("Client Connected")
@@ -235,23 +235,23 @@ function like so:
 
 ```go
 func wsEndpoint(w http.ResponseWriter, r *http.Request) {
-	upgrader.CheckOrigin = func(r *http.Request) bool { return true }
+    upgrader.CheckOrigin = func(r *http.Request) bool { return true }
 
-	// upgrade this connection to a WebSocket
-	// connection
-	ws, err := upgrader.Upgrade(w, r, nil)
-	if err != nil {
-		log.Println(err)
-	}
+    // upgrade this connection to a WebSocket
+    // connection
+    ws, err := upgrader.Upgrade(w, r, nil)
+    if err != nil {
+        log.Println(err)
+    }
 
-	log.Println("Client Connected")
-	err = ws.WriteMessage(1, []byte("Hi Client!"))
-	if err != nil {
-		log.Println(err)
-	}
-	// listen indefinitely for new messages coming
-	// through on our WebSocket connection
-	reader(ws)
+    log.Println("Client Connected")
+    err = ws.WriteMessage(1, []byte("Hi Client!"))
+    if err != nil {
+        log.Println(err)
+    }
+    // listen indefinitely for new messages coming
+    // through on our WebSocket connection
+    reader(ws)
 }
 ```
 

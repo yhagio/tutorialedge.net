@@ -63,26 +63,26 @@ arbitrary, random value and passes it back to a channel variable called
 package main
 
 import (
-	"fmt"
-	"math/rand"
+    "fmt"
+    "math/rand"
 )
 
 func CalculateValue(values chan int) {
-	value := rand.Intn(10)
-	fmt.Println("Calculated Random Value: {}", value)
-	values <- value
+    value := rand.Intn(10)
+    fmt.Println("Calculated Random Value: {}", value)
+    values <- value
 }
 
 func main() {
-	fmt.Println("Go Channel Tutorial")
+    fmt.Println("Go Channel Tutorial")
 
   values := make(chan int)
   defer close(values)
 
-	go CalculateValue(values)
+    go CalculateValue(values)
 
-	value := <-values
-	fmt.Println(value)
+    value := <-values
+    fmt.Println(value)
 }
 
 ```
@@ -159,30 +159,30 @@ channel in very quick succession.
 package main
 
 import (
-	"fmt"
-	"math/rand"
-	"time"
+    "fmt"
+    "math/rand"
+    "time"
 )
 
 func CalculateValue(c chan int) {
-	value := rand.Intn(10)
-	fmt.Println("Calculated Random Value: {}", value)
-	time.Sleep(1000 * time.Millisecond)
-	c <- value
-	fmt.Println("Only Executes after another goroutine performs a receive on the channel")
+    value := rand.Intn(10)
+    fmt.Println("Calculated Random Value: {}", value)
+    time.Sleep(1000 * time.Millisecond)
+    c <- value
+    fmt.Println("Only Executes after another goroutine performs a receive on the channel")
 }
 
 func main() {
-	fmt.Println("Go Channel Tutorial")
+    fmt.Println("Go Channel Tutorial")
 
-	valueChannel := make(chan int)
-	defer close(valueChannel)
+    valueChannel := make(chan int)
+    defer close(valueChannel)
 
-	go CalculateValue(valueChannel)
-	go CalculateValue(valueChannel)
+    go CalculateValue(valueChannel)
+    go CalculateValue(valueChannel)
 
-	values := <-valueChannel
-	fmt.Println(values)
+    values := <-valueChannel
+    fmt.Println(values)
 }
 ```
 
@@ -226,32 +226,32 @@ our goroutines to complete execution.
 package main
 
 import (
-	"fmt"
-	"math/rand"
-	"time"
+    "fmt"
+    "math/rand"
+    "time"
 )
 
 func CalculateValue(c chan int) {
-	value := rand.Intn(10)
-	fmt.Println("Calculated Random Value: {}", value)
-	time.Sleep(1000 * time.Millisecond)
-	c <- value
-	fmt.Println("This executes regardless as the send is now non-blocking")
+    value := rand.Intn(10)
+    fmt.Println("Calculated Random Value: {}", value)
+    time.Sleep(1000 * time.Millisecond)
+    c <- value
+    fmt.Println("This executes regardless as the send is now non-blocking")
 }
 
 func main() {
-	fmt.Println("Go Channel Tutorial")
+    fmt.Println("Go Channel Tutorial")
 
-	valueChannel := make(chan int, 2)
-	defer close(valueChannel)
+    valueChannel := make(chan int, 2)
+    defer close(valueChannel)
 
-	go CalculateValue(valueChannel)
-	go CalculateValue(valueChannel)
+    go CalculateValue(valueChannel)
+    go CalculateValue(valueChannel)
 
-	values := <-valueChannel
-	fmt.Println(values)
+    values := <-valueChannel
+    fmt.Println(values)
 
-	time.Sleep(1000 * time.Millisecond)
+    time.Sleep(1000 * time.Millisecond)
 }
 ```
 

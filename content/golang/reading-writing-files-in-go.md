@@ -44,22 +44,22 @@ package main
 
 // import the 2 modules we need
 import (
-	"fmt"
-	"io/ioutil"
+    "fmt"
+    "io/ioutil"
 )
 
 func main() {
-	// read in the contents of the localfile.data
-	data, err := ioutil.ReadFile("localfile.data")
-	// if our program was unable to read the file
-	// print out the reason why it can't
-	if err != nil {
-		fmt.Println(err)
-	}
+    // read in the contents of the localfile.data
+    data, err := ioutil.ReadFile("localfile.data")
+    // if our program was unable to read the file
+    // print out the reason why it can't
+    if err != nil {
+        fmt.Println(err)
+    }
 
-	// if it was successful in reading the file then
-	// print out the contents as a string
-	fmt.Print(string(data))
+    // if it was successful in reading the file then
+    // print out the contents as a string
+    fmt.Print(string(data))
 
 }
 ```
@@ -111,28 +111,28 @@ file as well:
 package main
 
 import (
-	"fmt"
-	"io/ioutil"
+    "fmt"
+    "io/ioutil"
 )
 
 func main() {
 
-	mydata := []byte("All the data I wish to write to a file")
+    mydata := []byte("All the data I wish to write to a file")
 
-	// the WriteFile method returns an error if unsuccessful
-	err := ioutil.WriteFile("myfile.data", mydata, 0777)
-	// handle this error
-	if err != nil {
-		// print it out
-		fmt.Println(err)
-	}
+    // the WriteFile method returns an error if unsuccessful
+    err := ioutil.WriteFile("myfile.data", mydata, 0777)
+    // handle this error
+    if err != nil {
+        // print it out
+        fmt.Println(err)
+    }
 
-	data, err := ioutil.ReadFile("myfile.data")
-	if err != nil {
-		fmt.Println(err)
-	}
+    data, err := ioutil.ReadFile("myfile.data")
+    if err != nil {
+        fmt.Println(err)
+    }
 
-	fmt.Print(string(data))
+    fmt.Print(string(data))
 
 }
 ```
@@ -158,46 +158,46 @@ Let's take a look at that now.
 package main
 
 import (
-	"fmt"
-	"io/ioutil"
-	"os"
+    "fmt"
+    "io/ioutil"
+    "os"
 )
 
 func main() {
 
-	mydata := []byte("All the data I wish to write to a file\n")
+    mydata := []byte("All the data I wish to write to a file\n")
 
-	// the WriteFile method returns an error if unsuccessful
-	err := ioutil.WriteFile("myfile.data", mydata, 0777)
-	// handle this error
-	if err != nil {
-		// print it out
-		fmt.Println(err)
-	}
+    // the WriteFile method returns an error if unsuccessful
+    err := ioutil.WriteFile("myfile.data", mydata, 0777)
+    // handle this error
+    if err != nil {
+        // print it out
+        fmt.Println(err)
+    }
 
-	data, err := ioutil.ReadFile("myfile.data")
-	if err != nil {
-		fmt.Println(err)
-	}
+    data, err := ioutil.ReadFile("myfile.data")
+    if err != nil {
+        fmt.Println(err)
+    }
 
-	fmt.Print(string(data))
+    fmt.Print(string(data))
 
-	f, err := os.OpenFile("myfile.data", os.O_APPEND|os.O_WRONLY, 0600)
-	if err != nil {
-		panic(err)
-	}
-	defer f.Close()
+    f, err := os.OpenFile("myfile.data", os.O_APPEND|os.O_WRONLY, 0600)
+    if err != nil {
+        panic(err)
+    }
+    defer f.Close()
 
-	if _, err = f.WriteString("new data that wasn't there originally\n"); err != nil {
-		panic(err)
-	}
+    if _, err = f.WriteString("new data that wasn't there originally\n"); err != nil {
+        panic(err)
+    }
 
-	data, err = ioutil.ReadFile("myfile.data")
-	if err != nil {
-		fmt.Println(err)
-	}
+    data, err = ioutil.ReadFile("myfile.data")
+    if err != nil {
+        fmt.Println(err)
+    }
 
-	fmt.Print(string(data))
+    fmt.Print(string(data))
 
 }
 ```

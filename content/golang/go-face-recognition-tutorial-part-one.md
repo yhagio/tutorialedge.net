@@ -98,23 +98,23 @@ Avengers.
 package main
 
 import (
-	"fmt"
+    "fmt"
 
-	"github.com/Kagami/go-face"
+    "github.com/Kagami/go-face"
 )
 
 const dataDir = "testdata"
 
 func main() {
-	fmt.Println("Facial Recognition System v0.01")
+    fmt.Println("Facial Recognition System v0.01")
 
-	rec, err := face.NewRecognizer(dataDir)
-	if err != nil {
-		fmt.Println("Cannot initialize recognizer")
-	}
-	defer rec.Close()
+    rec, err := face.NewRecognizer(dataDir)
+    if err != nil {
+        fmt.Println("Cannot initialize recognizer")
+    }
+    defer rec.Close()
 
-	fmt.Println("Recognizer Initialized")
+    fmt.Println("Recognizer Initialized")
 }
 ```
 
@@ -140,38 +140,38 @@ and then count the number of faces within said image:
 package main
 
 import (
-	"fmt"
-	"log"
-	"path/filepath"
+    "fmt"
+    "log"
+    "path/filepath"
 
-	"github.com/Kagami/go-face"
+    "github.com/Kagami/go-face"
 )
 
 const dataDir = "testdata"
 
 func main() {
-	fmt.Println("Facial Recognition System v0.01")
+    fmt.Println("Facial Recognition System v0.01")
 
-	rec, err := face.NewRecognizer(dataDir)
-	if err != nil {
-		fmt.Println("Cannot initialize recognizer")
-	}
-	defer rec.Close()
+    rec, err := face.NewRecognizer(dataDir)
+    if err != nil {
+        fmt.Println("Cannot initialize recognizer")
+    }
+    defer rec.Close()
 
-	fmt.Println("Recognizer Initialized")
+    fmt.Println("Recognizer Initialized")
 
-	// we create the path to our image with filepath.Join
-	avengersImage := filepath.Join(dataDir, "tony-stark.jpg")
+    // we create the path to our image with filepath.Join
+    avengersImage := filepath.Join(dataDir, "tony-stark.jpg")
 
-	// we then call RecognizeFile passing in the path
-	// to our file to retrieve the number of faces and any
-	// potential errors
-	faces, err := rec.RecognizeFile(avengersImage)
-	if err != nil {
-		log.Fatalf("Can't recognize: %v", err)
-	}
-	// we print out the number of faces in our image
-	fmt.Println("Number of Faces in Image: ", len(faces))
+    // we then call RecognizeFile passing in the path
+    // to our file to retrieve the number of faces and any
+    // potential errors
+    faces, err := rec.RecognizeFile(avengersImage)
+    if err != nil {
+        log.Fatalf("Can't recognize: %v", err)
+    }
+    // we print out the number of faces in our image
+    fmt.Println("Number of Faces in Image: ", len(faces))
 
 }
 ```
@@ -220,23 +220,23 @@ avengersImage := filepath.Join(dataDir, "avengers-02.jpeg")
 
 faces, err := rec.RecognizeFile(avengersImage)
 if err != nil {
-	log.Fatalf("Can't recognize: %v", err)
+    log.Fatalf("Can't recognize: %v", err)
 }
 fmt.Println("Number of Faces in Image: ", len(faces))
 
 var samples []face.Descriptor
 var avengers []int32
 for i, f := range faces {
-	samples = append(samples, f.Descriptor)
-	// Each face is unique on that image so goes to its own category.
-	avengers = append(avengers, int32(i))
+    samples = append(samples, f.Descriptor)
+    // Each face is unique on that image so goes to its own category.
+    avengers = append(avengers, int32(i))
 }
 // Name the categories, i.e. people on the image.
 labels := []string{
-	"Dr Strange",
-	"Tony Stark",
-	"Bruce Banner",
-	"Wong",
+    "Dr Strange",
+    "Tony Stark",
+    "Bruce Banner",
+    "Wong",
 }
 // Pass samples to the recognizer.
 rec.SetSamples(samples, avengers)
@@ -256,14 +256,14 @@ generated from the `avengers-02.jpeg` file:
 testTonyStark := filepath.Join(dataDir, "tony-stark.jpg")
 tonyStark, err := rec.RecognizeSingleFile(testTonyStark)
 if err != nil {
-	log.Fatalf("Can't recognize: %v", err)
+    log.Fatalf("Can't recognize: %v", err)
 }
 if tonyStark == nil {
-	log.Fatalf("Not a single face on the image")
+    log.Fatalf("Not a single face on the image")
 }
 avengerID := rec.Classify(tonyStark.Descriptor)
 if avengerID < 0 {
-	log.Fatalf("Can't classify")
+    log.Fatalf("Can't classify")
 }
 
 fmt.Println(avengerID)
@@ -279,14 +279,14 @@ recognition system works with an image of Dr Strange.
 testDrStrange := filepath.Join(dataDir, "dr-strange.jpg")
 drStrange, err := rec.RecognizeSingleFile(testDrStrange)
 if err != nil {
-	log.Fatalf("Can't recognize: %v", err)
+    log.Fatalf("Can't recognize: %v", err)
 }
 if drStrange == nil {
-	log.Fatalf("Not a single face on the image")
+    log.Fatalf("Not a single face on the image")
 }
 avengerID = rec.Classify(drStrange.Descriptor)
 if avengerID < 0 {
-	log.Fatalf("Can't classify")
+    log.Fatalf("Can't classify")
 }
 ```
 
@@ -298,14 +298,14 @@ And finally, let's try this out using Wong's image:
 testWong := filepath.Join(dataDir, "wong.jpg")
 wong, err := rec.RecognizeSingleFile(testWong)
 if err != nil {
-	log.Fatalf("Can't recognize: %v", err)
+    log.Fatalf("Can't recognize: %v", err)
 }
 if wong == nil {
-	log.Fatalf("Not a single face on the image")
+    log.Fatalf("Not a single face on the image")
 }
 avengerID = rec.Classify(wong.Descriptor)
 if avengerID < 0 {
-	log.Fatalf("Can't classify")
+    log.Fatalf("Can't classify")
 }
 fmt.Println(avengerID)
 fmt.Println(labels[avengerID])

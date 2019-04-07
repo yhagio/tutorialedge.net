@@ -80,39 +80,39 @@ function like so:
 package main
 
 import (
-	"fmt"
-	"io/ioutil"
-	"os"
+    "fmt"
+    "io/ioutil"
+    "os"
 )
 
 func main() {
-	// we call ioutil.TempFile which returns either a file
-	// or an error.
-	// we specify the directory we want to create these temp files in
-	// for this example we'll use `car-images`, and we'll define
-	// a prefix that will be used for all of our individual image filenames
-	// in this case we'll use 'car-'
-	file, err := ioutil.TempFile("car-images", "car-*.png")
-	if err != nil {
-		fmt.Println(err)
-	}
-	// We can choose to have these files deleted on program close
-	defer os.Remove(file.Name())
+    // we call ioutil.TempFile which returns either a file
+    // or an error.
+    // we specify the directory we want to create these temp files in
+    // for this example we'll use `car-images`, and we'll define
+    // a prefix that will be used for all of our individual image filenames
+    // in this case we'll use 'car-'
+    file, err := ioutil.TempFile("car-images", "car-*.png")
+    if err != nil {
+        fmt.Println(err)
+    }
+    // We can choose to have these files deleted on program close
+    defer os.Remove(file.Name())
 
-	if _, err := file.Write([]byte("hello world\n")); err != nil {
-		fmt.Println(err)
-	}
+    if _, err := file.Write([]byte("hello world\n")); err != nil {
+        fmt.Println(err)
+    }
 
-	data, err := ioutil.ReadFile(file.Name())
-	// if our program was unable to read the file
-	// print out the reason why it can't
-	if err != nil {
-		fmt.Println(err)
-	}
+    data, err := ioutil.ReadFile(file.Name())
+    // if our program was unable to read the file
+    // print out the reason why it can't
+    if err != nil {
+        fmt.Println(err)
+    }
 
-	// if it was successful in reading the file then
-	// print out the contents as a string
-	fmt.Print(string(data))
+    // if it was successful in reading the file then
+    // print out the contents as a string
+    fmt.Print(string(data))
 
 }
 ```
@@ -141,42 +141,42 @@ directory in which our temporary car files will exist:
 package main
 
 import (
-	"fmt"
-	"io/ioutil"
-	"os"
+    "fmt"
+    "io/ioutil"
+    "os"
 )
 
 func main() {
 
-	tempDir, err := ioutil.TempDir("", "cars-")
-	if err != nil {
-		fmt.Println(err)
-	}
-	defer os.RemoveAll(tempDir)
+    tempDir, err := ioutil.TempDir("", "cars-")
+    if err != nil {
+        fmt.Println(err)
+    }
+    defer os.RemoveAll(tempDir)
 
-	file, err := ioutil.TempFile(tempDir, "car-*.png")
-	if err != nil {
-		fmt.Println(err)
-	}
-	defer os.Remove(file.Name())
+    file, err := ioutil.TempFile(tempDir, "car-*.png")
+    if err != nil {
+        fmt.Println(err)
+    }
+    defer os.Remove(file.Name())
 
     // This will print out the full name and path of our image
-	fmt.Println(file.Name())
+    fmt.Println(file.Name())
 
-	if _, err := file.Write([]byte("hello world\n")); err != nil {
-		fmt.Println(err)
-	}
+    if _, err := file.Write([]byte("hello world\n")); err != nil {
+        fmt.Println(err)
+    }
 
-	data, err := ioutil.ReadFile(file.Name())
-	// if our program was unable to read the file
-	// print out the reason why it can't
-	if err != nil {
-		fmt.Println(err)
-	}
+    data, err := ioutil.ReadFile(file.Name())
+    // if our program was unable to read the file
+    // print out the reason why it can't
+    if err != nil {
+        fmt.Println(err)
+    }
 
-	// if it was successful in reading the file then
-	// print out the contents as a string
-	fmt.Print(string(data))
+    // if it was successful in reading the file then
+    // print out the contents as a string
+    fmt.Print(string(data))
 
 }
 ```

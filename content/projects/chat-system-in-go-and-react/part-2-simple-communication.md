@@ -45,19 +45,19 @@ web server. We'll start by creating a really simple `net/http` server:
 package main
 
 import (
-	"fmt"
-	"net/http"
+    "fmt"
+    "net/http"
 )
 
 func setupRoutes() {
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "Simple Server")
-	})
+    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+        fmt.Fprintf(w, "Simple Server")
+    })
 }
 
 func main() {
-	setupRoutes()
-	http.ListenAndServe(":8080", nil)
+    setupRoutes()
+    http.ListenAndServe(":8080", nil)
 }
 
 ```
@@ -123,18 +123,18 @@ endpoint:
 package main
 
 import (
-	"fmt"
-	"io"
-	"log"
-	"net/http"
+    "fmt"
+    "io"
+    "log"
+    "net/http"
 
-	"github.com/gorilla/websocket"
+    "github.com/gorilla/websocket"
 )
 
 // We'll need to define an Upgrader
 // this will require a Read and Write buffer size
 var upgrader = websocket.Upgrader{
-	ReadBufferSize:  1024,
+    ReadBufferSize:  1024,
   WriteBufferSize: 1024,
 
   // We'll need to check the origin of our connection
@@ -148,51 +148,51 @@ var upgrader = websocket.Upgrader{
 // new messages being sent to our WebSocket
 // endpoint
 func reader(conn *websocket.Conn) {
-	for {
+    for {
     // read in a message
-		messageType, p, err := conn.ReadMessage()
-		if err != nil {
-			log.Println(err)
-			return
-		}
+        messageType, p, err := conn.ReadMessage()
+        if err != nil {
+            log.Println(err)
+            return
+        }
     // print out that message for clarity
-		fmt.Println(string(p))
+        fmt.Println(string(p))
 
-		if err := conn.WriteMessage(messageType, p); err != nil {
-			log.Println(err)
-			return
-		}
+        if err := conn.WriteMessage(messageType, p); err != nil {
+            log.Println(err)
+            return
+        }
 
-	}
+    }
 }
 
 // define our WebSocket endpoint
 func serveWs(w http.ResponseWriter, r *http.Request) {
-	fmt.Println(r.Host)
+    fmt.Println(r.Host)
 
   // upgrade this connection to a WebSocket
   // connection
-	ws, err := upgrader.Upgrade(w, r, nil)
-	if err != nil {
-		log.Println(err)
+    ws, err := upgrader.Upgrade(w, r, nil)
+    if err != nil {
+        log.Println(err)
   }
   // listen indefinitely for new messages coming
   // through on our WebSocket connection
-	reader(ws)
+    reader(ws)
 }
 
 func setupRoutes() {
   http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "Simple Server")
+        fmt.Fprintf(w, "Simple Server")
   })
   // mape our `/ws` endpoint to the `serveWs` function
-	http.HandleFunc("/ws", serveWs)
+    http.HandleFunc("/ws", serveWs)
 }
 
 func main() {
-	fmt.Println("Chat App v0.01")
-	setupRoutes()
-	http.ListenAndServe(":8080", nil)
+    fmt.Println("Chat App v0.01")
+    setupRoutes()
+    http.ListenAndServe(":8080", nil)
 }
 
 ```

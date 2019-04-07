@@ -28,14 +28,14 @@ authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_4
 <p>If we take this binary tree as an example, the depth first search algorithm would do the following:</p>
 
 <ol>
-	<li>Add Node 1 to the stack </li>
-	<li>If Node 1 isn't the goal node then add Node 2 to the stack</li>
-	<li>Check if Node 2 is the goal node and if not add Node 4 to the stack.</li>
-	<li>If Node 4 isn't the goal node then add Node 8 to the stack. </li>
-	<li>If node 8 isn't the goal node then go to the nearest ancestor with unexplored children.</li>
-	<li>This happens to be Node 4, so we add Node 9 to the stack and check that.</li>
-	<li>If this isn't the goal node then we travel to Node 2 and explore it's unexplored children, Node 5.</li>
-	<li>and so on...</li>
+    <li>Add Node 1 to the stack </li>
+    <li>If Node 1 isn't the goal node then add Node 2 to the stack</li>
+    <li>Check if Node 2 is the goal node and if not add Node 4 to the stack.</li>
+    <li>If Node 4 isn't the goal node then add Node 8 to the stack. </li>
+    <li>If node 8 isn't the goal node then go to the nearest ancestor with unexplored children.</li>
+    <li>This happens to be Node 4, so we add Node 9 to the stack and check that.</li>
+    <li>If this isn't the goal node then we travel to Node 2 and explore it's unexplored children, Node 5.</li>
+    <li>and so on...</li>
 </ol>
 
 <p>We continue to go down the left most nodes until we find the first path that reaches our goal node.</p>

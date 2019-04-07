@@ -38,26 +38,26 @@ us to update and print the names of any employees we create.
 package main
 
 import (
-	"fmt"
+    "fmt"
 )
 
 type Employee struct {
-	Name string
+    Name string
 }
 
 func (e *Employee) UpdateName(newName string) {
-	e.Name = newName
+    e.Name = newName
 }
 
 func (e *Employee) PrintName() {
-	fmt.Println(e.Name)
+    fmt.Println(e.Name)
 }
 
 func main() {
-	var employee Employee
-	employee.Name = "Elliot"
-	employee.UpdateName("Forbsey")
-	employee.PrintName()
+    var employee Employee
+    employee.Name = "Elliot"
+    employee.UpdateName("Forbsey")
+    employee.PrintName()
 }
 
 ```

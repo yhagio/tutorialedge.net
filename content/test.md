@@ -8,7 +8,7 @@ title: Get Involved
 twitter: https://twitter.com/Elliot_F
 ---
 
-![](/images/ai.webp)
+![](https://images.tutorialedge.net/images/ai.webp)
 
 # Sanguine Lapithae colla latus oracula ignibus
 

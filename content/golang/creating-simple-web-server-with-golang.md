@@ -92,37 +92,37 @@ prevent us from being hit with race-condition bugs.
 package main
 
 import (
-	"fmt"
-	"log"
-	"net/http"
-	"strconv"
-	"sync"
+    "fmt"
+    "log"
+    "net/http"
+    "strconv"
+    "sync"
 )
 
 var counter int
 var mutex = &sync.Mutex{}
 
 func echoString(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "hello")
+    fmt.Fprintf(w, "hello")
 }
 
 func incrementCounter(w http.ResponseWriter, r *http.Request) {
-	mutex.Lock()
-	counter++
-	fmt.Fprintf(w, strconv.Itoa(counter))
-	mutex.Unlock()
+    mutex.Lock()
+    counter++
+    fmt.Fprintf(w, strconv.Itoa(counter))
+    mutex.Unlock()
 }
 
 func main() {
-	http.HandleFunc("/", echoString)
+    http.HandleFunc("/", echoString)
 
-	http.HandleFunc("/increment", incrementCounter)
+    http.HandleFunc("/increment", incrementCounter)
 
-	http.HandleFunc("/hi", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "Hi")
-	})
+    http.HandleFunc("/hi", func(w http.ResponseWriter, r *http.Request) {
+        fmt.Fprintf(w, "Hi")
+    })
 
-	log.Fatal(http.ListenAndServe(":8081", nil))
+    log.Fatal(http.ListenAndServe(":8081", nil))
 
 }
 
@@ -164,22 +164,22 @@ choose to put in that edit.html page.
 package main
 
 import (
-	"fmt"
-	"log"
-	"net/http"
+    "fmt"
+    "log"
+    "net/http"
 )
 
 func main() {
 
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		http.ServeFile(w, r, r.URL.Path[1:])
-	})
+    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+        http.ServeFile(w, r, r.URL.Path[1:])
+    })
 
-	http.HandleFunc("/hi", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "Hi")
-	})
+    http.HandleFunc("/hi", func(w http.ResponseWriter, r *http.Request) {
+        fmt.Fprintf(w, "Hi")
+    })
 
-	log.Fatal(http.ListenAndServe(":8081", nil))
+    log.Fatal(http.ListenAndServe(":8081", nil))
 
 }
 ```
@@ -228,15 +228,15 @@ so:
 package main
 
 import (
-	"log"
-	"net/http"
+    "log"
+    "net/http"
 )
 
 func main() {
 
-	http.Handle("/", http.FileServer(http.Dir("./static")))
+    http.Handle("/", http.FileServer(http.Dir("./static")))
 
-	log.Fatal(http.ListenAndServe(":8081", nil))
+    log.Fatal(http.ListenAndServe(":8081", nil))
 }
 ```
 
@@ -264,15 +264,15 @@ like so:
 package main
 
 import (
-	"log"
-	"net/http"
+    "log"
+    "net/http"
 )
 
 func main() {
 
-	http.Handle("/", http.FileServer(http.Dir("./static")))
+    http.Handle("/", http.FileServer(http.Dir("./static")))
 
-	log.Fatal(http.ListenAndServeTLS(":443", "server.crt", "server.key", nil))
+    log.Fatal(http.ListenAndServeTLS(":443", "server.crt", "server.key", nil))
 }
 
 ```

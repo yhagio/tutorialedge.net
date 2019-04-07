@@ -53,7 +53,7 @@ config/app.php file.
 
 ```php
 'providers' => [
-		…
+        …
   // add our new provider to the providers array
   'Laravel\Socialite\SocialiteServiceProvider',
 ],

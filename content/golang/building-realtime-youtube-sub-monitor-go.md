@@ -48,11 +48,11 @@ the main entry point to our Go program.
 package main
 
 import (
-	"fmt"
+    "fmt"
 )
 
 func main() {
-	fmt.Println("YouTube Subscriber Monitor")
+    fmt.Println("YouTube Subscriber Monitor")
 }
 ```
 
@@ -64,29 +64,29 @@ our frontend client will connect to in order to get the stats in real time.
 package main
 
 import (
-	"fmt"
-	"log"
-	"net/http"
+    "fmt"
+    "log"
+    "net/http"
 )
 
 // homePage will be a simple "hello World" style page
 func homePage(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello World")
+    fmt.Fprintf(w, "Hello World")
 }
 
 // setupRoutes handles setting up our servers
 // routes and matching them to their respective
 // functions
 func setupRoutes() {
-	http.HandleFunc("/", homePage)
+    http.HandleFunc("/", homePage)
     // here we kick off our server on localhost:8080
     log.Fatal(http.ListenAndServe(":8080", nil))
 }
 
 // our main function
 func main() {
-	fmt.Println("YouTube Subscriber Monitor")
-	// calls setup routes
+    fmt.Println("YouTube Subscriber Monitor")
+    // calls setup routes
     setupRoutes()
 }
 ```
@@ -170,76 +170,76 @@ struct that we can later Marshal into JSON.
 package youtube
 
 import (
-	"encoding/json"
-	"fmt"
-	"io/ioutil"
-	"net/http"
-	"os"
+    "encoding/json"
+    "fmt"
+    "io/ioutil"
+    "net/http"
+    "os"
 )
 
 // Response models the JSON structure
 // that we get back from the YouTube API
 type Response struct {
-	Kind  string  `json:"kind"`
-	Items []Items `json:"items"`
+    Kind  string  `json:"kind"`
+    Items []Items `json:"items"`
 }
 
 // Items stores the ID + Statistics for
 // a given channel
 type Items struct {
-	Kind  string `json:"kind"`
-	Id    string `json:"id"`
-	Stats Stats  `json:"statistics"`
+    Kind  string `json:"kind"`
+    Id    string `json:"id"`
+    Stats Stats  `json:"statistics"`
 }
 
 // Stats stores the information we care about
 // so how many views the channel has, how many subscribers
 // how many video etc.
 type Stats struct {
-	Views       string `json:"viewCount"`
-	Subscribers string `json:"subscriberCount"`
-	Videos      string `json:"videoCount"`
+    Views       string `json:"viewCount"`
+    Subscribers string `json:"subscriberCount"`
+    Videos      string `json:"videoCount"`
 }
 
 func GetSubscribers() (Items, error) {
-	var response Response
+    var response Response
     // We want to craft a new GET request that will include the query parameters we want
-	req, err := http.NewRequest("GET", "https://www.googleapis.com/youtube/v3/channels", nil)
-	if err != nil {
-		fmt.Println(err)
-		return Items{}, err
-	}
+    req, err := http.NewRequest("GET", "https://www.googleapis.com/youtube/v3/channels", nil)
+    if err != nil {
+        fmt.Println(err)
+        return Items{}, err
+    }
 
     // here we define the query parameters and their respective values
     q := req.URL.Query()
     // notice how I'm using os.Getenv() to pick up the environment
     // variables that we defined earlier. No hard coded credentials here
-	q.Add("key", os.Getenv("YOUTUBE_KEY"))
-	q.Add("id", os.Getenv("CHANNEL_ID"))
-	q.Add("part", "statistics")
-	req.URL.RawQuery = q.Encode()
+    q.Add("key", os.Getenv("YOUTUBE_KEY"))
+    q.Add("id", os.Getenv("CHANNEL_ID"))
+    q.Add("part", "statistics")
+    req.URL.RawQuery = q.Encode()
 
     // finally we make the request to the URL that we have just
     // constructed
-	client := &http.Client{}
-	resp, err := client.Do(req)
-	if err != nil {
-		return Items{}, err
-	}
-	defer resp.Body.Close()
+    client := &http.Client{}
+    resp, err := client.Do(req)
+    if err != nil {
+        return Items{}, err
+    }
+    defer resp.Body.Close()
 
-	fmt.Println("Response Status: ", resp.Status)
+    fmt.Println("Response Status: ", resp.Status)
     // we then read in all of the body of the
     // JSON response
-	body, _ := ioutil.ReadAll(resp.Body)
-	// and finally unmarshal it into an Response struct
+    body, _ := ioutil.ReadAll(resp.Body)
+    // and finally unmarshal it into an Response struct
     err = json.Unmarshal(body, &response)
-	if err != nil {
-		return Items{}, err
-	}
+    if err != nil {
+        return Items{}, err
+    }
     // we only care about the first Item in our
     // Items array, so we just send that back
-	return response.Items[0], nil
+    return response.Items[0], nil
 }
 ```
 
@@ -256,20 +256,20 @@ YouTube API via a WebSocket endpoint.
 package websocket
 
 import (
-	"encoding/json"
-	"fmt"
-	"log"
-	"net/http"
-	"time"
+    "encoding/json"
+    "fmt"
+    "log"
+    "net/http"
+    "time"
 
-	"github.com/elliotforbes/youtube-stats/youtube"
-	"github.com/gorilla/websocket"
+    "github.com/elliotforbes/youtube-stats/youtube"
+    "github.com/gorilla/websocket"
 )
 
 // We set our Read and Write buffer sizes
 var upgrader = websocket.Upgrader{
-	ReadBufferSize:  1024,
-	WriteBufferSize: 1024,
+    ReadBufferSize:  1024,
+    WriteBufferSize: 1024,
 }
 
 // The Upgrade function will take in an incoming request and upgrade the request
@@ -280,13 +280,13 @@ func Upgrade(w http.ResponseWriter, r *http.Request) (*websocket.Conn, error) {
     upgrader.CheckOrigin = func(r *http.Request) bool { return true }
 
     // creates our websocket connection
-	ws, err := upgrader.Upgrade(w, r, nil)
-	if err != nil {
-		log.Println(err)
-		return ws, err
+    ws, err := upgrader.Upgrade(w, r, nil)
+    if err != nil {
+        log.Println(err)
+        return ws, err
     }
     // returns our new websocket connection
-	return ws, nil
+    return ws, nil
 }
 ```
 
@@ -301,32 +301,32 @@ package:
 func Writer(conn *websocket.Conn) {
     // we want to kick off a for loop that runs for the
     // duration of our websockets connection
-	for {
+    for {
         // we create a new ticker that ticks every 5 seconds
-		ticker := time.NewTicker(5 * time.Second)
+        ticker := time.NewTicker(5 * time.Second)
 
         // every time our ticker ticks
-		for t := range ticker.C {
+        for t := range ticker.C {
             // print out that we are updating the stats
             fmt.Printf("Updating Stats: %+v\n", t)
             // and retrieve the subscribers
-			items, err := youtube.GetSubscribers()
-			if err != nil {
-				fmt.Println(err)
-			}
+            items, err := youtube.GetSubscribers()
+            if err != nil {
+                fmt.Println(err)
+            }
             // next we marshal our response into a JSON string
-			jsonString, err := json.Marshal(items)
-			if err != nil {
-				fmt.Println(err)
-			}
+            jsonString, err := json.Marshal(items)
+            if err != nil {
+                fmt.Println(err)
+            }
             // and finally we write this JSON string to our WebSocket
             // connection and record any errors if there has been any
-			if err := conn.WriteMessage(websocket.TextMessage, []byte(jsonString)); err != nil {
-				fmt.Println(err)
-				return
-			}
-		}
-	}
+            if err := conn.WriteMessage(websocket.TextMessage, []byte(jsonString)); err != nil {
+                fmt.Println(err)
+                return
+            }
+        }
+    }
 }
 ```
 
@@ -343,15 +343,15 @@ called `/stats` which will map to a `stats` function that we'll be defining.
 package main
 
 import (
-	"fmt"
-	"log"
-	"net/http"
+    "fmt"
+    "log"
+    "net/http"
 
-	"github.com/elliotforbes/youtube-stats/websocket"
+    "github.com/elliotforbes/youtube-stats/websocket"
 )
 
 func homePage(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello World")
+    fmt.Fprintf(w, "Hello World")
 }
 
 // our new stats function which will expose any YouTube
@@ -361,24 +361,24 @@ func stats(w http.ResponseWriter, r *http.Request) {
     // function in order to upgrade the connection
     // from a standard HTTP connection to a websocket one
     ws, err := websocket.Upgrade(w, r)
-	if err != nil {
-		fmt.Fprintf(w, "%+v\n", err)
+    if err != nil {
+        fmt.Fprintf(w, "%+v\n", err)
     }
     // we then call our Writer function
     // which continually polls and writes the results
     // to this websocket connection
-	go websocket.Writer(ws)
+    go websocket.Writer(ws)
 }
 
 func setupRoutes() {
-	http.HandleFunc("/", homePage)
-	http.HandleFunc("/stats", stats)
-	log.Fatal(http.ListenAndServe(":8080", nil))
+    http.HandleFunc("/", homePage)
+    http.HandleFunc("/stats", stats)
+    log.Fatal(http.ListenAndServe(":8080", nil))
 }
 
 func main() {
-	fmt.Println("YouTube Subscriber Monitor")
-	setupRoutes()
+    fmt.Println("YouTube Subscriber Monitor")
+    setupRoutes()
 }
 ```
 

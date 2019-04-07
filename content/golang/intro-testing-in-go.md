@@ -59,17 +59,17 @@ number and adds 2 to it. Nice and simple to get us up and running:
 package main
 
 import (
-	"fmt"
+    "fmt"
 )
 
 // Calculate returns x + 2.
 func Calculate(x int) (result int) {
-	result = x + 2
-	return result
+    result = x + 2
+    return result
 }
 
 func main() {
-	fmt.Println("Hello World")
+    fmt.Println("Hello World")
 }
 ```
 
@@ -80,13 +80,13 @@ directory and write the following test:
 package main
 
 import (
-	"testing"
+    "testing"
 )
 
 func TestCalculate(t *testing.T) {
-	if Calculate(2) != 4 {
-		t.Error("Expected 2 + 2 to equal 4")
-	}
+    if Calculate(2) != 4 {
+        t.Error("Expected 2 + 2 to equal 4")
+    }
 }
 ```
 
@@ -116,22 +116,22 @@ leverage an `array` of tests like so:
 
 ```go
 func TestTableCalculate(t *testing.T) {
-	var tests = []struct {
-		input    int
-		expected int
-	}{
-		{2, 4},
-		{-1, 1},
-		{0, 2},
-		{-5, -3},
-		{99999, 100001},
-	}
+    var tests = []struct {
+        input    int
+        expected int
+    }{
+        {2, 4},
+        {-1, 1},
+        {0, 2},
+        {-5, -3},
+        {99999, 100001},
+    }
 
-	for _, test := range tests {
-		if output := Calculate(test.input); output != test.expected {
-			t.Error("Test Failed: {} inputted, {} expected, recieved: {}", test.input, test.expected, output)
-		}
-	}
+    for _, test := range tests {
+        if output := Calculate(test.input); output != test.expected {
+            t.Error("Test Failed: {} inputted, {} expected, recieved: {}", test.input, test.expected, output)
+        }
+    }
 }
 ```
 

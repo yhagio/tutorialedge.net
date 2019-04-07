@@ -38,19 +38,19 @@ For example, take a look at `lastIndexTests` which is an array of type
 
 ```go
 var lastIndexTests = []IndexTest{
-	{"", "", 0},
-	{"", "a", -1},
-	{"", "foo", -1},
-	{"fo", "foo", -1},
-	{"foo", "foo", 0},
-	{"foo", "f", 0},
-	{"oofofoofooo", "f", 7},
-	{"oofofoofooo", "foo", 7},
-	{"barfoobarfoo", "foo", 9},
-	{"foo", "", 3},
-	{"foo", "o", 2},
-	{"abcABCabc", "A", 3},
-	{"abcABCabc", "a", 6},
+    {"", "", 0},
+    {"", "a", -1},
+    {"", "foo", -1},
+    {"fo", "foo", -1},
+    {"foo", "foo", 0},
+    {"foo", "f", 0},
+    {"oofofoofooo", "f", 7},
+    {"oofofoofooo", "foo", 7},
+    {"barfoobarfoo", "foo", 9},
+    {"foo", "", 3},
+    {"foo", "o", 2},
+    {"abcABCabc", "A", 3},
+    {"abcABCabc", "a", 6},
 }
 ```
 
@@ -61,9 +61,9 @@ feature a standard `string`, a separator, and an `out` integer value and have a
 
 ```go
 type IndexTest struct {
-	s   string
-	sep string
-	out int
+    s   string
+    sep string
+    out int
 }
 ```
 
@@ -94,40 +94,40 @@ Some fairly complex examples of tests using these files can be found in the
 
 ```go
 func TestReader(t *testing.T) {
-	vectors := []struct {
-		file    string    // Test input file
-		headers []*Header // Expected output headers
-		chksums []string  // MD5 checksum of files, leave as nil if not checked
-		err     error     // Expected error to occur
-	}{{
-		file: "testdata/gnu.tar",
-		headers: []*Header{{
-			Name:     "small.txt",
-			Mode:     0640,
-			Uid:      73025,
-			Gid:      5000,
-			Size:     5,
-			ModTime:  time.Unix(1244428340, 0),
-			Typeflag: '0',
-			Uname:    "dsymonds",
-			Gname:    "eng",
-			Format:   FormatGNU,
-		}, {
-			Name:     "small2.txt",
-			Mode:     0640,
-			Uid:      73025,
-			Gid:      5000,
-			Size:     11,
-			ModTime:  time.Unix(1244436044, 0),
-			Typeflag: '0',
-			Uname:    "dsymonds",
-			Gname:    "eng",
-			Format:   FormatGNU,
-		}},
-		chksums: []string{
-			"e38b27eaccb4391bdec553a7f3ae6b2f",
-			"c65bd2e50a56a2138bf1716f2fd56fe9",
-		},
+    vectors := []struct {
+        file    string    // Test input file
+        headers []*Header // Expected output headers
+        chksums []string  // MD5 checksum of files, leave as nil if not checked
+        err     error     // Expected error to occur
+    }{{
+        file: "testdata/gnu.tar",
+        headers: []*Header{{
+            Name:     "small.txt",
+            Mode:     0640,
+            Uid:      73025,
+            Gid:      5000,
+            Size:     5,
+            ModTime:  time.Unix(1244428340, 0),
+            Typeflag: '0',
+            Uname:    "dsymonds",
+            Gname:    "eng",
+            Format:   FormatGNU,
+        }, {
+            Name:     "small2.txt",
+            Mode:     0640,
+            Uid:      73025,
+            Gid:      5000,
+            Size:     11,
+            ModTime:  time.Unix(1244436044, 0),
+            Typeflag: '0',
+            Uname:    "dsymonds",
+            Gname:    "eng",
+            Format:   FormatGNU,
+        }},
+        chksums: []string{
+            "e38b27eaccb4391bdec553a7f3ae6b2f",
+            "c65bd2e50a56a2138bf1716f2fd56fe9",
+        },
   },
   // more test cases
 ```
@@ -161,32 +161,32 @@ So, in order to get around this problem, we can mock HTTP responses using the
 package main_test
 
 import (
-	"fmt"
-	"io"
-	"io/ioutil"
-	"net/http"
-	"net/http/httptest"
-	"testing"
+    "fmt"
+    "io"
+    "io/ioutil"
+    "net/http"
+    "net/http/httptest"
+    "testing"
 )
 
 func TestHttp(t *testing.T) {
   //
-	handler := func(w http.ResponseWriter, r *http.Request) {
+    handler := func(w http.ResponseWriter, r *http.Request) {
     // here we write our expected response, in this case, we return a
     // JSON string which is typical when dealing with REST APIs
-		io.WriteString(w, "{ \"status\": \"expected service response\"}")
-	}
+        io.WriteString(w, "{ \"status\": \"expected service response\"}")
+    }
 
-	req := httptest.NewRequest("GET", "https://tutorialedge.net", nil)
-	w := httptest.NewRecorder()
-	handler(w, req)
+    req := httptest.NewRequest("GET", "https://tutorialedge.net", nil)
+    w := httptest.NewRecorder()
+    handler(w, req)
 
-	resp := w.Result()
-	body, _ := ioutil.ReadAll(resp.Body)
+    resp := w.Result()
+    body, _ := ioutil.ReadAll(resp.Body)
 haha
-	fmt.Println(resp.StatusCode)
-	fmt.Println(resp.Header.Get("Content-Type"))
-	fmt.Println(string(body))
+    fmt.Println(resp.StatusCode)
+    fmt.Println(resp.Header.Get("Content-Type"))
+    fmt.Println(string(body))
 }
 ```
 
@@ -228,12 +228,12 @@ your test file:
 package main_test
 
 import (
-	"fmt"
-	"testing"
+    "fmt"
+    "testing"
 )
 
 func TestMainIntegration(t *testing.T) {
-	fmt.Println("My Integration Test")
+    fmt.Println("My Integration Test")
 }
 ```
 

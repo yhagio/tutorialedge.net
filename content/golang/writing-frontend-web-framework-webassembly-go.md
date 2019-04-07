@@ -106,7 +106,7 @@ our Oak Web Framework!
 package main
 
 func main() {
-	println("Oak Framework Initialized")
+    println("Oak Framework Initialized")
 }
 ```
 
@@ -130,20 +130,20 @@ We can use a really simple file server like this:
 package main
 
 import (
-	"flag"
-	"log"
-	"net/http"
+    "flag"
+    "log"
+    "net/http"
 )
 
 var (
-	listen = flag.String("listen", ":8080", "listen address")
-	dir    = flag.String("dir", ".", "directory to serve")
+    listen = flag.String("listen", ":8080", "listen address")
+    dir    = flag.String("dir", ".", "directory to serve")
 )
 
 func main() {
-	flag.Parse()
-	log.Printf("listening on %q...", *listen)
-	log.Fatal(http.ListenAndServe(*listen, http.FileServer(http.Dir(*dir))))
+    flag.Parse()
+    log.Printf("listening on %q...", *listen)
+    log.Fatal(http.ListenAndServe(*listen, http.FileServer(http.Dir(*dir))))
 }
 ```
 
@@ -168,7 +168,7 @@ import "syscall/js"
 
 // RegisterFunction
 func RegisterFunction(funcName string, myfunc func(i []js.Value)) {
-	js.Global().Set(funcName, js.NewCallback(myfunc))
+    js.Global().Set(funcName, js.NewCallback(myfunc))
 }
 ```
 
@@ -204,7 +204,7 @@ type HomeComponent struct{}
 var Home HomeComponent
 
 func (h HomeComponent) Render() string {
-	return "<h2>Home Component</h2>"
+    return "<h2>Home Component</h2>"
 }
 ```
 
@@ -221,7 +221,7 @@ framework:
 package component
 
 type Component interface {
-	Render() string
+    Render() string
 }
 ```
 
@@ -234,9 +234,9 @@ use within our component!
 package components
 
 import (
-	"syscall/js"
+    "syscall/js"
 
-	"github.com/elliotforbes/go-webassembly-framework"
+    "github.com/elliotforbes/go-webassembly-framework"
 )
 
 type AboutComponent struct{}
@@ -244,18 +244,18 @@ type AboutComponent struct{}
 var About AboutComponent
 
 func init() {
-	oak.RegisterFunction("coolFunc", CoolFunc)
+    oak.RegisterFunction("coolFunc", CoolFunc)
 }
 
 func CoolFunc(i []js.Value) {
-	println("does stuff")
+    println("does stuff")
 }
 
 func (a AboutComponent) Render() string {
-	return `<div>
-						<h2>About Component Actually Works</h2>
-						<button onClick="coolFunc();">Cool Func</button>
-					</div>`
+    return `<div>
+                        <h2>About Component Actually Works</h2>
+                        <button onClick="coolFunc();">Cool Func</button>
+                    </div>`
 }
 ```
 
@@ -286,19 +286,19 @@ checking, we'll just keep everything in memory for now to keep things simple:
 package router
 
 import (
-	"syscall/js"
+    "syscall/js"
 
-	"github.com/elliotforbes/go-webassembly-framework/component"
+    "github.com/elliotforbes/go-webassembly-framework/component"
 )
 
 type Router struct {
-	Routes map[string]component.Component
+    Routes map[string]component.Component
 }
 
 var router Router
 
 func init() {
-	router.Routes = make(map[string]component.Component)
+    router.Routes = make(map[string]component.Component)
 }
 ```
 
@@ -314,21 +314,21 @@ our `<div id="view"/>` html tag:
 // router/router.go
 // ...
 func NewRouter() {
-	js.Global().Set("Link", js.NewCallback(Link))
-	js.Global().Get("document").Call("getElementById", "view").Set("innerHTML", "")
+    js.Global().Set("Link", js.NewCallback(Link))
+    js.Global().Get("document").Call("getElementById", "view").Set("innerHTML", "")
 }
 
 func RegisterRoute(path string, component component.Component) {
-	router.Routes[path] = component
+    router.Routes[path] = component
 }
 
 func Link(i []js.Value) {
-	println("Link Hit")
+    println("Link Hit")
 
-	comp := router.Routes[i[0].String()]
-	html := comp.Render()
+    comp := router.Routes[i[0].String()]
+    html := comp.Render()
 
-	js.Global().Get("document").Call("getElementById", "view").Set("innerHTML", html)
+    js.Global().Get("document").Call("getElementById", "view").Set("innerHTML", html)
 }
 ```
 
@@ -353,23 +353,23 @@ use this in a simple application we could do so like this:
 package main
 
 import (
-	"github.com/elliotforbes/go-webassembly-framework"
-	"github.com/elliotforbes/go-webassembly-framework/examples/blog/components"
-	"github.com/elliotforbes/go-webassembly-framework/router"
+    "github.com/elliotforbes/go-webassembly-framework"
+    "github.com/elliotforbes/go-webassembly-framework/examples/blog/components"
+    "github.com/elliotforbes/go-webassembly-framework/router"
 )
 
 func main() {
-	// Starts the Oak framework
-	oak.Start()
+    // Starts the Oak framework
+    oak.Start()
 
-	// Starts our Router
-	router.NewRouter()
-	router.RegisterRoute("home", components.Home)
-	router.RegisterRoute("about", components.About)
+    // Starts our Router
+    router.NewRouter()
+    router.RegisterRoute("home", components.Home)
+    router.RegisterRoute("about", components.About)
 
-	// keeps our app running
-	done := make(chan struct{}, 0)
-	<-done
+    // keeps our app running
+    done := make(chan struct{}, 0)
+    <-done
 }
 
 ```

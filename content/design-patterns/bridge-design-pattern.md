@@ -28,10 +28,10 @@ authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_4
 <p>You should typically use the Bridge pattern when:</p>
 
 <ul>
-	<li>You require run-time binding of the implementation.</li>
-	<li>both the abstractions and their implementations should be extensible by subclassing.</li>
-	<li>changes in the implementation of an abstraction should have no impact on clients; that is, their code should not have to be recompiled</li>
-	<li>you want to share an implementation among multiple objects and this fact should be hidden from the client.</li>
+    <li>You require run-time binding of the implementation.</li>
+    <li>both the abstractions and their implementations should be extensible by subclassing.</li>
+    <li>changes in the implementation of an abstraction should have no impact on clients; that is, their code should not have to be recompiled</li>
+    <li>you want to share an implementation among multiple objects and this fact should be hidden from the client.</li>
 </ul>
 
 # Implementation

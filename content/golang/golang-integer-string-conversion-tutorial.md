@@ -24,19 +24,19 @@ Full documentation of the strconv package can be found here:
 
 ```go
 func strToIntConversion() {
-	fmt.Println("String to Integer Value Conversion")
+    fmt.Println("String to Integer Value Conversion")
 
-	var ourInteger int
-	// use the strconv package to convert our string '12345' to an integer value
-	ourInteger, err := strconv.Atoi("12345")
+    var ourInteger int
+    // use the strconv package to convert our string '12345' to an integer value
+    ourInteger, err := strconv.Atoi("12345")
 
-	// if there has been an error then handle it here
-	if err != nil {
-		fmt.Println(err)
-	}
+    // if there has been an error then handle it here
+    if err != nil {
+        fmt.Println(err)
+    }
 
-	// this should print out 12346
-	fmt.Println(ourInteger + 1)
+    // this should print out 12346
+    fmt.Println(ourInteger + 1)
 
 }
 ```
@@ -45,14 +45,14 @@ func strToIntConversion() {
 
 ```go
 func intToStringConversion() {
-	fmt.Println("integer to string conversion")
+    fmt.Println("integer to string conversion")
 
-	var ourString string
+    var ourString string
 
-	ourString = strconv.Itoa(12345)
+    ourString = strconv.Itoa(12345)
 
-	// print out our string value
-	fmt.Println(ourString)
+    // print out our string value
+    fmt.Println(ourString)
 
 }
 ```
@@ -65,42 +65,42 @@ Full Source Code:
 package main
 
 import (
-	"fmt"
-	"strconv"
+    "fmt"
+    "strconv"
 )
 
 func strToIntConversion() {
-	fmt.Println("String to Integer Value Conversion")
+    fmt.Println("String to Integer Value Conversion")
 
-	var ourInteger int
-	// use the strconv package to convert our string '12345' to an integer value
-	ourInteger, err := strconv.Atoi("12345")
+    var ourInteger int
+    // use the strconv package to convert our string '12345' to an integer value
+    ourInteger, err := strconv.Atoi("12345")
 
-	// if there has been an error then handle it here
-	if err != nil {
-		fmt.Println(err)
-	}
+    // if there has been an error then handle it here
+    if err != nil {
+        fmt.Println(err)
+    }
 
-	// this should print out 12346
-	fmt.Println(ourInteger + 1)
+    // this should print out 12346
+    fmt.Println(ourInteger + 1)
 }
 
 
 func intToStringConversion() {
-	fmt.Println("integer to string conversion")
+    fmt.Println("integer to string conversion")
 
-	var ourString string
+    var ourString string
 
-	ourString = strconv.Itoa(12345)
+    ourString = strconv.Itoa(12345)
 
-	// print out our string value
-	fmt.Println(ourString)
+    // print out our string value
+    fmt.Println(ourString)
 
 }
 
 
 func main() {
-	strToIntConversion()
-	intToStringConversion()
+    strToIntConversion()
+    intToStringConversion()
 }
 ```

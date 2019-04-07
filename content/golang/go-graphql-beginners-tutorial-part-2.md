@@ -72,25 +72,25 @@ append this new Tutorial to our global array of tutorials.
 
 ```go
 var mutationType = graphql.NewObject(graphql.ObjectConfig{
-	Name: "Mutation",
-	Fields: graphql.Fields{
-		"create": &graphql.Field{
-			Type:        tutorialType,
-			Description: "Create a new Tutorial",
-			Args: graphql.FieldConfigArgument{
-				"title": &graphql.ArgumentConfig{
-					Type: graphql.NewNonNull(graphql.String),
-				},
-			},
-			Resolve: func(params graphql.ResolveParams) (interface{}, error) {
-				tutorial := Tutorial{
-					Title: params.Args["title"].(string),
-				}
-				tutorials = append(tutorials, tutorial)
-				return tutorial, nil
-			},
-		},
-	},
+    Name: "Mutation",
+    Fields: graphql.Fields{
+        "create": &graphql.Field{
+            Type:        tutorialType,
+            Description: "Create a new Tutorial",
+            Args: graphql.FieldConfigArgument{
+                "title": &graphql.ArgumentConfig{
+                    Type: graphql.NewNonNull(graphql.String),
+                },
+            },
+            Resolve: func(params graphql.ResolveParams) (interface{}, error) {
+                tutorial := Tutorial{
+                    Title: params.Args["title"].(string),
+                }
+                tutorials = append(tutorials, tutorial)
+                return tutorial, nil
+            },
+        },
+    },
 })
 ```
 
@@ -223,13 +223,13 @@ out to this new database. We'll first need to add a new import to the top of our
 package main
 
 import (
-	"database/sql"
-	"encoding/json"
-	"fmt"
-	"log"
+    "database/sql"
+    "encoding/json"
+    "fmt"
+    "log"
 
-	"github.com/graphql-go/graphql"
-	_ "github.com/mattn/go-sqlite3"
+    "github.com/graphql-go/graphql"
+    _ "github.com/mattn/go-sqlite3"
 )
 ...
 ```

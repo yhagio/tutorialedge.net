@@ -69,13 +69,13 @@ import "fmt"
 var name string
 
 func init() {
-	fmt.Println("This will get called on main initialization")
-	name = "Elliot"
+    fmt.Println("This will get called on main initialization")
+    name = "Elliot"
 }
 
 func main() {
-	fmt.Println("My Wonderful Go Program")
-	fmt.Printf("Name: %s\n", name)
+    fmt.Println("My Wonderful Go Program")
+    fmt.Printf("Name: %s\n", name)
 }
 ```
 
@@ -173,18 +173,18 @@ import "fmt"
 var initCounter int
 
 func init() {
-	fmt.Println("Called First in Order of Declaration")
-	initCounter++
+    fmt.Println("Called First in Order of Declaration")
+    initCounter++
 }
 
 func init() {
-	fmt.Println("Called second in order of declaration")
-	initCounter++
+    fmt.Println("Called second in order of declaration")
+    initCounter++
 }
 
 func main() {
-	fmt.Println("Does nothing of any significance")
-	fmt.Printf("Init Counter: %d\n", initCounter)
+    fmt.Println("Does nothing of any significance")
+    fmt.Printf("Init Counter: %d\n", initCounter)
 }
 ```
 

@@ -165,15 +165,15 @@ can subsequently test:
 package main
 
 import (
-	"fmt"
+    "fmt"
 )
 
 func Calculate(x int) int {
-	return x + 2
+    return x + 2
 }
 
 func main() {
-	fmt.Println("Go CI Pipeline Tutorial")
+    fmt.Println("Go CI Pipeline Tutorial")
 }
 ```
 
@@ -188,9 +188,9 @@ package main
 import "testing"
 
 func TestCalculation(t *testing.T) {
-	if Calculate(2) != 4 {
-		t.Fatal("Someone has goofed")
-	}
+    if Calculate(2) != 4 {
+        t.Fatal("Someone has goofed")
+    }
 }
 ```
 

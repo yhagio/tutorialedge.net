@@ -61,68 +61,68 @@ our `main.go` file into this new `websocket.go` file.
 package websocket
 
 import (
-	"fmt"
-	"io"
-	"log"
-	"net/http"
+    "fmt"
+    "io"
+    "log"
+    "net/http"
 
-	"github.com/gorilla/websocket"
+    "github.com/gorilla/websocket"
 )
 
 var upgrader = websocket.Upgrader{
-	ReadBufferSize:  1024,
-	WriteBufferSize: 1024,
-	CheckOrigin: func(r *http.Request) bool { return true },
+    ReadBufferSize:  1024,
+    WriteBufferSize: 1024,
+    CheckOrigin: func(r *http.Request) bool { return true },
 }
 
 func Upgrade(w http.ResponseWriter, r *http.Request) (*websocket.Conn, error) {
-	ws, err := upgrader.Upgrade(w, r, nil)
-	if err != nil {
-		log.Println(err)
-		return ws, err
-	}
-	return ws, nil
+    ws, err := upgrader.Upgrade(w, r, nil)
+    if err != nil {
+        log.Println(err)
+        return ws, err
+    }
+    return ws, nil
 }
 
 func Reader(conn *websocket.Conn) {
-	for {
-		messageType, p, err := conn.ReadMessage()
-		if err != nil {
-			log.Println(err)
-			return
-		}
+    for {
+        messageType, p, err := conn.ReadMessage()
+        if err != nil {
+            log.Println(err)
+            return
+        }
 
-		fmt.Println(string(p))
+        fmt.Println(string(p))
 
-		if err := conn.WriteMessage(messageType, p); err != nil {
-			log.Println(err)
-			return
-		}
-	}
+        if err := conn.WriteMessage(messageType, p); err != nil {
+            log.Println(err)
+            return
+        }
+    }
 }
 
 func Writer(conn *websocket.Conn) {
-	for {
-		fmt.Println("Sending")
-		messageType, r, err := conn.NextReader()
-		if err != nil {
-			fmt.Println(err)
-			return
-		}
-		w, err := conn.NextWriter(messageType)
-		if err != nil {
-			fmt.Println(err)
-			return
-		}
-		if _, err := io.Copy(w, r); err != nil {
-			fmt.Println(err)
-			return
-		}
-		if err := w.Close(); err != nil {
-			fmt.Println(err)
-			return
-		}
-	}
+    for {
+        fmt.Println("Sending")
+        messageType, r, err := conn.NextReader()
+        if err != nil {
+            fmt.Println(err)
+            return
+        }
+        w, err := conn.NextWriter(messageType)
+        if err != nil {
+            fmt.Println(err)
+            return
+        }
+        if _, err := io.Copy(w, r); err != nil {
+            fmt.Println(err)
+            return
+        }
+        if err := w.Close(); err != nil {
+            fmt.Println(err)
+            return
+        }
+    }
 }
 ```
 
@@ -136,29 +136,29 @@ so:
 package main
 
 import (
-	"fmt"
-	"net/http"
+    "fmt"
+    "net/http"
 
-	"github.com/TutorialEdge/realtime-chat-go-react/pkg/websocket"
+    "github.com/TutorialEdge/realtime-chat-go-react/pkg/websocket"
 )
 
 func serveWs(w http.ResponseWriter, r *http.Request) {
-	ws, err := websocket.Upgrade(w, r)
-	if err != nil {
-		fmt.Fprintf(w, "%+V\n", err)
-	}
-	go websocket.Writer(ws)
-	websocket.Reader(ws)
+    ws, err := websocket.Upgrade(w, r)
+    if err != nil {
+        fmt.Fprintf(w, "%+V\n", err)
+    }
+    go websocket.Writer(ws)
+    websocket.Reader(ws)
 }
 
 func setupRoutes() {
-	http.HandleFunc("/ws", serveWs)
+    http.HandleFunc("/ws", serveWs)
 }
 
 func main() {
-	fmt.Println("Distributed Chat App v0.01")
-	setupRoutes()
-	http.ListenAndServe(":8080", nil)
+    fmt.Println("Distributed Chat App v0.01")
+    setupRoutes()
+    http.ListenAndServe(":8080", nil)
 }
 ```
 
@@ -237,40 +237,40 @@ within the pool.
 package websocket
 
 import (
-	"fmt"
-	"log"
-	"sync"
+    "fmt"
+    "log"
+    "sync"
 
-	"github.com/gorilla/websocket"
+    "github.com/gorilla/websocket"
 )
 
 type Client struct {
-	ID   string
-	Conn *websocket.Conn
-	Pool *Pool
+    ID   string
+    Conn *websocket.Conn
+    Pool *Pool
 }
 
 type Message struct {
-	Type int    `json:"type"`
-	Body string `json:"body"`
+    Type int    `json:"type"`
+    Body string `json:"body"`
 }
 
 func (c *Client) Read() {
-	defer func() {
-		c.Pool.Unregister <- c
-		c.Conn.Close()
-	}()
+    defer func() {
+        c.Pool.Unregister <- c
+        c.Conn.Close()
+    }()
 
-	for {
-		messageType, p, err := c.Conn.ReadMessage()
-		if err != nil {
-			log.Println(err)
-			return
-		}
-		message := Message{Type: messageType, Body: string(p)}
-		c.Pool.Broadcast <- message
-		fmt.Printf("Message Received: %+v\n", message)
-	}
+    for {
+        messageType, p, err := c.Conn.ReadMessage()
+        if err != nil {
+            log.Println(err)
+            return
+        }
+        message := Message{Type: messageType, Body: string(p)}
+        c.Pool.Broadcast <- message
+        fmt.Printf("Message Received: %+v\n", message)
+    }
 }
 ```
 
@@ -291,19 +291,19 @@ package websocket
 import "fmt"
 
 type Pool struct {
-	Register   chan *Client
-	Unregister chan *Client
-	Clients    map[*Client]bool
-	Broadcast  chan Message
+    Register   chan *Client
+    Unregister chan *Client
+    Clients    map[*Client]bool
+    Broadcast  chan Message
 }
 
 func NewPool() *Pool {
-	return &Pool{
-		Register:   make(chan *Client),
-		Unregister: make(chan *Client),
-		Clients:    make(map[*Client]bool),
-		Broadcast:  make(chan Message),
-	}
+    return &Pool{
+        Register:   make(chan *Client),
+        Unregister: make(chan *Client),
+        Clients:    make(map[*Client]bool),
+        Broadcast:  make(chan Message),
+    }
 }
 ```
 
@@ -328,33 +328,33 @@ Let's code this up now:
 
 ```go
 func (pool *Pool) Start() {
-	for {
-		select {
-		case client := <-pool.Register:
-			pool.Clients[client] = true
-			fmt.Println("Size of Connection Pool: ", len(pool.Clients))
-			for client, _ := range pool.Clients {
-				fmt.Println(client)
-				client.Conn.WriteJSON(Message{Type: 1, Body: "New User Joined..."})
-			}
-			break
-		case client := <-pool.Unregister:
-			delete(pool.Clients, client)
-			fmt.Println("Size of Connection Pool: ", len(pool.Clients))
-			for client, _ := range pool.Clients {
-				client.Conn.WriteJSON(Message{Type: 1, Body: "User Disconnected..."})
-			}
-			break
-		case message := <-pool.Broadcast:
-			fmt.Println("Sending message to all clients in Pool")
-			for client, _ := range pool.Clients {
-				if err := client.Conn.WriteJSON(message); err != nil {
-					fmt.Println(err)
-					return
-				}
-			}
-		}
-	}
+    for {
+        select {
+        case client := <-pool.Register:
+            pool.Clients[client] = true
+            fmt.Println("Size of Connection Pool: ", len(pool.Clients))
+            for client, _ := range pool.Clients {
+                fmt.Println(client)
+                client.Conn.WriteJSON(Message{Type: 1, Body: "New User Joined..."})
+            }
+            break
+        case client := <-pool.Unregister:
+            delete(pool.Clients, client)
+            fmt.Println("Size of Connection Pool: ", len(pool.Clients))
+            for client, _ := range pool.Clients {
+                client.Conn.WriteJSON(Message{Type: 1, Body: "User Disconnected..."})
+            }
+            break
+        case message := <-pool.Broadcast:
+            fmt.Println("Sending message to all clients in Pool")
+            for client, _ := range pool.Clients {
+                if err := client.Conn.WriteJSON(message); err != nil {
+                    fmt.Println(err)
+                    return
+                }
+            }
+        }
+    }
 }
 ```
 
@@ -367,26 +367,26 @@ remove some of the no-longer necessary functions and methods:
 package websocket
 
 import (
-	"log"
-	"net/http"
+    "log"
+    "net/http"
 
-	"github.com/gorilla/websocket"
+    "github.com/gorilla/websocket"
 )
 
 var upgrader = websocket.Upgrader{
-	ReadBufferSize:  1024,
-	WriteBufferSize: 1024,
-	CheckOrigin: func(r *http.Request) bool { return true },
+    ReadBufferSize:  1024,
+    WriteBufferSize: 1024,
+    CheckOrigin: func(r *http.Request) bool { return true },
 }
 
 func Upgrade(w http.ResponseWriter, r *http.Request) (*websocket.Conn, error) {
-	conn, err := upgrader.Upgrade(w, r, nil)
-	if err != nil {
-		log.Println(err)
-		return nil, err
-	}
+    conn, err := upgrader.Upgrade(w, r, nil)
+    if err != nil {
+        log.Println(err)
+        return nil, err
+    }
 
-	return conn, nil
+    return conn, nil
 }
 ```
 
@@ -399,41 +399,41 @@ every connection and to register that client with a `Pool`:
 package main
 
 import (
-	"fmt"
-	"net/http"
+    "fmt"
+    "net/http"
 
-	"github.com/TutorialEdge/realtime-chat-go-react/pkg/websocket"
+    "github.com/TutorialEdge/realtime-chat-go-react/pkg/websocket"
 )
 
 func serveWs(pool *websocket.Pool, w http.ResponseWriter, r *http.Request) {
-	fmt.Println("WebSocket Endpoint Hit")
-	conn, err := websocket.Upgrade(w, r)
-	if err != nil {
-		fmt.Fprintf(w, "%+v\n", err)
-	}
+    fmt.Println("WebSocket Endpoint Hit")
+    conn, err := websocket.Upgrade(w, r)
+    if err != nil {
+        fmt.Fprintf(w, "%+v\n", err)
+    }
 
-	client := &websocket.Client{
-		Conn: conn,
-		Pool: pool,
-	}
+    client := &websocket.Client{
+        Conn: conn,
+        Pool: pool,
+    }
 
-	pool.Register <- client
-	client.Read()
+    pool.Register <- client
+    client.Read()
 }
 
 func setupRoutes() {
-	pool := websocket.NewPool()
-	go pool.Start()
+    pool := websocket.NewPool()
+    go pool.Start()
 
-	http.HandleFunc("/ws", func(w http.ResponseWriter, r *http.Request) {
-		serveWs(pool, w, r)
-	})
+    http.HandleFunc("/ws", func(w http.ResponseWriter, r *http.Request) {
+        serveWs(pool, w, r)
+    })
 }
 
 func main() {
-	fmt.Println("Distributed Chat App v0.01")
-	setupRoutes()
-	http.ListenAndServe(":8080", nil)
+    fmt.Println("Distributed Chat App v0.01")
+    setupRoutes()
+    http.ListenAndServe(":8080", nil)
 }
 ```
 

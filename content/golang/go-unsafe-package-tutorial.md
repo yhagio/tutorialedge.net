@@ -20,20 +20,20 @@ weight: 32
 ## Calculating the Size of a Variable Reference
 
 ```go
-	myint := 3
-	fmt.Printf("a: %T, %d\n", myint, unsafe.Sizeof(myint))
+    myint := 3
+    fmt.Printf("a: %T, %d\n", myint, unsafe.Sizeof(myint))
 
-	mybool := true
-	fmt.Printf("a: %T, %d\n", mybool, unsafe.Sizeof(mybool))
+    mybool := true
+    fmt.Printf("a: %T, %d\n", mybool, unsafe.Sizeof(mybool))
 
-	var myInterface interface{}
-	fmt.Printf("a: %T, %d\n", myInterface, unsafe.Sizeof(myInterface))
+    var myInterface interface{}
+    fmt.Printf("a: %T, %d\n", myInterface, unsafe.Sizeof(myInterface))
 
-	var myArray []int
-	fmt.Printf("a: %T, %d\n", myArray, unsafe.Sizeof(myArray))
+    var myArray []int
+    fmt.Printf("a: %T, %d\n", myArray, unsafe.Sizeof(myArray))
 
-	var stringArray []string
-	fmt.Printf("a: %T, %d\n", stringArray, unsafe.Sizeof(stringArray))
+    var stringArray []string
+    fmt.Printf("a: %T, %d\n", stringArray, unsafe.Sizeof(stringArray))
 ```
 
 # Conclusion

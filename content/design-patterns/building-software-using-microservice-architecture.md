@@ -106,25 +106,25 @@ func configure() {
     fmt.Println("Starting Stream...")
 
     // FILTER
-	filterParams := &twitter.StreamFilterParams{
-		Track:         []string{"cat"},
-		StallWarnings: twitter.Bool(true),
-	}
-	stream, err := client.Streams.Filter(filterParams)
-	if err != nil {
-		log.Fatal(err)
-	}
+    filterParams := &twitter.StreamFilterParams{
+        Track:         []string{"cat"},
+        StallWarnings: twitter.Bool(true),
+    }
+    stream, err := client.Streams.Filter(filterParams)
+    if err != nil {
+        log.Fatal(err)
+    }
 
     // Receive messages until stopped or stream quits
-	go demux.HandleChan(stream.Messages)
+    go demux.HandleChan(stream.Messages)
 
-	// Wait for SIGINT and SIGTERM (HIT CTRL-C)
-	ch := make(chan os.Signal)
-	signal.Notify(ch, syscall.SIGINT, syscall.SIGTERM)
-	log.Println(<-ch)
+    // Wait for SIGINT and SIGTERM (HIT CTRL-C)
+    ch := make(chan os.Signal)
+    signal.Notify(ch, syscall.SIGINT, syscall.SIGTERM)
+    log.Println(<-ch)
 
-	fmt.Println("Stopping Stream...")
-	stream.Stop()
+    fmt.Println("Stopping Stream...")
+    stream.Stop()
 
 }
 

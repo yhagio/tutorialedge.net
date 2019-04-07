@@ -70,15 +70,15 @@ Next, let's write out Go program which will be able to read in this
 package main
 
 import (
-	"fmt"
-	"os"
+    "fmt"
+    "os"
 )
 
 func main() {
-	fmt.Println("Reading Environment Variable")
-	var databasePass string
-	databasePass = os.Getenv("DATABASE_PASS")
-	fmt.Printf("Database Password: %s\n", databasePass)
+    fmt.Println("Reading Environment Variable")
+    var databasePass string
+    databasePass = os.Getenv("DATABASE_PASS")
+    fmt.Printf("Database Password: %s\n", databasePass)
 }
 ```
 
@@ -102,22 +102,22 @@ do this by again leveraging the `os` package and calling `os.Setenv()`.
 package main
 
 import (
-	"fmt"
-	"os"
+    "fmt"
+    "os"
 )
 
 func main() {
-	fmt.Println("Reading Environment Variable")
-	var databasePass string
-	databasePass = os.Getenv("DATABASE_PASS")
-	fmt.Printf("Database Password: %s\n", databasePass)
+    fmt.Println("Reading Environment Variable")
+    var databasePass string
+    databasePass = os.Getenv("DATABASE_PASS")
+    fmt.Printf("Database Password: %s\n", databasePass)
 
-	err := os.Setenv("DATABASE_PASS", "newunicorns")
-	if err != nil {
-		fmt.Println(err)
-	}
-	databasePass = os.Getenv("DATABASE_PASS")
-	fmt.Printf("Database Password: %s\n", databasePass)
+    err := os.Setenv("DATABASE_PASS", "newunicorns")
+    if err != nil {
+        fmt.Println(err)
+    }
+    databasePass = os.Getenv("DATABASE_PASS")
+    fmt.Printf("Database Password: %s\n", databasePass)
 }
 
 ```
@@ -154,29 +154,29 @@ Let's take for instance a simple REST API:
 package main
 
 import (
-	"fmt"
-	"log"
-	"net/http"
-	"os"
+    "fmt"
+    "log"
+    "net/http"
+    "os"
 )
 
 func homePage(w http.ResponseWriter, r *http.Request) {
-	if os.Getenv("FEATURE_TOGGLE") == "TRUE" {
-		fmt.Println(os.Getenv("FEATURE_TOGGLE"))
-		fmt.Fprintf(w, "Exciting New Feature")
-	} else {
-		fmt.Println(os.Getenv("FEATURE_TOGGLE"))
-		fmt.Fprintf(w, "existing boring feature")
-	}
+    if os.Getenv("FEATURE_TOGGLE") == "TRUE" {
+        fmt.Println(os.Getenv("FEATURE_TOGGLE"))
+        fmt.Fprintf(w, "Exciting New Feature")
+    } else {
+        fmt.Println(os.Getenv("FEATURE_TOGGLE"))
+        fmt.Fprintf(w, "existing boring feature")
+    }
 }
 
 func handleRequests() {
-	http.HandleFunc("/", homePage)
-	log.Fatal(http.ListenAndServe(":8081", nil))
+    http.HandleFunc("/", homePage)
+    log.Fatal(http.ListenAndServe(":8081", nil))
 }
 
 func main() {
-	handleRequests()
+    handleRequests()
 }
 
 ```

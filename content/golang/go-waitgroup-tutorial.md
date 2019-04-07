@@ -47,13 +47,13 @@ package main
 import "fmt"
 
 func myFunc() {
-	fmt.Println("Inside my goroutine")
+    fmt.Println("Inside my goroutine")
 }
 
 func main() {
-	fmt.Println("Hello World")
-	go myFunc()
-	fmt.Println("Finished Execution")
+    fmt.Println("Hello World")
+    go myFunc()
+    fmt.Println("Finished Execution")
 }
 ```
 
@@ -86,24 +86,24 @@ our previous example through the use of `WaitGroups`:
 package main
 
 import (
-	"fmt"
-	"sync"
+    "fmt"
+    "sync"
 )
 
 func myFunc(waitgroup *sync.WaitGroup) {
-	fmt.Println("Inside my goroutine")
-	waitgroup.Done()
+    fmt.Println("Inside my goroutine")
+    waitgroup.Done()
 }
 
 func main() {
-	fmt.Println("Hello World")
+    fmt.Println("Hello World")
 
-	var waitgroup sync.WaitGroup
-	waitgroup.Add(1)
-	go myFunc(&waitgroup)
-	waitgroup.Wait()
+    var waitgroup sync.WaitGroup
+    waitgroup.Add(1)
+    go myFunc(&waitgroup)
+    waitgroup.Wait()
 
-	fmt.Println("Finished Execution")
+    fmt.Println("Finished Execution")
 }
 
 ```
@@ -138,22 +138,22 @@ read if the goroutine itself isn't too complex:
 package main
 
 import (
-	"fmt"
-	"sync"
+    "fmt"
+    "sync"
 )
 
 func main() {
-	fmt.Println("Hello World")
+    fmt.Println("Hello World")
 
-	var waitgroup sync.WaitGroup
-	waitgroup.Add(1)
-	go func() {
-		fmt.Println("Inside my goroutine")
-		waitgroup.Done()
-	}()
-	waitgroup.Wait()
+    var waitgroup sync.WaitGroup
+    waitgroup.Add(1)
+    go func() {
+        fmt.Println("Inside my goroutine")
+        waitgroup.Done()
+    }()
+    waitgroup.Wait()
 
-	fmt.Println("Finished Execution")
+    fmt.Println("Finished Execution")
 }
 
 ```
@@ -198,41 +198,41 @@ perform these requests asynchronously.
 package main
 
 import (
-	"fmt"
-	"log"
-	"net/http"
+    "fmt"
+    "log"
+    "net/http"
 )
 
 var urls = []string{
-	"https://google.com",
-	"https://tutorialedge.net",
-	"https://twitter.com",
+    "https://google.com",
+    "https://tutorialedge.net",
+    "https://twitter.com",
 }
 
 func fetch(url string) {
-	resp, err := http.Get(url)
-	if err != nil {
-		fmt.Println(err)
-	}
-	fmt.Println(resp.Status)
+    resp, err := http.Get(url)
+    if err != nil {
+        fmt.Println(err)
+    }
+    fmt.Println(resp.Status)
 }
 
 func homePage(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("HomePage Endpoint Hit")
-	for _, url := range urls {
-		go fetch(url)
-	}
-	fmt.Println("Returning Response")
-	fmt.Fprintf(w, "All Responses Received")
+    fmt.Println("HomePage Endpoint Hit")
+    for _, url := range urls {
+        go fetch(url)
+    }
+    fmt.Println("Returning Response")
+    fmt.Fprintf(w, "All Responses Received")
 }
 
 func handleRequests() {
-	http.HandleFunc("/", homePage)
-	log.Fatal(http.ListenAndServe(":8081", nil))
+    http.HandleFunc("/", homePage)
+    log.Fatal(http.ListenAndServe(":8081", nil))
 }
 
 func main() {
-	handleRequests()
+    handleRequests()
 }
 
 ```
@@ -251,50 +251,50 @@ only return the results once all of my `goroutines` had finished.
 package main
 
 import (
-	"fmt"
-	"log"
-	"net/http"
-	"sync"
+    "fmt"
+    "log"
+    "net/http"
+    "sync"
 )
 
 var urls = []string{
-	"https://google.com",
-	"https://tutorialedge.net",
-	"https://twitter.com",
+    "https://google.com",
+    "https://tutorialedge.net",
+    "https://twitter.com",
 }
 
 func fetch(url string, wg *sync.WaitGroup) (string, error) {
-	resp, err := http.Get(url)
-	if err != nil {
-		fmt.Println(err)
-		return "", err
-	}
-	wg.Done()
-	fmt.Println(resp.Status)
-	return resp.Status, nil
+    resp, err := http.Get(url)
+    if err != nil {
+        fmt.Println(err)
+        return "", err
+    }
+    wg.Done()
+    fmt.Println(resp.Status)
+    return resp.Status, nil
 }
 
 func homePage(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("HomePage Endpoint Hit")
-	var wg sync.WaitGroup
+    fmt.Println("HomePage Endpoint Hit")
+    var wg sync.WaitGroup
 
-	for _, url := range urls {
-		wg.Add(1)
-		go fetch(url, &wg)
-	}
+    for _, url := range urls {
+        wg.Add(1)
+        go fetch(url, &wg)
+    }
 
-	wg.Wait()
-	fmt.Println("Returning Response")
-	fmt.Fprintf(w, "Responses")
+    wg.Wait()
+    fmt.Println("Returning Response")
+    fmt.Fprintf(w, "Responses")
 }
 
 func handleRequests() {
-	http.HandleFunc("/", homePage)
-	log.Fatal(http.ListenAndServe(":8081", nil))
+    http.HandleFunc("/", homePage)
+    log.Fatal(http.ListenAndServe(":8081", nil))
 }
 
 func main() {
-	handleRequests()
+    handleRequests()
 }
 
 ```

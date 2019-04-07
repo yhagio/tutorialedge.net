@@ -66,7 +66,7 @@ great example of a variadic function which is possibly the most well known.
 // Spaces are always added between operands and a newline is appended.
 // It returns the number of bytes written and any write error encountered.
 func Println(a ...interface{}) (n int, err error) {
-	return Fprintln(os.Stdout, a...)
+    return Fprintln(os.Stdout, a...)
 }
 ```
 

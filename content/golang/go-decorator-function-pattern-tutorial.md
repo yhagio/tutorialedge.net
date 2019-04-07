@@ -79,7 +79,7 @@ func myFunc() {
 // coolFunc takes in a function
 // as a parameter
 func coolFunc(a func()) {
-	// it then immediately calls that functino
+    // it then immediately calls that functino
   a()
 }
 
@@ -87,7 +87,7 @@ func main() {
   fmt.Printf("Type: %T\n", myFunc)
   // here we call our coolFunc function
   // passing in myFunc
-	coolFunc(myFunc)
+    coolFunc(myFunc)
 }
 ```
 
@@ -114,24 +114,24 @@ particular function just to highlight it's start and end time.
 package main
 
 import (
-	"fmt"
-	"time"
+    "fmt"
+    "time"
 )
 
 func myFunc() {
   fmt.Println("Hello World")
-	time.Sleep(1 * time.Second)
+    time.Sleep(1 * time.Second)
 }
 
 func coolFunc(a func()) {
-	fmt.Printf("Starting function execution: %s\n", time.Now())
-	a()
-	fmt.Printf("End of function execution: %s\n", time.Now())
+    fmt.Printf("Starting function execution: %s\n", time.Now())
+    a()
+    fmt.Printf("End of function execution: %s\n", time.Now())
 }
 
 func main() {
-	fmt.Printf("Type: %T\n", myFunc)
-	coolFunc(myFunc)
+    fmt.Printf("Type: %T\n", myFunc)
+    coolFunc(myFunc)
 }
 
 ```
@@ -166,23 +166,23 @@ particular header set.
 package main
 
 import (
-	"fmt"
-	"log"
-	"net/http"
+    "fmt"
+    "log"
+    "net/http"
 )
 
 func homePage(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("Endpoint Hit: homePage")
-	fmt.Fprintf(w, "Welcome to the HomePage!")
+    fmt.Println("Endpoint Hit: homePage")
+    fmt.Fprintf(w, "Welcome to the HomePage!")
 }
 
 func handleRequests() {
-	http.HandleFunc("/", homePage)
-	log.Fatal(http.ListenAndServe(":8081", nil))
+    http.HandleFunc("/", homePage)
+    log.Fatal(http.ListenAndServe(":8081", nil))
 }
 
 func main() {
-	handleRequests()
+    handleRequests()
 }
 ```
 
@@ -196,42 +196,42 @@ see if the `Authorized` header is set to `true` on the incoming request.
 package main
 
 import (
-	"fmt"
-	"log"
-	"net/http"
+    "fmt"
+    "log"
+    "net/http"
 )
 
 func isAuthorized(endpoint func(http.ResponseWriter, *http.Request)) http.Handler {
-	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+    return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 
-		fmt.Println("Checking to see if Authorized header set...")
+        fmt.Println("Checking to see if Authorized header set...")
 
-		if val, ok := r.Header["Authorized"]; ok {
-			fmt.Println(val)
-			if val[0] == "true" {
-				fmt.Println("Header is set! We can serve content!")
-				endpoint(w, r)
-			}
-		} else {
-			fmt.Println("Not Authorized!!")
-			fmt.Fprintf(w, "Not Authorized!!")
-		}
-	})
+        if val, ok := r.Header["Authorized"]; ok {
+            fmt.Println(val)
+            if val[0] == "true" {
+                fmt.Println("Header is set! We can serve content!")
+                endpoint(w, r)
+            }
+        } else {
+            fmt.Println("Not Authorized!!")
+            fmt.Fprintf(w, "Not Authorized!!")
+        }
+    })
 }
 
 func homePage(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("Endpoint Hit: homePage")
-	fmt.Fprintf(w, "Welcome to the HomePage!")
+    fmt.Println("Endpoint Hit: homePage")
+    fmt.Fprintf(w, "Welcome to the HomePage!")
 }
 
 func handleRequests() {
 
-	http.Handle("/", isAuthorized(homePage))
-	log.Fatal(http.ListenAndServe(":8081", nil))
+    http.Handle("/", isAuthorized(homePage))
+    log.Fatal(http.ListenAndServe(":8081", nil))
 }
 
 func main() {
-	handleRequests()
+    handleRequests()
 }
 ```
 
@@ -263,17 +263,17 @@ easily do so:
 // we don't do any authentication based stuff in the body
 // of this function
 func newEndpoint(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("My New Endpoint")
-	fmt.Fprintf(w, "My second endpoint")
+    fmt.Println("My New Endpoint")
+    fmt.Fprintf(w, "My second endpoint")
 }
 
 func handleRequests() {
 
-	http.Handle("/", isAuthorized(homePage))
+    http.Handle("/", isAuthorized(homePage))
   // register our /new endpoint and decorate our
   // function with our isAuthorized Decorator
   http.Handle("/new", isAuthorized(newEndpoint))
-	log.Fatal(http.ListenAndServe(":8081", nil))
+    log.Fatal(http.ListenAndServe(":8081", nil))
 }
 ```
 

@@ -68,30 +68,30 @@ package main
 
 
 import (
-	"fmt"
-	"time"
+    "fmt"
+    "time"
 )
 
 
 // a very simple function that we'll
 // make asynchronous later on
 func compute(value int) {
-	for i := 0; i < value; i++ {
-		time.Sleep(time.Second)
-		fmt.Println(i)
-	}
+    for i := 0; i < value; i++ {
+        time.Sleep(time.Second)
+        fmt.Println(i)
+    }
 }
 
 func main() {
-	fmt.Println("Goroutine Tutorial")
+    fmt.Println("Goroutine Tutorial")
 
   // sequential execution of our compute function
-	compute(10)
-	compute(10)
+    compute(10)
+    compute(10)
 
   // we scan fmt for input and print that to our console
-	var input string
-	fmt.Scanln(&input)
+    var input string
+    fmt.Scanln(&input)
 
 }
 ```
@@ -112,26 +112,26 @@ package main
 
 
 import (
-	"fmt"
-	"time"
+    "fmt"
+    "time"
 )
 
 // notice we've not changed anything in this function
 // when compared to our previous sequential program
 func compute(value int) {
-	for i := 0; i < value; i++ {
-		time.Sleep(time.Second)
-		fmt.Println(i)
-	}
+    for i := 0; i < value; i++ {
+        time.Sleep(time.Second)
+        fmt.Println(i)
+    }
 }
 
 func main() {
-	fmt.Println("Goroutine Tutorial")
+    fmt.Println("Goroutine Tutorial")
 
   // notice how we've added the 'go' keyword
   // in front of both our compute function calls
-	go compute(10)
-	go compute(10)
+    go compute(10)
+    go compute(10)
 }
 ```
 
@@ -156,29 +156,29 @@ package main
 
 
 import (
-	"fmt"
-	"time"
+    "fmt"
+    "time"
 )
 
 // notice we've not changed anything in this function
 // when compared to our previous sequential program
 func compute(value int) {
-	for i := 0; i < value; i++ {
-		time.Sleep(time.Second)
-		fmt.Println(i)
-	}
+    for i := 0; i < value; i++ {
+        time.Sleep(time.Second)
+        fmt.Println(i)
+    }
 }
 
 func main() {
-	fmt.Println("Goroutine Tutorial")
+    fmt.Println("Goroutine Tutorial")
 
   // notice how we've added the 'go' keyword
   // in front of both our compute function calls
-	go compute(10)
-	go compute(10)
+    go compute(10)
+    go compute(10)
 
-	var input string
-	fmt.Scanln(&input)
+    var input string
+    fmt.Scanln(&input)
 }
 ```
 
@@ -198,12 +198,12 @@ package main
 import "fmt"
 
 func main() {
-	// we make our anonymous function concurrent using `go`
-	go func() {
-		fmt.Println("Executing my Concurrent anonymouse function")
-	}()
+    // we make our anonymous function concurrent using `go`
+    go func() {
+        fmt.Println("Executing my Concurrent anonymouse function")
+    }()
 
-	fmt.Scanln()
+    fmt.Scanln()
 }
 ```
 

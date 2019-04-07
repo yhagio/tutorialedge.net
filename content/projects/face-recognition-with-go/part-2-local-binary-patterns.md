@@ -120,11 +120,11 @@ package lbp
 // GetBinaryValue function used to get a binary value as a string based on a threshold.
 // Return "1" if the value is equal or higher than the threshold or "0" otherwise.
 func GetBinaryValue(value, threshold int) string {
-	if value >= threshold {
-		return "1"
-	} else {
-		return "0"
-	}
+    if value >= threshold {
+        return "1"
+    } else {
+        return "0"
+    }
 }
 
 ```
@@ -144,30 +144,30 @@ import (
     "testing"
 
     "github.com/elliotforbes/go-face-recognition/pkg/lbp"
-	"github.com/stretchr/testify/assert"
+    "github.com/stretchr/testify/assert"
 )
 
 type BinaryValueTestCase struct {
-	Value     int
-	Threshold int
-	Output    string
+    Value     int
+    Threshold int
+    Output    string
 }
 
 func TestGetBinaryValue(t *testing.T) {
-	var tests = []BinaryValueTestCase{
-		{9, 6, "1"},
-		{8, 6, "1"},
-		{2, 6, "0"},
-		{6, 6, "1"},
-		{2, 6, "0"},
-		{9, 6, "1"},
-		{1, 6, "0"},
-		{2, 6, "0"},
-	}
+    var tests = []BinaryValueTestCase{
+        {9, 6, "1"},
+        {8, 6, "1"},
+        {2, 6, "0"},
+        {6, 6, "1"},
+        {2, 6, "0"},
+        {9, 6, "1"},
+        {1, 6, "0"},
+        {2, 6, "0"},
+    }
 
-	for _, test := range tests {
-		assert.Equal(t, test.Output, lbp.GetBinaryValue(test.Value, test.Threshold))
-	}
+    for _, test := range tests {
+        assert.Equal(t, test.Output, lbp.GetBinaryValue(test.Value, test.Threshold))
+    }
 }
 
 ```
@@ -217,14 +217,14 @@ equal:
 
 ```go
 func TestGetBinaryString(t *testing.T) {
-	testCase := [][]uint8{
-		{9, 8, 2},
-		{2, 6, 6},
-		{1, 9, 2},
-	}
+    testCase := [][]uint8{
+        {9, 8, 2},
+        {2, 6, 6},
+        {1, 9, 2},
+    }
 
-	expectedString := "11010100"
-	assert.Equal(t, expectedString, lbp.GetBinaryString(testCase))
+    expectedString := "11010100"
+    assert.Equal(t, expectedString, lbp.GetBinaryString(testCase))
 }
 
 ```
@@ -252,16 +252,16 @@ calculates the binary values like so:
 // GetBinaryString takes in a grid of 3x3 pixels and computes
 // a binary string from this grid
 func GetBinaryString(pixels [][]uint8) string {
-	binaryString := ""
-	binaryString += GetBinaryValue(int(pixels[0][0]), int(pixels[1][1]))
-	binaryString += GetBinaryValue(int(pixels[0][1]), int(pixels[1][1]))
-	binaryString += GetBinaryValue(int(pixels[0][2]), int(pixels[1][1]))
-	binaryString += GetBinaryValue(int(pixels[1][2]), int(pixels[1][1]))
-	binaryString += GetBinaryValue(int(pixels[2][2]), int(pixels[1][1]))
-	binaryString += GetBinaryValue(int(pixels[2][1]), int(pixels[1][1]))
-	binaryString += GetBinaryValue(int(pixels[2][0]), int(pixels[1][1]))
-	binaryString += GetBinaryValue(int(pixels[1][0]), int(pixels[1][1]))
-	return binaryString
+    binaryString := ""
+    binaryString += GetBinaryValue(int(pixels[0][0]), int(pixels[1][1]))
+    binaryString += GetBinaryValue(int(pixels[0][1]), int(pixels[1][1]))
+    binaryString += GetBinaryValue(int(pixels[0][2]), int(pixels[1][1]))
+    binaryString += GetBinaryValue(int(pixels[1][2]), int(pixels[1][1]))
+    binaryString += GetBinaryValue(int(pixels[2][2]), int(pixels[1][1]))
+    binaryString += GetBinaryValue(int(pixels[2][1]), int(pixels[1][1]))
+    binaryString += GetBinaryValue(int(pixels[2][0]), int(pixels[1][1]))
+    binaryString += GetBinaryValue(int(pixels[1][0]), int(pixels[1][1]))
+    return binaryString
 }
 
 ```
