@@ -13,6 +13,8 @@ twitter: https://twitter.com/elliot_f
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
+> **Note** - The full source code for this tutorial can be found here: [TutorialEdge/go-jwt-tutorial](https://github.com/TutorialEdge/go-jwt-tutorial)
+
 JWTs, or JSON Web Tokens as they are more formally known, are a compact,
 URL-safe means of representing claims to be transferred between two parties.
 This is essentially a confusing way of saying that JWTs allow you to transmit
