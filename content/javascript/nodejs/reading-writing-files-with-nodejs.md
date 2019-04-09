@@ -34,37 +34,61 @@ fs.readFile("temp.txt", function(err, buf) {
 
 <p>Create a temp.txt within the same directory and write in it anything you’d like. Run your script using node index.js and you should see in the console the contents of your file.</p>
 
-<h5>Understanding the Code</h5>
+## Understanding the Code
 
-<p>We’ll step through this with comments.</p>
+We’ll step through this with comments.
 
 ```js
 var fs = require("fs");
 ```
 
-<p>This line does the job of importing the fs package and allowing us to utilize it within our own code.</p>
+This line does the job of importing the fs package and allowing us to utilize it within our own code.
 
 ```js
 fs.readFile("temp.txt", function(err, buf) {
-  console.log(buf.toString());
+  console.log(buf);
 });
 ```
 
-<p>This calls the readFile function asynchronously and then prints the contents of the file to the console.</p>
+This calls the readFile function asynchronously and then prints the contents of the file to the console.
 
-<h5>Returning a Buffer?</h5>
+### Handling Errors
+
+If you want to catch errors such as the file you are trying to reach isn't found, then you can do 
+so like this:
+
+```js
+fs.readFile("not-found.txt", "utf-8", (err, data) => {
+    if (err) { console.log(err) }
+    console.log(data);
+})
+```
+
+When you go to execute this, you should see something like this returned:
+
+```command
+$ node app.js
+{ Error: ENOENT: no such file or directory, open 'not-found.txt'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'not-found.txt' }
+undefined
+```
+
+### Returning a Buffer?
 
 <p>If the above code hasn’t worked as expected and you are seeing a buffer being printed out in the terminal then it might be an idea to specify the files encoding. We can do this like so: </p>
 
 ```js
 var fs = require("fs");
 
-fs.readFile("temp.txt", "utf-8", function(err, buf) {
-  console.log(buf.toString());
+fs.readFile("temp.txt", "utf-8", (err, data) => {
+  console.log(data);
 });
 ```
 
-<h2 id=”writing-to-files”>Writing To Files</h2>
+# Writing To Files
 
 <p>Now that you’ve got the reading of files down, it’s time to start modifying these files. To do this we’ll be using the same FS package we used in part one. </p>
 
@@ -77,10 +101,19 @@ var fs = require("fs");
 
 var data = "New File Contents";
 
-fs.writeFile("temp.txt", data, function(err, data) {
+fs.writeFile("temp.txt", data, (err) => {
   if (err) console.log(err);
   console.log("Successfully Written to File.");
 });
 ```
 
 <p>Run this code by executing node write.js in the terminal and then open up temp.txt in your editor, you should now see the new contents of the file. </p>
+
+> **Creating New Files** - The above code will successfully create new files for you should the
+path to the file not already exist. This is handy as it means you can succinctly create, and write
+to a new file in one promise.
+
+# Conclusion
+
+Hopefully you found this tutorial useful, if you did, or if you have any suggestions or comments, then please let me know in the comments section below!
+
