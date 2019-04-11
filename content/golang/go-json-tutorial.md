@@ -20,6 +20,9 @@ JSON, or JavaScript Object Notation, is without a doubt the most popular data
 format for sending and receiving data across the web. All major languages
 support the data format by default and Go is no different.
 
+> **Source Code** - The full source code for this tutorial can be found here:
+[TutorialEdge/go-json-tutorial](https://github.com/TutorialEdge/go-json-tutorial)
+
 # Video Tutorial
 
 {{< youtube id="Osm5SCw6gPU" autoplay="false" >}}
