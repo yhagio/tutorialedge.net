@@ -1,7 +1,11 @@
 {{ if eq .Params.author "Elliot Forbes" }}
 <div class="author-container">
   <div class="author-image">
+    {{ if .Params.authorImage }}
     <img src="{{ .Params.authorImage }}" alt="{{ .Params.author }}" />
+    {{ else }}
+    <img src="https://images.tutorialedge.net/images/logo.png" alt="{{ .Params.author }}" />
+    {{ end }}
   </div>
   <div class="author-info">
     <h2>

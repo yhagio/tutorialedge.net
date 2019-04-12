@@ -9,6 +9,7 @@ tags:
   - json
 title: Working with JSON in Rust - Tutorial
 twitter: https://twitter.com/Elliot_F
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 > This tutorial was built using Rust Version: 1.22.1

@@ -11,6 +11,7 @@ tags:
 title: Using RwLock and CondVars in Rust
 twitter: https://twitter.com/bltroutwine?lang=en
 weight: 2
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
 # Read many, write exclusive locks – RwLock
