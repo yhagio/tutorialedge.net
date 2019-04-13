@@ -40,17 +40,20 @@ export default {
         isAuthenticated: function() {
             if(typeof Cookies.get("jwt-token") !== 'undefined') {
                 this.loggedIn = true;
-                this.user = this.getuser();
+                this.user = this.getUser();
             }
         },
         getUser: function() {
             let token = Cookies.get("jwt-token");
-            var base64Url = token.split(".")[1];
-            var base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+            console.log(token);
+            let base64Url = token.split(".")[1];
+            let base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
             this.user = JSON.parse(window.atob(base64));
+            console.log(this.user);
         }
     },
     created: async function () {
+        this.isAuthenticated();
         let pageId = document.getElementById('page-id').innerHTML;  
         let response = await axios.get("https://api.tutorialedge.net/api/v1/comments/" + pageId);
         this.comments = response.data;
