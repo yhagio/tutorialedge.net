@@ -1,67 +1,71 @@
 
 
-<footer class="page-footer">
-	<div class="row">
-		<div class="col l3 m6 s12">
-			<div class="padded">
-				<h3>Courses</h3>
-				<ul>
-					<li><a href="{{ .Site.BaseURL }}/course/python/">Python</a></li>
-					<li><a href="{{ .Site.BaseURL }}/course/angular/">Angular</a></li>
-					<li><a href="{{ .Site.BaseURL }}/course/golang/">Golang</a></li>
-					<li><a href="{{ .Site.BaseURL }}/course/artificial-intelligence/">Artificial Intelligence</a></li>
-					<li><a href="{{ .Site.BaseURL }}/course/webdev/">Web Development</a></li>
-				</ul>
+	<footer class="page-footer">
+		<div class="row">
+			<div class="col l3 m6 s12">
+				<div class="padded">
+					<h3>Courses</h3>
+					<ul>
+						<li><a href="{{ .Site.BaseURL }}/course/python/">Python</a></li>
+						<li><a href="{{ .Site.BaseURL }}/course/angular/">Angular</a></li>
+						<li><a href="{{ .Site.BaseURL }}/course/golang/">Golang</a></li>
+						<li><a href="{{ .Site.BaseURL }}/course/artificial-intelligence/">Artificial Intelligence</a></li>
+						<li><a href="{{ .Site.BaseURL }}/course/webdev/">Web Development</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col l3 m6 s12">
+				<div class="padded">
+					<h3>Quick Links</h3>
+					
+					<ul>
+						<li><a href="{{ .Site.BaseURL }}/search/">Search Page</a></li>
+						<li><a href="{{ .Site.BaseURL }}/about/">About</a></li>
+						<li><a href="{{ .Site.BaseURL }}/get-involved/">Get Involved</a></li>
+					</ul>
+					<h3>Suggested Resources</h3>
+					<ul>
+						<li><a href="{{ .Site.BaseURL }}/uses/">My Hardware + Software Recording Setup </a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col l3 m6 s12">
+				<div class="padded">
+					<h3>Follow Me</h3>
+					<ul>
+						<li><a href="https://twitter.com/Elliot_F"><i class="ion ion-social-twitter"></i> - @Elliot_f</a></li>
+						<li><a href="https://www.facebook.com/tutorialedge"><i class="ion ion-social-facebook"></i> - TutorialEdge</a></li>
+						<li><a href="https://github.com/elliotforbes"><i class="ion ion-social-github"></i> - elliotforbes</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col l3 m12 s12 footer-special">
+				<div class="logo">
+					<a href="{{ .Site.BaseURL }}/"><img alt="tutorialedge logo" src="https://images.tutorialedge.net/images/logo.png"/> TutorialEdge.net</a>
+				</div>
+				<div class="padded">
+					<p>TutorialEdge.net is a totally free programming tutorial site that has been built with the intention of helping as many people as possible learn to program. The site is also completely opensourced and you can contribue here: <a href="https://github.com/elliotforbes/tutorialedge-v2">elliotforbes/tutorialedge-v2</a>, any pull requests will be greatly appreciated!</p>
+				</div>
 			</div>
 		</div>
-		<div class="col l3 m6 s12">
-			<div class="padded">
-				<h3>Quick Links</h3>
-				
-				<ul>
-					<li><a href="{{ .Site.BaseURL }}/search/">Search Page</a></li>
-					<li><a href="{{ .Site.BaseURL }}/about/">About</a></li>
-					<li><a href="{{ .Site.BaseURL }}/get-involved/">Get Involved</a></li>
-				</ul>
-				<h3>Suggested Resources</h3>
-				<ul>
-					<li><a href="{{ .Site.BaseURL }}/uses/">My Hardware + Software Recording Setup </a></li>
-				</ul>
-			</div>
+		<div class="footer-copyright">
+			<span class="float-left">TutorialEdge © 2019 Copyright</span>
+			<span class="float-right" id="page-id">{{ .UniqueID }}</span>
 		</div>
-		<div class="col l3 m6 s12">
-			<div class="padded">
-				<h3>Follow Me</h3>
-				<ul>
-					<li><a href="https://twitter.com/Elliot_F"><i class="ion ion-social-twitter"></i> - @Elliot_f</a></li>
-					<li><a href="https://www.facebook.com/tutorialedge"><i class="ion ion-social-facebook"></i> - TutorialEdge</a></li>
-					<li><a href="https://github.com/elliotforbes"><i class="ion ion-social-github"></i> - elliotforbes</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="col l3 m12 s12 footer-special">
-			<div class="logo">
-				<a href="{{ .Site.BaseURL }}/"><img alt="tutorialedge logo" src="https://images.tutorialedge.net/images/logo.png"/> TutorialEdge.net</a>
-			</div>
-			<div class="padded">
-				<p>TutorialEdge.net is a totally free programming tutorial site that has been built with the intention of helping as many people as possible learn to program. The site is also completely opensourced and you can contribue here: <a href="https://github.com/elliotforbes/tutorialedge-v2">elliotforbes/tutorialedge-v2</a>, any pull requests will be greatly appreciated!</p>
-			</div>
-		</div>
-	</div>
-	<div class="footer-copyright">
-		<span class="float-left">TutorialEdge © 2019 Copyright</span>
-		<span class="float-right" id="page-id">{{ .UniqueID }}</span>
-	</div>
-</footer>
+	</footer>
 
-<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/f41d55ea3daf17874b3365e0b/fb46d22d1e84d293c8189d6e8.js");</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-10255990-23"></script>
-<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
 
-	gtag('config', 'UA-10255990-23');
-</script>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="/app/main.bundle.js"></script>
+	<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/f41d55ea3daf17874b3365e0b/fb46d22d1e84d293c8189d6e8.js");</script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-10255990-23"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-10255990-23');
+	</script>
+</div>
 </body>
 </html>

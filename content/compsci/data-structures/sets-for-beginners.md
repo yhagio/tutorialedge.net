@@ -28,6 +28,7 @@ some incredibly useful functions such as `union()`, `issubset()`,
 `intersection()`, `isdisjoint()` that have also been translated directly over
 from Mathematics.
 
+
 _Sets_ aren't just a fundamental skill in Mathematics, throughout your
 programming career you will likely encounter a wide number of different problems
 that can be far more easily solved with the use of Sets.
