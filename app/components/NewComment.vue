@@ -31,7 +31,7 @@ export default {
             let pageId = document.getElementById('page-id').innerHTML;
             try {
             let response = await axios.post("https://api.tutorialedge.net/api/v1/comments/" + pageId, {
-                bodh: commentBody,
+                bodh: this.commentBody,
                 author: user.user.displayName,
                 user: user,
                 path: window.location.pathname
