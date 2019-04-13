@@ -27,13 +27,13 @@ export default {
     },
     methods: {
         submitComment: async function() {
-            console.log(this.user);
+            console.log("User: ", this.user);
             let pageId = document.getElementById('page-id').innerHTML;
             try {
             let response = await axios.post("https://api.tutorialedge.net/api/v1/comments/" + pageId, {
-                bodh: this.commentBody,
-                author: user.user.displayName,
-                user: user,
+                body: this.commentBody,
+                author: this.user.user.displayName,
+                user: this.user,
                 path: window.location.pathname
             }, {
                 headers: { Authorization: "Bearer " + Cookies.get("jwt-token")}
