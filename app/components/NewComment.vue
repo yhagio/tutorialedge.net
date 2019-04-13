@@ -16,6 +16,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
     name: "NewComment",
     props: ["user"],
@@ -33,14 +34,14 @@ export default {
                 bodh: commentBody,
                 author: user.user.displayName,
                 user: user,
-                path: window.location.pathname
+                path: location.pathname
             }, {
                 headers: { Authorization: "Bearer " + Cookies.get("jwt-token")}
             });
             } catch (err) {
                 console.log(err);
             }
-            window.location.realod();
+            location.realod();
         }
     }
 }
