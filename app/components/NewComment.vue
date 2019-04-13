@@ -7,7 +7,7 @@
             <textarea :v-model="commentBody" placeholder="Leave a reply"></textarea>
             <br/>
             <div class="comment-actions hidden">
-                <button id="comment" class="btn btn-primary float-right">
+                <button id="comment" v-on:click="submitComment" class="btn btn-primary float-right">
                     Submit
                 </button>
             </div>
