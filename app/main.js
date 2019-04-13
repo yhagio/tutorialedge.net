@@ -1,9 +1,8 @@
-import { initComments } from './comments/comments.js';
+import Comments from './components/Comments.vue';
 
-document.addEventListener("DOMContentLoaded", function(event) {
-  let commentsSection = document.getElementById("comments-section")
-  if(typeof commentsSection !== 'undefined') {
-    initComments();
+var app = new Vue({
+  el: '#dynamicApp',
+  components: {
+    Comments,
   }
 });
-  

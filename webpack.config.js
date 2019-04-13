@@ -1,5 +1,5 @@
 const path = require('path');
-
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const env = process.env.NODE_ENV;
 const isProd = env === 'production';
 const isStaging = env === 'staging';
@@ -19,9 +19,16 @@ module.exports = {
                 exclude: /(node_modules)/,
                 test: /\.js?$/,
                 loader: 'babel-loader',
+            },
+            {
+                test: /\.vue$/,
+                loader: 'vue-loader'
             }
         ]
     },
+    plugins: [
+        new VueLoaderPlugin()
+    ],
     devtool: !optimizeBuild && ' cheap-module-eval-source-map',
     target: 'web',
     stats: 'normal',

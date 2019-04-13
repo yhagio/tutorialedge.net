@@ -20,6 +20,8 @@
     "gulp-sourcemaps": "^2.6.5",
     "instantsearch.js": "^1.1.1",
     "node": "^10.15.1",
+    "vue-loader": "^15.7.0",
+    "vue-template-compiler": "^2.6.10",
     "webpack": "^4.29.5"
   },
   "devDependencies": {
