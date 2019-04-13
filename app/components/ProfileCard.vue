@@ -1,6 +1,5 @@
 <template>
     <div class="comment-login">
-        {{ user }}
         <div class="image">
             <img :src="user.user.picture" :alt="user.user.displayName" />
         </div>
