@@ -45,11 +45,9 @@ export default {
         },
         getUser: function() {
             let token = Cookies.get("jwt-token");
-            console.log(token);
             let base64Url = token.split(".")[1];
             let base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
             this.user = JSON.parse(window.atob(base64));
-            console.log(this.user);
         }
     },
     created: async function () {
