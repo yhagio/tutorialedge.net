@@ -19,10 +19,10 @@
 import axios from 'axios';
 export default {
     name: "NewComment",
-    props: ["user"],
     data: function() {
         return {
-            commentBody: ""
+            commentBody: "",
+            user: {}
         }
     },
     methods: {
@@ -43,6 +43,12 @@ export default {
             }
             window.location.reload();
         }
+    },
+    created: function() {
+        let token = Cookies.get("jwt-token");
+        let base64Url = token.split(".")[1];
+        let base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+        this.user = JSON.parse(window.atob(base64));
     }
 }
 </script>
