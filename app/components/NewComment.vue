@@ -4,7 +4,7 @@
             <img src="https://images.tutorialedge.net/images/logo.png" alt="default avatar">
         </div>
         <div class="comment-input" id="comment-input">
-            <textarea :v-model="commentBody" placeholder="Leave a reply"></textarea>
+            <textarea v-model="commentBody" placeholder="Leave a reply"></textarea>
             <br/>
             <div class="comment-actions hidden">
                 <button id="comment" v-on:click="submitComment" class="btn btn-primary float-right">
@@ -34,14 +34,14 @@ export default {
                 bodh: commentBody,
                 author: user.user.displayName,
                 user: user,
-                path: location.pathname
+                path: window.location.pathname
             }, {
                 headers: { Authorization: "Bearer " + Cookies.get("jwt-token")}
             });
             } catch (err) {
                 console.log(err);
             }
-            location.realod();
+            window.location.reload();
         }
     }
 }
