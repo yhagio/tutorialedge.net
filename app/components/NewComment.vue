@@ -27,7 +27,6 @@ export default {
     },
     methods: {
         submitComment: async function() {
-            console.log("User: ", this.user);
             let pageId = document.getElementById('page-id').innerHTML;
             try {
             let response = await axios.post("https://api.tutorialedge.net/api/v1/comments/" + pageId, {

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link async rel="stylesheet" href="/css/ionicons.min.css">
+	<link async rel="stylesheet" href="https://use.typekit.net/jnu8xif.css">
+    <link async rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+</head>
+<body>
+    <div class="top-bar">
+        <a href="https://tutorialedge.net/" /><img src="https://images.tutorialedge.net/images/logo.png" alt=""></a>
+        <h2>Redirecting...</h2>
+    </div>
+    <div class="info">
+        <p>You have been successfully logged in by Auth0, redirecting to your original page...</p>
+        <p>If this doesn't work, please contact me directly - support@elliotforbes.co.uk</p>
+    </div>
+
+    <style>
+    body {
+        background-color: #F5F6F8;
+    }
+    .top-bar {
+        text-align: center;
+        color: white;
+        background-color: #2A2B33;
+        width: 100%;
+        padding: 40px 80px;
+    }
+    .top-bar img {
+        margin-bottom: 20px;
+        width: 75px;
+        height: auto;
+    }
+    .info {
+        text-align: center;
+        padding: 40px 80px;
+    }
+    </style>
+    <script type="text/javascript">
+        setTimeout(function() {  
+            const urlParams = new URLSearchParams(window.location.search);
+            const token = urlParams.get('token');
+            Cookies.set("jwt-token", token, { secure: true });
+            
+            var redirect_url = Cookies.get("redirect_url");
+            if(typeof redirect_url !== 'undefined') {
+                Cookies.remove("redirect_url");
+                window.location.replace(redirect_url);
+            }
+        }, 2000);
+    </script>
+</body>
+</html>

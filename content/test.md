@@ -8,6 +8,16 @@ title: Get Involved
 twitter: https://twitter.com/Elliot_F
 ---
 
+<Quiz 
+  question="How many sides of a square?"
+  answers='[
+    {"value": 1},
+    {"value": 2},
+    {"value": 3},
+    {"value": 4}
+    ]'
+/>
+
 ![](https://images.tutorialedge.net/images/ai.webp)
 
 # Sanguine Lapithae colla latus oracula ignibus

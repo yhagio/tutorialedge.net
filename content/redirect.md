@@ -5,18 +5,6 @@ series: misc
 tags:
   - misc
 title: Redirect
+layout: redirect
 twitter: https://twitter.com/Elliot_F
 ---
-
-<script type="text/javascript">
-    const urlParams = new URLSearchParams(window.location.search);
-    const token = urlParams.get('token');
-    Cookies.set("jwt-token", token, { secure: true });
-    
-    var redirect_url = Cookies.get("redirect_url");
-    if(typeof redirect_url !== 'undefined') {
-        Cookies.remove("redirect_url");
-        window.location.replace(redirect_url);
-    }
-
-</script>
