@@ -22,6 +22,7 @@
     "node": "^10.15.1",
     "vue-cookies": "^1.5.13",
     "vue-loader": "^15.7.0",
+    "vue-star-rating": "^1.6.1",
     "vue-template-compiler": "^2.6.10",
     "webpack": "^4.29.5"
   },
