@@ -9,14 +9,19 @@ twitter: https://twitter.com/Elliot_F
 ---
 
 <Quiz 
-  question="How many sides of a square?"
-  answers='[
-    {"value": 1},
-    {"value": 2},
-    {"value": 3},
-    {"value": 4}
-    ]'
-/>
+  answer="There are 4 sides to a square"
+  options='[
+    {"value": "Hi", "correct": true},
+    {"value": "Nothing", "correct": false}
+    ]'>
+<template v-slot:question>
+<p>What does this output?</p>
+```js
+console.log("hi")
+```
+</template>
+</Quiz>
+
 
 ![](https://images.tutorialedge.net/images/ai.webp)
 

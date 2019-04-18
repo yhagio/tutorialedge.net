@@ -82,34 +82,6 @@ Vue will automatically listen for whether one of these elements has a CSS
 transition or animation applied. If it does then these CSS transition classes
 will be added/removed at the appropriate time.
 
-# Demo
-
-<div id="app">
-    <div class="hello">
-        <button class="btn btn-primary" v-if="!show" v-on:click="show = !show">
-            Show Mission
-        </button>
-        <button class="btn btn-primary" 
-            v-if="show && !accepted && !declined" v-on:click="accepted = true">
-            Accept Mission
-        </button>
-        <button class="btn btn-warning" 
-            v-if="show && !declined && !accepted" v-on:click="declined = true">
-            Decline Mission
-        </button>
-        <div class="cont center-align">
-        <transition name="fade">
-            <p v-if="show">Your Mission, should you choose to accept it...</p>
-        </transition>
-        <transition name="fade">
-            <p v-if="accepted">You have accepted the mission, this message will self-destruct in 5...</p>
-        </transition>
-        <transition name="fade">
-            <p v-if="declined">You have declined the mission, this message will self-destruct in 5...</p>
-        </transition>
-        </div>
-    </div>
-</div>
 
 # Full Component Source
 
@@ -214,43 +186,3 @@ This is the full source code for the component with simple transitions:
 
 That wraps up this tutorial! I hope you found it enlightening and educational!
 If you enjoyed it then please let me know in the comments section below!
-
-<div id="app">
-    {{ msg }}
-</div>
-
-<script>
-var app = new Vue({
-    el: '#app',
-    data () {
-        return {
-            show: false,
-            accepted: false,
-            declined: false
-        }
-    }
-})
-</script>
-
-<style>
-.hello .fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
-}
-.hello .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
-}
-.hello .btn-primary{
-  background-color:#256BFC;
-}
-.hello .btn-warning{
-  background-color: #C81117;
-}
-.hello .cont {
-  background-color: #000;
-  width: 100%;
-  height: 200px;
-  margin-top: 40px;
-  padding: 40px;
-  color: white;
-}
-</style>

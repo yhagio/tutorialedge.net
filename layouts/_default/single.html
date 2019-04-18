@@ -51,27 +51,31 @@
 <div class="container-fluid">
   <div class="content-container">
     <div class="row">
-      <div class="col-sm-3 d-block">
+      
+      <div class="d-none d-sm-none col-md-3 d-md-block">
         <div class="sidebar">
           {{ partial "sidebar.html" . }}
         </div>
       </div>
 
-      <div class="col-sm-7">
+      <div class="col-sm-9 col-md-7">
         <article class="content">
           {{ .Content }}
           {{ partial "author.html" . .Params }}
         </article>
       </div>
-      <div class="col-sm-2 hidden-md-down">
+
+      <div class="col-sm-3 col-md-2">
         <div id="right-sidebar">
           <div class="toc">
             <h4><i class="ion ion-ios-list-outline"></i> Table Of Contents</h4>
             {{.TableOfContents}}
           </div>
           <Suggestion />
+          <div class="clear"></div>
         </div>
       </div>
+
     </div>
   </div>
 </div>
@@ -87,13 +91,13 @@
 <script>
   // Add anchors on DOMContentLoaded
   document.addEventListener("DOMContentLoaded", function(event) {
-    var sidebar = new StickySidebar("#right-sidebar", { topSpacing: 20 });
+    var sidebar = new StickySidebar("#right-sidebar", { topSpacing: 10 });
     anchors.options = {
       visible: "always",
       placement: "left"
     };
     anchors.add(
-      ".content h1, .content h2, .content h3, .content h4, .content h5, .content h6"
+      ".content > h1, .content > h2, .content > h3, .content > h4"
     );
   });
 </script>

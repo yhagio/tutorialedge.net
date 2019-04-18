@@ -1,23 +1,38 @@
 <template>
-    <div>
-        <h2>{{ question }}</h2>
-        <p v-for="answer in answers">{{ answer.value }}</p>
+    <div class="quiz">
+        <h3>Pop Quiz Question!</h3>
+        <slot name="question"></slot>
+        <hr/>
+        <div class="answers">
+            <button type="button" class="btn btn-outline-primary" v-for="(option, index) in options" v-on:click="checkAnswer(option)" :key="index">{{ option.value }}</button>
+        </div>
+        <div v-if="this.correct" class="alert alert-success">Awesome!</div>
+        <div v-if="this.correct === false" class="alert alert-danger">{{ this.answer }}</div>
     </div>
 </template>
 
 <script>
 export default {
     name: "Quiz",
-    props: ["question", "answers"],
+    props: ["question", "options", "answer"],
     data: function() {
         return {
-            answers: []
+            options: [],
+            answer: "",
+            correct: ""
         }
     },
     created: function() {
-        console.log(this.question);
-        console.log(this.answers);
-        this.answers = JSON.parse(this.answers);
+        this.options = JSON.parse(this.options);
+    },
+    methods: {
+        checkAnswer: function (answer) {
+            if(answer.correct) {
+                this.correct = true;
+            } else {
+                this.correct = false;
+            }
+        }
     }
 }
 </script>

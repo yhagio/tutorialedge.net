@@ -1,16 +1,17 @@
 .helpful-post {
   border-radius: 3px;
+  width: 100%;
   h5 {
     font-weight: 400;
     font-size: 16px;
     color: rgba(0, 0, 0, 0.54);
-    vertical-align: middle;
   }
-  textarea .form-control {
+  textarea.form-control {
     background: transparent none repeat scroll 0% 0% !important;
     z-index: auto;
     position: relative;
     padding: 10px;
+    width: auto !important;
     line-height: 28px;
     font-size: 14px;
     transition: none 0s ease 0s;
@@ -24,6 +25,8 @@
   }
   .helpful {
     color: rgba(0, 0, 0, 0.54);
+    width: 100%;
+    font-size: 1rem;
   }
   .helpful::after {
     content: "";
@@ -37,4 +40,5 @@
     border-left: 4px solid #0a84ae;
     margin-left: 6px;
   }
+  margin-bottom: 40px;
 }
