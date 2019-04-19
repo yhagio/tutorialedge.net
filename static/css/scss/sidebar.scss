@@ -111,10 +111,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color: #ff3333;
-  padding: 15px;
-  border: 10px solid #f1f1f1;
-  color: white;
+  background-color: #F8F8F6;
+  padding: 25px;
   div {
     flex: 1;
     img {
@@ -128,9 +126,7 @@
   a {
     h3 {
       margin-top: 10px;
-      color: white !important;
     }
-    color: white !important;
     flex: 3;
     margin: 0;
     padding: 0;
