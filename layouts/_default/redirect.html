@@ -18,6 +18,7 @@
     <div class="info">
         <p>You have been successfully logged in by Auth0, redirecting to your original page...</p>
         <p>If this doesn't work, please contact me directly - support@elliotforbes.co.uk</p>
+        <div id="output"></div>
     </div>
 
     <style>
@@ -43,14 +44,19 @@
     </style>
     <script type="text/javascript">
         setTimeout(function() {  
-            const urlParams = new URLSearchParams(window.location.search);
-            const token = urlParams.get('token');
-            Cookies.set("jwt-token", token, { secure: true });
-            
-            var redirect_url = Cookies.get("redirect_url");
-            if(typeof redirect_url !== 'undefined') {
-                Cookies.remove("redirect_url");
-                window.location.replace(redirect_url);
+            let urlParams = new URLSearchParams(window.location.search);
+            let token = urlParams.get('token');
+            if((typeof(token) !== 'undefined') && (token !== null)) {
+                Cookies.set("jwt-token", token, { secure: true });
+                
+                var redirect_url = Cookies.get("redirect_url");
+                if(typeof redirect_url !== 'undefined') {
+                    Cookies.remove("redirect_url");
+                    window.location.replace(redirect_url);
+                }
+            } else {
+                console.log("No Token Returned from Login");
+                document.getElementById('output').innerHTML = '<h2>Error: No Token Returned</h2>';
             }
         }, 2000);
     </script>
