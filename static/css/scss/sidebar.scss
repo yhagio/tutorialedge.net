@@ -43,6 +43,11 @@
   width: 100%;
   display: block;
   outline: none;
+  background-color: white;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
+  box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
+  color: rgba(14,30,37,.54);
 }
 .right-sidebar h4 {
   font-size: 18px;
@@ -111,8 +116,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color: #F8F8F6;
+  border-radius: 8px;
+  background-color: white;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
+  box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
+  color: rgba(14,30,37,.54);
   padding: 25px;
+  
   div {
     flex: 1;
     img {

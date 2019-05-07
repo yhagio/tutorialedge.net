@@ -44,6 +44,7 @@
         >
         {{ end }}
       </span>
+      
     </div>
   </div>
 </div>
@@ -52,7 +53,7 @@
   <div class="content-container">
     <div class="row">
       
-      <div class="d-none d-sm-none col-md-3 d-md-block">
+      <div class="d-none d-sm-none col-sm-3 d-md-block">
         <div class="sidebar">
           {{ partial "sidebar.html" . }}
         </div>
@@ -63,6 +64,9 @@
           {{ .Content }}
           {{ partial "author.html" . .Params }}
         </article>
+        <div class="comments">
+          {{ partial "comments.html" . }}
+        </div>
       </div>
 
       <div class="col-sm-3 col-md-2">
@@ -80,11 +84,6 @@
   </div>
 </div>
 
-<div class="comments">
-  <div class="container">
-    {{ partial "comments.html" . }}
-  </div>
-</div>
 
 <script src="/js/sticky-sidebar.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.0/anchor.min.js"></script>
