@@ -1,6 +1,5 @@
 <template>
   <div class="helpful-post">
-    <hr>
     <div id="suggestion-input" v-if="!submitted">
       <!-- Was this helpful button group -->
       <h5>Was This Post Helpful?</h5>
