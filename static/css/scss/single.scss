@@ -50,7 +50,7 @@
   font-weight: 500;
   -webkit-box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
   box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
-  color: rgba(14,30,37,.54);
+  color: #4d545d;
 
   img {
     width: 35px;
@@ -76,10 +76,10 @@
   }
 }
 
-.container-wrapper {
-  width: 75%;
-  margin: auto;
-}
+// .container-wrapper {
+//   width: 75%;
+//   margin: auto;
+// }
 
 article {
   margin: 2.4rem 0 0;
@@ -269,7 +269,6 @@ article {
   // background: #f2f6fa;
 
   width: 100%;
-  border-left: 1px solid rgb(230, 236, 241);
   padding: 20px;
   margin-top: 20px;
   font-size: 0.85rem;
@@ -293,11 +292,8 @@ article {
   }
 
   ul {
-    // padding-left: 25px;
-    // list-style: square;
     list-style-type: none;
     padding: 0;
-
     margin: 0;
   }
 
@@ -378,7 +374,6 @@ article {
       height: 1px;
       content: " ";
       position: absolute;
-      background-color: rgb(230, 236, 241);
     }
   }
   p code {
