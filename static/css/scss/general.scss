@@ -58,6 +58,12 @@ body {
     display: none;
   }
 
+  .content-container {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+
   @media (min-width: 576px) { 
     .small-no-show {
       display: block;
