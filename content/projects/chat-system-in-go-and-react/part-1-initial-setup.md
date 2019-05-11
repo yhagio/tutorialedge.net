@@ -16,10 +16,29 @@ We'll start off this course by setting up both of our projects. Once we've got
 the fairly boring setup out of the way, we can begin to add new functionality
 and build up our application and see some positive results!
 
-# Setting Up Our Go Project
+# Goals
 
-> **Note -** We'll be using Go version 1.11 for this course as it is the latest
-> at the time of writing this.
+By the end of this part of the tutorial series, you will have:
+
+* Created the basic Go application within a `backend/` directory.
+* Created a basic ReactJS application within a `frontend/` directory.
+
+With both of these achieved, you will then be able to start adding functionality
+to your real-time chat system in the following parts of the course. 
+
+# Prerequisites
+
+In order to complete this tutorial series, you will need to meet the following 
+prerequisites.
+
+* You will need `npm` installed on your machine. 
+* You will need `npx` installed on your machine. This can be installed by typing
+`npm install -g npx`. 
+* You will need Go version 1.11+ installed on your machine.
+* You will need a code editor such as Visual Studio Code, in which you can 
+develop this project.
+
+# Setting Up Our Go Project
 
 If you are familiar with Go, this step is fairly easy, we'll want to start off
 by creating a new directory called `backend` within our project directory.
@@ -29,7 +48,7 @@ then want to initialize our project by calling:
 
 ```s
 $ cd backend
-$ GOMODDULES=on
+$ GO111MODULE=on
 $ go mod init github.com/TutorialEdge/realtime-chat-go-react
 ```
 
@@ -91,6 +110,19 @@ which will house all of our ReactJS code.
 
 ```s
 $ cd frontend
+```
+
+You will then need to create a new ReactJS application using the `create-react-app`
+package. This can be installed with `npm`:
+
+```s
+$ npm install -g create-react-app
+```
+
+Once this is installed, you should then be able to create your new ReactJS application
+with the following command:
+
+```s
 $ npx create-react-app .
 ```
 
@@ -110,10 +142,38 @@ README.md
 yarn.lock
 ```
 
+## Running Your ReactJS App Locally
+
+Now that you have successfully created your basic ReactJS application, it is time
+to test that everything is working as expected. Try running your application by
+typing the following:
+
+```s
+$ npm start
+```
+
+If everything went to plan, you will see that your new ReactJS application compiles
+and is served on a local development server running on `http://localhost:3000`:
+
+```output
+Compiled successfully!
+
+You can now view frontend in the browser.
+
+  Local:            http://localhost:3000/
+  On Your Network:  http://192.168.1.234:3000/
+
+Note that the development build is not optimized.
+To create a production build, use yarn build.
+```
+
+Perfect, you now have a basic ReactJS which can be extended in the next parts of this
+tutorial series.
+
 # Conclusion
 
-Awesome, we've successfully setup both our frontend and our backend pieces of
-our project and we can get cracking on adding cool functionality.
+Awesome, you have now successfully setup both your frontend and your backend pieces of
+our project and we can get cracking on adding cool new functionality. 
 
-Check out the next part of this series here:
-[Part 2 - Simple Communication](/projects/chat-system-in-go-and-react/part-2-simple-communication/)
+> **Check out the next part of this series here:
+[Part 2 - Simple Communication](/projects/chat-system-in-go-and-react/part-2-simple-communication/)**

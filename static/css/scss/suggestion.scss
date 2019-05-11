@@ -3,6 +3,7 @@
   border-radius: 8px;
   padding: 20px;
   margin-top: 20px;
+  margin-bottom: 20px;
   -webkit-box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
   box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
   color: rgba(14,30,37,.54);
@@ -10,6 +11,9 @@
   h5 {
     font-weight: 400;
     font-size: 16px;
+    color: rgba(0, 0, 0, 0.54);
+  }
+  label {
     color: rgba(0, 0, 0, 0.54);
   }
   textarea.form-control {
@@ -21,6 +25,10 @@
     line-height: 28px;
     font-size: 14px;
     transition: none 0s ease 0s;
+  }
+  button {
+    background-color: #0F607A !important;
+    border: none !important;
   }
 
   .helpful textarea:focus .form-control {
@@ -46,5 +54,4 @@
     border-left: 4px solid #0a84ae;
     margin-left: 6px;
   }
-  margin-bottom: 40px;
 }

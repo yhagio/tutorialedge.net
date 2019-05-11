@@ -43,15 +43,46 @@ body {
   }
 
   a {
-    color: #0a84ae;
+    color: #0F607A;
     text-decoration: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  .content-container {
-    width: 80vw;
-    margin: auto;
+  .none {
+    display: none !important;
+  }
+
+
+  .small-no-show {
+    display: none;
+  }
+
+  @media (min-width: 576px) { 
+    .small-no-show {
+      display: block;
+    }
+
+    .content-container {
+      width: 100%;
+      margin: auto;
+      margin-bottom: 40px;
+    }
+  }
+  @media (min-width: 768px) { 
+    .content-container {
+      width: 100%;
+      margin: auto;
+      margin-bottom: 40px;
+    }
+  }
+  
+  @media (min-width: 1200px) { 
+    .content-container {
+      width: 80vw;
+      margin: auto;
+      margin-bottom: 40px;
+    }
   }
 
   .paginate {
@@ -69,10 +100,6 @@ body {
 .full-width {
   width: 95%;
   margin: auto;
-}
-
-.row {
-  max-width: 100%;
 }
 
 .social-btns {
