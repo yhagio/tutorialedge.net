@@ -31,7 +31,9 @@ to your real-time chat system in the following parts of the course.
 In order to complete this tutorial series, you will need to meet the following 
 prerequisites.
 
-* You will need `npm` installed on your machine.
+* You will need `npm` installed on your machine. 
+* You will need `npx` installed on your machine. This can be installed by typing
+`npm install -g npx`. 
 * You will need Go version 1.11+ installed on your machine.
 * You will need a code editor such as Visual Studio Code, in which you can 
 develop this project.
@@ -108,6 +110,19 @@ which will house all of our ReactJS code.
 
 ```s
 $ cd frontend
+```
+
+You will then need to create a new ReactJS application using the `create-react-app`
+package. This can be installed with `npm`:
+
+```s
+$ npm install -g create-react-app
+```
+
+Once this is installed, you should then be able to create your new ReactJS application
+with the following command:
+
+```s
 $ npx create-react-app .
 ```
 
@@ -126,6 +141,34 @@ package.json
 README.md
 yarn.lock
 ```
+
+## Running Your ReactJS App Locally
+
+Now that you have successfully created your basic ReactJS application, it is time
+to test that everything is working as expected. Try running your application by
+typing the following:
+
+```s
+$ npm start
+```
+
+If everything went to plan, you will see that your new ReactJS application compiles
+and is served on a local development server running on `http://localhost:3000`:
+
+```output
+Compiled successfully!
+
+You can now view frontend in the browser.
+
+  Local:            http://localhost:3000/
+  On Your Network:  http://192.168.1.234:3000/
+
+Note that the development build is not optimized.
+To create a production build, use yarn build.
+```
+
+Perfect, you now have a basic ReactJS which can be extended in the next parts of this
+tutorial series.
 
 # Conclusion
 
