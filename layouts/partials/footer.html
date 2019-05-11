@@ -48,7 +48,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="footer-copyright">
+		<div class="footer-copyright none">
 			<span class="float-left">TutorialEdge © 2019 Copyright</span>
 			<span class="float-right" id="page-id">{{ .UniqueID }}</span>
 		</div>
@@ -62,6 +62,18 @@
 	gtag('js', new Date());
 
 	gtag('config', 'UA-10255990-23');
+	</script>
+	<script>
+	function init() {
+		var imgDefer = document.getElementsByTagName('img');
+		for (var i = 0; i < imgDefer.length; i++) {
+		if (imgDefer[i].getAttribute('data-src')) {
+			imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+		}
+		}
+	}
+	
+	window.onload = init;
 	</script>
 
 	<script src="https://cdn.jsdelivr.net/npm/vue"></script>

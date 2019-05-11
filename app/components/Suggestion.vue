@@ -2,9 +2,8 @@
   <div class="helpful-post">
     <div id="suggestion-input" v-if="!submitted">
       <!-- Was this helpful button group -->
-      <h5>Was This Post Helpful?</h5>
+      <label for="suggestion">Was this Helpful?</label>
       <star-rating v-model="rating" :increment="0.5" :star-size="25"></star-rating>
-
       <textarea
         v-model="suggestion"
         placeholder="Do you have any suggestions as to how we can make it better?"
@@ -14,7 +13,7 @@
         rows="5"
       ></textarea>
       <br>
-      <button v-on:click="submitFeedback" class="btn btn-outline-primary">Submit Feedback</button>
+      <button v-on:click="submitFeedback" class="btn btn-dark" v-bind:class="{ disabled: suggestion.length == 0 }">Submit Feedback</button>
     </div>
     <div v-if="submitted">
       <h5>Thank You For Your Feedback!</h5>
@@ -44,29 +43,33 @@ export default {
     return {
       rating: 0,
       suggestion: "",
-      submitted: false
+      submitted: false,
+      sending: false
     };
   },
   methods: {
     submitFeedback: async function() {
-      try {
-        let response = await axios.post(
-          "https://43xaudt448.execute-api.eu-west-1.amazonaws.com/dev/suggestion",
-          {
-            message: this.suggestion,
-            url: window.location.href,
-            helpful: this.rating,
-            nothelpful: false
-          },
-          {
-            headers: { "Content-Type": "application/json; charset=utf-8" }
-          }
-        );
-        console.log(response);
-        this.submitted = true;
-      } catch (err) {
-        //TODO: Handle appropriately with info to user
-        console.log(err);
+      if (this.suggestion.length >= 1) {
+        this.sending = true;
+        try {
+          let response = await axios.post(
+            "https://43xaudt448.execute-api.eu-west-1.amazonaws.com/dev/suggestion",
+            {
+              message: this.suggestion,
+              url: window.location.href,
+              helpful: this.rating,
+              nothelpful: false
+            },
+            {
+              headers: { "Content-Type": "application/json; charset=utf-8" }
+            }
+          );
+          console.log(response);
+          this.submitted = true;
+        } catch (err) {
+          //TODO: Handle appropriately with info to user
+          console.log(err);
+        }
       }
     }
   }

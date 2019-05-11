@@ -30,7 +30,11 @@
     }
     .register {
       flex: 3;
-      // background-color: blue;
+      color: #555f61;  
+      button {
+        background-color: #0F607A !important;
+        border: none !important;
+      }
     }
   }
 

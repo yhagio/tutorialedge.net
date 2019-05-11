@@ -1,17 +1,17 @@
-<div id="sidebar">
+<div id="sidebar small-no-show">
 
-  <div class="right-sidebar hide-on-small-only youtube-subscribe">
+  <div class="right-sidebar small-no-show youtube-subscribe">
     <div>
       <img src="https://images.tutorialedge.net/images/youtube.png" alt="">
     </div>
     <a href="https://www.youtube.com/tutorialedge">
-      <h3>Subscribe on YouTube!</h3>
-        <p>https://youtube.com/tutorialedge</p>
+      <h3>Subscribe Now</h3>
+        <p><b>TutorialEdge</b></p>
     </a>
   </div>
 
 
-  <div class="right-sidebar hide-on-small-only">
+  <div class="right-sidebar small-no-show">
     {{ range $taxonomyname, $taxonomy := .Site.Taxonomies.tags }}
 
     {{ $scratch := newScratch }}
@@ -38,7 +38,7 @@
     {{ end }}
   </div>
 
-  <div class="right-sidebar hide-on-small-only">
+  <div class="right-sidebar small-no-show">
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6782067367590597" data-ad-slot="4096707282"
       data-ad-format="auto"></ins>
