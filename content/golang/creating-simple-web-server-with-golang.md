@@ -31,6 +31,10 @@ content back to a client making requests to our server. Once we have achieved
 this, we'll then look at how we can serve static files before finally moving on
 to how we can serve these files using HTTP over TLS or `https` for short.
 
+# Prerequisites
+
+* You will need Go version 1.11+ installed on your development machine. 
+
 # Creating a Basic Web Server
 
 Ok, so to begin with, we’ll create a very simple web server that will just

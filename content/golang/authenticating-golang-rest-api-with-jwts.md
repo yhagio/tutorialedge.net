@@ -20,6 +20,12 @@ URL-safe means of representing claims to be transferred between two parties.
 This is essentially a confusing way of saying that JWTs allow you to transmit
 information from a client to the server in a stateless, but secure way.
 
+# Prerequisites
+
+Before you can follow this article, you will need the following:
+
+* You will need Go version 1.11+ installed on your development machine.
+
 # Introduction
 
 The JWT standard uses either a secret, using the HMAC algorithm, or a

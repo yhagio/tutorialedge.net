@@ -30,6 +30,10 @@ network monitoring, image manipulation and so on.
 > **Note -** The full code for this tutorial can be found here:
 > [TutorialEdge/Go/go-cli-tutorial](https://github.com/TutorialEdge/Go/tree/master/go-cli-tutorial)
 
+# Prerequisites
+
+* You will need Go version 1.11+ installed on your development machine. 
+
 # Popular Projects
 
 Golang is growing massively in popularity and we have seen large enterprise

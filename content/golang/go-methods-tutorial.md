@@ -34,7 +34,9 @@ field, `Name`.
 Next we'll declare an `UpdateName()` and a `PrintName()` method which will allow
 us to update and print the names of any employees we create.
 
+
 ```go
+// main.go
 package main
 
 import (

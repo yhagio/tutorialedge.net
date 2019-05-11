@@ -32,6 +32,10 @@ exposes all the known information for everything Pokemon related. A bit silly I
 know but it's a fully fledged API that follows standard naming conventions and
 requires no authentication so there is no barrier to entry.
 
+# Prerequisites
+
+* You will need Go version 1.11+ installed on your development machine. 
+
 # Querying The API
 
 To get us started we are going to query for all the Pokemon from the original

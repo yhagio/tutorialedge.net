@@ -14,16 +14,6 @@ authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_4
 weight: 22
 ---
 
-Welcome all! In this tutorial, we are going to be looking at how you can use
-`goroutines` within you Go based programs and subsequently improve the
-performance with which your programs execute.
-
-# Video Tutorial
-
-<div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/ARHXmR0_MGY?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="640" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
-
-# Introduction
-
 Now, Go is an incredibly performant language that features a hell of a lot of
 great features that allow you to build incredibly fast applications. It
 redefines what it means to build concurrent programs by providing us with these
@@ -34,6 +24,33 @@ into a concurrent program without having to worry about things like creating
 threads or thread-pools. But, as with all concurrent programming, this comes
 with some dangers that must be considered before you run around slapping the
 `go` keyword in front of all your function calls.
+
+**In this tutorial, we are going to be looking at how you can use
+`goroutines` within you Go based programs** and subsequently improve the
+performance with which your programs execute.
+
+# Goals
+
+By the end of this tutorial, you should:
+
+* have a solid understanding as to what `goroutines` are, and how they can be
+used to improve th performance of your applications
+* know how to create and work with anonymous goroutines.
+* have an understanding as to some of the dangers of making your applications
+concurrent. 
+
+# Prerequisites
+
+* You will need Go version 1.11+ installed on your development machine. 
+* You should have 
+
+# Video Tutorial
+
+Should you prefer, this tutorial is also available in video format. If you wish to support
+my work, then please consider liking and subscribing to my YouTube channel.
+
+<div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/ARHXmR0_MGY?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="640" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+
 
 # What Are Goroutines?
 
@@ -85,11 +102,11 @@ func compute(value int) {
 func main() {
     fmt.Println("Goroutine Tutorial")
 
-  // sequential execution of our compute function
+    // sequential execution of our compute function
     compute(10)
     compute(10)
 
-  // we scan fmt for input and print that to our console
+    // we scan fmt for input and print that to our console
     var input string
     fmt.Scanln(&input)
 
@@ -128,8 +145,8 @@ func compute(value int) {
 func main() {
     fmt.Println("Goroutine Tutorial")
 
-  // notice how we've added the 'go' keyword
-  // in front of both our compute function calls
+    // notice how we've added the 'go' keyword
+    // in front of both our compute function calls
     go compute(10)
     go compute(10)
 }
@@ -137,10 +154,10 @@ func main() {
 
 The only thing we needed to change to our existing sequential go program was to
 add the ‘go’ keyword in front of our compute function invocation. Here we’ve
-essentially created two separate goroutines that should now execute in parallel.
+essentially created two separate goroutines that will now execute in parallel.
 
-But, if you try and run this program, you'll notice that it completes without
-printing out our expected output.
+**But, if you try and run this program, you'll notice that it completes without
+printing out our expected output.**
 
 Why is this?
 
@@ -172,8 +189,8 @@ func compute(value int) {
 func main() {
     fmt.Println("Goroutine Tutorial")
 
-  // notice how we've added the 'go' keyword
-  // in front of both our compute function calls
+    // notice how we've added the 'go' keyword
+    // in front of both our compute function calls
     go compute(10)
     go compute(10)
 
@@ -182,7 +199,7 @@ func main() {
 }
 ```
 
-Try executing this in your terminal and you should see 0,0,1,1,2,2… and so on up
+Try executing this in your terminal and you will see 0,0,1,1,2,2… and so on up
 till ..9,9 print out in our console. And if you time this program’s execution
 then we are suddenly down to roughly 10 seconds.
 
@@ -193,6 +210,7 @@ concurrent using the `go` keyword. But, it just so happens that we can use the
 `go` keyword to make our anonymous functions concurrent as well:
 
 ```go
+// main.go
 package main
 
 import "fmt"
@@ -200,11 +218,21 @@ import "fmt"
 func main() {
     // we make our anonymous function concurrent using `go`
     go func() {
-        fmt.Println("Executing my Concurrent anonymouse function")
+        fmt.Println("Executing my Concurrent anonymous function")
     }()
-
+    // we have to once again block until our anonymous goroutine
+    // has finished or our main() function will complete without
+    // printing anything
     fmt.Scanln()
 }
+```
+
+When we execute this, we will see that our anonymous `goroutine` has
+successfully executed and called `fmt.Println`.
+
+```output
+$ go run main.go
+Executing my Concurrent anonymous function
 ```
 
 # Conclusion
@@ -217,6 +245,9 @@ Hopefully, you found this tutorial useful, if you did then please let me know in
 the comments section below!
 
 ## Further Reading
+
+If you enjoyed this article and wish to learn more about working with Concurrency
+in Go, then I recommend you check out our other articles on concurrency:
 
 * - [Go sync.WaitGroup Tutorial](/golang/go-waitgroup-tutorial/)
 * - [Go Mutex Tutorial](/golang/go-mutex-tutorial/)

@@ -32,6 +32,10 @@ high-quality projects and that was they had a solid **continuous integration**,
 and sometimes **continuous deployment** pipeline that is triggered whenever
 somebody makes changes to their codebase.
 
+# Prerequisites
+
+* You will need Go version 1.11+ installed on your development machine. 
+
 # The Benefits of a CI/CD Pipeline
 
 If you haven't built a highly used package before, the benefits of a CI/CD
