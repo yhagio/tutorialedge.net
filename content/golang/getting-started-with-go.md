@@ -28,6 +28,13 @@ and running. Once you've got everything working correctly, we can start the rest
 of our journey learning the more complex aspects of the language such as
 functions, methods, and eventually things like concurrency and reflection.
 
+# Prerequisites
+
+Before you can follow this article, you will need the following:
+
+* You will need Go installed on your development machine. If you need to install this
+you should check out the official download page: [Official Go Download](https://golang.org/dl/)
+
 # Getting Started
 
 Let's dive in with getting everything installed and writing an incredibly simple

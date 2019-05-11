@@ -34,6 +34,10 @@ benchmarking tests for very simple functions and then move on to more advanced
 examples before finally looking at how we can generate cool looking flame
 graphs.
 
+# Prerequisites
+
+* You will need Go version 1.11+ installed on your development machine. 
+
 # A Simple Benchmark Test
 
 Within Go, benchmarking tests can be written in conjunction with your standard

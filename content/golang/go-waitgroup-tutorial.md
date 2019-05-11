@@ -327,5 +327,11 @@ If you enjoyed this tutorial or have any comments/suggestions, then please feel
 free to let me know in the comments section below, or in the suggestions section 
 at the side!
 
-> **Note -** If you wish to keep up to date with all the latest articles then I
-> suggest following me on Twitter: [@Elliot_F](https://twitter.com/elliot_f)
+## Further Reading
+
+If you enjoyed this article and wish to learn more about working with Concurrency
+in Go, then I recommend you check out our other articles on concurrency:
+
+* [Go Goroutines Tutorial](/golang/concurrency-with-golang-goroutines/)
+* [Go sync.WaitGroup Tutorial](/golang/go-waitgroup-tutorial/)
+* [Go channels Tutorial](/golang/go-channels-tutorial/)

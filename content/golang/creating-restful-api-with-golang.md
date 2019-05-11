@@ -18,6 +18,10 @@ In this article, I'm going to be showing you how we can create a simple Golang
 based REST API that serves up a JSON based response whenever it is hit using a
 `HTTP` GET request.
 
+# Prerequisites
+
+* You will need Go version 1.11+ installed on your development machine. 
+
 # Video Tutorial
 
 <div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/W5b64DXeP0o?ecver=2" width="640" height="360" frameborder="0" allow="autoplay; encrypted-media" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
@@ -59,6 +63,7 @@ will match the URL path hit with a defined function and a `main` function which
 will kick off our API.
 
 ```go
+// main.go
 package main
 
 import (
@@ -190,6 +195,7 @@ currently has 2,281 stars on Github.
 ## Building our Router
 
 ```go
+// router.go
 package main
 
 import (
@@ -311,6 +317,7 @@ recommend my [Go MySQL Tutorial](/golang/golang-mysql-tutorial/)
 # Full Source Code:
 
 ```golang
+// main.go
 package main
 
 import (

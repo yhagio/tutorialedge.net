@@ -24,6 +24,10 @@ commands within our Go applications.
 > found under the exec package:
 > [os/exec package](https://golang.org/pkg/os/exec/).
 
+# Prerequisites
+
+* You will need Go version 1.11+ installed on your development machine. 
+
 # Cross Compatibility Issues
 
 Please note that some of these commands may not work on your operating system.

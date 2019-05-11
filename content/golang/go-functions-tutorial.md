@@ -16,7 +16,7 @@ weight: 4
 
 [![Tutorial Build Status](https://travis-ci.org/TutorialEdge/go-functions-tutorial.svg?branch=master)](https://travis-ci.org/TutorialEdge/go-functions-tutorial)
 
-In this tutorial, we are going to be looking at functions in Golang and hopefully, by
+**In this tutorial, we are going to be looking at functions in Golang** and hopefully, by
 the end of this tutorial, you will have a firm grasp as to what they are and how
 you can use them in your own projects.
 

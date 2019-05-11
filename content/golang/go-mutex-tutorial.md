@@ -140,3 +140,12 @@ goroutines present within it!
 
 Hopefully, you found this tutorial useful! If you have any comments or feedback,
 I would love to hear them in the comment section below. Happy Coding!
+
+## Further Reading
+
+If you enjoyed this article and wish to learn more about working with Concurrency
+in Go, then I recommend you check out our other articles on concurrency:
+
+* [Go Goroutines Tutorial](/golang/concurrency-with-golang-goroutines/)
+* [Go sync.WaitGroup Tutorial](/golang/go-waitgroup-tutorial/)
+* [Go channels Tutorial](/golang/go-channels-tutorial/)
