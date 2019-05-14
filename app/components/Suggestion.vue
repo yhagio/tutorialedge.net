@@ -13,7 +13,7 @@
         rows="5"
       ></textarea>
       <br>
-      <button v-on:click="submitFeedback" class="btn btn-dark" v-bind:class="{ disabled: suggestion.length == 0 }">Submit Feedback</button>
+      <button v-on:click="submitFeedback" class="btn btn-dark" v-bind:class="{ disabled: suggestion.length == 0 }">Submit</button>
     </div>
     <div v-if="submitted">
       <h5>Thank You For Your Feedback!</h5>

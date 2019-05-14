@@ -1,3 +1,5 @@
+@import "variables";
+
 .comments {
   width: 100%;
   padding-bottom: 40px;
@@ -6,19 +8,22 @@
   }
 
   .comment-login {
+    display: flex;
+    flex-wrap: wrap;
+
     background-color: white;
     padding: 40px;
     margin-bottom: 40px;
-    border: 1px solid #efefef;
-    display: flex;
-    border-radius: 8px;
-    -webkit-box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
-    box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
-    color: rgba(14,30,37,.54);
+    
+    overflow: hidden;;
+
+    border-radius: $border-radius;
+    -webkit-box-shadow: $card-box-shadow;
+    box-shadow: $card-box-shadow;
+    color: $gray;
+    
     width: 100%;
-    h2 {
-      padding: 0;
-    }
+
     .image {
       flex: 1;
       img {
@@ -28,11 +33,12 @@
         margin: auto;
       }
     }
+
     .register {
       flex: 3;
       color: #555f61;  
       button {
-        background-color: #0F607A !important;
+        background-color: $light-blue !important;
         border: none !important;
       }
     }
@@ -74,7 +80,7 @@
         }
 
         .markdown-support {
-            color: #777;
+            color: $light-gray;
         }
 
       }
@@ -97,10 +103,11 @@
             }
         }
         .comment-body {
-          border-radius: 8px;
-          -webkit-box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
-          box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
-          color: rgba(14,30,37,.54);
+          border-radius: $border-radius;
+          -webkit-box-shadow: $card-box-shadow;
+          box-shadow: $card-box-shadow;
+          color: $gray;
+
             flex: 5;
             background-color: white;
             padding: 40px;
