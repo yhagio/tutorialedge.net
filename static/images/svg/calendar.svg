@@ -1,0 +1,56 @@
+<svg version="1.1"
+    baseProfile="full"
+    width="18px" height="18px"
+    xmlns="http://www.w3.org/2000/svg">
+    <!-- Frame -->
+    <rect 
+        width="18px" height="18px"
+        rx="2" ry="2"
+        style="fill:#143650;"></rect>
+    <rect 
+        x="2" y="2"
+        width="14px" height="14px"
+        rx="2" ry="2"
+        style="fill:#F1EFDD;"></rect>
+
+    <!-- Calendar Top -->
+    <rect 
+        x="2" y="2"
+        width="14px" height="4px"
+        style="fill:#4AD5BE;"></rect>
+    <rect 
+        x="5" y="1"
+        width="1px" height="4px"
+        style="fill:#30485A;"></rect>
+    <rect 
+        x="12" y="1"
+        width="1px" height="4px"
+        style="fill:#30485A;"></rect>
+    
+    <!-- Dates -->
+    <rect 
+        x="4" y="8"
+        width="2px" height="2px"
+        style="fill:#C7CFDA;"></rect>
+    <rect 
+        x="8" y="8"
+        width="2px" height="2px"
+        style="fill:#C7CFDA;"></rect>
+    <rect 
+        x="12" y="8"
+        width="2px" height="2px"
+        style="fill:#C7CFDA;"></rect>
+
+    <rect 
+        x="4" y="12"
+        width="2px" height="2px"
+        style="fill:#C7CFDA;"></rect>
+    <rect 
+        x="8" y="12"
+        width="2px" height="2px"
+        style="fill:#C7CFDA;"></rect>
+    <rect 
+        x="12" y="12"
+        width="2px" height="2px"
+        style="fill:#C7CFDA;"></rect>
+</svg>

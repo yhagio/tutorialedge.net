@@ -52,7 +52,12 @@
   box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
   color: #4d545d;
 
-  img {
+  img.icon {
+    margin-right: 5px;
+    margin-top: -1px;
+  }
+
+  img.author {
     width: 35px;
     height: 35px;
     margin: -10px;
