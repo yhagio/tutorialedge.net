@@ -1,21 +1,25 @@
+@import "variables";
+
 body {
   font-family: "proxima-nova", "proxima-nova-all", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #4a4a4a;
   font-size: 1.25rem;
   line-height: 1.62;
-  color: #222;
+  
   text-align: left;
+  
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #F2F5F7;
+  
+  color: $gray;
+  background-color: $lightest-blue;
 
   h1, h2, h3, h4, h5, h6 {
     font-family: brandon-grotesque, sans-serif;
     font-weight: 400;
     font-style: normal;
     font-weight: 200;
-    color: #333;
+    color: $gray;
   }
 
   h1, h2, h3, h4, h5 {
@@ -43,7 +47,7 @@ body {
   }
 
   a {
-    color: #0F607A;
+    color: $link-blue;
     text-decoration: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -176,34 +180,6 @@ hr {
   transition: none;
 }
 
-.social-btn-dissolve.twitter {
-  background: #4cc4f2;
-}
-
-.social-btn-dissolve.facebook {
-  background: #3b5998;
-}
-
-.social-btn-dissolve.google {
-  background: #dd4b39;
-}
-
-.social-btn-dissolve.pinterest {
-  background: #cb2027;
-}
-
-.social-btn-dissolve.instagram {
-  background: #9b6954;
-}
-
-.social-btn-dissolve.tumblr {
-  background: #32506d;
-}
-
-.social-btn-dissolve.linkedin {
-  background: #0077B5;
-}
-
 .clear {
   width: 100%;
   height: 1px;
@@ -213,13 +189,14 @@ hr {
 
 .course-progress-box {
   background-color: white;
-  box-shadow: 0 14px 28px 0 rgba(115,143,147,.4);
+
   padding: 20px 20px;
   margin-bottom: 40px;
   border-radius: 5px;
   text-align: center;
   cursor: pointer;
-  box-shadow: 0 5px 15px -5px rgba(0,0,0,0.1);
+  
+  box-shadow: $box-shadow;
 }
 a:hover .course-progress-box {
   text-decoration: none;
@@ -240,25 +217,29 @@ a:hover .course-progress-box {
   text-decoration: none !important;
 }
 
-.course-progress-box h2 {
-  margin: 0;
-  color: #39424e;
-  font-size: 26px;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 15px;
-}
-.course-progress-box h2>small {
-  color: #738f93;
-  font-weight: 400;
-  line-height: 1.4;
-  font-size: 12px;
-  text-transform: uppercase;
-}
+.course-progress-box {
+  h2 {
+    margin: 0;
+    color: #39424e;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+  h2>small {
+    color: $light-gray;
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
 
-.course-progress-box button {
-  font-weight: 700;
-  padding: 10px 20px;
+  button {
+    font-weight: 700;
+    padding: 10px 20px;
+    background-color: $light-blue;
+    border: none;
+  }
 }
 
 
@@ -266,8 +247,7 @@ a:hover .course-progress-box {
   width: 100%;
   text-align: center;
   padding: 20px;
-}
-
-.paginate .total-count {
-  padding: 20px;
+  .total-count {
+    padding: 20px;
+  }
 }

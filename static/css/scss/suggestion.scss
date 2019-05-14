@@ -2,7 +2,6 @@
   background-color: white;
   border-radius: 8px;
   padding: 20px;
-  overflow: scroll;
   margin-top: 20px;
   margin-bottom: 20px;
   -webkit-box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
@@ -22,7 +21,7 @@
     z-index: auto;
     position: relative;
     padding: 10px;
-    width: auto !important;
+    width: 90% !important;
     line-height: 28px;
     font-size: 14px;
     transition: none 0s ease 0s;
@@ -30,6 +29,7 @@
   button {
     background-color: #0F607A !important;
     border: none !important;
+    width: 100%;
   }
 
   .helpful textarea:focus .form-control {

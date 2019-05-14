@@ -299,76 +299,22 @@ Key: 1.
 
 # Creating and Updating Articles
 
-Under Construction
+In this part of the tutorial, you are going to build the `Create` and `Update`
+part of a `CRUD` REST API. 
 
-# Summary
+
+
+# Conclusion
 
 This example represents a very simple RESTful API written using Go. In a real
 project, we'd typically tie this up with a database so that we were returning
-real values. For a tutorial on how to connect to a MySQL database using Go I'd
+real values.
+
+> **Source Code** - The full source code for this tutorial can be found here:
+[TutorialEdge/create-rest-api-in-go](https://github.com/TutorialEdge/create-rest-api-in-go-tutorial)
+
+## Further Reading
+
+* For a tutorial on how to connect to a MySQL database using Go I'd
 recommend my [Go MySQL Tutorial](/golang/golang-mysql-tutorial/)
 
-# Real Life Examples
-
-> If you want a real-life RESTful json api to have a look at, why not take a
-> look at the REST API powering this site's backend:
-> [Tutorialedge-Rest-API](https://github.com/elliotforbes/tutorialedge-rest-api)
-
-# Full Source Code:
-
-```golang
-// main.go
-package main
-
-import (
-    "encoding/json"
-    "fmt"
-    "log"
-    "net/http"
-
-    "github.com/gorilla/mux"
-)
-
-// Article - Our struct for all articles
-type Article struct {
-    Id      int    `json:"Id"`
-    Title   string `json:"Title"`
-    Desc    string `json:"desc"`
-    Content string `json:"content"`
-}
-
-type Articles []Article
-
-func homePage(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprintf(w, "Welcome to the HomePage!")
-    fmt.Println("Endpoint Hit: homePage")
-}
-
-func returnAllArticles(w http.ResponseWriter, r *http.Request) {
-    articles := Articles{
-        Article{Title: "Hello", Desc: "Article Description", Content: "Article Content"},
-        Article{Title: "Hello 2", Desc: "Article Description", Content: "Article Content"},
-    }
-    fmt.Println("Endpoint Hit: returnAllArticles")
-
-    json.NewEncoder(w).Encode(articles)
-}
-
-func returnSingleArticle(w http.ResponseWriter, r *http.Request) {
-    vars := mux.Vars(r)
-    key := vars["id"]
-    fmt.Fprintf(w, "Key: "+key)
-}
-
-func handleRequests() {
-    myRouter := mux.NewRouter().StrictSlash(true)
-    myRouter.HandleFunc("/", homePage)
-    myRouter.HandleFunc("/all", returnAllArticles)
-    myRouter.HandleFunc("/article/{id}", returnSingleArticle)
-    log.Fatal(http.ListenAndServe(":10000", myRouter))
-}
-
-func main() {
-    handleRequests()
-}
-```

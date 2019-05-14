@@ -1,7 +1,9 @@
+@import "variables";
+
 nav {
   &.navbar {
     padding: 0;
-    background-color: #141618 !important;
+    background-color: $darkest-blue !important;
     
     .navbar-brand {
       padding: 10px;
@@ -32,12 +34,12 @@ nav {
       margin-right: 20px;
       
       &:hover {
-        background-color: rgba(255,255,255,0.1);
+        background-color: $dark-blue;
       }
     }
 
     .sign-up {
-      background-color: #0d5ea6;
+      background-color: $light-blue;
       padding: 10px;
       
       &:hover {
@@ -84,8 +86,9 @@ nav .dropdown-menu img {
 .dropdown-item {
   padding: 10px 20px !important;
 }
+
 @media (min-width: 756px) {
-.dropdown-menu-mega {
-  width: 600px !important;
-}
+  .dropdown-menu-mega {
+    width: 600px !important;
+  }
 }
