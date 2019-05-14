@@ -17,7 +17,6 @@
 	<meta name="description" content="{{ . }}">{{ end }} {{ with .Site.Params.author }}
 	<meta name="author" content="{{ . }}">{{ end }}
 
-	<link async rel="stylesheet" href="/css/ionicons.min.css">
 	<link async rel="stylesheet" href="https://use.typekit.net/jnu8xif.css">
 	<link async rel="stylesheet" href="/css/bootstrap.min.css">
 	<link async rel="stylesheet" href="{{ .Site.BaseURL }}/dist/style.css">
@@ -45,7 +44,7 @@
 		<!-- Hamburger -->
 		<button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 		 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<i class="ion-navicon-round"></i>
+			<img src="/images/svg/hamburger.svg" alt="hamburger menu" />
 		</button>
 		<!-- END OF Hamburger -->
 
@@ -127,7 +126,7 @@
 
 			<!-- Right Hand of Navbar -->
 			<ul class="navbar-nav full-height">
-				<li class="nav-item"><a class="nav-link search" href="/search"><i class="ion-search"></i> Search</a></li>
+				<li class="nav-item"><a class="nav-link search" href="/search"><img src="/images/svg/search.svg" alt="search icon" style="width:15px; height: 15px;" /> Search</a></li>
 				<li><Signup/></li>
 			</ul>
 			<!-- END -->
