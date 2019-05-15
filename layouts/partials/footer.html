@@ -63,13 +63,32 @@
 
 	gtag('config', 'UA-10255990-23');
 	</script>
+
 	<script>
 	function init() {
 		var imgDefer = document.getElementsByTagName('img');
-		for (var i = 0; i < imgDefer.length; i++) {
-		if (imgDefer[i].getAttribute('data-src')) {
-			imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
-		}
+
+		var ua = navigator.userAgent.toLowerCase(); 
+		if (ua.indexOf('safari') != -1) { 
+			if (ua.indexOf('chrome') > -1) {
+				for (var i = 0; i < imgDefer.length; i++) {
+					if (imgDefer[i].getAttribute('data-src')) {
+						imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src') + ".webp");
+					}
+				} 
+			} else {
+				for (var i = 0; i < imgDefer.length; i++) {
+					if (imgDefer[i].getAttribute('data-src')) {
+						imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src') + ".png");
+					}
+				}
+			}
+		} else {
+			for (var i = 0; i < imgDefer.length; i++) {
+				if (imgDefer[i].getAttribute('data-src')) {
+					imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src') + ".png");
+				}
+			}
 		}
 	}
 	
