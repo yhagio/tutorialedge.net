@@ -19,7 +19,7 @@
 
 	<link async rel="stylesheet" href="https://use.typekit.net/jnu8xif.css">
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link async rel="stylesheet" href="{{ .Site.BaseURL }}/dist/style.css">
+	<link async rel="stylesheet" href="{{ .Site.BaseURL }}/app/style.css">
 
 	{{ if .RSSLink -}}
 	<link async href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}">
@@ -127,7 +127,7 @@
 			<!-- Right Hand of Navbar -->
 			<ul class="navbar-nav full-height">
 				<li class="nav-item"><a class="nav-link search" href="/search"><img src="/images/svg/search.svg" alt="search icon" style="width:15px; height: 15px;" /> Search</a></li>
-				<li><Signup/></li>
+				<Signup/>
 			</ul>
 			<!-- END -->
 
