@@ -8,9 +8,9 @@ const cssnano = require("cssnano");
 let paths = {
   styles: {
     // By using styles/**/*.sass we're telling gulp to check all folders for any sass file
-    src: "./static/css/**/*.scss",
+    src: "./static/**/*.scss",
     // Compiled files will end up in whichever folder it's found in (partials are not compiled)
-    dest: "static/dist/",
+    dest: "static/app/",
     destFile: "style.css",
   }
 };

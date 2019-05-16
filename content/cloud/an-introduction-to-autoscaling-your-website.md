@@ -51,16 +51,10 @@ You could also specify that you wish to scale up your services preemptively at
 Conversely you could have your services scale down at 5:00pm if you want to save
 the spending on extra servers.
 
+![Autoscaler demonstration](/images/cloud/autoscaler.svg)
+
 This level of control is brilliant. No service will be the same and being able
 to control exactly when and why services scale up is a huge benefit.
-
-<svg version="1.1"
-    baseProfile="full"
-    width="300"
-    height="200"
-    xmlns="http://www.w3.org/2000/svg">
-  <circle cx="150" cy="100" r="80" fill="green">
-</svg>
 
 # Conclusion
 
