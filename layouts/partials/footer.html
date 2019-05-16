@@ -54,6 +54,13 @@
 		</div>
 	</footer>
 
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+	<script src="/js/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-10255990-23"></script>
 	<script>
@@ -73,17 +80,26 @@
 		var is_Edge = navigator.userAgent.indexOf("Edge") > -1;
 		var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 		
-		var ua = navigator.userAgent.toLowerCase(); 
+		
 		if (is_safari || is_opera || is_Edge) { 
 			for (var i = 0; i < imgDefer.length; i++) {
+		
 				if (imgDefer[i].getAttribute('data-src')) {
-					imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src') + ".png");
+					if (imgDefer[i].getAttribute('data-src').split('.').pop() === 'png') {
+						imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+					} else {
+						imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src') + ".png");
+					}
 				}
 			}
 		} else {
-			for (var i = 0; i < imgDefer.length; i++) {
+			for (var i = 0; i < imgDefer.length; i++) {		
 				if (imgDefer[i].getAttribute('data-src')) {
-					imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src') + ".webp");
+					if (imgDefer[i].getAttribute('data-src').split('.').pop() === 'png') {
+						imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src').substr(0, imgDefer[i].getAttribute('data-src').length - 4) + ".webp");
+					} else {
+						imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src') + ".webp");
+					}
 				}
 			} 
 		}
