@@ -33,9 +33,9 @@
 				<div class="padded">
 					<h3>Follow Me</h3>
 					<ul>
-						<li><a href="https://twitter.com/Elliot_F"><i class="ion ion-social-twitter"></i> - @Elliot_f</a></li>
-						<li><a href="https://www.facebook.com/tutorialedge"><i class="ion ion-social-facebook"></i> - TutorialEdge</a></li>
-						<li><a href="https://github.com/elliotforbes"><i class="ion ion-social-github"></i> - elliotforbes</a></li>
+						<li><a href="https://twitter.com/Elliot_F">@Elliot_f</a></li>
+						<li><a href="https://www.facebook.com/tutorialedge">TutorialEdge</a></li>
+						<li><a href="https://github.com/elliotforbes">elliotforbes</a></li>
 					</ul>
 				</div>
 			</div>
@@ -63,13 +63,29 @@
 
 	gtag('config', 'UA-10255990-23');
 	</script>
+
 	<script>
 	function init() {
 		var imgDefer = document.getElementsByTagName('img');
-		for (var i = 0; i < imgDefer.length; i++) {
-		if (imgDefer[i].getAttribute('data-src')) {
-			imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
-		}
+		var is_firefox = typeof window.InstallTrigger !== 'undefined';
+		var is_chrome = !!window.chrome && !is_opera && !is_Edge;
+		var is_opera = !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+		var is_Edge = navigator.userAgent.indexOf("Edge") > -1;
+		var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+		
+		var ua = navigator.userAgent.toLowerCase(); 
+		if (is_safari || is_opera || is_Edge) { 
+			for (var i = 0; i < imgDefer.length; i++) {
+				if (imgDefer[i].getAttribute('data-src')) {
+					imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src') + ".png");
+				}
+			}
+		} else {
+			for (var i = 0; i < imgDefer.length; i++) {
+				if (imgDefer[i].getAttribute('data-src')) {
+					imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src') + ".webp");
+				}
+			} 
 		}
 	}
 	

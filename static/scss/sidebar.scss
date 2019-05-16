@@ -1,0 +1,145 @@
+.course-sidebar {
+  background-color: white;
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  z-index: 100;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  outline: none;
+  box-shadow: 0 5px 5px 0 rgba(0,0,0,0.3);
+  border: 1px solid #d4dadf;
+  a {
+    display: block;
+  }
+  h5 {
+    font-size: 18px;
+    font-weight: 200;
+  }
+  img {
+    height: 30px !important;
+    width: 30px !important;
+    float: left;
+    margin-right: 10px;
+  }
+}
+
+
+.email-signup {
+  margin-bottom: 60px;
+  z-index: 100;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  outline: none;
+}
+
+#right-sidebar{
+  margin-bottom: 40px;
+}
+
+.right-sidebar {
+  padding: 20px;
+  margin-bottom: 40px;
+  z-index: 100;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  outline: none;
+  background-color: white;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
+  box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
+  color: rgba(14,30,37,.54);
+  h4 {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+  a {
+    color: #555;
+    font-size: 15px;
+  }
+  .collection {
+    border: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+  }
+  
+  .collection-item {
+    border: none;
+    padding: 0;
+    margin: 0;
+    border-left: none;
+    position: relative;
+    display: block;
+    padding: 15px 15px;
+    border-bottom: 1px solid #E7E7EC;
+    border-right: none;
+    padding-bottom: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 10px;
+  }
+}
+
+.right-sidebar .collection-item a:hover {
+  z-index: 2;
+  color: #56CDFC;
+  border-color: #E7E7EC;
+}
+
+.right-sidebar .collection-item:hover:before {
+  background: #56CDFC;
+  content: '';
+  display: block;
+  height: 100%;
+  z-index: 3;
+  left: -20px;
+  position: absolute;
+  top: 0;
+  width: 4px;
+}
+
+
+.youtube-subscribe {
+  text-decoration: none;
+  transition: 0.5s;
+  display: block;
+  margin-top: 20px;
+  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.youtube-subscribe {
+  border-radius: 8px;
+  background-color: white;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
+  box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
+  color: rgba(14,30,37,.54);
+  padding: 25px;
+  
+  div {
+    img {
+      max-height: 100px;
+      width: auto;
+      display: block;
+      margin: auto;
+    }
+  }
+
+  a {
+    h3 {
+      margin-top: 10px;
+    }
+    margin: 0;
+    padding: 0;
+  }
+}
+

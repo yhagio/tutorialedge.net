@@ -1,0 +1,16 @@
+@import "variables";
+
+.quiz {
+    hr {
+        margin: 20px auto;
+    }
+    .answers {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .btn {
+            width: 45%;
+            margin-bottom: 10px;
+        }
+    }
+}

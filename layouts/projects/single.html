@@ -23,21 +23,17 @@
     <div class="post-info-inner">
       <span>
         {{ if .Params.authorImage }}
-        <img src="{{ .Params.authorImage }}" alt="{{ .Params.author }}" />
+        <img class="author" src="{{ .Params.authorImage }}" alt="{{ .Params.author }}" />
         {{ else }}
-        <i class="ion ion-social-twitter"></i>
+        <img class="author" src="https://images.tutorialedge.net/images/logo.png" alt="{{ .Params.author }}" />
         {{ end }}
         <a href="{{.Params.twitter }}">{{ .Params.author }}</a>
       </span>
+
+      <span><img class="icon" src="https://tutorialedge.net/images/svg/clock.svg" alt="clock"/>{{ .ReadingTime }} Minutes</span>
+      <span><img class="icon" src="https://tutorialedge.net/images/svg/calendar.svg" alt="clock"/> {{ dateFormat "Jan 2, 2006" .Date }}</span>
+
       <span>
-        <i class="ion ion-ios-clock"></i> {{ .ReadingTime }} Minutes
-      </span>
-      <span>
-        <i class="ion ion-ios-calendar"></i>
-        {{ dateFormat "Jan 2, 2006" .Date }}
-      </span>
-      <span>
-        <i class="ion ion-pricetags"></i>
         {{ range.Params.tags }}
         <a href="/tags/{{.}}"
           ><span class="badge badge-pill badge-info">{{ . }}</span></a
@@ -66,7 +62,7 @@
       <div class="col-sm-2 hidden-md-down">
         <div id="right-sidebar">
           <div class="toc">
-            <h4><i class="ion ion-ios-list-outline"></i> Table Of Contents</h4>
+            <h4>Table Of Contents</h4>
             {{.TableOfContents}}
           </div>
         </div>

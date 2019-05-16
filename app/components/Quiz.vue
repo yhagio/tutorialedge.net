@@ -2,12 +2,12 @@
     <div class="quiz">
         <h3>Pop Quiz Question!</h3>
         <slot name="question"></slot>
-        <hr/>
         <div class="answers">
             <button type="button" class="btn btn-outline-primary" v-for="(option, index) in options" v-on:click="checkAnswer(option)" :key="index">{{ option.value }}</button>
         </div>
         <div v-if="this.correct" class="alert alert-success">Awesome!</div>
         <div v-if="this.correct === false" class="alert alert-danger">{{ this.answer }}</div>
+        <hr/>
     </div>
 </template>
 

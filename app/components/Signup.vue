@@ -1,8 +1,8 @@
 <template>
-    <div>
-        <li v-if="this.isLoggedIn === false" class="nav-item sign-up"><a class="nav-link" v-on:click="login"><i class="ion-person"></i>  Sign Up</a></li>
-        <li v-if="isLoggedIn" class="nav-item sign-up"><a class="nav-link" href="/profile/">Profile</a></li>
-    </div>
+    <li class="nav-item sign-up">
+        <span v-if="this.isLoggedIn === false"><a class="nav-link" v-on:click="login"><i class="ion-person"></i>  Sign Up</a></span>
+        <span v-if="isLoggedIn"><a class="nav-link" href="/profile/">Profile</a></span>
+    </li>
 </template>
 
 <script>
