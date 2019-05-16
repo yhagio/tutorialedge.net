@@ -5,7 +5,8 @@
     <h1>
       {{ if .Params.image }}
       <img
-        src="https://images.tutorialedge.net/images/{{ .Params.image }}"
+        src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+        data-src="https://images.tutorialedge.net/images/{{ .Params.image }}"
         alt="{{ .Title }} Image"
       />
       {{ else }}
