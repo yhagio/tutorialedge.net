@@ -4,6 +4,7 @@
     padding-top: 40px;
     padding-bottom: 40px;
     width: 100%;
+
     .author-image {
         flex: 1;
         > img {
@@ -18,6 +19,10 @@
     }
     .author-info {
         flex: 3;
+        h2 {
+            margin-left: 0 !important;
+            padding: 0;
+        }
     }
 }
 
