@@ -20,6 +20,8 @@ programming.
 > In this tutorial we will be using Python 3.6 in order to demonstrate some of
 > the concepts covered.
 
+
+
 # Shift Left
 
 By shifting left we are essentially multiplying our original number by 2 \* the
