@@ -7,7 +7,7 @@
     <title>TutorialEdge Redirect</title>
     <link async rel="stylesheet" href="/css/ionicons.min.css">
 	<link async rel="stylesheet" href="https://use.typekit.net/jnu8xif.css">
-    <link async rel="stylesheet" href="/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 </head>
 <body>
@@ -15,13 +15,22 @@
         <a href="https://tutorialedge.net/" /><img src="https://images.tutorialedge.net/images/logo.png" alt=""></a>
         <h2>Sign Up To TutorialEdge</h2>
     </div>
-    <div class="info">
-        <p>Join the thousands of developers already subscribed!</p>
+    <div class="info container">
+        <div class="row">
+            <div class="col-sm-6">
+                <p>Join the thousands of developers already subscribed!</p>
+            </div>
+            <div class="col-sm-6">
+                <p>Join the thousands of developers already subscribed!</p>
+            </div>
+        </div>
     </div>
 
     <style>
     body {
         background-color: #F5F6F8;
+        margin: 0;
+        padding: 0;
     }
     .top-bar {
         text-align: center;
@@ -36,23 +45,21 @@
         height: auto;
     }
     .info {
+        width: 100%;
         text-align: center;
         padding: 40px 80px;
     }
     </style>
-    <script type="text/javascript">
-        setTimeout(function() {  
-            let urlParams = new URLSearchParams(window.location.search);
-            let token = urlParams.get('token');
-                Cookies.set("jwt-token", token);
-                
-                var redirect_url = Cookies.get("redirect_url");
-                if(typeof redirect_url !== 'undefined') {
-                    Cookies.remove("redirect_url");
-                    window.location.replace(redirect_url);
-                }
-            
-        }, 2000);
-    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-10255990-23"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-10255990-23');
+	</script>
+
 </body>
 </html>
