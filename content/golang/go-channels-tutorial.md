@@ -75,6 +75,8 @@ this works in Go. We'll first create a function that goes away and computes an
 arbitrary, random value and passes it back to a channel variable called
 `values`:
 
+<div class="filename">main.go</div>
+
 ```go
 package main
 
@@ -171,6 +173,8 @@ In our `main()` function, we've added a second call to
 `go CalculateValue(valueChannel)` so we should expect 2 values sent to this
 channel in very quick succession.
 
+<div class="filename">main.go</div>
+
 ```go
 package main
 
@@ -206,7 +210,7 @@ However, when you run this, you should see that only our first goroutines' final
 print statement is actually executed:
 
 ```plaintext
-go run test.go
+go run main.go
 Go Channel Tutorial
 Calculated Random Value: {} 1
 Calculated Random Value: {} 7
@@ -237,6 +241,8 @@ Let's modify our existing program to use a buffered channel and have a look at
 the output. Notice that I've added a call to `time.Sleep()` at the bottom of our
 `main()` function in order to lazily block our `main()` function enough to allow
 our goroutines to complete execution.
+
+<div class="filename">main.go</div>
 
 ```go
 package main
