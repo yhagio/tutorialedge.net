@@ -33,6 +33,8 @@ available.
 
 # Video Tutorial
 
+This tutorial can be found in video format if you prefer:
+
 <div style="position:relative;height:0;padding-bottom:42.76%"><iframe src="https://www.youtube.com/embed/GlA57dHa5Rg?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="842" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 
 # Introduction
@@ -49,8 +51,9 @@ same directory.
 This is not an accident. These are the files which contain all of the unit tests
 for the project and they test all of the code within their counterparts.
 
+<div class="filename">Project Structure Example</div>
+
 ```c
-// An Example of how your project would be structured
 myproject/
 - calc.go
 - calc_test.go
@@ -109,12 +112,12 @@ Now that we have created our first go test, it's time to run this and see if our
 code behaves the way we expect it to. We can execute our tests by running:
 
 ```output
-$ go test ./...
+$ go test
 ```
 
 This should then output something similar to the following:
 
-<div class="filename"> $ go test ./.. </div>
+<div class="filename"> $ go test </div>
 
 ```c
 PASS
@@ -169,7 +172,7 @@ Sometimes you may wish to see exactly what tests are running and how long they
 took. Thankfully, this is available if you use the `-v` flag when running your
 tests like so:
 
-<div class="filename"> $ go test ./... -v</div>
+<div class="filename"> $ go test -v</div>
 
 ```c
 === RUN   TestCalculate
@@ -220,10 +223,40 @@ ok      github.com/TutorialEdge/an-intro-to-testing-in-go       0.006s
 You will see that you have `66.7%` of your total Go code covered by test
 cases. 
 
-<!-- ## Visualizing Coverage
+## Visualizing Coverage
 
 Whilst this `66.7%` value can tell us how much of our code we have tested,
-it doesn't show us exactly what code paths we have or haven't tested.  -->
+it doesn't show us exactly what code paths we have or haven't tested. 
+
+This is where the `go test` and the `go tool cover` come in to help us solve
+this particular problem.
+
+We can use the `go test` tool to generate a `coverprofile` which can then be
+converted to a HTML visualization using the `go tool cover` command:
+
+<div class="filename"> $ go test -coverprofile=coverage.out </div>
+
+```output
+PASS
+coverage: 66.7% of statements
+ok      github.com/TutorialEdge/an-intro-to-testing-in-go       0.008s
+```
+
+You can then take this generated `coverage.out` file and use it to generate
+a HTML page which shows exactly what lines have been covered like so:
+
+```output
+$ go tool cover -html=coverage.out
+```
+
+This will open up a page in your browser of choice which will look a little 
+something like this:
+
+![Go test coverage visualization](https://images.tutorialedge.net/images/golang/an-intro-to-testing/coverage.png)
+
+As you can see, most of the code within our `Calculate` function is testing and 
+features `Green` coverage. Whilst the print statement in your `main` function
+is `Red` as this hasn't been covered by tests.
 
 # Conclusion
 
