@@ -14,7 +14,7 @@ twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
-Testing is hugely important in all software. Being able to ensure the
+**Testing is hugely important in all software.** Being able to ensure the
 correctness of your code and ensure that any changes you make don't end up
 breaking anything else in different parts of your codebase is hugely important.
 
@@ -262,6 +262,9 @@ is `Red` as this hasn't been covered by tests.
 
 Hopefully you found this tutorial useful! If you require further assistance then
 please feel free to let me know in the comments section below.
+
+> The full source code for this article can be found here:
+[TutorialEdge/an-intro-to-testing-in-go](https://github.com/TutorialEdge/an-intro-to-testing-in-go)
 
 ## Further Reading
 
