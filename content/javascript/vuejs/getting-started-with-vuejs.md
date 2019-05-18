@@ -7,8 +7,7 @@ desc:
 image: vuejs.png
 series: vuejs
 tags:
-  - vuejs
-  - javascript
+  - Beginners
 title: Getting Started With VueJS
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
@@ -32,6 +31,8 @@ Before I get started, it must be noted that you can get up and running really
 quickly with VueJS 2 in less than 30 lines of code. Below you will find a
 webpage that is a very simple VueJS page that simply prints out `Hello World` to
 the browser when hit.
+
+<div class="filename">index.html</div>
 
 ```xml
 <!DOCTYPE html>
@@ -76,9 +77,9 @@ $ npm install -g vue-cli
 Once this has successfully run, you should now be able to run `vue` and it
 should return the following:
 
-```bash
-$ vue
+<div class="filename"> $ vue</div>
 
+```output
   Usage: vue <command> [options]
 
 
@@ -104,9 +105,9 @@ journey into creating VueJS based applications.
 In order to generate our first project, navigate to a new project directory and
 then run the `vue init webpack` command.
 
-```bash
-$ vue init webpack
+<div class="filename"> $ vue init webpack</div>
 
+```output
 ? Generate project in current directory? Yes
 ? Project name starter-project
 ? Project description a simple starter project
@@ -132,9 +133,9 @@ Once you've successfully initiated your basic Vuejs project, it's time to run it
 locally and see it all working. You can do that by running the following
 command:
 
-```bash
-$ npm run dev
+<div class="filename"> $ npm run dev</div>
 
+```output
 > starter-project@1.0.0 dev /Users/elliot/Documents/Projects/tutorials/vuejs
 > webpack-dev-server --inline --progress --config build/webpack.dev.conf.js
 
@@ -175,15 +176,15 @@ some simple edits to it just to get us started. Open up the
 `src/components/HelloWorld.vue` component and remove some of the default HTML
 code from the `<template/>` section like so:
 
-```xml
+<div class="filename">HelloWorld.vue</div>
+
+```html
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
   </div>
 </template>
-```
 
-```html
 <script>
   export default {
     name: "HelloWorld",
@@ -194,9 +195,7 @@ code from the `<template/>` section like so:
     }
   };
 </script>
-```
 
-```html
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   h1,
@@ -225,16 +224,16 @@ browser.
 Congratulations, you have successfully built and subsequently edited your first
 VueJS application!
 
-# Further Reading
+# Conclusion
+
+Hopefully, you found this tutorial helpful in getting started with Vuejs 2! If
+you did, or you require further assistance, then please let me know in the
+comments section below.
+
+## Further Reading
 
 Now that you have a simple VueJS application up and running on your local
 machine, it's time to try and figure out what everything means. We have made a
 few changes already but in order to learn more I would recommend having a look
 at my article on
 [VueJS Components](/javascript/vuejs/vuejs-components-tutorial/).
-
-# Conclusion
-
-Hopefully, you found this tutorial helpful in getting started with Vuejs 2! If
-you did, or you require further assistance, then please let me know in the
-comments section below.

@@ -107,6 +107,8 @@ We'll start off by specifying the syntax we want to use, in this example
 Finally we define how we want our object to look. This consists of our message
 format of type `Person` which features two fields, `name` and `age`.
 
+<div class="filename">person.proto</div>
+
 ```proto
 syntax="proto3";
 
@@ -130,6 +132,8 @@ object.
 
 To get an understanding as to how this is stored, we call `fmt.Println(data)` to
 print out the wire encoded format that stores our `protobuf` object.
+
+<div class="filename">main.go</div>
 
 ```go
 package main
@@ -176,8 +180,9 @@ func main() {
 When we run this, we need to ensure that we pass in our `test.pb.go` file as
 well in order for this to work:
 
+<div class="filename"> $ go run main.go test.pb.go</div>
+
 ```s
-➜  src go run main.go test.pb.go
 [10 6 69 108 108 105 111 116 16 24]
 name:"Elliot" age:24
 ```
@@ -194,6 +199,8 @@ social media followers.
 
 We can compose our Person of standard field types and a custom `SocialFollowers`
 message type like so:
+
+<div class="filename">main.go</div>
 
 ```c
 syntax="proto3";
@@ -220,6 +227,8 @@ $ protoc --go_out=. *.proto
 
 And then when we come back into our Go program, we can populate our `elliot`
 object with `SocialFollowers`:
+
+<div class="filename">main.go</div>
 
 ```go
 package main
@@ -269,8 +278,9 @@ func main() {
 When we run this for a final time, we see that everything is printed out as
 expected:
 
+<div class="filename"> $ go run main.go test.pb.go</div>
+
 ```s
-➜  src go run main.go test.pb.go
 Elliot
 24
 1400

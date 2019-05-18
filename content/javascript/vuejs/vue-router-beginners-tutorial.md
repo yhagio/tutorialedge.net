@@ -7,8 +7,7 @@ desc:
 image: vuejs.png
 series: vuejs
 tags:
-  - vuejs
-  - javascript
+  - Routing
 title: Vue Router Beginners Tutorial
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
@@ -53,6 +52,8 @@ $ npm install vue-router
 In order for us to render a series of distinct pages within our Single Page
 Application we need to add the `<router-view/>` tag to our application. This
 will render the component of our choice depending on the route that is hit.
+
+<div class="filename">index.html</div>
 
 ```html
 <!DOCTYPE html>
@@ -137,6 +138,8 @@ change from rendering our `HomePageComponent` to our `SimpleComponent`.
 If we were to do this within a single `index.html` page then it would look
 something like so:
 
+<div class="filename">index.html</div>
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -204,6 +207,8 @@ And the final project should look something like so:
 ![VueJS routing tutorial](https://images.tutorialedge.net/vuejs-routing-tutorial-01.png)
 
 I threw in a bit of css for this one:
+
+<div class="filename">style.css</div>
 
 ```css
 .center {

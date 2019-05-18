@@ -171,6 +171,8 @@ your database when you are just trying to test things are working.
 So, in order to get around this problem, we can mock HTTP responses using the
 `net/http/httptest` package which is our best friend in these situations.
 
+<div class="filename">main_test.go</div>
+
 ```go
 package main_test
 

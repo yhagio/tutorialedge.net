@@ -64,6 +64,8 @@ So, now that we know what the problem is, let's see how we can fix it using a
 `mutex` within our Go system. In order to use `mutexes` within our code, we need
 to import the `sync` package.
 
+<div class="filename">main.go</div>
+
 ```go
 package main
 

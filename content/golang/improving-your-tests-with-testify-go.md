@@ -7,7 +7,7 @@ desc:
 series: golang
 image: golang.png
 tags:
-  - misc
+  - testing
 author: Elliot Forbes
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
@@ -52,6 +52,8 @@ improved readability.
 We'll start by defining a really simple Go program that features one exported
 function, `Calculate()`.
 
+<div class="filename">main.go</div>
+
 ```go
 package main
 
@@ -72,6 +74,8 @@ func main() {
 
 If we were to write tests for this using traditional methods, we would typically
 end up with something like this:
+
+<div class="filename">main_test.go</div>
 
 ```go
 package main
@@ -94,11 +98,14 @@ If we wanted to be a bit fancier, we might incorporate table-driven tests in
 here to ensure a wide variety of cases were tested. For now though, let's try
 and modify this basic approach to see how `testify` works:
 
+<div class="filename">main_test.go</div>
+
 ```go
 package main
 
 import (
     "testing"
+    "github.com/stretchr/testify/assert"
 )
 
 func TestCalculate(t *testing.T) {
@@ -141,6 +148,8 @@ react to it being `nil`.
 
 Incorporating `testify` into our test suites doesn't necessarily preclude us
 from using methods such as table-driven testing, in fact, it makes it simpler.
+
+<div class="filename">main_test.go</div>
 
 ```go
 package main
@@ -201,6 +210,8 @@ product or service. When this `ChargeCustomer()` method is called, it will
 subsequently call a Message Service which will send off an SMS text message to
 the customer to inform them the amount they have been charged.
 
+<div class="filename">main.go</div>
+
 ```go
 package main
 
@@ -259,6 +270,8 @@ send a notification to our clients and return a `nil` error.
 Finally, we create our `TestChargeCustomer` test function which in turn
 instantiates a new instance of type `smsServiceMock` and specifies what should
 happen when `SendChargeNotification` is called.
+
+<div class="filename">main_test.go</div>
 
 ```go
 package main
