@@ -7,8 +7,7 @@ desc:
 series: nodejs
 image: node.png
 tags:
-  - javascript
-  - nodejs
+  - file system
 title: Reading and Writing Files With NodeJS
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
@@ -20,9 +19,11 @@ authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_4
 
 <p>Being able to read from files on your local file system can be hugely useful and there are a number of different things you can build on top of this. A log reader, importing information from spreadsheets and xml files or whatever you can think of, being able to read from files is hugely useful.</p>
 
-<h5>The FS Package</h5>
+## The FS Package
 
-<p>Create a new file called index.js and add the following: </p>
+Create a new file called app.js and add the following: 
+
+<div class="filename">app.js</div>
 
 ```js
 var fs = require("fs");
@@ -32,7 +33,7 @@ fs.readFile("temp.txt", function(err, buf) {
 });
 ```
 
-<p>Create a temp.txt within the same directory and write in it anything you’d like. Run your script using node index.js and you should see in the console the contents of your file.</p>
+<p>Create a temp.txt within the same directory and write in it anything you’d like. Run your script using node app.js and you should see in the console the contents of your file.</p>
 
 ## Understanding the Code
 
@@ -66,8 +67,9 @@ fs.readFile("not-found.txt", "utf-8", (err, data) => {
 
 When you go to execute this, you should see something like this returned:
 
+<div class="filename"> $ node app.js</div>
+
 ```command
-$ node app.js
 { Error: ENOENT: no such file or directory, open 'not-found.txt'
   errno: -2,
   code: 'ENOENT',
@@ -78,7 +80,7 @@ undefined
 
 ### Returning a Buffer?
 
-<p>If the above code hasn’t worked as expected and you are seeing a buffer being printed out in the terminal then it might be an idea to specify the files encoding. We can do this like so: </p>
+If the above code hasn’t worked as expected and you are seeing a buffer being printed out in the terminal then it might be an idea to specify the files encoding. We can do this like so: 
 
 ```js
 var fs = require("fs");
@@ -92,9 +94,11 @@ fs.readFile("temp.txt", "utf-8", (err, data) => {
 
 <p>Now that you’ve got the reading of files down, it’s time to start modifying these files. To do this we’ll be using the same FS package we used in part one. </p>
 
-<h5>The Code:</h5>
+### The Code:
 
 <p>Again create a new file within your current directory and call it write.js and then add the following javascript code:</p>
+
+<div class="filename">write.js</div>
 
 ```js
 var fs = require("fs");
@@ -117,3 +121,8 @@ to a new file in one promise.
 
 Hopefully you found this tutorial useful, if you did, or if you have any suggestions or comments, then please let me know in the comments section below!
 
+## Further Reading
+
+If you enjoyed this article, you may also like some of our other articles:
+
+* [Creating and Deleting Directories in NodeJS](/)

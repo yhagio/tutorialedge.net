@@ -7,9 +7,6 @@ desc:
 series: webdev
 image: logo.png
 tags:
-  - webdev
-  - css3
-  - html5
   - books
 title: The Best Books for Learning Web Development
 twitter: https://twitter.com/Elliot_F
