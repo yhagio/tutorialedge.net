@@ -7,8 +7,7 @@ desc:
 image: vuejs.png
 series: vuejs
 tags:
-  - vuejs
-  - javascript
+  - VueX
 title: Managing State With Vuex in Vuejs
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
@@ -34,6 +33,8 @@ $ yarn add vuex
 
 Once you have successfully installed Vuex in your VueJS application, you can set
 your application to use it by doing the following within your `main.js` file:
+
+<div class="filename">main.js</div>
 
 ```js
 import Vue from "vue";
@@ -72,6 +73,8 @@ to use `vuex` as your application's state management system.
 State is the object representation of your applications state. This could be as
 simple as this if we wanted to store a 'name' value within our application:
 
+<div class="filename">/src/store/index.js</div>
+
 ```js
 import Vuex from "vuex";
 import Vue from "vue";
@@ -100,6 +103,8 @@ the use of an `action` which we'll cover in the next section.
 Let's have a look at how we would create a `updateName` mutation which would
 allow us to change our `name` value within our `state` object:
 
+<div class="filename">/src/store/index.js</div>
+
 ```js
 import Vuex from "vuex";
 import Vue from "vue";
@@ -127,6 +132,8 @@ The main reason we have this level of abstraction away from our `mutations` is
 so that we can make asynchronous requests. All mutations have to be synchronous,
 so by having our `actions` perform any asynchronous code and then `commit`-ing
 the result to a mutation, we manage to get round this.
+
+<div class="filename">/src/store/index.js</div>
 
 ```js
 import Vuex from "vuex";
@@ -181,6 +188,8 @@ For example, if we had a `name` set to `elliot` originally, and we had a
 for us. However, when we update the name by dispatching an `action`, this result
 would be updated to `S` as that would be the initial of `Sophie`.
 
+<div class="filename">/src/store/index.js</div>
+
 ```js
 import Vuex from "vuex";
 import Vue from "vue";
@@ -209,10 +218,6 @@ export const store = new Vuex.Store({
 
 If you are doing more expensive operations such as filtering a large list of
 objects then this starts to become more beneficial.
-
-## Modules
-
-> Still under construction
 
 # Conclusion
 

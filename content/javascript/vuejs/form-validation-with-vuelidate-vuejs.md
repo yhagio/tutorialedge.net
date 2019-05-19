@@ -7,8 +7,7 @@ desc:
 image: vuejs.png
 series: vuejs
 tags:
-  - vuejs
-  - javascript
+  - Form Handling
 title: Form Validation With Vuelidate Vuejs
 twitter: https://twitter.com/paulhalliday_io
 weight: 1

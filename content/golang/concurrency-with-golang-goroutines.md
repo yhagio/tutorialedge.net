@@ -80,6 +80,8 @@ As a means of demonstration, we’ll create a function that takes in an int valu
 and prints a number to the console **n** times. We’ll also add a sleep function
 which will wait for a second before printing the second number:
 
+<div class="filename">main.go</div>
+
 ```go
 package main
 
@@ -123,6 +125,8 @@ doesn't finish before our `goroutines` get a chance to execute.
 If we aren’t fussed about the order in which our program prints out the values 0
 to **n** then we can speed this program up by using goroutines and making it
 asynchronous.
+
+<div class="filename">main.go</div>
 
 ```go
 package main
@@ -168,6 +172,8 @@ are promptly terminated.
 In order to get around this, we can add a call to `fmt.Scanln()` so that our
 program waits for keyboard input before it kills off our poor goroutines:
 
+<div class="filename">main.go</div>
+
 ```go
 package main
 
@@ -209,8 +215,9 @@ In the previous example, we looked at how you could make a named function
 concurrent using the `go` keyword. But, it just so happens that we can use the
 `go` keyword to make our anonymous functions concurrent as well:
 
+<div class="filename">main.go</div>
+
 ```go
-// main.go
 package main
 
 import "fmt"
@@ -230,8 +237,9 @@ func main() {
 When we execute this, we will see that our anonymous `goroutine` has
 successfully executed and called `fmt.Println`.
 
+<div class="filename"> $ go run main.go</div>
+
 ```output
-$ go run main.go
 Executing my Concurrent anonymous function
 ```
 

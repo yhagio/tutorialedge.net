@@ -9,7 +9,7 @@ twitter: https://www.linkedin.com/in/ajdin-imsirovic/?originalSubdomain=ba
 series: vuejs
 image: vuejs.png
 tags:
-  - beginner
+  - beginners
 authorImage: https://media.licdn.com/dms/image/C4E03AQEMw64D-DxhmQ/profile-displayphoto-shrink_800_800/0?e=1554336000&v=beta&t=XdHlrGzvCX2DYWrpyuU8N_P6a5ci0So3yRW42Wri_CE
 ---
 

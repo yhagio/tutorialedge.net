@@ -6,8 +6,6 @@ desc:
   the fundamentals of VueJS
 series: vuejs
 tags:
-  - vuejs
-  - javascript
   - books
 title: The Best Books For Learning VueJS
 twitter: https://twitter.com/Elliot_F

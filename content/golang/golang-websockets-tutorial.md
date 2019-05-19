@@ -83,6 +83,8 @@ import "github.com/googollee/go-socket.io"
 Let's have a look at the example code that the provide in the `readme.md` for
 the library that we are using.
 
+<div class="filename">main.go</div>
+
 ```go
 package main
 
@@ -160,6 +162,8 @@ test what we have done works.
 
 We'll start by creating a simple `index.html` within our project directory.
 
+<div class="filename">index.html</div>
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -182,8 +186,9 @@ We'll start by creating a simple `index.html` within our project directory.
 
 When you then run your go websocket server by calling:
 
+<div class="filename"> $ go run main.go</div>
+
 ```s
-$ go run main.go
 2018/06/10 07:54:06 Serving at localhost:5000...
 2018/06/10 07:54:15 on connection
 2018/06/10 07:54:16 on connection

@@ -55,8 +55,10 @@ This command should create a `go.mod` file within our current directory.
 
 Once this has been done, we can go ahead and define our `main.go` file in which we'll do the majority of our coding:
 
+
+<div class="filename">main.go</div>
+
 ```go
-// main.go
 package main
 
 import "fmt"

@@ -47,7 +47,7 @@ loading of our component, so in order to do that we are going to want to add the
 ```html
 <template>
   <div class="hello">
-    { { pokemon }}
+    {{ pokemon } }
   </div>
 </template>
 
