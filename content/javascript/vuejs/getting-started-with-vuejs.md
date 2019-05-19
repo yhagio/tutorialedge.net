@@ -71,7 +71,7 @@ In order to get started, we'll first have to install the `vue-cli`. This can be
 done using `npm`:
 
 ```bash
-$ npm install -g vue-cli
+$ npm install -g @vue/cli
 ```
 
 Once this has successfully run, you should now be able to run `vue` and it
@@ -103,27 +103,21 @@ journey into creating VueJS based applications.
 # Creating Your First Application
 
 In order to generate our first project, navigate to a new project directory and
-then run the `vue init webpack` command.
+then run the `vue create my-project` command.
 
-<div class="filename"> $ vue init webpack</div>
+<div class="filename"> $ vue create my-project</div>
 
 ```output
-? Generate project in current directory? Yes
-? Project name starter-project
-? Project description a simple starter project
-? Author Elliot Forbes
-? Vue build standalone
-? Install vue-router? Yes
-? Use ESLint to lint your code? Yes
-? Pick an ESLint preset Standard
-? Set up unit tests No
-? Setup e2e tests with Nightwatch? No
-? Should we run `npm install` for you after the project has been created? (recommended) npm
+Vue CLI v3.4.0
+✨  Creating project in /path/to/project
+🗃  Initializing git repository...
+⚙  Installing CLI plugins. This might take a while...
 
-   vue-cli · Generated "vuejs".
-
-# Installing project dependencies ...
-# ========================
+yarn install v1.5.1
+(node:50810) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() me
+thods instead.
+info No lockfile found.
+[1/4] 🔍  Resolving packages..
 ... (omitted for brevity)
 ```
 
@@ -133,7 +127,7 @@ Once you've successfully initiated your basic Vuejs project, it's time to run it
 locally and see it all working. You can do that by running the following
 command:
 
-<div class="filename"> $ npm run dev</div>
+<div class="filename"> $ npm run serve </div>
 
 ```output
 > starter-project@1.0.0 dev /Users/elliot/Documents/Projects/tutorials/vuejs

@@ -8,7 +8,6 @@ series: golang
 image: golang.png
 tags:
   - beginner
-draft: true
 title: Go Methods Tutorial
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
@@ -28,15 +27,15 @@ that allows you to Update an employees name and print that name out. Not the
 most exciting of example projects, but it'll serve it's purpose as a means of
 demonstration.
 
-We'll first of all create a struct of type `Employee` which features one string
+We'll first of all create a `struct` of type `Employee` which features one string
 field, `Name`.
 
 Next we'll declare an `UpdateName()` and a `PrintName()` method which will allow
 us to update and print the names of any employees we create.
 
+<div class="filename">main.go</div>
 
 ```go
-// main.go
 package main
 
 import (
