@@ -14,9 +14,29 @@ authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_4
 weight: 16
 ---
 
-In this article, I'm going to be showing you how we can create a simple Golang
-based REST API that serves up a JSON based response whenever it is hit using a
-`HTTP` GET request.
+If you are writing any form of web application, then you are most likely
+interfacing with 1 or more REST APIs in order to populate the dynamic
+parts of your application and to perform tasks such as updating or deleting
+data within a database.
+
+**In this tutorial, you are going to be building a fully-fledged REST API**
+that exposes `GET`, `POST`, `DELETE` and `PUT` endpoints that will subsequently
+allow you to perform the full range of `CRUD` operations. 
+
+In order to keep this simple and focus on the basic concepts, we won't be interacting
+with any backend database technologies to store the articles that we'll be 
+playing with. However, we will be writing this REST API in such a way that it will
+be easy to update the functions we will be defining so that they make subsequent
+calls to a database to perform any necessary `CRUD` operations.
+
+If you wish to learn more about how you can use Go to interact with Databases, 
+you can check out the following articles:
+
+* [Go MySQL Tutorial](/golang/golang-mysql-tutorial/)
+* [Go ORM Tutorial](/golang/golang-orm-tutorial/)
+
+> **Source Code** - The full source code for this article can be found here:
+[TutorialEdge/create-rest-api-in-go-tutorial](https://github.com/TutorialEdge/create-rest-api-in-go-tutorial)
 
 # Prerequisites
 
