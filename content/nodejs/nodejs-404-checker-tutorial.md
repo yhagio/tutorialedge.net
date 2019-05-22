@@ -6,6 +6,8 @@ desc:
   given page using NodeJS
 series: nodejs
 image: node.png
+aliases: 
+ - "/javascript/nodejs/nodejs-404-checker-tutorial/"
 tags:
   - nodejs
   - javascript

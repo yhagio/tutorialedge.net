@@ -6,6 +6,8 @@ desc:
   files on our local filesystem using NodeJS.
 series: nodejs
 image: node.png
+aliases: 
+ - "/javascript/nodejs/reading-writing-files-with-nodejs"
 tags:
   - file system
 title: Reading and Writing Files With NodeJS

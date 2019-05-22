@@ -5,10 +5,9 @@ bookLink: http://amzn.to/2r74d8f
 bookTitle: Programming Game AI by Example
 date: 2017-04-15T09:23:35+01:00
 desc: "depth limited search demonstrated in java programming language. "
-series: ai
+series: artificial-intelligence
 image: ai.png
 tags:
-  - ai
   - java
 title: Depth Limited Search in Java
 twitter: https://twitter.com/Elliot_F

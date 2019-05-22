@@ -6,6 +6,8 @@ desc:
   shell scripts from within your nodejs application.
 series: nodejs
 image: node.png
+aliases:
+  - "/javascript/nodejs/executing-shell-scripts-with-nodejs/"
 tags:
   - unix
   - javascript

@@ -6,6 +6,8 @@ desc:
   memory and cpu usage in Nodejs
 series: nodejs
 image: node.png
+aliases:
+ - "/javascript/nodejs/monitoring-server-stats-with-nodejs/"
 tags:
   - javascript
   - nodejs

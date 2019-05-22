@@ -5,6 +5,8 @@ desc:
   In this tutorial, we are going to look at how you can create a realtime react
   application using socket.io
 series: react
+aliases:
+ - "/javascript/react/react-socket-io-tutorial/"
 tags:
   - javascript
   - react

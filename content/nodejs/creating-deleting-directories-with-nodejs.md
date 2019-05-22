@@ -6,6 +6,8 @@ desc:
   using NodeJS
 series: nodejs
 image: node.png
+aliases:
+  - "/javascript/nodejs/creating-deleting-directories-with-nodejs/"
 tags:
   - javascript
   - nodejs

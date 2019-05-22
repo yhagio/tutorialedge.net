@@ -6,6 +6,8 @@ desc:
   using NodeJS
 series: nodejs
 image: node.png
+aliases:
+ - "/javascript/nodejs/converting-csv-json-node/"
 tags:
   - csv
   - json
