@@ -5,7 +5,7 @@ desc:
   In this article we look at some of the best books you can buy to aid you in
   learning web development
 series: webdev
-image: logo.png
+image: logo.svg
 tags:
   - books
 title: The Best Books for Learning Web Development

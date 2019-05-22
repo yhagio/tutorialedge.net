@@ -1,7 +1,7 @@
 <template>
     <div class="comment-login">
         <div class="image">
-            <img src="/images/logo.png" alt="TutorialEdge Logo" />
+            <img src="/images/logo.svg" alt="TutorialEdge Logo" />
         </div>
         <div class="register">   
             <h2>Register or Login to Comment</h2>

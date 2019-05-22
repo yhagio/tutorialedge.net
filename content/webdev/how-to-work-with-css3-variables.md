@@ -4,7 +4,7 @@ date: 2017-04-21T19:53:46+01:00
 desc:
   In this tutorial we look at how we can get started working with CSS3 variables
 series: webdev
-image: logo.png
+image: logo.svg
 tags:
   - css3
 title: How To Work With CSS3 Variables

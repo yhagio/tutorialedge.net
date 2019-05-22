@@ -4,7 +4,7 @@ date: 2017-04-16T17:27:53+01:00
 desc:
   In this tutorial we take a broad overview of the basics of web development.
 series: webdev
-image: logo.png
+image: logo.svg
 tags:
   - beginners
 title: An Introduction To Web Development

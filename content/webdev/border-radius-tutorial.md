@@ -5,7 +5,7 @@ desc:
   In this tutorial we look at how we implement curved borders on some of the
   elements within our html
 series: webdev
-image: logo.png
+image: logo.svg
 tags:
   - css3
 title: CSS3 Border Radius Tutorial

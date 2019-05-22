@@ -5,7 +5,7 @@ desc:
   In This Tutorial we look at how you can implement the Bubble Sorting Algorithm
   in Python
 series: compsci
-image: logo.png
+image: logo.svg
 tags:
   - python
   - compsci

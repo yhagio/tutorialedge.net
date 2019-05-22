@@ -5,7 +5,7 @@ desc:
   In this tutorial, we will be looking at how you can get started writing your
   own Python based AWS Lambda functions
 series: python
-image: cloud.png
+image: cloud.svg
 tags:
   - python
   - aws

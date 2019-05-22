@@ -5,7 +5,7 @@ desc:
   In this tutorial we look at how you can go about creating your own Go based
   AWS Lambda functions.
 series: cloud
-image: cloud.png
+image: cloud.svg
 tags:
   - aws
   - go
