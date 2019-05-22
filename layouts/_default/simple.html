@@ -6,7 +6,7 @@
 			{{ if .Params.image }}
 			<img src="https://images.tutorialedge.net/images/{{ .Params.image }}" class="small-no-show" alt="{{ .Title }} Image">
 			{{ else }}
-			<img src="https://images.tutorialedge.net/images/logo.png" class="small-no-show" alt="{{ .Title }} Image">
+			<img src="https://images.tutorialedge.net/images/logo.svg" class="small-no-show" alt="{{ .Title }} Image">
 			{{ end }}
 			{{ .Title }}</h1>
 	</div>
@@ -18,7 +18,7 @@
 				{{ if .Params.authorImage }}
 				<img class="author" src="{{ .Params.authorImage }}" alt="{{ .Params.author }}" />
 				{{ else }}
-				<img class="author" src="https://images.tutorialedge.net/images/logo.png" alt="{{ .Params.author }}" />
+				<img class="author" src="https://images.tutorialedge.net/images/logo.svg" alt="{{ .Params.author }}" />
 				{{ end }}
 				<a href="{{.Params.twitter }}">{{ .Params.author }}</a>
 			</span>

@@ -5,7 +5,7 @@ desc: I thought I'd write up all of the software/hardware that I use in my day-t
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
 series: blog
-image: logo.png
+image: logo.svg
 tags:
 - misc
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg

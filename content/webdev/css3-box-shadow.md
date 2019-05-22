@@ -5,7 +5,7 @@ desc:
   In this tutorial we look at how we can implement a css3 box shadow to
   components of our website.
 series: webdev
-image: logo.png
+image: logo.svg
 tags:
   - css3
 title: CSS3 Box Shadow Tutorial

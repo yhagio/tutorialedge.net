@@ -5,7 +5,7 @@ desc:
   In this tutorial we take a look at the exact differences between class
   selectors and id selectors in CSS
 series: webdev
-image: logo.png
+image: logo.svg
 tags:
   - css3
 title: The Difference Between Class Selectors and ID Selectors in CSS

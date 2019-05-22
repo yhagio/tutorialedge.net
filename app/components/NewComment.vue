@@ -1,7 +1,7 @@
 <template>
     <div class="new-comment">
         <div class="avatar">
-            <img src="https://images.tutorialedge.net/images/logo.png" alt="default avatar">
+            <img src="https://images.tutorialedge.net/images/logo.svg" alt="default avatar">
         </div>
         <div class="comment-input" id="comment-input">
             <textarea v-model="commentBody" placeholder="Leave a reply"></textarea>

@@ -5,7 +5,7 @@ desc:
   In This Tutorial we look at heaps, we look at how they work and what problems
   they can solve
 series: compsci
-image: logo.png
+image: logo.svg
 draft: true
 tags:
   - python
