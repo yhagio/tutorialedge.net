@@ -5,6 +5,7 @@ desc:
   A quick look at why I choose to migrate the site from a Laravel 5 based system
   to hugo
 series: blog
+image: logo.svg
 tags:
   - blog
 title: Migrating to Hugo

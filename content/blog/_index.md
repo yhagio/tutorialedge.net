@@ -1,3 +1,4 @@
 ---
-title: TutorialEdge Blog
+title: Blog
+layout: list
 ---
