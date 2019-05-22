@@ -5,6 +5,8 @@ desc:
   The definitive list of all the books you should buy if you want to master the
   art of programming React applications
 series: react
+aliases:
+ - "/javascript/best-books-for-learning-react/"
 tags:
   - react
   - javascript
@@ -15,6 +17,8 @@ authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_4
 ---
 
 > This List is Currently under Construction
+
+<!-- TODO - Fill in -->
 
 # Learning React Native
 

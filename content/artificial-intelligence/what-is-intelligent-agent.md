@@ -7,7 +7,7 @@ date: 2017-04-15T08:10:24+01:00
 desc:
   Here we look at what intelligent agents are in the field of artificial
   intelligence
-series: ai
+series: artificial-intelligence
 image: ai.png
 tags:
   - ai

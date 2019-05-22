@@ -5,7 +5,7 @@ description:
   Learn the min-max algorithm and how to implement it in this tutorial by
   Nisheeth Joshi, a researcher and the author of Hands-On Artificial
   Intelligence with Java for Beginners.
-series: ai
+series: artificial-intelligence
 image: ai.png
 tags:
   - ai

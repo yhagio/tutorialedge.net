@@ -7,6 +7,8 @@ desc:
   Node in production environments.
 series: nodejs
 image: node.png
+aliases:
+ - "/javascript/nodejs/keeping-node-apps-running-forever-pm2/"
 tags:
   - pm2
   - nodejs

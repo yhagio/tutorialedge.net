@@ -3,7 +3,7 @@
 nav {
   &.navbar {
     padding: 0;
-    background-color: $darkest-blue !important;
+    background-color: $dark-blue !important;
     
     .navbar-brand {
       padding: 10px;
@@ -63,6 +63,28 @@ nav {
   }
 }
 
+nav.secondary-nav {
+  background-color: $darkest-blue !important;
+
+  li {
+    margin-right: 10px;
+    a {
+      img {
+        width: 20px;
+        height: auto;
+        margin-right: 10px;
+      }
+
+      position: relative;
+      display: block;
+      padding: 0 30px;
+      font-size: 1.1rem;
+      color: #fff!important;
+      line-height: 60px;
+      transition: .2s ease-in-out color,.2s ease-in-out;
+    }
+  }
+}
 
 nav .navbar-brand span{
   color: #fff !important;
