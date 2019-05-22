@@ -5,7 +5,7 @@ desc: In this tutorial, we look at how you can containerize your Go applications
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - docker
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg

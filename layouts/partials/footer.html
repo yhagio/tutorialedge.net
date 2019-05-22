@@ -64,44 +64,26 @@
 
 	gtag('config', 'UA-10255990-23');
 	</script>
-	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
-	<script src="/app/main.bundle.js"></script>
-	<script>
+	<script type="text/javascript">
 	function init() {
 		var imgDefer = document.getElementsByTagName('img');
-		var is_firefox = typeof window.InstallTrigger !== 'undefined';
-		var is_chrome = !!window.chrome && !is_opera && !is_Edge;
-		var is_opera = !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
-		var is_Edge = navigator.userAgent.indexOf("Edge") > -1;
-		var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-		
-		
-		if (is_safari || is_opera || is_Edge) { 
-			for (var i = 0; i < imgDefer.length; i++) {
-		
-				if (imgDefer[i].getAttribute('data-src')) {
-					if (imgDefer[i].getAttribute('data-src').split('.').pop() === 'png') {
-						imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
-					} else {
-						imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src') + ".png");
-					}
-				}
+		// var is_firefox = typeof window.InstallTrigger !== 'undefined';
+		// var is_chrome = !!window.chrome && !is_opera && !is_Edge;
+		// var is_opera = !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+		// var is_Edge = navigator.userAgent.indexOf("Edge") > -1;
+		// var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+		for (var i = 0; i < imgDefer.length; i++) {		
+			if (imgDefer[i].getAttribute('data-src')) {
+				imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));	
 			}
-		} else {
-			for (var i = 0; i < imgDefer.length; i++) {		
-				if (imgDefer[i].getAttribute('data-src')) {
-					if (imgDefer[i].getAttribute('data-src').split('.').pop() === 'png') {
-						imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src').substr(0, imgDefer[i].getAttribute('data-src').length - 4) + ".webp");
-					} else {
-						imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src') + ".webp");
-					}
-				}
-			} 
 		}
+		
 	}
 	
 	window.onload = init;
 	</script>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="/app/main.bundle.js"></script>
 
 </div>
 </body>

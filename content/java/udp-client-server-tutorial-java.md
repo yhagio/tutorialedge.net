@@ -5,7 +5,7 @@ desc:
   In this tutorial we discuss how to set up a UDP client and server using
   datagramsockets in Java
 series: java
-image: java.png
+image: java.svg
 tags:
   - java
   - networking

@@ -4,7 +4,7 @@ date: 2018-05-18T14:25:51+01:00
 desc:
   In this tutorial, we are going to look at what docker is, why it is useful,
   and how you can get a simple Docker-based application up and running
-image: docker.png
+image: docker.svg
 series: docker
 tags:
   - docker

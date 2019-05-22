@@ -5,7 +5,7 @@ desc:
   In this tutorial we look at the various synchronization primitives available
   to you in your Asyncio based programs.
 series: python
-image: python-logo.png
+image: python.svg
 tags:
   - asyncio
   - concurrency

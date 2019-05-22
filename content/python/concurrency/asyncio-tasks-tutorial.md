@@ -5,7 +5,7 @@ desc:
   In this tutorial we look at the various ways you can define and work with
   tasks in Asyncio.
 series: python
-image: python-logo.png
+image: python.svg
 tags:
   - asyncio
   - concurrency

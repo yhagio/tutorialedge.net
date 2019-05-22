@@ -5,7 +5,7 @@ desc:
   In this article we cover everything you need to get up and running with Python
   and Asyncio
 series: python
-image: python-logo.png
+image: python.svg
 tags:
   - concurrency
 title: Getting Started with Asyncio in Python

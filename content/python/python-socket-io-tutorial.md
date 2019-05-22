@@ -5,7 +5,7 @@ desc:
   In this tutorial we will be covering how you can implement a socket.io based
   Python webserver.
 series: python
-image: python-logo.png
+image: python.svg
 tags:
   - socket.io
 title: Python Socket.io Tutorial

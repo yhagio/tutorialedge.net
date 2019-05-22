@@ -6,7 +6,7 @@ desc: In this article, we'll be looking at a list of various interview questions
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
 series: golang
-image: python-logo.png
+image: python.svg
 tags:
 - beginner
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg

@@ -5,7 +5,7 @@ description:
   using Go
 date: 2018-09-27T10:48:51+01:00
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - advanced
 twitter: https://twitter.com/Elliot_F

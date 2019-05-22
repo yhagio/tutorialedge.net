@@ -7,7 +7,7 @@ desc:
   can go off and write your own Go programs.
 tags:
   - beginner
-image: golang.png
+image: golang.svg
 series: golang
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f

@@ -5,7 +5,7 @@ desc:
   The definitive list of all the books you should buy if you want to master the
   art of programming Golang applications
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - intermediate
 author: Elliot Forbes

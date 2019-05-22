@@ -5,7 +5,7 @@ desc:
   In this tutorial I'll be demonstrating how to create a very simple web server
   using Google's GoLang programming language.
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - intermediate
 title: Creating A Simple Web Server With Golang

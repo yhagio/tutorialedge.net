@@ -5,7 +5,7 @@ desc:
   In this tutorial, we are going to be looking at how you can compile your Go
   programs into WebAssembly
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - advanced
 title: Go WebAssembly Tutorial - Building a Calculator Tutorial

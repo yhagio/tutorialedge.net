@@ -5,7 +5,7 @@ desc:
   In this tutorial, we are going to look at the various basic data types
   available in Go
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - beginner
 title: Go Basic Types Tutorial

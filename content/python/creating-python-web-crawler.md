@@ -5,7 +5,7 @@ desc:
   "In this tutorial, we'll look at how you can build your own web crawler in
   Python "
 series: python
-image: python-logo.png
+image: python.svg
 tags:
   - intermediate
 title: Creating a Python Web Crawler

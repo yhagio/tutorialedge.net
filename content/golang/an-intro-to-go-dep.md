@@ -5,7 +5,7 @@ desc:
   In this tutorial, we are going to look at how you can get started using the go
   dep tool for your go projects.
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - intermediate
 title: An Intro to Go Dep

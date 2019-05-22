@@ -5,7 +5,7 @@ desc:
   "In this tutorial, we are going to look at how you can secure your Go REST
   APIs with JSON Web Tokens"
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - advanced
 author: Elliot Forbes

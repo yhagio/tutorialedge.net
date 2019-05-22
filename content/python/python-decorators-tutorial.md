@@ -5,7 +5,7 @@ desc:
   In this tutorial we learn what Python Decorators are and how we can create our
   own within our Python applications
 series: python
-image: python-logo.png
+image: python.svg
 tags:
   - beginner
 title: Python Decorators Tutorial

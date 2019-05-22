@@ -5,7 +5,7 @@ desc:
   In this tutorial we evaluate the different ways you can work with the file
   system in Python
 series: python
-image: python-logo.png
+image: python.svg
 tags:
   - beginner
   - filesystem

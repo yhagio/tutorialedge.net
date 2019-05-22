@@ -5,7 +5,7 @@ desc:
   In this tutorial, we are going to be taking a look at how you can use Protocol
   Buffers within your Go applications
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - advanced
 title: Go Protocol Buffer Tutorial

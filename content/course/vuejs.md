@@ -1,7 +1,7 @@
 ---
 date: 2018-03-01T08:16:15Z
 homepage: true
-image: vuejs.png
+image: vuejs.svg
 layout: simple
 series: vuejs
 title: VueJS fundamentals

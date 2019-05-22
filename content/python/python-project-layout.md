@@ -5,7 +5,7 @@ desc:
   In this tutorial we'll be examining some of the best practices to follow when
   it comes to laying out your Python applications
 series: python
-image: python-logo.png
+image: python.svg
 tags:
   - intermediate
 title: Python Project Layout Best Practices

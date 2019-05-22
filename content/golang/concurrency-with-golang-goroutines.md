@@ -5,7 +5,7 @@ desc:
   In this tutorial we examine how we can build concurrent highly performant go
   programs using goroutines.
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - concurrency
 title: Concurrency With Golang Goroutines

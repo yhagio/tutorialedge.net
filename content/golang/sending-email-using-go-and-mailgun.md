@@ -5,7 +5,7 @@ desc:
   In this tutorial I'll be demonstrating how to send mail using Mailgun's API
   and Google's GoLang programming language.
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - misc
 title: Sending Email Using Go And Mailgun

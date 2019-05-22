@@ -5,7 +5,7 @@ desc:
   "Executing system commands can be incredibly useful no matter what sort of
   software you are building, "
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - beginner
 weight: 8

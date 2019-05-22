@@ -8,7 +8,7 @@ desc:
   In this tutorial, we look at how you can build a solid CI pipeline with Travis
   for your Go Projects
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - advanced
 author: Elliot Forbes

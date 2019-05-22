@@ -39,7 +39,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "algolia": "atomic-algolia",
-    "server": "hugo server --buildDrafts",
+    "server": "hugo server --buildDrafts --ignoreCache",
     "gulp": "gulp watch",
     "start": "concurrently \"npm:server\" \"npm:gulp\" \"npm:webpack\"",
     "webpack": "webpack --config webpack.config.js"
