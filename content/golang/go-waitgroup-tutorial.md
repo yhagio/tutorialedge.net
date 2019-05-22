@@ -5,7 +5,7 @@ desc:
   In this tutorial, we'll be looking at how you can leverage WaitGroups within
   your Concurrent Go Applications
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - concurrency
 author: Elliot Forbes

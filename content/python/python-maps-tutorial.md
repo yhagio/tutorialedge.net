@@ -5,7 +5,7 @@ desc:
   In this tutorial we cover the map function within the Python programming
   language
 series: python
-image: python-logo.png
+image: python.svg
 tags:
   - beginner
   - concurrency

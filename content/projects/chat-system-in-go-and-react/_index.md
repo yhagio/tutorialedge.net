@@ -2,7 +2,7 @@
 author: Elliot Forbes
 date: 2018-03-19T11:05:52Z
 desc: "In this series, we are going to be building a Chat App in Go and ReactJS"
-image: golang.png
+image: golang.svg
 homepage: true
 series:
   - goreactchat

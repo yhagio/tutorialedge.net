@@ -5,7 +5,7 @@ desc:
   In this tutorial, we look at how properly implement a tests within your go
   based systems using the go test tool
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - testing
 weight: 11

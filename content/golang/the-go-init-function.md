@@ -4,7 +4,7 @@ desc:
   In this tutorial we'll be looking at the Go init function, how to use it and
   some of the things to consider when using it within your Go programs.
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - beginner
 weight: 13

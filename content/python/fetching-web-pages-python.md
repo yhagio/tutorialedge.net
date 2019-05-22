@@ -5,7 +5,7 @@ desc:
   This tutorial teaches the reader how to create a python script that will fetch
   any given web page using the urllib2 python module.
 series: python
-image: python-logo.png
+image: python.svg
 tags:
   - beginner
 title: Fetching Web Pages In Python Using Urllib2

@@ -5,7 +5,7 @@ desc:
   In this tutorial, we are going to be building a very simple Command Line
   Interface or CLI in Go
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - intermediate
 title: Building a Network Command Line Interface in Go

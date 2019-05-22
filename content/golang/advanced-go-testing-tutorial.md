@@ -6,7 +6,7 @@ desc:
   testing practices that the core language developers use to test the language
   itself.
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - testing
 title: Advanced Go Testing Tutorial

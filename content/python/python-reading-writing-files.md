@@ -5,7 +5,7 @@ desc:
   In this tutorial we'll be looking at how you can manipulate and read from
   files using the Python programming language.
 series: python
-image: python-logo.png
+image: python.svg
 tags:
   - beginner
 title: Reading and Writing Files In Python

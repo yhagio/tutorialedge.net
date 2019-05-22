@@ -5,7 +5,7 @@ desc:
   In this tutorial we look at how we can make HTTP requests in Python using the
   Requests package.
 series: python
-image: python-logo.png
+image: python.svg
 tags:
   - http
   - rest

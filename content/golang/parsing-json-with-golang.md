@@ -5,7 +5,7 @@ desc:
   In this tutorial we examine the encoding/json go package and how to parse JSON
   files.
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - beginner
 title: Parsing JSON files With Golang

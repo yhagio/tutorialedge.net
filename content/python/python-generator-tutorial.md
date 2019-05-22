@@ -5,7 +5,7 @@ desc:
   In this tutorial we look at what generators are within Python and how we can
   use them
 series: python
-image: python-logo.png
+image: python.svg
 tags:
   - beginner
 title: Python Generators Tutorial

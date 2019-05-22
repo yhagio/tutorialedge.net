@@ -5,7 +5,7 @@ desc:
   Learn the basics of Go and get started writing your own, highly performant Go
   programs.
 homepage: true
-image: golang.png
+image: golang.svg
 series: golang
 tags:
   - golang

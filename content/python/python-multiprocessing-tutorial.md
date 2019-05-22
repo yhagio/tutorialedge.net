@@ -6,7 +6,7 @@ desc:
   sub-processes instead of threads and effectively achieve both local and remote
   concurrency in your Python programs.
 series: python
-image: python-logo.png
+image: python.svg
 tags:
   - concurrency
 title: Python Multiprocessing Tutorial

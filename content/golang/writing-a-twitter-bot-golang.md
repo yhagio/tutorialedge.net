@@ -5,7 +5,7 @@ desc:
   In this tutorial I'll be demonstrating how you can implement a twitter bot
   using the go programming language
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - intermediate
 weight: 19

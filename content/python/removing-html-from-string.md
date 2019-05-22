@@ -5,7 +5,7 @@ desc:
   this tutorial shows us how to remove the html tags from a retrieved html page.
   This will allow us to do cool stuff such as keyword density checking etc.
 series: python
-image: python-logo.png
+image: python.svg
 tags:
   - beginner
 title: Removing HTML Tags from a String with Python

@@ -5,7 +5,7 @@ desc:
   An absolute beginners introduction to writing face recognition software in
   Python
 series: python
-image: python-logo.png
+image: python.svg
 tags:
   - ai
 title: An Introduction to Face Recognition in Python

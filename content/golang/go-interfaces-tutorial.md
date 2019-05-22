@@ -5,7 +5,7 @@ desc:
   In this tutorial, we are going to look at how you can create and use your own
   Interfaces within the Go Programming Langauge
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - beginner
 title: Go Interfaces Tutorial

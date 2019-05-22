@@ -5,7 +5,7 @@ desc:
   In this tutorial I'll be demonstrating how we can work with MySQL databases
   using Go.
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - intermediate
 weight: 21

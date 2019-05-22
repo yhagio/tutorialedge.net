@@ -5,7 +5,7 @@ desc:
   The definitive list of the best books you can buy whether you are a beginner,
   intermediate or advanced golang developer
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - misc
 title: The Best Books For Learning Golang

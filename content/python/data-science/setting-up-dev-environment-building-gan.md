@@ -9,7 +9,7 @@ desc:
 author: Josh Kalin
 twitter: https://www.linkedin.com/in/josh-kalin-96b6152b/
 series: python
-image: python-logo.png
+image: python.svg
 tags:
   - data-science
 authorImage: https://media.licdn.com/dms/image/C5603AQG7WI2sAsa3Qw/profile-displayphoto-shrink_800_800/0?e=1553126400&v=beta&t=FLKAeVTmqWQNS6N_oW-KssTYwrhdiw94Kd_QFYLikFM

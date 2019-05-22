@@ -5,7 +5,7 @@ desc:
   In this tutorial, we are going to look at how you can use mutexes in your Go
   programs
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - advanced
 title: Go Oauth2 Tutorial

@@ -5,7 +5,7 @@ desc:
   In this tutorial, we look at how you can effectively benchmark your go
   program.
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - testing
 title: An Introduction to Benchmarking Your Go Programs

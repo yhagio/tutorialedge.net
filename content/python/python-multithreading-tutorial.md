@@ -5,7 +5,7 @@ desc:
   Explore the python multithreading module and the power of asynchronous
   programming
 series: python
-image: python-logo.png
+image: python.svg
 tags:
   - concurrency
 title: Python Multithreading Tutorial - Concurrent Programming

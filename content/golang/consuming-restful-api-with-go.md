@@ -5,7 +5,7 @@ desc:
   This tutorial demonstrates how you can consume an already running RESTful API
   using Go
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - intermediate
 title: Consuming A RESTful API With Go
