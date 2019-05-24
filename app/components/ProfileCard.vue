@@ -1,13 +1,13 @@
 <template>
     <div class="comment-login">
         <div class="image">
-            <img :src="user.user.picture" :alt="user.user.displayName" />
+            <img :src="user.picture" :alt="user.name" />
         </div>
         <div class="register">
             
-            <h2>Username: {{ user.user.displayName }}</h2>
+            <h2>Username: {{ user.name }}</h2>
             <br/>
-            <button id="logout" v-on:click="logout" class="btn btn-warning">Logout</button>
+            <button id="logout" v-on:click="logout" class="btn btn-primary">Logout</button>
         </div>
     </div>
 </template>
@@ -23,16 +23,11 @@ export default {
     },
     methods: {
         logout: async function() {
-            let response = await axios.get("https://api.tutorialedge.net/api/v1/logout");
-            Cookies.remove("jwt-token");
-            window.location.reload();
+            this.$auth.logout()
         }
     },
     created: function () {
-        let token = Cookies.get("jwt-token");
-        let base64Url = token.split(".")[1];
-        let base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
-        this.user = JSON.parse(window.atob(base64));
+        this.user = this.$auth.user;
     }
 }
 </script>

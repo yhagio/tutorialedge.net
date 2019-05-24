@@ -11,14 +11,20 @@ export default {
     name: "Signup",
     data: function() {
         return {
-            isLoggedIn: false
+            isLoggedIn: false,
+            user: {}
+        }
+    },
+    created: function() {
+        if(this.$auth.isAuthenticated()) {
+            this.user = this.$auth.user;
+            this.isLoggedIn = true;
         }
     },
     methods: {
         login: function() {
-            Cookies.set("redirect_url", window.location.href);
-            // window.location.replace("http://localhost:3000/api/v1/login");
-            window.location.replace("https://api.tutorialedge.net/api/v1/login");
+
+            this.$auth.login();
         }
     }
 }
