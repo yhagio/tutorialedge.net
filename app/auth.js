@@ -3,9 +3,9 @@ import auth0 from 'auth0-js'
 // exchange the object with your own from the setup step above.
 let webAuth = new auth0.WebAuth({
   domain: 'tutorialedge.eu.auth0.com',
-  clientID: 'B63BMOpJ3SgxOB2jb6LY7EYEb4dU3J4D',
+  clientID: '35go3x6MIxvQ2Wa01mkpdcnv42xQxzye',
   // make sure this line is contains the port: 8080
-  redirectUri: 'http://localhost:1313/redirect/',
+  redirectUri: 'https://tutorialedge.net/redirect/',
   // we will use the api/v2/ to access the user information as payload
   audience: 'https://' + 'tutorialedge.eu.auth0.com' + '/api/v2/', 
   responseType: 'token id_token',
