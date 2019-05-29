@@ -2,12 +2,10 @@
 
 .top-bar {
   width: 100%;
-  background: #0276d9;
-  background-image: linear-gradient(22deg, #0276d9,#2C9CFC);
-  padding: 25px;
-  padding-top: 40px;
+  background-color: $top-bar-blue;
+  padding-top: 20px;
   border-bottom: 1px solid #e7e7ec;
-  color: white;
+  color: #000;
 
   img {
     width: auto;
@@ -19,7 +17,7 @@
     font-size: 36px;
     font-weight: 700 !important;
     line-height: 1.4;
-    color: white;
+  
   }
 
   h1 small {
@@ -32,7 +30,6 @@
     font-size: 3rem;
     font-weight: 700;
     letter-spacing: 0;
-    color: white;
   }
 
   p {
@@ -289,13 +286,13 @@ article {
   // background: #f2f6fa;
 
   width: 100%;
-  padding: 20px;
-  margin-top: 20px;
+  padding: 0px;
+  margin-top: 40px;
   font-size: 0.85rem;
   background-color: white;
-  border-radius: 8px;
-  -webkit-box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
-  box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
+  // border-radius: 8px;
+  // -webkit-box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
+  // box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
   color: rgba(14,30,37,.54);
 
   i {
@@ -340,10 +337,10 @@ article {
 
 .content {
   background-color: white;
-  padding: 40px;
-  border-radius: 8px;
-  -webkit-box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
-  box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
+  padding: 20px;
+  // border-radius: 8px;
+  // -webkit-box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
+  // box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
   color: rgba(14,30,37,.54);
   margin-bottom: 40px;
   margin-top: 20px;
