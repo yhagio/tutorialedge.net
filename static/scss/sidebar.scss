@@ -9,8 +9,8 @@
   width: 100%;
   display: block;
   outline: none;
-  // box-shadow: 0 5px 5px 0 rgba(0,0,0,0.3);
-  // border: 1px solid #d4dadf;
+  box-shadow: 0 5px 5px 0 rgba(0,0,0,0.3);
+  border: 1px solid #d4dadf;
   a {
     display: block;
   }
@@ -49,9 +49,9 @@
   display: block;
   outline: none;
   background-color: white;
-  // border-radius: 8px;
-  // -webkit-box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
-  // box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
+  border-radius: 8px;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
+  box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
   color: rgba(14,30,37,.54);
   h4 {
     font-size: 18px;
@@ -119,8 +119,8 @@
 .youtube-subscribe {
   border-radius: 8px;
   background-color: white;
-  // -webkit-box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
-  // box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
+  -webkit-box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
+  box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
   color: rgba(14,30,37,.54);
   padding: 25px;
   
