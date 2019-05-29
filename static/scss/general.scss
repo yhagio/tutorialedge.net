@@ -12,7 +12,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   
   color: $gray;
-  // background-color: $lightest-blue;
+  background-color: $lightest-blue;
 
   h1, h2, h3, h4, h5, h6 {
     font-family: brandon-grotesque, sans-serif;
@@ -189,11 +189,11 @@ hr {
 
 .course-progress-box {
   background-color: white;
-
+  font-family: brandon-grotesque, sans-serif;
   padding: 20px 20px;
   margin-bottom: 40px;
   border-radius: 5px;
-  text-align: center;
+  // text-align: center;
   cursor: pointer;
   
   box-shadow: $box-shadow;
@@ -203,46 +203,18 @@ a:hover .course-progress-box {
 }
 
 .course-progress-box img {
-  width: 100px;
-  height: auto;
-  margin: auto;
+  width: 40px;
+  margin-bottom: 20px;
 }
 .course-progress-box p {
   color: $gray;
-  font-size: 13px;
+  font-size: 1.1rem !important;
+  font-weight: 500;
   line-height: 1.5;
 }
 
 .course-listing a {
   text-decoration: none !important;
-}
-
-.course-progress-box {
-  h2 {
-    margin: 0;
-    color: #39424e;
-    font-size: 26px;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 15px;
-  }
-  h2>small {
-    color: $light-gray;
-    font-weight: 400;
-    line-height: 1.4;
-    font-size: 12px;
-    text-transform: uppercase;
-  }
-
-  button {
-    font-weight: 700;
-    padding: 10px 20px;
-    background-color: $light-blue;
-    background: #0276d9;
-    background-image: linear-gradient(22deg, #0276d9,#2C9CFC);
-    border-bottom: 1px solid #0376d8;
-    border: none;
-  }
 }
 
 

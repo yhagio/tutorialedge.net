@@ -281,18 +281,14 @@ article {
 }
 
 .toc {
-  color: #707C80 !important;
-  // padding: 20px;
-  // background: #f2f6fa;
-
   width: 100%;
-  padding: 0px;
-  margin-top: 40px;
+  padding: 20px;
+  margin-top: 20px;
   font-size: 0.85rem;
   background-color: white;
-  // border-radius: 8px;
-  // -webkit-box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
-  // box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
+  border-radius: 8px;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
+  box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
   color: rgba(14,30,37,.54);
 
   i {
@@ -337,10 +333,10 @@ article {
 
 .content {
   background-color: white;
-  padding: 20px;
-  // border-radius: 8px;
-  // -webkit-box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
-  // box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
+  padding: 40px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
+  box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
   color: rgba(14,30,37,.54);
   margin-bottom: 40px;
   margin-top: 20px;
