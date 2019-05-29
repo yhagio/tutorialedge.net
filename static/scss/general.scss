@@ -193,7 +193,7 @@ hr {
   padding: 20px 20px;
   margin-bottom: 40px;
   border-radius: 5px;
-  text-align: center;
+  // text-align: center;
   cursor: pointer;
   
   box-shadow: $box-shadow;
@@ -203,9 +203,8 @@ a:hover .course-progress-box {
 }
 
 .course-progress-box img {
-  width: 100px;
-  height: auto;
-  margin: auto;
+  width: 40px;
+  margin-bottom: 20px;
 }
 .course-progress-box p {
   color: $gray;
