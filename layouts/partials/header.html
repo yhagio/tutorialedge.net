@@ -49,7 +49,26 @@
 
 		<div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
-
+				<!-- Courses dropdown -->
+				<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="courseDropdown" role="button" data-toggle="dropdown"
+						 aria-haspopup="true" aria-expanded="false">
+							Courses
+						</a>
+						<div class="dropdown-menu" aria-labelledby="courseDropdown">
+							<a class="dropdown-item" href="{{ .Site.BaseURL }}/course/artificial-intelligence/"><img alt="AI logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/ai.png" />AI</a>
+							<a class="dropdown-item" href="{{ .Site.BaseURL }}/course/angular/"><img alt="angular logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/angular.svg" />Angular</a>
+							<a class="dropdown-item" href="{{ .Site.BaseURL }}/course/cloud/"><img alt="cloud logo" src="data:image/png.svg;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/cloud.svg" />Cloud</a>
+							<a class="dropdown-item" href="{{ .Site.BaseURL }}/course/compsci/"><img alt="computer science" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/logo.svg" />Computer Science</a>
+							<a class="dropdown-item" href="{{ .Site.BaseURL }}/course/python/"><img alt="python logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/python.svg" />Python</a>
+							<a class="dropdown-item" href="{{ .Site.BaseURL }}/course/golang/"><img alt="golang logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/golang.svg" />Golang</a>
+							<a class="dropdown-item" href="{{ .Site.BaseURL }}/course/rust/"><img alt="rust logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/rust-logo.png" />Rust</a>
+							<a class="dropdown-item" href="{{ .Site.BaseURL }}/course/vuejs/"><img alt="vuejs logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/vuejs.svg" />VueJS</a>
+							<a class="dropdown-item" href="{{ .Site.BaseURL }}/course/webdev/"><img alt="webdev logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/logo.svg" />Web
+								Dev</a>
+						</div>
+					</li>
+					<!-- End of courses dropdown -->
 			
 				<!-- Projects Dropdown -->
 				<li class="nav-item dropdown">
