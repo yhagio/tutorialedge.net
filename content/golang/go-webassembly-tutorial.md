@@ -14,6 +14,8 @@ authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_4
 weight: 29
 ---
 
+> **Update** - The code in this tutorial has been updated to work with the breaking changes in Go v1.12
+
 Welcome All! With Go v1.11 having just been released with an experimental port
 to WebAssembly included, I thought it would be awesome to see how we can write
 our own Go programs that compile straight to WebAssembly!
