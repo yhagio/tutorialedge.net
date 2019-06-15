@@ -212,10 +212,6 @@ Awesome, using this approach we can start to break down more complex instruction
 into a series of smaller, easier to digest targets that can be individually debugged
 and executed.
 
-# Parameterizing your Makefiles
-
-Let's consider what
-
 # Conclusion
 
 So, in this tutorial, we covered the absolute minimum needed to get up and running using
