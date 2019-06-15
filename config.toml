@@ -7,7 +7,8 @@ paginate = 9
 
 # Syntax highlighting stuff
 pygmentsCodeFences = true
-PygmentsStyle = "borland"
+# PygmentsStyle = "borland"
+PygmentsStyle = "monokai"
 # pygmentsOptions = "linenos=table"
 
 # index for algolia
