@@ -119,3 +119,9 @@ Tock
 # Conclusion
 
 So, in this tutorial, we have looked at how you can use tickers within your own Go applications to before repeatable tasks, both on the main thread, and as a background task.
+
+## Further Reading
+
+If you enjoyed this and wish to see how you can use `tickers` in a more advanced context then I recommend checking out my other article which is a real-time YouTube stats monitoring system.
+
+* [https://tutorialedge.net/golang/building-realtime-youtube-sub-monitor-go/](https://tutorialedge.net/golang/building-realtime-youtube-sub-monitor-go/ "Build a Real-Time YouTube Stats Monitoring System in Go")
