@@ -52,7 +52,7 @@ func main() {
 
 Now, when we go to run this, our Go application will run indefinitely until we `ctrl-c` quit the program and every 1 second it will print out `tock` to the terminal.
 
-<div class="filename" $ go run main.go </div>
+<div class="filename"> $ go run main.go </div>
 
 ```output
 Go Tickers Tutorial
