@@ -1,0 +1,115 @@
+---
+new_page_extension: md
+auto_deploy: false
+admin_path: 
+webhook_url: 
+sections:
+- type: directory
+  path: content/golang
+  label: Golang
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/python
+  label: Python
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/react
+  label: React
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/nodejs
+  label: Nodejs
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/typescript
+  label: Typescript
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/webdev
+  label: Webdev
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/compsci
+  label: Compsci
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/projects
+  label: Projects
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/cloud
+  label: Cloud
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/course
+  label: Course
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/docker
+  label: Docker
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/gamedev
+  label: Gamedev
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/general
+  label: General
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/artificial-intelligence
+  label: Artificial intelligence
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/rust
+  label: Rust
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/javascript
+  label: Javascript
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/security
+  label: Security
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/blog
+  label: Blog
+  create: all
+  match: "**/*"
+upload_dir: posts
+public_path: "/posts"
+front_matter_path: ''
+use_front_matter_path: false
+file_template: ":filename:"
+build:
+  preview_command: hugo -E -F -D -b $DEPLOY_URL -d public
+  publish_command: hugo -d public
+  preview_env:
+  - HUGO_ENV=staging
+  - HUGO_VERSION=0.55.6
+  publish_env:
+  - HUGO_ENV=production
+  - HUGO_VERSION=0.55.6
+  preview_output_directory: public
+  output_directory: public
+  instant_preview_command: hugo server -D -E -F --port 8080 --bind 0.0.0.0 --renderToDisk
+    -d public
+version: 0.55.6

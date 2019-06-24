@@ -1,10 +1,9 @@
 ---
-title: "Makefiles for Go Developers"
-date: 2019-06-06T21:02:23+01:00
-desc: 
-  In this tutorial, we are going to be looking at how you, as a Go developer, can leverage 
-  the wonderful bit of technology that is Makefiles for fame and fortune when developing
-  your own Go applications.
+title: Makefiles for Go Developers
+date: 2019-06-06T20:02:23.000+00:00
+desc: In this tutorial, we are going to be looking at how you, as a Go developer,
+  can leverage the wonderful bit of technology that is Makefiles for fame and fortune
+  when developing your own Go applications.
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
 series: golang
@@ -12,19 +11,19 @@ image: golang.png
 tags:
 - beginner
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
----
 
-In this tutorial, we are going to be looking at how you, as a Go developer, can leverage 
+---
+In this tutorial, we are going to be looking at how you, as a Go developer, can leverage
 the wonderful bit of technology that is Makefiles for fame and fortune when developing
 your own Go applications.
 
 # What are Makefiles?
 
-Let's start by looking at what Makefiles are first of all. Makefiles are an incredibly 
+Let's start by looking at what Makefiles are first of all. Makefiles are an incredibly
 useful automation tool that you can use to run and build not just your Go applications,
-but for most programming languages. 
+but for most programming languages.
 
-You will typically see `Makefiles` at the root directory of a whole host of different 
+You will typically see `Makefiles` at the root directory of a whole host of different
 Go applications on Github and in Gitlab as they are used extensively as the tool of choice
 for automating tasks that the maintainers of these applications find themselves doing often.
 
@@ -36,9 +35,9 @@ with a really simple `Makefile` example to whet our appetite.
 Create a new directory in which you can work in and within this directory create a new
 file called `Makefile`.
 
-Once you have this `Makefile`, open it up and let's add a `target` called `hello` to 
+Once you have this `Makefile`, open it up and let's add a `target` called `hello` to
 this `Makefile`. This target, when executed, will run the script below it, very similar
-to a normal function in programming terms. 
+to a normal function in programming terms.
 
 <div class="filename"> Makefile </div>
 
@@ -57,14 +56,14 @@ Hello
 ```
 
 As you can see the script within the body of our `hello` target has been successfully
-executed for us and `Hello` has printed out! 
+executed for us and `Hello` has printed out!
 
 Awesome, hopefully you can see where we are going with this.
 
 # Building a Simple Go App
 
 So, we have a simple `Makefile` in a project directory that performs the highly complex
-tax of printing out `Hello` to our terminal. 
+tax of printing out `Hello` to our terminal.
 
 Let's now take this a step further and add a simple Go application into the mix so that
 we can try our hand at defining new targets which will build and run this new Go app for us.
@@ -115,7 +114,7 @@ go build -o bin/main main.go
 ```
 
 Awesome, this `make build` command will have gone away and compiled our Go application successfully
-into a new `bin/` directory for us. 
+into a new `bin/` directory for us.
 
 Let's now try the `make run` command:
 
@@ -126,12 +125,12 @@ go run main.go
 Hello
 ```
 
-Here we see that our go application is run for us. 
+Here we see that our go application is run for us.
 
 ## What's the Big Deal?
 
 At this point, you might be asking what the big deal is about using Makefiles for your own
-Go applications. 
+Go applications.
 
 Well imagine you wanted to cross-compile your application to run on every OS and every
 architecture available but didn't want to manually set the `GOOS` and `GOARCH` variables
@@ -145,9 +144,9 @@ commands with all the appropriate `GOOS` and `GOARCH` compinations set like so:
 ```makefile
 compile:
 	echo "Compiling for every OS and Platform"
-	GOOS=darwin GOARCH=arm go build -o bin/main-dawrin-arm main.go
-	GOOS=darwin GOARCH=arm64 go build -o bin/main-darwin-arm64 main.go
 	GOOS=freebsd GOARCH=386 go build -o bin/main-freebsd-386 main.go
+	GOOS=linux GOARCH=386 go build -o bin/main-freebsd-386 main.go
+	GOOS=windows GOARCH=386 go build -o bin/main-freebsd-386 main.go
 ```
 
 And now, when you try to cross compile for every platform, you simply have to call
@@ -158,9 +157,9 @@ And now, when you try to cross compile for every platform, you simply have to ca
 ```output
 echo "Compiling for every OS and Platform"
 Compiling for every OS and Platform
-GOOS=linux GOARCH=arm go build -o bin/main-linux-arm main.go
-GOOS=linux GOARCH=arm64 go build -o bin/main-linux-arm64 main.go
 GOOS=freebsd GOARCH=386 go build -o bin/main-freebsd-386 main.go
+GOOS=linux GOARCH=386 go build -o bin/main-freebsd-386 main.go
+GOOS=windows GOARCH=386 go build -o bin/main-freebsd-386 main.go
 ```
 
 With everything successfully built, you should now see your `bin/` directory full of
@@ -213,10 +212,6 @@ Awesome, using this approach we can start to break down more complex instruction
 into a series of smaller, easier to digest targets that can be individually debugged
 and executed.
 
-# Parameterizing your Makefiles
-
-Let's consider what
-
 # Conclusion
 
 So, in this tutorial, we covered the absolute minimum needed to get up and running using
@@ -224,7 +219,7 @@ So, in this tutorial, we covered the absolute minimum needed to get up and runni
 
 ## Further Reading
 
-If you enjoyed this article but wish to learn more about Makefiles and how you can best 
+If you enjoyed this article but wish to learn more about Makefiles and how you can best
 use them, I suggest you check out the following articles:
 
 * [An Introduction to Makefiles](https://www.gnu.org/software/make/manual/html_node/Introduction.html)

@@ -1,19 +1,18 @@
 ---
 author: Elliot Forbes
-date: 2017-06-12T15:26:02+01:00
-desc:
-  In this tutorial we look at what generators are within Python and how we can
+date: 2017-06-12T14:26:02.000+00:00
+desc: In this tutorial we look at what generators are within Python and how we can
   use them
 series: python
 image: python.svg
 tags:
-  - beginner
+- beginner
 title: Python Generators Tutorial
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
-weight: 12
----
+weight: "12"
 
+---
 > This tutorial was built using Python 3.6
 
 In this tutorial I'm aiming to help demystify this concept of generators within
@@ -148,6 +147,8 @@ experiment with the number of times you call `print(next(mygen))`.
 > next() indefinitely.
 
 # Conclusion
+
+So, in this tutorial, we looked at generators in Python! We looked at how we can build our own Python generators and subsequently use them within our own Python applications for fame and fortune!
 
 Hopefully you found this tutorial useful! If you did or require further
 assistance then please let me know in the comments section below or by tweeting
