@@ -29,3 +29,5 @@ fields:
 - type: number
   name: weight
   label: weight
+pages:
+- content/projects/cloud-native-go-rest-api/building-a-cloud-native-rest-api-in-go-on-digitalocean.md
