@@ -4,7 +4,7 @@ hide_body: false
 fields:
 - type: text
   name: author
-  label: author
+  label: Author
 - type: datetime
   name: date
   label: date
