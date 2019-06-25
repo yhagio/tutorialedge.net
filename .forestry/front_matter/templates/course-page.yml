@@ -1,0 +1,31 @@
+---
+label: Course-Page
+hide_body: false
+fields:
+- type: text
+  name: author
+  label: author
+- type: datetime
+  name: date
+  label: date
+- type: textarea
+  name: desc
+  label: desc
+- type: file
+  name: image
+  label: image
+- type: list
+  name: series
+  label: series
+- type: list
+  name: tags
+  label: tags
+- type: text
+  name: title
+  label: title
+- type: text
+  name: twitter
+  label: twitter
+- type: number
+  name: weight
+  label: weight
