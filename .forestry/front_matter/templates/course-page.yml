@@ -30,5 +30,6 @@ fields:
   name: weight
   label: weight
 pages:
+- content/golang/go-maps-tutorial.md
 - content/projects/cloud-native-go-rest-api/part-1-codebase-and-initial-project-set-up.md
 - content/projects/cloud-native-go-rest-api/building-a-cloud-native-rest-api-in-go-on-digitalocean.md
