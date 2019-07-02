@@ -88,16 +88,60 @@ func main() {
 
 In this section of the tutorial, we are going to cover how to sort more complex data structures using custom sorting functions.
 
+In order to implement custom sorting functions, we'll have to first define an `array` with the type of the item we would like to sort. 
+
+In this case we'll be sorting an `array` of type `Programmer` which will feature a solitary `Age` field. We will therefore have to define a type `[]Programmer`  which we'll call `byAge` as we'll be sorted by age in this given example. We'll then have to create 3 methods that are built off this type.
+
+* `Len()` - returns the length of the array of items
+* `Swap()` - a function which swaps the position of two elements in a sorted array
+* `Less()` - a function which returns a `bool` value depending on whether the item at position `i` is less than the item at position `j`.
+
 ```go
-func (s byLength) Len() int {
-    return len(s)
+package main
+
+import (
+	"fmt"
+	"sort"
+)
+
+type Programmer struct {
+	Age int 
+} 
+
+type byAge []Programmer
+
+func (p byAge) Len() int {
+	return len(p)
 }
-func (s byLength) Swap(i, j int) {
-    s[i], s[j] = s[j], s[i]
+
+func (p byAge) Swap(i, j int) {
+	p[i], p[j] = p[j], p[i]
+} 
+
+func (p byAge) Less(i, j int) bool {
+	return p[i].Age < p[j].Age
 }
-func (s byLength) Less(i, j int) bool {
-    return len(s[i]) < len(s[j])
+
+func main() {
+    programmers := []Programmer{
+		Programmer{Age: 30,},
+		Programmer{Age: 20,},
+		Programmer{Age: 50,},
+		Programmer{Age: 1000,},
+	}
+
+	sort.Sort(byAge(programmers))
+
+	fmt.Println(programmers)
 }
+```
+
+When we run this, we should see that our `programmers` array is subsequently sorted based on the respective `Age` field of our `Programmer` struct.
+
+<div class="filename"> $ go run main.go </div>
+
+```output
+[{20} {30} {50} {1000}]
 ```
 
 # Conclusion
