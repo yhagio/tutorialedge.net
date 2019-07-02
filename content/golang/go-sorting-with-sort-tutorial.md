@@ -1,8 +1,8 @@
 ---
-title: "Go Sorting With the sort Package - Tutorial"
-date: 2019-05-26T08:49:44+01:00
-draft: true
-desc: In this tutorial, we are going to be taking a look at how you can implement sorting in your Go applications using the sort package.
+title: Go Sorting With the sort Package - Tutorial
+date: 2019-05-26T07:49:44.000+00:00
+desc: In this tutorial, we are going to be taking a look at how you can implement
+  sorting in your Go applications using the sort package.
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
 series: golang
@@ -10,9 +10,9 @@ image: golang.png
 tags:
 - beginner
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
----
 
-Sorting items to be in order is something that every programmer will undoubtedly have to do at one point in their career. There are different approaches and many different sorting algorithms available for you to choose from, but typically it is better to rely on already implemented packages to do your sorting for you. 
+---
+Sorting items to be in order is something that every programmer will undoubtedly have to do at one point in their career. There are different approaches and many different sorting algorithms available for you to choose from, but typically it is better to rely on already implemented packages to do your sorting for you.
 
 # Goals
 
@@ -25,7 +25,7 @@ By the end of this tutorial, you will know how to:
 
 In order to complete this tutorial, you will need the following:
 
-* Go v1.11+ installed on your machine 
+* Go v1.11+ installed on your machine
 * A text editor in which you can work. I recommend Visual Studio Code for this.
 
 # A Simple Sorting Example
@@ -60,7 +60,7 @@ Go Sorting Tutorial
 [1 3 2 6 3 4]
 ```
 
-Let's take a look at how we can use the `sort` package to sort this. 
+Let's take a look at how we can use the `sort` package to sort this.
 
 <div class="filename"> main.go </div>
 
@@ -102,7 +102,7 @@ func (s byLength) Less(i, j int) bool {
 
 # Conclusion
 
-Awesome, in this tutorial, we have been able to use the `"sort"` package to help implement sorting in our Go applications. 
+Awesome, in this tutorial, we have been able to use the `"sort"` package to help implement sorting in our Go applications.
 
 We have also looked at how we can implement our own custom sorting functions that allow us to sort more complex data structures in our applications.
 
@@ -110,4 +110,4 @@ We have also looked at how we can implement our own custom sorting functions tha
 
 If you enjoyed this article, you may also enjoy the following tutorials:
 
-* [hallo](/)
+* [https://tutorialedge.net/golang/concurrency-with-golang-goroutines/](https://tutorialedge.net/golang/concurrency-with-golang-goroutines/ "Concurrency with goroutines")
