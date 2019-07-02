@@ -116,6 +116,17 @@ Go Maps Tutorial
 Hello From the 2nd Service
 ```
 
+If we wanted to get really fancy, we could iterate over all the interfaces within our map, much like we did earlier on in the tutorial and call every `SayHi()` method:
+
+```go
+for key, service := range interfaceMap {
+	fmt.Println(key)
+	service.SayHi()
+}
+```
+
+This would subsequently print out the service keys and then call their respective `SayHi()` methods.
+
 # Conclusion
 
 Hopefully you enjoyed this tutorial on maps in Go and it has helped you out in some way! If you have any feedback or comments then I would love to hear them in the comments section below!
