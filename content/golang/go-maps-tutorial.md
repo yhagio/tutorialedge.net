@@ -12,11 +12,13 @@ weight = 15
 +++
 In this tutorial, we are going to look at maps in Go and how you can use them to achieve world domination!
 
-We are going to be covering just about everything you need to know about maps to get started using them within your own Go applications.
+We are going to be covering just about everything you need to know about maps to get started using them within your own Go applications. We are going to be looking at all of the various ways you interact with maps in Go and by the end of this tutorial, you will be a master when it comes to using them.
 
 # The Map Data Structure
 
 Maps are an incredibly useful data structure when you need incredibly quick key-value lookups. They are used in an incredibly diverse number of ways and they are an invaluable tool in any programmer's belt regardless of the underlying language used.
+
+Maps in Go can be considered the equivalent of `dict` in Python, or `HashMap` in Java. They are an implementation of a dictionary 
 
 # Map Basic Syntax
 
@@ -133,4 +135,7 @@ Hopefully you enjoyed this tutorial on maps in Go and it has helped you out in s
 
 ## Further Reading:
 
-* [Sorting in Go with the sort Package](https://tutorialedge.net/golang/go-sorting-with-sort-tutorial/)
+Maps in Go can also be used when it comes to unmarshalling JSON and XML data into Go structs. If you want to see how they are used then I recommend checking out the following articles: 
+
+* [Parsing JSON Files with Go](https://tutorialedge.net/golang/parsing-json-with-golang/)
+* [Go JSON Tutorial](https://tutorialedge.net/golang/go-json-tutorial/)
