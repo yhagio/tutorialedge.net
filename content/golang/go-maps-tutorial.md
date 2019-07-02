@@ -63,6 +63,59 @@ delete(mymap["mykey"])
 fmt.Println("Value deleted from map")
 ```
 
+# Mapping Strings to Interfaces 
+
+Maps in Go can be used for more than just mapping basic types to basic types. In more complex programs, you may need to map `string` to say an `interface`.  
+
+Say, for instance, you wanted to map an incoming HTTP requests `UUID` to a given `interface` within your application. This would allow you to change what `interface` handles an incoming request based on its mapped `UUID`.
+
+```go
+package main
+
+import "fmt"
+
+type Service interface{
+	SayHi()
+}
+
+type MyService struct{}
+func (s MyService) SayHi() {
+	fmt.Println("Hi")
+}
+
+type SecondService struct{}
+func (s SecondService) SayHi() {
+	fmt.Println("Hello From the 2nd Service")
+}
+
+func main() {
+	fmt.Println("Go Maps Tutorial")
+	// we can define a map of string uuids to
+    // the interface type 'Service'
+	interfaceMap := make(map[string]Service)
+	
+    // we can then populate our map with 
+    // simple ids to particular services
+	interfaceMap["SERVICE-ID-1"] = MyService{}
+	interfaceMap["SERVICE-ID-2"] = SecondService{}
+
+	// Incoming HTTP Request wants service 2
+	// we can use the incoming uuid to lookup the required
+	// service and call it's SayHi() method
+	interfaceMap["SERVICE-ID-2"].SayHi()
+
+}
+```
+
+If we then attempt to run this, we should see that we have successfully been able to retrieve the service we want from this map and then call the `SayHi()` method.
+
+<div class="filename"> $ go run main.go </div>
+
+```output
+Go Maps Tutorial
+Hello From the 2nd Service
+```
+
 # Conclusion
 
 Hopefully you enjoyed this tutorial on maps in Go and it has helped you out in some way! If you have any feedback or comments then I would love to hear them in the comments section below!
