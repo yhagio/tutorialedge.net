@@ -110,4 +110,4 @@ We have also looked at how we can implement our own custom sorting functions tha
 
 If you enjoyed this article, you may also enjoy the following tutorials:
 
-* [https://tutorialedge.net/golang/concurrency-with-golang-goroutines/](https://tutorialedge.net/golang/concurrency-with-golang-goroutines/ "Concurrency with goroutines")
+* [Sorting in Go with the Sort Package](https://tutorialedge.net/golang/go-sorting-with-sort-tutorial/) 
