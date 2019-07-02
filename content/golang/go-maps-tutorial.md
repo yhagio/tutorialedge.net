@@ -54,6 +54,18 @@ for key, value := range mymap {
 }
 ```
 
+Running this will subsequently print out all of the keys and their subsequent values contained within this `mymap` map. 
+
+If you need to extract all of the keys from a given `map` then you can use this loop in order to retrieve all keys and subsequently `append` them to an array of keys.
+
+```go
+var keyArray []string
+
+for key := range mymap {
+    keyArray = append(keyArray, key)
+}
+```
+
 # Deleting Elements in a Map
 
 For deleting items from a map, we can use the builtin `delete` function which takes in a `map[key]` key and subsequently tries to delete the given value from the map. In the event that the key does not exist within the map, the `delete` call is a no-op which essentially means it does nothing.
