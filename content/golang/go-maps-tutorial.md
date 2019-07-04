@@ -18,7 +18,7 @@ We are going to be covering just about everything you need to know about maps to
 
 Maps are an incredibly useful data structure when you need incredibly quick key-value lookups. They are used in an incredibly diverse number of ways and they are an invaluable tool in any programmer's belt regardless of the underlying language used.
 
-Maps in Go can be considered the equivalent of `dict` in Python, or `HashMap` in Java. They are an implementation of a dictionary 
+Maps in Go can be considered the equivalent of `dict` in Python, or `HashMap` in Java. 
 
 # Map Basic Syntax
 
@@ -54,7 +54,7 @@ for key, value := range mymap {
 }
 ```
 
-Running this will subsequently print out all of the keys and their subsequent values contained within this `mymap` map. 
+Running this will subsequently print out all of the keys and their subsequent values contained within this `mymap` map.
 
 If you need to extract all of the keys from a given `map` then you can use this loop in order to retrieve all keys and subsequently `append` them to an array of keys.
 
@@ -77,9 +77,9 @@ delete(mymap["mykey"])
 fmt.Println("Value deleted from map")
 ```
 
-# Mapping Strings to Interfaces 
+# Mapping Strings to Interfaces
 
-Maps in Go can be used for more than just mapping basic types to basic types. In more complex programs, you may need to map `string` to say an `interface`.  
+Maps in Go can be used for more than just mapping basic types to basic types. In more complex programs, you may need to map `string` to say an `interface`.
 
 Say, for instance, you wanted to map an incoming HTTP requests `UUID` to a given `interface` within your application. This would allow you to change what `interface` handles an incoming request based on its mapped `UUID`.
 
@@ -147,7 +147,7 @@ Hopefully you enjoyed this tutorial on maps in Go and it has helped you out in s
 
 ## Further Reading:
 
-Maps in Go can also be used when it comes to unmarshalling JSON and XML data into Go structs. If you want to see how they are used then I recommend checking out the following articles: 
+Maps in Go can also be used when it comes to unmarshalling JSON and XML data into Go structs. If you want to see how they are used then I recommend checking out the following articles:
 
 * [Parsing JSON Files with Go](https://tutorialedge.net/golang/parsing-json-with-golang/)
 * [Go JSON Tutorial](https://tutorialedge.net/golang/go-json-tutorial/)
