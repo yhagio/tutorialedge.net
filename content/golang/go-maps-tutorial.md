@@ -18,7 +18,7 @@ We are going to be covering just about everything you need to know about maps to
 
 Maps are an incredibly useful data structure when you need incredibly quick key-value lookups. They are used in an incredibly diverse number of ways and they are an invaluable tool in any programmer's belt regardless of the underlying language used.
 
-Maps in Go can be considered the equivalent of `dict` in Python, or `HashMap` in Java. 
+> Maps in Go can be considered the equivalent of `dict` in Python, or `HashMap` in Java. 
 
 # Map Basic Syntax
 
