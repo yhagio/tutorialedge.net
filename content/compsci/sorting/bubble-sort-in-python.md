@@ -1,18 +1,17 @@
 ---
 author: Elliot Forbes
-date: 2017-11-15T18:10:37Z
-desc:
-  In This Tutorial we look at how you can implement the Bubble Sorting Algorithm
+date: 2017-11-15T18:10:37.000+00:00
+desc: In This Tutorial we look at how you can implement the Bubble Sorting Algorithm
   in Python
 series: compsci
 image: logo.svg
 tags:
-  - python
-  - compsci
-title: Implementing The Bubble Sort in Python
+- python
+- compsci
+title: Implementing The Bubble Sort Algorithm in Python
 twitter: https://twitter.com/Elliot_F
----
 
+---
 > **Note -** This tutorial was built on top of Python 3.6
 
 In this tutorial we are going to be taking a quick look at the bubble sort
