@@ -1,18 +1,18 @@
 ---
 author: Elliot Forbes
-date: 2019-05-25T14:08:54Z
-desc:
-  In this tutorial, we are going to be looking at how you can add authentication to your NodeJS Services using JWTs.
+date: 2019-05-25T14:08:54.000+00:00
+desc: In this tutorial, we are going to be looking at how you can add authentication
+  to your NodeJS Services using JWTs.
 series: nodejs
 image: node.png
 tags:
-  - Authentication
+- Authentication
 title: NodeJS JWT Authentication Tutorial
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
----
 
-Welcome fellow programmers! In this tutorial, we are going to be looking at how we can add authentication to our NodeJS applications using JWTs. 
+---
+Welcome fellow programmers! In this tutorial, we are going to be looking at how we can add authentication to our NodeJS applications using JWTs.
 
 We'll be creating a REST API that feature a mixture of authenticated and un-authenticated JSON endpoints and we'll be implementing a nice and simple JWT validation function that will verify incoming requests to ensure they have the appropriate authorization header set and that the value of that header is a verified JSON Web Token!
 
@@ -31,11 +31,17 @@ In order to complete this tutorial, you will need to have the following:
 * NodeJS installed on your machine
 * A Text Editor (I recommend Visual Studio Code)
 
+# Video Tutorial
+
+This tutorial is available in video format if you prefer:
+
+{{< youtube id="0g0Of8jlhN8" autoplay="false" >}}
+
 # Introduction
 
 Being able to verify who is hitting your API endpoints is incredibly important. It allows you to determine if the requestor is an authorized person who is allowed to actually interact with your service.
 
-This is where JWT authentication can solve our problems. We can create use JWTs in combination with request headers to help us validate that an incoming request is authorized or not. 
+This is where JWT authentication can solve our problems. We can create use JWTs in combination with request headers to help us validate that an incoming request is authorized or not.
 
 # JWTs or JSON Web Tokens
 
@@ -43,7 +49,7 @@ JWTs or a JSON Web Token, to use its full name, is a means of representing claim
 
 ## Structure
 
-A typical JWT features a Header, a Payload, and a Signature. 
+A typical JWT features a Header, a Payload, and a Signature.
 
 ![JWT Structure](https://images.tutorialedge.net/node/node-jwt-authentication-tutorial/jwt-structure.svg)
 
@@ -103,7 +109,7 @@ With this now running, navigate to `http://localhost:3000/` in your browser and 
 
 # Adding a few Endpoints
 
-Now that we have a basic NodeJS application up and running on port 3000, let's look at how we can extend this and add a few endpoints which we can subsequently protect. 
+Now that we have a basic NodeJS application up and running on port 3000, let's look at how we can extend this and add a few endpoints which we can subsequently protect.
 
 I'm going to keep this super simple for now so that we can focus on the JWT authorization and not the underlying application.
 
@@ -164,7 +170,7 @@ Perfect, in this step we have been able to add 2 additional endpoints to our app
 
 # Generating a Valid JWT
 
-In this step, we are going to create 1 additional endpoint for our application that will return a valid JWT token for us to test out the authentication in subsequent steps. 
+In this step, we are going to create 1 additional endpoint for our application that will return a valid JWT token for us to test out the authentication in subsequent steps.
 
 In order for us to generate and validate these JWTs, we'll need to first import the `jsonwebtoken` node module:
 
@@ -240,7 +246,7 @@ Awesome, we now have a valid JWT that we can use to test the authentication we a
 
 # Authentication Middleware
 
-Let's have a look at the authentication function which will look at an incoming request and parse it for an `Authorization` header. 
+Let's have a look at the authentication function which will look at an incoming request and parse it for an `Authorization` header.
 
 <div class="filename"> index.js </div>
 
@@ -296,7 +302,7 @@ If we restart our application and try hitting the `/secret` endpoint once again,
 
 Perfect, this has worked exactly as expected and we aren't able to access our `/secret` endpoint without the appropriate `Authorization` header set. Let's attempt to hit this endpoint with a `curl` command, we'll add the `Authorization` header and set it to `jwt` along with a valid JWT retrieved from our `/jwt` endpoint.
 
-<div class="filename"> curl -H "Authorization: jwt &lt;VALID JWT&gt;" http://localhost:3000/secret </div>
+<div class="filename"> curl -H "Authorization: jwt <VALID JWT>" http://localhost:3000/secret </div>
 
 ```output
 {"message":"THIS IS SUPER SECRET, DO NOT SHARE!"}% 
