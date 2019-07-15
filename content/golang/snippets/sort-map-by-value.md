@@ -1,7 +1,6 @@
 ---
 title: "Sort Map by Value"
 date: 2019-07-15T19:30:49+01:00
-draft: true
 desc: In this code snippet, we look at how you can quickly and easily sort maps in Go
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
