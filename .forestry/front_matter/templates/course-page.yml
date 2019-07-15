@@ -30,6 +30,7 @@ fields:
   name: weight
   label: weight
 pages:
+- content/golang/snippets/concatenate-strings-in-go.md
 - content/projects/vuejs-nodejs-real-time-chat-system/building-a-real-time-chat-system-using-vue-js-and-node-js.md
 - content/golang/go-maps-tutorial.md
 - content/projects/cloud-native-go-rest-api/part-1-codebase-and-initial-project-set-up.md
