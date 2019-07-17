@@ -1,7 +1,7 @@
 ---
 title: Go Tickers Tutorial
 date: 2019-05-02T08:00:17.000+00:00
-desc: 
+desc: In this tutorial, we are going to look at how you can effectively use tickers in go to periodically execute tasks in your Go applications
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
 series: golang
