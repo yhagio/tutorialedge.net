@@ -1,7 +1,6 @@
 ---
 title: "Check Key Exists in Map Go"
 date: 2019-07-17T08:58:40+01:00
-draft: true
 desc: In this code snippet, we are going to look at how you can check to see if a key exists within a Map in Go
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
