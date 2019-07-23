@@ -4,8 +4,10 @@
   width: 100%;
   background-color: $top-bar-blue;
   padding-top: 20px;
-  border-bottom: 1px solid #e7e7ec;
   color: #000;
+  text-align: center;
+  border-bottom: 1px solid #f8f8f8 !important;
+  box-shadow: 0 1px 0 rgba(0,0,0,.1);
 
   img {
     width: auto;
@@ -15,21 +17,23 @@
 
   h1 {
     font-size: 36px;
-    font-weight: 700 !important;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    font-weight: 500;
     line-height: 1.4;
   
   }
 
   h1 small {
     font-size: 16px;
-    font-weight: 500;
   }
 
   h2 {
     line-height: 1.4;
     font-size: 3rem;
-    font-weight: 700;
-    letter-spacing: 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-weight: 500;
   }
 
   p {
@@ -43,18 +47,15 @@
 
 .post-info {
   line-height: 1.35;
-  font-weight: 400;
-  font-size: 1rem;
-  margin-bottom: 17px;
-  background-color: #fff;
+  font-size: 0.9rem;
   font-weight: 500;
-  -webkit-box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
-  box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
-  color: #4d545d;
+  color: #005469;
 
   img.icon {
     margin-right: 5px;
     margin-top: -1px;
+    width: 20px;
+    height: 20px;
   }
 
   img.author {
@@ -72,7 +73,7 @@
     padding: 20px;
   }
   a {
-    color: #4d545d;
+    color: #005469;
   }
   .badge-info {
     letter-spacing: 0.05rem;
@@ -81,13 +82,8 @@
   }
 }
 
-// .container-wrapper {
-//   width: 75%;
-//   margin: auto;
-// }
 
 article {
-  margin: 2.4rem 0 0;
   font-size: 1.45rem;
   line-height: 1.62;
   color: #3b454e;
@@ -302,7 +298,7 @@ article {
   h4 {
     color: #333 !important;
     font-size: 1.2rem;
-    font-weight: 400;
+    font-weight: 800;
     margin: 0;
     padding: 0;
     padding-bottom: 5px;

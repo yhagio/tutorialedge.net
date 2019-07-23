@@ -17,32 +17,28 @@
       {{ end }}
       {{ .Title }}
     </h1>
-  </div>
-</div>
-
-<div class="post-info">
-  <div class="container">
-    <div class="post-info-inner">
-      <span>
-        {{ if .Params.authorImage }}
-        <img class="author" src="{{ .Params.authorImage }}" alt="{{ .Params.author }}" />
-        {{ else }}
-        <img class="author" src="https://images.tutorialedge.net/images/logo.svg" alt="TutorialEdge Logo" />
-        {{ end }}
-        <a href="{{.Params.twitter }}">{{ .Params.author }}</a>
-      </span>
-
-      <span><img class="icon" src="https://tutorialedge.net/images/svg/clock.svg" alt="clock"/>{{ .ReadingTime }} Minutes</span>
-      <span><img class="icon" src="https://tutorialedge.net/images/svg/calendar.svg" alt="clock"/> {{ dateFormat "Jan 2, 2006" .Date }}</span>
-      
-      <span>
-        {{ range.Params.tags }}
-        <a href="/tags/{{.}}"
-          ><span class="badge badge-pill badge-info">{{ . }}</span></a
-        >
-        {{ end }}
-      </span>
-      
+    <div class="post-info">
+      <div class="post-info-inner">
+          <span>
+            {{ if .Params.authorImage }}
+            <img class="author" src="{{ .Params.authorImage }}" alt="{{ .Params.author }}" />
+            {{ else }}
+            <img class="author" src="https://images.tutorialedge.net/images/logo.svg" alt="TutorialEdge Logo" />
+            {{ end }}
+            <a href="{{.Params.twitter }}">{{ .Params.author }}</a>
+          </span>
+    
+          <span><img class="icon" src="https://tutorialedge.net/images/svg/clock.svg" alt="clock"/>{{ .ReadingTime }} Minutes</span>
+          <span><img class="icon" src="https://tutorialedge.net/images/svg/calendar.svg" alt="clock"/> {{ dateFormat "Jan 2, 2006" .Date }}</span>
+          
+          <span>
+            {{ range.Params.tags }}
+            <a href="/tags/{{.}}"
+              ><span class="badge badge-pill badge-info">{{ . }}</span></a
+            >
+            {{ end }}
+          </span>
+      </div>
     </div>
   </div>
 </div>

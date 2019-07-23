@@ -1,147 +1,63 @@
 {{ partial "header.html" . }}
 
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch.min.css">
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch-theme-algolia.min.css">
-<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css" integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8=" crossorigin="anonymous">
 
 
-<div class="course-listing padding">
-    <div class="row">
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@3.33.0/dist/algoliasearchLite.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@3.4.0/dist/instantsearch.production.min.js"></script>
 
-        <div class="col-sm-3">
-            <div class="filter">
-                <h3>Language/Skill</h3>
-                <div id="refinement-list">
-                </div>
-                <h3>Tags</h3>
-                <div id="tag-list">
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-9 search">
-            <div class="input-group">
-                <input id="search-input" class="form-control" placeholder="Search for tutorials">
-                <!-- We use a specific placeholder in the input to guides users in their search. -->
-            </div>
-            <h3>Results</h3>
-            <div id="hits"></div>
-            <div class="pagination" id="pagination"></div>
-        </div>
+<div class="top-bar">
+    <div class="container">
+        <div id="searchbox"></div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="content-container">
+        <br/>
+        <h3>Results</h3>
+        <div id="hits"></div>
+        <div class="pagination" id="pagination"></div>
     </div>
 </div>
 
 <style>
-    .padding {
-        padding: 40px;
-    }
-    .filter {
-        background-color: white;
-        padding: 20px;
-        box-shadow: 0 5px 15px -5px rgba(0,0,0,.1);
-    }
+#searchbox {
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
 
+.ais-Hits-item {
+    border: none;
+    padding: none;
+    margin: none;
+    box-shadow: none;
+}
 
-    .search {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
+.course-progress-box{
+    box-shadow: none;
+    border-color: #eaecef!important;
+    border: 1px solid;
+}
 
-    .input-group {
-        width: 100%;
-        margin-bottom: 40px;
-    }
-
-    .ais-search-input {
-        width: 100% !important;
-    }
-
-    .filters {
-        background-color: white;
-    }
-
-    .ais-hits {
-        display: grid;
-        grid: auto-flow dense / 1fr 1fr 1fr;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        grid-column-gap: 40px;
-    }
-
-    .ais-refinement-list--item:hover {
-        background-color: #f6f6f6;
-        cursor: pointer;
-    }
-
-    .ais-refinement-list--item {
-        min-height: 35px;
-        padding: .25rem .25rem .25rem .25rem;
-        border-radius: 20px;
-        cursor: pointer;
-    }
-
-    .ais-refinement-list--label {
-        display: grid;
-        grid: auto-flow dense / 1fr 5fr 1fr;
-        grid-auto-columns: 1fr 5fr 1fr;
-    }
-
-    .ais-refinement-list--count {
-        background-color: #f6f6f6;
-        color: #3d4852;
-        font-size: .75rem;
-        margin-left: auto;
-        align-items: center;
-        color: #4d545d;
-        font-size: 15px;
-        line-height: 16px;
-        padding-left: 10px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-right: 10px;
-        white-space: nowrap;
-        border-radius: 20px;
-    }
-
-    .filter h3 {
-        color: #22292f;
-        letter-spacing: 0;
-        line-height: 1;
-        text-transform: uppercase;
-        font-weight: 700;
-        margin: 1em 0;
-    }
 </style>
 
 
-<script>
-    var search = instantsearch({
-        // Replace with your own values
-        appId: 'HC4LXZHZ0P',
-        apiKey: 'c03dde5425f223cd11270e711db47c0c', // search only API key, no ADMIN key
+<script type="text/javascript">
+
+    const search = instantsearch({
         indexName: 'TutorialEdge',
-        urlSync: true,
-        searchParameters: {
-            hitsPerPage: 18
-        }
+        searchClient: algoliasearch('HC4LXZHZ0P', 'c03dde5425f223cd11270e711db47c0c'),
     });
 
-    search.addWidget(
-        instantsearch.widgets.refinementList({
-            container: '#refinement-list',
-            attributeName: 'section'
-        })
-    );
-    search.addWidget(
-        instantsearch.widgets.refinementList({
-            container: '#tag-list',
-            attributeName: 'tags'
-        })
-    );
     // Add this after the previous JavaScript code
     search.addWidget(
         instantsearch.widgets.searchBox({
-            container: '#search-input'
-        }),
+            container: '#searchbox',
+        })
     );
+
 
     search.addWidget(
         instantsearch.widgets.hits({
@@ -154,7 +70,7 @@
                 item: function (data) {
                     return '<a href="' + data.permalink + '">'
                         + '<div class="course-progress-box">'
-                        + '<img src="/images/logo.svg" alt="' + data.title + 'Image">'
+                        + '<img src="https://images.tutorialedge.net/images/logo.svg" alt="' + data.title + 'Image">'
                         + '<h2><small>Lesson</small><br />' + data.title + '</h2>'
                         + '<button class="btn btn-success">View Article</button>'
                         + '</div>'
