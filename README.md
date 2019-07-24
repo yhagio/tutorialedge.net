@@ -2,7 +2,7 @@
 
 ## General Information
 
-![Build Status](https://travis-ci.org/elliotforbes/tutorialedge-v2.svg?branch=master)
+![Build Status](https://travis-ci.org/elliotforbes/tutorialedge.net.svg?branch=master)
 
 I've been working on TutorialEdge.net as a hobby project since early 2015. Since
 then it's gone from only a handful of visitors per day to something that
@@ -20,8 +20,8 @@ site generator.
 1. Download the repo
 
    ```
-   git clone https://github.com/elliotforbes/tutorialedge-v2
-   cd tutorialedge-v2
+   git clone https://github.com/elliotforbes/tutorialedge.net
+   cd tutorialedge.net
    ```
 
 2. [Install hugo](https://gohugo.io/getting-started/installing/)
