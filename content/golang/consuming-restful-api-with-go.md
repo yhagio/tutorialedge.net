@@ -262,4 +262,4 @@ can effectively work with as if they were normal objects.
 > please let me know in the comments section below. If you think anything is
 > missing then please feel free to make the changes yourself by submitting a
 > pull request here:
-> [tutorialedge-v2](https://github.com/elliotforbes/tutorialedge-v2)
+> [tutorialedge.net](https://github.com/elliotforbes/tutorialedge.net)

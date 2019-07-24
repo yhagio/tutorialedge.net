@@ -63,7 +63,7 @@ Once you have Docker installed on your machine, you should be able to run
 return a list of everything you can do with the `docker` binary:
 
 ```s
-➜  tutorialedge-v2 git:(master) ✗ docker
+➜  tutorialedge.net git:(master) ✗ docker
 
 Usage:  docker COMMAND
 

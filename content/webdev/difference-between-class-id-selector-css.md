@@ -116,4 +116,4 @@ If you found there was something lacking about this tutorial then please feel
 free to let me know in the comments section below! If you wish to make any
 changes to this particular tutorial then you can also submit a pull request to
 the github repo for the site here:
-[TutorialEdge-v2](https://github.com/elliotforbes/tutorialedge-v2)
+[TutorialEdge.net](https://github.com/elliotforbes/tutorialedge.net)
