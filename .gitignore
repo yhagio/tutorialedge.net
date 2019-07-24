@@ -1,8 +1,15 @@
+# Macos
+.DS_Store
+
+# Generated
 public/
-*.deb
 .env
-node_modules/
 .vscode/
 
+# Packages
+*.deb
+
+# Node
+node_modules/
 package-lock.json
 yarn-error.log

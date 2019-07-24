@@ -11,6 +11,11 @@ pygmentsCodeFences = true
 PygmentsStyle = "monokai"
 # pygmentsOptions = "linenos=table"
 
+# Used by Hugo + and as partial
+[params]
+    title = "TutorialEdge.net"
+    author = "Elliot Forbes"
+    description = "Hundreds of free tutorials for cutting edge languages and frameworks."
 # index for algolia
 [indexes] 
     category = "categories" 
