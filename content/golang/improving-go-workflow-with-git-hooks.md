@@ -1,5 +1,5 @@
 ---
-title: "Improving Go Workflow With Git Hooks"
+title: "Improving Your Go Development Workflow With Git Hooks"
 date: 2019-08-02T08:05:10+01:00
 desc: In this article, we are going to be taking a look at how you can improve your Go development workflow through the use of git hooks that automatically format and lint your Go code
 author: Elliot Forbes
