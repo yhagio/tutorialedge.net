@@ -13,6 +13,8 @@ twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 
 ---
+> **Source Code** - The full source code for this tutorial can be found here: [github.com/TutorialEdge/TypeScript-MongoDB-REST-Tutorial](https://github.com/TutorialEdge/TypeScript-MongoDB-REST-Tutorial)
+
 # Introduction
 
 In this tutorial, we'll be building a very simple REST API that will allow you
@@ -290,7 +292,7 @@ mongoose.connect(uri, (err: any) => {
   if (err) {
     console.log(err.message);
   } else {
-    console.log("Succesfully Connected!");
+    console.log("Successfully Connected!");
   }
 });
 
@@ -364,7 +366,7 @@ export let deleteBook = (req: Request, res: Response) => {
     if (err) {
       res.send(err);
     } else {
-      res.send("Succesfully Deleted Book");
+      res.send("Successfully Deleted Book");
     }
   });
 };
@@ -386,7 +388,7 @@ export let updateBook = (req: Request, res: Response) => {
       if (err) {
         res.send(err);
       } else {
-        res.send("Succesfully updated book!");
+        res.send("Successfully updated book!");
       }
     }
   );
@@ -440,3 +442,9 @@ feedback on twitter: [@Elliot_F](https://twitter.com/elliot_f).
 
 If you need any further help then please feel free to let me know in the
 comments section below!
+
+## Further Reading
+
+If you enjoyed this article then you may also enjoy some of these posts on our site:
+
+* [Testing a TypeScript API with Mocha and Chai](https://tutorialedge.net/typescript/testing-typescript-api-with-mocha-chai/)
