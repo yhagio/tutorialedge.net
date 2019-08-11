@@ -50,7 +50,13 @@ Before we get started creating our TypeScript application, we'll first need to i
 tsc --init
 ```
 
-This command will go and create a `.tsconfig` file in the root of our project directory which will contain
+This command will go and create a `.tsconfig` file in the root of our project directory which will contain all of the default settings for compiling our TypeScript application into executable JavaScript.
+
+With this initialized, we'll also have to initialize a new `package.json` file. This can be done by calling:
+
+    yarn init
+
+The `package.json` file will contain all of our TypeScript project's dependencies.
 
 # Our TypeScript Application
 
@@ -79,10 +85,10 @@ So, to get started, we'll need to create a very simple REST API that will expose
 
 ```py
 - GET - /books # returns all books
-- GET - /book/{1} # returns a book with id 1
+- GET - /book/1 # returns a book with id 1
 - POST - /book # inserts a new book into the table
-- DELETE - /book/{1} # deletes a book with id of 1
-- PUT - /book/{1} # updates a book with id of 1
+- DELETE - /book/1 # deletes a book with id of 1
+- PUT - /book/1 # updates a book with id of 1
 ```
 
 This doesn't look too bad, 5 distinct endpoints, nothing we haven't done before!
