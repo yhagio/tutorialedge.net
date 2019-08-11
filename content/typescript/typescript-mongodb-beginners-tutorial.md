@@ -1,25 +1,33 @@
 ---
 author: Elliot Forbes
-date: 2018-06-10T19:56:37+01:00
-desc:
-  In this tutorial, we are going to look at how you can work with MongoDB within
+date: 2018-06-10T18:56:37.000+00:00
+desc: In this tutorial, we are going to look at how you can work with MongoDB within
   your TypeScript application
 image: typescript.png
 series: typescript
 tags:
-  - typescript
-  - mongodb
+- typescript
+- mongodb
 title: Typescript REST API And MongoDB Beginners Tutorial
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
----
 
+---
 # Introduction
 
 In this tutorial, we'll be building a very simple REST API that will allow you
 to store, query, update and delete books from a book table within your MongoDB
 instance. This will hopefully cover everything you need to get a basic project
 up yourself for your own side projects.
+
+# Prerequisites
+
+In order to complete this tutorial, you are going to need the following:
+
+* `npm` or `yarn` installed on your machine. We'll be using `yarn` as our primary tool for dependency management, but `npm` does also work should you wish to use that instead.
+* The `tsc` cli installed on your machine, this can be done with either of these commands: 
+  * `npm install -g typescript`
+  * `yarn global add typescript`
 
 # Setting Up A MongoDB Database with Docker
 
@@ -33,6 +41,16 @@ $ docker run --name my_mongo -d -p 127.0.0.1:27017:27017 mongo
 
 Note: If you already have a mongodb instance up and running then please feel
 free to ignore this step and carry on using your own instance.
+
+# Setting up our Project
+
+Before we get started creating our TypeScript application, we'll first need to initialize our project. This can be done relatively easily with the help of the `tsc` command line tool:
+
+```bash
+tsc --init
+```
+
+This command will go and create a `.tsconfig` file in the root of our project directory which will contain
 
 # Our TypeScript Application
 
@@ -109,6 +127,8 @@ $ yarn add concurrently
 
 Within our `package.json` file we'll now have to add the following `scripts`:
 
+<div class="filename">package.json</div>
+
 ```json
 {
   // clipped
@@ -129,6 +149,8 @@ Let's go and fix this now!
 
 Let's start off by creating a really simple `express` based server that returns
 `hi` when we hit the `/`.
+
+<div class="filename">app.ts</div>
 
 ```ts
 import * as express from "express";
@@ -156,6 +178,8 @@ based REST API!
 
 Ok, so let's start fleshing out our API and subsequently the functions within
 our `book.ts` file we want to expose.
+
+<div class="filename">book.ts</div>
 
 ```ts
 import { Request, Response } from "express";
@@ -195,10 +219,10 @@ app.set("port", process.env.PORT || 3000);
 
 // API Endpoints
 app.get("/", book.allBooks);
-app.get("/{id}", book.getBook);
+app.get("/:id", book.getBook);
 app.post("/", book.addBook);
-app.put("/{id}", book.updateBook);
-app.delete("/{id}", book.deleteBook);
+app.put("/:id", book.updateBook);
+app.delete("/:id", book.deleteBook);
 
 const server = app.listen(app.get("port"), () => {
   console.log("App is running on http://localhost:%d", app.get("port"));
@@ -223,6 +247,8 @@ it being the number one choice years ago and it hasn't changed since.
 
 `mongoose` allows you to work with models, much like Hibernate if you are coming
 from Java.
+
+<div class="filename">book.ts</div>
 
 ```ts
 // book.ts
