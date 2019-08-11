@@ -128,7 +128,7 @@ rebuild any changes we make to our TypeScript based API without having to go
 back into the command line.
 
 ```s
-$ yarn add concurrently
+$ yarn add concurrently nodemon
 ```
 
 Within our `package.json` file we'll now have to add the following `scripts`:
