@@ -179,7 +179,7 @@ Let's go and fix this now!
 # Our app.ts File
 
 Let's start off by creating a really simple `express` based server that returns
-`hi` when we hit the `/`.
+`hi` when we hit the `/`. 
 
 <div class="filename">app.ts</div>
 
@@ -188,6 +188,7 @@ import express, { Request, Response } from "express";
 
 // Our Express APP config
 const app = express();
+app.use(express.json());
 app.set("port", process.env.PORT || 3000);
 
 // API Endpoints
