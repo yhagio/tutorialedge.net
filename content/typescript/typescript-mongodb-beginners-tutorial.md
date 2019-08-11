@@ -50,7 +50,30 @@ Before we get started creating our TypeScript application, we'll first need to i
 tsc --init
 ```
 
-This command will go and create a `.tsconfig` file in the root of our project directory which will contain all of the default settings for compiling our TypeScript application into executable JavaScript.
+This command will go and create a `tsconfig.json` file in the root of our project directory which will contain all of the default settings for compiling our TypeScript application into executable JavaScript.
+
+Within this `tsconfig.json` file you will want to set the `outDir` to `dist/` and we'll want to specify the `sourceRoot` to `src/` and turn on `inlineSourceMap`. After doing that, your `tsconfig.json` file should look something like this:
+
+> **Note**: I've removed all of the commented out fields to keep this short and easy to follow
+
+<div class="filename">tsconfig.json</div>
+
+```json
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "es5",
+    "module": "commonjs",
+    "outDir": "./dist",
+    /* Strict Type-Checking Options */
+    "strict": true,      
+    "esModuleInterop": true,
+    /* Source Map Options */
+    "sourceRoot": "./src",
+    "inlineSourceMap": true
+  }
+}
+```
 
 With this initialized, we'll also have to initialize a new `package.json` file. This can be done by calling:
 
@@ -159,14 +182,14 @@ Let's start off by creating a really simple `express` based server that returns
 <div class="filename">app.ts</div>
 
 ```ts
-import * as express from "express";
+import express, { Request, Response } from "express";
 
 // Our Express APP config
 const app = express();
 app.set("port", process.env.PORT || 3000);
 
 // API Endpoints
-app.get("/", (req: any, res: any) => res.send("hi"));
+app.get("/", (req: Request, res: Response => res.send("hi"));
 
 const server = app.listen(app.get("port"), () => {
   console.log("App is running on http://localhost:%d", app.get("port"));
@@ -214,7 +237,7 @@ Within our `app.ts` file, we'll now want to map these functions up to a
 corresponding endpoint:
 
 ```ts
-import * as express from "express";
+import express, { Request, Response } from "express";
 
 import * as bookController from "./controllers/bookController";
 
