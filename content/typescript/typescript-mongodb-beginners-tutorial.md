@@ -25,7 +25,7 @@ up yourself for your own side projects.
 In order to complete this tutorial, you are going to need the following:
 
 * `npm` or `yarn` installed on your machine. We'll be using `yarn` as our primary tool for dependency management, but `npm` does also work should you wish to use that instead.
-* The `tsc` cli installed on your machine, this can be done with either of these commands: 
+* The `tsc` cli installed on your machine, this can be done with either of these commands:
   * `npm install -g typescript`
   * `yarn global add typescript`
 
@@ -180,12 +180,11 @@ this will successfully start up a really simple server on
 Excellent, we now have a good base on top of which we can build our MongoDB
 based REST API!
 
-# Our book.ts File
+# Our bookController.ts File
 
-Ok, so let's start fleshing out our API and subsequently the functions within
-our `book.ts` file we want to expose.
+Ok, so let's start fleshing out our API and subsequently the functions within our `bookController.ts` file we want to expose.
 
-<div class="filename">book.ts</div>
+<div class="filename">bookController.ts</div>
 
 ```ts
 import { Request, Response } from "express";
@@ -217,18 +216,21 @@ corresponding endpoint:
 ```ts
 import * as express from "express";
 
-import * as book from "./book";
+import * as bookController from "./controllers/bookController";
 
 // Our Express APP config
 const app = express();
 app.set("port", process.env.PORT || 3000);
 
 // API Endpoints
-app.get("/", book.allBooks);
-app.get("/:id", book.getBook);
-app.post("/", book.addBook);
-app.put("/:id", book.updateBook);
-app.delete("/:id", book.deleteBook);
+app.get("/", (req: Request, res: Response) => res.send("hi"))
+
+// API Endpoints
+app.get("/", bookController.allBooks);
+app.get("/{id}", bookController.getBook);
+app.post("/", bookController.addBook);
+app.put("/{id}", bookController.updateBook);
+app.delete("/{id}", bookController.deleteBook);
 
 const server = app.listen(app.get("port"), () => {
   console.log("App is running on http://localhost:%d", app.get("port"));
@@ -257,7 +259,6 @@ from Java.
 <div class="filename">book.ts</div>
 
 ```ts
-// book.ts
 import * as mongoose from "mongoose";
 
 const uri: string = "mongodb://127.0.0.1:27017/local";
@@ -287,6 +288,8 @@ export default Book;
 Within our book controller, we'll now want to create the 5 distinct functions
 that we've previously mapped to an endpoint within our `app.ts` file.
 
+<div class="filename">controllers/bookController.ts</div>
+
 ```ts
 // controllers/bookController.ts
 import { Request, Response } from "express";
@@ -310,6 +313,8 @@ for a particular book based of an `id` that is passed in via a path parameter.
 i.e. `http://localhost:3000/book/my-unique-book-id` where `my-unique-book-id`
 will be an alphanumeric string.
 
+<div class="filename">controllers/bookController.ts</div>
+
 ```ts
 export let getBook = (req: Request, res: Response) => {
   let book = Book.findById(req.params.id, (err: any, book: any) => {
@@ -328,6 +333,8 @@ row to delete from our database. We pass this `id` into the `deleteOne()`
 function and specify the callback function we wish to invoke once this has
 completed.
 
+<div class="filename">controllers/bookController.ts</div>
+
 ```ts
 export let deleteBook = (req: Request, res: Response) => {
   let book = Book.deleteOne({ _id: req.params.id }, (err: any) => {
@@ -343,6 +350,8 @@ export let deleteBook = (req: Request, res: Response) => {
 The `updateBook` function will this time use the `findByIdAndUpdate()` mongoose
 function in order to find a specific book and then update that based off the
 JSON block we send within the body of our `HTTP` request:
+
+<div class="filename">controllers/bookController.ts</div>
 
 ```ts
 export let updateBook = (req: Request, res: Response) => {
@@ -365,6 +374,8 @@ And finally, the `addBook` function will simply insert a new book object into
 our MongoDB database. We'll pass in the `title` and the `author` we wish in a
 `json` object within our `PUT` requests' body. If the `json` object we pass in
 doesn't have these two fields as a minimum then it'll fail and return an error!
+
+<div class="filename">controllers/bookController.ts</div>
 
 ```ts
 export let addBook = (req: Request, res: Response) => {
