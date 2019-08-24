@@ -5,6 +5,7 @@ desc:
   The definitive list of all the books you should buy if you want to master the
   art of programming React applications
 series: react
+image: react.svg
 aliases:
  - "/javascript/best-books-for-learning-react/"
 tags:

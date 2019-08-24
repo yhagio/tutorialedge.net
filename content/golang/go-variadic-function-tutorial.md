@@ -5,6 +5,7 @@ desc:
   In this tutorial, we are going to look at variadic functions in Go and how you
   can use them within your own Go applications
 series: golang
+image: golang.svg
 tags:
   - intermediate
 author: Elliot Forbes
