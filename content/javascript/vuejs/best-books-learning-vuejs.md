@@ -5,6 +5,7 @@ desc:
   In this article we look at some of the best books you can buy in order to nail
   the fundamentals of VueJS
 series: vuejs
+image: vuejs.png
 tags:
   - books
 title: The Best Books For Learning VueJS
