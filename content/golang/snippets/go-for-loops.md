@@ -1,14 +1,14 @@
 ---
-title: "Go for Loops"
+title: "Go for Loops - Basic Primer"
 date: 2019-07-19T13:29:13+01:00
 draft: true
-desc: 
+desc: In this tutorial, we are going to look at how you can define and work with for loops in Go.
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
 series: golang
 image: golang.png
 tags:
-- beginner
+- snippets
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
