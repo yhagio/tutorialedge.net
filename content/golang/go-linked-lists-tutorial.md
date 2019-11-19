@@ -89,4 +89,10 @@ Go Linked Lists Tutorial
 
 # Conclusion
 
-This was a very quick and simple introduction showing you how you can create and work with linked lists in Go. 
+Awesome, so in this tutorial, we looked at how you can work with linked lists in Go. We covered defining linked lists, and then we covered various ways you could intereact with you linked lists. 
+
+## Further Reading:
+
+If you enjoyed this tutorial or found it useful then you may also enjoy these other articles:
+
+* [Go Maps Tutorial](https://tutorialedge.net/golang/go-maps-tutorial/)
