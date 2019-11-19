@@ -17,7 +17,11 @@ Linked lists are a very useful data structure in computer science that can be us
 
 # The container/list package
 
-Thankfully, in Go, we have a handy linked list structure already implemented for us and ready to use in the shape of the container/list package - [container/list](https://golang.org/pkg/container/list/)
+Thankfully, in Go, we have a handy linked list structure already implemented for us and ready to use in the shape of the container/list package - [container/list](https://golang.org/pkg/container/list/).
+
+This incredibly handy package includes a number of different but helpful methods on the list structure that it exposes that allow us to easily query our linked list and iterate over it with minimal fuss.
+
+In this tutorial, we'll look at how you can define your own linked lists and then cover some of the methods that you can use to make life easier when working with these linked lists.
 
 # Defining a Linked List Struct
 
