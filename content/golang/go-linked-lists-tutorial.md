@@ -15,24 +15,31 @@ In this tutorial, we are going to be taking a look at how you can create and wor
 
 Linked lists are a very useful data structure in computer science that can be used for a wide variety of different tasks. They are also heavily used within programming interview questions, so a good knowledge of how they work and how you can create one in Go is vital if you want to land a new job!
 
+# The container/list package
+
+Thankfully, in Go, we have a handy linked list structure already implemented for us and ready to use in the shape of the container/list package - [container/list](https://golang.org/pkg/container/list/)
+
 # Defining a Linked List Struct
 
-Let's first take a look at how we can define a linked list in Go using a struct. This struct will feature 2 distinct elements, a Value and Next which will be a pointer to the next item in the linked list.
+Let's first take a look at how we can define a linked list in Go.
 
 <div class="filename"> main.go </div>
 
 ```go
 package main
 
-import "fmt"
-
-type ListNode struct {
-    Value int
-    Next *ListNode
-}
+import (
+    "fmt"
+    "container/list"
+)
 
 func main() {
     fmt.Println("Go Linked Lists Tutorial")
+    mylist := list.New()
+    mylist := mylist.PushBack(1)
+    mylist := mylist.PushFront(2)
+    // we now have a linked list with '1' at the back of the list
+    // and '2' at the front of the list.
 }
 ```
 
@@ -47,35 +54,23 @@ There a few potential ways to iterate over a linked list such as this in Go. The
 ```go
 package main
 
-import "fmt"
-
-type ListNode struct {
-    Value int
-    Next *ListNode
-}
-
-
+import (
+    "fmt"
+    "container/list"
+)
 
 func main() {
-	fmt.Println("Go Linked Lists Tutorial")
+    fmt.Println("Go Linked Lists Tutorial")
 	
-	node5 := ListNode{Value: 5}
-	node4 := ListNode{Value: 4, Next: &node5}
-	node3 := ListNode{Value: 3, Next: &node4}
-	node2 := ListNode{Value: 2, Next: &node3}
-	node1 := ListNode{Value: 1, Next: &node2}
+    mylist := list.New()
+    mylist := mylist.PushBack(1)
+    mylist := mylist.PushFront(2)
 
-	currentNode := &node1
+    for element := mylist.Front(); element != nil; element = element.Next() {
+	// do something with element.Value
+	fmt.Println(element.Value)
+    }
 
-	fmt.Printf("First Node: %d \n", currentNode.Value)
-
-    // run if the next node is not nil
-	for currentNode.Next != nil {
-        // set the current node to the next node
-        currentNode = currentNode.Next#
-        // process the next node in the linked list
-		fmt.Println(currentNode.Value)
-	}
 }
 ```
 
@@ -84,17 +79,10 @@ When you run this, you should see that it prints out all of the values defined w
 <div class="filename"> $ go run main.go </div>
 ```output
 Go Linked Lists Tutorial
-First Node: 1
 2
-3
-4
-5
+1
 ```
 
 # Conclusion
 
 This was a very quick and simple introduction showing you how you can create and work with linked lists in Go. 
-
-<!-- ## Further Reading
-
-* []() -->
