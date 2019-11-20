@@ -40,8 +40,8 @@ import (
 func main() {
     fmt.Println("Go Linked Lists Tutorial")
     mylist := list.New()
-    mylist := mylist.PushBack(1)
-    mylist := mylist.PushFront(2)
+    mylist.PushBack(1)
+    mylist.PushFront(2)
     // we now have a linked list with '1' at the back of the list
     // and '2' at the front of the list.
 }
@@ -67,8 +67,8 @@ func main() {
     fmt.Println("Go Linked Lists Tutorial")
 	
     mylist := list.New()
-    mylist := mylist.PushBack(1)
-    mylist := mylist.PushFront(2)
+    mylist.PushBack(1)
+    mylist.PushFront(2)
 
     for element := mylist.Front(); element != nil; element = element.Next() {
 	// do something with element.Value
@@ -86,6 +86,68 @@ Go Linked Lists Tutorial
 2
 1
 ```
+
+# Populating a Linked List
+
+When it comes to populating a linked list we have a number of methods to choose from. We've already seen the PushBack and PushFront methods in the previous code snippet. These do the job of inserting a new element into our linked list at either the front or the back of said list.
+
+<div class="filename"> main.go </div>
+```go
+
+mylist.PushBack(1)
+
+mylist.PushFront(1)
+
+mylist.InsertAfter
+
+```
+
+# Removing Elements from a Linked List
+
+When it comes to deleting an element from a linked list, there is yet another method available to us which makes our life a breeze. This method is the aptly named Remove() method!
+
+<div class="filename"> main.go </div>
+```go
+
+element := mylist.Front()
+mylist.Remove(element)
+
+```
+
+The Remove function takes in a pointer to an element within the list, and we can use it in handy situations where we want to say filter out elements that don't meet a certain threshold within our linked list:
+
+<div class="filename"> main.go </div>
+```go
+package main
+
+import (
+	"fmt"
+	"container/list"
+)
+
+
+func main() {
+
+	mylist := list.New()
+	mylist.PushBack(1)
+	mylist.PushFront(2)
+	
+	for element := mylist.Front(); element != nil; element = element.Next() {
+		// do something with element.Value
+		if element.Value != 1 {
+			mylist.Remove(element)
+		}
+	}
+	
+	for element := mylist.Front(); element != nil; element = element.Next() {
+		// do something with element.Value
+		fmt.Println(element.Value)
+	}
+
+}
+```
+
+When we run this, we should see that the second for loop only prints out 1 and we have successfully filter our linked list for elements that meet a certain criteria!
 
 # Conclusion
 
