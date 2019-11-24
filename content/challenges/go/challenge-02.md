@@ -15,18 +15,22 @@ twitter: https://twitter.com/Elliot_F
 
 This application will run indefinitely on a machine and expose information on given port and an endpoint such that when you hit http://localhost:9000/stats it will fetch and display the stats for that machine in JSON format.
 
-#### Key Concepts
+# Key Concepts
 
 * You will gain an understanding of how to write a simple HTTP server in Go
 * You will learn about how to marshal and unmarshal information into structs
 
-<details>
-  <summary>Tutorials</summary>
+# Completing the Challenge
+
+In order to complete the challenge, fork the [elliotforbes/go-challenges](https://github.com/elliotforbes/go-challenges) repository into your own GitHub account. 
+
+Next, create a directory within that repo for each of the challenges you attempt! This will give you a super handy repo that will contain excellent references for your own future Go projects!
+
+## Helpful Tutorials
   
-  The following tutorials should help you to complete this challenge:
-  
-  * [Creating a RESTful API in Go](https://tutorialedge.net/golang/creating-restful-api-with-golang/)
-</details>
+The following tutorials should help you to complete this challenge:
+
+* [Creating a RESTful API in Go](https://tutorialedge.net/golang/creating-restful-api-with-golang/)
 
 # Conclusion
 
