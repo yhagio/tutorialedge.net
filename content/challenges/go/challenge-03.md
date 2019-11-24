@@ -19,13 +19,17 @@ Go Modules and the go mod tool have been deemed the official strategy for managi
 
 * You will learn how to effectively break up your simple Go applications into larger, better structured applications using Go Modules as your dependency management system
 
-<details>
-  <summary>Tutorials</summary>
+# Completing the Challenge
+
+In order to complete the challenge, fork the [elliotforbes/go-challenges](https://github.com/elliotforbes/go-challenges) repository into your own GitHub account. 
+
+Next, create a directory within that repo for each of the challenges you attempt! This will give you a super handy repo that will contain excellent references for your own future Go projects!
+
+## Helpful Tutorials
   
-  The following tutorials should help you to complete this challenge:
-  
-  * [Go Modules Tutorial](https://tutorialedge.net/golang/go-modules-tutorial/)
-</details>
+The following tutorials should help you to complete this challenge:
+
+* [Go Modules Tutorial](https://tutorialedge.net/golang/go-modules-tutorial/)
 
 # Conclusion
 
