@@ -27,6 +27,8 @@ The application, when run, should return system utilization such as CPU utilizat
 
 # Key Concepts
 
+Through completing this challenge:
+
 * You will learn how to create a simple Go application and subsequently compile and run this application.
 * You will gain a basic understanding of the os package and how to import packages from the standard library into your Go applications.
 
@@ -42,7 +44,6 @@ The following tutorials should help you to complete this challenge:
 
 * [Getting Started with Go](https://tutorialedge.net/golang/getting-started-with-go/)
 
-
 # Conclusion
 
-Congratulations, you have successfully completed the first TutorialEdge Go challenge! 
+Congratulations, you have successfully completed the first TutorialEdge Go challenge!
