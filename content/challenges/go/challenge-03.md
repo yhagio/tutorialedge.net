@@ -1,6 +1,6 @@
 ---
 author: Elliot Forbes
-date: 2018-03-19T11:05:52Z
+date: 2019-11-24T11:05:52Z
 desc: In this Challenge, you will be improving the HTTP server you originally developed in the second Go Challenge!
 image: golang.png
 series:
@@ -13,7 +13,16 @@ twitter: https://twitter.com/Elliot_F
 
 > This challenge will be to split up the new REST API application you have developed in Challenge 2 and utilize Go Modules. 
 
+# Challenge
+
 Go Modules and the go mod tool have been deemed the official strategy for managing dependencies in your Go applications. Break up the existing application so that you create an entry point main.go file in the root of your directory as well as a sub-module which contains your endpoint code.
+
+## Acceptance Criteria
+
+In order to successfully complete this challenge, your project will have to:
+
+* Use Go Modules as a means of managing your dependencies
+* Contain a `main.go` file which references a module `stats` which is contained within a `stats/stats.go` file within your project. This `stats/stats.go` file must contain the logic for collecting the hardware utilization stats from your machine and exposing them as a HTTP function. 
 
 # Key Concepts
 
