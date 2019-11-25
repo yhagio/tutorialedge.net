@@ -1,6 +1,6 @@
 ---
 author: Elliot Forbes
-date: 2018-03-19T11:05:52Z
+date: 2019-11-24T11:05:52Z
 desc: In this Challenge, you will create your first Go application and commit it up to Github!
 image: golang.png
 series:
@@ -24,6 +24,15 @@ There is a huge market right now for logging and monitoring systems that allow y
 The application, when run, should return system utilization such as CPU utilization, RAM utilization, and Backing Store Utilization in a table format
 
 * This code will be contained within a single `main.go` file
+
+## Acceptance Criteria
+
+In order to successfully complete this challenge, your project will have to:
+
+* Collect the CPU utilization of your machine
+* Collect the RAM Utilization of your machine
+* Collect the Backing Storage Utilization of your machine
+* Display the results in a friendly fashion in the console when `go run main.go` is executed.
 
 # Key Concepts
 
