@@ -43,6 +43,8 @@ This tutorial will effectively act as a perfect example of this portability, as 
 
 > **Note** - For this particular tutorial, I'm going to be stealing the source code from my other tutorial on [Building a simple Web Server in Go](/golang/creating-simple-web-server-with-golang/). 
 
+<div class="filename"> my-project/main.go</div>
+
 ```go
 package main
 
@@ -73,6 +75,8 @@ Awesome, if we want to run this then we can do so by running `go run main.go` wh
 # Writing a Dockerfile
 
 Now that we have our server, let's set about writing our `Dockerfile` and constructing the container in which our newly born Go application will live.
+
+<div class="filename"> my-project/Dockerfile </div>
 
 ```Dockerfile
 # We specify the base image we need for our
@@ -171,6 +175,11 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 ```
 
 If we then wanted to kill this container, we could do so by using the `docker kill` command and pass in that container ID that is prints out in the terminal.
+
+# Working with Go Modules and Docker
+
+
+
 
 # Deploying our Docker Application to DigitalOcean
 
