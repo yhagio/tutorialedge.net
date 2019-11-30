@@ -160,7 +160,7 @@ with some dummy data that we can retrieve and modify later on.
 
 ```go
 func main() {
-    articles = []Articles{
+    articles := []Article{
         Article{Title: "Hello", Desc: "Article Description", Content: "Article Content"},
         Article{Title: "Hello 2", Desc: "Article Description", Content: "Article Content"},
     }
