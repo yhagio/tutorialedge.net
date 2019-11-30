@@ -1,7 +1,6 @@
 ---
 title: "Go Pointers Tutorial"
 date: 2019-11-30T11:56:56Z
-draft: true
 desc:  In this tutorial, we are going to be covering pointers in Go and how you can use them within your own Go programs. We'll be covering the best practices and we'll be covering some of the most common use-cases for pointers.
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
