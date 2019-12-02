@@ -3,6 +3,7 @@ author: Elliot Forbes
 date: 2019-11-24T11:05:52Z
 desc: In this Challenge, you are going to be building a Go application that 
 image: golang.png
+weight: 4
 series:
   - go-challenges
 tags:
@@ -40,7 +41,7 @@ By completing this challenge:
 
 # Completing the Challenge
 
-In order to complete the challenge, fork the elliotforbes/go-challenges repository into your own GitHub account.
+In order to complete the challenge, fork the [elliotforbes/go-challenges](https://github.com/elliotforbes/go-challenges) repository into your own GitHub account.
 
 Next, create a directory within that repo for each of the challenges you attempt! This will give you a super handy repo that will contain excellent references for your own future Go projects!
 
