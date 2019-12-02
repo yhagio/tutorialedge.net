@@ -3,6 +3,7 @@ author: Elliot Forbes
 date: 2019-11-24T11:05:52Z
 desc: In this Challenge, you will be improving the HTTP server you originally developed in the second Go Challenge!
 image: golang.png
+weight: 3
 series:
   - go-challenges
 tags:
