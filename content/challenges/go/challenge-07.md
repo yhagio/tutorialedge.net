@@ -1,29 +1,24 @@
 ---
-author: Elliot Forbes
-date: 2019-11-24T11:05:52Z
-desc: In this Challenge, you are going to be building a Go application that 
-image: golang.png
-weight: 5
+title: "Challenge 06"
+date: 2019-12-02T20:47:28Z
 draft: true
-series:
-  - go-challenges
+desc: 
+author: Elliot Forbes
+twitter: https://twitter.com/elliot_f
+series: 
+image: 
 tags:
-  - go
-title: Challenge 07 - Pointers and References
-twitter: https://twitter.com/Elliot_F
+- beginner
+authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
-Pointers vs References in Go is a topic I see a lot of beginners struggling with when they come from a language such as Python or Java which typically don't leverage pointers within the constructs of their language.
+# Introduction
 
-If you are coming from a C/C++ or lower level language, then you may well already be familiar with the differences between pointers and references in Go. If that is the case then this tutorial will help to introduce to you the Go way of doing things when it comes to handling pointers.
+# Prerequisites
 
-# Challenge
+# Conclusion
 
+## Further Reading:
 
+* []()
 
-# Key Concepts
-
-By completing this challenge:
-
-* You will gain an appreciation of the difference between both pointers and references
-* You will 
