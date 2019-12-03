@@ -32,6 +32,7 @@ You will need to create a linked list `Playlist` data structure as well as a `st
 * You must implement a function or method that allows you to remove a `Song` from your `Playlist`
 * You must implement a function or method that allows you to insert a `Song` into your `Playlist` at any given point
 * You must implement a function or method that allows you to add a `Song` to the end of your `Playlist`
+* You must implement a function or method that displays the entire playlist in order.
 
 # Key Concepts
 
