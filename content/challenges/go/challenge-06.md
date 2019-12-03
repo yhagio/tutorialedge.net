@@ -1,7 +1,7 @@
 ---
 author: Elliot Forbes
 date: 2019-11-24T11:05:52Z
-desc: In this Challenge, you are going to be building a Go application that 
+desc: In this Challenge, you are going to be implementing your own Linked Lists and learning the fundamentals of pointers in the Go programming language!
 image: golang.png
 weight: 6
 series:
