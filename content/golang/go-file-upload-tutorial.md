@@ -173,6 +173,8 @@ directory that follows the convention `upload-23421432.png`.
 
 # Conclusion
 
+> **Source Code** - The full source code for this project can be found here: [TutorialEdge/go-file-upload-tutorial](https://github.com/TutorialEdge/go-file-upload-tutorial)
+
 Hopefully you found this tutorial useful and entertaining! If you did, or you
 spotted anything wrong with the tutorial, then please feel free to let me know
 through the suggestion section below!
