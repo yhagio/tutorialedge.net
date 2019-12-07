@@ -92,6 +92,12 @@ Large applications such as Hashicorp's Terraform or Google's own Kubernetes tend
 
 This structure has worked exceptionally well and allowed the developers to deliver incredible value to the development community, however I think that as Go Modules start to become more prevalent, we will start to see a migration of these applications away from the more traditional structure and into a newer structure. 
 
+# Splitting Up Projects
+
+After a certain point, it may make sense to completely rip out certain parts of your project that make sense into separate repositories that have their own life cycle.  
+
+This will feature it's own set of drawbacks such as increased overhead when it comes to managing updates across your project's estate. However, it also means that your projects will be easier to digest for newcomers to the project who want to contribute and help. 
+
 # Conclusion
 
 Hopefully this article has helped you in your development efforts and given you some ideas when you start modeling your next Go project!
