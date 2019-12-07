@@ -18,3 +18,5 @@ weight: 100
 
 In this course, we are going to be taking a look at how you can get started with
 the Go programming language.
+
+> **Go Challenges** - Interested in learning Go through practical examples? Then check out my list of [Go Challenges](/challenges/go/) that are now available on the site!
