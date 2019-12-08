@@ -67,12 +67,51 @@ You will then `commit` these changes locally and `push` them up to your own `for
 
 ## Step 1 - Cloning
 
-The first action we are going to take is to `clone` down the repository 
+The first action we are going to take is to `clone` down the repository and then 
+
+## Step 2 - Making Changes
+
+Now that we have this repository on our local machine, it's time to make a few simple changes to the code. 
+
+Before we make any changes, we will first want to create a branch in which we will be working from. This practice of branching off ensures that we always have a working copy of our code in the master branch and gives us free reign to make breaking changes on a separate copy of the codebase. 
+
+<div class="filename"> command line </div>
+
+```output
+$ git branch -b feature-branch
+``` 
+
+> If you are working with a ticketing system such as JIRA then it is good practice to name your branches based on the ticket number you are working against. I.e. `git branch -b JIRA-0001`. This practice helps you track what changes have been made against the ticket and helps overall project organisation.
+
+Now that we have created this feature branch, we can start making code changes and simple commits to the branch. 
+
+> **Action** - Make some code changes and save these changes.
+
+Now that we have made some changes, we can now commit these changes and push these up to our feature branch:
+
+<div class="filename"> command line </div>
+
+```output
+$ git add -A 
+$ git commit -m "Simple Changes"
+$ git push origin feature-branch
+```
+
+The first 2 commands add the changes we have made and create a commit. These commits can then be pushed up to our feature branch using the `push` command. These changes have now been pushed up to our repository and other people can now pull down these changes to their own machines to work on them themselves should they wish.
+
+## Step 3 - Making a Pull Request
+
+At this point, we have pushed up our code to a separate branch from `master`. We haven't quite finished as we need to merge these changes into our `master` branch.
+
+There are a number of different ways to do this, but for open-source contributions the most popular way is to create a pull request.
+
 
 # Conclusion
 
 So, in this tutorial, we have covered the absolute basics of `git` and source control. We have been able to 
 
 ## Further Reading:
+
+If you enjoyed this article then you may also enjoy some of my other articles on the site:
 
 * []()
