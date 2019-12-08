@@ -80,6 +80,7 @@ Here are just a few Go projects that have adopted this structure.
 * **[google/go-cloud](https://github.com/google/go-cloud)** - This is an excellent example of a project that has adopted this structure. They have broken up the project into packages for each of the IAAS Cloud Providers, and each package contains all of the code pertinent to that specific cloud provider. 
 * **[hashicorp/consul](https://github.com/hashicorp/consul)** - This is another great example of a large project that has chosen to go down the modular approach.
 * **[ipfs/go-ipfs](https://github.com/ipfs/go-ipfs)** - IPFS is a very cool peer-to-peer filesystem written in Go based off of previous systems such as Git and BitTorrent. Again, they've chosen to go for a modular approach when developing their system.
+* **[gohugoio/hugo](https://github.com/gohugoio/hugo)** - The very awesome framework which is currently used as the backend of this site!
  
 # Mature Projects
 
