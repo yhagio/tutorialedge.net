@@ -105,10 +105,21 @@ At this point, we have pushed up our code to a separate branch from `master`. We
 
 There are a number of different ways to do this, but for open-source contributions the most popular way is to create a pull request.
 
+Within GitHub, on the home page for the repository that you are merging into, you should see a button for creating a pull request. 
+
+![Create Pull Request Button]()
+
+Click on this and it should give you a number of different options. Now, our aim is to merge our forked repository that we have been working on into the original repository so that our changes are available for everyone to see.
+
+You should see the option to select your forked repository, select this and then select the master branch of `tutorialedge/learn-git` and create the pull request. 
+
+After this point, I, as the repository owner, will get a notification saying that a new pull request has been opened and I will be able to review it and decide whether or not to merge your changes.
+
+
 
 # Conclusion
 
-So, in this tutorial, we have covered the absolute basics of `git` and source control. We have been able to 
+So, in this tutorial, we have covered the absolute basics of `git` and source control. We have been able to learn some of the basic git commands needed to get up and running and we've also been able to try our hand at a practical example of
 
 ## Further Reading:
 
