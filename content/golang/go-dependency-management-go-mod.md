@@ -65,9 +65,35 @@ From a usability point of view, this is a major improvement.
 
 # Semantic Import Versioning
 
+If you are developing, being able to pin you application against specific versions of packages and libraries that you know that work. This ensures that regardless of how long your software has been in production, you will have confidence that it will build successfully and work error-free without any nasty surprises.
+
+Go Modules features a way of pinning your 
+
 # Vendoring Packages
+
+
+
+## Building With Your Vendor Directory
+
+Sometimes, when you are working on tracking down a bug which is occuring in one of the packages that you import you may have to build your project with slightly modified versions of these specific packages.
+
+This is where building with a `vendor` directory can come in incredibly useful and I have used this in the past tracking down a particularly weird bug that was specific to the hardware I was running on top of.
+
+In order to build our project using these vendored dependencies can be done using this `go build` command:
+
+```output
+$ go build -mod vendor main.go
+```
 
 # Conclusion
 
 Hopefully this tutorial has demystified the art of dependency management in Go
 with the new Go modules.
+
+We have covered a lot in this particular tutorial. We have covered the basics of dependency management in Go as well as some tricks that you can use to make your go development experience easier.
+
+## Further Reading
+
+If you enjoyed this tutorial, then you may also enjoy some of the other tutorials on this site:
+
+* []()

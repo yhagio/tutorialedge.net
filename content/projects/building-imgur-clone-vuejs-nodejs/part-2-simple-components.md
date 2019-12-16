@@ -363,9 +363,14 @@ Let's start by adding some global style rules to our application within our `Hom
 
 ```
 
+When you click save with these new stylesheet trules in place, you should hopefully see a slightly nicer looking base for our imgur app take shape!
+
+
 # Conclusion
 
 Awesome, so in this tutorial of our series, we have successfully learned how our Vue.js application is structured as well as how we can go about creating simple components and rendering out in lists using the `v-for` directive. 
+
+If you are enjoying this series, then please let me know on twitter by tweeting me with a screenshot of how you are getting on!
 
 ## Further Reading:
 
