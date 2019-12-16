@@ -175,4 +175,4 @@ We have also looked at how we can set up a github.com repository within which we
 
 In the next part of this tutorial series, we will be exploring the world of Vue.js and modifying our existing frontend application by creating new simple components.
 
-* [Part 2 - Creating Simple Vue.js Components](/projects/building-imgur-clone-vuejs-nodejs/part-2-simple-components/)
+<!-- * [Part 2 - Creating Simple Vue.js Components](/projects/building-imgur-clone-vuejs-nodejs/part-2-simple-components/) -->
