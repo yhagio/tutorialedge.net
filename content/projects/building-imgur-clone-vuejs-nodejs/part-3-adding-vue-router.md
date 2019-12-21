@@ -417,6 +417,8 @@ I always feel like adding routing to your applications make them feel like "prop
 
 So, in this tutorial, we have managed to extend our existing Vue.JS Imgur application to incorporate routing and we have created some incredibly simple placeholder components which will be used to login, register and view routes which we will flesh out in the next part of this series.
 
+> **Source Code** - The up to date code for this part of the series can be found here: [elliotforbes/imgur-clone-vuejs-nodejs](https://github.com/elliotforbes/imgur-clone-vuejs-nodejs/tree/861c195270f2cf2c669a762ab7d4da839607fd6d)
+
 ## Further Reading:
 
 In the next tutorial in this series, we are going to be taking a look at authentication with AWS' Cognito service. This will allow people to log in to our Imgur application and create accounts. 
