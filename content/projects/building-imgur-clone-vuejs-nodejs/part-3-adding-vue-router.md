@@ -215,7 +215,7 @@ export default {
 
 Now, at this point, you should be able to click on this `Login` link at the top of your application and it should display something that looks like this within your browser:
 
-![Working Vue Router!](ttps://images.tutorialedge.net/images/imgur-clone/vue-router-01.png)
+![Working Vue Router!](https://images.tutorialedge.net/images/imgur-clone/vue-router-01.png)
 
 ## Register Route and Component
 
@@ -409,7 +409,7 @@ export default {
 
 Now, when you navigate to `/random-id` within your application, you should see that it displays something like this in the browser:
 
-![Working Vue Router!](ttps://images.tutorialedge.net/images/imgur-clone/vue-router-02.png)
+![Working Vue Router!](https://images.tutorialedge.net/images/imgur-clone/vue-router-02.png)
 
 # Conclusion
 
