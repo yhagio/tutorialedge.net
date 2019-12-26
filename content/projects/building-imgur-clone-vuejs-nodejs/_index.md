@@ -22,10 +22,20 @@ By the end of this course we will have covered the following concepts:
 * Building a backend REST API in Node.JS
 * How the frontend talks to the backend using HTTP requests
 * How we can implement authentication and authorization using OAuth2 and JWT
+* How to provision cloud infrastructure using the industry standard tool - Terraform
 
 ## Who is this course for?
 
-This course is primarily geared towards those of you who are somewhat new to full-stack development and wish to see how you can get started building your own simple web applications using Vue.JS and Node.JS. 
+This course is primarily geared towards those of you who are somewhat new to full-stack development and wish to see how you can get started building your own simple web applications using Vue.JS and Node.JS using some industry standard tools like the `serverless cli` and Terraform to provision your underlying cloud infrastructure that supports your application.
+
+## Prerequisites
+
+Before you can start this course, you will need the following tools installed:
+
+* Yarn
+* The AWS CLI and an AWS Account
+* Terraform v0.12+
+* Serverless CLI
 
 ## Finished Product 
 
