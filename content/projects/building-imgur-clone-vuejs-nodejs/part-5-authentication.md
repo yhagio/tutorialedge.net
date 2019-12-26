@@ -1,5 +1,5 @@
 ---
-title: "Part 4 - Authentication between our Backend and Frontend"
+title: "Part 5 - Authentication between our Backend and Frontend"
 date: 2019-08-20T18:44:50+01:00
 draft: true
 desc: In this tutorial series, we are going to be building an Imgur clone using Lambda functions written using Node.JS and a frontend built using Vue.JS
@@ -41,4 +41,4 @@ We have looked at some of the things you must avoid when adding authentication t
 
 In the next tutorial, we are going to be looking at building out the backend of our imgur clone and creating a number of AWS Lambda functions that our frontend SPA will interact with to upload, fetch and delete images within a user's account.
 
-* [Part 5 - Introducing AWS Lambda Functions](/)
+* [Part 6 - Deploying Our Application](/)
