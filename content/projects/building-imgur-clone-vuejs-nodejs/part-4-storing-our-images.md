@@ -45,6 +45,22 @@ As with everything, we'll be starting off simple and creating a Lambda Function 
 
 Before we build and test our function, we'll first need an S3 bucket in place that we will be using to store all of our user's images. 
 
+We'll be using terraform to provision this bucket for us.
+
+```terraform
+provider "aws" {
+}
+
+resource aws_s3_bucket "image_bucket" {
+
+}
+```
+
+With this defined, we can subsequently test this terraform configuration using the following command:
+
+```output
+$ terraform plan
+;"```
 
 
 ## Our Lambda Function Code
