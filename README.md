@@ -49,6 +49,7 @@ then please feel free to submit a pull request.
 - [Vietstone](https://github.com/vietstone)
 - [Stevenson Jean-Pierre](https://github.com/Sjeanpierre)
 - [Ross Jacobs](https://github.com/pocc)
+- [Edvin N](https://github.com/NissesSenap)
 
 - Andrea Koutifaris
 - Andrew Johnson
