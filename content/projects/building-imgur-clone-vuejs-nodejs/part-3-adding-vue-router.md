@@ -3,6 +3,7 @@ title: "Part 3 - Adding The Vue Router to our Application"
 date: 2019-08-20T18:44:50+01:00
 desc: In this tutorial series, we are going to be building an Imgur clone using Lambda functions written using Node.JS and a frontend built using Vue.JS
 author: Elliot Forbes
+weight: 3
 twitter: https://twitter.com/elliot_f
 series: vuejsimgurclone
 image: vuejs.png
