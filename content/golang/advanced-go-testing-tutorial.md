@@ -199,7 +199,6 @@ func TestHttp(t *testing.T) {
 
     resp := w.Result()
     body, _ := ioutil.ReadAll(resp.Body)
-haha
     fmt.Println(resp.StatusCode)
     fmt.Println(resp.Header.Get("Content-Type"))
     fmt.Println(string(body))
