@@ -1,7 +1,6 @@
 ---
 title: "2019 in Review - A Massive Year for TutorialEdge"
 date: 2020-01-02T08:03:47Z
-draft: true
 desc: 2019 has been an exceptional year for TutorialEdge and myself and in this post I cover all the things that have happened in 2019!
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
