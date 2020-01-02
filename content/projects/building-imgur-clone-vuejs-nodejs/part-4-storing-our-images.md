@@ -12,7 +12,7 @@ tags:
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
-In this tutorial, we are going to look at building out the backend of our imgur clone and start creating a few simple AWS Lambda functions that will handle actions such as uploading, retrieving and deleting images. 
+In this tutorial, we are going to look at building out the backend of our imgur clone and start creating a few simple AWS Lambda functions that will handle actions such as uploading, retrieving images. 
 
 This is where our application really starts to take shape and provide real value to our users, just without some critical functions like authentication and registration, which we will be covering in the next tutorial in this series.
 
@@ -60,8 +60,7 @@ With this defined, we can subsequently test this terraform configuration using t
 
 ```output
 $ terraform plan
-;"```
-
+```
 
 ## Our Lambda Function Code
 
@@ -72,6 +71,8 @@ import s3
 
 s3...
 ```
+
+This will allow us to quickly validate whether or not we are able to communicate with our S3 bucket as well as demonstrate how we will be hitting all of the subsequent API endpoints that we will be creating.
 
 ## Serverless Config
 
@@ -97,16 +98,13 @@ Awesome, you should now have your first deployed serverless function which you c
 
 # Storing Images
 
-Now that we have the hang of writing serverless functions, let's 
+Now that we have the hang of writing serverless functions, let's create a lambda function that will act as our image upload endpoint. 
 
+This will be a 2-step process. The first step will involve creating and deploying the lambda function, the second step will involve updating the frontend and adding a component that allows users to upload images. 
 
-# Deleting Images
+## Our Lambda Function
 
-
-
-# Image Rekognition
-
-
+Ok, 
 
 # Conclusion
 
