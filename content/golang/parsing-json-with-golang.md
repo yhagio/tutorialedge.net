@@ -165,7 +165,7 @@ to convert it toa byte array using ioutil.ReadAll. Once it's in a byte array we
 can pass it to our json.Unmarshal() method.
 
 ```go
-// read our opened xmlFile as a byte array.
+// read our opened jsonFile as a byte array.
 byteValue, _ := ioutil.ReadAll(jsonFile)
 
 // we initialize our Users array
