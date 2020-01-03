@@ -48,24 +48,218 @@ Before we build and test our function, we'll first need an S3 bucket in place th
 
 We'll be using terraform to provision this bucket for us.
 
-```terraform
+Create a new directory at the root of your project called `terraform/` and within this create a `main.tf` file. This simple file will contain the configuration needed for terraform to provision an AWS S3 bucket within our AWS account:
+
+<div class="filename"> terraform/main.tf </div>
+
+```yml
 provider "aws" {
+    region = "eu-west-1"
 }
 
-resource aws_s3_bucket "image_bucket" {
+resource "aws_s3_bucket" "imgur_image_bucket" {
+    bucket = "dev-imgur-clone-bucket"
 
+    tags = {
+        Name = "Dev Imgur Clone Bucket"
+        Environment = "Dev"
+    }
 }
 ```
 
-With this defined, we can subsequently test this terraform configuration using the following command:
+Let's break down what we defined here. The first `provider` block tells terraform that we wish to use the `AWS` terraform provider to provision any `resources` defined within the rest of the terraform code. This 
+
+With this defined, we can subsequently initialize our terraform using the following command:
+
+<div class="filename"> $ terraform init </div>
 
 ```output
-$ terraform plan
+
+Initializing the backend...
+
+Initializing provider plugins...
+- Checking for available provider plugins...
+- Downloading plugin for provider "aws" (hashicorp/aws) 2.43.0...
+
+The following providers do not have any version constraints in configuration,
+so the latest version was installed.
+
+To prevent automatic upgrades to new major versions that may contain breaking
+changes, it is recommended to add version = "..." constraints to the
+corresponding provider blocks in configuration, with the constraint strings
+suggested below.
+
+* provider.aws: version = "~> 2.43"
+
+Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will 
+detect it and remind you to do so if necessary.
 ```
+
+With this now initialized, we can test our configuration to see if we have done everything right by running `terraform plan` like so:
+
+<div class="filename"> $ terraform plan </div>
+
+```output
+Refreshing Terraform state in-memory prior to plan...
+The refreshed state will be used to calculate this plan, but will not be
+persisted to local or remote state storage.
+
+
+------------------------------------------------------------------------
+
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # aws_s3_bucket.imgur_image_bucket will be created
+  + resource "aws_s3_bucket" "imgur_image_bucket" {
+      + acceleration_status         = (known after apply)
+      + acl                         = "public"
+      + arn                         = (known after apply)
+      + bucket                      = "dev-imgur-clone-bucket"
+      + bucket_domain_name          = (known after apply)
+      + bucket_regional_domain_name = (known after apply)
+      + force_destroy               = false
+      + hosted_zone_id              = (known after apply)
+      + id                          = (known after apply)
+      + region                      = (known after apply)
+      + request_payer               = (known after apply)
+      + tags                        = {
+          + "Environment" = "Dev"
+          + "Name"        = "Dev Imgur Clone Bucket"
+        }
+      + website_domain              = (known after apply)
+      + website_endpoint            = (known after apply)
+
+      + versioning {
+          + enabled    = (known after apply)
+          + mfa_delete = (known after apply)
+        }
+    }
+
+Plan: 1 to add, 0 to change, 0 to destroy.
+
+------------------------------------------------------------------------
+
+Note: You didn't specify an "-out" parameter to save this plan, so Terraform
+can't guarantee that exactly these actions will be performed if
+"terraform apply" is subsequently run.
+```
+
+Awesome, we can see from the output on our `terraform plan` command that our terraform code will successfully provision an S3 bucket in the `eu-west-1` region with some tags and a `public` ACL.
+
+The next step is to create this by running `terraform apply` like so:
+
+<div class="filename"> $ terraform apply </div>
+
+```output
+
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # aws_s3_bucket.bucket will be created
+  + resource "aws_s3_bucket" "bucket" {
+      + acceleration_status         = (known after apply)
+      + acl                         = "private"
+      + arn                         = (known after apply)
+      + bucket                      = "dev-imgur-clone-bucket-test"
+      + bucket_domain_name          = (known after apply)
+      + bucket_regional_domain_name = (known after apply)
+      + force_destroy               = false
+      + hosted_zone_id              = (known after apply)
+      + id                          = (known after apply)
+      + region                      = (known after apply)
+      + request_payer               = (known after apply)
+      + tags                        = {
+          + "Environment" = "Dev"
+          + "Name"        = "Dev Imgur Clone Bucket"
+        }
+      + website_domain              = (known after apply)
+      + website_endpoint            = (known after apply)
+
+      + versioning {
+          + enabled    = (known after apply)
+          + mfa_delete = (known after apply)
+        }
+    }
+
+Plan: 1 to add, 0 to change, 0 to destroy.
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+aws_s3_bucket.bucket: Creating...
+aws_s3_bucket.bucket: Still creating... [10s elapsed]
+aws_s3_bucket.bucket: Creation complete after 20s [id=dev-imgur-clone-bucket-test]
+
+Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+```
+
+From the final few lines of our output, we can see the terraform has successfully provisioned us with an S3 bucket that we can use as the backend for our imgur clone!
+
+Later in this series, we will be adding a DynamoDB database which will hold meta information generated using the Rekognition service, but for now, we will be able to work with a simple S3 bucket.
+
+> **Note** - You can easily destroy this bucket by running `terraform destroy` should you wish to quickly clean up after yourself!
 
 ## Our Lambda Function Code
 
 Now that we have an S3 bucket in place that will be able to store our user's images, we can start writing code that will retrieve the images from our bucket. 
+
+We'll first be creating a new directory within the root of our project called `backend` which will house all of our backend Lambda function code.
+
+Within this directory, we are going to be creating a the yml configuration file for our serverless functions within a `serverless.yml` file:
+
+<div class="filename"> backend/serverless.yml </div>
+
+```yml
+service: imgur-clone-functions
+
+frameworkVersion: ">=1.1.0 <2.0.0"
+
+custom:
+  bucket: dev-imgur-clone-bucket-test
+
+provider:
+  name: aws
+  runtime: python3.6
+  region: eu-west-1
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - s3:PutObject
+        - s3:PutObjectAcl
+      Resource: "arn:aws:s3:::${self:custom.bucket}/*"
+
+functions:
+  list:
+    handler: list.list
+    environment:
+      BUCKET: ${self:custom.bucket}
+      TABLE: ${self:custom.table}
+    events:
+      - http:
+          path: list
+          method: get
+          cors: true
+```
+
+<div class="filename"> backend/list.py </div>
 
 ```py
 import s3
@@ -75,37 +269,12 @@ s3...
 
 This will allow us to quickly validate whether or not we are able to communicate with our S3 bucket as well as demonstrate how we will be hitting all of the subsequent API endpoints that we will be creating.
 
-## Serverless Config
-
-Now that we have the code for our first lambda function, we'll can now start writing our `serverless.yml` configuration that will allow us to easily deploy our first lambda function as well as giving it a HTTP endpoint.
-
-<div class="filename"> .serverless.yml </div>
-
-```yml
-functions:
-    events:
-    ...
-```
-
-With this configuration in place, let's attempt to now deploy this 
-
-<div class="filename"> $ serverless deploy </div>
-
-```output
-... deploy output
-```
-
-Awesome, you should now have your first deployed serverless function which you can hit through the endpoint outlined at the bottom of your deployment script.
-
 # Storing Images
 
 Now that we have the hang of writing serverless functions, let's create a lambda function that will act as our image upload endpoint. 
 
 This will be a 2-step process. The first step will involve creating and deploying the lambda function, the second step will involve updating the frontend and adding a component that allows users to upload images. 
 
-## Our Lambda Function
-
-Ok, 
 
 # Conclusion
 
