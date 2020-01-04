@@ -1,6 +1,6 @@
 ---
 title: "Part 4 - Uploading and Storing Images"
-date: 2020-01-04T18:44:50+01:00
+date: 2020-01-04T00:44:50+01:00
 weight: 5
 desc: In this tutorial series, we are going to be building an Imgur clone using Lambda functions written using Node.JS and a frontend built using Vue.JS
 author: Elliot Forbes
