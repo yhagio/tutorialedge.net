@@ -185,11 +185,6 @@ as wel as SQL databases at will.
 
 ## A Simple MySQL Database
 
-Ok, for the purpose of this tutorial, we'll be using MySQL as our data-store
-solution behind our GraphQL database. I'll undoubtedly be doing a similar
-tutorial for MongoDB in the future, but this should hopefully demonstrate the
-underlying mechanics.
-
 For the purpose of this tutorial, we'll use a SQLite3 local SQL database to
 quickly demonstrate how you could swap in a more effective data-source.
 
