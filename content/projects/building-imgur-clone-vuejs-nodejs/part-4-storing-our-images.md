@@ -1,7 +1,6 @@
 ---
 title: "Part 4 - Uploading and Storing Images"
-date: 2019-08-20T18:44:50+01:00
-draft: true
+date: 2020-01-04T18:44:50+01:00
 weight: 5
 desc: In this tutorial series, we are going to be building an Imgur clone using Lambda functions written using Node.JS and a frontend built using Vue.JS
 author: Elliot Forbes
@@ -13,7 +12,7 @@ tags:
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
-In this tutorial, we are going to look at building out the backend of our imgur clone and start creating a few simple AWS Lambda functions that will handle actions such as uploading, retrieving images. 
+In this tutorial, we are going to look at building out the backend of our imgur clone and start creating a few simple AWS Lambda functions that will handle actions such as uploading and retrieving images. 
 
 This is where our application really starts to take shape and provide real value to our users, just without some critical functions like authentication and registration, which we will be covering in the next tutorial in this series.
 
@@ -228,7 +227,7 @@ Within this directory, we are going to be creating a the yml configuration file 
 <div class="filename"> backend/serverless.yml </div>
 
 ```yml
-service: imgur-clone-functions
+service: imgur-clone-backend-functions
 
 frameworkVersion: ">=1.1.0 <2.0.0"
 
@@ -237,51 +236,221 @@ custom:
 
 provider:
   name: aws
-  runtime: python3.6
+  runtime: nodejs8.10
   region: eu-west-1
   iamRoleStatements:
     - Effect: Allow
       Action:
-        - s3:PutObject
-        - s3:PutObjectAcl
+        - s3:*
+      Resource: "arn:aws:s3:::${self:custom.bucket}"
+    - Effect: Allow
+      Action:
+        - s3:*
       Resource: "arn:aws:s3:::${self:custom.bucket}/*"
 
 functions:
   list:
-    handler: list.list
-    environment:
-      BUCKET: ${self:custom.bucket}
-      TABLE: ${self:custom.table}
+    handler: listS3Objects.list
     events:
       - http:
           path: list
           method: get
           cors: true
+
 ```
 
-<div class="filename"> backend/list.py </div>
+Now that we have our `serverless.yml` configuration file sorted, we can start writing the Node.js based lambda function which is simply going to list the items within our newly provisioned imgur bucket and then return the JSON:
 
-```py
-import s3
+<div class="filename"> backend/listS3Objects.js </div>
 
-s3...
+```js
+'use strict';
+
+let aws = require('aws-sdk')
+let s3 = new aws.S3();
+
+let params = {
+    Bucket: 'dev-imgur-clone-bucket-test'
+}
+
+module.exports.list = (event, context, callback) => {
+
+    s3.listObjects(params, (err, data) => {
+        if (err) {
+            callback(null, {
+                statusCode: 500,
+                headers: {
+                    'Access-Control-Allow-Origin': '*'
+                },
+                body: JSON.stringify({ error: err})
+            });
+        }
+
+        callback(null, {
+            statusCode: 200,
+            headers: {
+                'Access-Control-Allow-Origin': '*'
+            },
+            body: JSON.stringify(data)        
+        });
+    })
+};
 ```
 
 This will allow us to quickly validate whether or not we are able to communicate with our S3 bucket as well as demonstrate how we will be hitting all of the subsequent API endpoints that we will be creating.
+
+With this in place, let's attempt to deploy this now:
+
+<div class="filename"> $ serverless deploy </div>
+
+```output
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Uploading CloudFormation file to S3...
+Serverless: Uploading artifacts...
+Serverless: Uploading service .zip file to S3 (707 B)...
+Serverless: Validating template...
+Serverless: Updating Stack...
+Serverless: Checking Stack update progress...
+..........
+Serverless: Stack update finished...
+Service Information
+service: imgur-clone-backend-functions
+stage: dev
+region: eu-west-1
+stack: imgur-clone-backend-functions-dev
+api keys:
+  None
+endpoints:
+  GET - https://jwyzr20kqa.execute-api.eu-west-1.amazonaws.com/dev/list
+functions:
+  list: imgur-clone-backend-functions-dev-list
+Serverless: Removing old service artifacts from S3...
+```
+
+As you can see, we have successfully been able to deploy this serverless function and it has automatically been given permissions to access our s3 bucket as well as a HTTP endpoint which we can directly hit in the browser with a simple `HTTP GET` request!
+
+When we `curl` this new endpoint, we should see that it returns a JSON string which contains a `Contents` element which is at this point an empty array.
+
+<div class="filename"> $ curl https://jwyzr20kqa.execute-api.eu-west-1.amazonaws.com/dev/list </div>
+
+```output
+{"IsTruncated":false,"Marker":"","Contents":[],"Name":"dev-imgur-clone-bucket-test","Prefix":"","MaxKeys":1000,"CommonPrefixes":[]}
+```
+
+Awesome, we now have our first serverless Node.js function up and running and ready to serve our frontend application!!
+
+> **Action** - Test out this code by uploading an image to the s3 bucket and then hitting the API endpoint again. You should see the `Contents` array now populated with some information!
 
 # Storing Images
 
 Now that we have the hang of writing serverless functions, let's create a lambda function that will act as our image upload endpoint. 
 
-This will be a 2-step process. The first step will involve creating and deploying the lambda function, the second step will involve updating the frontend and adding a component that allows users to upload images. 
+This will be a 2-step process. The first step will involve creating and deploying the lambda function, the second step will involve updating the frontend and adding a component that allows users to upload images. We'll be holding off this step until the next part of this series where we will also be adding in the authorization around this new API endpoint.
 
+## Upload Lambda Function
+
+Let's start off by creating the S3 upload image lambda which our Vue.js upload component will interact with. 
+
+This will again be a really simple AWS Lambda function which leverages the AWS SDK in order to retrieve what is called a `signed URL` which we can then use to upload our image to our respective bucket! 
+
+<div class="filename"> backend/getSignedUpload.js </div>
+
+```js
+const AWS = require('aws-sdk');
+
+module.exports.requestUploadURL = (event, context, callback) => {
+    var s3 = new AWS.S3();
+
+    var params = JSON.parse(event.body);
+
+    var s3Params = {
+      Bucket: process.env.BUCKET,
+      Key:  params.name,
+      ContentType: params.type,
+      Expires: 3600,
+      ACL: 'public-read'
+    };
+  
+    var uploadURL = s3.getSignedUrl('putObject', s3Params);
+  
+    callback(null, {
+      statusCode: 200,
+      headers: {
+        'Access-Control-Allow-Origin': '*'
+      },
+      body: JSON.stringify({ uploadURL: uploadURL }),
+    })
+}
+```
+
+With this Lambda function now complete, we will need to now add this function to our `serverless.yml` configuration. This function will be eventually deployed as a protected endpoint, but for now we are going to keep it unauthenticated.
+
+<div class="filename"> backend/serverless.yml </div>
+
+```yml
+... 
+functions:
+  list:
+    handler: listS3Objects.list
+    events:
+      - http:
+          path: list
+          method: get
+          cors: true
+  
+  uploadImage:
+    handler: getSignedUpload.requestUploadURL
+    environment:
+      BUCKET: ${self:custom.bucket}
+    events:
+      - http:
+          path: upload-node
+          method: post
+          cors: true
+```
+
+Perfect, the final step now is to deploy this lambda function using the same command we used before:
+
+<div class="filename"> $ serverless deploy </div>
+
+```output
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Uploading CloudFormation file to S3...
+Serverless: Uploading artifacts...
+Serverless: Uploading service .zip file to S3 (1.16 KB)...
+Serverless: Validating template...
+Serverless: Updating Stack...
+Serverless: Checking Stack update progress...
+.....................................
+Serverless: Stack update finished...
+Service Information
+service: imgur-clone-backend-functions
+stage: dev
+region: eu-west-1
+stack: imgur-clone-backend-functions-dev
+api keys:
+  None
+endpoints:
+  GET - https://jwyzr20kqa.execute-api.eu-west-1.amazonaws.com/dev/list
+  POST - https://jwyzr20kqa.execute-api.eu-west-1.amazonaws.com/dev/upload-node
+functions:
+  list: imgur-clone-backend-functions-dev-list
+  uploadImage: imgur-clone-backend-functions-dev-uploadImage
+Serverless: Removing old service artifacts from S3...
+```
+
+And with that, we now have a Lambda function that is allows our users to upload images to our imgur clone bucket, we just don't have a means of interacting with the endpoint just yet but we will be getting to that shortly!
 
 # Conclusion
 
-So, in part 5 of this series, we have successfully managed to create a number of different AWS Lambda functions that now feature as the backend of our Imgur application.
+So, in part 5 of this series, we have successfully managed to create a number of different AWS Lambda functions that now feature as the backend of our Imgur application. 
+
+We are getting incredibly close to a `minimum viable product` where our application meets the minimum amount of functionality in order to be useful, in the next few tutorials, we should finally get there!
 
 ## Further Reading:
 
-Now that we have the backend of our Imgur application working and deployed to AWS, the next part of this series will be focused on creating an automated deployment pipeline that will allow us to focus on improving our application and reduce the time wasted on manual tasks.
+Now that we have the backend of our Imgur application working and deployed to AWS, the next part of this series will be focused on adding authorization and authentication to our application as well as the Upload component that will interact with our newly deployed endpoints!
 
-* []()
+> **Under Construction** - The next part of this tutorial series is currently under construction and is due out on the 11th of January 2020!
