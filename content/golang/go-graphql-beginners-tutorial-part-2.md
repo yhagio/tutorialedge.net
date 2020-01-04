@@ -198,7 +198,7 @@ This will open up an interactive shell which we can use to manipulate and query
 our SQL database. We want to start off by creating a table `tutorials`:
 
 ```s
-sqlite> CREATE TABLE tutorials (id int, title string, author int);
+sqlite> CREATE TABLE tutorials (id int, title string);
 ```
 
 We then want to insert a couple of rows into our database so that we can verify
