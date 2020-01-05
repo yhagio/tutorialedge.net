@@ -2,9 +2,8 @@
   "name": "tutorialedge-v2",
   "version": "1.0.0",
   "description": "![Build Status](https://travis-ci.org/elliotforbes/tutorialedge-v2.svg?branch=master)",
-  "main": "webpack.conf.js",
   "dependencies": {
-    "algoliasearch": "^3.33.0",
+    "algoliasearch": "^3.35.1",
     "amazon-cognito-auth-js": "^1.3.1",
     "amazon-cognito-identity-js": "^2.0.0",
     "atomic-algolia": "^0.3.17",
@@ -42,8 +41,7 @@
     "algolia": "atomic-algolia",
     "server": "hugo server --buildDrafts --ignoreCache",
     "gulp": "gulp watch",
-    "start": "concurrently \"npm:server\" \"npm:gulp\" \"npm:webpack\"",
-    "webpack": "webpack --config webpack.config.js"
+    "start": "concurrently \"npm:server\" \"npm:gulp\""
   },
   "repository": {
     "type": "git",

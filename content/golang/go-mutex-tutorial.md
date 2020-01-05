@@ -132,6 +132,12 @@ Withdrawing 700 from account with balance: 1500
 New Balance 800
 ```
 
+# Data Structures and Thread Safety 
+
+* **Array** - Not thread safe
+* **Map** - Read safe, but not write safe
+*
+
 # Conclusion
 
 So, in this tutorial, we had a look at the joys of race conditions and how they
