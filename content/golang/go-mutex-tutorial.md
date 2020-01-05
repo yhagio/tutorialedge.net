@@ -128,7 +128,7 @@ When you execute this code, you should see the following output:
 ```plaintext
 Go Mutex Example
 Depositing 500 to account with balance: 300
-Withdrawing 700 from account with balance: 1000
+Withdrawing 700 from account with balance: 1500
 New Balance 800
 ```
 
