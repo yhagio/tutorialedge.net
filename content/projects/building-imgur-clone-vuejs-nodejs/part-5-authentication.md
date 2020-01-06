@@ -25,12 +25,20 @@ Authenticating Single Page Applications is a little different to what you may be
 
 With this in mind, there are a few methods for authentication that we can leverage that ensure we don't expose any secrets that could potentially compromise our application.
 
-
 ## Route Guards
 
 In Vue.JS, if we want to guard routes and ensure that only authenticated personal can access these routes then we can use per-route guards alongside a bit of authentication logic.
 
- 
+```js
+export default new Router({
+  routes: [
+    ...
+    { path: '/profile', name: 'Profile', component: Profile, beforeEnter: requireAuth },
+  ]
+})
+```
+
+
 
 # Conclusion
 

@@ -13,7 +13,7 @@ authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_4
 
 In this tutorial, we are going to be covering pointers in Go and how you can use them within your own Go programs. We'll be covering the best practices and we'll be covering some of the most common use-cases for pointers.
 
-By the end of this tutorial, you will have a solid understanding of pointers and how they can be used and you will also know how to 
+By the end of this tutorial, you will have a solid understanding of pointers and how they can be used.
 
 # Introduction
 
@@ -257,6 +257,8 @@ Now, when we go to run this, we should see that our Go applications executes!
 ```output
 74
 ```
+
+> **Challenge** -Fancy challenging your knowledge of pointers in Go? Try out our latest Go challenge on the site - [Go Pointers and Linked Lists](/challenges/go/challenge-06/)
 
 # Conclusion
 
