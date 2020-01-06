@@ -14,10 +14,7 @@ authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_4
 weight: 24
 ---
 
-The use of Go when programming highly concurrent applications doesn't preclude
-the possibility of you writing a system that features race conditions. These
-race conditions can cause unexpected issues with your systems that are both hard
-to debug and at times, even harder to fix.
+The use of Go when programming highly concurrent applications doesn't prevent you from writing a system that features race conditions. These race conditions can cause unexpected issues with your systems that are both hard to debug and at times, even harder to fix.
 
 Thus, we need to be able to write Go programs that can execute concurrently in a
 safe manner without impacting performance. This is where the `mutex` comes into
@@ -132,11 +129,63 @@ Withdrawing 700 from account with balance: 1500
 New Balance 800
 ```
 
-# Data Structures and Thread Safety 
+# Avoiding Deadlock
 
-* **Array** - Not thread safe
-* **Map** - Read safe, but not write safe
-*
+There a couple of scenarios that you need to be aware of when working with mutexes that will result in deadlock. Deadlock is a scenario within our code where nothing can progress due to every goroutine continually blocking when trying to attain a lock. 
+
+## Ensure You Call Unlock()!
+
+If you are developing goroutines that require this lock and they can terminate in a number of different ways, then ensure that regardless of how your goroutine terminates, it always calls the `Unlock()` method. 
+
+If you fail to `Unlock()` on an error, then it is possible that your application will go into a deadlock as other goroutines will be unable to attain the lock on the mutex!
+
+## Calling Lock() Twice 
+
+One example to keep in mind when developing with mutexes is that the `Lock()` method will block until it attains the lock. You need to ensure that when developing your applications you do not call the `Lock()` method twice on the same lock or else you will experience a deadlock scenario. 
+
+<div class="filename"> deadlock_example.go </div>
+
+```go
+package main
+
+import (
+	"fmt"
+	"sync"
+)
+
+
+func main() {
+	var b sync.Mutex
+	
+	b.Lock()
+	b.Lock()
+	fmt.Println("This never executes as we are in deadlock") 
+}
+```
+
+When we attempt to run this, we should see that it throws a fatal error:
+
+<div class="filename"> $ go run deadlock_example.go </div>
+
+```output
+fatal error: all goroutines are asleep - deadlock!
+
+goroutine 1 [semacquire]:
+sync.runtime_SemacquireMutex(0x40e024, 0x1174ef00, 0x1, 0x40a0d0)
+	/usr/local/go/src/runtime/sema.go:71 +0x40
+sync.(*Mutex).lockSlow(0x40e020, 0x40c130)
+	/usr/local/go/src/sync/mutex.go:138 +0x120
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:81
+main.main()
+	/tmp/sandbox563268272/prog.go:13 +0xe0
+```
+
+# Semaphore vs Mutex
+
+Everything you can achieve with a Mutex can be done with a [channel](/golang/go-channels-tutorial) in Go if the size of the channel is set to 1. 
+
+However, the use case for what is known as a `binary semaphore` - a semaphore/channel of size 1 - is so common in the real world that it made sense to implement this exclusively in the form of a `mutex`.
 
 # Conclusion
 
