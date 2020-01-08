@@ -420,6 +420,25 @@ export default new Router({
 })
 ```
 
+# Update main.js
+
+<div class="filename"> frontend/src/main.js </div>
+
+```js
+import Vue from 'vue'
+import App from './App.vue'
+import cognitoAuth from './cognito'
+import router from './router'
+
+Vue.config.productionTip = false
+
+new Vue({
+  router,
+  cognitoAuth,
+  render: h => h(App),
+}).$mount('#app')
+```
+
 # Conclusion
 
 So, in this tutorial we have covered adding authentication to our Imgur clone and adding a few routes that allow users to create accounts and subsequently log in to our app.
