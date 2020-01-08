@@ -42,11 +42,82 @@ export default new Router({
 })
 ```
 
+# Terraforming our Cognito User Pool
+
+Before we can write any code for authentication/authorization, we'll need to provision an AWS Cognito User Pool within our AWS account so that we have something to interface with when it comes to registering new accounts etc.
+
+It feels right to do this again within our terraform as the pool itself is a bit of infrastructure that our app needs in place for it to properly function. Adding code to provision it alongside the rest of our infrastructure code makes sense and, in this particular instance, isn't actually all that difficult as we aren't doing anything overly bespoke:
+
+<div class="filename"> terraform/main.tf </div>
+
+```yml
+provider "aws" {
+    region = "eu-west-1"
+}
+
+resource "aws_s3_bucket" "bucket" {
+    bucket = "dev-imgur-clone-bucket-test"
+      
+    tags = {
+        Name = "Dev Imgur Clone Bucket"
+        Environment = "Dev"
+    }
+}
+
+resource "aws_cognito_user_pool" "imgur_clone_pool" {
+    name = "imgurclonepool"   
+}
+
+resource "aws_cognito_user_pool_client" "client" {
+  name = "imgur-app-client"
+
+  user_pool_id = "${aws_cognito_user_pool.imgur_clone_pool.id}"
+}
+
+output "UserPoolId" {
+    value = "${aws_cognito_user_pool.imgur_clone_pool.id}"
+}
+
+output "UserPoolArn" {
+    value = "${aws_cognito_user_pool.imgur_clone_pool.arn}"
+}
+
+output "ClientId" {
+    value = "${aws_cognito_user_pool_client.client.id}"
+}
+```
+
+Notice at the bottom of this new `main.tf` file we have also added a number of `output` blocks. These do the handy job of returning the `ClientId`, the `UserPoolId` and the `IdentityPoolId` that we need in order to configure our app to connect to cognito.
+
+With this in place, we can now run a `terraform plan` to first validate our new terraform infrastructure code, and then we can run `terraform apply` in order to provision this new user pool.
+
+<div class="filename"> frontend/src/config/index.js </div>
+
+```js
+export default {
+    region: 'eu-west-1',
+    IdentityPoolId: 'eu-west-1_SOMERANDOMSTRING',
+    UserPoolId: 'eu-west-1:12345678910',
+    ClientId: 'SomeR4ndomClientId',
+    // This will be the upload endpoint that we got from the last 
+    s3SignedUrl: 'https://rvv1a9to8j.execute-api.eu-west-1.amazonaws.com/dev/upload-node'
+  }
+```
+
 # Our Cognito Service
+
 
 Now that we have the basic theory behind what we want to achieve down, let's start implementing the cognito aspect of our Vue.js app. 
 
-Let's create a new directory called `cognito` within our `src` directory and create 2 new files called `index.js` and `cognito.js`.
+We'll first need to add the following dependencies to our application by running `npm install` or `yarn add`
+
+```bash
+$ npm install --save amazon-cognito-identity-js aws-sdk
+# or
+$ yarn add amazon-cognito-identity-js aws-sdk
+```
+
+With our necessary dependencies now in place, let's create a new directory called `cognito` within our `src` directory and create 2 new files called `index.js` and `cognito.js`.
 
 We'll start by creating a skeleton `cognito.js` file which will contain a class and the function stubs which we will be implementing 1 by 1.
 
@@ -126,7 +197,11 @@ CognitoAuth.install = function (Vue, options) {
 }
 ```
 
+With the skeleton of our `CognitoAuth` class now in place, we can now set about implementing each function within the class. You will have to bear with me as there are quite a few functions to implement, but it will be worth it once these are done and we can start fleshing out our `login`, `register` and `profile` components of our app!
+
 ## isAuthenticated()
+
+Let's start with the `isAuthenticated()` function. This will be a helpful function within our app that will allow us to validate whether or not the current user has been authenticated against the backend Cognito service. If they haven't been validated, it will return null and false, otherwise it will return the session and true.
 
 ```js
 isAuthenticated (cb) {
@@ -136,7 +211,7 @@ isAuthenticated (cb) {
         if (err) {
             return cb(err, false)
         }
-        return cb(null, true)
+        return cb(session, true)
         })
     } else {
         cb(null, false)
@@ -145,6 +220,8 @@ isAuthenticated (cb) {
 ```
 
 ## configure()
+
+Next, we'll implement the `configure()`, this function will read in the config from the con
 
 ```js
 configure (config) {
@@ -276,20 +353,7 @@ Vue.use(CognitoAuth, config)
 export default new CognitoAuth()
 ```
 
-This will basically import our newly created `CognitoAuth` class from our `cognito.js` file as well as a `config` file which we'll now create that will contain all of the config needed for our application to talk to a Cognito user pool:
-
-<div class="filename"> frontend/src/config/index.js </div>
-
-```js
-export default {
-    region: 'eu-west-1',
-    IdentityPoolId: 'eu-west-1_SOMERANDOMSTRING',
-    UserPoolId: 'eu-west-1:12345678910',
-    ClientId: 'SomeR4ndomClientId',
-    // This will be the upload endpoint that we got from the last 
-    s3SignedUrl: 'https://rvv1a9to8j.execute-api.eu-west-1.amazonaws.com/dev/upload-node'
-  }
-```
+This will basically import our newly created `CognitoAuth` class from our `cognito.js` file as well as a `config` file which we created earlier that contains all of the config needed for our application to talk to a Cognito user pool.
 
 # Adding Our Route Guards
 
@@ -355,11 +419,6 @@ export default new Router({
     ]
 })
 ```
-
-# Terraforming our Cognito User Pool
-
-With most
-
 
 # Conclusion
 
