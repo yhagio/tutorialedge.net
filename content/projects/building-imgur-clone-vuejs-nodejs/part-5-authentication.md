@@ -1,5 +1,5 @@
 ---
-title: "Part 5 - Authentication between our Backend and Frontend"
+title: "Part 5 - Authentication With Cognito and Route Guards"
 date: 2020-01-11T11:00:00+01:00
 weight: 6
 desc: In this tutorial series, we are going to be building an Imgur clone using Lambda functions written using Node.JS and a frontend built using Vue.JS
