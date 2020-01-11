@@ -453,4 +453,4 @@ We are getting incredibly close to a `minimum viable product` where our applicat
 
 Now that we have the backend of our Imgur application working and deployed to AWS, the next part of this series will be focused on adding authorization and authentication to our application as well as the Upload component that will interact with our newly deployed endpoints!
 
-> **Under Construction** - The next part of this tutorial series is currently under construction and is due out on the 11th of January 2020!
+> **Next Tutorial** - [Part 5 - Adding Authentication](/projects/building-imgur-clone-vuejs-nodejs/part-5-authentication/)
