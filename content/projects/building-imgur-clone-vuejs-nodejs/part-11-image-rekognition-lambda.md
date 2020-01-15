@@ -1,8 +1,8 @@
 ---
-title: "Part 8 - Authentication between our Backend and Frontend"
+title: "Part 11 - Image Rekognition Lambda"
 date: 2019-08-20T18:44:50+01:00
 draft: true
-weight: 9
+weight: 11
 desc: In this tutorial series, we are going to be building an Imgur clone using Lambda functions written using Node.JS and a frontend built using Vue.JS
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
@@ -12,3 +12,5 @@ tags:
 - beginner
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
+
+test

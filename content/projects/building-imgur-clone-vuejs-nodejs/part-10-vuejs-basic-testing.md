@@ -1,8 +1,8 @@
 ---
-title: "Part 7 - Authentication between our Backend and Frontend"
+title: "Part 10 - Implementing Basic Tests"
 date: 2019-08-20T18:44:50+01:00
 draft: true
-weight: 8
+weight: 10
 desc: In this tutorial series, we are going to be building an Imgur clone using Lambda functions written using Node.JS and a frontend built using Vue.JS
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
