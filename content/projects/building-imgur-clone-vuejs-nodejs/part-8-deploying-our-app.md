@@ -1,5 +1,5 @@
 ---
-title: "Part 6 - Deploying the Frontend and the Backend"
+title: "Part 8 - Deploying our Imgur Clone"
 date: 2019-08-20T18:44:50+01:00
 draft: true
 weight: 7

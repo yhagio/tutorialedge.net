@@ -1,5 +1,5 @@
 ---
-title: "Part 5 - Authentication between our Backend and Frontend"
+title: "Part 5 - Authentication With Cognito and Route Guards"
 date: 2020-01-11T11:00:00+01:00
 weight: 6
 desc: In this tutorial series, we are going to be building an Imgur clone using Lambda functions written using Node.JS and a frontend built using Vue.JS
@@ -148,6 +148,8 @@ We'll start by creating a skeleton `cognito.js` file which will contain a class 
 import { Config, CognitoIdentityCredentials } from 'aws-sdk'
 import { CognitoUser, CognitoUserPool, AuthenticationDetails, CognitoUserAttribute } from 'amazon-cognito-identity-js'
 
+import config from '@/config'
+
 // We'll want to create a class for CognitoAuth which will
 // contain all the methods we will need within our App
 export default class CognitoAuth {
@@ -294,10 +296,10 @@ authenticate (username, pass, cb) {
     cognitoUser.authenticateUser(authenticationDetails, {
         onSuccess: function (result) {
             var logins = {}
-            logins['cognito-idp.' + this.options.region + '.amazonaws.com/' + this.options.UserPoolId] = result.getIdToken().getJwtToken()
+            logins['cognito-idp.' + config.region + '.amazonaws.com/' + config.UserPoolId] = result.getIdToken().getJwtToken()
             
             Config.credentials = new CognitoIdentityCredentials({
-                IdentityPoolId: this.options.UserPoolId,
+                IdentityPoolId: config.UserPoolId,
                 Logins: logins
             })
             cb(null, result)

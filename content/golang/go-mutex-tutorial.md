@@ -80,30 +80,30 @@ func init() {
     balance = 1000
 }
 
-func deposit(value int, done chan bool) {
+func deposit(value int, wg *sync.WaitGroup) {
     mutex.Lock()
     fmt.Printf("Depositing %d to account with balance: %d\n", value, balance)
     balance += value
     mutex.Unlock()
-    done <- true
+    wg.Done()
 }
 
-func withdraw(value int, done chan bool) {
+func withdraw(value int, wg *sync.WaitGroup) {
     mutex.Lock()
     fmt.Printf("Withdrawing %d from account with balance: %d\n", value, balance)
     balance -= value
     mutex.Unlock()
-    done <- true
+    wg.Done()
 }
 
 func main() {
     fmt.Println("Go Mutex Example")
 
-    done := make(chan bool)
-    go withdraw(700, done)
-    go deposit(500, done)
-    <-done
-    <-done
+	var wg sync.WaitGroup
+	wg.Add(2)
+    go withdraw(700, &wg)
+    go deposit(500, &wg)
+    wg.Wait()
 
     fmt.Printf("New Balance %d\n", balance)
 }
