@@ -283,7 +283,7 @@ signup(username, email, pass, cb) {
 
 Our `authenticate()` function takes in a `username` and `password` from a form within our app and then attempts to authenticate whether or not they are a valid combination and the user exists within our pool. 
 
-You'll notice that within the `cognitoUser.authenticateUser()` we define an `onSuccess`, `onFailure` and `newPasswordRequired` function within which we can  
+You'll notice that within the `cognitoUser.authenticateUser()` we define an `onSuccess`, `onFailure` and `newPasswordRequired` function within which we can define how our application should react to each event type.
 
 ```js
 authenticate (username, pass, cb) {
