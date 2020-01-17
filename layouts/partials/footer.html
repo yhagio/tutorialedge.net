@@ -4,7 +4,7 @@
 		<div class="row">
 			<div class="col l3 m6 s12">
 				<div class="padded">
-					<h3>Courses</h3>
+					<h2>Courses</h2>
 					<ul>
 						<li><a href="{{ .Site.BaseURL }}/course/python/">Python</a></li>
 						<li><a href="{{ .Site.BaseURL }}/course/angular/">Angular</a></li>
@@ -16,26 +16,16 @@
 			</div>
 			<div class="col l3 m6 s12">
 				<div class="padded">
-					<h3>Quick Links</h3>
+					<h2>Quick Links</h2>
 					
 					<ul>
 						<li><a href="{{ .Site.BaseURL }}/search/">Search Page</a></li>
 						<li><a href="{{ .Site.BaseURL }}/about/">About</a></li>
 						<li><a href="{{ .Site.BaseURL }}/get-involved/">Get Involved</a></li>
 					</ul>
-					<h3>Suggested Resources</h3>
+					<h2>Suggested Resources</h2>
 					<ul>
 						<li><a href="{{ .Site.BaseURL }}/uses/">My Hardware + Software Recording Setup </a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="col l3 m6 s12">
-				<div class="padded">
-					<h3>Follow Me</h3>
-					<ul>
-						<li><a href="https://twitter.com/Elliot_F">@Elliot_f</a></li>
-						<li><a href="https://www.facebook.com/tutorialedge">TutorialEdge</a></li>
-						<li><a href="https://github.com/elliotforbes">elliotforbes</a></li>
 					</ul>
 				</div>
 			</div>
@@ -43,14 +33,16 @@
 				<div class="logo">
 					<a href="{{ .Site.BaseURL }}/"><img alt="tutorialedge logo" src="https://images.tutorialedge.net/images/logo.svg"/> TutorialEdge.net</a>
 				</div>
-				<div class="padded">
-					<p>TutorialEdge.net is a totally free programming tutorial site that has been built with the intention of helping as many people as possible learn to program. The site is also completely opensourced and you can contribue here: <a href="https://github.com/elliotforbes/tutorialedge-v2">elliotforbes/tutorialedge-v2</a>, any pull requests will be greatly appreciated!</p>
+				
+				<div class="search input-group">
+					<h2>Search The Site</h2>
+					<input id="searchForm" type="text" class="form-control" placeholder="Go, Python etc...">
+					<button class="search-button"><img src="/images/svg/search.svg" alt="search icon" style="width:15px; height: 15px;" /> </button>
 				</div>
 			</div>
 		</div>
-		<div class="footer-copyright none">
-			<span class="float-left">TutorialEdge © 2019 Copyright</span>
-			<span class="float-right" id="page-id">{{ .UniqueID }}</span>
+		<div class="footer-copyright">
+			<p class="float-left">TutorialEdge © 2020 Copyright</p>
 		</div>
 	</footer>
 

@@ -2,6 +2,7 @@
 
 body {
   font-family: "proxima-nova", "proxima-nova-all", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
   line-height: 1.62;
   
   text-align: left;
@@ -15,7 +16,7 @@ body {
 
   h1, h2, h3, h4, h5, h6 {
     font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
-    font-weight: 400;
+    font-weight: 600;
     font-style: normal;
     color: $gray;
   }
