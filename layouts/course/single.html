@@ -20,10 +20,10 @@
 			{{ range sort (index $.Site.Taxonomies.series .Params.series) }}
 			{{ if not .Params.homepage }}
 			<a class="course-progress-box" href="{{ .Permalink }}">
-				<img src="https://images.tutorialedge.net/images/{{ .Params.image }}" alt="{{ .Params.desc }}" />
+				<img src="https://images.tutorialedge.net/images/{{ .Params.image }}" alt="{{ .Params.Description }}" />
 				<h2>{{ .Title }}</h2>
 				<div class="clear"></div>
-				<p>{{ .Params.desc }}</p>
+				<p>{{ .Params.Description }}</p>
 			</a>
 			{{ end }}
 			{{ end }}
