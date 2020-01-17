@@ -1,5 +1,5 @@
 footer.page-footer{
-  background-color: white;
+  background-color: #141618;
   color: #fff;
   padding-top: 0px !important;
   padding-bottom: 0px !important;
@@ -8,10 +8,11 @@ footer.page-footer{
   font-size: 1rem;
   border-top: 1px solid #e7e7ec;
   
-  h3 {
-    color: #586069 !important;
-    font: 500 14px/16px Roboto,sans-serif;
-    margin: 0 0 8px;
+  h2 {
+    color: #ccc !important;
+    font: 500 18px/20px Roboto,sans-serif;
+    margin: 20px 0 8px;
+    
   }
 
   .row {
@@ -27,33 +28,63 @@ footer.page-footer{
     padding: 0;
     flex: 1;
   }
+
+  .search {
+    margin-top: 20px;
+    margin-right: 40px;
+    padding: 0;
+    width: 80%;
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 80%;
+      padding: 20px;
+      background-color: #21252D;
+      border: none;
+      font-size: 20px;
+    }
+
+    input:focus {
+      border: none important!;
+    }
+
+    button {
+      background-color: #28a745;
+      padding: 5px;
+      padding-left: 20px;
+      padding-right: 20px;
+      color: white;
+      border: none;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+  
+  .logo{
+    margin-top: 40px;
+    width: 100%;
+  }
+  
+  .logo a {
+    margin: 6px 0 0;
+    max-width: 216px;
+    font-size: 26px;
+    color: white;
+    font-weight: 400;
+    width: 100%;
+  }
+   img {
+   
+    width: 50px;
+    height: 50px;
+  }
 }
 
-footer .footer-special {
+footer  {
   flex: 1;
-    background: #37424b;
-}
-footer .footer-special .logo{
-  width: 100%;
-  padding: 10px;
-  border-bottom: 1px solid #455a64;
-  display: block;
-}
-footer .footer-special .logo a {
-  margin: -6px 0 0;
-  max-width: 216px;
-  font-size: 26px;
-  color: white;
-  font-weight: 200;
-  width: 100%;
-  vertical-align: top;
-}
-footer .footer-special a {
-  color: white !important;
-}
-footer .footer-special img {
-  width: 50px;
-  height: 50px;
 }
 
 footer.page-footer {
@@ -64,11 +95,12 @@ footer.page-footer {
       padding: 0px !important;
       li {
         list-style-type: none;
+        padding-top: 8px;
         a {
-          line-height: 1.25;
-          color: #586069;
-          text-transform: uppercase;
-          font-size: 0.8rem;
+          line-height: 1.5;
+          color: #aaa;
+          font-size: 1.05rem;
+          font-weight: 400;
         }
       }
     }
@@ -79,8 +111,7 @@ footer.page-footer {
 }
 
 footer .footer-copyright {
-  background-color: #586069 !important;
-  color: #fafafa !important;
-  padding-left: 20px;
-  padding-right: 20px;
+  border-top: 1px solid #2d3236;
+  color: #6A6D6E !important;
+  padding: 20px;
 }
