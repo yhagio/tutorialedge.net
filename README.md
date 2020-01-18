@@ -2,16 +2,18 @@
   <br/>
   <img alt="TutorialEdge" src="https://images.tutorialedge.net/images/logo.png" />
   <h1>TutorialEdge</h1>
+
+  <hr/>
+  
+  <img src="https://travis-ci.org/elliotforbes/tutorialedge.net.svg?branch=master" alt="build status" />  
 </div>
 
-![Build Status](https://travis-ci.org/elliotforbes/tutorialedge.net.svg?branch=master)
 
 # TutorialEdge.net Community  👩‍💻👨‍💻
 
 Welcome to the TutorialEdge codebase! 
 
 ## What is TutorialEdge.net?
-
 
 I've been working on TutorialEdge.net as a hobby project since early 2015. Since
 then it's gone from only a handful of visitors per day to something that
