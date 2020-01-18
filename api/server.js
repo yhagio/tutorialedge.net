@@ -19,10 +19,6 @@ async function getPageInfo(query) {
             return page.url == query.path
         })
 
-        if page.length < 1 {
-            return null
-        }
-
         return page[0]
 
     } catch (err) {
@@ -33,10 +29,6 @@ async function getPageInfo(query) {
 async function generateHTML(query) {
     console.log(query)
     let data = await getPageInfo(query)
-    if data === null {
-        
-    }
-    
 
     const templateHTML = await fs.readFileSync(__dirname + '/misc/template.html')
     const source = templateHTML.toString()
