@@ -17,7 +17,7 @@ to the programming community.
 
 # Table of Contents
 
-* [Contributing](CONTRIBUTING.md)
+* [Contributing](docs/contributing.md)
 
 ## Contribution Guide
 
