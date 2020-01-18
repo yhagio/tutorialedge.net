@@ -1,11 +1,16 @@
 'use strict';
 const fs = require('fs');
 
-module.exports.endpoint = (event, context, callback) => {
-  
-    let image = fs.readFileSync("test.png")
-
+async function returnImage(path) {
+    let image = fs.readFileSync(path)
     let imageBase64 = image.toString('base64')
+    return imageBase64
+}
+
+
+module.exports.endpoint = async (event, context, callback) => {
+  
+    let imageBase64 = await returnImage("test.png")
     
     const response = {
         statusCode: 200,

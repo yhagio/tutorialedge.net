@@ -21,6 +21,6 @@ functions:
     handler: handler.endpoint
     events:
       - http:
-          path: ping
+          path: card
           method: get
           contentHandling: CONVERT_TO_BINARY
