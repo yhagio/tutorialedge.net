@@ -92,7 +92,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/tutorialedge-rest-api/dev/1579360783621-2020-01-18T15:19:43.621Z/tutorialedge-rest-api.zip"
+          "S3Key": "serverless/tutorialedge-rest-api/dev/1579362033888-2020-01-18T15:40:33.888Z/tutorialedge-rest-api.zip"
         },
         "FunctionName": "tutorialedge-rest-api-dev-currentTime",
         "Handler": "handler.endpoint",
@@ -111,14 +111,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "CurrentTimeLambdaVersionqzdvheCOGSjclgJvjA1vQjCSVHc6q1D6Wk3l27k": {
+    "CurrentTimeLambdaVersion1VZvW8wxwec9fLVWj5UNRgH0BvslGualWAOUYpXPRRs": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "CurrentTimeLambdaFunction"
         },
-        "CodeSha256": "Kh5/aOYL316713vz2OFTLyXr0Xti3KQusz7SuZBbPaE="
+        "CodeSha256": "uUprnNENzu/fXgaLOgf50EUZTjSd1vKtET799SMAVxA="
       }
     },
     "ApiGatewayRestApi": {
@@ -132,7 +132,7 @@
         }
       }
     },
-    "ApiGatewayResourcePing": {
+    "ApiGatewayResourceCard": {
       "Type": "AWS::ApiGateway::Resource",
       "Properties": {
         "ParentId": {
@@ -141,19 +141,19 @@
             "RootResourceId"
           ]
         },
-        "PathPart": "ping",
+        "PathPart": "card",
         "RestApiId": {
           "Ref": "ApiGatewayRestApi"
         }
       }
     },
-    "ApiGatewayMethodPingGet": {
+    "ApiGatewayMethodCardGet": {
       "Type": "AWS::ApiGateway::Method",
       "Properties": {
         "HttpMethod": "GET",
         "RequestParameters": {},
         "ResourceId": {
-          "Ref": "ApiGatewayResourcePing"
+          "Ref": "ApiGatewayResourceCard"
         },
         "RestApiId": {
           "Ref": "ApiGatewayRestApi"
@@ -190,7 +190,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1579360783629": {
+    "ApiGatewayDeployment1579362033897": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -199,7 +199,7 @@
         "StageName": "dev"
       },
       "DependsOn": [
-        "ApiGatewayMethodPingGet"
+        "ApiGatewayMethodCardGet"
       ]
     },
     "CurrentTimeLambdaPermissionApiGateway": {
@@ -259,7 +259,7 @@
     "CurrentTimeLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "CurrentTimeLambdaVersionqzdvheCOGSjclgJvjA1vQjCSVHc6q1D6Wk3l27k"
+        "Ref": "CurrentTimeLambdaVersion1VZvW8wxwec9fLVWj5UNRgH0BvslGualWAOUYpXPRRs"
       }
     },
     "ServiceEndpoint": {
