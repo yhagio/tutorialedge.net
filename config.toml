@@ -28,7 +28,7 @@ PygmentsStyle = "monokai"
     mediaType = "application/json"
     notAlternative = true
 [params.algolia]
-    vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink", "description", "image"]
-    params = ["categories", "tags"]
+    vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink", "description", "image", "author"]
+    params = ["categories", "tags", "author"]
 [outputs]
     home = ["HTML", "RSS", "Algolia"]
