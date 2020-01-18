@@ -43,7 +43,7 @@ async function generateHTML(query) {
 async function generateImage() {
     const browser = await puppeteer.launch({
         args: ['--no-sandbox'],
-        timeout: 600
+        timeout: 10000
     });
     const page = await browser.newPage();
     await page.goto('file://' + __dirname + '/temp/index.html');
