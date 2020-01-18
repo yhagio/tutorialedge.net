@@ -25,19 +25,6 @@ to the programming community.
 
 * [Contributing](docs/contributing.md)
 
-## Contribution Guide
-
-Contributions to the site are greatly appreciated, if you see a typo or
-something that isn't quite right and want to help improve the site for everyone
-then please feel free to submit a pull request.
-
-- Start off by forking the repository
-- Make any changes you have in mind
-- Submit a Pull Request from your forked version back into the original version
-  of the site
-- I'll review it and approve it
-- It'll automatically go live in seconds!
-
 ## Contributors
 
 - [ElliotForbes(me)](https://github.com/elliotforbes)
