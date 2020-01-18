@@ -1,3 +1,9 @@
+<div align="center">
+  <br/>
+  <img alt="TutorialEdge" src="https://images.tutorialedge.net/images/logo.png" />
+  <h1>TutorialEdge</h1>
+</div>
+
 ![Build Status](https://travis-ci.org/elliotforbes/tutorialedge.net.svg?branch=master)
 
 # TutorialEdge.net Community  👩‍💻👨‍💻
