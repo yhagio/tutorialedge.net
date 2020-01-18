@@ -1,8 +1,11 @@
-# TutorialEdge.net
-
-## General Information
-
 ![Build Status](https://travis-ci.org/elliotforbes/tutorialedge.net.svg?branch=master)
+
+# TutorialEdge.net Community  👩‍💻👨‍💻
+
+Welcome to the TutorialEdge codebase! 
+
+## What is TutorialEdge.net?
+
 
 I've been working on TutorialEdge.net as a hobby project since early 2015. Since
 then it's gone from only a handful of visitors per day to something that
@@ -12,23 +15,9 @@ The main aim for the site is for it to be a place that I can host tutorials and
 courses on any language and framework I choose and hopefully give back something
 to the programming community.
 
-This website is built using [hugo](https://gohugo.io/), an open-source static
-site generator.
+# Table of Contents
 
-## Usage
-
-1. Download the repo
-
-   ```
-   git clone https://github.com/elliotforbes/tutorialedge.net
-   cd tutorialedge.net
-   ```
-
-2. [Install hugo](https://gohugo.io/getting-started/installing/)
-
-3. Start the server: `hugo server`
-
-4. Open the address in a browser (default is localhost:1313)
+* [Contributing](CONTRIBUTING.md)
 
 ## Contribution Guide
 
