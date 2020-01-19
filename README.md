@@ -37,7 +37,6 @@ to the programming community.
 - Andrew Johnson
 - Brian L.
 - Daniel Arbuckle
-- Elliot Forbes
 - John P.
 - Josh Kalin
 - Kevin Hennessy
