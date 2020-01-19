@@ -10,8 +10,8 @@ image: golang.svg
 tags:
 - beginner
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
-
 ---
+
 **In this tutorial, we are going to be looking at how you can use Go modules** in your Go applications
 to simplify the way you work with dependencies for your Go applications. We will be looking at
 how Go Modules work, and also what problems they solve for us, before finally going into developing a simple

@@ -7,50 +7,22 @@
 <script src="https://cdn.jsdelivr.net/npm/algoliasearch@3.33.0/dist/algoliasearchLite.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@3.4.0/dist/instantsearch.production.min.js"></script>
 
-<div class="top-bar">
-    <div class="container">
-        <div id="searchbox"></div>
-        <img src="https://images.tutorialedge.net/images/search-by-algolia-light-background.svg" alt="Search Results by Algolia" class="algolia"/>
-    </div>
-</div>
 
-<div class="container-fluid">
-    <div class="content-container">
+<div class="container-fluid search-results">
+    <div class="content-container ">
+        <h2>Search For Courses and Tutorials </h2>
+        <div id="searchbox"></div>
         <br/>
+        <img src="https://images.tutorialedge.net/images/search-by-algolia-light-background.svg" alt="Search Results by Algolia" class="algolia"/>
         <h3>Results</h3>
+        <hr/>
         <div id="hits"></div>
+        <br/>
         <div class="pagination" id="pagination"></div>
     </div>
 </div>
 
 <div class="blue-spacer"></div>
-
-<style>
-#searchbox {
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-
-.algolia {
-    width: auto;
-    height: 22px;
-    margin-bottom: 20px;
-}
-
-.ais-Hits-item {
-    border: none;
-    padding: none;
-    margin: none;
-    box-shadow: none;
-}
-
-.course-progress-box{
-    box-shadow: none;
-    border-color: #eaecef!important;
-    border: 1px solid;
-}
-
-</style>
 
 
 <script type="text/javascript">
@@ -79,9 +51,17 @@
                 item: function (data) {
                     return '<a href="' + data.permalink + '">'
                         + '<div class="course-progress-box">'
-                        + '<img src="https://images.tutorialedge.net/images/logo.svg" alt="' + data.title + 'Image">'
+                        + '<div class="row">'
+                        + '<div class="col-md-1 center-align">'
+                        + '<img class="search-image" src="https://images.tutorialedge.net/images/logo.svg" alt="' + data.title + 'Image">'
+                        + '</div>'
+                        + '<div class="col-md-11">'
                         + '<h2><small>Lesson</small><br />' + data.title + '</h2>'
+                        + '<p class="summmary d-none d-sm-block">' + data.summary + '</p>'
+
                         + '<button class="btn btn-success">View Article</button>'
+                        + '</div>'
+                        + '</div>'
                         + '</div>'
                         + '</a>';
 
