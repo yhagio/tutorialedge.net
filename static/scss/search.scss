@@ -5,9 +5,10 @@
 }
 
 .search-results {
+  min-height: 50vh;
   width:100%;
   padding: 40px;
-  background-color: white;
+  background-color: #fafbfc;
 }
 
 .search-result .url {
@@ -74,11 +75,15 @@
   background-color: white;
 }
 
+#hits {
+  display: flex;
+}
+
 .ais-hits {
-  display: grid;
-  grid: auto-flow dense / 1fr 1fr 1fr;
-  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-  grid-column-gap: 40px;
+  flex: 1;
+  // grid: auto-flow dense / 1fr;
+  // grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  // grid-column-gap: 40px;
 }
 
 .ais-refinement-list--item:hover {
@@ -123,4 +128,53 @@
   text-transform: uppercase;
   font-weight: 700;
   margin: 1em 0;
+}
+
+#searchbox {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.algolia {
+  width: auto;
+  height: 22px;
+  margin-bottom: 20px;
+}
+
+.ais-Hits-list {
+  display: flex !important; 
+} 
+
+.ais-Hits-item {
+
+  img {
+    width: auto;
+    margin: auto;
+    margin-top: 10px;
+    display: block;
+    max-height: 50px;
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  p {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+  box-shadow: none !important;
+}
+
+.course-progress-box {
+  border-color: #eaecef !important;
+  border: 1px solid;
 }
