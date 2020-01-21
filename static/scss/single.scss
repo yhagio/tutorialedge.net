@@ -84,7 +84,7 @@
 
 
 article {
-  font-size: 1.45rem;
+  font-size: 18px;
   line-height: 1.62;
   color: #3b454e;
 
@@ -284,7 +284,7 @@ article {
   width: 100%;
   padding-top: 20px;
   margin-top: 20px;
-  font-size: 0.85rem;
+  line-height: 1.65em;
   background-color: white;
   border-radius: 8px;
   // -webkit-box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
@@ -342,19 +342,19 @@ article {
   background-color: white;
   border-radius: 8px;
   padding: 20px;
-  // -webkit-box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
-  // box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
   color: rgba(14,30,37,.54);
   margin-bottom: 40px;
   margin-top: 20px;
   z-index: 100;
   text-decoration: none;
+
   width: 100%;
   display: block;
+  
   outline: none;
   color: #3b454e;
-  line-height: 1.65;
-  font-size: 1rem;
+  line-height: 1.9em;
+  font-size: 18px;
 
   .anchorjs-link {
     color: #ff5231;
@@ -380,13 +380,25 @@ article {
     margin-left: 20px;
   }
   p code {
-    padding: .3em .4em;
-    border-radius: .3em;
-    white-space: normal;
-    background: #e5eff5;
-    text-shadow: none;
-    color: #343f44;
-    font-size: .9em;
-    font-family: Operator Mono SSm A, Operator Mono SSm B, Consolas, monospace;
+
+    display: inline-block;
+    margin: 0;
+    padding: 0 .6em;
+    color: #9980fa;
+    background: rgba(153,128,250,.1);
+    border-radius: 2px;
+    -webkit-font-feature-settings: "tnum" 1;
+    font-feature-settings: "tnum" 1;
+    font-family: monospace;
+    font-weight: 600;
+
+    // padding: .3em .4em;
+    // border-radius: .3em;
+    // white-space: normal;
+    // background: #e5eff5;
+    // text-shadow: none;
+    // color: #343f44;
+    // font-size: 1em;
+    // font-family: Operator Mono SSm A, Operator Mono SSm B, Consolas, monospace;
   }
 }
