@@ -204,7 +204,7 @@ newly created backend websocket server!
 # Conclusion
 
 > **Note -** The full source code for this project can be found on Github:
-> [TutorialEdge/Go](https://github.com/TutorialEdge/Go/tree/master/go-websocket-tutorial)
+> [TutorialEdge/go-websockets-tutorial](https://github.com/TutorialEdge/go-websockets-tutorial)
 
 If you found this tutorial useful or require any further assistance then please
 feel free to let me know in the comments section below.
