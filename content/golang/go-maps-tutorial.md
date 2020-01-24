@@ -1,15 +1,16 @@
-+++
-author = "Elliot Forbes"
-date = "2019-06-29T23:00:00+00:00"
-desc = "In this tutorial, we are going to look at how you can effectively use Maps within your Go applications."
-image = "golang.svg"
-series = ["golang"]
-tags = ["beginner"]
-title = "Go Maps Tutorial"
-twitter = "https://twitter.com/elliot_f"
-weight = 15
+---
+author: Elliot Forbes
+date: 2019-06-29T23:00:00+00:00
+desc: In this tutorial, we are going to look at how you can effectively use Maps within your Go applications.
+series: golang
+image: golang.svg
+tags:
+  - concurrency
+title: Go Maps Tutorial
+twitter: https://twitter.com/elliot_f
+weight: 15
+---
 
-+++
 In this tutorial, we are going to look at maps in Go and how you can use them to achieve world domination!
 
 We are going to be covering just about everything you need to know about maps to get started using them within your own Go applications. We are going to be looking at all of the various ways you interact with maps in Go and by the end of this tutorial, you will be a master when it comes to using them.
