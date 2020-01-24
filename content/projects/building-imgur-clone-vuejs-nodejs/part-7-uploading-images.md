@@ -19,11 +19,23 @@ In this tutorial, we'll finally start implementing some of the basic functionali
 
 # Dependencies
 
-```
+Before we can continue, we'll need to add 2 additional libraries to our project that will allow us to make `HTTP` requests and to handle getting files from our users that we can subsequently upload. These 2 libraries are `Vue-Dropzone` and `Axios`.
+
+* **Vue-dropzone** is an awesome Vue component which is powered by Dropzone.js that looks awesome and will allow us to upload multiple files at the same time which is a cool feature. 
+
+* **axios** is an equally awesome JavaScript library that provides a really nice API when making `HTTP` requests.
+
+Let's install these 2 now with `npm`:
+
+```output
 $ npm install vue2-dropzone axios
 ```
 
 # Upload.vue Components
+
+With `axios` and `vue-dropzone` now added to our project, we can now make a start on our `Upload.vue` component. Within this component we'll want to leverage the `vue-dropzone` component within the `<template/>` section of our component.
+
+We'll also be adding an `alert` box which will wrap any errors we may see and highlight them to our users:
 
 <div class="filename"> frontend/src/components/Upload.vue </div>
 
@@ -43,15 +55,18 @@ $ npm install vue2-dropzone axios
         </div>
     </div>
 </template>
+```
 
+With the template in place, let's now flesh out the JavaScript element of this component. We'll start off 
+
+
+<div class="filename"> frontend/src/components/Upload.vue </div>
+
+```html
 <script>
-import { upload } from "@/services/file-upload.service";
 import vue2Dropzone from 'vue2-dropzone'
 import 'vue2-dropzone/dist/vue2Dropzone.css'
-const STATUS_INITIAL = 0,
-  STATUS_SAVING = 1,
-  STATUS_SUCCESS = 2,
-  STATUS_FAILED = 3;
+
 export default {
   name: "Upload",
   components: {
@@ -103,7 +118,12 @@ export default {
   }
 };
 </script>
+```
 
+
+<div class="filename"> frontend/src/components/Upload.vue </div>
+
+```html
 <style scoped>
 .upload-wrapper {
   background-color: white;
@@ -197,33 +217,6 @@ export default new Router({
 })
 ```
 
-# File Upload Frontend Service
-
-```js
-import * as axios from 'axios'
-import CognitoAuth from '@/cognito'
-import config from '@/config'
-
-function upload(file) {
-
-    CognitoAuth.getIdToken((err, result) => {
-        if (err) { console.log(err) } 
-        else {
-            const url = config.s3SignedUrl;
-            axios.defaults.headers.common['Authorization'] = result;
-            return axios({ method: 'post', url: url, data: { name: file.name, type: file.type }})
-                .then(x => {
-                    var options = { headers: { 'Content-Type': file.type } }
-                    delete axios.defaults.headers.common['Authorization'];
-                    return axios.put(x.data.uploadURL, file, options)
-                })
-        }
-    })
-
-}
-
-export { upload }
-```
 
 # Updating our config/index.js File
 
@@ -237,7 +230,8 @@ export default {
 }
 ```
 
+# Deploying our Application
 
-# Conclusion
+The next piece of the puzzle that we will have to solve is deploying our application somewhere that other people can see it and interact with it. This is one of the most exciting parts of software deployment in my opinion as it means that other people get to see the fruits of your hard labour and benefiting from your work!
 
 > **Next Tutorial** - Under Construction - The next tutorial in this series will be out on the 1st of February, 2020.
