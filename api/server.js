@@ -42,7 +42,7 @@ async function generateImage() {
     });
     const page = await browser.newPage();
     await page.goto('file://' + __dirname + '/temp/index.html');
-    await page.screenshot({path: 'temp/test.png', clip: {x: 0, y: 0, width: 600, height: 310}});
+    await page.screenshot({path: 'temp/test.png', clip: {x: 0, y: 0, width: 600, height: 330}});
     await browser.close();
 }
 

@@ -9,14 +9,13 @@
 <div class="container">
     <div class="max-w-full min-h-8 rounded overflow-hidden shadow-lg bg-white">
         <div class="px-8 py-8">
-            <p class="text-sm text-gray-600 flex items-center">
-                compsci
+            <p class="text-sm text-gray-600 flex items-center uppercase">
+                vuejsimgurclone
             </p>
-            <div class="font-bold h-12 text-2xl mb-2">Bit Manipulation For Beginners</div>
+            <div class="font-bold h-14 text-xl mb-3">Part 5 - Authentication With Cognito and Route Guards</div>
             <div class="line-clamp module">
-                <p class="text-gray-700 text-base">In this tutorial we will be taking a look at bit manipulation and how you can use it to optimize some of the different parts of your systems when you are programming.
- In this tutorial we will be using Python 3.6 in order to demonstrate some of the concepts covered.
- Shift Left By shifting left we are essentially multiplying our original number by 2 * the number of times we shift left.</p>
+                <p class="text-gray-700 text-base">In this tutorial, we are going to be taking a first look at how we will be adding authentication/authorization to our Vue.JS Imgur application. This is a fairly large and complex topic, but we&amp;rsquo;ll be breaking it down into 2 parts.
+In this part, we&amp;rsquo;ll be creating a helper class that will feature everything we need in order to talk to a cognito user pool that we&amp;rsquo;ll be creating again with terraform, and we&amp;rsquo;ll also be adding a few route guards to our application to see how these will protect certain sections of our app from unauthorized users!</p>
             </div>
         </div>
         <div class="flex px-6 mb-4">
@@ -59,7 +58,7 @@ body{
 .container {
     width: 600px;
     height: 300px;
-    padding: 10px;
+    padding: 20px;
 }
 .card {
     z-index: 100;
