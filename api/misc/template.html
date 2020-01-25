@@ -10,21 +10,31 @@
     <div class="max-w-full min-h-8 rounded overflow-hidden shadow-lg bg-white">
         <div class="px-8 py-8">
             <p class="text-sm text-gray-600 flex items-center">
-                TutorialEdge.net
+                {{series}}
             </p>
             <div class="font-bold h-12 text-2xl mb-2">{{title}}</div>
             <div class="line-clamp module">
                 <p class="text-gray-700 text-base">{{summary}}</p>
             </div>
         </div>
-        <div class="flex px-8 mb-4">
-            <img class="w-10 h-8 rounded-full mr-4" src="{{twitter}}/profile_image?size=original" alt="{{author}}">
-            <div class="text-sm">
-                <p class="text-gray-900 leading-none">{{author}}</p>
-                <p class="text-gray-600">Aug 18</p>
+        <div class="flex px-6 mb-4">
+            <div class="flex-1">
+                <div class="flex">
+                    <img class="w-8 h-8 rounded-full mr-4" src="https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg" alt="{{author}}">
+                    <div class="text-sm">
+                        <p class="text-gray-900 leading-none">{{author}}</p>
+                        <p class="text-gray-600">Aug 18</p>
+                    </div>
+                </div>
             </div>
-            <img class="w-10 h-8 rounded-full mr-4" src="https://images.tutorialedge.net/images/logo.png" alt="TutorialEdge">
-            
+            <div class="flex-1 float-right">
+                <div class="flex ml-12">
+                    <div class="text-sm mt-2 ml-12">
+                        <p class="text-gray-600">TutorialEdge.net</p>
+                    </div>
+                    <img class="w-10 h-10 rounded-full ml-4 float-right" src="https://images.tutorialedge.net/images/logo.png" alt="TutorialEdge">
+                </div>
+            </div>
 
           </div>
       </div>
