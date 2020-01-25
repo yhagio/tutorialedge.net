@@ -1,76 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 	<title>Test</title>
 </head>
 <body>
-<div class="card">
-    <div class="row">
-        <div class="col-md-2 article-image">
-            <img src="https://images.tutorialedge.net/images/logo.png" class="align-middle" alt="Article Image">
-        </div>
-        <div class="col-md-10">
-            <h2>{{title}}</h2>
-            <p class="card-text">{{summary}}</p>
-            <div class="row">
-                <div class="text-left col-md-6">
-                    <p class="card-text text-muted">@Elliot_f</p>  
-                </div>
-                <div class="text-right col-md-6">
-                    <p class="card-text text-right"><small class="text-muted">{{formatDate publishdate day="numeric" month="long" year="numeric"}} <img src="https://images.tutorialedge.net/images/logo.png" alt="TutorialEdge Logo"></small></p>  
-                </div>
+
+<div class="container">
+    <div class="max-w-full min-h-8 rounded overflow-hidden shadow-lg bg-white">
+        <div class="px-8 py-8">
+            <p class="text-sm text-gray-600 flex items-center">
+                TutorialEdge.net
+            </p>
+            <div class="font-bold h-12 text-2xl mb-2">{{title}}</div>
+            <div class="line-clamp module">
+                <p class="text-gray-700 text-base">{{summary}}</p>
             </div>
         </div>
+        <div class="flex px-8 mb-4">
+            <img class="w-10 h-8 rounded-full mr-4" src="{{twitter}}/profile_image?size=original" alt="{{author}}">
+            <div class="text-sm">
+                <p class="text-gray-900 leading-none">{{author}}</p>
+                <p class="text-gray-600">Aug 18</p>
+            </div>
+            <img class="w-10 h-8 rounded-full mr-4" src="https://images.tutorialedge.net/images/logo.png" alt="TutorialEdge">
+            
+
+          </div>
+      </div>
     </div>
-</div>
-
 <style>
-body {
-	background-color: #1E8EDC;
-	font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+body{ 
+    background-color: #267D8E;
+}
+.module {
+  width: 100%;
+  margin: 0 0 1em 0;
+  overflow: hidden;
 }
 
-.card {
-	width: 540px;
-	padding: 20px;
-	background-color: white;
-	margin: 30px;
-	-webkit-box-shadow: 10px 7px 10px -8px rgba(0,0,0,0.75);
-	-moz-box-shadow: 10px 7px 10px -8px rgba(0,0,0,0.75);
-	box-shadow: 10px 7px 10px -8px rgba(0,0,0,0.75);
-}
-
-.card img {
-	width: 20px;
-	height: 20px;
-}
-
-.article-image {
-	width: 60px;
-	height: 60px;
-}
-
-.article-image img{
-	width: 70px;
-	height: auto;
-	margin-top: 20px;
-}
-
-.card h2 {
-	border-bottom: 2px solid #cccccc;
-	margin-bottom: 20px;
-}
-
-.card p {
-    overflow: hidden;
+.line-clamp {
     display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
 }
+.container {
+    width: 600px;
+    height: 300px;
+    padding: 10px;
+}
+.card {
+    z-index: 100;
+    margin-left: 10px;
+    margin-top: 10px;
+} 
 </style>
 </body>
 </html>
