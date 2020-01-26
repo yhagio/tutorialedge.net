@@ -4,6 +4,7 @@ const axios = require('axios')
 const puppeteer = require('puppeteer')
 const handlebars = require('handlebars')
 const HandlebarsIntl = require('handlebars-intl')
+const tmp = require('tmp')
 const app = express()
 const port = 8080
 
@@ -42,17 +43,21 @@ async function generateImage() {
     });
     const page = await browser.newPage();
     await page.goto('file://' + __dirname + '/temp/index.html');
-    await page.screenshot({path: 'temp/test.png', clip: {x: 0, y: 0, width: 600, height: 330}});
+    let tmpfile = tmp.tmpNameSync();
+    await page.screenshot({path: tmpfile + ".png", clip: {x: 0, y: 0, width: 600, height: 330}});
     await browser.close();
+
+    return tmpfile;
 }
 
 
 app.get('/card', async (req, res) => {
     try {
         await generateHTML(req.query)
-        await generateImage("page")
-        res.sendFile(__dirname + "/temp/test.png")
+        let filename = await generateImage("page")
+        res.sendFile(filename + ".png")
     } catch (err) {
+        console.log(err)
         res.send("An Exception has occured")
     }
 })
