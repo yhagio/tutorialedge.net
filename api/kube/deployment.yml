@@ -1,0 +1,21 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tutorialedge-rest-api
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      name: tutorialedge-rest-api
+  template:
+    metadata:
+      labels:
+        name: tutorialedge-rest-api
+    spec:
+      containers:
+      - name: application
+        image: forbsey/tutorialedge-rest-api
+        imagePullPolicy: IfNotPresent
+        ports:
+          - containerPort: 8080
