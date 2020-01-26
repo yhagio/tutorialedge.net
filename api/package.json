@@ -13,6 +13,7 @@
     "express": "^4.17.1",
     "handlebars": "^4.7.2",
     "handlebars-intl": "^1.1.2",
-    "puppeteer": "^2.0.0"
+    "puppeteer": "^2.0.0",
+    "tmp": "^0.1.0"
   }
 }
