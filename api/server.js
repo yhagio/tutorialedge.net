@@ -11,38 +11,34 @@ const port = 8080
 HandlebarsIntl.registerWith(handlebars);
 app.use(express.static('temp'))
 
+const templateHTML = fs.readFileSync(__dirname + '/misc/template.html')
+const source = templateHTML.toString()
 let set = {}
-
-async function getPageInformation(query) {
-    let data = set[query.path]
-    return data;
-}
 
 async function generateHTML(query) {
     console.log(query)
-
-    let data = await getPageInformation(query)
     try {
-        const templateHTML = await fs.readFileSync(__dirname + '/misc/template.html')
-        const source = templateHTML.toString()
+        let data = set[query.path]
         const template = handlebars.compile(source, {strict: true})
         const result = template(data)
+        
+        let tmpfile = tmp.tmpNameSync();
+        fs.writeFileSync(tmpfile + ".html", result);
+        return tmpfile;
 
-        fs.writeFile(__dirname + '/temp/index.html', result, (err) => {
-            if (err) console.log(err)
-        })
     } catch (err) {
         console.log(err)
+        return null;
     }
 }
 
-async function generateImage() {
+async function generateImage(htmlfile) {
     const browser = await puppeteer.launch({
         args: ['--no-sandbox'],
         timeout: 10000
     });
     const page = await browser.newPage();
-    await page.goto('file://' + __dirname + '/temp/index.html');
+    await page.goto('file://' + htmlfile + ".html");
     let tmpfile = tmp.tmpNameSync();
     await page.screenshot({path: tmpfile + ".png", clip: {x: 0, y: 0, width: 600, height: 330}});
     await browser.close();
@@ -53,8 +49,8 @@ async function generateImage() {
 
 app.get('/card', async (req, res) => {
     try {
-        await generateHTML(req.query)
-        let filename = await generateImage("page")
+        let htmlfile = await generateHTML(req.query)
+        let filename = await generateImage(htmlfile)
         res.sendFile(filename + ".png")
     } catch (err) {
         console.log(err)
@@ -69,8 +65,8 @@ app.get('/health', (req, res) => {
 async function initialize() {
     try{
         console.log("Populating Cache")
-        let response = await axios.get('https://tutorialedge.net/algolia.json?v=1')
         
+        let response = await axios.get('https://tutorialedge.net/algolia.json?v=1')
         response.data.map((page) => {
             set[page.url] = page
         })
