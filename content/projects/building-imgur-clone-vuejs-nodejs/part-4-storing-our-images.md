@@ -443,6 +443,19 @@ Serverless: Removing old service artifacts from S3...
 
 And with that, we now have a Lambda function that is allows our users to upload images to our imgur clone bucket, we just don't have a means of interacting with the endpoint just yet but we will be getting to that shortly!
 
+# Updating our config/index.js File
+
+Finally, we want to create a `config/index.js` file which will contain a `s3SignedUrl` key-value which will point to our `/upload-node` backend API endpoint: 
+
+<div class="filename"> frontend/src/config/index.js </div>
+
+```js
+export default {
+    region: 'eu-west-1',
+    s3SignedUrl: 'https://rvv1a9to8j.execute-api.eu-west-1.amazonaws.com/dev/upload-node'
+}
+```
+
 # Conclusion
 
 So, in part 5 of this series, we have successfully managed to create a number of different AWS Lambda functions that now feature as the backend of our Imgur application. 

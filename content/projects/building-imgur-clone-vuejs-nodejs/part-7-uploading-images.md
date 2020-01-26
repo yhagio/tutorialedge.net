@@ -1,7 +1,6 @@
 ---
 title: "Part 7 - Uploading Images To Our App"
-date: 2019-08-20T18:44:50+01:00
-draft: true
+date: 2020-01-26T18:44:50+01:00
 weight: 8
 desc: In this tutorial series, we are going to be building an Imgur clone using Lambda functions written using Node.JS and a frontend built using Vue.JS
 author: Elliot Forbes
@@ -35,7 +34,7 @@ $ npm install vue2-dropzone axios
 
 With `axios` and `vue-dropzone` now added to our project, we can now make a start on our `Upload.vue` component. Within this component we'll want to leverage the `vue-dropzone` component within the `<template/>` section of our component.
 
-We'll also be adding an `alert` box which will wrap any errors we may see and highlight them to our users:
+We'll also be adding two `<alert>` boxes which will wrap any errors we may see and highlight them to our users:
 
 <div class="filename"> frontend/src/components/Upload.vue </div>
 
@@ -44,7 +43,8 @@ We'll also be adding an `alert` box which will wrap any errors we may see and hi
     <div class="container">
         <div class="upload-wrapper">
             <h4>Upload Images</h4>
-            {{ error }}
+            <div class="alert alert-warning" v-if="error">{{ error }}</div>
+            <div class="alert alert-info" v-if="status">{{ status }}</div>
             <div class="upload-form">
                 <vue-dropzone 
                     ref="myVueDropzone" 
@@ -57,15 +57,20 @@ We'll also be adding an `alert` box which will wrap any errors we may see and hi
 </template>
 ```
 
-With the template in place, let's now flesh out the JavaScript element of this component. We'll start off 
+With the template in place, let's now flesh out the JavaScript element of this component. 
 
+We'll then register `vue2Dropzone` as a component within the `components` block. 
+
+Within this component, we will be defining the `sendingEvent` function which we passed in to our `<vue-dropzone>` component using the `v-on:vdropzone-file-added` directive. This will attempt to get the **ID Token** which we will subsequently be using to form an authenticated request to `S3` in order to get a s3 Signed URL. 
 
 <div class="filename"> frontend/src/components/Upload.vue </div>
 
 ```html
 <script>
+import CognitoAuth from './../cognito'
+import config from './../config'
 import vue2Dropzone from 'vue2-dropzone'
-import 'vue2-dropzone/dist/vue2Dropzone.css'
+import axios from 'axios'
 
 export default {
   name: "Upload",
@@ -75,6 +80,7 @@ export default {
   data: function () {
     return {
         error: '',
+        status: '',
         signurl: '',
         dropzoneOptions: {
             url: 'https://httpbin.org/post',
@@ -90,36 +96,41 @@ export default {
     }
   },
   methods: {
+      /*eslint no-unused-vars: "off"*/
     sendingEvent(file, xhr, formData) {
-        upload(file)
-            .then((success) => { console.log("FUCK YES") })
-            .catch((err) => { console.log(err); })
-    
-    },
-    s3UploadSuccess(location) {
-      console.log(location)
-    },
-    uploadFiles() {
-        console.log("Hit");
-      if (this.signurl) {
-        this.$refs.myVueDropzone.setAWSSigningURL(this.signurl);
-        this.$refs.myVueDropzone.processQueue();
-      }
-      else {
-        this.$refs.urlsigner.focus();
-        alert("Enter your signing URL");
-      }
+        this.$cognitoAuth.getIdToken((err, result) => {
+            if (err) { 
+                this.error = err;
+            } else {
+                const url = config.s3SignedUrl;
+                axios.defaults.headers.common['Authorization'] = result;
+                let headers = {
+                        "Access-Control-Allow-Origin": "*"
+                };
+                axios({ method: 'post', url: url, headers: headers, data: { name: file.name, type: file.type }})
+                    .then(x => {
+                        var options = { headers: { 
+                            'Content-Type': file.type,
+                            'Access-Control-Allow-Origin': '*' 
+                        }}
+                        delete axios.defaults.headers.common['Authorization'];
+                        axios.put(x.data.uploadURL, file, options)
+                    })
+                    .then(status => {
+                        this.status = status;
+                    })
+                    .catch(err => {
+                        this.error = err;
+                    })
+            }
+        })
     }
-  },
-  watch: {
-    fileAdded() {
-        console.log("success");
-    },
   }
 };
 </script>
 ```
 
+Finally, let's style our `Upload.vue` component and make it look slightly nicer. We'll create a wrapper for our upload form that will essentially be just a white box and give it some box shadow, some margins and that'll do us.
 
 <div class="filename"> frontend/src/components/Upload.vue </div>
 
@@ -167,6 +178,10 @@ export default {
 ```
 
 ## Router Updates
+
+With this `Update.vue` component now defined, we need to now register a route for it within our `router/index.js` file. This will be another route that we'll want to guard with our `requireAuth` route guard as we don't want people to be able to see the upload page unless they are signed in.
+
+> **Note** - We will have to update our upload backend endpoint to ensure that only people who are authenticated are able to hit the endpoint. It is hugely important that you do both *client-side* and *server-side* authentication in situations like these.
 
 <div class="filename"> frontend/src/router/index.js </div>
 
@@ -217,18 +232,59 @@ export default new Router({
 })
 ```
 
+## Conditional Rendering
 
-# Updating our config/index.js File
+Having this new route in place, we want our users to be able to easily navigate to this new page when they are logged in. In order to make this easy, we are going to add a bit of conditional rendering to our `Navbar.vue` component so that it displays the links to **upload** and **profile** when they are logged in, and **signup** and **log in** when they are not!
 
-```js
-export default {
-    region: 'eu-west-1',
-    IdentityPoolId: 'eu-west-1_vTElG57hw',
-    UserPoolId: 'eu-west-1:853957954650',
-    ClientId: '7du6r7ds9332ptig4fjisui8oa',
-    s3SignedUrl: 'https://rvv1a9to8j.execute-api.eu-west-1.amazonaws.com/dev/upload-node'
-}
+Currently, we have 2 `<li class="nav-item">` elements within our `<nav>` that current hold the links to **Login** and **Register**. We can make these render conditionally by using the `v-if` directive. 
+
+The `v-if` directive will only render a block if the directive's expression returns a truthy value. Therefore, we need to define a function within our component that will return **true** if there is a currently logged in user, or **false** otherwise.
+
+<div class="filename"> frontend/src/components/Navbar.vue </div>
+
+```html
+<template>
+  ...
+          <li v-if="isLoggedIn()" class="nav-item">
+            <router-link class="nav-link" to="profile">Profile</router-link>
+          </li>
+          <li v-if="isLoggedIn()" class="nav-item">
+            <router-link class="nav-link" to="upload">Upload</router-link>
+          </li>
+          <li v-if="!isLoggedIn()" class="nav-item">
+            <router-link class="nav-link" to="login">Login</router-link>
+          </li>
+          <li v-if="!isLoggedIn()" class="nav-item">
+            <router-link class="nav-link" to="register">Register</router-link>
+          </li>
+  ...
+</template>
 ```
+
+With the `v-if` directive now added to our `nav-item`'s, we now need to implement this `isLoggedIn` function. This will call out to the `cognitoAuth` class that we have registered within our `Vue` instance and call `getCurrentUser()`. If the current user is `null` then it will return false or true if it is set:
+
+<div class="filename"> frontend/src/components/Navbar.vue </div>
+
+```html
+<script>
+export default {
+    name: 'Navbar',
+    methods: {
+      isLoggedIn: function() {
+        if(this.$cognitoAuth.getCurrentUser() === null) {
+          return false;
+        } else {
+          return true;
+        }
+      }
+    }
+}
+</script>
+```
+
+With this in place, try logging in and logging out to see if these changes have worked! When you log in, you will see that the links change and your users will be able to more easily navigate around the app.
+
+> **Up-to-date Code** - If you want the up-to-date code for this project, then please checkout the official repository: [elliotforbes/imgur-clone-vuejs-nodejs](https://github.com/elliotforbes/imgur-clone-vuejs-nodejs)
 
 # Deploying our Application
 
