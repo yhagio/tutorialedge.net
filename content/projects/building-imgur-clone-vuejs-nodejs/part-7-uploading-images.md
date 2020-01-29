@@ -14,11 +14,15 @@ authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_4
 
 In the last tutorial in this series, we successfully implemented a complete login/registration flow for our application that interfaces directly with an AWS Cognito UserPool. 
 
-In this tutorial, we'll finally start implementing some of the basic functionality that our app will need to survive in the wild and become self-driven by our newly registered users!
+In this tutorial, we'll finally start implementing some of the basic functionality that our app will need to survive in the wild and become self-driven by our newly registered users. More specifically, we will be adding the frontend **Upload** component component that will do the job of talking to the upload API endpoint that we built and deployed in part 4 of this series. 
+
+The **main aim of this tutorial** is to show how easy it is to bring in additional Vue.js frontend libraries and components into your Vue.js application so that you can start leveraging the work of other people to build your own apps. We'll also be covering how you can **craft authenticated API requests** that can subsequently talk to a backend that we will be protecting with cognito before uploading to S3!
+
+This will be a huge step towards a minimum viable product and it will be a very impressive technical challenge to overcome!
 
 # Dependencies
 
-Before we can continue, we'll need to add 2 additional libraries to our project that will allow us to make `HTTP` requests and to handle getting files from our users that we can subsequently upload. These 2 libraries are `Vue-Dropzone` and `Axios`.
+Before we can continue, we'll need to add the 2 additional libraries that we were talking about to our project. One that will allow us to easily make  `HTTP` requests and the other to handle getting files from our users that we can subsequently upload. These 2 libraries are `Vue-Dropzone` and `Axios`.
 
 * **Vue-dropzone** is an awesome Vue component which is powered by Dropzone.js that looks awesome and will allow us to upload multiple files at the same time which is a cool feature. 
 
@@ -57,11 +61,7 @@ We'll also be adding two `<alert>` boxes which will wrap any errors we may see a
 </template>
 ```
 
-With the template in place, let's now flesh out the JavaScript element of this component. 
-
-We'll then register `vue2Dropzone` as a component within the `components` block. 
-
-Within this component, we will be defining the `sendingEvent` function which we passed in to our `<vue-dropzone>` component using the `v-on:vdropzone-file-added` directive. This will attempt to get the **ID Token** which we will subsequently be using to form an authenticated request to `S3` in order to get a s3 Signed URL. 
+Note how we have defined an element, `<vue-dropzone/>` which features a number of different attributes, this is the external component that we can use in exactly the same manner as we would in internal component such as `<navbar/>`. The only difference is that we will import this component from the `vue2-dropzone` node module which we can do now:
 
 <div class="filename"> frontend/src/components/Upload.vue </div>
 
@@ -74,6 +74,8 @@ import axios from 'axios'
 
 export default {
   name: "Upload",
+  // register the external vue2-dropzone component
+  // within this component
   components: {
     vueDropzone: vue2Dropzone
   },
@@ -129,6 +131,10 @@ export default {
 };
 </script>
 ```
+
+Within this component, we will have defined the `sendingEvent` function which we passed in to our `<vue-dropzone>` component using the `v-on:vdropzone-file-added` directive. This will attempt to get the **ID Token**, if it is set, which we subsequently use to form an authenticated request to `S3` in order to get a s3 Signed URL. 
+
+This pattern of adding an **Authorization** header to `HTTP` requests is very common and something you will absolutely see being done in other Vue.js applications who interact with authenticated endpoints themselves. 
 
 Finally, let's style our `Upload.vue` component and make it look slightly nicer. We'll create a wrapper for our upload form that will essentially be just a white box and give it some box shadow, some margins and that'll do us.
 
@@ -217,7 +223,6 @@ function logout(to, from, next) {
   next('/')
 }
 
-
 export default new Router({
     routes: [
       { path: '/', component: HomePage },
@@ -284,9 +289,72 @@ export default {
 
 With this in place, try logging in and logging out to see if these changes have worked! When you log in, you will see that the links change and your users will be able to more easily navigate around the app.
 
+# Adding an Authorizer to Our Upload Function
+
+As it stands, our `upload-node` serverless function is currently open to the world and obviously this isn't ideal in terms of security. In order to lock this down, let's extend the `uploadImage` function definition within our `serverless.yml` file so that it uses our cognito pool as an `authorizer`:
+
+<div class="filename"> backend/serverless.yml </div>
+
+```yml
+service: imgur-clone-backend-functions
+
+frameworkVersion: ">=1.1.0 <2.0.0"
+
+custom:
+  bucket: dev-imgur-clone-bucket-test
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  region: eu-west-1
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - s3:*
+      Resource: "arn:aws:s3:::${self:custom.bucket}"
+    - Effect: Allow
+      Action:
+        - s3:*
+      Resource: "arn:aws:s3:::${self:custom.bucket}/*"
+
+functions:
+  list:
+    handler: listS3Objects.list
+    events:
+      - http:
+          path: list
+          method: get
+          cors: true
+  
+  uploadImage:
+    handler: getSignedUpload.requestUploadURL
+    environment:
+      BUCKET: ${self:custom.bucket}
+    events:
+      - http:
+          path: upload-node
+          method: post
+          cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:eu-west-1:853957954650:userpool/eu-west-1_vTElG57hw
+            identitySource: method.request.header.Authorization
+            type: token
+```
+
+Awesome, with this now added, let's redeploy our functions using `serverless deploy`.
+
+# Testing it All Works
+
+With this new change made to our `uploadImage` function, let's test the full flow for our application now. Try logging out, logging in and then navigating to the upload page and uploading an image to your bucket. Before you upload the image, open up the developer console within your browser and select the **network** tab so that you can watch the HTTP requests flow through to first the serverless API function and before finally hitting your S3 Bucket with a **HTTP PUT** request and your image!
+
+![Working Upload Functionality!](https://images.tutorialedge.net/images/imgur-clone/upload-success.png)
+
 > **Up-to-date Code** - If you want the up-to-date code for this project, then please checkout the official repository: [elliotforbes/imgur-clone-vuejs-nodejs](https://github.com/elliotforbes/imgur-clone-vuejs-nodejs)
 
+
 # Deploying our Application
+
+Awesome, we have successfully been able to implement authenticated uploads to our S3 bucket through our frontend Vue.js applications! This is a huge step forward and a massive accomplishment and with this in place we are now well on our way to having a minimum viable product!
 
 The next piece of the puzzle that we will have to solve is deploying our application somewhere that other people can see it and interact with it. This is one of the most exciting parts of software deployment in my opinion as it means that other people get to see the fruits of your hard labour and benefiting from your work!
 
