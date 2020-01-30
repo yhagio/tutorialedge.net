@@ -577,5 +577,4 @@ Congratulations, you have successfully implemented one of the trickiest and most
 
 In the next tutorial, we are going to be extending our application so that our newly registered users can start populating the site with their cat/dog images for the rest of the world to see! We now have a skeleton app that is almost an MVP which we can pitch to investors for millions, I'm very much hoping that you are enjoying this series and following along! If you have any feedback, I would love to hear it via either email or by tweeting me directly: [@Elliot_f](https://twitter.com/elliot_f)
 
-> **Under Construction** - The next tutorial in this series is currently under construction! It will be released on the 25th of January, 2020!
-
+> **Next Tutorial** - The next tutorial in the series can be found here: [Part 7 - Uploading Images](/projects/building-imgur-clone-vuejs-nodejs/part-7-uploading-images/)
