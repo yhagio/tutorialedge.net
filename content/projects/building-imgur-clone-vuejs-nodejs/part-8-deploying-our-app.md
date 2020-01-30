@@ -13,7 +13,7 @@ tags:
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
-In this final tutorial in the series, we are going to look at an incredibly important, but often overlooked aspect of project development and that is deploying our app in an automated fashion. 
+In this tutorial in the series, we are going to look at an incredibly important, but often overlooked aspect of project development and that is deploying our app in an automated fashion. 
 
 # The Importance of Automated Deployment
 
