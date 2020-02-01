@@ -4,6 +4,7 @@ const puppeteer = require('puppeteer')
 const handlebars = require('handlebars')
 const HandlebarsIntl = require('handlebars-intl')
 const tmp = require('tmp')
+const path = require('path')
 
 HandlebarsIntl.registerWith(handlebars);
 const templateHTML = fs.readFileSync(__dirname + '/misc/template.html')
@@ -24,9 +25,11 @@ async function generateHTML(path) {
     }
 }
 
-async function generateImage(path) {
+async function generateImage(imagePath) {
 
-    if(!fs.existsSync(__dirname + "/images" + path + "card.png")) {
+    let imagesCDNPath = path.join(__dirname, "../../../", "tutorialedge", "images.tutorialedge.net", "cards")
+
+    if(!fs.existsSync(imagesCDNPath + imagePath + "card.png")) {
         const browser = await puppeteer.launch({
             args: ['--no-sandbox'],
             timeout: 10000
@@ -34,11 +37,11 @@ async function generateImage(path) {
         const page = await browser.newPage();   
     
         await page.goto("file://" + __dirname + "/temp/index.html");
-        await fs.mkdirSync(__dirname + "/images" + path, { recursive: true })
-        await page.screenshot({path: __dirname + "/images" + path + "card.png", clip: {x: 0, y: 0, width: 600, height: 330}});
+        await fs.mkdirSync(imagesCDNPath + imagePath, { recursive: true })
+        await page.screenshot({path: imagesCDNPath + imagePath + "card.png", clip: {x: 0, y: 0, width: 600, height: 330}});
         await browser.close();
     } else {
-        console.log("Card already exists for path: %s", path)
+        console.log("Card already exists for path: %s", imagePath)
     }
 }
 
@@ -46,7 +49,7 @@ async function generateCards() {
     try{
         console.log("Populating Cache")
         
-        let response = await axios.get('https://tutorialedge.net/algolia.json?v=1')
+        let response = await axios.get('http://localhost:1313/algolia.json')
         response.data.map((page) => {
             set[page.url] = page
         })
