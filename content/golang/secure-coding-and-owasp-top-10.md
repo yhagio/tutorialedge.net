@@ -109,7 +109,7 @@ Right, so, we have seen how regex can be implemented using Golang.
 
 Is that it for data sanitization? No.
 
-When you deal with real world applications, you will have to capture other type of inputs, depending on your application. Therefore, here are three points to consider:
+When you deal with real world applications, you will have to capture other type of inputs, depending on your application. Therefore, here are six points to consider:
 1. Always perform data [normalization](https://blog.golang.org/normalization) before performing data sanitization; normalization is important because in Unicode, the same character can have many different representations and this can have a negative impact in the data sanitization process.
 2. If you are receiving a path (e.g. directory, link, etc.) as an input, [canonicalize](https://golang.org/pkg/path/filepath/#EvalSymlinks) it before performing data sanitization; absolute or relative paths can be used for malicious purposes as they may contain file links such as symbolic (soft) links, hard links, shortcuts, shadows, aliases, and junctions; hence, they should be fully resolved; furthermore, keep in mind your approach and verify it works for the OS(s) intended.
 3. The assumption "all input data is unsafe by default" also applies to hidden form fields, URLs, HTTP header content, etc.
