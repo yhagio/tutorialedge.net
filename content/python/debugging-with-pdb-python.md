@@ -28,6 +28,12 @@ has gone wrong.
 The PDB is classed as an interactive source code debugger which can be used in a
 similar fashion to how you would use the REPL.
 
+# Video Tutorial
+
+This tutorial is also available in video format should you wish to enjoy the content through that format:
+
+{{< youtube id="VQjCx3P89yk" autoplay="false" >}}
+
 # Starting the Python Debugger
 
 When it comes to starting the Python debugger we have 2 main options. We can
