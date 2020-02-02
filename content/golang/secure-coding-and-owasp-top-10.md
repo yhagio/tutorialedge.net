@@ -1,6 +1,6 @@
 ---
 author: Abdullah Garcia
-date: 2020-01-19T12:05:03Z
+date: 2020-02-02T12:05:03Z
 desc: 
   In this article, we will be reviewing general secure coding best practices and the OWASP Top 10 (2017) security risks, focusing on how they should be approached when coding using Go.
 series: golang
