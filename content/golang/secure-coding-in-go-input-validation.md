@@ -8,7 +8,7 @@ image: golang.svg
 tags:
   - advanced
   - security
-title: "Secure Coding & OWASP Top 10 (2017) in Golang - Part I"
+title: "Secure Coding in Go - Input Validation"
 twitter: https://twitter.com/abdullahgarcia
 authorImage: https://pbs.twimg.com/profile_images/1099327373177208833/fZLkqyx3_400x400.png
 ---
@@ -17,16 +17,21 @@ authorImage: https://pbs.twimg.com/profile_images/1099327373177208833/fZLkqyx3_4
 
 First of all, I would like to thank Elliot Forbes for the opportunity to collaborate in this space. My name is Abdullah Garcia. I am an experienced security engineer with over ten years of successful design and delivery of high-quality solutions across a broad range of industry sectors; for the curious ones, you can find more details in LinkedIn. I'm also a neuroscientist focused on Brain-Computer Interfaces (BCIs) for motor neurorehabilitation combining virtual reality, ML, and prosthetics. Finally, in my spare time, I enjoy landscape/urban/street photography (https://abdullahgarcia.myportfolio.com), traveling, cooking/baking, and all sort of sports... among other things.
 
-Right, so, these are the things I would like you to take away with this article:
+This article is the first of several to come, which objectives are:
 
 * Learn general secure coding best practices that are applicable regardless of the coding language you use.
 * Understand how to approach the OWASP Top 10 (2017) security risks when coding using Go.
+
+As for this one in particular:
+
+* Understand data sanitization and best practices.
+* Understand input validation and best practices.
 
 Thanks in advance for your time!
 
 # General Secure Coding Best Practices
 
-Before beginning this section, I would like to emphasize the following: when you code for living, I genuinely think it is your reponsibility to do it as best as possible (within your understanding; may that be in continuous growth by self-motivated learning). This includes owning the security considerations embedded into your coding practices. Remember, whatever you code, reflects your professionalism. Furthermore, your code composes an application which is likely to be used in the real world affecting/impacting people one way or another. Take pride on it!
+Before beginning this section, I would like to emphasize the following: when you code for living, I genuinely think it is your reponsibility to do it as best as possible within your understanding. Hopefully, that understanding will be in continuous growth by self-motivated learning. This includes owning the security considerations embedded into your coding practices. Remember, whatever you code, reflects your professionalism. Furthermore, your code composes an application which is likely to be used in the real world affecting/impacting people one way or another. Take pride in it!
 
 Let's begin!
 
@@ -79,7 +84,7 @@ Probably the most efficient way to implement whitelisting in any coding language
 
 Golang regex example:
 
-```
+```go
 package main
 
 import (
@@ -99,7 +104,7 @@ func main() {
 
 Result(s):
 
-```
+```output
 Pattern: ^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$
 
 Email: example<script>alert('Injected!');</script>@domain.com :false
@@ -110,11 +115,42 @@ Right, so, we have seen how regex can be implemented using Golang.
 Is that it for data sanitization? No.
 
 When you deal with real world applications, you will have to capture other type of inputs, depending on your application. Therefore, here are six points to consider:
-1. Always perform data [normalization](https://blog.golang.org/normalization) before performing data sanitization; normalization is important because in Unicode, the same character can have many different representations and this can have a negative impact in the data sanitization process.
+1. Always perform data [normalization](https://blog.golang.org/normalization) before performing data sanitization; normalization is important because in Unicode, the same character can have many different representations and this can have a negative impact in the data sanitization process; please, review the link for Golang coding example.
+
 2. If you are receiving a path (e.g. directory, link, etc.) as an input, [canonicalize](https://golang.org/pkg/path/filepath/#EvalSymlinks) it before performing data sanitization; absolute or relative paths can be used for malicious purposes as they may contain file links such as symbolic (soft) links, hard links, shortcuts, shadows, aliases, and junctions; hence, they should be fully resolved; furthermore, keep in mind your approach and verify it works for the OS(s) intended.
+
+Golang canonicalization example:
+
+```go
+package main
+
+import (
+	"fmt"
+	"path/filepath"
+)
+
+func main() {
+	input := "/usr/local/bin/kubectl"
+	
+	resolvedPath, _ := filepath.EvalSymlinks(input)
+
+	fmt.Printf("Input: %v :%v\n", input, resolvedPath)
+}
+```
+
+Result(s):
+
+```output
+Input: /usr/local/bin/kubectl :/usr/local/Cellar/kubernetes-cli/1.17.2/bin/kubectl
+```
+
 3. The assumption "all input data is unsafe by default" also applies to hidden form fields, URLs, HTTP header content, etc.
-4. Be aware that [double encoding](https://owasp.org/www-community/Double_Encoding) or other forms of obfuscation attacks can be attempted against your system and they can be addressed via canonicalization.
+
+4. Be aware that [double encoding](https://owasp.org/www-community/Double_Encoding) or other forms of obfuscation attacks can be 
+attempted against your system and they can be addressed via canonicalization.
+
 5. Check for null bytes: <%00>.
+
 6. Check for new line characters.
 
 Once data sanitization is over, input validation should take place. Input validation, as the term explicitly indicates, makes sure that the data abides to the rules applicable/defined for a type of input. What does this means... If a type of input is linked to a knowledge domain or business rule, then, whatever characteristics are dictated within them should be enforced. This is also true for the rules we define in terms of storage capability or processing purposes: e.g. how many characters are we allowing to be stored for such input.
@@ -133,7 +169,7 @@ That being said, what kind of input validation can take place after data sanitiz
 
 Golang example:
 
-```
+```go
 package main
 
 import (
@@ -149,7 +185,7 @@ func main() {
 
 Result(s):
 
-```
+```output
 First name: John Alejandro Dumas Patricio O'Neil :36
 ```
 
@@ -160,6 +196,8 @@ With that being said, there are a few more points for you to consider when it co
 2. All validation failures should result in input rejection.
 3. Validate data type and data range too; ensure there is a boundary check when appropriate.
 
+# Conclusion
+
 We have covered both terms now, so, how do they relate to OWASP Top 10? 
 
 Input validation, and data sanitization, are directly related to the following:
@@ -167,6 +205,11 @@ Input validation, and data sanitization, are directly related to the following:
 - A4: XML External Entities (XXE)
 - A7: Cross-Site Scripting (XSS)
 
-In the next article, I'll cover those OWASP Top 10 risks after addressing output encoding.
+In the next article, I'll cover those OWASP Top 10 risks after addressing **output encoding**.
+
+## Further Reading:
+
+- [Top 10 Secure Coding Practices](https://wiki.sei.cmu.edu/confluence/display/seccode/Top+10+Secure+Coding+Practices)
+- [Top 25 Software Errors](https://www.sans.org/top25-software-errors)
 
 Hopefully you found this tutorial useful, if you did, or if you require further help, then please do not hesitate to let me know in the comments section below!
