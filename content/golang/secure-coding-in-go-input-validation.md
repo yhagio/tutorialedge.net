@@ -72,7 +72,7 @@ In this domain and context, data sanitization means: remove (or transform) any d
 
 Input example:
 
-```
+```output
 example<script>alert('Tacos!');</script>@domain.com
 ```
 
@@ -159,7 +159,7 @@ To understand input validation, let's consider a website that has a form and wit
 
 Input example:
 
-```
+```output
 John Alejandro Dumas Patricio O'Neil
 ```
 
