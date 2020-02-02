@@ -20,6 +20,13 @@ Thus, we need to be able to write Go programs that can execute concurrently in a
 safe manner without impacting performance. This is where the `mutex` comes into
 play.
 
+# Video Tutorial
+
+This tutorial is available in video format:
+
+{{< youtube id="cjMdUmfzQWs" autoplay="false" >}}
+
+
 # The Theory
 
 A Mutex, or a mutual exclusion is a mechanism that allows us to prevent
