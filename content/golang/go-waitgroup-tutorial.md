@@ -26,7 +26,7 @@ In this tutorial, we are going to be covering the following:
 By the end of this, you should have a solid grasp as to how to employ
 `WaitGroups` within your own concurrent Go applications.
 
-> **Note** - The full code for this tutorial can be found here: [TutorialEdge](https://github.com/TutorialEdge/go-watigroup-tutorial)
+> **Note** - The full code for this tutorial can be found here: [TutorialEdge/go-waitgroup-tutorial](https://github.com/TutorialEdge/go-waitgroup-tutorial)
 
 # Video Tutorial
 
