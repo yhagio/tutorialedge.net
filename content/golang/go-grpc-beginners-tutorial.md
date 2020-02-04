@@ -73,6 +73,8 @@ You do have options that make this possible, but it's not something that's readi
 Let's start off by defining a really simple gRPC server in Go. Once we have a simple server up and running we 
 can set about creating a gRPC client that will be able to interact with it.
 
+<div class="filename"> server.go </div>
+
 ```go
 package main
 
@@ -88,6 +90,8 @@ func main() {
 Now that we have our server up and running, let's take a look at how we can build up a simple client
 that will be able to interact with it.
 
+<div class="filename"> client.go </div>
+
 ```go
 package main
 
@@ -97,6 +101,8 @@ func main() {
   fmt.Println("Go gRPC Client")
 }
 ```
+
+
 
 # Conclusion
 
