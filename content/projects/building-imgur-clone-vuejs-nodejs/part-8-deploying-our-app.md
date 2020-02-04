@@ -50,9 +50,44 @@ Now that we have created this `.travis.yml` file within our repository, we need 
 
 As the rest of this tutorial has been built on top of AWS, it makes sense that we also deploy our frontend application here to keep thinks simple. 
 
-So, we'll be deploying our built frontend application to an S3 bucket which will serve up this application to our users. 
+So, we'll be deploying our built frontend application to an S3 bucket which will serve up this application to our users. Once again, we will want to rely on an S3 bucket in which we can host our built frontend application and once again we will be relying on **terraform** to provision this S3 bucket for us as this is infrastructure.
 
-Within your AWS account, create a new bucket that will live alongside your images bucket. 
+Let's open up the `main.tf` file within our `terraform/` directory and add a new `resource` definition. We'll be adding this below the existing **bucket** resource definition:
+
+<div class="filename"> terraform/main.tf </div>
+
+```yml
+...
+resource "aws_s3_bucket" "frontend" {
+    bucket = "dev-imgur-clone-frontend"
+
+    tags = {
+        Name = "Dev Imgur Clone Frontend"
+        Environment = "Dev"
+    }
+}
+...
+```
+
+With this in place, let's provision this by once again using the `terraform apply` command:
+
+```output
+$ terraform apply
+...
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+aws_s3_bucket.frontend: Creating...
+aws_s3_bucket.frontend: Still creating... [10s elapsed]
+aws_s3_bucket.frontend: Creation complete after 14s [id=dev-imgur-clone-frontend]
+
+Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+```
+
+Awesome, we now have a bucket in which we can deploy and serve our frontend application from!
 
 ## Step 3 - Deploying our Lambda Functions
 
