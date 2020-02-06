@@ -105,6 +105,8 @@ serverless deploy
 
 ```
 
+With this now in place, let's test our automated deployment by making a code change to our repository.
+
 ### Handling Credentials
 
 With this in place, the final piece of the puzzle is to give Travis the credentials needed in order to deploy your AWS account.
