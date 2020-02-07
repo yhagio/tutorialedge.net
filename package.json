@@ -45,15 +45,15 @@
     "node-sass": "^4.11.0",
     "sass-loader": "*",
     "serverless-apigw-binary": "^0.4.4",
-    "webpack-cli": "^3.2.3"
+    "webpack-cli": "^3.3.10"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "algolia": "atomic-algolia",
     "server": "hugo server --buildDrafts --ignoreCache",
     "gulp": "gulp watch",
-    "webpack": "webpack",
-    "prod-build": "webpack -p",
+    "webpack": "webpack --config webpack/webpack.dev.js",
+    "prod-build": "webpack -p --config webpack/webpack.prod.js",
     "start": "concurrently \"npm:server\" \"npm:gulp\" \"npm:webpack\""
   },
   "repository": {
