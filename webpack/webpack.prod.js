@@ -7,9 +7,9 @@ module.exports = {
     entry: './app/index.ts',
     mode: 'production',
     output: {
-        path: path.resolve(__dirname, 'static/app'),
+        path: path.resolve(__dirname, '../static/app'),
         filename: '[name].bundle.js',
-        publicPath: '/static/app',
+        publicPath: __dirname + '../static/app',
     },
     module: {
         rules: [
