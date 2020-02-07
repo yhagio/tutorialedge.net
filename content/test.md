@@ -23,6 +23,9 @@ console.log("hi")
 </Quiz>
 
 
+[test link](/test/)
+
+
 ![](https://images.tutorialedge.net/images/ai.webp)
 
 # Sanguine Lapithae colla latus oracula ignibus
