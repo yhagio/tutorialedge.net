@@ -26,7 +26,6 @@ module.exports = {
             }
         ]
     },
-    devtool: !optimizeBuild && ' cheap-module-eval-source-map',
     target: 'web',
     stats: 'normal',
     watch: !optimizeBuild
