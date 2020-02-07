@@ -9,7 +9,7 @@ before_script:
 
 script:
 - hugo --minify
-- npm run webpack
+- npm run prod-build
 
 deploy:
   provider: s3
