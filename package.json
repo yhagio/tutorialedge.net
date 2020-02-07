@@ -53,6 +53,7 @@
     "server": "hugo server --buildDrafts --ignoreCache",
     "gulp": "gulp watch",
     "webpack": "webpack",
+    "prod-build": "webpack -p",
     "start": "concurrently \"npm:server\" \"npm:gulp\" \"npm:webpack\""
   },
   "repository": {
