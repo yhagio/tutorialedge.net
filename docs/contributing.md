@@ -28,6 +28,12 @@ site generator.
 
 2. [Install hugo](https://gohugo.io/getting-started/installing/)
 
-3. Start the server: `hugo server`
+3. Install additional dependencies to your machine and run npm install
+
+```bash
+$ npm install
+$ brew install sass/sass/sass
+$ npm start
+```
 
 4. Open the address in a browser (default is localhost:1313)

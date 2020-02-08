@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<meta property="og:title" content="{{ .Title }}" />
 	<meta propert="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Page.Params.desc }}{{ . }}{{ end }}{{ end }}">
@@ -29,9 +29,7 @@
 	<title>{{ .Title }} | TutorialEdge.net</title>
 	
 	<link rel="icon" type="image/png" href="https://images.tutorialedge.net/images/favicon.ico">
-
-	<link media="all" defer href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link media="all" defer rel="stylesheet" href="{{ .Site.BaseURL }}/app/style.css">
+	<link media="all" defer rel="stylesheet" href="{{ .Site.BaseURL }}/app/main.css">
 
 	{{ if .RSSLink -}}
 	<link defer href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}">
@@ -39,8 +37,8 @@
 
 	{{ .Hugo.Generator }}
 
-	<script src="/js/jquery-3.4.1.slim.min.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+	<script src="/js/jquery-3.4.1.slim.min.js" defer></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous" defer></script>
 
 </head>
 
@@ -69,7 +67,6 @@
 							Courses
 						</a>
 						<div class="dropdown-menu" aria-labelledby="courseDropdown">
-							<!-- <a class="dropdown-item" href="{{ .Site.BaseURL }}/course/artificial-intelligence/"><img alt="AI logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/ai.png" />AI</a> -->
 							<a class="dropdown-item" href="{{ .Site.BaseURL }}/course/angular/"><img alt="angular logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/angular.svg" />Angular</a>
 							<a class="dropdown-item" href="{{ .Site.BaseURL }}/course/cloud/"><img alt="cloud logo" src="data:image/png.svg;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/cloud.svg" />Cloud</a>
 							<a class="dropdown-item" href="{{ .Site.BaseURL }}/course/compsci/"><img alt="computer science" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/logo.svg" />Computer Science</a>
@@ -133,7 +130,6 @@
 								<a class="dropdown-item" href="{{ .Site.BaseURL }}/golang/"><img alt="Golang logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/golang.svg" /> Golang</a>
 							</div>
 							<div class="col-sm-6">
-								<!-- <a class="dropdown-item" href="{{ .Site.BaseURL }}/kubernetes/"><img alt="kubernetes logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/logo.svg" /> Kubernetes</a> -->
 								<a class="dropdown-item" href="{{ .Site.BaseURL }}/nodejs/"><img alt="Nodejs logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/javascript.svg" /> NodeJS</a>
 								<a class="dropdown-item" href="{{ .Site.BaseURL }}/python/"><img alt="Python logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/python.svg" /> Python</a>
 								<a class="dropdown-item" href="{{ .Site.BaseURL }}/rust/"> <img alt="Rust logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/rust-logo.png" /> Rust</a>
@@ -149,7 +145,6 @@
 				</li>
 				<!-- End of tutorials dropdown-->
 			</ul>
-
 
 			<!-- Right Hand of Navbar -->
 			<ul class="navbar-nav full-height">
