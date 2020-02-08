@@ -10,6 +10,7 @@ before_script:
 script:
 - hugo --minify
 - yarn prod-build
+- yarn sass-compile
 
 deploy:
   provider: s3
