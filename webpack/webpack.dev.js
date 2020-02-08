@@ -5,7 +5,7 @@ const isStaging = env === 'staging';
 const optimizeBuild = isProd || isStaging;
 
 module.exports = {
-    entry: './app/index.ts',
+    entry: [ './app/index.ts' ],
     mode: optimizeBuild ? 'production' : 'development',
     output: {
         path: path.resolve(__dirname, '../static/app'),
@@ -18,12 +18,7 @@ module.exports = {
                 test: /\.tsx?$/,
                 use: 'ts-loader',
                 exclude: /(node_modules)/,
-            },
-            {
-                test: /\.css$/,
-                use: ['style-loader', 'css-loader'],
-                exclude: /node_modules/,
-            }
+            } 
         ]
     },
     target: 'web',

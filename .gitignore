@@ -13,5 +13,3 @@ public/
 node_modules/
 package-lock.json
 yarn-error.log
-
-kube/kube-config.yml
