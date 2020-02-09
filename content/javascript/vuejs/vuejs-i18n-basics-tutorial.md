@@ -110,6 +110,8 @@ new Vue({
 
 ```
 
+With this package now plugged-in to our Vue instance, we can now use the `$t("key")` syntax to render our `hello` message within our `App.vue` component:
+
 <div class="filename"> src/App.vue </div>
 
 ```html
@@ -187,6 +189,70 @@ export default {
 ```
 
 Now, when we refresh our page, we should see a handy select box just below our `Hello` statement which allows us to change between preferred locales. When this is set to a different locale, the corresponding `hello` message is updated for us!
+
+# Handling Locale Files
+
+Once you get past the small application stage of your development and start handling a wider array of translations, you need to have a strategy that allows you to effectively manage and scale to a wide number of locales. 
+
+One of the best approaches that I have seen is to manage an `i18n` directory within your `src` directory and have an individual `locale.json` file for each locale you wish to cater for. 
+
+<div class="filename"> src/i18n/es.json </div>
+
+```json
+{"hello": "hola"}
+```
+
+<div class="filename"> src/i18n/es.json </div>
+
+```json
+{"hello": "hello"}
+```
+
+Within this directory, you could also maintain an `index.js` file which does the job of exporting these mappings:
+
+<div class="filename"> src/i18n/index.js </div>
+
+```js
+import en from './en.json'
+import es from './es.json'
+
+export const defaultLocale = 'en'
+
+export const languages = {
+  en: en,
+  es: es,
+}
+```
+
+Finally, we then update our `src/main.js` file to import the `languages` and `defaultLocale` from our `i18n/index.js` file and then plug these into our vue instance in the same manner as we had before:
+
+<div class="filename"> src/main.js </div>
+
+```js
+import Vue from 'vue'
+import App from './App.vue'
+import VueI18n from 'vue-i18n'
+
+import { languages, defaultLocale } from './i18n/index.js';
+
+const messages = Object.assign(languages)
+
+Vue.config.productionTip = false
+Vue.use(VueI18n);
+
+const i18n = new VueI18n({
+  locale: defaultLocale,
+  messages
+})
+
+new Vue({
+  i18n,
+  render: h => h(App),
+}).$mount('#app')
+
+```
+
+> **Note** - I cannot claim this clean way of managing locale files. The fame and glory rightly goes to `dekadentno` from this github thread: [https://github.com/kazupon/vue-i18n/issues/474](https://github.com/kazupon/vue-i18n/issues/474)
 
 # Conclusion
 
