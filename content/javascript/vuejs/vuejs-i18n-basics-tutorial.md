@@ -110,6 +110,8 @@ new Vue({
 
 ```
 
+With this package now plugged-in to our Vue instance, we can now use the `$t("key")` syntax to render our `hello` message within our `App.vue` component:
+
 <div class="filename"> src/App.vue </div>
 
 ```html
