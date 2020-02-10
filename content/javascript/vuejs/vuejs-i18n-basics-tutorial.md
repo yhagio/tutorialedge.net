@@ -258,6 +258,8 @@ new Vue({
 
 So, in this tutorial, we looked at how you could break down the language barriers within your Vue.js applications using the wonderful `vue-i18n` package. We also explored the various ways you could handle multiple massive locale files and dynamically switching between them within your application. 
 
+> **Source Code** - The full source code for this tutorial can be found here: [TutorialEdge/vue-i18n-test-app](https://github.com/TutorialEdge/vue-i18n-test-app)
+
 ## Further Reading:
 
 If you enjoyed this article, you may also enjoy these other articles on the site:
