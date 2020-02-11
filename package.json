@@ -30,6 +30,7 @@
     "handlebars": "^4.7.2",
     "handlebars-intl": "^1.1.2",
     "instantsearch.js": "^1.12.1",
+    "mustache": "^4.0.0",
     "node": "^10.15.1",
     "path": "^0.12.7",
     "postcss-loader": "^3.0.0",
