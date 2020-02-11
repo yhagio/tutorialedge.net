@@ -1,44 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>TutorialEdge Sign Up</title>
-	<link async rel="stylesheet" href="https://use.typekit.net/jnu8xif.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+{{ partial "header.html" . }}
 
-    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-</head>
-<body>
-        <style>
-                body {
-                    background-color: #F5F6F8;
-                }
-                .top-bar {
-                    text-align: center;
-                    color: white;
-                    background-color: #2A2B33;
-                    width: 100%;
-                    padding: 40px 80px;
-                }
-                .top-bar img {
-                    margin-bottom: 20px;
-                    width: 75px;
-                    height: auto;
-                }
-                .info {
-                    text-align: center;
-                    padding: 40px 80px;
-                }
-                </style>
 
-    <div id="dynamicApp">
-        <Redirect />
+<div class="blue-spacer"></div>
 
-        
-        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-        <script src="/app/main.bundle.js"></script>
-    </div>
-</body>
-</html>
+<div class="content h-100">
+	<div class="container">
+        <img src="https://images.tutorialedge.net/images/logo.png" alt="logo" />
+		<h1>Redirecting</h1>
+		<p>You have successfully logged in. You are now being redirected to the profile page...</p>
+		<p class="text-muted">If there are any issues, then please let me know by raising on here: <a href="https://github.com/elliotforbes/tutorialedge.net">elliotforbes/tutorialedge.net</a>
+        </p>
+	</div>
+</div>
+
+<div class="blue-spacer"></div>
+
+<style>
+.content {
+    min-height: 45vh;
+    text-align: center;
+}
+
+.content img {
+    margin-top: 80px;
+}
+
+.content h1 {
+    margin: auto;
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center !important;
+}
+</style>
+
+{{ partial "footer.html" . }}

@@ -11,6 +11,11 @@ module.exports = {
         filename: '[name].bundle.js',
         publicPath: __dirname + '../static/app',
     },
+    resolve: {
+        alias: {
+            "environments": path.resolve(__dirname, "../app/config/production.ts")
+        }
+    },
     module: {
         rules: [
             {

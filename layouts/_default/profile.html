@@ -1,5 +1,34 @@
 {{ partial "header.html" . }}
 
-<Profile />
+
+<div class="blue-spacer"></div>
+
+<div class="content h-100">
+	<div class="container">
+        <img src="https://images.tutorialedge.net/images/logo.png" alt="logo" />
+        <h1>Profile Placeholder</h1>
+	</div>
+</div>
+
+<div class="blue-spacer"></div>
+
+<style>
+.content {
+    min-height: 45vh;
+    text-align: center;
+}
+
+.content img {
+    margin-top: 80px;
+}
+
+.content h1 {
+    margin: auto;
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center !important;
+}
+</style>
 
 {{ partial "footer.html" . }}
