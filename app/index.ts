@@ -8,16 +8,12 @@ function initialize() {
     loadDeferredImgs()
     setupTippy()
 
-
     switch (window.location.pathname) {
         case "/redirect/":
             auth.handleAuthentication()
                 .then(() => {
                     window.location.assign('/profile/')
-                })
-                .catch((err:any) => {
-                    console.log(err);
-                })
+                });
             break;
         case "/profile/":
             console.log(auth.isAuthenticated())
@@ -32,7 +28,6 @@ function initialize() {
             }
             break;
         default:
-            console.log(window.location.pathname);
             break;
     }
 
