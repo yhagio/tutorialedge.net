@@ -13,7 +13,7 @@ module.exports = {
     },
     resolve: {
         alias: {
-            "environments": path.resolve(__dirname, "../app/config/production.ts")
+            environment: path.resolve(__dirname, "../app/config/production.ts")
         }
     },
     module: {
