@@ -12,11 +12,23 @@ function initialize() {
     switch (window.location.pathname) {
         case "/redirect/":
             auth.handleAuthentication()
-            window.location.assign('/profile/')
+                .then(() => {
+                    window.location.assign('/profile/')
+                })
+                .catch((err:any) => {
+                    console.log(err);
+                })
             break;
         case "/profile/":
+            console.log(auth.isAuthenticated())
             if(auth.isAuthenticated() !== true) {
                 auth.login();
+            }            
+            break;
+        case "/logout/":
+            if(auth.isAuthenticated()) {
+                auth.logout();
+                window.location.assign('/')
             }
             break;
         default:

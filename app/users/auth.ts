@@ -48,6 +48,8 @@ export class Auth {
         this._idToken = null;
         this._expiresAt = null;
         this._user = null;
+        Cookie.remove("expiresAt")
+        Cookie.remove("user")
         webAuth.logout({
             returnTo: config.redirectUri,
             clientID: config.clientID
@@ -55,20 +57,21 @@ export class Auth {
     }
 
     public isAuthenticated() {
-        return new Date().getTime() > Cookie.get("expiresAt");
+        return new Date().getTime() < Cookie.get("expiresAt");
     }
 
     public handleAuthentication(): any {
         return new Promise((resolve: any, reject: any) => {  
             webAuth.parseHash((err: any, authResult: any) => {
                 if (authResult && authResult.accessToken && authResult.idToken) {
-                    this._expiresAt = new Date().getTime() + authResult.expiresIn
+                    console.log(authResult.expiresIn);
+                    this._expiresAt = new Date().getTime() + (authResult.expiresIn * 1000)
                     this._accessToken = authResult.accessToken
                     this._idToken = authResult.idToken
                     this._user = authResult.idTokenPayload
 
-                    Cookie.set("user", JSON.stringify(this._user))
                     Cookie.set("expiresAt", this._expiresAt)
+                    Cookie.set("user", JSON.stringify(this._user))
                     resolve()
                         
                 } else if (err) {
