@@ -1,6 +1,6 @@
 import auth0 from 'auth0-js';
 import * as Promise from 'es6-promise';
-import * as Cookies from 'es-cookie';
+import * as Cookie from 'es-cookie';
 import config from 'environment'
 
 let webAuth = new auth0.WebAuth({
@@ -21,16 +21,33 @@ export class Auth {
     _idToken: string;
     _accessToken: string;
 
+    set idToken(id_token: string) {
+        this._idToken = id_token;
+    }
+
+    get idToken(): string {
+        return this._idToken;
+    }
+
+    set accessToken(access_token: string) {
+        this._accessToken = access_token;
+    }
+    
+    get accessToken(): string {
+        return this._accessToken;
+    }
+
     public login() {
-        Cookies.set("redirect_url", config.redirectUri);
-        webAuth.authorize()
+        webAuth.authorize({
+            redirectUri: config.redirectUri
+        })
     }
 
     public logout() {
-        Cookies.remove('access_token')
-        Cookies.remove('id_token')
-        Cookies.remove('expires_at')
-        Cookies.remove('user')
+        this._accessToken = null;
+        this._idToken = null;
+        this._expiresAt = null;
+        this._user = null;
         webAuth.logout({
             returnTo: config.redirectUri,
             clientID: config.clientID
@@ -38,20 +55,20 @@ export class Auth {
     }
 
     public isAuthenticated() {
-        let currTime = new Date().getTime();
-        // console.log(Cookies.get('expiresAt'))
-        // console.log(Cookies.getAll())
-        return new Date().getTime() <= (currTime + Cookies.get('expiresAt'));
+        return new Date().getTime() > Cookie.get("expiresAt");
     }
 
     public handleAuthentication(): any {
         return new Promise((resolve: any, reject: any) => {  
             webAuth.parseHash((err: any, authResult: any) => {
                 if (authResult && authResult.accessToken && authResult.idToken) {
-                    Cookies.set('expiresAt', authResult.expiresIn)
-                    Cookies.set('accessToken', authResult.accessToken)
-                    Cookies.set('idToken', authResult.idToken)
-                    Cookies.set('user', authResult.idTokenPayload)
+                    this._expiresAt = new Date().getTime() + authResult.expiresIn
+                    this._accessToken = authResult.accessToken
+                    this._idToken = authResult.idToken
+                    this._user = authResult.idTokenPayload
+
+                    Cookie.set("user", JSON.stringify(this._user))
+                    Cookie.set("expiresAt", this._expiresAt)
                     resolve()
                         
                 } else if (err) {
