@@ -64,7 +64,6 @@ export class Auth {
         return new Promise((resolve: any, reject: any) => {  
             webAuth.parseHash((err: any, authResult: any) => {
                 if (authResult && authResult.accessToken && authResult.idToken) {
-                    console.log(authResult.expiresIn);
                     this._expiresAt = new Date().getTime() + (authResult.expiresIn * 1000)
                     this._accessToken = authResult.accessToken
                     this._idToken = authResult.idToken
