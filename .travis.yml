@@ -8,8 +8,8 @@ before_script:
 - yarn install
 
 script:
-- hugo --minify
 - yarn prod-build
+- hugo --minify
 - yarn sass-compile
 
 deploy:
