@@ -11119,4 +11119,17 @@ nav .dropdown-menu img {
   padding-bottom: 20px;
 }
 
+.profile {
+  display: flex;
+}
+.profile h1 {
+  margin: 0 !important;
+}
+.profile img.profile-image {
+  width: 80px;
+  height: 80px;
+  margin-top: 34px !important;
+  border-radius: 50%;
+}
+
 /*# sourceMappingURL=main.css.map */

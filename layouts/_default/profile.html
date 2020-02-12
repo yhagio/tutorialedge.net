@@ -5,8 +5,18 @@
 
 <div class="content h-100">
 	<div id="target" class="container">
-        <h1>Profile: [[name]]</h1>
+        <div class="profile">
+            <img src="[[user.picture]]" class="profile-image" alt="Profile Picture">
+
+            <h2>Profile: [[user.name]] <br/>
+            <small>Thank you for Registering - This is currently in BETA</small></h2>
+        </div>
+
+        <div class="profile-info">
+        </div>
+
         <hr/>
+
         <a href="/logout/" class="btn btn-warning">Logout</a>
     </div>
 </div>

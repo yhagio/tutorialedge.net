@@ -37,6 +37,10 @@ export class Auth {
         return this._accessToken;
     }
 
+    get user(): string {
+        return JSON.parse(Cookie.get('user'));
+    }
+
     public login() {
         webAuth.authorize({
             redirectUri: config.redirectUri

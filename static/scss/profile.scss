@@ -1,0 +1,14 @@
+.profile {
+    display: flex;
+
+    h1 {
+        margin: 0 !important;
+    }
+
+    img.profile-image {
+        width: 80px;
+        height: 80px;
+        margin-top: 34px !important; 
+        border-radius: 50%;
+    }
+}

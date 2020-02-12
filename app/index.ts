@@ -1,6 +1,5 @@
 import { setupTippy } from './content/tippy.ts'
 import { loadDeferredImgs } from './content/images.ts'
-import * as Cookie from 'es-cookie'
 import * as Mustache from 'mustache'
 import { Auth } from './users/auth.ts'
 
@@ -23,7 +22,8 @@ function initialize() {
             } else {
                 let template = document.getElementById('target').innerHTML;
                 Mustache.tags = ["[[", "]]"];
-                let rendered = Mustache.render(template, { name: 'Elliot' })
+                console.log(auth.user);
+                let rendered = Mustache.render(template, { user: auth.user })
                 document.getElementById('target').innerHTML = rendered;
             }            
             break;
