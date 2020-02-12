@@ -16,13 +16,11 @@ function initialize() {
                 });
             break;
         case "/profile/":
-            console.log(auth.isAuthenticated())
             if(auth.isAuthenticated() !== true) {
                 auth.login();
             } else {
                 let template = document.getElementById('target').innerHTML;
                 Mustache.tags = ["[[", "]]"];
-                console.log(auth.user);
                 let rendered = Mustache.render(template, { user: auth.user })
                 document.getElementById('target').innerHTML = rendered;
             }            
