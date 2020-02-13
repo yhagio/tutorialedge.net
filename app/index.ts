@@ -1,41 +1,11 @@
 import { setupTippy } from './content/tippy.ts'
 import { loadDeferredImgs } from './content/images.ts'
-import * as Mustache from 'mustache'
-import { Auth } from './users/auth.ts'
+import { Router } from './router/index.ts'
 
 function initialize() {
-    let auth = new Auth()
     loadDeferredImgs()
     setupTippy()
-
-    switch (window.location.pathname) {
-        case "/redirect/":
-            auth.handleAuthentication()
-                .then(() => {
-                    window.location.assign('/profile/')
-                });
-            break;
-        case "/profile/":
-            if(auth.isAuthenticated() !== true) {
-                auth.login();
-            } else {
-                let template = document.getElementById('target').innerHTML;
-                Mustache.tags = ["[[", "]]"];
-                let rendered = Mustache.render(template, { user: auth.user })
-                document.getElementById('target').innerHTML = rendered;
-            }            
-            break;
-        case "/logout/":
-            if(auth.isAuthenticated()) {
-                auth.logout();
-                window.location.assign('/')
-            }
-            break;
-        default:
-            break;
-    }
-
-    
+    let router = new Router();
 }
 
 initialize();
