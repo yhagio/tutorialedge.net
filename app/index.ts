@@ -5,6 +5,7 @@ import './components/profile.ts'
 import './components/redirect.ts'
 import './components/logout.ts'
 import './components/quiz.ts'
+import './components/comments.ts'
 
 function initialize() {
     loadDeferredImgs()

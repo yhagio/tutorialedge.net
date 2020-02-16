@@ -9,7 +9,7 @@ twitter: https://twitter.com/Elliot_F
 ---
 
 
-<quiz-test></quiz-test>
+<quiz-element></quiz-element>
 
 [test link](/test/)
 
