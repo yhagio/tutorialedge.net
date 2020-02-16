@@ -1,25 +1,37 @@
+import {PolymerElement, html} from '@polymer/polymer/polymer-element.js';
 import { Auth } from '../auth/index.ts';
-import * as Mustache from 'mustache'
 
-export class Profile {
-    auth: any;
+class Profile extends PolymerElement{
     
-    public constructor() {
+    user: any;
+    auth: any;
+
+    constructor() {
+        super();     
         this.auth = new Auth();
         if(this.auth.isAuthenticated() !== true) {
             this.auth.login();
         } else {
-            this.render()
-        }            
+            this.user = this.auth.user;
+        }
     }
 
-    public render() {
-        let template = document.getElementById('target').innerHTML;
-        Mustache.tags = ["[[", "]]"];
-        let rendered = Mustache.render(template, { user: this.auth.user })
-        document.getElementById('target').innerHTML = rendered;
+    static get template() {
+        return html`<div class="profile">
+                <img src="[[user.picture]]" class="profile-image" alt="Profile Picture">
+    
+                <h2>Profile: [[user.name]] <br/>
+                <small>Thank you for Registering - This is currently in BETA</small></h2>
+            </div>
+    
+            <hr/>
+    
+            <p><b>Privacy Policy: <a href="/privacy/">Read Now</a></b></p>
+    
+            <a href="/logout/" class="btn btn-warning">Logout</a>
+            `;
     }
 
 }  
 
-export default { Profile };
+customElements.define('profile-component', Profile);

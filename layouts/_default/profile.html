@@ -1,25 +1,10 @@
 {{ partial "header.html" . }}
 
-
 <div class="blue-spacer"></div>
 
 <div class="content h-100">
-	<div id="target" class="container">
-        <div class="profile">
-            <img src="[[user.picture]]" class="profile-image" alt="Profile Picture">
-
-            <h2>Profile: [[user.name]] <br/>
-            <small>Thank you for Registering - This is currently in BETA</small></h2>
-        </div>
-
-        <div class="profile-info">
-        </div>
-
-        <hr/>
-
-        <p><b>Privacy Policy: <a href="/privacy/">Read Now</a></b></p>
-
-        <a href="/logout/" class="btn btn-warning">Logout</a>
+	<div class="container">
+        <profile-component></profile-component>
     </div>
 </div>
 

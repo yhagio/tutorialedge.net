@@ -8,20 +8,8 @@ title: Get Involved
 twitter: https://twitter.com/Elliot_F
 ---
 
-<Quiz 
-  answer="There are 4 sides to a square"
-  options='[
-    {"value": "Hi", "correct": true},
-    {"value": "Nothing", "correct": false}
-    ]'>
-<template v-slot:question>
-<p>What does this output?</p>
-```js
-console.log("hi")
-```
-</template>
-</Quiz>
 
+<quiz-test></quiz-test>
 
 [test link](/test/)
 
