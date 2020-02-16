@@ -1,7 +1,4 @@
 const path = require('path');
-const env = process.env.NODE_ENV;
-const isProd = env === 'production';
-const isStaging = env === 'staging';
 
 module.exports = {
     entry: './app/index.ts',
