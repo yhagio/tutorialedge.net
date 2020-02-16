@@ -17,12 +17,11 @@ class Comments extends LitElement{
     
     }
 
-    static get template() {
+    render() {
 
         return html`
         <h2>Comments</h2>
 
-        [[commentsTemplate]]
         `;
     }
 }
