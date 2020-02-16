@@ -1,10 +1,9 @@
-import {PolymerElement, html} from '@polymer/polymer/polymer-element.js';
+import {LitElement, html, customElement} from 'lit-element';
 
-class Quiz extends PolymerElement{
+@customElement("quiz-element")
+export class Quiz extends LitElement {
 
-    static get template() {
+    render() {
         return html`<h2>Quiz</h2>`;
     }
 }
-
-customElements.define('quiz-test', Quiz);

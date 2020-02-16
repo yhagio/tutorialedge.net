@@ -2,7 +2,7 @@
     "compilerOptions": {
       "outDir": "./static/app/",
       "noImplicitAny": true,
-      "module": "es6",
+      "module": "AMD",
       "target": "es6",
       "jsx": "react",
       "experimentalDecorators": true,

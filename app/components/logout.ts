@@ -1,7 +1,9 @@
-import {PolymerElement, html} from '@polymer/polymer/polymer-element.js';
+import {LitElement, html, customElement} from 'lit-element';
+// @ts-ignore
 import { Auth } from '../auth/index.ts';
 
-class Logout extends PolymerElement{
+@customElement("logout-component")
+export class Logout extends LitElement{
     
     auth: any;
 
@@ -23,5 +25,3 @@ class Logout extends PolymerElement{
     }
 
 }  
-
-customElements.define('logout-component', Logout);

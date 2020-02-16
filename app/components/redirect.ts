@@ -1,7 +1,9 @@
-import {PolymerElement, html} from '@polymer/polymer/polymer-element.js';
+import {LitElement, html, customElement} from 'lit-element';
+// @ts-ignore
 import { Auth } from '../auth/index.ts';
 
-class Redirect extends PolymerElement{
+@customElement("redirect-component")
+export class Redirect extends LitElement{
     
     auth: any;
 
@@ -32,5 +34,3 @@ class Redirect extends PolymerElement{
     }
 
 }  
-
-customElements.define('redirect-component', Redirect);

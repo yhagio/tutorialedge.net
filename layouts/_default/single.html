@@ -59,7 +59,9 @@
           {{ partial "author.html" . .Params }}
         </article>
         <div class="comments">
-          {{ partial "comments.html" . }}
+
+          <comments-component />
+
         </div>
       </div>
 
