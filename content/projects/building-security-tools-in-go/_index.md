@@ -1,7 +1,6 @@
 ---
 title: "Building Security Tools in Go"
 date: 2020-02-15T15:06:58Z
-draft: true
 desc: In this course, we are going to be introducing some basic security concepts and how you can build some very cool security tools using Go!
 homepage: true
 author: Elliot Forbes
