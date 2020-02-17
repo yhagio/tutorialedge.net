@@ -52,9 +52,4 @@ like this:
 
 ![Chat Application Screenshot](https://images.tutorialedge.net/images/chat-app-go-react/screenshot-02.png)
 
-## Under Construction
-
-This course is going to be extended in the next few days and weeks. If you have
-any comments or suggestions for how you'd like the course to evolve, then please
-feel free to reach out to me on twitter:
-[@Elliot_F](https://twitter.com/elliot_f)
+> **Source Code** - The full source code can be found here [TutorialEdge/realtime-chat-go-react](https://github.com/TutorialEdge/realtime-chat-go-react)
