@@ -19,20 +19,20 @@ export class Profile extends LitElement{
     }
 
     static styles = css`
-    .profile {
-        display: flex;
-    }
-    h1 {
-        margin-top: 20px;
-    }
+        .profile {
+            display: flex;
+        }
+        h1 {
+            margin-top: 20px;
+        }
 
-    img {
-        width: 80px;
-        height: 80px;
-        margin-right: 20px;
-        margin-top: 15px; 
-        border-radius: 50%;
-    }
+        img {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+            margin-top: 15px; 
+            border-radius: 50%;
+        }
     `;
 
     render() {

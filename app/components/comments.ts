@@ -9,7 +9,7 @@ class Comments extends LitElement{
     constructor() {
         super();
 
-        this.comments = ["hello", "hi"] 
+        
 
         this.commentsTemplate = this.comments.map((element:any) => {
             return `<h2>${element}</h2>`;
