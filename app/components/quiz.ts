@@ -84,12 +84,13 @@ export class Quiz extends LitElement {
             font-size: 17px;
             font-size: 1.0625rem;
             padding: 20px 24px;
+            margin-left: -10px;
+            margin-right: -10px;
             border-radius: 0.5625rem;
             border-top-left-radius: 0.1625rem;
             border-bottom-left-radius: 0.1625rem;
             margin-top: 24px;
             border-left: 4px solid #143650;
-            border-radius: 5px;
             transition: visibility 0s, opacity 0.5s linear;
         }
 
