@@ -38,6 +38,24 @@ nav {
       }
     }
 
+    .sign-up {
+      background-color: $light-blue;
+      padding: 10px;
+      color: white !important;
+      background: #0276d9;
+      background-image: linear-gradient(22deg, #0276d9,#2C9CFC);
+      border-bottom: 1px solid #0376d8;
+      border: none;
+      
+      &:hover {
+        opacity: 0.9;
+      }
+
+      i {
+        margin-right: 7px;
+      }
+    }
+
   }
 
   .navbar-expand-lg {

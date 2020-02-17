@@ -10679,6 +10679,21 @@ nav.navbar .search {
 nav.navbar .search:hover {
   background-color: #232A2D;
 }
+nav.navbar .sign-up {
+  background-color: #1D84B5;
+  padding: 10px;
+  color: white !important;
+  background: #0276d9;
+  background-image: linear-gradient(22deg, #0276d9, #2C9CFC);
+  border-bottom: 1px solid #0376d8;
+  border: none;
+}
+nav.navbar .sign-up:hover {
+  opacity: 0.9;
+}
+nav.navbar .sign-up i {
+  margin-right: 7px;
+}
 nav .navbar-expand-lg {
   padding: 0;
 }
