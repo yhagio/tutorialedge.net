@@ -10703,6 +10703,9 @@ nav.secondary-nav {
   border-bottom: 1px solid #f8f8f8 !important;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
+nav.secondary-nav .fill-black {
+  background-color: #232A2D;
+}
 nav.secondary-nav ul li a {
   color: #232A2D !important;
 }
