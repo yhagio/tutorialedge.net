@@ -11119,4 +11119,45 @@ nav .dropdown-menu img {
   padding-bottom: 20px;
 }
 
+.register {
+  width: 100%;
+  background-color: #F2F5F7;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+}
+.register img {
+  width: 80px;
+  margin-right: 40px;
+  display: block;
+  height: auto !important;
+}
+.register div {
+  margin: 20px;
+}
+.register h2 {
+  margin: 0;
+  padding: 0;
+}
+.register p {
+  color: rgba(0, 0, 0, 0.8);
+}
+.register .btn-subscribe {
+  background-color: #1D84B5;
+  padding: 10px;
+  color: white !important;
+  background: #0276d9;
+  background-image: linear-gradient(22deg, #0276d9, #2C9CFC);
+  border-bottom: 1px solid #0376d8;
+  border: none;
+  margin-right: 40px;
+  text-decoration: none;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.register a {
+  margin-left: 40px;
+  text-decoration: underline;
+}
+
 /*# sourceMappingURL=main.css.map */

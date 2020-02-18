@@ -100,7 +100,6 @@ export class Quiz extends LitElement {
         }
 
     `
-    
 
     render() {
         return html`
