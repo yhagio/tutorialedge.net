@@ -301,9 +301,15 @@ var n="undefined"!=typeof window&&"undefined"!=typeof document&&"undefined"!=typ
             display: flex;
             border: none;
             padding: 0;
+            background-color: white;
+            border: none;
             font-size: 1rem;
             margin: 20px;
             transition: color .3s,background-color .3s;
+        }
+
+        button:active {
+            border: none;
         }
 
         button > span:nth-child(1) {
