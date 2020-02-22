@@ -16,6 +16,12 @@ Welcome to the first tutorial in this new series on building security tools in G
 
 This will give us a good understanding of what Port Scanning is and why we should be aware of what ports we are leaving open on any of the machines that we run our applications on top of.
 
+# Video Tutorial
+
+If you prefer, this tutorial is also available in video format on my YouTube channel:
+
+{{< youtube id="H-PWrdkowVA" autoplay="false" >}}
+
 # What is Port Scanning?
 
 Port scanning is the act of iterating over every port on a machine and checking to see which ones are `Open`, `Closed`, or `Filtered`.  
