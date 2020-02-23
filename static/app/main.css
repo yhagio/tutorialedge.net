@@ -10537,6 +10537,18 @@ article .github-btn {
   font-weight: 600;
 }
 
+.welcome-bar-bg {
+  background-color: #0e2439;
+}
+
+.welcome-bar-clear {
+  width: 100%;
+  height: 40px;
+  background-color: #0e2439;
+  display: block;
+  clear: both;
+}
+
 .terminal {
   width: 60%;
   margin: -11rem auto -1rem auto;
@@ -10564,7 +10576,7 @@ article .github-btn {
 
 /* Homepage welcome bar */
 .welcome-bar {
-  background: #143650;
+  background-image: linear-gradient(to bottom, #1f364d, #0e2439);
   color: #fff;
   width: 100%;
   padding: 2rem 0 10rem 0;
@@ -10702,9 +10714,6 @@ nav.secondary-nav {
   background-color: white !important;
   border-bottom: 1px solid #f8f8f8 !important;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-}
-nav.secondary-nav .fill-black {
-  background-color: #232A2D;
 }
 nav.secondary-nav ul li a {
   color: #232A2D !important;
