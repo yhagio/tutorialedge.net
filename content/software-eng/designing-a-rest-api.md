@@ -1,8 +1,8 @@
 ---
-title: "Designing a Rest Api"
+title: "Designing a Production Grade REST API"
 date: 2020-02-24T22:11:32Z
 draft: true
-desc: 
+desc: In this tutorial, we are going 
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
 series: 
@@ -82,6 +82,7 @@ When it comes to managing this, you need to be careful and ensure that you **giv
 
 # Use Appropriate HTTP Verbs
 
+When it comes to writing APIs it is incredibly important to use the correct HTTP verbs when 
 
 # 
 
@@ -89,6 +90,12 @@ When it comes to managing this, you need to be careful and ensure that you **giv
 
 # Conclusion
 
+So, in this article, we looked at some of the best practices that you should consider when designing your own REST APIs. These are practices that I see a lot of production-grade services adhere to and they absolutely make the lives of developers using your services a whole lot easier.
+
+
+
 ## Further Reading:
+
+If you enjoyed this article then you may also enjoy these other articles on the site:
 
 * []()
