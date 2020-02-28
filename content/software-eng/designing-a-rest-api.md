@@ -1,12 +1,11 @@
 ---
 title: "Designing a Production Grade REST API"
 date: 2020-02-24T22:11:32Z
-draft: true
-desc: In this tutorial, we are going 
+desc: In this tutorial, we are going to look at what it takes to design a production-ready REST API.
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
-series: 
-image: 
+series: software-engineer
+image: logo.svg
 tags:
 - beginner
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
@@ -82,20 +81,70 @@ When it comes to managing this, you need to be careful and ensure that you **giv
 
 # Use Appropriate HTTP Verbs
 
-When it comes to writing APIs it is incredibly important to use the correct HTTP verbs when 
+When it comes to writing APIs it is incredibly important to use the correct HTTP verbs when it comes to creating your API endpoints and **don't include verbs** in your API path. 
 
-# 
+For example, don't define endpoints like this:
 
-# Prerequisites
+```output
+- /api/v1/getposts
+- /api/v1/newpost
+- /api/v1/updatepost/:id
+- /api/v1/deletepost/:id
+```
+
+If another developer is going to be using your API then they won't instinctively know what endpoints they have to use to perform basic CRUD operations. They will feel themselves second guessing as to whether or not the API endpoint to create a post is on `/api/v1/createpost`, `/api/v1/addpost` or `/api/v1/newpost`.
+
+This style is complex and leaves a lot of ambiguity. The better approach would be to use appropriate HTTP verbs instead:
+
+```output
+- /api/v1/post - HTTP GET request - All Posts
+- /api/v1/post/:id - HTTP GET request - Single post
+- /api/v1/post/:id - HTTP POST request - Publish a post
+- /api/v1/post/:id - HTTP PATCH request - update an existing post
+- /api/v1/post/:id - HTTP DELETE request - deletes a post
+```
+
+This is a far cleaner approach as you know instantly from general convention what endpoints you need to hit and with what verbs. There is no ambiguity in this approach.
+
+> **Note** - An excellent example of this approach is the [Open Service Broker API Spec](https://github.com/openservicebrokerapi/servicebroker/blob/master/spec.md)
+
+# Use the Correct Status Codes!
+
+This is a huge rule that you absolutely must adhere to. How your API is viewed by developers consuming the service can be seriously besmirched by an endpoint returning a `200 OK` status when in fact it is quietly failing behind the scenes.
+
+# Media Types
+
+If you are building a general purpose API that could be used for a massively variety of reasons then you need to consider adding different responses based on the `Content-Type` header passed in with the request. 
+
+This gives the developer trying to interact with your application the option of requesting a response in a variety of different data formats. 
+
+```output
+- /api/v1/posts - HTTP GET - Content-Type: application/json
+
+{ "posts": [
+    ... all the posts in JSON
+]}
+```
+
+Imagine we needed to feed the information from this into a build pipeline but needed the posts in a `yaml` format. Ideally, our API would be able to serialize the response into `yaml` and return it if the `Content-Type` was set to `application/yaml`:
+
+```output
+- /api/v1/posts - HTTP GET - Content-Type: application/yaml
+
+posts:
+ ... all posts in yaml format
+```
+
+# Swagger 
+
+Swagger is something that makes quickly testings and validating API endpoints a treat. If you are building an API that is going to be consumed by a wide variety of users then providing a page which allows them to instantly interact with your API offers huge value for something that takes incredibly minimal amounts of effort to set up.
 
 # Conclusion
 
 So, in this article, we looked at some of the best practices that you should consider when designing your own REST APIs. These are practices that I see a lot of production-grade services adhere to and they absolutely make the lives of developers using your services a whole lot easier.
 
-
-
-## Further Reading:
+<!-- ## Further Reading:
 
 If you enjoyed this article then you may also enjoy these other articles on the site:
 
-* []()
+* []() -->
