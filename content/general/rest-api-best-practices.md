@@ -68,47 +68,7 @@ DELETE http://myservice.com/api/v1/user # deletes a given user
 GET http://myservice.com/api/v1/user # gets a single user
 ```
 
-# Use of HTTP Response Codes
 
-When it comes to returning a response to whomever called your API then it's best
-to utilize the correct `HTTP` status codes.
-
-```bash
-1xx # Informational Status Codes
-2xx # Success status codes
-3xx # Redirection status codes
-4xx # Client Error status codes
-5xx # Server Error status codes
-```
-
-Be employing correct HTTP response codes we effectively improve the way our
-services interact with each other. It's a good idea to refer to
-[this](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) list of HTTP
-status codes when deciding what to return to a HTTP request in any given
-situation.
-
-A good example of this would be to imagine you had an API that powered a simple
-blog. You would have a number of different REST API endpoints that would return
-things like individual blog posts as well as ones that would allow you to update
-said blog posts. We'll imagine that we have 2 endpoints on our API exposed to
-the world, the first of which is a `GET` request which simply returns the `JSON`
-for that given article, the second is a `UPDATE` endpoint which updates the
-given article.
-
-```bash
-http://myservice.com/api/v1/article/1 # GET Endpoint returns article '1'
-http://myservice.com/api/v1/article/1 # UPDATE Endpoint updates article '1'
-```
-
-When a standard user calls `GET` on the first API you would typically return the
-json response as well as a `200 - OK` status code which indicates everything is
-ok. However, imagine that same user tries to update our article using the
-`UPDATE` endpoint. As the user isn't an administrator, we would want to return a
-different status code such as `401 - Unauthorized` which would indicate that the
-user does not have the sufficient level or permissions. Once the user becomes
-authorized as an admin and tries to `UPDATE` again to that same endpoint, we
-then return a `200 - OK` status which indicates they were successfully able to
-update the article.
 
 # Discoverability
 

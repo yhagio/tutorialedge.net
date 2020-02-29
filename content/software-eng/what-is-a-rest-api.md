@@ -5,6 +5,9 @@ desc:
   In this tutorial we take a look at RESTful APIs - What are they and how can we
   use them?
 series: beginner
+aliases: [
+  "/general/what-is-a-rest-api"
+]
 tags:
   - beginner
   - rest

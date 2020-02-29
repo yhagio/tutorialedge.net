@@ -1,7 +1,7 @@
 ---
 title: "Part 8 - Deploying our Imgur Clone"
 date: 2020-02-08T18:44:50+01:00
-weight: 8
+weight: 9
 desc: In this tutorial series, we are going to be building an Imgur clone using Lambda functions written using Node.JS and a frontend built using Vue.JS
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
