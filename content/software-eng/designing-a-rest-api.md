@@ -3,6 +3,9 @@ title: "Designing a Production Grade REST API"
 date: 2020-02-24T22:11:32Z
 desc: In this tutorial, we are going to look at what it takes to design a production-ready REST API.
 author: Elliot Forbes
+aliases: [
+    "/general/rest-api-best-practices/"
+]
 twitter: https://twitter.com/elliot_f
 series: software-engineer
 image: logo.svg
