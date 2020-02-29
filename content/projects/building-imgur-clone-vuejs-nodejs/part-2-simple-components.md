@@ -520,6 +520,4 @@ If you are enjoying this series, then please let me know on twitter by tweeting 
 
 In the next part of this series, we are going to be looking at setting up the vue router and getting routes setup within our application so that we can have distinct pages for things such as image-uploading, user login and profile pages and for individual image posts.
 
-> **Note** - Part 3 is currently under construction!
-
-<!-- * [Part 3 - Vue Router Setup](/projects/building-imgur-clone-vuejs-nodejs/part-3-adding-vue-router/) -->
+> **Next Tutorial** - [Part 3 - Vue Router Setup](/projects/building-imgur-clone-vuejs-nodejs/part-3-adding-vue-router/) 

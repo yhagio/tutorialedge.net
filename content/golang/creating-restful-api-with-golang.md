@@ -598,6 +598,8 @@ real values.
 
 ## Further Reading
 
-* For a tutorial on how to connect to a MySQL database using Go I'd
-recommend my [Go MySQL Tutorial](/golang/golang-mysql-tutorial/)
+If you enjoyed this article, then you may also enjoy the following tutorials:
+
+* [Designing a Production-Ready REST API](/software-eng/designing-a-rest-api/)
+* [Go MySQL Tutorial](/golang/golang-mysql-tutorial/)
 

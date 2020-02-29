@@ -424,6 +424,4 @@ So, in this tutorial, we have managed to extend our existing Vue.JS Imgur applic
 
 In the next tutorial in this series, we are going to be taking a look at building our own AWS Lambda functions, with the help of the serverless cli, that will allow us to store, retrieve and delete images in our application.
 
-> **Under Construction** - The next tutorial in this series is currently under construction!
-
-<!-- * [Part 4 - Adding Authentication to Your Application](/projects/building-imgur-clone-vuejs-nodejs/part-4-authentication/) -->
+> **Next Tutorial** - [Part 4 - Storing our Images](/projects/building-imgur-clone-vuejs-nodejs/part-4-storing-our-images/) 

@@ -482,6 +482,4 @@ This is a huge step forward and a piece of functionality that is vital in the va
 
 In the next tutorial in this series, we are going to be looking at extending our app to include a login/register workflow so that new users can join our application. With this authentication flow in place, we'll then be able to start tackling problems such as image upload!
 
-> **Under Construction** - The next part of this series is currently under construction and will be published on the 18th of January, 2020.
-
-<!-- * [Part 6 - Deploying Our Application](/) -->
+> **Next Tutorial** - [Part 6 - Deploying Our Application](/projects/building-imgur-clone-vuejs-nodejs/part-6-login-register-flow/)

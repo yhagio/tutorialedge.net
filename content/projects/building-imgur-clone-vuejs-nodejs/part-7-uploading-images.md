@@ -358,4 +358,4 @@ Awesome, we have successfully been able to implement authenticated uploads to ou
 
 The next piece of the puzzle that we will have to solve is deploying our application somewhere that other people can see it and interact with it. This is one of the most exciting parts of software deployment in my opinion as it means that other people get to see the fruits of your hard labour and benefiting from your work!
 
-> **Next Tutorial** - Under Construction - The next tutorial in this series will be out on the 1st of February, 2020.
+> **Next Tutorial** - [Part 8 - Deploying our Application](/projects/building-imgur-clone-vuejs-nodejs/part-8-deploying-our-app/)
