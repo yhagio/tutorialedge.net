@@ -30,6 +30,5 @@ module.exports = {
         new VueLoaderPlugin()
     ],
     target: 'web',
-    stats: 'normal',
-    watch: true
+    stats: 'normal'
 }
