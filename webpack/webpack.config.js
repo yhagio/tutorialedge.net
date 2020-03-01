@@ -1,8 +1,13 @@
 const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const env = process.env.NODE_ENV;
+const isProd = env === 'production';
+const isStaging = env === 'staging';
+const optimizeBuild = isProd || isStaging;
 
 module.exports = {
     entry: './app/main.js',
+    mode: optimizeBuild ? 'production' : 'development',
     output: {
         path: path.resolve(__dirname, '../static/app'),
         filename: '[name].bundle.js',
@@ -10,7 +15,7 @@ module.exports = {
     },
     resolve: {
         alias: {
-            environment: path.resolve(__dirname, "../app/config/production.ts")
+            environment: path.resolve(__dirname, "../app/config/development.ts")
         }
     },
     module: {
@@ -29,6 +34,7 @@ module.exports = {
     plugins: [
         new VueLoaderPlugin()
     ],
+    devtool: !optimizeBuild && ' cheap-module-eval-source-map',
     target: 'web',
     stats: 'normal',
     watch: true

@@ -42,6 +42,7 @@
     "tippy.js": "^5.2.0",
     "ts-loader": "^6.2.1",
     "typescript": "^3.7.5",
+    "vue": "^2.6.11",
     "vue-cookies": "^1.5.13",
     "vue-loader": "^15.7.0",
     "vue-star-rating": "^1.6.1",
@@ -66,7 +67,7 @@
     "sass-watch": "sass --watch static/scss/main.scss static/app/main.css",
     "sass-compile": "sass --style=compressed static/scss/main.scss static/app/main.css",
     "server": "hugo server --buildDrafts --ignoreCache --navigateToChanged",
-    "webpack": "webpack --config webpack/webpack.dev.js",
+    "webpack": "webpack --config webpack/webpack.config.js",
     "prod-build": "webpack -p --config webpack/webpack.prod.js",
     "start": "concurrently \"npm:server\" \"npm:webpack\" \"npm:sass-watch\""
   },
