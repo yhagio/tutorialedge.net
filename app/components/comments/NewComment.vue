@@ -7,7 +7,7 @@
         <div class="comment-input" id="comment-input">
             <textarea v-model="commentBody" placeholder="Leave a reply"></textarea>
             <br/>
-            <div class="comment-actions hidden">
+            <div class="comment-actions">
                 <button id="comment" v-on:click="submitComment" class="btn btn-primary float-right">
                     Submit
                 </button>
@@ -43,12 +43,6 @@ export default {
             }
             window.location.reload();
         }
-    },
-    created: function() {
-        let token = Cookies.get("jwt-token");
-        let base64Url = token.split(".")[1];
-        let base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
-        this.user = JSON.parse(window.atob(base64));
     }
 }
 </script>

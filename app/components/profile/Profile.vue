@@ -24,7 +24,12 @@ export default {
         }
     },
     created: function() {
-        console.log(this.$auth.test());
+        
+        if(!this.$auth.isAuthenticated) {
+            this.$auth.login()
+        } else {
+            this.user = this.$auth.getUser()
+        }
     }
 }
 </script>

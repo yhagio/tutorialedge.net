@@ -25,8 +25,6 @@ export const useAuth = ({...options}) => {
         data: function() {
             return {
                 loading: true,
-                isAuthenticated: false,
-                user: {},
                 error: null
             }
         },
@@ -49,20 +47,27 @@ export const useAuth = ({...options}) => {
                     clientID: config.clientID
                 })
             },    
+            getUser() {
+                let user = JSON.parse(Cookie.get("user"));
+                return user;
+            },
             isAuthenticated() {
+                console.log(Cookie.get("expiresAt"))
                 return new Date().getTime() < Cookie.get("expiresAt");
             },    
             handleAuthentication() {
                 return new Promise((resolve, reject) => {  
                     webAuth.parseHash((err, authResult) => {
                         if (authResult && authResult.accessToken && authResult.idToken) {
-                            this._expiresAt = new Date().getTime() + (authResult.expiresIn * 1000)
-                            this._accessToken = authResult.accessToken
-                            this._idToken = authResult.idToken
-                            this._user = authResult.idTokenPayload
-        
-                            Cookie.set("expiresAt", this._expiresAt)
-                            Cookie.set("user", JSON.stringify(this._user))
+
+                            console.log(authResult)
+                            Cookie.set("idToken", authResult.idToken)
+                            Cookie.set("accessToken", authResult.accessToken)
+                            let expiresAt = new Date().getTime() + (authResult.expiresIn * 1000)
+                            Cookie.set("expiresAt", expiresAt)
+                            console.log("Expires At: %s", Cookie.get("expiresAt"))
+                            Cookie.set("user", JSON.stringify(authResult.idTokenPayload))
+
                             resolve()
                                 
                         } else if (err) {
