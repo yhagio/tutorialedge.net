@@ -5,6 +5,7 @@ import './components/profile.ts'
 import './components/redirect.ts'
 import './components/register.ts'
 import './components/logout.ts'
+import './components/search.ts'
 import './components/quiz.ts'
 // import './components/comments.ts'
 

@@ -16,7 +16,11 @@ Interviews are hard, and job-hunting is often a time-consuming and miserable exp
 
 # Question 1
 
-> What is the difference between a pointer receiver and a reference receiver function?d
+> What is the difference between a pointer receiver and a reference receiver function?
+
+Hello
+
+>! answer
 
 # Question 2
 

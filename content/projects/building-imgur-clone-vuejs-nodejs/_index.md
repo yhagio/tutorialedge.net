@@ -43,4 +43,4 @@ It's nice to be able to visualize what you are going to be building and see resu
 
 By the end of this project, we will have built something that looks like this:
 
-<!-- ![FINISHED PRODUCT](FINISHED PRODUCT) -->
+![Finished Profile Page](https://images.tutorialedge.net/images/imgur-clone/first-deploy.png)

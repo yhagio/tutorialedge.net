@@ -65,7 +65,7 @@
     "algolia": "atomic-algolia",
     "sass-watch": "sass --watch static/scss/main.scss static/app/main.css",
     "sass-compile": "sass --style=compressed static/scss/main.scss static/app/main.css",
-    "server": "hugo server --buildDrafts --ignoreCache",
+    "server": "hugo server --buildDrafts --ignoreCache --navigateToChanged",
     "webpack": "webpack --config webpack/webpack.dev.js",
     "prod-build": "webpack -p --config webpack/webpack.prod.js",
     "start": "concurrently \"npm:server\" \"npm:webpack\" \"npm:sass-watch\""
