@@ -30,7 +30,11 @@
   <div class="content-container">
     <div class="row">
 
-      <div class="d-none d-sm-none col-sm-2 d-md-block"></div>
+      <div class="d-none d-sm-none col-sm-2 d-md-block">
+        <div class="sidebar">
+          {{ partial "sidebar.html" . }}
+        </div>
+      </div>
 
       <div class="col-sm-12 col-md-8">
         <article class="content">
@@ -79,6 +83,8 @@
 <script>
   // Add anchors on DOMContentLoaded
   document.addEventListener("DOMContentLoaded", function(event) {
+    var sidebar = new StickySidebar("#right-sidebar", { topSpacing: 10 });
+    var sidebar = new StickySidebar(".sidebar", { topSpacing: 10 });
     anchors.options = {
       visible: "always",
       placement: "left"
