@@ -27,6 +27,15 @@ var app = new Vue({
     Quiz
   },
   created: function() {
+
+    anchors.options = {
+      visible: "always",
+      placement: "left"
+    };
+    anchors.add(
+      ".content > h1, .content > h2, .content > h3, .content > h4"
+    );
+
     codeguard();
     loadDeferredImgs();
   }
