@@ -7,4 +7,31 @@
     <a href="https://www.buymeacoffee.com/tutorialedge" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
   </div>
 
+  <div class="right-sidebar small-no-show">
+    {{ range $taxonomyname, $taxonomy := .Site.Taxonomies.tags }}
+
+    {{ $scratch := newScratch }}
+    {{ range $taxonomy }}
+    {{ if eq $.Params.series .Params.series }}
+    {{ if not (in ($scratch.Get "tags") $taxonomyname) }}
+    {{if not (eq $taxonomyname .Params.series) }}
+    {{ $scratch.Add "tags" (slice $taxonomyname) }}
+    {{ end }}
+    {{ end }}
+    {{ end }}
+    {{ end }}
+
+    {{ range $scratch.Get "tags" }}
+    <h4 style="text-transform: uppercase;">{{ . }}</h4>
+    <ul class="collection">
+      {{ range sort $taxonomy }}
+      {{ if eq $.Params.series .Params.series }}
+      <li class="collection-item"><a href="{{.Permalink}}">{{ .Title }}</a></li>
+      {{ end }}
+      {{ end }}
+    </ul>
+    {{ end }}
+    {{ end }}
+  </div>
+
 </div>
