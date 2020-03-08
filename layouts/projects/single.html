@@ -82,18 +82,11 @@
 </div>
 
 <script src="/js/sticky-sidebar.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.0/anchor.min.js"></script>
+
 <script>
   // Add anchors on DOMContentLoaded
   document.addEventListener("DOMContentLoaded", function(event) {
     var sidebar = new StickySidebar("#right-sidebar", { topSpacing: 20 });
-    anchors.options = {
-      visible: "always",
-      placement: "left"
-    };
-    anchors.add(
-      ".content h1, .content h2, .content h3, .content h4, .content h5, .content h6"
-    );
   });
 </script>
 

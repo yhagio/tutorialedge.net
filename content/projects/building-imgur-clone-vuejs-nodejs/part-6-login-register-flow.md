@@ -93,6 +93,7 @@ For this component, we are going to need a new form that we'll style with some s
 
 <div class="filename"> frontend/src/components/Register.vue </div>
 
+
 ```html
 <template>
     <div class="login-box">

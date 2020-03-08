@@ -5,6 +5,7 @@ relativeUrls = true
 # only return 9 items per page
 paginate = 9
 
+enableEmoji = true
 # Syntax highlighting stuff
 pygmentsCodeFences = true
 # PygmentsStyle = "borland"
@@ -28,7 +29,7 @@ PygmentsStyle = "monokai"
     mediaType = "application/json"
     notAlternative = true
 [params.algolia]
-    vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink", "description", "image", "author"]
+    vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink", "desc", "image", "author"]
     params = ["categories", "tags", "author"]
 [outputs]
     home = ["HTML", "RSS", "Algolia"]

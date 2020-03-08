@@ -29,22 +29,20 @@ footer.page-footer{
     flex: 1;
   }
 
-  .search {
+  .footer-search {
+
     margin-top: 20px;
-    margin-right: 40px;
-    padding: 0;
-    width: 80%;
 
     h2 {
       margin-bottom: 20px;
     }
 
     input {
-      width: 80%;
-      padding: 20px;
-      background-color: #21252D;
       border: none;
-      font-size: 16px;
+      background-color: #21252D;
+      font-size: 20px;
+      padding: 20px;
+      color: white;
     }
 
     input:focus {
@@ -53,12 +51,11 @@ footer.page-footer{
 
     button {
       background-color: #28a745;
-      padding: 5px;
-      padding-left: 20px;
-      padding-right: 20px;
-      height: 100%;
       color: white;
       border: none;
+      margin: 0;
+      padding-left: 20px;
+      padding-right: 20px;
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
     }
