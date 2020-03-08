@@ -12,6 +12,8 @@ twitter: https://twitter.com/Elliot_F
 
 [test link](/test/)
 
+<div id="test" class="btn btn-primary">test tippy</div>
+
 
 ![](https://images.tutorialedge.net/images/ai.webp)
 

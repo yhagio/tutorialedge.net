@@ -1,4 +1,3 @@
-import { setupTippy } from './utils/tippy.js'
 import { loadDeferredImgs } from './utils/images.js'
 import { codeguard } from './utils/codeguard.js'
 
@@ -29,7 +28,6 @@ var app = new Vue({
   },
   created: function() {
     codeguard();
-    setupTippy();
     loadDeferredImgs();
   }
 });
