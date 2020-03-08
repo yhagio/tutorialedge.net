@@ -4,8 +4,10 @@ import { codeguard } from './utils/codeguard.js'
 
 import Comments from './components/comments/Comments.vue';
 import Quiz from './components/misc/Quiz.vue';
-import Profile from './components/profile/Profile.vue';
 import Redirect from './components/profile/Redirect.vue';
+import Profile from './components/profile/Profile.vue';
+import Logout from './components/profile/Logout.vue';
+import FooterSearch from './components/search/FooterSearch.vue';
 import config from 'environment';
 
 import { Auth0Plugin } from "./auth";
@@ -20,7 +22,9 @@ var app = new Vue({
   components: {
     Profile,
     Comments,
+    FooterSearch,
     Redirect,
+    Logout,
     Quiz
   },
   created: function() {

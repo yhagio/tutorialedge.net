@@ -9,7 +9,7 @@
 
         <hr/>
 
-        <p><b>Privacy Policy: <a href="/privacy/">Read Now</a></b></p>
+        <p><b>Privacy Policy: <a href="/privacy/">📕 Read Now</a></b></p>
 
         <a href="/logout/" class="btn btn-warning">Logout</a>
     </div>
@@ -25,7 +25,7 @@ export default {
     },
     created: function() {
         
-        if(!this.$auth.isAuthenticated) {
+        if(!this.$auth.isAuthenticated()) {
             this.$auth.login()
         } else {
             this.user = this.$auth.getUser()

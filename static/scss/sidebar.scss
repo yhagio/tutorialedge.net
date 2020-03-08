@@ -117,26 +117,27 @@
 
 .toc {
   width: 100%;
-  padding-top: 20px;
-  margin-top: 60px;
-  line-height: 1.65em;
+  margin-top: 40px;
+  line-height: 1.2em;
   background-color: white;
-  border-radius: 8px;
-  padding: 20px;
-  color: #718096!important;
-  background-color: #fafbfc;
 
   i {
     padding-right: 5px;
   }
 
   h4 {
-    color: #718096!important;
-    font-size: 1.2rem;
+    color: #000!important;
     font-weight: 800;
     margin: 0;
     padding: 0;
-    padding-bottom: 5px;
+    padding-bottom: 20px;
+  }
+
+  ul li::before {
+    content: counter(my-awesome-counter) ". ";
+    float: left;
+    margin-top: 3px;
+    margin-right: 5px;
   }
 
   ul {
@@ -145,12 +146,16 @@
     margin: 0;
   }
 
+  ul li {
+    counter-increment: my-awesome-counter;
+  }
+
   ul li a {
-    color: #555F61;
+    color: #e91e63;
     margin: 0px;
     cursor: pointer;
     display: flex;
-    padding: 4px 16px 4px 24px;
+    padding: 4px 12px 4px 14px;
     align-items: center;
     vertical-align: middle;
     text-decoration: none;

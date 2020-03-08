@@ -29,19 +29,16 @@ export const useAuth = ({...options}) => {
             }
         },
         methods: {
-            test() {
-                console.log("test")
-            },  
             login() {
                 webAuth.authorize({
                     redirectUri: config.redirectUri
                 })
             },    
             logout() {
-                this.accessToken = null;
-                this.user = null;
                 Cookie.remove("expiresAt")
                 Cookie.remove("user")
+                Cookie.remove("idToken")
+                Cookie.remove("accessToken")
                 webAuth.logout({
                     returnTo: config.redirectUri,
                     clientID: config.clientID
@@ -52,7 +49,6 @@ export const useAuth = ({...options}) => {
                 return user;
             },
             isAuthenticated() {
-                console.log(Cookie.get("expiresAt"))
                 return new Date().getTime() < Cookie.get("expiresAt");
             },    
             handleAuthentication() {
@@ -60,14 +56,11 @@ export const useAuth = ({...options}) => {
                     webAuth.parseHash((err, authResult) => {
                         if (authResult && authResult.accessToken && authResult.idToken) {
 
-                            console.log(authResult)
                             Cookie.set("idToken", authResult.idToken)
                             Cookie.set("accessToken", authResult.accessToken)
                             let expiresAt = new Date().getTime() + (authResult.expiresIn * 1000)
                             Cookie.set("expiresAt", expiresAt)
-                            console.log("Expires At: %s", Cookie.get("expiresAt"))
                             Cookie.set("user", JSON.stringify(authResult.idTokenPayload))
-
                             resolve()
                                 
                         } else if (err) {

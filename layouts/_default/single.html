@@ -19,25 +19,8 @@
     </h1>
     <div class="post-info">
       <div class="post-info-inner">
-          <span>
-            {{ if .Params.authorImage }}
-            <img class="author" src="{{ .Params.authorImage }}" alt="{{ .Params.author }}" />
-            {{ else }}
-            <img class="author" src="https://images.tutorialedge.net/images/logo.svg" alt="TutorialEdge Logo" />
-            {{ end }}
-            <a href="{{.Params.twitter }}">{{ .Params.author }}</a>
-          </span>
-    
-          <span class="d-none d-md-block"><img class="icon" src="https://tutorialedge.net/images/svg/clock.svg" alt="clock"/>{{ .ReadingTime }} Minutes</span>
-          <span class="d-none d-md-block"><img class="icon" src="https://tutorialedge.net/images/svg/calendar.svg" alt="clock"/> {{ dateFormat "Jan 2, 2006" .Date }}</span>
           
-          <span class="d-none d-md-block">
-            {{ range.Params.tags }}
-            <a href="/tags/{{.}}"
-              ><span class="badge badge-pill badge-info">{{ . }}</span></a
-            >
-            {{ end }}
-          </span>
+    
       </div>
     </div>
   </div>
@@ -46,15 +29,27 @@
 <div class="container-fluid">
   <div class="content-container">
     <div class="row">
-      
-      <div class="d-none d-sm-none col-sm-3 d-md-block">
-        <div class="sidebar">
-          {{ partial "sidebar.html" . }}
-        </div>
-      </div>
 
-      <div class="col-sm-9 col-md-7">
+      <div class="d-none d-sm-none col-sm-2 d-md-block"></div>
+
+      <div class="col-sm-12 col-md-8">
         <article class="content">
+          <div class="info">
+            <span>
+              {{ if .Params.authorImage }}
+              <img class="author" src="{{ .Params.authorImage }}" alt="{{ .Params.author }}" />
+              {{ else }}🖊️{{ end }}
+              <a href="{{.Params.twitter }}">{{ .Params.author }}</a>
+            </span>
+            <span>⏰ {{ .ReadingTime }} Minutes</span> 
+            <span>📅 {{ dateFormat "Jan 2, 2006" .Date }}</span>
+          </div>
+
+          <div class="toc">
+            <h4>Table Of Contents</h4>
+            {{.TableOfContents}}
+          </div>      
+
           {{ .Content }}
           {{ partial "register.html" . }}
         </article>
@@ -63,18 +58,16 @@
         </div>
       </div>
 
-      <div class="col-sm-3 col-md-2 d-none d-md-block">
+      <div class="col-sm-2 col-md-2 d-none d-md-block">
         <div id="right-sidebar">
-          <div class="toc">
-            <h4>Table Of Contents</h4>
-            {{.TableOfContents}}
-          </div>      
-          <hr/>
+          <div class="clear"></div>
           <div id="codefund"><!-- fallback content --></div>
           <script src="https://codefund.io/properties/330/funder.js" async="async"></script>
           <div class="clear"></div>
         </div>
       </div>
+
+
 
     </div>
   </div>
@@ -86,7 +79,6 @@
 <script>
   // Add anchors on DOMContentLoaded
   document.addEventListener("DOMContentLoaded", function(event) {
-    var sidebar = new StickySidebar("#right-sidebar", { topSpacing: 10 });
     anchors.options = {
       visible: "always",
       placement: "left"
@@ -96,7 +88,6 @@
     );
   });
 </script>
-
 
 <div class="blue-spacer"></div>
 

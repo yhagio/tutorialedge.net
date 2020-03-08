@@ -2,6 +2,7 @@
 author: Elliot Forbes
 date: 2017-04-14T20:28:13+01:00
 series: misc
+layout: review
 tags:
   - misc
 title: Get Involved
@@ -98,11 +99,6 @@ Nostri mors: freta hanc timor notis posito in animam posset mihi exilio.
 - Cum in mihi nec avus ut suas
 - Crudelis bisulco amnem requiescere fugit et sit
 - Iusta vincet nititur humum inhospita fero genetrix
-
-:tent:
-
-| ```go 
-```
 
 ## Neve ipse
 
