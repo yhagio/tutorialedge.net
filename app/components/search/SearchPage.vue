@@ -2,7 +2,6 @@
     <div class="container-fluid search-results">
         <ais-instant-search 
             index-name="TutorialEdge" 
-            :search-function="searchFunction"
             :search-client="searchClient">
             
            <div class="content-container ">
@@ -64,15 +63,7 @@ export default {
             searchClient: algoliasearch(
                 'HC4LXZHZ0P',
                 'c03dde5425f223cd11270e711db47c0c'
-            ),
-            searchFunction(helper) {
-                const page = helper.getPage(); // Retrieve the current page
-                let uri = window.location.search.substring(1); 
-                let params = new URLSearchParams(uri);
-                helper.setQuery(params.get("query")) // this call resets the page
-                        .setPage(page) // we re-apply the previous page
-                        .search();
-            },
+            )
         }
     },
     filters: {
@@ -83,6 +74,14 @@ export default {
 
             return `${da}/${mo}/${ye}`
         }
+    },
+    created: function(helper) {
+        const page = helper.getPage(); // Retrieve the current page
+        let uri = window.location.search.substring(1); 
+        let params = new URLSearchParams(uri);
+        helper.setQuery(params.get("query")) // this call resets the page
+                .setPage(page) // we re-apply the previous page
+                .search();
     }
 }
 </script>

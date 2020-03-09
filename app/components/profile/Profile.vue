@@ -8,8 +8,12 @@
         </div>
 
         <hr/>
-
         <p><b>Privacy Policy: <a href="/privacy/">📕 Read Now</a></b></p>
+
+        <div class="preferences">
+            <button class="btn btn-danger">Delete Account</button>
+        </div>
+
 
         <a href="/logout/" class="btn btn-warning">Logout</a>
     </div>
@@ -33,3 +37,19 @@ export default {
     }
 }
 </script>
+
+<style lang="scss">
+.profile {
+    display: flex;
+    h1 {
+        margin-top: 20px;
+    }
+    img {
+        width: 80px;
+        height: 80px;
+        margin-right: 20px;
+        margin-top: 15px; 
+        border-radius: 50%;
+    }
+}
+</style>

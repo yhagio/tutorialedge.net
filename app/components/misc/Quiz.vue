@@ -3,17 +3,17 @@
         <span class="question">Question</span>
         <h2>{{ question }}</h2>
 
-        <button id="a" v-on:click="checkAnswer">
+        <button id="a" v-if="A" v-on:click="checkAnswer">
             <span> A </span>
             <span> {{ A }} </span>
         </button>
         
-        <button id="b" v-on:click="checkAnswer">
+        <button id="b" v-if="B" v-on:click="checkAnswer">
             <span> B </span>
             <span> {{ B }} </span>
         </button>
 
-        <button id="c" v-on:click="checkAnswer">
+        <button id="c" v-if="C" v-on:click="checkAnswer">
             <span> C </span>
             <span> {{ C }} </span>
         </button>

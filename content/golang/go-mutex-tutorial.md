@@ -136,6 +136,8 @@ Withdrawing 700 from account with balance: 1500
 New Balance 800
 ```
 
+<Quiz question="True or False: Arrays in Go have built in read/write concurrency safeguards?" A="True" B="False" answer="False - In Go, no value is safe for concurrent read/write access. You would need to use a mutex to guard any updates to any variables." />
+
 # Avoiding Deadlock
 
 There a couple of scenarios that you need to be aware of when working with mutexes that will result in deadlock. Deadlock is a scenario within our code where nothing can progress due to every goroutine continually blocking when trying to attain a lock. 
