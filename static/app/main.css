@@ -10211,6 +10211,41 @@ a:hover .course-progress-box {
   padding-top: 40px;
   padding-bottom: 40px;
 }
+.course-listing .card {
+  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.1);
+  border: none;
+  margin-bottom: 40px;
+  border-radius: 10px;
+}
+.course-listing .card-header {
+  background-color: white;
+  border-radius: 10px;
+}
+.course-listing .card-header button:hover {
+  text-decoration: none;
+}
+.course-listing .card-header button:hover h2 {
+  transition: ease-in 0.5s;
+  color: #0F607A !important;
+}
+.course-listing .card-header button:hover span {
+  color: #4a4a4a !important;
+}
+.course-listing .card-header button {
+  text-align: left;
+  padding: 0px;
+}
+.course-listing .card-header button h2 {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+.course-listing .list-group-item img {
+  width: 100%;
+  height: auto;
+}
+.course-listing .list-group-item a span {
+  color: #82A1B2 !important;
+}
 .course-listing .courses {
   display: flex;
   flex-wrap: wrap;

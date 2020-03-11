@@ -2,10 +2,60 @@
   background-color: #f6f6f6;
   padding-top: 40px;
   padding-bottom: 40px;
+
+  .card {
+    box-shadow: $box-shadow;
+    border: none;
+    margin-bottom: 40px;
+    border-radius: 10px;    
+  }
+  
+  .card-header {
+    background-color: white;
+    border-radius: 10px;
+    
+    button:hover {
+      text-decoration: none;
+
+      h2 {
+        transition: ease-in 0.5s;
+        color: $link-blue !important;
+      }
+      
+      span {
+        color: $light-gray !important;
+      }
+    }
+    
+    button {
+      text-align: left;
+      padding: 0px;
+      
+      h2 {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+      }
+
+    }
+ 
+  } 
+
+  .list-group-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .list-group-item a span {
+    color: #82A1B2 !important;
+  }
+
+
+
   .courses {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    
     .course-progress-box {
       flex: 1 1 26%;
       margin: 20px;
