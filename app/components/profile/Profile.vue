@@ -11,7 +11,6 @@
         <p><b>Privacy Policy: <a href="/privacy/">📕 Read Now</a></b></p>
 
         <div class="preferences">
-            <button class="btn btn-danger">Delete Account</button>
         </div>
 
 
