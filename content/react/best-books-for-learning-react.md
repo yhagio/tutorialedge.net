@@ -17,15 +17,27 @@ twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
-> This List is Currently under Construction
+React is without a doubt one of the most popular frontend programming frameworks out at the moment. It features an absolutely incredible online community and a massive range of books and learning resources from which you can learn how to build your own production-ready applications using the framework.
 
-<!-- TODO - Fill in -->
+In this list, we will attempt to filter out some of the top books you can purchase if you wish to learn React for your own projects.
 
-# Learning React Native
+# Fullstack React
 
-<p><img src="https://images.tutorialedge.net/books/learning-react-native.jpg" alt="best books for learning react" class="book-img" /></p>
+<p><img src="https://images.tutorialedge.net/books/fullstack-react.png" alt="best books for learning react" class="book-img" />
+<b>Fullstack React</b> was sent to me by one of the co-authors - Nate Murray and over the past few weeks I have been working my way through it. 
+</p>
 
-<div class="amazon-link">Buy Now: <a href="http://amzn.to/2y0l3Zo">Learning React Native</a></div>
+At a price tag of $39 for just the book, or $79 for the advanced bundle which includes the source code, videos and sample app, this is very good value for money as it covers just about everything a developer would need to build production-worthy apps in React.
+
+## What it Covers
+
+- Creating your first apps
+- How to write your own components
+- Handling user interaction
+- Managing rich forms
+- Interacting with backend APIs
+
+> **Buy Now -** [GumRoad](https://www.newline.co/fullstack-react/?inf_contact_key=ec35e41ab92554ec9cd0c496d4ae76f816358d5485884e2f31e6019a0d26c8b0)
 
 # Learning React
 
@@ -62,3 +74,14 @@ authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_4
 <p><img src="https://images.tutorialedge.net/books/react-essentials.jpg" alt="best books for learning react" class="book-img" /></p>
 
 <div class="amazon-link">Buy Now: <a href="http://amzn.to/2wVN1af">React.js Essentials</a></div>
+
+
+# Learning React Native
+
+<p><img src="https://images.tutorialedge.net/books/learning-react-native.jpg" alt="best books for learning react" class="book-img" /></p>
+
+<div class="amazon-link">Buy Now: <a href="http://amzn.to/2y0l3Zo">Learning React Native</a></div>
+
+# Conclusion
+
+Hopefully you found this list of books useful in your programming pursuits! If you have any feedback or any suggestions for books that you would like to see on this list then please let me know in the comments section below!
