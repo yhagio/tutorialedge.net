@@ -21,6 +21,7 @@ Rust is an incredibly fast systems programming language that is used by a very
 wide range of organizations such as `mozilla` (the original creators of the
 language), `Atlassion`, `Dropbox` and `npm`.
 
+
 # Programming Rust: Fast, Safe Systems Development
 
 <p><img alt="Programming Rust: Fast, Safe Systems Development" src="https://images.tutorialedge.net/books/programming-rust.jpg" class="book-img" /> Programming Rust: Fast, Safe Systems Development (1st Edition) is a fantastic resource for those of you willing to pick up the relatively new language. The book explains the complexities of the language and how you can ensure your programs are free from things such as null pointer dereferences, double frees, dangling pointers and other such bugs. </p>
@@ -61,6 +62,22 @@ programming language.
 - Use Diesel to build safe database abstractions
 
 <div class="amazon-link">Buy Now: <a href="http://amzn.to/2kDALno">Mastering Rust</a></div>
+
+# FullStack Rust: The Complete Guide to Building Apps with the Rust Programming Language and Friends
+
+<p><img alt="Mastering Rust" src="https://images.tutorialedge.net/books/fullstack-rust.jpg" class="book-img" /> Fullstack Rust by <code>Andy Weiss</code> is a new book that was sent to me for review. I'm currently around halfway through the book and so far it has been great in terms of the topics it covers and the way in which it presents the material.</p>
+
+The book is still currently under construction as it stands, but from the initial material it looks more than worthy of a place on our list if you are looking to get into Rust!
+
+## What it Covers
+
+- Performance in Rust
+- The Strong, static, expressive type system
+- Fearless **concurrency**
+- Modern Generics
+- Memory Safety
+
+> **Buy Now:** [Fullstack Rust: The Complete Guide to Building Apps with the Rust Programming Language and Friends](https://gumroad.com/discover?query=fullstack%20rust#fBHCs)
 
 # Conclusion
 
