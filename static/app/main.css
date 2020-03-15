@@ -10234,6 +10234,8 @@ a:hover .course-progress-box {
 .course-listing .card-header button {
   text-align: left;
   padding: 0px;
+  width: 100% !important;
+  margin: auto;
 }
 .course-listing .card-header button h2 {
   font-size: 1.4rem;
@@ -10250,6 +10252,10 @@ a:hover .course-progress-box {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+.course-listing .courses button {
+  width: 100% !important;
+  margin: 0;
 }
 .course-listing .courses .course-progress-box {
   flex: 1 1 26%;
