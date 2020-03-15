@@ -84,7 +84,7 @@ Swapped 8 for 5
 [1, 2, 3, 4, 5, 8]
 ```
 
-<Quiz question="What is the time complexity of the Insertion Sort Algorithm?" A="O(N)" B="O(N^2)" C="O(N^3)" answer="B - The worst case sorting complexity of Insertion sort is O(N^2)"/>
+<Quiz question="What is the time complexity of the Insertion Sort Algorithm?" A="O(N)" B="O(N^2)" C="O(N^3)" correct="B" answer="B - The worst case sorting complexity of Insertion sort is O(N^2)"/>
 
 # Conclusion
 

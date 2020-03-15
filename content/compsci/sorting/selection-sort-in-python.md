@@ -96,7 +96,7 @@ $ python3.6 sort.py
 As you can see, it returns a list that has been successfully sorted using the
 selection sort algorithm.
 
-<Quiz question="What is the worst case time complexity of the Selection Sort Algorithm?" A="O(N)" B="O(N^2)" C="O(n log n)" answer="B - The worst case and best case sorting complexity of Selection sort is O(N^2)"/>
+<Quiz question="What is the worst case time complexity of the Selection Sort Algorithm?" A="O(N)" B="O(N^2)" C="O(n log n)" correct="B" answer="B - The worst case and best case sorting complexity of Selection sort is O(N^2)"/>
 
 # Conclusion
 

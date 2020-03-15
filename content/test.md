@@ -8,7 +8,7 @@ title: Get Involved
 twitter: https://twitter.com/Elliot_F
 ---
 
-<Quiz question="Who Is The Best #Peep?" A="Elliot" B="Nadi" C="Donna" answer="The correct answer is A" />
+<Quiz question="Who Is The Best #Peep?" A="Elliot" B="Nadi" C="Donna" correct="A" answer="The correct answer is A" />
 
 [test link](/test/)
 

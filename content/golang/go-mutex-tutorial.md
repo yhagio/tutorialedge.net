@@ -136,7 +136,7 @@ Withdrawing 700 from account with balance: 1500
 New Balance 800
 ```
 
-<Quiz question="True or False: Arrays in Go have built in read/write concurrency safeguards?" A="True" B="False" answer="False - In Go, no value is safe for concurrent read/write access. You would need to use a mutex to guard any updates to any variables." />
+<Quiz question="True or False: Arrays in Go have built in read/write concurrency safeguards?" A="True" B="False" correct="B" answer="False - In Go, no value is safe for concurrent read/write access. You would need to use a mutex to guard any updates to any variables." />
 
 # Avoiding Deadlock
 
