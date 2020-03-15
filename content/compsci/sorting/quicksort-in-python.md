@@ -12,7 +12,11 @@ title: Implementing Quicksort in Python
 twitter: https://twitter.com/Elliot_F
 ---
 
-> This tutorial was built using Python 3.6
+**In this tutorial we are going to be looking at how you can implement the QuickSort algorithm using Python.** This will include looking at how the underlying algorithm works, and the time/space complexity of the algorithm when implemented correctly.
+
+> **Note** - If you are applying for jobs at some of the top tech companies in the world then be aware that this algorithm may feature within their interview processes so it's worthwhile memorizing some of the key information about it.
+
+# QuickSort Algorithm
 
 Quicksort is one of the most popular sorting algorithms you will come across in
 computer science. This is because of it's `average` case performance of
