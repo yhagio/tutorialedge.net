@@ -30,7 +30,8 @@
     button {
       text-align: left;
       padding: 0px;
-      
+      width: 100% !important;
+      margin: auto;
       h2 {
         font-size: 1.4rem;
         text-transform: uppercase;
@@ -49,13 +50,16 @@
     color: #82A1B2 !important;
   }
 
-
-
   .courses {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     
+    button {
+      width: 100% !important;
+      margin: 0;
+    }
+
     .course-progress-box {
       flex: 1 1 26%;
       margin: 20px;
