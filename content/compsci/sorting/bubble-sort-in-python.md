@@ -6,8 +6,7 @@ desc: In This Tutorial we look at how you can implement the Bubble Sorting Algor
 series: compsci
 image: logo.svg
 tags:
-- python
-- compsci
+- sorting
 title: Implementing The Bubble Sort Algorithm in Python
 twitter: https://twitter.com/Elliot_F
 
@@ -31,6 +30,8 @@ pass through the array.
 Now that we have an appreciation for how the algorithm works, let's now take a
 look at how you would go about implementing this in the Python programming
 language.
+
+<div class="filename"> main.py </div>
 
 ```py
 # Bubble Sort In Python
@@ -82,6 +83,8 @@ Swapped: 4 with 5
 [1, 2, 3, 4, 5, 8]
 ```
 
+<Quiz question="What is the time complexity of the Bubble Sort Algorithm?" A="O(N)" B="O(N^2)" C="O(N^3)" correct="B" answer="B - The average and worst case sorting complexity of bubble sort is O(N^2)"/>
+
 # Conclusion
 
 Awesome! So, in this tutorial, we looked at how you could successfully implement
@@ -89,3 +92,10 @@ the Bubble Sort algorithm in Python.
 
 > **Note -** If you found this tutorial useful or require further help then
 > please feel free to let me know in the comments section below!
+
+## Related Reading
+
+If you enjoyed this tutorial, you may also enjoy these other tutorials on the site:
+
+* [QuickSort in Python](/compsci/sorting/quicksort-in-python/)
+* [Insertion Sort in Python](/compsci/sorting/insertion-sort-in-python/)

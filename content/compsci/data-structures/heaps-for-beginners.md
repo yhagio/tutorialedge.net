@@ -8,8 +8,7 @@ series: compsci
 image: logo.svg
 draft: true
 tags:
-  - python
-  - compsci
+- data-structures
 title: Data Structures - Heaps For Beginners
 twitter: https://twitter.com/Elliot_F
 ---

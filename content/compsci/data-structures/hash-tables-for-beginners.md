@@ -7,8 +7,7 @@ desc:
 series: compsci
 image: logo.svg
 tags:
-  - python
-  - compsci
+- data-structures
 title: Data Structures - Hash Tables For Beginners
 twitter: https://twitter.com/Elliot_F
 ---

@@ -7,8 +7,7 @@ desc:
 series: compsci
 image: logo.svg
 tags:
-  - python
-  - compsci
+- misc
 title: Bit Manipulation For Beginners
 twitter: https://twitter.com/Elliot_F
 ---

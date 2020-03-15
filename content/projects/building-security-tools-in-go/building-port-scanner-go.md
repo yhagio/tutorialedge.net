@@ -28,7 +28,7 @@ Port scanning is the act of iterating over every port on a machine and checking 
 
 In total there are just over **130,000 ports** on a typical machine, **65535 of which are `TCP`** and the **other 65535 which are `UDP` ports**. Each of these ports could effectively be a way in to your system if left open and port scanning allows security engineers see if there are any potential ways to gain access to your system from un-patched software.
 
-<quiz-element question="What Ports do HTTP and HTTPS use?" A="22 and 443" B="21 and 22" C="80 and 443" answer="The Correct answer is C - HTTP uses port 80 and HTTPS uses port 443" />
+<Quiz question="What Ports do HTTP and HTTPS use?" A="22 and 443" B="21 and 22" C="80 and 443" correct="C" answer="The Correct answer is C - HTTP uses port 80 and HTTPS uses port 443" />
 
 ## Why Should We Care?
 

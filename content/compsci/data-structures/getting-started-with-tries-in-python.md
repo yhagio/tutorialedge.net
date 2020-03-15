@@ -7,8 +7,7 @@ desc:
 series: compsci
 image: logo.svg
 tags:
-  - python
-  - compsci
+- data-structures
 title: Getting Started With Tries in Python
 twitter: https://twitter.com/Elliot_F
 ---
