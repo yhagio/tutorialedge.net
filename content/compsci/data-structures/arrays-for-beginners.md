@@ -12,8 +12,6 @@ image: logo.svg
 twitter: https://twitter.com/Elliot_F
 ---
 
-> Under Construction
-
 In this article we are going to be looking at the `array` data structure. We'll
 be looking at some of the fundamental characteristics of the structure and how
 we can best leverage this within our own programs.
@@ -23,18 +21,24 @@ we can best leverage this within our own programs.
 Arrays represent a collection of elements, these elements can be of different
 types; `integers`, `characters`, `strings`, `floating-point values` and even
 composite types such as `arrays` which allows you to create nested array
-structures should you wish.
+structures should you wish, or `objects` which are a group of elements all bundled together.
 
-# Instantiation
+For example, say we wanted to store a list of names. We could use an array which would contain
+all of the names we want like so:
 
-In many programming languages you are required to set the size of your array at
-the time of its instantiation.
-
-```c
-// in C if we wanted an array with 10 elements
-// we could instantiation it like this:
-int array[10];
+```json
+["Elliot", "Fraser"]
 ```
+
+Or if we wanted to have an array of the months of the year then we could easily define our array
+like so:
+
+```json
+["January", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
+```
+
+Arrays offer an incredible amount of flexibility to programmers as we can store any number of items we wish within
+them and you'll find arrays in almost every programming language you work with.
 
 # Access Elements in Arrays
 
