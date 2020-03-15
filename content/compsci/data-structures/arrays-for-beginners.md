@@ -6,8 +6,7 @@ desc:
   they can solve
 series: compsci
 tags:
-  - python
-  - compsci
+- data-structures
 title: Data Structures - Arrays for Beginners
 image: logo.svg
 twitter: https://twitter.com/Elliot_F

@@ -8,8 +8,7 @@ series: compsci
 draft: true
 image: logo.svg
 tags:
-  - python
-  - compsci
+- data-structures
 title: Data Structures - Binary Trees For Beginners
 twitter: https://twitter.com/Elliot_F
 ---

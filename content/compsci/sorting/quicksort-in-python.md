@@ -7,8 +7,7 @@ desc:
 series: compsci
 image: logo.svg
 tags:
-  - python
-  - compsci
+- sorting
 title: Implementing Quicksort in Python
 twitter: https://twitter.com/Elliot_F
 ---
@@ -87,7 +86,16 @@ We can test this by doing the following:
 [1, 2, 3, 4, 6, 7, 9, 12]
 ```
 
+<Quiz question="What is the average time complexity of the Quick Sort Algorithm?" A="O(N)" B="O(N^2)" C="O(n log n)" answer="C - The average case sorting complexity of Quick sort is O(n log n)"/>
+
 # Conclusion
 
 If you found this tutorial useful or require further assistance or info then
 please let me know in the comments section below!
+
+## Related Reading
+
+If you enjoyed this tutorial, you may also enjoy these other tutorials on the site:
+
+* [Bubble Sort in Python](/compsci/sorting/bubble-sort-in-python/)
+* [Insertion Sort in Python](/compsci/sorting/insertion-sort-in-python/)

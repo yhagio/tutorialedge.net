@@ -7,8 +7,7 @@ desc:
 series: compsci
 image: logo.svg
 tags:
-  - python
-  - compsci
+- algorithms
 title: Memoization For Beginners
 twitter: https://twitter.com/Elliot_F
 ---

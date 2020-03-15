@@ -7,8 +7,7 @@ desc:
 series: compsci
 image: logo.svg
 tags:
-  - python
-  - compsci
+- sorting
 title: Implementing Selection Sort in Python
 twitter: https://twitter.com/Elliot_F
 ---
@@ -104,3 +103,10 @@ managed to implement the selection sorting algorithm.
 
 If you found this useful, or have any feedback/comments then I'd love to hear
 them down below!
+
+## Related Reading
+
+If you enjoyed this tutorial, you may also enjoy these other tutorials on the site:
+
+* [QuickSort in Python](/compsci/sorting/quicksort-in-python/)
+* [Insertion Sort in Python](/compsci/sorting/insertion-sort-in-python/)

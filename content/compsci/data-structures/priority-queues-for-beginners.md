@@ -7,8 +7,7 @@ desc:
 series: compsci
 image: logo.svg
 tags:
-  - python
-  - compsci
+- data-structures
 title: Data Structures - Priority Queues For Beginners
 twitter: https://twitter.com/Elliot_F
 ---

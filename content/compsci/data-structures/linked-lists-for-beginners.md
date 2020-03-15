@@ -8,8 +8,7 @@ series: compsci
 draft: true
 image: logo.svg
 tags:
-  - python
-  - compsci
+- data-structures
 title: Data Structures - Linked Lists for beginners
 twitter: https://twitter.com/Elliot_F
 ---
