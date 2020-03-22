@@ -39,6 +39,7 @@ export const useAuth = ({...options}) => {
                 Cookie.remove("user")
                 Cookie.remove("idToken")
                 Cookie.remove("accessToken")
+                Cookie.remove("redirectUri")
                 webAuth.logout({
                     returnTo: config.redirectUri,
                     clientID: config.clientID
@@ -47,6 +48,10 @@ export const useAuth = ({...options}) => {
             getUser() {
                 let user = JSON.parse(Cookie.get("user"));
                 return user;
+            },
+            getAccessToken() {
+                let accessToken = Cookie.get("accessToken")
+                return accessToken;
             },
             isAuthenticated() {
                 return new Date().getTime() < Cookie.get("expiresAt");
