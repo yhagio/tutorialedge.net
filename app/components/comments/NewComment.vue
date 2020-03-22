@@ -1,17 +1,13 @@
   
 <template>
     <div class="new-comment">
-        <div class="avatar">
-            <img src="https://images.tutorialedge.net/images/logo.png" alt="default avatar">
-        </div>
+
         <div class="comment-input" id="comment-input">
             <textarea v-model="commentBody" placeholder="Leave a reply"></textarea>
             <br/>
-            <div class="comment-actions">
-                <button id="comment" v-on:click="submitComment" class="btn btn-primary float-right">
-                    Submit
-                </button>
-            </div>
+            <button id="comment" v-on:click="submitComment" class="btn btn-primary float-right">
+                Submit
+            </button>
         </div>
     </div>
 </template>
@@ -26,18 +22,29 @@ export default {
             user: {}
         }
     },
+    created: function() {
+        this.user = this.$auth.getUser();
+    },
     methods: {
         submitComment: async function() {
-            let pageId = document.getElementById('page-id').innerHTML;
             try {
-            let response = await axios.post("https://api.tutorialedge.net/api/v1/comments/" + pageId, {
-                body: this.commentBody,
-                author: this.user.user.displayName,
-                user: this.user,
-                path: window.location.pathname
-            }, {
-                headers: { Authorization: "Bearer " + Cookies.get("jwt-token")}
-            });
+
+                let body = JSON.stringify({
+                    slug: window.location.pathname,
+                    body: this.commentBody,
+                    author: this.user.name,
+                    picture: this.user.picture,
+                    user: this.user
+                })
+
+                let response = await axios({ method: "post", 
+                    url: "https://aryenshfvg.execute-api.eu-west-1.amazonaws.com/dev/comments", 
+                    data: body,
+                    headers: {
+                        "Authorization": "Bearer " + this.$auth.getAccessToken(),
+                        "Content-Type": "application/json"
+                    }
+                });
             } catch (err) {
                 console.log(err);
             }
@@ -46,3 +53,12 @@ export default {
     }
 }
 </script>
+
+<style lang="scss">
+.new-comment {
+    width: 100%;
+    background-color: #F2F5F7;
+    border-radius: 5px;
+    padding: 40px;
+}
+</style>
