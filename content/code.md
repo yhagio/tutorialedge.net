@@ -5,9 +5,11 @@ series: misc
 layout: simple
 tags:
   - misc
-title: Privacy Policy
+title: Code of Conduct - TutorialEdge
 twitter: https://twitter.com/Elliot_F
 ---
+
+> **Note** - TutorialEdge uses the code of conduct from the Python Software Foundation. 
 
 Members of the TutorialEdge clan are open, considerate, and respectful. Behaviours that reinforce these values contribute to a positive environment, and include:
 
