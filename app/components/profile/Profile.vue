@@ -7,8 +7,7 @@
             <div class="profile">
                 <img v-bind:src="user.picture" alt="Profile Picture">
 
-                <h2>Profile: {{ this.user.name }} <br/>
-                <small>Thank you for Registering - This is currently in BETA</small></h2>
+                <h2>Profile: {{ this.user.name }}</h2>
             </div>
             
             <h3>Trophies</h3>

@@ -9,6 +9,7 @@
         <div class="comment-body">
             <h4>{{ comment.author }} <small>{{ comment.posted }}</small></h4>
             <p>{{ comment.body }}</p>
+            <p></p>
         </div>
         <div class="comment-votes">
             <a v-on:click="upvote('thumbs_up')" v-bind:class="{upvoted: this.vote === 'thumbs_up'}" class="badge badge-light">{{ comment.thumbs_up }} 👍</a>
