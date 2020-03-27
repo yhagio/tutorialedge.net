@@ -1,35 +1,37 @@
 <template>
     <div>
-        <div class="profile">
-            <img v-bind:src="user.picture" alt="Profile Picture">
-
-            <h2>Profile: {{ this.user.name }} <br/>
-            <small>Thank you for Registering - This is currently in BETA</small></h2>
+        <div v-if="!loaded">
+            <h2>Loading...</h2>
         </div>
+        <div v-if="loaded" class="profile-wrapper">
+            <div class="profile">
+                <img v-bind:src="user.picture" alt="Profile Picture">
 
-        <hr/>
-        
-        <h3>Achievements</h3>
+                <h2>Profile: {{ this.user.name }} <br/>
+                <small>Thank you for Registering - This is currently in BETA</small></h2>
+            </div>
+            
+            <h3>Trophies</h3>
 
-        <!-- <div class="row">
-            <div class="col-lg-4">
-                <div class="card">
-                    <img src="https://images.tutorialedge.net/images/golang.svg" alt="">
-                    <h2>Beginners</h2>
-                    <button class="btn btn-primary">Attempt</button>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="trophy">
+                        <img src="https://images.tutorialedge.net/images/golang.svg" alt="First 1000 Gophers!">
+                        <p><b>An Original Clan Member</b> - One of the First 1,000 Users</p>
+                    </div>
                 </div>
             </div>
-        </div> -->
 
 
-        <hr/>
-        <p><b>Privacy Policy: <a href="/privacy/">📕 Read Now</a></b></p>
+            <hr/>
+            <p><b>Privacy Policy: <a href="/privacy/">📕 Read Now</a></b></p>
 
-        <div class="preferences">
+            <div class="preferences">
+            </div>
+
+
+            <a href="/logout/" class="btn btn-warning">Logout</a>
         </div>
-
-
-        <a href="/logout/" class="btn btn-warning">Logout</a>
     </div>
 </template>
 
@@ -40,7 +42,8 @@ export default {
     name: 'Profile',
     data: function() {
         return {
-            user: {}
+            user: {},
+            loaded: false
         }
     },
     created: function() {
@@ -48,11 +51,9 @@ export default {
         let urlParams = new URLSearchParams(window.location.search);
         let myParam = urlParams.get('redirectUri');
     
-
         if(myParam) {
             Cookie.set("redirectUri", myParam)
         } 
-
 
         if(!this.$auth.isAuthenticated()) {
             this.$auth.login()
@@ -65,6 +66,8 @@ export default {
                 console.log("redirecting...")
                 window.location.replace(redirectTo)
             }
+
+            this.loaded = true;
         }
     }
 }
@@ -85,6 +88,16 @@ export default {
     }
 }
 
+.trophy {
+    
+    img {
+        width: 50px !important; 
+        height: 50px !important;
+        float: left;
+        margin-right: 20px;
+    }
+}
+
 .card {
     img {
         width: 80%;
@@ -92,6 +105,7 @@ export default {
         margin: auto;
         padding: 40px 20px;
     }
+
 
     button {
         width: 100%;
