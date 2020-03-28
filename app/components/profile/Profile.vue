@@ -10,7 +10,7 @@
                 <h2>Profile: {{ this.user.name }}</h2>
             </div>
             
-            <h3>Trophies</h3>
+            <h3>🏆 Trophies</h3>
 
             <div class="row">
                 <div class="col-lg-4">
@@ -73,11 +73,18 @@ export default {
 </script>
 
 <style lang="scss">
+.profile-wrapper {
+    h3 {
+        margin-left: 0px;
+    }
+}
+
 .profile {
     display: flex;
     h1 {
         margin-top: 20px;
     }
+
     img {
         width: 80px;
         height: 80px;
