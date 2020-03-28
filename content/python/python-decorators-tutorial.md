@@ -27,7 +27,7 @@ types of applications.
 If you prefer, feel free to check out the video version of this course, like and
 subscribe to my channel for more Python related video content!
 
-<div style="position:relative;height:0;padding-bottom:56.3%"><iframe src="https://www.youtube.com/embed/7ipNLN9y-nc?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="639" height="360" frameborder="0" gesture="media" allowfullscreen></iframe></div>
+<div style="position:relative;height:0;padding-bottom:56.3%"><iframe src="https://www.youtube.com/watch?v=Npko82jkPKg" style="position:absolute;width:100%;height:100%;left:0" width="639" height="360" frameborder="0" gesture="media" allowfullscreen></iframe></div>
 
 # Getting Started
 
