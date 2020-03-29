@@ -22,6 +22,7 @@
 
 <script>
 import axios from 'axios';
+import config from 'environment';
 
 export default {
     name: 'Comment',
@@ -48,11 +49,10 @@ export default {
                     id: this.comment.id,
                     vote: vote
                 }
-                console.log(body)
 
                 let response = await axios({
                     method: 'put',
-                    url: 'https://aryenshfvg.execute-api.eu-west-1.amazonaws.com/dev/comments',
+                    url: config.apiBase + "/v1/comments",
                     data: body,
                     headers: {
                         "Authorization": "Bearer " + this.$auth.getAccessToken(),
