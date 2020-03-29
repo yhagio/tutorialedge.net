@@ -3,7 +3,6 @@ node_js:
   - 11
 
 before_install:
-- pyenv global 3.7.1
 - pip install -U pip
 - pip install awscli
 
@@ -17,7 +16,6 @@ script:
 - yarn prod-build
 - hugo --minify
 - yarn sass-compile
-
 
 deploy:
   provider: s3
