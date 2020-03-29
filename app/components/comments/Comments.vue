@@ -23,6 +23,7 @@
 import NewComment from './NewComment.vue';
 import Comment from './Comment.vue';
 import axios from 'axios';
+import config from 'environment'
 
 export default {
     name: "Comments",
@@ -43,7 +44,7 @@ export default {
             this.loggedIn = true;
         }
 
-        let response = await axios.get("https://aryenshfvg.execute-api.eu-west-1.amazonaws.com/dev/comments", { params: {
+        let response = await axios.get(config.apiBase + "/v1/comments", { params: {
           slug: window.location.pathname
         }})
 

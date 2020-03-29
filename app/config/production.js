@@ -5,7 +5,8 @@ const config = {
     // we will use the api/v2/ to access the user information as payload
     audience: 'https://' + 'tutorialedge.eu.auth0.com' + '/api/v2/', 
     responseType: 'token id_token',
-    scope: 'openid profile'
+    scope: 'openid profile',
+    apiBase: 'api.tutorialedge.net/api/'
 }
 
 export default config;
