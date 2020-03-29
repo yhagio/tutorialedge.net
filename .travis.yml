@@ -35,4 +35,4 @@ deploy:
     branch: master
 
 after_script:
-- aws --help
+- aws cloudfront create-invalidation --distribution-id E2USZE9G60PEM6 --paths "*"
