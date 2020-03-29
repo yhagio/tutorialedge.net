@@ -12,6 +12,7 @@ script:
 - hugo --minify
 - yarn sass-compile
 
+
 deploy:
   provider: s3
   access_key_id: AKIAIN5O72B44O5TWFVA
@@ -26,5 +27,5 @@ deploy:
     repo: elliotforbes/tutorialedge.net
     branch: master
 
-
-    
+after_script:
+- aws --help
