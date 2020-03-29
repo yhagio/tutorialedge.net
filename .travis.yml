@@ -2,6 +2,11 @@ language: node_js
 node_js: 
   - 10
 
+env:
+  - AWS_REGION="us-east-1"
+  - AWS_ACCESS_KEY_ID="secrethub://company/app/aws/access_key_id"
+  - AWS_SECRET_ACCESS_KEY="secrethub://company/app/aws/secret_access_key"
+
 before_install:
 - pyenv global 3.7.1
 - pip install -U pip
@@ -34,4 +39,7 @@ deploy:
     branch: master
 
 after_script:
+- export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
+- export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
+- export REGION=eu-west-1
 - aws cloudfront create-invalidation --distribution-id E2USZE9G60PEM6 --paths "*"
