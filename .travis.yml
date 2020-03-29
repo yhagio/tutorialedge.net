@@ -1,8 +1,9 @@
 language: node_js
 node_js: 
-  - 11
+  - 10
 
 before_install:
+- pyenv global 3.7.1
 - pip install -U pip
 - pip install awscli
 
