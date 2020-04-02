@@ -35,4 +35,4 @@ deploy:
     branch: master
 
 after_script:
-- travis-ci-cloudfront-invalidation -a $AWS_ACCESS_KEY_ID -s $AWS_SECRET_ACCESS_KEY -c $CF_ID -i '/*' -b $TRAVIS_BRANCH -p $TRAVIS_PULL_REQUEST
+- travis-ci-cloudfront-invalidation -a $AWS_ACCESS_KEY_ID -s $AWS_SECRET_ACCESS_KEY -c $CF_ID -i '*' -b $TRAVIS_BRANCH -p $TRAVIS_PULL_REQUEST
