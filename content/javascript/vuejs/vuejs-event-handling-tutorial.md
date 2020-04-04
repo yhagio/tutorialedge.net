@@ -8,7 +8,7 @@ image: vuejs.png
 series: vuejs
 tags:
   - event handling
-title: Vuejs Event Handling Tutorial
+title: Vue.js Event Handling Tutorial
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 weight: 3
@@ -158,3 +158,10 @@ So, in this tutorial, we covered how you can effectively handle events within
 your VueJS applications. Hopefully you enjoyed this! If you did then please let
 me know in either the comments section below or on twitter:
 [@Elliot_F](https://twitter.com/Elliot_F).
+
+## Further Reading
+
+If you enjoyed this article then you may enjoy some of the other tutorials on our site:
+
+* [Vue.js WebSocket Tutorial](/javascript/vuejs/vuejs-websocket-tutorial/)
+* [Vue.js Animations and Transitions Tutorial](/javascript/vuejs/vuejs-transitions-animations-tutorial/)

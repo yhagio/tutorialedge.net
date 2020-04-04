@@ -1,5 +1,5 @@
 ---
-title: "Components, Templates, and Props in Vue 2"
+title: "Components, Templates, and Props in Vue.js 2"
 date: 2019-01-30T14:08:59Z
 desc:
   In this guest post by Ajdin Imsirovic, the author of Vue.js Quick Start Guide,
@@ -655,3 +655,10 @@ If you found this article helpful and would like to get started with Vue.js,
 [Vue.js Quick Start Guide](https://amzn.to/2sXauVF) is the most ideal book for
 you to learn how to build amazing and complex reactive web applications easily
 using Vue.js
+
+## Further Reading
+
+If you enjoyed this article then you may enjoy some of the other tutorials on our site:
+
+* [Vue.js Change Handler Tutorial](/javascript/vuejs/vuejs-change-handler-tutorial/)
+* [Vue.js Animations and Transitions Tutorial](/javascript/vuejs/vuejs-transitions-animations-tutorial/)

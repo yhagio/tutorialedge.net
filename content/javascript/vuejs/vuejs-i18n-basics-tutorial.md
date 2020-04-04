@@ -1,5 +1,5 @@
 ---
-title: "Vuejs I18n Basics Tutorial"
+title: "Vue.js Internationalization - I18n - Basics Tutorial"
 date: 2020-02-09T09:03:59Z
 desc: In this tutorial, we are going to be looking at how you can add internationalization to your Vue.js applications using the vue-i18n library.
 author: Elliot Forbes

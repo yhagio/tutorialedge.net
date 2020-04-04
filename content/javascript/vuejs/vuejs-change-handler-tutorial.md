@@ -1,5 +1,5 @@
 ---
-title: "Vue.JS Change Handler Tutorial"
+title: "Vue.js Change Handler Tutorial"
 date: 2019-08-11T13:35:05+01:00
 draft: true
 desc: In this tutorial, we are going to be looking at how you can effectively watch for changes within a Vue.JS applications.
@@ -168,4 +168,11 @@ In the `watch` section of our component, we define a `handler` function that wil
 
 # Conclusion
 
+So, in this tutorial, we have looked at how you can build your own change handler functions in Vue.js. If you enjoyed this article, or have any comments or issues then please let me know in the comments section below!
+
 ## Further Reading
+
+If you enjoyed this article then you may enjoy some of the other tutorials on our site:
+
+* [Vue.js WebSocket Tutorial](/javascript/vuejs/vuejs-websocket-tutorial/)
+* [Vue.js Animations and Transitions Tutorial](/javascript/vuejs/vuejs-transitions-animations-tutorial/)

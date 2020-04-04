@@ -8,7 +8,7 @@ series: vuejs
 image: vuejs.png
 tags:
   - books
-title: The Best Books For Learning VueJS
+title: The Best Books For Learning Vue.js
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
@@ -59,3 +59,6 @@ nail the fundamentals and get up and running quickly!
 
 > If you liked this article then you may also like:
 > [The Best Books for Learning Laravel](/php/laravel/best-books-learning-laravel/)
+
+
+<!-- TODO: Add 2 More Books -->
