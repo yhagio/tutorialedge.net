@@ -8,7 +8,7 @@ image: vuejs.png
 series: vuejs
 tags:
   - vuejs
-title: Vuejs HTTP Requests with Axios Tutorial
+title: Vue.js HTTP Requests with Axios Tutorial
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 weight: 4
@@ -177,3 +177,10 @@ Hopefully, this article showed you everything you need in order to make `HTTP`
 requests within your VueJS applications. If you need further help then please
 let me know in the comments section below or by tweeting me:
 [@Elliot_F](https://twitter.com/elliot_f).
+
+## Further Reading
+
+If you enjoyed this article then you may enjoy some of the other tutorials on our site:
+
+* [Vue.js WebSocket Tutorial](/javascript/vuejs/vuejs-websocket-tutorial/)
+* [Vue.js Animations and Transitions Tutorial](/javascript/vuejs/vuejs-transitions-animations-tutorial/)

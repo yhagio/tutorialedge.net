@@ -8,7 +8,7 @@ image: vuejs.png
 series: vuejs
 tags:
   - Routing
-title: Vue Router Beginners Tutorial
+title: Vue.js Vue-Router Beginners Tutorial
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 weight: 5
@@ -236,6 +236,10 @@ Hopefully, you found this tutorial helpful. We have managed to set up a simple
 VueJS application that features routing with several routes, each displaying
 differing components.
 
-If you are interested in some more advanced routing concepts then I would highly
-recommend checking out the vue-router documentation. It features pages on things
-like transitions and lazy loading.
+
+## Further Reading
+
+If you enjoyed this article then you may enjoy some of the other tutorials on our site:
+
+* [Vue.js WebSocket Tutorial](/javascript/vuejs/vuejs-websocket-tutorial/)
+* [Vue.js Animations and Transitions Tutorial](/javascript/vuejs/vuejs-transitions-animations-tutorial/)

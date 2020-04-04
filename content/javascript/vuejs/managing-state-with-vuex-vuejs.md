@@ -8,7 +8,7 @@ image: vuejs.png
 series: vuejs
 tags:
   - VueX
-title: Managing State With Vuex in Vuejs
+title: Managing State With Vuex in Vue.js
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 weight: 1
@@ -223,3 +223,10 @@ objects then this starts to become more beneficial.
 
 Hopefully, you found this tutorial on `vuex` useful and it showed you everything
 you need in order to get started using it within your own Vue.js applications.
+
+## Further Reading
+
+If you enjoyed this article then you may enjoy some of the other tutorials on our site:
+
+* [Vue.js WebSocket Tutorial](/javascript/vuejs/vuejs-websocket-tutorial/)
+* [Vue.js Animations and Transitions Tutorial](/javascript/vuejs/vuejs-transitions-animations-tutorial/)
