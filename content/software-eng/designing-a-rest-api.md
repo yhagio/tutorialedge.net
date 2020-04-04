@@ -14,7 +14,10 @@ tags:
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
+<!-- TODO: Improve this -->
+
 In this article, we are going to transcend the programming language paradigm and look at the more high-level topic that is REST API design fundamentals. 
+
 
 We are going to take a look at some of the **do's** and **don'ts** when it comes to designing production-ready services and how we can design our systems so that they can be easily extended, upgraded and maintained without any underlying impact to the people consuming your service.
 
