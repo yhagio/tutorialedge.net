@@ -1,7 +1,6 @@
 ---
 title: "Rust Module Tutorial"
 date: 2020-04-05T08:53:05+01:00
-draft: true
 desc: In this tutorial, we are going to look at modules within Rust and how you can define and import your own simple modules!
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
@@ -79,6 +78,8 @@ Call to test_function()
 ```
 
 As you can see, this has printed out `Hello, World!` as well as the `Call to test_function()` which we defined within our `player` module. 
+
+<!-- TODO: Add section on module paths -->
 
 # Conclusion
 
