@@ -17,6 +17,8 @@ twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
+<!-- TODO: Flesh out the book descriptions -->
+
 React is without a doubt one of the most popular frontend programming frameworks out at the moment. It features an absolutely incredible online community and a massive range of books and learning resources from which you can learn how to build your own production-ready applications using the framework.
 
 In this list, we will attempt to filter out some of the top books you can purchase if you wish to learn React for your own projects.

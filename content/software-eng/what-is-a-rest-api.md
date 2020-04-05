@@ -75,3 +75,9 @@ with them wherever we are in the world as long as we have internet connectivity.
 If you want to learn how to implement your own REST APIs then I suggest you have
 a look at my tutorial on
 [Writing RESTful APIs in Go](/golang/creating-restful-api-with-golang/)
+
+## Further Reading:
+
+If you enjoyed this article then you may also enjoy some of my other articles on the site:
+
+* [Designing a Production Ready REST API](/software-eng/designing-a-rest-api)

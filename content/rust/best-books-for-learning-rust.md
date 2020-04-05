@@ -14,13 +14,14 @@ twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
+<!-- TODO: Add 2 more books -->
+
 In this article we will be looking at the best books you can buy to help you
 learn the basics of Rust Systems Development.
 
 Rust is an incredibly fast systems programming language that is used by a very
-wide range of organizations such as `mozilla` (the original creators of the
-language), `Atlassion`, `Dropbox` and `npm`.
-
+wide range of large organizations such as `mozilla` (the original creators of the
+language), `Atlassian`, `Dropbox` and `npm`.
 
 # Programming Rust: Fast, Safe Systems Development
 

@@ -7,7 +7,7 @@ desc:
 series: rust
 image: rust-logo.png
 tags:
-  - rust
+  - Concurrency
 title: Using RwLock and CondVars in Rust
 twitter: https://twitter.com/bltroutwine?lang=en
 weight: 2
