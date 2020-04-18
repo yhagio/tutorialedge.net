@@ -14,6 +14,8 @@
 
 <script>
 import axios from 'axios';
+import config from 'environment';
+
 export default {
     name: "NewComment",
     data: function() {

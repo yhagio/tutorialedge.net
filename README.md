@@ -46,6 +46,7 @@ to the programming community.
 - Paul Halliday
 - Rounak Banik
 - Zaid Sabih
+- [Nick McCullum](https://nickmccullum.com/)
 
 ## License
 
