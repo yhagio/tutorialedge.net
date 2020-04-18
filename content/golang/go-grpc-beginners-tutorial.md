@@ -102,8 +102,6 @@ func main() {
 }
 ```
 
-
-
 # Conclusion
 
 So, in this tutorial, we've looked at how you can build out a simple gRPC client and server in Go.
