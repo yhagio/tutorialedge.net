@@ -1,13 +1,15 @@
   
 <template>
-    <div class="new-comment">
-
-        <div class="comment-input" id="comment-input">
-            <textarea v-model="commentBody" placeholder="Leave a reply"></textarea>
-            <br/>
-            <button id="comment" v-on:click="submitComment" class="btn btn-primary float-right">
-                Submit
-            </button>
+    <div>
+        <div v-if="this.error != ''" class="alert alert-warning">{{this.error}}</div>
+        <div class="new-comment">
+            <div class="comment-input" id="comment-input">    
+                <textarea v-model="commentBody" placeholder="Leave a reply"></textarea>
+                <br/>
+                <button id="comment" v-on:click="submitComment" class="btn btn-primary float-right">
+                    Submit
+                </button>
+            </div>
         </div>
     </div>
 </template>
@@ -21,7 +23,8 @@ export default {
     data: function() {
         return {
             commentBody: "",
-            user: {}
+            user: {},
+            error: ''
         }
     },
     created: function() {
@@ -47,10 +50,10 @@ export default {
                         "Content-Type": "application/json"
                     }
                 });
+                window.location.reload();
             } catch (err) {
-                console.log(err);
+                this.error = err;
             }
-            window.location.reload();
         }
     }
 }
