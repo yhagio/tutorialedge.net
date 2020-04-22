@@ -15,6 +15,12 @@ I love playing with WebSockets, they are a very cool bit of technology that allo
 
 In this tutorial, we are going to be exploring the wonderful world of WebSockets and how you can integrate them into your Vue.js applications by building a really simple app that utilizes WebSocket connections.
 
+# Video Tutorial
+
+If you prefer, this tutorial is available in video format!
+
+{{< youtube id="4via-J98jwM" autoplay="false" >}}
+
 # Setting Up Our Project
 
 Let's start by creating a new Vue.js application using the `vue cli`, we'll call this `vuejs-websocket-tutorial` to keep things nice and simple.

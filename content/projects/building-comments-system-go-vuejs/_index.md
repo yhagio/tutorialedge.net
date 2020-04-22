@@ -5,9 +5,9 @@ desc: In this tutorial series, we are going to look at what it takes to build a 
 image: vuejs.png
 homepage: true
 series:
-  - gocommentsystem
+  - serverlesscomments
 tags:
-  - golang
+  - serverlesscomments
 title: Building a Comment System in Go and Vue.JS
 twitter: https://twitter.com/Elliot_F
 ---
@@ -52,4 +52,4 @@ By the end of this course, you should have a firm understanding as to how you ca
 
 If you want a sneak peak at the finished product then behold:
 
-![]()
+![Finished Images System](https://images.tutorialedge.net/images/comments-system/finished.png)
