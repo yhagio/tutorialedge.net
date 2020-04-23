@@ -8,6 +8,7 @@ import Profile from './components/profile/Profile.vue';
 import Logout from './components/profile/Logout.vue';
 import FooterSearch from './components/search/FooterSearch.vue';
 import config from 'environment';
+import CarbonAds from './components/misc/CarbonAds.vue'
 
 import { Auth0Plugin } from "./auth";
 
@@ -23,6 +24,7 @@ var app = new Vue({
     Comments,
     FooterSearch,
     Redirect,
+    CarbonAds,
     Logout,
     Quiz
   },
