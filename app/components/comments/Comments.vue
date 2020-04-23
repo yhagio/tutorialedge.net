@@ -3,7 +3,7 @@
       <hr/>
       <div class="comments-section">
           <h2>💬  Comments Section <br/><small>Always be kind when commenting and adhere to our <a href="/code/">Code of Conduct</a></small></h2>
-          <div v-if="comments.length === 0">
+          <div v-if="this.comments == null">
               <h4>Be the first to comment!</h4>
               <blockquote>Let me know what you thought of this tutorial. Your feedback on these tutorials can impact the wider community and help others overcome their own challenges.</blockquote>
           </div>
@@ -39,6 +39,7 @@ export default {
         }
     },
     created: async function () {
+      this.comments = [];
         this.redirectTo = "/profile/?redirectUri=" + window.location.pathname;
         if (this.$auth.isAuthenticated()) {
             this.loggedIn = true;
