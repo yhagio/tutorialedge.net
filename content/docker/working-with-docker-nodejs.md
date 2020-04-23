@@ -4,7 +4,7 @@ date: 2018-05-27T21:40:20+01:00
 desc:
   In this tutorial, we are going to look at how you can dockerize a NodeJS
   application
-image: docker.png
+image: docker.svg
 series: docker
 tags:
   - docker

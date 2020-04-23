@@ -1,0 +1,95 @@
+.course-listing {
+  background-color: #f6f6f6;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  .card {
+    box-shadow: $box-shadow;
+    border: none;
+    margin-bottom: 40px;
+    border-radius: 10px;    
+  }
+  
+  .card-header {
+    background-color: white;
+    border-radius: 10px;
+    
+    button:hover {
+      text-decoration: none;
+
+      h2 {
+        transition: ease-in 0.5s;
+        color: $link-blue !important;
+      }
+      
+      span {
+        color: $light-gray !important;
+      }
+    }
+    
+    button {
+      text-align: left;
+      padding: 0px;
+      width: 100% !important;
+      margin: auto;
+      h2 {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+      }
+
+    }
+ 
+  } 
+
+  .list-group-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .list-group-item a span {
+    color: #82A1B2 !important;
+  }
+
+  .courses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    button {
+      width: 100% !important;
+      margin: 0;
+    }
+
+    .course-progress-box {
+      flex: 1 1 26%;
+      margin: 20px;
+      padding-top: 20px;
+      background-color: white;
+      border-radius: 8px;
+      // -webkit-box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
+      // box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
+      color: rgba(14,30,37,.54);
+    }
+
+    .course-listing h3 {
+      font-size: 18px;
+      line-height: 1.4;
+      margin-bottom: 20px;
+    }
+  }
+}
+.course-outline {
+  background-color: white;
+  padding: 20px;
+  margin: 0;
+  margin-bottom: 20px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+.badge-info {
+  background-color: rgb(50, 138, 241) !important;
+  padding: 5px 12px;
+}

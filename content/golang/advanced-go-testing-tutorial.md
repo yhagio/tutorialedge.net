@@ -6,7 +6,7 @@ desc:
   testing practices that the core language developers use to test the language
   itself.
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - testing
 title: Advanced Go Testing Tutorial
@@ -15,8 +15,8 @@ authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_4
 weight: 12
 ---
 
-Welcome fellow coders! In this tutorial, we are going to be taking a look at
-selection of more advanced testing practices used by the likes of the Go core
+**Welcome fellow coders! In this tutorial, we are going to be taking a look at
+selection of more advanced testing practices** used by the likes of the Go core
 language developers and in popular production-level tools.
 
 I feel this approach, of actually studying what has been done in a production
@@ -26,6 +26,20 @@ production-level Go programs.
 > **Note -** If you are entirely new to testing your Go-based programs, then I
 > suggest you check out my other tutorial:
 > [an introduction to testing in go](/golang/intro-testing-in-go/)
+
+# Goals
+
+By the end of this tutorial:
+
+* You will have a stronger understanding as to how to test your Go systems
+* You will know how to separate your unit and your integration tests.
+* You will know how to mock any `HTTP` requests that your Go applications may make. 
+
+# Prerequisites
+
+Before you can follow this article, you will need the following:
+
+* You will need Go version 1.11+ installed on your development machine.
 
 # Achieving Good Coverage with Table Driven Tests
 
@@ -157,6 +171,8 @@ your database when you are just trying to test things are working.
 So, in order to get around this problem, we can mock HTTP responses using the
 `net/http/httptest` package which is our best friend in these situations.
 
+<div class="filename">main_test.go</div>
+
 ```go
 package main_test
 
@@ -183,7 +199,6 @@ func TestHttp(t *testing.T) {
 
     resp := w.Result()
     body, _ := ioutil.ReadAll(resp.Body)
-haha
     fmt.Println(resp.StatusCode)
     fmt.Println(resp.Header.Get("Content-Type"))
     fmt.Println(string(body))
@@ -255,10 +270,6 @@ Hopefully, you found this useful and it gave you the insight needed to go off
 and improve your own go tests. If you found it useful, or have any further
 questions, then please don't hesitate to let me know in the comments section
 below!
-
-> **Note -** If you want to keep track of when new Go articles are posted to the
-> site, then please feel free to follow me on twitter for all the latest news:
-> [@Elliot_F](https://twitter.com/elliot_f).
 
 ## Further Reading
 

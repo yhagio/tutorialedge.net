@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+	<title>Test</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="max-w-full min-h-8 rounded overflow-hidden shadow-lg bg-white">
+        <div class="px-8 py-8">
+            <p class="text-sm text-gray-600 flex items-center uppercase">
+                {{series}}
+            </p>
+            <div class="font-bold h-14 text-xl mb-3">{{title}}</div>
+            <div class="line-clamp module">
+                <p class="text-gray-700 text-base">{{summary}}</p>
+            </div>
+        </div>
+        <div class="flex px-6 mb-4">
+            <div class="flex-1">
+                <div class="flex">
+                    <img class="w-8 h-8 rounded-full mr-4" src="https://images.tutorialedge.net/images/logo.png" alt="{{author}}">
+                    <div class="text-sm">
+                        <p class="text-gray-900 leading-none">{{author}}</p>
+                        <p class="text-gray-600">{{formatDate publishdate day="numeric" month="long" year="numeric"}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-1 float-right">
+                <div class="flex ml-12">
+                    <div class="text-sm mt-2 ml-12">
+                        <p class="text-gray-600">TutorialEdge.net</p>
+                    </div>
+                    <img class="w-10 h-10 rounded-full ml-4 float-right" src="https://images.tutorialedge.net/images/logo.png" alt="TutorialEdge">
+                </div>
+            </div>
+
+          </div>
+      </div>
+    </div>
+<style>
+body{ 
+    background-color: #267D8E;
+}
+.module {
+  width: 100%;
+  margin: 0 0 1em 0;
+  overflow: hidden;
+}
+
+.line-clamp {
+    display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+}
+.container {
+    width: 600px;
+    height: 300px;
+    padding: 20px;
+}
+.card {
+    z-index: 100;
+    margin-left: 10px;
+    margin-top: 10px;
+} 
+</style>
+</body>
+</html>

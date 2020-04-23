@@ -5,10 +5,18 @@ relativeUrls = true
 # only return 9 items per page
 paginate = 9
 
+enableEmoji = true
 # Syntax highlighting stuff
 pygmentsCodeFences = true
+# PygmentsStyle = "borland"
+PygmentsStyle = "monokai"
 # pygmentsOptions = "linenos=table"
 
+# Used by Hugo + and as partial
+[params]
+    title = "TutorialEdge.net"
+    author = "Elliot Forbes"
+    description = "Hundreds of free tutorials for cutting edge languages and frameworks."
 # index for algolia
 [indexes] 
     category = "categories" 
@@ -21,7 +29,7 @@ pygmentsCodeFences = true
     mediaType = "application/json"
     notAlternative = true
 [params.algolia]
-    vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink", "description", "image"]
-    params = ["categories", "tags"]
+    vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink", "desc", "image", "author"]
+    params = ["categories", "tags", "author"]
 [outputs]
     home = ["HTML", "RSS", "Algolia"]

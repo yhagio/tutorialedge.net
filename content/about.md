@@ -24,7 +24,7 @@ I've never touched before.
 
 For those interested in what the code base looks like for the entire website
 then be sure to check out this github repo:
-[TutorialEdge-V2](https://github.com/elliotforbes/tutorialedge-v2)
+[TutorialEdge.net](https://github.com/elliotforbes/tutorialedge.net)
 
 # The Growth
 

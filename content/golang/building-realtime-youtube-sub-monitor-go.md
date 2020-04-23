@@ -7,44 +7,62 @@ desc:
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - WebSockets
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
 
-Hi Everyone! In this tutorial, we are going to be having a bit of fun and we are
-going to be creating a real-time YouTube stats monitoring system in Go.
+**Welcome Everyone! In this tutorial, we are going to be having a bit of fun and we are
+going to be creating a real-time YouTube stats monitoring system in Go.**
 
 So, we are going to be looking at a number of different topics within this
 tutorial such as creating a WebSocket server and using WebSockets to communicate
 in real-time with a frontend application, as well as how you can interact with
 an existing REST API to get the subscriber stats we need.
 
+# Goals
+
+By the end of this tutorial:
+
+* You will have a better understanding as to how you can use WebSockets within
+your own Go applications.
+* You will see how you can interact with the YouTube API to retrieve
+stats for your own YouTube channel. 
+
+# Prerequisites
+
+* You will need Go version 1.11+ installed on your development machine. 
+
 # Video Tutorial
+
+If you prefer, this tutorial is available in video format here:
 
 {{< youtube id="n3BQLHtsrkM" autoplay="false" >}}
 
 # Getting Started
 
-First things first, we'll want to create a new directory to work in. I'll be
-calling mine `youtube-stats/`.
+First things first, we'll want to create a new directory to work in. We will call 
+this `youtube-stats/`.
 
-Within this new project directory, we'll want to run the following command to
-initialize our project using go modules.
+```command
+$ mkdir -p youtube-stats
+$ cd youtube-stats/
+```
+
+Within this new project directory, you will then want to run the following command to
+initialize your project using go modules.
 
 ```s
 $ go mod init github.com/elliotforbes/youtube-stats
 
 ```
 
-> **Note -** You'll have to have set up your computer to use the new Go 1.11
-> Modules - [Go Modules Wiki](https://github.com/golang/go/wiki/Modules)
-
 Within this new directory, we'll be creating our `main.go` file which will be
 the main entry point to our Go program.
 
 ```go
+// youtube-stats/main.go
 package main
 
 import (
@@ -61,6 +79,7 @@ Let's go ahead and create a simple `net/http` based server that runs on
 our frontend client will connect to in order to get the stats in real time.
 
 ```go
+// youtube-stats/main.go
 package main
 
 import (
@@ -118,7 +137,7 @@ https://developers.google.com/youtube/v3/docs/channels/list#try-it. This should
 return all of the statistics of our channel as well as things like the
 description and a few other bits of information.
 
-Using our API Key, we can construct a request to this API Endpoint and test to
+Using your API Key, we can construct a request to this API Endpoint and test to
 see if everything works with a simple curl command. Replace the `API-KEY`
 section of this command with your own API Key and then try running this command
 in your terminal.
@@ -167,6 +186,7 @@ We'll want to define a `GetSubscribers()` function which will return an `Items`
 struct that we can later Marshal into JSON.
 
 ```go
+// youtube-stats/youtube/youtube.go
 package youtube
 
 import (
@@ -252,7 +272,7 @@ The next step will be to expose the stats that we are able to retrieve from the
 YouTube API via a WebSocket endpoint.
 
 ```go
-// websocket.go
+// youtube-stats/websocket/websocket.go
 package websocket
 
 import (
@@ -340,6 +360,7 @@ endpoint. We'll do this by adding a new route to our `setupRoutes()` function
 called `/stats` which will map to a `stats` function that we'll be defining.
 
 ```go
+// youtube-stats/main.go
 package main
 
 import (
@@ -460,10 +481,10 @@ count:
 </html>
 ```
 
-Awesome, we should have everything in place for our Real-time monitoring system
-to work! If you open this `index.html` page in your browser, you should see that
-it connects to our server. Our server will then start calling the YouTube API
-every 5 seconds and will send the results back to our frontend `index.html` page
+Awesome, you now have everything in place for your Real-time monitoring system
+to work! If you open this `index.html` page in your browser, you will see that
+it connects to your server. Your server will then start calling the YouTube API
+every 5 seconds and will send the results back to your frontend `index.html` page
 for it to render out!
 
 # Conclusion
@@ -478,6 +499,8 @@ then I'd love to hear them through the suggestions box below.
 If you want to support the work that I do then feel free to share my work with
 your friends and family! Every little bit helps! :)
 
-> **Note -** If you want to keep track of when new Go articles are posted to the
-> site, then please feel free to follow me on twitter for all the latest news:
-> [@Elliot_F](https://twitter.com/elliot_f).
+## Further Reading
+
+If you enjoyed this tutorial, then you may enjoy these other tutorials:
+
+* [Go WebSocket Tutorial with gorilla/mux](/golang/go-websocket-tutorial/)

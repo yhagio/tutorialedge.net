@@ -5,7 +5,7 @@ desc:
   In this tutorial, we are going to look at the various basic data types
   available in Go
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - beginner
 title: Go Basic Types Tutorial
@@ -29,10 +29,10 @@ necessary basics.
 So, to get us started, it's important to know that there are 4 distinct
 categories of types within the Go programming language:
 
-- Basic Types - what we'll be covering in this tutorial
-- Aggregate Types - These are arrays and structs
-- Reference Types - These are your pointers and slices
-- Interface Types - These are your standard interfaces
+- **Basic Types** - what we'll be covering in this tutorial
+- **Aggregate Types** - These are arrays and structs
+- **Reference Types** - These are your pointers and slices
+- **Interface Types** - These are your standard interfaces
 
 # Integers
 

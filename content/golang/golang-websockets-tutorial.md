@@ -3,7 +3,7 @@ author: Elliot Forbes
 date: 2017-08-23T19:29:11+01:00
 desc: In this tutorial we'll look at how you can implement websockets in Golang
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - advanced
 title: Working with Websockets and Socket.IO in Go - Tutorial
@@ -83,6 +83,8 @@ import "github.com/googollee/go-socket.io"
 Let's have a look at the example code that the provide in the `readme.md` for
 the library that we are using.
 
+<div class="filename">main.go</div>
+
 ```go
 package main
 
@@ -160,6 +162,8 @@ test what we have done works.
 
 We'll start by creating a simple `index.html` within our project directory.
 
+<div class="filename">index.html</div>
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -182,8 +186,9 @@ We'll start by creating a simple `index.html` within our project directory.
 
 When you then run your go websocket server by calling:
 
+<div class="filename"> $ go run main.go</div>
+
 ```s
-$ go run main.go
 2018/06/10 07:54:06 Serving at localhost:5000...
 2018/06/10 07:54:15 on connection
 2018/06/10 07:54:16 on connection
@@ -199,7 +204,7 @@ newly created backend websocket server!
 # Conclusion
 
 > **Note -** The full source code for this project can be found on Github:
-> [TutorialEdge/Go](https://github.com/TutorialEdge/Go/tree/master/go-websocket-tutorial)
+> [TutorialEdge/go-websockets-tutorial](https://github.com/TutorialEdge/go-websockets-tutorial)
 
 If you found this tutorial useful or require any further assistance then please
 feel free to let me know in the comments section below.

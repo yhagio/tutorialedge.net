@@ -7,13 +7,14 @@ desc:
 image: vuejs.png
 series: vuejs
 tags:
-  - vuejs
-  - webdev
-title: Vuejs Event Handling Tutorial
+  - event handling
+title: Vue.js Event Handling Tutorial
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 weight: 3
 ---
+
+<!-- TODO: Need to validate this with interactive elements now removed -->
 
 > The official documentation for VueJS event handling can be found here:
 > [VueJS Event Handling](https://vuejs.org/v2/guide/events.html).
@@ -44,11 +45,8 @@ subsequently perform this mapping of any events to an appropriate bit of
 JavaScript. For example, this button below is mapped to the JS:
 `counter = counter + 1`. Not to a particular function but this will still work.
 
-<div id="demo1">
-    <button class="btn btn-primary" v-on:click="counter = counter +1">Counter: {{ counter }}</button>
-</div>
 
-```xml
+```html
 <div id="demo1">
     <button class="btn btn-primary"
         v-on:click="counter = counter +1">
@@ -73,10 +71,6 @@ more complex? Well, we can encapsulate all of the JavaScript code we wish to
 execute into a function that will live within our VueJS Instance. We can then
 change our `v-on:click` directive to point towards the name of our function like
 so:
-
-<div id="demo2">
-    <button class="btn btn-primary" v-on:click="update()">Counter: {{ counter }}</button>
-</div>
 
 The HTML for the above code looks something like so:
 
@@ -157,15 +151,6 @@ If you wish to use something outwith this list, then you will have to use the
 specific key code for that key. You can see the full list of key codes here:
 [Mozilla Key Codes](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode).
 
-## In Action
-
-Let's see this in action, try and enter a message into the input below and then
-click the `enter` key. You should see an alert popup with the contents of the
-input.
-
-<div id="demo3">
-    <input v-on:keyup.enter="submit" v-model="message" placeholder="test me out!">
-</div>
 
 # Conclusion
 
@@ -174,36 +159,9 @@ your VueJS applications. Hopefully you enjoyed this! If you did then please let
 me know in either the comments section below or on twitter:
 [@Elliot_F](https://twitter.com/Elliot_F).
 
-<script>
-new Vue({
-    el: '#demo1',
-    data: {
-        counter: 0
-    }
-})
+## Further Reading
 
-new Vue({
-    el: '#demo2',
-    data: {
-        counter: 0
-    },
-    methods: {
-        update: function() {
-            console.log("Hello World")
-            this.counter += 2
-        }
-    }
-})
+If you enjoyed this article then you may enjoy some of the other tutorials on our site:
 
-new Vue({
-    el: '#demo3',
-    data:{
-        message: ''
-    },
-    methods: {
-        submit: function() {
-            alert('Submitted: ' + this.message)
-        }
-    }
-})
-</script>
+* [Vue.js WebSocket Tutorial](/javascript/vuejs/vuejs-websocket-tutorial/)
+* [Vue.js Animations and Transitions Tutorial](/javascript/vuejs/vuejs-transitions-animations-tutorial/)

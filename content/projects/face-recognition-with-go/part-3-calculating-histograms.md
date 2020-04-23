@@ -4,7 +4,7 @@ date: 2018-06-09T22:48:26+01:00
 desc:
   In this tutorial, we are going to look at how you can implement a testing
   framework for your TypeScript projects using Mocha and Chai
-image: golang.png
+image: golang.svg
 draft: true
 series:
   - gofacerecognition

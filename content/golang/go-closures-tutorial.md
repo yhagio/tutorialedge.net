@@ -4,6 +4,7 @@ date: 2018-12-08T13:33:45Z
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
 series: golang
+image: golang.svg
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 tags:
   - intermediate
@@ -49,6 +50,8 @@ be our closure in this example.
 This will contain a `limit` variable of type `int` which will be set to `10`.
 Every time `limit()` is called
 
+<div class="filename">main.go</div>
+
 ```go
 package main
 
@@ -72,8 +75,9 @@ func main() {
 
 Now, if we run this, we should see the following output:
 
+<div class="filename"> $ go run main.go</div>
+
 ```s
-$ go run main.go
 9
 8
 ```
@@ -81,6 +85,8 @@ $ go run main.go
 But why is this important? Well, this `limit` variable is bound to its assigned
 `limit`. If we were to bind `getLimit()` to say, `limit2` just below it, it
 would have a state that is unique to it:
+
+<div class="filename">main.go</div>
 
 ```go
 package main
@@ -111,8 +117,9 @@ func main() {
 
 When we run this, we should see the following output:
 
+<div class="filename"> $ go run main.go</div>
+
 ```s
-$ go run main.go
 9
 8
 9

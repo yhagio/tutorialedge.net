@@ -3,7 +3,7 @@ author: Elliot Forbes
 date: 2017-12-20T19:22:48Z
 desc: In this tutorial we will look at how we can work with lists in Python
 series: python
-image: python-logo.png
+image: python.svg
 tags:
   - beginner
 title: Working with Lists in Python - Tutorial

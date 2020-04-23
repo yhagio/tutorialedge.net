@@ -5,7 +5,7 @@ desc:
   "In this tutorial, we are going to look at building a really simple frontend
   web framework using WebAssembly and Go"
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - advanced
 author: Elliot Forbes

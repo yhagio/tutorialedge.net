@@ -18,10 +18,8 @@ export default {
     methods: {
         login: function() {
             Cookies.set("redirect_url", window.location.href);
-            // window.location.replace("http://localhost:3000/api/v1/login");
             window.location.replace("https://api.tutorialedge.net/api/v1/login");
         }
     }
 }
 </script>
-

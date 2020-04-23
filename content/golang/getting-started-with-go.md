@@ -7,7 +7,7 @@ desc:
   can go off and write your own Go programs.
 tags:
   - beginner
-image: golang.png
+image: golang.svg
 series: golang
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
@@ -27,6 +27,13 @@ We'll be focusing on getting a really simple `Hello World` style application up
 and running. Once you've got everything working correctly, we can start the rest
 of our journey learning the more complex aspects of the language such as
 functions, methods, and eventually things like concurrency and reflection.
+
+# Prerequisites
+
+Before you can follow this article, you will need the following:
+
+* You will need Go installed on your development machine. If you need to install this
+you should check out the official download page: [Official Go Download](https://golang.org/dl/)
 
 # Getting Started
 

@@ -5,7 +5,7 @@ desc:
   In this tutorial, we look at how you can effectively benchmark your go
   program.
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - testing
 title: An Introduction to Benchmarking Your Go Programs
@@ -33,6 +33,10 @@ In this tutorial, we are going to look at how we can perform standard
 benchmarking tests for very simple functions and then move on to more advanced
 examples before finally looking at how we can generate cool looking flame
 graphs.
+
+# Prerequisites
+
+* You will need Go version 1.11+ installed on your development machine. 
 
 # A Simple Benchmark Test
 

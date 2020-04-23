@@ -2,7 +2,7 @@
 author: Elliot Forbes
 date: 2017-04-14T20:27:58+01:00
 homepage: true
-image: angularjs.png
+image: angularjs.svg
 layout: simple
 series: angularjs
 title: AngularJS

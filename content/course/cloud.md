@@ -5,7 +5,7 @@ desc:
   Learn the basics of Cloud Development and designing and developing your own
   distributed cloud systems.
 homepage: true
-image: cloud.png
+image: cloud.svg
 series: cloud
 tags:
   - cloud

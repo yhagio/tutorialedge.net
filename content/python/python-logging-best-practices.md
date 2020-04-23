@@ -5,7 +5,7 @@ desc:
   In this tutorial we'll be examining some of the best practices when it comes
   to logging in your Python applications
 series: python
-image: python-logo.png
+image: python.svg
 tags:
   - beginner
   - logging

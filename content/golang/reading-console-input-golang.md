@@ -6,7 +6,7 @@ desc:
   GoLang program. Excellent for simple shells and other command line driven
   tools.
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - beginner
 title: Reading in Console Input in Golang

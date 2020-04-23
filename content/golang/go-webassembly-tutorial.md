@@ -5,7 +5,7 @@ desc:
   In this tutorial, we are going to be looking at how you can compile your Go
   programs into WebAssembly
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - advanced
 title: Go WebAssembly Tutorial - Building a Calculator Tutorial
@@ -13,6 +13,8 @@ twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 weight: 29
 ---
+
+> **Update** - The code in this tutorial has been updated to work with the breaking changes in Go v1.12
 
 Welcome All! With Go v1.11 having just been released with an experimental port
 to WebAssembly included, I thought it would be awesome to see how we can write

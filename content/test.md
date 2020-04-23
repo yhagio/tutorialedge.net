@@ -8,19 +8,11 @@ title: Get Involved
 twitter: https://twitter.com/Elliot_F
 ---
 
-<Quiz 
-  answer="There are 4 sides to a square"
-  options='[
-    {"value": "Hi", "correct": true},
-    {"value": "Nothing", "correct": false}
-    ]'>
-<template v-slot:question>
-<p>What does this output?</p>
-```js
-console.log("hi")
-```
-</template>
-</Quiz>
+<Quiz question="Who Is The Best #Peep?" A="Elliot" B="Nadi" C="Donna" correct="A" answer="The correct answer is A" />
+
+[test link](/test/)
+
+<div id="test" class="btn btn-primary">test tippy</div>
 
 
 ![](https://images.tutorialedge.net/images/ai.webp)
@@ -108,6 +100,11 @@ Nostri mors: freta hanc timor notis posito in animam posset mihi exilio.
 - Cum in mihi nec avus ut suas
 - Crudelis bisulco amnem requiescere fugit et sit
 - Iusta vincet nititur humum inhospita fero genetrix
+
+:tent:
+
+| ```go 
+```
 
 ## Neve ipse
 

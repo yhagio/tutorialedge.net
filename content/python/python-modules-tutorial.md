@@ -5,7 +5,7 @@ desc:
   In this tutorial we'll be looking at Python modules. What they are and how we
   can create/import our own Python Modules.
 series: python
-image: python-logo.png
+image: python.svg
 tags:
   - beginner
 title: Python Modules Tutorial

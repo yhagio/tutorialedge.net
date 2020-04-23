@@ -5,7 +5,7 @@ desc:
   "This tutorial teaches the user how they can build a twitter bot using both
   the Python programming language and the RESTful Twitter Library. "
 series: python
-image: python-logo.png
+image: python.svg
 tags:
   - intermediate
 title: Creating a Twitter Bot Using Python and the Twitter API

@@ -7,9 +7,8 @@ desc:
 image: vuejs.png
 series: vuejs
 tags:
-  - vuejs
-  - javascript
-title: Form Validation With Vuelidate Vuejs
+  - Form Handling
+title: Form Validation With Vuelidate in Vue.js
 twitter: https://twitter.com/paulhalliday_io
 weight: 1
 ---
@@ -619,9 +618,18 @@ data() {
 },
 ```
 
+# Conclusion
+
 You have now successfully created a form with appropriate validation! If this
 article interests you, you can refer to
 [Vue.js 2 Design Patterns and Best Practices](https://amzn.to/2JjyXiT). With
 this book, you'll be well on your way to becoming an expert Vue developer who
 can leverage design patterns to efficiently architect the design of your
 application and write clean and maintainable code.
+
+## Further Reading
+
+If you enjoyed this article then you may enjoy some of the other tutorials on our site:
+
+* [Vue.js Change Handler Tutorial](/javascript/vuejs/vuejs-change-handler-tutorial/)
+* [Vue.js Animations and Transitions Tutorial](/javascript/vuejs/vuejs-transitions-animations-tutorial/)

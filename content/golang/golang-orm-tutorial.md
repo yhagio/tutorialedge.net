@@ -5,7 +5,7 @@ desc:
   In this tutorial, we look at how you can use the Go ORM or GORM to easily
   manage interactions with the database
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - intermediate
 weight: 20

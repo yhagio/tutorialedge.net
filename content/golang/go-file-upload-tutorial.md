@@ -7,7 +7,7 @@ desc:
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - File Upload
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
@@ -172,6 +172,8 @@ You should see that a new file has been generated in the `temp-images/`
 directory that follows the convention `upload-23421432.png`.
 
 # Conclusion
+
+> **Source Code** - The full source code for this project can be found here: [TutorialEdge/go-file-upload-tutorial](https://github.com/TutorialEdge/go-file-upload-tutorial)
 
 Hopefully you found this tutorial useful and entertaining! If you did, or you
 spotted anything wrong with the tutorial, then please feel free to let me know

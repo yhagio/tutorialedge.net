@@ -5,10 +5,9 @@ desc:
   In This Tutorial we look at Queues, we look at how they work and what problems
   they can solve
 series: compsci
-image: logo.png
+image: logo.svg
 tags:
-  - python
-  - compsci
+- data-structures
 title: Data Structures - Queues For Beginners
 twitter: https://twitter.com/Elliot_F
 ---

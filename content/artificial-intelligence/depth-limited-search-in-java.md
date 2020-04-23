@@ -5,15 +5,16 @@ bookLink: http://amzn.to/2r74d8f
 bookTitle: Programming Game AI by Example
 date: 2017-04-15T09:23:35+01:00
 desc: "depth limited search demonstrated in java programming language. "
-series: ai
+series: artificial-intelligence
 image: ai.png
 tags:
-  - ai
   - java
 title: Depth Limited Search in Java
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 ---
+
+<!-- TODO: Revamp This Tutorial -->
 
 # About Depth Limited Searching
 
@@ -41,6 +42,7 @@ authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_4
 > Java</a>
 
 # The Implementation:
+discord
 
 <p>Below you’ll find an implementation of a Depth-Limited search class which is built as an extension of the AbstractSearch java class.</p>
 

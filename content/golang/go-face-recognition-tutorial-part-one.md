@@ -5,10 +5,11 @@ description:
   using Go
 date: 2018-09-27T10:48:51+01:00
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - advanced
 twitter: https://twitter.com/Elliot_F
+author: Elliot Forbes
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 weight: 31
 ---
@@ -129,7 +130,7 @@ Our first real test of this package will be to test to see whether we can
 accurately count the number of faces in a photograph. For the purpose of this
 tutorial, I will be using this photo:
 
-<img src="/images/tony-stark.jpg" style="width:25%; height: auto; margin: auto; display: block;"/>
+<img src="https://images.tutorialedge.net/images/tony-stark.jpg" style="width:25%; height: auto; margin: auto; display: block;"/>
 
 As you can see, nothing fancy, just the solitary face of Tony Stark.
 
@@ -189,7 +190,7 @@ Awesome, we've been able to analyze an image and determine that the image
 contains the face of one person. Let's try a more complex image with more of the
 Avengers in it:
 
-![](/images/avengers-01.jpg)
+![](https://images.tutorialedge.net/images/avengers-01.jpg)
 
 When we update line 24:
 
@@ -213,7 +214,7 @@ photos for faces with his likeness and match them together.
 So, let's take our `avengers-02.jpg` as our reference image for Tony Stark and
 then see if we can identify if this image contains his face:
 
-<img src="/images/tony-stark.jpg" style="width:25%; height: auto; margin: auto; display: block;"/>
+<img src="https://images.tutorialedge.net/images/tony-stark.jpg" style="width:25%; height: auto; margin: auto; display: block;"/>
 
 ```go
 avengersImage := filepath.Join(dataDir, "avengers-02.jpeg")
@@ -273,7 +274,7 @@ fmt.Println(labels[avengerID])
 Let's now try to validate that this wasn't a fluke and try to see if our image
 recognition system works with an image of Dr Strange.
 
-<img src="/images/dr-strange.jpg" style="width:25%; height: auto; margin: auto; display: block;"/>
+<img src="https://images.tutorialedge.net/images/dr-strange.jpg" style="width:25%; height: auto; margin: auto; display: block;"/>
 
 ```go
 testDrStrange := filepath.Join(dataDir, "dr-strange.jpg")
@@ -292,7 +293,7 @@ if avengerID < 0 {
 
 And finally, let's try this out using Wong's image:
 
-<img src="/images/wong.jpg" style="width:25%; height: auto; margin: auto; display: block;"/>
+<img src="https://images.tutorialedge.net/images/wong.jpg" style="width:25%; height: auto; margin: auto; display: block;"/>
 
 ```go
 testWong := filepath.Join(dataDir, "wong.jpg")

@@ -8,8 +8,7 @@ image: vuejs.png
 series: vuejs
 tags:
   - vuejs
-  - javascript
-title: Vuejs HTTP Requests with Axios Tutorial
+title: Vue.js HTTP Requests with Axios Tutorial
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 weight: 4
@@ -28,7 +27,9 @@ and makes the job of sending requests simple.
 
 In order to install the `axios` client, you can use `npm` like so:
 
-{{< highlight html >}} \$ npm install --save axios {{< /highlight >}}
+```output
+$ npm install --save axios
+```
 
 # GET Requests
 
@@ -41,10 +42,12 @@ loading of our component, so in order to do that we are going to want to add the
 `created` lifecycle hook to our `<script/>` section and then put our
 `axios.get()` request within that.
 
-```ts
+<div class="filename">HelloWorld.vue</div>
+
+```html
 <template>
   <div class="hello">
-    {{ pokemon }}
+    {{ pokemon } }
   </div>
 </template>
 
@@ -53,7 +56,7 @@ import axios from 'axios'
 
 export default {
   name: 'HelloWorld',
-  data () {
+  data: function () {
     return {
       pokemon: {}
     }
@@ -80,6 +83,7 @@ error.
 
 Should the request be successful, you should see the Pokemon JSON Response
 render out within your `HelloWorld` component.
+
 
 ## The Response Object
 
@@ -157,7 +161,7 @@ Whilst, I have just used the `POST` and `GET` HTTP verbs to demonstrate how you
 can use axios to send HTTP requests, there are others. These are all of the
 verbs that you can use to query RESTful API endpoints.
 
-```bash
+```output
 - post
 - put
 - patch
@@ -173,3 +177,10 @@ Hopefully, this article showed you everything you need in order to make `HTTP`
 requests within your VueJS applications. If you need further help then please
 let me know in the comments section below or by tweeting me:
 [@Elliot_F](https://twitter.com/elliot_f).
+
+## Further Reading
+
+If you enjoyed this article then you may enjoy some of the other tutorials on our site:
+
+* [Vue.js WebSocket Tutorial](/javascript/vuejs/vuejs-websocket-tutorial/)
+* [Vue.js Animations and Transitions Tutorial](/javascript/vuejs/vuejs-transitions-animations-tutorial/)

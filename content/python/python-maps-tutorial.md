@@ -5,7 +5,7 @@ desc:
   In this tutorial we cover the map function within the Python programming
   language
 series: python
-image: python-logo.png
+image: python.svg
 tags:
   - beginner
   - concurrency
@@ -46,12 +46,6 @@ but with maps we can be far more succinct:
 ```python
 results = list(map(double, values))
 ```
-
-{{< terminal 0 python >}}values = [2,3,4,5,6,7]
-
-def double(x): return x \* 2
-
-results = list(map(double, values)) print(results) {{< /terminal >}}
 
 ## Complete Example
 

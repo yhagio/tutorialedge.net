@@ -7,7 +7,7 @@ desc:
 series: rust
 image: rust-logo.png
 tags:
-  - rust
+  - intermediate
 title: Learning Generics in Rust
 twitter: https://twitter.com/TutorialEdge
 weight: 2

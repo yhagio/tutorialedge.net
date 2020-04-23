@@ -5,7 +5,7 @@ desc:
   In this tutorial, we'll be looking at how you can leverage WaitGroups within
   your Concurrent Go Applications
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - concurrency
 author: Elliot Forbes
@@ -26,7 +26,7 @@ In this tutorial, we are going to be covering the following:
 By the end of this, you should have a solid grasp as to how to employ
 `WaitGroups` within your own concurrent Go applications.
 
-> **Note** - The full code for this tutorial can be found here: [TutorialEdge](https://github.com/TutorialEdge/go-watigroup-tutorial)
+> **Note** - The full code for this tutorial can be found here: [TutorialEdge/go-waitgroup-tutorial](https://github.com/TutorialEdge/go-waitgroup-tutorial)
 
 # Video Tutorial
 
@@ -327,5 +327,11 @@ If you enjoyed this tutorial or have any comments/suggestions, then please feel
 free to let me know in the comments section below, or in the suggestions section 
 at the side!
 
-> **Note -** If you wish to keep up to date with all the latest articles then I
-> suggest following me on Twitter: [@Elliot_F](https://twitter.com/elliot_f)
+## Further Reading
+
+If you enjoyed this article and wish to learn more about working with Concurrency
+in Go, then I recommend you check out our other articles on concurrency:
+
+* [Go Goroutines Tutorial](/golang/concurrency-with-golang-goroutines/)
+* [Go sync.WaitGroup Tutorial](/golang/go-waitgroup-tutorial/)
+* [Go channels Tutorial](/golang/go-channels-tutorial/)

@@ -5,10 +5,9 @@ desc:
   In This Tutorial we look at tries, we look at how they work and what problems
   they can solve
 series: compsci
-image: logo.png
+image: logo.svg
 tags:
-  - python
-  - compsci
+- data-structures
 title: Getting Started With Tries in Python
 twitter: https://twitter.com/Elliot_F
 ---

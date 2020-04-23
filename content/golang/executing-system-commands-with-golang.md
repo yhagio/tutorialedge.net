@@ -5,7 +5,7 @@ desc:
   "Executing system commands can be incredibly useful no matter what sort of
   software you are building, "
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - beginner
 weight: 8
@@ -23,6 +23,10 @@ commands within our Go applications.
 > **Note -** The official documentation for executing system commands can be
 > found under the exec package:
 > [os/exec package](https://golang.org/pkg/os/exec/).
+
+# Prerequisites
+
+* You will need Go version 1.11+ installed on your development machine. 
 
 # Cross Compatibility Issues
 

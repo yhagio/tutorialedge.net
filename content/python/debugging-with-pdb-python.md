@@ -5,7 +5,7 @@ desc:
   In this tutorial we look at how you can debug your Python programs with the
   python debugger - PDB
 series: python
-image: python-logo.png
+image: python.svg
 tags:
   - debugging
 title: "Debugging with the Python Debugger - PDB "
@@ -27,6 +27,12 @@ has gone wrong.
 
 The PDB is classed as an interactive source code debugger which can be used in a
 similar fashion to how you would use the REPL.
+
+# Video Tutorial
+
+This tutorial is also available in video format should you wish to enjoy the content through that format:
+
+{{< youtube id="VQjCx3P89yk" autoplay="false" >}}
 
 # Starting the Python Debugger
 

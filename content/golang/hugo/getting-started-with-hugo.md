@@ -5,7 +5,7 @@ desc:
   In this tutorial we look at how you can get started writing your first hugo
   based website
 series: hugo
-image: golang.png
+image: golang.svg
 tags:
   - hugo
 title: Getting Started With Hugo

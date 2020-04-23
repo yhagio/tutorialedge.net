@@ -7,7 +7,7 @@ desc:
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - graphql
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
@@ -185,11 +185,6 @@ as wel as SQL databases at will.
 
 ## A Simple MySQL Database
 
-Ok, for the purpose of this tutorial, we'll be using MySQL as our data-store
-solution behind our GraphQL database. I'll undoubtedly be doing a similar
-tutorial for MongoDB in the future, but this should hopefully demonstrate the
-underlying mechanics.
-
 For the purpose of this tutorial, we'll use a SQLite3 local SQL database to
 quickly demonstrate how you could swap in a more effective data-source.
 
@@ -203,7 +198,7 @@ This will open up an interactive shell which we can use to manipulate and query
 our SQL database. We want to start off by creating a table `tutorials`:
 
 ```s
-sqlite> CREATE TABLE tutorials (id int, title string, author int);
+sqlite> CREATE TABLE tutorials (id int, title string);
 ```
 
 We then want to insert a couple of rows into our database so that we can verify
@@ -246,7 +241,7 @@ and populate a list of tutorials before returning them.
     Type:        graphql.NewList(tutorialType),
     Description: "Get Tutorial List",
     Resolve: func(params graphql.ResolveParams) (interface{}, error) {
-        db, err := sql.Open("sqlite3", "./foo.db")
+        db, err := sql.Open("sqlite3", "./tutorials.db")
         if err != nil {
             log.Fatal(err)
         }

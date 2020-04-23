@@ -8,9 +8,8 @@ desc:
 image: vuejs.png
 series: vuejs
 tags:
-  - vuejs
-  - javascript
-title: Designing the EveryNote Web App with VueJS and Vuex
+  - VueX
+title: Designing the EveryNote Web App with Vue.js and Vuex
 twitter: https://amzn.to/2K4Ih5G
 weight: 1
 ---

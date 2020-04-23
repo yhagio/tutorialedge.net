@@ -5,7 +5,7 @@ desc:
   In this tutorial we look at how you can implement an automatic deployment
   strategy for your hugo websites.
 series: hugo
-image: golang.png
+image: golang.svg
 tags:
   - hugo
 title: Hugo Deployment Workflow Tutorial
@@ -17,7 +17,7 @@ When developing websites with Hugo, having a solid automated deployment strategy
 can save you hundreds of hours of performing repetitive manual tasks. This site
 itself uses hugo and an automated deployment strategy in order to automatically
 deploy any changes made to it's underlying git repo:
-[elliotforbes/tutorialedge-v2](https://github.com/elliotforbes/tutorialedge-v2).
+[elliotforbes/tutorialedge.net](https://github.com/elliotforbes/tutorialedge.net).
 Whenever I wish to make a change to any of the content on my site I follow these
 steps:
 

@@ -5,10 +5,9 @@ desc:
   In This Tutorial we look at how you can implement the Selection Sorting
   Algorithm in Python
 series: compsci
-image: logo.png
+image: logo.svg
 tags:
-  - python
-  - compsci
+- sorting
 title: Implementing Selection Sort in Python
 twitter: https://twitter.com/Elliot_F
 ---
@@ -97,6 +96,8 @@ $ python3.6 sort.py
 As you can see, it returns a list that has been successfully sorted using the
 selection sort algorithm.
 
+<Quiz question="What is the worst case time complexity of the Selection Sort Algorithm?" A="O(N)" B="O(N^2)" C="O(n log n)" correct="B" answer="B - The worst case and best case sorting complexity of Selection sort is O(N^2)"/>
+
 # Conclusion
 
 So, that's all we are going to cover in this tutorial! We've successfully
@@ -104,3 +105,10 @@ managed to implement the selection sorting algorithm.
 
 If you found this useful, or have any feedback/comments then I'd love to hear
 them down below!
+
+## Related Reading
+
+If you enjoyed this tutorial, you may also enjoy these other tutorials on the site:
+
+* [QuickSort in Python](/compsci/sorting/quicksort-in-python/)
+* [Insertion Sort in Python](/compsci/sorting/insertion-sort-in-python/)

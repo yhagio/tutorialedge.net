@@ -9,7 +9,7 @@ twitter: https://twitter.com/rounak_banik
 series: python
 tags:
   - data-science
-image: python-logo.png
+image: python.svg
 ---
 
 The Internet Movie Database (IMDB) maintains a chart called the IMDB Top

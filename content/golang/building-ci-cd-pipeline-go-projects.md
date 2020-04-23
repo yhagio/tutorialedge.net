@@ -8,7 +8,7 @@ desc:
   In this tutorial, we look at how you can build a solid CI pipeline with Travis
   for your Go Projects
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - advanced
 author: Elliot Forbes
@@ -31,6 +31,10 @@ So, through my travels, one thing seemed to be prevalent across multiple
 high-quality projects and that was they had a solid **continuous integration**,
 and sometimes **continuous deployment** pipeline that is triggered whenever
 somebody makes changes to their codebase.
+
+# Prerequisites
+
+* You will need Go version 1.11+ installed on your development machine. 
 
 # The Benefits of a CI/CD Pipeline
 

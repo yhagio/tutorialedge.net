@@ -5,10 +5,9 @@ desc:
   In This Tutorial we look at bit manipulation and how you can use this to
   optimize your programs.
 series: compsci
-image: logo.png
+image: logo.svg
 tags:
-  - python
-  - compsci
+- misc
 title: Bit Manipulation For Beginners
 twitter: https://twitter.com/Elliot_F
 ---
@@ -166,3 +165,13 @@ print(set_bit(4, 00000000))
 <!--## Getting a Bit
 
 ## Clearing a Bit -->
+
+## Conclusion
+
+So, in this tutorial, we have looked at bit manipulation and how you can utilize bit manipulation techniques within your own Python applications.
+
+## Further Reading
+
+If you enjoyed this tutorial, you may also enjoy the following tutorials:
+
+* [Memoization Tutorial for Beginners](/compsci/memoization-for-beginners/)

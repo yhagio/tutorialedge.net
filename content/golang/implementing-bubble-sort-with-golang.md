@@ -5,9 +5,9 @@ desc:
   This tutorial demonstrates how one can implement their own version of bubble
   sort using the golang programming language
 series: golang
-image: golang.png
+image: golang.svg
 tags:
-  - misc
+  - algorithms
 title: Implementing the Bubble Sort Algorithm using Golang
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg

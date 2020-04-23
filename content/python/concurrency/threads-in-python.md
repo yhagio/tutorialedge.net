@@ -5,7 +5,7 @@ desc:
   In this article take a look at how you can implement very basic threading in
   Python using Threads
 series: python
-image: python-logo.png
+image: python.svg
 tags:
   - concurrency
 title: Threads in Python

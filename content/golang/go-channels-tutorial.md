@@ -5,7 +5,7 @@ desc:
   In this tutorial, we are going to look at how you can use channels in your Go
   programs
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - concurrency
 title: Go Channels Tutorial
@@ -14,8 +14,8 @@ twitter: https://twitter.com/Elliot_F
 weight: 25
 ---
 
-Welcome All! In this tutorial, we are going to be looking at how you can use
-channels within your Go-based applications.
+**In this tutorial, we are going to be looking at how you can use
+channels within your Go-based applications.**
 
 Channels are pipes that link between `goroutines` within your Go based
 applications that allow communication and subsequently the passing of values to
@@ -37,7 +37,23 @@ delight so far.
 > [goroutines](/golang/concurrency-with-golang-goroutines/) if you wish to learn
 > more about goroutines.
 
+# Goals
+
+By the end of this tutorial, you will:
+
+* Have a solid understanding as to the theory behind channels
+* Be able to create simple concurrent Go applications that use channels
+
+# Prerequisites
+
+In order to complete this tutorial, you will need to have met the following 
+prerequisites:
+
+* You will need Go installed on your machine. 
+
 # Video Tutorial
+
+If you wish, this tutorial is available in video format. 
 
 {{< youtube id="e4bu9g-bYtg" autoplay="false" >}}
 
@@ -58,6 +74,8 @@ Let's start off by seeing how we can build up a really simple example of how
 this works in Go. We'll first create a function that goes away and computes an
 arbitrary, random value and passes it back to a channel variable called
 `values`:
+
+<div class="filename">main.go</div>
 
 ```go
 package main
@@ -155,6 +173,8 @@ In our `main()` function, we've added a second call to
 `go CalculateValue(valueChannel)` so we should expect 2 values sent to this
 channel in very quick succession.
 
+<div class="filename">main.go</div>
+
 ```go
 package main
 
@@ -190,7 +210,7 @@ However, when you run this, you should see that only our first goroutines' final
 print statement is actually executed:
 
 ```plaintext
-go run test.go
+go run main.go
 Go Channel Tutorial
 Calculated Random Value: {} 1
 Calculated Random Value: {} 7
@@ -221,6 +241,8 @@ Let's modify our existing program to use a buffered channel and have a look at
 the output. Notice that I've added a call to `time.Sleep()` at the bottom of our
 `main()` function in order to lazily block our `main()` function enough to allow
 our goroutines to complete execution.
+
+<div class="filename">main.go</div>
 
 ```go
 package main
@@ -281,6 +303,11 @@ If you enjoyed this tutorial, then please feel free to let me know in the
 comments section below. If you have any suggestions as to what I could do better
 then I would love to hear them in the comments section below!
 
-> **Note -** If you want to keep track of when new Go articles are posted to the
-> site, then please feel free to follow me on twitter for all the latest news:
-> [@Elliot_F](https://twitter.com/elliot_f).
+## Further Reading
+
+If you enjoyed this article and wish to learn more about working with Concurrency
+in Go, then I recommend you check out our other articles on concurrency:
+
+* [Go Mutex Tutorial](/golang/go-mutex-tutorial/)
+* [Go Goroutines Tutorial](/golang/concurrency-with-golang-goroutines/)
+* [Go sync.WaitGroup Tutorial](/golang/go-waitgroup-tutorial/)

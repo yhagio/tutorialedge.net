@@ -7,9 +7,8 @@ desc:
 image: vuejs.png
 series: vuejs
 tags:
-  - vuejs
-  - javascript
-title: Vue Router Beginners Tutorial
+  - Routing
+title: Vue.js Vue-Router Beginners Tutorial
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 weight: 5
@@ -53,6 +52,8 @@ $ npm install vue-router
 In order for us to render a series of distinct pages within our Single Page
 Application we need to add the `<router-view/>` tag to our application. This
 will render the component of our choice depending on the route that is hit.
+
+<div class="filename">index.html</div>
 
 ```html
 <!DOCTYPE html>
@@ -137,6 +138,8 @@ change from rendering our `HomePageComponent` to our `SimpleComponent`.
 If we were to do this within a single `index.html` page then it would look
 something like so:
 
+<div class="filename">index.html</div>
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -205,6 +208,8 @@ And the final project should look something like so:
 
 I threw in a bit of css for this one:
 
+<div class="filename">style.css</div>
+
 ```css
 .center {
   text-align: center;
@@ -231,6 +236,10 @@ Hopefully, you found this tutorial helpful. We have managed to set up a simple
 VueJS application that features routing with several routes, each displaying
 differing components.
 
-If you are interested in some more advanced routing concepts then I would highly
-recommend checking out the vue-router documentation. It features pages on things
-like transitions and lazy loading.
+
+## Further Reading
+
+If you enjoyed this article then you may enjoy some of the other tutorials on our site:
+
+* [Vue.js WebSocket Tutorial](/javascript/vuejs/vuejs-websocket-tutorial/)
+* [Vue.js Animations and Transitions Tutorial](/javascript/vuejs/vuejs-transitions-animations-tutorial/)

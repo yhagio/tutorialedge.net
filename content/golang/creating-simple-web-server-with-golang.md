@@ -5,7 +5,7 @@ desc:
   In this tutorial I'll be demonstrating how to create a very simple web server
   using Google's GoLang programming language.
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - intermediate
 title: Creating A Simple Web Server With Golang
@@ -30,6 +30,10 @@ We'll first focus on building a simple server that can serve some really simple
 content back to a client making requests to our server. Once we have achieved
 this, we'll then look at how we can serve static files before finally moving on
 to how we can serve these files using HTTP over TLS or `https` for short.
+
+# Prerequisites
+
+* You will need Go version 1.11+ installed on your development machine. 
 
 # Creating a Basic Web Server
 

@@ -1,8 +1,17 @@
-# TutorialEdge.net
+<div align="center">
+  <br/>
+  <img alt="TutorialEdge" src="https://images.tutorialedge.net/images/logo.png" />
+  <h1>TutorialEdge</h1>
+  
+  <img src="https://travis-ci.org/elliotforbes/tutorialedge.net.svg?branch=master" alt="build status" />  
+</div>
 
-## General Information
 
-![Build Status](https://travis-ci.org/elliotforbes/tutorialedge-v2.svg?branch=master)
+# TutorialEdge.net Community  👩‍💻👨‍💻
+
+Welcome to the TutorialEdge codebase! 
+
+## What is TutorialEdge.net?
 
 I've been working on TutorialEdge.net as a hobby project since early 2015. Since
 then it's gone from only a handful of visitors per day to something that
@@ -12,36 +21,9 @@ The main aim for the site is for it to be a place that I can host tutorials and
 courses on any language and framework I choose and hopefully give back something
 to the programming community.
 
-This website is built using [hugo](https://gohugo.io/), an open-source static
-site generator.
+# Table of Contents
 
-## Usage
-
-1. Download the repo
-
-   ```
-   git clone https://github.com/elliotforbes/tutorialedge-v2
-   cd tutorialedge-v2
-   ```
-
-2. [Install hugo](https://gohugo.io/getting-started/installing/)
-
-3. Start the server: `hugo server`
-
-4. Open the address in a browser (default is localhost:1313)
-
-## Contribution Guide
-
-Contributions to the site are greatly appreciated, if you see a typo or
-something that isn't quite right and want to help improve the site for everyone
-then please feel free to submit a pull request.
-
-- Start off by forking the repository
-- Make any changes you have in mind
-- Submit a Pull Request from your forked version back into the original version
-  of the site
-- I'll review it and approve it
-- It'll automatically go live in seconds!
+* [Contributing](docs/contributing.md)
 
 ## Contributors
 
@@ -49,12 +31,12 @@ then please feel free to submit a pull request.
 - [Vietstone](https://github.com/vietstone)
 - [Stevenson Jean-Pierre](https://github.com/Sjeanpierre)
 - [Ross Jacobs](https://github.com/pocc)
+- [Edvin N](https://github.com/NissesSenap)
 
 - Andrea Koutifaris
 - Andrew Johnson
 - Brian L.
 - Daniel Arbuckle
-- Elliot Forbes
 - John P.
 - Josh Kalin
 - Kevin Hennessy
@@ -64,6 +46,7 @@ then please feel free to submit a pull request.
 - Paul Halliday
 - Rounak Banik
 - Zaid Sabih
+- [Nick McCullum](https://nickmccullum.com/)
 
 ## License
 

@@ -5,7 +5,7 @@ desc:
   This tutorial teaches you how to calculate the keyword density of a web page
   using the python programming language.
 series: python
-image: python-logo.png
+image: python.svg
 tags:
   - intermediate
 title: Calculating Keyword Density of a Web Page with Python

@@ -11,7 +11,7 @@ tags:
   - vuejs
   - animations
   - transitions
-title: VueJS Animations and Transitions Tutorial
+title: Vue.js Animations and Transitions Tutorial
 twitter: https://twitter.com/Elliot_F
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 weight: 6
@@ -186,3 +186,10 @@ This is the full source code for the component with simple transitions:
 
 That wraps up this tutorial! I hope you found it enlightening and educational!
 If you enjoyed it then please let me know in the comments section below!
+
+## Further Reading
+
+If you enjoyed this article then you may enjoy some of the other tutorials on our site:
+
+* [Vue.js WebSocket Tutorial](/javascript/vuejs/vuejs-websocket-tutorial/)
+* [Vue.js Change Handler Tutorial](/javascript/vuejs/vuejs-change-handler-tutorial/)

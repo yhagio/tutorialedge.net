@@ -1,0 +1,32 @@
+.author-container {
+    display: flex;
+    border-top: 1px solid rgb(230, 236, 241);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 100%;
+
+    .author-image {
+        flex: 1;
+        > img {
+            width: 100px;
+            margin: auto;
+            display: block;
+            height: 100px;
+            border-radius: 100%;
+            border: 5px solid #fff;
+            box-shadow: 0 5px 10px -5px rgba(0,0,0,.4);
+        }
+    }
+    .author-info {
+        flex: 3;
+        h2 {
+            margin-left: 0 !important;
+            padding: 0;
+        }
+    }
+}
+
+.share-buttons {
+    border-bottom: 1px solid rgb(230, 236, 241);
+    padding-bottom: 20px;
+}

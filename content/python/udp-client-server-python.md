@@ -5,7 +5,7 @@ desc:
   This tutorial shows the user how to construct a UDP based client and server
   application
 series: python
-image: python-logo.png
+image: python.svg
 tags:
   - networking
 title: UDP Client and Server Tutorial in Python

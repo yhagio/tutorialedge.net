@@ -5,7 +5,7 @@ desc:
   In this tutorial we examine the encoding/json go package and how to parse JSON
   files.
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - beginner
 title: Parsing JSON files With Golang
@@ -37,6 +37,8 @@ Let's start with a really simple Go program as our base, we'll build this out to
 showcase how to work with various different examples. Create a new file called
 `main.go`.
 
+<div class="filename">main.go</div>
+
 ```go
 package main
 
@@ -58,6 +60,8 @@ Let's try and read in a simple JSON file and then parse it. For the purpose of
 this tutorial we’ll be parsing the following json within our file. Copy this and
 save it into a `users.json` file within the same directory as your `main.go`
 file.
+
+<div class="filename">users.json</div>
 
 ```json
 {
@@ -117,6 +121,8 @@ data types.
 If you know the structure that you are expecting then I would recommend going
 down the verbose route and defining your structs like so:
 
+<div class="filename">main.go</div>
+
 ```go
 package main
 
@@ -159,7 +165,7 @@ to convert it toa byte array using ioutil.ReadAll. Once it's in a byte array we
 can pass it to our json.Unmarshal() method.
 
 ```go
-// read our opened xmlFile as a byte array.
+// read our opened jsonFile as a byte array.
 byteValue, _ := ioutil.ReadAll(jsonFile)
 
 // we initialize our Users array
@@ -243,6 +249,8 @@ define the struct types.
 # Full Implementation
 
 Below you'll find the full implementation of this tutorial.
+
+<div class="filename">main.go</div>
 
 ```go
 package main

@@ -4,7 +4,7 @@ date: 2018-07-14T22:33:43+01:00
 desc:
   In this course, we will be taking a look at everything you need to know about
   Docker if you are a golang based developer
-image: docker.png
+image: docker.svg
 series: docker
 tags:
   - docker

@@ -3,7 +3,7 @@ author: Elliot Forbes
 date: 2018-07-08T09:25:32+01:00
 desc: Learn the Computer Science Fundamentals.
 homepage: true
-image: logo.png
+image: logo.svg
 series: compsci
 tags:
   - compsci

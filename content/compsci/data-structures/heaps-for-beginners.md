@@ -5,11 +5,10 @@ desc:
   In This Tutorial we look at heaps, we look at how they work and what problems
   they can solve
 series: compsci
-image: logo.png
+image: logo.svg
 draft: true
 tags:
-  - python
-  - compsci
+- data-structures
 title: Data Structures - Heaps For Beginners
 twitter: https://twitter.com/Elliot_F
 ---

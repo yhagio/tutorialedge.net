@@ -4,7 +4,7 @@ date: 2018-06-09T22:48:26+01:00
 desc:
   In this course, we are going to look at how you can implement your own face
   recognitions in
-image: golang.png
+image: golang.svg
 draft: true
 homepage: true
 series:

@@ -16,10 +16,9 @@
 						{{ if .Params.image }}
 						<img src="https://images.tutorialedge.net/images/{{ .Params.image }}" alt="{{ .Title }} Image">
 						{{ else }}
-						<img src="https://images.tutorialedge.net/images/logo.png" alt="{{ .Title }} Image">
+						<img src="https://images.tutorialedge.net/images/logo.svg" alt="{{ .Title }} Image">
 						{{ end }}
-						<h2><small><b>Lesson</b> {{ .Params.Weight }} | <b>Time</b> {{ .ReadingTime }} <i class="ion ion-ios-clock-outline"></i>
-							</small><br />{{ .Title }}</h2>
+						<h2>{{ .Title }}</h2>
 						<button class="btn btn-success">Continue Course</button>
 					</div>
 				</a>

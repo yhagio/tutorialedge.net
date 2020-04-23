@@ -1,0 +1,258 @@
+@import "variables";
+
+body {
+  font-family: "proxima-nova", "proxima-nova-all", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+  line-height: 1.9em;
+  font-size: 18px;
+  font-family: Inter,sans-serif;
+  letter-spacing: -.014em;
+  font-feature-settings: "ss03","zero","cv08","cv11" 1;
+  
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  color: #292e31;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+    font-weight: 600;
+    font-style: normal;
+    color: $gray;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    margin: 1.2em 0;
+    font-size: 1.0625em;
+  }
+
+  b, strong {
+    font-weight: 800;
+    color: black;
+  }
+
+  h1, h2, h3, h4, h5 {
+    line-height: 1.2;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    clear: both;
+  }
+
+  h2 {
+    font-size: 1.65375em;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  h5 {
+    font-size: 16px;
+  }
+
+  a {
+    color: $link-blue;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .none {
+    display: none !important;
+  }
+
+
+  .small-no-show {
+    display: none;
+  }
+
+  .content-container {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: 576px) { 
+    .small-no-show {
+      display: block;
+    }
+
+    .content-container {
+      width: 100%;
+      margin: auto;
+      margin-bottom: 40px;
+    }
+  }
+  @media (min-width: 768px) { 
+    .content-container {
+      width: 100%;
+      margin: auto;
+      margin-bottom: 40px;
+    }
+  }
+  
+  @media (min-width: 1200px) { 
+    .content-container {
+      width: 80vw;
+      margin: auto;
+      margin-bottom: 40px;
+    }
+  }
+
+  .paginate {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .paginate .total-count {
+    padding: 20px;
+  }
+
+}
+
+.full-width {
+  width: 95%;
+  margin: auto;
+}
+
+.social-btns {
+  text-align: center;
+}
+ul.social-btns{
+  margin: 0;
+  padding: 5px;
+  margin-bottom: 25px;
+}
+
+.social-btns li {
+  margin: 8px;
+  display: inline-block;
+}
+
+@media (min-width: 768px) {
+
+  .social-btns li {
+      margin: 5px;
+  }
+}
+
+hr {
+  width: 50%;
+  color: #f6f4f4;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+
+/* Dissolve Button */
+.social-btn-dissolve {
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  color: #fff;
+  line-height: 35px;
+  border-radius: 50%;
+  display: block;
+  position: relative;
+}
+
+.social-btn-dissolve:hover {
+  color: #fff;
+}
+
+.social-btn-dissolve:hover:before {
+  opacity: 0;
+  -webkit-transform: scale(1.35);
+  transform: scale(1.35);
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.social-btn-dissolve:before {
+  background: inherit;
+  content: " ";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  border-radius: 50%;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.clear {
+  width: 100%;
+  height: 1px;
+  clear: both;
+}
+
+
+.course-progress-box {
+  background-color: white;
+  font-family: brandon-grotesque, sans-serif;
+  padding: 20px 20px;
+  margin-bottom: 40px;
+  border-radius: 5px;
+  // text-align: center;
+  cursor: pointer;
+  
+  box-shadow: $box-shadow;
+}
+a:hover .course-progress-box {
+  text-decoration: none;
+}
+
+.course-progress-box img {
+  width: 40px;
+  margin-bottom: 20px;
+}
+.course-progress-box p {
+  color: $gray;
+  font-size: 1.1rem !important;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.course-listing a {
+  text-decoration: none !important;
+}
+
+
+.paginate {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  .btn-primary {
+    font-weight: 700;
+    padding: 10px 20px;
+    background: #0276d9 !important;
+    background-image: linear-gradient(22deg, #0276d9,#2C9CFC) !important;
+    border-bottom: 1px solid #0376d8 !important;
+    border: none;
+  }
+
+  .total-count {
+    padding: 20px;
+  }
+}
+
+.blue-spacer {
+  width: 100%;
+  height: 120px;
+  background-color: $lightest-blue;
+  border-top: 1px solid #e7e7ec;
+}

@@ -5,7 +5,7 @@ desc:
   In this tutorial we look at semaphores and bounded semaphores and how we can
   utilize them within our Python programs
 series: python
-image: python-logo.png
+image: python.svg
 tags:
   - asyncio
   - concurrency

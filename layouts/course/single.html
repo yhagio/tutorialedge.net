@@ -15,22 +15,63 @@
 
 <div class="course-listing">
 	<div class="container">
-		<h3>Course Lessons</h3>
-		<div class="courses">
-			{{ range sort (index $.Site.Taxonomies.series .Params.series) }}
-			{{ if not .Params.homepage }}
-			<a class="course-progress-box" href="{{ .Permalink }}">
-				<img src="https://images.tutorialedge.net/images/{{ .Params.image }}" alt="{{ .Params.desc }}" />
-				<h2>{{ .Title }}</h2>
-				{{ range .Params.tags }}
-				<span class="badge badge-pill badge-info">{{ . }}</span>
-				{{ end }}
-				<hr/>
-				<p>{{ .Params.desc }}</p>
-			</a>
-			{{ end }}
-			{{ end }}
+
+
+		{{ range $taxonomyname, $taxonomy := .Site.Taxonomies.tags }}
+
+		{{ $scratch := newScratch }}
+		{{ range $taxonomy }}
+		{{ if eq $.Params.series .Params.series }}
+		{{ if not (in ($scratch.Get "tags") $taxonomyname) }}
+		{{if not (eq $taxonomyname .Params.series) }}
+		{{ $scratch.Add "tags" (slice $taxonomyname) }}
+		{{ end }}
+		{{ end }}
+		{{ end }}
+		{{ end }}
+
+		{{ range $scratch.Get "tags" }}
+		<div id="accordion">
+		<div class="card">
+			<div class="card-header" id="{{ . }}-header">
+				<h5 class="mb-0">
+				<button class="btn btn-link" data-toggle="collapse" data-target="#{{ . }}" aria-expanded="true" aria-controls="{{ . }}">
+					<h2>➕ {{ . }}</h2>
+					<span>View lessons</span>
+				</button>
+				</h5>
+			</div>
+		
+			<div id="{{ . }}" class="collapse" aria-labelledby="{{ . }}" data-parent="#accordion">
+				<div class="card-body">
+					<ul class="list-group list-group-flush">
+						{{ range sort $taxonomy }}
+						{{ if eq $.Params.series .Params.series }}
+						<li class="list-group-item"><a href="{{.Permalink}}">
+							<div class="row">
+								<div class="col-lg-1">
+									<img src="https://images.tutorialedge.net/images/{{ .Params.image }}" alt="{{ .Params.Description }}" />
+								</div>
+								<div class="col-lg-9">
+									<h3>{{ .Title }}</h3>
+									<span>{{ .Params.desc }}</span>
+								</div>
+								<div class="col-lg-2">
+									<button class="btn btn-primary">Read Now</button>
+								</div>
+							</div>
+						</a></li>
+						{{ end }}
+						{{ end }}
+					  </ul>
+				</div>
+			</div>
+			</div>
 		</div>
+			
+		</ul>
+		{{ end }}
+		{{ end }}
 	</div>
 </div>
 

@@ -5,7 +5,7 @@ desc:
   This tutorial demonstrates how you can consume an already running RESTful API
   using Go
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - intermediate
 title: Consuming A RESTful API With Go
@@ -31,6 +31,10 @@ using the very popular [pokeapi](http://pokeapi.co/docsv2/) which is an API that
 exposes all the known information for everything Pokemon related. A bit silly I
 know but it's a fully fledged API that follows standard naming conventions and
 requires no authentication so there is no barrier to entry.
+
+# Prerequisites
+
+* You will need Go version 1.11+ installed on your development machine. 
 
 # Querying The API
 
@@ -258,4 +262,4 @@ can effectively work with as if they were normal objects.
 > please let me know in the comments section below. If you think anything is
 > missing then please feel free to make the changes yourself by submitting a
 > pull request here:
-> [tutorialedge-v2](https://github.com/elliotforbes/tutorialedge-v2)
+> [tutorialedge.net](https://github.com/elliotforbes/tutorialedge.net)

@@ -5,7 +5,7 @@ desc:
   In this tutorial we'll look at what functions are in Golang and how you can
   use them in your programs
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - beginner
 title: Go Functions Tutorial
@@ -16,7 +16,7 @@ weight: 4
 
 [![Tutorial Build Status](https://travis-ci.org/TutorialEdge/go-functions-tutorial.svg?branch=master)](https://travis-ci.org/TutorialEdge/go-functions-tutorial)
 
-In this tutorial, we are going to be looking at functions in Golang and hopefully, by
+**In this tutorial, we are going to be looking at functions in Golang** and hopefully, by
 the end of this tutorial, you will have a firm grasp as to what they are and how
 you can use them in your own projects.
 
@@ -80,6 +80,8 @@ Once we have done this concatenation, we then return the `fullname` variable.
 
 And the full program would look like this:
 
+<div class="filename">main.go</div>
+
 ```go
 package main
 
@@ -108,6 +110,8 @@ potential errors as the second result.
 
 This practice can be very useful and allows go programmers to decide what to do 
 with any errors return within the original function block that calls our function:
+
+<div class="filename">main.go</div>
 
 ```go
 package main
@@ -142,6 +146,8 @@ func main() {
 Anonymous functions are very similar to regular functions except they lack a
 name in their function declaration. These functions can be defined within named 
 functions and can have access to any variables within it's enclosing function like so:
+
+<div class="filename">main.go</div>
 
 ```go
 package main

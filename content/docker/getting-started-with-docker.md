@@ -4,7 +4,7 @@ date: 2018-05-18T14:25:51+01:00
 desc:
   In this tutorial, we are going to look at what docker is, why it is useful,
   and how you can get a simple Docker-based application up and running
-image: docker.png
+image: docker.svg
 series: docker
 tags:
   - docker
@@ -63,7 +63,7 @@ Once you have Docker installed on your machine, you should be able to run
 return a list of everything you can do with the `docker` binary:
 
 ```s
-➜  tutorialedge-v2 git:(master) ✗ docker
+➜  tutorialedge.net git:(master) ✗ docker
 
 Usage:  docker COMMAND
 

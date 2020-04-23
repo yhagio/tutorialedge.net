@@ -8,7 +8,7 @@ desc:
 author: Kevin Jolly
 twitter: https://twitter.com/imkevinjolly
 series: python
-image: python-logo.png
+image: python.svg
 tags:
   - data-science
 authorImage: https://pbs.twimg.com/profile_images/868147892795588608/iAnFiiiE_400x400.jpg

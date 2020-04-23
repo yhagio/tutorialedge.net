@@ -5,7 +5,7 @@ desc:
   In this tutorial, we are going to be building a very simple Command Line
   Interface or CLI in Go
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - intermediate
 title: Building a Network Command Line Interface in Go
@@ -29,6 +29,10 @@ network monitoring, image manipulation and so on.
 
 > **Note -** The full code for this tutorial can be found here:
 > [TutorialEdge/Go/go-cli-tutorial](https://github.com/TutorialEdge/Go/tree/master/go-cli-tutorial)
+
+# Prerequisites
+
+* You will need Go version 1.11+ installed on your development machine. 
 
 # Popular Projects
 

@@ -5,10 +5,9 @@ desc:
   In This Tutorial we look at memoization and how you can use it to effectively
   optimize your recursive algorithms performance
 series: compsci
-image: logo.png
+image: logo.svg
 tags:
-  - python
-  - compsci
+- algorithms
 title: Memoization For Beginners
 twitter: https://twitter.com/Elliot_F
 ---

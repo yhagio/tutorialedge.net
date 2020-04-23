@@ -6,6 +6,9 @@
         <div class="register">
             
             <h2>Username: {{ user.user.displayName }}</h2>
+            <hr/>
+
+            <p><b>Privacy Policy: <a href="/privacy/">Read Now</a></b></p>
             <br/>
             <button id="logout" v-on:click="logout" class="btn btn-warning">Logout</button>
         </div>

@@ -5,7 +5,7 @@ desc: In this tutorial, we are going to look at how we can work with WebSockets 
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
 series: golang
-image: golang.png
+image: golang.svg
 tags:
   - WebSockets
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
@@ -55,8 +55,10 @@ This command should create a `go.mod` file within our current directory.
 
 Once this has been done, we can go ahead and define our `main.go` file in which we'll do the majority of our coding:
 
+
+<div class="filename">main.go</div>
+
 ```go
-// main.go
 package main
 
 import "fmt"
