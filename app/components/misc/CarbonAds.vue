@@ -1,7 +1,7 @@
 <template>
-    <div>
-        <h4>Carbon Ads</h4>
-        <script v-bind:src="this.src" v-bind:id="this.id"></script>
+    <div class="carbon-ads">
+        <h3>Carbon Ads</h3>
+        <script type="application/javascript" :src="this.src" :id="this.id"></script>
     </div>
 </template>
 
@@ -9,10 +9,10 @@
 export default {
   name: "CarbonAds",
   data: function() {
-    return {
-        src: "//cdn.carbonads.com/carbon.js?serve=CE7DT2JJ&placement=tutorialedgenet",
-        id: "_carbonads_js"
-    }
+      return {
+          id: "_carbonads_js",
+          src: "//cdn.carbonads.com/carbon.js?serve=CE7DT2JJ&placement=tutorialedgenet"
+      }
   }
 };
 </script>
