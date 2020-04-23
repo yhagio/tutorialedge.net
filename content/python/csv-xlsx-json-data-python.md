@@ -32,12 +32,9 @@ import pandas as pd
 
 If you encounter an error when executing this command, then it is likely that you do not have pandas installed on your machine. You can install pandas easily using the `pip` package manager by running the following on the command line:
 
+```output
+$ pip install pandas
 ```
-
-pip install pandas
-
-```
-
 
 ## Data Input and Output in Pandas
 
@@ -141,14 +138,11 @@ csv_data.sort_values('Amazon.com Inc Price')
 
 ```
 
-
-## Final Thoughts
+# Final Thoughts
 
 Manipulating data that is stored in csv, xlsx, and json files is an important concept for any data scientist to understand.
 
 In this tutorial, you learned:
-
-
 
 *   How to import pandas
 *   How to import datasets stored in remote locations into a pandas DataFrame by pinging their URL path
@@ -157,3 +151,10 @@ In this tutorial, you learned:
 *   How to sort pandas DataFrames
 
 Please feel free to refer back to this tutorial if you ever get stuck in the future!
+
+## Further Reading
+
+If you enjoyed this article by Nick, you may also enjoy some of the other articles on the site:
+
+* [Setting Up Your Dev Environment for Building a GAN](/python/data-science/setting-up-dev-environment-building-gan/)
+* [Building an IMDB top 250 clone with Pandas](/python/building-imdb-top-250-clone-pandas/)
