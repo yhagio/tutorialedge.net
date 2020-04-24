@@ -14,7 +14,6 @@ export default {
       }
   },
   created: function() {
-      console.log("Hello World")
     this.$el.innerHTML = ''
     this.load()
   },
