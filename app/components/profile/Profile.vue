@@ -1,45 +1,37 @@
 <template>
     <div>
-        <div class="profile-header"></div>
+        <div v-if="!loaded">
+            <h2>Loading...</h2>
+        </div>
+        <div v-if="loaded" class="profile-wrapper">
+            <div class="profile">
+                <img v-bind:src="user.picture" alt="Profile Picture">
 
-        <div class="content h-100">
-            <div class="container">
-                <div v-if="!loaded">
-                    <h2>Loading...</h2>
-                </div>
-                <div v-if="loaded" class="profile-wrapper">
-                    <div class="profile">
-                        <img v-bind:src="user.picture" alt="Profile Picture">
+                <h2>Profile: {{ this.user.name }}</h2>
+            </div>
+            
+            <h3>🏆 Trophies</h3>
 
-                        <h2>Profile: {{ this.user.name }}</h2>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="trophy">
+                        <img src="https://images.tutorialedge.net/images/golang.svg" alt="First 1000 Gophers!">
+                        <p><b>An Original Clan Member</b> - One of the First 1,000 Users</p>
                     </div>
-                    
-                    <h3>🏆 Trophies</h3>
-
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="trophy">
-                                <img src="https://images.tutorialedge.net/images/golang.svg" alt="First 1000 Gophers!">
-                                <p><b>An Original Clan Member</b> - One of the First 1,000 Users</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <hr/>
-                    <p><b>Privacy Policy: <a href="/privacy/">📕 Read Now</a></b></p>
-
-                    <div class="preferences">
-                    </div>
-
-                    <a href="/logout/" class="btn btn-warning">Logout</a>
                 </div>
             </div>
+
+
+            <hr/>
+            <p><b>Privacy Policy: <a href="/privacy/">📕 Read Now</a></b></p>
+
+            <div class="preferences">
+            </div>
+
+
+            <a href="/logout/" class="btn btn-warning">Logout</a>
         </div>
-
-        <div class="blue-spacer"></div>
     </div>
-
 </template>
 
 <script>
@@ -81,12 +73,6 @@ export default {
 </script>
 
 <style lang="scss">
-.profile-header {
-    background-color: #232F3D;
-    width: 100%;
-    height: 120px;
-}
-
 .profile-wrapper {
     h3 {
         margin-left: 0px;
