@@ -69,7 +69,7 @@
       <div class="col-sm-2 col-md-2 d-none d-md-block">
         <div id="right-sidebar">
           <div class="clear"></div>
-          <script async type="text/javascript" src="https://cdn.carbonads.com/carbon.js?serve=CE7DT2JJ&placement=tutorialedgenet" id="_carbonads_js"></script>
+          <Carbon />
           <div class="clear"></div>
         </div>
       </div>
@@ -88,25 +88,9 @@
   document.addEventListener("DOMContentLoaded", function(event) {
     var sidebar = new StickySidebar("#right-sidebar", { topSpacing: 10 });
     var sidebar = new StickySidebar(".sidebar", { topSpacing: 10 });
-
-    (function(){
-	  if(typeof _bsa !== 'undefined' && _bsa) {
-	    _bsa.init('custom', 'CE7DT2JL', 'placement:tutorialedgenet', { target: '.native-js', template: `
-	<a href="##link##" class="native-banner" style="background: linear-gradient(-30deg, ##backgroundColor##E5, ##backgroundColor##E5 45%, ##backgroundColor## 45%) #fff;">
-	  <div class="native-main">
-	    <img class="native-img" img src="##logo##">
-	    <div class="native-details" style="color: ##textColor##">
-	      <span class="native-company">Sponsored by ##company##</span>
-	      <span class="native-desc">##description##</span>
-	    </div>
-	    <span class="native-cta" style="color: ##ctaTextColor##; background-color: ##ctaBackgroundColor##;">##callToAction##</span>
-	  </div>
-	</a>`, }
-	    );
-	  }
-	})();
   });
 </script>
+
 
 <div class="blue-spacer"></div>
 
