@@ -21,6 +21,12 @@ Once we have a firm handle as to how gRPC can benefit our systems, we'll then be
 
 > **Note** - If you haven't already, I would check out the other tutorial on this site covering [Protocol Buffers in Go](/golang/go-protocol-buffer-tutorial/) 
 
+# Video Tutorial
+
+This tutorial is also available in video format if you would like to follow along:
+
+{{< youtube id="BdzYdN_Zd9Q" autoplay="false" >}}
+
 # Prerequisites
 
 **Before you can complete this tutorial**, you will have to have the following installed on your machine:
