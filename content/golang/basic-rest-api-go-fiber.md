@@ -23,6 +23,12 @@ So, in this tutorial, we'll be covering how you can get started building your ow
 
 Let's dive in! 
 
+# Video Tutorial
+
+This tutorial is also available in video format:
+
+{{< youtube id="Iq2qT0fRhAA" autoplay="false" >}}
+
 # Why Fiber?
 
 If you are coming from another language and trying your hand at developing Go applications then Fiber is an incredibly easy framework to start working with. It presents a familiar feel to Node.js developers who have previously built systems using Express.js. It's also built on top of `Fasthttp` which is an incredibly performant and minimal HTTP engine built for Go.
