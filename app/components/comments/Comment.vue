@@ -32,7 +32,6 @@ export default {
             formattedDate: '',
             counter: 0,
             voted: false,
-            vote: ''
         }
     },
     created: function() {
@@ -46,8 +45,7 @@ export default {
                 this.vote = vote;
 
                 let body = {
-                    id: this.comment.id,
-                    vote: vote
+                    comment: this.comment
                 }
 
                 let response = await axios({
