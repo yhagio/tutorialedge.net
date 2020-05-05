@@ -48,7 +48,11 @@
                         
                     </div>
                     <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="settings-tab">
-                        Currently Under Construction!
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        <button type="submit" class="btn btn-danger delete-btn">Submit</button>
+                        
                     </div>
                 </div>
             </div>
@@ -80,6 +84,9 @@ export default {
             }});
 
             this.comments = response.data.comments;
+        },
+        deleteAccount: function() {
+            console.log("Deleting Account")
         }
     },
     created: function() {
@@ -113,6 +120,11 @@ export default {
 .tab-content {
     margin-top: 20px; 
 }
+
+.delete-btn {
+    width: auto;
+}
+
 .profile-wrapper {
     h3 {
         margin-left: 0px;

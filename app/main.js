@@ -5,7 +5,9 @@ import Comments from './components/comments/Comments.vue';
 import Quiz from './components/misc/Quiz.vue';
 import Redirect from './components/profile/Redirect.vue';
 import Profile from './components/profile/Profile.vue';
+import ProfileNavButton from './components/profile/ProfileNavButton.vue';
 import Logout from './components/profile/Logout.vue';
+import Forum from './components/forum/Forum.vue';
 import FooterSearch from './components/search/FooterSearch.vue';
 import config from 'environment';
 import Carbon from './components/misc/Carbon.vue'
@@ -21,11 +23,13 @@ var app = new Vue({
   el: '#dynamicApp',
   components: {
     Profile,
+    ProfileNavButton,
     Comments,
     FooterSearch,
     Redirect,
     Carbon,
     Logout,
+    Forum,
     Quiz
   },
   created: function() {
