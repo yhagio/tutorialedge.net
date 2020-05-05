@@ -42,16 +42,11 @@ export default {
             if(!this.voted) {
                 this.voted = true;
                 this.comment[vote] += 1;
-                this.vote = vote;
-
-                let body = {
-                    comment: this.comment
-                }
 
                 let response = await axios({
                     method: 'put',
                     url: config.apiBase + "/v1/comments",
-                    data: body,
+                    data: this.comment,
                     headers: {
                         "Authorization": "Bearer " + this.$auth.getAccessToken(),
                         "Content-Type": "application/json"
