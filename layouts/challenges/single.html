@@ -5,7 +5,8 @@
     <h1>
       {{ if .Params.image }}
       <img
-        src="https://images.tutorialedge.net/images/{{ .Params.image }}"
+        src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+        data-src="https://images.tutorialedge.net/images/{{ .Params.image }}"
         alt="{{ .Title }} Image"
       />
       {{ else }}
@@ -18,82 +19,65 @@
     </h1>
   </div>
 </div>
-<div class="post-info">
-  <div class="container">
-    <div class="post-info-inner">
-      <span>
-        {{ if .Params.authorImage }}
-        <img class="author" src="{{ .Params.authorImage }}" alt="{{ .Params.author }}" />
-        {{ else }}
-        <img class="author" src="https://images.tutorialedge.net/images/logo.svg" alt="{{ .Params.author }}" />
-        {{ end }}
-        <a href="{{.Params.twitter }}">{{ .Params.author }}</a>
-      </span>
-
-      <span><img class="icon" src="https://tutorialedge.net/images/svg/clock.svg" alt="clock"/>{{ .ReadingTime }} Minutes</span>
-      <span><img class="icon" src="https://tutorialedge.net/images/svg/calendar.svg" alt="clock"/> {{ dateFormat "Jan 2, 2006" .Date }}</span>
-
-      <span>
-        {{ range.Params.tags }}
-        <a href="/tags/{{.}}"
-          ><span class="badge badge-pill badge-info">{{ . }}</span></a
-        >
-        {{ end }}
-      </span>
-    </div>
-  </div>
-</div>
 
 <div class="container-fluid">
   <div class="content-container">
     <div class="row">
-      <div class="col-sm-3 d-block">
-        <div class="sidebar">
-          {{ partial "sidebar.html" . }}
+
+      <div class="d-none d-sm-none col-sm-2 d-md-block left-sidebar">
+        {{ partial "sidebar.html" . }}
+      </div>
+
+      <div class="col-sm-12 col-md-8 post-body">
+        <article class="content">
+          <div class="info">
+            <span>
+              {{ if .Params.authorImage }}
+              <img class="author" src="{{ .Params.authorImage }}" alt="{{ .Params.author }}" />
+              {{ else }}🖊️{{ end }}
+              <a href="{{.Params.twitter }}">{{ .Params.author }}</a>
+            </span>
+            <span>⏰ {{ .ReadingTime }} Minutes</span> 
+            <span>📅 {{ dateFormat "Jan 2, 2006" .Date }}</span>
+          </div> 
+
+          {{ .Content }}
+          {{ partial "register.html" . }}
+        </article>
+        <div class="comments">
+          {{ partial "comments.html" . }}
         </div>
       </div>
 
-      <div class="col-sm-7">
-        <article class="content">
-          {{ .Content }}
-          {{ partial "author.html" . .Params }}
-        </article>
-      </div>
-      <div class="col-sm-2 hidden-md-down">
-        <div id="right-sidebar">
+      <div class="col-sm-2 col-md-2 d-none d-md-block right-sidebar">
+
+        <div class="carbon-ads">
+
           <div class="toc">
             <h4>Table Of Contents</h4>
             {{.TableOfContents}}
-            <hr/>
-            <div id="codefund"><!-- fallback content --></div>
-            <script src="https://codefund.io/properties/330/funder.js" async="async"></script>
-            <div class="clear"></div>
-          </div>
+          </div>     
+
+          <Carbon />
         </div>
+
       </div>
+
     </div>
   </div>
 </div>
 
-<div class="comments">
-  <div class="container">
-    {{ partial "comments.html" . }}
-  </div>
-</div>
 
 <script src="/js/sticky-sidebar.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.0/anchor.min.js"></script>
+
 <script>
   // Add anchors on DOMContentLoaded
   document.addEventListener("DOMContentLoaded", function(event) {
-    var sidebar = new StickySidebar("#right-sidebar", { topSpacing: 20 });
-    anchors.options = {
-      visible: "always",
-      placement: "left"
-    };
-    anchors.add(
-      ".content h1, .content h2, .content h3, .content h4, .content h5, .content h6"
-    );
+    var sidebar = new StickySidebar(".carbon-ads", { topSpacing: 10 });
   });
 </script>
+
+
+<div class="blue-spacer"></div>
+
 {{ partial "footer.html" . }}
