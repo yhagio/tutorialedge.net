@@ -27,3 +27,9 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+.carbon-ads {
+  margin-top: 60px;
+}
+</style>

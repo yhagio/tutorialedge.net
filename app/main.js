@@ -36,7 +36,7 @@ var app = new Vue({
 
     anchors.options = {
       visible: "always",
-      placement: "left"
+      placement: "right"
     };
     anchors.add(
       ".content > h1, .content > h2, .content > h3, .content > h4"

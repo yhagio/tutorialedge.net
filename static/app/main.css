@@ -9986,6 +9986,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #F5F7F9;
   color: #292e31;
 }
 body h1, body h2, body h3, body h4, body h5, body h6 {
@@ -9994,14 +9995,6 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   font-style: normal;
   color: #222;
 }
-body p {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  vertical-align: baseline;
-  margin: 1.2em 0;
-  font-size: 1.0625em;
-}
 body b, body strong {
   font-weight: 800;
   color: black;
@@ -10009,11 +10002,10 @@ body b, body strong {
 body h1, body h2, body h3, body h4, body h5 {
   line-height: 1.2;
   margin-bottom: 10px;
-  margin-top: 0px;
   clear: both;
 }
 body h2 {
-  font-size: 1.65375em;
+  font-ze: 1.65375em;
 }
 body h3 {
   font-size: 22px;
@@ -10040,7 +10032,6 @@ body .content-container {
   width: 100%;
   height: 100%;
   margin: auto;
-  margin-bottom: 40px;
 }
 @media (min-width: 576px) {
   body .small-no-show {
@@ -10049,21 +10040,18 @@ body .content-container {
   body .content-container {
     width: 100%;
     margin: auto;
-    margin-bottom: 40px;
   }
 }
 @media (min-width: 768px) {
   body .content-container {
     width: 100%;
     margin: auto;
-    margin-bottom: 40px;
   }
 }
 @media (min-width: 1200px) {
   body .content-container {
     width: 80vw;
     margin: auto;
-    margin-bottom: 40px;
   }
 }
 body .paginate {
@@ -10463,9 +10451,10 @@ a:hover .course-progress-box {
   background-color: #fafbfc;
   padding-top: 20px;
   color: #000;
+  z-index: 20;
   text-align: center;
-  border-bottom: 1px solid #f8f8f8 !important;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 8px 0 rgba(116, 129, 141, 0.1);
+  border-bottom: 1px solid #d4dadf;
 }
 .top-bar img {
   width: auto;
@@ -10478,21 +10467,6 @@ a:hover .course-progress-box {
   padding-bottom: 20px;
   font-weight: 500;
   line-height: 1.4;
-}
-.top-bar h1 small {
-  font-size: 16px;
-}
-.top-bar h2 {
-  line-height: 1.4;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  font-weight: 500;
-}
-.top-bar p {
-  margin-top: 20px;
-}
-.top-bar ul li {
-  list-style: square;
 }
 
 .post-info {
@@ -10530,6 +10504,13 @@ a:hover .course-progress-box {
   background-color: #0F7895 !important;
 }
 
+.post-body {
+  padding: 40px;
+  background-color: white;
+  z-index: 100;
+  border-left: 1px solid #E6ECF1;
+}
+
 article {
   font-size: 17px;
   line-height: 1.62;
@@ -10547,13 +10528,15 @@ article .info img {
   float: left;
   margin-right: 10px;
 }
+article > p {
+  padding-bottom: 24px;
+}
 article h1 {
   font-size: 1.75rem;
   line-height: 1.24;
   font-weight: 400;
   color: #3a3c4c;
   margin: 0px;
-  margin-top: 0;
   margin-bottom: 20px;
   padding: 0;
 }
@@ -10707,21 +10690,26 @@ article .github-btn {
   background-color: #24292e;
 }
 
+.container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
+  z-index: 10;
+}
+
 .content {
   background-color: white;
   border-radius: 8px;
-  padding: 20px;
+  padding: 40px;
   color: rgba(14, 30, 37, 0.54);
   margin-bottom: 40px;
-  margin-top: 20px;
-  z-index: 100;
+  z-index: 10;
   text-decoration: none;
-  width: 100%;
-  display: block;
   outline: none;
   color: #3b454e;
   line-height: 1.9em;
   font-size: 18px;
+}
+.content p {
+  margin-bottom: 24px;
+  margin-top: 24px;
 }
 .content .anchorjs-link {
   color: #ff5231;
@@ -10731,6 +10719,7 @@ article .github-btn {
   margin-top: 20px;
 }
 .content h1 {
+  margin-top: 73px;
   font-size: 1.75rem;
   line-height: 1.24;
   color: #242a31;
@@ -10738,15 +10727,23 @@ article .github-btn {
   display: flex;
   font-weight: 600;
   position: relative;
-  padding: 0;
-  margin-left: 20px;
 }
-.content h2,
-.content h3,
-.content h4,
-.content h5 {
-  margin: 43px 0px 24px;
-  margin-left: 20px;
+.content h1:before {
+  top: -52px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  margin-bottom: 24px;
+  margin-top: 20px;
+  content: " ";
+  position: absolute;
+  background-color: #E6ECF1;
+}
+.content ol {
+  padding-bottom: 24px;
+}
+.content .highlight {
+  padding-bottom: 24px;
 }
 .content p code {
   display: inline-block;
@@ -10768,6 +10765,11 @@ article .github-btn {
   background-color: #0e2439;
   display: block;
   clear: both;
+}
+
+.wp-block-group.wp-react-made-easy {
+  clip-path: polygon(0px 0px, 100% 40px, 100% 100%, 0px calc(100% - 72px));
+  padding: 100px 0px 136px;
 }
 
 .terminal {
@@ -10881,6 +10883,11 @@ article .github-btn {
   margin-top: 20px;
   background-color: #fff;
   color: #22798A;
+}
+
+.courses {
+  clip-path: polygon(0px 0px, 100% 40px, 100% 100%, 0px calc(100% - 72px));
+  padding: 100px 0px 136px;
 }
 
 nav.navbar {
@@ -11015,25 +11022,71 @@ nav .dropdown-menu img {
   margin-right: 10px;
 }
 
+.left-sidebar {
+  position: sticky;
+  margin-top: 40px;
+}
+.left-sidebar h4 {
+  margin-top: 40px;
+  text-transform: capitalize;
+}
+.left-sidebar a:hover {
+  transition: 1s;
+  color: black;
+}
+.left-sidebar .nav-item {
+  color: #7a848e;
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  align-items: center;
+  -webkit-box-align: center;
+  border-width: 1px 0px 1px 1px;
+  border-style: solid solid solid;
+  border-color: transparent transparent transparent;
+  border-image: initial;
+  padding: 4px 20px 8px 16px;
+  margin: 0;
+  border-right: 0px;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
+}
+.left-sidebar .nav-item::before {
+  top: 0px;
+  left: 0px;
+  width: 1px;
+  bottom: 0px;
+  content: "";
+  position: absolute;
+  background: #e6ecf1;
+}
+
+.right-sidebar:before {
+  content: "";
+  background-color: #fff;
+  position: relative;
+  top: 0px;
+  right: 0px;
+  z-index: -1;
+}
+
 .right-sidebar {
-  padding: 20px;
-  margin-bottom: 20px;
-  z-index: 100;
   text-decoration: none;
   width: 100%;
   display: block;
+  padding-right: -20px;
   outline: none;
-  background-color: white;
-  color: rgba(14, 30, 37, 0.54);
+  background-color: #fff;
 }
 .right-sidebar h4 {
   font-size: 18px;
   font-weight: 800;
   margin-bottom: 10px;
   margin-top: 20px;
-  color: #718096 !important;
+  color: #3E4750 !important;
 }
-.right-sidebar a {
+.right-sidebar r a {
   font-size: 16px;
   font-weight: 500;
   margin: 0;
@@ -11054,7 +11107,6 @@ nav .dropdown-menu img {
 }
 
 .right-sidebar .collection-item a:hover {
-  z-index: 2;
   color: #56CDFC;
   border-color: #E7E7EC;
 }
@@ -11064,7 +11116,6 @@ nav .dropdown-menu img {
   content: "";
   display: block;
   height: 100%;
-  z-index: 3;
   left: -20px;
   position: absolute;
   top: 0;
@@ -11074,9 +11125,8 @@ nav .dropdown-menu img {
 .youtube-subscribe {
   display: block;
   margin-top: 20px;
-  background-color: white;
+  margin-bottom: 20px;
   color: rgba(14, 30, 37, 0.54);
-  padding: 20px;
 }
 .youtube-subscribe div img {
   max-height: 100px;
@@ -11104,48 +11154,48 @@ nav .dropdown-menu img {
   margin-top: 40px;
   line-height: 1.2em;
   background-color: white;
+  z-index: 100;
 }
 .toc i {
   padding-right: 5px;
 }
 .toc h4 {
-  color: #000 !important;
-  font-weight: 800;
-  margin: 0;
-  padding: 0;
-  padding-bottom: 20px;
-}
-.toc ul li::before {
-  content: counter(my-awesome-counter) ". ";
-  float: left;
-  margin-top: 3px;
-  margin-right: 5px;
+  font-size: 10px;
+  font-family: Content-font, Roboto, sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
 }
 .toc ul {
-  list-style-type: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  list-style: none;
 }
 .toc ul li {
-  counter-increment: my-awesome-counter;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style-type: none;
+  font-size: 16px;
+  font-family: Content-font, Roboto, sans-serif;
+  font-weight: 500;
+  line-height: 2;
 }
 .toc ul li a {
-  color: #e91e63;
-  margin: 0px;
+  display: -webkit-box;
+  color: #74818D;
   cursor: pointer;
+  margin: 0;
   display: flex;
-  padding: 4px 12px 4px 14px;
   align-items: center;
+  padding-left: 4px;
   vertical-align: middle;
   text-decoration: none;
-  -moz-box-align: center;
-  font-size: 1rem;
-  font-weight: 500;
-  padding-left: 0;
-  margin-left: 0;
+  -webkit-box-align: center;
 }
 .toc ul li a:hover {
-  color: #0a84ae;
+  color: green;
+  transition: 1s;
 }
 
 .author-container {

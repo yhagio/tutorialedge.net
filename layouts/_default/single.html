@@ -17,12 +17,6 @@
       {{ end }}
       {{ .Title }}
     </h1>
-    <div class="post-info">
-      <div class="post-info-inner">
-          
-    
-      </div>
-    </div>
   </div>
 </div>
 
@@ -30,13 +24,11 @@
   <div class="content-container">
     <div class="row">
 
-      <div class="d-none d-sm-none col-sm-2 d-md-block">
-        <div class="sidebar">
-          {{ partial "sidebar.html" . }}
-        </div>
+      <div class="d-none d-sm-none col-sm-2 d-md-block left-sidebar">
+        {{ partial "sidebar.html" . }}
       </div>
 
-      <div class="col-sm-12 col-md-8">
+      <div class="col-sm-12 col-md-8 post-body">
         <article class="content">
           <div class="info">
             <span>
@@ -47,12 +39,7 @@
             </span>
             <span>⏰ {{ .ReadingTime }} Minutes</span> 
             <span>📅 {{ dateFormat "Jan 2, 2006" .Date }}</span>
-          </div>
-
-          <div class="toc">
-            <h4>Table Of Contents</h4>
-            {{.TableOfContents}}
-          </div>      
+          </div> 
 
           {{ .Content }}
           {{ partial "register.html" . }}
@@ -62,15 +49,19 @@
         </div>
       </div>
 
-      <div class="col-sm-2 col-md-2 d-none d-md-block">
-        <div id="right-sidebar">
-          <div class="clear"></div>
+      <div class="col-sm-2 col-md-2 d-none d-md-block right-sidebar">
+
+        <div class="carbon-ads">
+
+          <div class="toc">
+            <h4>Table Of Contents</h4>
+            {{.TableOfContents}}
+          </div>     
+
           <Carbon />
-          <div class="clear"></div>
         </div>
+
       </div>
-
-
 
     </div>
   </div>
@@ -82,14 +73,11 @@
 <script>
   // Add anchors on DOMContentLoaded
   document.addEventListener("DOMContentLoaded", function(event) {
-    var sidebar = new StickySidebar("#right-sidebar", { topSpacing: 10 });
-    var sidebar = new StickySidebar(".sidebar", { topSpacing: 10 });
+    var sidebar = new StickySidebar(".carbon-ads", { topSpacing: 10 });
   });
 </script>
 
 
 <div class="blue-spacer"></div>
-
-
 
 {{ partial "footer.html" . }}
