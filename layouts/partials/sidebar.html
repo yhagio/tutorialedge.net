@@ -1,37 +1,65 @@
 <div id="sidebar small-no-show">
 
-  <div class="right-sidebar youtube-subscribe">
+  <div class="youtube-subscribe">
     <h4>Support The Site</h4>
     <a href="https://www.patreon.com/bePatron?u=2531160" rel="noreferrer"><img class="patron" src="https://images.tutorialedge.net/images/patreon.png" alt="become a patron"/></a>
 
     <a href="https://www.buymeacoffee.com/tutorialedge" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
   </div>
 
-  <div class="right-sidebar small-no-show">
-    {{ range $taxonomyname, $taxonomy := .Site.Taxonomies.tags }}
+  <div class="small-no-show">
+    
+    <!-- <div class="accordion">
+      <h4>📚 Basics</h4>
+      <div class="nav-collapse"> 
+        <a href="#" class="nav-item">Getting Started with Go</a>
+        <a href="#" class="nav-item">Go Variables</a>
+        <a href="#" class="nav-item">Go Functions</a>
+      </div>
+      
+      <h4>📚 Intermediate</h4>
+      <div class="collapse-nav"> 
+        <a href="#" class="nav-item">Getting Started with Go</a>
+        <a href="#" class="nav-item">Go Variables</a>
+        <a href="#" class="nav-item">Go Functions</a>
+      </div>
+      
+      <h4>📚 Advanced</h4>
+      <div class="collapse-nav"> 
+        <a href="#" class="nav-item">Getting Started with Go</a>
+        <a href="#" class="nav-item">Go Variables</a>
+        <a href="#" class="nav-item">Go Functions</a>
+      </div>
 
-    {{ $scratch := newScratch }}
-    {{ range $taxonomy }}
-    {{ if eq $.Params.series .Params.series }}
-    {{ if not (in ($scratch.Get "tags") $taxonomyname) }}
-    {{if not (eq $taxonomyname .Params.series) }}
-    {{ $scratch.Add "tags" (slice $taxonomyname) }}
-    {{ end }}
-    {{ end }}
-    {{ end }}
-    {{ end }}
+    </div> -->
 
-    {{ range $scratch.Get "tags" }}
-    <h4 style="text-transform: uppercase;">{{ . }}</h4>
-    <ul class="collection">
-      {{ range sort $taxonomy }}
+    <div class="accordion">
+
+      {{ range $taxonomyname, $taxonomy := .Site.Taxonomies.tags }}
+
+      {{ $scratch := newScratch }}
+      {{ range $taxonomy }}
       {{ if eq $.Params.series .Params.series }}
-      <li class="collection-item"><a href="{{.Permalink}}">{{ .Title }}</a></li>
+      {{ if not (in ($scratch.Get "tags") $taxonomyname) }}
+      {{if not (eq $taxonomyname .Params.series) }}
+      {{ $scratch.Add "tags" (slice $taxonomyname) }}
       {{ end }}
       {{ end }}
-    </ul>
-    {{ end }}
-    {{ end }}
-  </div>
+      {{ end }}
+      {{ end }}
 
+      {{ range $scratch.Get "tags" }}
+      <h4>📚 {{ . }}</h4>
+      <div class="nav-collapse">
+        {{ range sort $taxonomy }}
+        {{ if eq $.Params.series .Params.series }}
+        <a href="{{.Permalink}}" class="nav-item">{{ .Title }}</a>
+        {{ end }}
+        {{ end }}
+      </div>
+      {{ end }}
+      {{ end }}
+    </div>
+  </div>
+  
 </div>

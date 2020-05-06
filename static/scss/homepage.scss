@@ -10,6 +10,11 @@
   clear: both;
 }
 
+.wp-block-group.wp-react-made-easy {
+  clip-path: polygon(0px 0px, 100% 40px, 100% 100%, 0px calc(100% - 72px));
+  padding: 100px 0px 136px;
+}
+
 .terminal {
   width: 60%;
   margin: -11rem auto -1rem auto;
@@ -116,3 +121,7 @@ display: inline-block;
   color: #22798A;
 }
 
+.courses {
+  clip-path: polygon(0px 0px, 100% 40px, 100% 100%, 0px calc(100% - 72px));
+  padding: 100px 0px 136px;
+}
