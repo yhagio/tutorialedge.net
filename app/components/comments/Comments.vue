@@ -86,6 +86,7 @@ $border-radius: 8px;
 .comments {
   width: 100%;
   padding-bottom: 40px;
+  margin-top: 40px;
   h2 {
       padding-bottom: 20px;
   }

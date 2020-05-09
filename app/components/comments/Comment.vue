@@ -8,8 +8,7 @@
         </div>
         <div class="comment-body">
             <h4>{{ comment.author }} <small>{{ comment.posted }}</small></h4>
-            <p>{{ comment.body }}</p>
-            <p></p>
+            <span v-html="markdown(comment.body)"></span>
         </div>
         <div class="comment-votes">
             <a v-on:click="upvote('thumbs_up')" v-bind:class="{upvoted: this.vote === 'thumbs_up'}" class="badge badge-light">{{ comment.thumbs_up }} 👍</a>
@@ -23,6 +22,7 @@
 <script>
 import axios from 'axios';
 import config from 'environment';
+import md from 'markdown-it';
 
 export default {
     name: 'Comment',
@@ -38,6 +38,11 @@ export default {
         var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     },
     methods: {
+        markdown: function(input) {
+            return md({
+                html: true
+            }).render(input)
+        },
         upvote: async function(vote) {
             if(!this.voted) {
                 this.voted = true;

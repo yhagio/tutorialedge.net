@@ -1,8 +1,7 @@
 <template>
     <div>
-        <div v-if="!loaded">
-            <h2>Loading...</h2>
-        </div>
+        <Loading v-if="this.loading" />
+        
         <div v-if="loaded" class="profile-wrapper">
             <div class="profile">
                 <img v-bind:src="user.picture" alt="Profile Picture">
@@ -29,30 +28,16 @@
                 </ul>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="trophies" role="tabpanel" aria-labelledby="trophies-tab">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="trophy">
-                                    <img src="https://images.tutorialedge.net/images/golang.svg" alt="First 1000 Gophers!">
-                                    <p><b>An Original Clan Member</b> - One of the First 1,000 Users</p>
-                                </div>
-                            </div>
-                        </div>
+                        <h5>Achievements</h5>
+                        <Profile-Achievements :achievements="this.achievements" />
                     </div>
                     <div class="tab-pane fade" id="comments" role="tabpanel" aria-labelledby="comments-tab">
-                        <ul class="list-group">
-                            <li v-for="comment in comments" v-bind:key="comment.id" class="list-group-item d-flex justify-content-between align-items-center">
-                                <p><b>{{comment.slug}}</b> {{comment.body}}</p>
-                                <!-- <span class="badge badge-primary badge-pill">14</span> -->
-                            </li>
-                        </ul>
-                        
+                       <h5>Comments You Have Posted:</h5>
+                       <Profile-Comments :comments="this.comments" />                        
                     </div>
                     <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="settings-tab">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                        <button type="submit" class="btn btn-danger delete-btn">Submit</button>
-                        
+                        <h5>Manage your Account Settings</h5>
+                        <Profile-Delete-Button :user="this.user"/>                        
                     </div>
                 </div>
             </div>
@@ -67,9 +52,19 @@
 import * as Cookie from 'es-cookie';
 import axios from 'axios';
 import config from 'environment';
+import ProfileDeleteButton from './ProfileDeleteButton.vue';
+import ProfileComments from './ProfileComments.vue';
+import ProfileAchievements from './ProfileAchievements.vue';
+import Loading from '../misc/Loading.vue';
 
 export default {
     name: 'Profile',
+    components: {
+        Loading,
+        ProfileDeleteButton,
+        ProfileAchievements,
+        ProfileComments
+    },
     data: function() {
         return {
             user: {},
@@ -84,9 +79,6 @@ export default {
             }});
 
             this.comments = response.data.comments;
-        },
-        deleteAccount: function() {
-            console.log("Deleting Account")
         }
     },
     created: function() {
@@ -106,10 +98,8 @@ export default {
             let redirectTo = Cookie.get("redirectUri");
             if(redirectTo) {
                 Cookie.remove("redirectUri")
-                console.log("redirecting...")
                 window.location.replace(redirectTo)
             }
-
             this.loaded = true;
         }
     }

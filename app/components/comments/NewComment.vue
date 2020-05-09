@@ -2,12 +2,16 @@
 <template>
     <div>
         <div v-if="this.error != ''" class="alert alert-warning">{{this.error}}</div>
+
+        <Loading v-if="this.loading" />
+
         <div class="new-comment">
             <div class="comment-input" id="comment-input">    
-                <textarea v-model="commentBody" placeholder="Leave a reply"></textarea>
+                <textarea v-model="commentBody" placeholder="Leave a reply..."></textarea>
                 <br/>
+                <small>Markdown Enabled 😎</small>
                 <button id="comment" v-on:click="submitComment" class="btn btn-primary float-right">
-                    Submit
+                    Submit 💬
                 </button>
             </div>
         </div>
@@ -17,14 +21,19 @@
 <script>
 import axios from 'axios';
 import config from 'environment';
+import Loading from '../misc/Loading.vue';
 
 export default {
     name: "NewComment",
+    components: {
+        Loading
+    },
     data: function() {
         return {
             commentBody: "",
             user: {},
-            error: ''
+            error: '',
+            loading: false
         }
     },
     created: function() {
@@ -33,6 +42,8 @@ export default {
     methods: {
         submitComment: async function() {
             try {
+
+                this.loading = true;
 
                 let body = JSON.stringify({
                     slug: window.location.pathname,
@@ -53,6 +64,7 @@ export default {
                 window.location.reload();
             } catch (err) {
                 this.error = err;
+                this.loading = false;
             }
         }
     }
@@ -65,5 +77,18 @@ export default {
     background-color: #F2F5F7;
     border-radius: 5px;
     padding: 40px;
+}
+
+.loading {
+    display: block;
+    width: 100%;
+    text-align: center;
+    img {
+        width: 100px;
+        height: auto;
+        margin: auto;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
 }
 </style>
