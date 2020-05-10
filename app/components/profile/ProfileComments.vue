@@ -4,6 +4,10 @@
 
         <Loading v-if="this.loading" />
 
+        <span v-if="this.err" class="alert alert-danger">{{this.err}}</span>
+
+        <div class="clear"></div>
+
         <ul class="list-group">
             <li v-for="comment in comments" v-bind:key="comment.id" class="list-group-item d-flex justify-content-between align-items-center">
                 <p><b>{{comment.slug}}</b> {{comment.body}}</p>
@@ -36,16 +40,22 @@ export default {
     methods: {
         deleteComment: async function(comment) {
             this.loading = true;
-            let response = await axios.delete(config.apiBase + "/v1/comments",
-            {   params: { id: comment.ID },
-                headers: { 
-                            "Authorization": "Bearer " + this.$auth.getAccessToken(),
-                            "Content-Type": "application/json"
-                }
-            });
+            try {
+                let response = await axios.delete(config.apiBase + "/v1/comments",
+                {   params: { id: comment.ID },
+                    headers: { 
+                                "Authorization": "Bearer " + this.$auth.getAccessToken(),
+                                "Content-Type": "application/json"
+                    }
+                });
+                this.loading = false;
+                window.location.reload();
+            
+            } catch (err) {
+                this.loading = false;
+                this.err = err;
+            }
 
-            this.loading = false;
-            window.location.reload();
         }
     }
 }
