@@ -75,7 +75,8 @@ export default {
     methods: {
         getComments: async function() {
             let response = await axios.get(config.apiBase + "/v1/user", { params: {
-                name: this.user.name
+                name: this.user.name,
+                sub: this.user.sub
             }});
 
             this.comments = response.data.comments;
