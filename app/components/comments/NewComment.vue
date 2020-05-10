@@ -50,7 +50,8 @@ export default {
                     body: this.commentBody,
                     author: this.user.name,
                     picture: this.user.picture,
-                    user: this.user
+                    user: this.user,
+                    sub: this.user.sub,
                 })
 
                 let response = await axios({ method: "post", 
