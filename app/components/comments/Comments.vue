@@ -49,7 +49,9 @@ export default {
           slug: window.location.pathname
         }})
 
-        this.comments = response.data.comments;
+        this.comments = response.data.comments.sort((a,b) => {
+          return b.ID - a.ID;
+        });
     }
 }
 </script>

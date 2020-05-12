@@ -7,7 +7,7 @@
             </div>
         </div>
         <div class="comment-body">
-            <h4>{{ comment.author }} <small>{{ comment.posted }}</small></h4>
+            <h4>{{ comment.author }} <small>{{ comment.CreatedAt | formatDate }}</small></h4>
             <span v-html="markdown(comment.body)"></span>
         </div>
         <div class="comment-votes">

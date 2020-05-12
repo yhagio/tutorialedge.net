@@ -19,6 +19,14 @@ import VueCodemirror from 'vue-codemirror';
 import 'codemirror/lib/codemirror.css'
 import 'codemirror/theme/monokai.css' 
 
+import dayjs from 'dayjs'
+
+Vue.filter('formatDate', function(value) {
+  if (value) {
+    return dayjs(String(value)).format('D MMM, YYYY hh:mm')
+  }
+});
+
 import { Auth0Plugin } from "./auth";
 
 Vue.use(Auth0Plugin, {
