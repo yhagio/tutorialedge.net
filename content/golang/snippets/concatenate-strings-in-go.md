@@ -10,35 +10,32 @@ layout: snippets
 tags:
 - snippets
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+snippet: |
+    package main
+
+    import (
+        "fmt"
+        "strings"
+    )
+
+    func main() {
+        fmt.Println("String Concatenation Tutorial")
+
+        var myString strings.Builder
+        // we can use the WriteString method to append
+        // to our existing strings.Builder string
+        myString.WriteString("Hello ")
+        // here we append to the end of our string
+        myString.WriteString("World")
+        
+        // print out our concatenated string
+        fmt.Println(myString.String())
+
+    }
 ---
 
 > In this code snippet, we are going to look at how you can efficiently concatenate strings in Go using the string.Builder type.
 
-<div class="filename"> main.go </div>
-
-```go
-package main
-
-import (
-    "fmt"
-    "strings"
-)
-
-func main() {
-    fmt.Println("String Concatenation Tutorial")
-
-    var myString strings.Builder
-	// we can use the WriteString method to append
-	// to our existing strings.Builder string
-    myString.WriteString("Hello ")
-	// here we append to the end of our string
-    myString.WriteString("World")
-	
-	// print out our concatenated string
-    fmt.Println(myString.String())
-
-}
-```
 
 <div class="filename"> $ go run main.go </div>
 
