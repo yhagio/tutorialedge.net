@@ -10,42 +10,41 @@ layout: snippets
 tags:
 - snippets
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+snippet: |
+  package main
+  
+  import (
+    "fmt"
+    "sort"
+  )
+
+  func main() {
+    mymap := map[string]int{
+      "Elliot": 25,
+      "Sophie": 24, 
+      "Fraser": 20,
+    }
+    
+    // make an array of type string to store our keys 
+    keys := []string{} 
+
+    // iterate over the map and append all keys to our
+    // string array of keys
+    for key := range mymap {
+      keys = append(keys, key)
+    }
+
+    // use the sort method to sort our keys array
+    sort.Strings(keys)
+
+    for _, key := range keys {
+      fmt.Println(key, mymap[key])
+    }
+  }
 ---
 
 > In this code snippet, we are going to look at how you can quickly and easily sort maps in Go using the `sort` package.
 
-# Sort Map by Length of Keys
-
-<div class="filename"> main.go </div>
-
-```go
-package main
-
-import (
-	"fmt"
-	"sort"
-)
-
-func main() {
-	mymap := map[string]int{"Elliot": 25, "Sophie": 24, "Fraser": 20}
-
-	// make an array of type string to store our keys 
-	keys := []string{}
-
-	// iterate over the map and append all keys to our
-	// string array of keys
-	for key := range mymap {
-		keys = append(keys, key)
-	}
-
-	// use the sort method to sort our keys array
-	sort.Strings(keys)
-
-	for _, key := range keys {
-		fmt.Println(key, mymap[key])
-	}
-}
-```
 
 When we run this, we should see that we are able to retrieve the values from our map in
 order of the length of the string key.
