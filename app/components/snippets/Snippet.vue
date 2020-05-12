@@ -1,16 +1,18 @@
 <template>
     <div class="snippet">
-        <h4>Code:</h4>
+        <Loading v-if="this.loading" />
+        
+        <h4>Try It Now:</h4>
         <codemirror v-model="code" :options="cmOptions" />
 
-        <!-- <button v-on:click="executeCode" class="btn btn-primary">Run Code...</button>
+        <button v-on:click="executeCode" class="btn btn-primary">Run Code...</button>
         
-        <div class="alert alert-success" role="alert">
+        <div v-if="this.output" class="alert alert-success" role="alert">
             <h4 class="alert-heading">Output:</h4>
             <p class="mb-0">{{ this.output }}</p>
         </div>
 
-        <hr> -->
+        <hr>
 
         <Carbon />
     </div>
@@ -21,18 +23,21 @@ import { codemirror } from 'vue-codemirror';
 import Carbon from '../misc/Carbon.vue';
 import axios from 'axios';
 import config from 'environment';
+import Loading from '../misc/Loading.vue';
 
 export default {
     name: 'Snippet',
     props: ["code"],
     components: {
         codemirror,
-        Carbon
+        Carbon,
+        Loading
     },
     data () {
         return {
             code: "",
-            output: "This is the program output...",
+            output: "",
+            loading: false,
             cmOptions: {
                 tabSize: 4,
                 mode: 'text/x-go',
@@ -44,26 +49,26 @@ export default {
     },
     methods: {
         executeCode: async function() {
-            
-            let body = JSON.stringify({
-                code: this.code
-            })
-
+            this.loading = true;
             let response = await axios({ method: "post", 
                     url: config.apiBase + "/v1/code", 
-                    data: body,
+                    data: this.code,
                     headers: {
                         "Authorization": "Bearer " + this.$auth.getAccessToken(),
                         "Content-Type": "application/json"
                     }
                 });
-            this.output = response;
+            this.loading = false;
+            this.output = response.data;
         }
     }
 }
 </script>
 
 <style lang="scss">
+.loading {
+    z-index: 200;
+}
 .snippet {
     padding: 40px;
 }
