@@ -10,31 +10,28 @@ image: golang.png
 tags:
 - snippets
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+layout: snippets
+snippet: |
+  package main
+
+  import "fmt"
+
+  func main() {
+
+      mymap := make(map[string]int)
+
+      mymap["elliot"] = 25
+
+      // we can use this if statement to check to see if 
+      // a given key "elliot" exists within a map in Go
+      if _, ok := mymap["elliot"]; ok {
+          // the key 'elliot' exists within the map
+          fmt.Println(mymap["elliot"])
+      }
+  }
 
 ---
-> In this code snippet, we are going to look at how you can check to see if a key exists within a Map in Go
 
-<div class="filename"> main.go </div>
-
-```go
-package main
-
-import "fmt"
-
-func main() {
-
-    mymap := make(map[string]int)
-
-    mymap["elliot"] = 25
-
-    // we can use this if statement to check to see if 
-    // a given key "elliot" exists within a map in Go
-    if _, ok := mymap["elliot"]; ok {
-        // the key 'elliot' exists within the map
-        fmt.Println(mymap["elliot"])
-    }
-}
-```
 
 When we execute this, we will see the following output:
 

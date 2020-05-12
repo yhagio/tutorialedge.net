@@ -9,8 +9,15 @@ import ProfileNavButton from './components/profile/ProfileNavButton.vue';
 import Logout from './components/profile/Logout.vue';
 import Forum from './components/forum/Forum.vue';
 import FooterSearch from './components/search/FooterSearch.vue';
+import Snippet from './components/snippets/Snippet.vue';
 import config from 'environment';
 import Carbon from './components/misc/Carbon.vue'
+
+import 'codemirror/mode/go/go.js'
+import VueCodemirror from 'vue-codemirror';
+
+import 'codemirror/lib/codemirror.css'
+import 'codemirror/theme/monokai.css' 
 
 import { Auth0Plugin } from "./auth";
 
@@ -18,6 +25,9 @@ Vue.use(Auth0Plugin, {
   domain: config.domain,
   clientId: config.clientID
 })
+
+
+Vue.use(VueCodemirror, {})
 
 var app = new Vue({
   el: '#dynamicApp',
@@ -30,6 +40,7 @@ var app = new Vue({
     Carbon,
     Logout,
     Forum,
+    Snippet,
     Quiz
   },
   created: function() {
