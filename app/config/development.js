@@ -6,7 +6,7 @@ const config = {
     audience: 'https://' + 'tutorialedge.eu.auth0.com' + '/api/v2/', 
     responseType: 'token id_token',
     scope: 'openid profile',
-    apiBase: 'https://api.tutorialedge.net/api'
+    apiBase: 'https://qstevbyfql.execute-api.eu-west-1.amazonaws.com/test'
 }
 
 export default config;

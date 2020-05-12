@@ -2,49 +2,34 @@
 
 <div class="top-bar">
     <div class="container">
-        <h1>
+      <h1>
         {{ if .Params.image }}
         <img
-            src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-            data-src="https://images.tutorialedge.net/images/{{ .Params.image }}"
-            alt="{{ .Title }} Image"
+          src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+          data-src="https://images.tutorialedge.net/images/{{ .Params.image }}"
+          alt="{{ .Title }} Image"
         />
         {{ else }}
         <img
-            src="https://images.tutorialedge.net/images/logo.svg"
-            alt="{{ .Title }} Image"
+          src="https://images.tutorialedge.net/images/logo.svg"
+          alt="{{ .Title }} Image"
         />
         {{ end }}
         {{ .Title }}
-        </h1>
+      </h1>
     </div>
-</div>
+  </div>
 
 <div class="container-fluid">
     <div class="content-container">
         <div class="row">
-            <div class="col-sm-9 col-md-9">
-                <article class="content" v-pre>
-                    {{ .Content }}
-                    {{ partial "author.html" . .Params }}
-                </article>
-                <div class="comments">
-                    {{ partial "comments.html" . }}
-                </div>
+            <div class="col-lg-6 col-md-6">
+                <Snippet code="{{ .Params.snippet }}" />
             </div>
-        
-            <div class="col-sm-3 col-md-3">
-                <div id="right-sidebar">
-                    <div class="toc">
-                        <h4>Table Of Contents</h4>
-                        {{.TableOfContents}}
-                    </div>      
-                    <hr/>
-                    <div id="codefund"><!-- fallback content --></div>
-                        <script src="https://codefund.io/properties/330/funder.js" async="async"></script>
-                        <div class="clear"></div>
-                    </div>
-                </div>
+            <div class="col-lg-6 col-md-6 post-body">
+                <article class="content">
+                    {{ .Content }}
+                </article>
             </div>
         </div>
     </div>

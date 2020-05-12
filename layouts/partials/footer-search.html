@@ -1,0 +1,63 @@
+
+<footer class="page-footer">
+	<div class="row">
+		<div class="col l3 m6 s12">
+			<div class="padded">
+				<h2>Courses</h2>
+				<ul>
+					<li><a href="{{ .Site.BaseURL }}/course/python/">Python</a></li>
+					<li><a href="{{ .Site.BaseURL }}/course/angular/">Angular</a></li>
+					<li><a href="{{ .Site.BaseURL }}/course/golang/">Golang</a></li>
+					<li><a href="{{ .Site.BaseURL }}/course/artificial-intelligence/">Artificial Intelligence</a></li>
+					<li><a href="{{ .Site.BaseURL }}/course/webdev/">Web Development</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col l3 m6 s12">
+			<div class="padded">
+				<h2>Quick Links</h2>
+				
+				<ul>
+					<li><a href="{{ .Site.BaseURL }}/search/">Search Page</a></li>
+					<li><a href="{{ .Site.BaseURL }}/about/">About</a></li>
+					<li><a href="{{ .Site.BaseURL }}/get-involved/">Get Involved</a></li>
+					<li><a href="{{ .Site.BaseURL }}/privacy/">Privacy Policy</a></li>
+				</ul>
+				<h2>Suggested Resources</h2>
+				<ul>
+					<li><a href="{{ .Site.BaseURL }}/uses/">My Hardware + Software Recording Setup </a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col l3 m12 s12 footer-special">
+			<div class="logo">
+				<a href="{{ .Site.BaseURL }}/"><img alt="tutorialedge logo" src="https://images.tutorialedge.net/images/logo.svg"/> TutorialEdge.net</a>
+			</div>
+			
+			<div class="footer-search input-group">
+				<Footer-Search/>
+			</div>
+		</div>
+	</div>
+	<div class="footer-copyright">
+		<p class="float-left">TutorialEdge © 2020 Copyright</p>
+	</div>
+</footer>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-10255990-23"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-10255990-23');
+</script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.0/anchor.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+<script src="/app/search.bundle.js"></script>
+</div>
+</body>
+</html>

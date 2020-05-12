@@ -1,76 +1,11 @@
 {{ partial "header.html" . }}
 
-<div class="blue-spacer"></div>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.32.0/codemirror.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.32.0/addon/merge/merge.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.32.0/theme/monokai.min.css" rel="stylesheet">
 
-<div class="content h-100">
-	<div id="target" class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div id="editor"></div>
-            </div>
-            <div class="col-lg-6">
-                <h2>Challenge Description</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur quisquam explicabo autem velit officia ad doloribus blanditiis excepturi amet necessitatibus, nostrum debitis eum, saepe maiores itaque cum dicta quo vitae.</p>
-                
-                <hr>
-
-                <button class="btn btn-success">Submit</button>
-                <button class="btn btn-danger">Reset</button>
-                
-                <hr/>
-
-                <div class="alert alert-success">Challenge Complete: Soluation took <b>23ms</b> to Execute</div>
-
-                <h4>Test Cases</h4>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <ul>
-                            <li>&#x2705; Test 1</li>
-                            <li>&#x2705; Test 2</li>
-                            <li>&#x2705; Test 3</li>
-                            <li>&#x2705; Test 4</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6">
-                        <ul>
-                            <li>&#x2705; Test 5</li>
-                            <li>&#x2705; Test 6</li>
-                            <li>&#x2705; Test 7</li>
-                            <li>&#x2705; Test 8</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-    </div>
+<div id="challengeApp">
+    <Challenge />
 </div>
 
-<div class="blue-spacer"></div>
-
-<style>
-.content {
-    min-height: 45vh;
-}
-
-.content h2 {
-    margin-left: 0;
-}
-
-#editor {
-    position: absolute;
-    width: 95%;
-    height: 100%;
-    font-size: 18px;
-}
-</style>
-
-<script src="https://pagecdn.io/lib/ace/1.4.8/ace.js" crossorigin="anonymous" integrity="sha256-+svOVB1WmhKhTy7N21gWvtyXn91qF0r52P2hIArRRug=" ></script>
-<script>
-    var editor = ace.edit("editor");
-    editor.setTheme("ace/theme/monokai");
-    editor.session.setMode("ace/mode/javascript");
-</script>
-
-{{ partial "footer.html" . }}
+{{ partial "footer-challenge.html" . }}

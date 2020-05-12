@@ -9,7 +9,8 @@ const optimizeBuild = isProd || isStaging;
 module.exports = {
     entry: {
         main: './app/main.js',
-        search: './app/search.js' 
+        search: './app/search.js', 
+        challenge: './app/challenge.js' 
     },
     mode: 'production',
     output: {
