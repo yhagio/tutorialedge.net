@@ -4,7 +4,7 @@ date: 2020-05-13T07:46:58+01:00
 desc: In this code snippet, we are going to look at how you can effectively cast an int in go to a float
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
-series: snippets
+series: golang
 image: golang.svg
 layout: snippets
 tags:
