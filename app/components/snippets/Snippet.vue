@@ -50,16 +50,21 @@ export default {
     methods: {
         executeCode: async function() {
             this.loading = true;
-            let response = await axios({ method: "post", 
-                    url: config.apiBase + "/v1/code", 
-                    data: this.code,
-                    headers: {
-                        "Authorization": "Bearer " + this.$auth.getAccessToken(),
-                        "Content-Type": "application/json"
-                    }
-                });
-            this.loading = false;
-            this.output = response.data;
+            try {
+                let response = await axios({ method: "post", 
+                        url: config.apiBase + "/v1/executego", 
+                        data: this.code,
+                        headers: {
+                            "Authorization": "Bearer " + this.$auth.getAccessToken(),
+                            "Content-Type": "application/json"
+                        }
+                    });
+                this.loading = false;
+                this.output = response.data;
+            } catch (e) {
+                this.loading = false;
+                this.output = e;
+            }
         }
     }
 }
