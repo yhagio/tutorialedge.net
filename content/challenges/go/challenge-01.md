@@ -10,6 +10,14 @@ tags:
   - go
 title: Challenge 01 - Getting Started with Go
 twitter: https://twitter.com/Elliot_F
+snippet: |
+  package main
+  
+  import "fmt"
+
+  func main() {
+    fmt.Println("Hello World")
+  }
 ---
 
 Welcome to the first TutorialEdge Go challenge! These challenges have been hand-crafted in order to expose fundamental Go concepts.  

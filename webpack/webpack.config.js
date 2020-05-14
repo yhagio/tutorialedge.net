@@ -9,8 +9,7 @@ const optimizeBuild = isProd || isStaging;
 module.exports = {
     entry: {
         main: './app/main.js',
-        search: './app/search.js',
-        challenge: './app/challenge.js'
+        search: './app/search.js'
     },
     mode: optimizeBuild ? 'production' : 'development',
     output: {
@@ -60,5 +59,9 @@ module.exports = {
     devtool: !optimizeBuild && ' cheap-module-eval-source-map',
     target: 'web',
     stats: 'normal',
+    watchOptions: {
+        aggregateTimeout: 200,
+        poll: 1000
+    },
     watch: true
 }

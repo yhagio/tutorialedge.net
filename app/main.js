@@ -10,8 +10,11 @@ import Logout from './components/profile/Logout.vue';
 import Forum from './components/forum/Forum.vue';
 import FooterSearch from './components/search/FooterSearch.vue';
 import Snippet from './components/snippets/Snippet.vue';
+import Challenge from './components/Challenge/Challenge.vue';
 import config from 'environment';
 import Carbon from './components/misc/Carbon.vue'
+
+import HallOfFame from './components/halloffame/HallOfFame.vue';
 
 import 'codemirror/mode/go/go.js'
 import VueCodemirror from 'vue-codemirror';
@@ -41,7 +44,9 @@ var app = new Vue({
   el: '#dynamicApp',
   components: {
     Profile,
+    Challenge,
     ProfileNavButton,
+    HallOfFame,
     Comments,
     FooterSearch,
     Redirect,
