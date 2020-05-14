@@ -8,7 +8,7 @@ series: golang
 image: golang.svg
 layout: snippets
 tags:
-- beginner
+- snippets
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 snippet: |
   package main
@@ -28,8 +28,6 @@ snippet: |
 ---
 
 In this Code Snippet, we are going to see what it takes to convert an `interface{}` to a `string`.
-
-
 
 ## Further Reading:
 
