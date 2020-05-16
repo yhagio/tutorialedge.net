@@ -4,11 +4,11 @@ date: 2020-05-13T08:27:56+01:00
 desc: In this snippet, we are going to look at how you can quickly loop over an array in Go
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
-series: snippets
+series: golang
 image: golang.svg
 layout: snippets
 tags:
-- beginner
+- snippets
 authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
 snippet: |
   package main

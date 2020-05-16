@@ -74,8 +74,6 @@ export default {
                 });
                 this.loading = false;
                 this.output = response.data.toString();
-                console.log(response);
-                console.log(response.data);
             } catch (err) {
                 this.loading = false;
                 this.output = err;
