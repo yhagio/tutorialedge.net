@@ -9,4 +9,5 @@ const config = {
     apiBase: 'https://x6prfq8k16.execute-api.eu-west-1.amazonaws.com/development'
 }
 
+
 export default config;

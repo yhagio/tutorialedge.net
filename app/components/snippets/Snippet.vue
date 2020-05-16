@@ -2,14 +2,18 @@
     <div class="snippet">
         <Loading v-if="this.loading" />
         
-        <h4>Try It Now:</h4>
-        <codemirror v-model="code" :options="cmOptions" />
+        <div class="snippet-editor">
+            <h4>Try It Now:</h4>
+            <div class="window-header">
+                <div class="action-buttons"></div>
+                <span class="language">Go</span>
+            </div>
+            <codemirror v-model="code" :options="cmOptions" />
+        </div>
 
-        <button v-on:click="executeCode" class="btn btn-primary">Run Code...</button>
-        
-        <div v-if="this.output" class="alert alert-success" role="alert">
-            <h4 class="alert-heading">Output:</h4>
-            <p class="mb-0">{{ this.output }}</p>
+        <div class="controls">
+            <button v-on:click="executeCode" class="btn btn-primary btn-execute">Submit Code</button>
+            <codemirror v-model="output" :options="terminalOptions" />
         </div>
 
         <hr>
@@ -44,6 +48,15 @@ export default {
                 theme: 'monokai',
                 lineNumbers: true,
                 line: true,
+            },
+            terminalOptions: {
+                tabSize: 4,
+                theme: 'monokai',
+                mode: 'application/html',
+                lineNumbers: false,
+                readOnly: true,
+                cursorBlinkRate: -1,
+                lineWrapping: true
             }
         }
     },
@@ -52,38 +65,20 @@ export default {
             this.loading = true;
             try {
                 let response = await axios({ method: "post", 
-                        url: config.apiBase + "/v1/executego", 
-                        data: this.code,
-                        headers: {
-                            "Authorization": "Bearer " + this.$auth.getAccessToken(),
-                            "Content-Type": "application/json"
-                        }
-                    });
+                    url: config.apiBase + "/v1/executego", 
+                    data: this.code,
+                    headers: {
+                        "Authorization": "Bearer " + this.$auth.getAccessToken(),
+                        "Content-Type": "application/json"
+                    }
+                });
                 this.loading = false;
-                this.output = response.data;
-            } catch (e) {
+                this.output = response.data.toString();
+            } catch (err) {
                 this.loading = false;
-                this.output = e;
+                this.output = err;
             }
         }
     }
 }
 </script>
-
-<style lang="scss">
-.loading {
-    z-index: 200;
-}
-.snippet {
-    padding: 40px;
-}
-.cm-s-monokai.CodeMirror {
-    background: #272822;
-    color: #f8f8f2;
-    min-height: 60vh;
-}
-
-.CodeMirror {
-    height: 600px auto;
-}
-</style>
