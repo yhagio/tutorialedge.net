@@ -10,6 +10,7 @@ import Logout from './components/profile/Logout.vue';
 import Forum from './components/forum/Forum.vue';
 import FooterSearch from './components/search/FooterSearch.vue';
 import Snippet from './components/snippets/Snippet.vue';
+import Challenge from './components/challenges/Challenge.vue';
 import config from 'environment';
 import Carbon from './components/misc/Carbon.vue'
 
@@ -49,6 +50,7 @@ var app = new Vue({
     Logout,
     Forum,
     Snippet,
+    Challenge,
     Quiz
   },
   created: function() {
