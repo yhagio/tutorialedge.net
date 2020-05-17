@@ -181,7 +181,7 @@ type Engineer struct {
     Name string
 }
 
-func (e *Engineer) Language() string {
+func (e Engineer) Language() string {
     return e.Name + " programs in Go"
 }
 
