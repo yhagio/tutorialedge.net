@@ -12,7 +12,6 @@
             <h4>{{ comment.author }} <small>{{ comment.CreatedAt | formatDate }}</small></h4>
             <span v-html="markdown(comment.body)"></span>
             <p v-if="isOwner" class="comment-controls">
-                <!-- <button class="btn btn-link btn-no-margin" v-on:click="editComment(comment)">Edit</button> |  -->
                 <button class="btn btn-link btn-no-margin" v-on:click="deleteComment(comment)">Delete</button>
             </p>
         </div>
@@ -77,26 +76,6 @@ export default {
                         "Content-Type": "application/json"
                     }
                 })
-            }
-        },
-        editComment: async function(comment) {
-            this.loading = true;
-            if (this.$auth.isAuthenticated()) {
-                try {
-                    let response = await axios({
-                        method: 'put',
-                        url: config.apiBase + "/v1/comments",
-                        data: this.comment,
-                        headers: {
-                            "Authorization": "Bearer " + this.$auth.getAccessToken(),
-                            "Content-Type": "application/json"
-                        }
-                    })
-                    this.loading = false;
-                } catch (err) {
-                    this.loading = false;
-                    this.error = err;
-                }
             }
         },
         deleteComment: async function(comment) {
