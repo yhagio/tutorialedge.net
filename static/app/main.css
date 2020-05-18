@@ -11275,8 +11275,6 @@ nav .dropdown-menu img {
   height: 37px;
   background: #384A56;
   position: relative;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
   color: white;
 }
 .window-header .action-buttons {
@@ -11316,7 +11314,10 @@ nav .dropdown-menu img {
 }
 
 .snippet {
-  padding: 40px;
+  font-size: 16px;
+  line-height: 25px;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 .snippet .snippet-editor .cm-s-monokai.CodeMirror {
   background: #272822;
@@ -11327,8 +11328,6 @@ nav .dropdown-menu img {
 .controls {
   background-color: white;
   padding: 40px;
-  margin-top: 20px;
-  border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.2) 0 4px 2px -2px;
 }
 .controls .cm-s-monokai.CodeMirror {

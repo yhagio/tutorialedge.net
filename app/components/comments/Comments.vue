@@ -10,7 +10,7 @@
           <span v-if="!this.loggedIn">
             <a v-bind:href="this.redirectTo" class="btn btn-subscribe">Become a Member</a> or <a v-bind:href="this.redirectTo">Log In</a> 
           </span>
-          <NewComment v-if="loggedIn"/>
+          <CommentEditor v-if="loggedIn"/>
           <Comment 
               v-for="(comment, index) in comments" 
               :key="index"
@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import NewComment from './NewComment.vue';
+import CommentEditor from './CommentEditor.vue';
 import Comment from './Comment.vue';
 import axios from 'axios';
 import config from 'environment'
@@ -28,7 +28,7 @@ import config from 'environment'
 export default {
     name: "Comments",
     components: {
-        NewComment: NewComment,
+        CommentEditor: CommentEditor,
         Comment: Comment
     },
     data: function () {
@@ -104,7 +104,7 @@ $border-radius: 8px;
     width: 100%;
 
     padding-top: 40px;
-    .new-comment {
+    .comment-editor {
       display: flex;
       margin-bottom: 40px;
 

@@ -3,7 +3,6 @@
         <Loading v-if="this.loading" />
         
         <div class="snippet-editor">
-            <h4>Try It Now:</h4>
             <div class="window-header">
                 <div class="action-buttons"></div>
                 <span class="language">Go</span>
