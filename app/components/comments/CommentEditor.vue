@@ -5,9 +5,9 @@
 
         <Loading v-if="this.loading" />
 
-        <div class="new-comment">
+        <div class="comment-editor">
             <div class="comment-input" id="comment-input">    
-                <textarea v-model="commentBody" placeholder="Leave a reply..."></textarea>
+                <textarea v-model="comment.body" placeholder="Leave a reply..."></textarea>
                 <br/>
                 <small>Markdown Enabled 😎</small>
                 <button id="comment" v-on:click="submitComment" class="btn btn-primary float-right">
@@ -24,13 +24,13 @@ import config from 'environment';
 import Loading from '../misc/Loading.vue';
 
 export default {
-    name: "NewComment",
+    name: "CommentEditor",
     components: {
         Loading
     },
     data: function() {
         return {
-            commentBody: "",
+            comment: {},
             user: {},
             error: '',
             loading: false
@@ -47,7 +47,7 @@ export default {
 
                 let body = JSON.stringify({
                     slug: window.location.pathname,
-                    body: this.commentBody,
+                    body: this.comment.body,
                     author: this.user.name,
                     picture: this.user.picture,
                     user: this.user,
@@ -73,7 +73,7 @@ export default {
 </script>
 
 <style lang="scss">
-.new-comment {
+.comment-editor {
     width: 100%;
     background-color: #F2F5F7;
     border-radius: 5px;
