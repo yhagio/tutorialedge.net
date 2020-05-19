@@ -5,7 +5,7 @@
         <div class="snippet-editor">
             <div class="window-header">
                 <div class="action-buttons"></div>
-                <span class="language">Go</span>
+                <span class="language">{{ this.language }}</span>
             </div>
             <codemirror v-model="code" :options="cmOptions" />
         </div>
@@ -30,7 +30,10 @@ import Loading from '../misc/Loading.vue';
 
 export default {
     name: 'Snippet',
-    props: ["code"],
+    props: [
+        "code",
+        "language"
+    ],
     components: {
         codemirror,
         Carbon,
@@ -64,7 +67,7 @@ export default {
             this.loading = true;
             try {
                 let response = await axios({ method: "post", 
-                    url: config.apiBase + "/v1/executego", 
+                    url: config.apiBase + "/v1/execute" + this.language, 
                     data: this.code,
                     headers: {
                         "Authorization": "Bearer " + this.$auth.getAccessToken(),

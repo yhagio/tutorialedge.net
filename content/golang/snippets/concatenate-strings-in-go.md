@@ -6,6 +6,7 @@ author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
 series: golang
 image: golang.svg
+language: go
 layout: snippets
 tags:
 - snippets
