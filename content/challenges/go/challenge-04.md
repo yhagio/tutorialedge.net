@@ -10,6 +10,7 @@ tags:
   - go
 title: Challenge 04 - Goroutines and WaitGroups!
 twitter: https://twitter.com/Elliot_F
+language: go
 ---
 
 In Go, `goroutines` and `WaitGroups` are without a doubt some of the best features of the language. They enable us to more easily write highly concurrent applications that are vastly more efficient and quicker than their synchronous counterparts.

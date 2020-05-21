@@ -10,6 +10,7 @@ tags:
   - go
 title: Challenge 02 - Creating a Simple HTTP Server in Go
 twitter: https://twitter.com/Elliot_F
+language: go
 ---
 
 In this challenge, you are going to be extending the application you built in the previous challenge and exposing the hardware utilization stats you collected through a HTTP endpoint. 

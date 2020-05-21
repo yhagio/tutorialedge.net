@@ -6,6 +6,7 @@ desc:
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
 weight: 6
+language: go
 series: 
   - go-challenges
 image: logo.svg

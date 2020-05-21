@@ -46,7 +46,7 @@ export default {
             loading: false,
             cmOptions: {
                 tabSize: 4,
-                mode: 'text/x-go',
+                mode: 'text/x-' + this.language,
                 theme: 'monokai',
                 lineNumbers: true,
                 line: true,
