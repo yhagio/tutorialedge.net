@@ -28,7 +28,7 @@
 
 <script>
 export default {
-    name: "Quiz",
+    name: 'Quiz',
     props: ["question", "A", "B", "C", "answer", "correct"],
     data: function() {
         return {
@@ -41,6 +41,9 @@ export default {
             correct: 'B',
             answered: false
         }
+    },
+    created: async function() {
+        console.log("Hi");
     },
     methods: {
         checkAnswer: function(answer) {
