@@ -1,82 +1,55 @@
 {{ partial "header.html" . }}
 
 <div class="top-bar">
-  <div class="container">
-    <h1>
-      {{ if .Params.image }}
-      <img
-        src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-        data-src="https://images.tutorialedge.net/images/{{ .Params.image }}"
-        alt="{{ .Title }} Image"
-      />
-      {{ else }}
-      <img
-        src="https://images.tutorialedge.net/images/logo.svg"
-        alt="{{ .Title }} Image"
-      />
-      {{ end }}
-      {{ .Title }}
-    </h1>
-  </div>
-</div>
-
-<div class="container-fluid">
-  <div class="content-container">
-    <div class="row">
-
-      <div class="d-none d-sm-none col-sm-2 d-md-block left-sidebar">
-        {{ partial "sidebar.html" . }}
-      </div>
-
-      <div class="col-sm-12 col-md-8 post-body">
-        <article class="content">
-          <div class="info">
-            <span>
-              {{ if .Params.authorImage }}
-              <img class="author" src="{{ .Params.authorImage }}" alt="{{ .Params.author }}" />
-              {{ else }}🖊️{{ end }}
-              <a href="{{.Params.twitter }}">{{ .Params.author }}</a>
-            </span>
-            <span>⏰ {{ .ReadingTime }} Minutes</span> 
-            <span>📅 {{ dateFormat "Jan 2, 2006" .Date }}</span>
-          </div> 
-
-          {{ .Content }}
-          {{ partial "register.html" . }}
-        </article>
-        <div class="comments">
-          {{ partial "comments.html" . }}
-        </div>
-      </div>
-
-      <div class="col-sm-2 col-md-2 d-none d-md-block right-sidebar">
-
-        <div class="carbon-ads">
-
-          <div class="toc">
-            <h4>Table Of Contents</h4>
-            {{.TableOfContents}}
-          </div>     
-
-          <Carbon />
-        </div>
-
-      </div>
-
+    <div class="container">
+      <h1>
+        {{ if .Params.image }}
+        <img
+          src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+          data-src="https://images.tutorialedge.net/images/{{ .Params.image }}"
+          alt="{{ .Title }} Image"
+        />
+        {{ else }}
+        <img
+          src="https://images.tutorialedge.net/images/logo.svg"
+          alt="{{ .Title }} Image"
+        />
+        {{ end }}
+        {{ .Title }}
+      </h1>
     </div>
   </div>
+
+<div class="container-fluid">
+    <div class="content-container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <Challenge language="{{ .Params.language }}" code="{{ .Params.snippet }}" />
+            </div>
+            <div class="col-lg-6 col-md-6 post-body">
+                <article class="content">
+                    {{ .Content }}
+                </article>
+            </div>
+        </div>
+    </div>
 </div>
 
-
 <script src="/js/sticky-sidebar.min.js"></script>
-
+<script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.0/anchor.min.js"></script>
 <script>
   // Add anchors on DOMContentLoaded
   document.addEventListener("DOMContentLoaded", function(event) {
-    var sidebar = new StickySidebar(".carbon-ads", { topSpacing: 10 });
+    var sidebar = new StickySidebar("#right-sidebar", { topSpacing: 10 });
+    anchors.options = {
+      visible: "always",
+      placement: "left"
+    };
+    anchors.add(
+      ".content > h1, .content > h2, .content > h3, .content > h4"
+    );
   });
 </script>
-
 
 <div class="blue-spacer"></div>
 
