@@ -10,6 +10,7 @@ tags:
   - go
 title: Challenge 03 - Improving your HTTP Server in Go
 twitter: https://twitter.com/Elliot_F
+language: go
 ---
 
 > This challenge will be to split up the new REST API application you have developed in Challenge 2 and utilize Go Modules. 

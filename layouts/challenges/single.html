@@ -24,7 +24,7 @@
     <div class="content-container">
         <div class="row">
             <div class="col-lg-6 col-md-6">
-                <Challenge language="{{ .Params.language }}" code="{{ .Params.snippet }}" />
+                <Challenge language="{{ .Params.language }}" code="{{ .Params.snippet }}" tests="{{ jsonify .Params.tests }}"/>
             </div>
             <div class="col-lg-6 col-md-6 post-body">
                 <article class="content">

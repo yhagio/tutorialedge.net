@@ -10,6 +10,34 @@ tags:
   - go
 title: Challenge 01 - Getting Started with Go
 twitter: https://twitter.com/Elliot_F
+language: go
+snippet: |
+  package main
+  
+  import "fmt"
+
+  func AddInts(a, b int) int {
+    return 0
+  }
+
+  func main() {
+    fmt.Println("Hello World")
+  }
+tests: 
+  - name: main_test
+    test: TestAddInts
+    code: |
+      package main
+
+      import "testing"
+
+      func TestAddInts(t *testing.T) {
+        expected := 2
+        result := AddInts(1, 1)
+        if expected != result {
+          t.Fail()
+        }
+      }
 ---
 
 Welcome to the first TutorialEdge Go challenge! These challenges have been hand-crafted in order to expose fundamental Go concepts.  
