@@ -15,13 +15,21 @@ snippet: |
   package main
   
   import "fmt"
-
+  
+  // AddInts is a function that takes in 2 integer
+  // values and returns the sum
   func AddInts(a, b int) int {
+    // add the code to successfully add the 2
+    // integers
     return 0
   }
 
   func main() {
-    fmt.Println("Hello World")
+    // sets result equal to the output
+    // of AddInts
+    result := AddInts(2, 3)
+    // prints the result of our add
+    fmt.Println(result)
   }
 tests: 
   - name: main_test
@@ -40,48 +48,16 @@ tests:
       }
 ---
 
-Welcome to the first TutorialEdge Go challenge! These challenges have been hand-crafted in order to expose fundamental Go concepts.  
+In this first challenge, we are going to look at modifying an incredibly simple Go application so that it passes the unit tests.
 
-These challenges have been designed to push your understanding of the language and present you with somewhat life-like scenarios.
+In the code to the left, we have 2 functions in Go. The `main` func which is the entry point for our Go application, and the `AddInts` function which takes in 2 `int` values and *should* return the sum.
 
-# Challenge Info
+# Challenge
 
-There is a huge market right now for logging and monitoring systems that allow you to track the hardware utilization of your servers so that you can preemptively scale up and down to handle variable demand on your applications. In this challenge, you will be tasked with creating a really simple command line application that will query the current utilization of your development machine. 
-
-> **Goal:** Build a command-line application in Go that queries system utilization.
-
-The application, when run, should return system utilization such as CPU utilization, RAM utilization, and Backing Store Utilization in a table format
-
-* This code will be contained within a single `main.go` file
-
-## Acceptance Criteria
-
-In order to successfully complete this challenge, your project will have to:
-
-* Collect the CPU utilization of your machine
-* Collect the RAM Utilization of your machine
-* Collect the Backing Storage Utilization of your machine
-* Display the results in a friendly fashion in the console when `go run main.go` is executed.
-
-# Key Concepts
-
-Through completing this challenge:
-
-* You will learn how to create a simple Go application and subsequently compile and run this application.
-* You will gain a basic understanding of the os package and how to import packages from the standard library into your Go applications.
-
-# Completing the Challenge
-
-In order to complete the challenge, fork the [elliotforbes/go-challenges](https://github.com/elliotforbes/go-challenges) repository into your own GitHub account. 
-
-Next, create a directory within that repo for each of the challenges you attempt! This will give you a super handy repo that will contain excellent references for your own future Go projects!
+In a quick introduction to the language, you will have to modify the code so that the `AddInts` function returns the correct value and the tests pass.
 
 ## Helpful Tutorials
   
 The following tutorials should help you to complete this challenge:
 
 * [Getting Started with Go](https://tutorialedge.net/golang/getting-started-with-go/)
-
-# Conclusion
-
-Congratulations, you have successfully completed the first TutorialEdge Go challenge!
