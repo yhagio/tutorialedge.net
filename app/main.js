@@ -2,7 +2,7 @@ import { loadDeferredImgs } from './utils/images.js'
 import { codeguard } from './utils/codeguard.js'
 
 import Comments from './components/comments/Comments.vue';
-import Quiz from './components/misc/Quiz.vue';
+import Quiz from './components/quiz/Quiz.vue';
 import Redirect from './components/profile/Redirect.vue';
 import Profile from './components/profile/Profile.vue';
 import ProfileNavButton from './components/profile/ProfileNavButton.vue';
@@ -12,6 +12,7 @@ import FooterSearch from './components/search/FooterSearch.vue';
 import Snippet from './components/snippets/Snippet.vue';
 import Challenge from './components/challenge/Challenge.vue';
 import config from 'environment';
+
 import Carbon from './components/misc/Carbon.vue'
 
 import 'codemirror/mode/go/go.js';

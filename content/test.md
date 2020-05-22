@@ -8,14 +8,8 @@ title: Get Involved
 twitter: https://twitter.com/Elliot_F
 ---
 
+
 <Quiz question="Who Is The Best #Peep?" A="Elliot" B="Nadi" C="Donna" correct="A" answer="The correct answer is A" />
-
-[test link](/test/)
-
-<div id="test" class="btn btn-primary">test tippy</div>
-
-
-![](https://images.tutorialedge.net/images/ai.webp)
 
 # Sanguine Lapithae colla latus oracula ignibus
 

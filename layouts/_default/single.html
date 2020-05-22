@@ -26,10 +26,12 @@
 
       <div class="d-none d-sm-none col-sm-2 d-md-block left-sidebar">
         {{ partial "sidebar.html" . }}
-      </div>
+      </div> <!-- left-sidebar end tag -->
 
       <div class="col-sm-12 col-md-8 post-body">
+        
         <article class="content">
+
           <div class="info">
             <span>
               {{ if .Params.authorImage }}
@@ -40,43 +42,40 @@
             <span>⏰ {{ .ReadingTime }} Minutes</span> 
             <span>📅 {{ dateFormat "Jan 2, 2006" .Date }}</span>
           </div> 
-
+          
           {{ .Content }}
-          {{ partial "register.html" . }}
+          
         </article>
+        
         <div class="comments">
+          {{ partial "register.html" . }}
           {{ partial "comments.html" . }}
-        </div>
-      </div>
+        </div> <!-- comments end tag -->
+      </div> <!-- post-body end tag-->
 
       <div class="col-sm-2 col-md-2 d-none d-md-block right-sidebar">
 
-        <div class="carbon-ads">
-
+        <div class="sticky">
           <div class="toc">
             <h4>Table Of Contents</h4>
             {{.TableOfContents}}
-          </div>     
+          </div>  <!-- toc end tag -->
 
           <Carbon />
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-</div>
+        </div> <!-- sticky sidebar end tag -->
+      </div> <!-- right-sidebar end tag -->
+    </div> <!-- row end tag -->
+  </div> <!-- content-container end tag-->
+</div> <!-- container-fluid end tag -->
 
 
 <script src="/js/sticky-sidebar.min.js"></script>
-
 <script>
   // Add anchors on DOMContentLoaded
   document.addEventListener("DOMContentLoaded", function(event) {
-    var sidebar = new StickySidebar(".carbon-ads", { topSpacing: 10 });
+    var sidebar = new StickySidebar(".sticky", { topSpacing: 10 });
   });
 </script>
-
 
 <div class="blue-spacer"></div>
 
