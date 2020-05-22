@@ -40,9 +40,9 @@ jobs:
     # Generate-cards will auto-generate the OpenGraph cards for
     # every article on the site and automatically upload these
     # to the images.tutorialedge.net CDN bucket
-    - stage: generate-cards
-      script: ./scripts/generateCards.js
-      if: branch = master
+    # - stage: generate-cards
+    #   script: ./scripts/generateCards.js
+    #   if: branch = master
 
     # Algolia-index will automatically generate a new index
     # for the site and push it to algolia every time a deployment
