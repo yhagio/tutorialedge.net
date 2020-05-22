@@ -19,17 +19,11 @@ function build() {
     yarn sass-compile
 }
 
-function deploy() {
-    echo "Starting Deployment to S3"
-
-    echo "Invalidating CloudFront cache..."
-}
 
 function main() {
     echo "Deploying..."
     setup
     build
-    deploy
     echo "Successfully Deployed Site!"
 }
 
