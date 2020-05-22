@@ -21,13 +21,27 @@ jobs:
     # Deploy will rebuild the artifacts using the 
     # for the site to the S3 bucket which is fronted by CloudFront
     - stage: deploy
-      script: ./scripts/deploy.sh
+      if: branch = master
+      deploy:
+        provider: s3
+        access_key_id: $AWS_ACCESS_KEY_ID
+        secret_access_key:
+          secure: ofq2WdkVFtijG9rfv4iXTGKsiPoaX1hRLxWExB3Pj8FK9dm10IqqeRbR042IKgd260HmtazVmsQ/BgQASY1QDZwmugC1WMSPx3WUxEwtOmI2Il1SL4yqz5GGJ9fCu3yJ9Y668Foh178Q10rd6C6qMUuhFASUPIo4ujXOdCZmN4rzwq7GK9XgRbdNvNSgXmuUbSPI5zhnVvShJJDtJgR+VCh5QXdb8Vokb0BxnaooRgHgh7JtjgT7hs31TAXZ8LmmJfXc7XFePKt8WShbNa2O2M8vyE7sFwRsMiGTNTYLO/5wo0QT/1l1Q6CdDjyiS3DUOldS1y2mbOaAgSvL9oCemMx2UYD4ucPXNekeFRrKI86jBEjKGFnOspqL8Cx5us7181JxBZW1zVoj7p2tsfzQXnvkZ7SUQ86+99sPxA4kejWl5Wlfli2aBVjx9jCxC0UO7ii97FXbPDQKSAIEk/LyRc1Rh1EKeaHt0BK+6+WNeuQNtbF+hlFDXIKX6Gsly61hZpZF1Sdt/oFehVO5hHB+jPEL4IYGt8N2rsoSoJtzVsH2lafxsFZrS0/rf4n/iAmw/hK0NJ+S1U/5YfjfEQopWBN3mUv9ACzFeSkDT6FUHkWAwbuqJSEuXiuHY3gU6UmLWK+GkQKWxfM2lnQbOJDczg0KScOi1/O8qLJrcNV1RzE=
+        bucket: tutorialedge.net
+        local-dir: public
+        skip_cleanup: true
+        region: eu-west-1
+        acl: public_read
+        on:
+          repo: elliotforbes/tutorialedge.net
+          branch: master
 
     # Generate-cards will auto-generate the OpenGraph cards for
     # every article on the site and automatically upload these
     # to the images.tutorialedge.net CDN bucket
     - stage: generate-cards
-      script: ./scripts/generate-cards.sh
+      script: ./scripts/generateCards.js
+      if: branch = master
 
     # Algolia-index will automatically generate a new index
     # for the site and push it to algolia every time a deployment
@@ -35,39 +49,5 @@ jobs:
     # searchable
     - stage: algolia-index
       script: ./scripts/algolia-index.sh
+      if: branch = master
 
-
-before_install:
-- pyenv global 3.7.1
-- pip install -U pip
-- pip install awscli
-
-
-before_script:
-- wget https://github.com/gohugoio/hugo/releases/download/v0.51/hugo_0.51_Linux-64bit.deb
-- sudo dpkg -i hugo*.deb
-- yarn install
-- yarn global add travis-ci-cloudfront-invalidation
-
-script:
-- npm rebuild node-sass
-- yarn prod-build
-- hugo --minify
-- yarn sass-compile
-
-deploy:
-  provider: s3
-  access_key_id: $AWS_ACCESS_KEY_ID
-  secret_access_key:
-    secure: ofq2WdkVFtijG9rfv4iXTGKsiPoaX1hRLxWExB3Pj8FK9dm10IqqeRbR042IKgd260HmtazVmsQ/BgQASY1QDZwmugC1WMSPx3WUxEwtOmI2Il1SL4yqz5GGJ9fCu3yJ9Y668Foh178Q10rd6C6qMUuhFASUPIo4ujXOdCZmN4rzwq7GK9XgRbdNvNSgXmuUbSPI5zhnVvShJJDtJgR+VCh5QXdb8Vokb0BxnaooRgHgh7JtjgT7hs31TAXZ8LmmJfXc7XFePKt8WShbNa2O2M8vyE7sFwRsMiGTNTYLO/5wo0QT/1l1Q6CdDjyiS3DUOldS1y2mbOaAgSvL9oCemMx2UYD4ucPXNekeFRrKI86jBEjKGFnOspqL8Cx5us7181JxBZW1zVoj7p2tsfzQXnvkZ7SUQ86+99sPxA4kejWl5Wlfli2aBVjx9jCxC0UO7ii97FXbPDQKSAIEk/LyRc1Rh1EKeaHt0BK+6+WNeuQNtbF+hlFDXIKX6Gsly61hZpZF1Sdt/oFehVO5hHB+jPEL4IYGt8N2rsoSoJtzVsH2lafxsFZrS0/rf4n/iAmw/hK0NJ+S1U/5YfjfEQopWBN3mUv9ACzFeSkDT6FUHkWAwbuqJSEuXiuHY3gU6UmLWK+GkQKWxfM2lnQbOJDczg0KScOi1/O8qLJrcNV1RzE=
-  bucket: tutorialedge.net
-  local-dir: public
-  skip_cleanup: true
-  region: eu-west-1
-  acl: public_read
-  on:
-    repo: elliotforbes/tutorialedge.net
-    branch: master
-
-after_script:
-- travis-ci-cloudfront-invalidation -a $AWS_ACCESS_KEY_ID -s $AWS_SECRET_ACCESS_KEY -c $CF_ID -i '*' -b $TRAVIS_BRANCH -p $TRAVIS_PULL_REQUEST
