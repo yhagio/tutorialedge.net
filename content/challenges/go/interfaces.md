@@ -15,15 +15,28 @@ layout: challenge
 draft: true
 snippet: |
   package main
-  
-  import "fmt"
 
-  func AddInts(a, b int) int {
-    return 0
+  type Employee interface {
+      Language() string
+      Age() int
+      Random() (string, error)
+  }
+
+  type Engineer struct {
+      Name string
+  }
+
+  func (e Engineer) Language() string {
+      return e.Name + " programs in Go"
   }
 
   func main() {
-    fmt.Println("Hello World")
+      // This will throw an error
+      var programmers []Employee
+      elliot := Engineer{Name: "Elliot"}
+      // Engineer does not implement the Employee interface
+      // you'll need to implement Age() and Random()
+      programmers = append(programmers, elliot)
   }
 tests: 
   - name: main_test
@@ -44,6 +57,12 @@ tests:
 
 In this challenge, you are going to implement the necessary methods needed to satisfy the provided Go interface.
 
-<Quiz question="Who Is The Best #Peep?" A="Elliot" B="Nadi" C="Donna" correct="A" answer="The correct answer is A" />
+On the left hand screen, you have a simple Go application that features an interface called `Employee`. 
 
-test
+In order to complete this challenge, you will have to complete the code and satisfy this interface.
+
+# Further Reading:
+
+If you like this challenge then you may also appreciate some of the following articles on the site:
+
+* [Go Interfaces Tutorial](/golang/go-interfaces-tutorial/)

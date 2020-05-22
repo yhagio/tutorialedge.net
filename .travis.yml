@@ -1,6 +1,41 @@
+#===========================================
+# The Travis-ci Pipeline for TutorialEdge.
+#===========================================
 language: node_js
 node_js: 
   - 10
+
+#===========================================
+# The Deployment Stages
+#===========================================
+jobs:
+  include:
+
+    # Run-Tests is a placeholder for now
+    # but it will eventually execute the Vue.js
+    # test suite that I am building up to ensure the
+    # site remains functional
+    - stage: run-tests
+      script: ./scripts/run-tests.sh
+
+    # Deploy will rebuild the artifacts using the 
+    # for the site to the S3 bucket which is fronted by CloudFront
+    - stage: deploy
+      script: ./scripts/deploy.sh
+
+    # Generate-cards will auto-generate the OpenGraph cards for
+    # every article on the site and automatically upload these
+    # to the images.tutorialedge.net CDN bucket
+    - stage: generate-cards
+      script: ./scripts/generate-cards.sh
+
+    # Algolia-index will automatically generate a new index
+    # for the site and push it to algolia every time a deployment
+    # is done. This is critical for new articles on the site to be 
+    # searchable
+    - stage: algolia-index
+      script: ./scripts/algolia-index.sh
+
 
 before_install:
 - pyenv global 3.7.1
