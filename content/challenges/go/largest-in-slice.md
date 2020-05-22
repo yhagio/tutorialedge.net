@@ -1,14 +1,14 @@
 ---
 author: Elliot Forbes
 date: 2019-11-24T11:05:52Z
-desc: In this Challenge, you will create your first Go application and commit it up to Github!
+desc: In this Challenge, you are going to find the minimum and maximum values from a slice in Go.
 image: golang.png
 weight: 1
 series:
   - go-challenges
 tags:
   - go
-title: Challenge - Satisfying Interfaces in Go 
+title: Challenge - Finding Minimum and Maximum
 twitter: https://twitter.com/Elliot_F
 language: go
 layout: challenge
@@ -18,6 +18,7 @@ snippet: |
   type Employee interface {
       Language() string
       Age() int
+      Random() (string, error)
   }
 
   type Engineer struct {
@@ -38,16 +39,18 @@ snippet: |
   }
 tests: 
   - name: main_test
-    test: TestInterface
+    test: TestAddInts
     code: |
       package main
 
       import "testing"
 
-      func TestInterface(t *testing.T) {
-        var employees []Employee
-        elliot := Engineer{Name: "Elliot"}
-        employees = append(employees, elliot)
+      func TestAddInts(t *testing.T) {
+        expected := 2
+        result := AddInts(1, 1)
+        if expected != result {
+          t.Fail()
+        }
       }
 ---
 
@@ -56,8 +59,6 @@ In this challenge, you are going to implement the necessary methods needed to sa
 On the left hand screen, you have a simple Go application that features an interface called `Employee`. 
 
 In order to complete this challenge, you will have to complete the code and satisfy this interface.
-
-<Quiz question="Can you implement additional methods for this interface outside of the contract?" correct="B" answer="False" A="True" B="False"/>
 
 # Further Reading:
 

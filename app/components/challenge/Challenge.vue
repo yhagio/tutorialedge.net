@@ -24,6 +24,9 @@
             <div v-if="this.response" role="alert">
                 <h4 class="alert-heading">Test Output:</h4>
                 <hr>
+                <div v-if="!this.response.built">
+                    <p class="alert alert-warning">{{ this.response.output }}</p>
+                </div>
 
                 <div v-for="test in response.tests" v-bind:key="test.name">
                     <p class="mb-0"><b>Test: </b> {{ test.name }}</p>
