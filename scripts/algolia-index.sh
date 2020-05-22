@@ -11,6 +11,7 @@ function setup() {
 
 function algolia_index() {
     echo "Running Algolia Index Job"
+    npm run algolia
 }
 
 function main() {
