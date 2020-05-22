@@ -22,6 +22,7 @@ jobs:
     # for the site to the S3 bucket which is fronted by CloudFront
     - stage: deploy
       if: branch = master
+      script: ./scripts/deploy.sh
       deploy:
         provider: s3
         access_key_id: $AWS_ACCESS_KEY_ID
