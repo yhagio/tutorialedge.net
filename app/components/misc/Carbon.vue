@@ -1,6 +1,5 @@
 <template>
     <div class="carbon-ads">
-        <script type="application/javascript" :src="this.src" :id="this.id"></script>
     </div>
 </template>
 
@@ -13,7 +12,7 @@ export default {
           src: "//cdn.carbonads.com/carbon.js?serve=CE7DT2JJ&placement=tutorialedgenet"
       }
   },
-  created: function() {
+  mounted: function() {
     this.$el.innerHTML = ''
     this.load()
   },
