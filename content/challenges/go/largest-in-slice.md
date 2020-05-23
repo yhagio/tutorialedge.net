@@ -12,6 +12,7 @@ title: Challenge - Finding Minimum and Maximum
 twitter: https://twitter.com/Elliot_F
 language: go
 layout: challenge
+draft: true
 snippet: |
   package main
 
