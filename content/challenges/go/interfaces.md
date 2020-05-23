@@ -57,7 +57,7 @@ On the left hand screen, you have a simple Go application that features an inter
 
 In order to complete this challenge, you will have to complete the code and satisfy this interface.
 
-<Quiz question="Can you implement additional methods for this interface outside of the contract?" correct="B" answer="False" A="True" B="False"/>
+<Quiz question="Can you implement additional methods for this interface outside of the contract?" correct="A" answer="True" A="True" B="False"/>
 
 # Further Reading:
 
