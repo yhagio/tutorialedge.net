@@ -89,6 +89,11 @@ In order to help you see what is going on, you have been provided a very quick p
 * [Sorting in Go with the Sort Package](/golang/go-sorting-with-sort-tutorial/)
 </details>
 
+# See the Solution
+
+Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 03 - Sort By Price](https://discuss.tutorialedge.net/t/challenge-03-sorting-by-price/20) 
+
+
 # Further Reading:
 
 If you like this challenge then you may also appreciate some of the following articles on the site:
