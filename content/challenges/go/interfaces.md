@@ -59,6 +59,10 @@ In order to complete this challenge, you will have to complete the code and sati
 
 <Quiz question="Can you implement additional methods for this interface outside of the contract?" correct="A" answer="True" A="True" B="False"/>
 
+# See the Solution
+
+Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 02 - Satisfying Interfaces](https://discuss.tutorialedge.net/t/challenge-02-satisfying-interfaces/19) 
+
 # Further Reading:
 
 If you like this challenge then you may also appreciate some of the following articles on the site:

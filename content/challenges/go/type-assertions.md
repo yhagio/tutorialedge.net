@@ -85,6 +85,10 @@ In this challenge, we are going to define a function that is called `GetDevelope
 
 Within this function, you will have to declare a new `Developer` instance and use *type assertion* to populate the values correctly before then returning this new `Developer` instance.
 
+# See the Solution
+
+Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 01 - Type Assertions](hhttps://discuss.tutorialedge.net/t/challenge-01-type-assertions/18) 
+
 ## Further Reading
 
 * [Go Interfaces Tutorial](/golang/go-interfaces-tutorial/)
