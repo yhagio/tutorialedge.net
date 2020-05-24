@@ -4,6 +4,7 @@ date: 2019-11-24T11:05:52Z
 desc: In this Challenge, you are going to be building a Go application that 
 image: golang.png
 weight: 4
+draft: true
 series:
   - go-challenges
 tags:

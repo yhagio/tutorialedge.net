@@ -4,6 +4,7 @@ date: 2019-12-02T20:31:47Z
 desc: In this tutorial, we are going to venture out from the relative safety of the Go standard library and trying our hand are pulling in external packages from github
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
+draft: true
 series: 
  - go-challenges
 weight: 5

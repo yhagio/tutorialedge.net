@@ -3,6 +3,7 @@ author: Elliot Forbes
 date: 2019-11-24T11:05:52Z
 desc: In this Challenge, you will be building a very simple Go HTTP server which will show off the stats you collect in the first Go Challenge.
 image: golang.png
+draft: true
 weight: 2
 series:
   - go-challenges
