@@ -4,6 +4,7 @@ date: 2019-11-24T11:05:52Z
 desc: In this Challenge, you are going to find the minimum and maximum values from a slice in Go.
 image: golang.png
 weight: 1
+draft: true
 series:
   - go-challenges
 tags:
