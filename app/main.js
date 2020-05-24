@@ -10,6 +10,7 @@ import Logout from './components/profile/Logout.vue';
 import Forum from './components/forum/Forum.vue';
 import FooterSearch from './components/search/FooterSearch.vue';
 import Snippet from './components/snippets/Snippet.vue';
+import ChallengeHome from './components/challenge/ChallengeHome.vue';
 import Challenge from './components/challenge/Challenge.vue';
 import config from 'environment';
 
@@ -43,6 +44,7 @@ var app = new Vue({
   el: '#dynamicApp',
   components: {
     Profile,
+    ChallengeHome,
     Challenge,
     Quiz,
     ProfileNavButton,
