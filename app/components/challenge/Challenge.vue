@@ -23,7 +23,7 @@
         
             <div v-if="this.response" role="alert">
                 <h4 class="alert-heading">Program Output:</h4>
-                <p class="output">{{ this.response.output }}</p>
+                <pre class="output">{{ this.response.output }}</pre>
                 <br/>
                 <h4>Test Results</h4>
                 <div class="output" v-for="test in response.tests" v-bind:key="test.name">
@@ -50,6 +50,7 @@
 import { codemirror } from 'vue-codemirror';
 import Carbon from '../misc/Carbon.vue';
 import axios from 'axios';
+import md from 'markdown-it';
 import config from 'environment';
 import Loading from '../misc/Loading.vue';
 
@@ -89,6 +90,11 @@ export default {
         }
     },
     methods: {
+        markdown: function(input) {
+            return md({
+                html: true
+            }).render(input)
+        },
         executeCode: async function() {
             this.loading = true;
             let request = {
