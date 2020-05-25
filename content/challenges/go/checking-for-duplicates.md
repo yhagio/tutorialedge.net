@@ -24,7 +24,7 @@ snippet: |
     Age int
   }
 
-  func FilterUnique(developers []Developer) []Developer {
+  func FilterUnique(developers []Developer) []string {
     // TODO Implement
     return nil
   }
