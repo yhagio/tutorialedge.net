@@ -267,7 +267,20 @@ So, we've added a `cb` parameter to our function. This `cb` will be called on
 Once we've made these changes, we can update our `App.js` to add this callback
 function and update our state using `setState` whenever we do get a new message.
 
-We're going to move our `connect()` call from our `constructor` into a
+
+We'll need to first define our starting `chatHistory` state within a constructor of our `App.js` file like so:
+
+```js
+// App.js
+constructor(props) {
+  super(props);
+  this.state = {
+    chatHistory: []
+  }
+}
+```
+
+Next, we're going to move our `connect()` call from our `constructor` into a
 `componentDidMount()` function which will be called automatically as part of our
 Components life-cycle.
 
