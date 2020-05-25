@@ -22,13 +22,11 @@
             <button v-on:click="executeCode" class="btn btn-primary">Run Code...</button>
         
             <div v-if="this.response" role="alert">
-                <h4 class="alert-heading">Test Output:</h4>
-                <hr>
-                <div v-if="!this.response.built">
-                    <p class="alert alert-warning">{{ this.response.output }}</p>
-                </div>
-
-                <div v-for="test in response.tests" v-bind:key="test.name">
+                <h4 class="alert-heading">Program Output:</h4>
+                <p class="output">{{ this.response.output }}</p>
+                <br/>
+                <h4>Test Results</h4>
+                <div class="output" v-for="test in response.tests" v-bind:key="test.name">
                     <p class="mb-0"><b>Test: </b> {{ test.name }}</p>
                     <p class="mb-0"><b>Passed: </b> 
                         <span v-if="test.passed">✅</span> 
@@ -133,6 +131,16 @@ export default {
   text-decoration: none;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.output {
+    margin: 0 0 5px;
+    color: #576871;
+    color: var(--color-text-dark-faded);
+    font-weight: 400;
+    font-size: 14px;
+    background-color: #F3F7F7;
+    padding: 20px;
 }
 
 </style>
