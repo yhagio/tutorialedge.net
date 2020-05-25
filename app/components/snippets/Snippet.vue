@@ -12,7 +12,8 @@
 
         <div class="controls">
             <button v-on:click="executeCode" class="btn btn-primary btn-execute">Submit Code</button>
-            <codemirror v-model="output" :options="terminalOptions" />
+            <h5>Progam Output:</h5>
+            <pre class="output">{{ this.output }}</pre>
         </div>
 
         <hr>
