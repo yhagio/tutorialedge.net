@@ -14,7 +14,7 @@
             <button v-on:click="executeCode" class="btn btn-primary btn-execute">Submit Code</button>
             <div class="output-label">
                 <h5>Progam Output:</h5>
-                <p>{{ this.output.time }}s</p>
+                <p>{{ this.output.time }}</p>
             </div>
             <pre class="output">{{ this.output.output }}</pre>
         </div>
