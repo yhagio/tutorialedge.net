@@ -375,7 +375,7 @@ This method will allow us to `pop` an element off the top of our `Items` stack a
 
 # See the Solution
 
-Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 05 - Implementing a Stack](https://discuss.tutorialedge.net/t/challenge-05-implementing-a-stack/22) 
+Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 05 - Implementing a](https://discuss.tutorialedge.net/t/challenge-05-implementing-a-stack/22) 
 
 
 ## Further Reading:

@@ -7,7 +7,8 @@ const config = {
     responseType: 'token id_token',
     scope: 'openid profile',
     // apiBase: 'https://x6prfq8k16.execute-api.eu-west-1.amazonaws.com/development'
-    apiBase: 'https://api.tutorialedge.net/api'
+    apiBase: 'https://api.tutorialedge.net/api',
+    goApiUrl: 'https://api-go.tutorialedge.net'
 }
 
 
