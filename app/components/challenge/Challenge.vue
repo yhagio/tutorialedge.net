@@ -22,7 +22,10 @@
             <button v-on:click="executeCode" class="btn btn-primary">Run Code...</button>
         
             <div v-if="this.response" role="alert">
-                <h4 class="alert-heading">Program Output:</h4>
+                <div class="output-label">
+                    <h5>Progam Output:</h5>
+                    <p>{{ this.response.time }}</p>
+                </div>
                 <pre class="output">{{ this.response.output }}</pre>
                 <br/>
                 <h4>Test Results</h4>
@@ -105,7 +108,7 @@ export default {
             try {
                 
                 let resp = await axios({ method: "post", 
-                        url: config.apiBase + "/v1/challenge" + this.language, 
+                        url: config.goApiUrl + "/challenge", 
                         data: JSON.stringify(request),
                         headers: {
                             "Authorization": "Bearer " + this.$auth.getAccessToken(),
@@ -147,6 +150,13 @@ export default {
     font-size: 14px;
     background-color: #F3F7F7;
     padding: 20px;
+}
+
+.output-label {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    font-family: monospace;
 }
 
 </style>
