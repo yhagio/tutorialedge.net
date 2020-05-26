@@ -12,8 +12,11 @@
 
         <div class="controls">
             <button v-on:click="executeCode" class="btn btn-primary btn-execute">Submit Code</button>
-            <h5>Progam Output:</h5>
-            <pre class="output">{{ this.output }}</pre>
+            <div class="output-label">
+                <h5>Progam Output:</h5>
+                <p>{{ this.output.time }}s</p>
+            </div>
+            <pre class="output">{{ this.output.output }}</pre>
         </div>
 
         <hr>
@@ -67,16 +70,21 @@ export default {
         executeCode: async function() {
             this.loading = true;
             try {
+                let req = {
+                    code: this.code
+                }
+
                 let response = await axios({ method: "post", 
-                    url: config.apiBase + "/v1/execute" + this.language, 
-                    data: this.code,
+                    // url: config.apiBase + "/v1/execute" + this.language, 
+                    url: config.goApiUrl + "/execute", 
+                    data: JSON.stringify(req),
                     headers: {
                         "Authorization": "Bearer " + this.$auth.getAccessToken(),
                         "Content-Type": "application/json"
                     }
                 });
                 this.loading = false;
-                this.output = response.data.toString();
+                this.output = response.data;
             } catch (err) {
                 this.loading = false;
                 this.output = err;
@@ -85,3 +93,13 @@ export default {
     }
 }
 </script>
+
+<style lang="scss">
+.output-label {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    font-family: monospace;
+}
+
+</style>
