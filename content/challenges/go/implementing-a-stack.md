@@ -25,21 +25,21 @@ snippet: |
     Price       int
   }
 
-  func (s Stack) Pop() Flight {
+  func (s *Stack) Pop() Flight {
     // TODO Implement
     return Flight{}
   }
 
-  func (s Stack) Push(f Flight) {
+  func (s *Stack) Push(f Flight) {
     // TODO Implement
   }
 
-  func (s Stack) Peek() Flight {
+  func (s *Stack) Peek() Flight {
     // TODO Implement
     return Flight{}
   }
 
-  func (s Stack) IsEmpty() bool {
+  func (s *Stack) IsEmpty() bool {
     return false
   }
 

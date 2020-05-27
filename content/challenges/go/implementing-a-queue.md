@@ -371,7 +371,7 @@ This method will allow us to `pop` an element off the front of our `Items` queue
 
 # See the Solution
 
-Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 06 - Implementing a Queue](https://discuss.tutorialedge.net/t/challenge-05-implementing-a-stack/22) 
+Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 06 - Implementing a Queue](https://discuss.tutorialedge.net/t/challenge-06-implementing-a-queue/23) 
 
 
 ## Further Reading:
