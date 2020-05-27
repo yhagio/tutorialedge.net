@@ -1,7 +1,7 @@
 ---
-title: "Challenge 05 - Implementing a Stack in Go"
+title: "Challenge 06 - Implementing a Queue in Go"
 date: 2020-05-25T19:47:24+01:00
-desc: In this challenge, you will be implementing some of the core functionality of the Stack data structure in Go!
+desc: In this challenge, you will be implementing some of the core functionality of the Queue data structure in Go!
 image: golang.png
 weight: 1
 series:
