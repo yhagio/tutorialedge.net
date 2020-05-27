@@ -87,7 +87,7 @@ Within this function, you will have to declare a new `Developer` instance and us
 
 # See the Solution
 
-Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 01 - Type Assertions](hhttps://discuss.tutorialedge.net/t/challenge-01-type-assertions/18) 
+Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 01 - Type Assertions](https://discuss.tutorialedge.net/t/challenge-01-type-assertions/18/2) 
 
 ## Further Reading
 
