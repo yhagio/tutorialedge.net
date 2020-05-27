@@ -17,7 +17,7 @@ snippet: |
 
   import "fmt"
 
-  type Stack struct{}
+  type Queue struct{}
 
   type Flight struct {
     Origin      string
@@ -25,26 +25,26 @@ snippet: |
     Price       int
   }
 
-  func (s Stack) Pop() Flight {
+  func (q *Queue) Pop() Flight {
     // TODO Implement
     return Flight{}
   }
 
-  func (s Stack) Push(f Flight) {
+  func (q *Queue) Push(f Flight) {
     // TODO Implement
   }
 
-  func (s Stack) Peek() Flight {
+  func (q *Queue) Peek() Flight {
     // TODO Implement
     return Flight{}
   }
 
-  func (s Stack) IsEmpty() bool {
+  func (q *Queue) IsEmpty() bool {
     return false
   }
 
   func main() {
-    fmt.Println("Go Stack Implementation")
+    fmt.Println("Go Queue Implementation")
   }
 tests:
   - name: main_test
@@ -58,7 +58,7 @@ tests:
       )
 
       func TestPop(t *testing.T) {
-        stack := Stack{
+        queue := Queue{
           Items: []Flight{
             Flight{Origin: "GLA", Destination: "NYC", Price: 2000},
             Flight{Origin: "NYC", Destination: "JFK", Price: 2000},
@@ -67,18 +67,18 @@ tests:
           },
         }
 
-        flight, err := stack.Pop()
+        flight, err := queue.Pop()
         if err != nil {
           fmt.Println("Error")
           t.Fail()
         }
 
-        if len(stack.Items) != 3 {
-          fmt.Println("Stack Length Not Updated")
+        if len(queue.Items) != 3 {
+          fmt.Println("queue Length Not Updated")
           t.Fail()
         }
 
-        if flight.Origin != "BSB" {
+        if flight.Origin != "GLA" {
           fmt.Println(flight)
           t.Fail()
         }
@@ -86,7 +86,7 @@ tests:
       }
 
       func TestPush(t *testing.T) {
-        stack := Stack{
+        queue := Queue{
           Items: []Flight{
             Flight{Origin: "GLA", Destination: "NYC", Price: 2000},
             Flight{Origin: "NYC", Destination: "JFK", Price: 2000},
@@ -95,26 +95,26 @@ tests:
           },
         }
 
-        stack.Push(Flight{Origin: "DUB", Destination: "OHA", Price: 300})
+        queue.Push(Flight{Origin: "DUB", Destination: "OHA", Price: 300})
 
-        if len(stack.Items) != 5 {
+        if len(queue.Items) != 5 {
           t.Fail()
         }
 
-        flight, err := stack.Pop()
+        flight, err := queue.Pop()
         if err != nil {
           t.Fail()
         }
 
-        if flight.Origin != "DUB" {
+        if flight.Origin != "GLA" {
           t.Fail()
         }
       }
 
       func TestIsEmpty(t *testing.T) {
-        stack := Stack{Items: []Flight{}}
+        queue := Queue{Items: []Flight{}}
         expected := true
-        result := stack.IsEmpty()
+        result := queue.IsEmpty()
         if expected != result {
           t.Fail()
         }
@@ -122,7 +122,7 @@ tests:
       }
 
       func TestPeek(t *testing.T) {
-        stack := Stack{
+        queue := Queue{
           Items: []Flight{
             Flight{Origin: "GLA", Destination: "NYC", Price: 2000},
             Flight{Origin: "NYC", Destination: "JFK", Price: 2000},
@@ -131,21 +131,20 @@ tests:
           },
         }
 
-        flight, err := stack.Peek()
+        flight, err := queue.Peek()
         if err != nil {
           fmt.Println(err)
           t.Fail()
         }
 
-        if flight.Origin != "BSB" {
+        if flight.Origin != "GLA" {
           t.Fail()
         }
 
-        if len(stack.Items) != 4 {
+        if len(queue.Items) != 4 {
           t.Fail()
         }
       }
-
   - name: main_test
     test: TestPeek
     code: |
@@ -157,7 +156,7 @@ tests:
       )
 
       func TestPop(t *testing.T) {
-        stack := Stack{
+        queue := Queue{
           Items: []Flight{
             Flight{Origin: "GLA", Destination: "NYC", Price: 2000},
             Flight{Origin: "NYC", Destination: "JFK", Price: 2000},
@@ -166,18 +165,18 @@ tests:
           },
         }
 
-        flight, err := stack.Pop()
+        flight, err := queue.Pop()
         if err != nil {
           fmt.Println("Error")
           t.Fail()
         }
 
-        if len(stack.Items) != 3 {
-          fmt.Println("Stack Length Not Updated")
+        if len(queue.Items) != 3 {
+          fmt.Println("queue Length Not Updated")
           t.Fail()
         }
 
-        if flight.Origin != "BSB" {
+        if flight.Origin != "GLA" {
           fmt.Println(flight)
           t.Fail()
         }
@@ -185,7 +184,7 @@ tests:
       }
 
       func TestPush(t *testing.T) {
-        stack := Stack{
+        queue := Queue{
           Items: []Flight{
             Flight{Origin: "GLA", Destination: "NYC", Price: 2000},
             Flight{Origin: "NYC", Destination: "JFK", Price: 2000},
@@ -194,26 +193,26 @@ tests:
           },
         }
 
-        stack.Push(Flight{Origin: "DUB", Destination: "OHA", Price: 300})
+        queue.Push(Flight{Origin: "DUB", Destination: "OHA", Price: 300})
 
-        if len(stack.Items) != 5 {
+        if len(queue.Items) != 5 {
           t.Fail()
         }
 
-        flight, err := stack.Pop()
+        flight, err := queue.Pop()
         if err != nil {
           t.Fail()
         }
 
-        if flight.Origin != "DUB" {
+        if flight.Origin != "GLA" {
           t.Fail()
         }
       }
 
       func TestIsEmpty(t *testing.T) {
-        stack := Stack{Items: []Flight{}}
+        queue := Queue{Items: []Flight{}}
         expected := true
-        result := stack.IsEmpty()
+        result := queue.IsEmpty()
         if expected != result {
           t.Fail()
         }
@@ -221,7 +220,7 @@ tests:
       }
 
       func TestPeek(t *testing.T) {
-        stack := Stack{
+        queue := Queue{
           Items: []Flight{
             Flight{Origin: "GLA", Destination: "NYC", Price: 2000},
             Flight{Origin: "NYC", Destination: "JFK", Price: 2000},
@@ -230,21 +229,20 @@ tests:
           },
         }
 
-        flight, err := stack.Peek()
+        flight, err := queue.Peek()
         if err != nil {
           fmt.Println(err)
           t.Fail()
         }
 
-        if flight.Origin != "BSB" {
+        if flight.Origin != "GLA" {
           t.Fail()
         }
 
-        if len(stack.Items) != 4 {
+        if len(queue.Items) != 4 {
           t.Fail()
         }
       }
-
 
   - name: main_test
     test: TestPush
@@ -257,7 +255,7 @@ tests:
       )
 
       func TestPop(t *testing.T) {
-        stack := Stack{
+        queue := Queue{
           Items: []Flight{
             Flight{Origin: "GLA", Destination: "NYC", Price: 2000},
             Flight{Origin: "NYC", Destination: "JFK", Price: 2000},
@@ -266,18 +264,18 @@ tests:
           },
         }
 
-        flight, err := stack.Pop()
+        flight, err := queue.Pop()
         if err != nil {
           fmt.Println("Error")
           t.Fail()
         }
 
-        if len(stack.Items) != 3 {
-          fmt.Println("Stack Length Not Updated")
+        if len(queue.Items) != 3 {
+          fmt.Println("queue Length Not Updated")
           t.Fail()
         }
 
-        if flight.Origin != "BSB" {
+        if flight.Origin != "GLA" {
           fmt.Println(flight)
           t.Fail()
         }
@@ -285,7 +283,7 @@ tests:
       }
 
       func TestPush(t *testing.T) {
-        stack := Stack{
+        queue := Queue{
           Items: []Flight{
             Flight{Origin: "GLA", Destination: "NYC", Price: 2000},
             Flight{Origin: "NYC", Destination: "JFK", Price: 2000},
@@ -294,26 +292,26 @@ tests:
           },
         }
 
-        stack.Push(Flight{Origin: "DUB", Destination: "OHA", Price: 300})
+        queue.Push(Flight{Origin: "DUB", Destination: "OHA", Price: 300})
 
-        if len(stack.Items) != 5 {
+        if len(queue.Items) != 5 {
           t.Fail()
         }
 
-        flight, err := stack.Pop()
+        flight, err := queue.Pop()
         if err != nil {
           t.Fail()
         }
 
-        if flight.Origin != "DUB" {
+        if flight.Origin != "GLA" {
           t.Fail()
         }
       }
 
       func TestIsEmpty(t *testing.T) {
-        stack := Stack{Items: []Flight{}}
+        queue := Queue{Items: []Flight{}}
         expected := true
-        result := stack.IsEmpty()
+        result := queue.IsEmpty()
         if expected != result {
           t.Fail()
         }
@@ -321,7 +319,7 @@ tests:
       }
 
       func TestPeek(t *testing.T) {
-        stack := Stack{
+        queue := Queue{
           Items: []Flight{
             Flight{Origin: "GLA", Destination: "NYC", Price: 2000},
             Flight{Origin: "NYC", Destination: "JFK", Price: 2000},
@@ -330,52 +328,50 @@ tests:
           },
         }
 
-        flight, err := stack.Peek()
+        flight, err := queue.Peek()
         if err != nil {
           fmt.Println(err)
           t.Fail()
         }
 
-        if flight.Origin != "BSB" {
+        if flight.Origin != "GLA" {
           t.Fail()
         }
 
-        if len(stack.Items) != 4 {
+        if len(queue.Items) != 4 {
           t.Fail()
         }
       }
 
 ---
 
-👋 Welcome Gophers! In this challenge, we are going to be implementing some of the basic functionality of the `Stack` data structure in Go.
+👋 Welcome Gophers! In this challenge, we are going to be implementing some of the basic functionality of the `Queue` data structure in Go.
 
 This is going to be the first of a number of data-structure questions which may come in handy if you are about to go in for an interview!
 
-We'll be carrying on the theme of flying from the previous challenge here and implementing 3 crucial methods needed to support a basic implementation of a stack. 
+We'll be carrying on the theme of flying from the previous challenge here and implementing 3 crucial methods needed to support a basic implementation of a Queue. 
 
 # Push
 
-The first challenge will be to implement the `Push` function of our Stack interface. 
+The first challenge will be to implement the `Push` function of our Queue data structure. 
 
-This method will take in a Flight and `push` the flight onto the top of our `Items` stack. 
+This method will take in a Flight and `push` the flight onto the back of our `Items` queue. 
 
 # Peek
 
 The second part of this challenge will be implementing the `Peek` function.
 
-This method will allow us to view what item is at the top of our stack but not modify the underlying stack values.
+This method will allow us to view what item is at the front of our queue but not modify the underlying stack values.
 
 # Pop
 
 The third and final part of this challenge will be implementing the `Pop` function.
 
-This method will allow us to `pop` an element off the top of our `Items` stack and return to us the top flight.
-
-<Quiz question="Pointer receivers, denoted by the (s *Stack), on our methods allow us to modify the value to which the receiver points" answer="True - not using pointer receivers here would mean that calling pop and push would not update the underlying value of the stack" correct="A" A="True " B="False" />
+This method will allow us to `pop` an element off the front of our `Items` queue and return to us the first flight.
 
 # See the Solution
 
-Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 05 - Implementing a Stack](https://discuss.tutorialedge.net/t/challenge-05-implementing-a-stack/22) 
+Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 06 - Implementing a Queue](https://discuss.tutorialedge.net/t/challenge-05-implementing-a-stack/22) 
 
 
 ## Further Reading:
