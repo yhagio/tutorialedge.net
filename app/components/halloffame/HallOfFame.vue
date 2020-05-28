@@ -30,9 +30,9 @@ export default {
     data: function() {
         return {}
     },
-    created: function() {
-        console.log("hi!")
-    }
+    // created: function() {
+    //     // console.log("hi!")
+    // }
 }
 </script>
 

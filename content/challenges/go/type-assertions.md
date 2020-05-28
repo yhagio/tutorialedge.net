@@ -8,7 +8,7 @@ series:
   - go-challenges
 tags:
   - go
-title: Challenge - Type Assertions in Go
+title: Challenge 01 - Type Assertions in Go
 twitter: https://twitter.com/Elliot_F
 language: go
 layout: challenge

@@ -3,12 +3,12 @@ author: Elliot Forbes
 date: 2019-11-24T11:05:52Z
 desc: In this Challenge, you will create your first Go application and commit it up to Github!
 image: golang.png
-weight: 1
+weight: 3
 series:
   - go-challenges
 tags:
   - go
-title: Challenge - Sorting Flights by Price
+title: Challenge 03 - Sorting Flights by Price
 twitter: https://twitter.com/Elliot_F
 language: go
 layout: challenge

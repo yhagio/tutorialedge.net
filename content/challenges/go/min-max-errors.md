@@ -3,7 +3,7 @@ author: Elliot Forbes
 date: 2019-11-24T11:05:52Z
 desc: In this Challenge, you are going to find the cheapest and most expensive flights from a list in Go 
 image: golang.png
-weight: 1
+weight: 7
 series:
   - go-challenges
 tags:
