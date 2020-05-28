@@ -89,6 +89,8 @@ Start off by building up a map of these `rune` values to the number of occurrenc
 
 </details>
 
+<Quiz question="How can we optimize this function so that it is not performing unnecessary calculations?" answer="We can implement all of the above checks to ensure that the function only does what it has to before returning the correct answer" correct="C" A="We can check the length of each string at the start of the function and return false if they differ" B="We can use maps to efficiently lookup perviously encountered characters" C="All of the Above" />
+
 # See the Solution
 
 Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 08 - Checking Permutations]() 
