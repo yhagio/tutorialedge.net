@@ -1,11 +1,11 @@
 ---
-title: "Checking for Duplicates"
+title: "Challenge 04 - Checking for Duplicates"
 date: 2020-05-24T21:23:23+01:00
 desc: In this challenge, we are going to implement a function that allows us to check and see if there are duplicates within a list in Go
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
 image: golang.png
-weight: 1
+weight: 4
 series:
   - go-challenges
 tags:
