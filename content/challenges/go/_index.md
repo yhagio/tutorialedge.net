@@ -19,15 +19,6 @@ These challenges have been designed and created to gradually build up your knowl
 
 Each challenge will feature a couple of links to tutorials which should contain everything you need in order to complete the challenge. However, if you need more help then feel free to reach out to me on twitter - [@Elliot_f](https://twitter.com/elliot_f).
 
-## Prerequisites
-
-* A Text Editor such as Visual Studio Code to write your Go applications in
-* Go Version 1.13
-* Git installed and a github account
-
-## Learning Path
-
-We'll begin by looking at the basics before moving on to more advanced topics such as concurrency with `goroutines` and `channels`. Each of these challenges will look to give 
 
 ## Feedback and Support
 
