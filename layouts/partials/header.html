@@ -29,6 +29,7 @@
 	<title>{{ .Title }} | TutorialEdge.net</title>
 	
 	<link rel="icon" type="image/png" href="https://images.tutorialedge.net/images/favicon.ico">
+	<link media="all" defer rel="stylesheet" href="{{ .Site.BaseURL }}/assets/flat-icons.css">
 	<link media="all" defer rel="stylesheet" href="{{ .Site.BaseURL }}/app/main.css">
 
 	{{ with .OutputFormats.Get "RSS" }}
@@ -36,7 +37,7 @@
 	{{- end }}
 
 	{{ .Hugo.Generator }}
-
+	<script src="https://kit.fontawesome.com/36f5cfa744.js" crossorigin="anonymous"></script>
 
 	<script src="/js/jquery-3.4.1.slim.min.js" defer></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous" defer></script>

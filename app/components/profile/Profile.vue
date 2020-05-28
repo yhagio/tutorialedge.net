@@ -17,7 +17,10 @@
             <div class="profile-container">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active" id="trophies-tab" data-toggle="tab" href="#trophies" role="tab" aria-controls="trophies" aria-selected="true">Trophies</a>
+                        <a class="nav-link active" id="Challenges-tab" data-toggle="tab" href="#Challenges" role="tab" aria-controls="Challenges" aria-selected="true">Challenges</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="trophies-tab" data-toggle="tab" href="#trophies" role="tab" aria-controls="trophies" aria-selected="true">Trophies</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="comments-tab" data-toggle="tab" href="#comments" role="tab" aria-controls="comments" aria-selected="false">Comments</a>
@@ -27,13 +30,17 @@
                     </li>
                 </ul>
                 <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="trophies" role="tabpanel" aria-labelledby="trophies-tab">
+                    <div class="tab-pane fade show active" id="Challenges" role="tabpanel" aria-labelledby="Challenges-tab">
+                        <h5>Challenges Completed</h5>
+                        <Profile-Challenges :challenges="this.profile.challenges" />
+                    </div>
+                    <div class="tab-pane fade" id="trophies" role="tabpanel" aria-labelledby="trophies-tab">
                         <h5>Achievements</h5>
                         <Profile-Achievements :achievements="this.achievements" />
                     </div>
                     <div class="tab-pane fade" id="comments" role="tabpanel" aria-labelledby="comments-tab">
                        <h5>Comments You Have Posted:</h5>
-                       <Profile-Comments :comments="this.comments" />                        
+                       <Profile-Comments :comments="this.profile.comments" />                        
                     </div>
                     <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="settings-tab">
                         <h5>Manage your Account Settings</h5>
@@ -55,6 +62,7 @@ import config from 'environment';
 import ProfileDeleteButton from './ProfileDeleteButton.vue';
 import ProfileComments from './ProfileComments.vue';
 import ProfileAchievements from './ProfileAchievements.vue';
+import ProfileChallenges from './ProfileChallenges.vue';
 import Loading from '../misc/Loading.vue';
 
 export default {
@@ -63,11 +71,16 @@ export default {
         Loading,
         ProfileDeleteButton,
         ProfileAchievements,
-        ProfileComments
+        ProfileComments,
+        ProfileChallenges
     },
     data: function() {
         return {
             user: {},
+            profile: {
+                comments: [],
+                challenges: []
+            },
             comments: [],
             loaded: false
         }
@@ -79,7 +92,7 @@ export default {
                 sub: this.user.sub
             }});
 
-            this.comments = response.data.comments;
+            this.profile = response.data;
         }
     },
     created: function() {

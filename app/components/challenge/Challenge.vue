@@ -40,6 +40,16 @@
                         <span>{{ test.output }}</span>
                     </p>
                 </div>
+
+                <hr/>
+                
+                <div v-if="this.complete" class="complete text-center">
+                    <h4>🎉 Challenge Complete! 🎉</h4>
+
+                    <p>You have been awared <b>10 challenge points!</b></p>
+
+                    <!-- <SocialShare /> -->
+                </div>
             </div>
         </div>
 
@@ -52,6 +62,7 @@
 <script>
 import { codemirror } from 'vue-codemirror';
 import Carbon from '../misc/Carbon.vue';
+import SocialShare from '../social/SocialShare.vue';
 import axios from 'axios';
 import md from 'markdown-it';
 import config from 'environment';
@@ -67,15 +78,18 @@ export default {
     components: {
         codemirror,
         Carbon,
-        Loading
+        Loading,
+        SocialShare
     },
     data () {
         return {
             loggedIn: false,
             code: "",
+            complete: false,
             output: "",
             loading: false,
             redirectTo: "",
+            user: {},
             response: {},
             cmOptions: {
                 tabSize: 4,
@@ -90,6 +104,7 @@ export default {
         this.redirectTo = "/profile/?redirectUri=" + window.location.pathname;
         if(this.$auth.isAuthenticated()) {
             this.loggedIn = true;
+            this.user = this.$auth.getUser();
         }
     },
     methods: {
@@ -97,6 +112,34 @@ export default {
             return md({
                 html: true
             }).render(input)
+        },
+        testsPassed: function(tests) {
+            if (tests === null || tests === undefined) {
+                return false
+            } else {
+                return tests.every(test => test.passed === true);
+            }
+        },
+        markChallengeComplete: async function() {
+            let challenge = JSON.stringify({
+                slug: window.location.pathname,
+                code: this.code,
+                score: 10,
+                passed: true,
+                execution_time: this.response.time,
+                user: this.user,
+                sub: this.user.sub
+            })
+
+            let response = await axios({
+                url: config.apiBase + "/v1/challenges",
+                method: "post",
+                data: challenge,
+                headers: {
+                    "Authorization": "Bearer " + this.$auth.getAccessToken(),
+                    "Content-Type": "application/json"
+                }
+            })
         },
         executeCode: async function() {
             this.loading = true;
@@ -117,6 +160,9 @@ export default {
                     });
                 this.loading = false;
                 this.response = resp.data;
+                this.complete = this.testsPassed(this.response.tests)
+
+                this.markChallengeComplete();
 
             } catch (e) {
                 this.loading = false;
@@ -158,5 +204,4 @@ export default {
     justify-content: space-between;
     font-family: monospace;
 }
-
 </style>
