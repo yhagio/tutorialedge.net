@@ -26,7 +26,13 @@
 
 <script>
 export default {
-    name: "HallOfFame"
+    name: "HallOfFame",
+    data: function() {
+        return {}
+    },
+    created: function() {
+        console.log("hi!")
+    }
 }
 </script>
 
