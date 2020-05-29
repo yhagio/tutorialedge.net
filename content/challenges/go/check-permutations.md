@@ -92,7 +92,7 @@ Start off by building up a map of these `rune` values to the number of occurrenc
 
 # See the Solution
 
-Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 08 - Checking Permutations]() 
+Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 08 - Checking Permutations](https://discuss.tutorialedge.net/t/challenge-08-checking-permutations/25/2) 
 
 ## Further Reading:
 
