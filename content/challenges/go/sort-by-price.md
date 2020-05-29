@@ -52,7 +52,6 @@ tests:
 
       import (
         "fmt"
-        "reflect"
         "testing"
       )
 
@@ -73,9 +72,17 @@ tests:
 
         result := SortByPrice(flights)
 
-        fmt.Println(reflect.DeepEqual(result, expected))
+        for i := 0; i < len(expected); i++ {
+          fmt.Println(result[i].Price)
+          fmt.Println(expected[i].Price)
+          if result[i].Price != expected[i].Price {
+            t.Fail()
+          }
+        }
 
       }
+
+
 ---
 
 In this challenge, you are going to be attempting to sort a list of `Flight`s based on their price from highest to lowest. 
