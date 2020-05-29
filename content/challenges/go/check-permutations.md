@@ -1,7 +1,6 @@
 ---
 title: "Challenge 08 - Check Permutations"
 date: 2020-05-28T21:08:18+01:00
-draft: true
 desc: In this challenge, you are going to be building a function that takes in two string values and checks to see if they are permutations of each other!
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
