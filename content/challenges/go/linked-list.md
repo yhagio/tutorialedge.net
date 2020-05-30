@@ -141,7 +141,7 @@ Doubly linked lists on the other hand have 2 pointers to both the previous `node
 
 In this challenge, you will be implementing a very simple, singly linked list that allows you to append new `string` values to the end of our linked list and ensure that you update the `Tail` and `Head` values appropriately. 
 
-<Quiz question="What is the complexity of this new Append function?" answer="O(k)" correct="B" A="O(k^2)" B="O(k)" C="O(1)" />
+<Quiz question="What is the time complexity of the most optimal solution for the Append method?" answer="O(k)" correct="B" A="O(k^2)" B="O(k)" C="O(1)" />
 
 # See the Solution
 
