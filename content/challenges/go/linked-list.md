@@ -145,7 +145,7 @@ In this challenge, you will be implementing a very simple, singly linked list th
 
 # See the Solution
 
-Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 09 - Singly Linked Lists](https://discuss.tutorialedge.net/) 
+Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 09 - Singly Linked Lists](https://discuss.tutorialedge.net/t/challenge-09-singly-linked-list/28/2) 
 
 # Further Reading:
 
