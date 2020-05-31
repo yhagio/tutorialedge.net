@@ -1,7 +1,6 @@
 ---
-title: "Go RabbitMQ Tutorial"
+title: "Go RabbitMQ Beginners Tutorial"
 date: 2020-05-25T13:24:10+01:00
-draft: true
 desc: In this tutorial, we are going to look at how you can build incredibly simple Go applications that interact with RabbitMQ.
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f

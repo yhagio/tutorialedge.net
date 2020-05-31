@@ -5,12 +5,12 @@
         <div v-if="loaded" class="profile-wrapper">
             <div class="profile">
                 <img v-bind:src="user.picture" alt="Profile Picture">
-
-                <h2>Profile: {{ this.user.name }}</h2>
+                <h2>Profile: {{ this.user.name }}
+                    <br/>
+                    <small>Score: {{ this.score }}</small>
+                </h2>
             </div> 
-
-            <div class="clear"></div>
-        
+ 
             <p><b>Privacy Policy: <a href="/privacy/">📕 Read Now</a></b></p>
             <p><b> $100 Free DigitalOcean Credit: <a href="https://m.do.co/c/b348c7113c88">🦈 Claim Now</a></b></p>
 
@@ -95,6 +95,15 @@ export default {
             this.profile = response.data;
         }
     },
+    computed: {
+        score: function() {
+            if(this.profile.challenges.length !== 0) {
+                let score = 0;
+                this.profile.challenges.forEach(challenge => score += challenge.score)
+                return score;
+            }
+        }
+    },
     created: function() {
         
         let urlParams = new URLSearchParams(window.location.search);
@@ -137,8 +146,10 @@ export default {
 
 .profile {
     display: flex;
-    h1 {
+    
+    h2 {
         margin-top: 20px;
+        margin-left: 20px;
     }
 
     img {
