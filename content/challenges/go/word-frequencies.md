@@ -20,16 +20,12 @@ snippet: |
     "strings"
   )
 
-  func CountWords(text []string) map[string]int {
+  func CountWords(text string) map[string]int {
     // Implement Me :)
-    frequency := make(map[string]int)
-    return frequency
   }
 
-  func Top5Words(map[string]int) []string {
+  func Top5Words(wordmap map[string]int) []Word {
     // Implement Me :)
-    OrderedWords := []string{}
-    return OrderedWords
   }
 
   func main() {
@@ -37,7 +33,7 @@ snippet: |
 
     text := `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`
 
-    results := CountWords(strings.Split(text, " "))
+    results := CountWords(text)
     MostCommon := Top5Words(results)
 
     fmt.Println(MostCommon)
