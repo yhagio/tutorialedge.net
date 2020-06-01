@@ -160,7 +160,7 @@ We'll be carrying on the flying theme where the function takes in a `slice` of F
 
 <details><summary>Hint</summary>
 
-You should be able to use the `reflect` package to test if individual `Flight` instances are equal to other `Flight` instances.
+There are a number of ways to solve this. You may be able to use the `reflect` package or you may be able to serialize each flight and create a hash of them which you can store in a hash.
 </details>
 
 # See the Solution
