@@ -3,12 +3,13 @@ author: Elliot Forbes
 date: 2019-11-24T11:05:52Z
 desc: In this Challenge, you will create your first Go application and commit it up to Github!
 image: golang.png
-weight: 0
+draft: true
+weight: 1
 series:
   - go-challenges
 tags:
   - go
-title: Getting Started with Go
+title: Challenge 00 - Getting Started with Go
 twitter: https://twitter.com/Elliot_F
 language: go
 snippet: |
