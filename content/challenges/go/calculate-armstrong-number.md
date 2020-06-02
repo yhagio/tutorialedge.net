@@ -98,7 +98,7 @@ tests:
 
 # See the Solution
 
-Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 11 - Armstrong Numbers](https://discuss.tutorialedge.net/t/challenge-10-word-frequencies/29) 
+Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 12 - Armstrong Numbers](https://discuss.tutorialedge.net/t/challenge-12-armstrong-numbers/32) 
 
 ## Further Reading:
 
