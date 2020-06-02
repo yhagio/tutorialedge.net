@@ -4,6 +4,7 @@ date: 2020-05-31T18:22:08+01:00
 desc: In this challenge, you will be tasked with efficiently counting the frequencies of words in Go!
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
+weight: 10
 series: 
   - go-challenges
 image: golang.svg 
