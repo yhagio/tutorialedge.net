@@ -69,7 +69,7 @@ tests:
 
 # See the Solution
 
-Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 14 - Leap Years](https://discuss.tutorialedge.net/t/challenge-13-smallest-difference/34) 
+Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 14 - Leap Years](https://discuss.tutorialedge.net/t/challenge-14-leap-years/35) 
 
 ## Further Reading:
 
