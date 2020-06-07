@@ -10,7 +10,7 @@ tags:
   - intermediate
 title: Building a Network Command Line Interface in Go
 twitter: https://twitter.com/Elliot_F
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 weight: 18
 ---
 

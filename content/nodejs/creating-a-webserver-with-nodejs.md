@@ -12,7 +12,7 @@ tags:
   - javascript
 title: Building a Webserver using ExpressJS and NodeJS
 twitter: https://twitter.com/Elliot_F
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 This is the first tutorial in a series in which we’ll be building up a website

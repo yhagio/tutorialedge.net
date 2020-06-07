@@ -10,7 +10,7 @@ tags:
   - intermediate
 title: Creating a Twitter Bot Using Python and the Twitter API
 twitter: https://twitter.com/Elliot_F
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 Twitter bots are a fantastic way to drum up a bit of interest in your brand or

@@ -10,7 +10,7 @@ tags:
   - concurrency
 title: Python Multithreading Tutorial - Concurrent Programming
 twitter: https://twitter.com/Elliot_F
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 **In this tutorial, we are going to be looking at how you you can use multithreading** within your Python applications. 

@@ -9,7 +9,7 @@ series: nodejs
 image: node.png
 tags:
 - WebSockets
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 I'm a huge fan of WebSockets and using them in both frontend and backend applications. WebSockets allow you to really easily create dynamic applications that update in real-time without a massive networking overhead.

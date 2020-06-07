@@ -13,7 +13,7 @@ tags:
 title: Part 5 - Viewing Individual News Articles
 twitter: https://twitter.com/Elliot_F
 weight: 5
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 In the previous tutorial, we looked at how we could show all of the latest

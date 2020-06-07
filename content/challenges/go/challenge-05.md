@@ -12,7 +12,7 @@ image: golang.svg
 language: go
 tags:
 - go
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 In this challenge, we are going to be venturing out of the relative safety of the Go standard library and into the big, bad world of external dependencies. 

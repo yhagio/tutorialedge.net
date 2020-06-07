@@ -10,7 +10,7 @@ series: golang
 image: golang.svg
 tags:
   - filesystem
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 Go 1.11 brought some very cool new functionality such as the experimental Go

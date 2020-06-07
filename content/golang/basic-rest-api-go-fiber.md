@@ -8,7 +8,7 @@ series: golang
 image: golang.svg
 tags:
 - intermediate
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 **Fiber** is a new Go-based web framework which has exploded onto the scene and generated **a lot** of interest from the programming community. The repository for the framework has consistently been on the [GitHub Trending](https://github.com/trending) page for the Go programming language and as such, I thought I would open up the old VS Code and try my hand at building a simple REST API.

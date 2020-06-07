@@ -8,7 +8,7 @@ series: golang
 image: golang.svg
 tags:
 - beginner
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 The structure your Go applications should follow is a somewhat contentious subject. Some people are adamant that everyone should follow the well known [golang-standards/project-layout](https://github.com/golang-standards/project-layout) structure for absolutely every project. 

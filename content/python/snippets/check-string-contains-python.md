@@ -10,7 +10,7 @@ layout: snippets
 image: python.svg
 tags:
 - snippet
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 snippet: |
   planets = "my very excellent mother just served us nine pizzas"
   is_true = "very" in planets

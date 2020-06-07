@@ -10,7 +10,7 @@ image:
 language: go
 tags:
 - golang
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 *In this code snippet* we are going to be lokoing at how you can do 

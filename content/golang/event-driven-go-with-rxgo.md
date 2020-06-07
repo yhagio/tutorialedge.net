@@ -11,7 +11,7 @@ series: golang
 image: golang.svg
 tags:
   - event-driven
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 The Event-driven programming paradigm is something that I've always thought was

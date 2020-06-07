@@ -11,7 +11,7 @@ tags:
   - concurrency
 title: Python Event-Driven Programming with RxPY - Tutorial
 twitter: https://twitter.com/Elliot_F
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 > This tutorial was built using Python 3.6

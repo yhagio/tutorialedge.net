@@ -13,7 +13,7 @@ tags:
 title: Part 4 - Calculating Euclidean Distance Between Images
 twitter: https://twitter.com/Elliot_F
 weight: 5
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 In this part of the series, we'll be taking a look at how you can use the

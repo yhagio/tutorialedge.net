@@ -8,7 +8,7 @@ series: golang
 image: golang.png
 tags:
 - tools
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 Git hooks are a pretty powerful way of improving your development workflow without having to remember to run additional scripts or perform additional tasks. In this article, we are going to be taking a look at how you can define your own simple git hooks within a project repository that can automatically perform the task of linting + formating your Go code.

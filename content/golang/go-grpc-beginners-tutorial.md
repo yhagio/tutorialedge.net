@@ -10,7 +10,7 @@ series: golang
 image: golang.svg
 tags:
   - intermediate
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 **Welcome fellow Gophers!** A lot of you have requested that I write a tutorial on the topic of gRPC and how you can write your own gRPC-based systems in Go. So, in this tutorial we'll be diving into the wonderful and exciting world of gRPC and exploring how we can leverage it for fame and fortune!

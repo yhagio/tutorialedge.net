@@ -9,7 +9,7 @@ series:
 image: 
 tags:
 - beginner
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 GitHub actions have taken the developer universe by storm since their release to general availability earlier this year. The have been huge amounts of developers choosing to utilize this new feature to help automate the tedious tasks away and ultimately save developers a heap of time.

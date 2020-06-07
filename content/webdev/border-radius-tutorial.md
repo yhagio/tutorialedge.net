@@ -10,7 +10,7 @@ tags:
   - css3
 title: CSS3 Border Radius Tutorial
 twitter: https://twitter.com/Elliot_F
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 Effective use of border-radius on some elements can remove the harshness of the
