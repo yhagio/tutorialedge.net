@@ -9,7 +9,7 @@ series: golang
 image: golang.png
 tags:
 - beginner
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 
 ---
 Sorting items to be in order is something that every programmer will undoubtedly have to do at one point in their career. There are different approaches and many different sorting algorithms available for you to choose from, but typically it is better to rely on already implemented packages to do your sorting for you.

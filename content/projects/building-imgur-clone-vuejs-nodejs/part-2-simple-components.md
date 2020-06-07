@@ -9,7 +9,7 @@ series: vuejsimgurclone
 image: vuejs.png
 tags:
 - beginner
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 In the previous part of this project series, we scaffolded the basic structure of both the frontend and the backend of our project. Once we were happy that everything was setup correctly, we then created a github repository in which our project now lives.

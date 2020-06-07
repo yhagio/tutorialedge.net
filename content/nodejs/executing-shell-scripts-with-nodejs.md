@@ -14,7 +14,7 @@ tags:
   - nodejs
 title: Executing Shell Scripts With NodeJS
 twitter: https://twitter.com/Elliot_F
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 <p>One of the problems I’ve been faced with recently is how do I go about executing shell scripts using NodeJS. This essentially allows me to query the status of certain processes and utilize the full power of the unix shell commands. </p>

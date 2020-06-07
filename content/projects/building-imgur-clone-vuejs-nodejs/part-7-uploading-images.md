@@ -9,7 +9,7 @@ series: vuejsimgurclone
 image: vuejs.png
 tags:
 - beginner
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 In the last tutorial in this series, we successfully implemented a complete login/registration flow for our application that interfaces directly with an AWS Cognito UserPool. 

@@ -9,7 +9,7 @@ series: vuejsimgurclone
 image: vuejs.png
 tags:
 - beginner
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 In this tutorial, we are going to look at building out the backend of our imgur clone and start creating a few simple AWS Lambda functions that will handle actions such as uploading and retrieving images. 

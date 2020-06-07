@@ -9,7 +9,7 @@ tags:
   - golang
 title: Part 1 - Initial Setup
 twitter: https://twitter.com/Elliot_F
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 We'll start off this course by setting up both of our projects. Once we've got

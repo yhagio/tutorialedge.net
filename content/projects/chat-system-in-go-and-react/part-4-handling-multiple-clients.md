@@ -9,7 +9,7 @@ tags:
   - golang
 title: Part 4 - Handling Multiple Clients
 twitter: https://twitter.com/Elliot_F
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 > **Note -** This post is part 4 of a series on building a chat application in

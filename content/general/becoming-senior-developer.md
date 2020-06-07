@@ -9,7 +9,7 @@ series: general
 image: logo.svg
 tags:
 - beginner
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 This past month I was fortunate enough to make the leap from junior to senior engineer with the company I currently work for and I was delighted. With this new-found fame and glory, I thought I would share some of the key learning points that I have taken away from the past few years which may help hopefully others looking to make the leap from junior to senior. 

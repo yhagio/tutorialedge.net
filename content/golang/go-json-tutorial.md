@@ -10,7 +10,7 @@ series: golang
 image: golang.svg
 tags:
   - beginner
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 Welcome fellow Gophers! In this tutorial, we are going to be taking a

@@ -8,7 +8,7 @@ series: blog
 image: logo.svg
 tags:
 - misc
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 I'm constantly getting questions on what software/plugins/hardware I use to record my YouTube videos so I thought I'd write it up in one convenient place and just link this whenever the question pops up!

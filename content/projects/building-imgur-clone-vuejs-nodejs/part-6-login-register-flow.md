@@ -9,7 +9,7 @@ series: vuejsimgurclone
 image: vuejs.png
 tags:
 - beginner
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 In the previous tutorial in this series, we looked at creating a Cognito User Pool using Terraform and creating the `cognitoAuth` class which we then hooked up to some route guards in order to protect some special areas of our application.

@@ -11,7 +11,7 @@ series: software-engineer
 image: logo.svg
 tags:
 - beginner
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 <!-- TODO: Improve this -->

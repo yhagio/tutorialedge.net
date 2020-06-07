@@ -11,7 +11,7 @@ tags:
   - express
 title: Building a RESTful API using Express and Typescript
 twitter: https://twitter.com/Elliot_F
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 In this tutorial, we are going to be building a REST API using both `express`

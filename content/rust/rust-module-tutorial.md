@@ -9,7 +9,7 @@ image: rust.svg
 weight: 2
 tags:
 - "01 - beginner"
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 Welcome Rustaceans! In this tutorial, we are going to take a look at Modules in Rust and how you can define your own simple modules.

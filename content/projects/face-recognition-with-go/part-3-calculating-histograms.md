@@ -13,7 +13,7 @@ tags:
 title: Part 3 - Generating Histograms in Go
 twitter: https://twitter.com/Elliot_F
 weight: 4
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 In the previous part of this series, we looked at how you could calculate the

@@ -8,7 +8,7 @@ series: golang
 image: golang.png
 tags:
 - Redis
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 Hi everyone, in this tutorial, we are going to be looking at how you can effectively use Redis as a backend solution for your Go applications. 

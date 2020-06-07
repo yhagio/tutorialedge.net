@@ -8,7 +8,7 @@ series: golang
 image: golang.svg
 tags:
 - beginner
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 In this tutorial, we are going to be covering pointers in Go and how you can use them within your own Go programs. We'll be covering the best practices and we'll be covering some of the most common use-cases for pointers.

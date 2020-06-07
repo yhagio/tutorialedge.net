@@ -11,7 +11,7 @@ tags:
 twitter: https://twitter.com/Elliot_F
 language: go
 layout: challenge
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 snippet: |
   package main
 

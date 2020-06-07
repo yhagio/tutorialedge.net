@@ -8,7 +8,7 @@ series: blog
 image: logo.png
 tags:
 - blog
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 2019 has been an absolutely spectacular year for myself and TutorialEdge. In a professional capacity, I feel that this year has been the most challenging and rewarding year yet. I've started working in a more dev-ops based role and I've been able to learn far more about things like low-level networking and the underlying infrastructure upon which our applications live on.

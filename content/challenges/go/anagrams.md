@@ -1,6 +1,6 @@
 ---
-title: "Python Templating Tutorial"
-date: 2020-05-19T10:40:42+01:00
+title: "Anagrams"
+date: 2020-06-05T17:44:11+01:00
 draft: true
 desc: 
 author: Elliot Forbes
@@ -12,9 +12,7 @@ tags:
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
-# Introduction
-
-# Prerequisites
+👋 Welcome Gophers! In this challenge, you are tasked with 
 
 # Conclusion
 

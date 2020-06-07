@@ -9,7 +9,7 @@ series: software-engineer
 image: logo.svg
 tags:
 - beginner
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 It cannot be understated how important source control systems are when it comes to developing software. If you are just getting started in the world of computer programming then it is absolutely crucial that you nail this fundamental skill so that you can actively contribute your own code to any projects you may become a part of.
