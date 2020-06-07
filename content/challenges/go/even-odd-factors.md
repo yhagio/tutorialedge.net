@@ -27,7 +27,10 @@ snippet: |
     fmt.Println("Odd or Even Factors")
 
     numFactors := OddEvenFactors(23)
-    fmt.Println(numFactors) // odd
+    fmt.Println(numFactors) // "even"
+
+    numFactors = OddEvenFactors(36)
+    fmt.Println(numFactors) // "odd"
   }
 tests:
   - name: main_test
