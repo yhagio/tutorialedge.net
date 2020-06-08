@@ -40,13 +40,14 @@ tests:
       import "testing"
 
       func TestFunc(t *testing.T) {
-          original := "VEZEU0ZVVFVTSk9I"
-          expected := "secretmessage"
+        original := "VEZEU0ZVVFVTSk9I"
+        expected := "SECRETSTRING"
 
-          if expected != DecodeSecret(original) {
-            t.Fail()
-          }
+        if expected != DecodeSecret(original) {
+          t.Fail()
+        }
       }
+
 ---
 
 👋 Welcome Gophers! In this challenge, you are tasked with decoding the secret message.
