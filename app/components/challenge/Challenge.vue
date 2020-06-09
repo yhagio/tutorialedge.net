@@ -21,6 +21,8 @@
 
             <button v-on:click="executeCode" class="btn btn-primary">Run Code...</button>
         
+            <p>{{ this.challenges.challenges.length }}</p>
+
             <div v-if="this.response" role="alert">
                 <div class="output-label">
                     <h5>Progam Output:</h5>
@@ -89,6 +91,7 @@ export default {
             output: "",
             loading: false,
             redirectTo: "",
+            challenges: {},
             user: {},
             response: {},
             cmOptions: {
@@ -101,6 +104,7 @@ export default {
         }
     },
     created: async function() {
+        this.getChallengeStats()
         this.redirectTo = "/profile/?redirectUri=" + window.location.pathname;
         if(this.$auth.isAuthenticated()) {
             this.loggedIn = true;
@@ -112,6 +116,18 @@ export default {
             return md({
                 html: true
             }).render(input)
+        },
+        getChallengeStats: async function() {
+            let resp = await axios({
+                url: config.apiBase + "/v1/challenges",
+                method: "get",
+                params: {
+                    slug: window.location.pathname,
+                }
+            });
+
+            this.challenges = resp.data;
+            console.log(this.challenges);
         },
         testsPassed: function(tests) {
             if (tests === null || tests === undefined) {

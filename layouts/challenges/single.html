@@ -21,18 +21,16 @@
   </div>
 
 <div class="container-fluid">
-    <div class="content-container">
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <Challenge language="{{ .Params.language }}" code="{{ .Params.snippet }}" tests="{{ jsonify .Params.tests }}"/>
-            </div>
-            <div class="col-lg-6 col-md-6 post-body">
-                <article class="content">
-                    {{ .Content }}
-                </article>
-            </div>
-        </div>
-    </div>
+      <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12">
+              <Challenge language="{{ .Params.language }}" code="{{ .Params.snippet }}" tests="{{ jsonify .Params.tests }}"/>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 post-body">
+              <article class="content">
+                  {{ .Content }}
+              </article>
+          </div>
+      </div>
 </div>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.0/anchor.min.js"></script>

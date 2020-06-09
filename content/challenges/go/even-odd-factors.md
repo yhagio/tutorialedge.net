@@ -5,6 +5,7 @@ desc: In this challenge, we are going to be implementing a function that will re
 author: Elliot Forbes
 image: golang.png
 weight: 16
+difficulty: Easy
 series:
   - go-challenges
 tags:

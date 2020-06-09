@@ -10,6 +10,7 @@ tags:
   - go
 title: Challenge 02 - Satisfying Interfaces in Go 
 twitter: https://twitter.com/Elliot_F
+difficulty: Easy
 language: go
 layout: challenge
 snippet: |

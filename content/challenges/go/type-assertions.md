@@ -12,6 +12,7 @@ title: Challenge 01 - Type Assertions in Go
 twitter: https://twitter.com/Elliot_F
 language: go
 layout: challenge
+difficulty: Easy
 snippet: |
   package main
   

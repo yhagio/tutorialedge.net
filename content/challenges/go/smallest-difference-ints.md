@@ -8,6 +8,7 @@ weight: 13
 series: 
   - go-challenges
 image: golang.svg 
+difficulty: Medium
 tags:
 - go
 language: go

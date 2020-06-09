@@ -6,6 +6,7 @@ desc:
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
 series: 
+difficulty: Easy
 image: 
 tags:
 - beginner

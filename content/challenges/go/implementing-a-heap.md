@@ -8,6 +8,7 @@ twitter: https://twitter.com/elliot_f
 series: 
   - go-challenges
 image: golang.svg
+difficulty: Medium
 tags:
   - go
 layout: challenge
