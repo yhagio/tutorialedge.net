@@ -33,13 +33,13 @@ snippet: |
   }
 tests:
   - name: main_test
-    test: TestCheckPermutations
+    test: TestDecodeSecret
     code: |
       package main
 
       import "testing"
 
-      func TestFunc(t *testing.T) {
+      func TestDecodeSecret(t *testing.T) {
         original := "VEZEU0ZVVFVTSk9I"
         expected := "SECRETSTRING"
 
