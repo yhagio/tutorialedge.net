@@ -2,9 +2,6 @@
   <br/>
   <img alt="TutorialEdge" src="https://images.tutorialedge.net/images/logo.png" />
   <h1>TutorialEdge</h1>
-  
-  <img src="https://travis-ci.org/elliotforbes/tutorialedge.net.svg?branch=master" alt="build status" />  
-  
 </div>
 
 
