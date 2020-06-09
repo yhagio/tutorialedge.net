@@ -10,6 +10,7 @@ tags:
   - go
 twitter: https://twitter.com/Elliot_F
 language: go
+difficulty: Hard
 layout: challenge
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 snippet: |

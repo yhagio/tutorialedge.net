@@ -11,6 +11,7 @@ tags:
 twitter: https://twitter.com/Elliot_F
 language: go
 layout: challenge
+difficulty: Hard
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 snippet: |
   package main

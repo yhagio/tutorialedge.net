@@ -11,6 +11,7 @@ tags:
 title: Challenge 07 - Minimums, Maximums and Errors
 twitter: https://twitter.com/Elliot_F
 language: go
+difficulty: Medium
 layout: challenge
 snippet: |
   package main

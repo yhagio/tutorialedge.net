@@ -3,12 +3,13 @@
 .top-bar {
   width: 100%;
   background-color: $top-bar-blue;
-  padding-top: 20px;
   color: #000;
   z-index: 20;
+  padding: 20px;
   text-align: center;
   box-shadow: 0 3px 8px 0 rgba(116, 129, 141, 0.1);
   border-bottom: 1px solid #d4dadf;
+  
   img {
     width: auto;
     height: 100px;
@@ -17,10 +18,9 @@
 
   h1 {
     font-size: 36px;
-    padding-top: 40px;
-    padding-bottom: 20px;
     font-weight: 500;
     line-height: 1.4;
+    background-color: $top-bar-blue;
   
   }
 }

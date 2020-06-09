@@ -5,6 +5,7 @@ desc: In this challenge, we are going to implement a function that allows us to 
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
 image: golang.png
+difficulty: Medium
 weight: 4
 series:
   - go-challenges

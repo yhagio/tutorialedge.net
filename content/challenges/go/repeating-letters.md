@@ -12,6 +12,7 @@ tags:
 - go
 language: go
 layout: challenge
+difficulty: Easy
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 snippet: |
   package main

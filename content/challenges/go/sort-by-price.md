@@ -12,6 +12,7 @@ title: Challenge 03 - Sorting Flights by Price
 twitter: https://twitter.com/Elliot_F
 language: go
 layout: challenge
+difficulty: Medium
 snippet: |
   package main
 

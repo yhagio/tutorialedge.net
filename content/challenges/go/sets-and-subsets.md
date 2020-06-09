@@ -5,6 +5,7 @@ date: 2020-06-01T19:47:02+01:00
 desc: In this challenge, you are going to be implementing a function that checks to see if a set is a sub-set.
 image: golang.svg
 weight: 11
+difficulty: Medium
 series:
   - go-challenges
 tags:

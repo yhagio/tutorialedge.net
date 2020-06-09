@@ -10,6 +10,7 @@ tags:
   - go
 language: go
 layout: challenge
+difficulty: Medium
 weight: 8
 tags:
 - beginner

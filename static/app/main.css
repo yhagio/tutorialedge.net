@@ -10224,6 +10224,7 @@ a:hover .course-progress-box {
 .blue-spacer {
   width: 100%;
   height: 120px;
+  background-image: url(/images/svg/small-dots.svg);
   background-color: #F2F5F7;
   border-top: 1px solid #e7e7ec;
 }
@@ -10403,6 +10404,7 @@ a:hover .course-progress-box {
   background-color: #f6f6f6;
   padding-top: 40px;
   padding-bottom: 40px;
+  background-image: url(/images/svg/small-dots.svg);
 }
 .course-listing .card {
   box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.1);
@@ -10456,6 +10458,8 @@ a:hover .course-progress-box {
   padding-top: 20px;
   background-color: white;
   border-radius: 8px;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.12);
+  box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.12);
   color: rgba(14, 30, 37, 0.54);
 }
 .course-listing .courses .course-listing h3 {
@@ -10480,12 +10484,56 @@ a:hover .course-progress-box {
   padding: 5px 12px;
 }
 
+.challenge-listing {
+  background-color: #f6f6f6;
+  padding: 40px;
+  background-image: url(/images/svg/small-dots.svg);
+}
+.challenge-listing h3 {
+  background-color: #f6f6f6;
+  padding: 20px;
+  width: auto;
+}
+.challenge-listing a {
+  text-decoration: none !important;
+}
+.challenge-listing .challenges {
+  display: grid;
+  grid-gap: 1px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.challenge-listing .challenges .challenge-box {
+  flex: 0 0 32%;
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.12);
+  box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.12);
+  color: rgba(14, 30, 37, 0.54);
+}
+.challenge-listing .challenges .challenge-box h2 {
+  font-size: 20px;
+}
+.challenge-listing .challenges .challenge-box h2 small {
+  font-weight: 800;
+  color: #999;
+  clear: both;
+  margin-bottom: 15px;
+}
+.challenge-listing .challenges .challenge-box p {
+  font-size: 1rem;
+}
+.challenge-listing .challenges .challenge-box button {
+  margin: 0;
+}
+
 .top-bar {
   width: 100%;
   background-color: #fafbfc;
-  padding-top: 20px;
   color: #000;
   z-index: 20;
+  padding: 20px;
   text-align: center;
   box-shadow: 0 3px 8px 0 rgba(116, 129, 141, 0.1);
   border-bottom: 1px solid #d4dadf;
@@ -10497,10 +10545,9 @@ a:hover .course-progress-box {
 }
 .top-bar h1 {
   font-size: 36px;
-  padding-top: 40px;
-  padding-bottom: 20px;
   font-weight: 500;
   line-height: 1.4;
+  background-color: #fafbfc;
 }
 
 .post-info {
@@ -10922,6 +10969,7 @@ article .github-btn {
 .courses {
   clip-path: polygon(0px 0px, 100% 40px, 100% 100%, 0px calc(100% - 72px));
   padding: 100px 0px 136px;
+  background-image: url(/images/svg/small-dots.svg);
 }
 
 nav.navbar {
