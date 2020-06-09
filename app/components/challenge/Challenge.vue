@@ -20,8 +20,6 @@
         <div v-if="this.loggedIn" class="controls">
 
             <button v-on:click="executeCode" class="btn btn-primary">Run Code...</button>
-        
-            <p>{{ this.challenges.challenges.length }}</p>
 
             <div v-if="this.response" role="alert">
                 <div class="output-label">
@@ -104,7 +102,7 @@ export default {
         }
     },
     created: async function() {
-        this.getChallengeStats()
+        // this.getChallengeStats()
         this.redirectTo = "/profile/?redirectUri=" + window.location.pathname;
         if(this.$auth.isAuthenticated()) {
             this.loggedIn = true;
@@ -127,7 +125,6 @@ export default {
             });
 
             this.challenges = resp.data;
-            console.log(this.challenges);
         },
         testsPassed: function(tests) {
             if (tests === null || tests === undefined) {
