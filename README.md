@@ -4,8 +4,11 @@
   <h1>TutorialEdge</h1>
   
   <img src="https://travis-ci.org/elliotforbes/tutorialedge.net.svg?branch=master" alt="build status" />  
+  
 </div>
 
+
+![Production Deploy](https://github.com/elliotforbes/tutorialedge.net/workflows/Production%20Deploy/badge.svg)
 
 # TutorialEdge.net Community  👩‍💻👨‍💻
 
