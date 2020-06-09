@@ -9,6 +9,7 @@
 
 
 ![Production Deploy](https://github.com/elliotforbes/tutorialedge.net/workflows/Production%20Deploy/badge.svg)
+![Algolia Index](https://github.com/elliotforbes/tutorialedge.net/workflows/Algolia%20Index/badge.svg)
 
 # TutorialEdge.net Community  👩‍💻👨‍💻
 
