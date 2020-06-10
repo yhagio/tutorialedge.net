@@ -1,5 +1,17 @@
   <template>
     <div class="container">
+      <div v-if="!this.loggedIn" class="register">
+        <div class="d-none d-md-block">
+            <img src="https://images.tutorialedge.net/images/logo.svg" alt="TutorialEdge">
+        </div>
+        <div>
+            <h2>👨‍💻 Join the TutorialEdge Clan! 👩‍💻</h2>
+            <p>Gain access to the discussion as well as new challenges and quizzes and keep-up-to date with our newsletter!</p>
+            <a href="/profile/" class="btn btn-subscribe">Register</a>
+            or
+            <a href="/profile/">Log In</a>
+        </div>
+    </div>
       <hr/>
       <div class="comments-section">
           <h2>💬  Comments Section <br/><small>Always be kind when commenting and adhere to our <a href="/code/">Code of Conduct</a></small></h2>
