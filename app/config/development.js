@@ -5,7 +5,7 @@ const config = {
     // we will use the api/v2/ to access the user information as payload
     audience: 'https://' + 'tutorialedge.eu.auth0.com' + '/api/v2/', 
     responseType: 'token id_token',
-    scope: 'openid profile',
+    scope: 'openid profile user_metadata',
     apiBase: 'https://x6prfq8k16.execute-api.eu-west-1.amazonaws.com/development',
     // apiBase: 'https://api.tutorialedge.net/api',
     goApiUrl: 'https://api-go.tutorialedge.net'
