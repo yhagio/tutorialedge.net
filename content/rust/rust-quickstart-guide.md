@@ -8,7 +8,7 @@ twitter: https://twitter.com/elliot_f
 series: rust
 image: rust-logo.png
 tags:
-- "01 - beginner"
+- beginner
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 

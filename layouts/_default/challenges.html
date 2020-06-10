@@ -14,25 +14,26 @@
 </div>
 
 <div class="challenge-listing">
-    <h3>Challenges</h3>
+		<h3>Challenges</h3>
 
-        <div class="challenges">
-            {{ range $key, $value := .Params.series }}
-            {{ range sort (index $.Site.Taxonomies.series $value) }}
-            {{ if not .Params.homepage }}
-                <a href="{{ .Permalink }}">
-                    <div class="challenge-box">
-                        <h2><small>{{ .Params.difficulty }}</small><br />{{ .Title }}</h2>
-                        <p>{{ .Page.Params.desc }}</p>
-                        <button class="btn btn-success">Attempt Challenge</button>
-                    </div>
-                </a>
-            {{ end }}
-            {{ end }}
-            {{ end }}
+            <div class="challenges">
+                {{ range $key, $value := .Params.series }}
+                {{ range sort (index $.Site.Taxonomies.series $value) }}
+                {{ if not .Params.homepage }}
+                    <a href="{{ .Permalink }}">
+                        <div class="challenge-box">
+                            <h2><small>{{ .Params.difficulty }}</small><br />{{ .Title }}</h2>
+                            <p>{{ .Page.Params.desc }}</p>
+                            <button class="btn btn-success">Attempt Challenge</button>
+                        </div>
+                    </a>
+                {{ end }}
+                {{ end }}
+                {{ end }}
 
+            </div>
         </div>
-    </div>
+	</div>
 </div>
 
 
