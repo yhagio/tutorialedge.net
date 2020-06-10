@@ -1,10 +1,7 @@
 ---
 author: Elliot Forbes
 date: 2017-04-14T20:28:13+01:00
-series: misc
 layout: simple
-tags:
-  - misc
 title: Privacy Policy
 twitter: https://twitter.com/Elliot_F
 ---

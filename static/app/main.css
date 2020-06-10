@@ -10013,14 +10013,17 @@ body {
   font-family: "proxima-nova", "proxima-nova-all", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica, helvetica neue, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
   line-height: 1.9em;
-  font-size: 18px;
+  font-size: 16px;
+  font-family: Content-font, Roboto, sans-serif;
+  font-weight: 400;
+  line-height: 1.625;
   font-family: Inter, sans-serif;
   letter-spacing: -0.014em;
   font-feature-settings: "ss03", "zero", "cv08", "cv11" 1;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #F5F7F9;
+  background: #F5F7F9;
   color: #292e31;
 }
 body h1, body h2, body h3, body h4, body h5, body h6 {
@@ -10039,10 +10042,10 @@ body h1, body h2, body h3, body h4, body h5 {
   clear: both;
 }
 body h2 {
-  font-ze: 1.65375em;
+  font-size: 20px;
 }
 body h3 {
-  font-size: 22px;
+  font-size: 18px;
 }
 body h4 {
   font-size: 18px;
@@ -10450,6 +10453,11 @@ a:hover .course-progress-box {
   margin: 0;
 }
 
+.challenge-container {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
 .challenge-listing {
   padding: 40px;
   background-image: url(/images/svg/small-dots.svg);
@@ -10491,6 +10499,48 @@ a:hover .course-progress-box {
 }
 .challenge-listing .challenges .challenge-box button {
   margin: 0;
+}
+
+.next-prev {
+  width: auto;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-areas: "previous next";
+  grid-template-columns: 1fr 1fr;
+  margin: 0px;
+  padding: 0px;
+  grid-column-gap: 24px;
+  margin-top: 40px;
+}
+.next-prev .challenge-next {
+  color: #242a31;
+  padding: 20px;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+  align-items: center;
+  justify-self: stretch;
+  flex-direction: row;
+  background-color: white;
+  -webkit-box-align: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e6ecf1;
+  border-image: initial;
+  grid-area: previous/previous/previous/previous;
+  border-radius: 3px;
+  text-decoration: none;
+  page-break-inside: avoid;
+  transition: border 250ms ease 0s;
+}
+.next-prev .challenge-next span {
+  font-size: 12px;
+  font-family: Content-font, Roboto, sans-serif;
+  font-weight: 400;
+  line-height: 1.625;
 }
 
 .top-bar {
@@ -10558,9 +10608,10 @@ a:hover .course-progress-box {
 }
 
 article {
-  font-size: 17px;
-  line-height: 1.62;
-  color: #3b454e;
+  font-size: 16px;
+  font-family: Content-font, Roboto, sans-serif;
+  font-weight: 400;
+  line-height: 1.625;
 }
 article .info {
   display: flex;
@@ -10573,9 +10624,6 @@ article .info img {
   border-radius: 100%;
   float: left;
   margin-right: 10px;
-}
-article > p {
-  padding-bottom: 24px;
 }
 article h1 {
   font-size: 1.75rem;

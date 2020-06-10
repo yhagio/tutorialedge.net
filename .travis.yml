@@ -10,14 +10,6 @@ node_js:
 #===========================================
 jobs:
   include:
-
-    # Run-Tests is a placeholder for now
-    # but it will eventually execute the Vue.js
-    # test suite that I am building up to ensure the
-    # site remains functional
-    - stage: run-tests
-      script: ./scripts/run-tests.sh
-
     # Deploy will rebuild the artifacts using the 
     # for the site to the S3 bucket which is fronted by CloudFront
     - stage: deploy

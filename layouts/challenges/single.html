@@ -21,6 +21,7 @@
   </div>
 
 <div class="container-fluid">
+  <div class="challenge-container">
       <div class="row">
           <div class="col-lg-6 col-md-6 col-sm-12">
               <Challenge language="{{ .Params.language }}" code="{{ .Params.snippet }}" tests="{{ jsonify .Params.tests }}"/>
@@ -28,9 +29,41 @@
           <div class="col-lg-6 col-md-6 col-sm-12 post-body">
               <article class="content">
                   {{ .Content }}
-              </article>
+
+                  <div class="clear"></div>
+                  
+                  <hr/>
+
+                  <h3>Other Challenges</h3>
+                  <div class="next-prev">
+                    <div>
+                      {{ with .NextInSection }}
+                      <a class="challenge-next" href="{{ .Permalink }}">
+                        
+                        <div class="float-right">
+                          <span>Previous Challenge</span>                    
+                          <h4>{{ .Title }}</h4>
+                        </div>
+                      </a>
+                      {{ end }}
+                    </div>
+                    <div>
+                      {{ with .PrevInSection }}
+                      <a class="challenge-next" href="{{ .Permalink }}">
+                        <div>
+                          <span>Next Challenge</span>                    
+                          <h4>{{ .Title }}</h4>
+                        </div>
+                        
+                      </a>
+                      {{ end }}
+                    </div>
+                  </div>
+                  
+                </article>
           </div>
       </div>
+  </div>
 </div>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.0/anchor.min.js"></script>

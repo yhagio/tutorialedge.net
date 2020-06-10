@@ -3,7 +3,7 @@ set -eoux pipefail
 
 function setup() {
     echo "Setting up Environment"
-    wget https://github.com/gohugoio/hugo/releases/download/v0.51/hugo_0.51_Linux-64bit.deb
+    wget https://github.com/gohugoio/hugo/releases/download/v0.71/hugo_0.71_Linux-64bit.deb
     sudo dpkg -i hugo*.deb
     yarn install
     yarn global add travis-ci-cloudfront-invalidation

@@ -7,7 +7,7 @@ desc:
 series: golang
 image: golang.svg
 tags:
-  - misc
+  - snippet
 title: Golang Integer String Conversion Tutorial
 twitter: https://twitter.com/Elliot_F
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg

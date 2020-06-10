@@ -245,4 +245,4 @@ This is just part 1 of my notes that I’ve taken for sitting the CKAD exam, hop
 
 We’ve covered roughly 40% of the concepts outlined within the CKAD Curriculum which is available on Github. I’m hoping to have the second part of this series done and dusted by Sunday and then the third, and final part done by Wednesday of next week, so stay tuned for more!
 
-> Note: If you want an exceptionally good resource on learning Kubernetes with a focus on the exam, I can highly recommend Matthew Palmer’s book and course which can be found here: https://matthewpalmer.net/kubernetes-app-developer/#purchase
+> 🧙 **Note:** If you want an exceptionally good resource on learning Kubernetes with a focus on the exam, I can highly recommend Matthew Palmer’s book and course which can be found here: https://matthewpalmer.net/kubernetes-app-developer/#purchase

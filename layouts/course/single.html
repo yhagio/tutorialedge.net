@@ -13,7 +13,13 @@
 	</div>
 </div>
 
-<div class="course-listing">
+<div class="course-listing">	
+
+	<h3>Hi</h3>
+	{{ range .Params.tags }}
+		{{ . }}
+	{{ end }}
+
 
 	{{ range $taxonomyname, $taxonomy := .Site.Taxonomies.tags }}
 

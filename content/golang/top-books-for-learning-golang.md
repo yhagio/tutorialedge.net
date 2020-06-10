@@ -7,7 +7,7 @@ desc:
 series: golang
 image: golang.svg
 tags:
-  - misc
+  - books
 title: The Best Books For Learning Golang
 twitter: https://twitter.com/Elliot_F
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg

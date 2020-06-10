@@ -1,10 +1,36 @@
 {{ partial "header.html" . }}
 
-<div class="title-bar">
+<div class="blue-spacer"></div>
+
+<div class="content h-100">
 	<div class="container">
+        <img src="https://images.tutorialedge.net/images/logo.png" alt="logo" />
 		<h1>404 Page Not Found</h1>
-		<p>This site has recently migrated over to a newer framework. You may be experiencing a high number of 404s in this time.</p>
+		<p>It seems as if you have hit a path that does not exist on this site!</p>
+		<p class="text-muted">If you feel as if this is an issue, then please let me know by raising on here: <a href="https://github.com/elliotforbes/tutorialedge.net">elliotforbes/tutorialedge.net</a>
+        </p>
 	</div>
 </div>
+
+<div class="blue-spacer"></div>
+
+<style>
+.content {
+    min-height: 45vh;
+    text-align: center;
+}
+
+.content img {
+    margin-top: 80px;
+}
+
+.content h1 {
+    margin: auto;
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center !important;
+}
+</style>
 
 {{ partial "footer.html" . }}

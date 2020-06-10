@@ -1,15 +1,12 @@
 ---
 author: Elliot Forbes
 date: 2017-04-14T20:28:13+01:00
-series: misc
 layout: simple
-tags:
-  - misc
 title: Code of Conduct - TutorialEdge
 twitter: https://twitter.com/Elliot_F
 ---
 
-> **Note** - TutorialEdge uses the code of conduct from the Python Software Foundation. 
+> 🧙 **Note** - TutorialEdge uses the code of conduct from the Python Software Foundation. 
 
 Members of the TutorialEdge clan are open, considerate, and respectful. Behaviours that reinforce these values contribute to a positive environment, and include:
 

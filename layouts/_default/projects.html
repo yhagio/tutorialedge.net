@@ -24,8 +24,7 @@
 		<h3>Course Lessons</h3>
 
 		<div class="row">
-			{{ range $key, $value := .Params.series }}
-			{{ range sort (index $.Site.Taxonomies.series $value) }}
+			{{ range .Pages }}
 			{{ if not .Params.homepage }}
 			<div class="col-lg-12">
 				<a href="{{ .Permalink }}">
@@ -37,7 +36,6 @@
 					</div>
 				</a>
 			</div>
-			{{ end }}
 			{{ end }}
 			{{ end }}
 
