@@ -10,15 +10,13 @@
 	<div class="container">
 		<div class="courses">
 			{{ $paginator := .Paginate .Data.Pages }} {{ range $paginator.Pages }}
-				<a class="course-progress-box" href="{{ .RelPermalink }}">
-					{{ if .Params.image }}
-					<img src="https://images.tutorialedge.net/images/{{ .Params.image }}" alt="{{ .Title }} Image">
-					{{ else }}
-					<img src="{{ .Site.BaseURL }}/images/logo.svg" alt="{{ .Title }} Image">
-					{{ end }}
-					<h2><small><b>Lesson</b> {{ .Params.Weight }}						</small><br />{{ .Title }}</h2>
+			<a href="{{ .Permalink }}">
+				<div class="course-box">
+					<h2><small>{{ .Params.difficulty }}</small><br />{{ .Title }}</h2>
+					<p>{{ .Page.Params.desc }}</p>
 					<button class="btn btn-success">Read Now</button>
-				</a>
+				</div>
+			</a>
 			{{ end }}
 		</div>
 		<div class="center-align">
