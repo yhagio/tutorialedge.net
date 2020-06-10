@@ -10024,7 +10024,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #F5F7F9;
-  color: #292e31;
+  color: #374151;
+  color: rgba(55, 65, 81, var(--text-opacity));
 }
 body h1, body h2, body h3, body h4, body h5, body h6 {
   font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
@@ -10616,6 +10617,7 @@ article {
 article .info {
   display: flex;
   justify-content: space-between;
+  margin-top: 0px;
 }
 article .info img {
   width: 25px;
@@ -10688,6 +10690,9 @@ article pre {
   overflow: auto;
   border-radius: 8px;
   margin-top: 20px;
+}
+article pre code {
+  color: white;
 }
 article .filename {
   background: #f2f6fa;
@@ -10799,7 +10804,7 @@ article .github-btn {
   outline: none;
   color: #3b454e;
   line-height: 1.9em;
-  font-size: 18px;
+  font-size: 17px;
 }
 .content p {
   margin-bottom: 24px;
@@ -11099,6 +11104,7 @@ nav .dropdown-menu img {
 }
 .course-sidebar a {
   display: block;
+  color: #3B454E;
 }
 .course-sidebar h5 {
   font-size: 18px;
@@ -11124,7 +11130,7 @@ nav .dropdown-menu img {
   color: black;
 }
 .left-sidebar .nav-item {
-  color: #7a848e;
+  color: #3B454E;
   cursor: pointer;
   display: flex;
   position: relative;
@@ -11134,10 +11140,10 @@ nav .dropdown-menu img {
   border-style: solid solid solid;
   border-color: transparent transparent transparent;
   border-image: initial;
-  padding: 4px 20px 8px 16px;
+  padding: 4px 4px 8px 16px;
   margin: 0;
   border-right: 0px;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 24px;
   text-decoration: none;
 }

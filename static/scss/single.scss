@@ -21,7 +21,6 @@
     font-weight: 500;
     line-height: 1.4;
     background-color: $top-bar-blue;
-  
   }
 }
 
@@ -69,8 +68,6 @@
   border-left: 1px solid #E6ECF1;
 }
 
-
-
 article {
   font-size: 16px;
   font-family: Content-font, Roboto, sans-serif;
@@ -80,7 +77,8 @@ article {
   .info {
     display: flex;
     justify-content: space-between;
-  
+    margin-top: 0px;
+    
     img {
       width: 25px;
       margin-top: 3px;
@@ -91,7 +89,6 @@ article {
     }
 
   }
-
 
   h1 {
     font-size: 1.75rem;
@@ -181,7 +178,6 @@ article {
     border-top-right-radius: 0px;
   }
   
-
   .highlight {
     margin-bottom: 20px;
   }
@@ -303,7 +299,7 @@ article {
   outline: none;
   color: #3b454e;
   line-height: 1.9em;
-  font-size: 18px;
+  font-size: 17px;
 
   p {
     margin-bottom: 24px;
@@ -351,7 +347,6 @@ article {
   }
 
   p code {
-
     display: inline-block;
     margin: 0;
     font-size: 1em;
@@ -360,5 +355,4 @@ article {
     font-feature-settings: "tnum" 1;
     font-family: monospace;
   }
-
 }
