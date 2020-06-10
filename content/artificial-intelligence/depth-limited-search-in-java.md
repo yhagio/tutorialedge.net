@@ -42,7 +42,6 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 > Java</a>
 
 # The Implementation:
-discord
 
 <p>Below you’ll find an implementation of a Depth-Limited search class which is built as an extension of the AbstractSearch java class.</p>
 

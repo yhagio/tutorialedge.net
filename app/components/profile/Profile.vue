@@ -10,7 +10,7 @@
                     <small>Score: {{ this.score }}</small>
                 </h2>
             </div> 
- 
+
             <p><b>Privacy Policy: <a href="/privacy/">📕 Read Now</a></b></p>
             <p><b> $100 Free DigitalOcean Credit: <a href="https://m.do.co/c/b348c7113c88">🦈 Claim Now</a></b></p>
 
