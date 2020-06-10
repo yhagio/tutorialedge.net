@@ -35,8 +35,7 @@ snippet: |
     }
 ---
 
-> In this code snippet, we are going to look at how you can efficiently concatenate strings in Go using the string.Builder type.
-
+👋 Welcome Gophers! In this code snippet, we are going to look at how you can efficiently concatenate strings in Go using the string.Builder type.
 
 <div class="filename"> $ go run main.go </div>
 
@@ -50,3 +49,4 @@ Hello World
 If you enjoyed this really quick and dirty code snippet on string concatenation in Go, you may also like these articles:
 
 * [Go Basic Types Tutorial](/golang/go-basic-types-tutorial/)
+* [Comparing Structs in Go](/golang/snippets/comparing-structs-in-go/)

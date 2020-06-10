@@ -8,7 +8,7 @@ series: rust
 image: rust.svg
 weight: 2
 tags:
-- "01 - beginner"
+- beginner
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
