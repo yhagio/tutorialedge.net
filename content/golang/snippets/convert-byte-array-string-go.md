@@ -1,5 +1,5 @@
 ---
-title: "Convert Byte Array String Go"
+title: "Converting Byte Slices to Strings in Go"
 date: 2020-06-10T08:30:28+01:00
 desc: In this article, we look at how you can convert a byte array or slice in Go to a string value.
 author: Elliot Forbes
