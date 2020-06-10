@@ -12,6 +12,9 @@ pygmentsCodeFences = true
 PygmentsStyle = "monokai"
 # pygmentsOptions = "linenos=table"
 
+[markup]
+  defaultMarkdownHandler = "blackFriday"
+
 # Used by Hugo + and as partial
 [params]
     title = "TutorialEdge.net"

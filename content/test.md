@@ -1,15 +1,40 @@
 ---
 author: Elliot Forbes
 date: 2017-04-14T20:28:13+01:00
-series: misc
-tags:
-  - misc
 title: Get Involved
 twitter: https://twitter.com/Elliot_F
 ---
 
 
 <Quiz question="Who Is The Best #Peep?" A="Elliot" B="Nadi" C="Donna" correct="A" answer="The correct answer is A" />
+
+{{% row %}}
+{{% column %}}
+```go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("hello World")
+}
+```
+{{% /column %}}
+
+{{% column %}}
+## why hello
+
+This is an example 
+{{% /column %}}
+{{% /row %}}
+
+{{<mermaid>}}
+graph TD;
+  A-->B;
+  A-->C;
+  B-->D;
+  C-->D;
+{{</mermaid>}}
 
 # Sanguine Lapithae colla latus oracula ignibus
 

@@ -45,6 +45,35 @@
           
           {{ .Content }}
           
+          <div class="clear"></div>
+                  
+          <hr/>
+          
+          <div class="next-prev">
+            <div>
+              {{ with .NextInSection }}
+              <a class="challenge-next" href="{{ .Permalink }}">
+                
+                <div class="float-right">
+                  <span>Previous Article</span>                    
+                  <h4>{{ .Title }}</h4>
+                </div>
+              </a>
+              {{ end }}
+            </div>
+            <div>
+              {{ with .PrevInSection }}
+              <a class="challenge-next" href="{{ .Permalink }}">
+                <div>
+                  <span>Next Article</span>                    
+                  <h4>{{ .Title }}</h4>
+                </div>
+                
+              </a>
+              {{ end }}
+            </div>
+          </div>
+
         </article>
         
         <div class="comments">

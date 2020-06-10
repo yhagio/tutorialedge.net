@@ -7,7 +7,7 @@ desc:
 series: golang
 image: golang.svg
 tags:
-  - misc
+  - mail
 title: Sending Email Using Go And Mailgun
 twitter: https://twitter.com/Elliot_F
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg

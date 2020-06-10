@@ -6,14 +6,12 @@ author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
 series: blog
 image: logo.svg
-tags:
-- misc
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 I'm constantly getting questions on what software/plugins/hardware I use to record my YouTube videos so I thought I'd write it up in one convenient place and just link this whenever the question pops up!
 
-> **Note** - This was inspired by Wes Bos, who I am huge fan of! This list will be a living
+> 🧙 **Note** - This was inspired by Wes Bos, who I am huge fan of! This list will be a living
 document that I will update whenever anything changes!  
 
 Here's a photo of my setup as it stands today:

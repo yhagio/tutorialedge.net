@@ -48,7 +48,7 @@ export default {
                 let body = JSON.stringify({
                     slug: window.location.pathname,
                     body: this.comment.body,
-                    author: this.user.name,
+                    author: this.user.nickname,
                     picture: this.user.picture,
                     user: this.user,
                     sub: this.user.sub,

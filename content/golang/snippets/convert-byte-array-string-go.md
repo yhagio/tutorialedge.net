@@ -8,6 +8,7 @@ series: golang
 image: golang.svg
 language: go
 layout: snippets
+tags_weight: 1
 tags:
 - snippets
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg
