@@ -44,6 +44,28 @@ jobs:
     runs-on: ubuntu-18.04
     needs: build
     steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0    
+
+      - name: Install NPM 
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.72.0'
+          
+      - name: Build
+        run: |
+          echo "Building Site"
+          npm install
+          npm run prod-build
+          hugo --minify
+          npm run sass-compile
+
       - name: Deploy
         run: |
           echo "Deploying Site"
