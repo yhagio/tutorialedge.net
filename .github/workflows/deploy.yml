@@ -6,7 +6,11 @@ on:
       - content
 
 jobs:
-  deploy:
+  #----------------------------------
+  # Build job performs the action of building and testing
+  # the site
+  #----------------------------------
+  build:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
@@ -31,7 +35,16 @@ jobs:
           hugo --minify
           npm run sass-compile
 
+  #----------------------------------
+  # Deploy job performs the action of deploying the
+  # built artefacts to the S3 bucket that hosts
+  # tutorialedge
+  #----------------------------------
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
       - name: Deploy
         run: |
           echo "Deploying Site"
           ls public
+      
