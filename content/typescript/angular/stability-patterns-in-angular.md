@@ -30,8 +30,8 @@ Angular applications, it is most frustrating for your users.
 Fortunately, there is a very simple way to prevent your user from getting
 frustrated about unresponsive APIs: timeouts. A timeout is a simple defense
 mechanism that allows your application to wait a fixed amount of time and not a
-millisecond more. Create a new project to test it out: ng new timeoutcd
-timeoutng g service API
+millisecond more. Create a new project to test it out: `ng new timeoutcd
+timeoutng g service API`
 
 This will create a new project and a service called API. In the first glance,
 there is not much to look at:
@@ -82,7 +82,7 @@ export class ApiService {
 
 Add a new method in APIService, which simply makes an http.get request to the
 GitHub repository that contains the code for this article
-(https://github.com/MathieuNls/Angular-Design-Patterns-and-Best-Practices):
+[here](https://github.com/MathieuNls/Angular-Design-Patterns-and-Best-Practices).
 
 ```ts
 import { Injectable } from "@angular/core";
@@ -507,8 +507,8 @@ Note that you have two helper functions that do not directly participate in the
 implementation of the circuit patterns, only extracting the root URL of a call
 in order to compute a shared status by root APIs. Thanks to these helper
 functions, you can
-have http://someapi.com/users and http://someapi.com/sales share
-the same status, while http://anotherapi.com/someCall has its own
+have `http://someapi.com/users` and `http://someapi.com/sales` share
+the same status, while `http://anotherapi.com/someCall` has its own
 separated ApiStatus.
 
 The timeout and the circuit breaker patterns work in parallel in order to reduce

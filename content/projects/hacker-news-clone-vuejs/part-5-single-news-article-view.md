@@ -220,7 +220,7 @@ around. Add the following CSS to the `<style scoped>` part of your `Single.vue`
 component:
 
 > These were taken from this codepen:
-> [Comments](https://codepen.io/kavendish/pen/aOdopx)! I can't take credit for
+> `https://codepen.io/kavendish/pen/aOdopx` I can't take credit for
 > making it look nice!
 
 ```css
