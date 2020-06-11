@@ -78,3 +78,20 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           DISTRIBUTION_ID: ${{ secrets.DISTRIBUTION_ID }}
+
+  #----------------------------------
+  # Validation Jobs for the site
+  #----------------------------------
+  broken_link_checker_job:
+    runs-on: ubuntu-latest
+    name: Check for broken links
+    steps:
+    - name: Check for broken links
+      id: link-report
+      uses: celinekurpershoek/github-actions-link-checker@{version}
+      with:
+        url: 'https://tutorialedge.net'
+        honorRobotExclusions: false
+        ignorePatterns: 'github,google'
+    - name: Get the result
+      run: echo "${{steps.link-report.outputs.result}}"

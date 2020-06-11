@@ -1,0 +1,9 @@
+name: Algolia Index
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  
