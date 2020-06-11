@@ -30,3 +30,8 @@ jobs:
           npm run prod-build
           hugo --minify
           npm run sass-compile
+
+      - name: Deploy
+        run: |
+          echo "Deploying Site"
+          ls public
