@@ -92,6 +92,6 @@ jobs:
       with:
         url: 'https://tutorialedge.net'
         honorRobotExclusions: false
-        ignorePatterns: 'github,google'
+        ignorePatterns: 'github,google,youtube'
     - name: Get the result
       run: echo "${{steps.link-report.outputs.result}}"
