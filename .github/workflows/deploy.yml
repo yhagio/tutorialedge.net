@@ -28,6 +28,7 @@ jobs:
           hugo-version: '0.72.0'
           
       - name: Build
+        timeout-minutes: 10
         run: |
           echo "Building Site"
           npm install
@@ -40,6 +41,7 @@ jobs:
         with:
           name: website
           path: public/
+
   #----------------------------------
   # Deploy job performs the action of deploying the
   # built artefacts to the S3 bucket that hosts
