@@ -1,4 +1,4 @@
-name: Production Deploy
+name: Broken Link Checker
 
 on:
   push:
