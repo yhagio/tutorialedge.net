@@ -52,7 +52,7 @@ face_locations = face_recognition.face_locations(image)
 print("I found {} face(s) in this photograph.".format(len(face_locations)))
 ```
 
-![stock photo](/images/stock_people.jpg)
+![stock photo](https://images.tutorialedge.net/images/stock_people.jpg)
 
 If I were to run this against the image above I would get the following output:
 
