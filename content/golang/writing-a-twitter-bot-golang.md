@@ -15,7 +15,7 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 In this tutorial I’m going to be demonstrating how to build a twitter bot using
-<a href="https://github.com/dghubble/go-twitter">go-twitter</a>, a popular Go
+[go-twitter](https://github.com/dghubble/go-twitter), a popular Go
 client library for the Twitter API.
 
 I’ll be demonstrating how you can build a go based twitter bot that will be able

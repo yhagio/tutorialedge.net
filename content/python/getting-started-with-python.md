@@ -30,7 +30,7 @@ language you’ll first need to install the latest version of Python onto your
 local development machine. For the purpose of this video series we shall be
 using version 3.6.2.
 
-Navigate to the downloads page of [www.python.org](www.python.org) and download
+Navigate to the downloads page of [www.python.org](https://www.python.org) and download
 the appropriate version now.
 
 Once you’ve successfully installed Python you should then be able to call
