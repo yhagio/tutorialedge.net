@@ -10,7 +10,7 @@ series: rust
 image: rust-logo.png
 tags:
   - beginner
-authorImage: https://tutorialedge.net/images/logo.svg
+authorImage: https://tutorialedge.net/images/logo.png
 ---
 
 In Rust, every data value has a single owning scope—no more, no less. So, what's

@@ -40,7 +40,7 @@ get started writing our twitter bot!
 
 # Connecting to Twitter
 
-<p>Just like with the <a href="/python/creating-twitter-bot-python/">Python version of this tutorial</a>, you’ll have to create an app in twitter’s <a href=”https://apps.twitter.com/”>app control panel</a>. Once you’ve created a new application, it should present you with all the secret tokens and keys that you need in order to proceed.</p>
+Just like with the [Python version of this tutorial](/python/creating-twitter-bot-python/), you’ll have to create an app in twitter’s [app control panel](https://apps.twitter.com/). Once you’ve created a new application, it should present you with all the secret tokens and keys that you need in order to proceed.
 
 # Environment Variables
 

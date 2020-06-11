@@ -16,9 +16,8 @@ In this tutorial we’ll be looking at how we can store or pass information
 between routes in an AngularJS application. This can be useful in a number of
 different applications and is actually quite simple.
 
-<div class="github-link">
-This tutorial will be using the code from this github repo: <a href="https://github.com/elliotforbes/angularjs-fundamentals">AngularJS Fundamentals</a>
-</div>
+> This tutorial will be using the code from this github repo: [AngularJS Fundamentals](https://github.com/elliotforbes/angularjs-fundamentals)
+
 
 If you want to see a working example of this then simply clone the repo to your
 local machine and run it. I typically use the npm module: live-server in order
@@ -36,7 +35,7 @@ As a means of an example we’ll be creating 2 components, a 'route1' component
 and a 'route2' component. On each page we'll then have an input field in which
 you can enter anything you wish and a button to press in order to 'push'
 whatever is in that input field to our storage service. These can be accessed by
-going to http://app:port/#/route1 and http://app:port/#/route2 respectively.
+going to `http://app:port/#/route1` and `http://app:port/#/route2` respectively.
 
 ## Our Storage Service
 

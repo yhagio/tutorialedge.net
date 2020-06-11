@@ -237,7 +237,7 @@ file permissions.
 ## Further Reading:
 
 - [Parsing JSON Files with Go](/golang/parsing-json-with-golang/)
-- [Parsing XML Files with Go](/golang/parsing-xml-with-goland/)
+- [Parsing XML Files with Go](/golang/parsing-xml-with-golang/)
 
 Hopefully you found this tutorial useful, if you did, or if you require further
 help, then please do not hesitate to let me know in the comments section below!

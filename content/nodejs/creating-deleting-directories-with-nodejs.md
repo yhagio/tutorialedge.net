@@ -34,8 +34,7 @@ node_modules directory within your current directory. Once this has completed we
 can then start using this new package.
 
 If you wish to read up more about this package you check it’s code out here:
-<a href=”https://github.com/substack/node-mkdirp” target=”_blank”>mkdirp
-github</a>
+[substack/node-mkdirp](https://github.com/substack/node-mkdirp)
 
 <h5>The Code</h5>
 
@@ -66,7 +65,7 @@ npm install rimraf --local
 ```
 
 Again, if you want to see the code for this package you can do so
-<a href=”https://github.com/isaacs/rimraf” target=”_blank”>here</a>
+[isaacs/rimraf](https://github.com/isaacs/rimraf”)
 
 # The Code
 

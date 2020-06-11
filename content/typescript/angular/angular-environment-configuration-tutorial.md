@@ -15,7 +15,7 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 
 > This Tutorial is part of the Angular Fundamentals course which can be found
 > here:
-> [Angular Fundamentals](https://tutorialedge.net/course/angular-2-fundamentals)
+> [Angular Fundamentals](https://tutorialedge.net/course/angular/)
 
 If you are developing serious applications there is a very good chance that you
 will have more than one environment. You’ll have at least one testing
