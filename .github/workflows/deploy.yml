@@ -34,7 +34,6 @@ jobs:
           npm install
           npm run prod-build
           hugo --minify
-          npm run sass-compile
       
       - name: Upload Deployment artefacts
         uses: actions/upload-artifact@v1
