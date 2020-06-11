@@ -78,9 +78,9 @@ example<script>alert('Tacos!');</script>@domain.com
 
 By reading the input above, we can tell straight away that this is certainly not an email address and also that it is attempting to deliver a script payload via the data. But, this appreciation comes from our visual interpretation. 
 
-From a coding perspective, data sanitization should be implemented by applying the following premise: what is allowed? This is also known as **whitelisting**. This approach is recommended over the premise for **blacklisting**: what isn't allowed? The reason is simple: you have a known finite set of possibilities for what is allowed as opposed to what isn't.
+From a coding perspective, data sanitization should be implemented by applying the following premise: what is allowed? This is also known as **allow-listing**. This approach is recommended over the premise for **block-listing**: what isn't allowed? The reason is simple: you have a known finite set of possibilities for what is allowed as opposed to what isn't.
 
-Probably the most efficient way to implement whitelisting in any coding language is using [regex](https://en.wikipedia.org/wiki/Regular_expression).
+Probably the most efficient way to implement allow-listing in any coding language is using [regex](https://en.wikipedia.org/wiki/Regular_expression).
 
 Golang regex example:
 

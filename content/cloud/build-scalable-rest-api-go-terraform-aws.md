@@ -145,7 +145,7 @@ Using this approach, any instances created by our auto-scaling group will automa
 
 # Provisioning an Elastic Load Balancer
 
-In order to provision an Elastic Load Balancer (ELB) to automatically distributes incoming traffic across multiple targets, we'll first need to create a security group resource and specify both ingress and egress rules that will whitelist the IP addresses and ports of incoming and outgoing traffic.
+In order to provision an Elastic Load Balancer (ELB) to automatically distributes incoming traffic across multiple targets, we'll first need to create a security group resource and specify both ingress and egress rules that will add the IP addresses and ports of incoming and outgoing traffic to the allowlist.
 
 ```js
 resource "aws_autoscaling_group" "example" {
