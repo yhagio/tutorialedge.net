@@ -57,8 +57,3 @@ nail the fundamentals and get up and running quickly!
 
 <div class="amazon-link">Buy Now: <a href="https://amzn.to/2MbLpPg">Vue.js 2 Design Patterns and Best Practices</a></div>
 
-> If you liked this article then you may also like:
-> [The Best Books for Learning Laravel](/php/laravel/best-books-learning-laravel/)
-
-
-<!-- TODO: Add 2 More Books -->

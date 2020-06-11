@@ -65,7 +65,7 @@ npm install rimraf --local
 ```
 
 Again, if you want to see the code for this package you can do so
-[isaacs/rimraf](https://github.com/isaacs/rimraf”)
+[isaacs/rimraf](https://github.com/isaacs/rimraf)
 
 # The Code
 

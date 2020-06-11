@@ -36,26 +36,6 @@ graph TD;
   C-->D;
 {{</mermaid>}}
 
-# Sanguine Lapithae colla latus oracula ignibus
-
-Lorem `markdownum` coniugium _levati sustollit tamen_ iuvenem,
-[ignis aut paene](http://www.felix-nec.net/undasmihi.html) quem per lacesse inde
-mihi: mea. Natalis [aura](http://sociorum.io/gementissolutis.aspx), et undas
-[hoc uberrima](http://ferre.net/arasfessus.html). Discedere maerenti virgine ut
-anilem opus, quae, enim [sentit decurrere](http://pependit.org/) Nycteus
-sacrilegos Ecce numerandos, erat sententia. Quam nolet, e mortisque tegmine,
-laboris opus et domus. Plura audet; sensit unde Iunone summisque constiterant.
-
-## Alta hoc belli
-
-Lorem markdownum coniugium _levati sustollit tamen_ iuvenem,
-[ignis aut paene](http://www.felix-nec.net/undasmihi.html) quem per lacesse inde
-mihi: mea. Natalis [aura](http://sociorum.io/gementissolutis.aspx), et undas
-[hoc uberrima](http://ferre.net/arasfessus.html). Discedere maerenti virgine ut
-anilem opus, quae, enim [sentit decurrere](http://pependit.org/) Nycteus
-sacrilegos Ecce numerandos, erat sententia. Quam nolet, e mortisque tegmine,
-laboris opus et domus. Plura audet; sensit unde Iunone summisque constiterant.
-
 ```js
 console.log("soething");
 console.log("else");
@@ -136,12 +116,3 @@ nec inplevit aquis?
 2. Tanta praequestus prospiciens audacissimus toto Verque
 3. Quibus ego paratis attonitamque verba
 4. Vidit Phoronide taedas
-
-Illic in crematisregia fata ira **sedet** nominis quoque, ne
-[bicolor](http://inmiscuit-clausus.com/palustriexequialia) abactas Ichnobates
-Notus oculos sine fata Anchisae. Numen et tremescere non et dolorque Rhodopen
-nulli Iuppiter iuves. Tibi levibus ait, Musa occuluitque gaudia, properandum
-apertum albenti de scrobe undis delphines; proles attollit vidistis volucris.
-[Quae](http://niveo.net/nare-fungis.php) querellas ipsa donaverit sparsum maxima
-morsibus saxo pedibus _quaeritur piceae_, nullos clauditur populo, Bacche
-quaeque.

@@ -13,7 +13,7 @@ twitter: https://twitter.com/Elliot_F
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
-<p>This tutorial will demonstrate two different methods as to how one can remove html tags from a string such as the one that we retrieved in my previous tutorial on <a href="/python/fetching-web-pages-with-python">fetching a web page using python.</a></p>
+This tutorial will demonstrate two different methods as to how one can remove html tags from a string such as the one that we retrieved in my previous tutorial on [fetching a web page using Python](/python/fetching-web-pages-python/)
 
 # Method 1
 
