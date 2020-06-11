@@ -13,7 +13,7 @@ tags:
   - react
   - socket.io
 title: Building Real-time ReactJS Applications with Socket.Io - Tutorial
-twitter: https://twitter.com/Elliot_F
+twitter: https://www.twitter.com/Elliot_F
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 

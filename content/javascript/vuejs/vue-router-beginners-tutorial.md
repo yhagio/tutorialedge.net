@@ -17,7 +17,7 @@ weight: 5
 The vue-router within VueJS allows you to create powerful Single Page
 Applications with minimal fuss. On a traditional website, each distinct page
 would constitute a request to the server to load the relevant file. So when
-someone navigated to http://myapp.com/page-1.html, the `page-1.html` file would
+someone navigated to `http://myapp.com/page-1.html`, the `page-1.html` file would
 be served up.
 
 However, when navigating through a single page application, you only have see

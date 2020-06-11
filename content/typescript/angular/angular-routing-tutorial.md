@@ -24,9 +24,6 @@ Routing in Angular 2+ has changed dramatically from the original AngularJS days
 where you would have to utilize the \$routeProvider and typically define routes
 in a separate file to that of your module file.
 
-> If you are interested, check out my
-> [AngularJS 1.5 Routing Tutorial](https://tutorialedge.net/angularjs-template-tutorial-ng-view)
-
 # Defining your First Routes
 
 The first thing that you need to do in order to add routing to your application

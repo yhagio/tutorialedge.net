@@ -120,7 +120,7 @@ Awesome, with this done, we can start looking at setting up the `github` reposit
 
 First, you will need to log in to your github.com account and create a new repository.
 
-![Creating new Github Repo](https://images.tutorialedge.net/images/imgur-clone/create-push.png)
+![Creating new Github Repo](https://images.tutorialedge.net/images/imgur-clone/create-repo.png)
 
 This will instantly create a free repository for us in which we can store all of our applications source code. It is incredibly important to note that any and all files you push up to a **public** repository can be viewed by **anyone**, so please do not push up anything you do not wish the rest of the world to see like API credentials or usernames + passwords.
 

@@ -12,12 +12,11 @@ title: AngularJS Data Binding Tutorial
 twitter: https://twitter.com/Elliot_F
 ---
 
-<p>AngularJS Official Docs on Data Binding can be found here: <a href="https://docs.angularjs.org/guide/databinding">AngularJS Data Binding</a></p>
+AngularJS Official Docs on Data Binding can be found here: [AngularJS Data Binding](https://docs.angularjs.org/guide/databinding)
 
 > Please note that the use of scope is somewhat frowned upon. Check out my
 > article on
-> <a href="https://tutorialedge.net/working-with-angularjs-component-applications">Working
-> with Components</a> and how you should use one way data-binding.
+> [Working with Components](/javascript/angularjs/working-with-angularjs-component-applications/) and how you should use one way data-binding.
 
 <h2>What is Data Binding?</h2>
 
