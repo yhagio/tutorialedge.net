@@ -34,7 +34,7 @@ Typically you would have one server hosting one `instance` of your application.
 This then begs the question, how can you route a `request` to either of your
 instances? This is where your load balancer would come into play.
 
-![load balancer graphic](/images/load-balancer.gif)
+![load balancer graphic](https://images.tutorialedge.net/images/load-balancer.gif)
 
 Typically you would set up a `load balancer` that would receive all of your
 website or services `requests`. The `load balancer` would then forward on these

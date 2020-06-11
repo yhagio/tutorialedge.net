@@ -110,7 +110,7 @@ means by breaking it down.
 
 Let's have a look at the following class inheritance graph from the algo's wiki:
 
-![C3 Linearization Graph](/images/c3-linearization.png)
+![C3 Linearization Graph](https://images.tutorialedge.net/images/c3-linearization.png)
 
 Basically in this graph `class O` does not have any parents and features a
 number of children: `[A, B, C, D, E]`. Our `[A, B, C]` classes are the parents

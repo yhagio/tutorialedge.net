@@ -305,4 +305,4 @@ below!
 If you are looking for more, then you may quite like some of the other articles
 on this site. Feel free to check out the following articles:
 
-- [Go OAuth2 Tutorial](/golang/go)/golang/go-oauth2-tutorial/)
+- [Go OAuth2 Tutorial](/golang/go-oauth2-tutorial/)

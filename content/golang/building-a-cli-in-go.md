@@ -28,7 +28,7 @@ can build your own CLIs that could do a wide variety of other things such as
 network monitoring, image manipulation and so on.
 
 > **Note -** The full code for this tutorial can be found here:
-> [TutorialEdge/Go/go-cli-tutorial](https://github.com/TutorialEdge/Go/tree/master/go-cli-tutorial)
+> [TutorialEdge/Go](https://github.com/TutorialEdge/Go)
 
 # Prerequisites
 

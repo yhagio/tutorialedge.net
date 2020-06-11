@@ -43,8 +43,7 @@ here:
 
 # Text Tutorial
 
-In order to do this we’ll be using
-<a href=”https://github.com/go-sql-driver/mysql”>https://github.com/go-sql-driver/mysql</a>
+In order to do this we’ll be using [https://github.com/go-sql-driver/mysql](https://github.com/go-sql-driver/mysql)
 as our MySQL driver. `Go-SQL-Driver` is a lightweight and fast MySQL driver that
 supports connections over `TCP/IPv4`, `TCP/IPv6`, `Unix domain sockets` or
 custom protocols and features automatic handling of broken connections.

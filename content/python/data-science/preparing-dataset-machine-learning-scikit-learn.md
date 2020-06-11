@@ -11,7 +11,7 @@ series: python
 image: python.svg
 tags:
   - data-science
-authorImage: https://pbs.twimg.com/profile_images/868147892795588608/iAnFiiiE_400x400.jpg
+authorImage: https://images.tutorialedge.net/logo.png
 ---
 
 The first step to implementing any machine learning algorithm with scikit-learn

@@ -10,7 +10,7 @@ series: vuejs
 image: vuejs.png
 tags:
   - beginners
-authorImage: https://media.licdn.com/dms/image/C4E03AQEMw64D-DxhmQ/profile-displayphoto-shrink_800_800/0?e=1554336000&v=beta&t=XdHlrGzvCX2DYWrpyuU8N_P6a5ci0So3yRW42Wri_CE
+authorImage: https://images.tutorialedge.net/logo.png
 ---
 
 To begin, let's look at how to make a component in Vue. First, we specify the

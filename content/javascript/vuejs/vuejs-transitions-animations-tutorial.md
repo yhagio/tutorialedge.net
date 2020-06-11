@@ -27,7 +27,7 @@ in when a certain condition is met. I was watching Mission Impossible whilst
 writing this so the theme for this is a top secret mission. The finished product
 for this section is going to look something like this:
 
-![finished product](/images/vuejs-animations.png)
+![finished product](https://images.tutorialedge.net/images/vuejs-animations.png)
 
 So, if we break this down this shouldn't look as intimidating. We have 3 buttons
 within a div that when clicked basically flip a boolean value. When this is

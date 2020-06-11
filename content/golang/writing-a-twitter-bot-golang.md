@@ -15,7 +15,7 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 In this tutorial I’m going to be demonstrating how to build a twitter bot using
-<a href="https://github.com/dghubble/go-twitter">go-twitter</a>, a popular Go
+[go-twitter](https://github.com/dghubble/go-twitter), a popular Go
 client library for the Twitter API.
 
 I’ll be demonstrating how you can build a go based twitter bot that will be able
@@ -40,7 +40,7 @@ get started writing our twitter bot!
 
 # Connecting to Twitter
 
-<p>Just like with the <a href="/python/creating-twitter-bot-python/">Python version of this tutorial</a>, you’ll have to create an app in twitter’s <a href=”https://apps.twitter.com/”>app control panel</a>. Once you’ve created a new application, it should present you with all the secret tokens and keys that you need in order to proceed.</p>
+Just like with the [Python version of this tutorial](/python/creating-twitter-bot-python/), you’ll have to create an app in twitter’s [app control panel](https://apps.twitter.com/). Once you’ve created a new application, it should present you with all the secret tokens and keys that you need in order to proceed.
 
 # Environment Variables
 

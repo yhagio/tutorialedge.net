@@ -89,7 +89,7 @@ node server.js
 ```
 
 This should start the server and if we navigate to our browser and type:
-http://localhost:3000 you should see Hello World! Printed out.
+`localhost:3000` you should see Hello World! Printed out.
 
 # Improving Our Server
 
