@@ -7,7 +7,7 @@ desc:
   Learn what it takes to set up the development environment you need to get
   started with Generative Adversarial Networks
 author: Josh Kalin
-twitter: https://www.linkedin.com/in/josh-kalin-96b6152b/
+twitter: https://amzn.to/2SYiQrA
 series: python
 image: python.svg
 tags:

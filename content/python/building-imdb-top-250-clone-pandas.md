@@ -37,8 +37,8 @@ This article covers the following:
 You’ll be required to have Python installed on a system. Finally, to use the Git
 repository, you need to install Git. The code files of this article can be found
 on GitHub at
-https://github.com/PacktPublishing/Hands-On-Recommendation-Systems-with-Python/tree/master/Chapter3.
-You can also see the code in action at http://bit.ly/2v7SZD4.
+`https://github.com/PacktPublishing/Hands-On-Recommendation-Systems-with-Python/tree/master/Chapter3`.
+You can also see the code in action at `http://bit.ly/2v7SZD4`.
 
 # The simple recommender
 

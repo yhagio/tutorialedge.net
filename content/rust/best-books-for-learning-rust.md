@@ -78,7 +78,7 @@ The book is still currently under construction as it stands, but from the initia
 - Modern Generics
 - Memory Safety
 
-> **Buy Now:** [Fullstack Rust: The Complete Guide to Building Apps with the Rust Programming Language and Friends](https://gumroad.com/discover?query=fullstack%20rust#fBHCs)
+> **Buy Now:** [Fullstack Rust: The Complete Guide to Building Apps with the Rust Programming Language and Friends](https://gumroad.com/a/122844275)
 
 # Conclusion
 
