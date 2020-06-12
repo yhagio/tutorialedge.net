@@ -1,6 +1,6 @@
 <div align="center">
   <br/>
-  <img alt="TutorialEdge" width="40%" height="auto" src="https://images.tutorialedge.net/images/logo.svg" />
+  <img alt="TutorialEdge" width="20%" height="auto" src="https://images.tutorialedge.net/images/logo.svg" />
   <h1>TutorialEdge</h1>
 </div>
 
