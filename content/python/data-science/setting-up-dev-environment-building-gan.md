@@ -54,7 +54,7 @@ the CUDA library:
 > NVIDIA for general computing on graphical processing units (GPUs). With CUDA,
 > developers are able to dramatically speed up computing applications by
 > harnessing the power of GPUs."
-> (Source: https://developer.nvidia.com/cuda-zone).
+> (Source: `https://developer.nvidia.com/cuda-zone`).
 
 Using CUDA, TensorFlow can achieve drastic speedups in terms of processing
 power. In order to make this happen, we need to have a certain type of GPU and
