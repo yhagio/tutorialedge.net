@@ -1,14 +1,13 @@
 ---
-title: "Github Actions for Go Projects"
+title: "GitHub Actions for Go Projects"
 date: 2020-06-07T10:12:45+01:00
-draft: true
-desc: 👋 Welcome Gophers! In this article, we are going to be looking at how you can use Github actions to supercharge your Go project setup!
+desc: 👋 Welcome Gophers! In this article, we are going to be looking at how you can use GitHub actions to supercharge your Go project setup!
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
 series: golang
 image: golang.svg
 tags:
-- beginner
+- intermediate
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
@@ -68,7 +67,151 @@ Now that we have a basic handle on building our own GitHub actions for our proje
 
 Let's start by defining an action that, when a pull request comes in to our project, it will automatically lint the incoming code and validate that it meets our project's standards!
 
+Let's start by creating a new workflow file within our project called `.github/workflows/lint.yml`. We'll be defining our action within this file:
 
+<div class="filename">.github/workflows/lint.yml</div>
+
+```yaml
+name: Lint Go Code
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  lint:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-go@v2
+        with:
+          stable: 'false'
+          go-version: '1.14.1'
+
+      - name: Lint
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.26.0
+
+          golangci-lint run
+```
+
+Once you have this `lint.yml` file update, let's `git add`, `git commit`, and `git push` this to our project repository.  
+
+Upon pushing this up to our GitHub repository, we should be able to see the workflow running within the `actions` tab of our repo. 
+
+![GitHub Actions Successful Run](https://images.tutorialedge.net/golang/successful-action.png)
+
+# 🧪 Platform and Version Matrix Builds
+
+If you are working on a project that you have to test across multiple versions of Go or across multiple different architectures, then you can utilize the power of actions to aide you in your quest!
+
+Let's build in a simple GitHub action that will build our project across a variety of different Go versions now:
+
+<div class="filename"> .github/workflows/test.yml </div>
+
+```yaml
+on:
+  push:
+    branches:
+      - master
+
+name: Test Across Matrix
+
+jobs:
+  test:
+    # We want to define a strategy for our job
+    strategy:
+      # this will contain a matrix of all of the combinations
+      # we wish to test again:
+      matrix:
+        go-version: [1.12.x, 1.13.x, 1.14.x]
+        platform: [ubuntu-latest, macos-latest, windows-latest]
+    
+    # Defines the platform for each test run
+    runs-on: ${{ matrix.platform }}
+    
+    # the steps that will be run through for each version and platform
+    # combination
+    steps:
+    # sets up go based on the version
+    - name: Install Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: ${{ matrix.go-version }}
+
+    # checks out our code locally so we can work with the files
+    - name: Checkout code
+      uses: actions/checkout@v2
+    
+    # runs go test ./...
+    - name: Test
+      run: go test ./...
+```
+
+Let's try commit this and trigger this workflow now within our project.
+
+You should be able to see the 9 jobs defined within our `3x3` matrix running and you should see the results of their execution like so:
+
+![Matrix Running](https://images.tutorialedge.net/golang/action-matrix.png)
+
+Obviously I have a fair bit of work to do in this example project to get the tests passing across all versions and platforms, however, I have removed the manual toil needed to run these myself.
+
+# 🚢 Publishing Docker Images
+
+The final action we are going to cover in this tutorial is a `publish` action which will take our committed code and then build a docker image from the `Dockerfile` within our project before then publishing it to Docker Hub. 
+
+## 🙈 Managing Secrets
+
+In this task, we'll have to figure out a way expose secrets to our task in a secure way. Thankfully, GitHub makes this easy for us and allows us to add secrets to each individual repository through the `settings` tab.
+
+Navigate to the `settings` tab and then open `Secrets` and click the `New secret` button. We then need to add the `DOCKER_USERNAME` and `DOCKER_PASSWORD` secrets with your own Docker Hub credentials. 
+
+With these in place, we can then pass them through to actions using `${{ secrets.VARIABLE_NAME }}`. 
+
+> **Note** - Take care when creating custom tasks that you don't echo our these secrets or have the `-x` flag set in bash scripts. This could lead to secrets leaking in ways that you don't expect.
+
+## 🛒 Using Predefined Marketplace GitHub Actions  
+
+Now that we've covered passing secrets securely, we can now attempt to use these secrets with a pre-defined marketplace action that handles most of the complexity of publishing to Docker Hub for us. 
+
+We'll be using `elgohr/Publish-Docker-Github-Action@master` in order to publish our image. It's worthwhile checking out the marketplace to see the full list of arguments this takes in, but for now we'll just be using the `name` of the image we want to publish as well as our `username` and `password` combo:
+
+<div class="filename"> .github/workflows/publish.yml </div>
+
+```yaml
+name: Build and Publish Docker Image
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+    # checks out our project source code
+    - uses: actions/checkout@v2
+    
+    # Builds our docker image!
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+
+    # Publishes our image to Docker Hub 😎
+    - name: Publish to Registry
+      uses: elgohr/Publish-Docker-Github-Action@master
+      with:
+        # the name of our image
+        name: forbsey/go-api
+        # Here we pass in our Docker Username
+        username: ${{ secrets.DOCKER_USERNAME }}
+        # and our Docker password which 
+        password: ${{ secrets.DOCKER_PASSWORD }}
+```
+
+If we commit this with our secrets set within our repository, we should see that our image is automatically published up to Docker Hub for us using the `username` and `password` combination. 
+
+Perfect! We now have a fully functional `publish` action which will build and publish our Docker image for us up to Docker Hub from which we can now deploy to our hearts content!
 
 # Conclusion
 
