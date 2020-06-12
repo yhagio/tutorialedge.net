@@ -5,12 +5,12 @@ desc:
   In this guest post by Ajdin Imsirovic, the author of Vue.js Quick Start Guide,
   you’ll learn about components, templates, and props in Vue 2.
 author: Ajdin Imsirovic
-twitter: https://www.linkedin.com/in/ajdin-imsirovic/?originalSubdomain=ba
+twitter: https://amzn.to/3hvnuKu
 series: vuejs
 image: vuejs.png
 tags:
   - beginners
-authorImage: https://images.tutorialedge.net/logo.png
+authorImage: https://images.tutorialedge.net/images/logo.svg
 ---
 
 To begin, let's look at how to make a component in Vue. First, we specify the
