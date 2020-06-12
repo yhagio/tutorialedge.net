@@ -489,10 +489,10 @@ your movies are very highly rated and popular at the same time.
 If you found this article interesting, you can explore Rounak Banik’s Hands-On
 Recommendation Systems with Python to get started with building recommendation
 systems is a familiarity with Python. With
-[Hands-On Recommendation Systems with Python](https://amzn.to/2PRq53f), learn
+[Hands-On Recommendation Systems with Python](https://amzn.to/3cWU2JQ), learn
 the tools and techniques required in building various kinds of powerful
 recommendation systems (collaborative, knowledge and content based) and
 deploying them to the web.
 
 
-> View on Amazon: [Hands-On Recommendation Systems with Python](https://amzn.to/2PRq53f)
+> View on Amazon: [Hands-On Recommendation Systems with Python](https://amzn.to/3cWU2JQ)

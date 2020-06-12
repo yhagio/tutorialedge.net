@@ -18,5 +18,3 @@ jobs:
       uses: elliotforbes/broken-link-checker@1.0.2
       with:
         url: 'https://tutorialedge.net'
-    - name: Get the result
-      run: echo "${{steps.link-report.outputs.result}}"
