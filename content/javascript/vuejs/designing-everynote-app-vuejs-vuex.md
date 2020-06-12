@@ -25,7 +25,7 @@ The application can be downloaded by cloning the
 Git repository. You’ll require Node.js installed on a system. Finally, to use
 the Git repository, the user needs to install Git. The code files of this
 article can be found on GitHub:
-https://github.com/PacktPublishing/Vuex-Quick-Start-Guide/tree/master/chapter-4.
+`https://github.com/PacktPublishing/Vuex-Quick-Start-Guide/tree/master/chapter-4`.
 
 # Designing the EveryNote web app
 

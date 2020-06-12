@@ -35,7 +35,4 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 
 <p>So how does this work? In our .list class we use display: flex; which initiates flexbox for the outer element. In order for our inner-elements to all have the same height, we have to use display:flex; once again in our .list-item css class.</p>
 
-<h2>The Code</h2>
-
-<p data-height="385" data-theme-id="18325" data-slug-hash="epOxWM" data-default-tab="result" data-user="emforce" class='codepen'>See the Pen <a href='https://codepen.io/emforce/pen/epOxWM/'>epOxWM</a> by Elliot Forbes (<a href='https://codepen.io/emforce'>@emforce</a>) on <a href='https://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<!-- TODO: Add code for this and improve article -->

@@ -12,7 +12,7 @@ series: python
 image: python.svg
 tags:
   - data-science
-authorImage: https://media.licdn.com/dms/image/C5603AQG7WI2sAsa3Qw/profile-displayphoto-shrink_800_800/0?e=1553126400&v=beta&t=FLKAeVTmqWQNS6N_oW-KssTYwrhdiw94Kd_QFYLikFM
+authorImage: https://images.tutorialedge.net/images/logo.svg
 ---
 
 What's a development environment? Everyone thinks setting up
