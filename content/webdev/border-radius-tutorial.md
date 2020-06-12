@@ -60,7 +60,7 @@ class which gives it the shape of a perfect circle.
 It's important to note that the `border-radius: 100%;` property can be attached
 to `<img>` tags in order for them to take on a circular shape:
 
-<img class="circle" src="https://twitter.com/Elliot_F/profile_image?size=original" alt="circle-image" />
+<img class="circle" src="https://images.tutorialedge.net/authors/profile.jpeg" alt="circle-image" />
 
 <style>
 img.circle {
@@ -76,7 +76,7 @@ img.circle {
 ```html
 <img
   class="circle"
-  src="https://twitter.com/Elliot_F/profile_image?size=original"
+  src="https://images.tutorialedge.net/authors/profile.jpeg"
   alt="circle-image"
 />
 
