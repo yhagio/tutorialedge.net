@@ -8,6 +8,7 @@
 ![Production Deploy](https://github.com/elliotforbes/tutorialedge.net/workflows/Production%20Deploy/badge.svg)
 ![Algolia Index](https://github.com/elliotforbes/tutorialedge.net/workflows/Algolia%20Index/badge.svg)
 ![Broken Link Checker](https://github.com/elliotforbes/tutorialedge.net/workflows/Broken%20Link%20Checker/badge.svg)
+![Generates a Lighthouse Report For the Site](https://github.com/elliotforbes/tutorialedge.net/workflows/Generates%20a%20Lighthouse%20Report%20For%20the%20Site/badge.svg)
 
 # TutorialEdge.net Community  👩‍💻👨‍💻
 
