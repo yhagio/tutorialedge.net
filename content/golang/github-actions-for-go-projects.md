@@ -68,6 +68,88 @@ Now that we have a basic handle on building our own GitHub actions for our proje
 
 Let's start by defining an action that, when a pull request comes in to our project, it will automatically lint the incoming code and validate that it meets our project's standards!
 
+Let's start by creating a new workflow file within our project called `.github/workflows/lint.yml`. We'll be defining our action within this file:
+
+<div class="filename">.github/workflows/lint.yml</div>
+
+```yaml
+name: Lint Go Code
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  lint:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-go@v2
+        with:
+          stable: 'false'
+          go-version: '1.14.1'
+
+      - name: Lint
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.26.0
+
+          golangci-lint run
+```
+
+Once you have this `lint.yml` file update, let's `git add`, `git commit`, and `git push` this to our project repository.  
+
+Upon pushing this up to our GitHub repository, we should be able to see the workflow running within the `actions` tab of our repo. 
+
+![GitHub Actions Successful Run](https://images.tutorialedge.net/golang/successful-action.png)
+
+# ⚒️ Building Release Artifacts
+
+If you are working on a project that you have to test across multiple versions of Go or to release across multiple different architectures, then you can utilize the power of actions to aide you in your quest!
+
+Let's build in a simple GitHub action that will build our project across a variety of different Go versions now:
+
+<div class="filename"> .github/workflows/test.yml </div>
+
+```yaml
+on:
+  push:
+    branches:
+      - master
+
+name: Test Across Matrix
+
+jobs:
+  test:
+    # We want to define a strategy for our job
+    strategy:
+      # this will contain a matrix of all of the combinations
+      # we wish to test again:
+      matrix:
+        go-version: [1.12.x, 1.13.x, 1.14.x]
+        platform: [ubuntu-latest, macos-latest, windows-latest]
+    
+    # Defines the platform for each test run
+    runs-on: ${{ matrix.platform }}
+    
+    # the steps that will be run through for each version and platform
+    # combination
+    steps:
+    # sets up go based on the version
+    - name: Install Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: ${{ matrix.go-version }}
+
+    # checks out our code locally so we can work with the files
+    - name: Checkout code
+      uses: actions/checkout@v2
+    
+    # runs go test ./...
+    - name: Test
+      run: go test ./...
+```
+
 
 
 # Conclusion
