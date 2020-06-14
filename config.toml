@@ -13,7 +13,11 @@ PygmentsStyle = "monokai"
 # pygmentsOptions = "linenos=table"
 
 [markup]
-  defaultMarkdownHandler = "blackFriday"
+    defaultMarkdownHandler = "goldmark"
+    [markup.goldmark.renderer]
+        hardWraps = false
+        unsafe = true
+        xhtml = true
 
 # Used by Hugo + and as partial
 [params]

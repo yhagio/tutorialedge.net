@@ -95,6 +95,7 @@ In order to help you see what is going on, you have been provided a very quick p
 <details><summary>Helpful Article</summary>
 
 * [Sorting in Go with the Sort Package](/golang/go-sorting-with-sort-tutorial/)
+
 </details>
 
 # See the Solution
