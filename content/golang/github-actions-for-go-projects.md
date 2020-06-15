@@ -15,6 +15,13 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 
 Specifically, we are going to be taking a look at how you can build your own GitHub actions by starting off with a `"Hello World"` example and then ramping it up to more useful actions such as code linting and test coverage reporting!
 
+
+# 🎥 Video Tutorial
+
+This tutorial is also available in video format!
+
+{{< youtube id="KVrL_UHJ7kQ" auto_play="false">}}
+
 # 🚀 What are GitHub Actions? 
 
 GitHub actions have just recently become generally available to everyone with a repository on GitHub. 
@@ -223,4 +230,4 @@ This is by no means an exhaustive list, but hopefully it highlights just how pow
 
 If you found this article useful, you may also like some of these other articles on the site:
 
-* [Github Actions for Beginners](/software-eng/getting-started-with-github-actions/)
+* [Makefiles for Go Developers](/golang/makefiles-for-go-developers/)
