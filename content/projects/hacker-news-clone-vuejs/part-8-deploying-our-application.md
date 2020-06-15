@@ -13,7 +13,7 @@ tags:
 title: Part 8 - Deploying Our HackerNews Client To AWS
 twitter: https://twitter.com/Elliot_F
 weight: 8
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 In this final lesson in the series, we are going to be taking a look at how you

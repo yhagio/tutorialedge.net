@@ -10,7 +10,7 @@ tags:
   - intermediate
 title: Creating A Simple Web Server With Golang
 twitter: https://twitter.com/Elliot_F
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 weight: 17
 ---
 
@@ -69,7 +69,7 @@ func main() {
 In the above code, we essentially define two different Handlers. These handlers
 are what respond to any `HTTP` request that matches the string pattern we define
 as the first parameter. So essentially whenever a request is made for the home
-page or _http://localhost:8081/_, we'll see our first handler respond as the
+page or `http://localhost:8081/`, we'll see our first handler respond as the
 query matches that pattern.
 
 # Running Our Server
@@ -132,7 +132,7 @@ func main() {
 
 ```
 
-Run this and then navigate to http://localhost:8081/increment and you should see
+Run this and then navigate to `http://localhost:8081/increment` and you should see
 the current count which will be locked, incremented and then unlocked every time
 you make a request to that page.
 
@@ -161,7 +161,7 @@ to the server, and if it contains say index.html then it would return the
 index.html file, rendered as HTML in the browser.
 
 If we were to create an edit.html page and send a request to
-http://localhost:8081/edit.html then it would return whatever HTML content you
+`http://localhost:8081/edit.html` then it would return whatever HTML content you
 choose to put in that edit.html page.
 
 ```go
@@ -190,7 +190,7 @@ func main() {
 
 ## Checking it Works
 
-Again run the server and navigate to http://localhost:8081/index.html and you
+Again run the server and navigate to `http://localhost:8081/index.html` and you
 should hopefully see your very simple index.html file rendered in all its glory.
 
 # Serving Content from a Directory

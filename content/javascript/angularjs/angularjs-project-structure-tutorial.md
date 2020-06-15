@@ -125,7 +125,7 @@ subdirectory would encapsulate all our comments related code.
 
 For examples of how to write your own component based applications then please
 check out my post:
-[Working with Component Based AngularJS Projects](https://tutorialedge.net/working-with-angularjs-component-applications).
+[Working with Component Based AngularJS Projects](/javascript/angularjs/working-with-angularjs-component-applications/).
 
 Todd Motto, one of the most respected AngularJS community members has an
 excellent github repo that showcases a component based application :

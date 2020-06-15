@@ -6,8 +6,6 @@ desc:
   optimize your programs.
 series: compsci
 image: logo.svg
-tags:
-- misc
 title: Bit Manipulation For Beginners
 twitter: https://twitter.com/Elliot_F
 ---

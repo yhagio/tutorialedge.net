@@ -8,7 +8,7 @@ tags:
   - Kubernetes
 title: My Notes for the Certified Kubernetes Application Developer - Part 1, Core Concepts
 twitter: https://twitter.com/Elliot_F
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 Recently, I’ve started studying for the Certified Kubernetes Application Developer certificate, CKAD for short, and I thought I would share some of the notes I took in an effort to try and pass this certification.
@@ -245,4 +245,4 @@ This is just part 1 of my notes that I’ve taken for sitting the CKAD exam, hop
 
 We’ve covered roughly 40% of the concepts outlined within the CKAD Curriculum which is available on Github. I’m hoping to have the second part of this series done and dusted by Sunday and then the third, and final part done by Wednesday of next week, so stay tuned for more!
 
-> Note: If you want an exceptionally good resource on learning Kubernetes with a focus on the exam, I can highly recommend Matthew Palmer’s book and course which can be found here: https://matthewpalmer.net/kubernetes-app-developer/#purchase
+> 🧙 **Note:** If you want an exceptionally good resource on learning Kubernetes with a focus on the exam, I can highly recommend Matthew Palmer’s book and course which can be found here: https://matthewpalmer.net/kubernetes-app-developer/#purchase

@@ -66,7 +66,7 @@ Before going forward, I want you to think about these questions:
 
 The answer to both is: no, it doesn't. You should always be prepared for the worst case: all input data is unsafe by default. Interestingly, there's a whole conversation related to my previous statement: known knowns, known unknowns, and unknown unknowns. I won't address it in this article, but if you are interested, please, let me know in the comments section. Keep this in mind and let's continue!
 
-In this domain and context, data sanitization means: remove (or transform) any data (i.e. characters) which purpose is malicious. In other words, you want the data to be safe before validating it. However, you should always consider usability and a practical approach. Given that we are dealing with an email address input field, we can't simply remove data from the input received. Therefore, if the data is unfit, we should halt the data-related process and return a message to the user; the message should remind the user of the characters that can be used (**positive feedback**) and/or, in this case, the [standard syntax](https://tools.ietf.org/html/rfc5322#section-3.4.1) of an email address.
+In this domain and context, data sanitization means: remove (or transform) any data (i.e. characters) which purpose is malicious. In other words, you want the data to be safe before validating it. However, you should always consider usability and a practical approach. Given that we are dealing with an email address input field, we can't simply remove data from the input received. Therefore, if the data is unfit, we should halt the data-related process and return a message to the user; the message should remind the user of the characters that can be used (**positive feedback**) and/or, in this case, the [standard syntax](https://tools.ietf.org/html/rfc5322) of an email address.
 
 **Remember, data-related processes should always take place on a trusted system (e.g. backend) as they could be disabled/bypassed by a malicious user/script otherwise (e.g. frontend).**
 
@@ -78,9 +78,9 @@ example<script>alert('Tacos!');</script>@domain.com
 
 By reading the input above, we can tell straight away that this is certainly not an email address and also that it is attempting to deliver a script payload via the data. But, this appreciation comes from our visual interpretation. 
 
-From a coding perspective, data sanitization should be implemented by applying the following premise: what is allowed? This is also known as **whitelisting**. This approach is recommended over the premise for **blacklisting**: what isn't allowed? The reason is simple: you have a known finite set of possibilities for what is allowed as opposed to what isn't.
+From a coding perspective, data sanitization should be implemented by applying the following premise: what is allowed? This is also known as **allow-listing**. This approach is recommended over the premise for **block-listing**: what isn't allowed? The reason is simple: you have a known finite set of possibilities for what is allowed as opposed to what isn't.
 
-Probably the most efficient way to implement whitelisting in any coding language is using [regex](https://en.wikipedia.org/wiki/Regular_expression).
+Probably the most efficient way to implement allow-listing in any coding language is using [regex](https://en.wikipedia.org/wiki/Regular_expression).
 
 Golang regex example:
 

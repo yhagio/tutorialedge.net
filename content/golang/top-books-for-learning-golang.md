@@ -7,10 +7,10 @@ desc:
 series: golang
 image: golang.svg
 tags:
-  - misc
+  - books
 title: The Best Books For Learning Golang
 twitter: https://twitter.com/Elliot_F
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 Go is a language that has drastically grown in popularity over the past few

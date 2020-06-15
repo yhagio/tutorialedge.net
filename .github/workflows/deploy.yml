@@ -1,0 +1,80 @@
+name: Production Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  #----------------------------------
+  # Build job performs the action of building and testing
+  # the site
+  #----------------------------------
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0    
+
+      - name: Install NPM 
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.72.0'
+          
+      - name: Build
+        timeout-minutes: 10
+        run: |
+          echo "Building Site"
+          npm install
+          hugo --minify
+          npm run prod-build
+      
+      - name: Upload Deployment artefacts
+        uses: actions/upload-artifact@v1
+        with:
+          name: website
+          path: public/
+
+  #----------------------------------
+  # Deploy job performs the action of deploying the
+  # built artefacts to the S3 bucket that hosts
+  # tutorialedge
+  #----------------------------------
+  deploy:
+    runs-on: ubuntu-18.04
+    needs: build
+    steps:
+      - name: Download Build Artefact
+        uses: actions/download-artifact@v1
+        with:
+          name: website
+          path: public
+      
+      - name: Test
+        run: | 
+          ls public
+
+      - uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --acl public-read --follow-symlinks --delete
+        env:
+          AWS_S3_BUCKET: tutorialedge.net
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: 'eu-west-1'
+          SOURCE_DIR: 'public'
+      
+      - name: Clear CloudFront Cache
+        uses: awact/cloudfront-action@master
+        env:
+          SOURCE_PATH: '/*'
+          AWS_REGION: 'eu-west-1'
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          DISTRIBUTION_ID: ${{ secrets.DISTRIBUTION_ID }}

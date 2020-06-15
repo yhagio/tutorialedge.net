@@ -12,6 +12,13 @@ pygmentsCodeFences = true
 PygmentsStyle = "monokai"
 # pygmentsOptions = "linenos=table"
 
+[markup]
+    defaultMarkdownHandler = "goldmark"
+    [markup.goldmark.renderer]
+        hardWraps = false
+        unsafe = true
+        xhtml = true
+
 # Used by Hugo + and as partial
 [params]
     title = "TutorialEdge.net"

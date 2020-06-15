@@ -1,5 +1,7 @@
 <template>
     <div class="comment">
+        <Loading v-if="this.loading" />
+
         <div class="author">
             <div class="icon">
                 <img v-if="comment.picture!=='logo.svg'" :src="comment.picture" alt="">
@@ -9,6 +11,9 @@
         <div class="comment-body">
             <h4>{{ comment.author }} <small>{{ comment.CreatedAt | formatDate }}</small></h4>
             <span v-html="markdown(comment.body)"></span>
+            <p v-if="isOwner" class="comment-controls">
+                <button class="btn btn-link btn-no-margin" v-on:click="deleteComment(comment)">Delete</button>
+            </p>
         </div>
         <div class="comment-votes">
             <a v-on:click="upvote('thumbs_up')" v-bind:class="{upvoted: this.vote === 'thumbs_up'}" class="badge badge-light">{{ comment.thumbs_up }} 👍</a>
@@ -23,19 +28,33 @@
 import axios from 'axios';
 import config from 'environment';
 import md from 'markdown-it';
+import Loading from '../misc/Loading.vue';
 
 export default {
     name: 'Comment',
     props: ['comment'],
+    components: {
+        Loading
+    },
     data: function() {
         return {
             formattedDate: '',
             counter: 0,
             voted: false,
+            loading: false,
+            isOwner: false
         }
     },
     created: function() {
         var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+
+        if (this.$auth.isAuthenticated()) {
+            let user = this.$auth.getUser();
+            if(user.sub === this.comment.sub) {
+                this.isOwner = true;
+            }
+        }
+            
     },
     methods: {
         markdown: function(input) {
@@ -58,6 +77,28 @@ export default {
                     }
                 })
             }
+        },
+        deleteComment: async function(comment) {
+            this.loading = true;
+            if (this.$auth.isAuthenticated()) {
+                try {
+                    let response = await axios({
+                        method: 'delete',
+                        params: { id: comment.ID },
+                        url: config.apiBase + "/v1/comments",
+                        data: this.comment,
+                        headers: {
+                            "Authorization": "Bearer " + this.$auth.getAccessToken(),
+                            "Content-Type": "application/json"
+                        }
+                    })
+                    this.loading = false;
+                    window.location.reload();
+                } catch (err) {
+                    this.loading = false;
+                    this.error = err;
+                }
+            }
         }
     }
 }
@@ -72,6 +113,16 @@ export default {
     display: flex;
     border-bottom: 1px solid rgb(230, 234, 235);
     
+    .comment-controls {
+        font-size: small;
+    }
+
+    .btn-no-margin {
+        margin: 0;
+        padding: 0;
+        font-size: small;
+    }
+
     .badge {
         padding: 5px 10px;
     }

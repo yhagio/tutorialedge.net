@@ -7,10 +7,10 @@ desc:
 series: golang
 image: golang.svg
 tags:
-  - misc
+  - mail
 title: Sending Email Using Go And Mailgun
 twitter: https://twitter.com/Elliot_F
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 <p>In this tutorial I'm going to be demonstrating how you can send mail with Go(Lang) and the mailgun api. Thankfully, mailgun's API is fantastic and sending mail is incredibly easy once you've set everything up properly.</p>

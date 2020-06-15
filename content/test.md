@@ -1,41 +1,40 @@
 ---
 author: Elliot Forbes
 date: 2017-04-14T20:28:13+01:00
-series: misc
-tags:
-  - misc
 title: Get Involved
 twitter: https://twitter.com/Elliot_F
 ---
 
+
 <Quiz question="Who Is The Best #Peep?" A="Elliot" B="Nadi" C="Donna" correct="A" answer="The correct answer is A" />
 
-[test link](/test/)
+{{% row %}}
+{{% column %}}
+```go
+package main
 
-<div id="test" class="btn btn-primary">test tippy</div>
+import "fmt"
 
+func main() {
+    fmt.Println("hello World")
+}
+```
+{{% /column %}}
 
-![](https://images.tutorialedge.net/images/ai.webp)
+{{% column %}}
+## why hello
 
-# Sanguine Lapithae colla latus oracula ignibus
+This is an example 
+{{% /column %}}
+{{% /row %}}
 
-Lorem `markdownum` coniugium _levati sustollit tamen_ iuvenem,
-[ignis aut paene](http://www.felix-nec.net/undasmihi.html) quem per lacesse inde
-mihi: mea. Natalis [aura](http://sociorum.io/gementissolutis.aspx), et undas
-[hoc uberrima](http://ferre.net/arasfessus.html). Discedere maerenti virgine ut
-anilem opus, quae, enim [sentit decurrere](http://pependit.org/) Nycteus
-sacrilegos Ecce numerandos, erat sententia. Quam nolet, e mortisque tegmine,
-laboris opus et domus. Plura audet; sensit unde Iunone summisque constiterant.
-
-## Alta hoc belli
-
-Lorem markdownum coniugium _levati sustollit tamen_ iuvenem,
-[ignis aut paene](http://www.felix-nec.net/undasmihi.html) quem per lacesse inde
-mihi: mea. Natalis [aura](http://sociorum.io/gementissolutis.aspx), et undas
-[hoc uberrima](http://ferre.net/arasfessus.html). Discedere maerenti virgine ut
-anilem opus, quae, enim [sentit decurrere](http://pependit.org/) Nycteus
-sacrilegos Ecce numerandos, erat sententia. Quam nolet, e mortisque tegmine,
-laboris opus et domus. Plura audet; sensit unde Iunone summisque constiterant.
+{{<mermaid>}}
+graph TD;
+  A-->B;
+  A-->C;
+  B-->D;
+  C-->D;
+{{</mermaid>}}
 
 ```js
 console.log("soething");
@@ -117,12 +116,3 @@ nec inplevit aquis?
 2. Tanta praequestus prospiciens audacissimus toto Verque
 3. Quibus ego paratis attonitamque verba
 4. Vidit Phoronide taedas
-
-Illic in crematisregia fata ira **sedet** nominis quoque, ne
-[bicolor](http://inmiscuit-clausus.com/palustriexequialia) abactas Ichnobates
-Notus oculos sine fata Anchisae. Numen et tremescere non et dolorque Rhodopen
-nulli Iuppiter iuves. Tibi levibus ait, Musa occuluitque gaudia, properandum
-apertum albenti de scrobe undis delphines; proles attollit vidistis volucris.
-[Quae](http://niveo.net/nare-fungis.php) querellas ipsa donaverit sparsum maxima
-morsibus saxo pedibus _quaeritur piceae_, nullos clauditur populo, Bacche
-quaeque.

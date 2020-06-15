@@ -7,7 +7,7 @@ tags:
   - intermediate
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 desc:
   In this tutorial, we are going to be looking at how you can implement your own
   decorator functions in Go.
@@ -305,4 +305,4 @@ below!
 If you are looking for more, then you may quite like some of the other articles
 on this site. Feel free to check out the following articles:
 
-- [Go OAuth2 Tutorial](/golang/go)/golang/go-oauth2-tutorial/)
+- [Go OAuth2 Tutorial](/golang/go-oauth2-tutorial/)

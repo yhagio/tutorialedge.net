@@ -4,7 +4,10 @@ body {
   font-family: "proxima-nova", "proxima-nova-all", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
   line-height: 1.9em;
-  font-size: 18px;
+  font-size: 16px;
+  font-family: Content-font, Roboto, sans-serif;
+  font-weight: 400;
+  line-height: 1.625;
   font-family: Inter,sans-serif;
   letter-spacing: -.014em;
   font-feature-settings: "ss03","zero","cv08","cv11" 1;
@@ -12,8 +15,9 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #F5F7F9;
-  color: #292e31;
+  background: #F5F7F9;
+  color: #374151;
+  color: rgba(55,65,81,var(--text-opacity));
 
   h1, h2, h3, h4, h5, h6 {
     font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
@@ -34,11 +38,11 @@ body {
   }
 
   h2 {
-    font-ze: 1.65375em;
+    font-size: 20px;
   }
 
   h3 {
-    font-size: 22px;
+    font-size: 18px;
   }
 
   h4 {
@@ -239,6 +243,7 @@ a:hover .course-progress-box {
 .blue-spacer {
   width: 100%;
   height: 120px;
+  background-image: url(/images/svg/small-dots.svg);
   background-color: $lightest-blue;
   border-top: 1px solid #e7e7ec;
 }

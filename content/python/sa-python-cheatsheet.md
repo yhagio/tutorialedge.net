@@ -8,7 +8,7 @@ series: python
 image: python.svg
 tags:
 - SysAdmin
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 For the majority of my development career I have been an application developer, and I thoroughly enjoyed writing applications and not worrying so much about the hardware and networking components upon which my applications sat. 

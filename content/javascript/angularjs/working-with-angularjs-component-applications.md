@@ -138,7 +138,7 @@ youtubeSubscriberRoutes.$inject = ["$routeProvider"];
 angular.module("social").config(youtubeSubscriberRoutes);
 ```
 
-If you try navigating to http://localhost:port/#/youtube-subscribers, you should
+If you try navigating to `http://localhost:port/#/youtube-subscribers`, you should
 now see our application as well as our newly defined youtube-subscribers.html
 rendering just below our navigation.
 
@@ -181,7 +181,7 @@ youtubeSubscriberRoutes.$inject = ["$routeProvider"];
 angular.module("social").config(youtubeSubscriberRoutes);
 ```
 
-Now, when you navigate to http://yourapp:port/#/youtube-subscribers you should
+Now, when you navigate to `http://yourapp:port/#/youtube-subscribers` you should
 hopefully still see the same html that you defined in your
 youtube-subscribers.html file. The only difference being that it’s referencing
 our newly created component and not just pulling in the html directly from the
@@ -212,7 +212,7 @@ order to attain any extra information we want to render through our application.
 ## Adding our Controller to Our Component
 
 Now that we actually have a controller defined, we can come back into our
-youtube-subscriber.component.js file and add a reference to our newly created
+`youtube-subscriber.component.js` file and add a reference to our newly created
 controller like so:
 
 ```js

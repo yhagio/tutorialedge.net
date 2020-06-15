@@ -1,0 +1,19 @@
+name: Generates a Lighthouse Report For the Site
+
+on:
+  push:
+    branches:
+      - content
+
+jobs:
+  #----------------------------------
+  # Generates a lighthouse report for the site
+  #----------------------------------
+  generate_lighthouse_report:
+    runs-on: ubuntu-latest
+    name: Generates Lighthouse Report on the site
+    steps:
+      - name: Lighthouse Check
+        uses: foo-software/lighthouse-check-action@v1.0.14
+        with:
+            urls: "https://tutorialedge.net"

@@ -7,12 +7,12 @@ desc:
   Learn what it takes to set up the development environment you need to get
   started with Generative Adversarial Networks
 author: Josh Kalin
-twitter: https://www.linkedin.com/in/josh-kalin-96b6152b/
+twitter: https://amzn.to/2SYiQrA
 series: python
 image: python.svg
 tags:
   - data-science
-authorImage: https://media.licdn.com/dms/image/C5603AQG7WI2sAsa3Qw/profile-displayphoto-shrink_800_800/0?e=1553126400&v=beta&t=FLKAeVTmqWQNS6N_oW-KssTYwrhdiw94Kd_QFYLikFM
+authorImage: https://images.tutorialedge.net/images/logo.svg
 ---
 
 What's a development environment? Everyone thinks setting up
@@ -54,7 +54,7 @@ the CUDA library:
 > NVIDIA for general computing on graphical processing units (GPUs). With CUDA,
 > developers are able to dramatically speed up computing applications by
 > harnessing the power of GPUs."
-> (Source: https://developer.nvidia.com/cuda-zone).
+> (Source: `https://developer.nvidia.com/cuda-zone`).
 
 Using CUDA, TensorFlow can achieve drastic speedups in terms of processing
 power. In order to make this happen, we need to have a certain type of GPU and

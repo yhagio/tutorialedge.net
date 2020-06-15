@@ -10013,15 +10013,19 @@ body {
   font-family: "proxima-nova", "proxima-nova-all", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica, helvetica neue, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
   line-height: 1.9em;
-  font-size: 18px;
+  font-size: 16px;
+  font-family: Content-font, Roboto, sans-serif;
+  font-weight: 400;
+  line-height: 1.625;
   font-family: Inter, sans-serif;
   letter-spacing: -0.014em;
   font-feature-settings: "ss03", "zero", "cv08", "cv11" 1;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #F5F7F9;
-  color: #292e31;
+  background: #F5F7F9;
+  color: #374151;
+  color: rgba(55, 65, 81, var(--text-opacity));
 }
 body h1, body h2, body h3, body h4, body h5, body h6 {
   font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
@@ -10039,10 +10043,10 @@ body h1, body h2, body h3, body h4, body h5 {
   clear: both;
 }
 body h2 {
-  font-ze: 1.65375em;
+  font-size: 20px;
 }
 body h3 {
-  font-size: 22px;
+  font-size: 18px;
 }
 body h4 {
   font-size: 18px;
@@ -10224,6 +10228,7 @@ a:hover .course-progress-box {
 .blue-spacer {
   width: 100%;
   height: 120px;
+  background-image: url(/images/svg/small-dots.svg);
   background-color: #F2F5F7;
   border-top: 1px solid #e7e7ec;
 }
@@ -10399,93 +10404,152 @@ a:hover .course-progress-box {
     display: none;
   }
 }
-.course-listing {
-  background-color: #f6f6f6;
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-.course-listing .card {
-  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.1);
-  border: none;
-  margin-bottom: 40px;
-  border-radius: 10px;
-}
-.course-listing .card-header {
-  background-color: white;
-  border-radius: 10px;
-}
-.course-listing .card-header button:hover {
-  text-decoration: none;
-}
-.course-listing .card-header button:hover h2 {
-  transition: ease-in 0.5s;
-  color: #0F607A !important;
-}
-.course-listing .card-header button:hover span {
-  color: #4a4a4a !important;
-}
-.course-listing .card-header button {
-  text-align: left;
-  padding: 0px;
-  width: 100% !important;
-  margin: auto;
-}
-.course-listing .card-header button h2 {
-  font-size: 1.4rem;
-  text-transform: uppercase;
-}
-.course-listing .list-group-item img {
-  width: 100%;
-  height: auto;
-}
-.course-listing .list-group-item a span {
-  color: #82A1B2 !important;
-}
-.course-listing .courses {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.course-listing .courses button {
-  width: 100% !important;
-  margin: 0;
-}
-.course-listing .courses .course-progress-box {
-  flex: 1 1 26%;
-  margin: 20px;
-  padding-top: 20px;
-  background-color: white;
-  border-radius: 8px;
-  color: rgba(14, 30, 37, 0.54);
-}
-.course-listing .courses .course-listing h3 {
-  font-size: 18px;
-  line-height: 1.4;
-  margin-bottom: 20px;
-}
-
 .course-outline {
   background-color: white;
   padding: 20px;
   margin: 0;
   margin-bottom: 20px;
 }
-.course-outline img {
-  width: 100%;
-  height: auto;
+
+.course-listing {
+  padding: 40px;
+  background-image: url(/images/svg/small-dots.svg);
+}
+.course-listing h3 {
+  background-color: #F5F7F9;
+  padding: 20px;
+  width: auto;
+}
+.course-listing a {
+  text-decoration: none !important;
+}
+.course-listing .courses {
+  display: grid;
+  grid-gap: 1px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.course-listing .courses .course-box {
+  flex: 0 0 32%;
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.12);
+  box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.12);
+  color: rgba(14, 30, 37, 0.54);
+}
+.course-listing .courses .course-box h2 {
+  font-size: 20px;
+}
+.course-listing .courses .course-box h2 small {
+  font-weight: 800;
+  color: #999;
+  clear: both;
+  margin-bottom: 15px;
+}
+.course-listing .courses .course-box p {
+  font-size: 1rem;
+}
+.course-listing .courses .course-box button {
+  margin: 0;
 }
 
-.badge-info {
-  background-color: #328af1 !important;
-  padding: 5px 12px;
+.challenge-container {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.challenge-listing {
+  padding: 40px;
+  background-image: url(/images/svg/small-dots.svg);
+}
+.challenge-listing h3 {
+  background-color: #F5F7F9;
+  padding: 20px;
+  width: auto;
+}
+.challenge-listing a {
+  text-decoration: none !important;
+}
+.challenge-listing .challenges {
+  display: grid;
+  grid-gap: 1px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.challenge-listing .challenges .challenge-box {
+  flex: 0 0 32%;
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.12);
+  box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.12);
+  color: rgba(14, 30, 37, 0.54);
+}
+.challenge-listing .challenges .challenge-box h2 {
+  font-size: 20px;
+}
+.challenge-listing .challenges .challenge-box h2 small {
+  font-weight: 800;
+  color: #999;
+  clear: both;
+  margin-bottom: 15px;
+}
+.challenge-listing .challenges .challenge-box p {
+  font-size: 1rem;
+}
+.challenge-listing .challenges .challenge-box button {
+  margin: 0;
+}
+
+.next-prev {
+  width: auto;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-areas: "previous next";
+  grid-template-columns: 1fr 1fr;
+  margin: 0px;
+  padding: 0px;
+  grid-column-gap: 24px;
+  margin-top: 40px;
+}
+.next-prev .challenge-next {
+  color: #242a31;
+  padding: 20px;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+  align-items: center;
+  justify-self: stretch;
+  flex-direction: row;
+  background-color: white;
+  -webkit-box-align: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e6ecf1;
+  border-image: initial;
+  grid-area: previous/previous/previous/previous;
+  border-radius: 3px;
+  text-decoration: none;
+  page-break-inside: avoid;
+  transition: border 250ms ease 0s;
+}
+.next-prev .challenge-next span {
+  font-size: 12px;
+  font-family: Content-font, Roboto, sans-serif;
+  font-weight: 400;
+  line-height: 1.625;
 }
 
 .top-bar {
   width: 100%;
   background-color: #fafbfc;
-  padding-top: 20px;
   color: #000;
   z-index: 20;
+  padding: 20px;
   text-align: center;
   box-shadow: 0 3px 8px 0 rgba(116, 129, 141, 0.1);
   border-bottom: 1px solid #d4dadf;
@@ -10497,10 +10561,9 @@ a:hover .course-progress-box {
 }
 .top-bar h1 {
   font-size: 36px;
-  padding-top: 40px;
-  padding-bottom: 20px;
   font-weight: 500;
   line-height: 1.4;
+  background-color: #fafbfc;
 }
 
 .post-info {
@@ -10546,13 +10609,15 @@ a:hover .course-progress-box {
 }
 
 article {
-  font-size: 17px;
-  line-height: 1.62;
-  color: #3b454e;
+  font-size: 16px;
+  font-family: Content-font, Roboto, sans-serif;
+  font-weight: 400;
+  line-height: 1.625;
 }
 article .info {
   display: flex;
   justify-content: space-between;
+  margin-top: 0px;
 }
 article .info img {
   width: 25px;
@@ -10561,9 +10626,6 @@ article .info img {
   border-radius: 100%;
   float: left;
   margin-right: 10px;
-}
-article > p {
-  padding-bottom: 24px;
 }
 article h1 {
   font-size: 1.75rem;
@@ -10628,6 +10690,9 @@ article pre {
   overflow: auto;
   border-radius: 8px;
   margin-top: 20px;
+}
+article pre code {
+  color: white;
 }
 article .filename {
   background: #f2f6fa;
@@ -10739,7 +10804,7 @@ article .github-btn {
   outline: none;
   color: #3b454e;
   line-height: 1.9em;
-  font-size: 18px;
+  font-size: 17px;
 }
 .content p {
   margin-bottom: 24px;
@@ -10919,11 +10984,6 @@ article .github-btn {
   color: #22798A;
 }
 
-.courses {
-  clip-path: polygon(0px 0px, 100% 40px, 100% 100%, 0px calc(100% - 72px));
-  padding: 100px 0px 136px;
-}
-
 nav.navbar {
   padding: 0;
   background-color: #232A2D !important;
@@ -11044,6 +11104,7 @@ nav .dropdown-menu img {
 }
 .course-sidebar a {
   display: block;
+  color: #3B454E;
 }
 .course-sidebar h5 {
   font-size: 18px;
@@ -11069,7 +11130,7 @@ nav .dropdown-menu img {
   color: black;
 }
 .left-sidebar .nav-item {
-  color: #7a848e;
+  color: #3B454E;
   cursor: pointer;
   display: flex;
   position: relative;
@@ -11079,10 +11140,10 @@ nav .dropdown-menu img {
   border-style: solid solid solid;
   border-color: transparent transparent transparent;
   border-image: initial;
-  padding: 4px 20px 8px 16px;
+  padding: 4px 4px 8px 16px;
   margin: 0;
   border-right: 0px;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 24px;
   text-decoration: none;
 }
@@ -11303,6 +11364,76 @@ nav .dropdown-menu img {
 .register a {
   margin-left: 40px;
   text-decoration: underline;
+}
+
+.window-header {
+  height: 37px;
+  background: #384A56;
+  position: relative;
+  color: white;
+}
+.window-header .action-buttons {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  margin-top: -5px;
+  width: 10px;
+  height: 10px;
+  background: Crimson;
+  border-radius: 50%;
+  box-shadow: 15px 0 0 Orange, 30px 0 0 LimeGreen;
+}
+.window-header .language {
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: 30%;
+  margin-top: -10px;
+  height: 21px;
+  padding: 0 1em;
+  text-align: right;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background: transparent;
+  font-family: Lato, sans-serif;
+  color: white;
+}
+
+.CodeMirror {
+  box-shadow: rgba(0, 0, 0, 0.2) 0 4px 2px -2px;
+}
+
+.loading {
+  z-index: 200 !important;
+}
+
+.snippet {
+  font-size: 16px;
+  line-height: 25px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.snippet .snippet-editor .cm-s-monokai.CodeMirror {
+  background: #272822;
+  color: #f8f8f2;
+  min-height: 60vh;
+}
+
+.controls {
+  background-color: white;
+  padding: 40px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 4px 2px -2px;
+}
+.controls .cm-s-monokai.CodeMirror {
+  height: 200px !important;
+  margin-bottom: 20px;
+}
+
+.controls button {
+  margin: 0;
+  margin-bottom: 20px;
+  border-radius: 0 !important;
 }
 
 /*# sourceMappingURL=main.css.map */

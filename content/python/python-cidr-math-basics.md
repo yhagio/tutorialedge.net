@@ -9,7 +9,7 @@ series:
 image: 
 tags:
 - beginner
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 Python is well known for being the tool of choice for most System Administrators and a common task that most SysAdmins find themselves is calculating CIDR ranges. 

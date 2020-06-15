@@ -8,7 +8,7 @@ tags:
   - beginner
 title: Getting Started With Python
 twitter: https://twitter.com/Elliot_F
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 weight: 1
 ---
 
@@ -30,7 +30,7 @@ language you’ll first need to install the latest version of Python onto your
 local development machine. For the purpose of this video series we shall be
 using version 3.6.2.
 
-Navigate to the downloads page of [www.python.org](www.python.org) and download
+Navigate to the downloads page of [www.python.org](https://www.python.org) and download
 the appropriate version now.
 
 Once you’ve successfully installed Python you should then be able to call

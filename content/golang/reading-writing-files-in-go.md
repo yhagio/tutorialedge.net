@@ -10,7 +10,7 @@ tags:
   - filesystem
 title: Reading And Writing To Files in Go
 twitter: https://twitter.com/Elliot_F
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 weight: 8
 ---
 
@@ -237,7 +237,7 @@ file permissions.
 ## Further Reading:
 
 - [Parsing JSON Files with Go](/golang/parsing-json-with-golang/)
-- [Parsing XML Files with Go](/golang/parsing-xml-with-goland/)
+- [Parsing XML Files with Go](/golang/parsing-xml-with-golang/)
 
 Hopefully you found this tutorial useful, if you did, or if you require further
 help, then please do not hesitate to let me know in the comments section below!

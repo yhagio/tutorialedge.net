@@ -11,7 +11,7 @@ tags:
   - java
 title: Depth Limited Search in Java
 twitter: https://twitter.com/Elliot_F
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 <!-- TODO: Revamp This Tutorial -->
@@ -42,7 +42,6 @@ authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_4
 > Java</a>
 
 # The Implementation:
-discord
 
 <p>Below you’ll find an implementation of a Depth-Limited search class which is built as an extension of the AbstractSearch java class.</p>
 

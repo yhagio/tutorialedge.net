@@ -10,7 +10,7 @@ series: golang
 image: golang.svg
 tags:
   - File Upload
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 Hi everybody! In this tutorial, we are going to be building a really simple

@@ -11,7 +11,7 @@ tags:
   - books
 title: The Top Programming Books for Learning Rust
 twitter: https://twitter.com/Elliot_F
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 <!-- TODO: Add 2 more books -->
@@ -78,7 +78,7 @@ The book is still currently under construction as it stands, but from the initia
 - Modern Generics
 - Memory Safety
 
-> **Buy Now:** [Fullstack Rust: The Complete Guide to Building Apps with the Rust Programming Language and Friends](https://gumroad.com/discover?query=fullstack%20rust#fBHCs)
+> **Buy Now:** [Fullstack Rust: The Complete Guide to Building Apps with the Rust Programming Language and Friends](https://gumroad.com/a/122844275)
 
 # Conclusion
 

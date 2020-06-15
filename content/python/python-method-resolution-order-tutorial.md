@@ -9,7 +9,7 @@ tags:
   - advanced
 title: Python Method Resolution Order Tutorial
 twitter: https://twitter.com/Elliot_F
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 Understanding the way and the order in which Python resolves functions is
@@ -110,7 +110,7 @@ means by breaking it down.
 
 Let's have a look at the following class inheritance graph from the algo's wiki:
 
-![C3 Linearization Graph](/images/c3-linearization.png)
+![C3 Linearization Graph](https://images.tutorialedge.net/images/c3-linearization.png)
 
 Basically in this graph `class O` does not have any parents and features a
 number of children: `[A, B, C, D, E]`. Our `[A, B, C]` classes are the parents

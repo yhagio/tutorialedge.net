@@ -8,7 +8,7 @@ series: golang
 image: golang.svg
 tags:
   - WebSockets
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 Hi Fellow Devs! In this tutorial, we are going to be looking at how we can use WebSockets
@@ -346,7 +346,7 @@ a simple WebSocket based application in Go!
 
 So, hopefully you enjoyed this tutorial and found it useful! I'm hoping this highlighted some of the main benefits of using WebSockets within your own Go applications!
 
-> **Source Code** - The full source code for this tutorial can be found here: [Go-Websocket-Tutorial](https://github.com/TutorialEdge/Go/tree/master/go-websocket-tutorial)
+> **Source Code** - The full source code for this tutorial can be found here: [TutorialEdge/Go](https://github.com/TutorialEdge/Go/)
 
 ## Further Reading
 

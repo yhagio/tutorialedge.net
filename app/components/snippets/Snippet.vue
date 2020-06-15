@@ -2,14 +2,21 @@
     <div class="snippet">
         <Loading v-if="this.loading" />
         
-        <h4>Try It Now:</h4>
-        <codemirror v-model="code" :options="cmOptions" />
+        <div class="snippet-editor">
+            <div class="window-header">
+                <div class="action-buttons"></div>
+                <span class="language">{{ this.language }}</span>
+            </div>
+            <codemirror v-model="code" :options="cmOptions" />
+        </div>
 
-        <button v-on:click="executeCode" class="btn btn-primary">Run Code...</button>
-        
-        <div v-if="this.output" class="alert alert-success" role="alert">
-            <h4 class="alert-heading">Output:</h4>
-            <p class="mb-0">{{ this.output }}</p>
+        <div class="controls">
+            <button v-on:click="executeCode" class="btn btn-primary btn-execute">Submit Code</button>
+            <div class="output-label">
+                <h5>Progam Output:</h5>
+                <p>{{ this.output.time }}</p>
+            </div>
+            <pre class="output">{{ this.output.output }}</pre>
         </div>
 
         <hr>
@@ -27,7 +34,10 @@ import Loading from '../misc/Loading.vue';
 
 export default {
     name: 'Snippet',
-    props: ["code"],
+    props: [
+        "code",
+        "language"
+    ],
     components: {
         codemirror,
         Carbon,
@@ -40,10 +50,19 @@ export default {
             loading: false,
             cmOptions: {
                 tabSize: 4,
-                mode: 'text/x-go',
+                mode: 'text/x-' + this.language,
                 theme: 'monokai',
                 lineNumbers: true,
                 line: true,
+            },
+            terminalOptions: {
+                tabSize: 4,
+                theme: 'monokai',
+                mode: 'application/html',
+                lineNumbers: false,
+                readOnly: true,
+                cursorBlinkRate: -1,
+                lineWrapping: true
             }
         }
     },
@@ -51,19 +70,24 @@ export default {
         executeCode: async function() {
             this.loading = true;
             try {
+                let req = {
+                    code: this.code
+                }
+
                 let response = await axios({ method: "post", 
-                        url: config.apiBase + "/v1/executego", 
-                        data: this.code,
-                        headers: {
-                            "Authorization": "Bearer " + this.$auth.getAccessToken(),
-                            "Content-Type": "application/json"
-                        }
-                    });
+                    // url: config.apiBase + "/v1/execute" + this.language, 
+                    url: config.goApiUrl + "/execute", 
+                    data: JSON.stringify(req),
+                    headers: {
+                        "Authorization": "Bearer " + this.$auth.getAccessToken(),
+                        "Content-Type": "application/json"
+                    }
+                });
                 this.loading = false;
                 this.output = response.data;
-            } catch (e) {
+            } catch (err) {
                 this.loading = false;
-                this.output = e;
+                this.output = err;
             }
         }
     }
@@ -71,19 +95,11 @@ export default {
 </script>
 
 <style lang="scss">
-.loading {
-    z-index: 200;
-}
-.snippet {
-    padding: 40px;
-}
-.cm-s-monokai.CodeMirror {
-    background: #272822;
-    color: #f8f8f2;
-    min-height: 60vh;
+.output-label {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    font-family: monospace;
 }
 
-.CodeMirror {
-    height: 600px auto;
-}
 </style>

@@ -10,7 +10,7 @@ tags:
   - intermediate
 title: Building a Network Command Line Interface in Go
 twitter: https://twitter.com/Elliot_F
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 weight: 18
 ---
 
@@ -28,7 +28,7 @@ can build your own CLIs that could do a wide variety of other things such as
 network monitoring, image manipulation and so on.
 
 > **Note -** The full code for this tutorial can be found here:
-> [TutorialEdge/Go/go-cli-tutorial](https://github.com/TutorialEdge/Go/tree/master/go-cli-tutorial)
+> [TutorialEdge/Go](https://github.com/TutorialEdge/Go)
 
 # Prerequisites
 

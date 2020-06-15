@@ -13,7 +13,7 @@ export default {
         }
     },
     created: function() {
-        console.log("Loading Forum")
+        // console.log("Loading Forum")
     }
 }
 </script>

@@ -11,7 +11,7 @@ tags:
 weight: 21
 title: Golang MySQL Tutorial
 twitter: https://twitter.com/Elliot_F
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 As you continue your Golang learning journey, it becomes almost inevitable that
@@ -43,8 +43,7 @@ here:
 
 # Text Tutorial
 
-In order to do this we’ll be using
-<a href=”https://github.com/go-sql-driver/mysql”>https://github.com/go-sql-driver/mysql</a>
+In order to do this we’ll be using [https://github.com/go-sql-driver/mysql](https://github.com/go-sql-driver/mysql)
 as our MySQL driver. `Go-SQL-Driver` is a lightweight and fast MySQL driver that
 supports connections over `TCP/IPv4`, `TCP/IPv6`, `Unix domain sockets` or
 custom protocols and features automatic handling of broken connections.

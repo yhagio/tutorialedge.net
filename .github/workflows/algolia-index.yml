@@ -1,0 +1,32 @@
+name: Algolia Index
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  index:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.72.0'
+      
+      - name: Install NPM 
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      
+      - name: Build and Index
+        env:
+          ALGOLIA_INDEX_NAME: ${{ secrets.ALGOLIA_INDEX_NAME }}
+          ALGOLIA_INDEX_FILE: ${{ secrets.ALGOLIA_INDEX_FILE }}
+          ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
+          ALGOLIA_ADMIN_KEY: ${{ secrets.ALGOLIA_ADMIN_KEY }}
+        run: |
+          npm install
+          hugo --minify
+          npm run algolia

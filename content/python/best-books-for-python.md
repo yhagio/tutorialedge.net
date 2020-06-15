@@ -10,7 +10,7 @@ tags:
   - books
 title: The Top Books for Learning to Program in Python
 twitter: https://twitter.com/Elliot_F
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 Python is one of the most popular programming languages on the planet. It’s

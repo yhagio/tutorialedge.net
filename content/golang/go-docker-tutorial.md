@@ -8,7 +8,7 @@ series: golang
 image: golang.svg
 tags:
   - docker
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 Docker is a truly excellent bit of tech that allows us to specify the environment in which we want all of our applications to live within a simple `Dockerfile`. This effectively allows for easier collaboration and rids us of the _"it works on my machine"_ problem that is soo prevalent in development teams across the globe.

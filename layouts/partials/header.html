@@ -7,8 +7,10 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+	<meta name="monetization" content="$ilp.uphold.com/WJYihmKB9qwa">
+
 	<meta property="og:title" content="{{ .Title }}" />
-	<meta propert="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Page.Params.desc }}{{ . }}{{ end }}{{ end }}">
+	<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Page.Params.desc }}{{ . }}{{ end }}{{ end }}">
 	<meta property="og:locale" content="en_US">
 	<meta property="og:site_name" content="TutorialEdge">
 	<meta property="og:image" content="https://images.tutorialedge.net/cards{{ .Page.RelPermalink }}card.png">
@@ -29,14 +31,15 @@
 	<title>{{ .Title }} | TutorialEdge.net</title>
 	
 	<link rel="icon" type="image/png" href="https://images.tutorialedge.net/images/favicon.ico">
+	<link media="all" defer rel="stylesheet" href="{{ .Site.BaseURL }}/assets/flat-icons.css">
 	<link media="all" defer rel="stylesheet" href="{{ .Site.BaseURL }}/app/main.css">
 
-	{{ if .RSSLink -}}
-	<link defer href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}">
+	{{ with .OutputFormats.Get "RSS" }}
+	<link defer href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml" title="TutorialEdge">
 	{{- end }}
 
-	{{ .Hugo.Generator }}
-
+	{{ hugo.Generator }}
+	<script src="https://kit.fontawesome.com/36f5cfa744.js" crossorigin="anonymous"></script>
 
 	<script src="/js/jquery-3.4.1.slim.min.js" defer></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous" defer></script>
@@ -153,7 +156,7 @@
 
 			<!-- Right Hand of Navbar -->
 			<ul class="navbar-nav full-height">
-				<!-- <li class="nav-item"><a class="nav-link search" href="/forum/">💬 Forum</a></li> -->
+				<li class="nav-item"><a class="nav-link search" href="https://discuss.tutorialedge.net/">💬 Forum</a></li>
 				<li class="nav-item"><a class="nav-link search" href="/search/">🔍 Search</a></li>
 				
 				<Profile-Nav-Button />
@@ -165,45 +168,45 @@
 	</nav>
 	
 	<!-- As a heading -->
-<nav class="navbar secondary-nav navbar-expand-lg navbar-light bg-light">
+	<nav class="navbar secondary-nav navbar-expand-lg navbar-light bg-light">
 
-	<!-- Hamburger -->
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#secondNav"
-	aria-controls="secondNav" aria-expanded="false" aria-label="Toggle navigation">
-	   <img src="/images/svg/hamburger-black.svg" alt="hamburger menu" />
-   </button>
+		<!-- Hamburger -->
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#secondNav"
+			aria-controls="secondNav" aria-expanded="false" aria-label="Toggle navigation">
+			<img src="/images/svg/hamburger-black.svg" alt="hamburger menu" />
+		</button>
 
-   <div class="collapse navbar-collapse justify-content-between" id="secondNav">
-		<ul class="navbar-nav mr-auto">
+		<div class="collapse navbar-collapse justify-content-between" id="secondNav">
+			<ul class="navbar-nav mr-auto">
 
-			<!-- Courses dropdown -->
-			<li class="nav-item">
-				<a class="nav-link" href="{{ .Site.BaseURL }}/course/angular/"><img alt="angular logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/angular.svg" /> Angular</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="{{ .Site.BaseURL }}/course/cloud/"><img alt="cloud logo" src="data:image/png.svg;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/cloud.svg" /> Cloud</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="{{ .Site.BaseURL }}/course/compsci/"><img alt="cloud logo" src="data:image/png.svg;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/logo.svg" /> Comp Sci</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="{{ .Site.BaseURL }}/course/python/"><img alt="python logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/python.svg" />Python</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="{{ .Site.BaseURL }}/course/golang/"><img alt="golang logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/golang.svg" />Golang</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="{{ .Site.BaseURL }}/course/rust/"><img alt="rust logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/rust-logo.png" />Rust</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="{{ .Site.BaseURL }}/course/reactjs/"><img alt="rust logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/react.svg" />React.JS</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="{{ .Site.BaseURL }}/course/vuejs/"><img alt="vuejs logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/vuejs.svg" />VueJS</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="{{ .Site.BaseURL }}/course/webdev/"><img alt="webdev logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/logo.svg" />Web Dev</a>
-			</li>
-		</ul>
-	</div>
-</nav>
+				<!-- Courses dropdown -->
+				<li class="nav-item">
+					<a class="nav-link" href="{{ .Site.BaseURL }}/course/angular/"><img alt="angular logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/angular.svg" /> Angular</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{{ .Site.BaseURL }}/course/cloud/"><img alt="cloud logo" src="data:image/png.svg;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/cloud.svg" /> Cloud</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{{ .Site.BaseURL }}/course/compsci/"><img alt="cloud logo" src="data:image/png.svg;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/logo.svg" /> Comp Sci</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{{ .Site.BaseURL }}/course/python/"><img alt="python logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/python.svg" />Python</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{{ .Site.BaseURL }}/course/golang/"><img alt="golang logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/golang.svg" />Golang</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{{ .Site.BaseURL }}/course/rust/"><img alt="rust logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/rust-logo.png" />Rust</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{{ .Site.BaseURL }}/course/reactjs/"><img alt="rust logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/react.svg" />React.JS</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{{ .Site.BaseURL }}/course/vuejs/"><img alt="vuejs logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/vuejs.svg" />VueJS</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{{ .Site.BaseURL }}/course/webdev/"><img alt="webdev logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/logo.svg" />Web Dev</a>
+				</li>
+			</ul>
+		</div>
+	</nav>

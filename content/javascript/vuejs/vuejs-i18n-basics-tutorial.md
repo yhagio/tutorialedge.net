@@ -8,7 +8,7 @@ series: vuejs
 image: vuejs.png
 tags:
 - intermediate
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 In this tutorial, we are going to look at how you can introduce internationalization into your Vue.js applications using the `vue-i18n` library.

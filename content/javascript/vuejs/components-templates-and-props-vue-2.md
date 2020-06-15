@@ -5,12 +5,12 @@ desc:
   In this guest post by Ajdin Imsirovic, the author of Vue.js Quick Start Guide,
   you’ll learn about components, templates, and props in Vue 2.
 author: Ajdin Imsirovic
-twitter: https://www.linkedin.com/in/ajdin-imsirovic/?originalSubdomain=ba
+twitter: https://amzn.to/3hvnuKu
 series: vuejs
 image: vuejs.png
 tags:
   - beginners
-authorImage: https://media.licdn.com/dms/image/C4E03AQEMw64D-DxhmQ/profile-displayphoto-shrink_800_800/0?e=1554336000&v=beta&t=XdHlrGzvCX2DYWrpyuU8N_P6a5ci0So3yRW42Wri_CE
+authorImage: https://images.tutorialedge.net/images/logo.svg
 ---
 
 To begin, let's look at how to make a component in Vue. First, we specify the
@@ -36,7 +36,7 @@ the article and span tags and gave that custom tag the name of custom-artic
 > **Note -** Components are named using kebab-case.
 
 The code for this component is available as a Codepen
-at https://codepen.io/AjdinImsirovic/pen/xzpOaJ.
+at `https://codepen.io/AjdinImsirovic/pen/xzpOaJ`.
 
 Now, to create an instance of our component, we simply use
 our <custom-article> opening and closing tags in our HTML, like this:
@@ -65,7 +65,7 @@ new Vue({
 ```
 
 The example code for the previous example is available
-here: https://codepen.io/AjdinImsirovic/pen/RJxMae.
+here: `https://codepen.io/AjdinImsirovic/pen/RJxMae`.
 
 Next, we'll see how we can improve our component with the help
 of the props and data options.
@@ -90,7 +90,7 @@ flows of data between the parent and the child. Props are always defined as an
 array.
 
 The code for the previous example is available
-here: https://codepen.io/AjdinImsirovic/pen/KeZNPr.
+here: `https://codepen.io/AjdinImsirovic/pen/KeZNPr`.
 
 We have registered a prop in our component, and now we can use it in HTML as an
 attribute named just like our prop:
@@ -111,7 +111,7 @@ our custom-article component.
 # Adding content to our components with the help of the data object
 
 > **Code -** The code pen for this example can be found
-> at https://codepen.io/AjdinImsirovic/pen/QxadmE.
+> at `https://codepen.io/AjdinImsirovic/pen/QxadmE`.
 
 In our HTML, we'll change the code to the following:
 
@@ -172,7 +172,7 @@ new Vue({
 ```
 
 To view the pen for the previous example,
-visit https://codepen.io/AjdinImsirovic/pen/VdyQzW.
+visit `https://codepen.io/AjdinImsirovic/pen/VdyQzW`.
 
 > **Note -** If we used data as an object instead of as a function, then
 > reactivity would apply to all instances of our component. Since the main
@@ -205,7 +205,7 @@ border-radius: 10px; }
 ```
 
 > **Code-** This example is available
-> at https://codepen.io/AjdinImsirovic/pen/mKpxGZ.
+> at `https://codepen.io/AjdinImsirovic/pen/mKpxGZ`.
 
 Let's say we commented out the datacontent property of the Vue
 instance's data function. Can you guess what would happen?
@@ -215,7 +215,7 @@ data? The child component will simply revert to its default property in
 the props object.
 
 > **Codepen -** To see this in action, visit this
-> link: https://codepen.io/AjdinImsirovic/pen/BVJxKL.
+> link: `https://codepen.io/AjdinImsirovic/pen/BVJxKL`.
 
 # Other ways of building component templates in Vue
 
@@ -248,7 +248,7 @@ props: ['name'] }) new Vue({ el: '#app' })
 ```
 
 > **Codepen -** The code pen for this example is available
-> here: https://codepen.io/AjdinImsirovic/pen/NzXyem.
+> here: `https://codepen.io/AjdinImsirovic/pen/NzXyem`.
 
 Single-file templates are probably the most practical way of creating templates
 in Vue. You keep all your HTML, JS, and styling in a single file (with
@@ -345,7 +345,7 @@ When naming custom components, we need to use hyphens. This is done to make sure
 there are no naming collisions with regular HTML elements.
 
 > **Codepen -** The example code for this section is available
-> at https://codepen.io/AjdinImsirovic/pen/qypBbz.
+> at `https://codepen.io/AjdinImsirovic/pen/qypBbz`.
 
 Now that we understand how to add a simple component to our Vue instance, let's
 practice by adding a more complex example.
@@ -378,7 +378,7 @@ In this code, we have added mustache syntax to our template. Then we have
 utilized the data option to return the text, which will be interpolated in the
 template. The mustache syntax tells our component to look for the header inside
 our data option. The code for this example is available
-here: https://codepen.io/AjdinImsirovic/pen/wxpvxy.  Next, under our header,
+here: `https://codepen.io/AjdinImsirovic/pen/wxpvxy`.  Next, under our header,
 we'll add some Bootstrap cards.  For simplicity's sake, we'll use an existing
 example from the official Bootstrap documentation, which is available at the
 following
@@ -424,7 +424,7 @@ Vue.component("the-card", {
 ```
 
 > **Codepen- ** The code for this stage of the development of our code is
-> available here: https://codepen.io/AjdinImsirovic/pen/VByYeW.
+> available here: `https://codepen.io/AjdinImsirovic/pen/VByYeW`.
 
 Next, let's add our card component to our HTML. The full updated code will look
 like this:
@@ -467,7 +467,7 @@ Our specific goal is to try to use the data option in our component instance and
 combine it with the powers of Vue directives to further improve our Vue apps.
 
 > **Codepen -** The code for this section is available
-> at https://codepen.io/AjdinImsirovic/pen/Epoamy.
+> at `https://codepen.io/AjdinImsirovic/pen/Epoamy`.
 
 Let's make our JS a bit easier to read with the help of the backtick ES6 JS
 syntax. This syntax allows us to write JavaScript strings which span multiple

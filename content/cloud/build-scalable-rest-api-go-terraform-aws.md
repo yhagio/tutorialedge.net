@@ -9,7 +9,7 @@ tags:
   - resiliency
 title: How to use Terraform, Go, and AWS to build a scalable and resilient REST API
 twitter: https://twitter.com/Elliot_F
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 I've recently been exploring the power of Terraform - and wanted to apply what I've learned to build a scalable and resilient REST API. In just a few simple steps, we'll be using Terraform to provision our underlying AWS infrastructure and deploy our microservice developed with Go.
@@ -145,7 +145,7 @@ Using this approach, any instances created by our auto-scaling group will automa
 
 # Provisioning an Elastic Load Balancer
 
-In order to provision an Elastic Load Balancer (ELB) to automatically distributes incoming traffic across multiple targets, we'll first need to create a security group resource and specify both ingress and egress rules that will whitelist the IP addresses and ports of incoming and outgoing traffic.
+In order to provision an Elastic Load Balancer (ELB) to automatically distributes incoming traffic across multiple targets, we'll first need to create a security group resource and specify both ingress and egress rules that will add the IP addresses and ports of incoming and outgoing traffic to the allowlist.
 
 ```js
 resource "aws_autoscaling_group" "example" {

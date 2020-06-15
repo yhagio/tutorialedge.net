@@ -1,7 +1,6 @@
 ---
 title: "Vue.js Change Handler Tutorial"
 date: 2019-08-11T13:35:05+01:00
-draft: true
 desc: In this tutorial, we are going to be looking at how you can effectively watch for changes within a Vue.JS applications.
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
@@ -9,7 +8,7 @@ series: vuejs
 image: vuejs.png
 tags:
 - beginner
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 Welcome fellow programmers! In this tutorial, we are going to be looking at how you can effectively watch for changes in your application and trigger functions whenever particular data properties are updated. 

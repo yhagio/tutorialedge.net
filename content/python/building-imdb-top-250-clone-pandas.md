@@ -37,8 +37,8 @@ This article covers the following:
 You’ll be required to have Python installed on a system. Finally, to use the Git
 repository, you need to install Git. The code files of this article can be found
 on GitHub at
-https://github.com/PacktPublishing/Hands-On-Recommendation-Systems-with-Python/tree/master/Chapter3.
-You can also see the code in action at http://bit.ly/2v7SZD4.
+`https://github.com/PacktPublishing/Hands-On-Recommendation-Systems-with-Python/tree/master/Chapter3`.
+You can also see the code in action at `http://bit.ly/2v7SZD4`.
 
 # The simple recommender
 
@@ -47,7 +47,7 @@ Create a new directory named `IMDB`. Create a Jupyter Notebook in this directo
 named `Simple Recommender` and open it in the browser.
 
 Now load the dataset available at
-https://www.kaggle.com/rounakbanik/the-movies-dataset/downloads/movies_metadata.csv/7:
+`https://www.kaggle.com/rounakbanik/the-movies-dataset/downloads/movies_metadata.csv/7`:
 
 ```py
 import pandas as pd
@@ -480,7 +480,7 @@ def build_chart(gen_df, percentile=0.8):
 You may want recommendations for animated movies between 30 minutes and 2 hours
 in length, and released anywhere between 1990 and 2005. See the results:
 
-![](https://images.tutorialedge.net/images/python/recommender-system-python/image5-25.png)
+![Results of recommender systems](https://images.tutorialedge.net/images/python/recommender-system-python/image5-25.png)
 
 You can see that the movies that it outputs satisfy all the conditions you
 passed in as input. Since you applied IMDB's metric, you can also observe that
@@ -489,11 +489,10 @@ your movies are very highly rated and popular at the same time.
 If you found this article interesting, you can explore Rounak Banik’s Hands-On
 Recommendation Systems with Python to get started with building recommendation
 systems is a familiarity with Python. With
-[Hands-On Recommendation Systems with Python](https://amzn.to/2PRq53f), learn
+[Hands-On Recommendation Systems with Python](https://amzn.to/3cWU2JQ), learn
 the tools and techniques required in building various kinds of powerful
 recommendation systems (collaborative, knowledge and content based) and
 deploying them to the web.
 
-<div class="amazon-link">
-View on Amazon: <a href="https://amzn.to/2PRq53f">Hands-On Recommendation Systems with Python</a>
-</div>
+
+> View on Amazon: [Hands-On Recommendation Systems with Python](https://amzn.to/3cWU2JQ)

@@ -13,7 +13,7 @@ tags:
 title: Part 7 - Managing State with Vuex in your VueJS Applications
 twitter: https://twitter.com/Elliot_F
 weight: 7
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 In this tutorial, we are going to be adding Vuex to our VueJS application. We'll

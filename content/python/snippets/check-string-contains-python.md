@@ -5,10 +5,19 @@ desc: In this snippet, we are going to look at how you can check
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
 series: python
+language: python
+layout: snippets
 image: python.svg
 tags:
 - snippet
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
+snippet: |
+  planets = "my very excellent mother just served us nine pizzas"
+  is_true = "very" in planets
+  print(is_true)
+
+  is_false = "pluto" in planets
+  print(is_false)
 ---
 
 In this code snippet, we are going to look at how you can check if a string exists within a string in Python.

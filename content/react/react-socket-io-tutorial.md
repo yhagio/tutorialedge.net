@@ -14,7 +14,7 @@ tags:
   - socket.io
 title: Building Real-time ReactJS Applications with Socket.Io - Tutorial
 twitter: https://twitter.com/Elliot_F
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 In this article, we are going to be looking at how you can implement real-time
@@ -177,7 +177,7 @@ Our backend system is very simple, but can be extended to your heart's content.
 This will actually be the base for a new series that I'm building on creating a
 real-time chat application that runs on AWS. If you want to stay tuned to when
 this comes out then please feel free to follow me on twitter:
-[@Elliot_f](https://twiter.com/Elliot_f)
+[@Elliot_f](https://twitter.com/Elliot_f)
 
 So, the below code simply sets up a socket.io endpoint that runs on
 `http://localhost:5000`. When a user connects to this websocket endpoint, it

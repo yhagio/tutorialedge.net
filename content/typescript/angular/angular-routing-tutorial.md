@@ -10,7 +10,7 @@ tags:
   - typescript
 title: Angular Routing Tutorial
 twitter: https://twitter.com/Elliot_F
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 > This tutorial was built using Angular 2.2. Some of the code samples may not
@@ -23,9 +23,6 @@ and basically create a full-blown multi-page application.
 Routing in Angular 2+ has changed dramatically from the original AngularJS days
 where you would have to utilize the \$routeProvider and typically define routes
 in a separate file to that of your module file.
-
-> If you are interested, check out my
-> [AngularJS 1.5 Routing Tutorial](https://tutorialedge.net/angularjs-template-tutorial-ng-view)
 
 # Defining your First Routes
 

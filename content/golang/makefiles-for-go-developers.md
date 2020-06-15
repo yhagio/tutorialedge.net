@@ -10,7 +10,7 @@ series: golang
 image: golang.png
 tags:
 - Tools
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 
 ---
 In this tutorial, we are going to be looking at how you, as a Go developer, can leverage

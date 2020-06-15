@@ -8,8 +8,8 @@
 
         <div class="clear"></div>
 
-        <ul class="list-group">
-            <li v-for="comment in comments" v-bind:key="comment.id" class="list-group-item d-flex justify-content-between align-items-center">
+       <ul class="list-group">
+             <li v-for="comment in comments" v-bind:key="comment.id" class="list-group-item d-flex justify-content-between align-items-center">
                 <p><b>{{comment.slug}}</b> {{comment.body}}</p>
 
                 <button type="button" class="btn btn-danger" v-on:click="deleteComment(comment)">

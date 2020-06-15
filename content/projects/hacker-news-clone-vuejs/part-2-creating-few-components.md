@@ -13,7 +13,7 @@ tags:
 title: Part 2 - Creating a Few Components
 twitter: https://twitter.com/Elliot_F
 weight: 2
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 In the previous tutorial, we not only managed to set up our base project and get

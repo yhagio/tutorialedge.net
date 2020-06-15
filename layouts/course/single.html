@@ -13,66 +13,39 @@
 	</div>
 </div>
 
-<div class="course-listing">
-	<div class="container">
+<div class="course-listing">	
 
+	{{ range $taxonomyname, $taxonomy := .Site.Taxonomies.tags }}
 
-		{{ range $taxonomyname, $taxonomy := .Site.Taxonomies.tags }}
+	{{ $scratch := newScratch }}
+	{{ range $taxonomy }}
+	{{ if eq $.Params.series .Params.series }}
+	{{ if not (in ($scratch.Get "tags") $taxonomyname) }}
+	{{if not (eq $taxonomyname .Params.series) }}
+	{{ $scratch.Add "tags" (slice $taxonomyname) }}
+	{{ end }}
+	{{ end }}
+	{{ end }}
+	{{ end }}
 
-		{{ $scratch := newScratch }}
-		{{ range $taxonomy }}
-		{{ if eq $.Params.series .Params.series }}
-		{{ if not (in ($scratch.Get "tags") $taxonomyname) }}
-		{{if not (eq $taxonomyname .Params.series) }}
-		{{ $scratch.Add "tags" (slice $taxonomyname) }}
-		{{ end }}
-		{{ end }}
-		{{ end }}
-		{{ end }}
-
-		{{ range $scratch.Get "tags" }}
-		<div id="accordion">
-		<div class="card">
-			<div class="card-header" id="{{ . }}-header">
-				<h5 class="mb-0">
-				<button class="btn btn-link" data-toggle="collapse" data-target="#{{ . }}" aria-expanded="true" aria-controls="{{ . }}">
-					<h2>➕ {{ . }}</h2>
-					<span>View lessons</span>
-				</button>
-				</h5>
-			</div>
-		
-			<div id="{{ . }}" class="collapse" aria-labelledby="{{ . }}" data-parent="#accordion">
-				<div class="card-body">
-					<ul class="list-group list-group-flush">
-						{{ range sort $taxonomy }}
-						{{ if eq $.Params.series .Params.series }}
-						<li class="list-group-item"><a href="{{.Permalink}}">
-							<div class="row">
-								<div class="col-lg-1">
-									<img src="https://images.tutorialedge.net/images/{{ .Params.image }}" alt="{{ .Params.Description }}" />
-								</div>
-								<div class="col-lg-9">
-									<h3>{{ .Title }}</h3>
-									<span>{{ .Params.desc }}</span>
-								</div>
-								<div class="col-lg-2">
-									<button class="btn btn-primary">Read Now</button>
-								</div>
-							</div>
-						</a></li>
-						{{ end }}
-						{{ end }}
-					  </ul>
+	{{ range $scratch.Get "tags" }}
+	<h3>{{.}}</h3>
+	<div class="courses">
+		{{ range sort $taxonomy }}
+			{{ if eq $.Params.series .Params.series }}
+			<a href="{{ .Permalink }}">
+				<div class="course-box">
+					<h2><small>{{ .Params.difficulty }}</small><br />{{ .Title }}</h2>
+					<p>{{ .Page.Params.desc }}</p>
+					<button class="btn btn-success">Read Now</button>
 				</div>
-			</div>
-			</div>
-		</div>
-			
-		</ul>
-		{{ end }}
+			</a>
+			{{ end }}
 		{{ end }}
 	</div>
+	<div class="clear"></div>
+	{{ end }}
+	{{ end }}
 </div>
 
 

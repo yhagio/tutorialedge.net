@@ -1,5 +1,17 @@
   <template>
     <div class="container">
+      <div v-if="!this.loggedIn" class="register">
+        <div class="d-none d-md-block">
+            <img src="https://images.tutorialedge.net/images/logo.svg" alt="TutorialEdge">
+        </div>
+        <div>
+            <h2>👨‍💻 Join the TutorialEdge Clan! 👩‍💻</h2>
+            <p>Gain access to the discussion as well as new challenges and quizzes and keep-up-to date with our newsletter!</p>
+            <a href="/profile/" class="btn btn-subscribe">Register</a>
+            or
+            <a href="/profile/">Log In</a>
+        </div>
+    </div>
       <hr/>
       <div class="comments-section">
           <h2>💬  Comments Section <br/><small>Always be kind when commenting and adhere to our <a href="/code/">Code of Conduct</a></small></h2>
@@ -10,7 +22,7 @@
           <span v-if="!this.loggedIn">
             <a v-bind:href="this.redirectTo" class="btn btn-subscribe">Become a Member</a> or <a v-bind:href="this.redirectTo">Log In</a> 
           </span>
-          <NewComment v-if="loggedIn"/>
+          <CommentEditor v-if="loggedIn"/>
           <Comment 
               v-for="(comment, index) in comments" 
               :key="index"
@@ -20,7 +32,7 @@
 </template>
 
 <script>
-import NewComment from './NewComment.vue';
+import CommentEditor from './CommentEditor.vue';
 import Comment from './Comment.vue';
 import axios from 'axios';
 import config from 'environment'
@@ -28,7 +40,7 @@ import config from 'environment'
 export default {
     name: "Comments",
     components: {
-        NewComment: NewComment,
+        CommentEditor: CommentEditor,
         Comment: Comment
     },
     data: function () {
@@ -104,7 +116,7 @@ $border-radius: 8px;
     width: 100%;
 
     padding-top: 40px;
-    .new-comment {
+    .comment-editor {
       display: flex;
       margin-bottom: 40px;
 

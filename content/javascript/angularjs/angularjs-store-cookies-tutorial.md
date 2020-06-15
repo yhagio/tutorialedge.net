@@ -152,5 +152,5 @@ then please feel free to let me know in the comments section below. The full
 source code for this tutorial is included in my
 [AngularJS Fundamentals Repo](https://github.com/elliotforbes/angularjs-fundamentals).
 Pull this code and run it using live-server and then navigate to
-http://localhost:8080/#/cookies and you should see the cookies component
+`http://localhost:8080/#/cookies` and you should see the cookies component
 working.

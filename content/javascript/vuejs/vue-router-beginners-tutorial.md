@@ -10,14 +10,14 @@ tags:
   - Routing
 title: Vue.js Vue-Router Beginners Tutorial
 twitter: https://twitter.com/Elliot_F
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 weight: 5
 ---
 
 The vue-router within VueJS allows you to create powerful Single Page
 Applications with minimal fuss. On a traditional website, each distinct page
 would constitute a request to the server to load the relevant file. So when
-someone navigated to http://myapp.com/page-1.html, the `page-1.html` file would
+someone navigated to `http://myapp.com/page-1.html`, the `page-1.html` file would
 be served up.
 
 However, when navigating through a single page application, you only have see

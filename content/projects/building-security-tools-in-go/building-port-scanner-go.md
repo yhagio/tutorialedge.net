@@ -9,7 +9,7 @@ series:
 image: golang.svg
 tags:
 - security
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 Welcome to the first tutorial in this new series on building security tools in Go! In this tutorial, we are going to be building a very cool port scanner which you will be able to point at a server and probe for any potential vulnerabilities.

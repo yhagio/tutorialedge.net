@@ -8,7 +8,7 @@ series: vuejs
 image: vuejs.svg
 tags:
 - intermediate
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 I love playing with WebSockets, they are a very cool bit of technology that allow for incredibly efficient two-way (duplex) communication over a single long-lived TCP connection.

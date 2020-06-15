@@ -9,7 +9,7 @@ series: vuejsimgurclone
 image: vuejs.png
 tags:
 - beginner
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 In the first part of this tutorial series, we are going to be working on project setup for both the frontend and the backend of the Imgur image-hosting clone that we are going to be building. 
@@ -120,7 +120,7 @@ Awesome, with this done, we can start looking at setting up the `github` reposit
 
 First, you will need to log in to your github.com account and create a new repository.
 
-![Creating new Github Repo](https://images.tutorialedge.net/images/imgur-clone/create-push.png)
+![Creating new Github Repo](https://images.tutorialedge.net/images/imgur-clone/create-repo.png)
 
 This will instantly create a free repository for us in which we can store all of our applications source code. It is incredibly important to note that any and all files you push up to a **public** repository can be viewed by **anyone**, so please do not push up anything you do not wish the rest of the world to see like API credentials or usernames + passwords.
 

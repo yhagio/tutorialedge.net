@@ -55,7 +55,7 @@ or other applications could view it?
 One answer to this question is by wrapping it in a RESTful API.
 
 We could expose our code and wrap it in an API so that whenever we navigated to
-say http://localhost:8000/api/weatherStats it would give us a JSON response that
+say `http://localhost:8000/api/weatherStats` it would give us a JSON response that
 contained all the current weather stats.
 
 # Why Do We Do This?

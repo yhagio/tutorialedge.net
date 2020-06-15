@@ -1,0 +1,34 @@
+{{ partial "header.html" . }}
+
+<div class="top-bar">
+	<div class="container">
+		<h1>
+			{{ if .Params.image }}
+			<img src="https://images.tutorialedge.net/images/{{ .Params.image }}" alt="{{ .Title }} Image">
+			{{ else }}
+			<img src="https://images.tutorialedge.net/images/logo.svg" alt="{{ .Title }} Image">
+			{{ end }}
+			{{.Title}}</h1>
+	</div>
+</div>
+
+<div class="challenge-listing">
+    <h3>Challenges</h3>
+
+    <div class="challenges">
+        {{ range .Pages }}
+        {{ if not .Params.homepage }}
+            <a href="{{ .Permalink }}">
+                <div class="challenge-box">
+                    <h2><small>{{ .Params.difficulty }}</small><br />{{ .Title }}</h2>
+                    <p>{{ .Page.Params.desc }}</p>
+                    <button class="btn btn-success">Attempt Challenge</button>
+                </div>
+            </a>
+        {{ end }}
+        {{ end }}
+    </div>
+</div>
+
+
+{{ partial "footer.html" . }}

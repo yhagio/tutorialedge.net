@@ -7,9 +7,10 @@ author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
 series: golang
 image: golang.png
+language: go
 tags:
 - snippets
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 layout: snippets
 snippet: |
   package main

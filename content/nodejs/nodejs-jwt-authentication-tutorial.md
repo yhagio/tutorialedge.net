@@ -9,7 +9,7 @@ tags:
 - Authentication
 title: NodeJS JWT Authentication Tutorial
 twitter: https://twitter.com/Elliot_F
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 
 ---
 Welcome fellow programmers! In this tutorial, we are going to be looking at how we can add authentication to our NodeJS applications using JWTs.

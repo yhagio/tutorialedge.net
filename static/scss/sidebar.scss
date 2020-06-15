@@ -12,6 +12,7 @@
 
   a {
     display: block;
+    color: #3B454E;
   }
   h5 {
     font-size: 18px;
@@ -40,7 +41,7 @@
   }
 
   .nav-item {
-    color: rgb(122, 132, 142);
+    color: #3B454E;
     cursor: pointer;
     display: flex;
     position: relative;
@@ -50,10 +51,10 @@
     border-style: solid solid solid;
     border-color: transparent transparent transparent;
     border-image: initial;
-    padding: 4px 20px 8px 16px;
+    padding: 4px 4px 8px 16px;
     margin: 0;
     border-right: 0px;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 24px;
     text-decoration: none;
   }

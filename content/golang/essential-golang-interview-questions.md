@@ -9,7 +9,7 @@ series: golang
 image: golang.svg
 tags:
 - interviews
-authorImage: https://pbs.twimg.com/profile_images/1028545501367554048/lzr43cQv_400x400.jpg
+authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
  
 Interviews are hard, and job-hunting is often a time-consuming and miserable experience for most people. This article will hopefully help you to nail that next Go job interview by giving you some practice and insight into some of the most common questions interviewers might ask when you are going for an interview.
