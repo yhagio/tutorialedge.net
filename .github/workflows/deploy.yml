@@ -32,8 +32,8 @@ jobs:
         run: |
           echo "Building Site"
           npm install
-          hugo --minify
           npm run prod-build
+          hugo --minify
       
       - name: Upload Deployment artefacts
         uses: actions/upload-artifact@v1
