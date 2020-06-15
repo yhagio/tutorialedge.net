@@ -3,7 +3,7 @@ name: Generates a Lighthouse Report For the Site
 on:
   push:
     branches:
-      - content
+      - main
 
 jobs:
   #----------------------------------
