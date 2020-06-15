@@ -3,7 +3,7 @@ name: Broken Link Checker
 on:
   push:
     branches:
-      - content
+      - main
 
 jobs:
   #----------------------------------
