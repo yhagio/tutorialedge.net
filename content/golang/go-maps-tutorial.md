@@ -150,5 +150,7 @@ Hopefully you enjoyed this tutorial on maps in Go and it has helped you out in s
 
 Maps in Go can also be used when it comes to unmarshalling JSON and XML data into Go structs. If you want to see how they are used then I recommend checking out the following articles:
 
+* [Snippet: Checking if a Key Exists in a Map](/golang/snippets/check-key-exists-in-map-go/)
+* [Snippet: Sort Map By Value](/golang/snippets/sort-map-by-value/)
 * [Parsing JSON Files with Go](https://tutorialedge.net/golang/parsing-json-with-golang/)
 * [Go JSON Tutorial](https://tutorialedge.net/golang/go-json-tutorial/)
