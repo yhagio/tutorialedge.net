@@ -3,6 +3,7 @@ author: Elliot Forbes
 date: 2017-04-14T20:28:13+01:00
 title: Get Involved
 twitter: https://twitter.com/Elliot_F
+mermaid: true
 ---
 
 # Testing Main Branch
@@ -47,6 +48,8 @@ hebes sidera. Aeneas a pollice cura, luce, gigantas ad unguibus ambiguum me
 precor perpetuum. Mitia fratremque oculis.
 
 ---
+
+Integrate $$\int x^3 dx$$
 
 ## what is Markdown?
 

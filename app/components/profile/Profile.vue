@@ -7,7 +7,7 @@
                 <img v-bind:src="user.picture" alt="Profile Picture">
                 <h2>Profile: {{ this.user.name }}
                     <br/>
-                    <small>Score: {{ this.score }}</small>
+                    <small>🏆 Score: {{ this.score }}</small>
                 </h2>
             </div> 
 
@@ -17,26 +17,26 @@
             <div class="profile-container">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active" id="Challenges-tab" data-toggle="tab" href="#Challenges" role="tab" aria-controls="Challenges" aria-selected="true">Challenges</a>
+                        <a class="nav-link active" id="Challenges-tab" data-toggle="tab" href="#Challenges" role="tab" aria-controls="Challenges" aria-selected="true">🎯 Challenges</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="trophies-tab" data-toggle="tab" href="#trophies" role="tab" aria-controls="trophies" aria-selected="true">Trophies</a>
+                        <a class="nav-link" id="trophies-tab" data-toggle="tab" href="#trophies" role="tab" aria-controls="trophies" aria-selected="true">🏆 Trophies</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="comments-tab" data-toggle="tab" href="#comments" role="tab" aria-controls="comments" aria-selected="false">Comments</a>
+                        <a class="nav-link" id="comments-tab" data-toggle="tab" href="#comments" role="tab" aria-controls="comments" aria-selected="false">💬 Comments</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Settings</a>
+                        <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">⚙️ Settings</a>
                     </li>
                 </ul>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="Challenges" role="tabpanel" aria-labelledby="Challenges-tab">
-                        <h5>Challenges Completed</h5>
-                        <Profile-Challenges :challenges="this.profile.challenges" />
+                        <Profile-Contributions v-if="!this.loading" :challenges="this.profile.challenges" />
+                        <Profile-Challenges v-if="!this.loading" :challenges="this.profile.challenges" />
                     </div>
                     <div class="tab-pane fade" id="trophies" role="tabpanel" aria-labelledby="trophies-tab">
                         <h5>Achievements</h5>
-                        <Profile-Achievements :achievements="this.achievements" />
+                        <Profile-Achievements v-if="!this.loading" :challenges="this.challenges" />
                     </div>
                     <div class="tab-pane fade" id="comments" role="tabpanel" aria-labelledby="comments-tab">
                        <h5>Comments You Have Posted:</h5>
@@ -62,6 +62,7 @@ import config from 'environment';
 import ProfileDeleteButton from './ProfileDeleteButton.vue';
 import ProfileComments from './ProfileComments.vue';
 import ProfileAchievements from './ProfileAchievements.vue';
+import ProfileContributions from './ProfileContributions.vue';
 import ProfileChallenges from './ProfileChallenges.vue';
 import Loading from '../misc/Loading.vue';
 
@@ -71,6 +72,7 @@ export default {
         Loading,
         ProfileDeleteButton,
         ProfileAchievements,
+        ProfileContributions,
         ProfileComments,
         ProfileChallenges
     },
@@ -87,10 +89,13 @@ export default {
     },
     methods: {
         getComments: async function() {
+            this.loading = true;
             let response = await axios.get(config.apiBase + "/v1/user", { params: {
                 name: this.user.name,
                 sub: this.user.sub
             }});
+
+            this.loading = false;
 
             this.profile = response.data;
         }

@@ -45,6 +45,7 @@
 	</div>
 </footer>
 
+{{ if .Params.mermaid}}{{ partial "mermaid.html" . }}{{ end }}
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-10255990-23"></script>
@@ -56,7 +57,6 @@ gtag('js', new Date());
 gtag('config', 'UA-10255990-23');
 </script>
 
-<script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.0/anchor.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
 <script src="/app/main.bundle.js"></script>

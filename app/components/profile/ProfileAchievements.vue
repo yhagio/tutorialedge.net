@@ -14,6 +14,11 @@
 <script>
 export default {
     name: 'ProfileAchievements',
-    props: ['achievements']
+    props: ['challenges'],
+    methods: {
+        getAchievements() {
+            console.log("Getting User Achievements");
+        }
+    }
 }
 </script>
