@@ -146,6 +146,10 @@ export default {
   visibility: hidden;
 }
 
+.squares li:hover {
+    border: 1px solid black;
+}
+
 .squares li {
   background-color: #ebedf0;
 }
