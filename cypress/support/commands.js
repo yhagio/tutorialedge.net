@@ -17,18 +17,18 @@ Cypress.Commands.add("login", (overrides = {}) => {
 
     const options = {
         method: 'POST',
-        url: Cypress.env('auth_url'),
+        url: Cypress.env('AUTH_URL'),
         body: {
             grant_type: 'password',
-            username: Cypress.env('auth_username'),
-            password: Cypress.env('auth_password'),
-            audience: Cypress.env('auth_audience'),
+            username: Cypress.env('AUTH_USERNAME'),
+            password: Cypress.env('AUTH_PASSWORD'),
+            audience: Cypress.env('AUTH_AUDIENCE'),
             scope: 'openid profile email',
-            client_id: Cypress.env('auth_client_id'),
-            client_secret: Cypress.env('auth_client_secret'),
+            client_id: Cypress.env('AUTH_CLIENT_ID'),
+            client_secret: Cypress.env('AUTH_CLIENT_SECRET'),
         },
     };
-    
+
     cy.request(options);
 })
 //
