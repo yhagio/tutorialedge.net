@@ -13,3 +13,6 @@ public/
 node_modules/
 package-lock.json
 yarn-error.log
+
+# Cypress env variables
+cypress.env.json

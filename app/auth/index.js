@@ -54,18 +54,26 @@ export const useAuth = ({...options}) => {
                 return accessToken;
             },
             isAuthenticated() {
-                return new Date().getTime() < Cookie.get("expiresAt");
+                if(Cookie.get("expiresAt") === undefined) {
+                    return false;
+                }
+                return new Date().getTime() < JSON.parse(Cookie.get("expiresAt")).expiryTime;
             },    
             handleAuthentication() {
                 return new Promise((resolve, reject) => {  
                     webAuth.parseHash((err, authResult) => {
                         if (authResult && authResult.accessToken && authResult.idToken) {
 
+                            
                             Cookie.set("idToken", authResult.idToken)
                             Cookie.set("accessToken", authResult.accessToken)
-                            let expiresAt = new Date().getTime() + (authResult.expiresIn * 1000)
-                            Cookie.set("expiresAt", expiresAt)
+                            let expiresAt = {
+                                expiryTime: new Date().getTime() + (authResult.expiresIn * 1000),
+                                expiryLength: authResult.expiresIn
+                            }
+                            Cookie.set("expiresAt", JSON.stringify(expiresAt))
                             Cookie.set("user", JSON.stringify(authResult.idTokenPayload))
+                            
                             resolve()
                                 
                         } else if (err) {
