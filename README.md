@@ -29,29 +29,6 @@ to the programming community.
 
 * [Contributing](docs/contributing.md)
 
-## Contributors
-
-- [ElliotForbes(me)](https://github.com/elliotforbes)
-- [Vietstone](https://github.com/vietstone)
-- [Stevenson Jean-Pierre](https://github.com/Sjeanpierre)
-- [Ross Jacobs](https://github.com/pocc)
-- [Edvin N](https://github.com/NissesSenap)
-
-- Andrea Koutifaris
-- Andrew Johnson
-- Brian L.
-- Daniel Arbuckle
-- John P.
-- Josh Kalin
-- Kevin Hennessy
-- Kevin Jolly
-- Mathieu Nayrolles
-- Nisheeth Joshi
-- Paul Halliday
-- Rounak Banik
-- Zaid Sabih
-- [Nick McCullum](https://nickmccullum.com/)
-
 ## License
 
 This theme is released under the
