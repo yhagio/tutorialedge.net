@@ -27,7 +27,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          start: npm run start
+          start: yarn start
         env:
           CYPRESS_AUTH_AUDIENCE: ${{ secrets.CYPRESS_AUTH_AUDIENCE }}
           CYPRESS_AUTH_URL: ${{ secrets.CYPRESS_AUTH_URL }}
