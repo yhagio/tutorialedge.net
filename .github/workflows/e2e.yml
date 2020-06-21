@@ -1,0 +1,37 @@
+name: End-to-end tests
+on: [push]
+jobs:
+  cypress-run:
+    runs-on: ubuntu-16.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Install NPM 
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      
+      - name: NPM Install
+        timeout-minutes: 10
+        run: |
+          echo "Building Site"
+          npm install
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.72.0'
+      
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          start: yarn start
+        env:
+          CYPRESS_AUTH_AUDIENCE: ${{ secrets.CYPRESS_AUTH_AUDIENCE }}
+          CYPRESS_AUTH_URL: ${{ secrets.CYPRESS_AUTH_URL }}
+          CYPRESS_AUTH_CLIENT_ID: ${{ secrets.CYPRESS_AUTH_CLIENT_ID }}
+          CYPRESS_AUTH_CLIENT_SECRET: ${{ secrets.CYPRESS_AUTH_CLIENT_SECRET }}
+          CYPRESS_AUTH_USERNAME: ${{ secrets.CYPRESS_AUTH_USERNAME }}
+          CYPRESS_AUTH_PASSWORD: ${{ secrets.CYPRESS_AUTH_PASSWORD }}

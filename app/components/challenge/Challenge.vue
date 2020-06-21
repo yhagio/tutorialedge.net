@@ -19,17 +19,17 @@
 
         <div v-if="this.loggedIn" class="controls">
 
-            <button v-on:click="executeCode" class="btn btn-primary">Run Code...</button>
+            <button v-on:click="executeCode" class="btn btn-primary btn-execute">Run Code...</button>
 
             <div v-if="this.response" role="alert">
                 <div class="output-label">
                     <h5>Progam Output:</h5>
-                    <p>{{ this.response.time }}</p>
+                    <p id="outputtime">{{ this.response.time }}</p>
                 </div>
                 <pre class="output">{{ this.response.output }}</pre>
                 <br/>
                 <h4>Test Results</h4>
-                <div class="output" v-for="test in response.tests" v-bind:key="test.name">
+                <div id="test-output" class="output" v-for="test in response.tests" v-bind:key="test.name">
                     <p class="mb-0"><b>Test: </b> {{ test.name }}</p>
                     <p class="mb-0"><b>Passed: </b> 
                         <span v-if="test.passed">✅</span> 

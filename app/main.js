@@ -6,7 +6,6 @@ import Redirect from './components/profile/Redirect.vue';
 import Profile from './components/profile/Profile.vue';
 import ProfileNavButton from './components/profile/ProfileNavButton.vue';
 import Logout from './components/profile/Logout.vue';
-import Forum from './components/forum/Forum.vue';
 import FooterSearch from './components/search/FooterSearch.vue';
 import Snippet from './components/snippets/Snippet.vue';
 import ChallengeHome from './components/challenge/ChallengeHome.vue';
@@ -52,7 +51,6 @@ var app = new Vue({
     Redirect,
     Carbon,
     Logout,
-    Forum,
     Snippet
   },
   created: function() {

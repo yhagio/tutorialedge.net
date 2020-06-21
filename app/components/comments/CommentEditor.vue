@@ -7,7 +7,7 @@
 
         <div class="comment-editor">
             <div class="comment-input" id="comment-input">    
-                <textarea v-model="comment.body" placeholder="Leave a reply..."></textarea>
+                <textarea id="comment-editor" v-model="comment.body" placeholder="Leave a reply..."></textarea>
                 <br/>
                 <small>Markdown Enabled 😎</small>
                 <button id="comment" v-on:click="submitComment" class="btn btn-primary float-right">
