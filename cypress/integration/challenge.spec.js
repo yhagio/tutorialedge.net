@@ -13,7 +13,7 @@ describe('challenge', () => {
                     expiryLength: expires_in
                 }))
                 cy.setCookie("user", JSON.stringify({
-                    name: "Elliot"
+                    name: "Elliot",
                 }))
             })
     })
