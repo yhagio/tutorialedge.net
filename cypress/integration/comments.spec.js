@@ -16,7 +16,9 @@ context('Comments', () => {
                     expiryLength: expires_in
                 }))
                 cy.setCookie("user", JSON.stringify({
-                    name: "Elliot"
+                    name: "Elliot",
+                    sub: "auth0|5ee0dc7b2fd48d001390ceb3",
+                    nickname: "Elliot"
                 }))
             })
     })
@@ -44,6 +46,6 @@ context('Comments', () => {
 
     it("Deletes a comment that has been posted", () => {
         cy.visit("http://localhost:1313/test/")
-
+        
     })
 })
