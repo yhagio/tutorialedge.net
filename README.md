@@ -25,6 +25,10 @@ The main aim for the site is for it to be a place that I can host tutorials and
 courses on any language and framework I choose and hopefully give back something
 to the programming community.
 
+# Premium Supporters
+
+* [Logan Wright](https://github.com/LBWright)
+
 # Table of Contents
 
 * [Contributing](docs/contributing.md)
