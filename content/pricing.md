@@ -26,12 +26,6 @@ Sponsoring the site will unlimited access to the source code for all projects on
 
 ---
 
-## The Contributor 💪 - $1/month
-
-My content has helped you out in some way and you want to show a little love to a fellow developer!
-
----
-
 ## The Supporter 🚀 - $7/month
 
 You enjoy my work and want to support it. You want to see more high-quality programming tutorials and series and help improve the programming community 💪 
