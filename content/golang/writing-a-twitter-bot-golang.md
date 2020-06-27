@@ -6,8 +6,7 @@ desc:
   using the go programming language
 series: golang
 image: golang.svg
-tags:
-  - intermediate
+tag: Intermediate
 weight: 19
 title: Writing A Twitter Bot in Golang
 twitter: https://twitter.com/Elliot_F

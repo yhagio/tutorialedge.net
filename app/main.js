@@ -6,11 +6,15 @@ import Redirect from './components/profile/Redirect.vue';
 import Profile from './components/profile/Profile.vue';
 import ProfileNavButton from './components/profile/ProfileNavButton.vue';
 import Logout from './components/profile/Logout.vue';
+import Register from './components/profile/Register.vue';
+import Login from './components/profile/Login.vue';
 import FooterSearch from './components/search/FooterSearch.vue';
 import Snippet from './components/snippets/Snippet.vue';
 import ChallengeHome from './components/challenge/ChallengeHome.vue';
 import HallOfFame from './components/halloffame/HallOfFame.vue';
 import Challenge from './components/challenge/Challenge.vue';
+import VideoPlayer from './components/video/VideoPlayer.vue';
+import Githubsvg from './components/misc/Githubsvg.vue';
 import config from 'environment';
 import Carbon from './components/misc/Carbon.vue'
 import 'codemirror/mode/go/go.js';
@@ -43,13 +47,17 @@ var app = new Vue({
     Profile,
     Challenge,
     ChallengeHome,
+    Githubsvg,
     Quiz,
     ProfileNavButton,
+    Login,
     HallOfFame,
     Comments,
     FooterSearch,
+    VideoPlayer,
     Redirect,
     Carbon,
+    Register,
     Logout,
     Snippet
   },

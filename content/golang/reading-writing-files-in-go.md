@@ -6,6 +6,7 @@ desc:
   your local filesystem using Go
 series: golang
 image: golang.svg
+tag: Beginner
 tags:
   - filesystem
 title: Reading And Writing To Files in Go

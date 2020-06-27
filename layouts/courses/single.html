@@ -1,0 +1,29 @@
+{{ partial "header.html" . }}
+
+<div class="container-fluid">
+  <div class="content-container">
+    <div class="row">
+      <div class="col-lg-8 col-md-8">
+        <Video-Player id="{{ .Params.video }}" next="{{ .Params.nextPage }}" title="{{ .Title }}" blurb="{{ .Params.blurb }}" />
+      </div>
+      <div class="col-lg-4 col-md-4 video-sidebar">
+        <div class="accordion">
+          <h2>Course Videos</h2>
+          {{ $currentPage := . }}
+          {{ range sort (index .Site.Data.courses .Params.series) "weight" "asc" }}
+            <h4>📚 {{ .name }}</h4>
+            {{ range .articles }}
+              <a class="nav-item" href="{{ .URL }}">
+                <span>{{ .title }}</span>
+              </a>
+            {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="blue-spacer"></div>
+
+{{ partial "footer.html" . }}

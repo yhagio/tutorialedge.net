@@ -6,8 +6,7 @@ desc:
   software you are building, "
 series: golang
 image: golang.svg
-tags:
-  - beginner
+tag: Beginner
 weight: 8
 title: Executing System Commands With Golang
 twitter: https://twitter.com/Elliot_F

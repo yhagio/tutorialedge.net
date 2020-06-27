@@ -6,8 +6,7 @@ desc:
   Buffers within your Go applications
 series: golang
 image: golang.svg
-tags:
-  - advanced
+tag: Advanced
 title: Go Protocol Buffer Tutorial
 twitter: https://twitter.com/Elliot_F
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg

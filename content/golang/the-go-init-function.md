@@ -5,8 +5,7 @@ desc:
   some of the things to consider when using it within your Go programs.
 series: golang
 image: golang.svg
-tags:
-  - beginner
+tag: Beginner
 weight: 13
 author: Elliot Forbes
 title: "The Go init Function"

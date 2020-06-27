@@ -7,8 +7,9 @@ date: 2017-04-15T09:23:35+01:00
 desc:
   "This article looks to demonstrate how one can implement the depth first graph
   search algorithm using the java programming language. "
-series: artificial-intelligence
+series: ai
 image: ai.png
+tag: beginner
 tags:
   - java
 title: Breadth First Search Algorithm Tutorial with Java
@@ -21,22 +22,22 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 
 # Uninformed Search vs Informed / Heuristic Search
 
-<p>The next couple of algorithms we will be covering in this Artificial Intelligence course can be classed as either:</p>
+The next couple of algorithms we will be covering in this Artificial Intelligence course can be classed as either:
 
-<p><b>uninformed or blind searches:</b> in which our algorithms have no additional information about states beyond that provided in the problem definition.</p>
+uninformed or blind searches: in which our algorithms have no additional information about states beyond that provided in the problem definition.
 
-<p><b>Informed or Heuristic searches:</b> in which our algorithms have some extra knowledge about the problem domain and can distinguish whether or not one non-goal state is “more promising” than another.</p>
+Informed or Heuristic searches: in which our algorithms have some extra knowledge about the problem domain and can distinguish whether or not one non-goal state is “more promising” than another.
 
 # Breadth First Search
 
-<p>BFS is a simple strategy in which the root node is expanded first, then all the successors of the root node are expanded next, then their successors and so on until the best possible path has been found. Due to the fact that this strategy for graph traversal has no additional information about states beyond that provided in the problem definition, Breadth First Search is classed as an uninformed or blind search.</p>
+BFS is a simple strategy in which the root node is expanded first, then all the successors of the root node are expanded next, then their successors and so on until the best possible path has been found. Due to the fact that this strategy for graph traversal has no additional information about states beyond that provided in the problem definition, Breadth First Search is classed as an uninformed or blind search.
 
 > Breadth First Search Utilizes the queue data structure as opposed to the stack
 > that Depth First Search uses.
 
-<p>BFS uses a queue data structure which is a 'First in, First Out' or FIFO data structure. This queue stores all the nodes that we have to explore and each time a node is explored it is added to our set of visited nodes.</p>
+BFS uses a queue data structure which is a 'First in, First Out' or FIFO data structure. This queue stores all the nodes that we have to explore and each time a node is explored it is added to our set of visited nodes.
 
-<p>If we were to conduct a breadth first search on the binary tree above then it would do the following:</p>
+If we were to conduct a breadth first search on the binary tree above then it would do the following:
 
 1. Set Node 1 as the start Node
 2. Add this Node to the Queue
@@ -48,21 +49,21 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 7. If Node 3 isn't our goal node add Node 6 and Node 7 to our Queue.
 8. Repeat until goal Node is found.
 
-<p>If we stopped execution after Node 3 was checked then our Queue would look like this:</p>
+If we stopped execution after Node 3 was checked then our Queue would look like this:
 
-<p>Node 4, Node 5, Node 7, Node 8.</p>
+Node 4, Node 5, Node 7, Node 8.
 
-<p>As you can see, if you follow this algorithm through then you will recursively search every level of the binary tree going deeper and deeper until you find the shortest possible path.</p>
+As you can see, if you follow this algorithm through then you will recursively search every level of the binary tree going deeper and deeper until you find the shortest possible path.
 
 <img src="https://images.tutorialedge.net/uploads/breadth-first-search.png?v=123" alt="breadth-first-search" />
 
 # How it Works
 
-<p>Say we had a map of the London Underground, each station would represent a node which would itself have a smaller list of stations that are directly connected to it. The entire map of the London Underground represents our Graph and each of the stations on that graph represent a node.</p>
+Say we had a map of the London Underground, each station would represent a node which would itself have a smaller list of stations that are directly connected to it. The entire map of the London Underground represents our Graph and each of the stations on that graph represent a node.
 
-<p>For example, take Westminster station for example. This station could be represented as a node which would have: STATION 1, STATION 2 and STATION 3 in its list of child nodes.</p>
+For example, take Westminster station for example. This station could be represented as a node which would have: STATION 1, STATION 2 and STATION 3 in its list of child nodes.
 
-<p>We can represent this sort of structure like so in Java:</p>
+We can represent this sort of structure like so in Java:
 
 ```java
 import java.lang.reflect.Array;
@@ -114,7 +115,7 @@ public class Node {
 
 # Our Breadth First Search Class
 
-<p>In this tutorial I will be implementing the breadth first searching algorithm as a class as this makes it far easier to swap in and out different graph traversal algorithms later on.</p>
+In this tutorial I will be implementing the breadth first searching algorithm as a class as this makes it far easier to swap in and out different graph traversal algorithms later on.
 
 ```java
 import java.util.ArrayList;
@@ -170,9 +171,9 @@ public class BreadthFirstSearch {
 
 # The Results
 
-<p>Whilst Breadth First Search can be useful in graph traversal algorithms, one of its flaws is that it finds the shallowest goal node or station which doesn’t necessarily mean it’s the most optimal solution. Breadth First Search is only every optimal if for instance you happen to be in a scenario where all actions have the same cost.</p>
+Whilst Breadth First Search can be useful in graph traversal algorithms, one of its flaws is that it finds the shallowest goal node or station which doesn’t necessarily mean it’s the most optimal solution. Breadth First Search is only every optimal if for instance you happen to be in a scenario where all actions have the same cost.
 
-<p>Breadth First graph traversal algorithms also happen to be very computationally demanding in the way that they calculate the shortest path. Take for instance if we have a binary tree of depth 10. The binary tree contains nodes which contain a maximum of 2 child nodes each, this is otherwise known as having a branching factor equal to 2.  if we wanted to compute the optimal path for this graph then we would have to traverse, in a worst case scenario, 512 distinct nodes. Given that on modern machines this isn’t exactly what we would consider demanding, imagine if we had a new graph that had 3 child nodes for every node and the same depth of 10. With this new graph we would have to traverse, in a worst case scenario, 19,683 different nodes. And given that this is only at depth 10 with 3 child nodes, you can easily extrapolate the numbers for yourself. With a branching factor of 10 and a depth of 16, it would take 350 years to compute the solution on an ordinary personal computer, give or take.</p>
+Breadth First graph traversal algorithms also happen to be very computationally demanding in the way that they calculate the shortest path. Take for instance if we have a binary tree of depth 10. The binary tree contains nodes which contain a maximum of 2 child nodes each, this is otherwise known as having a branching factor equal to 2.  if we wanted to compute the optimal path for this graph then we would have to traverse, in a worst case scenario, 512 distinct nodes. Given that on modern machines this isn’t exactly what we would consider demanding, imagine if we had a new graph that had 3 child nodes for every node and the same depth of 10. With this new graph we would have to traverse, in a worst case scenario, 19,683 different nodes. And given that this is only at depth 10 with 3 child nodes, you can easily extrapolate the numbers for yourself. With a branching factor of 10 and a depth of 16, it would take 350 years to compute the solution on an ordinary personal computer, give or take.
 
 # Our Driver Class
 

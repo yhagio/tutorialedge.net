@@ -6,8 +6,7 @@ desc:
   manage interactions with the database
 series: golang
 image: golang.svg
-tags:
-  - intermediate
+tag: Intermediate
 weight: 20
 title: Golang ORM Tutorial
 twitter: https://twitter.com/Elliot_F

@@ -6,6 +6,7 @@ desc:
   sort using the golang programming language
 series: golang
 image: golang.svg
+tag: Intermediate
 tags:
   - algorithms
 title: Implementing the Bubble Sort Algorithm using Golang

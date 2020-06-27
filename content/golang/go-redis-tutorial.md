@@ -6,6 +6,7 @@ author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
 series: golang
 image: golang.png
+tag: Intermediate
 tags:
 - Redis
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg

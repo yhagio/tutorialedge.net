@@ -6,8 +6,7 @@ desc:
   art of programming Golang applications
 series: golang
 image: golang.svg
-tags:
-  - intermediate
+tag: Intermediate
 author: Elliot Forbes
 twitter: https://twitter.com/Elliot_F
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg

@@ -1,0 +1,44 @@
+.video-sidebar {
+  padding: 40px;
+  background-color: white;
+  border-left: 1px solid #E6ECF1;
+  
+h4 {
+    margin-top: 40px;
+    text-transform: capitalize;
+}
+
+a:hover {
+    transition: 1s;
+    color: black;
+}
+
+.nav-item {
+    color: #3B454E;
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    align-items: center;
+    -webkit-box-align: center;
+    border-width: 1px 0px 1px 1px;
+    border-style: solid solid solid;
+    border-color: transparent transparent transparent;
+    border-image: initial;
+    padding: 4px 4px 8px 16px;
+    margin: 0;
+    border-right: 0px;
+    font-size: 15px;
+    line-height: 24px;
+    text-decoration: none;
+}
+.nav-item::before {
+    top: 0px;
+    left: 0px;
+    width: 1px;
+    bottom: 0px;
+    content: "";
+    position: absolute;
+    background: rgb(230, 236, 241);
+  }
+  
+}

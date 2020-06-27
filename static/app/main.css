@@ -10437,6 +10437,7 @@ a:hover .course-progress-box {
   -webkit-box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.12);
   box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.12);
   color: rgba(14, 30, 37, 0.54);
+  text-align: center;
 }
 .course-listing .courses .course-box h2 {
   font-size: 20px;
@@ -10614,12 +10615,12 @@ article {
   font-weight: 400;
   line-height: 1.625;
 }
-article .info {
+article .post-info {
   display: flex;
   justify-content: space-between;
   margin-top: 0px;
 }
-article .info img {
+article .post-info img {
   width: 25px;
   margin-top: 3px;
   height: auto;
@@ -10798,7 +10799,6 @@ article .github-btn {
   border-radius: 8px;
   padding: 40px;
   color: rgba(14, 30, 37, 0.54);
-  margin-bottom: 40px;
   z-index: 10;
   text-decoration: none;
   outline: none;
@@ -11036,6 +11036,7 @@ nav.secondary-nav {
   background-color: white !important;
   border-bottom: 1px solid #f8f8f8 !important;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  z-index: 100;
 }
 nav.secondary-nav ul li a {
   color: #232A2D !important;
@@ -11434,6 +11435,47 @@ nav .dropdown-menu img {
   margin: 0;
   margin-bottom: 20px;
   border-radius: 0 !important;
+}
+
+.video-sidebar {
+  padding: 40px;
+  background-color: white;
+  border-left: 1px solid #E6ECF1;
+}
+.video-sidebar h4 {
+  margin-top: 40px;
+  text-transform: capitalize;
+}
+.video-sidebar a:hover {
+  transition: 1s;
+  color: black;
+}
+.video-sidebar .nav-item {
+  color: #3B454E;
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  align-items: center;
+  -webkit-box-align: center;
+  border-width: 1px 0px 1px 1px;
+  border-style: solid solid solid;
+  border-color: transparent transparent transparent;
+  border-image: initial;
+  padding: 4px 4px 8px 16px;
+  margin: 0;
+  border-right: 0px;
+  font-size: 15px;
+  line-height: 24px;
+  text-decoration: none;
+}
+.video-sidebar .nav-item::before {
+  top: 0px;
+  left: 0px;
+  width: 1px;
+  bottom: 0px;
+  content: "";
+  position: absolute;
+  background: #e6ecf1;
 }
 
 /*# sourceMappingURL=main.css.map */

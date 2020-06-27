@@ -8,8 +8,7 @@ author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
 series: golang
 image: golang.svg
-tags:
-  - intermediate
+tag: Intermediate
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 

@@ -6,8 +6,7 @@ desc:
   xml package in go.
 series: golang
 image: golang.svg
-tags:
-  - beginner
+tag: Beginner
 title: Parsing XML Files With Golang
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 twitter: https://twitter.com/Elliot_F

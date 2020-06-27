@@ -34,6 +34,15 @@ export const useAuth = ({...options}) => {
                     redirectUri: config.redirectUri
                 })
             },    
+            callback() {
+                this.handleAuthentication().
+                    then(() => {
+                        webAuth.popup.callback();
+                    })
+                    .catch((err) => {
+                        console.log(err);
+                    });
+            },
             logout() {
                 Cookie.remove("expiresAt")
                 Cookie.remove("user")

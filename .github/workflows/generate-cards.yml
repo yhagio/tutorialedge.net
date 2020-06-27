@@ -1,0 +1,12 @@
+name: Generate Cards
+
+on:
+  push:
+    branches: ["master"]
+
+jobs:
+  generateCards:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Hugo

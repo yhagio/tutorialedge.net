@@ -5,8 +5,7 @@ weight: 1
 desc:
   In this tutorial, we are going to get you up and running with Go so that you
   can go off and write your own Go programs.
-tags:
-  - beginner
+tag: Beginner
 image: golang.svg
 series: golang
 author: Elliot Forbes

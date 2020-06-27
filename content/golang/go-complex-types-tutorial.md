@@ -6,8 +6,7 @@ desc: In this tutorial, we are going to look at the various composite types
 series: golang
 image: golang.svg
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg
-tags:
-  - beginner
+tag: Beginner
 title: Go Composite Types Tutorial
 twitter: https://twitter.com/Elliot_F
 weight: 3

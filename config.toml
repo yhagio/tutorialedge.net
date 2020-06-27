@@ -1,42 +1,50 @@
+#==================================================
+# The Root Configuration File for the site
+#==================================================
 languageCode = "en-us"
 title = "TutorialEdge.net"
 baseURL = "https://tutorialedge.net"
 relativeUrls = true
-# only return 9 items per page
 paginate = 9
-
 enableEmoji = true
-# Syntax highlighting stuff
 pygmentsCodeFences = true
-# PygmentsStyle = "borland"
 PygmentsStyle = "monokai"
-# pygmentsOptions = "linenos=table"
 
+#---------------------------------------------
+# The Markdown configuration for the site
+# - we need unsafe and xhtml so that we can render
+#   markdown within the Vue.js components
+#---------------------------------------------
 [markup]
     defaultMarkdownHandler = "goldmark"
     [markup.goldmark.renderer]
         hardWraps = false
         unsafe = true
-        xhtml = true
+        xhtml = true    
 
-# Used by Hugo + and as partial
+#---------------------------------------------
+# Algolia Configuration
+#---------------------------------------------
 [params]
     title = "TutorialEdge.net"
     author = "Elliot Forbes"
     description = "Hundreds of free tutorials for cutting edge languages and frameworks."
-# index for algolia
+
 [indexes] 
     category = "categories" 
     tag = "tags" 
     series = "series"
     course = "course"
+
 [outputFormats.Algolia]
     baseName = "algolia"
     isPlainText = true
     mediaType = "application/json"
     notAlternative = true
+
 [params.algolia]
     vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink", "desc", "image", "author"]
     params = ["categories", "tags", "author"]
+
 [outputs]
     home = ["HTML", "RSS", "Algolia"]

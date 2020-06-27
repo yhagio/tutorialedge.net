@@ -1,12 +1,24 @@
 {{ partial "header.html" . }}
 
-
 <div class="top-bar">
 	<div class="container">
-		<h2>{{.Title}}</h2>
+	  <h1>
+		{{ if .Params.image }}
+		<img
+		  src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+		  data-src="https://images.tutorialedge.net/images/{{ .Params.image }}"
+		  alt="{{ .Title }} Image"
+		/>
+		{{ else }}
+		<img
+		  src="https://images.tutorialedge.net/images/logo.svg"
+		  alt="{{ .Title }} Image"
+		/>
+		{{ end }}
+		{{ .Title }}
+	  </h1>
 	</div>
-</div>
-
+  </div>
 <div class="course-outline">
 	<div class="container">
 		{{ .Content }}
@@ -14,39 +26,25 @@
 </div>
 
 <div class="course-listing">	
+	{{ $series := .Params.series }}
 
-	{{ range $taxonomyname, $taxonomy := .Site.Taxonomies.tags }}
-
-	{{ $scratch := newScratch }}
-	{{ range $taxonomy }}
-	{{ if eq $.Params.series .Params.series }}
-	{{ if not (in ($scratch.Get "tags") $taxonomyname) }}
-	{{if not (eq $taxonomyname .Params.series) }}
-	{{ $scratch.Add "tags" (slice $taxonomyname) }}
-	{{ end }}
-	{{ end }}
-	{{ end }}
-	{{ end }}
-
-	{{ range $scratch.Get "tags" }}
-	<h3>{{.}}</h3>
-	<div class="courses">
-		{{ range sort $taxonomy }}
-			{{ if eq $.Params.series .Params.series }}
-			<a href="{{ .Permalink }}">
-				<div class="course-box">
-					<h2><small>{{ .Params.difficulty }}</small><br />{{ .Title }}</h2>
-					<p>{{ .Page.Params.desc }}</p>
-					<button class="btn btn-success">Read Now</button>
-				</div>
-			</a>
+	{{ if isset .Params.series "" }}
+		{{ range sort (index $.Site.Data.course .Params.series) "weight" "asc" }}
+			<h3>{{.name}}</h3>
+			<div class="courses">
+			{{ $pages := (where $.Site.Pages "Params.series" $series) }}
+			{{ range (where $pages "Params.tag" .name) }}
+				<a href="{{ .Permalink }}">
+					<div class="course-box">
+						<h2><small>{{ .Params.difficulty }}</small><br />{{ .Title }}</h2>
+						<p>{{ .Page.Params.desc }}</p>
+						<button class="btn btn-success">Read Now</button>
+					</div>
+				</a>
 			{{ end }}
-		{{ end }}
-	</div>
-	<div class="clear"></div>
-	{{ end }}
+			</div>
+		{{ end }}	
 	{{ end }}
 </div>
-
 
 {{ partial "footer.html" . }}

@@ -6,8 +6,7 @@ desc:
   Interface or CLI in Go
 series: golang
 image: golang.svg
-tags:
-  - intermediate
+tag: Intermediate
 title: Building a Network Command Line Interface in Go
 twitter: https://twitter.com/Elliot_F
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg

@@ -6,8 +6,7 @@ desc:
   Interfaces within the Go Programming Langauge
 series: golang
 image: golang.svg
-tags:
-  - beginner
+tag: Beginner
 title: Go Interfaces Tutorial
 twitter: https://twitter.com/Elliot_F
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg

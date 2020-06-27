@@ -6,8 +6,7 @@ desc:
   use them in your programs
 series: golang
 image: golang.svg
-tags:
-  - beginner
+tag: Beginner
 title: Go Functions Tutorial
 twitter: https://twitter.com/Elliot_F
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg

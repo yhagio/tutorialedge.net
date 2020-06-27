@@ -6,8 +6,7 @@ desc:
   using Go
 series: golang
 image: golang.svg
-tags:
-  - intermediate
+tag: Intermediate
 title: Consuming A RESTful API With Go
 twitter: https://twitter.com/Elliot_F
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg

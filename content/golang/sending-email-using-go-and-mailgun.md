@@ -6,6 +6,7 @@ desc:
   and Google's GoLang programming language.
 series: golang
 image: golang.svg
+tag: Misc
 tags:
   - mail
 title: Sending Email Using Go And Mailgun

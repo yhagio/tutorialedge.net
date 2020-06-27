@@ -67,7 +67,7 @@ nav.secondary-nav {
   background-color: white !important;
   border-bottom: 1px solid #f8f8f8 !important;
   box-shadow: 0 1px 0 rgba(0,0,0,.1);
-
+  z-index: 100;
 
   ul li a {
     color: $dark-blue !important;
