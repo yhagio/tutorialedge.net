@@ -6,6 +6,7 @@ desc:
   programs
 series: golang
 image: golang.svg
+tag: Intermediate
 tags:
   - concurrency
 title: Go Channels Tutorial

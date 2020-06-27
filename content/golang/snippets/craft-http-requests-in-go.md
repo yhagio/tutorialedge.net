@@ -9,8 +9,7 @@ series:
 image:
 layout: snippets 
 language: go
-tags:
-- beginner
+tag: Snippet
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 snippet: |
   package main

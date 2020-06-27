@@ -7,6 +7,7 @@ desc:
   itself.
 series: golang
 image: golang.svg
+tag: Misc
 tags:
   - testing
 title: Advanced Go Testing Tutorial

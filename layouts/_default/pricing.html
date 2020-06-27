@@ -1,40 +1,15 @@
 {{ partial "header.html" . }}
 
-<div class="top-bar">
-    <div class="container">
-      <h1>
-        <img
-          src="https://images.tutorialedge.net/images/logo.svg"
-          alt="{{ .Title }} Image"
-        />
-        {{ .Title }}
-      </h1>
-    </div>
+<div class="top-bar profile">
+  <div class="container">
+    <h1>Upgrade Account 🚀</h1>
+    <p>Gain access to the premium content and courses on the site by sponsoring me on through GitHub.</p>
+    <p>The goal is to be able to work full-time on OpenSource projects and new content for the site, your sponsorship helps to bring that goal one step closer ♥️ </p>
   </div>
-
-<div class="content h-100">
-	<div class="container">
-        {{ .Content }}
-    </div>
 </div>
 
-<div class="blue-spacer"></div>
-
-<style>
-.content {
-    min-height: 45vh;
-}
-
-.content img {
-    margin-top: 80px;
-}
-
-.content h1 {
-    margin: auto;
-    display: block;
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-</style>
+<div>
+  <Pricing />
+</div>
 
 {{ partial "footer.html" . }}

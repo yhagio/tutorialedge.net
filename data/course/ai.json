@@ -1,0 +1,18 @@
+{
+    "beginner": {
+        "name": "Beginner",
+        "weight": 1
+    },
+    "intermediate": {
+        "name": "Intermediate",
+        "weight": 2
+    },
+    "advanced": {
+        "name": "Advanced",
+        "weight": 3
+    },
+    "misc": {
+        "name": "Misc",
+        "weight": 4
+    }
+}

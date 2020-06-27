@@ -6,8 +6,9 @@ desc:
   using Go.
 series: golang
 image: golang.svg
-tags:
-  - intermediate
+tag: Intermediate
+tags: 
+ - intermediate
 weight: 21
 title: Golang MySQL Tutorial
 twitter: https://twitter.com/Elliot_F

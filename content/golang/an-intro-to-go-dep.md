@@ -6,8 +6,9 @@ desc:
   dep tool for your go projects.
 series: golang
 image: golang.svg
-tags:
-  - intermediate
+tags: 
+ - intermediate
+tag: Intermediate
 title: An Intro to Go Dep
 twitter: https://twitter.com/Elliot_F
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg

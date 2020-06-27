@@ -6,8 +6,9 @@ desc:
   using Go(Lang)
 series: golang
 image: golang.svg
-tags:
-  - intermediate
+tag: Intermediate
+tags: 
+ - intermediate
 title: Creating a RESTful API With Golang
 twitter: https://twitter.com/Elliot_F
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg

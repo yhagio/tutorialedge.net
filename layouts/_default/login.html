@@ -1,46 +1,7 @@
 {{ partial "header.html" . }}
 
-<div class="top-bar profile">
-  <div class="container">
-    <h2>Login / Register</h2>
-    <p>Join the thousands of developers currently registered on the site!</p>
-  </div>
-</div>
-
-<div class="content">
-  <div id="loading">
-    <img src="/images/logo.svg" alt="Loading spinner" />
-  </div>
-
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">Auth0 - JavaScript</a>
-
-        <button id="btn-home-view" class="btn btn-primary btn-margin">
-          Home
-        </button>
-        <button id="qsLoginBtn" class="btn btn-primary btn-margin">
-          Log In
-        </button>
-
-        <button id="qsLogoutBtn" class="btn btn-primary btn-margin">
-          Log Out
-        </button>
-      </div>
-    </div>
-  </nav>
-
-  <main class="container">
-    <!-- home view -->
-    <div id="home-view">
-      <h4>Hello</h4>
-    </div>
-
-    <div id="login-view">
-      <h4>Hi</h4>
-    </div>
-  </main>
+<div>
+  <Login />
 </div>
 
 {{ partial "footer.html" . }}

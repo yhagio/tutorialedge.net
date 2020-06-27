@@ -6,8 +6,9 @@ desc:
   using Google's GoLang programming language.
 series: golang
 image: golang.svg
-tags:
-  - intermediate
+tag: Intermediate
+tags: 
+ - intermediate
 title: Creating A Simple Web Server With Golang
 twitter: https://twitter.com/Elliot_F
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg

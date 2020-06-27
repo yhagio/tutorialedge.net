@@ -6,6 +6,7 @@ desc:
   again using the strconv golang package.
 series: golang
 image: golang.svg
+tag: Beginner
 tags:
   - snippet
 title: Golang Integer String Conversion Tutorial

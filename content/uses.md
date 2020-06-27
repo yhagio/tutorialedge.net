@@ -4,7 +4,7 @@ date: 2019-03-02T18:52:03Z
 desc: I thought I'd write up all of the software/hardware that I use in my day-to-day work on the site so that it's available in one convenient place!
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
-series: blog
+
 image: logo.svg
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---

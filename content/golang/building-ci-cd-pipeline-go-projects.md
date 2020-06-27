@@ -9,8 +9,9 @@ desc:
   for your Go Projects
 series: golang
 image: golang.svg
-tags:
-  - advanced
+tag: Advanced
+tags: 
+ - advanced
 author: Elliot Forbes
 twitter: https://twitter.com/Elliot_f
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg

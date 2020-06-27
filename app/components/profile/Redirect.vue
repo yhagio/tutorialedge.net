@@ -11,7 +11,7 @@
 <script>
 export default {
     name: 'Redirect',
-    created: function() {
+    mounted: function() {
         this.$auth.handleAuthentication()
             .then(() => {
                 window.location.assign("/profile/");

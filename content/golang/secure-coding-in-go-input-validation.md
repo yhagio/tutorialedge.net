@@ -5,9 +5,9 @@ desc:
   In this article, we will be reviewing general secure coding best practices and the OWASP Top 10 (2017) security risks, focusing on how they should be approached when coding using Go.
 series: golang
 image: golang.svg
-tags:
-  - advanced
-  - security
+tag: Advanced
+tags: 
+ - advanced
 title: "Secure Coding in Go - Input Validation"
 twitter: https://twitter.com/abdullahgarcia
 authorImage: https://pbs.twimg.com/profile_images/1099327373177208833/fZLkqyx3_400x400.png

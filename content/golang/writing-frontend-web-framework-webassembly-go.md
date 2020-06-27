@@ -6,8 +6,9 @@ desc:
   web framework using WebAssembly and Go"
 series: golang
 image: golang.svg
-tags:
-  - advanced
+tag: Advanced
+tags: 
+ - advanced
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg

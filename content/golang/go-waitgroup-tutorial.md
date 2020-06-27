@@ -6,6 +6,7 @@ desc:
   your Concurrent Go Applications
 series: golang
 image: golang.svg
+tag: Intermediate
 tags:
   - concurrency
 author: Elliot Forbes

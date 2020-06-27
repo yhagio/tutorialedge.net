@@ -11,7 +11,7 @@ let webAuth = new auth0.WebAuth({
     // we will use the api/v2/ to access the user information as payload
     audience: 'https://' + config.domain + '/api/v2/', 
     responseType: 'token id_token',
-    scope: 'openid profile' // define the scopes you want to use
+    scope: 'openid profile email user_metadata app_metadata' // define the scopes you want to use
 })
 
 let instance;
@@ -34,6 +34,15 @@ export const useAuth = ({...options}) => {
                     redirectUri: config.redirectUri
                 })
             },    
+            callback() {
+                this.handleAuthentication().
+                    then(() => {
+                        webAuth.popup.callback();
+                    })
+                    .catch((err) => {
+                        console.log(err);
+                    });
+            },
             logout() {
                 Cookie.remove("expiresAt")
                 Cookie.remove("user")
@@ -53,6 +62,14 @@ export const useAuth = ({...options}) => {
                 let accessToken = Cookie.get("accessToken")
                 return accessToken;
             },
+            getIsSponsor() {
+                let user = JSON.parse(Cookie.get("user"));
+                if(user["https://tutorialedge.net_user_metadata"].sponsor) {
+                    return true
+                } else {
+                    return false
+                }
+            },
             isAuthenticated() {
                 if(Cookie.get("expiresAt") === undefined) {
                     return false;
@@ -63,7 +80,9 @@ export const useAuth = ({...options}) => {
                 return new Promise((resolve, reject) => {  
                     webAuth.parseHash((err, authResult) => {
                         if (authResult && authResult.accessToken && authResult.idToken) {
-
+                            
+                            console.log(authResult.accessToken);
+                            console.log(authResult)
                             
                             Cookie.set("idToken", authResult.idToken)
                             Cookie.set("accessToken", authResult.accessToken)

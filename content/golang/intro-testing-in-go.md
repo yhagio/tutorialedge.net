@@ -6,6 +6,7 @@ desc:
   based systems using the go test tool
 series: golang
 image: golang.svg
+tag: Beginner
 tags:
   - testing
 weight: 11

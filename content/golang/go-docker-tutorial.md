@@ -6,6 +6,7 @@ author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
 series: golang
 image: golang.svg
+tag: Intermediate
 tags:
   - docker
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg

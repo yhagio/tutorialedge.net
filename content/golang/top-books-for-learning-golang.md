@@ -6,6 +6,7 @@ desc:
   intermediate or advanced golang developer
 series: golang
 image: golang.svg
+tag: Beginner
 tags:
   - books
 title: The Best Books For Learning Golang

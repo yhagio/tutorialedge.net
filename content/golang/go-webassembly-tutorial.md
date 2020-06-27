@@ -6,8 +6,9 @@ desc:
   programs into WebAssembly
 series: golang
 image: golang.svg
-tags:
-  - advanced
+tag: Advanced
+tags: 
+ - advanced
 title: Go WebAssembly Tutorial - Building a Calculator Tutorial
 twitter: https://twitter.com/Elliot_F
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg

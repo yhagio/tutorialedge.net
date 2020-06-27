@@ -6,6 +6,7 @@ desc:
   programs using goroutines.
 series: golang
 image: golang.svg
+tag: Intermediate
 tags:
   - concurrency
 title: Concurrency With Golang Goroutines

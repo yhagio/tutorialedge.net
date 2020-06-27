@@ -1,0 +1,33 @@
+{
+  "Frontend": {
+    "name": "Frontend",
+    "weight": 1,
+    "articles": [
+      {
+        "title": "Setting Up Our Development Environment"
+      },
+      {
+        "title": "Adding Components"
+      },
+      {
+        "title": "Routing"
+      },
+      {
+        "title": "Guarded Routes"
+      },
+      {
+        "title": "Integration with Auth0"
+      }
+    ]
+  },
+  "Backend": {
+    "name": "Backend",
+    "weight": 2,
+    "articles": []
+  },
+  "Deployment": {
+    "name": "Deployment",
+    "weight": 3,
+    "articles": []
+  }
+}
