@@ -7,6 +7,8 @@ desc:
 series: golang
 image: golang.svg
 tag: Beginner
+tags: 
+ - beginner
 weight: 8
 title: Executing System Commands With Golang
 twitter: https://twitter.com/Elliot_F

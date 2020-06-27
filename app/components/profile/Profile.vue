@@ -11,6 +11,11 @@
                 </h2>
             </div> 
 
+            <p v-if="this.$auth.getIsSponsor">
+                <b>Account Type:</b> 
+                <span >Sponsor</span>        
+            </p>
+
             <p><b>Privacy Policy: <a href="/privacy/">📕 Read Now</a></b></p>
             <p><b>Upgrade Account: <a href="/pricing/">🚀 Pricing</a></b></p>
 

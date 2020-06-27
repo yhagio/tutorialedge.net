@@ -9,11 +9,11 @@ draft: true
 series: ogimgdev
 tags:
   - ogimgdev
-title: Part 1 - An Introduction to Face Recognition in Go
+title: Part 1 - Setting Up Your Development Environment
 twitter: https://twitter.com/Elliot_F
 video: 432302639
 nextPage: /courses/ogimg-dev/frontend-02/
 weight: 1
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg
-blurb: A descriptive message for under the video
+blurb: Under Construction
 ---

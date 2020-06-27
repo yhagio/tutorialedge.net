@@ -26,24 +26,36 @@
 </div>
 
 <div class="course-listing">	
-	{{ $series := .Params.series }}
+	{{ range $taxonomyname, $taxonomy := .Site.Taxonomies.tags }}
 
-	{{ if isset .Params.series "" }}
-		{{ range sort (index $.Site.Data.course .Params.series) "weight" "asc" }}
-			<h3>{{.name}}</h3>
-			<div class="courses">
-			{{ $pages := (where $.Site.Pages "Params.series" $series) }}
-			{{ range (where $pages "Params.tag" .name) }}
-				<a href="{{ .Permalink }}">
-					<div class="course-box">
-						<h2><small>{{ .Params.difficulty }}</small><br />{{ .Title }}</h2>
-						<p>{{ .Page.Params.desc }}</p>
-						<button class="btn btn-success">Read Now</button>
-					</div>
-				</a>
+	{{ $scratch := newScratch }}
+	{{ range $taxonomy }}
+	{{ if eq $.Params.series .Params.series }}
+	{{ if not (in ($scratch.Get "tags") $taxonomyname) }}
+	{{if not (eq $taxonomyname .Params.series) }}
+	{{ $scratch.Add "tags" (slice $taxonomyname) }}
+	{{ end }}
+	{{ end }}
+	{{ end }}
+	{{ end }}
+
+	{{ range $scratch.Get "tags" }}
+	<h3>{{.}}</h3>
+	<div class="courses">
+		{{ range sort $taxonomy }}
+			{{ if eq $.Params.series .Params.series }}
+			<a href="{{ .Permalink }}">
+				<div class="course-box">
+					<h2><small>{{ .Params.difficulty }}</small><br />{{ .Title }}</h2>
+					<p>{{ .Page.Params.desc }}</p>
+					<button class="btn btn-success">Read Now</button>
+				</div>
+			</a>
 			{{ end }}
-			</div>
-		{{ end }}	
+		{{ end }}
+	</div>
+	<div class="clear"></div>
+	{{ end }}
 	{{ end }}
 </div>
 

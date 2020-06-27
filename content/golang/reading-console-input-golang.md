@@ -8,6 +8,8 @@ desc:
 series: golang
 image: golang.svg
 tag: Beginner
+tags: 
+ - beginner
 title: Reading in Console Input in Golang
 twitter: https://twitter.com/Elliot_F
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg

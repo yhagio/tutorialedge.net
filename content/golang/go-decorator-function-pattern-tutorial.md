@@ -4,6 +4,8 @@ date: 2018-10-20T21:34:14+01:00
 series: golang
 image: golang.svg
 tag: Intermediate
+tags: 
+ - intermediate
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg

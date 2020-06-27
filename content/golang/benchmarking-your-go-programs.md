@@ -6,6 +6,8 @@ desc:
   program.
 series: golang
 image: golang.svg
+tags: 
+ - misc
 tag: Misc
 title: An Introduction to Benchmarking Your Go Programs
 twitter: https://twitter.com/Elliot_F

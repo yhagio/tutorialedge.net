@@ -7,6 +7,8 @@ desc:
 series: golang
 image: golang.svg
 tag: Beginner
+tags: 
+ - beginner
 title: Go Basic Types Tutorial
 twitter: https://twitter.com/Elliot_F
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg

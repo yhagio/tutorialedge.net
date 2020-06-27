@@ -7,6 +7,8 @@ series: golang
 image: golang.svg
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 tag: Intermediate
+tags: 
+ - intermediate
 desc:
   In this tutorial, we are going to be looking at closures and how you can use
   them within your own Go applications.

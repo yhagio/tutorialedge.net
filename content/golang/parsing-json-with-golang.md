@@ -7,6 +7,8 @@ desc:
 series: golang
 image: golang.svg
 tag: Beginner
+tags: 
+ - beginner
 title: Parsing JSON files With Golang
 twitter: https://twitter.com/Elliot_F
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg

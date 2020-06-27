@@ -6,6 +6,8 @@ desc:
 series: golang
 image: golang.svg
 tag: Advanced
+tags: 
+ - advanced
 title: "Secure Coding in Go - Input Validation"
 twitter: https://twitter.com/abdullahgarcia
 authorImage: https://pbs.twimg.com/profile_images/1099327373177208833/fZLkqyx3_400x400.png

@@ -6,6 +6,8 @@ desc:
   APIs with JSON Web Tokens"
 series: golang
 image: golang.svg
+tags: 
+ - advanced
 tag: Advanced
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f

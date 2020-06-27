@@ -7,6 +7,8 @@ series: golang
 image: golang.svg
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 tag: Beginner
+tags: 
+ - beginner
 title: Go Composite Types Tutorial
 twitter: https://twitter.com/Elliot_F
 weight: 3

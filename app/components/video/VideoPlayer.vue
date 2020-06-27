@@ -1,13 +1,13 @@
 <template>
     <div class="player">
         <div id="screencast">
-            <div v-if="!this.paid" class="overlay"></div>
-            <div v-if="!this.paid" class="info">
+            <div v-if="!this.sponsor" class="overlay"></div>
+            <div v-if="!this.sponsor" class="info">
                 <h2>This video is restricted to GitHub Sponsors only.</h2>
                 <p>Your sponsorship helps to make videos like these possible! 🚀</p>
                 <a href="https://github.com/sponsors/elliotforbes/button" class="btn btn-outline btn-white">
                     Sponsor Now
-                    <GitHubSVG />
+                    <Githubsvg />
                 </a>
             </div>
         </div>
@@ -26,12 +26,12 @@ export default {
     props: ["id", "next", "blurb", "title"],
     data: function() {
         return {
-            paid: false
+            sponsor: false,
+            user: {}
         }
     },
     methods: {
         loadVideo: function() {
-            this.notPaid = true;
             var options = {
                 id: this.id,
                 autoplay: true,
@@ -56,12 +56,9 @@ export default {
     },
     mounted: function() {
         this.loading = true;
-        if(this.$auth.isAuthenticated()) {
-            this.loading = false;
-            this.paid = true;
+        if(this.$auth.getIsSponsor) {
+            this.sponsor = true;
             this.loadVideo();
-        } else {
-            this.loading = false;
         }
         
     }

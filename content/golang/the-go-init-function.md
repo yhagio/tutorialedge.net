@@ -6,6 +6,8 @@ desc:
 series: golang
 image: golang.svg
 tag: Beginner
+tags: 
+ - beginner
 weight: 13
 author: Elliot Forbes
 title: "The Go init Function"

@@ -10,6 +10,8 @@ desc:
 series: golang
 image: golang.svg
 tag: Advanced
+tags: 
+ - advanced
 author: Elliot Forbes
 twitter: https://twitter.com/Elliot_f
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg

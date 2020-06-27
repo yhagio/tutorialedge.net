@@ -6,6 +6,8 @@ date: 2018-09-27T10:48:51+01:00
 series: golang
 image: golang.svg
 tag: Advanced
+tags: 
+ - advanced
 author: Elliot Forbes
 twitter: https://twitter.com/Elliot_F
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg

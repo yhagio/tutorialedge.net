@@ -7,8 +7,9 @@ twitter: https://twitter.com/elliot_f
 series: golang
 image: golang.svg
 tag: Beginner
+tags: 
+ - beginner
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg
-
 ---
 In this tutorial, we are going to be looking at tickers in Go and how you can use tickers effectively within your own Go applications.
 

@@ -1,20 +1,11 @@
 <template>
-     <div class="price-listing">
-        <div class="prices">	
+     <div class="login-box">
+        <div class="login">	
             <div></div>
             <div class="price-box">
-                <h2>Standard Account 🚀</h2>
-                <hr>
-                <p><b>Join the thousands of developers</b> currently registered on the site.</p>
-
-                <hr>
-                <h4>Perks</h4>
-
-                <p>✅ Gain access to the growing list of challenges on the site </p>
-                <p>✅ Participate in the forums and be able to post questions </p>
-                
-                <div class="clear"></div>
-                <button class="btn btn-primary" v-on:click="this.signup">🚀 Sign Up</button>
+                <h2>Sign in 🚀</h2>
+                <p>Authenticate with Google or GitHub:</p>
+                <button class="btn btn-primary" v-on:click="this.signup">🚀 Sign In</button>
             </div>
             <div></div>
         </div>
@@ -34,9 +25,10 @@ export default {
 
 <style lang="scss" scoped>
 
-.price-listing {
+.login-box {
   padding: 40px;
   background-image: url(/images/svg/small-dots.svg);
+  min-height: 50vh;
   h3 {
       background-color: #F5F7F9;
       padding: 20px;
@@ -47,7 +39,7 @@ export default {
       text-decoration: none !important;
   }
     
-  .prices {
+  .login {
       display: grid;
       justify-content: center;
       grid-gap: 1px;
@@ -56,6 +48,7 @@ export default {
       .price-box {
           flex: 0 0 32%;  
           margin: 20px;
+          margin-top: 40px;
           padding: 40px;
           align-self: center;
           background-color: white;
