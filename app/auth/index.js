@@ -80,10 +80,7 @@ export const useAuth = ({...options}) => {
                 return new Promise((resolve, reject) => {  
                     webAuth.parseHash((err, authResult) => {
                         if (authResult && authResult.accessToken && authResult.idToken) {
-                            
-                            console.log(authResult.accessToken);
-                            console.log(authResult)
-                            
+                             
                             Cookie.set("idToken", authResult.idToken)
                             Cookie.set("accessToken", authResult.accessToken)
                             let expiresAt = {
