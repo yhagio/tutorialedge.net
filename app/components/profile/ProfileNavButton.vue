@@ -22,9 +22,6 @@ export default {
 </script>
 
 <style lang="scss">
-.sign-up {
-
-}
 
 button.nav-link {
     background-color: rgba(0,0,0,0);
