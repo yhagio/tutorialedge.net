@@ -3,9 +3,9 @@
         <div class="login">	
             <div></div>
             <div class="price-box">
-                <h2>Sign in 🚀</h2>
+                <h2>Register or Sign in 🚀</h2>
                 <p>Authenticate with Google or GitHub:</p>
-                <button class="btn btn-primary" v-on:click="this.signup">🚀 Sign In</button>
+                <button class="btn btn-primary" v-on:click="this.signup">🚀 Click Here</button>
             </div>
             <div></div>
         </div>
