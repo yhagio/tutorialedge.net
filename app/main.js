@@ -8,6 +8,7 @@ import ProfileNavButton from './components/profile/ProfileNavButton.vue';
 import Logout from './components/profile/Logout.vue';
 import Register from './components/profile/Register.vue';
 import Login from './components/profile/Login.vue';
+import Pricing from './components/profile/Pricing.vue';
 import FooterSearch from './components/search/FooterSearch.vue';
 import Snippet from './components/snippets/Snippet.vue';
 import ChallengeHome from './components/challenge/ChallengeHome.vue';
@@ -50,6 +51,7 @@ var app = new Vue({
     Githubsvg,
     Quiz,
     ProfileNavButton,
+    Pricing,
     Login,
     HallOfFame,
     Comments,

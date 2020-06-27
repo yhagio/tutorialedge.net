@@ -2,7 +2,6 @@
     <div class="price-listing">
         <div class="prices">	
             <div class="price-box">
-                <img src="https://s22.postimg.cc/8mv5gn7w1/paper-plane.png" alt="" class="pricing-img">
                 <h2>
                     The Supporter 🚀
                     <br/><small>$7/month</small>    
@@ -16,7 +15,6 @@
                 <a class="btn btn-sponsor" href="https://github.com/sponsors/elliotforbes">Sponsor Now <Githubsvg /></a>
             </div>
             <div class="price-box">
-                <img src="https://s28.postimg.cc/ju5bnc3x9/plane.png" alt="" class="pricing-img">
                 <h2>
                     Freelancer/Startup 😎
                     <br/><small>$49/month</small>    
@@ -31,7 +29,6 @@
                 <a class="btn btn-sponsor" href="https://github.com/sponsors/elliotforbes">Sponsor Now <Githubsvg /></a>
             </div>
             <div class="price-box">
-                <img src="https://s21.postimg.cc/tpm0cge4n/space-ship.png" alt="" class="pricing-img">
                 <h2>
                     Business/Agency 🏢
                     <br/><small>$199/month</small>    
@@ -89,7 +86,7 @@ export default {
           align-self: center;
           background-color: white;
           border-radius: 8px;
-          height: 700px;
+          height: 500px;
           -webkit-box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
           box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
           color: rgba(14,30,37,.54);
