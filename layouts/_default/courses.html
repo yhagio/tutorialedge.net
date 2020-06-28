@@ -1,11 +1,11 @@
 {{ partial "header.html" . }}
 
 <div class="course-listing">
-    <h3>Courses - Coming Soon!</h3>
+    <h3>Courses</h3>
 
     <div class="courses">
         {{ range .Site.Data.courses.index }}
-            <a href="#">
+            <a href="{{ .url }}">
                 <div class="course-box">
                     <img src="{{ .img }}" alt="">
                     <h2><small>{{ .Params.difficulty }}</small><br />{{ .title }}</h2>
@@ -14,7 +14,7 @@
                     <span class="badge badge-pill badge-success">{{ . }}</span>
                     {{ end }}
                     <div class="clear"></div>
-                    <button class="btn btn-primary">Coming Soon!</button>
+                    <button class="btn btn-primary">Watch Now!</button>
                 </div>
             </a>
         {{ end }}
