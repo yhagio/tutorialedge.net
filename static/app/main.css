@@ -11446,9 +11446,20 @@ nav .dropdown-menu img {
   margin-top: 40px;
   text-transform: capitalize;
 }
+.video-sidebar .current-page {
+  color: #2697F7;
+}
 .video-sidebar a:hover {
   transition: 1s;
-  color: black;
+  color: #13A352;
+}
+.video-sidebar .play-button {
+  width: 20px;
+  margin-right: 10px;
+  margin-top: 2px;
+  height: auto;
+  float: left;
+  stroke: green;
 }
 .video-sidebar .nav-item {
   color: #3B454E;
@@ -11469,13 +11480,12 @@ nav .dropdown-menu img {
   text-decoration: none;
 }
 .video-sidebar .nav-item::before {
-  top: 0px;
-  left: 0px;
-  width: 1px;
-  bottom: 0px;
-  content: "";
-  position: absolute;
-  background: #e6ecf1;
+  content: url("https://images.tutorialedge.net/images/play-button.svg");
+  width: 20px;
+  padding-top: 5px;
+  margin-right: 10px;
+  margin-top: 2px;
+  height: auto;
 }
 
 /*# sourceMappingURL=main.css.map */

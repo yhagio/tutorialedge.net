@@ -3,42 +3,55 @@
   background-color: white;
   border-left: 1px solid #E6ECF1;
   
-h4 {
-    margin-top: 40px;
-    text-transform: capitalize;
-}
-
-a:hover {
-    transition: 1s;
-    color: black;
-}
-
-.nav-item {
-    color: #3B454E;
-    cursor: pointer;
-    display: flex;
-    position: relative;
-    align-items: center;
-    -webkit-box-align: center;
-    border-width: 1px 0px 1px 1px;
-    border-style: solid solid solid;
-    border-color: transparent transparent transparent;
-    border-image: initial;
-    padding: 4px 4px 8px 16px;
-    margin: 0;
-    border-right: 0px;
-    font-size: 15px;
-    line-height: 24px;
-    text-decoration: none;
-}
-.nav-item::before {
-    top: 0px;
-    left: 0px;
-    width: 1px;
-    bottom: 0px;
-    content: "";
-    position: absolute;
-    background: rgb(230, 236, 241);
+  h4 {
+      margin-top: 40px;
+      text-transform: capitalize;
   }
-  
+
+  .current-page {
+    color: #2697F7;
+  }
+
+  a:hover {
+      transition: 1s;
+      color: #13A352;
+  }
+
+  .play-button {
+    width: 20px;
+    margin-right: 10px;
+    margin-top: 2px;
+    height: auto;
+    float: left;
+    stroke: green;
+  }
+
+  .nav-item {
+      color: #3B454E;
+      cursor: pointer;
+      display: flex;
+      position: relative;
+      align-items: center;
+      -webkit-box-align: center;
+      border-width: 1px 0px 1px 1px;
+      border-style: solid solid solid;
+      border-color: transparent transparent transparent;
+      border-image: initial;
+      padding: 4px 4px 8px 16px;
+      margin: 0;
+      border-right: 0px;
+      font-size: 15px;
+      line-height: 24px;
+      text-decoration: none;
+  }
+
+  .nav-item::before {
+      content: url('https://images.tutorialedge.net/images/play-button.svg');
+      width: 20px;
+      padding-top: 5px;
+      margin-right: 10px;
+      margin-top: 2px;
+      height: auto; 
+  }
+
 }

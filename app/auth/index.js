@@ -64,11 +64,13 @@ export const useAuth = ({...options}) => {
             },
             getIsSponsor() {
                 let user = JSON.parse(Cookie.get("user"));
-                if(user["https://tutorialedge.net_user_metadata"].sponsor) {
-                    return true
-                } else {
-                    return false
+                if(user["https://tutorialedge.net_user_metadata"] !== undefined) {
+                    if(user["https://tutorialedge.net_user_metadata"].sponsor !== undefined) {
+                        return user["https://tutorialedge.net_user_metadata"].sponsor; 
+                    } 
+                    return false;
                 }
+                return false;
             },
             isAuthenticated() {
                 if(Cookie.get("expiresAt") === undefined) {

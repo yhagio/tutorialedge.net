@@ -4,19 +4,26 @@
     "weight": 1,
     "articles": [
       {
-        "title": "Setting Up Our Development Environment"
+        "title": "Setting Up Our Development Environment",
+        "state": "published",
+        "url": "/courses/ogimg-dev/frontend-01/"
       },
       {
-        "title": "Adding Components"
+        "title": "Adding Tailwind CSS to our Project",
+        "state": "published",
+        "url": "/courses/ogimg-dev/frontend-02/"
       },
       {
-        "title": "Routing"
+        "title": "Routing",
+        "state": "draft"
       },
       {
-        "title": "Guarded Routes"
+        "title": "Guarded Routes",
+        "state": "draft"
       },
       {
-        "title": "Integration with Auth0"
+        "title": "Integration with Auth0",
+        "state": "draft"
       }
     ]
   },
