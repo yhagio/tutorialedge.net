@@ -1,14 +1,29 @@
 {{ partial "header.html" . }}
 
-<div class="container-fluid">
+<div class="container-fluid video-bg">
   <div class="content-container">
     <div class="row">
       <div class="col-lg-8 col-md-8">
-        <Video-Player id="{{ .Params.video }}" next="{{ .Params.nextPage }}" title="{{ .Title }}" blurb="{{ .Params.blurb }}" paid="{{ .Params.paid }}" />
+        <div class="player">
+          
+          <Video-Player id="{{ .Params.video }}" next="{{ .Params.nextPage }}"paid="{{ .Params.paid }}"></Video-Player>
+
+          <div class="video-blurb">
+            <article class="content video-content">
+              <h1>{{.Title}}</h1>
+              <div class="video-info">
+                <span>📅 Posted: {{ dateFormat "Jan 2, 2006" .Date }}</span>
+              </div>
+              {{ .Content }}
+            </article>
+            
+            {{ partial "comments.html" . }}
+          </div>
+        </div>
       </div>
-      <div class="col-lg-4 col-md-4 video-sidebar">
-        <div class="accordion">
-          <h2>🎥 Course Videos</h2>
+      <div class="col-lg-4 col-md-4 video-sidebar">        
+        <h2>🎥 Course Videos</h2>
+        <div class="accordion"></div>
           {{ $currentPage := . }}
           {{ range sort (index .Site.Data.courses .Params.series) "weight" "asc" }}
             <h4>📚 {{ .name }}</h4>
@@ -17,15 +32,20 @@
                 <a class="nav-item" href="{{ .Site.BaseURL }}{{ .url }}">
                   <span>{{ .title }}</span>
                 </a>
+                {{ else if eq .state "pending"}}
+                  <a class="nav-item disabled" href="#">
+                    <span>{{ .title }}</span>
+                  </a>
               {{ end }}
             {{ end }}
           {{ end }}
+          <div class="ad">
+            <Carbon />
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-<div class="blue-spacer"></div>
 
 {{ partial "footer.html" . }}

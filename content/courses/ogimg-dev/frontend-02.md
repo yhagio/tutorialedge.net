@@ -14,5 +14,6 @@ nextPage: /courses/ogimg-dev/frontend-03/
 weight: 2
 paid: false
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg
-blurb: In this tutorial, we are going to look at how you can add Tailwind CSS to our frontend React.js application.
 ---
+
+In this tutorial, we are going to look at how you can add Tailwind CSS to our frontend React.js application. This will enable us to quickly style our application and make it responsive across different devices.
