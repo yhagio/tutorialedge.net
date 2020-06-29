@@ -11252,6 +11252,20 @@ nav .dropdown-menu img {
   margin-bottom: 20px;
   color: rgba(14, 30, 37, 0.54);
 }
+.youtube-subscribe a {
+  display: block;
+}
+.youtube-subscribe a img {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+}
+.youtube-subscribe iframe {
+  width: 100%;
+  max-width: 180px;
+  height: 47px !important;
+  border: 0;
+}
 .youtube-subscribe div img {
   max-height: 100px;
   width: auto;
