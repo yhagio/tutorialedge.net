@@ -2,23 +2,24 @@
 
 <div class="top-bar">
 	<div class="container">
-	  <h1>
-		{{ if .Params.image }}
-		<img
-		  src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-		  data-src="https://images.tutorialedge.net/images/{{ .Params.image }}"
-		  alt="{{ .Title }} Image"
-		/>
-		{{ else }}
-		<img
-		  src="https://images.tutorialedge.net/images/logo.svg"
-		  alt="{{ .Title }} Image"
-		/>
-		{{ end }}
-		{{ .Title }}
-	  </h1>
+		<h1>
+			{{ if .Params.image }}
+			<img
+			src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+			data-src="https://images.tutorialedge.net/images/{{ .Params.image }}"
+			alt="{{ .Title }} Image"
+			/>
+			{{ else }}
+			<img
+			src="https://images.tutorialedge.net/images/logo.svg"
+			alt="{{ .Title }} Image"
+			/>
+			{{ end }}
+			{{ .Title }}
+		</h1>
 	</div>
-  </div>
+</div>
+
 <div class="course-outline">
 	<div class="container">
 		{{ .Content }}

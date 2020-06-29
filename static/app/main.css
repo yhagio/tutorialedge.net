@@ -10413,6 +10413,7 @@ a:hover .course-progress-box {
 
 .course-listing {
   padding: 40px;
+  width: 100%;
   background-image: url(/images/svg/small-dots.svg);
 }
 .course-listing h3 {
@@ -10426,7 +10427,34 @@ a:hover .course-progress-box {
 .course-listing .courses {
   display: grid;
   grid-gap: 1px;
-  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+}
+@media (min-width: 576px) {
+  .course-listing .courses {
+    margin: 10px;
+    border-radius: 0;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  .course-listing .courses {
+    margin: 20px;
+    border-radius: 10px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .course-listing .courses {
+    margin: 40px;
+    border-radius: 10px;
+  }
+}
+@media (min-width: 1200px) {
+  .course-listing .courses {
+    margin: 80px;
+    border-radius: 10px;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 .course-listing .courses .course-box {
   flex: 0 0 32%;
@@ -11442,10 +11470,32 @@ nav .dropdown-menu img {
 }
 
 .player {
-  margin: 80px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   overflow: hidden;
-  border-radius: 10px;
+}
+@media (min-width: 576px) {
+  .player {
+    margin: 10px;
+    border-radius: 0;
+  }
+}
+@media (min-width: 768px) {
+  .player {
+    margin: 20px;
+    border-radius: 10px;
+  }
+}
+@media (min-width: 992px) {
+  .player {
+    margin: 40px;
+    border-radius: 10px;
+  }
+}
+@media (min-width: 1200px) {
+  .player {
+    margin: 80px;
+    border-radius: 10px;
+  }
 }
 .player h1 {
   font-size: 1.75rem;
