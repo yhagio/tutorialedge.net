@@ -4,37 +4,52 @@
     "weight": 1,
     "articles": [
       {
-        "title": "Setting Up Our Development Environment",
+        "title": "Setting Up Our React App",
         "state": "published",
         "url": "/courses/ogimg-dev/frontend-01/"
       },
       {
-        "title": "Adding Tailwind CSS to our Project",
+        "title": "Adding Tailwind CSS to our React App",
         "state": "published",
         "url": "/courses/ogimg-dev/frontend-02/"
       },
       {
-        "title": "Routing",
-        "state": "draft"
+        "title": "Creating A Responsive Header Component",
+        "state": "pending",
+        "url": "/courses/ogimg-dev/frontend-03/"
       },
       {
-        "title": "Guarded Routes",
-        "state": "draft"
+        "title": "Setting up React Routing",
+        "state": "pending",
+        "url": "/courses/ogimg-dev/frontend-04/"
       },
       {
-        "title": "Integration with Auth0",
-        "state": "draft"
+        "title": "Integration with Auth0 - Coming Soon!",
+        "state": "pending",
+        "url": "/courses/ogimg-dev/frontend-05/"
       }
     ]
   },
   "Backend": {
     "name": "Backend",
     "weight": 2,
-    "articles": []
+    "articles": [
+      {
+        "title": "Coming Soon!",
+        "state": "pending",
+        "url": "#"
+      }
+    ]
   },
   "Deployment": {
     "name": "Deployment",
     "weight": 3,
-    "articles": []
+    "articles": [
+      {
+        "title": "Coming Soon!",
+        "state": "pending",
+        "url": "#"
+      }
+    ]
   }
 }

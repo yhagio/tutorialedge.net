@@ -15,5 +15,10 @@ video: 433296255
 nextPage: /courses/ogimg-dev/frontend-02/
 weight: 1
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg
-blurb: Bootstrapping our React.js Application within our frontend directory.
 ---
+
+In this tutorial, we cover setting up our project directory and bootstrapping our React.js application using the `create-react-app` CLI.
+
+```bash
+$ npx create-react-app frontend
+```
