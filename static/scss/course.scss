@@ -7,6 +7,7 @@
 
 .course-listing {
   padding: 40px;
+  width: 100%;
   background-image: url(/images/svg/small-dots.svg);
   h3 {
       background-color: #F5F7F9;
@@ -21,7 +22,33 @@
   .courses {
       display: grid;
       grid-gap: 1px;
-      grid-template-columns: repeat(3, 1fr);
+      width: 100%;
+      
+      @media (min-width: 576px) { 
+        margin: 10px;
+        border-radius: 0;
+        grid-template-columns: repeat(1, 1fr);
+      }
+      
+      // Medium devices (tablets, 768px and up)
+      @media (min-width: 768px) { 
+        margin: 20px;
+        border-radius: 10px;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      // Large devices (desktops, 992px and up)
+      @media (min-width: 992px) {
+        margin: 40px;
+        border-radius: 10px;
+      }
+      
+      // Extra large devices (large desktops, 1200px and up)
+      @media (min-width: 1200px) { 
+        margin: 80px;
+        border-radius: 10px;
+        grid-template-columns: repeat(3, 1fr);
+      }
 
       .course-box {
           flex: 0 0 32%;  
