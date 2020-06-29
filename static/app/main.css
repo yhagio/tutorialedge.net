@@ -11257,10 +11257,12 @@ nav .dropdown-menu img {
 }
 .youtube-subscribe a img {
   width: 100%;
+  max-width: 180px;
   height: auto;
 }
 .youtube-subscribe iframe {
   width: 100%;
+  max-width: 180px;
   height: 47px !important;
   border: 0;
 }
