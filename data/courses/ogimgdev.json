@@ -24,9 +24,14 @@
         "url": "/courses/ogimg-dev/frontend-04/"
       },
       {
+        "title": "Styling our Home Page",
+        "state": "published",
+        "url": "/courses/ogimg-dev/frontend-05/"
+      },
+      {
         "title": "Integration with Auth0 - Coming Soon!",
         "state": "pending",
-        "url": "/courses/ogimg-dev/frontend-05/"
+        "url": "/courses/ogimg-dev/frontend-06/"
       }
     ]
   },
