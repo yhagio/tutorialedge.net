@@ -10,7 +10,7 @@ tags:
 title: Part 4 - Setting up React Router
 twitter: https://twitter.com/Elliot_F
 video: 433754833
-nextPage: /courses/ogimg-dev/frontend-04/
+nextPage: /courses/ogimg-dev/frontend-05/
 weight: 4
 paid: false
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg
