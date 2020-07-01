@@ -29,9 +29,14 @@
         "url": "/courses/ogimg-dev/frontend-05/"
       },
       {
-        "title": "Integration with Auth0 - Coming Soon!",
-        "state": "pending",
+        "title": "Integration with Auth0",
+        "state": "published",
         "url": "/courses/ogimg-dev/frontend-06/"
+      },
+      {
+        "title": "Styling our Profile Page And Sign up - Coming soon",
+        "state": "pending",
+        "url": "/courses/ogimg-dev/frontend-07/"
       }
     ]
   },
