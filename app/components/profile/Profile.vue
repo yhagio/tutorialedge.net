@@ -11,8 +11,6 @@
                 </h2>
             </div> 
 
-            {{ this.user }}
-
             <p v-if="this.$auth.getIsSponsor()">
                 <b>Account Type:</b> 
                 <span >Sponsor</span>        
