@@ -33,7 +33,8 @@
 </template>
 
 <script>
-import moment from 'moment';
+import dayjs from 'dayjs';
+import dayOfYear from 'dayjs/plugin/dayOfYear';
 
 export default {
     name: "ProfileContributions",
@@ -45,9 +46,11 @@ export default {
     },
     mounted: function() {
 
+        dayjs.extend(dayOfYear);
+
         let challengeDateMap = new Map();
         this.challenges.forEach(challenge => {
-            let challengeDate = moment(challenge.CreatedAt).dayOfYear();
+            let challengeDate = dayjs(challenge.CreatedAt).dayOfYear();
             if(challengeDateMap.has(challengeDate)) {
                 challengeDateMap.set(challengeDate, challengeDateMap.get(challengeDate)+1);
             } else {
@@ -59,7 +62,7 @@ export default {
         for (var i = 1; i < 365; i++) {
             
             let level = 0;
-            let day = moment().dayOfYear(i).dayOfYear();
+            let day = dayjs().dayOfYear(i).dayOfYear();
             if(challengeDateMap.has(day)) {
                 let count = challengeDateMap.get(day);
                 if(count >= 3) {
