@@ -21,9 +21,6 @@ export default {
         return {
             user: {}
         }
-    },
-    mounted: function() {
-        console.log("hi!");
     }
 }
 </script>
