@@ -7,7 +7,13 @@ const config = {
     responseType: 'token id_token',
     scope: 'openid profile user_metadata',
     apiBase: 'https://api.tutorialedge.net/api',
-    goApiUrl: 'https://api-go.tutorialedge.net'
+    goApiUrl: 'https://api-go.tutorialedge.net',
+    stripe: {
+        pk: 'pk_live_YDWUH6DEcREKLBektnQbxheu',
+        price: 'price_1H0TLtH6SNauSNAXnyLSptti',
+        successUrl: 'https://tutorialedge.net/profile/',
+        cancelUrl: 'https://tutorialedge.net/profile/'
+    }
 }
 
 export default config;

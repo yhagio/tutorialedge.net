@@ -8,7 +8,13 @@ const config = {
     scope: 'openid profile user_metadata',
     apiBase: 'https://x6prfq8k16.execute-api.eu-west-1.amazonaws.com/development',
     // apiBase: 'https://api.tutorialedge.net/api',
-    goApiUrl: 'https://api-go.tutorialedge.net'
+    goApiUrl: 'https://api-go.tutorialedge.net',
+    stripe: {
+        pk: 'pk_test_vzLRvltMJHJJ65YFypICxZrY',
+        price: 'price_1H0UFdH6SNauSNAXRNZxJgGe',
+        successUrl: 'http://localhost:1313/profile/',
+        cancelUrl: 'http://localhost:1313/profile/'
+    }
 }
 
 

@@ -49,7 +49,7 @@
                     </div>
                     <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="settings-tab">
                         <h5>Manage your Account Settings</h5>
-                        <Profile-Delete-Button :user="this.user"/>                        
+                        <Profile-Settings :user="this.user"/>                        
                     </div>
                 </div>
             </div>
@@ -64,7 +64,7 @@
 import * as Cookie from 'es-cookie';
 import axios from 'axios';
 import config from 'environment';
-import ProfileDeleteButton from './ProfileDeleteButton.vue';
+import ProfileSettings from './ProfileSettings.vue';
 import ProfileComments from './ProfileComments.vue';
 import ProfileAchievements from './ProfileAchievements.vue';
 import ProfileContributions from './ProfileContributions.vue';
@@ -75,11 +75,11 @@ export default {
     name: 'Profile',
     components: {
         Loading,
-        ProfileDeleteButton,
         ProfileAchievements,
         ProfileContributions,
         ProfileComments,
-        ProfileChallenges
+        ProfileChallenges,
+        ProfileSettings
     },
     data: function() {
         return {
