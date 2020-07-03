@@ -88,7 +88,10 @@ export default {
                 challenges: [],
                 account: {
                     customer_no: 0,
-                    premium: false
+                    premium: false,
+                    billing_portal: {
+                        url: ""
+                    }
                 }
             },
             comments: [],
