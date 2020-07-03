@@ -2,9 +2,7 @@ const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const env = process.env.NODE_ENV;
-const isProd = env === 'production';
-const isStaging = env === 'staging';
-const optimizeBuild = isProd || isStaging;
+const optimizeBuild = false;
 
 module.exports = {
     entry: {

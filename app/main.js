@@ -21,13 +21,10 @@ import Carbon from './components/misc/Carbon.vue'
 import 'codemirror/mode/go/go.js';
 import 'codemirror/mode/python/python.js';
 import VueCodemirror from 'vue-codemirror';
-import VueSocialSharing from 'vue-social-sharing'
 import 'codemirror/lib/codemirror.css'
 import 'codemirror/theme/monokai.css' 
 import dayjs from 'dayjs'
 import { Auth0Plugin } from "./auth";
-
-Vue.use(VueSocialSharing);
 
 Vue.filter('formatDate', function(value) {
   if (value) {
