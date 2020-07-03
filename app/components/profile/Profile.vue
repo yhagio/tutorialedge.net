@@ -11,9 +11,9 @@
                 </h2>
             </div> 
 
-            <p v-if="this.$auth.getIsSponsor()">
-                <b>Account Type:</b> 
-                <span >Sponsor</span>        
+            <p>
+                <b>Paid Type:</b> 
+                <span >{{this.profile.account.premium}}</span>        
             </p>
 
             <p><b>Privacy Policy: <a href="/privacy/">📕 Read Now</a></b></p>
@@ -48,8 +48,7 @@
                        <Profile-Comments :comments="this.profile.comments" />                        
                     </div>
                     <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="settings-tab">
-                        <h5>Manage your Account Settings</h5>
-                        <Profile-Settings :user="this.user"/>                        
+                        <Profile-Settings :user="this.user" :profile="this.profile"/>                        
                     </div>
                 </div>
             </div>
@@ -86,7 +85,11 @@ export default {
             user: {},
             profile: {
                 comments: [],
-                challenges: []
+                challenges: [],
+                account: {
+                    customer_no: 0,
+                    premium: false
+                }
             },
             comments: [],
             loaded: false
@@ -96,12 +99,9 @@ export default {
         getComments: async function() {
             this.loading = true;
             let response = await axios.get(config.apiBase + "/v1/user", { params: {
-                name: this.user.name,
                 sub: this.user.sub
             }});
-
             this.loading = false;
-
             this.profile = response.data;
         }
     },
