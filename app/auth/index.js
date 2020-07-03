@@ -62,16 +62,6 @@ export const useAuth = ({...options}) => {
                 let accessToken = Cookie.get("accessToken")
                 return accessToken;
             },
-            getIsSponsor() {
-                let user = JSON.parse(Cookie.get("user"));
-                if(user["https://tutorialedge.net_user_metadata"] !== undefined) {
-                    if(user["https://tutorialedge.net_user_metadata"].sponsor !== undefined) {
-                        return user["https://tutorialedge.net_user_metadata"].sponsor; 
-                    } 
-                    return false;
-                }
-                return false;
-            },
             isAuthenticated() {
                 if(Cookie.get("expiresAt") === undefined) {
                     return false;
