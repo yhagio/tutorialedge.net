@@ -2,11 +2,10 @@
     <div id="screencast">
         <div v-if="this.showOverlay" class="overlay"></div>
         <div v-if="this.showOverlay" class="info">
-            <h2>This video is restricted to GitHub Sponsors only.</h2>
-            <p>Your sponsorship helps to make videos like these possible! 🚀</p>
-            <a href="https://github.com/sponsors/elliotforbes" class="btn btn-outline btn-white">
-                Sponsor Now
-                <Githubsvg />
+            <h2>This video is restricted to Subscribers.</h2>
+            <p>Subscribe in order to access all premium content on the site! 🚀</p>
+            <a @click='pay' class="btn btn-outline btn-white">
+                Subscribe Now 🚀
             </a>
         </div>
     </div>    
@@ -16,6 +15,8 @@
 import Player from '@vimeo/player';
 import Githubsvg from '../misc/Githubsvg.vue';
 import Carbon from '../misc/Carbon.vue';
+import axios from 'axios';
+import config from 'environment';
 
 export default {
     name: 'VideoPlayer',
@@ -28,10 +29,32 @@ export default {
         return {
             showOverlay: true,
             paid: false,
-            user: {}
+            user: {},
+            profile: {}
         }
     },
     methods: {
+        pay () {
+            let stripe = Stripe(config.stripe.pk);
+
+            stripe.redirectToCheckout({
+                lineItems: [
+                    {
+                        price: config.stripe.price, 
+                        quantity: 1
+                    }
+                ],
+                mode: 'subscription',
+                successUrl: config.stripe.successUrl,
+                cancelUrl: config.stripe.cancelUrl
+            })
+                .then(data => {
+                    console.log(data.token);
+                })
+                .catch(err => {
+                    console.log(err);
+                })
+        },
         loadVideo: function() {
             var options = {
                 id: this.id,
@@ -47,15 +70,25 @@ export default {
                 }); 
         },
     },
-    mounted: function() {
+    mounted: async function() {
         // if this is a premium video
         // only remove the overlay if the user is authenticated and
         // the user is a sponsor
         // console.log(this.paid);
         if(this.paid === "true") {
-            if(this.$auth.isAuthenticated() && this.$auth.getIsSponsor()) {
-                this.showOverlay = false;
-                this.loadVideo();
+            if(this.$auth.isAuthenticated()) {
+                this.user = this.$auth.getUser()
+                this.loading = true;
+                let response = await axios.get(config.apiBase + "/v1/user", { params: {
+                    sub: this.user.sub
+                }});
+                this.loading = false;
+                this.profile = response.data;
+
+                if(this.profile.account.premium) {
+                    this.showOverlay = false;
+                    this.loadVideo();
+                }
             }
         } else {
             // if it isn't a premium video then
