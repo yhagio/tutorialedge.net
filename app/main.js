@@ -32,8 +32,6 @@ Vue.filter('formatDate', function(value) {
   }
 });
 
-Vue.config.devtools = true
-
 Vue.use(Auth0Plugin, {
   domain: config.domain,
   clientId: config.clientID
