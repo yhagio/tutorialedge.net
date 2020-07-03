@@ -40,6 +40,19 @@
     color: black;
   }
 
+  a.sign-up {
+    background-color: #1D84B5;
+    padding: 10px;
+    margin: 0;
+    display: block;
+    width: 100%;
+    color: white !important;
+    background: #0276d9;
+    background-image: linear-gradient(22deg, #0276d9, #2C9CFC);
+    border-bottom: 1px solid #0376d8;
+    border: none;
+  }
+
   .nav-item {
     color: #3B454E;
     cursor: pointer;
@@ -136,7 +149,7 @@
   margin-top: 20px;
   margin-bottom: 20px;
   color: rgba(14,30,37,.54);
-  
+  padding-right: 20px;
   a {
     img {
       width: 100%;
