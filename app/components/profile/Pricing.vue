@@ -5,7 +5,7 @@
             <div class="price-box">
                 <h2>
                     Developer Account -
-                    <br/><small>$14.99/month</small>    
+                    <br/><small>$16.99/month</small>    
                 </h2>
                 <div class="clear"></div>
                 <p>A solo-dev or small startup that use my work to help them achieve success in their own pursuits.</p>
