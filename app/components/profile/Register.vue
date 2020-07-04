@@ -1,22 +1,19 @@
 <template>
-     <div class="price-listing">
-        <div class="prices">	
-            <div></div>
-            <div class="price-box">
-                <h2>Standard Account 🚀</h2>
-                <hr>
-                <p><b>Join the thousands of developers</b> currently registered on the site.</p>
+     <div class="register-container">
+        <h2>Register Now or Sign In</h2>
+        <div class="register-box">
+            <h2>Standard Account 🚀</h2>
+            <hr>
+            <p><b>Join the thousands of developers</b> currently registered on the site.</p>
 
-                <hr>
-                <h4>Perks</h4>
+            <hr>
+            <h4>Perks</h4>
 
-                <p>✅ Gain access to the growing list of challenges on the site </p>
-                <p>✅ Participate in the forums and be able to post questions </p>
-                
-                <div class="clear"></div>
-                <button class="btn btn-primary" v-on:click="this.signup">🚀 Sign Up</button>
-            </div>
-            <div></div>
+            <p>✅ Gain access to the growing list of challenges on the site </p>
+            <p>✅ Participate in the forums and be able to post questions </p>
+            
+            <div class="clear"></div>
+            <button class="btn btn-primary" v-on:click="this.signup">🚀 Sign Up</button>
         </div>
     </div>
 </template>
@@ -37,6 +34,7 @@ export default {
 .price-listing {
   padding: 40px;
   background-image: url(/images/svg/small-dots.svg);
+  background-color: #F9FAFB;
   h3 {
       background-color: #F5F7F9;
       padding: 20px;
@@ -51,10 +49,10 @@ export default {
       display: grid;
       justify-content: center;
       grid-gap: 1px;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(5, 1fr);
 
       .price-box {
-          flex: 0 0 32%;  
+          flex: 0 0 20%;  
           margin: 20px;
           padding: 40px;
           align-self: center;
