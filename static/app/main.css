@@ -10946,12 +10946,36 @@ article .github-btn {
 }
 
 /* End of homepage welcome bar */
-.features {
+.stats-container {
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #0d5ea6;
-  text-align: left;
-  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.28), inset 0 -4px 8px rgba(0, 0, 0, 0.28);
+  background-color: #161E2E;
+  text-align: center;
+}
+.stats-container h1 {
+  color: #a0aec0;
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+.stats-container hr {
+  background-color: #4a5568;
+}
+.stats-container .stats {
+  display: grid;
+  justify-content: center;
+  grid-gap: 1px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.stats-container .stats .stat-box {
+  flex: 0 0 25%;
+  margin: 20px;
+}
+.stats-container .stats .stat-box h2 {
+  color: white;
+  font-size: 1.875rem;
+}
+.stats-container .stats .stat-box h2 small {
+  color: #a0aec0;
 }
 
 .features h2 {

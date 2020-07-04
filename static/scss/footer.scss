@@ -1,4 +1,4 @@
-footer.page-footer{
+footer.page-footer {
   background-color: #141618;
   color: #fff;
   padding-top: 0px !important;
@@ -7,12 +7,11 @@ footer.page-footer{
   overflow: hidden;
   font-size: 1rem;
   border-top: 1px solid #e7e7ec;
-  
+
   h2 {
     color: #ccc !important;
-    font: 500 18px/20px Roboto,sans-serif;
+    font: 500 18px/20px Roboto, sans-serif;
     margin: 20px 0 8px;
-    
   }
 
   .row {
@@ -21,16 +20,15 @@ footer.page-footer{
     display: flex;
   }
   .padded {
-  padding: 40px;
+    padding: 40px;
   }
   .col {
-    margin:0;
+    margin: 0;
     padding: 0;
     flex: 1;
   }
 
   .footer-search {
-
     margin-top: 20px;
 
     h2 {
@@ -39,7 +37,7 @@ footer.page-footer{
 
     input {
       border: none;
-      background-color: #21252D;
+      background-color: #21252d;
       font-size: 20px;
       padding: 20px;
       color: white;
@@ -60,12 +58,12 @@ footer.page-footer{
       border-bottom-right-radius: 5px;
     }
   }
-  
-  .logo{
+
+  .logo {
     margin-top: 40px;
     width: 100%;
   }
-  
+
   .logo a {
     margin: 6px 0 0;
     max-width: 216px;
@@ -74,14 +72,13 @@ footer.page-footer{
     font-weight: 400;
     width: 100%;
   }
-   img {
-   
+  img {
     width: 50px;
     height: 50px;
   }
 }
 
-footer  {
+footer {
   flex: 1;
 }
 
@@ -110,6 +107,6 @@ footer.page-footer {
 
 footer .footer-copyright {
   border-top: 1px solid #2d3236;
-  color: #6A6D6E !important;
+  color: #6a6d6e !important;
   padding: 20px;
 }
