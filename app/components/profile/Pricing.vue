@@ -20,8 +20,8 @@
 
                             <ul>
                                 <li>Unlimited Access To Premium Courses</li>
-                                <li>Take Part in Quizes And Test Your Skills</li>
-                                <li>Have A Say In Where What We Cover Next</li>
+                                <li>Take Part in Quizzes And Test Your Skills</li>
+                                <li>Have A Say In What We Cover Next</li>
                             </ul>
              
                             <a class="btn btn-primary btn-signup" @click='pay'>Start 7-Day Free Trial 🚀 </a>
@@ -38,8 +38,8 @@
 
                             <ul>
                                 <li>Unlimited Access To Premium Courses</li>
-                                <li>Take Part in Quizes And Test Your Skills</li>
-                                <li>Have A Say In Where What We Cover Next</li>
+                                <li>Take Part in Quizzes And Test Your Skills</li>
+                                <li>Have A Say In What We Cover Next</li>
                                 <li>Save 20%</li>
                             </ul>
              
