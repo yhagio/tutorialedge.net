@@ -70,25 +70,30 @@ export default {
                 }); 
         },
     },
-    mounted: async function() {
+    mounted: function() {
         // if this is a premium video
         // only remove the overlay if the user is authenticated and
         // the user is a sponsor
         // console.log(this.paid);
         if(this.paid === "true") {
             if(this.$auth.isAuthenticated()) {
+
                 this.user = this.$auth.getUser()
                 this.loading = true;
-                let response = await axios.get(config.apiBase + "/v1/user", { params: {
+                let response = axios.get(config.apiBase + "/v1/user", { params: {
                     sub: this.user.sub
-                }});
-                this.loading = false;
-                this.profile = response.data;
-
-                if(this.profile.account.premium) {
-                    this.showOverlay = false;
-                    this.loadVideo();
-                }
+                }}).then(() => {
+                    this.loading = false;
+                    this.profile = response.data;
+    
+                    if(this.profile.account.premium) {
+                        this.showOverlay = false;
+                        this.loadVideo();
+                    }
+                })
+                .catch((err) => {
+                    console.log(err);
+                })
             }
         } else {
             // if it isn't a premium video then
