@@ -6,6 +6,18 @@
                 <p>Premium courses designed to help you solve real-world problems and gain the experience necessary to reach the next level.</p>
             </div>
         </div>
+
+        <div v-if="this.discount" class="discount-code">
+            <div class="container">
+                <!-- <div class="flag">
+
+                </div> -->
+                <!-- <h2>🎉 Discount Code 🎉 - I've noticed you are coming from 🏴󠁧󠁢󠁳󠁣󠁴󠁿 based on your account information. I support <b>Purchasing Power Partiy</b> and want to make the educational content affordable to everyone across the globe. If you need it use the code: <b>SCOTLANDLOVE</b> to get 38% off your subscription!</h2> -->
+                <h2>🎉 Launch Discount Code 🎉</h2>
+                <p>Use the code: <b>CODECLAN</b> to get <b>50% off</b> subscriptions!</p>
+            </div>
+        </div>
+
         <div class="price-listing">
             <div class="container">
                 <div class="prices">	
@@ -57,7 +69,11 @@ import config from 'environment'
 
 export default {
     name: 'Pricing',
-    mounted: function() {},
+    data: function() {
+        return {
+            discount: true
+        }
+    },
     methods: {
         payMonthly() {
             let stripe = Stripe(config.stripe.pk);
@@ -93,6 +109,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.discount-code {
+    background-color: white;
+    padding: 20px;
+    p {
+        font-weight: normal;
+    }
+}
 
 .btn-signup {
     margin-top: 40px;
