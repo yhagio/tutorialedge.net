@@ -24,7 +24,7 @@
                                 <li>Have A Say In What We Cover Next</li>
                             </ul>
              
-                            <a class="btn btn-primary btn-signup" @click='pay'>Start 7-Day Free Trial 🚀 </a>
+                            <a class="btn btn-primary btn-signup" @click='payMonthly'>Start 7-Day Free Trial 🚀 </a>
                         </div>
                     </div>
                     <div class="price-box">
@@ -43,7 +43,7 @@
                                 <li>Save 20%</li>
                             </ul>
              
-                            <a class="btn btn-primary btn-signup" @click='pay'>Start 7-Day Free Trial 🚀 </a>
+                            <a class="btn btn-primary btn-signup" @click='payYearly'>Start 7-Day Free Trial 🚀 </a>
                         </div>
                     </div>
                 </div>
@@ -59,27 +59,35 @@ export default {
     name: 'Pricing',
     mounted: function() {},
     methods: {
-        pay () {
+        payMonthly() {
             let stripe = Stripe(config.stripe.pk);
 
             stripe.redirectToCheckout({
                 lineItems: [
-                    {
-                        price: config.stripe.price, 
-                        quantity: 1
-                    }
+                    { price: config.stripe.price.monthly,  quantity: 1 }
                 ],
                 mode: 'subscription',
                 successUrl: config.stripe.successUrl,
                 cancelUrl: config.stripe.cancelUrl
             })
-                .then(data => {
-                    console.log(data.token);
-                })
-                .catch(err => {
-                    console.log(err);
-                })
-        }
+                .then(data => { console.log(data.token); })
+                .catch(err => { console.log(err); })
+        },
+        payYearly() {
+            let stripe = Stripe(config.stripe.pk);
+
+            stripe.redirectToCheckout({
+                lineItems: [
+                    { price: config.stripe.price.yearly,  quantity: 1 }
+                ],
+                mode: 'subscription',
+                successUrl: config.stripe.successUrl,
+                cancelUrl: config.stripe.cancelUrl
+            })
+                .then(data => { console.log(data.token); })
+                .catch(err => { console.log(err); })
+        },
+        
     }
 }
 </script>
@@ -119,84 +127,83 @@ export default {
 }
 
 .price-listing {
-  padding: 40px;
-  background-image: url(/images/svg/small-dots.svg);
-  h3 {
-      background-color: #F5F7F9;
-      padding: 20px;
-      width: auto;
-  }
-  
-  a {
-      text-decoration: none !important;
-  }
+    padding: 40px;
+    background-image: url(/images/svg/small-dots.svg);
+    h3 {
+        background-color: #F5F7F9;
+        padding: 20px;
+        width: auto;
+    }
     
-  .prices {
-      display: grid;
-      justify-content: center;
-      grid-gap: 1px;
-      grid-template-columns: repeat(2, 1fr);
+    a {
+        text-decoration: none !important;
+    }
+        
+    .prices {
+        display: grid;
+        justify-content: center;
+        grid-gap: 1px;
+        grid-template-columns: repeat(2, 1fr);
 
-      .price-box {
-          flex: 0 0 25%;  
-          margin: 20px;
-          align-self: center;
-          background-color: white;
-          border-radius: 8px;
-          box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 10px 10px -5px rgba(0,0,0,.04);
-          color: rgba(14,30,37,.54);
-          text-align: center;
+        .price-box {
+            flex: 0 0 25%;  
+            margin: 20px;
+            align-self: center;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 10px 10px -5px rgba(0,0,0,.04);
+            color: rgba(14,30,37,.54);
+            text-align: center;
 
-          .title {
-              padding: 40px;
-              h2 {
-                  font-size: 1.875rem;
-                  small {
-                      font-weight: 800;
-                      color: #999;
-                      clear: both;
-                      margin-bottom: 15px;
-                  }
-              }
-          }
-
-        .perks {
-            background-color: rgb(249,250,251);
-            padding: 40px;
-            border-top: 2px solid;
-            --border-opacity: 1;
-            border-color: #f4f5f7;
-            border-color: rgba(244,245,247,var(--border-opacity));
-
-            ul {
-                list-style-type: none;
-                text-align: left;
-            }
-
-            ul li {
-                margin: 0;
-                margin-bottom: 20px;
-                font-size: 1rem;
-                --text-opacity: 1;
-                color: #6b7280;
-                font-weight: 500;
-                color: rgba(107,114,128,var(--text-opacity));
-
-                &::before {
-                    content: "✅ ";
-                    opacity: 1;
-                    margin-right: 10px;
+            .title {
+                padding: 40px;
+                h2 {
+                    font-size: 1.875rem;
+                    small {
+                        font-weight: 800;
+                        color: #999;
+                        clear: both;
+                        margin-bottom: 15px;
+                    }
                 }
             }
-        }
 
+            .perks {
+                background-color: rgb(249,250,251);
+                padding: 40px;
+                border-top: 2px solid;
+                --border-opacity: 1;
+                border-color: #f4f5f7;
+                border-color: rgba(244,245,247,var(--border-opacity));
 
-        .sign-up {
-            margin: 0;
-            color: white !important;
+                ul {
+                    list-style-type: none;
+                    text-align: left;
+                }
+
+                ul li {
+                    margin: 0;
+                    margin-bottom: 20px;
+                    font-size: 1rem;
+                    --text-opacity: 1;
+                    color: #6b7280;
+                    font-weight: 500;
+                    color: rgba(107,114,128,var(--text-opacity));
+
+                    &::before {
+                        content: "✅ ";
+                        opacity: 1;
+                        margin-right: 10px;
+                    }
+                }
+            }
+            
+            .sign-up {
+                margin: 0;
+                color: white !important;
+            }
         }
     }
-}
 
 }
 </style>
