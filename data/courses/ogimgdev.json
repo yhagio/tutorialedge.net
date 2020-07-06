@@ -4,32 +4,32 @@
     "weight": 1,
     "articles": [
       {
-        "title": "Setting Up Our React App",
+        "title": "Setting Up Our React App - (01:39)",
         "state": "published",
         "url": "/courses/ogimg-dev/frontend-01/"
       },
       {
-        "title": "Adding Tailwind CSS to our React App",
+        "title": "Adding Tailwind CSS to our React App - (04:34)",
         "state": "published",
         "url": "/courses/ogimg-dev/frontend-02/"
       },
       {
-        "title": "Creating A Responsive Header Component",
+        "title": "Creating A Responsive Header Component - (10:46)",
         "state": "published",
         "url": "/courses/ogimg-dev/frontend-03/"
       },
       {
-        "title": "Setting up a React Router",
+        "title": "Setting up a React Router - (04:46)",
         "state": "published",
         "url": "/courses/ogimg-dev/frontend-04/"
       },
       {
-        "title": "Styling our Home Page",
+        "title": "Styling our Home Page - (10:37)",
         "state": "published",
         "url": "/courses/ogimg-dev/frontend-05/"
       },
       {
-        "title": "Integration with Auth0",
+        "title": "Integration with Auth0 - (11:32)",
         "state": "published",
         "url": "/courses/ogimg-dev/frontend-06/"
       },
@@ -45,9 +45,24 @@
     "weight": 2,
     "articles": [
       {
-        "title": "Coming Soon!",
+        "title": "Setting Up Our Express.js API",
         "state": "pending",
-        "url": "#"
+        "url": "/courses/ogimg-dev/backend-01/"
+      },
+      {
+        "title": "Introduction to Handlebars",
+        "state": "pending",
+        "url": "/courses/ogimg-dev/backend-02/"
+      },
+      {
+        "title": "Generating Screenshots with Puppeteer",
+        "state": "pending",
+        "url": "/courses/ogimg-dev/backend-03/"
+      },
+      {
+        "title": "Serving Our Images",
+        "state": "pending",
+        "url": "/courses/ogimg-dev/backend-04/"
       }
     ]
   },
@@ -56,9 +71,29 @@
     "weight": 3,
     "articles": [
       {
-        "title": "Coming Soon!",
+        "title": "🔒 - An Introduction to GitHub Actions",
         "state": "pending",
-        "url": "#"
+        "url": "/courses/ogimg-dev/deployment-01/"
+      },
+      {
+        "title": "🔒 - Creating a Continuous Integration Workflow",
+        "state": "pending",
+        "url": "/courses/ogimg-dev/deployment-02/"
+      },
+      {
+        "title": "🔒 - Automated End-to-End Testing with Cypress.io",
+        "state": "pending",
+        "url": "/courses/ogimg-dev/deployment-03/"
+      },
+      {
+        "title": "🔒 - Automated Deployment of our Frontend to AWS S3",
+        "state": "pending",
+        "url": "/courses/ogimg-dev/deployment-04/"
+      },
+      {
+        "title": "🔒 - Automated Deployment of our Backend to AWS ECS",
+        "state": "pending",
+        "url": "/courses/ogimg-dev/deployment-05/"
       }
     ]
   }
