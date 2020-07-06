@@ -183,8 +183,26 @@ with these incorporated changes.
 $ npm install --save nodemon
 ```
 
-Now that `nodemon` is explicitly listed within our `package.json` as a
-dependency, we can go ahead and rebuild our docker image:
+Now that `nodemon` has been added to our `package.json` as a
+dependency, we can update our `start` command to run `nodemon`:
+
+<div class="filename"> package.json </div>
+
+```json
+{
+    "name": "simple-rest-api",
+    "version": "1.0.0",
+    "main": "app.js",
+    "dependencies": {
+      "express": "^4.16.3"
+    },
+    "scripts": {
+      "start": "nodemon"
+    }
+  }
+```
+
+With this change in place, we can now go ahead and rebuild our docker image:
 
 ```s
 $ docker build -t node-docker-tutorial .
