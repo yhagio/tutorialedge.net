@@ -45,13 +45,13 @@
     "weight": 2,
     "articles": [
       {
-        "title": "Setting Up Our Express.js API",
-        "state": "pending",
+        "title": "Setting Up Our Express.js API - (03:18)",
+        "state": "published",
         "url": "/courses/ogimg-dev/backend-01/"
       },
       {
-        "title": "Introduction to Handlebars",
-        "state": "pending",
+        "title": "Introduction to Handlebars - (09:30)",
+        "state": "published",
         "url": "/courses/ogimg-dev/backend-02/"
       },
       {
