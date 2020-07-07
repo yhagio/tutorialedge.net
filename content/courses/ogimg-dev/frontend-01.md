@@ -31,11 +31,12 @@ The SaaS product will allow developers to programmatically generate OpenGraph im
 * Building a REST API with Node.js
 * Securing Endpoints with JWTs
 
-## Intro
+## Episode 01
 
 In this tutorial, we cover setting up our project directory and bootstrapping our React.js application using the `create-react-app` CLI.
+
+Let's start off by bootstrapping our React app into our `frontend/` directory:
 
 ```bash
 $ npx create-react-app frontend
 ```
-

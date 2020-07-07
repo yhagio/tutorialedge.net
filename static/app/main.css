@@ -10578,14 +10578,23 @@ a:hover .course-progress-box {
   background-color: #fafbfc;
   color: #000;
   z-index: 20;
-  padding: 20px;
   text-align: center;
   box-shadow: 0 3px 8px 0 rgba(116, 129, 141, 0.1);
   border-bottom: 1px solid #d4dadf;
 }
+@media (min-width: 576px) {
+  .top-bar {
+    padding: 5px;
+  }
+}
+@media (min-width: 768px) {
+  .top-bar {
+    padding: 40px;
+  }
+}
 .top-bar img {
   width: auto;
-  height: 100px;
+  height: 40px;
   margin-right: 40px;
 }
 .top-bar h1 {
@@ -10631,10 +10640,19 @@ a:hover .course-progress-box {
 }
 
 .post-body {
-  padding: 40px;
   background-color: white;
   z-index: 100;
   border-left: 1px solid #E6ECF1;
+}
+@media (min-width: 576px) {
+  .post-body {
+    padding: 5px;
+  }
+}
+@media (min-width: 768px) {
+  .post-body {
+    padding: 40px;
+  }
 }
 
 article {
