@@ -5,14 +5,21 @@
   background-color: $top-bar-blue;
   color: #000;
   z-index: 20;
-  padding: 20px;
+  @media (min-width: 576px) { 
+      padding: 5px;
+  }
+
+  @media (min-width: 768px) { 
+      padding: 40px;
+  }
+
   text-align: center;
   box-shadow: 0 3px 8px 0 rgba(116, 129, 141, 0.1);
   border-bottom: 1px solid #d4dadf;
   
   img {
     width: auto;
-    height: 100px;
+    height: 40px;
     margin-right: 40px;
   }
 
@@ -62,7 +69,14 @@
 }
 
 .post-body {
-  padding: 40px;
+  @media (min-width: 576px) { 
+      padding: 5px;
+  }
+
+  @media (min-width: 768px) { 
+      padding: 40px;
+  }
+
   background-color: white;
   z-index: 100;
   border-left: 1px solid #E6ECF1;
