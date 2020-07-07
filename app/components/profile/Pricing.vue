@@ -166,12 +166,29 @@ export default {
     .prices {
         display: grid;
         justify-content: center;
-        grid-gap: 1px;
-        grid-template-columns: repeat(2, 1fr);
-
+    
+        @media (min-width: 576px) { 
+            grid-gap: 1px;
+            grid-template-columns: repeat(1, 1fr);
+        }
+      
+        // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) { 
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
         .price-box {
             flex: 0 0 25%;  
-            margin: 20px;
+            
+
+            @media (min-width: 576px) { 
+                margin: 5px;
+            }
+        
+            @media (min-width: 768px) { 
+                margin: 20px;
+            }
+
             align-self: center;
             background-color: white;
             border-radius: 8px;

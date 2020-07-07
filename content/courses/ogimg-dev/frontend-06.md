@@ -9,6 +9,7 @@ image: react.svg
 video: 434477172
 weight: 6
 paid: false
+nextPage: /courses/ogimg-dev/backend-01/
 tags:
 - ogimgdev
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg
