@@ -72,7 +72,7 @@
     "articles": [
       {
         "title": "🔒 - An Introduction to GitHub Actions",
-        "state": "Published",
+        "state": "published",
         "url": "/courses/ogimg-dev/deployment-01/"
       },
       {
