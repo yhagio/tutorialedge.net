@@ -4,7 +4,7 @@
         <div v-if="this.showOverlay" class="info">
             <h2>This video is restricted to Subscribers.</h2>
             <p>Subscribe in order to access all premium content on the site! 🚀</p>
-            <a @click='pay' class="btn btn-outline btn-white">
+            <a href="/pricing/" class="btn btn-outline btn-white">
                 Subscribe Now 🚀
             </a>
         </div>
@@ -34,27 +34,6 @@ export default {
         }
     },
     methods: {
-        pay () {
-            let stripe = Stripe(config.stripe.pk);
-
-            stripe.redirectToCheckout({
-                lineItems: [
-                    {
-                        price: config.stripe.price, 
-                        quantity: 1
-                    }
-                ],
-                mode: 'subscription',
-                successUrl: config.stripe.successUrl,
-                cancelUrl: config.stripe.cancelUrl
-            })
-                .then(data => {
-                    console.log(data.token);
-                })
-                .catch(err => {
-                    console.log(err);
-                })
-        },
         loadVideo: function() {
             var options = {
                 id: this.id,
@@ -82,7 +61,7 @@ export default {
                 this.loading = true;
                 let response = axios.get(config.apiBase + "/v1/user", { params: {
                     sub: this.user.sub
-                }}).then(() => {
+                }}).then((response) => {
                     this.loading = false;
                     this.profile = response.data;
     
