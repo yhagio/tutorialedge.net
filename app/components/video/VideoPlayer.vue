@@ -53,7 +53,6 @@ export default {
         // if this is a premium video
         // only remove the overlay if the user is authenticated and
         // the user is a sponsor
-        // console.log(this.paid);
         if(this.paid === "true") {
             if(this.$auth.isAuthenticated()) {
 
