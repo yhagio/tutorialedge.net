@@ -48,6 +48,14 @@ In this challenge, you are going to implement the `DiffSquares` function so that
 5^2 - 4^2 = 9
 ```
 
+If you require a hint as to how this is done, please click below:
+
+<details><summary>Hint</summary>
+
+You can calculate powers of numbers in Go using the `math.Pow` function. You can read more about this here: [Math Pow](https://golang.org/pkg/math/#Pow)
+
+</details>
+
 # See the Solution
 
 Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 19 - Diff of Squares](https://discuss.tutorialedge.net/t/challenge-19-diff-of-squares/53) 
