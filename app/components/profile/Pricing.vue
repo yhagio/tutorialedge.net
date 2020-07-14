@@ -23,7 +23,7 @@
                 <div class="prices">	
                     <div class="price-box">
                         <div class="title">
-                            <h2><small>$16.99/month</small><br/>Full Access</h2>
+                            <h2><small>$9.99/month</small><br/>Full Access</h2>
                             <small>Supporting Purchasing Power Parity</small>
                         </div>
                         <div class="perks">
@@ -41,7 +41,7 @@
                     </div>
                     <div class="price-box">
                         <div class="title">
-                            <h2><small>$162.99/year</small><br/>Full Access</h2>
+                            <h2><small>$99.99/year</small><br/>Full Access</h2>
                             <small>Supporting Purchasing Power Parity</small>
                         </div>
                         <div class="perks">

@@ -11,8 +11,8 @@ const config = {
   stripe: {
     pk: "pk_live_YDWUH6DEcREKLBektnQbxheu",
     price: {
-      monthly: "price_1H0YN8H6SNauSNAXuwiFP44w",
-      yearly: "price_1H0ZzHH6SNauSNAXymYkIlDV",
+      monthly: "price_1H4u5NH6SNauSNAXH6tuide8",
+      yearly: "price_1H4u65H6SNauSNAXAYwWCIAq",
     },
     successUrl: "https://tutorialedge.net/profile/",
     cancelUrl: "https://tutorialedge.net/profile/",
