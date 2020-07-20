@@ -11,9 +11,9 @@ module.exports = {
     },
     mode: optimizeBuild ? 'production' : 'development',
     output: {
-        path: path.resolve(__dirname, '../static/app'),
+        path: path.resolve(__dirname, '../assets/app'),
         filename: '[name].bundle.js',
-        publicPath: '/static/app',
+        publicPath: '/assets/app',
     },
     resolve: {
         alias: {
@@ -52,7 +52,7 @@ module.exports = {
     },
     plugins: [
         new VueLoaderPlugin(),
-        new BundleAnalyzerPlugin()
+        new BundleAnalyzerPlugin(),
     ],
     devtool: !optimizeBuild && ' cheap-module-eval-source-map',
     target: 'web',

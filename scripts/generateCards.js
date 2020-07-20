@@ -49,8 +49,9 @@ async function generateCards() {
     try{
         console.log("Populating Cache")
         
-        let response = await axios.get('http://localhost:1313/algolia.json')
-        response.data.map((page) => {
+        let response = await axios.get('https://tutorialedge.net/algolia.json')
+        // console.log(response);
+        response.map((page) => {
             set[page.url] = page
         })
 

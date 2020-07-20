@@ -1,6 +1,52 @@
 {{ partial "header.html" . }}
 {{ partial "welcome-bar.html" . }}
 
+
+<div class="course-listing tutorials">
+	<div class="container">
+		<h2>All Tutorials</h2>
+		<div class="row">
+			{{ range .Paginator.Pages.ByDate.Reverse }}
+			{{ $paginator := .Paginate (where .Pages "Type" "posts") 9 }}
+			<div class="col-sm-4">
+				<a href="{{ .Permalink }}">
+					<div class="course-progress-box">
+						{{ if .Params.image }}
+						<img src="https://images.tutorialedge.net/images/{{ .Params.image }}" alt="{{ .Title }} Image">
+						{{ end }}
+						<h2>{{ .Title }}</h2>
+						<p>Published: {{ dateFormat "Monday, Jan 2, 2006" .Date }}</p>
+					</div>
+				</a>
+
+			</div>
+
+			{{ end }}
+		</div>
+		<div class="clear"></div>
+		<div class="center-align">
+			{{ partial "pagination.html" . }}
+		</div>
+	</div>
+</div>
+
+<div class="stats-container">
+	<h1>Site Stats</h1>
+	<hr/>
+	<div class="stats container">
+		<div class="stat-box">
+			<h2>300+ <br/><small>Tutorials</small></h2>
+		</div>
+		<div class="stat-box">
+			<h2>12,000 <br/><small>Subscribers</small></h2>
+		</div>
+		<div class="stat-box">
+			<h2>1,000 <br/><small>Registered Users</small></h2>
+		</div>
+	</div>
+</div>
+
+
 <div class="courses">
 	<div class="course-listing">
 		<div class="container">
@@ -25,48 +71,5 @@
 	</div>
 </div>
 
-<div class="stats-container">
-	<h1>Site Stats</h1>
-	<hr/>
-	<div class="stats container">
-		<div class="stat-box">
-			<h2>300+ <br/><small>Tutorials</small></h2>
-		</div>
-		<div class="stat-box">
-			<h2>12,000 <br/><small>Subscribers</small></h2>
-		</div>
-		<div class="stat-box">
-			<h2>1,000 <br/><small>Registered Users</small></h2>
-		</div>
-	</div>
-</div>
-
-
-<div class="course-listing tutorials">
-	<div class="container">
-		<h2>All Tutorials</h2>
-		<div class="row">
-			{{ $paginator := .Paginate .Data.Pages.ByDate.Reverse }} {{ range $paginator.Pages }}
-			<div class="col-sm-4">
-				<a href="{{ .Permalink }}">
-					<div class="course-progress-box">
-						{{ if .Params.image }}
-						<img src="https://images.tutorialedge.net/images/{{ .Params.image }}" alt="{{ .Title }} Image">
-						{{ end }}
-						<h2>{{ .Title }}</h2>
-						<p>Published: {{ dateFormat "Monday, Jan 2, 2006" .Date }}</p>
-					</div>
-				</a>
-
-			</div>
-
-			{{ end }}
-		</div>
-		<div class="clear"></div>
-		<div class="center-align">
-			{{ partial "pagination.html" . }}
-		</div>
-	</div>
-</div>
 
 {{ partial "footer.html" . }}

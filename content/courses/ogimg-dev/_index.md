@@ -7,7 +7,7 @@ date: 2018-03-19T11:05:52Z
 image: reactjs.svg
 homepage: true
 series:
-  - vuejsawsblog
+  - ogimgdev
 tags:
   - vuejs
   - aws
@@ -15,15 +15,16 @@ tags:
 twitter: https://twitter.com/Elliot_F
 ---
 
-## Course Outline
+In this series, we are going to be building a full SaaS Web Application using React.js and Node.js! This will cover everything from setting up the project through to building the individual components and then through to deployment through automation. 
 
-In this course, we are going to be taking a look at how you can build a fully functioning SaaS product from the ground up using React.js for the frontend and Node.js for the backend.
+The SaaS product will allow developers to programmatically generate OpenGraph images for their social media posts.
 
-## Topics
+## Topics Covered:
 
-Through these videos, we'll be covering a range of different topics such as:
-
-* Building a frontend SPA using React.js and deploying it to Netlify
-* Building a REST API in Express.js on top of Node.js
-* Integration with the payment platform Stripe
-* Account Management with Auth0
+* Styling our App with Tailwind CSS
+* Using Hooks within our React.js App
+* Integration with Auth0
+* Integration with Stripe for payments
+* Generating Images with Node.js
+* Building a REST API with Node.js
+* Securing Endpoints with JWTs

@@ -5,5 +5,12 @@
         "desc": "Building a SaaS WebSite with React.js and Node.js - Under Construction",
         "url": "/courses/ogimg-dev/frontend-01/",
         "tech": ["React.js", "Node.js", "Docker", "AWS"]
-    }
+    },
+    "goclouddev": {
+        "img": "https://images.tutorialedge.net/images/golang.svg",
+        "title": "The Go Developers Guide to AWS",
+        "desc": "Get up and running writing Go applications on top of AWS",
+        "url": "/courses/go-cloud-dev/",
+        "tech": ["Go", "AWS", "Docker"]
+    }   
 }

@@ -2,15 +2,14 @@
 
 body {
   font-family: "proxima-nova", "proxima-nova-all", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #090910;
+  -webkit-font-smoothing: antialiased;
   font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
   line-height: 1.9em;
-  font-size: 16px;
-  font-family: Content-font, Roboto, sans-serif;
-  font-weight: 400;
+  font-size: 1rem;
   line-height: 1.625;
   font-family: Inter,sans-serif;
-  letter-spacing: -.014em;
-  font-feature-settings: "ss03","zero","cv08","cv11" 1;
   
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

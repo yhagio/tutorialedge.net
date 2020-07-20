@@ -360,12 +360,22 @@ article {
   }
 
   p code {
-    display: inline-block;
-    margin: 0;
-    font-size: 1em;
-    color: #5c6bc0;
-    -webkit-font-feature-settings: "tnum" 1;
-    font-feature-settings: "tnum" 1;
-    font-family: monospace;
+    font-size: .8rem;
+    background: #fbfbfd;
+    box-shadow: 0 1px 1px rgba(0,0,0,.075);
+    color: #ca473f;
+    text-align: left;
+    white-space: pre;
+    padding-left: 5px;
+    padding-right: 5px;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
   }
 }
