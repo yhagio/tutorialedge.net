@@ -15,7 +15,7 @@ async function generateHTML(path) {
     console.log("Generating HTML for card for path: %s", path)
     try {
         let data = set[path]
-        const template = handlebars.compile(source, {strict: true})
+        const template = handlebars.compile(source, {strict: false})
         const result = template(data)
         
         fs.writeFileSync(__dirname + "/temp/index.html", result);
@@ -51,8 +51,11 @@ async function generateCards() {
         
         let response = await axios.get('https://tutorialedge.net/algolia.json')
         // console.log(response);
-        response.map((page) => {
-            set[page.url] = page
+        response.data.map((page) => {
+            console.log(page)
+            let url = new URL(page.permalink)
+            console.log(url.pathname)
+            set[url.pathname] = page
         })
 
         for(let path in set) {
