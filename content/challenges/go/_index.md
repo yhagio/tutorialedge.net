@@ -3,7 +3,6 @@ author: Elliot Forbes
 date: 2018-03-19T11:05:52Z
 desc: These Go based challenges have been carefully crafted and designed to teach you the fundamentals of programming in Go
 homepage: true
-layout: challenges
 image: golang.svg
 series:
   - go-challenges

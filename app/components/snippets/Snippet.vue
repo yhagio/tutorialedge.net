@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import { codemirror } from 'vue-codemirror';
+// import { codemirror } from 'vue-codemirror';
 import Carbon from '../misc/Carbon.vue';
 import axios from 'axios';
 import config from 'environment';
@@ -39,7 +39,7 @@ export default {
         "language"
     ],
     components: {
-        codemirror,
+        // codemirror,
         Carbon,
         Loading
     },

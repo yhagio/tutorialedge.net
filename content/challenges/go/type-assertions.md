@@ -20,14 +20,13 @@ snippet: |
     "fmt"
   )
 
-  // Developer struct
   type Developer struct {
     Name string
     Age int
   }
 
   func GetDeveloper(name interface{}, age interface{}) Developer {
-    // TODO
+    fmt.Println("Implement Me")
   }
 
   func main() {

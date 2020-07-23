@@ -1,21 +1,28 @@
 {{ partial "header.html" . }}
 
-<div class="container-fluid">
-    <div class="course-listing">
-        <h3>Courses</h3>
+<div class="bg-gray-800 py-4 px-16 text-center text-white">
+    <h1 class="flex mx-auto">
+        {{ if .Params.image }}
+        <img class="w-16 h-auto" src="https://images.tutorialedge.net/images/{{ .Params.image }}" alt="{{ .Title }} Image">
+        {{ else }}
+        <img class="w-16 h-auto" src="https://images.tutorialedge.net/images/logo.svg" alt="{{ .Title }} Image">
+        {{ end }}
+        <span class="text-3xl ml-8 mt-3">{{.Title}}</span>
+    </h1>
+</div>
 
-        <div class="courses">
+<div class="article-list bg-gray-100">
+    <div class="max-w-screen-xl mx-auto">
+        <div class="md:grid md:grid-cols-3 md:col-gap-8 md:row-gap-10">
             {{ range .Site.Data.courses.index }}
                 <a href="{{ .url }}">
-                    <div class="course-box">
-                        <img src="{{ .img }}" alt="">
-                        <h2><small>{{ .Params.difficulty }}</small><br />{{ .title }}</h2>
-                        <p>{{ .desc }}</p>
+                    <div class="bg-white rounded overflow-hidden shadow-lg px-4 py-4 pb-8 mx-2 text-center">
+                        <img class="w-16 h-auto mx-auto mt-16" src="{{ .img }}" alt="">
+                        <h2 class="font-bold text-2xl mb-2"><small>{{ .Params.difficulty }}</small><br />{{ .title }}</h2>
+                        <p class="text-sm text-gray-800 mb-8">{{ .desc }}</p>
                         {{ range .tech }}
-                        <span class="badge badge-pill badge-success">{{ . }}</span>
+                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">{{ . }}</span>
                         {{ end }}
-                        <div class="clear"></div>
-                        <button class="btn btn-primary">Watch Now!</button>
                     </div>
                 </a>
             {{ end }}

@@ -10,7 +10,7 @@
         "img": "https://images.tutorialedge.net/images/golang.svg",
         "title": "The Go Developers Guide to AWS",
         "desc": "Get up and running writing Go applications on top of AWS",
-        "url": "/courses/go-cloud-dev/",
+        "url": "/courses/go-dev-cloud/",
         "tech": ["Go", "AWS", "Docker"]
     }   
 }

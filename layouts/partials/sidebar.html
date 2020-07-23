@@ -1,41 +1,43 @@
-<div id="sidebar small-no-show">
+<div class="youtube-subscribe mb-8">
+  <h4 class="text-lg mb-4">Register Now</h4>
+  <p class="mb-8 text-sm">Join thousands of developers from across the globe and take on challenges and quizzes!</p>
+  
+  <a href="/login/" class="btn btn-default sign-up">Register Now 🚀</a> 
+</div>
 
-  <div class="youtube-subscribe">
-    <h4>Register Now</h4>
-    <p>Join thousands of developers from across the globe and take on challenges and quizzes!</p>
-    
-    <a href="/login/" class="btn btn-default sign-up">Register Now 🚀</a> 
-  </div>
+<div class="small-no-show">
 
-  <div class="small-no-show">
+  <div class="accordion">
 
-    <div class="accordion">
+    {{ range $taxonomyname, $taxonomy := .Site.Taxonomies.tags }}
 
-      {{ range $taxonomyname, $taxonomy := .Site.Taxonomies.tags }}
+    {{ $scratch := newScratch }}
+    {{ range $taxonomy }}
+    {{ if eq $.Params.series .Params.series }}
+    {{ if not (in ($scratch.Get "tags") $taxonomyname) }}
+    {{if not (eq $taxonomyname .Params.series) }}
+    {{ $scratch.Add "tags" (slice $taxonomyname) }}
+    {{ end }}
+    {{ end }}
+    {{ end }}
+    {{ end }}
 
-      {{ $scratch := newScratch }}
-      {{ range $taxonomy }}
-      {{ if eq $.Params.series .Params.series }}
-      {{ if not (in ($scratch.Get "tags") $taxonomyname) }}
-      {{if not (eq $taxonomyname .Params.series) }}
-      {{ $scratch.Add "tags" (slice $taxonomyname) }}
-      {{ end }}
-      {{ end }}
-      {{ end }}
-      {{ end }}
+    {{ range $scratch.Get "tags" }}
+    <div class="mb-8">
 
-      {{ range $scratch.Get "tags" }}
-      <h4>📚 {{ . }}</h4>
-      <div class="nav-collapse">
+      <h5 class="mb-3 lg:mb-2 text-gray-700 uppercase tracking-wide font-bold text-sm lg:text-xs">📚 {{ . }}</h5>
+      <ul>
         {{ range sort $taxonomy }}
         {{ if eq $.Params.series .Params.series }}
-        <a href="{{.Permalink}}" class="nav-item">{{ .Title }}</a>
+        <li class="mb-3 lg:mb-1">
+          <a href="{{.Permalink}}" class="px-2 -mx-2 py-1 transition duration-200 ease-in-out relative block hover:translate-x-2px hover:text-gray-900 text-gray-700 font-medium">{{ .Title }}</a>
+        </li>
         {{ end }}
         {{ end }}
-      </div>
-      {{ end }}
-      {{ end }}
+      </ul>
+      
     </div>
+    {{ end }}
+    {{ end }}
   </div>
-  
 </div>

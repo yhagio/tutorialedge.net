@@ -31,9 +31,8 @@
 	<title>{{ .Title }} | TutorialEdge.net</title>
 	
 	<link rel="icon" type="image/png" href="https://images.tutorialedge.net/images/favicon.ico">
-	<link media="all" defer rel="stylesheet" href="{{ .Site.BaseURL }}/assets/flat-icons.css">
 
-	{{ $styles := resources.Get "scss/main.scss" | toCSS | postCSS | minify | fingerprint }}
+	{{ $styles := resources.Get "scss/tailwind/main.scss" | toCSS | postCSS | minify | fingerprint }}
 	<link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
 
 	{{ with .OutputFormats.Get "RSS" }}
@@ -41,34 +40,113 @@
 	{{- end }}
 
 	{{ hugo.Generator }}
-	<script src="https://kit.fontawesome.com/36f5cfa744.js" crossorigin="anonymous"></script>
-
-	<script src="/js/jquery-3.4.1.slim.min.js" defer></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous" defer></script>
+	
 	<script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
 
 </head>
 
 <body class="min-height-full">
 	<div id="dynamicApp">
+		<nav class="bg-gray-900">
+			<div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+				<div class="relative flex items-center justify-between h-16">
+					<div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+						<button class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-150 ease-in-out" aria-label="Main menu" aria-expanded="false">
+							<!-- Icon when menu is closed. -->
+							<!-- Menu open: "hidden", Menu closed: "block" -->
+							<svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+							</svg>
+							<!-- Icon when menu is open. -->
+							<!-- Menu open: "block", Menu closed: "hidden" -->
+							<svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+							</svg>
+						</button>
+					</div>
+					<div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+						<div class="flex-shrink-0">
+							<a href="/">
+								<img class="block lg:hidden h-10 w-auto" alt="tutorialedge logo" src="https://images.tutorialedge.net/images/logo.svg" alt="{{ .Site.Title }}" />
+							</a>
+							<a href="/">
+								<img class="lg:block h-10 w-auto" alt="tutorialedge logo" src="https://images.tutorialedge.net/images/logo.svg" alt="{{ .Site.Title }}" />
+							</a>
+						</div>
+						<div class="sm:block sm:ml-6">
+							<div class="flex">
+								<a href="/course/" class="nav-link">📚 Topics</a>
+								<a href="/courses/" class="nav-link">🎥 Courses</a>
+								<a href="/challenges/" class="nav-link">🎯 Challenges</a>
+								<a href="/tutorials/" class="nav-link">⚒️ Tutorials</a>
+								<a href="https://discuss.tutorialedge.net" class="nav-link">💬 Forum</a>
+							</div>
+						</div>
+					</div>
+					<div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+
+						<button class="p-1 border-2 border-transparent text-gray-400 rounded-full hover:text-white focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out" aria-label="Notifications">
+							<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+							</svg>
+						</button>
+
+						<!-- Profile dropdown -->
+						<div class="ml-3 relative">
+							<div>
+								<button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-white transition duration-150 ease-in-out" id="user-menu" aria-label="User menu" aria-haspopup="true">
+									<img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+								</button>
+							</div>
+						<!--
+							Profile dropdown panel, show/hide based on dropdown state.
+
+							Entering: "transition ease-out duration-100"
+							From: "transform opacity-0 scale-95"
+							To: "transform opacity-100 scale-100"
+							Leaving: "transition ease-in duration-75"
+							From: "transform opacity-100 scale-100"
+							To: "transform opacity-0 scale-95"
+						-->
+							<div class="hidden origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg">
+								<div class="py-1 rounded-md bg-white shadow-xs" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
+									<a href="#" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem">Your Profile</a>
+									<a href="#" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem">Settings</a>
+									<a href="#" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem">Sign out</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="hidden sm:hidden">
+				<div class="px-2 pt-2 pb-3">
+				<a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">Dashboard</a>
+				<a href="#" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">Team</a>
+				<a href="#" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">Projects</a>
+				<a href="#" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">Calendar</a>
+				</div>
+			</div>
+		</nav>
+
+
+
+
+<!-- 
 	<nav class="navbar navbar-expand-lg">
-		<!-- LOGO -->
 		<a class="navbar-brand" href="/">
 			<img alt="tutorialedge logo" src="https://images.tutorialedge.net/images/logo.svg" alt="{{ .Site.Title }}">
 			<span>TutorialEdge.net</span>
 		</a>
-		<!-- END OF LOGO -->
-		
-		<!-- Hamburger -->
 		<button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 		 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<img src="/images/svg/hamburger.svg" alt="hamburger menu" />
 		</button>
-		<!-- END OF Hamburger -->
 
 		<div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
-				<!-- Courses dropdown -->
 				<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="courseDropdown" role="button" data-toggle="dropdown"
 						 aria-haspopup="true" aria-expanded="false">
@@ -86,9 +164,6 @@
 								Dev</a>
 						</div>
 					</li>
-					<!-- End of courses dropdown -->
-			
-				<!-- Projects Dropdown -->
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="courseDropdown" role="button" data-toggle="dropdown"
 					 aria-haspopup="true" aria-expanded="false">
@@ -105,9 +180,6 @@
 							 src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/golang.svg" />Building Security Tools in Go</a>
 					</div>
 				</li>
-				<!-- End of Projects Dropdown -->
-
-				<!-- Challenges Dropdown -->
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="courseDropdown" role="button" data-toggle="dropdown"
 					 aria-haspopup="true" aria-expanded="false">
@@ -117,9 +189,6 @@
 						<a class="dropdown-item" href="{{ .Site.BaseURL }}/challenges/go/"><img alt="Golang logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/golang.svg" />Learning Go Challenges</a>
 					</div>
 				</li>
-				<!-- End of challenges Dropdown -->
-
-				<!-- Tutorials Dropdown -->
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="tutorialDropdown" role="button" data-toggle="dropdown"
 					 aria-haspopup="true" aria-expanded="false">
@@ -151,10 +220,8 @@
 				<li class="nav-item">
 					<a class="nav-link" href="/courses/">Screencasts</a>
 				</li>
-				<!-- End of tutorials dropdown-->
 			</ul>
 
-			<!-- Right Hand of Navbar -->
 			<ul class="navbar-nav full-height">
 				<li class="nav-item"><a class="nav-link search" href="https://discuss.tutorialedge.net/">💬 Forum</a></li>
 				<li class="nav-item"><a class="nav-link search" href="/search/">🔍 Search</a></li>
@@ -162,15 +229,11 @@
 				<Profile-Nav-Button />
 
 			</ul>
-			<!-- END -->
 
 		</div>
 	</nav>
 	
-	<!-- As a heading -->
 	<nav class="navbar secondary-nav navbar-expand-lg navbar-light bg-light"> 
-
-		<!-- Hamburger -->
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#secondNav"
 			aria-controls="secondNav" aria-expanded="false" aria-label="Toggle navigation">
 			<img src="/images/svg/hamburger-black.svg" alt="hamburger menu" />
@@ -178,8 +241,6 @@
 
 		<div class="collapse navbar-collapse justify-content-between" id="secondNav">
 			<ul class="navbar-nav mr-auto">
-
-				<!-- Courses dropdown -->
 				<li class="nav-item">
 					<a class="nav-link" href="{{ .Site.BaseURL }}/course/angular/"><img alt="angular logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/angular.svg" /> Angular</a>
 				</li>
@@ -209,4 +270,4 @@
 				</li>
 			</ul>
 		</div>
-	</nav>
+	</nav> -->

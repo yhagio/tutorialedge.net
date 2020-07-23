@@ -2,6 +2,9 @@
 author: Elliot Forbes
 date: 2017-04-14T20:28:13+01:00
 title: Get Involved
+series: general
+tags:
+- general
 twitter: https://twitter.com/Elliot_F
 ---
 

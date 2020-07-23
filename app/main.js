@@ -18,11 +18,6 @@ import VideoPlayer from './components/video/VideoPlayer.vue';
 import Githubsvg from './components/misc/Githubsvg.vue';
 import config from 'environment';
 import Carbon from './components/misc/Carbon.vue'
-import 'codemirror/mode/go/go.js';
-import 'codemirror/mode/python/python.js';
-import VueCodemirror from 'vue-codemirror';
-import 'codemirror/lib/codemirror.css'
-import 'codemirror/theme/monokai.css' 
 import dayjs from 'dayjs'
 import { Auth0Plugin } from "./auth";
 
@@ -36,8 +31,6 @@ Vue.use(Auth0Plugin, {
   domain: config.domain,
   clientId: config.clientID
 })
-
-Vue.use(VueCodemirror, {})
 
 var app = new Vue({
   el: '#dynamicApp',

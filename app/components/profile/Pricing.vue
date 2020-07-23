@@ -1,63 +1,60 @@
 <template>
     <div>
         <div class="pricing-top-bar">
-            <div class="container">
+            <div class="mx-auto">
                 <h1>Upgrade Account 🚀</h1>
                 <p>Premium courses designed to help you solve real-world problems and gain the experience necessary to reach the next level.</p>
             </div>
         </div>
 
-        <div v-if="this.discount" class="discount-code">
-            <div class="container">
+        <div v-if="this.discount" class="bg-gray-200 px-4 py-8">
+            <div class="mx-auto text-center">
                 <!-- <div class="flag">
 
                 </div> -->
                 <!-- <h2>🎉 Discount Code 🎉 - I've noticed you are coming from 🏴󠁧󠁢󠁳󠁣󠁴󠁿 based on your account information. I support <b>Purchasing Power Partiy</b> and want to make the educational content affordable to everyone across the globe. If you need it use the code: <b>SCOTLANDLOVE</b> to get 38% off your subscription!</h2> -->
-                <h2>🎉 Launch Discount Code 🎉</h2>
+                <h2 class="text-3xl">🎉 Launch Discount Code 🎉</h2>
                 <p>Use the code: <b>CODECLAN</b> to get <b>50% off</b> subscriptions!</p>
             </div>
         </div>
 
-        <div class="price-listing">
-            <div class="container">
+        <div class="price-listing bg-gray-100">
+            <div class="w-1/2 mx-auto">
                 <div class="prices">	
+
                     <div class="price-box">
                         <div class="title">
                             <h2><small>$9.99/month</small><br/>Full Access</h2>
                             <small>Supporting Purchasing Power Parity</small>
                         </div>
                         <div class="perks">
-                            
                             <h4>Rewards</h4>
-
-                            <ul>
+                            <ul class="mb-8">
                                 <li>Unlimited Access To Premium Courses</li>
                                 <li>Take Part in Quizzes And Test Your Skills</li>
                                 <li>Have A Say In What We Cover Next</li>
                             </ul>
-             
-                            <a class="btn btn-primary btn-signup" @click='payMonthly'>Start 7-Day Free Trial 🚀 </a>
+                            <a class="btn btn-primary btn-signup mt-4" @click='payMonthly'>Start 7-Day Free Trial 🚀 </a>
                         </div>
                     </div>
+
                     <div class="price-box">
                         <div class="title">
                             <h2><small>$99.99/year</small><br/>Full Access</h2>
                             <small>Supporting Purchasing Power Parity</small>
                         </div>
                         <div class="perks">
-                            
                             <h4>Rewards</h4>
-
-                            <ul>
+                            <ul class="mb-8">
                                 <li>Unlimited Access To Premium Courses</li>
                                 <li>Take Part in Quizzes And Test Your Skills</li>
                                 <li>Have A Say In What We Cover Next</li>
                                 <li>Save 20%</li>
                             </ul>
-             
-                            <a class="btn btn-primary btn-signup" @click='payYearly'>Start 7-Day Free Trial 🚀 </a>
+                            <a class="btn btn-primary btn-signup mt-4" @click='payYearly'>Start 7-Day Free Trial 🚀 </a>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -109,14 +106,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-.discount-code {
-    background-color: white;
-    padding: 20px;
-    p {
-        font-weight: normal;
-    }
-}
 
 .btn-signup {
     margin-top: 40px;

@@ -1,20 +1,20 @@
   <template>
-    <div class="container">
-      <div v-if="!this.loggedIn" class="register">
-        <div class="d-none d-md-block">
-            <img src="https://images.tutorialedge.net/images/logo.svg" alt="TutorialEdge">
-        </div>
-        <div>
-            <h2>👨‍💻 Join the TutorialEdge Clan! 👩‍💻</h2>
-            <p>Gain access to the discussion as well as new challenges and quizzes and keep-up-to date with our newsletter!</p>
+    <div>
+      <div v-if="!this.loggedIn" class="bg-gray-200 mx-auto rounded">
+        <div class="flex p-8">
+          <img class="w-16 h-auto ml-8" src="https://images.tutorialedge.net/images/logo.svg" alt="TutorialEdge">
+          <div class="ml-16 mb-8">
+            <h2 class="text-3xl font-strong mb-4 ">👨‍💻 Join the TutorialEdge Clan! 👩‍💻</h2>
+            <p class="mb-8">Gain access to the discussion as well as new challenges and quizzes and keep-up-to date with our newsletter!</p>
             <a href="/profile/" class="btn btn-subscribe">Register</a>
             or
             <a href="/profile/">Log In</a>
+          </div>
         </div>
-    </div>
-      <hr/>
+      </div>
+      
       <div class="comments-section">
-          <h2>💬  Comments Section <br/><small>Always be kind when commenting and adhere to our <a href="/code/">Code of Conduct</a></small></h2>
+          <h2 class="mb-8 text-3xl">💬  Comments Section <br/><small>Always be kind when commenting and adhere to our <a href="/code/">Code of Conduct</a></small></h2>
           <div v-if="this.comments == null">
               <h4>Be the first to comment!</h4>
               <blockquote>Let me know what you thought of this tutorial. Your feedback on these tutorials can impact the wider community and help others overcome their own challenges.</blockquote>
@@ -69,20 +69,6 @@ export default {
 </script>
 
 <style lang="scss">
-
-$dark-blue: #232A2D;
-$darkest-blue: #263344;
-$link-blue: #0F607A;
-$light-blue: #1D84B5;
-$top-bar-blue: #fafbfc;
-$lightest-blue: #F2F5F7;
-$light-gray: #4a4a4a;
-$gray: #222;
-
-$box-shadow: 0 5px 15px -5px rgba(0,0,0,0.1);
-$card-box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
-$border-radius: 8px;
-
 .btn-subscribe {
   background-color: #1D84B5;
   padding: 10px;
@@ -101,9 +87,6 @@ $border-radius: 8px;
   width: 100%;
   padding-bottom: 40px;
   margin-top: 40px;
-  h2 {
-      padding-bottom: 20px;
-  }
 
   h2 > small {
     font-size: 1rem;
@@ -135,11 +118,6 @@ $border-radius: 8px;
         button {
           margin: auto;
           margin-top: 20px;
-        }
-
-
-        .markdown-support {
-            color: $light-gray;
         }
 
       }

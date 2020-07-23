@@ -1,0 +1,7 @@
+.footer-section {
+    @apply uppercase text-xs font-bold tracking-wider text-blue-700 outline-none border-t border-white py-4 w-full text-left;
+}
+
+.footer-section-head {
+    @apply relative text-gray-700 font-light font-light border-b px-4 pb-4 py-3 w-full;
+}

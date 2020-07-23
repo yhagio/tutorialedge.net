@@ -1,24 +1,15 @@
 {{ partial "header.html" . }}
 
-<div class="top-bar">
-    <div class="container">
-      <h1>
+<div class="bg-gray-800 py-4 px-16 text-center text-white">
+    <h1 class="flex mx-auto">
         {{ if .Params.image }}
-        <img
-          src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-          data-src="https://images.tutorialedge.net/images/{{ .Params.image }}"
-          alt="{{ .Title }} Image"
-        />
+        <img class="w-16 h-auto" src="https://images.tutorialedge.net/images/{{ .Params.image }}" alt="{{ .Title }} Image">
         {{ else }}
-        <img
-          src="https://images.tutorialedge.net/images/logo.svg"
-          alt="{{ .Title }} Image"
-        />
+        <img class="w-16 h-auto" src="https://images.tutorialedge.net/images/logo.svg" alt="{{ .Title }} Image">
         {{ end }}
-        {{ .Title }}
-      </h1>
-    </div>
-  </div>
+        <span class="text-3xl ml-8 mt-3">{{.Title}}</span>
+    </h1>
+</div>
 
 <div class="container-fluid">
     <div class="content-container">
