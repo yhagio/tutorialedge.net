@@ -12,7 +12,7 @@
             <h4>{{ comment.author }} <small>{{ comment.CreatedAt | formatDate }}</small></h4>
             <span v-html="markdown(comment.body)"></span>
             <p v-if="isOwner" class="comment-controls">
-                <button class="btn btn-link btn-no-margin" v-on:click="deleteComment(comment)">Delete</button>
+                <button class="btn btn-link btn-no-margin" aria-label="delete comment" v-on:click="deleteComment(comment)">Delete</button>
             </p>
         </div>
         <div class="comment-votes">

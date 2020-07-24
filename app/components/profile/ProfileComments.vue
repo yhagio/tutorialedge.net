@@ -10,7 +10,7 @@
             <li v-for="comment in comments" v-bind:key="comment.id">
                 <h3 class="text-sm">{{comment.slug}}</h3>
                 <p>{{comment.body}}</p>
-                <button type="button" class="btn btn-danger" v-on:click="deleteComment(comment)">
+                <button type="button" class="btn btn-danger" aria-label="delete comment" v-on:click="deleteComment(comment)">
                     Delete Comment
                 </button>
             </li>

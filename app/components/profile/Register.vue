@@ -13,7 +13,7 @@
             <p>✅ Participate in the forums and be able to post questions </p>
             
             <div class="clear"></div>
-            <button class="btn btn-primary" v-on:click="this.signup">🚀 Sign Up</button>
+            <button aria-label="Sign Up" class="btn btn-primary" v-on:click="this.signup">🚀 Sign Up</button>
         </div>
     </div>
 </template>
