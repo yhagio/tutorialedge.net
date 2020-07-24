@@ -16,10 +16,18 @@ import HallOfFame from './components/halloffame/HallOfFame.vue';
 import Challenge from './components/challenge/Challenge.vue';
 import VideoPlayer from './components/video/VideoPlayer.vue';
 import Githubsvg from './components/misc/Githubsvg.vue';
+import Navbar from './components/nav/Nav.vue';
 import config from 'environment';
 import Carbon from './components/misc/Carbon.vue'
 import dayjs from 'dayjs'
+import codemirror from 'vue-codemirror';
 import { Auth0Plugin } from "./auth";
+import SearchPage from "./components/search/SearchPage.vue";
+
+import InstantSearch from "vue-instantsearch";
+
+Vue.use(InstantSearch);
+Vue.use(codemirror);
 
 Vue.filter('formatDate', function(value) {
   if (value) {
@@ -39,6 +47,7 @@ var app = new Vue({
     Challenge,
     ChallengeHome,
     Githubsvg,
+    SearchPage,
     Quiz,
     ProfileNavButton,
     Pricing,
@@ -50,6 +59,7 @@ var app = new Vue({
     Redirect,
     Carbon,
     Register,
+    Navbar,
     Logout,
     Snippet
   },

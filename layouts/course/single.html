@@ -34,16 +34,18 @@
 	{{ end }}
 
 	{{ range $scratch.Get "tags" }}
-	<h3>{{.}}</h3>
-	<div class="courses">
+	<h3 class="text-xl mb-8 uppercase mt-8">{{.}}</h3>
+	<div class="grid grid-cols-1 row-gap-10 md:grid-cols-3 md:col-gap-8 md:row-gap-10">
 		{{ range sort $taxonomy }}
 			{{ if eq $.Params.series .Params.series }}
-			<a href="{{ .Permalink }}">
-				<div class="course-box">
-					<h2><small>{{ .Params.difficulty }}</small><br />{{ .Title }}</h2>
-					<p>{{ .Page.Params.desc }}</p>
-					<button class="btn btn-success">Read Now</button>
-				</div>
+			<a class="bg-white p-8 rounded shadow text-center" href="{{ .Permalink }}">
+				{{ if .Params.image }}
+					<img class="w-24 mx-auto h-auto" src="https://images.tutorialedge.net/images/{{ .Params.image }}" alt="Sunset in the mountains">
+				{{ end }}
+				<p class="text-sm text-gray-700">{{ .Params.difficulty }}</p>
+				<h2 class="text-xl mb-8">{{ .Title }}</h2>
+				<p class="text-sm mb-8">{{ .Page.Params.desc }}</p>
+				<button class="btn btn-success">Read Now</button>
 			</a>
 			{{ end }}
 		{{ end }}

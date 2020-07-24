@@ -1,4 +1,7 @@
 {{ partial "header.html" . }}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.56.0/codemirror.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.56.0/theme/dracula.min.css">
+
 
 <div class="bg-gray-800 py-4 px-16 text-center text-white">
     <h1 class="flex mx-auto">
@@ -12,17 +15,15 @@
 </div>
 
 <div class="container-fluid">
-    <div class="content-container">
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
+  <div class="challenge-container">
+      <div class="grid grid-cols-2">
+          <div class="flex-none rounded bg-gray-200">
                 <Snippet language="{{ .Params.language }}" code="{{ .Params.snippet }}" />
             </div>
-            <div class="col-lg-6 col-md-6 post-body">
-                <article class="content">
+            <div class="flex-1 p-16">
+              <article class="prose mx-auto">
                     {{ .Content }}
-
                     <hr/>
-          
                     <div class="next-prev">
                       <div>
                         {{ with .NextInSection }}
@@ -54,5 +55,9 @@
 </div>
 
 <div class="blue-spacer"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.56.0/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.56.0/mode/go/go.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.56.0/mode/go/go.min.js"></script>
 
 {{ partial "footer.html" . }}

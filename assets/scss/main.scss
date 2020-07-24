@@ -1,15 +1,12 @@
-@import "../../node_modules/bootstrap/scss/bootstrap";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@import "variables.scss";
-@import "footer.scss";
-@import "general.scss";
-@import "course.scss";
-@import "challenges.scss";
-@import "single.scss";
+@tailwind/typography;
+
 @import "homepage.scss";
-@import "header.scss";
-@import "sidebar.scss";
-@import "author.scss";
-@import "register.scss";
+@import "general.scss";
+@import "single.scss";
+@import "footer.scss";
 @import "editor.scss";
-@import "videos.scss";
+@import "player.scss";

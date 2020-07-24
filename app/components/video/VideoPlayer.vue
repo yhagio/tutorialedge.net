@@ -2,8 +2,8 @@
     <div id="screencast">
         <div v-if="this.showOverlay" class="overlay"></div>
         <div v-if="this.showOverlay" class="info">
-            <h2>This video is restricted to Subscribers.</h2>
-            <p>Subscribe in order to access all premium content on the site! 🚀</p>
+            <h2 class="text-3xl mb-4">This video is restricted to Subscribers.</h2>
+            <p class="text-sm mb-8">Subscribe in order to access all premium content on the site! 🚀</p>
             <a href="/pricing/" class="btn btn-outline btn-white">
                 Subscribe Now 🚀
             </a>

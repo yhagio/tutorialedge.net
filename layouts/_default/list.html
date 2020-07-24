@@ -13,17 +13,15 @@
 
 <div class="article-list bg-gray-100">
 	<div class="max-w-screen-xl mx-auto">
-		<div class="md:grid md:grid-cols-3 md:col-gap-8 md:row-gap-10">
+		<div class="grid grid-cols-1 row-gap-10 md:grid-cols-3 md:col-gap-8">
 			{{ $paginator := .Paginate .Pages }} {{ range .Pages }}
-			<a href="{{ .Permalink }}">
-				<div class="bg-white rounded overflow-hidden shadow-lg px-4 py-4 mx-2">
-					{{ if .Params.image }}
+			<a class="bg-white rounded overflow-hidden shadow-lg px-4 py-4 mx-2 sm:mt-8 md:mt-8" href="{{ .Permalink }}">
+				{{ if .Params.image }}
 					<img class="w-24 mx-auto h-auto" src="https://images.tutorialedge.net/images/{{ .Params.image }}" alt="Sunset in the mountains">
-					{{ end }}
-					<div class="px-6 py-4">
-						<div class="font-bold text-xl mb-2">{{ .Title }}</div>
-						<p class="text-gray-700 text-base">{{ .Params.desc }}</p>
-					</div>
+				{{ end }}
+				<div class="px-6 py-4">
+					<div class="font-bold text-xl mb-2">{{ .Title }}</div>
+					<p class="text-gray-700 text-base">{{ .Params.desc }}</p>
 				</div>
 			</a>
 			{{ end }}

@@ -17,7 +17,7 @@
                 </div>
                 <div class="flex-1 mt-4">
                     <div class="flex justify-end">
-                        <a href="/write/"><button class="bg-transparent border border-solid border-gray-600  hover:bg-gray-600 text-gray-200 font-semibold hover:text-white py-4 px-4 rounded">Create Post ✍️ </button></a>
+                        <!-- <a href="/write/"><button class="bg-transparent border border-solid border-gray-600  hover:bg-gray-600 text-gray-200 font-semibold hover:text-white py-4 px-4 rounded">Create Post ✍️ </button></a> -->
                         <a href="/logout/"><button class="bg-transparent border border-solid border-gray-600  hover:bg-gray-600 text-gray-200 font-semibold hover:text-white py-4 px-4 rounded">Logout 🚪</button></a>
                     </div>
                 </div>
@@ -62,7 +62,7 @@
             </div>
             
             <div class="bg-gray-200">
-                <div class="bg-white mx-auto max-w-screen-xl px-16 py-8 rounded shadow mb-8">
+                <div class="bg-white mx-auto max-w-screen-xl px-16 py-8 rounded shadow mb-8 overflow-scroll">
                     <Profile-Contributions v-if="!this.loading" :challenges="this.profile.challenges"></Profile-Contributions>
                     <Profile-Challenges v-if="!this.loading" :challenges="this.profile.challenges"></Profile-Challenges>
                 </div>

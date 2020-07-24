@@ -3,11 +3,8 @@
         <Loading v-if="this.loading" />
         
         <div class="snippet-editor text-white text-lg flex-none rounded">
-            <!-- <div class="window-header bg-gray-600 px-4 py-2">
-                <span class="language">{{ this.language }}</span>
-            </div> -->
             <codemirror v-model="code" 
-                :options="cmOptions"></codemirror>
+                :options="this.cmOptions"></codemirror>
         </div>
 
         <div v-if="!this.loggedIn" class="bg-white p-8 shadow">
@@ -59,11 +56,6 @@
 
 <script>
 import { codemirror } from 'vue-codemirror';
-import "codemirror/mode/go/go.js";
-import "codemirror/mode/python/python.js";
-import "codemirror/lib/codemirror.css";
-import "codemirror/theme/monokai.css";
-
 import Carbon from '../misc/Carbon.vue';
 import SocialShare from '../social/SocialShare.vue';
 import axios from 'axios';
@@ -97,15 +89,14 @@ export default {
             response: {},
             cmOptions: {
                 tabSize: 4,
-                mode: 'text/x-go',
-                theme: 'monokai',
+                styleActiveLine: true,
                 lineNumbers: true,
-                line: true,
+                mode: 'text/x-go',
+                theme: "dracula"
             }
         }
     },
     created: async function() {
-        // this.getChallengeStats()
         this.redirectTo = "/profile/?redirectUri=" + window.location.pathname;
         if(this.$auth.isAuthenticated()) {
             this.loggedIn = true;
@@ -190,6 +181,7 @@ export default {
 </script>
 
 <style lang="scss">
+
 .output {
     margin: 0 0 5px;
     color: #576871;
@@ -207,7 +199,7 @@ export default {
     font-family: monospace;
 }
 
-.CodeMirror {
+div.CodeMirror {
     font-size: 18px;
     height: auto;
 }

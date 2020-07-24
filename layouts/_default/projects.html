@@ -11,8 +11,8 @@
     </h1>
 </div>
 
-<div class="bg-white">
-	<article class="prose">
+<div class="bg-white p-8">
+	<article class="prose max-w-none">
 		{{ .Content }}
 	</article>
 </div>
@@ -21,7 +21,7 @@
 	<div class="max-w-screen-xl mx-auto">
 		<h3>Course Lessons</h3>
 
-		<div class="md:grid md:grid-cols-3 md:col-gap-8 md:row-gap-10">
+		<div class="grid grid-cols-1 row-gap-10 md:grid-cols-3 md:col-gap-8">
 			{{ range .Pages }}
 			<a href="{{ .Permalink }}">
 				<div class="flex-1 bg-white rounded px-8 py-8 text-center m-4 shadow">
