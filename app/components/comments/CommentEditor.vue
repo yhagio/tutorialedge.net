@@ -6,7 +6,8 @@
         <Loading v-if="this.loading" />
 
         <div class="comment-editor">
-            <div class="comment-input" id="comment-input">    
+            <div class="comment-input" id="comment-input">   
+                <label for="comment-editor">Leave a Reply...</label> 
                 <textarea id="comment-editor" v-model="comment.body" placeholder="Leave a reply..."></textarea>
                 <br/>
                 <small>Markdown Enabled 😎</small>
