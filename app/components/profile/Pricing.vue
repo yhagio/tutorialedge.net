@@ -19,12 +19,12 @@
         </div>
 
         <div class="price-listing bg-gray-100">
-            <div class="w-1/2 mx-auto">
-                <div class="prices">	
+            <div class="w-4/5 mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 grid-row-gap-10">	
 
                     <div class="price-box">
                         <div class="title">
-                            <h2><small>$9.99/month</small><br/>Full Access</h2>
+                            <h2 class="text-gray-800"><small>$9.99/month</small><br/>Full Access</h2>
                             <small>Supporting Purchasing Power Parity</small>
                         </div>
                         <div class="perks">
@@ -34,7 +34,7 @@
                                 <li>Take Part in Quizzes And Test Your Skills</li>
                                 <li>Have A Say In What We Cover Next</li>
                             </ul>
-                            <a class="btn btn-primary btn-signup mt-4" @click='payMonthly'>Start 7-Day Free Trial 🚀 </a>
+                            <a class="btn btn-primary btn-signup block mt-4" @click='payMonthly'>Start 7-Day Free Trial 🚀 </a>
                         </div>
                     </div>
 
@@ -51,7 +51,7 @@
                                 <li>Have A Say In What We Cover Next</li>
                                 <li>Save 20%</li>
                             </ul>
-                            <a class="btn btn-primary btn-signup mt-4" @click='payYearly'>Start 7-Day Free Trial 🚀 </a>
+                            <a class="btn btn-primary block btn-signup mt-4" @click='payYearly'>Start 7-Day Free Trial 🚀 </a>
                         </div>
                     </div>
 
@@ -152,87 +152,73 @@ export default {
         text-decoration: none !important;
     }
         
-    .prices {
-        display: grid;
-        justify-content: center;
-    
+    .price-box {
+        flex: 0 0 25%;  
+        
+
         @media (min-width: 576px) { 
-            grid-gap: 1px;
-            grid-template-columns: repeat(1, 1fr);
+            margin: 5px;
         }
-      
-        // Medium devices (tablets, 768px and up)
+    
         @media (min-width: 768px) { 
-            grid-template-columns: repeat(2, 1fr);
+            margin: 20px;
         }
-        
-        .price-box {
-            flex: 0 0 25%;  
-            
 
-            @media (min-width: 576px) { 
-                margin: 5px;
-            }
-        
-            @media (min-width: 768px) { 
-                margin: 20px;
-            }
+        align-self: center;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 10px 10px -5px rgba(0,0,0,.04);
+        color: rgba(14,30,37,.54);
+        text-align: center;
 
-            align-self: center;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 10px 10px -5px rgba(0,0,0,.04);
-            color: rgba(14,30,37,.54);
-            text-align: center;
-
-            .title {
-                padding: 40px;
-                h2 {
-                    font-size: 1.875rem;
-                    small {
-                        font-weight: 800;
-                        color: #999;
-                        clear: both;
-                        margin-bottom: 15px;
-                    }
+        .title {
+            padding: 40px;
+            h2 {
+                font-size: 1.875rem;
+                small {
+                    font-weight: 800;
+                    color: #999;
+                    clear: both;
+                    margin-bottom: 15px;
                 }
             }
+        }
 
-            .perks {
-                background-color: rgb(249,250,251);
-                padding: 40px;
-                border-top: 2px solid;
-                --border-opacity: 1;
-                border-color: #f4f5f7;
-                border-color: rgba(244,245,247,var(--border-opacity));
+        .perks {
+            background-color: rgb(249,250,251);
+            padding: 40px;
+            border-top: 2px solid;
+            --border-opacity: 1;
+            border-color: #f4f5f7;
+            border-color: rgba(244,245,247,var(--border-opacity));
 
-                ul {
-                    list-style-type: none;
-                    text-align: left;
-                }
-
-                ul li {
-                    margin: 0;
-                    margin-bottom: 20px;
-                    font-size: 1rem;
-                    --text-opacity: 1;
-                    color: #6b7280;
-                    font-weight: 500;
-                    color: rgba(107,114,128,var(--text-opacity));
-
-                    &::before {
-                        content: "✅ ";
-                        opacity: 1;
-                        margin-right: 10px;
-                    }
-                }
+            ul {
+                list-style-type: none;
+                text-align: left;
             }
-            
-            .sign-up {
+
+            ul li {
                 margin: 0;
-                color: white !important;
+                margin-bottom: 20px;
+                font-size: 1rem;
+                --text-opacity: 1;
+                color: #6b7280;
+                font-weight: 500;
+                color: rgba(107,114,128,var(--text-opacity));
+
+                &::before {
+                    content: "✅ ";
+                    opacity: 1;
+                    margin-right: 10px;
+                }
             }
         }
+        
+        .sign-up {
+            margin: 0;
+            color: white !important;
+        }
+    
     }
 
 }

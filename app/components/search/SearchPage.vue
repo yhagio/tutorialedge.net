@@ -4,7 +4,7 @@
             index-name="TutorialEdge" 
             :search-client="searchClient">
             
-           <div class="mx-auto p-8">
+           <div class="mx-auto p-4 sm:p-8">
                 <h2 class="text-xl mb-4">Search For Courses and Tutorials </h2>
                 <ais-search-box :autofocus="true" />
                 <br/>
@@ -12,14 +12,14 @@
             </div>
             
             <div class="article-list bg-gray-200">
-                <div class="w-9/12 mx-auto grid grid-flow-col">
+                <div class="w-full sm:w-4/5 mx-auto grid grid-flow-col">
                     <ais-hits>
                         <div slot="item" class="col-span-1" slot-scope="{ item }">
                             <a v-bind:href="item.permalink">
-                                <div class="bg-white rounded shadow flex p-8 m-8">
-                                    <div class="p-8">
-                                        <img v-if="item.image" class="w-8 h-auto mx-auto" v-bind:src="'https://images.tutorialedge.net/images/' + item.image" />
-                                        <img v-if="!item.image" class="w-8 h-auto mx-auto" src="https://images.tutorialedge.net/images/logo.png" />
+                                <div class="bg-white rounded shadow sm:flex p-4 sm:p-8 m-4 sm:m-8">
+                                    <div class="hidden sm:block p-8">
+                                        <img v-if="item.image" class="w-full h-auto mx-auto" v-bind:src="'https://images.tutorialedge.net/images/' + item.image" />
+                                        <img v-if="!item.image" class="w-full h-auto mx-auto" src="https://images.tutorialedge.net/images/logo.png" />
                                     </div>
                                     <div class="ml-8">
                                         <h2>{{ item.title }}</h2>

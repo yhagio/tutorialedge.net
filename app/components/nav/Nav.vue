@@ -32,7 +32,7 @@
             </div>
         </div>
     
-        <div v-if="isSecondMenuOpen" class="bg-white lg:flex sm:block">
+        <div v-if="isSecondMenuOpen" class="bg-white block lg:flex">
             <a class="p-4 py-8 font-semibold text-gray-700 hover:bg-gray-200 flex" href="/course/angular/">
                 <img class="w-4 h-auto mr-2" src="https://images.tutorialedge.net/images/angular.svg" alt="Logo" />
                 Angular
@@ -50,7 +50,7 @@
                 Software Engineering
             </a>
             <a class="p-4 py-8 font-semibold text-gray-700 hover:bg-gray-200 flex" href="/course/python/">
-                <img class="w-4 h-auto mr-2" src="https://images.tutorialedge.net/images/python.svg" alt="Logo" />
+                <img class="w-6 h-auto mr-2" src="https://images.tutorialedge.net/images/python.svg" alt="Logo" />
                 Python
             </a>
             <a class="p-4 py-8 font-semibold text-gray-700 hover:bg-gray-200 flex" href="/course/golang/">
@@ -58,7 +58,7 @@
                 Golang
             </a>
             <a class="p-4 py-8 font-semibold text-gray-700 hover:bg-gray-200 flex" href="/course/rust/">
-                <img class="w-4 h-auto mr-2" src="https://images.tutorialedge.net/images/rustlang.svg" alt="Logo" />
+                <img class="w-6 h-auto mr-2" src="https://images.tutorialedge.net/images/rust-logo.png" alt="Logo" />
                 Rust
             </a>
             <a class="p-4 py-8 font-semibold text-gray-700 hover:bg-gray-200 flex" href="/course/reactjs/">
