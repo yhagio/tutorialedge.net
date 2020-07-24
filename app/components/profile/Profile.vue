@@ -29,7 +29,7 @@
                     <p class="text-3xl">🏆 {{ this.score }}</p>
                 </div>
 
-                <div id="quizes" class="flex-1 text-white">
+                <!-- <div id="quizes" class="flex-1 text-white">
                     <p class="uppercase text-sm">Quizzes Complete:</p>
                     <p class="text-3xl">🧪 5</p>
                 </div>
@@ -37,7 +37,7 @@
                 <div id="quizes" class="flex-1 text-white">
                     <p class="uppercase text-sm">Courses Complete:</p>
                     <p class="text-3xl">📚 2</p>
-                </div>
+                </div> -->
             </div>
 
             <div id="stats" class="bg-gray-200 px-8 py-8">
