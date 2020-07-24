@@ -1,10 +1,10 @@
   <template>
     <div>
       <div v-if="!this.loggedIn" class="bg-gray-200 mx-auto rounded">
-        <div class="flex p-8">
-          <img class="w-16 h-auto ml-8" src="https://images.tutorialedge.net/images/logo.svg" alt="TutorialEdge">
-          <div class="ml-16 mb-8">
-            <h2 class="text-3xl font-strong mb-4 ">👨‍💻 Join the TutorialEdge Clan! 👩‍💻</h2>
+        <div class="sm:flex p-8">
+          <img class="w-16 h-auto mx-auto mb-8 sm:ml-8" src="https://images.tutorialedge.net/images/logo.svg" alt="TutorialEdge">
+          <div class="sm:ml-16 mb-8">
+            <h2 class="text-3xl font-strong mb-4">👨‍💻 Join the TutorialEdge Clan! 👩‍💻</h2>
             <p class="mb-8">Gain access to the discussion as well as new challenges and quizzes and keep-up-to date with our newsletter!</p>
             <a href="/profile/" class="btn btn-subscribe">Register</a>
             or
