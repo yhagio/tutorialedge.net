@@ -47,8 +47,8 @@
                         <p class="text-3xl">{{ this.profile.comments.length }}</p>
                     </div>
                     <div class="bg-white w-full mr-4 px-8 py-8 rounded shadow">
-                        <p class="text-sm">Post Views</p>
-                        <p class="text-3xl">0 Views</p>
+                        <p class="text-sm">Challenges Complete</p>
+                        <p class="text-3xl">{{ this.profile.challenges.length }}</p>
                     </div>
                     <div class="bg-white w-full mr-4 px-8 py-8 rounded shadow">
                         <p class="text-sm">Post Reactions</p>
