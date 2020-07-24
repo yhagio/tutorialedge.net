@@ -1,5 +1,5 @@
 <template>
-    <div class="carbon-ads">
+    <div class="carbon-ads text-sm bg-white">
     </div>
 </template>
 
@@ -26,9 +26,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss">
-.carbon-ads {
-  margin-top: 60px;
-}
-</style>

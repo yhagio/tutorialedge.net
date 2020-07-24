@@ -1,7 +1,7 @@
 <template>
     <div>
-        <h5>Profile Contributions</h5>
-        <div class="graph">
+        <h5 class="text-xl mb-4">Profile Contributions</h5>
+        <div class="graph mx-auto">
             <ul class="months">
                 <li>Jan</li>
                 <li>Feb</li>

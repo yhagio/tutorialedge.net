@@ -1,15 +1,13 @@
 <template>
     <div>
-        <h5>Challenges Completed</h5>
+        <h5 class="text-xl">Challenges Completed</h5>
         <p v-if="this.challenges.length == 0">You have not passed any challenges yet.</p>
 
         <Loading v-if="this.loading" />
 
         <span v-if="this.err" class="alert alert-danger">{{this.err}}</span>
 
-        <div class="clear"></div>
-
-       <ul class="challenges">
+       <ul class="mt-4 challenges">
              <li v-for="challenge in challenges" v-bind:key="challenge.id" class="d-flex justify-content-between align-items-center">
                 <p>
                     <b><a :href="challenge.slug">{{challenge.slug}}</a></b>

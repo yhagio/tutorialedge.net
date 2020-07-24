@@ -31,180 +31,25 @@
 	<title>{{ .Title }} | TutorialEdge.net</title>
 	
 	<link rel="icon" type="image/png" href="https://images.tutorialedge.net/images/favicon.ico">
-	<link media="all" defer rel="stylesheet" href="{{ .Site.BaseURL }}/assets/flat-icons.css">
-	<link media="all" defer rel="stylesheet" href="{{ .Site.BaseURL }}/app/main.css">
+
+	{{ $styles := resources.Get "scss/main.scss" | toCSS | postCSS | minify | fingerprint }}
+	<link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
 
 	{{ with .OutputFormats.Get "RSS" }}
 	<link defer href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml" title="TutorialEdge">
 	{{- end }}
 
 	{{ hugo.Generator }}
-	<script src="https://kit.fontawesome.com/36f5cfa744.js" crossorigin="anonymous"></script>
-
-	<script src="/js/jquery-3.4.1.slim.min.js" defer></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous" defer></script>
+	
 	<script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
 
 </head>
 
 <body class="min-height-full">
 	<div id="dynamicApp">
-	<nav class="navbar navbar-expand-lg">
-		<!-- LOGO -->
-		<a class="navbar-brand" href="/">
-			<img alt="tutorialedge logo" src="https://images.tutorialedge.net/images/logo.svg" alt="{{ .Site.Title }}">
-			<span>TutorialEdge.net</span>
-		</a>
-		<!-- END OF LOGO -->
-		
-		<!-- Hamburger -->
-		<button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-		 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<img src="/images/svg/hamburger.svg" alt="hamburger menu" />
-		</button>
-		<!-- END OF Hamburger -->
 
-		<div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<!-- Courses dropdown -->
-				<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="courseDropdown" role="button" data-toggle="dropdown"
-						 aria-haspopup="true" aria-expanded="false">
-							Courses
-						</a>
-						<div class="dropdown-menu" aria-labelledby="courseDropdown">
-							<a class="dropdown-item" href="{{ .Site.BaseURL }}/course/angular/"><img alt="angular logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/angular.svg" />Angular</a>
-							<a class="dropdown-item" href="{{ .Site.BaseURL }}/course/cloud/"><img alt="cloud logo" src="data:image/png.svg;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/cloud.svg" />Cloud</a>
-							<a class="dropdown-item" href="{{ .Site.BaseURL }}/course/compsci/"><img alt="computer science" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/logo.svg" />Computer Science</a>
-							<a class="dropdown-item" href="{{ .Site.BaseURL }}/course/python/"><img alt="python logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/python.svg" />Python</a>
-							<a class="dropdown-item" href="{{ .Site.BaseURL }}/course/golang/"><img alt="golang logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/golang.svg" />Golang</a>
-							<a class="dropdown-item" href="{{ .Site.BaseURL }}/course/rust/"><img alt="rust logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/rust-logo.png" />Rust</a>
-							<a class="dropdown-item" href="{{ .Site.BaseURL }}/course/vuejs/"><img alt="vuejs logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/vuejs.svg" />VueJS</a>
-							<a class="dropdown-item" href="{{ .Site.BaseURL }}/course/webdev/"><img alt="webdev logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/logo.svg" />Web
-								Dev</a>
-						</div>
-					</li>
-					<!-- End of courses dropdown -->
-			
-				<!-- Projects Dropdown -->
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="courseDropdown" role="button" data-toggle="dropdown"
-					 aria-haspopup="true" aria-expanded="false">
-						Projects
-					</a>
-					<div class="dropdown-menu" aria-labelledby="courseDropdown">
-						<a class="dropdown-item" href="{{ .Site.BaseURL }}/projects/hacker-news-clone-vuejs/"><img alt="VueJS logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/vuejs.svg" />HackerNews
-							Clone in VueJS</a>
-						<a class="dropdown-item" href="{{ .Site.BaseURL }}/projects/building-imgur-clone-vuejs-nodejs/"><img alt="VueJS logo"
-							 src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/vuejs.svg" />Building an Imgur Clone with Vue.JS and Node.JS</a>
-						<a class="dropdown-item" href="{{ .Site.BaseURL }}/projects/chat-system-in-go-and-react/"><img alt="VueJS logo"
-							 src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/golang.svg" />Building a Chat Application in Go and React</a>
-						<a class="dropdown-item" href="{{ .Site.BaseURL }}/projects/building-security-tools-in-go/"><img alt="VueJS logo"
-							 src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/golang.svg" />Building Security Tools in Go</a>
-					</div>
-				</li>
-				<!-- End of Projects Dropdown -->
-
-				<!-- Challenges Dropdown -->
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="courseDropdown" role="button" data-toggle="dropdown"
-					 aria-haspopup="true" aria-expanded="false">
-						Challenges
-					</a>
-					<div class="dropdown-menu" aria-labelledby="courseDropdown">
-						<a class="dropdown-item" href="{{ .Site.BaseURL }}/challenges/go/"><img alt="Golang logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/golang.svg" />Learning Go Challenges</a>
-					</div>
-				</li>
-				<!-- End of challenges Dropdown -->
-
-				<!-- Tutorials Dropdown -->
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="tutorialDropdown" role="button" data-toggle="dropdown"
-					 aria-haspopup="true" aria-expanded="false">
-						Tutorials
-					</a>
-					<div class="dropdown-menu dropdown-menu-mega" aria-labelledby="tutorialDropdown">
-						<div class="row">
-							<div class="col-sm-6">
-								<a class="dropdown-item" href="{{ .Site.BaseURL }}/artificial-intelligence/"><img alt="AI logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/ai.png" /> AI</a>
-								<a class="dropdown-item" href="{{ .Site.BaseURL }}/typescript/angular/"><img alt="Angular logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/angular.svg" />Angular</a>
-								<a class="dropdown-item" href="{{ .Site.BaseURL }}/javascript/angularjs/"><img alt="AngularJS logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/logos/angularjs.svg" /> AngularJS</a>
-								<a class="dropdown-item" href="{{ .Site.BaseURL }}/cloud/"><img alt="Cloud logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/cloud.svg" /> Cloud</a>
-								<a class="dropdown-item" href="{{ .Site.BaseURL }}/compsci/"><img alt="Comp Sci logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/logo.svg" /> Comp Sci</a>
-								<a class="dropdown-item" href="{{ .Site.BaseURL }}/docker/"><img alt="Docker logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/docker.svg" /> Docker</a>
-								<a class="dropdown-item" href="{{ .Site.BaseURL }}/gamedev/"><img alt="GameDev logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/logo.svg" /> GameDev</a>
-								<a class="dropdown-item" href="{{ .Site.BaseURL }}/golang/"><img alt="Golang logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/golang.svg" /> Golang</a>
-							</div>
-							<div class="col-sm-6">
-								<a class="dropdown-item" href="{{ .Site.BaseURL }}/nodejs/"><img alt="Nodejs logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/javascript.svg" /> NodeJS</a>
-								<a class="dropdown-item" href="{{ .Site.BaseURL }}/python/"><img alt="Python logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/python.svg" /> Python</a>
-								<a class="dropdown-item" href="{{ .Site.BaseURL }}/rust/"> <img alt="Rust logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/rust-logo.png" /> Rust</a>
-								<a class="dropdown-item" href="{{ .Site.BaseURL }}/typescript/"><img alt="TypeScript logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/typescript.svg" /> TypeScript</a>
-								<a class="dropdown-item" href="{{ .Site.BaseURL }}/javascript/vuejs/"><img alt="VueJS logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/vuejs.svg" /> VueJS</a>
-								<a class="dropdown-item" href="{{ .Site.BaseURL }}/webdev/"><img alt="Web Dev logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/logo.svg" /> Web Dev</a>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="/courses/">Screencasts</a>
-				</li>
-				<!-- End of tutorials dropdown-->
-			</ul>
-
-			<!-- Right Hand of Navbar -->
-			<ul class="navbar-nav full-height">
-				<li class="nav-item"><a class="nav-link search" href="https://discuss.tutorialedge.net/">💬 Forum</a></li>
-				<li class="nav-item"><a class="nav-link search" href="/search/">🔍 Search</a></li>
-				
-				<Profile-Nav-Button />
-
-			</ul>
-			<!-- END -->
-
-		</div>
-	</nav>
+		<Navbar></Navbar>
 	
-	<!-- As a heading -->
-	<nav class="navbar secondary-nav navbar-expand-lg navbar-light bg-light"> 
+		
 
-		<!-- Hamburger -->
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#secondNav"
-			aria-controls="secondNav" aria-expanded="false" aria-label="Toggle navigation">
-			<img src="/images/svg/hamburger-black.svg" alt="hamburger menu" />
-		</button>
 
-		<div class="collapse navbar-collapse justify-content-between" id="secondNav">
-			<ul class="navbar-nav mr-auto">
-
-				<!-- Courses dropdown -->
-				<li class="nav-item">
-					<a class="nav-link" href="{{ .Site.BaseURL }}/course/angular/"><img alt="angular logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/angular.svg" /> Angular</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="{{ .Site.BaseURL }}/course/cloud/"><img alt="cloud logo" src="data:image/png.svg;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/cloud.svg" /> Cloud</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="{{ .Site.BaseURL }}/course/compsci/"><img alt="cloud logo" src="data:image/png.svg;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/logo.svg" /> Comp Sci</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="{{ .Site.BaseURL }}/course/python/"><img alt="python logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/python.svg" />Python</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="{{ .Site.BaseURL }}/course/golang/"><img alt="golang logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/golang.svg" />Golang</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="{{ .Site.BaseURL }}/course/rust/"><img alt="rust logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/rust-logo.png" />Rust</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="{{ .Site.BaseURL }}/course/reactjs/"><img alt="rust logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/react.svg" />React.JS</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="{{ .Site.BaseURL }}/course/vuejs/"><img alt="vuejs logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/vuejs.svg" />VueJS</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="{{ .Site.BaseURL }}/course/webdev/"><img alt="webdev logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://images.tutorialedge.net/images/logo.svg" />Web Dev</a>
-				</li>
-			</ul>
-		</div>
-	</nav>

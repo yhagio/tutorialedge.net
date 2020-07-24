@@ -1,51 +1,43 @@
 <template>
-    <div class="container-fluid search-results">
+    <div class="w-full">
         <ais-instant-search 
             index-name="TutorialEdge" 
             :search-client="searchClient">
             
-           <div class="content-container ">
-                <h2>Search For Courses and Tutorials </h2>
+           <div class="mx-auto p-8">
+                <h2 class="text-xl mb-4">Search For Courses and Tutorials </h2>
                 <ais-search-box :autofocus="true" />
                 <br/>
                 <ais-powered-by />
             </div>
             
-            <div class="row">
-
-                <div class="col-lg-3">
-                    <ais-refinement-list attribute="section" show-more/>
-                </div>
-
-                <div class="col-lg-9">
-                    <div class="search-results">
-                    
-                        <ais-hits>
-                            <div slot="item"  slot-scope="{ item }">
-                                <a v-bind:href="item.permalink">
-                                    <div class="course-progress-box">
-                                        <div class="row">
-                                            <div class="col-lg-1">
-                                                <img v-if="item.image" v-bind:src="'https://images.tutorialedge.net/images/' + item.image" />
-                                                <img v-if="!item.image" src="https://images.tutorialedge.net/images/logo.png" />
-                                            </div>
-                                            <div class="col-lg-11">
-                                                <h2>{{ item.title }}</h2>
-                                                <p><b>Author:</b> {{ item.author }}</p>
-                                                <p><b>Published:</b> {{ item.publishdate | moment }}</p>
-                                                <p>{{ item.summary }}</p>
-                                            </div>
-                                        </div>
+            <div class="article-list bg-gray-200">
+                <div class="w-9/12 mx-auto grid grid-flow-col">
+                    <ais-hits>
+                        <div slot="item" class="col-span-1" slot-scope="{ item }">
+                            <a v-bind:href="item.permalink">
+                                <div class="bg-white rounded shadow flex p-8 m-8">
+                                    <div class="p-8">
+                                        <img v-if="item.image" class="w-8 h-auto mx-auto" v-bind:src="'https://images.tutorialedge.net/images/' + item.image" />
+                                        <img v-if="!item.image" class="w-8 h-auto mx-auto" src="https://images.tutorialedge.net/images/logo.png" />
                                     </div>
-                                </a>
-                            </div>
-                        </ais-hits>
-                    </div>
+                                    <div class="ml-8">
+                                        <h2>{{ item.title }}</h2>
+                                        <p><b>Author:</b> {{ item.author }}</p>
+                                        <p><b>Published:</b> {{ item.publishdate | moment }}</p>
+                                        <p>{{ item.summary }}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </ais-hits>
                 </div>
 
             </div>
 
-            <ais-pagination />
+            <div class="p-8">
+              <ais-pagination />
+            </div>
 
         </ais-instant-search>
      </div>
@@ -267,15 +259,7 @@ export default {
 
 .ais-Hits-item {
 
-  img {
-    width: auto;
-    margin: auto;
-    margin-top: 10px;
-    display: block;
-    max-height: 50px;
-  }
-
-  h2 {
+h2 {
     font-size: 20px;
     font-weight: 400;
   }

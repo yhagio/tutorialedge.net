@@ -1,11 +1,13 @@
-<div class="paginate">
-{{ if .Paginator.HasPrev }}
-	<a class="btn btn-primary" href="{{ .Paginator.Prev.URL }}"><< Previous Page</a>
-{{ end }}
-{{ if .Paginator.HasNext }}
-	<a class="btn btn-primary" href="{{ .Paginator.Next.URL }}">Next Page >></a>
-{{ end }}
-	<div class="total-count">
-		Showing Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}
+<div class="paginate w-full mt-8">
+	<div class="text-center mx-auto">
+		{{ if .Paginator.HasPrev }}
+		<a class="btn mb-8 mx-auto" href="{{ .Paginator.Prev.URL }}"><< Previous Page</a>
+		{{ end }}
+		{{ if .Paginator.HasNext }}
+		<a class="btn mb-8" href="{{ .Paginator.Next.URL }}">Next Page >></a>
+		{{ end }}
+		<div class="total-count mt-8">
+			Showing Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}
+		</div>
 	</div>
 </div>

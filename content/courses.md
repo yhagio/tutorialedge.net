@@ -5,4 +5,3 @@ layout: courses
 title: All Courses
 ---
 
-test

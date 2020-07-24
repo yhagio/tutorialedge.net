@@ -1,7 +1,7 @@
 <template>
     <div class="quiz">
         <span class="question">Question</span>
-        <h2>{{ question }}</h2>
+        <h2 class="text-gray-700">{{ question }}</h2>
 
         <button id="a" v-if="A" v-on:click="checkAnswer('A')">
             <span v-bind:class="{selected: this.selected == 'A'}"> A </span>
@@ -62,7 +62,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .fade-enter-active,
 .fade-leave-active {
     transition: opacity 0.5s;
@@ -79,7 +79,6 @@ export default {
 }
 
 .question {
-    color: #8795a1;
     font-size: 1rem;
     margin: 0;
     margin-bottom: -15px;

@@ -2,15 +2,11 @@
     <div class="snippet">
         <Loading v-if="this.loading" />
         
-        <div class="snippet-editor">
-            <div class="window-header">
-                <div class="action-buttons"></div>
-                <span class="language">{{ this.language }}</span>
-            </div>
+        <div class="snippet-editor rounded">
             <codemirror v-model="code" :options="cmOptions" />
         </div>
 
-        <div class="controls">
+        <div class="controls bg-white p-8 rounded shadow mb-8">
             <button v-on:click="executeCode" class="btn btn-primary btn-execute">Submit Code</button>
             <div class="output-label">
                 <h5>Progam Output:</h5>
@@ -19,9 +15,10 @@
             <pre class="output">{{ this.output.output }}</pre>
         </div>
 
-        <hr>
-
-        <Carbon />
+        
+        <div class="bg-white p-4 shadow rounded">
+            <Carbon />
+        </div>
     </div>
 </template>
 
@@ -50,10 +47,10 @@ export default {
             loading: false,
             cmOptions: {
                 tabSize: 4,
-                mode: 'text/x-' + this.language,
-                theme: 'monokai',
+                styleActiveLine: true,
                 lineNumbers: true,
-                line: true,
+                mode: 'text/x-go',
+                theme: "dracula"
             },
             terminalOptions: {
                 tabSize: 4,
@@ -95,6 +92,10 @@ export default {
 </script>
 
 <style lang="scss">
+.CodeMirror {
+    height: auto;
+}
+
 .output-label {
     display: flex;
     -webkit-box-pack: justify;

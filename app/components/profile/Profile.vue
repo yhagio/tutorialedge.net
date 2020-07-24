@@ -1,61 +1,91 @@
 <template>
-    <div>
+    <div class="bg-gray-200 border-b">
         <Loading v-if="this.loading" />
         
-        <div v-if="loaded" class="profile-wrapper">
-            <div class="profile">
-                <img v-bind:src="user.picture" alt="Profile Picture">
-                <h2>Profile: {{ this.user.name }}
-                    <br/>
-                    <small>🏆 Score: {{ this.score }}</small>
-                </h2>
+        <div v-if="loaded">
+            <div class="bg-gray-800 px-16 py-8 flex text-white">
+                <div class="flex-1 flex">
+                    <img class="rounded w-32 h-auto mr-8" v-bind:src="user.picture" alt="Profile Picture">
+                    <div>
+                        <h2 class="text-2xl text-white mt-2">Profile: {{ this.user.name }}</h2>
+
+                        <p class="text-sm text-gray-400 mt-4">Nickname: <span class="text-white">{{this.user.nickname}}</span></p>
+
+                        <p class="text-sm text-white mt-4" v-if="this.profile.account.premium">✅ Premium Account</p>
+                        <p class="text-sm text-gray-400 mt-4" v-if="!this.profile.account.premium">Free Account - <a class="text-white text-underline" href="/pricing/">Upgrade Account 🚀</a></p>
+                    </div>
+                </div>
+                <div class="flex-1 mt-4">
+                    <div class="flex justify-end">
+                        <!-- <a href="/write/"><button class="bg-transparent border border-solid border-gray-600  hover:bg-gray-600 text-gray-200 font-semibold hover:text-white py-4 px-4 rounded">Create Post ✍️ </button></a> -->
+                        <a href="/logout/"><button class="bg-transparent border border-solid border-gray-600  hover:bg-gray-600 text-gray-200 font-semibold hover:text-white py-4 px-4 rounded">Logout 🚪</button></a>
+                    </div>
+                </div>
             </div> 
 
-            <p>
-                <b>Paid Type:</b> 
-                <span >{{this.profile.account.premium}}</span>        
-            </p>
+            <div class="bg-gray-900 px-16 py-8 flex text-center">
+                <div id="score" class="flex-1 text-white">
+                    <p class="uppercase text-sm">Challenges score:</p>
+                    <p class="text-3xl">🏆 {{ this.score }}</p>
+                </div>
 
-            <p><b>Privacy Policy: <a href="/privacy/">📕 Read Now</a></b></p>
-            <p><b>Upgrade Account: <a href="/pricing/">🚀 Pricing</a></b></p>
+                <div id="quizes" class="flex-1 text-white">
+                    <p class="uppercase text-sm">Quizzes Complete:</p>
+                    <p class="text-3xl">🧪 5</p>
+                </div>
 
-            <div class="profile-container">
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="Challenges-tab" data-toggle="tab" href="#Challenges" role="tab" aria-controls="Challenges" aria-selected="true">🎯 Challenges</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="trophies-tab" data-toggle="tab" href="#trophies" role="tab" aria-controls="trophies" aria-selected="true">🏆 Trophies</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="comments-tab" data-toggle="tab" href="#comments" role="tab" aria-controls="comments" aria-selected="false">💬 Comments</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">⚙️ Settings</a>
-                    </li>
-                </ul>
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="Challenges" role="tabpanel" aria-labelledby="Challenges-tab">
-                        <Profile-Contributions v-if="!this.loading" :challenges="this.profile.challenges" />
-                        <Profile-Challenges v-if="!this.loading" :challenges="this.profile.challenges" />
-                    </div>
-                    <div class="tab-pane fade" id="trophies" role="tabpanel" aria-labelledby="trophies-tab">
-                        <h5>Achievements</h5>
-                        <Profile-Achievements v-if="!this.loading" :challenges="this.challenges" />
-                    </div>
-                    <div class="tab-pane fade" id="comments" role="tabpanel" aria-labelledby="comments-tab">
-                       <h5>Comments You Have Posted:</h5>
-                       <Profile-Comments :comments="this.profile.comments" />                        
-                    </div>
-                    <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="settings-tab">
-                        <Profile-Settings :user="this.user" :profile="this.profile"/>                        
-                    </div>
+                <div id="quizes" class="flex-1 text-white">
+                    <p class="uppercase text-sm">Courses Complete:</p>
+                    <p class="text-3xl">📚 2</p>
                 </div>
             </div>
 
-            <hr/>
-            <a href="/logout/" class="btn btn-warning">Logout</a>
+            <div id="stats" class="bg-gray-200 px-8 py-8">
+                <div class="max-w-screen-xl mx-auto flex justify-between">
+                    <div class="bg-white w-full mr-4 px-8 py-8 rounded shadow">
+                        <p class="text-sm">Comments</p>
+                        <p class="text-3xl">{{ this.profile.comments.length }}</p>
+                    </div>
+                    <div class="bg-white w-full mr-4 px-8 py-8 rounded shadow">
+                        <p class="text-sm">Post Views</p>
+                        <p class="text-3xl">0 Views</p>
+                    </div>
+                    <div class="bg-white w-full mr-4 px-8 py-8 rounded shadow">
+                        <p class="text-sm">Post Reactions</p>
+                        <p class="text-3xl">0 Reactions</p>
+                    </div>
+                    <div class="bg-white w-full px-8 py-8 rounded shadow">
+                        <p class="text-sm">Posts</p>
+                        <p class="text-3xl">0</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gray-200">
+                <div class="bg-white mx-auto max-w-screen-xl px-16 py-8 rounded shadow mb-8 overflow-scroll">
+                    <Profile-Contributions v-if="!this.loading" :challenges="this.profile.challenges"></Profile-Contributions>
+                    <Profile-Challenges v-if="!this.loading" :challenges="this.profile.challenges"></Profile-Challenges>
+                </div>
+
+                <div class="bg-white mx-auto max-w-screen-xl px-16 py-8 rounded shadow mb-8">
+                    <h3 class="text-xl mb-4">Achievements</h3>
+                    <Profile-Achievements v-if="!this.loading" :challenges="this.challenges" />
+                </div>
+                
+                <div class="bg-white mx-auto max-w-screen-xl px-16 py-8 rounded shadow mb-8">
+                    <h3 class="text-xl mb-4">Comments</h3>
+                    <Profile-Comments :comments="this.profile.comments" />                        
+                </div>
+
+                <div class="bg-white mx-auto max-w-screen-xl px-16 py-8 rounded shadow mb-8">
+                    <h3 class="text-xl mb-4">Settings</h3>
+                    <Profile-Settings :user="this.user" :profile="this.profile"/>                        
+                </div>
+            </div>
+
         </div>
+
+        <div class="blue-spacer"></div>
     </div>
 </template>
 
@@ -151,11 +181,6 @@ export default {
     width: auto;
 }
 
-.profile-wrapper {
-    h3 {
-        margin-left: 0px;
-    }
-}
 
 .profile {
     display: flex;

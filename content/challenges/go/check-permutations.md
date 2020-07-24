@@ -10,6 +10,7 @@ tags:
   - go
 language: go
 layout: challenge
+image: golang.svg
 difficulty: Medium
 weight: 8
 tags:

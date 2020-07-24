@@ -1,32 +1,25 @@
 {{ partial "header.html" . }}
 
-<div class="top-bar">
-	<div class="container">
-		<h1>
-			{{ if .Params.image }}
-			<img
-			src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-			data-src="https://images.tutorialedge.net/images/{{ .Params.image }}"
-			alt="{{ .Title }} Image"
-			/>
-			{{ else }}
-			<img
-			src="https://images.tutorialedge.net/images/logo.svg"
-			alt="{{ .Title }} Image"
-			/>
-			{{ end }}
-			{{ .Title }}
-		</h1>
+<div class="bg-gray-800 py-8 px-16 text-center text-white">
+    <h1 class="flex mx-auto">
+        {{ if .Params.image }}
+        <img class="w-16 h-auto" src="https://images.tutorialedge.net/images/{{ .Params.image }}" alt="{{ .Title }} Image">
+        {{ else }}
+        <img class="w-16 h-auto" src="https://images.tutorialedge.net/images/logo.svg" alt="{{ .Title }} Image">
+        {{ end }}
+        <span class="text-3xl ml-8 mt-3">{{.Title}}</span>
+    </h1>
+</div>
+
+<div class="w-auto p-16 shadow">
+	<div class="mx-auto">
+		<article class="prose max-w-none">
+			{{ .Content }}
+		</article>
 	</div>
 </div>
 
-<div class="course-outline">
-	<div class="container">
-		{{ .Content }}
-	</div>
-</div>
-
-<div class="course-listing">	
+<div class="article-list bg-gray-200">	
 	{{ range $taxonomyname, $taxonomy := .Site.Taxonomies.tags }}
 
 	{{ $scratch := newScratch }}
@@ -41,16 +34,18 @@
 	{{ end }}
 
 	{{ range $scratch.Get "tags" }}
-	<h3>{{.}}</h3>
-	<div class="courses">
+	<h3 class="text-xl mb-8 uppercase mt-8">{{.}}</h3>
+	<div class="grid grid-cols-1 row-gap-10 md:grid-cols-3 md:col-gap-8 md:row-gap-10">
 		{{ range sort $taxonomy }}
 			{{ if eq $.Params.series .Params.series }}
-			<a href="{{ .Permalink }}">
-				<div class="course-box">
-					<h2><small>{{ .Params.difficulty }}</small><br />{{ .Title }}</h2>
-					<p>{{ .Page.Params.desc }}</p>
-					<button class="btn btn-success">Read Now</button>
-				</div>
+			<a class="bg-white p-8 rounded shadow text-center" href="{{ .Permalink }}">
+				{{ if .Params.image }}
+					<img class="w-24 mx-auto h-auto" src="https://images.tutorialedge.net/images/{{ .Params.image }}" alt="Sunset in the mountains">
+				{{ end }}
+				<p class="text-sm text-gray-700">{{ .Params.difficulty }}</p>
+				<h2 class="text-xl mb-8">{{ .Title }}</h2>
+				<p class="text-sm mb-8">{{ .Page.Params.desc }}</p>
+				<button class="btn btn-success">Read Now</button>
 			</a>
 			{{ end }}
 		{{ end }}

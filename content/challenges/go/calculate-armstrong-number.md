@@ -21,9 +21,6 @@ snippet: |
 
   type MyInt int
 
-  // IsArmstrong checks to see if a number is
-  // indeed an armstrong number and returns a
-  // bool
   func (n *MyInt) IsArmstrong() bool {
     return false
   }
