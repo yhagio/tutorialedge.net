@@ -7,7 +7,7 @@
         </div>
 
         <div class="controls bg-white p-8 rounded shadow mb-8">
-            <button v-on:click="executeCode" class="btn btn-primary btn-execute">Submit Code</button>
+            <button aria-label="submit code" v-on:click="executeCode" class="btn btn-primary btn-execute">Submit Code</button>
             <div class="output-label">
                 <h5>Progam Output:</h5>
                 <p id="outputtime">{{ this.output.time }}</p>

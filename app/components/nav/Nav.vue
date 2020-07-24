@@ -10,7 +10,7 @@
                 </div>
 
                 <div class="md:hidden">
-                    <button @click="isOpen = !isOpen" type="button" class="text-gray-200 focus:text-white focus:outline-hidden">
+                    <button @click="isOpen = !isOpen" type="button" aria-label="expand mobile menu" class="text-gray-200 focus:text-white focus:outline-hidden">
                         <svg class="block h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path v-if="!isOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                             <path v-if="isOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -21,7 +21,7 @@
 
             <div :class="isOpen ? 'block' : 'hidden'" class="md:block md:flex">
                 <a class="font-semibold text-white block py-4 px-4 sm:py-6 hover:bg-gray-800" href="/courses/">📹 Courses</a>
-                <button @click="isSecondMenuOpen = !isSecondMenuOpen" class="font-semibold text-white block py-4 px-4 sm:py-6 hover:bg-gray-800" :class="isSecondMenuOpen ? 'bg-gray-800' : ''" href="/tutorials/">📚 Tutorials</button>
+                <button @click="isSecondMenuOpen = !isSecondMenuOpen" aria-label="expand tutorial menu" class="font-semibold text-white block py-4 px-4 sm:py-6 hover:bg-gray-800" :class="isSecondMenuOpen ? 'bg-gray-800' : ''" href="/tutorials/">📚 Tutorials</button>
                 <a class="font-semibold text-white block py-4 px-4 sm:py-6 hover:bg-gray-800" href="/challenges/">🎯 Challenges</a>
                 <a class="font-semibold text-white block py-4 px-4 sm:py-6 hover:bg-gray-800" href="/projects/">⚒️ Projects</a>
                 <a class="font-semibold text-white block py-4 px-4 sm:py-6 hover:bg-gray-800" href="/search/">🔎 Search</a>

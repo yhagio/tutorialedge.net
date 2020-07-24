@@ -3,17 +3,17 @@
         <span class="question">Question</span>
         <h2 class="text-gray-700">{{ question }}</h2>
 
-        <button id="a" v-if="A" v-on:click="checkAnswer('A')">
+        <button aria-label="Check Answer A" id="a" v-if="A" v-on:click="checkAnswer('A')">
             <span v-bind:class="{selected: this.selected == 'A'}"> A </span>
             <span v-bind:class="computedStyle('A')"> {{ A }} </span>
         </button>
         
-        <button id="b" v-if="B" v-on:click="checkAnswer('B')">
+        <button aria-label="Check Answer A" id="b" v-if="B" v-on:click="checkAnswer('B')">
             <span v-bind:class="{selected: this.selected == 'B'}"> B </span>
             <span v-bind:class="computedStyle('B')"> {{ B }} </span>
         </button>
 
-        <button id="c" v-if="C" v-on:click="checkAnswer('C')">
+        <button aria-label="Check Answer A" id="c" v-if="C" v-on:click="checkAnswer('C')">
             <span v-bind:class="{selected: this.selected == 'C'}"> C </span>
             <span v-bind:class="computedStyle('C')"> {{ C }} </span>
         </button>

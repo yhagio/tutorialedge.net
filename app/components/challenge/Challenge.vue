@@ -16,7 +16,7 @@
 
         <div v-if="this.loggedIn" class="bg-white p-8 shadow">
 
-            <button v-on:click="executeCode" class="btn btn-primary btn-execute">Run Code...</button>
+            <button v-on:click="executeCode" aria-label="Run code" class="btn btn-primary btn-execute">Run Code...</button>
 
             <div v-if="this.response" role="alert">
                 <div class="output-label">

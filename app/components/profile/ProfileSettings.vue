@@ -17,7 +17,7 @@
             </label>
             <input v-model="this.user.email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="email">
 
-            <button class="btn btn-primary">Update Account</button>
+            <button aria-label="Update account" class="btn btn-primary">Update Account</button>
         </div>
 
         <div class="flex-1">

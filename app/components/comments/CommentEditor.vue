@@ -11,7 +11,7 @@
                 <textarea id="comment-editor" v-model="comment.body" placeholder="Leave a reply..."></textarea>
                 <br/>
                 <small>Markdown Enabled 😎</small>
-                <button id="comment" v-on:click="submitComment" class="btn btn-primary float-right">
+                <button id="comment" v-on:click="submitComment" aria-label="Submit comment" class="btn btn-primary float-right">
                     Submit 💬
                 </button>
             </div>

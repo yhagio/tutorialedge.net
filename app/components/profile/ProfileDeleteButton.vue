@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteAccount">
+        <button aria-label="open delete account popup" type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteAccount">
         Delete Account
         </button>
 
@@ -17,7 +17,7 @@
                         Are you sure you want to delete your account?
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-danger">Delete Account</button>
+                        <button aria-label="delete account" type="button" class="btn btn-danger">Delete Account</button>
                     </div>
                 </div>
             </div>
