@@ -9,7 +9,7 @@ series:
   - go-challenges
 image: golang.svg 
 tags:
-- go
+  - "Misc"
 language: go
 layout: challenge
 difficulty: Easy

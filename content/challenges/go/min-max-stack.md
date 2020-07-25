@@ -8,7 +8,7 @@ weight: 9
 series:
   - go-challenges
 tags:
-  - go
+  - "Data Structures"
 twitter: https://twitter.com/Elliot_F
 language: go
 layout: challenge

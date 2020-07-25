@@ -10,7 +10,7 @@ series:
 image: golang.svg 
 difficulty: Medium
 tags:
-- go
+  - "Math"
 language: go
 layout: challenge
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg

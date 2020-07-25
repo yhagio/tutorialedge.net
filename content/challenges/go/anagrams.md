@@ -9,7 +9,7 @@ series:
 difficulty: Easy
 image: 
 tags:
-- beginner
+  - "Misc"
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 

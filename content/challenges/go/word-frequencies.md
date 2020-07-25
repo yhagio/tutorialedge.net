@@ -10,7 +10,7 @@ series:
 image: golang.svg 
 difficulty: Easy
 tags:
-- go
+  - "Data Structures"
 language: go
 layout: challenge
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg

@@ -10,7 +10,7 @@ weight: 4
 series:
   - go-challenges
 tags:
-  - go
+  - "Data Structures"
 language: go
 layout: challenge
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg

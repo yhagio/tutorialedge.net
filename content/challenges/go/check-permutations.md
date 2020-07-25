@@ -14,7 +14,7 @@ image: golang.svg
 difficulty: Medium
 weight: 8
 tags:
-- beginner
+  - "Data Structures"
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 snippet: |
   package main
