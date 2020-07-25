@@ -7,7 +7,7 @@ weight: 1
 series:
   - go-challenges
 tags:
-  - go
+  - Language
 title: Challenge 01 - Type Assertions in Go
 twitter: https://twitter.com/Elliot_F
 language: go

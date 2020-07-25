@@ -7,7 +7,7 @@ twitter: https://twitter.com/elliot_f
 series:
   - go-challenges
 tags:
-  - go
+  - "Language"
 language: go
 layout: challenge
 difficulty: Medium

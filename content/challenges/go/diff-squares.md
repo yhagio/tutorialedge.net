@@ -7,7 +7,7 @@ weight: 19
 series:
   - go-challenges
 tags:
-  - go
+  - "Math"
 title: Challenge 19 - Calculating The Difference Between Squares 
 twitter: https://twitter.com/Elliot_F
 difficulty: Easy

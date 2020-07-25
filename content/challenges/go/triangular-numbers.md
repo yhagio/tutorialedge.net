@@ -7,7 +7,7 @@ weight: 20
 series:
   - go-challenges
 tags:
-  - go
+  - "Math"
 title: Challenge 20 - Finding the nth Triangular Number 
 twitter: https://twitter.com/Elliot_F
 difficulty: Easy

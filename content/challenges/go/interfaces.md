@@ -7,7 +7,7 @@ weight: 2
 series:
   - go-challenges
 tags:
-  - go
+  - Language
 title: Challenge 02 - Satisfying Interfaces in Go 
 twitter: https://twitter.com/Elliot_F
 difficulty: Easy

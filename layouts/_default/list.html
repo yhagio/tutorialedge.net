@@ -22,6 +22,13 @@
 				<div class="px-6 py-4">
 					<div class="font-bold text-xl mb-2">{{ .Title }}</div>
 					<p class="text-gray-700 text-base">{{ .Params.desc }}</p>
+					<div class="flex justify-center mt-4">
+						{{ range .Params.tags }}
+							<div class="ml-4 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 rounded-full bg-orange-200 text-orange-700 text-gray-700">
+								{{ . }}
+							</div>
+						{{ end }}
+					</div>
 				</div>
 			</a>
 			{{ end }}

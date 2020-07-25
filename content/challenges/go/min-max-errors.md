@@ -7,7 +7,7 @@ weight: 7
 series:
   - go-challenges
 tags:
-  - go
+  - "Data Structures"
 title: Challenge 07 - Minimums, Maximums and Errors
 twitter: https://twitter.com/Elliot_F
 language: go

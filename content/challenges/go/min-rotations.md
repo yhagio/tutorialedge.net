@@ -7,7 +7,7 @@ twitter: https://twitter.com/elliot_f
 series:
   - go-challenges
 tags:
-  - go
+  - "Data Structures"
 language: go
 difficulty: Medium
 image: golang.svg

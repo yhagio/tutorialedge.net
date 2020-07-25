@@ -9,7 +9,7 @@ difficulty: Easy
 series:
   - go-challenges
 tags:
-  - go
+  - "Math"
 twitter: https://twitter.com/Elliot_F
 language: go
 layout: challenge
