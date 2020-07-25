@@ -110,3 +110,18 @@
         transition: border 250ms ease 0s;
     }
 }
+
+.filename {
+    background: #f2f6fa;
+    padding: .7rem 1rem .75rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.filename+.highlight>pre {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    margin-top: 0;
+}
