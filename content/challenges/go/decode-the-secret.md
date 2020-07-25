@@ -11,6 +11,7 @@ tags:
 language: go
 layout: challenge
 difficulty: Medium
+image: golang.svg
 weight: 17
 tags:
 - beginner
