@@ -3,9 +3,9 @@
 <div class="bg-gray-800 py-4 px-16 text-center text-white">
     <h1 class="flex mx-auto">
         {{ if .Params.image }}
-        <img class="w-16 h-auto" src="https://images.tutorialedge.net/images/{{ .Params.image }}" alt="{{ .Title }} Image">
+        <img class="w-16 h-16" src="https://images.tutorialedge.net/images/{{ .Params.image }}" alt="{{ .Title }} Image">
         {{ else }}
-        <img class="w-16 h-auto" src="https://images.tutorialedge.net/images/logo.svg" alt="{{ .Title }} Image">
+        <img class="w-16 h-16" src="https://images.tutorialedge.net/images/logo.svg" alt="{{ .Title }} Image">
         {{ end }}
         <span class="text-3xl ml-8 mt-3">{{.Title}}</span>
     </h1>
@@ -22,7 +22,7 @@
     <div class="flex justify-between mb-8">
       <span class="flex">
         {{ if .Params.authorImage }}
-          <img class="w-8 h-auto mr-4 rounded" src="{{ .Params.authorImage }}" alt="{{ .Params.author }}" />
+          <img class="w-8 h-8 mr-4 rounded" src="{{ .Params.authorImage }}" alt="{{ .Params.author }}" />
         {{ end }}
         <a href="{{.Params.twitter }}" class="mt-1 text-sm text-gray-800">{{ .Params.author }}</a>
       </span>

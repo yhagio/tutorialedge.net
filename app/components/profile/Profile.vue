@@ -5,7 +5,7 @@
         <div v-if="loaded">
             <div class="bg-gray-800 px-16 py-8 flex text-white">
                 <div class="flex-1 flex">
-                    <img class="rounded w-32 h-auto mr-8" v-bind:src="user.picture" alt="Profile Picture">
+                    <img class="rounded mt-16 sm:mt-0 w-16 h-16 sm:w-16 sm:h-16 mr-8" v-bind:src="user.picture" alt="Profile Picture">
                     <div>
                         <h2 class="text-2xl text-white mt-2">Profile: {{ this.user.name }}</h2>
 
