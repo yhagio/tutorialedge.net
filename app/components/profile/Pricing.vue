@@ -2,19 +2,16 @@
     <div>
         <div class="pricing-top-bar">
             <div class="mx-auto">
-                <h1>Upgrade Account 🚀</h1>
-                <p>Premium courses designed to help you solve real-world problems and gain the experience necessary to reach the next level.</p>
+                <h1>Sponsorship + Account Upgrade 🚀</h1>
             </div>
         </div>
 
-        <div v-if="this.discount" class="bg-gray-200 px-4 py-8">
-            <div class="mx-auto text-center">
-                <!-- <div class="flag">
-
-                </div> -->
-                <!-- <h2>🎉 Discount Code 🎉 - I've noticed you are coming from 🏴󠁧󠁢󠁳󠁣󠁴󠁿 based on your account information. I support <b>Purchasing Power Partiy</b> and want to make the educational content affordable to everyone across the globe. If you need it use the code: <b>SCOTLANDLOVE</b> to get 38% off your subscription!</h2> -->
-                <h2 class="text-3xl">🎉 Launch Discount Code 🎉</h2>
-                <p>Use the code: <b>CODECLAN</b> to get <b>50% off</b> subscriptions!</p>
+        <div class="p-8 px-16 bg-white">
+            <div class="w-4/5 mx-auto">
+                <h3 class="text-xl text-gray-900 mb-4">About Me</h3>
+                <p class="text-gray-800">👨‍💻 My name is Elliot Forbes and I build free programming courses, tutorials and videos for <b>everyone!</b> The dream is being able to work on building out more comprehensive courses, interactive quizzes and video tutorials for everyone. This can only be achieved through your help and support!</p>
+                <p class="text-gray-800 mt-4">🙏 If my work has helped you in any capacity and you are able to help support more tutorials and more content, a monthly contribution helps to bring this one step closer!</p>
+                <p class="text-gray-800 mt-4">😎 Not everyone has the means to be able to support me through sponsorships. If this is the case, reach out to me - support '@' elliotforbes.co.uk and I can upgrade your account <b>free of charge</b> to give you access to the growing list of premium videos and courses on the site! 💪</p>
             </div>
         </div>
 
@@ -24,34 +21,30 @@
 
                     <div class="price-box">
                         <div class="title">
-                            <h2 class="text-gray-800"><small>$9.99/month</small><br/>Full Access</h2>
-                            <small>Supporting Purchasing Power Parity</small>
+                            <h2 class="text-gray-800"><small>$1.99/month</small><br/>Monthly Sponsorship</h2>
                         </div>
                         <div class="perks">
-                            <h4>Rewards</h4>
                             <ul class="mb-8">
                                 <li>Unlimited Access To Premium Courses</li>
                                 <li>Take Part in Quizzes And Test Your Skills</li>
                                 <li>Have A Say In What We Cover Next</li>
                             </ul>
-                            <a class="btn btn-primary btn-signup block mt-4" @click='payMonthly'>Start 7-Day Free Trial 🚀 </a>
+                            <a class="btn btn-primary btn-signup block mt-4" @click='payMonthly'>Sponsor Now 🚀 </a>
                         </div>
                     </div>
 
                     <div class="price-box">
                         <div class="title">
-                            <h2><small>$99.99/year</small><br/>Full Access</h2>
-                            <small>Supporting Purchasing Power Parity</small>
+                            <h2 class="text-gray-800"><small>$19.99/year</small><br/>Yearly Sponsorship</h2>
                         </div>
                         <div class="perks">
-                            <h4>Rewards</h4>
                             <ul class="mb-8">
                                 <li>Unlimited Access To Premium Courses</li>
                                 <li>Take Part in Quizzes And Test Your Skills</li>
                                 <li>Have A Say In What We Cover Next</li>
-                                <li>Save 20%</li>
+                                <li>Thanks at the end of my YouTube videos!</li>
                             </ul>
-                            <a class="btn btn-primary block btn-signup mt-4" @click='payYearly'>Start 7-Day Free Trial 🚀 </a>
+                            <a class="btn btn-primary block btn-signup mt-4" @click='payYearly'>Sponsor Now 🚀 </a>
                         </div>
                     </div>
 
