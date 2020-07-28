@@ -7,7 +7,6 @@ const config = {
   responseType: "token id_token",
   scope: "openid profile user_metadata",
   apiBase: "https://x6prfq8k16.execute-api.eu-west-1.amazonaws.com/development",
-  // apiBase: 'https://api.tutorialedge.net/api',
   goApiUrl: "https://api-v2.tutorialedge.net",
   stripe: {
     pk: "pk_test_vzLRvltMJHJJ65YFypICxZrY",

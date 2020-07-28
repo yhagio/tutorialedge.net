@@ -15,7 +15,8 @@ import ChallengeHome from './components/challenge/ChallengeHome.vue';
 import HallOfFame from './components/halloffame/HallOfFame.vue';
 import Challenge from './components/challenge/Challenge.vue';
 import VideoPlayer from './components/video/VideoPlayer.vue';
-import Githubsvg from './components/misc/Githubsvg.vue';
+import Githubsvg from './components/misc/Githubsvg.vue'; 
+import ChallengeStats from './components/challenge/ChallengeStats.vue';
 import Navbar from './components/nav/Nav.vue';
 import config from 'environment';
 import Carbon from './components/misc/Carbon.vue'
@@ -61,6 +62,7 @@ var app = new Vue({
     Register,
     Navbar,
     Logout,
+    ChallengeStats,
     Snippet
   },
   created: function() {
