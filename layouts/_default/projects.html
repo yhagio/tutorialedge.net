@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 
 <div class="bg-gray-800 py-4 px-16 text-center text-white">
-    <h1 class="flex mx-auto">
+    <h1 class="flex mx-auto lg:w-4/5">
         {{ if .Params.image }}
         <img class="w-16 h-auto" src="https://images.tutorialedge.net/images/{{ .Params.image }}" alt="{{ .Title }} Image">
         {{ else }}
@@ -12,14 +12,14 @@
 </div>
 
 <div class="bg-white p-8">
-	<article class="prose max-w-none">
+	<article class="prose max-w-none w-4/5 mx-auto">
 		{{ .Content }}
 	</article>
 </div>
 
 <div class="article-list bg-gray-100">
 	<div class="max-w-screen-xl mx-auto">
-		<h3>Course Lessons</h3>
+		<h3 class="text-xl">Course Lessons</h3>
 
 		<div class="grid grid-cols-1 row-gap-10 md:grid-cols-3 md:col-gap-8">
 			{{ range .Pages }}
