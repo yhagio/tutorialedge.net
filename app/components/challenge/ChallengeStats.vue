@@ -3,7 +3,7 @@
         <div class="max-w-screen-xl mx-auto flex justify-between">
             <div class="bg-white w-full mr-4 px-8 py-8 rounded shadow">
                 <p class="text-sm">Complete</p>
-                <p class="text-3xl">495 Complete</p>
+                <p class="text-3xl">{{ this.challenges.length }}</p>
             </div>
             <div class="bg-white w-full mr-4 px-8 py-8 rounded shadow">
                 <p class="text-sm">Total Challenges</p>
@@ -14,6 +14,9 @@
 </template>
 
 <script>
+import axios from 'axios';
+import config from 'environment';
+
 export default {
     name: 'ChallengeStats',
     data: function() {
@@ -21,8 +24,15 @@ export default {
             challenges: []
         }
     },
-    // created: function() {
-    //     axios.get("")
-    // }
+    mounted: function() {
+        axios.get(config.apiBase + "/v1/challenges")
+            .then(resp => {
+                console.log(resp.data);
+                this.challenges = resp.data.challenges;
+            })
+            .catch(err => console.log(err));
+
+        console.log(this.challenges);
+    }
 }
 </script>
