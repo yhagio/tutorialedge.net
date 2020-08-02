@@ -16,7 +16,7 @@
 
         <div v-if="this.loggedIn" class="bg-white p-8 shadow">
 
-            <button v-on:click="executeCode" aria-label="Run code" class="btn btn-primary btn-execute">Run Code...</button>
+            <button v-on:click="executeCode" aria-label="Run code" class="btn btn-primary btn-execute mb-6">Run Code...</button>
 
             <div v-if="this.response" role="alert">
                 <div class="output-label">
@@ -39,15 +39,30 @@
                 </div>
 
                 <hr/>
-                
+
                 <div v-if="this.complete" class="complete text-center mt-4 mb-8">
-                    <h4 class="text-3xl mb-4 mt-8">🎉 Challenge Complete! 🎉</h4>
+                    <h4 class="text-3xl mb-4 mt-8">🎉 You Have Completed This Challenge! 🎉</h4>
 
                     <p>You have been awared <b>10 challenge points!</b></p>
                 </div>
             </div>
         </div>
-        <div class="p-4 rounded bg-white mt-10 shadow">
+
+        <div id="challenge-stats" class="px-8 py-8">
+            <div class="mx-auto flex justify-between">
+                <div class="bg-white w-full mr-4 px-8 py-8 rounded shadow">
+                    <p class="text-sm">Status</p>
+                    <p v-if="this.complete" class="text-3xl text-green-600">Completed</p>
+                    <p v-if="!this.complete" class="text-3xl text-red-600">Not Complete</p>
+                </div>
+                <div class="bg-white w-full mr-4 px-8 py-8 rounded shadow">
+                    <p class="text-sm">Times Completed</p>
+                    <p class="text-3xl">{{this.challenges.length}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-4 rounded bg-white shadow m-8 mr-10">
             <Carbon />
         </div>
     </div>
@@ -84,7 +99,7 @@ export default {
             output: "",
             loading: false,
             redirectTo: "",
-            challenges: {},
+            challenges: [],
             user: {},
             response: {},
             cmOptions: {
@@ -102,23 +117,26 @@ export default {
             this.loggedIn = true;
             this.user = this.$auth.getUser();
         }
+    
+        let resp = await axios({
+            url: config.apiBase + "/v1/challenges",
+            method: "get",
+            params: {
+                slug: window.location.pathname,
+            }
+        });
+ 
+        this.challenges = resp.data.challenges;
+
+        this.complete = this.challenges.find(challenge => {
+            return this.user.sub === challenge.sub
+        })
     },
     methods: {
         markdown: function(input) {
             return md({
                 html: true
             }).render(input)
-        },
-        getChallengeStats: async function() {
-            let resp = await axios({
-                url: config.apiBase + "/v1/challenges",
-                method: "get",
-                params: {
-                    slug: window.location.pathname,
-                }
-            });
-
-            this.challenges = resp.data;
         },
         testsPassed: function(tests) {
             if (tests === null || tests === undefined) {
