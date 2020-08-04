@@ -7,7 +7,7 @@
             </div>
             <div class="bg-white w-full mr-4 px-8 py-8 rounded shadow">
                 <p class="text-sm">Total Challenges</p>
-                <p class="text-3xl">20</p>
+                <p class="text-3xl">21</p>
             </div>
         </div>
     </div>
