@@ -1,7 +1,7 @@
 ---
-title: "Challenge 21 - Working with JSON"
+title: "Challenge 21 - JSON and Stock Dividends"
 date: 2020-08-02T21:08:18+01:00
-desc: In this challenge, you are going to be building a function that takes in two string values and checks to see if they are permutations of each other!
+desc: In this challenge, you are going to need to work with JSON strings and parse JSON in Go in order to retrieve the highest dividend stocks!
 author: Elliot Forbes
 twitter: https://twitter.com/elliot_f
 series:
@@ -11,7 +11,6 @@ tags:
 language: go
 layout: challenge
 image: golang.svg
-draft: true
 difficulty: Medium
 weight: 21
 tags:
@@ -27,54 +26,52 @@ snippet: |
   }
 
   type Stock struct {
-    Ticker string `json:"ticker"`
-    Dividend int `json:'dividend"`
+    Ticker   string `json:"ticker"`
+    Dividend int    `json:'dividend"`
   }
 
   // HighestDividend iterates through a JSON string of stocks
-  // unmarshalls them into a struct and returns the Stock with 
+  // unmarshalls them into a struct and returns the Stock with
   // the highest dividend
-  func HighestDividend(json str) (Stock, error) {
+  func HighestDividend(json string) string {
     // implement me
+    return ""
   }
 
   func main() {
     fmt.Println("Stock Price AI")
 
-    stocks_json := "adcme"
+    stocks_json := `[
+      {"ticker":"APPL","dividend":0.5},
+      {"ticker":"GOOG","dividend":0.2},
+      {"ticker":"MSFT","dividend":0.3}
+    ]`
 
     highestDividend, _ := HighestDividend(stocks_json)
     fmt.Println(highestDividend)
   }
 tests:
   - name: main_test
-    test: TestCheckPermutations
+    test: TestHighestDividend
     code: |
       package main
 
       import "testing"
 
-      type Test struct {
-        str1     string
-        str2     string
-        expected bool
-        throws   bool
-      }
+      func TestHighestDividend(t *testing.T) {
+        stocks_json := `[
+            {"ticker":"APPL","dividend":0.5},
+            {"ticker":"GOOG","dividend":0.2},
+            {"ticker":"MSFT","dividend":0.3}
+        ]`
 
-      func TestCheckPermutations(t *testing.T) {
-        tests := []Test{
-          Test{str1: "abc", str2: "bca", expected: true},
-          Test{str1: "cda", str2: "abc", expected: false},
-        }
+        expected := "APPL"
+        result := HighestDividend(stocks_json)
 
-        for _, test := range tests {
-          result := CheckPermutations(test.str1, test.str2)
-          if result != test.expected {
-            t.Fail()
-          }
+        if expected != result {
+          t.Fail()
         }
       }
-
 
 ---
 
@@ -82,18 +79,18 @@ tests:
 
 # Example
 
+```bash
+[
+  {"ticker": "APPL", "dividend": 0.5},
+  {"ticker": "MSFT", "dividend": 0.2}
+]
 
-<details><summary>Hints</summary>
-
-Possible hints
-
-</details>
-
-<Quiz question"How can we optimize this function so that it is not performing unnecessary calculations?" answer="We can implement all of the above checks to ensure that the function only does what it has to before returning the correct answer" correct="C" A="We can check the length of each string at the start of the function and return false if they differ" B="We can use maps to efficiently lookup perviously encountered characters" C="All of the Above" />
+# HighestDividend returns "APPL"
+```
 
 # See the Solution
 
-Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 21 - Working with JSON](https://discuss.tutorialedge.net/t/challenge-08-checking-permutations/25/2) 
+Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 21 - Working with JSON](https://discuss.tutorialedge.net/t/challenge-21-json-and-stock-dividends/63) 
 
 ## Further Reading:
 
