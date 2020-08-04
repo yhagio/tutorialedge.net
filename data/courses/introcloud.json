@@ -1,0 +1,38 @@
+{
+    "Frontend": {
+        "name": "Fundamentals",
+        "weight": 1,
+        "articles": [
+            {
+                "title": "Course Overview",
+                "state": "published",
+                "url": "/courses/intro-to-cloud/"
+            },
+            {
+                "title": "IaaS vs PaaS vs SaaS vs FaaS",
+                "state": "published",
+                "url": "/courses/intro-to-cloud/iaas-paas-saas/"
+            },
+            {
+                "title": "Public vs Private",
+                "state": "published",
+                "url": "/courses/intro-to-cloud/public-vs-private/"
+            },
+            {
+                "title": "Load Balancers Overview",
+                "state": "published",
+                "url": "/courses/intro-to-cloud/load-balancers/"
+            },
+            {
+                "title": "Deployment Practices",
+                "state": "published",
+                "url": "/courses/intro-to-cloud/deployment-practices/"
+            },
+            {
+                "title": "Auto Scalars",
+                "state": "published",
+                "url": "/courses/intro-to-cloud/auto-scalars/"
+            }
+        ]
+    }
+}

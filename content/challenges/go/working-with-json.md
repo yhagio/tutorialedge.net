@@ -11,6 +11,7 @@ tags:
 language: go
 layout: challenge
 image: golang.svg
+draft: true
 difficulty: Medium
 weight: 21
 tags:

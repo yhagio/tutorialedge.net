@@ -5,5 +5,12 @@
         "desc": "Building a SaaS WebSite with React.js and Node.js - Under Construction",
         "url": "/courses/ogimg-dev/frontend-01/",
         "tech": ["React.js", "Node.js", "Docker", "AWS"]
-    }   
+    },
+    "introcloud": {
+        "img": "https://images.tutorialedge.net/images/cloud.svg",
+        "title": "Introduction To Cloud Engineering",
+        "desc": "Everything you need to get started developing applications in the Cloud!",
+        "url": "/courses/intro-to-cloud/",
+        "tech": ["Cloud", "AWS"]
+    }
 }
