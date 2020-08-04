@@ -26,7 +26,7 @@ snippet: |
     Price int
   }
 
-  // SortByPrice sorts flights from lower to highest
+  // SortByPrice sorts flights from highest to lowest
   func SortByPrice(flights []Flight) []Flight {
     // implement
     return nil
