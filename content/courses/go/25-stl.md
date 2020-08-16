@@ -4,6 +4,7 @@ date: 2018-06-09T22:48:26+01:00
 desc: In this course tutorial, we are going to be getting started with the Go programming language!
 image: golang.svg
 paid: false
+draft: true
 series: gocourse
 tags:
   - gocourse
