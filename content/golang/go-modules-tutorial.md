@@ -18,21 +18,21 @@ to simplify the way you work with dependencies for your Go applications. We will
 how Go Modules work, and also what problems they solve for us, before finally going into developing a simple
 Go application which uses Go Modules.
 
-# Goals
+## Goals
 
 By the end of this tutorial:
 
 * You will have a solid understanding of Go Modules
 * You will be able to build a Go package which uses Go Modules
 
-# Prerequisites
+## Prerequisites
 
 In order to follow this tutorial, you will have to have the following:
 
 * You will need Go version 1.11+ installed on your development machine.
 * You will need an account on GitHub
 
-# Why Go Modules?
+## Why Go Modules?
 
 There has been a lot of turbulence in the dependency management space in the Go language
 over the last few years. We've seen tools such as `dep`, `godep`, `govendor` and a whole
@@ -60,7 +60,7 @@ application, `2` would be the **minor** version, and `3` would be the **patch** 
 > **Note** - You can find the original proposal for versioned Go modules here:
 > [Proposal: Version Go Modules](https://go.googlesource.com/proposal/+/master/design/24301-versioned-go.md)
 
-## The Problem
+### The Problem
 
 Imagine you are developing a Go service that has a number of key dependencies
 such as `package A`. Now, at the time of writing your service `package A` has
@@ -75,7 +75,7 @@ This is where versioning comes in to save the day. By using versioning, we can
 select the precise versions of a package or library that we wish to use and
 ensure that whenever we build our package, it always uses the specified version.
 
-# A Simple Example
+## A Simple Example
 
 In this part of the tutorial, we are going to build an simple Go package which
 will use Go Modules to handle dependencies.
@@ -121,7 +121,7 @@ Let's verify everything is working at this point by trying to run our simple Go 
 Hello World
 ```
 
-# Adding Dependencies To Your Project
+## Adding Dependencies To Your Project
 
 Now that we have a basic project initialized and using go modules, let's take this a step further
 and look at how we can introduce new dependencies into our codebase.
@@ -167,7 +167,7 @@ Hello World
 Awesome, we have been able to define a really simple Go application that uses Go modules and
 import an external dependency for use within said Go application!
 
-# Handling Major and Minor Versions
+## Handling Major and Minor Versions
 
 As it stands, when our application imports the package: `"github.com/elliotforbes/test-package"`, it'll
 import the latest version to start with. If we wanted fine grained control over what versions we import
@@ -201,7 +201,7 @@ our production environment. This again gives us greater confidence in what we ar
 ensures that when we finally push our application into production environments, it doesn't break
 catastrophically on us due to the underlying package changing without our knowledge.
 
-# Conclusion
+## Conclusion
 
 I hope that you enjoyed this tutorial and it has given you some insight into how
 you can use Modules within your own Go applications.

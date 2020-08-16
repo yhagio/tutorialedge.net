@@ -19,7 +19,7 @@ when your backend is burning and smoothly recover when it comes back online. In
 this article, you’ll learn about stability patterns, timeouts and the circuit
 breaker.
 
-# Timeouts
+## Timeouts
 
 You can never trust an API to work as expected, even if it is your own API. You
 should always expect everything that can go wrong to, well, go wrong. One of the
@@ -163,7 +163,7 @@ you automatically unsubscribe and allow your application to continue. Of course,
 your users will have to be warned in some way that the operation was
 unsuccessful.
 
-# Circuit breaker 
+## Circuit breaker 
 
 The timeout pattern is efficient at protecting the patience of your users and,
 ultimately, your Angular application. However, in the case that the API is not

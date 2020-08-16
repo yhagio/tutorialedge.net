@@ -25,11 +25,11 @@ commands within our Go applications.
 > found under the exec package:
 > [os/exec package](https://golang.org/pkg/os/exec/).
 
-# Prerequisites
+## Prerequisites
 
 * You will need Go version 1.11+ installed on your development machine. 
 
-# Cross Compatibility Issues
+## Cross Compatibility Issues
 
 Please note that some of these commands may not work on your operating system.
 If you are trying to write code that is compatible on multiple platforms then it
@@ -38,7 +38,7 @@ un-achievable then I recommend you add conditional logic to your program that
 executes a different system command depending on the system it's executing on
 top of.
 
-## Checking Current Operating System
+### Checking Current Operating System
 
 In order to check what operating system our code is running on we can use the
 runtime package and check the GOOS constant. This will return the operating
@@ -55,7 +55,7 @@ system target:
 > **Note -** The full list of GOOS variables can be found here:
 > [Sys Package](https://golang.org/pkg/runtime/internal/sys/#GOOS).
 
-# Implementation
+## Implementation
 
 > **Note -** I'm writing this tutorial on MacOS using commands that may not
 > necessarily work on Windows machines.
@@ -122,10 +122,10 @@ If we then attempt to run this, we should see the following:
 
 ```s
 $ go run main.go
-Command Successfully Executed # ls command
+Command Successfully Executed ## ls command
 main.go
 
-Command Successfully Executed # pwd command
+Command Successfully Executed ## pwd command
 /Users/elliot/Documents/Projects/elliotforbes/...
 ```
 
@@ -133,7 +133,7 @@ As you can see, both of the commands are successfully executed and we've managed
 to capture the output from these commands and subsequently output them within
 the context of our own Go program.
 
-## Passing in Arguments
+### Passing in Arguments
 
 Awesome, we've managed to get some really simple commands running, but how do we
 go about passing in arguments to these commands?
@@ -186,7 +186,7 @@ total 8
 > any number of trailing arguments, therefore, you can pass in as many arguments
 > to your initial command as you desire.
 
-# Conclusion
+## Conclusion
 
 So, in this tutorial, we looked at how we could leverage the `os/exec` package
 in Go to execute system commands within our Go programs.

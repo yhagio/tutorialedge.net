@@ -18,7 +18,7 @@ In this tutorial we are going to look at the `queue` data structure. We'll take
 a look at how this data structure can be used for various tasks and the various
 sort of things you can do with queues.
 
-# Introduction
+## Introduction
 
 The `queue` data structure is typically used in scenarios where you want things
 to be processed in the same order that they were inputted into a system.
@@ -42,7 +42,7 @@ into a `queue`. Worker threads within your application would then monitor this
 'third'
 ```
 
-# Conclusion
+## Conclusion
 
 Hopefully you found this article on the `queue` data structure useful! If you
 require further help then please feel free to let me know in the comments

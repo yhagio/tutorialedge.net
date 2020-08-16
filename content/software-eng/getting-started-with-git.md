@@ -14,7 +14,7 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 
 It cannot be understated how important source control systems are when it comes to developing software. If you are just getting started in the world of computer programming then it is absolutely crucial that you nail this fundamental skill so that you can actively contribute your own code to any projects you may become a part of.
 
-# Introduction
+## Introduction
 
 In this tutorial, we are going to step through some of the absolute basics when it comes to working with Git and source control systems so that you can start to create your own projects.
 
@@ -27,11 +27,11 @@ We are going to cover the following:
 
 By the end of this tutorial, you should be confident and capable of pulling down Open Source repositories from GitHub using the `git` CLI and making Pull Requests back into said repositories.
 
-# The Fundamental Concepts
+## The Fundamental Concepts
 
 Let's dive into some of the fundamental concepts surrounding `git` that will highlight exactly why these source controls systems are needed in everyday development life for developers.
 
-## Why Is It Needed?
+### Why Is It Needed?
 
 Imagine you were working on a team of people in a room on a simple project. How would you go about ensuring everyone could work on the project at the same time whilst ensuring that each developer isn't stepping on the toes of another developer by changing their code?
 
@@ -43,7 +43,7 @@ Thankfully, this is where git, and more specifically source control systems, com
 
 Source control systems such as git help us to orchestrate how developers can make changes to shared projects. They take away most of the hassle when it comes to merging in any changes you have made into the current latest version of the code, this is often referred to as the `master` copy or `branch`.  
 
-## Basic Structure
+### Basic Structure
 
 Let's break down some of the concepts of git into separate pieces:
 
@@ -59,17 +59,17 @@ Let's break down some of the concepts of git into separate pieces:
 
 This is quite a lot to take in, but don't worry! We will be covering each in more detail very shortly!
 
-# Challenge - Making an Open Source Change
+## Challenge - Making an Open Source Change
 
 > I'm a great believer in learning through doing, so, if you wish you can follow allow these steps to practice the concepts you have just been taught. In this challenge, you will `fork` a `repository` that I have created and make a few minor changes to the code within this `repository`. 
 
 You will then `commit` these changes locally and `push` them up to your own `forked` version and finally you will submit a `pull request` into the original location!
 
-## Step 1 - Cloning
+### Step 1 - Cloning
 
 The first action we are going to take is to `clone` down the repository and then 
 
-## Step 2 - Making Changes
+### Step 2 - Making Changes
 
 Now that we have this repository on our local machine, it's time to make a few simple changes to the code. 
 
@@ -117,11 +117,11 @@ After this point, I, as the repository owner, will get a notification saying tha
 
 
 
-# Conclusion
+## Conclusion
 
 So, in this tutorial, we have covered the absolute basics of `git` and source control. We have been able to learn some of the basic git commands needed to get up and running and we've also been able to try our hand at a practical example of
 
-## Further Reading:
+### Further Reading:
 
 If you enjoyed this article then you may also enjoy some of my other articles on the site:
 

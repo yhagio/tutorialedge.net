@@ -15,7 +15,7 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
  
 Interviews are hard, and job-hunting is often a time-consuming and miserable experience for most people. This article will hopefully help you to nail that next Go job interview by giving you some practice and insight into some of the most common questions interviewers might ask when you are going for an interview.
 
-# Question 1
+## Question 1
 
 > What is the difference between a pointer receiver and a reference receiver function?
 
@@ -23,16 +23,16 @@ Hello
 
 >! answer
 
-# Question 2
+## Question 2
 
-# Question 3
+## Question 3
 
-# Question 4
+## Question 4
 
-# Question 5
+## Question 5
 
 
-# Conclusion
+## Conclusion
 
 > **Note -** If you want to keep track of when new Go articles are posted to the
 > site, then please feel free to follow me on twitter for all the latest news:

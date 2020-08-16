@@ -18,7 +18,7 @@ In this tutorial we are going to look at the `set` data structure in computer
 science and how you can leverage it within your applications. We'll be covering
 this concept using the Python programming language.
 
-# Sets in Mathematics
+## Sets in Mathematics
 
 Understanding Sets and basic Set Theory in Mathematics is a fundamental skill.
 The idea of a _Set_ has been translated directly from mathematics into
@@ -32,7 +32,7 @@ _Sets_ aren't just a fundamental skill in Mathematics, throughout your
 programming career you will likely encounter a wide number of different problems
 that can be far more easily solved with the use of Sets.
 
-# Introduction
+## Introduction
 
 A `set` is a data structure that can store any number of `unique` values in any
 order you so wish. Set's are different from
@@ -65,7 +65,7 @@ This can also be used for strings:
 {'r', ' ', 'a', 'i', 't', 'e', 'l', 'd', 'y', 'o', 's', 'n', 'm', 'h', ',', 'w'}
 ```
 
-# Adding Values to Sets
+## Adding Values to Sets
 
 When you try to add values to a `set` in Python, it will only insert the value
 if that value does not already exist within the set:
@@ -91,7 +91,7 @@ unique values from a list of any size:
 {1, 2, 3, 4, 5, 6, 7} # prints out only the unique values
 ```
 
-# Conclusion
+## Conclusion
 
 Hopefully you found this article on the `set` data structure useful! If you
 require further help then please feel free to let me know in the comments

@@ -21,7 +21,7 @@ By the end of this tutorial, we will have covered the following topics:
 - Mounting Volumes in Docker
 - Auto-build on changes
 
-# Our Basic Go Program
+## Our Basic Go Program
 
 For the purpose of this tutorial, we'll be using the code from my
 [go WebServer tutorial](/golang/creating-simple-web-server-with-golang/)
@@ -51,29 +51,29 @@ func main() {
 }
 ```
 
-# A Simple Example
+## A Simple Example
 
 Let's start by creating a simple `Dockerfile` that will allow us to run a very
 simple Go program that runs on port 8080.
 
 ```dockerfile
-# All Dockerfiles start from a base image
-# you want to choose as lightweight a base
-# image to start with as possible
+## All Dockerfiles start from a base image
+## you want to choose as lightweight a base
+## image to start with as possible
 FROM golang:1.11.4-alpine
-# we create a directory within our docker image
-# that will contain all of the code for our app
+## we create a directory within our docker image
+## that will contain all of the code for our app
 RUN mkdir /app
-# We need to copy the current directory
-# into our /app directory
+## We need to copy the current directory
+## into our /app directory
 ADD . /app
-# we set our workdir
+## we set our workdir
 WORKDIR /app
-# We build our go application and
-# specify the name of the executable we
-# want to build
+## We build our go application and
+## specify the name of the executable we
+## want to build
 RUN go build -o main .
-# here we trigger our newly built Go program
+## here we trigger our newly built Go program
 CMD ["/app/main"]
 ```
 
@@ -112,7 +112,7 @@ Awesome, when this runs, you should see that our simple Go program kicks off
 successfully and we should see any output from our program streaming out in the
 terminal.
 
-# Mounting Volumes
+## Mounting Volumes
 
 Now that we've got a really simple example up and running, let's take a look at
 how we can construct a more complex Docker image that _mounts_ a particular
@@ -185,7 +185,7 @@ created `index.html` being served back to us.
 > **Try it Yourself -** Try updating the `index.html` file and changing the
 > `<h1/>` tag contents on `line 7`. Then refresh your browser window.
 
-# Conclusion
+## Conclusion
 
 So, in this tutorial, we covered how we can use Docker for fame and fortune when
 building your Go applications.

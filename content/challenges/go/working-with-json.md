@@ -81,7 +81,7 @@ You will need to implement the `HighestDividend` function so that it takes in a 
 
 Finally, you will need to return the string `ticker` for the stock that has the highest dividend. 
 
-# Example
+## Example
 
 ```bash
 [
@@ -89,14 +89,14 @@ Finally, you will need to return the string `ticker` for the stock that has the 
   {"ticker": "MSFT", "dividend": 0.2}
 ]
 
-# HighestDividend returns "APPL"
+## HighestDividend returns "APPL"
 ```
 
-# See the Solution
+## See the Solution
 
 Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 21 - Working with JSON](https://discuss.tutorialedge.net/t/challenge-21-json-and-stock-dividends/63) 
 
-## Further Reading:
+### Further Reading:
 
 If you enjoyed this challenge, you may also enjoy some of these other challenges:
 

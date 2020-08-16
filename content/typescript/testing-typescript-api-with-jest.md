@@ -22,7 +22,7 @@ In this tutorial, we'll be looking at how you can get a very simple test
 framework up and running for your TypesScript based API using the `jest` and
 `supertest` testing libraries.
 
-# Installation
+## Installation
 
 Now that we have gotten the `why?` out of the way, let's see how we can go about
 implementing our own testing framework:
@@ -72,7 +72,7 @@ in the above code snippet. This dictates where `jest` will be able to find our
 tests and in this case we've dictated they'll be within our `src/__tests__/`
 directory.
 
-# A Simple Test
+## A Simple Test
 
 Ok, so we've got the necessary libraries installed, how do we then go about
 using these to test our codebase?
@@ -97,7 +97,7 @@ In the above test suite we have used the `supertest` library to make a test
 request against our API endpoint `GET "/"`. This then awaits the response and
 tests this response to ensure it's what we expect.
 
-## Running our Tests
+### Running our Tests
 
 Now that we've got this test case written, let's try running our test suite by
 calling the following:
@@ -128,7 +128,7 @@ Excellent, we now have a running, incredibly simple testing framework that we
 can start to flesh out and use to test every other endpoint or function within
 our TypeScript based REST API.
 
-# Conclusion
+## Conclusion
 
 I hope you enjoyed this tutorial! If you found it useful and wish to learn more
 then please feel free to follow me on Twitter where I actively post new stuff:

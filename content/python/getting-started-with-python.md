@@ -14,7 +14,7 @@ weight: 1
 
 > This tutorial uses Python version 3.6
 
-# Introduction
+## Introduction
 
 In this course we’ll be taking a look at the absolute basics of the Python
 programming language and cover everything you need to get up and running
@@ -23,7 +23,7 @@ creating your own basic Python programs.
 The full text version of this course can be found by clicking on the Python
 Programming Course card on the homepage of my site.
 
-# Installing Python
+## Installing Python
 
 Let’s dive in. So before we can get started working with the Python programming
 language you’ll first need to install the latest version of Python onto your
@@ -43,7 +43,7 @@ Execute the python command now. This should open up Python’s interactive shell
 which allows you to quickly get up and running writing very small Python
 programs.
 
-# Our First Program
+## Our First Program
 
 To get us started and give us a feel for the language we are going to create a
 customary Hello World program that simply prints out hello world to the console.
@@ -66,7 +66,7 @@ will then read this and try to execute it to the best of its abilities. If
 everything has gone to plan then you should see `Hello World` successfully
 printed out below.
 
-# Conclusion
+## Conclusion
 
 Congratulations, you have embarked on your first step towards becoming a Python
 programmer and have successfully written and executed your first Python program.

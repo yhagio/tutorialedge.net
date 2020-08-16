@@ -15,7 +15,7 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 In this quick tutorial we are going to look at the various ways you can add
 images to your markdown content in hugo.
 
-# Markdown Annotation
+## Markdown Annotation
 
 The quickest and simplest way of adding images to your content would be to use
 markdown annotation. Place the image you want to display in your post within
@@ -25,7 +25,7 @@ your `static/` directory and then reference it in your markdown like so:
 ![image alt text](/my_image.png)
 ```
 
-# Using HTML Tags
+## Using HTML Tags
 
 In the situation where you need to add say a custom css class to the image then
 your second option is to simply use an `<img/>` tag within your markdown

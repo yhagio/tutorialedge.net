@@ -47,7 +47,7 @@ In this example we have a simple interface called `Flight` which we want to pret
 
 We can use the `json.MarshalIndent` function which takes in the `interface` we want to marshal as well as the `prefix` string and the `indent` string. In this example we don't use a prefix, but we do set the indent to 2 empty spaces.
 
-## Further Reading:
+### Further Reading:
 
 If you found this snippet useful, you may also like some of the other snippets on the site:
 

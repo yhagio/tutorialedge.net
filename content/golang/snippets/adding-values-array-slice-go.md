@@ -39,11 +39,11 @@ In this quick snippet, we are going to look at how you can add values to an arra
 
 In this example, we define an array of type `string` which contains a list of scientists. Below where we create this array we use the `append` function to then add `Hawkins` to the list of scientists.
 
-# The append Function
+## The append Function
 
 The `append` function is a built-in function which appends elements to the end of a slice. It takes care of allocating the underlying arrays should they need to be resized to accommodate any new elements and then returns the new slice.
 
-## Further Reading:
+### Further Reading:
 
 If you enjoyed this snippet, you may also enjoy some of the other work on the site:
 

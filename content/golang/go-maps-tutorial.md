@@ -16,13 +16,13 @@ In this tutorial, we are going to look at maps in Go and how you can use them to
 
 We are going to be covering just about everything you need to know about maps to get started using them within your own Go applications. We are going to be looking at all of the various ways you interact with maps in Go and by the end of this tutorial, you will be a master when it comes to using them.
 
-# The Map Data Structure
+## The Map Data Structure
 
 Maps are an incredibly useful data structure when you need incredibly quick key-value lookups. They are used in an incredibly diverse number of ways and they are an invaluable tool in any programmer's belt regardless of the underlying language used.
 
 > Maps in Go can be considered the equivalent of `dict` in Python, or `HashMap` in Java. 
 
-# Map Basic Syntax
+## Map Basic Syntax
 
 Maps in Go can be defined using the `map` keyword followed by a `key` type and a `value` type. These types can be any of the basic types that Go supports and you can initialise a new map in Go using the `make` keyword which takes in the map type.
 
@@ -45,7 +45,7 @@ mymap["mykey"] = 10
 fmt.Println(mymap["mykey"]) // prints out 10
 ```
 
-# Iterating over Keys and Values
+## Iterating over Keys and Values
 
 When it comes to retrieving values out of a map, we can use the `range` keyword and loop over `keys` and `values` like we would a normal `array` or `slice:`
 
@@ -68,7 +68,7 @@ for key := range mymap {
 }
 ```
 
-# Deleting Elements in a Map
+## Deleting Elements in a Map
 
 For deleting items from a map, we can use the builtin `delete` function which takes in a `map[key]` key and subsequently tries to delete the given value from the map. In the event that the key does not exist within the map, the `delete` call is a no-op which essentially means it does nothing.
 
@@ -79,7 +79,7 @@ delete(mymap["mykey"])
 fmt.Println("Value deleted from map")
 ```
 
-# Mapping Strings to Interfaces
+## Mapping Strings to Interfaces
 
 Maps in Go can be used for more than just mapping basic types to basic types. In more complex programs, you may need to map `string` to say an `interface`.
 
@@ -143,11 +143,11 @@ for key, service := range interfaceMap {
 
 This would subsequently print out the service keys and then call their respective `SayHi()` methods.
 
-# Conclusion
+## Conclusion
 
 Hopefully you enjoyed this tutorial on maps in Go and it has helped you out in some way! If you have any feedback or comments then I would love to hear them in the comments section below!
 
-## Further Reading:
+### Further Reading:
 
 Maps in Go can also be used when it comes to unmarshalling JSON and XML data into Go structs. If you want to see how they are used then I recommend checking out the following articles:
 

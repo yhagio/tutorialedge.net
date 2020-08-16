@@ -14,13 +14,13 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 
 Welcome all! In this tutorial, we are going to be taking a look at the spread operator in JavaScript and how you can use this in a variety of different ways in your own JavaScript applications.
 
-# A Simple Example
+## A Simple Example
 
 ```js
 let array = {...}
 ```
 
-# Conclusion
+## Conclusion
 
 > **Note -** If you want to keep track of when new Go articles are posted to the
 > site, then please feel free to follow me on twitter for all the latest news:

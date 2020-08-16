@@ -19,7 +19,7 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 In this tutorial we'll be exploring how one can create a socket.io based
 webserver in Python using the `socketio` module.
 
-# What are WebSockets?
+## What are WebSockets?
 
 WebSockets are an awesome bit of technology which enable us to do cool things
 such as perform real time communication between both a client and a server. They
@@ -40,7 +40,7 @@ a minute from all of our clients. By using WebSockets we can maintain a single
 TCP connection for all of our clients and simply send any stock updates over
 said TCP connection whenever we want to update our clients.
 
-# Installation & Requirements.txt
+## Installation & Requirements.txt
 
 We'll start by installing the `python-socketio` python package using `pip`:
 
@@ -51,7 +51,7 @@ $ pip install python-socketio
 > **Note -** If you don't already have `aiohttp` installed, you will have to
 > install it by again calling `pip install aiohttp`
 
-# Implementing a Server
+## Implementing a Server
 
 We'll be basing our `socket.io` server on an `aiohttp` based web server. You can
 find the source code to `aiohttp` here:
@@ -68,36 +68,36 @@ of type `message` and when these events occur it will then act upon said events.
 from aiohttp import web
 import socketio
 
-# creates a new Async Socket IO Server
+## creates a new Async Socket IO Server
 sio = socketio.AsyncServer()
-# Creates a new Aiohttp Web Application
+## Creates a new Aiohttp Web Application
 app = web.Application()
 # Binds our Socket.IO server to our Web App
-# instance
+## instance
 sio.attach(app)
 
-# we can define aiohttp endpoints just as we normally
-# would with no change
+## we can define aiohttp endpoints just as we normally
+## would with no change
 async def index(request):
     with open('index.html') as f:
         return web.Response(text=f.read(), content_type='text/html')
 
-# If we wanted to create a new websocket endpoint,
-# use this decorator, passing in the name of the
-# event we wish to listen out for
+## If we wanted to create a new websocket endpoint,
+## use this decorator, passing in the name of the
+## event we wish to listen out for
 @sio.on('message')
 async def print_message(sid, message):
-    # When we receive a new event of type
-    # 'message' through a socket.io connection
-    # we print the socket ID and the message
+    ## When we receive a new event of type
+    ## 'message' through a socket.io connection
+    ## we print the socket ID and the message
     print("Socket ID: " , sid)
     print(message)
 
-# We bind our aiohttp endpoint to our app
-# router
+## We bind our aiohttp endpoint to our app
+## router
 app.router.add_get('/', index)
 
-# We kick off our server
+## We kick off our server
 if __name__ == '__main__':
     web.run_app(app)
 ```
@@ -123,7 +123,7 @@ $ python3.6 main.py
 This means that it is successfully server our new WebSocket server and we can
 start working on the frontend and connecting that in to it.
 
-# A Sample Client Application
+## A Sample Client Application
 
 Now that we've implemented the server, let's implement a really clean and simple
 `index.html` page that we can serve. This will simply contain a single
@@ -173,7 +173,7 @@ HELLO WORLD
 Awesome, we have successfully managed to set up a really simple Socket.IO
 connection between both our Python backend and a simple HTML frontend!
 
-# Challenge - Two-Way Communication
+## Challenge - Two-Way Communication
 
 Now that we've implemented simple one-way communication from our frontend to our
 backend, let's try improve things a little by implementing two-way
@@ -201,8 +201,8 @@ version of our string back to the frontend:
 async def print_message(sid, message):
     print("Socket ID: " , sid)
     print(message)
-    # await a successful emit of our reversed message
-    # back to the client
+    ## await a successful emit of our reversed message
+    ## back to the client
     await sio.emit('message', message[::-1])
 ```
 
@@ -213,7 +213,7 @@ is then reversed and sent back to the frontend to be printed out in the browser!
 Awesome, we have successfully managed to implement full duplex communication
 over WebSockets using the socket.io library!
 
-# Conclusion
+## Conclusion
 
 So, in this tutorial, we managed to successfully implement a really simple
 WebSocket server using Python and `aiohttp`.

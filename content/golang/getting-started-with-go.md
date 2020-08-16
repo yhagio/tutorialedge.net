@@ -29,14 +29,14 @@ and running. Once you've got everything working correctly, we can start the rest
 of our journey learning the more complex aspects of the language such as
 functions, methods, and eventually things like concurrency and reflection.
 
-# Prerequisites
+## Prerequisites
 
 Before you can follow this article, you will need the following:
 
 * You will need Go installed on your development machine. If you need to install this
 you should check out the official download page: [Official Go Download](https://golang.org/dl/)
 
-# Getting Started
+## Getting Started
 
 Let's dive in with getting everything installed and writing an incredibly simple
 program to get our toes wet.
@@ -120,7 +120,7 @@ $ ./main
 > **Congratulations -** You have successfully written, run and compiled your
 > first Go application!
 
-# Conclusion
+## Conclusion
 
 So, in this simple tutorial, we managed to successfully start our journey into
 the world of Go development.

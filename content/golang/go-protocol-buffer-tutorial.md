@@ -26,11 +26,11 @@ By the end of this tutorial, you should be fairly comfortable with the basics
 and you'll subsequently be able to go out and build your own more advanced
 systems.
 
-# Video Tutorial
+## Video Tutorial
 
 <div style="position:relative;height:0;padding-bottom:43.59%"><iframe src="https://www.youtube.com/embed/NoDRq6Twkts?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="826" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 
-# The Protocol Buffer Data Format
+## The Protocol Buffer Data Format
 
 Protocol buffers, are essentially a data format, much like JSON or XML in the
 sense that they store structured data which can be serialized or de-serialized
@@ -82,7 +82,7 @@ representation may be similar at this scale, but when we start to consider
 scenarios where our data is larger than your standard "getting started" example,
 the savings start to ramp up.
 
-# A Simple Example
+## A Simple Example
 
 ```s
 & go get github.com/golang/protobuf
@@ -188,7 +188,7 @@ well in order for this to work:
 name:"Elliot" age:24
 ```
 
-# Nested Fields
+## Nested Fields
 
 Ok, so we've managed to get a fairly simple example up and running, but in the
 real-world, we will most likely have multiple nested fields within our message
@@ -288,7 +288,7 @@ Elliot
 2500
 ```
 
-# Conclusion
+## Conclusion
 
 So, in this tutorial, we had a good look at how you can get up and running with
 the protocol buffer data format within your own Go-based applications.

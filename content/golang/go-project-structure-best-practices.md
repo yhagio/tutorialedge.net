@@ -20,7 +20,7 @@ In this article, I will be presenting a range of options that you can choose fro
 
 > **Note** - When it comes to structuring your applications, there is no "once-and-done" approach. As your application evolves, so too must your method of structuring your project. 
 
-# Small Applications - Flat Structure
+## Small Applications - Flat Structure
 
 Every project starts out small and gradually grows arms and legs depending on how successful it is, or how much time developers are willing to contribute into it. 
 
@@ -37,14 +37,14 @@ Starting with a flat folder structure in these situations like the one outlined 
 
 Too often have I seen developers spending more time arranging and re-arranging their codebase at the early stages of their projects, before anything of real value has been delivered and ultimately it leads to longer feedback loops between you as a developer or team of developers and your intended audience.
 
-## Benefits
+### Benefits
 
 This flat folder structure is ideal when it comes to developing:
 
 * **Microservices** - tiny applications deployed in a distributed fashion that are built to do one thing, and one thing only.
 * **Small Tools and libraries** - Command line tools or small libraries that focus on doing a handful of tasks really well.
 
-## Examples of This Structure
+### Examples of This Structure
 
 Let's have a look at some examples of where this structure works:
 
@@ -53,7 +53,7 @@ Let's have a look at some examples of where this structure works:
 * **[go-yaml/yaml](https://github.com/go-yaml/yaml)** - Another very cool project that features a completely flat project structure. 
 
 
-# Medium/Large Sized Applications - Modularization
+## Medium/Large Sized Applications - Modularization
 
 As your projects grow in size and complexity, you'll quickly see it start to outgrow the flat structure which is when you should start to consider modularizing your codebase.
 
@@ -74,7 +74,7 @@ rest-api/
 - - common_utils.go
 ```
 
-## Examples of This Structure
+### Examples of This Structure
 
 Here are just a few Go projects that have adopted this structure. 
 
@@ -83,7 +83,7 @@ Here are just a few Go projects that have adopted this structure.
 * **[ipfs/go-ipfs](https://github.com/ipfs/go-ipfs)** - IPFS is a very cool peer-to-peer filesystem written in Go based off of previous systems such as Git and BitTorrent. Again, they've chosen to go for a modular approach when developing their system.
 * **[gohugoio/hugo](https://github.com/gohugoio/hugo)** - The very awesome framework which is currently used as the backend of this site!
  
-# Mature Projects
+## Mature Projects
 
 You will absolutely still see projects that adhere to the older project structure, but this is very much a byproduct of the time in which these applications were developed. 
 
@@ -94,19 +94,19 @@ Large applications such as Hashicorp's Terraform or Google's own Kubernetes tend
 
 This structure has worked exceptionally well and allowed the developers to deliver incredible value to the development community, however I think that as Go Modules start to become more prevalent, we will start to see a migration of these applications away from the more traditional structure and into a newer structure. 
 
-# Splitting Up Projects
+## Splitting Up Projects
 
 After a certain point, it may make sense to completely rip out certain parts of your project that make sense into separate repositories that have their own life cycle.  
 
 This will feature it's own set of drawbacks such as increased overhead when it comes to managing updates across your project's estate. However, it also means that your projects will be easier to digest for newcomers to the project who want to contribute and help. 
 
-# Conclusion
+## Conclusion
 
 Hopefully this article has helped you in your development efforts and given you some ideas when you start modeling your next Go project!
 
 These are my own findings based off my own personal development experience developing services and service brokers in my day job. Your own mileage may vary when using these structures but I would love to hear your own thoughts and tips on how you structure your Go applications in the comments section below!
 
-## Further Reading:
+### Further Reading:
 
 If you found this article useful, then you may also appreciate some of my other articles:
 

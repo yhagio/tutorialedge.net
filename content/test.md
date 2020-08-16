@@ -7,7 +7,7 @@ twitter: https://twitter.com/Elliot_F
 mermaid: true
 ---
 
-# Testing Main Branch
+## Testing Main Branch
 
 <Quiz question="Who Is The Best #Peep?" A="Elliot" B="Nadi" C="Donna" correct="A" answer="The correct answer is A" />
 
@@ -25,7 +25,7 @@ func main() {
 {{% /column %}}
 
 {{% column %}}
-## why hello
+### why hello
 
 This is an example 
 {{% /column %}}
@@ -52,7 +52,7 @@ precor perpetuum. Mitia fratremque oculis.
 
 Integrate $$\int x^3 dx$$
 
-## what is Markdown?
+### what is Markdown?
 
 see [Wikipedia](http://en.wikipedia.org/wiki/Markdown)
 
@@ -64,16 +64,16 @@ see [Wikipedia](http://en.wikipedia.org/wiki/Markdown)
 
 ---
 
-## usage
+### usage
 
 1. Write markdown text in this textarea.
 2. Click 'HTML Preview' button.
 
 ---
 
-## markdown quick reference
+### markdown quick reference
 
-# headers
+## headers
 
 _emphasis_
 
@@ -89,11 +89,11 @@ _emphasis_
 
 ---
 
-## changelog
+### changelog
 
 - 17-Feb-2013 re-design
 
-## Pone solaque quater in terra hac in
+### Pone solaque quater in terra hac in
 
 Geminae subita illo etiam interea, ergo argento aestum me fautrix et? Factus
 petis, summae, init suus tyranni, fuit faciem. Praedamque via, tum nescia,
@@ -111,7 +111,7 @@ Nostri mors: freta hanc timor notis posito in animam posset mihi exilio.
 | ```go 
 ```
 
-## Neve ipse
+### Neve ipse
 
 Tristis absolvere vates inque iunguntur intexto: voce animo sit meo humus alto
 erat condiderant. Possideat victor; albis auro **malas** quoque dominam medio

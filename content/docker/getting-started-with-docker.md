@@ -17,7 +17,7 @@ In this tutorial, we are going to be taking a look at what Docker is, why it's
 needed and how you can get up and running using Docker in your day-to-day
 development.
 
-# What Is Docker?
+## What Is Docker?
 
 Docker is a containerization technology that allows you to package up your
 application into something that will run everywhere that Docker can run.
@@ -30,7 +30,7 @@ version of the JVM that you need.
 By specifying only what your application needs, you end up with lightweight
 containers that can be scheduled and ran side-by-side.
 
-# Why Should You Use Docker?
+## Why Should You Use Docker?
 
 Imagine you were working in a development team that spanned across the world. In
 this team you were working on a number of different microservices that all
@@ -53,7 +53,7 @@ appropriate flags and your microservice would be started on your local machine.
 You would no longer have to spend hours trying to get everything just right and
 you could dive right into the codebase and start making changes.
 
-# Installation
+## Installation
 
 Docker can be installed by navigating to this page:
 [Docker Download](https://www.docker.com) and clicking the download button.
@@ -83,7 +83,7 @@ Options:
 ... and so on
 ```
 
-# A Simple Python Docker Application
+## A Simple Python Docker Application
 
 Let's have a shot at writing our own Docker based application that uses Python
 and serves a very simple REST API over port 3000.
@@ -139,7 +139,7 @@ Finally we specify the image we wish to build our container from by appending
 docker run --name "py36-account-service" -d -p 9000:80 py36-account-service
 ```
 
-# Benefits
+## Benefits
 
 The main benefits of Docker-izing the above Python program would be that if it
 is reliant on the particular version of Python we specified, another developer
@@ -148,7 +148,7 @@ simply have to have `docker` installed on their machine and then they would run
 that above `docker run` command and their service would start up and be exposed
 on port 9000.
 
-# Conclusion
+## Conclusion
 
 In this tutorial, we looked at what Docker is, and how you can use it to improve
 the way that you develop software. We created a really simple NodeJS project

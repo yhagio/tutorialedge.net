@@ -20,7 +20,7 @@ weight: 6
 In this tutorial, we are going to explore how we can use animations and
 transitions to make our VueJS web application really stand out from the crowd.
 
-# A Simple Transition
+## A Simple Transition
 
 Let's start of by creating a few very simple transitions, these will simply fade
 in when a certain condition is met. I was watching Mission Impossible whilst
@@ -83,7 +83,7 @@ transition or animation applied. If it does then these CSS transition classes
 will be added/removed at the appropriate time.
 
 
-# Full Component Source
+## Full Component Source
 
 This is the full source code for the component with simple transitions:
 
@@ -182,12 +182,12 @@ This is the full source code for the component with simple transitions:
 </style>
 ```
 
-# Conclusion
+## Conclusion
 
 That wraps up this tutorial! I hope you found it enlightening and educational!
 If you enjoyed it then please let me know in the comments section below!
 
-## Further Reading
+### Further Reading
 
 If you enjoyed this article then you may enjoy some of the other tutorials on our site:
 

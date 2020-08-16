@@ -16,7 +16,7 @@ We'll start off this course by setting up both of our projects. Once we've got
 the fairly boring setup out of the way, we can begin to add new functionality
 and build up our application and see some positive results!
 
-# Goals
+## Goals
 
 By the end of this part of the tutorial series, you will have:
 
@@ -26,7 +26,7 @@ By the end of this part of the tutorial series, you will have:
 With both of these achieved, you will then be able to start adding functionality
 to your real-time chat system in the following parts of the course. 
 
-# Prerequisites
+## Prerequisites
 
 In order to complete this tutorial series, you will need to meet the following 
 prerequisites.
@@ -38,7 +38,7 @@ prerequisites.
 * You will need a code editor such as Visual Studio Code, in which you can 
 develop this project.
 
-# Setting Up Our Go Project
+## Setting Up Our Go Project
 
 If you are familiar with Go, this step is fairly easy, we'll want to start off
 by creating a new directory called `backend` within our project directory.
@@ -70,7 +70,7 @@ generated two new files within your `backend/` directory. These should be the
 > check out the official Wiki page:
 > [Go Modules](https://github.com/golang/go/wiki/Modules)
 
-## Validating Everything Works
+### Validating Everything Works
 
 Once we've called `go mod init` within our `backend/` directory, we'll sanity
 check that everything is working as intended.
@@ -98,7 +98,7 @@ Chat App v0.01
 Awesome, if that worked successfully, we can then move on to setting up our
 Frontend application.
 
-# Setting Up Our React Frontend
+## Setting Up Our React Frontend
 
 Setting up our frontend is slightly more complex, we'll first start by creating
 another directory within the root of our project that we'll call `frontend`
@@ -142,7 +142,7 @@ README.md
 yarn.lock
 ```
 
-## Running Your ReactJS App Locally
+### Running Your ReactJS App Locally
 
 Now that you have successfully created your basic ReactJS application, it is time
 to test that everything is working as expected. Try running your application by
@@ -170,7 +170,7 @@ To create a production build, use yarn build.
 Perfect, you now have a basic ReactJS which can be extended in the next parts of this
 tutorial series.
 
-# Conclusion
+## Conclusion
 
 Awesome, you have now successfully setup both your frontend and your backend pieces of
 our project and we can get cracking on adding cool new functionality. 

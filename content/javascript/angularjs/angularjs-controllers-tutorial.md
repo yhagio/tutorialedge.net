@@ -20,7 +20,7 @@ twitter: https://twitter.com/Elliot_F
 > with Components</a> and see how you should use controllers within a component
 > based system.
 
-# Instantiating a Controller
+## Instantiating a Controller
 
 We’ll begin by creating a very simple controller that contains a function that
 we’ll call every time we click a button. We’ll also have a \$scope variable that
@@ -65,7 +65,7 @@ testApp.controller("testController", function($scope) {
 
 <p>Notice we’ve that we’ve added the ng-controller directive to our body html tag and added the name of our controller in there as well as added the ng-app directive to our outermost html tags. These two things are essential if we want this to run.</p>
 
-# Scope Inheritance
+## Scope Inheritance
 
 <p>One very useful thing to note is that we can effectively achieve scope inheritance due to the fact each new ng-controller instantiation creates a new child scope. This essentially allows us to access scope variables declared higher up in the hierarchy and this can be quite useful if you are wanting to achieve less code duplication etc.</p>
 

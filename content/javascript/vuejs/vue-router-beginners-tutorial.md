@@ -27,7 +27,7 @@ navigating through your application, you can fully control any behaviours you
 wish in terms of transitions and this tends to give your site a far more dynamic
 look and feel.
 
-# Installation
+## Installation
 
 In order to get started with the `vue-router` you will first have to include it
 within your Vue.JS project. This can be done by either adding the `<script>` tag
@@ -47,7 +47,7 @@ $ npm install vue-router
 > Full installation instructions can be found here:
 > [Vue-Router Installation Guide](https://router.vuejs.org/en/installation.html)
 
-# Simple Example
+## Simple Example
 
 In order for us to render a series of distinct pages within our Single Page
 Application we need to add the `<router-view/>` tag to our application. This
@@ -108,7 +108,7 @@ const app = new Vue({
 
 Ta-da! We now have VueJS routing with 2 very simple routes.
 
-## Navigating Our Routes
+### Navigating Our Routes
 
 Once we have defined our routes as well as our router, we need a method of
 traversing between these different routes. In order to do this, we can leverage
@@ -133,7 +133,7 @@ component within our `index.html`.
 When clicking on this we should see our application's `<router-view>` component
 change from rendering our `HomePageComponent` to our `SimpleComponent`.
 
-## Full Single-Page Sample
+### Full Single-Page Sample
 
 If we were to do this within a single `index.html` page then it would look
 something like so:
@@ -225,19 +225,19 @@ I threw in a bit of css for this one:
 }
 ```
 
-# Vue CLI Configuration
+## Vue CLI Configuration
 
 When using the `vue cli`, we can define that a router is set up for us on
 creation of our project.
 
-# Conclusion
+## Conclusion
 
 Hopefully, you found this tutorial helpful. We have managed to set up a simple
 VueJS application that features routing with several routes, each displaying
 differing components.
 
 
-## Further Reading
+### Further Reading
 
 If you enjoyed this article then you may enjoy some of the other tutorials on our site:
 

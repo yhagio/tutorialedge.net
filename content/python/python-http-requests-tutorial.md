@@ -28,7 +28,7 @@ Python.
 > If you want to know more about RESTful APIs then check out my article on
 > [What is a REST API?](/general/what-is-a-rest-api/)
 
-# Installing the requests library
+## Installing the requests library
 
 Before we can get started with the `requests` library we'll have to install it.
 This can be done using `pip` like so:
@@ -37,7 +37,7 @@ This can be done using `pip` like so:
 pip install requests
 ```
 
-# Making GET Requests
+## Making GET Requests
 
 As a means of example we'll be using the `pokeapi` that DigitalOcean have kindly
 put up for educational purposes. You can find the full link to the official
@@ -54,10 +54,10 @@ Open up a new Python file and add the following code:
 import requests
 
 def main():
-    # we define a request object that is equal to requests.get('API')
+    ## we define a request object that is equal to requests.get('API')
     req = requests.get('http://pokeapi.co/api/v2/pokemon/1/')
-    # we then print out the http status_code that was returned on making this request
-    # you should see a successfull '200' code being returned.
+    ## we then print out the http status_code that was returned on making this request
+    ## you should see a successfull '200' code being returned.
     print(req.status_code)
 
 if __name__ == '__main__':
@@ -101,7 +101,7 @@ HTTP Status Code: 200
 Pokemon Name: bulbasaur
 ```
 
-# Making POST Requests
+## Making POST Requests
 
 The requests library features methods for all of the `HTTP` verbs currently in
 use. If you wanted to make a simple `POST` request to an API endpoint then you

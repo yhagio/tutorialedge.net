@@ -22,7 +22,7 @@ tutorial such as creating a WebSocket server and using WebSockets to communicate
 in real-time with a frontend application, as well as how you can interact with
 an existing REST API to get the subscriber stats we need.
 
-# Goals
+## Goals
 
 By the end of this tutorial:
 
@@ -31,17 +31,17 @@ your own Go applications.
 * You will see how you can interact with the YouTube API to retrieve
 stats for your own YouTube channel. 
 
-# Prerequisites
+## Prerequisites
 
 * You will need Go version 1.11+ installed on your development machine. 
 
-# Video Tutorial
+## Video Tutorial
 
 If you prefer, this tutorial is available in video format here:
 
 {{< youtube id="n3BQLHtsrkM" autoplay="false" >}}
 
-# Getting Started
+## Getting Started
 
 First things first, we'll want to create a new directory to work in. We will call 
 this `youtube-stats/`.
@@ -117,7 +117,7 @@ browser and you should hopefully see `Hello World` printed out in the browser!
 
 Awesome, so we now have a solid base that we can build on top of!
 
-# The YouTube API
+## The YouTube API
 
 Being able to interact with the YouTube API is going to be a crucial part of
 this mini-project. In order to connect to this API, we'll need to first create a
@@ -130,7 +130,7 @@ project within the
 Once we have created a project, we can then create a new API Key within the
 credentials section of the developer dashboard.
 
-## API Endpoint
+### API Endpoint
 
 The API that we are going to be interacting with is the `channels/list` API
 which can be found here -
@@ -154,7 +154,7 @@ printing out in our terminal which contains everything we need!
 > wish I'd invested more time learning it when I just started my career. A
 > simple curl command can save you a lot of time debugging.
 
-## Authentication
+### Authentication
 
 So, as we are going to be using an API Key that is from our own personal Google
 accounts, we want to ensure that we aren't exposing these to the rest of the
@@ -173,7 +173,7 @@ $ export CHANNEL_ID=UCwFl9Y49sWChrddQTD9QhRA
 Now that we've done that, we can use the `os.Getenv()` function in order to
 retrieve these values whenever we need them in our code base.
 
-## Retrieving our Stats
+### Retrieving our Stats
 
 Now that we've got our API key, we've got an API that we can hit and we are
 seeing a 200 response from that API through curl, we can start coding up our
@@ -267,7 +267,7 @@ func GetSubscribers() (Items, error) {
 Awesome, we now have something that is able to hit the YouTube API in a
 self-contained package that we can reference in other parts of our project.
 
-# Setting up a WebSocket Endpoint
+## Setting up a WebSocket Endpoint
 
 The next step will be to expose the stats that we are able to retrieve from the
 YouTube API via a WebSocket endpoint.
@@ -354,7 +354,7 @@ func Writer(conn *websocket.Conn) {
 Now that we have that in place, we'll just need to create a new endpoint on our
 server to call these two functions and we should be good to go!
 
-# Our New Endpoint
+## Our New Endpoint
 
 Finally, we'll want to update our `main.go` file to expose our new WebSocket API
 endpoint. We'll do this by adding a new route to our `setupRoutes()` function
@@ -408,7 +408,7 @@ And that should be everything we need for our server to work! We can now try
 running this by calling `go run main.go` and it should kick off our server once
 again on `http://localhost:8080`.
 
-# The Frontend
+## The Frontend
 
 The final piece of the puzzle is the frontend. We'll be creating an incredibly
 simple frontend `index.html` page in this case just to highlight how you can
@@ -488,7 +488,7 @@ it connects to your server. Your server will then start calling the YouTube API
 every 5 seconds and will send the results back to your frontend `index.html` page
 for it to render out!
 
-# Conclusion
+## Conclusion
 
 In this tutorial, we covered a few cool topics such as WebSocket communication
 using the `gorilla/mux` package as well as handling JSON responses from an API.
@@ -500,7 +500,7 @@ then I'd love to hear them through the suggestions box below.
 If you want to support the work that I do then feel free to share my work with
 your friends and family! Every little bit helps! :)
 
-## Further Reading
+### Further Reading
 
 If you enjoyed this tutorial, then you may enjoy these other tutorials:
 

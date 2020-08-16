@@ -38,7 +38,7 @@ In this example, we have our `originalString` which we test to see if it contain
 
 We then use the same function to check a negative case and see if `meh` exists in the second string.
 
-## Further Reading:
+### Further Reading:
 
 If you liked this snippet, you make also like some of the other content on this site:
 

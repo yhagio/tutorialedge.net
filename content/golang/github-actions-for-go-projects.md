@@ -17,13 +17,13 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 Specifically, we are going to be taking a look at how you can build your own GitHub actions by starting off with a `"Hello World"` example and then ramping it up to more useful actions such as code linting and test coverage reporting!
 
 
-# 🎥 Video Tutorial
+## 🎥 Video Tutorial
 
 This tutorial is also available in video format!
 
 {{< youtube id="KVrL_UHJ7kQ" auto_play="false">}}
 
-# 🚀 What are GitHub Actions? 
+## 🚀 What are GitHub Actions? 
 
 GitHub actions have just recently become generally available to everyone with a repository on GitHub. 
 
@@ -31,7 +31,7 @@ They are an incredibly versatile tool that allows us to trigger code off the bac
 
 **For example**, whenever I make a change to the `master` branch of the repository for this website, GitHub actions automatically run through a series of jobs that build, and deploy the website into production as well as running through a number of checks to see if there are any broken links on the site and validating that the site is at least meeting the basic requirements around accessibility thanks to a lighthouse report generated.
 
-# 🧙 A Simple Action
+## 🧙 A Simple Action
 
 Let's start off by defining a simple GitHub action for one of our Go projects. 
 
@@ -57,7 +57,7 @@ jobs:
 {{% /column %}}
 
 {{% column %}}
-## Hello World Action
+### Hello World Action
 
 In this action, which we've called `Simple Job`. We have set this up so that every time you push a change to the `master` branch of your project, it will trigger the `Hello` job!
 
@@ -69,7 +69,7 @@ In this case, we have just defined 1 solitary step in this job which we've calle
 {{% /row %}}
 
 
-# Something more useful... Automatic Linting! 🤓
+## Something more useful... Automatic Linting! 🤓
 
 Now that we have a basic handle on building our own GitHub actions for our project, let's take it a step further and start defining some actions that will be genuinely useful to us as maintainers of Go projects.
 
@@ -110,7 +110,7 @@ Upon pushing this up to our GitHub repository, we should be able to see the work
 
 ![GitHub Actions Successful Run](https://images.tutorialedge.net/golang/successful-action.png)
 
-# 🧪 Platform and Version Matrix Builds
+## 🧪 Platform and Version Matrix Builds
 
 If you are working on a project that you have to test across multiple versions of Go or across multiple different architectures, then you can utilize the power of actions to aide you in your quest!
 
@@ -128,31 +128,31 @@ name: Test Across Matrix
 
 jobs:
   test:
-    # We want to define a strategy for our job
+    ## We want to define a strategy for our job
     strategy:
-      # this will contain a matrix of all of the combinations
-      # we wish to test again:
+      ## this will contain a matrix of all of the combinations
+      ## we wish to test again:
       matrix:
         go-version: [1.12.x, 1.13.x, 1.14.x]
         platform: [ubuntu-latest, macos-latest, windows-latest]
     
-    # Defines the platform for each test run
+    ## Defines the platform for each test run
     runs-on: ${{ matrix.platform }}
     
-    # the steps that will be run through for each version and platform
-    # combination
+    ## the steps that will be run through for each version and platform
+    ## combination
     steps:
-    # sets up go based on the version
+    ## sets up go based on the version
     - name: Install Go
       uses: actions/setup-go@v2
       with:
         go-version: ${{ matrix.go-version }}
 
-    # checks out our code locally so we can work with the files
+    ## checks out our code locally so we can work with the files
     - name: Checkout code
       uses: actions/checkout@v2
     
-    # runs go test ./...
+    ## runs go test ./...
     - name: Test
       run: go test ./...
 ```
@@ -165,11 +165,11 @@ You should be able to see the 9 jobs defined within our `3x3` matrix running and
 
 Obviously I have a fair bit of work to do in this example project to get the tests passing across all versions and platforms, however, I have removed the manual toil needed to run these myself.
 
-# 🚢 Publishing Docker Images
+## 🚢 Publishing Docker Images
 
 The final action we are going to cover in this tutorial is a `publish` action which will take our committed code and then build a docker image from the `Dockerfile` within our project before then publishing it to Docker Hub. 
 
-## 🙈 Managing Secrets
+### 🙈 Managing Secrets
 
 In this task, we'll have to figure out a way expose secrets to our task in a secure way. Thankfully, GitHub makes this easy for us and allows us to add secrets to each individual repository through the `settings` tab.
 
@@ -179,7 +179,7 @@ With these in place, we can then pass them through to actions using `${{ secrets
 
 > **Note** - Take care when creating custom tasks that you don't echo our these secrets or have the `-x` flag set in bash scripts. This could lead to secrets leaking in ways that you don't expect.
 
-## 🛒 Using Predefined Marketplace GitHub Actions  
+### 🛒 Using Predefined Marketplace GitHub Actions  
 
 Now that we've covered passing secrets securely, we can now attempt to use these secrets with a pre-defined marketplace action that handles most of the complexity of publishing to Docker Hub for us. 
 
@@ -198,22 +198,22 @@ jobs:
   build-and-publish:
     runs-on: ubuntu-latest
     steps:
-    # checks out our project source code
+    ## checks out our project source code
     - uses: actions/checkout@v2
     
-    # Builds our docker image!
+    ## Builds our docker image!
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
 
-    # Publishes our image to Docker Hub 😎
+    ## Publishes our image to Docker Hub 😎
     - name: Publish to Registry
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
-        # the name of our image
+        ## the name of our image
         name: forbsey/go-api
-        # Here we pass in our Docker Username
+        ## Here we pass in our Docker Username
         username: ${{ secrets.DOCKER_USERNAME }}
-        # and our Docker password which 
+        ## and our Docker password which 
         password: ${{ secrets.DOCKER_PASSWORD }}
 ```
 
@@ -221,13 +221,13 @@ If we commit this with our secrets set within our repository, we should see that
 
 Perfect! We now have a fully functional `publish` action which will build and publish our Docker image for us up to Docker Hub from which we can now deploy to our hearts content!
 
-# Conclusion
+## Conclusion
 
 Awesome! 😎 So, in this tutorial, we have successfully created a number of very useful GitHub actions around one of our Go GitHub repositories!
 
 This is by no means an exhaustive list, but hopefully it highlights just how powerful GitHub actions can be when added to your own projects!
 
-## Further Reading:
+### Further Reading:
 
 If you found this article useful, you may also like some of these other articles on the site:
 

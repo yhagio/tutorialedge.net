@@ -23,13 +23,13 @@ can be a great method for authentication in some web apps.
 > Check out my AngularJS 1.\* tutorial on
 > [storing information in cookies](/javascript/angularjs/angularjs-store-cookies-tutorial/)
 
-# Limitations of Cookies
+## Limitations of Cookies
 
 Typically we can only store no more than 20 cookies per web server and no more
 than 4KB of information in each cookie and they can last indefinitely should you
 choose to specify the max-age attribute.
 
-# Setting Up
+## Setting Up
 
 In order to play about with cookies in Angular 2 we’ll have to install the
 `angular2-cookie` library by typing the following within our project:
@@ -41,7 +41,7 @@ npm install angular2-cookie --save
 This should download angular2-cookies to our project’s node_modules folder and
 also add it as a dependency to our project.
 
-# Implementation
+## Implementation
 
 Once we’ve successfully added angular2-cookie to our project we can set about
 using it. It’s recommended that you import the CookieService within your module
@@ -94,7 +94,7 @@ export class AppComponent {
 }
 ```
 
-# Setting Cookies
+## Setting Cookies
 
 In order to set cookies using this library we would have to use the following
 method:
@@ -106,7 +106,7 @@ method:
 this._cookieService.put("test", "test");
 ```
 
-# Retrieving Cookies
+## Retrieving Cookies
 
 Once we have successfully set a cookie, we can then retrieve that same cookie by
 using the `.get(cookie)` method like so:
@@ -116,7 +116,7 @@ using the `.get(cookie)` method like so:
 this._cookieService.get("test");
 ```
 
-# Conclusion
+## Conclusion
 
 If you found this tutorial useful or need further information on working with
 cookies in Angular 2 then please let me know in the comments section below.

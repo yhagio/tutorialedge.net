@@ -1,0 +1,48 @@
+{{ partial "header.html" . }}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.56.0/codemirror.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.56.0/theme/dracula.min.css">
+
+<div class="bg-gray-800 py-8 px-16 text-center text-white">
+    <h1 class="flex mx-auto">
+        {{ if .Params.image }}
+        <img class="w-16 h-auto" src="https://images.tutorialedge.net/images/{{ .Params.image }}"
+            alt="{{ .Title }} Image">
+        {{ else }}
+        <img class="w-16 h-auto" src="https://images.tutorialedge.net/images/logo.svg" alt="{{ .Title }} Image">
+        {{ end }}
+        <span class="text-3xl ml-8 mt-3">{{.Title}}</span>
+    </h1>
+</div>
+
+<div class="container-fluid">
+    <div class="grid md:grid-cols-2">
+
+        <div class="flex-none h-auto rounded bg-gray-200">
+            <Challenge language="{{ .Params.language }}" code="{{ .Params.snippet }}"
+                tests="{{ jsonify .Params.tests }}" />
+        </div>
+
+        <div class="flex-1 w-full p-8 md:p-16">
+            <article class="prose mx-auto">
+                {{ .Content }}
+
+                <div class="clear"></div>
+
+                <hr />
+
+                <h3>Next Lessons</h3>
+                {{ partial "next-prev.html" . }}
+
+            </article>
+        </div>
+    </div>
+</div>
+
+<div class="blue-spacer"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.56.0/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.56.0/mode/go/go.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.56.0/mode/go/go.min.js"></script>
+
+
+{{ partial "footer.html" . }}

@@ -16,7 +16,7 @@ title: Building a Blog with VueJS and AWS
 twitter: https://twitter.com/Elliot_F
 ---
 
-### Topics To Cover
+#### Topics To Cover
 
 Throughout this tutorial series, we are going to be covering a wide variety of
 different topics on both Vue.JS and the underlying AWS service

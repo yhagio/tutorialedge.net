@@ -37,7 +37,7 @@ snippet: |
 
 In order to do this, we are going to use the builtin function `delete` in order to remove an `key` from our `mymap` map.
 
-## Further Reading:
+### Further Reading:
 
 If you found this snippet useful, you may also enjoy some of the other articles on the site:
 

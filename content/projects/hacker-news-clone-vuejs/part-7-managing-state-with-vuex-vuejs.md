@@ -20,13 +20,13 @@ In this tutorial, we are going to be adding Vuex to our VueJS application. We'll
 be looking at how we can improve the performance of our application and persist
 data between route changes.
 
-# Why Vuex?
+## Why Vuex?
 
 Vuex is a state management pattern + library for Vue.js applications.
 Essentially, it acts as a centralized store for all components in an
 application.
 
-## Vuex Core Concepts
+### Vuex Core Concepts
 
 Before we continue to flesh out our VueJS application, we should really ground
 ourselves with the core concepts of Vuex. There are 5 main concepts we'll need
@@ -47,23 +47,23 @@ to get our heads round, `state`, `getters`, `mutations`, `actions`, and
 - _Modules_ : `modules` allow us to split our more complex application's state
   into a series of smaller components, thus simplifying our state.
 
-# Installing Vuex
+## Installing Vuex
 
 First things first, we will have to install `vuex` using our package manager of
 choice. As I've been using yarn for this series, I'll be using yarn to install
 this package.
 
 ```s
-# npm
+## npm
 $ npm install vuex
-# Yarn
+## Yarn
 $ yarn add vuex
 ```
 
 Once we have successfully installed `vuex` we can go ahead and start using this
 wonderful package.
 
-# Setting up a Store
+## Setting up a Store
 
 The first thing we need to do is to create a new directory `/src/store.js`. This
 will contain the code for our store that our application will rely upon.
@@ -111,7 +111,7 @@ export const store = new Vuex.Store({
 > any modules you may have into separate files and directories. Check out the
 > [official docs](https://vuex.vuejs.org/en/structure.html) for more on this.
 
-# Updating our main.js File
+## Updating our main.js File
 
 Now that we've created our basic vuex store, we need to ensure our Vue instance
 is using this newly defined store by adding it to our root instance in our
@@ -132,7 +132,7 @@ new Vue({
 }).$mount("#app");
 ```
 
-# Vuex Basics
+## Vuex Basics
 
 Now that we've set up our application to use our newly defined store, let's test
 to see if it all works. Open your `Home.vue` component file and then within your
@@ -154,7 +154,7 @@ comments etc.
 Create a new file, `actions.js` within your `/src/store/` directory. This is
 where we will define our `vuex` actions.
 
-# Updating our State
+## Updating our State
 
 We want to store both our `topStories` and our `newStories`, so we will need to
 not only update our `/src/store/index.js` to import the mutations file we will
@@ -179,7 +179,7 @@ export default new Vuex.Store({
 });
 ```
 
-# Defining our Mutations
+## Defining our Mutations
 
 We need to define a mutation that will update our `state`'s `topStories` and
 `newStories` arrays. These will simply take in an article and push said article
@@ -197,7 +197,7 @@ export default {
 };
 ```
 
-# Defining our Actions
+## Defining our Actions
 
 Now that we've defined our mutations, we need to add our `actions` that will use
 these `mutations`. We'll call these `fetch_top_stories` and `fetch_new_stories`
@@ -255,14 +255,14 @@ export default {
 };
 ```
 
-# Updating our Homepage.vue and our New.vue Components
+## Updating our Homepage.vue and our New.vue Components
 
 Now that we've defined everything we need with regards to our `actions`,
 `mutations` and `store`, it's time to update our `Home.vue` and `New.vue`
 components so that they retrieve the topStories from the store or trigger a
 `fetch_top/new_stories` action should the store not contain any stories.
 
-## New.vue component
+### New.vue component
 
 ```js
 data: function () {
@@ -276,7 +276,7 @@ created: function () {
 }
 ```
 
-## Homepage.vue component
+### Homepage.vue component
 
 ```js
 data: function () {
@@ -293,7 +293,7 @@ created: function () {
 Hopefully, you will agree, that by moving off our state management code into
 `vuex`, we have managed to greatly simplify some of our components.
 
-# Conclusion
+## Conclusion
 
 In this section of the course, we managed to add Vuex to our HackerNews clone
 application. This helped to improve the performance of our application by

@@ -28,7 +28,7 @@ snippet: |
 
 In this code snippet, we are going to take a look at how you can convert an `int` value in Go to a `float64` value.
 
-## Further Reading:
+### Further Reading:
 
 For more in-depth information as to how this works, please check out the following blog posts:
 

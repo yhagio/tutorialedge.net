@@ -23,7 +23,7 @@ RESTful Twitter API.
 > <a href="https://github.com/bear/python-twitter">Github: Bear's Python-Twitter
 > Wrapper</a>
 
-# Getting Started
+## Getting Started
 
 <p>To get started you will have to use the pip tool to install the Twitter library on your machine. To do so you can use the python pip package manager by typing the following into the terminal:</p>
 
@@ -33,11 +33,11 @@ pip install python-twitter
 
 <p>Full installation instructions can be found on the Readme.md file found on github if needed.</p>
 
-# Obtaining OAuth Access Tokens
+## Obtaining OAuth Access Tokens
 
 <p>In order for this Twitter API to work you will have to generate OAuth access tokens for the owner of the application. These access tokens allow your application to run on behalf of the twitter account which you hold for your brand or website. The other option would be to use 3-Legged OAuth but in an attempt to keep this simple we'll be sticking to standard OAuth authentication. A good guide for building access tokens can be found on twitters dev subdomain here: <a href="https://dev.twitter.com/oauth/overview/application-owner-access-tokens">OAuth Access Tokens</a></p>
 
-# Connecting to your Twitter Account using OAuth
+## Connecting to your Twitter Account using OAuth
 
 <p>The code for connecting to your Twitter account using this Bear's Python wrapper looks like so:</p>
 
@@ -55,7 +55,7 @@ bot = Twitter(auth=OAuth(access_token_key, access_token_secret,
 
 <p>Replace the strings 'consumer_key' etc. with the appropriate keys and secrets generated for you and you should have successfully connected to the Twitter RESTful API. Now that we've connected we can begin to do some interesting things such as retweeting followers or searching tweets.</p>
 
-# Searching for Tweets
+## Searching for Tweets
 
 <p>The first thing we need to do is create a function for searching for tweets, this function will return all recent tweets that have mentioned a specific string anywhere within the tweet.</p>
 
@@ -64,7 +64,7 @@ def search_tweets(query, count=100):
     return bot.search.tweets(query=query, result_type='recent', count=count)
 ```
 
-# Favoriting Tweets
+## Favoriting Tweets
 
 <p>So now that we've got the basic mechanisms in place to search for tweets, we now have to do something with them. The first interaction I'm going to show you how to do is favourite tweets.</p>
 
@@ -74,14 +74,14 @@ def fav_tweet(tweet):
         result = t.favorites.create(_id=tweet['id'])
         print "Favorited: %s" % (result['text'])
         return result
-    # when you have already favourited a tweet
-    # this error is thrown
+    ## when you have already favourited a tweet
+    ## this error is thrown
     except TwitterHTTPError as e:
         print "Error: ", e
         return None
 ```
 
-# Retweeting Tweets
+## Retweeting Tweets
 
 <p>Retweeting specific tweets is again very similar to favoriting tweets and can be useful if you want to, for instance, retweet all replies to any of the posts you make and try to improve your community presence. </p>
 
@@ -96,7 +96,7 @@ def retweet_tweet(tweet):
         return None
 ```
 
-# Bringing it all together
+## Bringing it all together
 
 <p>Now that you've got an idea of how to favorite and retweet tweets, we can bring this together into a bot that constantly runs on a server or wherever else you choose to run it.</p>
 
@@ -129,8 +129,8 @@ def fav_tweet(tweet):
         result = t.favorites.create(_id=tweet['id'])
         print "Favorited: %s" % (result['text'])
         return result
-    # when you have already favourited a tweet
-    # this error is thrown
+    ## when you have already favourited a tweet
+    ## this error is thrown
     except TwitterHTTPError as e:
         print "Error: ", e
         return None

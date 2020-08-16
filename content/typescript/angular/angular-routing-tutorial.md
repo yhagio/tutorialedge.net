@@ -24,7 +24,7 @@ Routing in Angular 2+ has changed dramatically from the original AngularJS days
 where you would have to utilize the \$routeProvider and typically define routes
 in a separate file to that of your module file.
 
-# Defining your First Routes
+## Defining your First Routes
 
 The first thing that you need to do in order to add routing to your application
 is append the following tag to your index.html page:
@@ -103,7 +103,7 @@ In our app.component.html file. In my
 you’ll see that I’ve defined this below my app-top-nav which will remain
 constant for all pages throughout my application.
 
-# Child Routes
+## Child Routes
 
 So now that we know how to define our own routes we could keep adding and adding
 them to our app.module.ts file forever right? Well what happens when we are
@@ -143,7 +143,7 @@ sub-modules defined routes:
 RouterModule.forChild(blogRoutes);
 ```
 
-# Navigation Between Routes in HTML
+## Navigation Between Routes in HTML
 
 Now that we’ve defined our routes we need to provide a means to navigate between
 these routes in our html. If we were wanting to link to any other route in our
@@ -155,13 +155,13 @@ application then we can use the following:
 
 The above `<a/>` tag would link to our settings page that we defined above.
 
-# A Live Example
+## A Live Example
 
 Should you wish to see a live example of Angular routing then feel free to
 checkout my Angular Admin repo:
 [Angular-2-Admin-Dashboard](https://github.com/elliotforbes/angular-2-admin.git)
 
-# Conclusion
+## Conclusion
 
 If you found this tutorial helpful or need further assistance then please do not
 hesitate to let me know in the comments section below.
@@ -170,7 +170,7 @@ hesitate to let me know in the comments section below.
 > <a href="https://angular.io/docs/ts/latest/guide/router.html">official angular
 > routing documentation</a> for more in-depth resources
 
-## Further Reading
+### Further Reading
 
 - [Angular Detecting Route Changes](/typescript/angular/angular-detecting-route-changes/)
 - [Angular Getting Current Location using Location Provider](/typescript/angular/angular-get-current-route-location/)

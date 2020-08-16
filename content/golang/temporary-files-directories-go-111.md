@@ -25,7 +25,7 @@ or even thousands of files within our Go programs.
 In this tutorial, we'll be looking at how you can use these within your own Go
 programs and some potential use cases.
 
-# Creating Temporary Files
+## Creating Temporary Files
 
 Let's start off by looking at the new `TempFile` function. Let's say we were
 creating an object recognition system that pulled in thousands of pictures of
@@ -72,7 +72,7 @@ car-images/car-982382640.png
 This has automatically replaced the `*` character within our defined `car-*.png`
 pattern with a random, globally-unique pattern.
 
-## Writing to Temporary Files
+### Writing to Temporary Files
 
 If we want to write to these temporary files, we can do so using the `Write`
 function like so:
@@ -127,7 +127,7 @@ $ go run main.go
 hello world
 ```
 
-# Generating Temporary Directories
+## Generating Temporary Directories
 
 Now that we've covered temporary files, let's have a look at generating
 temporary directories. This could be useful if we wanted to extend our object
@@ -191,7 +191,7 @@ $ go run main.go
 hello world
 ```
 
-# Conclusion
+## Conclusion
 
 Awesome, in this tutorial, we looked at how we could use the newly added
 `TempDir` and `TempFile` functions from the `io/ioutil` package for fame and
@@ -205,6 +205,6 @@ to hear them in the suggestions box below!
 > site, then please feel free to follow me on twitter for all the latest news:
 > [@Elliot_F](https://twitter.com/elliot_f).
 
-## Related Reading:
+### Related Reading:
 
 - [Reading and Writing Files in Go](/golang/reading-writing-files-in-go/)

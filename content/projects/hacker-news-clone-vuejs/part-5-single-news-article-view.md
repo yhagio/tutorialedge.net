@@ -25,7 +25,7 @@ be the best bit!
 In this tutorial, we'll be adding a new route to our VueJS application which
 will be able to render an individual story and the comments associated with it.
 
-# Video Tutorial
+## Video Tutorial
 
 This tutorial is also available in video format, should you wish to support the
 series then you can do so by subscribing to my YouTube channel and hitting that
@@ -33,7 +33,7 @@ like button on my videos!
 
 <div style="position:relative;height:0;padding-bottom:42.76%"><iframe src="https://www.youtube.com/embed/weR4NFFgrOo?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="842" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 
-# Our Single.vue Component
+## Our Single.vue Component
 
 First things first, we will need a new component. Create a new file within your
 `src/views` directory called `Single.vueSin`.
@@ -92,7 +92,7 @@ Within our `Single` component we will be able to retrieve this `:id` value and
 then make the appropriate REST API request to fetch that stories' comments and
 render them accordingly.
 
-# Updating our Homepage Component
+## Updating our Homepage Component
 
 So, now that we've defined this route, we need to update our `Home.vue`
 component so that each story we retrieve links back to the appropriate
@@ -138,7 +138,7 @@ like so:
 
 ![Our single component](https://images.tutorialedge.net/images/hackernews-clone/screenshot-09.png)
 
-# Querying The Comments API
+## Querying The Comments API
 
 So, we have the story, we have our new component, how do we get our new
 component to retrieve all of the top-level comments for said story?
@@ -187,7 +187,7 @@ export default {
 };
 ```
 
-# Updating our Template
+## Updating our Template
 
 Now that we've queried the appropriate API endpoints to retrieve the top level
 comments, it's time to display these in our `Single.vue` component. In order to
@@ -291,7 +291,7 @@ component:
 }
 ```
 
-# Some Global Style Changes
+## Some Global Style Changes
 
 To polish this just a little bit more, let's add some styles to our root level
 `App.vue` component:
@@ -328,7 +328,7 @@ body {
 }
 ```
 
-# The Finished Product
+## The Finished Product
 
 Once you have made the above changes, you should see something like this render
 out into your browser:

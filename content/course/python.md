@@ -16,7 +16,7 @@ say C or C++ for those with minimal programming experience and it's range of
 supporting libraries make it incredibly powerful if you want to do complex
 things like data science.
 
-# Auxiliary Resources
+## Auxiliary Resources
 
 If you are interested in buying books in order to aid your learning of Python
 then I highly recommend checking out my article on

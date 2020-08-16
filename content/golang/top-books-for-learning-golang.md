@@ -36,7 +36,7 @@ in order to get yourself started with the language. These reviews are entirely
 subjective and will hopefully give you enough of a taste of the book in order to
 make an effective decision.
 
-# Introductory Books
+## Introductory Books
 
 If you are completely new to Golang then this is the section to start in. The
 books below are gentle introductions to the language and should help to get you
@@ -46,9 +46,9 @@ started on your Golang journey.
 > you and I would recommend checking out some basic tutorials/books first before
 > you try these out.
 
-## The Go Programming Language
+### The Go Programming Language
 
-### Alan A. A. Donovan & Brian W. Kernignhan (_Addison-Wesley, 2015_)
+#### Alan A. A. Donovan & Brian W. Kernignhan (_Addison-Wesley, 2015_)
 
 <img alt="The Go Programming Language" src="https://images.tutorialedge.net/books/the-go-programming-language.jpg" class="book-img" />
 
@@ -80,7 +80,7 @@ In the final chapters, the book goes into detail about complex topics such as
 Reflection as well as covering some of the low-level programming fundamentals
 such as foreign function interfaces (FFI) and calling out to C code.
 
-### The Book Covers
+#### The Book Covers
 
 - The Fundamentals of Go
 - Concurrency in Go
@@ -90,9 +90,9 @@ such as foreign function interfaces (FFI) and calling out to C code.
 
 <div class="amazon-link">View on Amazon: <a href="http://amzn.to/2feFblR">The Go Programming Language</a></div>
 
-## Go in Action (1st Edition)
+### Go in Action (1st Edition)
 
-### William Kennedy, Brian Ketelsen, Erik St. Martin (_Manning, 2015_)
+#### William Kennedy, Brian Ketelsen, Erik St. Martin (_Manning, 2015_)
 
 <img alt="Go In Action" class="book-img" src="https://images.tutorialedge.net/books/go-in-action.jpg"/>
 
@@ -108,7 +108,7 @@ sites and servers and come away a proficient golang developer.
 Manning books are renowned for their high quality books and this one truly is no
 different.
 
-### The Book Covers
+#### The Book Covers
 
 - A Quick start guide to go
 - The packages and tooling
@@ -118,9 +118,9 @@ different.
 
 <div class="amazon-link">View on Amazon: <a href="http://amzn.to/2vcRZOZ">Go in Action</a></div>
 
-## Introducing Go
+### Introducing Go
 
-### Caleb Doxsey (_O'Reilly, 2016r_)
+#### Caleb Doxsey (_O'Reilly, 2016r_)
 
 <img alt="Introducing Go" src="https://images.tutorialedge.net/books/introducing-go.jpg" class="book-img"/>
 
@@ -135,7 +135,7 @@ with one of the above books as it is a quick and easy introduction to the
 language, good for getting up and running quickly but you may desire more
 in-depth coverage of the advanced topics once you are done.
 
-### The Book Covers
+#### The Book Covers
 
 - Getting started with Go
 - Go's Type System
@@ -146,15 +146,15 @@ in-depth coverage of the advanced topics once you are done.
 
 <div class="amazon-link">View on Amazon: <a href="http://amzn.to/2vSrzDx">Introducing Go</a></div>
 
-# Intermediate Books
+## Intermediate Books
 
 In this section, we'll be covering some of the books that can certainly help you
 make the transition from novice Go programmer to intermediate and further push
 the bounds of your programming knowledge.
 
-## Writing an Interpreter in Go
+### Writing an Interpreter in Go
 
-### Thorsten Ball (_Self-Published, 2018_)
+#### Thorsten Ball (_Self-Published, 2018_)
 
 Writing an Interpreter in Go is an absolutely incredible book that was very much
 anticipated by swathes of Go programmers since it's announcement. So far, it has
@@ -173,9 +173,9 @@ article.
 
 <div class="amazon-link">View on Amazon: <a href="https://amzn.to/2BZPh39">Writing an Interpreter in Go</a></div>
 
-## Writing a Compiler in Go
+### Writing a Compiler in Go
 
-### Thorsten Ball (_Self-Published, 2018_)
+#### Thorsten Ball (_Self-Published, 2018_)
 
 Writing a Compiler in Go is the second book by Thorsten Ball and has only just
 been released and I've heard from fellow programmers that the book is just as
@@ -191,15 +191,15 @@ to finish the first and also looking forward the next books in his series!
 
 <div class="amazon-link">View on Amazon: <a href="https://amzn.to/2C1cLVx">Writing a Compiler in Go</a></div>
 
-# Advanced Books
+## Advanced Books
 
 In this section I'll be listing books which are more advanced in nature and
 cover material that may be unsuitable for those who have little-to-no experience
 with the go programming language.
 
-## Concurrency in Go: Tools and Techniques for Developers
+### Concurrency in Go: Tools and Techniques for Developers
 
-### Katherine Cox-Buday (_O'Reilly, 2017_)
+#### Katherine Cox-Buday (_O'Reilly, 2017_)
 
 <img alt="Network programming with go" class="book-img" src="https://images.tutorialedge.net/books/concurrency-in-go.jpg"/>
 
@@ -220,7 +220,7 @@ addition to your Go book library.
 
 <div class="amazon-link">View on Amazon: <a href="https://amzn.to/2BWvSjM">Concurrency in Go: Tools and Techniques for Developers</a></div>
 
-# Conclusion
+## Conclusion
 
 Hopefully, you found this list of the best books for learning Go useful! I am a
 huge fan of the language and would love to hear your comments as to how you got

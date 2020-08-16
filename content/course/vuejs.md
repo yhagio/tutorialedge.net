@@ -7,7 +7,7 @@ series: vuejs
 title: VueJS fundamentals
 ---
 
-### Course Outline
+#### Course Outline
 
 In the past few months, I have been playing about with VueJS 2 and in all
 honesty, I have been seriously loving it. It's a lighter alternative to the

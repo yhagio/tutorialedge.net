@@ -16,7 +16,7 @@ twitter: https://twitter.com/Elliot_F
 
 > **Note** - If you are applying for jobs at some of the top tech companies in the world then be aware that this algorithm may feature within their interview processes so it's worthwhile memorizing some of the key information about it.
 
-# QuickSort Algorithm
+## QuickSort Algorithm
 
 Quicksort is one of the most popular sorting algorithms you will come across in
 computer science. This is because of it's `average` case performance of
@@ -40,7 +40,7 @@ noted that the worst case performance for this algorithm is actually `O(N^2)`
 which occurs if you consistently choose the worst possible point in the array to
 `pivot` on.
 
-# Implementing this in Python
+## Implementing this in Python
 
 Now that we understand the logic behind the quicksorting algorithm, it's time to
 implement this in Python. Below we'll be defining a `quicksort()` function which
@@ -53,20 +53,20 @@ will take in an `array` as it's only parameter.
 ```py
 def quicksort(array):
 
-    # We define our 3 arrays
+    ## We define our 3 arrays
     less = []
     equal = []
     greater = []
 
-    # if the length of our array is greater than 1
-    # we perform a sort
+    ## if the length of our array is greater than 1
+    ## we perform a sort
     if len(array) > 1:
-        # Select our pivot. This doesn't have to be
-        # the first element of our array
+        ## Select our pivot. This doesn't have to be
+        ## the first element of our array
         pivot = array[0]
 
-        # recursively go through every element
-        # of the array passed in and sort appropriately
+        ## recursively go through every element
+        ## of the array passed in and sort appropriately
         for x in array:
             if x < pivot:
                 less.append(x)
@@ -75,8 +75,8 @@ def quicksort(array):
             if x > pivot:
                 greater.append(x)
 
-        # recursively call quicksort on gradually smaller and smaller
-        # arrays until we have a sorted list.
+        ## recursively call quicksort on gradually smaller and smaller
+        ## arrays until we have a sorted list.
         return quicksort(less)+equal+quicksort(greater)
 
     else:
@@ -86,7 +86,7 @@ def main():
   print(quicksort([6,4,7,1,2,9,12,3]))
 ```
 
-# Testing it works
+## Testing it works
 
 We can test this by doing the following:
 
@@ -100,7 +100,7 @@ Awesome, we can see from the output that this has successfully managed to sort o
 
 <Quiz question="What is the average time complexity of the Quick Sort Algorithm?" A="O(N)" B="O(N^2)" C="O(n log n)" correct="C" answer="C - The average case sorting complexity of Quick sort is O(n log n)"/>
 
-# In-Place Memory QuickSort Implementation
+## In-Place Memory QuickSort Implementation
 
 Now that we've looked at implementing the simplest version of QuickSort, let's now take a look at a slightly more complex but memory-efficient implementation which does in-place sorts.
 
@@ -146,12 +146,12 @@ def quicksort(arr, start, end):
 
 Awesome, with these tweaks **in place**, we now have a QuickSort implementation that sorts arrays **in-place** and thus is far more efficient when it comes to memory utilization
 
-# Conclusion
+## Conclusion
 
 If you found this tutorial useful or require further assistance or info then
 please let me know in the comments section below!
 
-## Related Reading
+### Related Reading
 
 If you enjoyed this tutorial, you may also enjoy these other tutorials on the site:
 

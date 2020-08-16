@@ -20,7 +20,7 @@ they work within the confines of the Go programming language. We'll then take a
 look at demystifying the differences between both methods and functions and when
 you should ideally use them within your Go programs.
 
-# A Simple Example
+## A Simple Example
 
 Let's start off by covering what methods and how we can implement our own in our
 Go systems. We'll be creating an incredibly simple employee management system
@@ -72,7 +72,7 @@ func main() {
 
 So why do we use methods at all within our Go programs?
 
-# Functions Vs Methods
+## Functions Vs Methods
 
 Well, there is a subtle distinction between your traditional functions in Go and
 your Methods. Methods typically act upon a given object, i.e.
@@ -103,7 +103,7 @@ func (g *Guitarist) Update(params ParamsStruct) {
 myGuitarist.Update(params)
 ```
 
-# Conclusion
+## Conclusion
 
 In this tutorial, we learned what methods are and how they differ from functions
 in go.

@@ -16,7 +16,7 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 
 <p>In this tutorial I'm going to be demonstrating how you can send mail with Go(Lang) and the mailgun api. Thankfully, mailgun's API is fantastic and sending mail is incredibly easy once you've set everything up properly.</p>
 
-# Requirements
+## Requirements
 
 <ul>
 <li>You'll need a mailgun account with your own verified domains</li>
@@ -24,7 +24,7 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 <li>Your Mailgun's Public API Key</li>
 </ul>
 
-# Implementation
+## Implementation
 
 ```go
 package main

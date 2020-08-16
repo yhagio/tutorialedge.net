@@ -16,9 +16,9 @@ description:
 weight: 32
 ---
 
-# Introduction
+## Introduction
 
-## Calculating the Size of a Variable Reference
+### Calculating the Size of a Variable Reference
 
 ```go
     myint := 3
@@ -37,4 +37,4 @@ weight: 32
     fmt.Printf("a: %T, %d\n", stringArray, unsafe.Sizeof(stringArray))
 ```
 
-# Conclusion
+## Conclusion

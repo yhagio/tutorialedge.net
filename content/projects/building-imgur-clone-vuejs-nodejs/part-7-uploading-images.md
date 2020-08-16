@@ -20,7 +20,7 @@ The **main aim of this tutorial** is to show how easy it is to bring in addition
 
 This will be a huge step towards a minimum viable product and it will be a very impressive technical challenge to overcome!
 
-# Dependencies
+## Dependencies
 
 Before we can continue, we'll need to add the 2 additional libraries that we were talking about to our project. One that will allow us to easily make  `HTTP` requests and the other to handle getting files from our users that we can subsequently upload. These 2 libraries are `Vue-Dropzone` and `Axios`.
 
@@ -34,7 +34,7 @@ Let's install these 2 now with `npm`:
 $ npm install vue2-dropzone axios
 ```
 
-# Upload.vue Components
+## Upload.vue Components
 
 With `axios` and `vue-dropzone` now added to our project, we can now make a start on our `Upload.vue` component. Within this component we'll want to leverage the `vue-dropzone` component within the `<template/>` section of our component.
 
@@ -183,7 +183,7 @@ Finally, let's style our `Upload.vue` component and make it look slightly nicer.
 </style>
 ```
 
-## Router Updates
+### Router Updates
 
 With this `Update.vue` component now defined, we need to now register a route for it within our `router/index.js` file. This will be another route that we'll want to guard with our `requireAuth` route guard as we don't want people to be able to see the upload page unless they are signed in.
 
@@ -237,7 +237,7 @@ export default new Router({
 })
 ```
 
-## Conditional Rendering
+### Conditional Rendering
 
 Having this new route in place, we want our users to be able to easily navigate to this new page when they are logged in. In order to make this easy, we are going to add a bit of conditional rendering to our `Navbar.vue` component so that it displays the links to **upload** and **profile** when they are logged in, and **signup** and **log in** when they are not!
 
@@ -289,7 +289,7 @@ export default {
 
 With this in place, try logging in and logging out to see if these changes have worked! When you log in, you will see that the links change and your users will be able to more easily navigate around the app.
 
-# Adding an Authorizer to Our Upload Function
+## Adding an Authorizer to Our Upload Function
 
 As it stands, our `upload-node` serverless function is currently open to the world and obviously this isn't ideal in terms of security. In order to lock this down, let's extend the `uploadImage` function definition within our `serverless.yml` file so that it uses our cognito pool as an `authorizer`:
 
@@ -343,7 +343,7 @@ functions:
 
 Awesome, with this now added, let's redeploy our functions using `serverless deploy`.
 
-# Testing it All Works
+## Testing it All Works
 
 With this new change made to our `uploadImage` function, let's test the full flow for our application now. Try logging out, logging in and then navigating to the upload page and uploading an image to your bucket. Before you upload the image, open up the developer console within your browser and select the **network** tab so that you can watch the HTTP requests flow through to first the serverless API function and before finally hitting your S3 Bucket with a **HTTP PUT** request and your image!
 
@@ -352,7 +352,7 @@ With this new change made to our `uploadImage` function, let's test the full flo
 > **Up-to-date Code** - If you want the up-to-date code for this project, then please checkout the official repository: [elliotforbes/imgur-clone-vuejs-nodejs](https://github.com/elliotforbes/imgur-clone-vuejs-nodejs)
 
 
-# Deploying our Application
+## Deploying our Application
 
 Awesome, we have successfully been able to implement authenticated uploads to our S3 bucket through our frontend Vue.js applications! This is a huge step forward and a massive accomplishment and with this in place we are now well on our way to having a minimum viable product!
 

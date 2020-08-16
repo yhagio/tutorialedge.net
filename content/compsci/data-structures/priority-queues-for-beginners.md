@@ -17,7 +17,7 @@ twitter: https://twitter.com/Elliot_F
 In this article we'll be covering `Priority Queues` and how they differ from
 your standard `Queue` data structure.
 
-# Why Do We Need Them?
+## Why Do We Need Them?
 
 In order to explain this better, let's think about a real-world example where a
 normal queueing system may not be the best idea. Let's imagine you were
@@ -44,7 +44,7 @@ events, some events such as power loss or other critical issues would then be
 prioritized higher than less serious issues, this is where priority queues
 shine.
 
-# Priority Queue Implementation
+## Priority Queue Implementation
 
 Let's have a look at how we could implement a very simple `Priority Queue` in
 Python.
@@ -74,7 +74,7 @@ This would output the following when run:
 50 Priority, Issue 4: Very High Priority Value
 ```
 
-# Conclusion
+## Conclusion
 
 I hope you found this tutorial useful! If you did or require further assistance
 then please do not hesitate to let me know in the comments section below or by

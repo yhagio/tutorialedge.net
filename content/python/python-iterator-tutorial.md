@@ -18,7 +18,7 @@ In this tutorial we'll be looking at what `iterators` are with Python. We'll
 also be looking at how we can effectively work with them and improve our Python
 programs using them.
 
-# What Are Iterators?
+## What Are Iterators?
 
 Iterators are cool in the sense that they allow us to step over every item in an
 array, object or file and perform work on each item. For example, we could take
@@ -31,14 +31,14 @@ within that string.
 >>> for character in string:
 >>>    print(character)
 
-# Output
+## Output
 t
 e
 s
 t
 ```
 
-# Iterables
+## Iterables
 
 `Iterables` in Python represent something that we can actively iterate over.
 These are things like `lists`, `sets` and even `strings` as we've seen in the
@@ -59,7 +59,7 @@ s
 t
 ```
 
-# The `next()` Method
+## The `next()` Method
 
 When we have an `iterator` object we can effectively step through it using the
 `next()` method. This will simply return the next element of the given

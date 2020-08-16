@@ -27,22 +27,22 @@ tests:
 
 In order to complete this challenge, you will have to successfully implement some of the core functionality of the `heap` data structure.
 
-# What is a Heap?
+## What is a Heap?
 
 In computer science, a `heap` is a complete binary tree. There are two variations of heaps:
 
 * `Min-Heap` - The root element of this binary tree is the smallest element. 
 * `Max-Heap` - 
 
-# Introduction
+## Introduction
 
-# Prerequisites
+## Prerequisites
 
-# See the Solution
+## See the Solution
 
 Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 05 - Implementing a Stack](https://discuss.tutorialedge.net/t/challenge-05-implementing-a-stack/22) 
 
-## Further Reading:
+### Further Reading:
 
 If you enjoyed this challenge, you may also enjoy some of the other challenges on this site:
 

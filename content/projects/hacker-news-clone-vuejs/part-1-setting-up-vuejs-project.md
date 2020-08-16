@@ -23,18 +23,18 @@ We'll get a basic VueJS application up and running and we'll also cover how you
 can build this simple project so that you end up with files that are deployable
 to the likes of and S3 bucket, or a server that can serve your files.
 
-# Video Tutorial
+## Video Tutorial
 
 <div style="position:relative;height:0;padding-bottom:42.76%"><iframe src="https://www.youtube.com/embed/IezF9Gj4Pcc?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="842" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 
-# Installing the Vue CLI
+## Installing the Vue CLI
 
 We'll be using version `3.4.0` of the `vue-cli` in order to create our initial
 project. You can install this by typing the following:
 
 ```s
 $ yarn global add @vue/cli
-# or
+## or
 $ yarn global add @vue/cli
 ```
 
@@ -45,7 +45,7 @@ $ vue --version
 3.4.0
 ```
 
-# Creating our Project
+## Creating our Project
 
 Once we have successfully installed version `3.4.0` or above of the `vue-cli`,
 we can then go about creating our project by typing the following:
@@ -82,7 +82,7 @@ newly created VueJS application running:
 
 ![VueJS up and running!](https://images.tutorialedge.net/images/hackernews-clone/screenshot-01.png)
 
-# Project Structure
+## Project Structure
 
 If we open up the newly created `hn-clone` directory within a code editor of
 choice, we should see a number of files and directories automatically created
@@ -110,7 +110,7 @@ The key directory that we'll want to concern ourselves with is the `src/`
 directory. This is where most of our application source code will live and we'll
 be adding a few new components under here in the next parts of this series.
 
-# Building Your Project
+## Building Your Project
 
 Once you are happy with your project, you will need to build it using the
 `yarn run build` command. This will generate a `dist/` directory which will
@@ -134,7 +134,7 @@ Within the `dist/static/js/` directory you should see all of the minified,
 transpiled javascript files that your `index.html` file needs in order to run as
 a Vue.js application. You will be able to push this up to
 
-# Next Tutorial
+## Next Tutorial
 
 Excellent, we now have everything we need set up on our machine in order to
 build our HackerNews clone! In the next tutorial, we are going to start building

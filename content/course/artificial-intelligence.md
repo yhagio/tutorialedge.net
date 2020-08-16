@@ -8,7 +8,7 @@ series: ai
 title: Artificial Intelligence
 ---
 
-### Course Outline
+#### Course Outline
 
 Over this course I’m aiming to introduce you to key strategies used by game
 developers when implementing Artificial Intelligence systems into their own

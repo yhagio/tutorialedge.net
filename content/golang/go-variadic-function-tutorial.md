@@ -21,7 +21,7 @@ In this tutorial, we are going to be looking at `Variadic Functions` in Go.
 We'll be covering how to implement and how to use these functions within your
 own Go applications.
 
-# Variadic Functions
+## Variadic Functions
 
 There are times, when we do not know how many string arguments we will require
 for our functions. This is where `variadic functions` come into play.
@@ -58,7 +58,7 @@ $ go run main.go
 > **Note -** Variadic Functions are not limited to strings, we can use any
 > variation of composite or basic types.
 
-# Production Examples
+## Production Examples
 
 Let's have a look at an example of this in production Go code. `Println()` is a
 great example of a variadic function which is possibly the most well known.
@@ -75,7 +75,7 @@ func Println(a ...interface{}) (n int, err error) {
 > **Note -** This example takes in an arbitrary number of `interface{}`
 > arguments.
 
-# Conclusion
+## Conclusion
 
 So, in this tutorial, we managed to successfully cover variadic functions in Go.
 We covered, what they are and how they can be used for fame and fortune within

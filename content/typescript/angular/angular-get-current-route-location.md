@@ -21,7 +21,7 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 In this tutorial we’ll be looking at various ways we can obtain the current URL
 of our application in Angular 2.
 
-# The Location Service
+## The Location Service
 
 The location service is part of the **@angular/common** module. It allows you to
 interact directly with a browser’s URL and can read and redirect the user should
@@ -30,7 +30,7 @@ you wish to.
 > This tutorial assumes that you are familiar with Angular 2 Routing and have an
 > application that utilizes routes.
 
-## Getting the Current Path
+### Getting the Current Path
 
 Getting the current application path can be handy for scenarios where you want
 to show select sub-menus in say a navigation component.

@@ -13,7 +13,7 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 
 In this tutorial, we are going to look at how you can introduce internationalization into your Vue.js applications using the `vue-i18n` library.
 
-# What is i18n?
+## What is i18n?
 
 If you are trying to build a global audience for your application then being able to cater for a huge number of different languages within your application is a huge win. Thankfully, **i18n** makes this a lot easier for us by giving us a standard format for defining translations within our application's codebase which can then be quickly swapped in and out depending on the users preference.
 
@@ -36,7 +36,7 @@ With these definitions in place, we can render our `hello` message within our ap
 </div>
 ```
 
-# Installation
+## Installation
 
 In order to add the `vue-i18n` package to your Vue.js apps, you can either include the CDN link:
 
@@ -61,7 +61,7 @@ Vue.use(VueI18n)
 ...
 ```
 
-# A Simple Application
+## A Simple Application
 
 Ok, now that we've covered the theory and installing the package, let's build up a simple Vue.js app which uses this package to quickly switch between different locales.
 
@@ -144,7 +144,7 @@ Now, when we view our app in the browser, we should see that it renders the defa
 
 If we change up the default `locale` within our `main.js` to `es` then we should see that the greeting changes to `hola` when we refresh out app!
 
-## Changing Locale Dynamically
+### Changing Locale Dynamically
 
 Giving your users the ability to change their default locale can ensure that your users face consistent behavior from your app regardless of where they are using it around the world and from what browser.
 
@@ -190,7 +190,7 @@ export default {
 
 Now, when we refresh our page, we should see a handy select box just below our `Hello` statement which allows us to change between preferred locales. When this is set to a different locale, the corresponding `hello` message is updated for us!
 
-# Handling Locale Files
+## Handling Locale Files
 
 Once you get past the small application stage of your development and start handling a wider array of translations, you need to have a strategy that allows you to effectively manage and scale to a wide number of locales. 
 
@@ -254,13 +254,13 @@ new Vue({
 
 > **Note** - I cannot claim this clean way of managing locale files. The fame and glory rightly goes to `dekadentno` from this github thread: [https://github.com/kazupon/vue-i18n/issues/474](https://github.com/kazupon/vue-i18n/issues/474)
 
-# Conclusion
+## Conclusion
 
 So, in this tutorial, we looked at how you could break down the language barriers within your Vue.js applications using the wonderful `vue-i18n` package. We also explored the various ways you could handle multiple massive locale files and dynamically switching between them within your application. 
 
 > **Source Code** - The full source code for this tutorial can be found here: [TutorialEdge/vue-i18n-test-app](https://github.com/TutorialEdge/vue-i18n-test-app)
 
-## Further Reading:
+### Further Reading:
 
 If you enjoyed this article, you may also enjoy these other articles on the site:
 

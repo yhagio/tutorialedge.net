@@ -14,7 +14,7 @@ twitter: https://twitter.com/Elliot_F
 weight: 100
 ---
 
-### Course Outline
+#### Course Outline
 
 In this course, we are going to be taking a look at how you can get started with
 the Go programming language.

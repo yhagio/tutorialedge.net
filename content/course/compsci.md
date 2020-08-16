@@ -12,7 +12,7 @@ twitter: https://twitter.com/Elliot_F
 weight: 100
 ---
 
-### Course Outline
+#### Course Outline
 
 In this course, we are going to look at the basic data structures and how you
 can use them to implement the various fundamental sorting algorithms!

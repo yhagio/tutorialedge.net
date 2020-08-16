@@ -44,7 +44,7 @@ In this example we define a string `myAgeString` which is equal to `"26"`. In or
 We are then able to add 1 to this new `int` variable and then print it out using the `%d` format character.
 
 
-## Further Reading:
+### Further Reading:
 
 If you found this code snippet useful, you may also enjoy some of the other content on the site: 
 

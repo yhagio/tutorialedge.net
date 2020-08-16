@@ -17,7 +17,7 @@ GitHub actions have taken the developer universe by storm since their release to
 In this tutorial, we are going to be walking through the basics of GitHub actions and why you should be considering them for use in your own projects in the near future!
 
 
-# Introduction
+## Introduction
 
 Let's start off by defining a really simple function that we'll want to run every time we make a change to the `master` branch of our project. 
 
@@ -45,7 +45,7 @@ jobs:
 {{% /column %}}
 
 {{% column %}}
-## Hello World Action
+### Hello World Action
 
 In this action, which we've called `Simple Job`. We have set this up so that every time you push a change to the `master` branch of your project, it will trigger the `Hello` job!
 
@@ -56,10 +56,10 @@ In this case, we have just defined 1 solitary step in this job which we've calle
 {{% /column %}}
 {{% /row %}}
 
-# Prerequisites
+## Prerequisites
 
-# Conclusion
+## Conclusion
 
-## Further Reading:
+### Further Reading:
 
 * []()

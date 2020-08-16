@@ -44,7 +44,7 @@ In this code snippet, we are going to look at how you can parse date & time stri
 
 In this example, we use the `time.Parse` function which takes in the date layout as well as the date string we wish to parse.
 
-# List of Popular Layouts
+## List of Popular Layouts
 
 Here you'll find a list of the most popular date format layouts that you can use to parse your date strings:
 
@@ -71,7 +71,7 @@ const (
 
 
 
-## Further Reading
+### Further Reading
 
 If you found this code snippet useful, you may also be interested in some of the other content on the site:
 

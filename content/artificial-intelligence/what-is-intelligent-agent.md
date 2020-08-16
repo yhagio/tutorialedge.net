@@ -20,9 +20,9 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 
 <p>A simple example of this is a robot hoover. Through a series of sensors, it can sense whether or not the floor is dirty and based off this information it will then decide whether or not to continue cleaning the floor.</p>
 
-# Intelligent Agents In Industry
+## Intelligent Agents In Industry
 
-## Finance
+### Finance
 
 <p>An example of a useful intelligent agent in the finance industry would be something that perceives the stock environment and then acts on this information in order to make trades and generate profit. AI trading systems have a huge advantage over traditional human traders as they are able to amalgamate huge sums of information in order to place their trades. </p>
 

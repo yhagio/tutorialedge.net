@@ -15,11 +15,11 @@ tags:
 twitter: https://twitter.com/Elliot_F
 ---
 
-## Course Outline
+### Course Outline
 
 In this course, we are going to be taking a look at how you can build a fully functioning SaaS product from the ground up using React.js for the frontend and Node.js for the backend.
 
-## Topics
+### Topics
 
 Through these videos, we'll be covering a range of different topics such as:
 

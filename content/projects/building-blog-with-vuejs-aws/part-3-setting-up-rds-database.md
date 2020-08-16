@@ -15,7 +15,7 @@ twitter: https://twitter.com/Elliot_F
 weight: 3
 ---
 
-# Introduction
+## Introduction
 
 Welcome back to part 3 of my course on building a blog with Vue.JS on AWS. In
 this part of the course, we are going to be setting up an RDS instance which
@@ -41,7 +41,7 @@ These Functions will do as follows:
 This represents a fairly standard set of endpoints that will allow give us
 _most_ of the basic functionality our blog will need in order to work.
 
-# Amazon Aurora
+## Amazon Aurora
 
 For the purposes of this tutorial series, we'll be creating an Amazon Aurora DB
 instance which will be MySQL 5.6 compatible. This will cost roughly \$30/month
@@ -61,20 +61,20 @@ demands with no additional time invested on your part.
 If our blog happens to go viral for any reason, Amazon Aurora will be able to
 handle the massive surge in traffic.
 
-# Creating our RDS Instance
+## Creating our RDS Instance
 
 So, let's get started by creating our RDS instance.
 
-# Our Lambda Functions
+## Our Lambda Functions
 
-## Insert Post
+### Insert Post
 
-## Get Post
+### Get Post
 
-## Update Post
+### Update Post
 
-## Delete Post
+### Delete Post
 
-## All Posts - Paginated
+### All Posts - Paginated
 
-# Conclusion
+## Conclusion

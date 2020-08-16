@@ -152,12 +152,12 @@ You can create new errors using the `error` package and calling `errors.New()`.
 
 </details>
 
-# See the Solution
+## See the Solution
 
 Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 07 - Minimums, Maximums and Errors](https://discuss.tutorialedge.net/t/challenge-05-implementing-a-stack/22) 
 
 
-# Further Reading:
+## Further Reading:
 
 If you like this challenge then you may also appreciate some of the following articles on the site:
 

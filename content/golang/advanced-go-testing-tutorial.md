@@ -28,7 +28,7 @@ production-level Go programs.
 > suggest you check out my other tutorial:
 > [an introduction to testing in go](/golang/intro-testing-in-go/)
 
-# Goals
+## Goals
 
 By the end of this tutorial:
 
@@ -36,13 +36,13 @@ By the end of this tutorial:
 * You will know how to separate your unit and your integration tests.
 * You will know how to mock any `HTTP` requests that your Go applications may make. 
 
-# Prerequisites
+## Prerequisites
 
 Before you can follow this article, you will need the following:
 
 * You will need Go version 1.11+ installed on your development machine.
 
-# Achieving Good Coverage with Table Driven Tests
+## Achieving Good Coverage with Table Driven Tests
 
 Let's start our journey in the `strings` package. If you have a look at the top
 of the `strings_test.go` file within `src/strings/` you should see a number of
@@ -90,7 +90,7 @@ This same practice is done numerous times for numerous different functions and
 this helps to guarantee that when any code changes are made to these functions,
 the expected functionality will not change.
 
-# Use the testdata Directory
+## Use the testdata Directory
 
 In certain situations, you won't be able to specify your expected input and
 output as an array of elements like in the above example. You may be trying to
@@ -152,13 +152,13 @@ first technique we covered here in combination with files from the `testdata/`
 directory to ensure that when a sample `.tar` file is opened, the files and
 their checksums match their expectations.
 
-<!-- # Subtests - new in Go 1.8
+<!-- ## Subtests - new in Go 1.8
 
 This was a technique I came across recently when watching Mitchell Hashimoto's - [Advanced Testing with Go](https://www.youtube.com/watch?v=8hQG7QlcLBk) talk on YouTube which I highly recommend.
 
 Using subtests effectively allows you to write numerous tests within a Test method  -->
 
-# Mocking HTTP Requests
+## Mocking HTTP Requests
 
 As soon as you start writing production-level APIs and services, it's likely
 you'll start interacting with other services and being able to test the way that
@@ -210,7 +210,7 @@ In the above test case, we basically overwrite the response we expect from our
 URL and then continue to test other parts of our system that rely upon that
 response.
 
-# The Use of Separate Packages
+## The Use of Separate Packages
 
 If we have a look at the `strings_test.go` file and inspect the package at the
 top, you should notice that it doesn't reside within the same package that the
@@ -221,7 +221,7 @@ you'll need to import a package in your `*_test.go` file to adequately write
 your tests. If the package you import in already has a reference to the package
 you are trying to test, you may see issues with cyclic dependencies.
 
-# Differentiate your Unit and Integration Tests
+## Differentiate your Unit and Integration Tests
 
 > **Note -** I originally found out about this tip from:
 > [Go Advanced Tips Tricks](https://medium.com/@povilasve/go-advanced-tips-tricks-a872503ac859)
@@ -262,7 +262,7 @@ PASS
 ok      _/Users/elliot/Documents/Projects/tutorials/golang/advanced-go-testing-tutorial 0.006s
 ```
 
-# Conclusion
+## Conclusion
 
 So, in this tutorial, we had a look at some of the more advanced testing
 techniques and tricks employed by the Go language maintainers.
@@ -272,7 +272,7 @@ and improve your own go tests. If you found it useful, or have any further
 questions, then please don't hesitate to let me know in the comments section
 below!
 
-## Further Reading
+### Further Reading
 
 If you enjoyed this, you may like my other articles on testing in Go:
 

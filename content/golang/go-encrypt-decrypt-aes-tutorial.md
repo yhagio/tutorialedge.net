@@ -14,7 +14,7 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 weight: 34
 ---
 
-# Objectives
+## Objectives
 
 By the end of this tutorial, you will be able to...
 
@@ -27,7 +27,7 @@ can do various things like, encrypt files on your file system and protect them
 with a passphrase only you know or add simple encryption to various parts of the
 systems that you are working on.
 
-# Introduction
+## Introduction
 
 We'll start off by looking at the AES, or Advanced Encryption Standard, as that
 is the standard we will be using to encrypt and decrypt the information within
@@ -40,7 +40,7 @@ a passage of text.
 Once this is done, we'll create a counterpart program which will decrypt this
 passage of text using that same passphrase we used to encrypt our text.
 
-# AES - Advanced Encryption Standard
+## AES - Advanced Encryption Standard
 
 So AES, or the Advanced Encryption Standard, is a symmetric key encryption
 algorithm that was originally developed by two Belgian cryptographers - Joan
@@ -54,13 +54,13 @@ to choose from due to both it's efficiency and ease of use.
 > so make sure that you follow me on twitter:
 > [@Elliot_f](https://twitter.com/elliot_f)
 
-## Symmetric Key Encryption
+### Symmetric Key Encryption
 
 If you haven't come across the term symmetric key encryption, then fear not,
 it's a relatively simple concept that essentially allows two parties to encrypt
 and decrypt information using a shared secret.
 
-# Our Encryption Client
+## Our Encryption Client
 
 Ok, let's jump into our code editor of choice and start writing some code!
 
@@ -144,7 +144,7 @@ if err != nil {
 > out my aptly named article -
 > [Reading and Writing to Files in Go](/golang/reading-writing-files-in-go/).
 
-## Testing it Out
+### Testing it Out
 
 Once we have finished making these changes to our `encrypt.go` file, we can try
 testing it out:
@@ -157,7 +157,7 @@ If this runs successfully, you should see a new file created within your
 project's directory called `myfile.data`. If you open this up, you should see
 the results of your encryption!
 
-# Our Decryption Client
+## Our Decryption Client
 
 Now that we've covered encryption and writing our encrypted message to a file,
 let's now have a look at reading from that file and trying to decrypt that using
@@ -221,7 +221,7 @@ func main() {
 }
 ```
 
-## Testing it Out
+### Testing it Out
 
 Awesome, so now that we have finished writing our `decrypt.go` program, we can
 try it out.
@@ -236,7 +236,7 @@ As you can see from the output, we have been able to successfully read the
 encrypted contents of our `myfile.data` file and subsequently decrypt it using
 our shared secret key.
 
-# Challenge - Encrypted FileSystem
+## Challenge - Encrypted FileSystem
 
 If you are interested in a challenge, a cool way to test what you have learned
 in this tutorial would be to try and extend the existing program that we've
@@ -247,7 +247,7 @@ input and outputs them in encrypted form to your current location.
 
 - [Building a CLI in Go](/golang/building-a-cli-in-go/)
 
-# Conclusion
+## Conclusion
 
 So, in this tutorial we have successfully covered a number of cool concepts such
 as symmetric encryption algorithms, and how to encrypt and decrypt information

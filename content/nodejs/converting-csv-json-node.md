@@ -27,7 +27,7 @@ This package will do pretty much all the heavy lifting for us and having used it
 in production environments I can say that it’s remarkably easy to implement into
 a project.
 
-# Setting Up Your Project
+## Setting Up Your Project
 
 Create a new project directory on your machine and open up this location in your
 terminal. Next we’ll want to install the <b>csvtojson</b> node module, you can
@@ -40,7 +40,7 @@ npm install csvtojson --save
 This should create a <b>node_modules</b> directory within your project which
 will contain all the dependencies that csvtojson requires.
 
-# Implementation
+## Implementation
 
 Now that we’ve got everything set up we can begin implementation. Open up your
 project in your prefered text editor and create a new js file. Within this file

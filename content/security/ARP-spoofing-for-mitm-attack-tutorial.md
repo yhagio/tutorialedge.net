@@ -12,7 +12,7 @@ twitter: https://twitter.com/Zaid_alq
 author: Zaid Sabih
 ---
 
-# Man-in-the-middle attacks
+## Man-in-the-middle attacks
 
 A man-in-the-middle (MITM) attack is one of the most dangerous and effective
 attacks that you can carry out in a network. You can only perform it once you’re
@@ -39,7 +39,7 @@ You can simply tell the device that you’re the router, and because the devices
 trust anyone, they will trust you and start sending packets instead of sending
 the packets to the router.
 
-# ARP spoofing using arpspoof
+## ARP spoofing using arpspoof
 
 Now, check out how to run an actual ARP poisoning attack, redirect the flow of
 packets, and make it flow through your device. This section will talk about a
@@ -103,7 +103,7 @@ sending it to the actual access point.
 This will place your attacker device in the middle of the connection and you’ll
 be able to read the packets, modify them, or drop them.
 
-# ARP spoofing using MITMf
+## ARP spoofing using MITMf
 
 In this section, you’ll use a tool called MITMf, and as the name suggests, this
 tool allows you to run a number of MITM attacks. You’ll run the tool, see how to
@@ -170,7 +170,7 @@ So, basically, you can capture any username and password that is entered in 
 computer that you're ARP spoofing. You can also see all the URLs that the person
 has requested. So, here, you can see that they requested me.hack.me.
 
-# Conclusion
+## Conclusion
 
 If you found this article interesting, you can explore Zaid Sabih’s Learn
 Ethical Hacking from Scratch to learn how to hack systems like black hat hackers

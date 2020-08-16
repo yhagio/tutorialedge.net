@@ -15,13 +15,13 @@ I love playing with WebSockets, they are a very cool bit of technology that allo
 
 In this tutorial, we are going to be exploring the wonderful world of WebSockets and how you can integrate them into your Vue.js applications by building a really simple app that utilizes WebSocket connections.
 
-# Video Tutorial
+## Video Tutorial
 
 If you prefer, this tutorial is available in video format!
 
 {{< youtube id="4via-J98jwM" autoplay="false" >}}
 
-# Setting Up Our Project
+## Setting Up Our Project
 
 Let's start by creating a new Vue.js application using the `vue cli`, we'll call this `vuejs-websocket-tutorial` to keep things nice and simple.
 
@@ -32,7 +32,7 @@ $ cd vuejs-websocket-tutorial
 
 We can then serve this project by calling `yarn serve` and it will start up our simple Vue.js application for us on `http://localhost:8080`.
 
-# Simple Approach - Logic Within Components
+## Simple Approach - Logic Within Components
 
 Let's take a look first at the simple approach. With this approach we will define all of the connection logic and the communication logic for our components within the component that does the communication.
 
@@ -100,7 +100,7 @@ These aren't the only callbacks you can define:
 * **onclose** - This is triggered whenever the connection between the client and the server is closed.
 * **onerror** - This is triggered whenever there is an error between the client and the server.
 
-## Sending Messages Over the WebSocket Connection
+### Sending Messages Over the WebSocket Connection
 
 With this connection logic now in place, let's look at how we can start sending some messages to this WebSocket server which will in turn echo the message back to us!
 
@@ -134,7 +134,7 @@ With this in place, check out the app in the browser and open the browser tools 
 
 Awesome! We have been able to implement two-way communication between a remote server from within our `App.vue` component!
 
-## Full Component Code
+### Full Component Code
 
 With everything pieced together, we should now have an `App.vue` component that looks a little something like this:
 
@@ -194,7 +194,7 @@ export default {
 ```
 
 <!-- TODO: Add The WebSocket Service -->
-<!-- # Building a WebSocket Service
+<!-- ## Building a WebSocket Service
 
 Now that we have covered the simpler approach, let's have a look at a more advanced approach for the Vue.js applications that are more complex and feature multiple components communicating over the same connection.
 
@@ -208,19 +208,19 @@ console.log("WebSocket Service");
 
 With this in place, we can now update one of our Vue.js components to interact with this service. -->
 
-# Adding Vuex
+## Adding Vuex
 
 As your applications start to grow and the state within the application starts to become a little more complex, it may come time to consider adding Vuex into your application so that you can elegantly handle and store state across all of your components.
 
 If you are in this position, then it would be worthwhile checking out another tutorial I have on the site that looks at how you can [store and manage state in your Vue.js applications using Vuex](/javascript/vuejs/managing-state-with-vuex-vuejs/)
 
-# Conclusion
+## Conclusion
 
 So, in this tutorial, we have managed to build a really simple Vue.js application that utilizes WebSockets as a means of communication. 
 
 I hope you enjoyed this tutorial, if you have any comments or would like any further help then pleas feel free to let me know in the comments section below!
 
-## Further Reading:
+### Further Reading:
 
 If you enjoyed this tutorial, you may also like these other tutorials on the site:
 

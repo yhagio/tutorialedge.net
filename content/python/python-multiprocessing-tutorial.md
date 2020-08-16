@@ -16,7 +16,7 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 
 > **Last Updated:** 1st December, 2018
 
-# Introduction
+## Introduction
 
 Previously we've looked at how you can try to achieve concurrency with Python
 using multithreading, the tutorial of which can be found here:
@@ -26,7 +26,7 @@ Now we are going to be having a look at how we can sidestep the limiting Global
 Interpreter Lock that effectively prevented our multithreaded applications from
 being truly concurrent by using the multiprocessing Python module.
 
-# Parallelism vs Concurrency
+## Parallelism vs Concurrency
 
 So, before we go deeper into the multiprocessing module, it's worthwhile
 ensuring you know the advantages of using multiprocessing over multithreading.
@@ -35,7 +35,7 @@ of CPU-bound tasks, multiprocessing is what you want to use. However, if your
 particular task is Input/Output bound, then you'll generally want to use
 multithreading to improve the performance of your applications.
 
-# A Simple Example:
+## A Simple Example:
 
 Let's start by building a really simple Python program that utilizes the
 multiprocessing module.
@@ -85,7 +85,7 @@ let's imagine we were doing something more CPU-intensive than simply generating
 a single random number. This is where the multiprocessing module would truly
 start to shine.
 
-# Pools
+## Pools
 
 In the previous example, we looked at how we could spin up individual processes,
 this might be good for a run-and-done type of application, but when it comes to
@@ -174,14 +174,14 @@ As you can see, our each job is executed by one of the `8` workers that exist
 within the pool. These processes are reused in order to prevent the costly task
 of destroying and creating new processes and subsequent execution.
 
-# Passing Data Between Processes
+## Passing Data Between Processes
 
 When performing concurrent programming the best practice is usually to avoid
 sharing state as much as possible. However when you absolutely need to have some
 form of shared data then the multiprocessing module provides a couple of ways of
 doing so.
 
-## Queues:
+### Queues:
 
 Queue objects are a FIFO data structure that are thread and process safe which
 make them perfect for passing data between different processes without
@@ -218,7 +218,7 @@ Elliots-MacBook-Pro:Networking elliotforbes$ python processing.py
 [0.6756465745753756, 0.4104274331895341, 0.6733748532075048, 0.9494118991646461]
 ```
 
-# Conclusion
+## Conclusion
 
 Overall Python's MultiProcessing module is brilliant for those of you wishing to
 sidestep the limitations of the Global Interpreter Lock that hampers the

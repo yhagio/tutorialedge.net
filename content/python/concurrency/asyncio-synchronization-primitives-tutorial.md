@@ -16,7 +16,7 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 
 > This tutorial was built on top of Python 3.6
 
-# Video Tutorial
+## Video Tutorial
 
 <div style="position:relative;height:0;padding-bottom:42.76%"><iframe src="https://www.youtube.com/embed/kMcwcJdIvHI?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="842" height="360" frameborder="0" gesture="media" allowfullscreen></iframe></div>
 
@@ -25,7 +25,7 @@ available to you in your Asyncio programming adventures. We'll be taking a brief
 look at why these synchronization primitives are important and also the various
 ways you can use them within a simple Asyncio based program.
 
-# Why Are These Important?
+## Why Are These Important?
 
 When it comes to programming concurrent systems you have to try and ensure that
 your program is free from a little thing called a `Race Condition`. A
@@ -39,7 +39,7 @@ Asyncio we have a number to choose from. These are all based on the `threading`
 module equivalent and tend to have the same `API` with which we can work with
 them.
 
-# Locks
+## Locks
 
 The best analogy to describe how a lock works is to imagine there is a queue of
 people trying to access a bathroom. One person goes in and locks the door and in
@@ -49,7 +49,7 @@ business.
 In computing terms when we lock something, we essentially prevent someone else
 coming in and messing with the locked resource whilst it's in use.
 
-## A Simple Lock Example
+### A Simple Lock Example
 
 In this example we are going to create a `asyncio.Lock()` instance and we are
 going to try to acquire this lock using `with await lock`. Once our worker has
@@ -62,23 +62,23 @@ import time
 
 async def myWorker(lock):
     print("Attempting to attain lock")
-    # acquire lock
+    ## acquire lock
     with await lock:
-        # run critical section of code
+        ## run critical section of code
         print("Currently Locked")
         time.sleep(2)
-    # our worker releases lock at this poit
+    ## our worker releases lock at this poit
     print("Unlocked Critical Section")
 
 async def main():
-    # instantiate our lock
+    ## instantiate our lock
     lock = asyncio.Lock()
-    # await the execution of 2 myWorker coroutines
-    # each with our same lock instance passed in
+    ## await the execution of 2 myWorker coroutines
+    ## each with our same lock instance passed in
     await asyncio.wait([myWorker(lock), myWorker(lock)])
 
-# Start up a simple loop and run our main function
-# until it is complete
+## Start up a simple loop and run our main function
+## until it is complete
 lock = asyncio.Lock()
 loop = asyncio.get_event_loop()
 loop.run_until_complete(main())
@@ -86,7 +86,7 @@ print("All Tasks Completed")
 loop.close()
 ```
 
-## Output
+### Output
 
 WHen we run this ywe should see that only one of our concurrently running
 workers is able to run at the one time.
@@ -102,14 +102,14 @@ Unlocked Critical Section
 All Tasks Completed
 ```
 
-# Queues
+## Queues
 
 When it comes to communicating in a synchronized fashion then asyncio provides
 its own `queue` based implementation. We can push things onto our queue in a
 synchronized fashion with a producer and have consumers simultaneously poll this
 queue for anything pushed onto it.
 
-## Simple Implementation
+### Simple Implementation
 
 In this example we are going to create a `newsProducer()` coroutine and a
 `newsConsumer()` coroutine. The `newsProducer()` coroutine will push new news
@@ -134,7 +134,7 @@ async def newsConsumer(id, myQueue):
         print("Consumer: {} Attempting to get from queue".format(id))
         item = await myQueue.get()
         if item is None:
-            # the producer emits None to indicate that it is done
+            ## the producer emits None to indicate that it is done
             break
         print("Consumer: {} consumed article with id: {}".format(id, item))
 
@@ -149,7 +149,7 @@ finally:
     loop.close()
 ```
 
-## Output
+### Output
 
 When we then try to run this you should see that our producer pushes items onto
 our queue and then our consumers compete with one another in order to get
@@ -173,7 +173,7 @@ Consumer: 1 Attempting to get from queue
 Putting news item onto queue
 ```
 
-# Conclusion
+## Conclusion
 
 If you found this tutorial useful or require further assistance then please let
 me know in the comments section below!

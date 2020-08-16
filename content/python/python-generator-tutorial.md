@@ -19,7 +19,7 @@ In this tutorial I'm aiming to help demystify this concept of generators within
 the Python programming language. We'll look at what generators are and how we
 can utilize them within our python programs.
 
-# What Are Generators?
+## What Are Generators?
 
 Generators are functions that can return multiple values at different times.
 These are [iterators](/python/python-iterator-tutorial/) that we can
@@ -52,7 +52,7 @@ def my_generator(x):
     yield x*8
 ```
 
-# Complete Code Snippet
+## Complete Code Snippet
 
 Let's flesh this out into a full python script. In this we have our new
 generator function with it's 3 `yield` statements, below that we declare an
@@ -73,7 +73,7 @@ print(next(mygen))
 print(next(mygen))
 ```
 
-## Output
+### Output
 
 If we were then to run this code and call the `next()` function 3 times on this
 generator, you should see the value is doubled every time. The above code should
@@ -86,7 +86,7 @@ $ python3.6 generators.py
 16
 ```
 
-# StopIteration Error
+## StopIteration Error
 
 The StopIteration error is raised when a call to next() is made and there are no
 subsequent values to be yielded from our generator function. If we added a 4th
@@ -105,7 +105,7 @@ StopIteration
 FAIL
 ```
 
-# Infinite Generator
+## Infinite Generator
 
 Let's now improve upon our original generator function. We can implement an
 [iterator](/python/python-iterator-tutorial/) that continues to yield values
@@ -127,7 +127,7 @@ print(next(mygen))
 print(next(mygen))
 ```
 
-# Output
+## Output
 
 We can then call the next() function as many times as we'd desire and we would
 then see our original value of `x` double with each subsequent call to our
@@ -146,7 +146,7 @@ experiment with the number of times you call `print(next(mygen))`.
 > you'd start to hit some form of limit for the above program if you called
 > next() indefinitely.
 
-# Conclusion
+## Conclusion
 
 So, in this tutorial, we looked at generators in Python! We looked at how we can build our own Python generators and subsequently use them within our own Python applications for fame and fortune!
 

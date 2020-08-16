@@ -20,28 +20,28 @@ weight: 1
 In this post, you'll use a third-party library named Vuelidate to perform model
 validation depending on a particular rule set
 
-# Create a New Vue Project
+## Create a New Vue Project
 
 Create a playground project by running the following in your Terminal:
 
 ```s
-# Create a new Vue project
+## Create a new Vue project
 $ vue init webpack-simple vue-validation
 
-# Navigate to directory
+## Navigate to directory
 $ cd vue-validation
 
-# Install dependencies
+## Install dependencies
 $ npm install
 
-# Install Vuelidate
+## Install Vuelidate
 $ npm install vuelidate
 
-# Run application
+## Run application
 $ npm run dev
 ```
 
-# What is Vuelidate?
+## What is Vuelidate?
 
 `Vuelidate` is an open source, lightweight library that helps you perform model
 validation with a variety of validation contexts. Validation can be functionally
@@ -68,7 +68,7 @@ Vuelidate's `$v` throughout the project. This then allows you to use
 the `$v` object to gain information about the current state of your form within
 your Vue instance across all components.
 
-# Using Vuelidate
+## Using Vuelidate
 
 Now, create a basic form that allows you to input
 `firstName`, `lastName`, `email`, and `password`. This will allow you to add
@@ -238,7 +238,7 @@ If everything has gone as planned, you should get the following result:
 
 ![vuejs form validation result](https://images.tutorialedge.net/images/javascript/vuejs/form-validation-image1.png)
 
-# Displaying form errors
+## Displaying form errors
 
 You can use the `$invalid` Boolean inside the `$v.model_name` object
 (where `model_name` is equal to `email`, `firstName`, `lastName`, or `password`)
@@ -425,7 +425,7 @@ has been touched (is `$dirty`):
 </div>
 ```
 
-# Password validation
+## Password validation
 
 When creating user accounts, passwords tend to be entered twice and conform to a
 minimum length. Add another field and some more validation rules to enforce
@@ -571,7 +571,7 @@ display any error messages:
 </div>
 ```
 
-# Form submission
+## Form submission
 
 In case your form is invalid, you can disable the `Submit` button:
 
@@ -618,7 +618,7 @@ data() {
 },
 ```
 
-# Conclusion
+## Conclusion
 
 You have now successfully created a form with appropriate validation! If this
 article interests you, you can refer to
@@ -627,7 +627,7 @@ this book, you'll be well on your way to becoming an expert Vue developer who
 can leverage design patterns to efficiently architect the design of your
 application and write clean and maintainable code.
 
-## Further Reading
+### Further Reading
 
 If you enjoyed this article then you may enjoy some of the other tutorials on our site:
 

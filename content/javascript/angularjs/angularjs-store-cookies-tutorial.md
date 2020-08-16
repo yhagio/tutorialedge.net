@@ -25,7 +25,7 @@ between routes as is detailed here:
 
 <div class="github-link">The full source code for this tutorial can be found here: <a href="https://github.com/elliotforbes/angularjs-fundamentals">AngularJS Fundamentals Repo</a></div>
 
-# Cookie Limitations
+## Cookie Limitations
 
 It must be noted that typically you cannot store more than 20 cookies per web
 server, or more than 4KB of data per cookie.
@@ -37,7 +37,7 @@ browser will retain that cookie for the longer. This is typically how sites like
 Amazon retain your browsing history and can determine what to show you in the
 recommended items section.
 
-# Implementation
+## Implementation
 
 In this tutorial I’ll be following a component based architecture style, if you
 are not familiar with components in AngularJS then I recommend you check our my
@@ -47,7 +47,7 @@ other post:
 Conversely you can also just lift the code from the controller and put it into
 your own existing controllers.
 
-## The Necessary Imports
+### The Necessary Imports
 
 In your angular application you’ll need to add the following script tag to the
 head of your main html page and below your angular.js script tag:
@@ -63,7 +63,7 @@ Ensure that the version of angular-cookies you are importing is the same version
 of angularjs that you are using within your application or you may run into
 issues.
 
-## Our Controller
+### Our Controller
 
 In our controller we’ll have 2 main functions, one to get the cookies on page
 load and one to set the cookies on a button click. We’ll have to ensure that we
@@ -90,7 +90,7 @@ CookieController.$inject = ["$log", "$scope", "$cookies"];
 angular.module("root").controller("CookieController", CookieController);
 ```
 
-## Our Html Page
+### Our Html Page
 
 Our html page will consist of an input field and a button, when we enter a value
 into the input field and click our Store Cookie button, the ctrl.storeCookie
@@ -128,7 +128,7 @@ our input field in a ‘favourite’ cookie.
 </div>
 ```
 
-## Our Component
+### Our Component
 
 We’ll have a very simple component to tie everything together:
 
@@ -145,7 +145,7 @@ var cookies = {
 angular.module("root").component("cookies", cookies);
 ```
 
-# Conclusion
+## Conclusion
 
 I hope that you found this tutorial useful, if you’ve got any further queries
 then please feel free to let me know in the comments section below. The full

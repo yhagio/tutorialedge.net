@@ -18,7 +18,7 @@ In this tutorial, we are going to be taking a look at stacks in Computer Science
 and how they can be used to effectively solve problems that we may face as
 software developers.
 
-# Stacks - The Theory
+## Stacks - The Theory
 
 I think the best way to imagine the stack data structure is to imagine a stack
 of pancakes. Typically, when you add a new pancake, it has to go on to the top
@@ -38,7 +38,7 @@ Some implementations may include the functionality to `peek` the top element of
 our stack, but it isn't absolutely necessary. This is akin to peeking at the top
 pancake in our pile and inspecting it.
 
-# A Simple Array Based Example
+## A Simple Array Based Example
 
 Let's consider how we would implement this in Python. We'll need to store a
 collection of elements, so an `array` makes sense to base our implementation off
@@ -66,7 +66,7 @@ last element of our `elements` array.
 > **Note -** - This is an incredibly basic, non-thread safe implementation of a
 > `stack`.
 
-# Conclusion
+## Conclusion
 
 Hopefully you found this tutorial useful. If you have any suggestions as to how
 this could be improved then I would love to hear them in the suggestions section

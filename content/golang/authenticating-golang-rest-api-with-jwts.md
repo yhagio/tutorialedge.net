@@ -21,13 +21,13 @@ URL-safe means of representing claims to be transferred between two parties.
 This is essentially a confusing way of saying that JWTs allow you to transmit
 information from a client to the server in a stateless, but secure way.
 
-# Prerequisites
+## Prerequisites
 
 Before you can follow this article, you will need the following:
 
 * You will need Go version 1.11+ installed on your development machine.
 
-# Introduction
+## Introduction
 
 The JWT standard uses either a secret, using the HMAC algorithm, or a
 public/private key pair using RSA or ECDSA.
@@ -52,7 +52,7 @@ So, if you haven't guessed by now, in this tutorial, we'll be looking at exactly
 what it takes to build a secure Go-based REST API that uses JSON Web Tokens to
 communicate!
 
-# Video Tutorial
+## Video Tutorial
 
 This tutorial is available in a video format, if you want to support me and my
 work then please feel free to leave a like and subscribe to my channel for my
@@ -60,7 +60,7 @@ content!
 
 <div style="position:relative;height:0;padding-bottom:56.3%"><iframe src="https://www.youtube.com/embed/-Scg9INymBs?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="639" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 
-# A Simple REST API
+## A Simple REST API
 
 So, we are going to be using the code from one of my other articles,
 [Creating a simple REST API in Go](/golang/creating-restful-api-with-golang/),
@@ -95,7 +95,7 @@ When we run this an attempt to hit our homepage, running on
 `http://localhost:8081/`, we should see the message `Hello World` in our
 browser.
 
-# JWT Authentication
+## JWT Authentication
 
 So, now that we have a simple API that we can now protect using signed JWT
 tokens, let's build a client API that will try to request data from this
@@ -119,7 +119,7 @@ this:
 
 ![architecture-diagram](https://images.tutorialedge.net/images/golang/go-jwt-tutorial/diagram-01.png)
 
-## Our Server
+### Our Server
 
 So, let's see this in action, let's create a really simple server:
 
@@ -193,7 +193,7 @@ If this is a valid token, we then serve the protected endpoint.
 > here:
 > [Getting Started with Decorators in Go](/golang/go-decorator-function-pattern-tutorial/)
 
-## Our Client
+### Our Client
 
 Now that we have a server that features a JWT secured endpoint, let's build
 something that can interact with it.
@@ -279,7 +279,7 @@ It then attempts to hit our `server` application which is running on
 the token we've generated in the client and proceeds to serve us our super
 secret `Hello World` message.
 
-<!-- # Using RSA Keys to Sign your Tokens
+<!-- ## Using RSA Keys to Sign your Tokens
 
 So far, we've looked at how you can sign your tokens using strings which, if used appropriately, is a valid method of signing your tokens. However, if you start to open up your service to multiple third-parties, this then becomes risky.
 
@@ -287,7 +287,7 @@ If you go down this route, you'll need to give them a copy of the string you use
 
 There are ways around this, you can use the `RS256` encryption algorithm instead of the `HS256` algorithm we used above.  -->
 
-# Conclusion
+## Conclusion
 
 Hopefully, this tutorial helped to demystify the art of securing your Go
 applications and REST APIs using JSON Web Tokens. This was a lot of fun writing
@@ -301,7 +301,7 @@ my site!
 > site, then please feel free to follow me on twitter for all the latest news:
 > [@Elliot_F](https://twitter.com/elliot_f).
 
-## Further Reading
+### Further Reading
 
 If you fancy reading up more on JSON Web Tokens and how they are used then I can
 thoroughly recommend the following articles:

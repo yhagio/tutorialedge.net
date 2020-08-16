@@ -27,7 +27,7 @@ if not _the_ most popular testing package for Go developers around the world.
 Its elegant syntax allows you to write incredibly easy assertions that just make
 sense.
 
-# Getting Started
+## Getting Started
 
 The first thing we'll have to do in order to get up and running with the testify
 package is to install it. Now, if you are using Go Modules then this will just
@@ -44,7 +44,7 @@ go get github.com/stretchr/testify
 After you have done this, we should be good to start incorporating it into our
 various testing suites.
 
-# A Simple Example
+## A Simple Example
 
 Let's start off by looking at how we would traditionally write tests in Go. This
 should give us a good idea of what `testify` brings to the table in terms of
@@ -119,7 +119,7 @@ Awesome, as you can see, we've managed to succinctly test for equality using the
 got fewer lines of code to read over and we can clearly see what the test
 function is trying to achieve.
 
-## Negative Test Cases and Nil Tests
+### Negative Test Cases and Nil Tests
 
 So, we've looked at happy path testing, but how about negative assertions and
 Nil checks. Well, thankfully the `testify` package has methods that allow us to
@@ -145,7 +145,7 @@ If we wanted to test to see if `"status"` was not nil then we could use either
 `assert.Nil(status)` or `assert.NotNil(object)` depending on how we wish to
 react to it being `nil`.
 
-## Combining Testify with Table-Driven Tests
+### Combining Testify with Table-Driven Tests
 
 Incorporating `testify` into our test suites doesn't necessarily preclude us
 from using methods such as table-driven testing, in fact, it makes it simpler.
@@ -188,7 +188,7 @@ just passing in the input and the expected values as opposed to having to pass
 `t` in as our first parameter every time. This isn't a big deal, but it
 certainly helps to make our tests look cleaner.
 
-# Mocking
+## Mocking
 
 Another excellent feature of the `testify` package is it's mocking capabilities.
 Mocking effectively allows us to write replacement objects that mock the
@@ -203,7 +203,7 @@ may start to take umbrage.
 
 So, how do we go about mocking using the `testify` package?
 
-## A Mocking Example
+### A Mocking Example
 
 Let's take a look at how we can put `mocks` to use with a fairly simple example.
 In this example, we've got a system that will attempt to charge a customer for a
@@ -357,7 +357,7 @@ other APIs. Overall, mocking is something that is really powerful and is
 definitely something you should try to master if you are going to be testing
 production-grade systems in Go.
 
-## Generating Mocks with Mockery
+### Generating Mocks with Mockery
 
 So, in the above example we mocked out all of the various methods ourselves, but
 in real-life examples, this may represent a hell of a lot of different methods
@@ -371,14 +371,14 @@ within your Go packages and it'll automatically output the generated mocks to
 `mocks/InterfaceName.go`. This is seriously handy when you want to save yourself
 a tonne of time and it's a tool I would highly recommend checking out!
 
-# Key Takeaways
+## Key Takeaways
 
 - Testify helps you to simplify the way you write assertions within your test
   cases.
 - Testify can also be used to mock objects within your testing framework to
   ensure you aren't calling production endpoints whenever you test.
 
-# Conclusion
+## Conclusion
 
 Hopefully, this has helped to demystify the art of testing your Go projects
 using the `stretchr/testify` package. In this tutorial, we've managed to look at
@@ -392,7 +392,7 @@ interacting with production systems and doing things you didn't quite want to.
 If you found this useful, or if you have any comments or feedback, then please
 feel free to let me know in the comments section below.
 
-## Further Reading
+### Further Reading
 
 If you enjoyed this, you may like my other articles on testing in Go:
 

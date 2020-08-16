@@ -70,7 +70,7 @@ here: `https://codepen.io/AjdinImsirovic/pen/RJxMae`.
 Next, we'll see how we can improve our component with the help
 of the props and data options.
 
-# Adding props and data for better components
+## Adding props and data for better components
 
 To make our custom-article component more useful, we'll add a props option to
 it, like this:
@@ -108,7 +108,7 @@ having to make a whole new component. They help us reuse what we already have.
 In the next section, we'll use the Vue instance's data object to add content to
 our custom-article component.
 
-# Adding content to our components with the help of the data object
+## Adding content to our components with the help of the data object
 
 > **Code -** The code pen for this example can be found
 > at `https://codepen.io/AjdinImsirovic/pen/QxadmE`.
@@ -217,7 +217,7 @@ the props object.
 > **Codepen -** To see this in action, visit this
 > link: `https://codepen.io/AjdinImsirovic/pen/BVJxKL`.
 
-# Other ways of building component templates in Vue
+## Other ways of building component templates in Vue
 
 So far, we have looked at defining templates as strings (using single
 or double quotes) and as template literals (using backticks). There are also
@@ -255,7 +255,7 @@ in Vue. You keep all your HTML, JS, and styling in a single file (with
 a .vue file extension), and you compile this file with a build process, such as
 Webpack.
 
-# Building a simple web page out of components
+## Building a simple web page out of components
 
 As we have seen in the previous section, there are many ways to build a
 component in Vue, which might make things look more complex than they have to
@@ -272,7 +272,7 @@ instance has some additional options that can only be used in it.
 After these introductory clarifications, let's see how a component can be added
 to a Vue instance.
 
-# Adding simple components to a Vue instance
+## Adding simple components to a Vue instance
 
 To start off this example, we'll begin with a simple Vue instance.
 
@@ -350,7 +350,7 @@ there are no naming collisions with regular HTML elements.
 Now that we understand how to add a simple component to our Vue instance, let's
 practice by adding a more complex example.
 
-# Creating a more complex page out of components in Vue
+## Creating a more complex page out of components in Vue
 
 To begin, let's add a single component to our new Vue instance. This time, we
 will employ the data option inside our custom component's options object.
@@ -458,7 +458,7 @@ with the help of Vue.
 
 We can take it even one step further, as we'll see in the next section.
 
-# Improving our Vue-based layouts with v-for
+## Improving our Vue-based layouts with v-for
 
 In this section, we will improve our existing web page with the help of Vue
 directives.
@@ -649,14 +649,14 @@ The result of adding the previous code can be seen in this screenshot:
 
 ![](https://images.tutorialedge.net/images/javascript/vuejs/components-templates-props/image2-19.png)
 
-# Conclusion
+## Conclusion
 
 If you found this article helpful and would like to get started with Vue.js,
 [Vue.js Quick Start Guide](https://amzn.to/2sXauVF) is the most ideal book for
 you to learn how to build amazing and complex reactive web applications easily
 using Vue.js
 
-## Further Reading
+### Further Reading
 
 If you enjoyed this article then you may enjoy some of the other tutorials on our site:
 

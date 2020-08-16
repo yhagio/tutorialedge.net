@@ -17,11 +17,11 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 
 <p><strong>In this tutorial</strong> I’m going to be showing you exactly how we can read and write files on our local filesystem using NodeJS.</p>
 
-# Reading From Files
+## Reading From Files
 
 <p>Being able to read from files on your local file system can be hugely useful and there are a number of different things you can build on top of this. A log reader, importing information from spreadsheets and xml files or whatever you can think of, being able to read from files is hugely useful.</p>
 
-## The FS Package
+### The FS Package
 
 Create a new file called app.js and add the following: 
 
@@ -37,7 +37,7 @@ fs.readFile("temp.txt", function(err, buf) {
 
 <p>Create a temp.txt within the same directory and write in it anything you’d like. Run your script using node app.js and you should see in the console the contents of your file.</p>
 
-## Understanding the Code
+### Understanding the Code
 
 We’ll step through this with comments.
 
@@ -55,7 +55,7 @@ fs.readFile("temp.txt", function(err, buf) {
 
 This calls the readFile function asynchronously and then prints the contents of the file to the console.
 
-### Handling Errors
+#### Handling Errors
 
 If you want to catch errors such as the file you are trying to reach isn't found, then you can do 
 so like this:
@@ -80,7 +80,7 @@ When you go to execute this, you should see something like this returned:
 undefined
 ```
 
-### Returning a Buffer?
+#### Returning a Buffer?
 
 If the above code hasn’t worked as expected and you are seeing a buffer being printed out in the terminal then it might be an idea to specify the files encoding. We can do this like so: 
 
@@ -92,11 +92,11 @@ fs.readFile("temp.txt", "utf-8", (err, data) => {
 });
 ```
 
-# Writing To Files
+## Writing To Files
 
 <p>Now that you’ve got the reading of files down, it’s time to start modifying these files. To do this we’ll be using the same FS package we used in part one. </p>
 
-### The Code:
+#### The Code:
 
 <p>Again create a new file within your current directory and call it write.js and then add the following javascript code:</p>
 
@@ -119,11 +119,11 @@ fs.writeFile("temp.txt", data, (err) => {
 path to the file not already exist. This is handy as it means you can succinctly create, and write
 to a new file in one promise.
 
-# Conclusion
+## Conclusion
 
 Hopefully you found this tutorial useful, if you did, or if you have any suggestions or comments, then please let me know in the comments section below!
 
-## Further Reading
+### Further Reading
 
 If you enjoyed this article, you may also like some of our other articles:
 

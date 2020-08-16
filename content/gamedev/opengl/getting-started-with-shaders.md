@@ -17,7 +17,7 @@ twitter: https://twitter.com/Elliot_F
 
 <p>Learning shaders is just about one of the most important things you can do if you are going to get into graphical programming as it enables you to control just about everything when it comes to rendering your models in a game. Each stage grants an extra level of granularity through which you can create a game that looks like no other and whilst graphics don't make the game, having an aesthetically pleasing game can certainly help it. </p>
 
-# The 5 Stages of the Graphical Pipeline
+## The 5 Stages of the Graphical Pipeline
 
 <p>The new rendering pipeline was introduced in version 3.1 of OpenGL and whilst I've not necessarily had the pleasure of using the old fixed-function pipeline in my development life, I have been told that the newer method is huge improvement. This programmable pipeline contains 4 main stages and one final compute stage and we can control each of these simply by providing a shader.</p>
 
@@ -41,7 +41,7 @@ twitter: https://twitter.com/Elliot_F
 
 <p>This isn't a part of the graphical pipeline in the same way as the stages above and stands separate. In this stage we can do things like compute post-processing effects.</p>
 
-# Writing Our First Shader Program
+## Writing Our First Shader Program
 
 <p>Now that you've got a little bit of an understanding of what a shader program is, it's time to start analyzing the code that goes into making a simple shader.</p>
 

@@ -21,7 +21,7 @@ AngularJS Applications.
 All code in this tutorial can be found in this github repo: <a href="https://github.com/elliotforbes/angularjs-fundamentals">Github Repo</a>
 </div>
 
-# Browser Events
+## Browser Events
 
 In most modern web browsers, every time something interesting happens in either
 the Document or the browser an event is generated. Within AngularJS we can
@@ -32,7 +32,7 @@ An event can be a vast number of things, from hovering over a hyperlink to
 double-clicking on an object on the page and thankfully Angular has directives
 that cover a lot of these.
 
-# AngularJS Event Listeners
+## AngularJS Event Listeners
 
 The complete list of AngularJS events are as follows:
 
@@ -69,7 +69,7 @@ This shows the power of the AngularJS framework as it hides all the ugly DOM
 manipulation code and allows us to focus on implementing the business logic into
 our application.
 
-# Implementation
+## Implementation
 
 Below you'll find an array of how we can utilize these event handling directives
 in AngularJS. These are just some examples of how you could go about

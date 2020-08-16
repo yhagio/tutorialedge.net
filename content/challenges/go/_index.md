@@ -18,6 +18,6 @@ I am a huge believer in learning through doing, which is one of the main reasons
 These challenges have been designed and created to gradually build up your knowledge of Go. Each challenge will ultimately cover more and more advanced concepts within the Go programming language and help you to master the basics of the language so that you can go forth and write your own beautiful Go code.
 
 
-## Feedback and Support
+### Feedback and Support
 
 > This course is currently in Beta and still under production! If you have any feedback then please feel free to let me know on Twitter - [@Elliot_f](https://twitter.com/elliot_f)! 

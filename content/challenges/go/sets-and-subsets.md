@@ -164,11 +164,11 @@ We'll be carrying on the flying theme where the function takes in a `slice` of F
 There are a number of ways to solve this. You may be able to use the `reflect` package or you may be able to serialize each flight and create a hash of them which you can store in a hash.
 </details>
 
-# See the Solution
+## See the Solution
 
 Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 11 - Sets and Subsets](https://discuss.tutorialedge.net/t/challenge-11-sets-and-subsets/30) 
 
-# Further Reading:
+## Further Reading:
 
 If you enjoyed this challenge, then feel free to try some of the other challenges on the site:
 

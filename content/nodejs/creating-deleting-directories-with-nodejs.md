@@ -20,7 +20,7 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 directories using NodeJS</strong> and we’ll be using the mkdirp and the rimraf
 node package in order to achieve this.
 
-# Creating Directories
+## Creating Directories
 
 In order to create a directory we’ll need first download the mkdirp npm package,
 we can do this like so:
@@ -67,7 +67,7 @@ npm install rimraf --local
 Again, if you want to see the code for this package you can do so
 [isaacs/rimraf](https://github.com/isaacs/rimraf)
 
-# The Code
+## The Code
 
 ```js
 var rimraf = require("rimraf");

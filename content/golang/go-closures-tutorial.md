@@ -18,7 +18,7 @@ In this tutorial, we are going to be looking at closures in Go. We'll be
 covering the theory behind them, and we'll look at how you can use them in your
 own Go applications.
 
-# Closures - The Theory
+## Closures - The Theory
 
 So, let's dive in the theory.
 
@@ -40,7 +40,7 @@ variables that lay outwith it's body.
 > can learn more about anonymous functions here:
 > [Go Anonymous Functions](/golang/go-functions-tutorial/#anonymous-functions)
 
-# A Simple Example
+## A Simple Example
 
 Let's create a really simple example of a closure which will hopefully clarify
 how it works.
@@ -131,7 +131,7 @@ When we run this, we should see the following output:
 Awesome, so we've just successfully created our own instance of a `closure` in
 Go.
 
-# Conclusion
+## Conclusion
 
 So, in this tutorial, we covered the basic theory of closures and how you can
 use them within your own Go programs.
@@ -144,6 +144,6 @@ section below!
 > site, then please feel free to follow me on twitter for all the latest news:
 > [@Elliot_F](https://twitter.com/elliot_f).
 
-## Further Reading
+### Further Reading
 
 - [Go Variadic Functions](/golang/go-variadic-function-tutorial/)

@@ -14,14 +14,14 @@ weight: 3
 
 > This tutorial was built in Python 3.6
 
-# A Simple List
+## A Simple List
 
 ```py
 my_list = [1, 2, 3, 4] 
 print(my_list)
 ```
 
-# Reversing a List
+## Reversing a List
 
 This quick and easy technique shows how you can access all the elements of a
 list in reverse order.
@@ -32,7 +32,7 @@ list in reverse order.
 [5, 4, 3, 2, 1]
 ```
 
-## Try it Out
+### Try it Out
 
 ```py
 my_list = [1, 2, 3, 4] 
@@ -53,7 +53,7 @@ element within this reversed list like so:
 1
 ```
 
-# Conclusion
+## Conclusion
 
 If you found this tutorial useful or require further assistance then please let
 me know in the comments section below or by tweeting me:

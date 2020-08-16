@@ -23,7 +23,7 @@ things like graphics rendering and physics engines and allow game developers to
 focus purely on game-play mechanics. In this guide however we shall be looking
 at the more low-level books which don't rely on one of these game engines.
 
-# Game Development Essentials: An Introduction
+## Game Development Essentials: An Introduction
 
 <p><img src="https://images.tutorialedge.net/books/game-development-essentials.jpg" alt="best books for learning Game Development" class="book-img"/> Game Development Essentials has to be one of the best books around for getting into the art of Game development. The author Jeannie Novak has an impressive array of game development titles to her name and this book presents an authoritative introduction to what it takes to become a successful game developer. </p>
 
@@ -40,7 +40,7 @@ if you are looking to start making games.
 
 <div class="amazon-link">Buy Now: <a href="http://amzn.to/2x8QNyg">Game Development Essentials: An Introduction</a></div>
 
-# Game Programming Patterns
+## Game Programming Patterns
 
 <p><img src="https://images.tutorialedge.net/books/game-programming-patterns.jpg" alt="best books for learning Game Development" class="book-img"/> As with any piece of system, the amount of time and effort you spend effectively designing these software systems can make or break said systems. Ineffective or no design at all can lead to code bases that are horrific to navigate and modify and this ultimately leads to a lot of pain when trying to debug or refactor certain aspects of your code.  </p>
 
@@ -57,7 +57,7 @@ other developers and overall it is simply a necessity for any game developer.
 
 <div class="amazon-link">Buy Now: <a href="http://amzn.to/2x81tgV">Game Programming Patterns</a></div>
 
-# Foundations of Game Engine Development, Volume 1: Mathematics
+## Foundations of Game Engine Development, Volume 1: Mathematics
 
 <p><img src="https://images.tutorialedge.net/books/foundations-of-game-dev.jpg" alt="best books for learning Game Development" class="book-img"/> Like it or not mathematics plays a huge part in the life of any game developer. Whether it be in physics engines, graphics programming or artificial intelligence systems, having a solid foundation of mathematics knowledge is crucial for all game developers. Foundations of Game Engine Development Volume 1: Mathematics teaches you just about everything you need in order to get up and running. </p>
 
@@ -69,13 +69,13 @@ development.
 
 <div class="amazon-link">Buy Now: <a href="http://amzn.to/2iY1fSY">Foundations of Game Engine Development, Volume 1: Mathematics</a></div>
 
-# Game Development Essentials: Game Level Design
+## Game Development Essentials: Game Level Design
 
 <p><img src="https://images.tutorialedge.net/books/game-dev-essentials.jpg" alt="best books for learning Game Development" class="book-img"/></p>
 
 <div class="amazon-link">Buy Now: <a href="http://amzn.to/2wCwJTC">Game Development Essentials: Game Level Design</a></div>
 
-# Game Engine Architecture, Second Edition
+## Game Engine Architecture, Second Edition
 
 <p><img src="https://images.tutorialedge.net/books/game-engine-architecture.jpg" alt="best books for learning Game Development" class="book-img"/></p>
 

@@ -18,7 +18,7 @@ Here's a photo of my setup as it stands today:
 
 ![My Setup](https://images.tutorialedge.net/images/setup.jpg)
 
-# Editor + Terminal
+### Editor + Terminal
 
 * [_Visual Studio Code_](https://code.visualstudio.com/) - My editor of choice for pretty much everything from Node,
  to Python, to Golang. It's an excellent bit of software that can be extended to suit 
@@ -32,7 +32,7 @@ with any workflows yet!
 * [_Todoist_](https://todoist.com/?lang=en) - A really cool task management tool which
 helps me organize what I need to do!
 
-# Recording Setup
+### Recording Setup
 
 * [_Blue Yeti Microphone_](https://amzn.to/2ObIcR3) - I've used the Blue Yeti Microphone since the start of my YouTube career and I have never found any issue with it. This is an excellent
 USB microphone that has really stood the test of time! 
@@ -42,7 +42,7 @@ helps to isolate the microphone from any knocks or bumps when I'm recording.
 * _ScreenFlow 8_ - This is an incredible bit of software which makes screen recording
 an absolute dream.
 
-# Hardware
+### Hardware
 
 * [_MacBook Pro 15" 2017_](https://amzn.to/2ObI83R) - This is the beast that powers absolutely
 everything. I went for the 16GB RAM, 512GB of SSD model with the 4GB Intel Radeon Pro 560.  

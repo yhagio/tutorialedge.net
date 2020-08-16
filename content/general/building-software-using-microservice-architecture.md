@@ -20,7 +20,7 @@ asynchronous vs synchronous and most importantly managing your services. I’m
 going to be writing everything using Google’s Go(GoLang) programming language
 but these concepts will be transferable across to other language domains.
 
-# Why Should We Use Microservice Based Architecture?
+## Why Should We Use Microservice Based Architecture?
 
 Microservice based architecture isn’t a silver bullet that will solve all your
 problems, however, it does a very good job of simplifying the way you develop
@@ -33,7 +33,7 @@ architecture is flexible in the sense that modules can be replaced without
 impacting the picture and modules can be written in the programming language
 that best solves that particular problem.
 
-# High-Level Overview
+## High-Level Overview
 
 So we’ll be creating 2 services, one a _RESTful_ api that persists tweets and
 another a service that parses twitter for all tweets related to a certain topic.

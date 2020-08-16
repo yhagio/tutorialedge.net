@@ -26,7 +26,7 @@ By the end of this tutorial, we will have:
 
 Let's get started!
 
-# Updates to Terraform
+## Updates to Terraform
 
 So, whilst we have successfully created a User Pool using terraform in the last tutorial, one thing we failed to do was set up email confirmation for our User Pool so that it could successfully send verification emails to incoming users.
 
@@ -81,11 +81,11 @@ With these minor tweaks in place you will once again have to run `terraform plan
 
 With this in place, we should be good to start implementing our user registration flow!
 
-# Register Flow
+## Register Flow
 
 Now, we already have a `Register.vue` component in our app and an associated route to that component defined within our `router/index.js` file, however we'll need to update the code so that it interacts with our new `cognitoAuth` class and redirects people to the confirmation page once they have inputted their details. 
 
-## Register.vue Component
+### Register.vue Component
 
 Let's start by updating our `Register.vue` component which will enable our users to register a new account within our application. 
 
@@ -198,7 +198,7 @@ Saving this and navigating to this page via the top navbar should result in some
 
 ![Registration Page](https://images.tutorialedge.net/images/imgur-clone/register.png)
 
-## Confirm.vue component
+### Confirm.vue component
 
 Awesome, with this in place, we'll now have to tackle the `Confirm.vue` component which will allow our newly registered users to confirm their newly created accounts using the confirmation code which will have been emailed to them after registration.
 
@@ -302,7 +302,7 @@ button i {
 </style>
 ```
 
-## Updating Routes
+### Updating Routes
 
 With the `Confirm.vue` component now implemented, we now need to add a route to this component within our `router/index.js` file. This will look a little something like so:
 
@@ -359,7 +359,7 @@ The confirmation page should successfully be able to verify and will redirect yo
 
 ![Confirm Screenshot](https://images.tutorialedge.net/images/imgur-clone/confirm.png)
 
-# Login Flow
+## Login Flow
 
 Now that we have the ability for users to register, we need to implement the login flow so that already registered users can return and log into their account. 
 
@@ -494,7 +494,7 @@ If you save this, you should see that when you navigate to the `/login` route ou
 
 Try logging in with a confirmed account and you should see it redirect you to the placeholder profile page which we'll update now!
 
-# Profile Page:
+## Profile Page:
 
 Let's finish off by updating our `Profile.vue` component so that it retrieves the current logged in users and displays their `username` on the page.
 
@@ -570,11 +570,11 @@ Save this, and we should see our profile page return our username and rendering 
 
 > **Action** - Test the logout functionality and try hit the `/profile` page. You will see the route guard automatically redirect you to the login page!
 
-# Conclusion
+## Conclusion
 
 Congratulations, you have successfully implemented one of the trickiest and most demanding bits of functionality for your application so far. This new Login/Register flow allows you to start building an audience for your application now and you can now start building the functionality for your app that will make it successful. 
 
-## Further Reading
+### Further Reading
 
 In the next tutorial, we are going to be extending our application so that our newly registered users can start populating the site with their cat/dog images for the rest of the world to see! We now have a skeleton app that is almost an MVP which we can pitch to investors for millions, I'm very much hoping that you are enjoying this series and following along! If you have any feedback, I would love to hear it via either email or by tweeting me directly: [@Elliot_f](https://twitter.com/elliot_f)
 

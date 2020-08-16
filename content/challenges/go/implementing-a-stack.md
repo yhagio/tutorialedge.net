@@ -354,19 +354,19 @@ This is going to be the first of a number of data-structure questions which may 
 
 We'll be carrying on the theme of flying from the previous challenge here and implementing 3 crucial methods needed to support a basic implementation of a stack. 
 
-# Push
+## Push
 
 The first challenge will be to implement the `Push` function of our Stack interface. 
 
 This method will take in a Flight and `push` the flight onto the top of our `Items` stack. 
 
-# Peek
+## Peek
 
 The second part of this challenge will be implementing the `Peek` function.
 
 This method will allow us to view what item is at the top of our stack but not modify the underlying stack values.
 
-# Pop
+## Pop
 
 The third and final part of this challenge will be implementing the `Pop` function.
 
@@ -374,12 +374,12 @@ This method will allow us to `pop` an element off the top of our `Items` stack a
 
 <Quiz question="Pointer receivers, denoted by the (s *Stack), on our methods allow us to modify the value to which the receiver points" answer="True - not using pointer receivers here would mean that calling pop and push would not update the underlying value of the stack" correct="A" A="True " B="False" />
 
-# See the Solution
+## See the Solution
 
 Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 05 - Implementing a Stack](https://discuss.tutorialedge.net/t/challenge-05-implementing-a-stack/22) 
 
 
-## Further Reading:
+### Further Reading:
 
 If you enjoyed this challenge, you may also enjoy some of the other challenges on this site:
 

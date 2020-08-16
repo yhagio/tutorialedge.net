@@ -18,7 +18,7 @@ In this tutorial, we are going to be looking at how you, as a Go developer, can 
 the wonderful bit of technology that is Makefiles for fame and fortune when developing
 your own Go applications.
 
-# What are Makefiles?
+## What are Makefiles?
 
 Let's start by looking at what Makefiles are first of all. Makefiles are an incredibly
 useful automation tool that you can use to run and build not just your Go applications,
@@ -28,7 +28,7 @@ You will typically see `Makefiles` at the root directory of a whole host of diff
 Go applications on Github and in Gitlab as they are used extensively as the tool of choice
 for automating tasks that the maintainers of these applications find themselves doing often.
 
-# A Simple Example
+## A Simple Example
 
 Now that we have covered the absolute basic concepts, let's see these concepts in action
 with a really simple `Makefile` example to whet our appetite.
@@ -61,7 +61,7 @@ executed for us and `Hello` has printed out!
 
 Awesome, hopefully you can see where we are going with this.
 
-# Building a Simple Go App
+## Building a Simple Go App
 
 So, we have a simple `Makefile` in a project directory that performs the highly complex
 tax of printing out `Hello` to our terminal.
@@ -128,7 +128,7 @@ Hello
 
 Here we see that our go application is run for us.
 
-## What's the Big Deal?
+### What's the Big Deal?
 
 At this point, you might be asking what the big deal is about using Makefiles for your own
 Go applications.
@@ -166,7 +166,7 @@ GOOS=windows GOARCH=386 go build -o bin/main-freebsd-386 main.go
 With everything successfully built, you should now see your `bin/` directory full of
 binaries compatible with a range of different Operating Systems and Platforms.
 
-# Layering Commands
+## Layering Commands
 
 Let's now imagine we are working with a complex system that has a multi-stage build/run
 process that has developed over many years. Instead of having to define all of the commands
@@ -213,12 +213,12 @@ Awesome, using this approach we can start to break down more complex instruction
 into a series of smaller, easier to digest targets that can be individually debugged
 and executed.
 
-# Conclusion
+## Conclusion
 
 So, in this tutorial, we covered the absolute minimum needed to get up and running using
 `Makefiles` and the `make` command so that you can simplify your development process.
 
-## Further Reading
+### Further Reading
 
 If you enjoyed this article but wish to learn more about Makefiles and how you can best
 use them, I suggest you check out the following articles:

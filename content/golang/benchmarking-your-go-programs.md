@@ -35,11 +35,11 @@ benchmarking tests for very simple functions and then move on to more advanced
 examples before finally looking at how we can generate cool looking flame
 graphs.
 
-# Prerequisites
+## Prerequisites
 
 * You will need Go version 1.11+ installed on your development machine. 
 
-# A Simple Benchmark Test
+## A Simple Benchmark Test
 
 Within Go, benchmarking tests can be written in conjunction with your standard
 unit tests. These benchmark functions should be prefixed by "Benchmark" followed
@@ -111,7 +111,7 @@ order to run through.
 Obviously, as more benchmarks are added to our suite, or the complexity of our
 functions increases, you should see these benchmarks taking longer and longer.
 
-## The -run Flag
+### The -run Flag
 
 In the above example, we ran our benchmarks in conjunction with our tests. This
 might not be ideal if you have a massive test suite and just want to validate
@@ -189,7 +189,7 @@ was triggered. As long as we keep a consistent naming convention for our
 benchmark functions, it should be fairly easy to specify a command that only
 tests them.
 
-# Increasing the Complexity.
+## Increasing the Complexity.
 
 Typically, you'll want to benchmark your programs with a variety of distinct
 inputs. You want to measure the performance characteristics of your program
@@ -236,7 +236,7 @@ ok      _/Users/elliot/Documents/Projects/Tutorialedge/go-benchmarking-tutorial 
 When writing your benchmark suites, it's worthwhile fleshing out multiple
 benchmarks like this just to give you a far more accurate representation.
 
-<!-- # Generating Flame Graphs
+<!-- ## Generating Flame Graphs
 
 Flame graphs are an excellent way to help identify potential hot spots in your code that are bottlenecks through cool visualizations. In order to generate these Flame graphs, we'll be using the [uber/go-torch](https://github.com/uber/go-torch).
 
@@ -244,7 +244,7 @@ These graphs look a little something like this:
 
 ![generated flame graph](http://uber.github.io/go-torch/meta.svg) -->
 
-# Conclusion
+## Conclusion
 
 Hopefully this article gave you some indication as to how you can go about
 implementing your own suite of benchmarks. If you require further assistance
@@ -254,7 +254,7 @@ then please let me know in the comments section below!
 > please feel free to follow me on twitter for all the latest news:
 > [@Elliot_F](https://twitter.com/elliot_f).
 
-## Further Reading:
+### Further Reading:
 
 - [Analyzing the performance of Go functions with benchmarks](https://medium.com/justforfunc/analyzing-the-performance-of-go-functions-with-benchmarks-60b8162e61c6)
 - [Practical Go Benchmarks](https://stackimpact.com/blog/practical-golang-benchmarks/)

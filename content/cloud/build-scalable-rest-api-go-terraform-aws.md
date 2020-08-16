@@ -50,7 +50,7 @@ CMD ["/app/main"]
 
 Our simple Dockerfile for our go appNow that we've defined both the microservice and our Dockerfile, let's publish our Docker image to a repository. I've deployed this particular image here on docker hub, so feel free to follow along using my image.
 
-# Provisioning an EC2 using Terraform
+## Provisioning an EC2 using Terraform
 
 Terraform is surprisingly easy to get up and running with. When I first started using the CLI, I was able to spin up an EC2 instance in less than 5 minutes.
 Using the Terraform configuration files, we'll be specifying the characteristics of our infrastructure -such as the Auto Scaling Groups, the Security Groups, and the Instance Types we wish to run.
@@ -72,7 +72,7 @@ resource "aws_instance" "example" {
 
 After declaring your infrastructure as code in the .tf file, just run the terraform apply command an it'll automatically provision a t2.micro instance in the us-east-1 region.
 
-# The Benefits of Declarative vs. Procedural
+## The Benefits of Declarative vs. Procedural
 
 One of my favorite features of Terraform is that the files are declarative as opposed to procedural. This effectively means that whatever you have provisioned within your terraform files should accurately reflect the infrastructure that is currently deployed and running.
 
@@ -80,14 +80,14 @@ With a procedural style tools like Chef and Ansible, you write the step-by-step 
 
 Using provisioning tool like Terraform is advantageous over the likes of configuration tools such as Ansible which are procedural in nature. The problem with using procedural configuration tools is that it becomes far more difficult to track the overall state of your infrastructure - whereas provisioning tools like Terraform reduces drift.
 
-# The Joys of Destroy
+## The Joys of Destroy
 
 Another advantage of using a declarative approach is that it becomes very easy to modify your infrastructure or tear down your environments. You simply specify how you want your infrastructure to look within your .tf files and then execute the terraform apply command to provision the configuration.
 
 For example, a developer might create several environments purely for the intention of testing a system before a production release. Using the terraform destroy command, a developer can quickly tear down the temporary infrastructure without the need for additional scripting.
 Integrating this approach to immutable infrastructure as code within your CI/CD pipeline can save time and money - simply spin up your infrastructure, run your tests, and then tear down your infrastructure.
 
-# Provisioning an Auto Scaling Group
+## Provisioning an Auto Scaling Group
 
 Auto Scaling Groups (ASG) can automatically provision more instances of our microservice when the loads increase. In order to provision an ASG within our terraform file, we'll first want to create an AWS Security Groups that specifies both ingress and egress port rules for every instance within our ASG.
 
@@ -143,7 +143,7 @@ sudo docker run -d -p 80:8081 forbsey/go-docker:first
 
 Using this approach, any instances created by our auto-scaling group will automatically configure themselves to run our microservice on startup - with no manual intervention needed!
 
-# Provisioning an Elastic Load Balancer
+## Provisioning an Elastic Load Balancer
 
 In order to provision an Elastic Load Balancer (ELB) to automatically distributes incoming traffic across multiple targets, we'll first need to create a security group resource and specify both ingress and egress rules that will add the IP addresses and ports of incoming and outgoing traffic to the allowlist.
 
@@ -227,7 +227,7 @@ elb_dns_name = terraform-go-api-1767816456.eu-west-1.elb.amazonaws.com
 
 > Note: new services can take a while to show up due to DNS propagation timings
 
-# The Finished Application!
+## The Finished Application!
 
 Following the short and simple steps in this blog, we've been able to develop and deploy a production-ready go microservice that features:
 

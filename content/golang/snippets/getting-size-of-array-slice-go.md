@@ -37,7 +37,7 @@ In this code snippet, we are going to look at how you can retrieve the length of
 
 In this example, we define an a slice of type `string` which contains a number of famous scientists. Below this instantiation, we then call `len(scientists)` to retrieve the length of this slice which is then printed out for us.
 
-## Further Reading:
+### Further Reading:
 
 If you enjoyed this code snippet, you may appreciate some of the other content on the site:
 

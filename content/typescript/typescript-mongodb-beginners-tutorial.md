@@ -15,14 +15,14 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 > **Source Code** - The full source code for this tutorial can be found here: [github.com/TutorialEdge/TypeScript-MongoDB-REST-Tutorial](https://github.com/TutorialEdge/TypeScript-MongoDB-REST-Tutorial)
 
-# Introduction
+## Introduction
 
 In this tutorial, we'll be building a very simple REST API that will allow you
 to store, query, update and delete books from a book table within your MongoDB
 instance. This will hopefully cover everything you need to get a basic project
 up yourself for your own side projects.
 
-# Prerequisites
+## Prerequisites
 
 In order to complete this tutorial, you are going to need the following:
 
@@ -31,7 +31,7 @@ In order to complete this tutorial, you are going to need the following:
   * `npm install -g typescript`
   * `yarn global add typescript`
 
-# Setting Up A MongoDB Database with Docker
+## Setting Up A MongoDB Database with Docker
 
 For the purpose of this tutorial, I'm going to be using `docker` in order to
 quickly get a mongodb instance up and running on my local development machine.
@@ -44,7 +44,7 @@ $ docker run --name my_mongo -d -p 127.0.0.1:27017:27017 mongo
 Note: If you already have a mongodb instance up and running then please feel
 free to ignore this step and carry on using your own instance.
 
-# Setting up our Project
+## Setting up our Project
 
 Before we get started creating our TypeScript application, we'll first need to initialize our project. This can be done relatively easily with the help of the `tsc` command line tool:
 
@@ -83,7 +83,7 @@ With this initialized, we'll also have to initialize a new `package.json` file. 
 
 The `package.json` file will contain all of our TypeScript project's dependencies.
 
-# Our TypeScript Application
+## Our TypeScript Application
 
 Our TypeScript application is going to simply expose a simple REST API that will
 allow us to perform basic CRUD on our MongoDB table. We'll be creating a table
@@ -91,7 +91,7 @@ that will contain a list of technical books and some attributes about said
 books.
 
 ```bash
-# rough book schema
+## rough book schema
 [
   { "title": "Learning Concurrency in Python" },
   { "title": "An Introduction to Cloud Development" }
@@ -103,22 +103,22 @@ Now, MongoDB is a non-relational database so if we wish to add new fields like
 an author, some comments or the book's rating then we can certainly do so in the
 future. This will be enough for us to get started with right now though.
 
-# Our Base REST API
+## Our Base REST API
 
 So, to get started, we'll need to create a very simple REST API that will expose
 5 distinct API endpoints:
 
 ```py
-- GET - /books # returns all books
-- GET - /book/1 # returns a book with id 1
-- POST - /book # inserts a new book into the table
-- DELETE - /book/1 # deletes a book with id of 1
-- PUT - /book/1 # updates a book with id of 1
+- GET - /books ## returns all books
+- GET - /book/1 ## returns a book with id 1
+- POST - /book ## inserts a new book into the table
+- DELETE - /book/1 ## deletes a book with id of 1
+- PUT - /book/1 ## updates a book with id of 1
 ```
 
 This doesn't look too bad, 5 distinct endpoints, nothing we haven't done before!
 
-# Our Project File Structure
+## Our Project File Structure
 
 Let's have a look at the project structure for the REST API that we'll be
 building. We'll need a main entry point which will be our `app.ts` file, this
@@ -137,7 +137,7 @@ we'll put the code for interacting with our mongodb instance.
 - tsconfig.json
 - package.json
 - node_modules/
-- dist/ # all of our built ts files get put here by the compiler
+- dist/ ## all of our built ts files get put here by the compiler
 ```
 
 let's initialize this project now by creating a new directory to work in and
@@ -176,7 +176,7 @@ We can now build and run our application by typing `yarn run watch` into our
 terminal. At this stage, not a lot should happen, as we don't yet have any code!
 Let's go and fix this now!
 
-# Our app.ts File
+## Our app.ts File
 
 Let's start off by creating a really simple `express` based server that returns
 `hi` when we hit the `/`. 
@@ -206,7 +206,7 @@ this will successfully start up a really simple server on
 Excellent, we now have a good base on top of which we can build our MongoDB
 based REST API!
 
-# Our bookController.ts File
+## Our bookController.ts File
 
 Ok, so let's start fleshing out our API and subsequently the functions within our `bookController.ts` file we want to expose.
 
@@ -266,7 +266,7 @@ const server = app.listen(app.get("port"), () => {
 Excellent, we have now defined all of the API Endpoints we had in mind. It's now
 time to work on integrating this with MongoDB!
 
-# Integrating with MongoDB
+## Integrating with MongoDB
 
 The first thing we'll need to do is import a new library that will allow us to
 not only connect to our MongoDB instance, but to also do cool things such as
@@ -417,7 +417,7 @@ export let addBook = (req: Request, res: Response) => {
 };
 ```
 
-# Running our Project
+## Running our Project
 
 Now, we should be done with our programming section of this tutorial, it's time
 to run this and try and test it by throwing a few HTTP Requests at it. We can
@@ -436,7 +436,7 @@ Postman in order to hit your API with a number of different HTTP requests and do
 things like populate your database, update any entries and just get used to
 interacting with it in general.
 
-# Conclusion
+## Conclusion
 
 Hopefully you found this tutorial useful! If you did then I'd love to hear your
 feedback on twitter: [@Elliot_F](https://twitter.com/elliot_f).
@@ -444,7 +444,7 @@ feedback on twitter: [@Elliot_F](https://twitter.com/elliot_f).
 If you need any further help then please feel free to let me know in the
 comments section below!
 
-## Further Reading
+### Further Reading
 
 If you enjoyed this article then you may also enjoy some of these posts on our site:
 

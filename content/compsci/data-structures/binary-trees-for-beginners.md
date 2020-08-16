@@ -18,13 +18,13 @@ twitter: https://twitter.com/Elliot_F
 Binary trees are a really cool data structure that feature a series of `nodes`
 that have at most two child `nodes`.
 
-# Ordered Binary Trees
+## Ordered Binary Trees
 
 `Ordered binary trees` are a type of `binary tree` where each `node` within the
 tree has a value greater than their left child `node` and less than their right
 child `node`.
 
-# Conclusion
+## Conclusion
 
 I hope you found this tutorial useful! If you require further assistance then
 please feel free to leave a comment in the comments section below or tweet me

@@ -29,11 +29,11 @@ By the end of this, you should have a solid grasp as to how to employ
 
 > **Note** - The full code for this tutorial can be found here: [TutorialEdge/go-waitgroup-tutorial](https://github.com/TutorialEdge/go-waitgroup-tutorial)
 
-# Video Tutorial
+## Video Tutorial
 
 {{< youtube id="0BPSR-W4GSY" autoplay="false" >}}
 
-# Understanding WaitGroups
+## Understanding WaitGroups
 
 Let's dive straight in and look at what a `WaitGroup` is and what problem it
 solves for us.
@@ -68,7 +68,7 @@ fails to reach `line 6` and it never actually prints out `Inside my goroutine`.
 This is because the main function actually terminates before the `goroutine`
 gets a chance to execute.
 
-## The Solution? - WaitGroups
+### The Solution? - WaitGroups
 
 WaitGroups essentially allow us to tackle this problem by blocking until any
 goroutines within that `WaitGroup` have successfully executed.
@@ -80,7 +80,7 @@ signal the end of its' execution.
 > **Note -** You need to ensure that you call `.Add(1)` before you execute your
 > `goroutine`.
 
-# A Simple Example
+## A Simple Example
 
 Now that we've covered the essential theory, let's take a look at how we can fix
 our previous example through the use of `WaitGroups`:
@@ -131,7 +131,7 @@ Inside my goroutine
 Finished Execution
 ```
 
-# Anonymous Functions
+## Anonymous Functions
 
 It should be noted that we can accomplish the same thing as above using
 anonymous functions should we so wish. This can be more succinct and easier to
@@ -184,7 +184,7 @@ go func(url string) {
 
 This is just something to keep in mind if you ever face this issue.
 
-# A "Real" World Example
+## A "Real" World Example
 
 In one of my production applications, I was tasked with creating an API that
 interfaced with a tonne of other APIs and aggregated the results up into one
@@ -319,7 +319,7 @@ Returning Response
 > effective outcome could have been achieve through the use of channels. For
 > more on channels - [Go Channels Tutorial](/golang/go-channels-tutorial/)
 
-# Conclusion
+## Conclusion
 
 In this tutorial, we learned the basics of WaitGroups, including what they are
 and how we can use them within our own highly performant applications in Go.
@@ -328,7 +328,7 @@ If you enjoyed this tutorial or have any comments/suggestions, then please feel
 free to let me know in the comments section below, or in the suggestions section 
 at the side!
 
-## Further Reading
+### Further Reading
 
 If you enjoyed this article and wish to learn more about working with Concurrency
 in Go, then I recommend you check out our other articles on concurrency:

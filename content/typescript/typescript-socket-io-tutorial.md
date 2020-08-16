@@ -26,7 +26,7 @@ We'll be covering the following:
 - Building a Simple client to connect to our Server
 - Two-way communication between our client and our server
 
-# WebSockets
+## WebSockets
 
 WebSockets are an awesome technology and I absolutely love playing around with
 them and creating real-time applications. I've used them for quite a number of
@@ -43,7 +43,7 @@ our Websocket API will sit on top of.
 > The full source code for this repo can be found here:
 > [TutorialEdge/TypeScript](https://github.com/TutorialEdge/TypeScript)
 
-# Introduction
+## Introduction
 
 We are going to start off by defining a really simple TypeScript based
 Express.js server that will listen on port 3000. Whenever a user hits
@@ -111,7 +111,7 @@ project should be built. Create this file in the root directory of your project:
 }
 ```
 
-# Building our Project
+## Building our Project
 
 Now that we've set up our `tsconfig.json` file and we've got our `src/server.ts`
 file, we can attempt to build and subsequently run this app:
@@ -125,7 +125,7 @@ Should there be no errors, this will kick off our server running on port `3000`.
 Attempt to hit this now by navigating to `http://localhost:3000` in your
 browser.
 
-# Automatically Rebuilding and Re-running
+## Automatically Rebuilding and Re-running
 
 Obviously, as we start to develop this out more, we don't want to have to
 perform the above commands every time we wish to test what we've done works.
@@ -164,7 +164,7 @@ Now, we can just run `yarn run watch` and it will automatically rebuild and
 rerun our TypeScript based project every time we make a change. This is
 invaluable as it saves you a lot of time in the long run.
 
-# Implementing our Websocket Endpoint
+## Implementing our Websocket Endpoint
 
 Now that we have a basic `express` server, let's add the code we'll need for our
 `socket.io` based endpoint.
@@ -209,7 +209,7 @@ const server = http.listen(3000, function() {
 Now, when we run our `yarn run watch` command, it should start up our incredibly
 simple websocket API.
 
-# Testing This Works
+## Testing This Works
 
 Now that we've implemented the server, let's implement a really clean and simple
 `./client/index.html` page that we can serve. This will simply contain a single
@@ -245,7 +245,7 @@ When we try and hit `http://localhost:3000` in our browser, we should see our
 `index.html` page rendering our button. We should see, in our server logs, that
 a new user has connected as we've triggered the `connection` event.
 
-## Listening for Messages
+### Listening for Messages
 
 So, in the above `index.html` we emit a `message` of `Hello World`. If we want
 to listen to this within our server, we can add the following code:
@@ -301,7 +301,7 @@ HELLO WORLD
 Awesome, we've managed to successfully send a message from our client to our
 WebSocket server using the socket-io package.
 
-# Two-Way Communication
+## Two-Way Communication
 
 Now that we've got basic one-way communication up and running, let's try going
 back the way and send an echoed response from our server back to the client
@@ -349,7 +349,7 @@ browser console.
 > client. You should see this newly modified message being printed out only in
 > your client's browser console.
 
-# Conclusion
+## Conclusion
 
 In this tutorial, we've successfully managed to create a socket.io TypeScript
 server that can be connected to using a frontend in order to display any

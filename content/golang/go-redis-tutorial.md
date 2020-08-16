@@ -14,7 +14,7 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 
 Hi everyone, in this tutorial, we are going to be looking at how you can effectively use Redis as a backend solution for your Go applications. 
 
-# Prerequisites
+## Prerequisites
 
 If you wish to follow this tutorial on your local machine, you'll need to have the following installed on your machine:
 
@@ -22,7 +22,7 @@ If you wish to follow this tutorial on your local machine, you'll need to have t
 * Go version 1.12+ - We'll be using Go modules to manage our project's dependencies
 * A text editor such as Visual Studio Code
 
-# Why Redis?
+## Why Redis?
 
 Redis is a fantastic open-source in-memory data structure store which can be used for various purposes such a database for your app, or a caching service or even a message broker. 
 
@@ -30,7 +30,7 @@ It supports a wide variety of different data structures and is incredibly versat
 
 For the purpose of this tutorial however, we are going to be keeping it nice and simple with a single, locally running instance of redis which we'll be running with Docker. 
 
-# Running Redis With Docker Locally
+## Running Redis With Docker Locally
 
 Let's get started with this tutorial and download the `redis` docker image and run it using the following 2 docker commands:
 
@@ -41,7 +41,7 @@ $ docker run --name redis-test-instance -p 6379:6379 -d redis
 
 The first `pull` command does the job of retrieving the `redis` image from DockerHub so that we can then run it as a container using the second command. In the second command we specify the name of our redis container and we also map our local port 6379 to the port that redis is running against within the container using the `-p` flag. 
 
-# Connecting to our Redis Instance
+## Connecting to our Redis Instance
 
 Ok, so now that we have successfully started our redis instance, we can start writing a very simple Go application that will connect with this instance. 
 
@@ -113,11 +113,11 @@ Go Redis Tutorial
 PONG <nil>
 ```
 
-# Adding Values to Redis
+## Adding Values to Redis
 
 Perfect, we've been able to successfully connect to our Redis instance in the previous part of this tutorial. We now need to look at how we can both `Set` and `Get` values from this redis instance.
 
-## Setting Values
+### Setting Values
 
 We'll start off by looking at setting values using the `client.Set` method. This method takes in a `key` and a `value` as well as an `expiration`. Setting the `expiration` to 0 effectively sets the key to have no expiration time.
 
@@ -131,7 +131,7 @@ if err != nil {
 }
 ```
 
-## Getting Values
+### Getting Values
 
 Now that we have looked at setting values using the `Set` method, let's take a look at how we would retrieve those values using the aptly named `Get` method. 
 
@@ -158,7 +158,7 @@ Elliot
 
 Awesome, we have now been able to successfully both Set and Get values from our Redis instance from within our Go application!
 
-# Storing Composite Values
+## Storing Composite Values
 
 Whilst you can certainly achieve a lot just with storing basic key/value pairs in Redis, sometimes you need to take things a little further and store more complex composite data structures in the database. 
 
@@ -220,11 +220,11 @@ PONG <nil>
 ```
 
 
-# Conclusion
+## Conclusion
 
 So, in this tutorial, we took a look at the basics of working with Redis in Go. We looked at how you can connect to Redis databases using the `github.com/go-redis/redis` package and we looked at how you can interact with that database using some of the methods that the package provides for us.
 
-## Further Reading
+### Further Reading
 
 If you enjoyed reading this, you may also enjoy some of our other articles on the site:
 

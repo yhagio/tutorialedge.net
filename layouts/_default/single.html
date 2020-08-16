@@ -43,11 +43,12 @@
 
   <div class="hidden w-1/5 sm:block text-gray-700 bg-white p-4 md:p-8 lg:p-16">
     <div class="sticky">
-        <div class="toc">
+        <div class="toc mb-8 bg-gray-200 rounded p-4">
           <h4 class="text-gray-800 uppercase tracking-wide font-bold text-sm lg:text-xs mb-4">Table Of Contents</h4>
+          {{.TableOfContents}}
+
         </div>  <!-- toc end tag -->
 
-        {{.TableOfContents}}
 
         <Carbon />
       </div> <!-- sticky sidebar end tag -->

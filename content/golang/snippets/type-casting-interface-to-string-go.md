@@ -30,7 +30,7 @@ snippet: |
 
 In this Code Snippet, we are going to see what it takes to convert an `interface{}` to a `string`.
 
-## Further Reading:
+### Further Reading:
 
 If you enjoyed this code snippet, you may also appreciate some of the other content on my site:
 

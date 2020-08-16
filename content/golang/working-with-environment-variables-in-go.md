@@ -30,7 +30,7 @@ In this tutorial, we will be covering:
 - How you can subsequently use environment variables as the basis for feature
   flags within your application.
 
-# Handling Credentials
+## Handling Credentials
 
 If you are writing distributed systems in Go, the best practice when it comes to
 configuration is to store it in the environment.
@@ -48,7 +48,7 @@ additional fuss.
 > when developing cloud native applications -
 > [III. Config](https://12factor.net/config)
 
-# Reading Environment Variables
+## Reading Environment Variables
 
 With Go, we can read environment variables using the `os` package and by calling
 `os.Getenv()` passing in the string name of our environment variable.
@@ -94,7 +94,7 @@ Database Password: unicorns
 Awesome, our application has been able to successfully pick up this environment
 variable and print it out using a simple call to `fmt.Printf`.
 
-# Setting Environment Variables
+## Setting Environment Variables
 
 Go also has the ability to set environment variables should you so wish. We can
 do this by again leveraging the `os` package and calling `os.Setenv()`.
@@ -138,7 +138,7 @@ Database Password: newunicorns
 > child process cannot change it's parent processes' environment variables. Any
 > changes you make will only be made for your Go program.
 
-# Feature Flags
+## Feature Flags
 
 One interesting use of environment variables within Go programs could be as
 `Feature Flags` or `Feature Toggles`. These feature flags essentially give us
@@ -192,7 +192,7 @@ In a distributed system, this downtime should see our application instance being
 taken out of a load balancer group whilst it's down and then being re-added to
 the load balancer group when it is brought back up.
 
-# Setup Of Environment Variables
+## Setup Of Environment Variables
 
 In more complex applications, you may have tens, if not hundreds of different
 environment variables that need to be set prior to application startup.
@@ -224,7 +224,7 @@ These are just a few potential suggestions, hopefully they give you some
 indication as to how to handle this in a production environment in a secure
 fashion.
 
-# Conclusion
+## Conclusion
 
 So, in this tutorial, we have covered both reading and writing environment
 variables in Go, as well as using these environment variables to implement

@@ -15,21 +15,21 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 Sorting items to be in order is something that every programmer will undoubtedly have to do at one point in their career. There are different approaches and many different sorting algorithms available for you to choose from, but typically it is better to rely on already implemented packages to do your sorting for you.
 
-# Goals
+## Goals
 
 By the end of this tutorial, you will know how to:
 
 * Implement basic sorting within your Go applications using the `"sort"` package.
 * Implement custom sorting functions that allow you to sort composite data structures
 
-# Prerequisites
+## Prerequisites
 
 In order to complete this tutorial, you will need the following:
 
 * Go v1.11+ installed on your machine
 * A text editor in which you can work. I recommend Visual Studio Code for this.
 
-# A Simple Sorting Example
+## A Simple Sorting Example
 
 Let's take a look at a really simple sorting application that allows us to sort a variety of arrays.
 
@@ -85,7 +85,7 @@ func main() {
 }
 ```
 
-# Custom Sorting Functions
+## Custom Sorting Functions
 
 In this section of the tutorial, we are going to cover how to sort more complex data structures using custom sorting functions.
 
@@ -145,13 +145,13 @@ When we run this, we should see that our `programmers` array is subsequently sor
 [{20} {30} {50} {1000}]
 ```
 
-# Conclusion
+## Conclusion
 
 Awesome, in this tutorial, we have been able to use the `"sort"` package to help implement sorting in our Go applications.
 
 We have also looked at how we can implement our own custom sorting functions that allow us to sort more complex data structures in our applications.
 
-## Further Reading
+### Further Reading
 
 If you enjoyed this article, you may also enjoy the following tutorials:
 

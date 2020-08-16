@@ -23,7 +23,7 @@ By taking the time to adequately test your go programs you allow yourself to
 develop faster with a greater sense of confidence that what you are developing
 will continue to work when you release it to production.
 
-# Goals
+## Goals
 
 By the end of this tutorial, you will have a good grasp of testing basic functions
 and methods in Go using the standard `"testing"` package.
@@ -32,18 +32,18 @@ You will have had experience writing table-driven tests and you will also see
 how to generate more verbose output from your tests using the various flags
 available.
 
-# Video Tutorial
+## Video Tutorial
 
 This tutorial can be found in video format if you prefer:
 
 <div style="position:relative;height:0;padding-bottom:42.76%"><iframe src="https://www.youtube.com/embed/GlA57dHa5Rg?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="842" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 
-# Introduction
+## Introduction
 
 In this tutorial we are going to look at how you can develop and run tests for
 your go code using the `go test` command.
 
-## Go Test Files
+### Go Test Files
 
 If you have seen any go projects before, you may have noticed that most, if not
 all files within the project, feature a `FILE_test.go` counterpart within the
@@ -62,7 +62,7 @@ myproject/
 - main_test.go
 ```
 
-## A Simple Test File
+### A Simple Test File
 
 Imagine we had a very simple go program that was made up of one file and
 featured a `calculate()` function. This `calculate()` function simply takes in 1
@@ -107,7 +107,7 @@ func TestCalculate(t *testing.T) {
 }
 ```
 
-## Running Our Tests
+### Running Our Tests
 
 Now that we have created our first go test, it's time to run this and see if our
 code behaves the way we expect it to. We can execute our tests by running:
@@ -125,7 +125,7 @@ PASS
 ok      _/Users/elliot/Documents/Projects/tutorials/golang/go-testing-tutorial  0.007s
 ```
 
-## Table Driven Testing
+### Table Driven Testing
 
 Now that we are happy that one calculation works, we should look to improve
 confidence by adding a few extra test cases into our code. If we want to
@@ -167,7 +167,7 @@ PASS
 ok      _/Users/elliot/Documents/Projects/tutorials/golang/go-testing-tutorial  0.007s
 ```
 
-# Verbose Test Output
+## Verbose Test Output
 
 Sometimes you may wish to see exactly what tests are running and how long they
 took. Thankfully, this is available if you use the `-v` flag when running your
@@ -187,7 +187,7 @@ ok      _/Users/elliot/Documents/Projects/tutorials/golang/go-testing-tutorial  
 You can see that both our normal test and our table test ran and passed and took
 less than `0.00s` to execute.
 
-# Checking Test Coverage
+## Checking Test Coverage
 
 Test coverage is a metric that I have seen abused at times by companies. These
 companies set targets on all of their systems such as "the codebase must be at least 75%
@@ -205,7 +205,7 @@ The days spent writing tests to cover unimportant parts of your codebase could
 have been better spent writing test cases around the **critical business logic**
 captured within your systems and ensuring more edge cases are covered. 
 
-## Using the -cover flag
+### Using the -cover flag
 
 With the important part out of the way, let's look at how you can check the 
 test coverage of your system using the `go test` command:
@@ -224,7 +224,7 @@ ok      github.com/TutorialEdge/an-intro-to-testing-in-go       0.006s
 You will see that you have `66.7%` of your total Go code covered by test
 cases. 
 
-## Visualizing Coverage
+### Visualizing Coverage
 
 Whilst this `66.7%` value can tell us how much of our code we have tested,
 it doesn't show us exactly what code paths we have or haven't tested. 
@@ -259,7 +259,7 @@ As you can see, most of the code within our `Calculate` function is testing and
 features `Green` coverage. Whilst the print statement in your `main` function
 is `Red` as this hasn't been covered by tests.
 
-# Conclusion
+## Conclusion
 
 Hopefully you found this tutorial useful! If you require further assistance then
 please feel free to let me know in the comments section below.
@@ -267,7 +267,7 @@ please feel free to let me know in the comments section below.
 > The full source code for this article can be found here:
 [TutorialEdge/an-intro-to-testing-in-go](https://github.com/TutorialEdge/an-intro-to-testing-in-go)
 
-## Further Reading
+### Further Reading
 
 If you enjoyed this, you may like my other articles on testing in Go:
 

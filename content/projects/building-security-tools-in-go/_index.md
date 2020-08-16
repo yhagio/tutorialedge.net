@@ -17,7 +17,7 @@ Security is something we all need to be aware of as application developers. I ha
 
 In reality, every decision you make when building applications needs to be made with security in mind or you could end up exposing your customer's private information to unscrupulous characters across the dark web.
 
-## Goals
+### Goals
 
 The goal of this course is two parts:
 

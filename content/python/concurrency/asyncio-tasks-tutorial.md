@@ -20,7 +20,7 @@ In this tutorial we'll be looking at Tasks in Asyncio. We'll be building on top
 of my previous tutorial on
 [Asyncio Event Loops](/python/concurrency/asyncio-event-loops-tutorial/).
 
-# Tasks
+## Tasks
 
 Tasks within Asyncio are responsible for the execution of coroutines within an
 event loop. These tasks can only run in one event loop at one time and in order
@@ -34,7 +34,7 @@ in previous chapters.
 In this section we’ll look at some of the key functions that we can use in order
 to work with tasks within our asyncio based programs.
 
-# A Simple Example
+## A Simple Example
 
 One of the key things to note about tasks in Asyncio is that you don't directly
 create them, you instead use the `ensure_future()` function or the
@@ -75,7 +75,7 @@ Completed All Tasks
 Let's now take a look at how we can retrieve all of our tasks using the
 `all_tasks()` method.
 
-## The all_tasks(loop=None) method
+### The all_tasks(loop=None) method
 
 Being able to ascertain what tasks are currently pending can be important for
 systems in production needing to be able to anticipate things such as workload
@@ -116,7 +116,7 @@ Processing Task
 Completed All Tasks
 ```
 
-## The cancel() function
+### The cancel() function
 
 Being able to effectively cancel pending tasks can be useful in scenarios where
 you are rate limiting the number of tasks being executed, or if you are trying
@@ -168,12 +168,12 @@ Processing Task
 Completed All Tasks
 ```
 
-# Task Functions
+## Task Functions
 
 So we've looks at how we can interact with individual tasks but let's now take a
 step back and look at how we can interact with them as a collective.
 
-## The as_completed() function
+### The as_completed() function
 
 ```py
 import asyncio
@@ -196,7 +196,7 @@ finally:
     loop.close()
 ```
 
-## The gather() function
+### The gather() function
 
 The `gather()` function returns one single future that aggregates all of the
 results from the given coroutines or futures passed into it. You should note
@@ -222,7 +222,7 @@ finally:
     loop.close()
 ```
 
-## The wait() function
+### The wait() function
 
 The `wait()` function simply blocks until the Future instances passed into it
 complete, upon completion this will then returned a named 2-tuple of sets. The
@@ -250,7 +250,7 @@ finally:
     loop.close()
 ```
 
-# Conclusion
+## Conclusion
 
 I hope you found this tutorial useful, if you require further assistance then
 please feel free to let me know in the comments section below!

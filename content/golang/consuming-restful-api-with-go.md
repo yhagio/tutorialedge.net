@@ -33,11 +33,11 @@ exposes all the known information for everything Pokemon related. A bit silly I
 know but it's a fully fledged API that follows standard naming conventions and
 requires no authentication so there is no barrier to entry.
 
-# Prerequisites
+## Prerequisites
 
 * You will need Go version 1.11+ installed on your development machine. 
 
-# Querying The API
+## Querying The API
 
 To get us started we are going to query for all the Pokemon from the original
 series. We'll be hitting the `http://pokeapi.co/api/v2/pokedex/kanto/` API
@@ -48,7 +48,7 @@ expecting when our go program performs a `GET` request on this endpoint.
 > **Note -** When you open a web page in a browser, you are performing a `GET`
 > request for that page.
 
-# GET Request
+## GET Request
 
 So in order to mimic what we've just done in the browser in go, we'll have to
 write a program that looks like so:
@@ -96,7 +96,7 @@ If you run the above program you should see that it successfully performs a
 `GET` request on our API Endpoint and then prints all of our Pokemon out in the
 console.
 
-## Creating a Pokemon Struct
+### Creating a Pokemon Struct
 
 By knowing the structure of the JSON response that the above API endpoint gives
 us we can now map this into a series of `structs` that we can map our objects
@@ -155,7 +155,7 @@ type PokemonSpecies struct {
 }
 ```
 
-## Unmarshalling our JSON
+### Unmarshalling our JSON
 
 Now that we've defined these structs, we can Unmarshal the returned JSON string
 into a new variable. We can do this in our `main` function by adding these three
@@ -176,7 +176,7 @@ that it all works we print out our `responseObject.Name` which should equat to
 our expectations, if it prints out 151 then we know we've done it right and we
 can now iterate over these pokemon.
 
-# Listing All Our Pokemon
+## Listing All Our Pokemon
 
 In order to list all of our pokemon we need to create a for loop that loops for
 every object in our `responseObjects` Pokemon array like so:
@@ -196,7 +196,7 @@ for i := 0; i < len(responseObject.Pokemon); i++ {
 Running this now you should see that every Pokemon's name is listed in your
 console.
 
-# Full Source Code
+## Full Source Code
 
 ```go
 package main
@@ -252,7 +252,7 @@ func main() {
 }
 ```
 
-# Summary
+## Summary
 
 In this tutorial, we've looked at how you can perform `GET` requests on `HTTP`
 endpoints and print out the plain text response of the response. We've then

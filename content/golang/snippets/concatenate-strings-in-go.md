@@ -44,7 +44,7 @@ String Concatenation Tutorial
 Hello World
 ```
 
-## Further Reading
+### Further Reading
 
 If you enjoyed this really quick and dirty code snippet on string concatenation in Go, you may also like these articles:
 

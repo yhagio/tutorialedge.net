@@ -20,11 +20,11 @@ past how you can utilize raw websockets and convert them into observables using
 the RxJS library in a previous tutorial which can be found here:
 [Angular Websockets Tutorial](/typescript/angular/angular-websockets-tutorial/)
 
-# Video Tutorial
+## Video Tutorial
 
 <div style="position:relative;height:0;padding-bottom:42.76%"><iframe src="https://www.youtube.com/embed/n7OKfVwClE4?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="842" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 
-# Installing Socket.IO
+## Installing Socket.IO
 
 In order to utilize the socket.io library we will first have to install it using
 the node package manager. We can do this by typing the following:
@@ -34,7 +34,7 @@ npm install socket.io-client
 npm install @types/socket.io-client
 ```
 
-# Turning Websockets into RxJS Subjects
+## Turning Websockets into RxJS Subjects
 
 RxJS Subjects are both an `Observable` and an `Observer`. Using these Subjects
 we can concurrently listen to and send messages to a single websocket, this
@@ -127,7 +127,7 @@ export class ChatService {
 }
 ```
 
-# Using our Chat Service
+## Using our Chat Service
 
 If we wanted to start using our newly crafted chat service we could something
 like this:
@@ -166,7 +166,7 @@ specified your newly created services in the `app.module.ts` providers array you
 should hopefully now have an application that can send and receive messages from
 a `socket.io` based webserver.
 
-# Our Websocket Server
+## Our Websocket Server
 
 In this tutorial we will be leveraging a very simple socket.io based `express`
 server which will listen on `http://localhost:5000` for all incoming websocket
@@ -206,7 +206,7 @@ http.listen(5000, () => {
 > are installed. You can do that by typing `npm i express http socket.io`. You
 > can run this server by typing `node app.js`.
 
-# Conclusion
+## Conclusion
 
 When you run this you should see our websocket server print out something like
 the below output. It first starts on port 5000, when we then open up our Angular

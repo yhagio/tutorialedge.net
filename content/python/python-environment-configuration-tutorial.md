@@ -28,7 +28,7 @@ In some scenarios you may have to pick up various environment variables from the
 machine running your Python application. In this tutorial I'm going to be
 showing you the best ways to access these environment variables.
 
-# Basic Example
+## Basic Example
 
 Say we had a section of code that talks to a database. In `development` we would
 want it to talk to our `development`-only database, in `production` we would
@@ -50,7 +50,7 @@ millions in damages.
 
 So how do we do this using environment variables?
 
-# System Environment Variables
+## System Environment Variables
 
 If we had two distinct servers to run our Python applications, we could set the
 environment variables `db_username` and `db_password` on each of our servers.
@@ -86,7 +86,7 @@ you run your Python applications. However this approach could be difficult if
 you run on one shared machine without the use of virtual machines, containers or
 some other similar mechanism.
 
-# Docker
+## Docker
 
 If you haven't heard of Docker then I highly suggest you check it out.
 Essentially it's a containerization technology that allows you to wrap your
@@ -99,7 +99,7 @@ contained things such as database `usernames` and `passwords`. Your application
 would then pick these up at runtime and use these credentials to connect to the
 appropriate database.
 
-# Conclusion
+## Conclusion
 
 Hopefully this article helped to shed some light on how you would go about
 working with environment variables in your Python applications. If you found

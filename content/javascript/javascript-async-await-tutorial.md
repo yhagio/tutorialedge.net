@@ -19,7 +19,7 @@ in version 7.6. Hopefully, by the end of the tutorial, you will be going back to
 refactor all of your old NodeJS based applications to replace all of your
 chained callbacks and promises.
 
-# A Simple Introduction
+## A Simple Introduction
 
 Let us first have a look at how we would typically deal with functions that
 return promises without `async` or `await`. We'll create a `myPromise()`
@@ -78,7 +78,7 @@ of code, as we had with 8 lines of code in our previous `myTraditionalFunction`.
 By utilizing the `async` and `await` keywords, we have been able to create a
 program that is far cleaner and more concise.
 
-# Improvements to Error Handling
+## Improvements to Error Handling
 
 Using both `async` and `await` improves the way we can deal with errors that
 occur inside of our promises. Let's take for example a program that crawls a
@@ -131,7 +131,7 @@ async function crawlPage(url) {
 crawlPage("https://tutorialedge.net/");
 ```
 
-# Conclusion
+## Conclusion
 
 Hopefully, you found this tutorial useful and I've shown you the light when it
 comes to using `async` and `await` within your own JavaScript programs. I would

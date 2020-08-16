@@ -16,13 +16,13 @@ Welcome to the first tutorial in this new series on building security tools in G
 
 This will give us a good understanding of what Port Scanning is and why we should be aware of what ports we are leaving open on any of the machines that we run our applications on top of.
 
-# Video Tutorial
+## Video Tutorial
 
 If you prefer, this tutorial is also available in video format on my YouTube channel:
 
 {{< youtube id="H-PWrdkowVA" autoplay="false" >}}
 
-# What is Port Scanning?
+## What is Port Scanning?
 
 Port scanning is the act of iterating over every port on a machine and checking to see which ones are `Open`, `Closed`, or `Filtered`.  
 
@@ -30,7 +30,7 @@ In total there are just over **130,000 ports** on a typical machine, **65535 of 
 
 <Quiz question="What Ports do HTTP and HTTPS use?" A="22 and 443" B="21 and 22" C="80 and 443" correct="C" answer="The Correct answer is C - HTTP uses port 80 and HTTPS uses port 443" />
 
-## Why Should We Care?
+### Why Should We Care?
 
 This is one of the biggest offenders when it comes to identifying how a security breach has occurred. These security breaches can be caused by a combination of leaving ports open and not updating the services running behind those ports regularly enough. 
 
@@ -38,7 +38,7 @@ There are a number of different ways we can protect ourselves from these securit
 
 With this in mind, let's jump in to the code and see how we can implement our own, simple port scanning tool in Go which can help us to better evaluate the systems that we develop and deploy for any security vulnerabilities.
 
-# Scanning a Port in Go
+## Scanning a Port in Go
 
 Let's take a look at how we would implement a simple port scan function in Go using the `net` package.
 
@@ -86,7 +86,7 @@ Port Open: true
 
 If we try against one of the lower ports within the **1-1024** port range on our machine, we should see that it returns `false` as these are typically locked down by default or assigned to services that do not accept connections on these ports.
 
-# First Scan - Lower Port Ranges
+## First Scan - Lower Port Ranges
 
 The lower end of the port range from 1-1024 are well known ports that have been pre-allocated to various services such as HTTP - `Port 80`, SSH - `Port 22` or FTP - `Port 21` to name just a few. 
 
@@ -169,7 +169,7 @@ Now, when we run this, we should see that our program goes away and tries to ope
 
 Hopefully, if you are running this against your local machine, you should see that no ports are currently in an `Open` state. 
 
-# Running UDP Scans
+## Running UDP Scans
 
 Now that we have a means of scanning ports within our `ScanPort` function, we can now easily extend our port scanning application to also scan the lower `UDP` ports by adding an additional loop in our `InitialScan` function like so:
 
@@ -224,7 +224,7 @@ We've also made some slight changes to our `ScanResult` struct and changed the `
 
 Now, when we run this, our port-scanner will run through the bottom 1024 and scan both `TCP` and `UDP` ports and output the results!
 
-# Types of Port Scan
+## Types of Port Scan
 
 In the above example we are looking exclusively at how to do a TCP Connect port scan over a machine. This is fine for getting started, however you should note that this can sometimes tip off a security system that a potential hack is underway. 
 
@@ -244,7 +244,7 @@ Some of the more common techniques are:
 
 > **Challenge** - Have a look at the [https://github.com/tatsushid/go-fastping](https://github.com/tatsushid/go-fastping) and import it into your project. Extend the `port` package to include the functionality to run an ICMP port scan in a new function.
 
-# Wider Port Scans
+## Wider Port Scans
 
 We've looked at how to do an initial scan which covers the first 1024 ports on a machine for both UDP and TCP. However, if there are no obvious services which have been left open on these ports then the next step is typically to widen the scan to the first 49151 ports which are the list of registered ports. 
 
@@ -341,7 +341,7 @@ func main() {
 
 Try running this now and see how long it takes to run, even on my high-powered Macbook Pro connecting to `localhost` it takes quite a long time to complete. If we were targetting a server in a different country or continent then we would also have to account for network latency which would massively increase the amount of time this scan would take to run.
 
-# Improving the Performance with goroutines
+## Improving the Performance with goroutines
 
 Currently we have a synchronous system that will loop through all the ports one after the other and check to see if they are open. However, we can massively improve the performance of our system by introducing `goroutines` and making our port scans execute concurrently. 
 
@@ -354,7 +354,7 @@ Currently we have a synchronous system that will loop through all the ports one 
 >
 > * [Go WaitGroup Tutorial](/golang/go-waitgroup-tutorial/)
 
-# Conclusion
+## Conclusion
 
 So, in this tutorial, we have looked at the technique of port scanning and how it can be used to probe various servers for potential vulnerabilities. With this newfound understanding of this technique, we then put theory into practice and built an incredibly cool Go-based port scanner which we can use in our own day-to-day security tests!
 

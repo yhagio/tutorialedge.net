@@ -27,7 +27,7 @@ we'll be covering in order to read and write, `.txt`, `.csv`, `.xls` and so on,
 the only thing that differs for these files is the structure of the data that
 you write to each of these file types.
 
-# Reading Files
+## Reading Files
 
 In order to read from files on your local filesystem, you'll have to use the
 `io/ioutil` module. You'll first have to pull of the contents of a file into
@@ -76,7 +76,7 @@ this has all my content%
 As you can see, we've successfully managed to read all of the data stored within
 our proprietary `localfile.data` file type.
 
-# Writing Files to New Files
+## Writing Files to New Files
 
 Now that we've covered reading from files in Go, it's time to look at creating
 and writing to our own files!
@@ -148,7 +148,7 @@ and prints the contents in the console:
 All the data I wish to write to a file
 ```
 
-# Writing to Existing Files
+## Writing to Existing Files
 
 What happens if we have an existing file that we want to write additional
 information to?
@@ -215,7 +215,7 @@ new data that wasn't there originally
 And Voila! We have successfully managed to append to an existing file using
 `os.OpenFile` and the `f.WriteString()` method.
 
-## File Permissions
+### File Permissions
 
 It's incredibly important to understand the various different file permissions
 available to you when you are writing to new files.
@@ -224,7 +224,7 @@ available to you when you are writing to new files.
 > checking out:
 > [https://golang.org/pkg/os/#FileMode](https://golang.org/pkg/os/#FileMode)
 
-# Conclusion
+## Conclusion
 
 If you understand the basics of reading and writing files in Go, then you have
 the basics down for reading and writing **any** filetype possible, be that CSV,
@@ -235,7 +235,7 @@ That's all we are going to cover in this tutorial, we've managed to look at
 reading and writing to a really simple data format. We then briefly looked at
 file permissions.
 
-## Further Reading:
+### Further Reading:
 
 - [Parsing JSON Files with Go](/golang/parsing-json-with-golang/)
 - [Parsing XML Files with Go](/golang/parsing-xml-with-golang/)

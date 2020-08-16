@@ -24,13 +24,13 @@ So, in this tutorial, we'll be covering how you can get started building your ow
 
 Let's dive in! 
 
-# Video Tutorial
+## Video Tutorial
 
 This tutorial is also available in video format:
 
 {{< youtube id="Iq2qT0fRhAA" autoplay="false" >}}
 
-# Why Fiber?
+## Why Fiber?
 
 If you are coming from another language and trying your hand at developing Go applications then Fiber is an incredibly easy framework to start working with. It presents a familiar feel to Node.js developers who have previously built systems using Express.js. It's also built on top of `Fasthttp` which is an incredibly performant and minimal HTTP engine built for Go.
 
@@ -64,7 +64,7 @@ Fiber v1.9.1 listening on :3000
 
 Awesome, we now have the base upon which we can start building more complex systems on top of! 😎
 
-# Introduction
+## Introduction
 
 Let's start off by modifying the quick-start code and making it more extensible:
 
@@ -99,7 +99,7 @@ Let's breakdown what we have done here.
 * We've created a new function called `setupRoutes` which we pass the pointer to our `app`. Within this `setupRoutes` function we map the endpoints to the named functions. This change allows us to move our route logic out from the app initialization logic which is important if we are going to be writing more complex apps.
 * We've created the named function `helloWorld` which we have now mapped the `/` endpoint to. This change allows us to write more complex endpoint functions.
 
-# Building our REST API Endpoints
+## Building our REST API Endpoints
 
 So, with these new changes in place, let's now look at extending the functionality of our app and creating some additional endpoints from which we can serve requests. We'll be building a book management system which will feature an in-memory store of books that we have been reading during this pandemic lock down!
 
@@ -114,7 +114,7 @@ We'll want to create the following endpoints:
 
 Let's see how we can start building this up now. 
 
-## The Book Package
+### The Book Package
 
 Not enough introductory tutorials break out of the `main.go` file and I've been guilty of this in the past. So let's break this cycle and build some solid foundations which can be easily extended should you wish to build more complex apps off the code in this tutorial.
 
@@ -209,7 +209,7 @@ Delete Book
 
 **Brilliant, all 4 endpoints have returned the proper response** for their respective HTTP requests!
 
-# Adding a Database
+## Adding a Database
 
 Now that we have our respective endpoints all defined and working as expected, let's have a look at setting up a simple database that we'll interact with using `gorm` which simplifies our life talking to databases!
 
@@ -304,7 +304,7 @@ type Book struct {
 }
 ```
 
-## Updating our Endpoints
+### Updating our Endpoints
 
 Next, we'll need to update the functions mapped to each of our endpoints. Let's start off by updating `GetBooks` to return all books:
 
@@ -335,7 +335,7 @@ Here we've used the `c.Params("id")` function in order to retrieve the path para
 
 > **Note** - I've not bothered adding error handling to this particular endpoint, it will always assume that the book exists. I'll leave this as a challenge to the reader to handle this case.
 
-## Adding and Deleting Books
+### Adding and Deleting Books
 
 So far we have just dealt with retrieving books from our database, let's look at how we can start adding and deleting books by updating the `NewBook` and `DeleteBook` functions.
 
@@ -371,7 +371,7 @@ func DeleteBook(c *fiber.Ctx) {
 }
 ```
 
-## Migrating our Database
+### Migrating our Database
 
 Gorm thankfully handles the creation and any updates of our tables for us, so the complexity of setting all this up is minimal. We need to add the call to `AutoMigrate` passing in the struct that we want to generate our tables based off of:
 
@@ -393,7 +393,7 @@ func initDatabase() {
 
 When we next start our API, it will automatically generate the tables for us within our sqlite database.
 
-## Testing our Endpoints:
+### Testing our Endpoints:
 
 Now that we have our endpoints defined and talking to the database, the next step is to test these manually to verify if they work as intended:
 
@@ -413,7 +413,7 @@ Book Successfully Deleted
 
 All of these have worked as we had intended them too! We now have a mostly functioning REST API which we can interact with and throw a frontend on top of!
 
-## Reading JSON Request Data
+### Reading JSON Request Data
 
 The final thing I want to cover in this tutorial is reading the body of an incoming request and parsing that into a `book struct` so that we can populate custom data into our database.
 
@@ -441,13 +441,13 @@ $ curl -X POST -H "Content-Type: application/json" --data "{\"title\": \"Angels 
 
 Everything is working as expected! We can see the new book being added to the database for us with the information we have provided!
 
-# Conclusion
+## Conclusion
 
 🔥 Awesome, so in this tutorial, we managed to build a really simple REST API for a book management system in Go using the Fiber framework! 🔥
 
 I hope this helped you out and you enjoy the tutorial! 😄 If you liked it or have any additional questions or comments then please let me know in the comments section below! 
 
-## Further Reading:
+### Further Reading:
 
 Take a look at some of the other tutorials on the site! 
 

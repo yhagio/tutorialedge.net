@@ -27,19 +27,19 @@ the Git repository, the user needs to install Git. The code files of this
 article can be found on GitHub:
 `https://github.com/PacktPublishing/Vuex-Quick-Start-Guide/tree/master/chapter-4`.
 
-# Designing the EveryNote web app
+## Designing the EveryNote web app
 
 One way to start designing an application is by creating mock-ups of the user
 interfaces. The EveryNote app will look like the following mock-up:
 
 ![](https://images.tutorialedge.net/images/javascript/vuejs/vuex-quickstart-image1.png)
 
-## The EveryNote mock-up interface
+### The EveryNote mock-up interface
 
 The EveryNote features are simple and well defined, so you can begin by picking
 a feature and starting to develop it.
 
-## Application structure
+### Application structure
 
 Vuex proposes an application-generic structure, which you can adopt. The
 following is the folder structure:
@@ -141,19 +141,19 @@ Clone the `book` repository and use `git checkout step-0_project-scaffold` to
 see all the project files for this step. Now that the project scaffold is ready,
 you can start coding the first feature.
 
-# Developing the EveryNote app
+## Developing the EveryNote app
 
 In the following paragraphs, you’ll learn to develop the application using
 test-driven development (TDD).
 
-## But why use TDD?
+### But why use TDD?
 
 One reason is that it is easier to understand what the code is supposed to do by
 reading assertions about its behavior inside the test code, rather than
 inferring its behavior from implementation code. Another reason is that it is
 easier to understand how to test a component while writing the component.
 
-## Using a to-do list to help the development process
+### Using a to-do list to help the development process
 
 This to-do list is a simple .txt file that changes over time and will hopefully
 be empty when the app is finished. The initial To-do list looks like this:
@@ -175,7 +175,7 @@ Done:
 
 Use the \* symbol to mark the current feature under development.
 
-## Displaying a list of notes
+### Displaying a list of notes
 
 Start by displaying a list of notes because the other features depend on it.
 Another possible feature to start with is the ability to create a new note. In
@@ -384,7 +384,7 @@ The following is a screenshot of the result:
 
 ![](https://images.tutorialedge.net/images/javascript/vuejs/vuex-quickstart-image2.png)
 
-# List of notes
+## List of notes
 
 Right now, the result is ugly; you can add some CSS to make it much better
 looking after all the main features are implemented.
@@ -392,7 +392,7 @@ looking after all the main features are implemented.
 You can download the code at this stage by typing:
 `git checkout step-1_note-list`
 
-## Creating new notes
+### Creating new notes
 
 At this point, the To-do list looks like this:
 
@@ -865,7 +865,7 @@ bit, it now looks like the following figure:
 
 ![](https://images.tutorialedge.net/images/javascript/vuejs/vuex-quickstart-image3.png)
 
-# EveryNote restyled
+## EveryNote restyled
 
 You can download the code at this stage by typing the following:
 `git checkout step-2_create-notes`

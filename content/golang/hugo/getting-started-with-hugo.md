@@ -34,7 +34,7 @@ key advantages to this approach such as:
 In this tutorial I'm going to be showing you some of the essentials of hugo in
 order to help you get up and running with your own staticly generated website.
 
-# Getting Started
+## Getting Started
 
 > In order to download Hugo you can visit this site:
 > [https://github.com/spf13/hugo/releases](https://github.com/spf13/hugo/releases)
@@ -42,7 +42,7 @@ order to help you get up and running with your own staticly generated website.
 Once you've successfully installed hugo and can access it from the command line
 then building a site is relatively simple.
 
-## Generating a New Site
+### Generating a New Site
 
 In order to generate a brand new hugo based website you can run the following
 command:
@@ -54,7 +54,7 @@ hugo new site mySite
 This will automatically create a new directory called mySite which will feature
 all of the components we require for our new hugo based website.
 
-## Layout
+### Layout
 
 The layout of all hugo websites typically looks something like this:
 
@@ -68,12 +68,12 @@ The layout of all hugo websites typically looks something like this:
 |-- themes // the location of our website theme
 ```
 
-# Hugo CLI
+## Hugo CLI
 
 Hugo has a number of very useful, and very powerful cli based tools which can
 really help the efficiency of how you work on your site.
 
-## Live Server
+### Live Server
 
 One of the best features of hugo is the inbuilt live server that it comes with.
 The live server allows you to make changes to your content and layouts and
@@ -104,7 +104,7 @@ total in 87 ms
 This indicates that it's seen a change to one of the files within your site and
 that it's rebuilding the entire site for you so that you can view it locally.
 
-## Generating New Content
+### Generating New Content
 
 Hugo comes with an inbuilt post builder that I find is quite handy for
 generating new posts quickly with the basic meta data provideed for us. In order
@@ -130,7 +130,7 @@ date = "2017-05-27T11:39:09+01:00"
 +++
 ```
 
-# CI/CD Pipeline
+## CI/CD Pipeline
 
 One major advantage of hugo and building sites using it is the fact that the
 build process is so simple. We can generate all the files necessary for our site

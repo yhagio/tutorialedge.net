@@ -18,7 +18,7 @@ In this tutorial we are going to be taking a look at the insertion sorting
 algorithm and how it works as well as how you can implement this algorithm in
 the Python programming language.
 
-# Insertion Sorting
+## Insertion Sorting
 
 So the insertion sorting algorithm is a well known sorting algorithm that can
 sort an unsorted array in a worst case time of `O(N^2)` time. It works by
@@ -32,18 +32,18 @@ iterating through an array and sorting elements in a linear fashion.
 - The algorithm proceed to insert the next element into the correct position in
   our sorted array until the entire list has been sorted.
 
-# Implementing it in Python
+## Implementing it in Python
 
 Implementing it in Python can be done like so:
 
 ```py
-# Insertion Sort In Python
+## Insertion Sort In Python
 #
-# Performance Complexity = O(n^2)
-# Space Complexity = O(n)
+## Performance Complexity = O(n^2)
+## Space Complexity = O(n)
 
 def insertionSort(my_list):
-    # for every element in our array
+    ## for every element in our array
     for index in range(1, len(my_list)):
         current = my_list[index]
         position = index
@@ -86,12 +86,12 @@ Swapped 8 for 5
 
 <Quiz question="What is the time complexity of the Insertion Sort Algorithm?" A="O(N)" B="O(N^2)" C="O(N^3)" correct="B" answer="B - The worst case sorting complexity of Insertion sort is O(N^2)"/>
 
-# Conclusion
+## Conclusion
 
 If you found this tutorial useful or require further assistance then please let
 me know in the comments section below!
 
-## Related Reading
+### Related Reading
 
 If you enjoyed this tutorial, you may also enjoy these other tutorials on the site:
 

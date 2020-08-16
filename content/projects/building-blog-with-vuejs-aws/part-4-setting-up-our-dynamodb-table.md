@@ -26,7 +26,7 @@ Once we have this new table all defined, we can start to play about with
 inserting things and then retrieving them using our existing Lambda function.
 Let's get started!
 
-# Step 1 - Creating a DynamoDB Table
+## Step 1 - Creating a DynamoDB Table
 
 The first thing we'll have to do is set up our table. This involves defining a
 simple schema that will be used to store our blog posts and subsequently our
@@ -55,7 +55,7 @@ then start playing with it and putting in some of our blog's content.
 
 If we want to do cool things such as paginated queries and
 
-# Step 2 - Testing Inserts Locally
+## Step 2 - Testing Inserts Locally
 
 Now that we have defined our table's schema and everything is set up for us, we
 can go about testing it out with a few simple inserts. For the purpose of this
@@ -67,12 +67,12 @@ Try inserting a few items into our new table that feature a `title`, a `body`, a
 
 ![Create Table DynamoDB](https://images.tutorialedge.net/images/vuejs-blog-aws/screenshot-08.png)
 
-# Step 3 - Updating our Lambda Function
+## Step 3 - Updating our Lambda Function
 
 Perfect, we now have both a table and some data within said table to play about
 with and retrieve within our solitary Lambda function. Open up your
 `listPosts.js` lambda function within your editor and then append the following:
 
-# Step 4 - A New Insert Function!
+## Step 4 - A New Insert Function!
 
-# Next Steps
+## Next Steps

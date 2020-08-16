@@ -20,11 +20,11 @@ In this
 
 
 
-# Conclusion
+## Conclusion
 
 So, in this tutorial, we have managed to create a really simple, but cool game of Pong using 
 
 
-## Further Reading:
+### Further Reading:
 
 * []()

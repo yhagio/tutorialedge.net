@@ -20,7 +20,7 @@ a development environment needs to be this incredibly arduous process. The
 installation process could be worse. It's actually quite simple and this article
 intends to show you the basics.
 
-# Getting ready
+## Getting ready
 
 Let's lay out the requirements for the equipment you'll need:
 
@@ -39,12 +39,12 @@ Ubuntu is the typical operating system for this type of development. This
 article will assume Ubuntu and Bash as the default interaction with the
 operating system.
 
-# How to do it...
+## How to do it...
 
 There are a few common steps that will need to be for each new developer—these
 steps will be addressed in the following subsections.
 
-# Installing the NVIDIA driver for your GPU
+## Installing the NVIDIA driver for your GPU
 
 Installing the correct NVIDIA driver is incredibly important. A key component 
 is the usage of CUDA in TensorFlow. NVIDIA has this description for
@@ -78,7 +78,7 @@ The following is an example of the nvidia-smi command:
 The output of nvidia-smi will show your GPU any processes you have running and
 the current driver version installed.
 
-# Installing Nvidia-Docker
+## Installing Nvidia-Docker
 
 The following is an Nvidia-Docker hierarchy that you need to understand before
 installing it:
@@ -112,11 +112,11 @@ one:
 
 ```dockerfile
 Ubuntu 14.04/16.04/18.04, Debian Jessie/Stretch
-# If you have nvidia-docker 1.0 installed: we need to remove it and all existing GPU containers
+## If you have nvidia-docker 1.0 installed: we need to remove it and all existing GPU containers
 docker volume ls -q -f driver=nvidia-docker | xargs -r -I{} -n1 docker ps -q -a -f volume={} | xargs -r docker rm -f
 sudo apt-get purge -y nvidia-docker
 
-# Add the package repositories
+## Add the package repositories
 curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | \
   sudo apt-key add -
 distribution=$(. /etc/os-release;echo$ID$VERSION_ID)
@@ -124,11 +124,11 @@ curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.li
   sudo tee /etc/apt/sources.list.d/nvidia-docker.list
 sudo apt-get update
 
-# Install nvidia-docker2 and reload the Docker daemon configuration
+## Install nvidia-docker2 and reload the Docker daemon configuration
 sudo apt-get install -y nvidia-docker2
 sudo pkill -SIGHUP dockerd
 
-# Test nvidia-smi with the latest official CUDA image
+## Test nvidia-smi with the latest official CUDA image
 docker run --runtime=nvidia --rm nvidia/cuda nvidia-smi
 ```
 
@@ -137,7 +137,7 @@ docker run --runtime=nvidia --rm nvidia/cuda nvidia-smi
 
 Now, let's go over each of these commands in detail.
 
-# Purging all older versions of Docker 
+## Purging all older versions of Docker 
 
 First things first—you have to wipe out all the old versions of Docker prior to
 this installation. The folks maintaining this repository conveniently provided a
@@ -157,7 +157,7 @@ $ sudo apt-get purge -y nvidia-docker
 
 Here, we've completed our step 1 installation!
 
-# Adding package repositories
+## Adding package repositories
 
 Now that you've removed all of the older versions of NVIDIA-Docker, it's time to
 add the keys and repository to the typical apt-get repositories that you can
@@ -188,7 +188,7 @@ sudo apt-get update
 
 Now we move on to the next step.
 
-# Installing NVIDIA-Docker2 and reloading the daemon
+## Installing NVIDIA-Docker2 and reloading the daemon
 
 This is the point you've been waiting for! (Probably not.) Use apt-get to
 install the nvidia-docker2 package:
@@ -205,7 +205,7 @@ $ sudo pkill -SIGHUP dockerd
 
 Now, you're ready for a simple test of the installation.
 
-# Testing nvidia-smi through the Docker container
+## Testing nvidia-smi through the Docker container
 
 This is the moment of truth—if this command runs correctly, you should see
 the nvidia-smi output that you see on your machine outside of the container:
@@ -217,7 +217,7 @@ driver for your GPU section:
 
 Now you're ready to move onto actually building a development environment.
 
-# Building a container for development
+## Building a container for development
 
 What's a container? A container is Docker's name for a VM with a certain
 configuration of operating system and software. Docker containers allow you the
@@ -233,11 +233,11 @@ FROM nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
 ARG KERAS=2.2.0
 ARG TENSORFLOW=1.8.0
 
-# Update the repositories within the container
+## Update the repositories within the container
 
 RUN apt-get update
 
-# Install Python 2 and 3 + our basic dev tools
+## Install Python 2 and 3 + our basic dev tools
 
 RUN apt-get install -y \
           python-dev \
@@ -246,13 +246,13 @@ RUN apt-get install -y \
           git \
           vim
 
-# Install pip
+## Install pip
 
 RUN curl -O https://bootstrap.pypa.io/get-pip.py &amp;&amp; \
          python get-pip.py &amp;&amp; \
          rm get-pip.py
 
-# Install Tensorflow and Keras
+## Install Tensorflow and Keras
 
 RUN pip --no-cache-dir install \
          tensorflow_gpu==${TENSORFLOW} \
@@ -265,7 +265,7 @@ This is the basics of how you will build a basic image, called base_image.
 > the RUN commands work in
 > Dockerfiles: https://docs.docker.com/engine/reference/run/.
 
-# Conclusion
+## Conclusion
 
 If you enjoyed reading this article and are curious about building GANs, you can
 explore [Generative Adversarial Networks Cookbook](https://amzn.to/2SYiQrA).

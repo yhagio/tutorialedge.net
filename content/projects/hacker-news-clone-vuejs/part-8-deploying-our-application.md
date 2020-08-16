@@ -24,7 +24,7 @@ We'll cover how to do this in an automated fashion using the Travis-CI platform
 and we'll also cover some of the various methods of improving performance using
 services such as CloudFront.
 
-# Setting up a CI/CD Pipeline
+## Setting up a CI/CD Pipeline
 
 Now that we have a basic level of functionality within our application, it makes
 sense to deploy it, have our users see it, and interact with it and hopefully
@@ -38,7 +38,7 @@ This iterative approach to building up our application is something I would
 recommend doing with **all** your projects. Get it in the hands of your users as
 soon as possible and build based on their feedback.
 
-## How a Pipeline Helps
+### How a Pipeline Helps
 
 When you start seriously developing a project or application, there comes a time
 where the amount of time you spend on deploying the newer versions of that
@@ -49,14 +49,14 @@ The earlier on you implement a good CI/CD pipeline in your project, the more
 time you save in the long run, so doing this right and from the start can
 certainly improve the chances of a successful project.
 
-## Travis-CI
+### Travis-CI
 
 For this particular course, we are going to be using the free-to-use
 [Travis CI](https://travis-ci.org/). If you are developing open-source
 libraries, applications, etc... then this is _the_ tool to use for continuously
 testing and deploying your stuff.
 
-# Conclusion
+## Conclusion
 
 Hopefully you found this final part of the series educational! These courses
 take a long time to develop and fine tune over time, so if you can, I would

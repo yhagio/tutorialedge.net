@@ -11,13 +11,13 @@ tags:
   - cloud
 title: Auto Scalars
 twitter: https://twitter.com/Elliot_F
-# video: 433296255
+## video: 433296255
 nextPage: /courses/intro-to-cloud/
 weight: 1
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
-## Auto Scalers
+### Auto Scalers
 
 One of the key issues that Gemma and her team faced was that of a variable amount of traffic coming through their services. At times this would be just a couple of users per minute which was easily handled, however when some of the comics went viral, this number could go up to hundreds of people using their site, per second. 
 
@@ -31,11 +31,11 @@ Gemma and her team could couple their services up with autoscalers that would be
 
 This not only saved the company a lot of money as they were no longer paying for incredibly powerful servers to be up at all times, it also saved them from constantly worrying how their site was going to handle periods where their content went viral. 
 
-### Stateless vs Stateful Applications
+#### Stateless vs Stateful Applications
 
 When it came to designing new applications one thing Gemma had to bear in mind was the statefulness of said applications. When designing cloud-native systems it's best to keep the applications stateless so that they are not only easier to test, but they are also easier to scale horizontally.   
 
-### Horizontal vs Vertical 
+#### Horizontal vs Vertical 
 
 When it comes to scalability, you can either scale your apps horizontally or vertically. 
 
@@ -47,7 +47,7 @@ Each of these ways has their merits but the easiest one to perform is without a 
 
 With horizontal scaling, you simply clone an existing t2 instance and start it. Once it's started you add it to your load balancer and, if you have designed your application to be stateless, it should now be able to handle more traffic with minimal fuss.
 
-## Summary
+### Summary
 
 In this chapter we looked at the various ways that Gemma and her team could improve the resiliency of their applications running in the cloud through the use of various different types of load balancers. 
 

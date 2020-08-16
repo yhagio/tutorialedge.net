@@ -34,7 +34,7 @@ efficient forms, which you can find in a lot of games even today. As it is
 already built into the Unity Surface Shader language, it is best to start with
 this first and build on it.
 
-# Create a new shader
+## Create a new shader
 
 Start by carrying out the following steps:
 
@@ -119,7 +119,7 @@ The effect is even easier to see if you use cylinders:
 
 ![](https://images.tutorialedge.net/images/gamedev/unity/custom-diffuse-lighting-tutorial/image4-23.png)
 
-# How it works...
+## How it works...
 
 SimpleLambert forces Cg to look for a function called `LightingSimpleLambert()`.
 Note the Lighting at the beginning, which is omitted in the directive.
@@ -190,7 +190,7 @@ Unity’s implementation of the Lambert Lighting function in
 the UnityCG.cginc file so that you don't have to write the code over and over
 again.
 
-# Conclusion
+## Conclusion
 
 If you found this article interesting, you can explore
 [Unity 2018 Shaders and Effects Cookbook - Third Edition](https://amzn.to/2Iu9S0W)

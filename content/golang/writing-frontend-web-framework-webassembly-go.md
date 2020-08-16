@@ -31,7 +31,7 @@ communicates thanks to the likes of [Lin Clark](https://twitter.com/linclark)
 and we'll undoubtedly see more major improvements as WebAssembly starts to
 become more prominent in our lives.
 
-# Introduction
+## Introduction
 
 So, in this tutorial, I thought it would be a good idea to build the base of an
 incredibly simple frontend framework written in Go that compiles into
@@ -51,7 +51,7 @@ the requirements of a semi-decent frontend framework.
 > If you fancy contributing to the project, feel free, I'd be happy to get any
 > pull requests!
 
-# Starting Point
+## Starting Point
 
 Right, let's dive into our editor of choice and start coding! The first thing
 we'll want to do is create a really simple `index.html` that will act as our
@@ -151,7 +151,7 @@ func main() {
 You can then serve your application by typing `go run server.go` and you should
 be able to access your app from `http://localhost:8080`.
 
-# Function Registration
+## Function Registration
 
 Ok, so we've got a fairly basic print statement working, but in the grand scheme
 of things, I don't quite think that qualifies it as a Web Framework just yet.
@@ -180,7 +180,7 @@ their own functionality.
 Other projects using our framework can start to register their own functions
 that can subsequently be used within their own frontend applications.
 
-# Components
+## Components
 
 So, I guess the next thing we need to consider adding to our framework is the
 concept of components. Basically, I want to be able to define a `components/`
@@ -266,7 +266,7 @@ rendered to our page and we should be able to click that button which calls
 
 Awesome, let's see how we can go about building a simple router now.
 
-# Building a Router
+## Building a Router
 
 Ok, so we've got the concept of `components` within our web framework down.
 We've almost finished right?
@@ -375,7 +375,7 @@ func main() {
 
 ```
 
-# A Full Example
+## A Full Example
 
 With all of this put together, we can start building really simple web
 applications that feature components and routing. If you want to see a couple of
@@ -383,7 +383,7 @@ examples as to how this works, then check out the examples within the official
 repo:
 [elliotforbes/go-webassembly-framework/examples](https://github.com/elliotforbes/go-webassembly-framework/tree/master/examples)
 
-# Challenges Going Forward
+## Challenges Going Forward
 
 The code in this framework is in no way production ready, but I'm hoping this
 post kicks off good discussion as to how we can start building more production
@@ -396,7 +396,7 @@ which are phenomenal frameworks that massively speed up developer productivity.
 I'm hoping this article motivates some of you to go off and start looking at how
 you can improve on this incredibly simple starting point.
 
-# Conclusion
+## Conclusion
 
 If you enjoyed this tutorial, then please feel free to share it to your friends,
 on your twitter, or wherever you feel like, it really helps the site and

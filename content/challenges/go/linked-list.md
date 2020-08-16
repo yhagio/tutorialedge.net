@@ -130,7 +130,7 @@ tests:
 
 In this challenge, we will be attempted to implement the `Add` function of a *singly linked list*.
 
-# Linked Lists
+## Linked Lists
 
 Linked lists are a data structure we can utilize in order to represent a sequence of elements or `nodes` as they are called. Singly linked lists are a one way sequence where each `node` contains a pointer to the next `node` in the list. 
 
@@ -138,17 +138,17 @@ Linked lists are a data structure we can utilize in order to represent a sequenc
 
 Doubly linked lists on the other hand have 2 pointers to both the previous `node` and the next `node` and can be traversed back and forth.
 
-# Challenge Requirements
+## Challenge Requirements
 
 In this challenge, you will be implementing a very simple, singly linked list that allows you to append new `string` values to the end of our linked list and ensure that you update the `Tail` and `Head` values appropriately. 
 
 <Quiz question="What is the time complexity of the most optimal solution for the Append method?" answer="O(k)" correct="B" A="O(k^2)" B="O(k)" C="O(1)" />
 
-# See the Solution
+## See the Solution
 
 Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 09 - Singly Linked Lists](https://discuss.tutorialedge.net/t/challenge-09-singly-linked-list/28/2) 
 
-# Further Reading:
+## Further Reading:
 
 If you enjoyed this challenge, then feel free to try some of the other challenges on the site:
 

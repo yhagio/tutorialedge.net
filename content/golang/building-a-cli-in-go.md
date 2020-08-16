@@ -31,11 +31,11 @@ network monitoring, image manipulation and so on.
 > **Note -** The full code for this tutorial can be found here:
 > [TutorialEdge/Go](https://github.com/TutorialEdge/Go)
 
-# Prerequisites
+## Prerequisites
 
 * You will need Go version 1.11+ installed on your development machine. 
 
-# Popular Projects
+## Popular Projects
 
 Golang is growing massively in popularity and we have seen large enterprise
 companies such as Hashicorp adopt the language for quite a number of different
@@ -43,14 +43,14 @@ tools and systems. And for good reason, the design of Go lends itself incredibly
 well to these styles of application and the ability to cross-compile a binary
 executable for all major platforms easily is a massive win.
 
-# Video Tutorial
+## Video Tutorial
 
 If you prefer learning through the medium of video, then feel free to check out
 this tutorial here:
 
 <div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/i2p0Snwk4gc?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="640" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 
-# Getting Started
+## Getting Started
 
 Let's create a new directory on our computer called `go-cli/` or something along
 those lines. We'll be creating a directory structure that will look like this
@@ -69,7 +69,7 @@ go-cli/
 > [Go project layout](https://github.com/golang-standards/project-layout) guide
 > available on Github.
 
-# Getting Into The Code
+## Getting Into The Code
 
 Now that we've got a basic project structure down, we can start to work on our
 application. First of all, we will need a new file called `cli.go` within our
@@ -100,7 +100,7 @@ Go CLI v0.01
 Excellent, we've got the makings of our new CLI sorted, let's now look at how we
 can add a few commands and make it somewhat useful.
 
-# Our First Command
+## Our First Command
 
 As we'll be using the `urfave/cli` package we'll need to download this package
 locally in order to use it, we can do that through a simple `go get` command
@@ -239,7 +239,7 @@ This should then return the name servers for my site and print them out in the
 terminal. We can also do a run the help command which will show us exactly how
 to use our new command within our CLI.
 
-# Looking up IP Addresses
+## Looking up IP Addresses
 
 All of our command definitions will look really similar within our program, with
 the exception of how we go about printing out the results. The `net.LookupIP()`
@@ -264,7 +264,7 @@ these in order to print them out in a nice fashion:
 },
 ```
 
-# Looking up our CNAME
+## Looking up our CNAME
 
 We can then add our `cname` command which will use the `net.LookupCNAME()`
 function with our passed in host and return a single CNAME string which we can
@@ -286,7 +286,7 @@ then print out:
 },
 ```
 
-# Looking up MX Records
+## Looking up MX Records
 
 Finally, we want to be able to query the Mail Exchange records for our given
 host, we can do that by using the `net.LookupMX()` function and passing in our
@@ -311,7 +311,7 @@ iterate over in order to print out:
 },
 ```
 
-# Building our CLI
+## Building our CLI
 
 Now that we have a basic CLI up and running, it's time to build it so that we
 can use it in anger.
@@ -348,7 +348,7 @@ GLOBAL OPTIONS:
 As you can see, all of our commands have been successfully listed in the
 COMMANDS section of the output.
 
-# Conclusion
+## Conclusion
 
 So, in this tutorial we've managed to successfully build a really simple, yet
 effective CLI using the `urface/cli` package from Github. The CLI can be

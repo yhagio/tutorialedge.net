@@ -25,7 +25,7 @@ will listen for messages and write them back to via the same WebSocket.
 By the end of this part of the series, we'll have a frontend application that
 can communicate directly with our backend in a two-way fashion.
 
-# Server
+## Server
 
 Let's start with our backend WebSocket server. We'll be using the
 `github.com/gorilla/websocket` package in order to set up our WebSocket
@@ -66,7 +66,7 @@ This will run on `http://localhost:8080` and can be started by calling
 `go run main.go`. If you navigate to this in the browser, you should see
 `Simple Server` outputted in plaintext.
 
-# The WebSocket Protocol
+## The WebSocket Protocol
 
 Before we start fleshing this out, it's worthwhile covering the theory behind
 how this will work.
@@ -81,7 +81,7 @@ This drastically reduces the amount of network overhead that is required for the
 likes of any real-time application and it allows us to maintain an incredible
 amount of clients on a single server instance.
 
-## The Cons
+### The Cons
 
 WebSockets definitely come with a few cons that are worth considering. As soon
 as you introduce state, it becomes more complex with regards to scaling up your
@@ -91,7 +91,7 @@ You have to consider options such as storing your state in message brokers, or
 in databases/memory caches that can scale in parallel with your application
 instances.
 
-## The Implementation
+### The Implementation
 
 When it comes to implementing a WebSocket endpoint, we need to create a new
 endpoint and then upgrade the connection from a standard HTTP endpoint to a
@@ -104,7 +104,7 @@ minimal fuss.
 > **Note -** You can read more about the official WebSocket protocol here:
 > [RFC-6455](https://tools.ietf.org/html/rfc6455)
 
-# Creating a WebSocket Endpoint
+## Creating a WebSocket Endpoint
 
 Now that we have covered the theory, let's look at how we can do it in practice.
 Let's create a new endpoint `/ws` which we will convert from a standard `http`
@@ -199,7 +199,7 @@ func main() {
 If everything goes to plan, you should be able to run this by calling
 `go run main.go` and it will automatically kick off our server.
 
-# Client
+## Client
 
 Now that we've set up our server, we need something that will be able to
 interact with it. This is where our ReactJS frontend comes in to play.
@@ -292,7 +292,7 @@ has been able to successfully connect to our backend WebSocket server running on
 > **Question -** What happens when you click this button? What Output do you see
 > in the console of your browser and in the console of your backend?
 
-# Conclusion
+## Conclusion
 
 So, thus concludes part 2 of this series. We've been able to create a really
 simple WebSocket server that echo's back any messages sent to it.

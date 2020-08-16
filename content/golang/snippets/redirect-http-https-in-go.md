@@ -15,12 +15,12 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 
 *In this code snippet* we are going to be lokoing at how you can do 
 
-# Introduction
+## Introduction
 
-# Prerequisites
+## Prerequisites
 
-# Conclusion
+## Conclusion
 
-## Further Reading:
+### Further Reading:
 
 * []()

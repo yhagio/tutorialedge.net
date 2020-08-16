@@ -17,14 +17,14 @@ In order to demonstrate this, we'll be creating a simple login form component th
 
 This will hopefully give you a good idea as to how you can take this forward and implement change handlers within your own Vue.JS applications.
 
-# Prerequisites
+## Prerequisites
 
 You should have the following installed on your machine to ensure that you can complete this tutorial:
 
 * `yarn` cli - for dependency management and serving your Vue.JS application
 * `vue` cli - for generating new Vue.JS applications
 
-# Introduction
+## Introduction
 
 Let's start off by creating a new Vue.JS application using the `vue` cli. 
 
@@ -94,7 +94,7 @@ export default {
 
 Cool, we now have a foundation for the rest of our project!
 
-# Implementing Change
+## Implementing Change
 
 Let's dive in to how we would effectively handle changes within our app. We'll be creating `form` with a single input field which will feature the `v-model` attribute equal to `username`. Within the `data` of our simple component, we'll also be defining this matching `username` data value.
 
@@ -165,11 +165,11 @@ export default {
 
 In the `watch` section of our component, we define a `handler` function that will be triggered whenever our `username` changes within our app. Open up the 
 
-# Conclusion
+## Conclusion
 
 So, in this tutorial, we have looked at how you can build your own change handler functions in Vue.js. If you enjoyed this article, or have any comments or issues then please let me know in the comments section below!
 
-## Further Reading
+### Further Reading
 
 If you enjoyed this article then you may enjoy some of the other tutorials on our site:
 

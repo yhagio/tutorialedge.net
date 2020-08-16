@@ -28,13 +28,13 @@ has gone wrong.
 The PDB is classed as an interactive source code debugger which can be used in a
 similar fashion to how you would use the REPL.
 
-# Video Tutorial
+## Video Tutorial
 
 This tutorial is also available in video format should you wish to enjoy the content through that format:
 
 {{< youtube id="VQjCx3P89yk" autoplay="false" >}}
 
-# Starting the Python Debugger
+## Starting the Python Debugger
 
 When it comes to starting the Python debugger we have 2 main options. We can
 either invoke the PDB from the start of our projects execution and step through
@@ -48,12 +48,12 @@ would tend to recommend going down the second route as this would execute
 everything up until we reach that particular section of code and then it would
 open up the PDB for us to work with.
 
-# Common Commands
+## Common Commands
 
 Becoming relatively proficient with the Python debugger requires knowledge of
 just a few of the many commands available.
 
-## Commands
+### Commands
 
 These commands can be entered either as their shorthand versions `s` or there
 full commands `step`.
@@ -79,7 +79,7 @@ as `print()`, `repr()` and so on, you can effectively navigate through your
 Python programs and come to a decent understanding as to when and where in your
 program something has went wrong.
 
-# Example
+## Example
 
 Let's have a look at how we can use this to effectively step over a very simple
 Python program.
@@ -125,7 +125,7 @@ command to go to the next line and then explore our `x` variable:
 (Pdb)
 ```
 
-# Conclusion
+## Conclusion
 
 In this tutorial we covered how you can get up and running using the python
 debugger, the `pdb` to walk through various sections of your Python code and try

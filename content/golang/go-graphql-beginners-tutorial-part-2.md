@@ -35,7 +35,7 @@ of the data retrieved by our web components.
 > Engineering which highlights their successes with the technology -
 > [GraphQL - A Success Story for Paypal Checkout](https://medium.com/paypal-engineering/graphql-a-success-story-for-paypal-checkout-3482f724fb53)
 
-# Mutations
+## Mutations
 
 Let's dive in, the first thing we are going to be looking at is mutations. We'll
 do this before we cover data-sources as it is far easier to learn these concepts
@@ -57,7 +57,7 @@ tutorial, this would take in all of the information within the mutation query
 and it would resolve to a single _resolver_ function which would go away and
 update this tutorial in the database with the new information.
 
-## A New Tutorial
+### A New Tutorial
 
 Let's start off by trying to create a really simple mutation that will allow us
 to add new tutorials to our existing list of tutorials.
@@ -175,7 +175,7 @@ new `field` on our mutation object that features it's own `resolve` function for
 each of these actions, and then within these `resolve` functions we would
 implement the logic for updating/deleting particular tutorials.
 
-# Swapping out Data Sources
+## Swapping out Data Sources
 
 Now that we've covered mutations, it is probably a good time to cover how we
 would swap out our in-memory data store for something like MySQL or MongoDB.
@@ -184,7 +184,7 @@ An awesome feature of GraphQL is that it isn't constrained to any particular set
 of database technologies. We can create a GraphQL API that interacts with NoSQL
 as wel as SQL databases at will.
 
-## A Simple MySQL Database
+### A Simple MySQL Database
 
 For the purpose of this tutorial, we'll use a SQLite3 local SQL database to
 quickly demonstrate how you could swap in a more effective data-source.
@@ -303,7 +303,7 @@ $ go run ./...
 {"data":{"list":[{"id":1,"title":"First Tutorial"},{"id":2,"title":"Second Tutorial"},{"id":3,"title":"third Tutorial"}]}}
 ```
 
-## Retrieving a Single Tutorial
+### Retrieving a Single Tutorial
 
 We've just about got the hang of using an external data-source for our GraphQL
 API, but let's now take a look at one more easy example. Let's have a look at
@@ -364,7 +364,7 @@ $ go run ./...
 {"data":{"tutorial":{"id":1,"title":"First Tutorial"}}}
 ```
 
-## Key Points
+### Key Points
 
 So, just to reiterate, we've moved away from parsing and returning an in-memory
 list of Tutorials and instead, we are connecting to a database, making a SQL
@@ -376,7 +376,7 @@ tables within our SQLite database to store these. We could then simply perform
 additional SQL queries to our database to retrieve the author based on an `ID`
 as well as the comments.
 
-## Using an ORM
+### Using an ORM
 
 If we wanted to simplify our development work further, there is the option of
 using an ORM when communicating with our SQLite database. This would handle our
@@ -393,7 +393,7 @@ simplify our code and continue to expand our API purely in Go. Again, I've
 created a reference implementation of this that you can view here:
 [elliotforbes/go-graphql-tutorial](https://github.com/elliotforbes/go-graphql-tutorial/)
 
-# Conclusion
+## Conclusion
 
 So, this concludes part 2 of my Go GraphQL mini-series. In this tutorial, we
 covered the basics of _mutations_ and how you could swap out the data-sources

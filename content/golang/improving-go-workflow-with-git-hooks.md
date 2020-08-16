@@ -16,17 +16,17 @@ Git hooks are a pretty powerful way of improving your development workflow witho
 
 This fairly simple example should give you a flavour as to how you can leverage git hooks for your own devious plans.
 
-# Real-Life Example
+## Real-Life Example
 
 One example of this is from one of my current projects where the team had to encrypt secrets files before they were getting pushed to the project's repository. Encrypting the file was a simple one liner, but due to the number of encrypted files we were working with, it became a challenge to remember to encrypt every file that has been changed and more often than not we would run our project and scratch our heads whilst we tried to figure out why it wasn't picking up the new secrets.
 
-## The Solution
+### The Solution
 
 When it came to attempting to solve this, we were fairly limited in the tools we could pull in and didn't want to use something that would impact the current development flow for people in the team who had their own preferences. 
 
 This is where git hooks came into play. With hooks, I could define a simple `pre-commit` hook script that would automatically perform the task of encrypting any un-encrypted files and adding them to the commit. I could also make this an optional addon to the team's development flow by creating these hooks in a `hooks/` directory so that if they wished to add these git hooks to their workflow, they could with a simple `git config core.hooksPath hooks` command.
 
-# Creating a Git Hook
+## Creating a Git Hook
 
 Hooks are actually surprisingly simple to make as they are simply just bash scripts that have specific names in particular directory. When you next execute a given `git` command, it would automatically execute this bash script provided it was the rightly named file for that particular command.
 
@@ -77,7 +77,7 @@ When you run this, you should now see that `"Test Hook"` is printed out just bef
 
 Awesome! You have successfully created your own git hook! This will now be executed every time you commit something within this given repository. 
 
-# Improving our Git Hook
+## Improving our Git Hook
 
 Ok, so we have been able to successfully create our first git hook, it's now time to start improving this so that it actually performs a useful task for us other than just echo some text.
 
@@ -88,14 +88,14 @@ Let's start by adding some go linting to this script:
 
 echo "Test Hook"
 
-# this will retrieve all of the .go files that have been 
-# changed since the last commit
+## this will retrieve all of the .go files that have been 
+## changed since the last commit
 STAGED_GO_FILES=$(git diff --cached --name-only -- '*.go')
 
-# we can check to see if this is empty
+## we can check to see if this is empty
 if [[ $STAGED_GO_FILES == "" ]]; then
     echo "No Go Files to Update"
-# otherwise we can do stuff with these changed go files
+## otherwise we can do stuff with these changed go files
 else
     for file in $STAGED_GO_FILES; do
         echo $file
@@ -125,20 +125,20 @@ Aweomse, so it's able to see that we've update a `.go` file within our project d
 
 echo "Test Hook"
 
-# this will retrieve all of the .go files that have been 
-# changed since the last commit
+## this will retrieve all of the .go files that have been 
+## changed since the last commit
 STAGED_GO_FILES=$(git diff --cached --name-only -- '*.go')
 
-# we can check to see if this is empty
+## we can check to see if this is empty
 if [[ $STAGED_GO_FILES == "" ]]; then
     echo "No Go Files to Update"
-# otherwise we can do stuff with these changed go files
+## otherwise we can do stuff with these changed go files
 else
     for file in $STAGED_GO_FILES; do
-        # format our file
+        ## format our file
         go fmt $file
-        # add any potential changes from our formatting to the 
-        # commit
+        ## add any potential changes from our formatting to the 
+        ## commit
         git add $file
     done
 fi
@@ -168,7 +168,7 @@ main.go
 Awesome! We have now been able to create a git hook that automatically improves our Go development workflow and ensures that
 whatever we commit is properly formatted code!
 
-# Distributing Git Hooks Between Teams
+## Distributing Git Hooks Between Teams
 
 Now, unfortunately the changes we made within the `hooks/` directory under our project's `.git/` directory will not be tracked 
 and therefore getting these changes out to various different members of your team becomes a bit of a challenge. 
@@ -185,7 +185,7 @@ $ git config core.hooksPath .githooks
 Once you have executed this particular command, you should now see that whenever you try and commit something, the hooks provided
 within that directory are now enabled!
 
-# Conclusion
+## Conclusion
 
 Awesome, so in this tutorial, we've had a look at how you can improve your Go development workflow by using git hooks in conjunction 
 with existing tools such as `go fmt` to ensure that whatever you commit up to your repositories has been properly formated! 
@@ -194,6 +194,6 @@ This is just a very small taste of what you can achieve with git hooks and hopef
 can take these further! If you have any ideas or examples as to how you have improved this workflow, then I would love to 
 hear about them in the comments section below!
 
-## Further Reading:
+### Further Reading:
 
 * [Customizing Git - Git Hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)

@@ -33,11 +33,11 @@ high-quality projects and that was they had a solid **continuous integration**,
 and sometimes **continuous deployment** pipeline that is triggered whenever
 somebody makes changes to their codebase.
 
-# Prerequisites
+## Prerequisites
 
 * You will need Go version 1.11+ installed on your development machine. 
 
-# The Benefits of a CI/CD Pipeline
+## The Benefits of a CI/CD Pipeline
 
 If you haven't built a highly used package before, the benefits of a CI/CD
 pipeline may not be immediately obvious to you. If you have built a highly-used
@@ -59,7 +59,7 @@ broken code.
   have an infinite number of deployment platforms and cataloging these all would
   be an ongoing slog.
 
-# A Overview of our Simple Pipeline
+## A Overview of our Simple Pipeline
 
 So, let's start this article by envisioning the perfect pipeline for our
 package. Our pipeline **must**:
@@ -79,7 +79,7 @@ branch. Why you may ask? well, so that we can enforce every change to our
 package to go through the pipeline we'll be fleshing out later on in this
 article.
 
-# Step 1 - Setting up Travis-CI
+## Step 1 - Setting up Travis-CI
 
 The very first thing we will have to do, is to set up travis to work with our
 open-source project. You'll have to register an account with them if you haven't
@@ -98,7 +98,7 @@ Once you have successfully set this up, it's time to go about adding a
 will automatically see this and execute whatever pipeline you define within it:
 
 ```yaml
-# .travis.yml
+## .travis.yml
 language: go
 
 sudo: false
@@ -115,7 +115,7 @@ Now, with everything on the travis side setup, we can move on to triggering our
 pipeline and adding more functionality to it. Right now it doesn't do an awful
 lot, so let's change that!
 
-# Step 2 - Trigger with a Pull Request
+## Step 2 - Trigger with a Pull Request
 
 Now, if you are working in your own repository, you'll need to have
 self-discipline in order to ensure you never commit directly to master. Whenever
@@ -140,7 +140,7 @@ for you. Within your newly created Pull Request, you should see that this has
 been kicked off and it'll then let you know if the code you wish to merge is fit
 to merge based off our previously defined tests and formatting.
 
-# Step 3 - Adding Some Tests
+## Step 3 - Adding Some Tests
 
 So, now that we have a basic pipeline in place, it's time to extend it a bit and
 get it to automatically run a couple of unit tests for our code. We can start by
@@ -201,7 +201,7 @@ func TestCalculation(t *testing.T) {
 
 When we try and run this test locally, we see that all tests pass. Awesome,
 
-# Step 4 - Auto Formatting our Code
+## Step 4 - Auto Formatting our Code
 
 Now that we've got our tests automatically running on a code change, it's time
 to add automatic formatting using gofmt.
@@ -250,7 +250,7 @@ script:
   - go test -v -race $(go list ./... | grep -v vendor)
 ```
 
-# Step 5 - Setting up Reviewers in Github
+## Step 5 - Setting up Reviewers in Github
 
 Finally, should all of our tests and formatting checks pass, we need to set up
 some reviewers for our project that will be able to manually verify that we
@@ -270,7 +270,7 @@ every pull request.
 After this is done, we've successfully pulled together a really simple and
 effective continuous integration pipeline for our Go project.
 
-# Step 6 - Testing it All Works
+## Step 6 - Testing it All Works
 
 Now that everything is in place, it is time to test it all works. Create a new
 branch on your project and open a new pull request to `master` from your branch.
@@ -289,7 +289,7 @@ If you have set up your branch rules correctly, any outsiders attempting to
 submit a PR into your project will have to be reviewed and approved over and
 above passing the travis pipeline before they can get their changes into master.
 
-# Conclusion
+## Conclusion
 
 Now, I've put all of this together for you in a handy project repo which can be
 found here:

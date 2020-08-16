@@ -1,0 +1,13 @@
+{
+    "Beginners": {
+        "name": "Beginners",
+        "weight": 1,
+        "articles": [
+            {
+                "title": "Getting Started",
+                "state": "published",
+                "url": "/courses/go/01-getting-started/"
+            }
+        ]
+    }
+}

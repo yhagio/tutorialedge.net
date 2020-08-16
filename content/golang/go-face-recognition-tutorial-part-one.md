@@ -27,14 +27,14 @@ doing simple face recognition on still images and seeing how that works and
 we'll then be expanding upon this to look into real-time face recognition on
 video feeds in part 2 of this mini-series.
 
-# Video Tutorial
+## Video Tutorial
 
 This tutorial is available in video format, should you wish to support me and my
 channel then please like and subscribe to my channel!
 
 <div style="position:relative;height:0;padding-bottom:43.59%"><iframe src="https://www.youtube.com/embed/cLrRLA9y1i4?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="826" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 
-# The Kagami/go-face package
+## The Kagami/go-face package
 
 For the basis of this tutorial, we'll be using the
 [kagami/go-face](https://github.com/Kagami/go-face) package which wraps around
@@ -44,7 +44,7 @@ the dlib machine learning toolkit!
 > It's definitely an interesting read and you can find it here:
 > https://hackernoon.com/face-recognition-with-go-676a555b8a7e
 
-## The dlib toolkit
+### The dlib toolkit
 
 The Dlib toolkit is built in C++ and is incredible at both face and object
 recognition/detection. According to its documentation, it scores around 99.4%
@@ -57,7 +57,7 @@ base.
 > tutorial, here it is:
 > [An introduction to Face Recognition in Python](https://tutorialedge.net/python/intro-face-recognition-in-python/)
 
-# Setup
+## Setup
 
 I'm not going to lie, getting this up and running is slightly more painful than
 your standard Go package. You'll need to install both `pkg-config` and `dlib` on
@@ -68,7 +68,7 @@ $ brew install pkg-config dlib
 $ sed -i '' 's/^Libs: .*/& -lblas -llapack/' /usr/local/lib/pkgconfig/dlib-1.pc
 ```
 
-# Getting Started
+## Getting Started
 
 We'll first of all need to download the `kagami/go-face` package which can be
 done with the following `go get` command:
@@ -125,7 +125,7 @@ Ok, so if we try and run our program at this point, we should see both
 output. We've successfully set everything we need up in order to do some cool
 advanced facial recognition!
 
-# Counting Faces in a Picture
+## Counting Faces in a Picture
 
 Our first real test of this package will be to test to see whether we can
 accurately count the number of faces in a photograph. For the purpose of this
@@ -202,7 +202,7 @@ avengersImage := filepath.Join(dataDir, "avengers-01.jpg")
 And re-run our program, you should see that our program is able to determine
 that 2 people are in this new image.
 
-# Recognizing Faces:
+## Recognizing Faces:
 
 Sweet, so we're able to calculate the number of faces in an image, now what
 about actually determining who those people are?
@@ -334,12 +334,12 @@ allows us to identify the various different Avengers.
 > Challenge: Build up a number of reference files on all of the Avengers and try
 > to extract out the face recognition code snippets into a reusable function
 
-# Complete Source Code:
+## Complete Source Code:
 
 The complete source code for this tutorial can be found in Github:
 [Tutorialedge/go-face-recognition-tutorial](https://github.com/TutorialEdge/go-face-recognition-tutorial)
 
-# Conclusion
+## Conclusion
 
 In this tutorial, we successfully managed to build a really simple face
 recognition system that works on still images. This will hopefully form the

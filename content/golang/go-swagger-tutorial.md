@@ -15,17 +15,17 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 
 In this tutorial, we are going to look at how we can integrate swagger on top of our Go REST APIs!
 
-# What Is Swagger?
+## What Is Swagger?
 
 Swagger is an absolutely amazing tool which has become the default tool used to easily expose the endpoints of your services and provide additional context around these endpoints!
 
 
 
-# Introduction
+## Introduction
 
 
-# Conclusion
+## Conclusion
 
-## Further Reading:
+### Further Reading:
 
 * []()

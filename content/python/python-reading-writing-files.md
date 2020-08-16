@@ -22,12 +22,12 @@ from files or store data in local files. In this tutorial we'll be looking at
 how you can create files, write to these newly created and then subsequently
 delete these files once we are done.
 
-# Creating Files
+## Creating Files
 
 There are multiple ways to create files in Python, but arguably the cleanest way
 to do this is by using the `with` keyword like so:
 
-## Context Manager Approach
+### Context Manager Approach
 
 ```py
 def main():
@@ -45,7 +45,7 @@ we then call `file.write("THIS IS A TEST FILE")` which subsequently writes
 statement the program then handles closing the file for us and we don't have to
 worry about anything else.
 
-## Without a Context Manager
+### Without a Context Manager
 
 However should you wish to do this in a manner that doesn't use a context
 manager then you can do something like so:
@@ -70,12 +70,12 @@ complications such as:
 
 More importantly, it's considered bad practice.
 
-# Writing to a File
+## Writing to a File
 
 In the previous two examples you'll notice that we called the `open()` function
 with `'w'` as our second parameter.
 
-# Different Modes
+## Different Modes
 
 When it comes to working with files in Python, it's important to bear in mind
 that there are different `modes` that you can open a file with. This allows you
@@ -93,7 +93,7 @@ you quite a bit of debugging time. In the past I have found myself scratching my
 head wondering why the `w` mode is overwriting all of my file's content when I
 should indeed have used the `a` mode.
 
-# Reading a File Line-by-Line
+## Reading a File Line-by-Line
 
 It's not an uncommon use-case to want to iterate over a file in a line-by-line
 fashion and process each line as it comes in. When you open a file you can

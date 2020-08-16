@@ -18,7 +18,7 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
 
-## Episode 01
+### Episode 01
 
 In this tutorial, we cover setting up our project directory and bootstrapping our React.js application using the `create-react-app` CLI.
 

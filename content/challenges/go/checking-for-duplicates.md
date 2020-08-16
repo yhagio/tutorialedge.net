@@ -104,12 +104,12 @@ You may wish to use a `map` in your function in order to check if elements have 
 </details>
 
 
-# See the Solution
+## See the Solution
 
 Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 04 - Filtering Duplicates](https://discuss.tutorialedge.net/t/challenge-04-filtering-duplicates/21) 
 
 
-## Further Reading:
+### Further Reading:
 
 If you like this challenge then you may also enjoy some of the other challenges on the site:
 

@@ -14,11 +14,11 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 
 In the last tutorial in this series, we looked at building a really simple component within our Imgur application. Now that we have some fo the basics under our belt when it comes to building components, it's time to look at how we can start building a more complex application and introduce multiple components and a router that allows us to switch between rendering certain components.
 
-# Introduction
+## Introduction
 
 In this tutorial, we'll be looking primarily at how you can set up your Vue.JS application to use the incredibly popular `vue router` package. We'll be covering how routing works in terms of all Single Page Applications, and then how it specifically works within Vue.JS.
 
-# Routing in Single Page Applications
+## Routing in Single Page Applications
 
 In most frontend JavaScript frameworks such as React, Angular and even Vue.JS, you tend to have a single router within your application that handles the task of determining what path you are hitting and then dictating the component that has to be rendered for that path.
 
@@ -33,7 +33,7 @@ const routes = [
 
 If you look at how Angular handles client-side routing configuration, you will see a lot of similarities. React is ever so slightly different in how it handles route definitions but the underlying premise is still very much the same.
 
-# Adding Our First Routes
+## Adding Our First Routes
 
 Now that we have some inclination as to what client-side routing is, let's now put what we have covered into practice and create our very first route within our app.
 
@@ -46,7 +46,7 @@ $ yarn add vue-router
 
 With this installed, we can move on to creating our first routes!
 
-## HomePage Route
+### HomePage Route
 
 The most obvious route to add will be the Home page route which will display the latest images that have been uploaded to the site by users. 
 
@@ -115,7 +115,7 @@ export default {
 
 When you save this, there should be no distinguishable changes to how you app renders in the browser, the only difference is under the covers it is matching the `/` route to your `HomePage` component.
 
-## Login Route and Component
+### Login Route and Component
 
 Now that we have our homepage route defined, let's extend our app and add a few really simple additional routes and components that we will be fleshing out more in part 4 of this series.
 
@@ -218,7 +218,7 @@ Now, at this point, you should be able to click on this `Login` link at the top 
 
 ![Working Vue Router!](https://images.tutorialedge.net/images/imgur-clone/vue-router-01.png)
 
-## Register Route and Component
+### Register Route and Component
 
 Next, we will need a custom route and component for people that wish to register within our application. 
 
@@ -322,7 +322,7 @@ Awesome, we have now successfully defined 3 static routes as well as their respe
 
 > **Action** - Create 1 more additional route for `/profile` which will map to a really simple `Profile.vue` component that just features a `<h2>Profile</h2>` template.
 
-## Dynamic Routing - Individual Images
+### Dynamic Routing - Individual Images
 
 We'll want to create a route that allows us to access individual images and our previous method of hard coding routes to given components may have worked for previous parts of our application, it will unfortunately not scale out well to this new bit of functionality.
 
@@ -412,7 +412,7 @@ Now, when you navigate to `/random-id` within your application, you should see t
 
 ![Working Vue Router!](https://images.tutorialedge.net/images/imgur-clone/vue-router-02.png)
 
-# Conclusion
+## Conclusion
 
 I always feel like adding routing to your applications make them feel like "proper" applications and it's always exciting adding the placeholders for the login and authentication flow that every application tends to require.
 
@@ -420,7 +420,7 @@ So, in this tutorial, we have managed to extend our existing Vue.JS Imgur applic
 
 > **Source Code** - The up to date code for this part of the series can be found here: [elliotforbes/imgur-clone-vuejs-nodejs](https://github.com/elliotforbes/imgur-clone-vuejs-nodejs/tree/861c195270f2cf2c669a762ab7d4da839607fd6d)
 
-## Further Reading:
+### Further Reading:
 
 In the next tutorial in this series, we are going to be taking a look at building our own AWS Lambda functions, with the help of the serverless cli, that will allow us to store, retrieve and delete images in our application.
 

@@ -16,12 +16,12 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 👋 Welcome fellow Gophers! In this tutorial, we'll be covering the basics of Type Assertions in Go!
 
 
-# Introduction
+## Introduction
 
-# Prerequisites
+## Prerequisites
 
-# Conclusion
+## Conclusion
 
-## Further Reading:
+### Further Reading:
 
 * []()

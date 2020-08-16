@@ -32,14 +32,14 @@ Go-based programs for your frontend applications.
 > **Note -** If you haven't guessed from the opening line, Go v1.11 will be
 > required in order for this tutorial to work!
 
-# Video Tutorial
+## Video Tutorial
 
 If you want to support me and my efforts then check out the video version of
 this tutorial and subscribe to my channel!
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4kBvvk2Bzis" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-# Introduction
+## Introduction
 
 So what does this really mean for Go and Web developers? Well, it gives us the
 ability to write our frontend web apps using the Go language and subsequently
@@ -51,7 +51,7 @@ frontend purposes. GopherJS has been around for quite a while now and is pretty
 damn mature, however, the difference is that it compiles Go code to JS and not
 to WebAssembly.
 
-# A Simple Example
+## A Simple Example
 
 Let's start off with a really simple example, this will simply output
 `Hello World` in the console whenever we click a button in our web page. Sounds
@@ -166,13 +166,13 @@ click the button!
 Awesome, we've managed to successfully compile a really simple Go -> WebAssembly
 project and get it working in the browser.
 
-# A More Complex Example
+## A More Complex Example
 
 Now for the good bit. Say, we wanted to create a more complex example that
 featured DOM manipulation, custom Go functions that could be bound to button
 clicks and more. Well thankfully, it's not too difficult!
 
-## Registering Functions
+### Registering Functions
 
 We'll start off by creating a few functions of our own that we want to expose to
 our frontend. I'm feeling rather unoriginal today so these are going to be just
@@ -249,7 +249,7 @@ you should be able to see the outputs of this function printing out.
 
 We are slowly but surely starting to get somewhere with this!
 
-## Evaluating DOM Elements
+### Evaluating DOM Elements
 
 So, I guess the next stage, is to start evaluating DOM elements and using their
 values instead of hard-coded values.
@@ -301,7 +301,7 @@ Try recompiling this code now and reloading your browser, you should notice that
 if we enter the values `22` and `3` in both our inputs, it successfully outputs
 `25` in the console.
 
-# Manipulating DOM elements
+## Manipulating DOM elements
 
 Our calculator wouldn't be very good if it didn't actually report the results
 within our page, so let's fix that now by taking in a third `id` that we'll
@@ -319,7 +319,7 @@ func add(i []js.Value) {
 }
 ```
 
-# Updating our subtract function:
+## Updating our subtract function:
 
 Finally, let's update our subtract method:
 
@@ -391,7 +391,7 @@ license that can be found in the LICENSE file.
 </html>
 ```
 
-# Conclusion
+## Conclusion
 
 So, in this tutorial, we managed to learn how we can compile our Go programs
 into WebAssembly using the new v1.11 of the Go language. We created a really

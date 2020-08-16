@@ -15,7 +15,7 @@ For the majority of my development career I have been an application developer, 
 
 However, over the past year, I have been thrown into the deep end of a far lower level of software engineering than I was previously used to. I have been working on a fairly substantial project which has brought me down into the mirky depths of network rules and VM management. This typically meant moving away from building larger applications that clients directly interacted with and moving more towards writing scripts and deployment pipelines using Python.
 
-# Iterating Over Files in a Directory
+## Iterating Over Files in a Directory
 
 The first handy function is the `os.walk()` function which returns a generator object that you can iterate over using a `for` loop:
 
@@ -24,17 +24,17 @@ import os
 
 def main():
     for root, directories, files in os.walk("/")
-        # print the root of the directory
+        ## print the root of the directory
         print(root)
-        # print the directories within the root
+        ## print the directories within the root
         print(directories)
-        # print the files within the root
+        ## print the files within the root
         print(files)
 ```
 
 Awesome, so this allows us traverse any directory we wish and get everything within those directories.
 
-# Creating and Deleting Files
+## Creating and Deleting Files
 
 Creating and deleting files within the day-to-day life of a sysadmin is a fairly common task. Let's start by looking at how you can create and write to files using the `open()` function.
 
@@ -48,7 +48,7 @@ def main():
 
 Now, notice how we have achieved this using `with`. This `with` keyword in Python is incredibly useful in these scenarios as it allows you to ensure resources are **cleaned up** after you have finished executing the body of the `with` statement. This is hugely important as it prevents Python scripts from holding on to files well past when they were meant to. 
 
-## Deleting Files
+### Deleting Files
 
 Deleting files can be achieved using either the `os.remove` function or the `os.unlink` function which takes in the path to the file as it's sole argument:  
 
@@ -80,7 +80,7 @@ def main():
 
 This second tactic can be very handy in situations where you are debugging why files are failing to be removed and can give you context around things like file ownership etc.
 
-# Creating and Deleting Directories
+## Creating and Deleting Directories
 
 Let's take a step back from files and look at how we can create and delete directories using the `os` package in Python.
 
@@ -94,7 +94,7 @@ def main():
     os.mkdir("tmp")
 ```
 
-## Deleting Directories
+### Deleting Directories
 
 For deleting directories, we can leverage the `shutil` python package which is definitely worth taking a look at as there are a number of incredibly handy functions within that package which make a sysadmin's life a lot easier.
 
@@ -111,7 +111,7 @@ This will delete everything within `/path/to/my/directory` and the root folder. 
 
 > **Official Docs** - For more on the `shutil` package check out the official documentation here: [Python 3 Shutil](https://docs.python.org/3/library/shutil.html)
 
-# Moving Files
+## Moving Files
 
 Moving files about the place is yet another common task I find myself constantly performing time and time again. Once again, to solve this we can use the `shutil` package in order to make our lives that little bit easier:
 
@@ -119,13 +119,13 @@ Moving files about the place is yet another common task I find myself constantly
 import shutil
 
 def main():
-    # move origin.file to destination.file
+    ## move origin.file to destination.file
     shutil.move("/path/to/origin.file", "/path/to/destination.file")
 ```
 
 Now, if you want to preserve some of the metadata for the file, then you can specify the `copy_function=copy2` 3rd argument within the `move()` function.
 
-# Backing up Directories
+## Backing up Directories
 
 Backups are hugely important. There will always be times when things go so wrong that you want to just start afresh and being able to deleting everything and restore from a backup directory always comes in handy.
 
@@ -133,12 +133,12 @@ Backups are hugely important. There will always be times when things go so wrong
 import shutil
 
 def main():
-    # backup our directory and attempt to preserve metadata on everything we
-    # backup by specifying the copy_function
+    ## backup our directory and attempt to preserve metadata on everything we
+    ## backup by specifying the copy_function
     shutil.copytree("/path/to/directory", "/path/to/backup", copy_function=copy2)
 ```
 
-# Looking up IP Addresses
+## Looking up IP Addresses
 
 Moving away from the wonderful world of file manipulation, let's now have a look at a few network tests that I have found useful over the past year. 
 
@@ -155,7 +155,7 @@ def main():
 
 This sample code will return the first `IP` address that gets returned.
 
-# Testing Connectivity
+## Testing Connectivity
 
 The next network based code we will look at is testing connectivity to a port and IP address which can be very handy for debugging firewall rules which I have found to be an absolute pain in the ass, *but also necessary...*.
 
@@ -177,7 +177,7 @@ def main():
 
 I choose to try and connect to a **local instance** of this site running on **port 1313** when testing this, but you can change the IP to any IP you wish and the port to any port you wish and this will still work.
 
-# Working with Environment Variables
+## Working with Environment Variables
 
 Finally, let's take a look at environment variables. Some scripts need to be run against multiple environments with various different credentials for each environment and as such hard-coding these into your script can leave you with a fair few headaches depending on how complex the scripts are. Hard-coding also increases the chances of committing and publishing secrets to git repositories which I absolutely have never done before...
 
@@ -192,11 +192,11 @@ def main():
     print(password)
 ```
 
-# Conclusion
+## Conclusion
 
 Hopefully this handy cheat sheet has been useful to you in your System Admin pursuits! If you have any ideas as to what else can be added to this list then please feel free to let me know in the comments section below!
 
-<!-- ## Further Reading:
+<!-- ### Further Reading:
 
 For a more in-depth look at some of the topics covered, please feel free to check out the other tutorials on this site:
 

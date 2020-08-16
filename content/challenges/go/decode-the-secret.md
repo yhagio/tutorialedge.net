@@ -58,11 +58,11 @@ You will need to implement the `DecodeSecret` function which will take in a stri
 
 This decoded string will be the result of a caesar cipher which has shifted all of the characters of the string up by 1 place. So you will have to ensure that when you return the result, it also decodes this cipher.
 
-# See the Solution
+## See the Solution
 
 Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 17 - Decode the Secret](https://discuss.tutorialedge.net/t/challenge-17-decode-the-secret/39) 
 
-## Further Reading:
+### Further Reading:
 
 If you enjoyed this challenge, you may also enjoy some of the other challenges on this site:
 

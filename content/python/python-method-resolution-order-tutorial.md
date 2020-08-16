@@ -20,7 +20,7 @@ from multiple other classes.
 In this tutorial we'll be looking at how Python 3 handles its `MRO` by using a
 little something called `C3 Linearization`.
 
-# The Problems with Inheritance
+## The Problems with Inheritance
 
 Imagine you were implementing a programming language that featured inheritance.
 When you first approach this topic you decide: a child class will have all of
@@ -34,7 +34,7 @@ decide what function or attribute takes precedence?
 > algorithm called `right-first depth-first search` to solve this. Python 3 uses
 > the `C3 linearization algorithm`.
 
-# A Pratical Example
+## A Pratical Example
 
 Let's take a look at how `Method Resolution Order` or `MRO` works in real-terms
 with a very simple Python program. We'll define 2 classes that inherit nothing,
@@ -71,7 +71,7 @@ my_class = my_super_class()
 my_class.test_func()
 ```
 
-## Output
+### Output
 
 When we run the above code you should see that the `__init__` function is called
 of our `my_super_class` class. It then calls the inherited `test_func(self)`
@@ -87,7 +87,7 @@ If we were to switch the order in which our `my_super_class` inherits then
 you'll see that the `test_func()` from the `not_so_awesome_class` is called
 instead. Key takeaway from this point is that ordering of inheritance matters.
 
-# C3 Linearization
+## C3 Linearization
 
 Let's now have a look at this `C3 superclass linearization` algorithm and how it
 works. We can define it as so:
@@ -106,7 +106,7 @@ means by breaking it down.
 - It guarantees that for every class in a graph of all inherited classes, they
   adhere to the previous two points
 
-# An Example
+## An Example
 
 Let's have a look at the following class inheritance graph from the algo's wiki:
 
@@ -138,7 +138,7 @@ Let's start breaking this down:
 
 > Exercise: Work out the linearization of `L(Z)` based on examples above.
 
-# Conclusion
+## Conclusion
 
 Hopefully this article gave you a little bit more insight into how
 `Method Resolution Order` works in Python 3. If you found this useful or require

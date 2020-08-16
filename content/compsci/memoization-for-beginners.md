@@ -18,7 +18,7 @@ runtime performance of some of our recursive algorithms by effectively caching
 the results of previous computations so that they don't have to be continuously
 re-computed.
 
-# The Fibonacci Example
+## The Fibonacci Example
 
 Calculating Fibonacci in a recursive manner is quite possibly the best example
 I've come across when it comes to showing the power of `memoization`.
@@ -26,8 +26,8 @@ I've come across when it comes to showing the power of `memoization`.
 Imagine we had a function that computed the fibonacci number `n` like so:
 
 ```py
-# Basic fibonacci function
-# 1 + 1 + 2 + 3 + 5 + 8 + 13
+## Basic fibonacci function
+## 1 + 1 + 2 + 3 + 5 + 8 + 13
 def fib(n):
     if n <= 0:
         return 0
@@ -49,7 +49,7 @@ Now the runtime complexity of this relatively simple function above would be
 `O(2^n)` which is incredibly inefficient as we start to compute larger and
 larger fibonacci numbers.
 
-# The Memoization Optimization
+## The Memoization Optimization
 
 Through the use of `memoization` we could effectively store the results of
 previous computations. In order to store our results we will use a `dict` in
@@ -94,7 +94,7 @@ Memo Computed
 We have been able to modify our program and change is runtime performance from
 `O(2^N)` to `O(N)` which is a huge saving.
 
-# Entire Program
+## Entire Program
 
 The entire Python file can be found below.
 
@@ -147,7 +147,7 @@ Total Time: 0.00010204315185546875
 As you can see the `memoized` version of the fibonacci function returns in a
 fraction of the time.
 
-# Conclusion
+## Conclusion
 
 If you found this tutorial useful or need further explanation then please feel
 free to let me know in the comments section below!

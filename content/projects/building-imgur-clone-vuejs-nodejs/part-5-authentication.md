@@ -16,13 +16,13 @@ In this tutorial, we are going to be taking a first look at how we will be addin
 
 In this part, we'll be creating a helper class that will feature everything we need in order to talk to a `cognito` user pool that we'll be creating again with terraform, and we'll also be adding a few route guards to our application to see how these will protect certain sections of our app from unauthorized users!
 
-# Authentication in Single Page Applications
+## Authentication in Single Page Applications
 
 Authenticating Single Page Applications, or SPAs, is very similar to authenticating REST APIs or services in the backend. You typically start off by defining routes that take in X and return Y and then you implement some form of middleware which wrap these routes and validate that incoming requests are indeed authorized to hit these routes.
 
 With SPAs like this, we have already defined the routes for our app, we now just need to implement the frontend equivalent of middleware which, in Vue.js is typically called a route guard. 
 
-## Route Guards
+### Route Guards
 
 The `vue-router` library features route or navigation guards that can be applied either globally across the app, or on a per-route basis. These guards are designed to either forward, or reject requests based on decision logic based within the function for that guard.
 
@@ -34,7 +34,7 @@ These route guard functions take in 3 parameters:
 
 > **Official Documentation** - If you want more in-depth information about these guards within the Vue Router then you can check out the official page here: [Vue Router Navigation Guards](https://router.vuejs.org/guide/advanced/navigation-guards.html)
 
-## Per-Route Guard
+### Per-Route Guard
 
 Within our app, we will have a number of distinct routes such as the `/profile` route which we'll need to add a route guard to in order to ensure that the person accessing that route is authenticated. 
 
@@ -49,7 +49,7 @@ export default new Router({
 })
 ```
 
-# Terraforming our Cognito User Pool
+## Terraforming our Cognito User Pool
 
 Before we can write any code for authentication/authorization, we'll need to create an AWS Cognito User Pool within our AWS account so that we have something to interface with when it comes to registering new accounts etc.
 
@@ -125,7 +125,7 @@ export default {
   }
 ```
 
-# Our Cognito Service
+## Our Cognito Service
 
 Now that we have a `cognito` User Pool in place and the configuration added to our app, let's try and build out the `cognitoAuth` class which will be our primary means for communicating with our newly created `cognito` service.
 
@@ -133,7 +133,7 @@ We'll first need to add the following dependencies to our application by running
 
 ```bash
 $ npm install --save amazon-cognito-identity-js aws-sdk
-# or
+## or
 $ yarn add amazon-cognito-identity-js aws-sdk
 ```
 
@@ -221,7 +221,7 @@ CognitoAuth.install = function (Vue, options) {
 
 With the skeleton of our `CognitoAuth` class now in place, we can now set about implementing each function within the class. You will have to bear with me as there are quite a few functions to implement, but it will be worth it once these are done and we can start fleshing out our `login`, `register` and `profile` components of our app!
 
-## isAuthenticated()
+### isAuthenticated()
 
 Let's start with the `isAuthenticated()` function. This will be a helpful function within our app that will allow us to validate whether or not the current user has been authenticated against the backend Cognito service. If they haven't been validated, it will return null and false, otherwise it will return the session and true.
 
@@ -241,7 +241,7 @@ isAuthenticated (cb) {
 }
 ```
 
-## configure()
+### configure()
 
 Next, we'll implement the `configure()`, this function will read in the config from the config file that we created earlier in the tutorial and construct a `CognitoUserPool` using them:
 
@@ -262,7 +262,7 @@ configure (config) {
 }
 ```
 
-## signup()
+### signup()
 
 The `signup()` function allows us to pass in a `username`, `email`, and `password` and sign up a new user to our application. Thankfully, this isn't all that complex and we don't have to worry too much about any client-side validation before we send it off to the backend. 
 
@@ -279,7 +279,7 @@ signup(username, email, pass, cb) {
 }
 ```
 
-## authenticate()
+### authenticate()
 
 Our `authenticate()` function takes in a `username` and `password` from a form within our app and then attempts to authenticate whether or not they are a valid combination and the user exists within our pool. 
 
@@ -314,7 +314,7 @@ authenticate (username, pass, cb) {
 }
 ```
 
-## getCurrentUser()
+### getCurrentUser()
 
 This handy helper function returns the current user which can be parsed for things like username and email:
 
@@ -324,7 +324,7 @@ getCurrentUser () {
 }
 ```
 
-## confirmRegistration()
+### confirmRegistration()
 
 The `confirmRegistration()` function takes in a username and a given `code` which is sent to them via email and then validates whether this code is correct before confirming the user's new account:
 
@@ -338,7 +338,7 @@ confirmRegistration (username, code, cb) {
 }
 ```
 
-## logout()
+### logout()
 
 This is an incredibly simple function that simply ends the user's session on the site and logs them out:
 
@@ -348,7 +348,7 @@ logout () {
 }
 ```
 
-## getIdToken()
+### getIdToken()
 
 This function checks to see if the current user is logged in, if they are then it retrieves the user's JSON Web TOken which can then be used for crafting HTTP Requests against endpoints that feature JWT protection.
 
@@ -368,7 +368,7 @@ getIdToken (cb) {
 
 ```
 
-## Exporting our CognitoAuth Class
+### Exporting our CognitoAuth Class
 
 With this in place, we'll also need to flesh out our `index.js` file to expose this to the rest of our application:
 
@@ -386,7 +386,7 @@ export default new CognitoAuth()
 
 This will basically import our newly created `CognitoAuth` class from our `cognito.js` file as well as a `config` file which we created earlier that contains all of the config needed for our application to talk to a Cognito user pool.
 
-# Adding Our Route Guards
+## Adding Our Route Guards
 
 Let's now have a look at how we can implement a route guard and then subsequently update our route definitions to include this route guard.
 
@@ -449,7 +449,7 @@ export default new Router({
 })
 ```
 
-# Update main.js
+## Update main.js
 
 With our cognitoAuth class now all fleshed out, we will need to do one last thing to register the class within our Vue.js instance. 
 
@@ -472,13 +472,13 @@ new Vue({
 
 You should now be able to try and hit `/profile` within your application and see that the requireAuth route guard has done it's job and redirected you to the `/login` page! 
 
-# Conclusion
+## Conclusion
 
 So, in this tutorial we have started the process of adding authentication to our Imgur clone app through the use of AWS' Cognito service. We've successfully added a few route guards to existing components and validated that our route guards are successfully redirecting users to a `/login` route should they attempt to hit a route unauthenticated.
 
 This is a huge step forward and a piece of functionality that is vital in the vast majority of applications currently in the wild. This concept is agnostic to the type of application you are building and there is the option to lift and shift this authentication code from out of this application into your own application which is very cool!
 
-## Further Reading:
+### Further Reading:
 
 In the next tutorial in this series, we are going to be looking at extending our app to include a login/register workflow so that new users can join our application. With this authentication flow in place, we'll then be able to start tackling problems such as image upload!
 

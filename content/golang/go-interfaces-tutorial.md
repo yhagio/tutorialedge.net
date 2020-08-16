@@ -33,7 +33,7 @@ feel free to let me know in the comments section below!
 > **Github Source Code** - The full source code for this tutorial can be found here: 
 [TutorialEdge/Go-Interfaces-Tutorial](https://github.com/TutorialEdge/go-interfaces-tutorial)
 
-# Basic Example
+## Basic Example
 
 If you are new to Go, you may be seeing `interface{}` a lot in code snippets and
 tutorials. This can be fairly daunting seeing this at first if you don't know
@@ -71,14 +71,14 @@ $ go run main.go
 25
 ```
 
-## Why is this Useful?
+### Why is this Useful?
 
 By defining a function that takes in an `interface{}`, we essentially give
 ourselves the flexibility to pass in anything we want. It's a Go programmers way
 of saying, this function takes in something, but I don't necessarily care about
 its type.
 
-# Defining Interfaces
+## Defining Interfaces
 
 So, what are interfaces? Why do we use them within Go? Well by defining an
 interface in Go, we essentially define a contract. If we define a type based off
@@ -146,7 +146,7 @@ guitarists = append(guitarists, player)
 guitarists = append(guitarists, player2)
 ```
 
-# Return Values
+## Return Values
 
 In real-world examples, we would typically have more complex functions within
 our interfaces that featured return values. In Go, we can define these
@@ -161,7 +161,7 @@ type Employee interface {
 }
 ```
 
-# Satisfying Interfaces
+## Satisfying Interfaces
 
 Say we wanted to create an array of all `Employee`'s in the firm. Within this
 array, we'd want all of our `Engineer`s.
@@ -196,7 +196,7 @@ func main() {
 }
 ```
 
-# Conclusion
+## Conclusion
 
 So, within this tutorial, we have successfully managed to uncover what
 interfaces are within Go and how we can implement them within our own Go-based

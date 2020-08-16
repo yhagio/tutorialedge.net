@@ -22,7 +22,7 @@ subsequently utilize this information in your Angular based application.
 > to check out my tutorial on
 > [Angular Routing](/typescript/angular/angular-routing-tutorial/)
 
-# What Are Query Parameters?
+## What Are Query Parameters?
 
 Query Parameters or `query strings` as they are otherwise known enable us to
 pass in information to an application through the URL that we use to open said
@@ -32,20 +32,20 @@ single, specific user, you would typically pass in some form of identifier in
 your URL to let your application known which user to display. For example:
 
 ```bash
-# This would indicate that you wished to
-# view the user who's id was '1'
+## This would indicate that you wished to
+## view the user who's id was '1'
 http://myapp/user?id=1
-# This would indicate that you wished to
-# view the user who's id was '2'
+## This would indicate that you wished to
+## view the user who's id was '2'
 http://myapp/user?id=2
-# ... and so on
+## ... and so on
 ```
 
 The advantage of this is that you only have to define one page in your
 application that displays user details and it will dynamically retrieve the
 details for whichever `id` was passed in via the url.
 
-# Retrieving Query Parameters in Angular
+## Retrieving Query Parameters in Angular
 
 In order to retrieve the query parameters present in our application's URL we
 can utilize `ActivatedRoutes`.
@@ -83,7 +83,7 @@ see the following outputted in our console:
 Object {version: "1", id: "2", name: "elliot"}
 ```
 
-# Retrieving Specific Query Parameters
+## Retrieving Specific Query Parameters
 
 If we then wanted to retrieve specific query parameters we could do something
 like so:
@@ -111,7 +111,7 @@ the `id` query parameter is when the component is loaded. So
 `http://localhost:4200/?id=testid` would set our `id` variable to `testid` to
 give an example.
 
-# Passing Query Parameters via routerLink
+## Passing Query Parameters via routerLink
 
 If we wanted to create a link that automatically included a series of query
 parameters then we can do so easily using the `[queryParams]` directive like so:

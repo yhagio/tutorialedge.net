@@ -39,22 +39,22 @@ you can check out the following articles:
 > **Source Code** - The full source code for this article can be found here:
 [TutorialEdge/create-rest-api-in-go-tutorial](https://github.com/TutorialEdge/create-rest-api-in-go-tutorial)
 
-# Prerequisites
+## Prerequisites
 
 * You will need Go version 1.11+ installed on your development machine. 
 
-# Goals
+## Goals
 
 By the end of this tutorial, you will know how to create your own REST-ful
 APIs in Go that can handle all aspects of. You will know how to create 
 REST endpoints within your project that can handle `POST`, `GET`, `PUT` and 
 `DELETE` HTTP requests.
 
-# Video Tutorial
+## Video Tutorial
 
 <div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/W5b64DXeP0o?ecver=2" width="640" height="360" frameborder="0" allow="autoplay; encrypted-media" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
 
-# REST Architectures
+## REST Architectures
 
 REST is everywhere these days, from websites to enterprise applications, the
 RESTful architecture style is a powerful way of providing communication between
@@ -64,7 +64,7 @@ both consumers and producers and are typically stateless by design.
 > **Note -** If you wish to learn more about the basics of REST APIs then check
 > out <a href="/general/what-is-a-rest-api/">What Are RESTful APIs?</a>
 
-## JSON
+### JSON
 
 For the purpose of this tutorial I’ll be using JavaScript Object Notation as a
 means of sending and receiving all information and thankfully Go comes with some
@@ -75,13 +75,13 @@ library package, encoding/json.
 > official documentation:
 > <a href="https://golang.org/pkg/encoding/json/" target="_blank">encoding/json</a>
 
-## Marshalling
+### Marshalling
 
 In order for us to easily We can easily convert data structures in GO into JSON
 by using something called marshalling which produces a byte slice containing a
 very long string with no extraneous white space.
 
-# Getting Started with A Basic API
+## Getting Started with A Basic API
 
 To get started we will have to create a very simple server which can handle HTTP
 requests. To do this we'll create a new file called `main.go`. Within this
@@ -127,7 +127,7 @@ successfully created the base from which we'll build our REST API.
 > <a href="/golang/creating-simple-web-server-with-golang/">Creating a Simple
 > Web Server with Go(Lang)</a>
 
-# Our Articles Structure
+## Our Articles Structure
 
 We'll be creating a REST API that allows us to `CREATE`, `READ`, `UPDATE` and
 `DELETE` the articles on our website. When we talk about `CRUD` APIs we are
@@ -172,7 +172,7 @@ func main() {
 Perfect, let's now move on to creating our `/articles` endpoint which will
 return all of the articles that we've just defined here.
 
-# Retrieving All Articles
+## Retrieving All Articles
 
 In this part of the tutorial we are going to create a new REST endpoint which,
 when hit with a `HTTP GET` request, will return all of the articles for our site.
@@ -237,7 +237,7 @@ Swapping the routers will enable you to more easily perform tasks such as
 parsing any path or query parameters that may reside within an incoming 
 `HTTP` request which we will need later on.
 
-# Getting Started with Routers
+## Getting Started with Routers
 
 Now the standard library is adequate at providing everything you need to get
 your own simple REST API up and running but now that we’ve got the basic
@@ -246,7 +246,7 @@ most notable and highly used is the
 [gorilla/mux router](https://github.com/gorilla/mux) which, as it stands
 currently has 2,281 stars on Github.
 
-## Building our Router
+### Building our Router
 
 We can update our existing `main.go` file and swap in a `gorilla/mux`
 based `HTTP` router in place of the standard library one which was present
@@ -304,7 +304,7 @@ later on in this tutorial.
 Rest API v2.0 - Mux Routers
 ```
 
-## Path Variables
+### Path Variables
 
 So far so good, we’ve created a very simple REST API that returns a homepage and
 all our Articles. But what happens if we want to just view one article? 
@@ -395,13 +395,13 @@ content: "Article Content"
 
 You will now see the article matching the key `1` returned as JSON.
 
-# Creating and Updating Articles
+## Creating and Updating Articles
 
 In this part of the tutorial, you are going to build the `Create`, `Update` and
 `DELETE` part of a `CRUD` REST API. We have already covered the `R` with the ability
 to read both single articles and all articles.
 
-## Creating new Articles 
+### Creating new Articles 
 
 Once again, you will need to create a new function which will do the job of creating
 this new article. 
@@ -507,7 +507,7 @@ You have now successfully added a `Create` function to your new REST API!
 In the next section of this tutorial, you are going to look at how you can 
 add a new API Endpoint which will allow you to delete Articles.
 
-## Deleting Articles
+### Deleting Articles
 
 There may be times where you need to delete the data being exposed by your
 REST API. In order to do this, you need to expose a `DELETE` endpoint within
@@ -568,7 +568,7 @@ now only contains a single `Article`.
 doing any checks to ensure that our code is free of race conditions. In order to make this 
 code thread-safe, I recommend checking out my other tutorial on [Go Mutexes](/golang/go-mutex-tutorial/)
 
-## Updating Articles Endpoint
+### Updating Articles Endpoint
 
 The final endpoint you will need to implement is the Update endpoint. This endpoint
 will be a `HTTP PUT` based endpoint and will need to take in an `Id` path parameter, 
@@ -578,7 +578,7 @@ body.
 This JSON in the body of the incoming `HTTP PUT` request will contain the newer version
 of the article that we want to update.
 
-### **Challenge**
+#### **Challenge**
 
 Try create an `updateArticle` function and corresponding route in the
 `handleRequests` function. This will match to `PUT` requests. Once you have this, 
@@ -588,7 +588,7 @@ using the same code that you used in your `createNewArticle` function.
 Finally, you will have to loop over the articles in your `Articles` array and match
 and subsequently update the article.
 
-# Conclusion
+## Conclusion
 
 This example represents a very simple RESTful API written using Go. In a real
 project, we'd typically tie this up with a database so that we were returning
@@ -597,7 +597,7 @@ real values.
 > **Source Code** - The full source code for this tutorial can be found here:
 [TutorialEdge/create-rest-api-in-go](https://github.com/TutorialEdge/create-rest-api-in-go-tutorial)
 
-## Further Reading
+### Further Reading
 
 If you enjoyed this article, then you may also enjoy the following tutorials:
 

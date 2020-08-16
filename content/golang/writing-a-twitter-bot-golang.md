@@ -23,7 +23,7 @@ I’ll be demonstrating how you can build a go based twitter bot that will be ab
 to do such things as automatically reply to tweets and favorite tweets that
 contain a specific hashtag.
 
-# Setting Up Your Project
+## Setting Up Your Project
 
 > **Note -** We'll be using go modules which is an experimental feature of Go
 > 1.11
@@ -39,11 +39,11 @@ $ go mod init github.com/elliotforbes/go-twitter-bot
 This should create a `go.mod` file within our directory and we should be good to
 get started writing our twitter bot!
 
-# Connecting to Twitter
+## Connecting to Twitter
 
 Just like with the [Python version of this tutorial](/python/creating-twitter-bot-python/), you’ll have to create an app in twitter’s [app control panel](https://apps.twitter.com/). Once you’ve created a new application, it should present you with all the secret tokens and keys that you need in order to proceed.
 
-# Environment Variables
+## Environment Variables
 
 So, once we've created a new application within the twitter apps dashboard,
 we'll have our credentials and we'll be ready to start coding up our app.
@@ -68,7 +68,7 @@ $ export ACCESS_TOKEN_SECRET=VALUE
 Once we've done this, we'll be able to pick these values up safely within our
 code using the `os` package.
 
-# Writing our Basic Go Twitter Bot
+## Writing our Basic Go Twitter Bot
 
 Once you’ve got all the access tokens and secret tokens ready, it’s time to
 start implementing our Bot.
@@ -187,7 +187,7 @@ We should now be able to run this using the same `go run ./...` command that we
 used earlier. If our credentials have been set properly, we should see our
 account details being printed out in the client!
 
-# Sending Tweets
+## Sending Tweets
 
 Ok, so now that we've got a client that works, we can try sending a few test
 tweets out using one of the libraries' existing functions.
@@ -209,7 +209,7 @@ has popped up on our timelines:
 
 ![](https://images.tutorialedge.net/images/golang/go-twitter-bot/tweet.png)
 
-# Searching Tweets
+## Searching Tweets
 
 Ok, so we're able to send tweets, but how do we go about searching for tweets on
 a given topic?
@@ -237,7 +237,7 @@ brand and plugged in a sentiment analysis system. We could chart things like the
 general sentiment for a brand across twitter over time, which would be pretty
 awesome!
 
-# Conclusion
+## Conclusion
 
 That's us reached the end of our journey for this particular topic! I'm hoping
 this tutorial has given you a good enough foundation to go off and build really
@@ -247,7 +247,7 @@ cool systems that interact with various social media accounts.
 > site, then please feel free to follow me on twitter for all the latest news:
 > [@Elliot_F](https://twitter.com/elliot_f).
 
-## Related Tutorials
+### Related Tutorials
 
 If you enjoyed this tutorial, you might also enjoy the following tutorials:
 

@@ -163,11 +163,11 @@ You will have to implement a function which keeps track of the number of times a
 
 <Quiz question="We can rely on the ordering of maps to store a list of the top 5 words, true or false?" answer="False, you will have to rely on another data structure in order to return a list of the top 5 sorted words" correct="A" A="True" B="False" />
 
-# See the Solution
+## See the Solution
 
 Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 10 - Word Frequencies](https://discuss.tutorialedge.net/t/challenge-10-word-frequencies/29) 
 
-## Further Reading:
+### Further Reading:
 
 If you enjoyed this challenge, you may also enjoy some of the other challenges on this site:
 

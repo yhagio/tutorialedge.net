@@ -30,11 +30,11 @@ up with a really elegant system fairly quickly!
 > **Note -** You can read more about the TempFile api in my other tutorial here:
 > [Go Temporary Files and Directories](/golang/temporary-files-directories-go-111/)
 
-# Video Tutorial
+## Video Tutorial
 
 {{< youtube id="0sRjYzL_oYs" autoplay="false" >}}
 
-# The Implementation
+## The Implementation
 
 We'll start off by creating a really simple HTTP server using the `net/http`
 package. This will feature just the one solitary endpoint which will be our
@@ -133,7 +133,7 @@ func main() {
 Awesome, we can try running this and seeing if everything else works by again
 calling `go run main.go` within our terminal.
 
-# The Frontend
+## The Frontend
 
 We'll need a really simple HTML frontend that will act as our portal for
 uploading our files. We won't bother with any of the more complex aspects such
@@ -172,7 +172,7 @@ file to our running web server.
 You should see that a new file has been generated in the `temp-images/`
 directory that follows the convention `upload-23421432.png`.
 
-# Conclusion
+## Conclusion
 
 > **Source Code** - The full source code for this project can be found here: [TutorialEdge/go-file-upload-tutorial](https://github.com/TutorialEdge/go-file-upload-tutorial)
 

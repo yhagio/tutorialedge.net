@@ -27,7 +27,7 @@ JSON is now the most popular data format available and you'll find that most
 RESTful APIs provide JSON responses when you try to interface with them. Thus
 being able to work with it and parse it in Go is incredibly useful!
 
-# The Encoding/Json Package
+## The Encoding/Json Package
 
 So, to get us started, we'll be leveraging the `encoding/json` standard library
 package in order to get us up and running. I highly recommend you check out the
@@ -55,7 +55,7 @@ func main() {
 And we can run this with a simple `go run main.go` call. This should return a
 simple `Hello World`.
 
-# Reading and Parsing a JSON File
+## Reading and Parsing a JSON File
 
 Let's try and read in a simple JSON file and then parse it. For the purpose of
 this tutorial we’ll be parsing the following json within our file. Copy this and
@@ -92,7 +92,7 @@ file.
 This should be complex enough to test our skills and should allow us to transfer
 our skills to real world examples fairly easily.
 
-# Reading the JSON File
+## Reading the JSON File
 
 We’ll be using the `os` package in order to open up our `users.json` file from
 our filesystem. Once we have opened the file, we'll defer the closing of the
@@ -111,7 +111,7 @@ fmt.Println("Successfully Opened users.json")
 defer jsonFile.Close()
 ```
 
-## Parsing with Structs
+### Parsing with Structs
 
 We have a few options when it comes to parsing the JSON that is contained within
 our `users.json` file. We could either unmarshal the JSON using a set of
@@ -159,7 +159,7 @@ type Social struct {
 
 Once we have these in place, we can use them to unmarshal our JSON.
 
-# Unmarshalling our JSON
+## Unmarshalling our JSON
 
 Once we've used the os.Open function to read our file into memory, we then have
 to convert it toa byte array using ioutil.ReadAll. Once it's in a byte array we
@@ -187,7 +187,7 @@ for i := 0; i < len(users.Users); i++ {
 }
 ```
 
-# Working with Unstructured Data
+## Working with Unstructured Data
 
 Sometimes, going through the process of creating structs for everything can be
 somewhat time consuming and overly verbose for the problems you are trying to
@@ -247,7 +247,7 @@ define the struct types.
 > **Note -** It is typically recommended to try and define the structs, if you
 > happen to know the structure of the data coming back.
 
-# Full Implementation
+## Full Implementation
 
 Below you'll find the full implementation of this tutorial.
 
@@ -321,13 +321,13 @@ func main() {
 }
 ```
 
-# Conclusion
+## Conclusion
 
 Hopefully this tutorial helped to demystify the art of working with JSON in
 Golang. If you found this tutorial helpful or have anything else to add then
 please let me know in the comments section below.
 
-# Further Reading
+## Further Reading
 
 If you enjoyed this tutorial or found it useful, you may also enjoy some of my
 other articles on the site:

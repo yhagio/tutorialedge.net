@@ -23,7 +23,7 @@ In this tutorial, we are going to continue to develop our blog and get started
 building up the first of our Lambda functions that we'll need to make our blog
 work.
 
-# Our First Lambda Function
+## Our First Lambda Function
 
 We'll start by creating a `hello world` style lambda function that will later
 return a paginated list of blog posts. Once we've managed to successfully deploy
@@ -58,7 +58,7 @@ Let's break down the above code.
 - **line 5** - We call our `callback` function which returns a `statusCode`, any
   response `headers` and a `body`.
 
-# Serverless Config
+## Serverless Config
 
 Now that we have a simple Lambda function, let's attempt to deploy this using
 the serverless command line interface. Create a new `serverless.yml` file within
@@ -143,7 +143,7 @@ You should notice that in the list of `endpoints` this deployment returns, we
 have a `GET` request and the url for that request. If we now hit that API
 endpoint, we should be able to see `Hello World` displaying within our browser!
 
-# Debugging your Lambda Functions
+## Debugging your Lambda Functions
 
 If you see any issues with this endpoint, it's worthwhile looking into how you
 can accurately debug what has gone wrong with the code you have written and
@@ -163,7 +163,7 @@ have gone wrong:
 
 ![CloudWatch Logs](https://images.tutorialedge.net/images/vuejs-blog-aws/screenshot-03.png)
 
-# Next Steps
+## Next Steps
 
 We have now managed to write and deploy our first Lambda function! In the next
 few tutorials, we will be expanding our Lambda collection and start integrating

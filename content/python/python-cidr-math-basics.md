@@ -16,7 +16,7 @@ Python is well known for being the tool of choice for most System Administrators
 
 In this tutorial, we'll be looking at how you can perform a wide range of various CIDR calculations using the `netaddr` package in Python!
 
-# Installation
+## Installation
 
 Before we can get started with the `netaddr` python package, we'll have to install it using the `pip` command line tool like so:
 
@@ -26,7 +26,7 @@ $ pip install netaddr
 
 With this in place, we can start manipulating some CIDRs!
 
-# Simple Examples
+## Simple Examples
 
 Let's start off with a really simple example. Imagine we had a really simple Yaml file which contained some information about authors:
 
@@ -58,11 +58,11 @@ def main():
 Hello World
 ```
 
-# Conclusion
+## Conclusion
 
 Hopefully you found this tutorial useful! If you have any comments of feedback then I would love to hear them in the comments section below!
 
-## Further Reading:
+### Further Reading:
 
 If you enjoyed this tutorial then you may also enjoy these other tutorials on the site:
 

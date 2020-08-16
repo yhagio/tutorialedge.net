@@ -13,7 +13,7 @@ twitter: https://twitter.com/abdullahgarcia
 authorImage: https://pbs.twimg.com/profile_images/1099327373177208833/fZLkqyx3_400x400.png
 ---
 
-# Introduction
+## Introduction
 
 First of all, I would like to thank Elliot Forbes for the opportunity to collaborate in this space. My name is Abdullah Garcia. I am an experienced security engineer with over ten years of successful design and delivery of high-quality solutions across a broad range of industry sectors; for the curious ones, you can find more details in LinkedIn. I'm also a neuroscientist focused on Brain-Computer Interfaces (BCIs) for motor neurorehabilitation combining virtual reality, ML, and prosthetics. Finally, in my spare time, I enjoy landscape/urban/street photography (https://abdullahgarcia.myportfolio.com), traveling, cooking/baking, and all sort of sports... among other things.
 
@@ -29,7 +29,7 @@ As for this one in particular:
 
 Thanks in advance for your time!
 
-# General Secure Coding Best Practices
+## General Secure Coding Best Practices
 
 Before beginning this section, I would like to emphasize the following: when you code for living, I genuinely think it is your reponsibility to do it as best as possible within your understanding. Hopefully, that understanding will be in continuous growth by self-motivated learning. This includes owning the security considerations embedded into your coding practices. Remember, whatever you code, reflects your professionalism. Furthermore, your code composes an application which is likely to be used in the real world affecting/impacting people one way or another. Take pride in it!
 
@@ -54,7 +54,7 @@ The practices involve the following areas:
 
 Note that this list is based on the **[OWASP SCP Quick Reference Guide (v2)](https://www.owasp.org/index.php/OWASP_Secure_Coding_Practices_-_Quick_Reference_Guide)**. However, the content you'll find also includes knowledge acquired over the years and highlights some additional points.
 
-## Input Validation
+### Input Validation
 
 Whenever **input validation** is discussed, **data sanitization** coexists with it. Note that some people use the term **data validation** too; unfortunately, its usage is not consistent and sometimes is equivalent to input validation and some others to data sanitization. Also, I want you to remember that data sanitization is applied differently depending on the domain: e.g. data wiping, data handling, data privacy, etc. In any case, we need to clarify each term and its process and I think the best way to do it is with context and examples.
 
@@ -196,7 +196,7 @@ With that being said, there are a few more points for you to consider when it co
 2. All validation failures should result in input rejection.
 3. Validate data type and data range too; ensure there is a boundary check when appropriate.
 
-# Conclusion
+## Conclusion
 
 We have covered both terms now, so, how do they relate to OWASP Top 10? 
 
@@ -207,7 +207,7 @@ Input validation, and data sanitization, are directly related to the following:
 
 In the next article, I'll cover those OWASP Top 10 risks after addressing **output encoding**.
 
-## Further Reading:
+### Further Reading:
 
 - [Top 10 Secure Coding Practices](https://wiki.sei.cmu.edu/confluence/display/seccode/Top+10+Secure+Coding+Practices)
 - [Top 25 Software Errors](https://www.sans.org/top25-software-errors)

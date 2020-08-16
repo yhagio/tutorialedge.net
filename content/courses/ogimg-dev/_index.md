@@ -19,7 +19,7 @@ In this series, we are going to be building a full SaaS Web Application using Re
 
 The SaaS product will allow developers to programmatically generate OpenGraph images for their social media posts.
 
-## Topics Covered:
+### Topics Covered:
 
 * Styling our App with Tailwind CSS
 * Using Hooks within our React.js App

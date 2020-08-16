@@ -16,13 +16,13 @@ In the first part of this tutorial series, we are going to be working on project
 
 By the end of this section, you will have two separate projects that built using the `vue` cli for our frontend Vue.js application and the `npm` cli for our backend Node.js REST API that will be powering our frontend.
 
-# Introduction
+## Introduction
 
 This section of the course is going to show you the standard approach that is taken to kick-start new Node.js and Vue.js applications. 
 
 We'll be creating two distinct folder structures to house both applications but these will both live alongside each other in a single Github repository. The reason we'll be using a simple repository for this is to minimize complexity, this course is more focused on teaching you how to build web applications with Vue.js and Node.js as opposed to teaching you how to use git.
 
-# Prerequisites
+## Prerequisites
 
 In order to complete this section of the course, you will need the following tools installed on your machine:
 
@@ -34,7 +34,7 @@ There will be more dependencies required throughout the course, but as and when 
 
 For now, this is all we need to get started!
 
-# Scaffolding our Frontend Application
+## Scaffolding our Frontend Application
 
 The first thing we will want to create is the base for our frontend application. In order to install the cli on your local machine, you can run the following `npm install` command:
 
@@ -63,7 +63,7 @@ This will start a live development server for our application which will automat
 
 Copy the `Local:` url that is displayed in the terminal into a new tab within a browser and you will see your application up and running!
 
-# Scaffolding our Backend Application
+## Scaffolding our Backend Application
 
 Now that we have successfully managed to create the base for our frontend application, we can start looking at how we scaffold our backend REST API.
 
@@ -112,7 +112,7 @@ REST API Started on port 3000
 
 We can then open up `http://localhost:3000` within our browser and with any luck we should see our new backend application successfully returning `Hello World` to us!
 
-# Initializing our Git Repository
+## Initializing our Git Repository
 
 Awesome, with this done, we can start looking at setting up the `github` repository we'll be using for this tutorial series. 
 
@@ -166,13 +166,13 @@ Once these commands have been successfully performed, you will now see all withi
 
 ![Populated Repository](https://images.tutorialedge.net/images/imgur-clone/repo-after-push.png)
 
-# Conclusion
+## Conclusion
 
 Awesome, in this part of the series, we have successfully built the base for both our frontend Vue.js application as well as that of our Node.js REST API that will power our application and handle things such as authentication and file-uploading.
 
 We have also looked at how we can set up a github.com repository within which we can store our application's source code. It's a great habit to use source control for everything you do, even if it happens to be a simple test project as it gives you more experience working with the `git` cli which is the current industry standard tool for source control.
 
-## Next Tutorial:
+### Next Tutorial:
 
 In the next part of this tutorial series, we will be exploring the world of Vue.js and modifying our existing frontend application by creating new simple components.
 

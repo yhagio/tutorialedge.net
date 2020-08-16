@@ -15,14 +15,14 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 
 Rust is a language that has **exploded onto the system programming scene** recently. It is incredibly well liked by the developers that have picked it up and we are seeing it growing well in terms of popularity for system projects.
 
-# Why Rust?
+## Why Rust?
 
 There are a number of reasons why you should pick Rust as your next progra
 
-# Prerequisites
+## Prerequisites
 
-# Conclusion
+## Conclusion
 
-## Further Reading:
+### Further Reading:
 
 * []()

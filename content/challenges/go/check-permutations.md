@@ -70,7 +70,7 @@ tests:
 
 👋 Welcome Gophers! In this Go challenge, you are going to be implementing a function that takes in two `string` values and checks to see if they are permutations of one another.
 
-# Example
+## Example
 
 If I have 2 strings, "abc" and "cba", when I pass these strings into the function, it should return `true` as these two strings are permutations of each other. 
 
@@ -92,11 +92,11 @@ Start off by building up a map of these `rune` values to the number of occurrenc
 
 <Quiz question="How can we optimize this function so that it is not performing unnecessary calculations?" answer="We can implement all of the above checks to ensure that the function only does what it has to before returning the correct answer" correct="C" A="We can check the length of each string at the start of the function and return false if they differ" B="We can use maps to efficiently lookup perviously encountered characters" C="All of the Above" />
 
-# See the Solution
+## See the Solution
 
 Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 08 - Checking Permutations](https://discuss.tutorialedge.net/t/challenge-08-checking-permutations/25/2) 
 
-## Further Reading:
+### Further Reading:
 
 If you enjoyed this challenge, you may also enjoy some of these other challenges:
 

@@ -21,7 +21,7 @@ differences are between 1._ Modules and 2._ modules.
 > <a target="_blank" href="https://angular.io/docs/ts/latest/guide/ngmodule.html">Angular
 > 2 Modules</a>
 
-# What Are Modules?
+## What Are Modules?
 
 Typically a module would contain all the code necessary for one cohesive piece
 of functionality for your application. So say you were designing an admin
@@ -60,7 +60,7 @@ http calls or define routes within our application.
 ------ All our code for gathering statistics and displaying them etc.
 ```
 
-# Our Main Module
+## Our Main Module
 
 Now we know every Angular application must have at the very least a root module.
 This is typically a class that has been decorated with @NgModule. @NgModule
@@ -88,7 +88,7 @@ export class AppModule {}
 > We can add our own custom components to the declarations array. Notice I’ve
 > added TestComponent above.
 
-## The @NgModule Decorator
+### The @NgModule Decorator
 
 In order to define a module we need to first define a class within our
 application. After we've defined this class we would then have to decorate it
@@ -141,7 +141,7 @@ import { UserModule, UserComponent } from "./users/users.module";
 Once we've done this we can then utilize the <user></user> tags within any
 component that lies within our root AppModule.
 
-# Bootstrapping
+## Bootstrapping
 
 In Angular 1.\* we would typically have used the ng-app directive to bootstrap
 our angular application. This would act almost like a main function that would
@@ -160,7 +160,7 @@ import { AppModule } from "./app.module";
 platformBrowserDynamic().bootstrapModule(AppModule);
 ```
 
-# Conclusion
+## Conclusion
 
 I hope you found this tutorial useful. If you want any further help or
 information then please let me know in the comments section below!

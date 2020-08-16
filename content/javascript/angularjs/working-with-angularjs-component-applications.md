@@ -22,7 +22,7 @@ application. This application utilizes a component based architecture and
 follows some of the best practices outlined in Todd Motto’s
 [Style Guide](https://github.com/toddmotto/angular-styleguide)
 
-# Getting the Code
+## Getting the Code
 
 If you have git installed on your local machine then getting the code is just a
 case of doing:
@@ -36,7 +36,7 @@ git pull origin master
 This should pull the latest version of the code to your current working
 directory.
 
-# Building our Application
+## Building our Application
 
 This application currently uses gulp in order to minify and concatenate any and
 all files under our components directory into a bundle.js file. In order to
@@ -48,7 +48,7 @@ For more information on using gulp to improve your angularjs development flow
 check out this tutorial:
 [Automating your AngularJS Workflow with Gulp](/javascript/angularjs/automating-your-angularjs-workflow-with-gulp/)
 
-# The Structure
+## The Structure
 
 The first thing we should look at is the structure. For cleanliness I’ve created
 a src sub-folder within which all of our own code will be stored. This includes
@@ -66,7 +66,7 @@ true for our gulpfile.js, our package.json and our readme.md.
 ---- dist/
 ```
 
-## Component Based Architecture
+### Component Based Architecture
 
 As I’ve already said, this application utilizes a component based architecture.
 This architecture style is perfect for medium to large projects that could
@@ -79,7 +79,7 @@ ourselves breaking the Don’t Repeat Yourself (DRY) methodology. However I feel
 that when developing huge, complex frontend applications, having that separation
 of concerns is far more beneficial in the long run.
 
-# Extending This Application
+## Extending This Application
 
 If we wanted to extend this application with a module of our own, we can simple
 create a folder within our components directory in a fitting place and develop
@@ -98,7 +98,7 @@ directory we would create 4 main files initially:
 ------ youtube-subscribers.routes.js
 ```
 
-## Our HTML Page
+### Our HTML Page
 
 The application currently uses the ng-view directive and ng-routes in order to
 decide what html to show depending on what url you are currently looking at.
@@ -119,7 +119,7 @@ something like so:
 </div>
 ```
 
-## Our Routes Page
+### Our Routes Page
 
 Now that we have our html defined for our youtube-subscribers page, we need to
 define a route that will show this html whenever we navigate to it. We can do
@@ -142,7 +142,7 @@ If you try navigating to `http://localhost:port/#/youtube-subscribers`, you shou
 now see our application as well as our newly defined youtube-subscribers.html
 rendering just below our navigation.
 
-## Our Components File
+### Our Components File
 
 Currently you’ll notice we are using an absolute path to our defined html page.
 But say we wanted to display this page elsewhere as part of a bigger page? Well
@@ -164,7 +164,7 @@ This defines a youtubeSubscribers object with the same templateUrl that points
 to our newly created youtube-subscribers.html page and also creates the bindings
 for any variables we may wish to pass to that html page.
 
-## Updating our Routes Provider
+### Updating our Routes Provider
 
 So now that we have a component defined for our application we can jump back
 into our youtube-subscribers.routes.js file and modify templateUrl to template
@@ -187,7 +187,7 @@ youtube-subscribers.html file. The only difference being that it’s referencing
 our newly created component and not just pulling in the html directly from the
 file.
 
-## Our Controller File
+### Our Controller File
 
 So we’ve done the bare minimum in order to create a new angularjs component, but
 now we want to start adding some functionality to it. In order to that we can
@@ -209,7 +209,7 @@ This creates the basic controller within which we can add things like querying
 the youtube-api for our subscriber count or querying our own RESTful services in
 order to attain any extra information we want to render through our application.
 
-## Adding our Controller to Our Component
+### Adding our Controller to Our Component
 
 Now that we actually have a controller defined, we can come back into our
 `youtube-subscriber.component.js` file and add a reference to our newly created
@@ -245,7 +245,7 @@ youtubeSubscribers array that we’eve defined in our controller.
 </div>
 ```
 
-# Conclusions
+## Conclusions
 
 This hopefully gave you an idea of how easy it is to extend a component based
 angularjs application and to define everything you need for your own components.

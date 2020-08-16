@@ -21,9 +21,9 @@ development seriously. In this introductory guide I'll be helping to demystify
 some of the key terms and concepts that every web developer should know or be
 aware of.
 
-# The Languages - HTML and CSS
+## The Languages - HTML and CSS
 
-## HTML - Hyper Text Markup language
+### HTML - Hyper Text Markup language
 
 HTML or Hyper text markup language as it more formally known is the language in
 which we define the structure of our web pages. Every webpage must follow this
@@ -47,9 +47,9 @@ structure and it looks something like this:
 The above code is made up of a series of `tags` which are most often opened
 `<tag-name>` and then closed like so: `</tag-name>`.
 
-# Line by Line
+## Line by Line
 
-## Our Head Section
+### Our Head Section
 
 The Doctype tag specifies that this document is of type html. We leave this in
 so that browsers can more easily work with our web pages.
@@ -80,7 +80,7 @@ our site which sets our webpage's tab name in modern browsers.
 </head>
 ```
 
-## Meta Data
+### Meta Data
 
 When we talk about meta data we are referring to the tags within our `<head>`
 section that describe our webpage. We can define things like the webpage's
@@ -94,7 +94,7 @@ like so:
 />
 ```
 
-# Our Body Section
+## Our Body Section
 
 Finally we come to the `<body>` section of our webpage. It is within this
 section that we write the code that defines how our webpage is structured. We
@@ -111,7 +111,7 @@ would typically put the title of our content. These tags range from `<h1>` to
 </body>
 ```
 
-# Making Our Site Look Good - CSS
+## Making Our Site Look Good - CSS
 
 So in the above section we've defined a very basic website. It doesn't do
 anything fancy just yet and it definitely doesn't look the best so the next

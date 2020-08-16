@@ -27,7 +27,7 @@ the 1990's and are about the same age as myself.
 This technology has truly revolutionized consumer electronics and we see face
 recognition as a "must-have" accessory for our smart phones and watches.
 
-# The Different Face Recognition Algorithms
+## The Different Face Recognition Algorithms
 
 In recent years we have seen a majority of the largest tech companies come out
 with various research papers on doing mass facial recognition and detection at
@@ -42,7 +42,7 @@ as such, will be out of scope for what we are trying to achieve in this course.
 We'll be focusing on the somewhat simpler, but still very effective Local Binary
 Patterns Histogram algorithm.
 
-# Local Binary Patterns Histogram - Our Algorithm of Choice
+## Local Binary Patterns Histogram - Our Algorithm of Choice
 
 So, the algorithm we'll be implementing through the course of this series is
 going to be the local binary patterns histogram algorithm.
@@ -50,7 +50,7 @@ going to be the local binary patterns histogram algorithm.
 That's quite a mouthful to say, but the underlying algorithm is beautifully
 simple.
 
-# Alternative Algorithms and Implementations
+## Alternative Algorithms and Implementations
 
 If you are just interested in getting a quick and simple face recognition up and
 running without knowing the details, then you can certainly rely on libraries
@@ -61,7 +61,7 @@ However, the goal for this course is to try and give you a deeper insight into
 what it takes to develop your own face recognition system including the
 underlying mathematical component.
 
-# Next Part of the Series
+## Next Part of the Series
 
 This was just a quick and simple introduction to the world of face recognition.
 

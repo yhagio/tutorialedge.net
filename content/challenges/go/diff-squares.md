@@ -56,11 +56,11 @@ You can calculate powers of numbers in Go using the `math.Pow` function. You can
 
 </details>
 
-# See the Solution
+## See the Solution
 
 Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 19 - Diff of Squares](https://discuss.tutorialedge.net/t/challenge-19-diff-of-squares/53) 
 
-# Further Reading:
+## Further Reading:
 
 If you like this challenge then you may also appreciate some of the following articles on the site:
 

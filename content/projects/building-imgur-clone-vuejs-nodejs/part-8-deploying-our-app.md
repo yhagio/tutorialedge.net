@@ -14,7 +14,7 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 
 In this tutorial in the series, we are going to look at an incredibly important, but often overlooked aspect of project development and that is deploying our app in an automated fashion. The main goal for this tutorial is to show you **how you can fully automate both your Vue.js and your Serverless deploys using Travis-CI**.
 
-# The Importance of Automated Deployment
+## The Importance of Automated Deployment
 
 Being able to automatically and reliably deploy updates to your applications is hugely important regardless of what you are developing. 
 
@@ -22,7 +22,7 @@ I have seen manual and complex deployments of applications cripple the developme
 
 As we now have a minimum viable product, now is exactly the right time where we should be automating the deployment of this new application. 
 
-# Travis CI
+## Travis CI
 
 For the purpose of this tutorial series, we will be using the free Travis CI system in order to automatically build and deploy our application. 
 
@@ -30,7 +30,7 @@ You will be able to sign up to this using a GitHub account and once you have don
 
 > **Note** - In order to set this up for your project, I recommend checking out the official docs here: [Travis CI Tutorial](https://docs.travis-ci.com/user/tutorial/)
 
-## Step 1 - A Simple Build Script
+### Step 1 - A Simple Build Script
 
 Let's first take a look at how we can set up a simple build job that will be triggered every time you make a code change to the `master` branch within our git repository. 
 
@@ -60,7 +60,7 @@ Now that we have created this `.travis.yml` file within our repository, we need 
 
 ![First Build](https://images.tutorialedge.net/images/imgur-clone/first-build.png)
 
-## Step 2 - Deploying our Built Application
+### Step 2 - Deploying our Built Application
 
 As the rest of this tutorial has been built on top of AWS, it makes sense that we also deploy our frontend application here to keep thinks simple. 
 
@@ -112,7 +112,7 @@ Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 
 Awesome, we now have a bucket in which we can deploy and serve our frontend application from and we have the **app-path** which outputs the URL that we can reach our app when it is eventually deployed!
 
-## Step 3 - Pushing our Frontend to Our S3 Bucket
+### Step 3 - Pushing our Frontend to Our S3 Bucket
 
 We have the bucket, we have the code building within our Travis pipeline. We now need to push the built code to our bucket. 
 
@@ -135,8 +135,8 @@ script:
 - yarn build
 - popd
 
-# We need to add this block with our credentials and the name of the
-# the s3 bucket that we created in the previous step
+## We need to add this block with our credentials and the name of the
+## the s3 bucket that we created in the previous step
 deploy:
   provider: s3
   access_key_id: 
@@ -170,7 +170,7 @@ Awesome, when this successfully builds, open up the URL which was outputted from
 
 ![First Deploy](https://images.tutorialedge.net/images/imgur-clone/first-deploy.png)
 
-# Deploying our Serverless Functions
+## Deploying our Serverless Functions
 
 Now, the frontend of our application isn't the entire application, we need to also be able to deploy the Lambda functions that we developed in part 5 of this tutorial series.
 
@@ -219,7 +219,7 @@ With this now in place, let's test our automated deployment by making a code cha
 
 This is due to the fact that the appropriate environment variables have not been set up which
 
-### Handling Credentials
+#### Handling Credentials
 
 With this in place, the final piece of the puzzle is to give Travis the credentials needed in order to deploy your AWS account.
 
@@ -273,12 +273,12 @@ With this final piece of the puzzle in place, we should now be able to update ou
 
 ![Working Build](https://images.tutorialedge.net/images/imgur-clone/final-build.png)
 
-# Conclusion
+## Conclusion
 
 So, in this tutorial, we have managed to build a really **quick and powerful automated deployment pipeline** that will take any changes of our application merged into our master branch, and automatically deploy them to AWS with no manual intervention.
 
 This is a huge step forward in terms of progress and it will allow us to quickly iterate over changes and focus on improving the code whilst massively reducing the *toil* that is involved in manually deploying our app to AWS!
 
-## Challenge - Automated Terraforming
+### Challenge - Automated Terraforming
 
 With this pipeline now in place, you should attempt to add an additional step to the pipeline which automatically applies any changes to the terraform code to our underlying infrastructure. You should also look at moving the tfstate files out of the git repo and into an S3 bucket for bonus points!

@@ -29,7 +29,7 @@ Throughout my time using the framework I have had the pleasure of reading
 multiple books, articles and tutorials covering the framework and I thought I
 would share with you my list of favorite books.
 
-# Angular 2 Cookbook
+## Angular 2 Cookbook
 
 <p><img alt="Angular 2 Cookbook" src="https://images.tutorialedge.net/books/angular-2-cookbook.jpeg" class="book-img" /> The second edition of the Angular 2 Cookbook by Matt Frisbie is a top-class book to buy if you are looking to learn the Angular framework. The book follows a cookbook approach with each recipe building upon knowledge gained from previous recipes and by the end of the book you should be a top-class Angular expert able to write highly performant code that follows current industry standards. </p>
 
@@ -50,7 +50,7 @@ others.
 
 <div class="amazon-link">Buy Now: <a href="http://amzn.to/2rbwn1g">Angular 2 Cookbook</a></div>
 
-# Angular 2 By Example
+## Angular 2 By Example
 
 <p><img alt="Angular 2 By Example" src="https://images.tutorialedge.net/books/angular-2-by-example.jpeg" class="book-img" /> Angular 2 by Example does a fantastic job of teaching you the basics of the Angular framework through a range of interesting coding examples. The first few chapters cover the Angular essentials such as the design of the framework and why the decision was made to go with TypeScript. It then guides you through the creation of a 7 minute workout app which does an excellent job of covering components. </p>
 
@@ -64,19 +64,19 @@ I'd highly recommend this book to anyone willing to learn the Angular framework.
 
 <div class="amazon-link">Buy Now: <a href="http://amzn.to/2sg9SLR">Angular 2 By Example</a></div>
 
-# ASP.NET Core and Angular 2
+## ASP.NET Core and Angular 2
 
 <p><img src="https://images.tutorialedge.net/books/asp-net-with-angular.jpg" alt="ASP.NET Core and Angular 2" class="book-img"/>ASP.NET Core and Angular 2 does a fantastic job of introducing Angular 2 to ASP.NET developers and showing them how they can build single page applications in conjunction with an ASP.NET core. </p>
 
 <div class="amazon-link">Buy Now: <a href="http://amzn.to/2rnYiKo">ASP.NET Core and Angular 2</a></div>
 
-# ng-book: The Complete Guide to Angular 4
+## ng-book: The Complete Guide to Angular 4
 
 <p><img src="https://images.tutorialedge.net/books/ng-book.jpg" alt="ng-book: The complete guide to Angular 4" class="book-img" />ng-book : The Complete Guide to Angular 4 does an excellent job of providing a number of high quality examples of how you can write solid Angular 4 code. From the reviews it has received so far it has been relatively well received and has obtained an average of 3.7/5 at the time of writing this. </p>
 
 <div class="amazon-link">Buy Now: <a href="http://amzn.to/2wBcRyF">ng-book: The Complete Guide to Angular 4</a></div>
 
-# Angular Test-Driven Development
+## Angular Test-Driven Development
 
 <p><img src="https://images.tutorialedge.net/books/angular-test-driven.jpg" alt="best books to learn angular" class="book-img" />Angular Test-Driven development focuses on how the testing strategies you should follow when building Angular applications. It covers in details things such as Karma for your unit-testing needs and the likes of Protractor for your end-to-end purposes. </p>
 
@@ -90,7 +90,7 @@ enterprise level applications using Angular.
 
 <div class="amazon-link">Buy Now: <a href="http://amzn.to/2gzweAt">Angular Test-Driven Development</a></div>
 
-# Pro Angular
+## Pro Angular
 
 <p><img src="https://images.tutorialedge.net/books/pro-angular.jpg" alt="best books for learning angular" class="book-img" /> The second edition of Pro Angular by Adam Freeman goes into detail on topics such as the MVC pattern. </p>
 
@@ -99,13 +99,13 @@ have to buy just one Angular book.
 
 <div class="amazon-link">Buy Now: <a href="http://amzn.to/2wzfUsT">Pro Angular</a></div>
 
-# Learning TypeScript
+## Learning TypeScript
 
 The Angular framework is built using TypeScript and having a solid foundation in
 this language is important. In this section we'll be looking at books that focus
 purely on learning the TypeScript programming language.
 
-# Pro TypeScript: Application-Scale JavaScript Development
+## Pro TypeScript: Application-Scale JavaScript Development
 
 <p><img src="https://images.tutorialedge.net/books/pro-typescript.jpg" alt="Pro TypeScript" class="book-img"/>Whilst this book may not be focused on Angular, it's an incredible learning aide for someone who is new to the language and the framework. During my time working with the framework I've seen developers, myself included, who have struggled with issues that aren't Angular-centric that could have been solved if our underlying knowledge of the TypeScript language was stronger.</p>
 

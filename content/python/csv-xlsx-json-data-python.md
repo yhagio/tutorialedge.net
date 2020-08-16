@@ -20,7 +20,7 @@ With that said, Python itself lacks many of the core capabilities that data scie
 In this tutorial, I will show you how to manipulate csv, xlsx, and json data in Python using the pandas programming library.
 
 
-## Installing Pandas
+### Installing Pandas
 
 To manipulate data using the pandas programming library, you'll first need to import pandas into your Python script. Here's the command you would use to import pandas using the alias `pd` (which is convention in the data science world):
 
@@ -36,7 +36,7 @@ If you encounter an error when executing this command, then it is likely that yo
 $ pip install pandas
 ```
 
-## Data Input and Output in Pandas
+### Data Input and Output in Pandas
 
 Pandas includes methods for inputting and outputting data from its DataFrame object. There are different methods for `csv`, `xlsx`, and `json` files, but they all follow similar syntax. Data input methods look like `read_filetype(path)` while data output methods look like `to_filetype(path)`.
 
@@ -73,12 +73,12 @@ json_data.to_json('stock_prices_data.json')
 ```
 
 
-## Pandas Core Functionality
+### Pandas Core Functionality
 
 Now that we have imported (and saved) the data as a pandas DataFrame, let's consider some of the core functionality included in the pandas Python library.
 
 
-### How To Create Pandas Series From Pandas DataFrames
+#### How To Create Pandas Series From Pandas DataFrames
 
 The pandas library has another data structure called a pandas Series which is very similar to a [NumPy array](https://nickmccullum.com/advanced-python/numpy-arrays/). It is a one-dimensional list of data elements.
 
@@ -93,7 +93,7 @@ my_series = csv_data['Alphabet Inc Price']
 ```
 
 
-### How To Deal With Missing Data in a Pandas DataFrame
+#### How To Deal With Missing Data in a Pandas DataFrame
 
 It is common to encounter [missing data](https://nickmccullum.com/advanced-python/missing-data-pandas/) when dealing with large datasets. Fortunately, the pandas library has built-in methods that make it easy to work with missing data.
 
@@ -126,7 +126,7 @@ csv_data.fillna(0)
 It is common to nest the `mean` method within the `filna` method to replace missing values with the average value of a DataFrame (or even a row or column from that DataFrame).
 
 
-### How To Sort Pandas DataFrames
+#### How To Sort Pandas DataFrames
 
 It is possible to sort a pandas DataFrame using the `sort_values` method. This is similar to applying a filter in Excel. 
 
@@ -138,7 +138,7 @@ csv_data.sort_values('Amazon.com Inc Price')
 
 ```
 
-# Final Thoughts
+## Final Thoughts
 
 Manipulating data that is stored in csv, xlsx, and json files is an important concept for any data scientist to understand.
 
@@ -152,7 +152,7 @@ In this tutorial, you learned:
 
 Please feel free to refer back to this tutorial if you ever get stuck in the future!
 
-## Further Reading
+### Further Reading
 
 If you enjoyed this article by Nick, you may also enjoy some of the other articles on the site:
 

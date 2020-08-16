@@ -11,7 +11,7 @@ tags:
   - cloud
 title: Public Vs Private vs Hybrid Clouds
 twitter: https://twitter.com/Elliot_F
-# video: 433296255
+## video: 433296255
 nextPage: /courses/intro-to-cloud/load-balancers/
 weight: 1
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg
@@ -25,7 +25,7 @@ This approach, however, requires a team to manage any internal cloud offerings t
 
 This is the reason that platforms such as Pivotal's CloudFoundry are being developed. These platforms enable companies to develop and host their own private cloud offering with minimal fuss.
 
-### Hybrid Cloud Offerings
+#### Hybrid Cloud Offerings
 
 By offering an internal cloud platform, you by no means preclude yourself from using external public cloud applications. In fact, I've seen a number of successful examples of teams developing what is known as a hybrid cloud application.
 

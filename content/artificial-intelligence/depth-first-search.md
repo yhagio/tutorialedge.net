@@ -16,11 +16,11 @@ twitter: https://twitter.com/Elliot_F
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
-# Depth First Search
+## Depth First Search
 
 <p>DFS is another uninformed graph traversal algorithm which produces a non-optimal solution but can be useful for traversing quickly into deeper search domains. Depth first search is very similar to the previously covered breadth first search that we covered in this tutorial: <a href="/artificial-intelligence/breadth-first-search-java/">breadth first search in Java</a></p>
 
-# How it Works
+## How it Works
 
 <p>With Depth first search you start at the top most node in a tree and then follow the left most branch until there exists no more leafs in that branch. At that point you will search the nearest ancestor with unexplored nodes until such time as you find the goal node.</p>
 
@@ -39,7 +39,7 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 
 <p>We continue to go down the left most nodes until we find the first path that reaches our goal node.</p>
 
-# AbstractSearch Class
+## AbstractSearch Class
 
 <p>As a means of clearing up the code from all these tutorials I am going to add in an abstract class to which all of our graph traversal classes will extend and adhere to. The source code for this looks like so:</p>
 
@@ -65,7 +65,7 @@ public abstract class AbstractSearch {
 }
 ```
 
-# Depth First Search Implementation
+## Depth First Search Implementation
 
 ```java
 import java.util.ArrayList;
@@ -114,7 +114,7 @@ public class DepthFirstSearch extends AbstractSearch{
 }
 ```
 
-# Updating our Driver class
+## Updating our Driver class
 
 <p>Due to the fact we've created an abstract search class we can now do something similar to this in our driver class:</p>
 

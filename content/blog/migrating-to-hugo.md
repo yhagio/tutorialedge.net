@@ -17,16 +17,16 @@ huge change to the way the site looks and hopefully the speed at which the site
 serves content. Over the past 2 weeks I've been working with a static site tool,
 similar to that of Jekyll, called Hugo.
 
-# Reasons for the Migration
+## Reasons for the Migration
 
-## Ease
+### Ease
 
 The first and biggest reason I'm moving to a github based site is due to the
 ease with which I can make changes. I was writing in markdown with the old
 system so the writing style isn't going to change and leveraging the power of
 github when it comes to revision history is fantastic.
 
-## Speed
+### Speed
 
 Laravel 5 is a great framework, I really respect what Taylor has been able to do
 with it but unfortunately I don't have the time to custom build my own CMS
@@ -44,7 +44,7 @@ I also no longer have to worry about managing a database and worrying about
 database performance. With Hugo, github essentially acts as the database and I
 don't have to worry about the latency for performing a lookup for a post.
 
-## Community
+### Community
 
 Moving to a public github based solution means that other people can actively
 contribute( should they wish) to the site and help make it one of the best

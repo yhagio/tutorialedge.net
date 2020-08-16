@@ -23,25 +23,25 @@ In this tutorial, we'll be introducing 2 key technologies that are widely used i
 
 > **Note** - You could use terraform to define these lambda functions, but I have found it's a far simpler and nicer experience using the Serverless CLI as it gives additional benefits such as deploying to multiple environments like 'test', 'dev', 'production'.   
 
-# Introducing Serverless CLI
+## Introducing Serverless CLI
 
 In order to make our lives simpler, we'll be using the Serverless CLI in order to test and deploy our AWS Lambda functions. This is a tool that has exploded in popularity since the start of the serverless revolution due to the way it simplified key tasks like creating API gateways and quickly deploying lambda functions. 
 
 > **Note** - The Serverless CLI does a number of key tasks for us when developing serverless applications across not only AWS, but also across technologies such as OpenFAAS, Google Functions and Azure functions to name a few. 
 
-## Official Serverless Docs
+### Official Serverless Docs
 
 * [Serverless CLI Docs](https://serverless.com/framework/docs/providers/aws/cli-reference/)
 
-# Introducing Terraform
+## Introducing Terraform
 
 Terraform is a widely adopted tool that allows us to declare in config what infrastructure we want to provision for our applications. It takes this config and interacts with `terraform providers` that call the underlying API endpoints that are needed to provision anything we configure. A lot of the large cloud providers such as AWS, Google Cloud, and DigitalOcean feature custom providers
 
-# Creating a Simple Lambda Function - Fetching Images from a Bucket
+## Creating a Simple Lambda Function - Fetching Images from a Bucket
 
 As with everything, we'll be starting off simple and creating a Lambda Function that can access an S3 Bucket that we will be creating and list off the paths of the images within that bucket. 
 
-## Creating an S3 Bucket
+### Creating an S3 Bucket
 
 Before we build and test our function, we'll first need an S3 bucket in place that we will be using to store all of our user's images. 
 
@@ -128,7 +128,7 @@ Resource actions are indicated with the following symbols:
 
 Terraform will perform the following actions:
 
-  # aws_s3_bucket.imgur_image_bucket will be created
+  ## aws_s3_bucket.imgur_image_bucket will be created
   + resource "aws_s3_bucket" "imgur_image_bucket" {
       + acceleration_status         = (known after apply)
       + acl                         = "public"
@@ -177,7 +177,7 @@ Resource actions are indicated with the following symbols:
 
 Terraform will perform the following actions:
 
-  # aws_s3_bucket.bucket will be created
+  ## aws_s3_bucket.bucket will be created
   + resource "aws_s3_bucket" "bucket" {
       + acceleration_status         = (known after apply)
       + acl                         = "private"
@@ -224,7 +224,7 @@ Later in this series, we will be adding a DynamoDB database which will hold meta
 
 > **Note** - You can easily destroy this bucket by running `terraform destroy` should you wish to quickly clean up after yourself!
 
-## Our Lambda Function Code
+### Our Lambda Function Code
 
 Now that we have an S3 bucket in place that will be able to store our user's images, we can start writing code that will retrieve the images from our bucket. 
 
@@ -350,13 +350,13 @@ Awesome, we now have our first serverless Node.js function up and running and re
 
 > **Action** - Test out this code by uploading an image to the s3 bucket and then hitting the API endpoint again. You should see the `Contents` array now populated with some information!
 
-# Storing Images
+## Storing Images
 
 Now that we have the hang of writing serverless functions, let's create a lambda function that will act as our image upload endpoint. 
 
 This will be a 2-step process. The first step will involve creating and deploying the lambda function, the second step will involve updating the frontend and adding a component that allows users to upload images. We'll be holding off this step until the next part of this series where we will also be adding in the authorization around this new API endpoint.
 
-## Upload Lambda Function
+### Upload Lambda Function
 
 Let's start off by creating the S3 upload image lambda which our Vue.js upload component will interact with. 
 
@@ -451,7 +451,7 @@ Serverless: Removing old service artifacts from S3...
 
 And with that, we now have a Lambda function that is allows our users to upload images to our imgur clone bucket, we just don't have a means of interacting with the endpoint just yet but we will be getting to that shortly!
 
-# Updating our config/index.js File
+## Updating our config/index.js File
 
 Finally, we want to create a `config/index.js` file which will contain a `s3SignedUrl` key-value which will point to our `/upload-node` backend API endpoint: 
 
@@ -464,13 +464,13 @@ export default {
 }
 ```
 
-# Conclusion
+## Conclusion
 
 So, in part 5 of this series, we have successfully managed to create a number of different AWS Lambda functions that now feature as the backend of our Imgur application. 
 
 We are getting incredibly close to a `minimum viable product` where our application meets the minimum amount of functionality in order to be useful, in the next few tutorials, we should finally get there!
 
-## Further Reading:
+### Further Reading:
 
 Now that we have the backend of our Imgur application working and deployed to AWS, the next part of this series will be focused on adding authorization and authentication to our application as well as the Upload component that will interact with our newly deployed endpoints!
 

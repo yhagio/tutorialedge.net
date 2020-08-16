@@ -32,7 +32,7 @@ the deployment process I've defined picks these changes up and deploys them to
 my live website. In this tutorial we'll be looking at the various methods you
 could use in order to automatically deploy your own hugo websites.
 
-# Using Jenkins
+## Using Jenkins
 
 > [Jenkins](https://jenkins.io/) for those of you who have never used it before
 > is a continuous integration/continuous deployment tool that is built for
@@ -47,12 +47,12 @@ If any changes are made then it would then run something like the following in
 the build stage:
 
 ```shell
-# You will need the hugo binary somewhere on your webserver
-# build the website into the public/ directory
+## You will need the hugo binary somewhere on your webserver
+## build the website into the public/ directory
 /Path/To/hugo
 
-# Once you've built your website you can then copy all of these
-# files to where your website lives on your web server
+## Once you've built your website you can then copy all of these
+## files to where your website lives on your web server
 cp -R public/* /var/www/html/
 ```
 

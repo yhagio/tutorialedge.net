@@ -14,7 +14,7 @@ twitter: https://twitter.com/Elliot_F
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
-# Logging - Why Is It Important?
+## Logging - Why Is It Important?
 
 Logs are an invaluable resource when it comes to effectively maintaining
 applications. Think of them as breadcrumbs you can follow to find out where your
@@ -22,12 +22,12 @@ application has faltered. In simple applications this may be unnecessary and
 overkill, but in production applications that work with highly sensitive and
 valuable data, logs are priceless.
 
-# Logging in NodeJS Applications
+## Logging in NodeJS Applications
 
 In this tutorial I’m going to be demonstrating a quick and simple method of
 logging a very simple server program.
 
-## Log Levels
+### Log Levels
 
 Some applications process hundreds of millions of transactions every day, if we
 log all this out to a single file then we could be traversing hundreds of
@@ -43,19 +43,19 @@ Info Warning Error
 Not only that but we’ll set up a system where we create a new file every day so
 that we can narrow any error searches further.
 
-## Implementation
+### Implementation
 
 This is going to be a very simple logging system that has been made purely for
 demonstration purposes. It can be extended to suit your needs.
 
-## Our Simple Server
+### Our Simple Server
 
 Let’s create a very simple express based server that will serve as the base of
 our application. If you wish to read more about writing your own express based
 server then you can do so here:
 [Tutorial: Writing your own ExpressJS Server](/javascript/nodejs/creating-a-webserver-with-nodejs/).
 
-## router.js
+### router.js
 
 First we’ll begin by creating a router which will act as our servers middleware
 for all requests:
@@ -75,7 +75,7 @@ router.get("/", function(req, res) {
 module.exports = router;
 ```
 
-## app.js
+### app.js
 
 And then we’ll create the server:
 
@@ -98,7 +98,7 @@ If you want to try this out then you can do so by typing:
 Node app.js
 ```
 
-# Implementing Our Logging System
+## Implementing Our Logging System
 
 Now that we’ve got a basic application running on port 3000, we can now begin to
 create our simple logging system;
@@ -146,7 +146,7 @@ Logger.error = function(msg) {
 };
 ```
 
-# Using our new Logging System:
+## Using our new Logging System:
 
 Now that we’ve implemented our basic logging system we can go back into our
 router.js file and add the following:

@@ -22,14 +22,14 @@ writing your own decorators fairly simple and then we'll cover some cool
 examples as to how you can use decorators to improve the performance of some
 types of applications.
 
-# Video Tutorial
+## Video Tutorial
 
 If you prefer, feel free to check out the video version of this course, like and
 subscribe to my channel for more Python related video content!
 
 <div style="position:relative;height:0;padding-bottom:56.3%"><iframe src="https://www.youtube.com/watch?v=Npko82jkPKg" style="position:absolute;width:100%;height:100%;left:0" width="639" height="360" frameborder="0" gesture="media" allowfullscreen></iframe></div>
 
-# Getting Started
+## Getting Started
 
 Decorators are a pretty cool concept that allow you to decorate functions and
 classes with a decorator and a new, transformed function or class will be
@@ -61,7 +61,7 @@ at `http://localhost:5000` and whenever you navigated to that page in the
 browser you would would see that our `hello()` function is called and
 `Hello World!` is printed in our browser.
 
-# First Class Citizens
+## First Class Citizens
 
 So how do we write our own decorators? We'll it turns out it's surprisingly
 simple. In Python functions and classes are considered first class citizens.
@@ -90,7 +90,7 @@ Instead of printing out hello, it prints out that the `myFunction()` that we
 passed into `anotherFunction()` is of type `function` as well as it's name and
 it's address in memory.
 
-# Nested Functions
+## Nested Functions
 
 With functions being classed as objects within Python, we can start to do cool
 things such as nested functions.
@@ -123,7 +123,7 @@ the following:
 json
 ```
 
-# A Simple Decorator
+## A Simple Decorator
 
 Due to the fact functions are a first class citizen in python, we can also
 manipulate them in much the same way that we would manipulate variables. Let's
@@ -163,7 +163,7 @@ Our call to `myFunction()` has successfully triggered our mutate decorator,
 which has modified our original function and returned a new function which
 contains our desired print statements.
 
-# Taking it further
+## Taking it further
 
 This is just a simple example of how you can write your own python decorators,
 but there are hundreds of other uses for decorators within your Python
@@ -180,7 +180,7 @@ might like their decorator example which automatically memoizes the results of
 said function for you:
 [Python Decorator Memoization](https://wiki.python.org/moin/PythonDecoratorLibrary#Memoize)
 
-# Losing Traceability
+## Losing Traceability
 
 When we utilize decorators in the above fashion you may notice an unintended
 side-affect where the function has been renamed to that of the decorator.
@@ -195,7 +195,7 @@ find that your programs become slightly harder to debug as tools that are
 specifically designed for introspection will throw back incorrect function names
 like the above example.
 
-## The Solution
+### The Solution
 
 In order to fix this particular side-effect, we can look to the `functools`
 module which is built-in to Python. We add `from functools import *` to the top
@@ -233,7 +233,7 @@ Finished Executing Method
 '<function myFunction at 0x1022d3e18>'
 ```
 
-# Conclusion
+## Conclusion
 
 In this tutorial, we managed to cover a number of key things you'll need to know
 when working with decorators in Python. We covered the fact that in Python,

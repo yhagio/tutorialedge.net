@@ -12,17 +12,17 @@ tags:
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
-# Glossary
+## Glossary
 
 * **Cargo** - Cargo is Rust's build system and package manager. The majority of Rustaceans use this tool to manage their Rust projects due to the fact that the tool performs tasks such as building your code, downloading the libaries your code depends on and building these libraries.
 
 
-# Cargo Quickstart
+## Cargo Quickstart
 
 > **Official Documentation** - The official documentation for Cargo can be found here - [Hello, Cargo!](https://doc.rust-lang.org/book/ch01-03-hello-cargo.html)
 
 ```py
-# Creates a new Project
+## Creates a new Project
 cargo new project_name 
 ```
 
@@ -38,16 +38,16 @@ edition = "2018"
 [dependencies]
 ```
 
-## Building with Cargo
+### Building with Cargo
 
 ```py
-# This attempts to build your Rust project
+## This attempts to build your Rust project
 cargo build
 
-# You can run your project when developing with run
+## You can run your project when developing with run
 cargo run
 ```
 
 
-# Splitting Code
+## Splitting Code
 

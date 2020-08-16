@@ -30,7 +30,7 @@ attention to in order to get it right.
 > **Note** - The full github repository for this tutorial can be found here:
 [TutorialEdge/go-oauth-tutorial](https://github.com/TutorialEdge/go-oauth-tutorial)
 
-# The Theory
+## The Theory
 
 So, before we dive into how we can code this up, it's important to know how it
 works in the background. Typically, we have a `client` that will start by making
@@ -48,7 +48,7 @@ So, with that said, let's now look at how we can implement our own
 > **Note -** If you are interested in seeing the RFC that Oauth2 implementations
 > follow, you can find it here: [RFC-6749](https://tools.ietf.org/html/rfc6749)
 
-# A Simple Oauth2 Flow
+## A Simple Oauth2 Flow
 
 We'll start off by implementing a really simple server based on the example that
 they provide within their documentation. When we pass an `client id` and a
@@ -215,7 +215,7 @@ func outputHTML(w http.ResponseWriter, req *http.Request, filename string) {
 
 ```
 
-# Our Client
+## Our Client
 
 Now that we have our server implementation done and dusted, we can focus on
 building up our client. This will use the `golang.org/x/oauth2` standard package
@@ -347,7 +347,7 @@ application `/oauth2` endpoint, but it will return a JSON string containing our
 
 Awesome, we have a fully working Oauth2 flow implemented.
 
-# Conclusion
+## Conclusion
 
 So, in this tutorial, we looked at how you could implement your own
 `authorization server` in Go. We then looked at how we could build a simple

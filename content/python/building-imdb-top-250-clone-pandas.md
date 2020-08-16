@@ -40,7 +40,7 @@ on GitHub at
 `https://github.com/PacktPublishing/Hands-On-Recommendation-Systems-with-Python/tree/master/Chapter3`.
 You can also see the code in action at `http://bit.ly/2v7SZD4`.
 
-# The simple recommender
+## The simple recommender
 
 The first step in building your simple recommender is setting up your workspace.
 Create a new directory named `IMDB`. Create a Jupyter Notebook in this directory
@@ -71,7 +71,7 @@ follows:
 1. Calculate the score for every movie that satisfies the conditions
 1. Output the list of movies in decreasing order of their scores
 
-# The metric
+## The metric
 
 The metric is the numeric quantity based on which you rank movies. A movie is
 considered to be better than another movie if it has a higher metric score than
@@ -117,7 +117,7 @@ You already have the values for v and R for every movie in the form of
 the `vote_count` and `vote_average` features respectively. Calculating C is
 extremely trivial.
 
-# The prerequisties
+## The prerequisties
 
 The IMDB weighted formula also has a variable m, which it requires to compute
 its score. This variable is in place to make sure that only movies that are
@@ -175,13 +175,13 @@ OUTPUT:
 From your dataset of 45,000 movies, approximately 9,000 movies (or 20%) made the
 cut.
 
-# Calculating the score
+## Calculating the score
 
 The final value that you need to discover before you calculate your scores
 is C, the mean rating for all the movies in the dataset:
 
 ```py
-# Calculate C
+## Calculate C
 C = df['vote_average'].mean()
 C
 
@@ -197,11 +197,11 @@ First, define a function that computes the rating for a movie, given its
 features and the values of m and C:
 
 ```py
-# Function to compute the IMDB weighted rating for each movie
+## Function to compute the IMDB weighted rating for each movie
 def weighted_rating(x, m=m, C=C):
     v = x['vote_count']
     R = x['vote_average']
-    # Compute the weighted score
+    ## Compute the weighted score
     return (v/(v+m) * R) + (m/(m+v) * C)
 ```
 
@@ -210,11 +210,11 @@ construct a new feature score. Since the calculation is done for every row, se
 the axis to `1` to denote row-wise operation:
 
 ```py
-# Compute the score using the weighted_rating function defined above
+## Compute the score using the weighted_rating function defined above
 q_movies['score'] = q_movies.apply(weighted_rating, axis=1)
 ```
 
-# Sorting and output
+## Sorting and output
 
 There is just one step left. You now need to sort your DataFrame on the basis of
 the score you just computed and output the list of top movies:
@@ -229,7 +229,7 @@ Top 25 movies. This strongly suggests that you should probably explore a higher
 value of m. Experiment with different values of m and observe how the movies in
 the chart change.
 
-# The knowledge-based recommender
+## The knowledge-based recommender
 
 Now, you’ll learn to build a knowledge-based recommender on top of your IMDB Top
 250 clone. This will be a simple function that will perform the following tasks:
@@ -320,7 +320,7 @@ df.head()
 The runtime feature is already in a form that is usable. It doesn't require any
 additional wrangling. Now, turn your attention to genres.
 
-# Genres
+## Genres
 
 You may observe that the genres are in a format that looks like a JSON object
 (or a Python dictionary). Take a look at the genres object of one of your
@@ -409,7 +409,7 @@ You should be able to see three Toy Story rows now; one each to
 represent animation, family, and comedy. This `gen_df` DataFrame is what you
 will use to build your knowledge-based recommender.
 
-# The build_chart function
+## The build_chart function
 
 You are finally in a position to write the function that will act as your
 recommender. You cannot use your computed values of m and C from earlier, as
@@ -475,7 +475,7 @@ def build_chart(gen_df, percentile=0.8):
     return q_movies
 ```
 
-# Time to put your model into action!
+## Time to put your model into action!
 
 You may want recommendations for animated movies between 30 minutes and 2 hours
 in length, and released anywhere between 1990 and 2005. See the results:

@@ -21,7 +21,7 @@ were to write a word processor that did spell checks against words in a
 document, you would implement a `trie` and perform a very quick lookup to check
 whether or not the words in your word document are indeed valid words.
 
-# Implementing a Very Simple Trie
+## Implementing a Very Simple Trie
 
 When it comes to implementing a `trie` we typically use a series of nested hash
 tables. In Python the closest thing we have to a hash table is a `dict()` which
@@ -35,29 +35,29 @@ and then from this list of words, it will create a `trie` structure.
 ```py
 _end = '*'
 
-# takes in a list of words
+## takes in a list of words
 def make_trie(*words):
-    # creates our root dict()
+    ## creates our root dict()
     trie = dict()
 
     for word in words:
-        # create a temporary dict based off our root
-        # dict object
+        ## create a temporary dict based off our root
+        ## dict object
         temp_dict = trie
 
         for letter in word:
-            # update our temporary dict and add our current
-            # letter and a sub-dictionary
+            ## update our temporary dict and add our current
+            ## letter and a sub-dictionary
             temp_dict = temp_dict.setdefault(letter, {})
 
-        # If our word is finished, add {'*': '*'}
-        # this tells us our word is finished
+        ## If our word is finished, add {'*': '*'}
+        ## this tells us our word is finished
         temp_dict[_end] = _end
     return trie
 
-# Test our trie creation
+## Test our trie creation
 trie = make_trie('hi', 'hello', 'howdy')
-# print out our new trie
+## print out our new trie
 print(trie)
 ```
 
@@ -69,7 +69,7 @@ root element: `h`.
 {'h': {'i': {'*': '*'}, 'e': {'l': {'l': {'o': {'*': '*'}}}}, 'o': {'w': {'d': {'y': {'*': '*'}}}}}}
 ```
 
-# Implementing a find_word() function
+## Implementing a find_word() function
 
 So now that we have created a `trie` structure we need to implement a mechanism
 that checks to see if a word exists within our `trie`.
@@ -89,7 +89,7 @@ def find_word(trie, word):
             return False
 ```
 
-# Implementing an add_word() function
+## Implementing an add_word() function
 
 If we wanted to implement a function that took in an existing `trie` and
 returned a new `trie` that contained a new word that has been passed in, we
@@ -97,31 +97,31 @@ could do something similar to this:
 
 ```py
 def add_word(trie, word):
-    # We want to catch if a word already
-    # exists within our trie structure
+    ## We want to catch if a word already
+    ## exists within our trie structure
     if find_word(trie, word):
         print("Word Already Exists")
-        # if it does just return our original trie
+        ## if it does just return our original trie
         return trie
 
-    # if it doesn't we want to add the new word
+    ## if it doesn't we want to add the new word
     temp_trie = trie
     for letter in word:
-        # iterate through our word and see how
-        # much of the word we already have within our
-        # structure
+        ## iterate through our word and see how
+        ## much of the word we already have within our
+        ## structure
         if letter in temp_trie:
             temp_trie = temp_trie[letter]
         else:
             temp_trie = temp_trie.setdefault(letter, {})
 
-    # Terminate our new word
+    ## Terminate our new word
     temp_trie[_end] = _end
-    # return our new trie object
+    ## return our new trie object
     return temp_trie
 ```
 
-# Complete Code Sample
+## Complete Code Sample
 
 Below you'll find the complete code sample for this tutorial. I've fleshed this
 out into a Python class that you can use much like you would a `list` or a
@@ -188,7 +188,7 @@ print(my_trie.find_word("head"))
 
 ```
 
-# Conclusion
+## Conclusion
 
 If you found this tutorial useful then please let me know in the comments
 section below. Conversely if you need anything further explained then I will

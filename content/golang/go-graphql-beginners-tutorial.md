@@ -26,7 +26,7 @@ We'll be focused on the data-retrieval side of GraphQL in this tutorial and
 we'll back it with an in-memory data source. This should give us a good base to
 build up on top of in subsequent tutorials.
 
-# The Basics of GraphQL
+## The Basics of GraphQL
 
 Ok, so before we dive in, we should really cover the basics of GraphQL. How does
 using it benefit us as developers?
@@ -47,7 +47,7 @@ This is just one example of the many benefits the technology provides us.
 Hopefully, in the coming tutorial series, we'll see a few more of these benefits
 up front.
 
-# Query Language for our API, NOT our Database
+## Query Language for our API, NOT our Database
 
 One important thing to note is that GraphQL is not a query language like our
 traditional SQL. It is an abstraction that sits in-front of our APIs and is
@@ -57,7 +57,7 @@ This is actually really cool. We can stand up a GraphQL server that interacts
 with existing services and then build around this new GraphQL server instead of
 having to worry about modifying existing REST APIs.
 
-# Comparing REST to GraphQL
+## Comparing REST to GraphQL
 
 Let's look at how the RESTful approach differs from the GraphQL approach. Now,
 imagine we were building a service that returns all of the tutorials on this
@@ -66,7 +66,7 @@ create an API endpoint that allowed us to retrieve particular tutorials based on
 an ID:
 
 ```py
-# A dummy endpoint that takes in an ID path parameter
+## A dummy endpoint that takes in an ID path parameter
 'http://api.tutorialedge.net/tutorial/:id'
 ```
 
@@ -118,7 +118,7 @@ array of tutorial IDs representing the tutorials written by this author without
 having to send an additional _x_ more REST requests to get the information! How
 good is that?
 
-# Basic Setup
+## Basic Setup
 
 Ok, so now that we understand a little bit more about GraphQL and how it's
 useful, let's see it in practice.
@@ -126,7 +126,7 @@ useful, let's see it in practice.
 We are going to be creating a simple GraphQL server in Go, using the
 [graphql-go/graphql](https://github.com/graphql-go/graphql) implementation.
 
-# Setting up a Simple Server
+## Setting up a Simple Server
 
 Let's start by initializing our project using `go mod init`:
 
@@ -192,7 +192,7 @@ $ go run ./...
 So, if everything worked, then we've been able to set up a really simple GraphQL
 server and make a really simple query to this server.
 
-## GraphQL Schema
+### GraphQL Schema
 
 Let's break down what was going on in the above code so that we can expand it
 further. On `lines 14-21` we define our `Schema`. When we make queries against
@@ -204,7 +204,7 @@ particular `field` is requested. Right now, we are just returning the string
 `"world"`, but we'll be implementing the ability to query the database from
 here.
 
-## Querying
+### Querying
 
 Let's have a look at the second part of our `main.go` file. On `line 30` we
 start to define a `query` that requests the field `hello`.
@@ -216,7 +216,7 @@ Finally, on `line 36` we execute the request and the results of the request are
 populated into `r`. We then do some error handling and then Marshal the response
 into JSON and print it out to our console.
 
-# A More Complex Example
+## A More Complex Example
 
 Now that we have a really simple GraphQL server up and running and we are able
 to query against it, let's take it a step further and build a more complex
@@ -270,7 +270,7 @@ func populate() []Tutorial {
 This will give us a simple list of tutorials that we can then resolve to later
 on.
 
-## Creating New Object Types
+### Creating New Object Types
 
 We'll start off by creating a new object in GraphQL using `graphql.NewObject()`.
 We'll define 3 different Types using GraphQL's strict typing, these will match
@@ -347,7 +347,7 @@ var tutorialType = graphql.NewObject(
 )
 ```
 
-## Updating our Schema
+### Updating our Schema
 
 Now that we've defined our `Type` system, let's set about updating our Schema to
 reflect these new types. We'll define 2 distinct `Field`'s, the first will be
@@ -403,7 +403,7 @@ memory.
 So we've created our Types and updated our GraphQL schema, we aren't doing too
 bad!
 
-# Testing it Works
+## Testing it Works
 
 Let's try playing with our new GraphQL server and play around with the queries
 that we are submitting. Let's try out our `list` schema by changing the `query`
@@ -474,7 +474,7 @@ working as expected.
 > function so that it returns more tutorials. Once we've done this, play around
 > with the queries and try to become more familiar with them.
 
-# Conclusion
+## Conclusion
 
 > **Note -** The full source code for this tutorial can be found here:
 > [main.go](https://gist.github.com/elliotforbes/9b8400ef5154eb3420e409aeffe39633)

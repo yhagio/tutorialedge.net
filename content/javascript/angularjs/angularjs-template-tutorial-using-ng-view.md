@@ -24,7 +24,7 @@ defining all this in one page you then have the ability to update your entire
 application's design very quickly as opposed to making changes in what could
 potentially be hundreds of files.
 
-# The Templating Solution
+## The Templating Solution
 
 In this tutorial I’ll be introducing you to the ng-view angularjs directive.
 This directive is fantastic for creating multiple page applications that are
@@ -34,7 +34,7 @@ application.
 You can check out the official documentation for the ng-view directive here:
 https://docs.angularjs.org/api/ngRoute/directive/ngView
 
-# Basic Templating
+## Basic Templating
 
 <div class="github-link">
 Full source code is available here: <a href="https://github.com/elliotforbes/AngularJS-1.4.5-ngView">AngularJS ngView Directive</a>
@@ -43,7 +43,7 @@ Full source code is available here: <a href="https://github.com/elliotforbes/Ang
 In this tutorial we’ll be creating a simple shop with a home view, a categories
 view and a single view.
 
-# Our Controllers
+## Our Controllers
 
 In the interest of brevity I've kept this as a single file but these could be
 split into multiple files if you so wished.
@@ -90,7 +90,7 @@ testApp.controller("ShopController", function($scope, $routeParams) {
 });
 ```
 
-## Our Master Page:
+### Our Master Page:
 
 This is our master template. Here we can define our title, all of our asset
 imports as well as anything else that we want to feature on every page. In this
@@ -114,7 +114,7 @@ our application.
 </html>
 ```
 
-# Our Templates
+## Our Templates
 
 For brevity I've kept this in a single code block. You'll see below the contents
 of our three different html pages. As you can see we've only defined what is
@@ -145,7 +145,7 @@ Amazing Web Store - featured at the top followed by each pages distinct html.
 ...
 ```
 
-# Displaying Custom Components
+## Displaying Custom Components
 
 The above method is great for displaying very simple routes that match to a page
 and a controller, but what happens if you have defined components? How do you
@@ -172,7 +172,7 @@ $routeProvider
 ...
 ```
 
-# Conclusion
+## Conclusion
 
 If you found this article useful or have any further questions then please feel
 free to let me know in the comments section below.

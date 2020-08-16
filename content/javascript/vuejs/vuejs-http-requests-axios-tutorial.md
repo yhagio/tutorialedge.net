@@ -23,7 +23,7 @@ make `HTTP` requests within your VueJS 2 applications. The `axios` framework is
 without a doubt the most popular `HTTP` frameworks to use within the framework
 and makes the job of sending requests simple.
 
-# Installing Axios
+## Installing Axios
 
 In order to install the `axios` client, you can use `npm` like so:
 
@@ -31,7 +31,7 @@ In order to install the `axios` client, you can use `npm` like so:
 $ npm install --save axios
 ```
 
-# GET Requests
+## GET Requests
 
 Let's attempt to perform a `HTTP` `GET` request that will retrieve all of the
 pokemon from the official Pokemon API that is free to use! We'll modify the
@@ -85,7 +85,7 @@ Should the request be successful, you should see the Pokemon JSON Response
 render out within your `HelloWorld` component.
 
 
-## The Response Object
+### The Response Object
 
 Whenever we make a `HTTP` request to something, we will get back a `response`
 object that features the following:
@@ -103,7 +103,7 @@ axios.get("MY_URL").then(response => {
 You can then do cool things like check to see what status is returned as your
 response.
 
-# POST Requests
+## POST Requests
 
 If you want to send `POST` requests to a service then you certainly can simply
 by changing the above code to `axios.post(URL)`. Again, this method returns a
@@ -133,7 +133,7 @@ export default {
 };
 ```
 
-## Modifying Headers
+### Modifying Headers
 
 Say, for example, you had an authorized endpoint that required some headers to
 be set in order to hit that endpoint. An example of this that I have faced
@@ -147,7 +147,7 @@ axios.defaults.headers.common["Authorization"] = result;
 We can then make any `HTTP` requests as we normally would and it should include
 the newly set `Authorization` header.
 
-## Alternative Method of Setting Headers
+### Alternative Method of Setting Headers
 
 Another way of modifying headers is to define a JavaScript object like so:
 
@@ -155,7 +155,7 @@ Another way of modifying headers is to define a JavaScript object like so:
 var options = { headers: { "Content-Type": file.type } };
 ```
 
-# Other HTTP Verbs
+## Other HTTP Verbs
 
 Whilst, I have just used the `POST` and `GET` HTTP verbs to demonstrate how you
 can use axios to send HTTP requests, there are others. These are all of the
@@ -171,14 +171,14 @@ verbs that you can use to query RESTful API endpoints.
 - options
 ```
 
-# Conclusion
+## Conclusion
 
 Hopefully, this article showed you everything you need in order to make `HTTP`
 requests within your VueJS applications. If you need further help then please
 let me know in the comments section below or by tweeting me:
 [@Elliot_F](https://twitter.com/elliot_f).
 
-## Further Reading
+### Further Reading
 
 If you enjoyed this article then you may enjoy some of the other tutorials on our site:
 

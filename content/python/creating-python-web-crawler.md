@@ -28,7 +28,7 @@ host of data mining tasks. You could for instance do any of the following:
 
 The possibilities are truly endless.
 
-# The Design
+## The Design
 
 The web crawler that we'll be building will take in the base url of a website
 and will try to crawl every subsequent linked page on that website. The process
@@ -47,7 +47,7 @@ pages of said website have been crawled.
 > Create a new directory called `crawler`. This is where our source code will go
 > for the crawler we will be building.
 
-# Step 1 - Making Requests
+## Step 1 - Making Requests
 
 The first problem we have to solve when it comes to building a web crawler is,
 how do we retrieve web pages in such a fashion that we can parse them? In order
@@ -62,7 +62,7 @@ and continue crawling those links.
 Within our `crawler` project. Create a new `crawler` module:
 
 ```py
-# module structure
+## module structure
 - crawler/
 - - crawler/
 - - - __init__.py
@@ -74,7 +74,7 @@ We'll put the majority of our web-crawling logic within this `crawler` module.
 Open up `crawler/crawler.py` and add the following code:
 
 ```py
-# crawler/crawler.py
+## crawler/crawler.py
 def crawl(url):
     print(url)
 ```

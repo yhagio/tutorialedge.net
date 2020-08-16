@@ -27,7 +27,7 @@ allow people to do some really cool things.
 such library and at the time of writing this it features well over `7,000` stars
 on github.
 
-# Setting up
+## Setting up
 
 In order to get started with the `face_recognition` library you will first have
 to install it, this can be done with a simple `pip` install command like so:
@@ -36,7 +36,7 @@ to install it, this can be done with a simple `pip` install command like so:
 pip3 install face_recognition
 ```
 
-# A Simple Example
+## A Simple Example
 
 Let's take a stock image with a number of people in it. If we wanted to
 automatically find all of the faces in an image, we could easily do that in 4
@@ -66,7 +66,7 @@ something like a security camera and perform real-time analysis using this
 detection algorithm to see if someone has just walked into your house for
 example.
 
-# Identifying Faces
+## Identifying Faces
 
 A more complex example would be identifying the exact coordinates of each of the
 faces found and translating those coordinates into separate images.
@@ -79,23 +79,23 @@ we've detected in our new security software. This can be done like so using the
 from PIL import Image
 import face_recognition
 
-# Load the jpg file into a numpy array
+## Load the jpg file into a numpy array
 image = face_recognition.load_image_file("stock_people.jpg")
 
-# Find all the faces in the image using the default HOG-based model.
-# This method is fairly accurate, but not as accurate as the CNN model and not GPU accelerated.
-# See also: find_faces_in_picture_cnn.py
+## Find all the faces in the image using the default HOG-based model.
+## This method is fairly accurate, but not as accurate as the CNN model and not GPU accelerated.
+## See also: find_faces_in_picture_cnn.py
 face_locations = face_recognition.face_locations(image)
 
 print("I found {} face(s) in this photograph.".format(len(face_locations)))
 
 for face_location in face_locations:
 
-    # Print the location of each face in this image
+    ## Print the location of each face in this image
     top, right, bottom, left = face_location
     print("A face is located at pixel location Top: {}, Left: {}, Bottom: {}, Right: {}".format(top, left, bottom, right))
 
-    # You can access the actual face itself like this:
+    ## You can access the actual face itself like this:
     face_image = image[top:bottom, left:right]
     pil_image = Image.fromarray(face_image)
     pil_image.show()
@@ -124,7 +124,7 @@ analysis and try to guage how happy or sad people are within your videos.
 This could be useful if you were trying to get real-time feedback on how well an
 attraction is doing at a museum or an amusement park!
 
-# Checking if A Person Exists Within an Image
+## Checking if A Person Exists Within an Image
 
 Recognizing that an image contains multiple faces is pretty cool but we can
 actually take this one step further and determine who exists within an image.
@@ -138,19 +138,19 @@ people you are trying to identify.
 ```py
 import face_recognition
 
-# Load in our reference image of Joe Biden
+## Load in our reference image of Joe Biden
 known_image = face_recognition.load_image_file("biden.jpg")
-# Load in our image of a group of people
+## Load in our image of a group of people
 unknown_image = face_recognition.load_image_file("unknown.jpg")
 
-# Create a biden encoding
+## Create a biden encoding
 biden_encoding = face_recognition.face_encodings(known_image)[0]
-# create an encoding based off our group photo
+## create an encoding based off our group photo
 unknown_encoding = face_recognition.face_encodings(unknown_image)[0]
 
-# Compare the encodings and try to determine if Biden exists within a photo
+## Compare the encodings and try to determine if Biden exists within a photo
 results = face_recognition.compare_faces([biden_encoding], unknown_encoding)
-# Print the results
+## Print the results
 print(results)
 ```
 
@@ -161,7 +161,7 @@ exists within a photo or series of photos becomes more expensive.
 This means we couldn't take a photo of everyone in the world and expect our
 software to be able to tell us in real-time who exists within any given photo.
 
-# Conclusion
+## Conclusion
 
 This was a fairly simple introduction to the art of facial recognition software
 and hopefully you found it both useful and interesting. In this tutorial we

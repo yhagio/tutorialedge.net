@@ -24,16 +24,16 @@ By the end of this tutorial, we will have covered:
 
 Awesome, with that in mind, let's dive into the theory!
 
-# Packet Manipulation and Sniffing
+## Packet Manipulation and Sniffing
 
 Security engineers often use this technique of packet manipulation and sniffing in order to try and gain as much information from a system as possible. This is all part of the **recon** stage of a penetration test where we probe services running on various ports with pre-crafted packets which should elicit responses.
 
 
-# Packet Crafting and Editing
+## Packet Crafting and Editing
 
 
 
-# Defining Packets and Payloads in Go
+## Defining Packets and Payloads in Go
 
 In order to do our packet creation and editing, we'll be using the `github.com/google/gopacket` package which effectively wraps around the C-based `libpcap`. 
 
@@ -49,11 +49,11 @@ func main() {
 }
 ```
 
-# Conclusion
+## Conclusion
 
 That's all we are going to cover in this tutorial, hopefully you found it useful and educational! If you have any comments or any suggestions for new topics then please let me know in the comments section below!
 
-## Further Reading:
+### Further Reading:
 
 If you enjoyed this tutorial, then you may also enjoy some of these other tutorials on the site:
 

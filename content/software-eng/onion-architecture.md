@@ -28,7 +28,7 @@ Inward moving, we encounter the **Domain Services** layer. In this layer is wher
 
 Let's walk-through an example on how we can solve a real-world task such as processing a financial transaction to see how we apply the **Onion Architecture.** from the outside, in.
 
-## An Example - Buying A Coffee
+### An Example - Buying A Coffee
 
 One outer layer which may surprise many is **Infrastructure**. Is the database we use or an external dependency not part of our domain model layer? A very valid question so let's explore it further. 
 
@@ -215,7 +215,7 @@ func ChargeUserHandler(w http.ResponseWriter, r *http.Request) {
 
 Now, if we deploy this service, when Andre decides to buy a coffee we can be certain that we will meet the requirements set-out in our investigation and be confident our logic is neatly sorted into layers (assuming we have the appropriate level of testing in place). This is a simple use-case but the real question being asked is why.
 
-## Why use Onion Architecture?
+### Why use Onion Architecture?
 
 But, what are the benefits of using **Onion Architecture**? 
 

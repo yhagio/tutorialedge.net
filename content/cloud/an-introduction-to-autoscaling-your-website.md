@@ -17,7 +17,7 @@ In this article we are going to look at `autoscalers`. We are going to look at
 how they work and how they can enable your service to dynamically grow and
 shrink to cope with variable demands.
 
-# The Scenario
+## The Scenario
 
 Imagine the scenario where you write a RESTful API that at first just requires a
 single server instance on AWS in order to sustain the initial demand placed on
@@ -31,7 +31,7 @@ It then hits the top page of `news.ycombinator.com` and suddenly you see an
 explosion in terms of requests. Your single server copes for all of 5 minutes
 before falling over and suddenly your service dies.
 
-# The Solution
+## The Solution
 
 With autoscalers we can help to mitigate against this type of issue. We can
 specify that when one instance of our service starts to receive a massive number
@@ -39,7 +39,7 @@ of requests then we can spin up another instance of said service. Coupling this
 with a `load balancer` we could dynamically scale up the number of `instances`
 of our application in order to cope with an increased demand.
 
-# 50 Shades of Autoscaler
+## 50 Shades of Autoscaler
 
 When it comes to autoscalers, we can have them dynamically spin up or down the
 number of instances of our services based on a number of requirements. You could
@@ -56,7 +56,7 @@ the spending on extra servers.
 This level of control is brilliant. No service will be the same and being able
 to control exactly when and why services scale up is a huge benefit.
 
-# Conclusion
+## Conclusion
 
 Hopefully this article gave you some idea as to what autoscalers are and how you
 can use them in order to dynamically scale your application to cope with

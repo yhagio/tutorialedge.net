@@ -22,14 +22,14 @@ AngularJS Official Docs on Data Binding can be found here: [AngularJS Data Bindi
 
 <p>Data binding is incredibly useful due to the fact it automatically synchronizes the data in both our model and view components. Any changes made to something in the frontend will automatically be reflected in the backend and vice versa. This essentially means we no longer have to worry about complex DOM manipulation and traversal.</p>
 
-# How Does it Work?
+## How Does it Work?
 
 AngularJS utilizes it's own mechanism very similar to Dirty Checking.
 Essentially AngularJS iterates through a list of variables and checks to see
 whether or not the value of that variable has changed. If a variable has changed
 then it goes and performs the DOM manipulation required.
 
-## Performance Issues
+### Performance Issues
 
 It must be noted that once you get to about 2000 variables that you have to
 consistently watch you might start seeing noticeable differences in your apps

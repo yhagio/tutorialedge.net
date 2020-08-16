@@ -21,13 +21,13 @@ By the end of this tutorial, we will have covered:
 
 With this in mind, let's dive in!
 
-# Modules in Rust
+## Modules in Rust
 
 When you first start learning Rust coming from another programming language, one of the first problems you typically come up against is - "How do I split my code into multiple files?".
 
 This is where modules come into play. Modules in Rust allow us to split up our code into multiple files so that we can write more readable and maintainable code within our projects.
 
-# Defining A Module
+## Defining A Module
 
 Let's start looking at how we can define a simple module within a simple Rust application. Create a new project using `cargo` like so:
 
@@ -82,13 +82,13 @@ As you can see, this has printed out `Hello, World!` as well as the `Call to tes
 
 <!-- TODO: Add section on module paths -->
 
-# Conclusion
+## Conclusion
 
 In this tutorial, we looked at the basics of modules within the Rust programming language and how you can build your own incredibly simple modules!
 
 If you have any comments or anything else you would like to discuss, then please let me know in the comments section below!
 
-## Further Reading:
+### Further Reading:
 
 If you enjoyed this tutorial, you may also like some of the other tutorials on the site:
 

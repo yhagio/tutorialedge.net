@@ -16,7 +16,7 @@ In this tutorial, we are going to be covering pointers in Go and how you can use
 
 By the end of this tutorial, you will have a solid understanding of pointers and how they can be used.
 
-# Introduction
+## Introduction
 
 In Go, when we call a function and pass in a bunch of arguments to that function, the language creates copies of the arguments which are then used within said function. For example:
 
@@ -74,7 +74,7 @@ When we run the above code, we should see that `myTestFunc` has correctly update
 5
 ```
 
-# Defining Pointers
+## Defining Pointers
 
 Let's now take a step back and looks at the fundamentals of working with pointers. 
 
@@ -106,7 +106,7 @@ When we attempt to run this? We should see the following:
 
 The first value represents the value of our pointer variable `age`. The second represents the address of this variable.
 
-## Assigning Values to Pointers
+### Assigning Values to Pointers
 
 > **Question** - What happens if you try and assign a value to age?
 
@@ -164,7 +164,7 @@ func main() {
 
 > **Important Note** - We can eliminate the first line of our main function in the above example and modify `age = new(int)` to be `age := new(int)` should we wish to be a little more succinct.
 
-## Nullability
+### Nullability
 
 > **Important Note** - A big advantage of using pointers within your Go code is that they are nullable. 
 
@@ -196,7 +196,7 @@ func testFunc(id string) (*Guitarist, error) {
 }
 ```
 
-# Passing Variables
+## Passing Variables
 
 When teaching Go, I often see developers stumble over how they pass pointer variables to functions that take a value receiver. Let's see an example of this:
 
@@ -225,7 +225,7 @@ When we try to run this, we should see that it complains that we cannot pass in 
 <div class="filename"> $ go run main.go </div>
 
 ```output
-# command-line-arguments
+## command-line-arguments
 ./main.go:13:25: cannot use age (type *int) as type int in argument to YearsUntilRetirement
 ```
 
@@ -259,13 +259,13 @@ Now, when we go to run this, we should see that our Go applications executes!
 74
 ```
 
-# Conclusion
+## Conclusion
 
 Awesome, so in this tutorial, we covered the basics of pointers within Go and how you can use and abuse them within your own Go applications!
 
 Hopefully you found this tutorial useful and interesting, if you did, or you have any additional comments or questions, then please feel free to let me know in the comments section below!
 
-## Further Reading:
+### Further Reading:
 
 If you enjoyed this tutorial, then you may also be interested in some of the other tutorials on my site:
 

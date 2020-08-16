@@ -71,11 +71,11 @@ n = 3
 result = 6
 ```
 
-# See the Solution
+## See the Solution
 
 Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 20 - Triangular Numbers](https://discuss.tutorialedge.net/t/challenge-20-triangular-numbers/55) 
 
-# Further Reading:
+## Further Reading:
 
 If you like this challenge then you may also appreciate some of the following articles on the site:
 

@@ -15,7 +15,7 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 
 In this article, we are going to be covering 
 
-# Conclusion
+## Conclusion
 
 > **Note -** If you want to keep track of when new Go articles are posted to the
 > site, then please feel free to follow me on twitter for all the latest news:

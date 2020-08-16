@@ -11,7 +11,7 @@ tags:
   - cloud
 title: Containerization
 twitter: https://twitter.com/Elliot_F
-# video: 433296255
+## video: 433296255
 nextPage: /courses/intro-to-cloud/serverless/
 weight: 1
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg
@@ -19,7 +19,7 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 
 In this chapter, we'll be looking at containerization in depth. We'll be touching upon the history of containerization and then looking at the current industry leader, Docker, and how you can then use Docker for a simple Python 3.6 application.
 
-## Introduction
+### Introduction
 
 Docker is a containerization technology that allows you to define a container that will feature everything your application needs to run. 
 
@@ -27,7 +27,7 @@ Say for instance you are writing a small Python application using a very specifi
 
 This is immensely powerful as Docker enables you to specify only what's needed for your application to run. You don't need to build every container off incredibly heavy Ubuntu images unless you absolutely need to. This allows me the ability to save memory and only have run containers that have the absolute minimum requirements needed to run my app.
 
-## Containerization 
+### Containerization 
 
 What is containerization? What does it really do?
 
@@ -39,7 +39,7 @@ Docker essentially allows us to benefit from these same advantages. Regardless o
 
 This means that windows developers can develop an application on top of their preferential windows machine the exact same way a MacOS or a Linux developer would develop on top of their machine.  
 
-### The Benefits of Containerization
+#### The Benefits of Containerization
 
 The benefits of using containers, even within teams that aren't looking to leverage cloud based platforms, is huge. Within Gemma's team there were times where newer developers would come in and getting them up and running with the appropriate environment configuration for all of the services would take up to a week of a senior developers time. 
 
@@ -51,7 +51,7 @@ Another inherit advantage that a technology like docker brings is the fact it is
 
 Docker containers, on the other hand, are far more lightweight and can be started in a couple of seconds.  
 
-## Images
+### Images
 
 I tend to think of images as blueprints for any containers I wish to run. Images in docker are inert, immutable files that are essentially snapshots of a container. You can instantiate a container from an image.
 
@@ -69,18 +69,18 @@ If we consider Gemma and the Comic Co, if she, for instance, wanted to run a sta
 
 As long as each of the machines she wanted to run this site on had docker installed, she could start her application with the exact same command and her `nginx` based container would start up and begin serving her static site. 
 
-## Container Lifecycle + Persistance
+### Container Lifecycle + Persistance
 
 * You can persist data!
 * docker is really good for stateless apps
 
-## How Containers were used at The Comic Co.
+### How Containers were used at The Comic Co.
 
 During the transition to a microservice based approach Gemma oversaw a couple of new faces joining her team. There’s always a learning curve when joining a new team and a transition period which reduces the overall effectiveness of the team as they look to get everything set up on their work machine.
 
 No newcomer should feel stranded and as such Gemma put some of her senior engineers with the newcomers in an attempt to get them up and running with the codebase as quickly as possible.
 
-## Dependency and Environment Hell
+### Dependency and Environment Hell
 
 Originally there were 4 people within Gemma’s team, they all worked as a tightly knit unit and were able to very quickly and easily fix any dependency issues or environment issues on each others machine with not too much time wasted.
 
@@ -90,7 +90,7 @@ One team member may have had Python 3.1 installed on their machine whilst the ac
 
 Now whilst this may have been somewhat trivial to solve, it did represent time spent trying to synchronize everyone to be on the right version. As the codebase grew in complexity, so too did the environment config needed in order for it to run.
 
-### III. Config — 12 Factor Applications
+#### III. Config — 12 Factor Applications
 
 If you have worked on making applications cloud friendly then you may have encountered the 12 factors. Gemma and her team were trying to ensure that every service within their application adhered to all of these factors in order to easily scale and deploy their services with very little to no manual effort.
 
@@ -101,13 +101,13 @@ The third factor is that you store all config items within your environment. Thi
 
 In order to retrieve database passwords etc. This however makes running it on your local machine rather difficult and you would have to set all of these variables first in order for your program to run. You could do this with the likes of a powershell script or a bash script but making this cross-platform compatible takes time and effort and any changes become difficult.
 
-## The Issue
+### The Issue
 
 The combination of setting appropriate dependencies and environment variables for all newcomers was starting to become a bit of a burden and there were times when tests were run against production databases. This was due to developers forgetting to set environment variables back to development values.
 
 With plans for further team expansion in the future this issue needed to be resolved.
 
-## The Solution — Docker
+### The Solution — Docker
 
 This is when Gemma discovered the wonderful world of containerization and Docker. With containerization Gemma and her team were able to define everything they needed for their application to run within a Dockerfile and then run their newly coined docker app with one simple command.
 
@@ -125,7 +125,7 @@ They specified the precise Python version they wanted their app to run in, they 
 
 You’ll see on the second last line that they were also able to specify their DB_PASS environment variable which would subsequently allow them to connect to their development database.
 
-## Running Their App
+### Running Their App
 
 The real beauty of defining this Dockerfile was that everyone in the team would be able to build and start the application after having installed Docker on their local machine by using the following 2 commands:
 
@@ -137,13 +137,13 @@ This would subsequently go away, download all of requirements needed and build o
 A screenshot of Gemma running this locally
 After this point she was able to run the application by calling the second Docker command specified above.
 
-## Running The Account Service
+### Running The Account Service
 
 By migrating the app to this new format it meant that anyone new to the team could be told to simply install Docker if they hadn’t already, and then run these two commands and they’d have a working account-service on their machine. This would ultimately save a lot of time in the long run.
 
 This worked across all of the developers Operating Systems with minimal fuss.
 
-## Dealing With Multiple Environments
+### Dealing With Multiple Environments
 
 So whilst the above structure allowed developers to get up and running with one environment of their application, it doesn’t solve the problem of developers accidentally running application tests against a production environment.
 
@@ -151,7 +151,7 @@ To combat this we can do things like specifying what --env-file we want to pass 
 
     docker run my_app --env-file .dev
 
-## Conclusion
+### Conclusion
 
 Through the utilization of docker, Gemma and her team were able to minimize the barrier to entry for new developers coming into the team and greatly reduce the time taken to get someone up and running with a working development environment.
 

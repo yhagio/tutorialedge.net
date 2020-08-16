@@ -48,7 +48,7 @@ This second value is what we use to check if a given key exists in the `if` stat
 
 Only if the value exists in the map does the body of the `if` statement execute.
 
-# Further Reading
+## Further Reading
 
 If you found this useful and wish to learn more about Maps in Go, then you may also enjoy this full article on Maps:
 

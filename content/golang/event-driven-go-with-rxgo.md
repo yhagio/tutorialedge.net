@@ -23,11 +23,11 @@ The main beauty of event driven programs are their simplicity. You can model
 events coming in to the system and define subscribers to these events that
 trigger and handle them accordingly.
 
-# A Simple Example
+## A Simple Example
 
-<!-- # TODO: Write -->
+<!-- ## TODO: Write -->
 
-# Conclusion
+## Conclusion
 
 So, in this tutorial we managed to cover how to write event-driven programs in
 Go using RxGo.

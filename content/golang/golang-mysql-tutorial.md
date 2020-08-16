@@ -21,7 +21,7 @@ you will have to interact with some form of database.
 In this tutorial I’ll be demonstrating how you can connect to a MySQL database
 and perform basic SQL statements using Go.
 
-# Why MySQL?
+## Why MySQL?
 
 MySQL is one of the most well-known and well-used database technologies
 available to developers at the present point in time. It has an absolutely
@@ -35,14 +35,14 @@ for building some decent applications on top of.
 > scenarios where you need to consider alternatives such as CockroachDB or NoSQL
 > databases.
 
-# Video Tutorial
+## Video Tutorial
 
 If you prefer following a video, then this tutorial is available in video format
 here:
 
 <div style="position:relative;height:0;padding-bottom:42.76%"><iframe src="https://www.youtube.com/embed/DWNozbk_fuk?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="842" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 
-# Text Tutorial
+## Text Tutorial
 
 In order to do this we’ll be using [https://github.com/go-sql-driver/mysql](https://github.com/go-sql-driver/mysql)
 as our MySQL driver. `Go-SQL-Driver` is a lightweight and fast MySQL driver that
@@ -51,7 +51,7 @@ custom protocols and features automatic handling of broken connections.
 
 > Github Repo: **[go-sql-driver/mysql](https://github.com/go-sql-driver/mysql)**
 
-# Connection Pooling
+## Connection Pooling
 
 If you are building high-performance database applications, connection-pooling
 is an absolute **must**.
@@ -66,12 +66,12 @@ startup. These connections are reused, time and time again, and this
 subsequently means you aren't creating and destroying a new connection every
 time you perform a query.
 
-# Implementation
+## Implementation
 
 We’ll begin by connecting to a database we’ve set up on our local machine and
 then go on to perform some basic insert and select statements.
 
-## Connecting to a MySQL database
+### Connecting to a MySQL database
 
 Let's create a new `main.go` file. Within this, we'll import a few packages and
 set up a simple connection to an already running local database. For the purpose
@@ -110,7 +110,7 @@ func main() {
 }
 ```
 
-## Performing Basic SQL Commands
+### Performing Basic SQL Commands
 
 So, now that we've created a connection, we need to start submitting queries to
 the database.
@@ -158,7 +158,7 @@ func main() {
 }
 ```
 
-# Populating Structs from Results
+## Populating Structs from Results
 
 Retrieving a set of results from the database is all well and good, but we need
 to be able to read these results or populating existing `structs` so that we can
@@ -213,7 +213,7 @@ In this example we retrieved 2 columns from the tags database and then used
 > **Note -** If you retrieve 3 fields from the database and Scan only has 2
 > parameters, it will fail. They need to match up exactly.
 
-# Querying a Single Row
+## Querying a Single Row
 
 Say we wanted to query a single row this time and had an ID and again wanted to
 populate our struct. We could do that like so:
@@ -230,7 +230,7 @@ log.Println(tag.ID)
 log.Println(tag.Name)
 ```
 
-# Conclusion
+## Conclusion
 
 In this tutorial, we managed to set up a connection to a MySQL and then perform
 some simple queries to that database and marshal the returned responses into a
@@ -241,6 +241,6 @@ of MySQL.
 If you found this tutorial helpful or require more assistance then please don't
 hesitate to let me know in the comments section below:
 
-## Recommended Reading:
+### Recommended Reading:
 
 - [Creating a RESTful JSON api with Go](/golang/creating-restful-api-with-golang/)

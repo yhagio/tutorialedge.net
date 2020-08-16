@@ -28,7 +28,7 @@ ourselves from having to perform costly refactoring further down the road and
 can potentially ease the transition from hobby side-project into a fully-fledged
 system.
 
-# Structuring your Python Projects
+## Structuring your Python Projects
 
 When it comes to structuring your Python projects it makes sense to follow some
 semblance of structure or you will find yourself soon entangled in the heaps of
@@ -37,7 +37,7 @@ it was my lack of structure that caused me a lot of pain and heartache when it
 came to writing my University dissertation project and if I knew then what I
 know now, I may have gotten a marginally better grade for far less work.
 
-## Simple Project Structure
+### Simple Project Structure
 
 For simple Python projects your projects structure you can typically keep most,
 if not all of your source code contained within the one directory level like so:
@@ -56,7 +56,7 @@ that if your project starts to grow substantially then keeping everything in the
 one `mypackage.py` file is a bad idea. This is where you'll typically have to
 migrate to a more advanced project structure.
 
-## Advanced Project Structure
+### Advanced Project Structure
 
 For more advanced ones however you'll tend to find it looking something like
 this:

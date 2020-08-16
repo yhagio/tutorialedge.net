@@ -15,8 +15,8 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 
 👋 Welcome Gophers! In this challenge, you are tasked with 
 
-# Conclusion
+## Conclusion
 
-## Further Reading:
+### Further Reading:
 
 * []()

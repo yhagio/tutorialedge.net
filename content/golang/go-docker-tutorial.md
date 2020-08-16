@@ -24,11 +24,11 @@ By the end of this tutorial, you should have a good handle on the following:
 
 Why DigitalOcean? we'll I'm secretly hoping they start sponsoring some of my upcoming video tutorials so that I can start focusing on writing content full time! :D
 
-# Video Tutorial
+## Video Tutorial
 
 {{< youtube id="lIbdPrUpGz4" autoplay="false" >}}
 
-# Why Docker?
+## Why Docker?
 
 I've been asked this question a number of times, in a number of different contexts over the past few years and I've given talks about this particular bit of tech to developers of all levels of experience.
 
@@ -38,7 +38,7 @@ This includes things like environment variables, specific Go versions or build s
 
 By investing the time to declare these in a Dockerfile upfront, you essentially make your app portable across any machine that can run docker. If you have new developers joining a team, you can simply point them to a repository with a `Dockerfile` already defined in it, give them the start command to run it locally and that's them set up and ready to start working on your system.
 
-# Our Go Code
+## Our Go Code
 
 This tutorial will effectively act as a perfect example of this portability, as at the end of this, _if I have done my job right_, you should be able to run this application locally with a simple `docker` command.
 
@@ -73,32 +73,32 @@ func main() {
 
 Awesome, if we want to run this then we can do so by running `go run main.go` which will kick of a server on `http://localhost:8081`.
 
-# Writing a Dockerfile
+## Writing a Dockerfile
 
 Now that we have our server, let's set about writing our `Dockerfile` and constructing the container in which our newly born Go application will live.
 
 <div class="filename"> my-project/Dockerfile </div>
 
 ```Dockerfile
-# We specify the base image we need for our
-# go application
+## We specify the base image we need for our
+## go application
 FROM golang:1.12.0-alpine3.9
-# We create an /app directory within our
-# image that will hold our application source
-# files
+## We create an /app directory within our
+## image that will hold our application source
+## files
 RUN mkdir /app
-# We copy everything in the root directory
-# into our /app directory
+## We copy everything in the root directory
+## into our /app directory
 ADD . /app
-# We specify that we now wish to execute 
-# any further commands inside our /app
-# directory
+## We specify that we now wish to execute 
+## any further commands inside our /app
+## directory
 WORKDIR /app
-# we run go build to compile the binary
-# executable of our Go program
+## we run go build to compile the binary
+## executable of our Go program
 RUN go build -o main .
-# Our start command which kicks off
-# our newly created binary executable
+## Our start command which kicks off
+## our newly created binary executable
 CMD ["/app/main"]
 ```
 
@@ -163,7 +163,7 @@ for this container process.
 
 Awesome, if we open up `http://localhost:8080` within our browser, we should see that our application is successfully responding with `Hello, "/"`. 
 
-## Running our Container In the Background
+### Running our Container In the Background
 
 You'll notice that if we `ctrl-c` this within the terminal, it will kill the container. If we want to have it run permanently in the background, you can replace _-it_ with _-d_ to run this container in detached mode.
 
@@ -177,7 +177,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 If we then wanted to kill this container, we could do so by using the `docker kill` command and pass in that container ID that is prints out in the terminal.
 
-# Working with Go Modules and Docker
+## Working with Go Modules and Docker
 
 Let's look at a more complex example which features imported modules. In this instance, we will need to add a step within our `Dockerfile` which does the job of downloading our dependencies prior to the `go build` command executing:
 
@@ -188,22 +188,22 @@ FROM golang:1.12.0-alpine3.9
 RUN mkdir /app
 ADD . /app
 WORKDIR /app
-# Add this go mod download command to pull in any dependencies
+## Add this go mod download command to pull in any dependencies
 RUN go mod download
-# Our project will now successfully build with the necessary go libraries included.
+## Our project will now successfully build with the necessary go libraries included.
 RUN go build -o main .
-# Our start command which kicks off
-# our newly created binary executable
+## Our start command which kicks off
+## our newly created binary executable
 CMD ["/app/main"]
 ```
 
-# Deploying our Docker Application to DigitalOcean
+## Deploying our Docker Application to DigitalOcean
 
 Now that we have a fully functioning containerized Go application, it's time to put it somewhere so that the world can see it in all of its glory!
 
 I've not had much of a chance to play about with DigitalOcean as of yet, so I'm taking this tutorial as an opportunity to try out some of their services and features so that I'm not confined to the world of AWS permanently.
 
-## Step 1 - Pushing to a Github Repo
+### Step 1 - Pushing to a Github Repo
 
 It's always good practice to store your source code in a GitHub repo regardless of what you are doing. Further down the line, if we start automating the task of deployment using tools such as Jenkins or other continuous deployment tools, then having your code in a source control system is a vital part of that.
 
@@ -219,13 +219,13 @@ $ git push origin master
 
 When we next refresh our GitHub repository, we should see that our source code has been successfully committed and pushed up!
 
-## Step 2 - Creating a Droplet and ssh-ing To That Droplet
+### Step 2 - Creating a Droplet and ssh-ing To That Droplet
 
 Awesome, so the next step is to get a Droplet up and running within our DigitalOcean account that we can then deploy a Docker container to. 
 
 Create a new droplet using the `One-click apps` Docker 18.09.2~3 on 18.04 image with the $5/month plan and then add your ssh key so that you can subsequently ssh into that newly created server.
 
-## Step 3 - Deploying our Application
+### Step 3 - Deploying our Application
 
 Finally, take the IP address of your new Droplet and ssh into it. Once you've ssh-ed into it, you can deploy our newly docker-ized Go application by first pulling it from GitHub and then using the same 2 docker commands we used on our local machine!
 
@@ -238,7 +238,7 @@ $ docker run -d -p 8080:8081 my-go-app
 
 After running these commands, you should now be able to navigate to `http://1.2.3.4:8080`, replacing `1.2.3.4` with the IPv4 address of your newly started Droplet. You should now see `Hello World` printing out in your browser!
 
-# Conclusion
+## Conclusion
 
 Hopefully this tutorial was helpful! If you have any suggestions for what can be improved, or what additional content you would like to see then please let me know in the suggestions box below!
 

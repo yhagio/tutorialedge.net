@@ -11,19 +11,19 @@ tags:
   - cloud
 title: Cloud Deployment Practices
 twitter: https://twitter.com/Elliot_F
-# video: 433296255
+## video: 433296255
 nextPage: /courses/ogimg-dev/frontend-02/
 weight: 1
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
-## Deployment Practices
+### Deployment Practices
 
 When it comes to deploying new versions of your systems to replace existing versions of your application, you typically have a variety of different approaches you could choose from. Each of these has certain advantages over the others and it's important to consider the benefits of each of them when planning how you wish to do deployments.
 
 In this section, we'll look at some of the most popular deployment strategies you could use to ensure minimal-to-no downtime updates to your applications.
 
-### Green-Blue Deployment 
+#### Green-Blue Deployment 
 
 The first deployment strategy, and quite possibly the most commonly used strategy, is your standard green-blue deployments. Say, for instance, we had 2 instances of our application running behind a load balancer. 
 
@@ -37,7 +37,7 @@ So, how do they do this without incurring downtime?
 
 This is where this blue-green strategy comes into play. Let's have a look at how this works step-by-step.
 
-### Step 1
+#### Step 1
 
 Step 1 would be to remove our `green` instance from our load balancer. At this point in time we are down to only 1 server and instance of our application currently handling requests from our users.
 
@@ -69,7 +69,7 @@ And ta-da! We've managed to update our application from version 1.0 to version 1
 
 We've effectively managed to deploy a new version of our hypothetical application with no downtime and no stress. We were able to verify that our new v1.1 of our application was good to go before going live, should there have been any issues with v1.1 when we performed out tests, we could have simply redeployed version 1.0 and re-added that back to our load balancer configuration.
 
-### Canary Testing  
+#### Canary Testing  
 
 Another method of deployment that Gemma could leverage is Canary Testing. The name of this comes from the olden days of people working in mines, there would often be scenarios where Carbon Monoxide levels would rise dangerously and the miners had no way of determining this. 
 
@@ -79,7 +79,7 @@ Imagine you were now trying to test how good a new feature of your application w
 
 Large companies such as Facebook utilize this method and will commonly deploy things to the country of New Zealand before any other country in order to test any big changes.  
 
-### Feature Flags
+#### Feature Flags
 
 Another cool way to deploy new changes is to utilize something called feature flags. Essentially, within your application, you would have a conditional statement that determines whether or not to use a new feature depending on what state a particular flag is in. 
 

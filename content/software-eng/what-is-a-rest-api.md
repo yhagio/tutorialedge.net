@@ -23,7 +23,7 @@ API?
 This tutorial will try to explain in layman’s terms what a REST API is and how
 we can utilize these APIs in order to build our own systems.
 
-# REST Basics
+## REST Basics
 
 **REST** - Representational State Transfer.
 
@@ -45,7 +45,7 @@ Most APIs these days would return a response to us in the form of JSON.
 
 <img src="https://images.tutorialedge.net/uploads/rest-api.png" alt="REST API Basics" />
 
-# A Simple Example
+## A Simple Example
 
 Imagine you wrote a bit of code that gives you the current weather conditions at
 your house. It reads the temperature, humidity and rainfall and stores them
@@ -58,7 +58,7 @@ We could expose our code and wrap it in an API so that whenever we navigated to
 say `http://localhost:8000/api/weatherStats` it would give us a JSON response that
 contained all the current weather stats.
 
-# Why Do We Do This?
+## Why Do We Do This?
 
 **Improved Code Reuse** - By exposing our code through REST APIs we essentially
 give ourselves a greater degree of flexibility. We can develop our software once
@@ -70,13 +70,13 @@ to duplicate our work efforts.
 available all the time. We make them very stable and as a result we can interact
 with them wherever we are in the world as long as we have internet connectivity.
 
-# Taking it Further
+## Taking it Further
 
 If you want to learn how to implement your own REST APIs then I suggest you have
 a look at my tutorial on
 [Writing RESTful APIs in Go](/golang/creating-restful-api-with-golang/)
 
-## Further Reading:
+### Further Reading:
 
 If you enjoyed this article then you may also enjoy some of my other articles on the site:
 

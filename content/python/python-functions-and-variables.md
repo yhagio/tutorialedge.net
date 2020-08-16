@@ -14,7 +14,7 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 weight: 2
 ---
 
-# Variables in Python
+## Variables in Python
 
 Let’s first have a look at variables. A variable is essentially a place where we
 can store the value of something for processing later on. Imagine you wanted to
@@ -82,7 +82,7 @@ print("Welcome: " + first_name)
 
 This should then print out `Welcome: Elliot` to our console when we run it.
 
-# Functions in Python
+## Functions in Python
 
 So now that we’ve got a basic understanding of variables in Python, let’s now
 move on to functions. If you’ve never encountered functions before then you can
@@ -118,17 +118,17 @@ If we then wished to use this function then we could do something like this:
 def double(my_number):
     return my_number * 2
 
-# create a new variable called `my_var` which equals
-# the value returned by calling double() on the value 5.
+## create a new variable called `my_var` which equals
+## the value returned by calling double() on the value 5.
 my_var = double(5)
-# print our new `my_var`
+## print our new `my_var`
 print(my_var)
 ```
 
 > **Exercise** - Try implementing a triple function that takes in a `my_number`
 > variable and returns triple this value.
 
-## Further Examples
+### Further Examples
 
 In the previous example we defined a pretty small function that only featured
 one line of code within its body. It's important to note however that you can

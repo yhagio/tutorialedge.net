@@ -30,7 +30,7 @@ This includes memory that was allocated on the **heap**. The time between when 
 value is created and the time when its owning scope is done is called
 the **lifetime** of the value.
 
-# The stack
+## The stack
 
 Like most programming languages, Rust uses a **stack** to handle memory
 management for scopes. A stack is a simple data structure, also referred to as
@@ -69,7 +69,7 @@ efficiently and with no garbage collection required.
 > compiler knows when to allocate and deallocate memory without having to figure
 > it out while the program runs.
 
-# Transferring ownership
+## Transferring ownership
 
 It's possible (and common) to transfer ownership of a value to a different
 scope. For example, we can do something like this:
@@ -153,7 +153,7 @@ this from the compiler:
 
 ![](https://images.tutorialedge.net/images/rust/image2-19.png)
 
-# Conclusion
+## Conclusion
 
 As far as the compiler is concerned, if we could have moved the value before
 using it, we don't get to use it. Hope you enjoyed reading this article. If

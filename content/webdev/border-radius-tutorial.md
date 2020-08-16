@@ -16,7 +16,7 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 Effective use of border-radius on some elements can remove the harshness of the
 square corners on some components.
 
-# Circle Element
+## Circle Element
 
 In this example we'll be creating a completely round circle object using nothing
 but css3. This is what our finished item will look like:
@@ -34,7 +34,7 @@ but css3. This is what our finished item will look like:
 }
 </style>
 
-# Source Code
+## Source Code
 
 To get this to work, what I've done is create a `div` and attached the `.circle`
 class to that div. I've then defined this `.circle` within my css file and given
@@ -55,7 +55,7 @@ class which gives it the shape of a perfect circle.
 </style>
 ```
 
-# Circle Images
+## Circle Images
 
 It's important to note that the `border-radius: 100%;` property can be attached
 to `<img>` tags in order for them to take on a circular shape:
@@ -71,7 +71,7 @@ img.circle {
 }
 </style>
 
-## Source Code:
+### Source Code:
 
 ```html
 <img
@@ -90,7 +90,7 @@ img.circle {
 </style>
 ```
 
-# border-radius For Specific Corners
+## border-radius For Specific Corners
 
 There are times where you don't want every corner of your object to be rounded,
 thankfully we can utilize some of the more specific border-radius properties in
@@ -127,7 +127,7 @@ border-radius: 10px 15px 20px 30px;
 </style>
 ```
 
-## Output
+### Output
 
 <div class="element">
 </div>

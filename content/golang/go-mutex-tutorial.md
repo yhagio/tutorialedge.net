@@ -21,14 +21,14 @@ Thus, we need to be able to write Go programs that can execute concurrently in a
 safe manner without impacting performance. This is where the `mutex` comes into
 play.
 
-# Video Tutorial
+## Video Tutorial
 
 This tutorial is available in video format:
 
 {{< youtube id="cjMdUmfzQWs" autoplay="false" >}}
 
 
-# The Theory
+## The Theory
 
 A Mutex, or a mutual exclusion is a mechanism that allows us to prevent
 concurrent processes from entering a critical section of data whilst it's
@@ -63,7 +63,7 @@ This right here, is an example of a race condition and how, if we aren't
 careful, our concurrent programs can start to see issues when we don't carefully
 guard the critical sections in our code.
 
-# A Simple Example
+## A Simple Example
 
 So, now that we know what the problem is, let's see how we can fix it using a
 `mutex` within our Go system. In order to use `mutexes` within our code, we need
@@ -139,17 +139,17 @@ New Balance 800
 
 <Quiz question="True or False: Arrays in Go have built in read/write concurrency safeguards?" A="True" B="False" correct="B" answer="False - In Go, no value is safe for concurrent read/write access. You would need to use a mutex to guard any updates to any variables." />
 
-# Avoiding Deadlock
+## Avoiding Deadlock
 
 There a couple of scenarios that you need to be aware of when working with mutexes that will result in deadlock. Deadlock is a scenario within our code where nothing can progress due to every goroutine continually blocking when trying to attain a lock. 
 
-## Ensure You Call Unlock()!
+### Ensure You Call Unlock()!
 
 If you are developing goroutines that require this lock and they can terminate in a number of different ways, then ensure that regardless of how your goroutine terminates, it always calls the `Unlock()` method. 
 
 If you fail to `Unlock()` on an error, then it is possible that your application will go into a deadlock as other goroutines will be unable to attain the lock on the mutex!
 
-## Calling Lock() Twice 
+### Calling Lock() Twice 
 
 One example to keep in mind when developing with mutexes is that the `Lock()` method will block until it attains the lock. You need to ensure that when developing your applications you do not call the `Lock()` method twice on the same lock or else you will experience a deadlock scenario. 
 
@@ -191,13 +191,13 @@ main.main()
 	/tmp/sandbox563268272/prog.go:13 +0xe0
 ```
 
-# Semaphore vs Mutex
+## Semaphore vs Mutex
 
 Everything you can achieve with a Mutex can be done with a [channel](/golang/go-channels-tutorial) in Go if the size of the channel is set to 1. 
 
 However, the use case for what is known as a `binary semaphore` - a semaphore/channel of size 1 - is so common in the real world that it made sense to implement this exclusively in the form of a `mutex`.
 
-# Conclusion
+## Conclusion
 
 So, in this tutorial, we had a look at the joys of race conditions and how they
 can wreck havoc on an unsuspecting concurrent system. We then looked at how we
@@ -208,7 +208,7 @@ goroutines present within it!
 Hopefully, you found this tutorial useful! If you have any comments or feedback,
 I would love to hear them in the comment section below. Happy Coding!
 
-## Further Reading
+### Further Reading
 
 If you enjoyed this article and wish to learn more about working with Concurrency
 in Go, then I recommend you check out our other articles on concurrency:

@@ -16,7 +16,7 @@ In this tutorial, we are going to be taking a look at how you can create and wor
 
 Linked lists are a very useful data structure in computer science that can be used for a wide variety of different tasks. They are also heavily used within programming interview questions, so a good knowledge of how they work and how you can create one in Go is vital if you want to land a new job!
 
-# The container/list package
+## The container/list package
 
 Thankfully, in Go, we have a handy linked list structure already implemented for us and ready to use in the shape of the container/list package - [container/list](https://golang.org/pkg/container/list/).
 
@@ -24,7 +24,7 @@ This incredibly handy package includes a number of different but helpful methods
 
 In this tutorial, we'll look at how you can define your own linked lists and then cover some of the methods that you can use to make life easier when working with these linked lists.
 
-# Defining a Linked List Struct
+## Defining a Linked List Struct
 
 Let's first take a look at how we can define a linked list in Go.
 
@@ -50,7 +50,7 @@ func main() {
 
 In this instance, we are creating a linked list of integers, but we could change the type of Value to be anything we want such as another struct type. For now though, we are keeping it nice and simple. 
 
-# Iterating a Linked List in Go
+## Iterating a Linked List in Go
 
 There a few potential ways to iterate over a linked list such as this in Go. The most straightforward way is to process the first node in the linked list, and then use a for loop to iterate over the remainder of the linked list checking to see if the Next node is nil like so:
 
@@ -89,7 +89,7 @@ Go Linked Lists Tutorial
 1
 ```
 
-# Populating a Linked List
+## Populating a Linked List
 
 When it comes to populating a linked list we have a number of methods to choose from. We've already seen the PushBack and PushFront methods in the previous code snippet. These do the job of inserting a new element into our linked list at either the front or the back of said list.
 
@@ -105,7 +105,7 @@ mylist.InsertAfter
 
 ```
 
-# Removing Elements from a Linked List
+## Removing Elements from a Linked List
 
 When it comes to deleting an element from a linked list, there is yet another method available to us which makes our life a breeze. This method is the aptly named Remove() method!
 
@@ -154,11 +154,11 @@ func main() {
 
 When we run this, we should see that the second for loop only prints out 1 and we have successfully filter our linked list for elements that meet a certain criteria!
 
-# Conclusion
+## Conclusion
 
 Awesome, so in this tutorial, we looked at how you can work with linked lists in Go. We covered defining linked lists, and then we covered various ways you could intereact with you linked lists. 
 
-## Further Reading:
+### Further Reading:
 
 If you enjoyed this tutorial or found it useful then you may also enjoy these other articles:
 

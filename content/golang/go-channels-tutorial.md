@@ -38,27 +38,27 @@ delight so far.
 > [goroutines](/golang/concurrency-with-golang-goroutines/) if you wish to learn
 > more about goroutines.
 
-# Goals
+## Goals
 
 By the end of this tutorial, you will:
 
 * Have a solid understanding as to the theory behind channels
 * Be able to create simple concurrent Go applications that use channels
 
-# Prerequisites
+## Prerequisites
 
 In order to complete this tutorial, you will need to have met the following 
 prerequisites:
 
 * You will need Go installed on your machine. 
 
-# Video Tutorial
+## Video Tutorial
 
 If you wish, this tutorial is available in video format. 
 
 {{< youtube id="e4bu9g-bYtg" autoplay="false" >}}
 
-# The Theory
+## The Theory
 
 The idea of channels isn't anything new, as like many of Go's concurrency
 features, these concepts have been brought forward from the likes of Hoare's
@@ -69,7 +69,7 @@ The developers of Go, however, have made it their mission to present these
 concepts in a simple a fashion as possible to enable programmers to create
 better, more correct, highly concurrent applications.
 
-# A Simple Example
+## A Simple Example
 
 Let's start off by seeing how we can build up a really simple example of how
 this works in Go. We'll first create a function that goes away and computes an
@@ -153,11 +153,11 @@ Calculated Random Value: {} 7
 So, instantiating and using channels in your Go programs looks fairly
 straightforward so far, but what about in more complex scenarios?
 
-<!-- # Multiple goroutines Example
+<!-- ## Multiple goroutines Example
 
 Let's now take a look at how we can construct our Go programs to use `channels` in conjunction with a number of different `goroutines` and build up the complexity a bit.  -->
 
-# Unbuffered Channels
+## Unbuffered Channels
 
 Using a traditional `channel` within your goroutines can sometimes lead to
 issues with behavior that you may not quite be expecting. With traditional
@@ -223,7 +223,7 @@ The reason for this is our call to `c <- value` has blocked in our second
 goroutine and subsequently the `main()` function concludes it's execution before
 our second `goroutine` gets a chance to complete its own execution.
 
-# Buffered Channels
+## Buffered Channels
 
 The way to get around this blocking behavior is to use something called a
 buffered channel. These buffered channels are essentially queues of a given size
@@ -293,7 +293,7 @@ This executes regardless as the send is now non-blocking
 This executes regardless as the send is now non-blocking
 ```
 
-# Conclusion
+## Conclusion
 
 So, in this fairly lengthy tutorial, we managed to learn about the various
 distinct types of channels within Go. We discovered the differences between both
@@ -304,7 +304,7 @@ If you enjoyed this tutorial, then please feel free to let me know in the
 comments section below. If you have any suggestions as to what I could do better
 then I would love to hear them in the comments section below!
 
-## Further Reading
+### Further Reading
 
 If you enjoyed this article and wish to learn more about working with Concurrency
 in Go, then I recommend you check out our other articles on concurrency:

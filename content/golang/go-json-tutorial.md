@@ -24,16 +24,16 @@ support the data format by default and Go is no different.
 > **Source Code** - The full source code for this tutorial can be found here:
 [TutorialEdge/go-json-tutorial](https://github.com/TutorialEdge/go-json-tutorial)
 
-# Video Tutorial
+## Video Tutorial
 
 {{< youtube id="Osm5SCw6gPU" autoplay="false" >}}
 
-# Marshalling JSON
+## Marshalling JSON
 
 Let's start off by taking a look at how we can Marshal JSON in Go. Marshalling
 effectively allows us to convert our Go objects into JSON strings.
 
-## A Simple Example
+### A Simple Example
 
 Let's have a look at a simple example of this. Say we had a `Book` struct
 defined in our Go code.
@@ -60,7 +60,7 @@ if err != nil {
 fmt.Println(string(byteArray))
 ```
 
-## Advanced Example - Nested Structs
+### Advanced Example - Nested Structs
 
 Now that we've got the basics of Marshalling down, let's take a look at a more
 complex example that features nested structs.
@@ -101,7 +101,7 @@ $ go run main.go
 {"title":"Learning Concurrency in Python","author":{"book_sales":3,"age":25,"is_developer":true}}
 ```
 
-## Indentation
+### Indentation
 
 If you want to print out your JSON in a way that it more readable, then you can
 try using the `json.MarshalIndent()` function instead of the regular
@@ -135,7 +135,7 @@ lot nicer:
 }
 ```
 
-### Full Source Code
+#### Full Source Code
 
 The full source code for this example
 
@@ -172,7 +172,7 @@ func main() {
 }
 ```
 
-# Unmarshalling JSON
+## Unmarshalling JSON
 
 Now that we've covered marshalling our structs into JSON, let's try and go the
 other way. We want to be able to take in a JSON string and unmarshal that string
@@ -233,7 +233,7 @@ We've been able to successfully unmarshal our JSON string into a struct with
 minimal fuss! We can now work with that populated struct just as we normally
 would in our Go programs.
 
-# Unstructured Data
+## Unstructured Data
 
 Sometimes, you might not have knowledge of the structure of the JSON string that
 you are reading. You may not be able to generate a pre-defined struct that you
@@ -265,7 +265,7 @@ This can be a handy tip if you are in a tight squeeze, however, if you do know
 the structure of your JSON then it is highly recommended that you define the
 structs explicitly.
 
-# Conclusion
+## Conclusion
 
 Hopefully you enjoyed this tutorial and found it useful, if you have any
 suggestions as to how I can make this better, I'd love to hear them in the

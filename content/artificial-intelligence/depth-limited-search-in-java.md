@@ -16,13 +16,13 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 
 <!-- TODO: Revamp This Tutorial -->
 
-# About Depth Limited Searching
+## About Depth Limited Searching
 
 <p>Traditional depth first search could be deemed useless in infinite state spaces as they will continue to traverse down the leftmost branch infinitely. This essentially means that the path to the goal node might never be found, in order to combat this we can add a limit to the depth that our search recurses down the tree, this essentially transforms our depth first algorithm into a depth-limited algorithm.</p>
 
 <p>This algorithm can fail in two different ways. First is that no goal node is found in the graph and the other is the cutoff type of failure in which no goal node is found within the set depth.</p>
 
-# Walkthrough
+## Walkthrough
 
 <p>This algorithm basically follows the same methods as the depth first search.</p>
 
@@ -41,11 +41,11 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 > <a href="/artificial-intelligence/depth-first-search/">Depth First Search in
 > Java</a>
 
-# The Implementation:
+## The Implementation:
 
 <p>Below you’ll find an implementation of a Depth-Limited search class which is built as an extension of the AbstractSearch java class.</p>
 
-# AbstractSearch Java Class:
+## AbstractSearch Java Class:
 
 ```java
 /**
@@ -66,7 +66,7 @@ public abstract class AbstractSearch {
 }
 ```
 
-# Depth Limited Search Class
+## Depth Limited Search Class
 
 ```java
 import java.util.ArrayList;

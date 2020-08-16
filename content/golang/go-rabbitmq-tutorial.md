@@ -16,20 +16,20 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 
 We'll be taking a look at how you can stand up a test RabbitMQ instance on your local machine using Docker and then we'll look at how you can connect in to that RabbitMQ instance from your Go app so that you can publish and subscribe to various topics within the broker.
 
-# Prerequisites
+## Prerequisites
 
 In order to complete this tutorial on your local machine, you are going to need the following tools installed:
 
 * Go v1.12+ - All my new tutorials use Go Modules by default.
 * Docker - This will be used to run the local instance of RabbitMQ, if you have another RabbitMQ server you are connecting to then this won't be needed.
 
-# Video Tutorial 
+## Video Tutorial 
 
 This tutorial is available in video format if you prefer following along that way! Please make sure to like and subscribe to my channel for more Go content!
 
 {{< youtube id="pAXp6o-zWS4" autoplay="false">}}
 
-# What is RabbitMQ?
+## What is RabbitMQ?
 
 RabbitMQ is one of the most popular open source message brokers from the lovely folks over at Pivotal which is now owned by VMWare. 
 
@@ -37,7 +37,7 @@ It's an incredibly lightweight and easy-to-deploy message broker that supports a
 
 It is without a doubt one of the most popular messaging brokers out at the moment and it can be easily distributed across multiple availability zones and regions to help ensure high availability of the service. 
 
-# Why Use Brokers?
+## Why Use Brokers?
 
 Using Brokers allows us as developers to implement more resilient distributed systems that are able to handle parts of the application going down.  
 
@@ -53,7 +53,7 @@ We can design our applications to interact with message brokers instead of direc
 
 These are just some of the key benefits that using message brokers provide to us, there are absolutely a lot more and it's worthwhile reading up on them to see if they meet the needs for your project!
 
-# Setting Up a RabbitMQ Instance Locally
+## Setting Up a RabbitMQ Instance Locally
 
 With the basic theory out of the way, let's dive into the practical side and start implementing a Go application that can talk to a RabbitMQ instance running on our local machine via Docker.
 
@@ -65,7 +65,7 @@ $ docker run -d --hostname my-rabbit --name some-rabbit -p 15672:15672 -p 5672:5
 
 This will kick off our local RabbitMQ instance which we can manage through the UI which is available at `http://localhost:15672` using the username **guest** and password **guest**. 
 
-# Getting Started
+## Getting Started
 
 Now that we've covered some of the theory behind RabbitMQ, let's start off by creating a new directory in which we'll build up our Go applications. Within this directory, let's create a new file called `main.go` which will house the entry-point to our message-publishing application:
 
@@ -98,7 +98,7 @@ In this code, we import the `streadway/amqp` package which allows us to communic
 
 Within the body of our `main` function, we then attempt to `Dial` our RabbitMQ instance using the `guest:guest` username and password. This `Dial` function returns the connection to our RabbitMQ instance, or an error value should we be unsuccessful in connecting. 
 
-## Testing our Connection
+### Testing our Connection
 
 Now that we've covered the code, let's attempt to run our Go application by first initializing our project to use Go Modules and then running it by calling `go run main.go`:
 
@@ -111,7 +111,7 @@ Successfully Connected to our RabbitMQ Instance
 
 Awesome! As you can see, we have been able to successfully connect to our running RabbitMQ instance!
 
-# Sending Messages
+## Sending Messages
 
 Now that we have a basic connection setup, let's look at how we can start interacting with this RabbitMQ instance and publish messages to it.
 
@@ -196,7 +196,7 @@ Successfully Published Message to Queue
 
 Awesome, we have been able to successfully publish a message to our newly instantiated `TestQueue`! If we run this a couple of times then we should see the number of messages increase as they await processing by another system!
 
-# Consuming Messages From a Queue
+## Consuming Messages From a Queue
 
 With our Queue instantiated and starting to fill up with messages, let's have a look at creating a second Go app that will continually poll this queue for new messages and consume them.
 
@@ -265,7 +265,7 @@ Finally, after adding a few `Println` statements we then call `<-forever` which 
 
 > **Note - ** for more information on how we are using channels here to block our main function, please check out the [Go Channels Tutorial](/golang/go-channels-tutorial/) on the site!
 
-## Testing it Out
+### Testing it Out
 
 With this now in place, let's try run our consumer in another terminal window in order to test our ability to consume messages from this `TestQueue` that we have created:
 
@@ -283,13 +283,13 @@ Awesome! We have been able to successfully consume all of the messages that have
 
 Try publishing more messages to the queue using `go run main.go` in your original terminal window and you should see the Queue size go up and then instantly be consumed by our running `consumer.go` application.
 
-# Conclusion
+## Conclusion
 
 Awesome, so in this tutorial, we've managed to set up a local instance of RabbitMQ running locally on our machine through the help of docker and we've been able to  subsequently build up a Go application that is able to publish and subscribe to this RabbitMQ instance.
 
 If you enjoyed this or have anything you'd like to discuss then please let me know in the comment section down below!
 
-## Further Reading:
+### Further Reading:
 
 If you enjoyed this article, you may also enjoy some of the other articles on the site:
 

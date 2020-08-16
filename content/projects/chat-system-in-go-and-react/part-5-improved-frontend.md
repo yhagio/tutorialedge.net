@@ -26,7 +26,7 @@ any new chat messages are displayed in a nicer fashion than they are currently.
 
 So, let's dive in!
 
-# A Chat Input Component
+## A Chat Input Component
 
 Let's start off by creating a new `component` within our `frontend/` React
 project. This component will essentially just render an `<input/>` and then
@@ -81,7 +81,7 @@ import ChatInput from "./ChatInput.jsx";
 export default ChatInput;
 ```
 
-## Updating our App.js
+### Updating our App.js
 
 Ok, so we've created our `ChatInput` component, we can update our `App.js`
 component so that it uses this newly created component and pass in the already
@@ -116,13 +116,13 @@ send(event) {
 }
 ```
 
-## Trying it out
+### Trying it out
 
 Now that we've created our `ChatInput` component, we can test it out. Run your
 Go WebSocket server and your frontend, try sending some custom messages and see
 if everything works as expected.
 
-# Improving Our Chat History Component
+## Improving Our Chat History Component
 
 So, right now, we've got a fairly ugly, but functional chat history which
 displays every message being broadcast from the WebSocket server out to our
@@ -132,7 +132,7 @@ This message is just displayed as is, in JSON format, with no additional styling
 around it, so let's have a look at improving this now by creating another
 component called that we'll call our `Message` component.
 
-## Our Message Component
+### Our Message Component
 
 Let's start off by defining our `Message.jsx` file. This component is going to
 take in the message it needs to display through a `prop`. It'll then parse this
@@ -193,7 +193,7 @@ out and give our chat a bit of visual depth.
 }
 ```
 
-## Updating our Chat History Component
+### Updating our Chat History Component
 
 Now that we've created this `Message` component, we can start using this within
 our `ChatHistory` component. In order to do this, we'll need to update our
@@ -224,7 +224,7 @@ component!
 
 ![Chat Application Screenshot](https://images.tutorialedge.net/images/chat-app-go-react/screenshot-02.png)
 
-# Conclusion
+## Conclusion
 
 So, in this tutorial, we improved upon our existing frontend design and
 implemented the ability to send custom messages back to our backend WebSocket

@@ -20,7 +20,7 @@ In this tutorial we'll be building a very simple RESTful based API using
 [aio-libs/aiohttp](https://github.com/aio-libs/aiohttp) which is an asynchronous
 http client/server framework.
 
-# Getting Started with aiohttp
+## Getting Started with aiohttp
 
 Before we go into how we can use aiohttp to create a simple RESTful API, it's
 important to know exactly what the framework is and what it can do for us. To
@@ -35,7 +35,7 @@ manner, it can concurrently handle hundreds of requests per second without too
 much hassle. In comparison to frameworks such as flask, it's incredibly
 performant.
 
-## Installing aiohttp
+### Installing aiohttp
 
 In order to install aiohttp you can run the following `pip` command:
 
@@ -43,7 +43,7 @@ In order to install aiohttp you can run the following `pip` command:
 pip install aiohttp
 ```
 
-# Writing a Simple API
+## Writing a Simple API
 
 To get us started writing a simple API we are going to write a handler function;
 `async def handle(request):` which will return a `json` based response whenever
@@ -53,7 +53,7 @@ request endpoint that calls `handle` whenever `"/"` is hit. Finally we call
 `web.run_app(app)` in order to kick off our newly defined `aiohttp` API.
 
 ```py
-# filename: app.py
+## filename: app.py
 
 from aiohttp import web
 import json
@@ -68,7 +68,7 @@ app.router.add_get('/', handle)
 web.run_app(app)
 ```
 
-# Testing our API
+## Testing our API
 
 We can then run our new REST API by calling `python app.py` which should start
 our app on `http://0.0.0.0` a.k.a `http://localhost` on port `8080` by default.
@@ -82,7 +82,7 @@ our app on `http://0.0.0.0` a.k.a `http://localhost` on port `8080` by default.
 When you navigate to `http://localhost:8080` you should see our
 `{"status": "success"}` being returned in the browser.
 
-# POST Requests and Query Parameters
+## POST Requests and Query Parameters
 
 Now that we've successfully defined a very basic, single `endpoint` API we can
 now start to build on top of this and start exposing different routes that use
@@ -94,18 +94,18 @@ function `new_user(request)` now.
 ```py
 async def new_user(request):
     try:
-        # happy path where name is set
+        ## happy path where name is set
         user = request.query['name']
-        # Process our new user
+        ## Process our new user
         print("Creating new user with name: " , user)
 
         response_obj = { 'status' : 'success' }
-        # return a success json response with status code 200 i.e. 'OK'
+        ## return a success json response with status code 200 i.e. 'OK'
         return web.Response(text=json.dumps(response_obj), status=200)
     except Exception as e:
-        # Bad path where name is not set
+        ## Bad path where name is not set
         response_obj = { 'status' : 'failed', 'reason': str(e) }
-        # return failed with a status code of 500 i.e. 'Server Error'
+        ## return failed with a status code of 500 i.e. 'Server Error'
         return web.Response(text=json.dumps(response_obj), status=500)
 ```
 
@@ -129,6 +129,6 @@ Creating new user with name:  test
 
 You should also receive the same success json as well as a `200` status.
 
-# Video Tutorial
+## Video Tutorial
 
 <div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/Z784Mwm4VBg?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="640" height="360" frameborder="0" gesture="media" allowfullscreen></iframe></div>

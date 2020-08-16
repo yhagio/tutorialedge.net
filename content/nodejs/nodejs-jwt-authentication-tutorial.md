@@ -16,7 +16,7 @@ Welcome fellow programmers! In this tutorial, we are going to be looking at how 
 
 We'll be creating a REST API that feature a mixture of authenticated and un-authenticated JSON endpoints and we'll be implementing a nice and simple JWT validation function that will verify incoming requests to ensure they have the appropriate authorization header set and that the value of that header is a verified JSON Web Token!
 
-# Goals
+## Goals
 
 By the end of this tutorial, we will have covered the following:
 
@@ -24,30 +24,30 @@ By the end of this tutorial, we will have covered the following:
 * We will understand how we can create middleware functions that we can wrap endpoints with.
 * We will understand how to add JWT Authentication to these middleware functions to ensure only authorized requestors can hit our REST API endpoints.
 
-# Prerequisites
+## Prerequisites
 
 In order to complete this tutorial, you will need to have the following:
 
 * NodeJS installed on your machine
 * A Text Editor (I recommend Visual Studio Code)
 
-# Video Tutorial
+## Video Tutorial
 
 This tutorial is available in video format if you prefer:
 
 {{< youtube id="0g0Of8jlhN8" autoplay="false" >}}
 
-# Introduction
+## Introduction
 
 Being able to verify who is hitting your API endpoints is incredibly important. It allows you to determine if the requestor is an authorized person who is allowed to actually interact with your service.
 
 This is where JWT authentication can solve our problems. We can create use JWTs in combination with request headers to help us validate that an incoming request is authorized or not.
 
-# JWTs or JSON Web Tokens
+## JWTs or JSON Web Tokens
 
 JWTs or a JSON Web Token, to use its full name, is a means of representing claims between two parties.
 
-## Structure
+### Structure
 
 A typical JWT features a Header, a Payload, and a Signature.
 
@@ -63,7 +63,7 @@ In this tutorial, we are going to be creating JWTs that feature an incredibly si
 
 This private RSA key is _only_ known by the server issuing any JWTs used and thus, unless a bad actor gets a hold of this key, it's almost impossible to generate a JWT token that will have a valid signature.
 
-# A Basic REST API
+## A Basic REST API
 
 Now that we have covered the theory, let's set about creating a simple REST API in NodeJS that uses Express.JS. Create a new directory in which our project will live and run the following:
 
@@ -107,7 +107,7 @@ Example app listening on port 3000!
 
 With this now running, navigate to `http://localhost:3000/` in your browser and you will see your application returning the expected `Hello World!` back to you.
 
-# Adding a few Endpoints
+## Adding a few Endpoints
 
 Now that we have a basic NodeJS application up and running on port 3000, let's look at how we can extend this and add a few endpoints which we can subsequently protect.
 
@@ -168,7 +168,7 @@ And when we open up the `/readme` endpoint, we should see the following:
 
 Perfect, in this step we have been able to add 2 additional endpoints to our application that we will be attempting to protect with JWT validation in the next step of this tutorial.
 
-# Generating a Valid JWT
+## Generating a Valid JWT
 
 In this step, we are going to create 1 additional endpoint for our application that will return a valid JWT token for us to test out the authentication in subsequent steps.
 
@@ -244,7 +244,7 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJib2R5Ijoic3R1ZmYiLCJpYXQiOjE1NTg4MTUyMzl
 
 Awesome, we now have a valid JWT that we can use to test the authentication we are going to be building in the next part of this tutorial!
 
-# Authentication Middleware
+## Authentication Middleware
 
 Let's have a look at the authentication function which will look at an incoming request and parse it for an `Authorization` header.
 
@@ -310,13 +310,13 @@ Perfect, this has worked exactly as expected and we aren't able to access our `/
 
 Awesome, with this valid JWT in our `Authorization` header, we've been able to access the `/secret` endpoint!
 
-# Conclusion
+## Conclusion
 
 So, in this tutorial, we have managed to create an `isAuthenticated` middleware function that we can wrap our express API Endpoints with. This `isAuthenticated` function parses incoming `HTTP` requests to check if they have the appropriate `Authorization` header set and then checks to see whether the value of this header is a valid JWT token that has been signed with a specific private key.
 
 > **Source Code** - The full source code for this tutorial can be found here: [TutorialEdge/node-jwt-authentication-tutorial](https://github.com/TutorialEdge/node-jwt-authentication-tutorial)
 
-## Further Reading
+### Further Reading
 
 If you enjoyed this article, you may also enjoy these other articles:
 

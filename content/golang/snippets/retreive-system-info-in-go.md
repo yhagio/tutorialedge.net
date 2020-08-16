@@ -26,7 +26,7 @@ snippet: |
 
 In this quick snippet, we are going to look at how you can retrieve the underlying system information 
 
-## Further Reading:
+### Further Reading:
 
 If you enjoyed this snippet, you may also enjoy some of the other content on the site:
 

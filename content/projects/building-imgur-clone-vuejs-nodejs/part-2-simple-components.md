@@ -16,7 +16,7 @@ In the previous part of this project series, we scaffolded the basic structure o
 
 With the setup out of the way, we can now start to dive down into developing the frontend and learnings some of the critical, core Vue.js concepts that you'll need in order to succeed as a Vue.js developer.
 
-# Introduction
+## Introduction
 
 In this part of the series, we are going to be looking at components in Vue.js and how we can start to construct our application using a number of components. 
 
@@ -27,7 +27,7 @@ By the end of this particular tutorial, you should be comfortable creating your 
 
 I'll also be leaving a link to where you can find more in-depth information and articles on Vue.js components throughout this tutorial which provide additional information, but they aren't needed to help complete the course.
 
-# Understanding the Project Structure
+## Understanding the Project Structure
 
 Let's get started by navigating in to our `frontend/` directory and trying to figure out what has been created for us by the `vue` cli.
 
@@ -63,7 +63,7 @@ Finally, we have a few standalone files:
 * `babel.config.js` - this config file tells our application how we wish to transpile our Vue.js code into a backwards compatible version of JavaScript that can be rendered by all/most browsers. 
 * `README.md` - It's always good practice to document how you build your application and how you can do additional development work to said application in the `README.md` file for that project. 
 
-# Starting from a Clean Slate
+## Starting from a Clean Slate
 
 So, right now, our basic application looks a little like this:
 
@@ -98,7 +98,7 @@ export default {
 
 With this done, we will see our application now successfully compiling and displaying `Imgur clone` in the browser. We now have a great clean slate on top of which we can build our awesome image hosting application!
 
-# Creating our First Component
+## Creating our First Component
 
 Let's start looking at how we can develop our own components in Vue.js. We'll begin by creating a new file within the `src/components/` directory called `HomePage.vue`. 
 
@@ -157,7 +157,7 @@ export default {
 
 Saving this, our application will automatically recompile successfully and we will now see `Home Page` replace the `Imgur clone` which is indicates that our new `Home Page` component is now being rendered within our application.
 
-# Importing CSS Libraries
+## Importing CSS Libraries
 
 As it stands, we've been able to successfully create and render our own simple component within our application but it isn't really doing anything all that exciting. Let's fix this now and import some additional CSS libraries and modify our `HomePage.vue` component so that it renders out a couple of placeholder images for now.
 
@@ -216,7 +216,7 @@ In this instance, we'll be using plain old bootstrap due to its popularity and h
 
 Awesome, our application is now set up to use an external CSS library! We can now start creating some nicely styled components which will house the images that we are going to display on our site!
 
-# Creating Our First Component
+## Creating Our First Component
 
 Ok, so we have the CSS framework in place, let's have a look at what it takes to start creating our own Vue.js components!
 
@@ -301,7 +301,7 @@ export default {
 ```
 
 
-# Creating an Image Component
+## Creating an Image Component
 
 Within our HomePage component, we are going to be displaying the latest images that have been updated to our Imgur application. For these images, we'll want to create a component that will fetch and display each image for us as well as some metadata about the image.
 
@@ -382,7 +382,7 @@ At this point, our application should look something a little like this:
 
 ![Simple Components](https://images.tutorialedge.net/images/imgur-clone/simple-components-01.png)
 
-# The v-for Directive and Component Props
+## The v-for Directive and Component Props
 
 Ok, so we hard coded rendering 4 divs to display some images within our `HomePage` component, but there is a way we can dynamically render multiple images using the `v-for` directive.
 
@@ -418,7 +418,7 @@ export default {
 
 > **Note** - It's generally best practice to use a `data` *function* as opposed to an object as it ensures that each instance of a component maintains an independent copy of the data returned. 
 
-## v-for
+### v-for
 
 Let's now update the `<template>` section of our `HomePage` component so that it utilizes this `v-for` directive:
 
@@ -447,7 +447,7 @@ At this point, you should see that our changes have successfully been rendered i
 
 ![v-for directive working!](https://images.tutorialedge.net/images/imgur-clone/simple-components-02.png)
 
-## Passing props to Components
+### Passing props to Components
 
 The final part of this tutorial is going to look at how we can pass information from a parent component, or `HomePage` component in this example, to a child component, our `ImageCard` component. This will allow us to pass unique `URLs` to each `ImageCard` component.
 
@@ -485,7 +485,7 @@ With this added, we then have to update the template so that instead of having a
 
 You may noticed a slight change to our `src` attribute on the `<img>` tag. We've changed this to include a `:` character just before it which is shorthand for `v-bind:src="img"`. 
 
-## Final Updates to the HomePage Component
+### Final Updates to the HomePage Component
 
 Now that we have added this `prop` to our `ImageCard` component, we now need to make 1 final update to our `HomePage` component to pass in URLs to our dynamically rendered components:
 
@@ -510,13 +510,13 @@ Save these changes and you should see that our `ImageCard` components new render
 
 ![Props working!](https://images.tutorialedge.net/images/imgur-clone/simple-components-03.png)
 
-# Conclusion
+## Conclusion
 
 Awesome, so in this tutorial of our series, we have successfully learned how our Vue.js application is structured as well as how we can go about creating simple components and subsequently rendering these components within our `HomePage` component.
 
 If you are enjoying this series, then please let me know on twitter by tweeting me with a screenshot of how you are getting on!
 
-## Further Reading:
+### Further Reading:
 
 In the next part of this series, we are going to be looking at setting up the vue router and getting routes setup within our application so that we can have distinct pages for things such as image-uploading, user login and profile pages and for individual image posts.
 

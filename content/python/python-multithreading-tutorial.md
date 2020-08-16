@@ -15,7 +15,7 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 
 **In this tutorial, we are going to be looking at how you you can use multithreading** within your Python applications. 
 
-# What is Multithreading?
+## What is Multithreading?
 
 Modern computers tend to feature a CPU that has multiple processing cores, each
 of these cores can run many threads simultaneously which gives us the ability to
@@ -27,7 +27,7 @@ get started with Python's `threading` module.
 1. Creating and Running Threads
 2. Teaching the Limitations of Python's threading implementation
 
-# Creating Threads in Python
+## Creating Threads in Python
 
 <p>To begin with we are going to want to create a new file and call it worker.py, this will contain all our code for one of our threads. To begin with we are going to create a class in python and have it import and extend the threading module.</p>
 
@@ -35,8 +35,8 @@ get started with Python's `threading` module.
 import threading
 
 class Worker(threading.Thread):
-    # Our workers constructor, note the super() method which is vital if we want this
-    # to function properly
+    ## Our workers constructor, note the super() method which is vital if we want this
+    ## to function properly
     def __init__(self):
         super(Worker, self).__init__()
 
@@ -52,9 +52,9 @@ import threading
 from worker import Worker
 
 def main():
-    # This initializes ''thread1'' as an instance of our Worker Thread
+    ## This initializes ''thread1'' as an instance of our Worker Thread
    thread1 = Worker()
-    # This is the code needed to run our newly created thread
+    ## This is the code needed to run our newly created thread
     thread1.start()
 
   if __name__ == "__main__":
@@ -63,7 +63,7 @@ def main():
 
 <p>That''s all the code you need to successfully create and instantiate a thread in python. If you can run python through your command line then open up a new terminal at your current folder and type ''python main.py''. You should hopefully see the output of the above program should no errors occur.</p>
 
-# Exercise:
+## Exercise:
 
 <p>Try instantiating more threads by creating new Worker() objects and then start them:</p>
 
@@ -78,7 +78,7 @@ def main():
 
 <p>When you run this you should see output that looks something like this:  Notice that the outputted numbers are out of order, this basically shows you the precise order in which the threads have completed their tasks in and shows you the true power of asynchronous programming, multiple threads performing in parallel.</p>
 
-# Limitation with Classic Python Threads
+## Limitation with Classic Python Threads
 
 One of the main problems with Python's classic implementation of threads is that
 they are not truly asynchronous. Performing tests on huge datasets show that the

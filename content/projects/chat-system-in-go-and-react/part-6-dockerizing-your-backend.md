@@ -23,7 +23,7 @@ Why are we doing this now you might ask? Well, before we look into things like
 authentication, load balancing and deployment, it'll be good to have a standard
 way of deploying our application using containerization technology.
 
-# Why Docker?
+## Why Docker?
 
 If this is your first time hearing about Docker and containerization
 technologies, then you may be questioning why we are using it?
@@ -39,7 +39,7 @@ Not only that, it eradicates the "it works on my machine" as, within your
 `Dockerfile`, you dictate the exact environment that your application needs in
 order to start up.
 
-# Getting Started
+## Getting Started
 
 The first thing you'll need to do, is to install Docker for Desktop on your
 machine. This can be done here:
@@ -101,7 +101,7 @@ Conversely, if we wanted to use Google's Cloud, we could deploy it to their
 container offering with no additional work needed! This just highlights one of
 the massive benefits of containerization for development.
 
-# No Docker for the Frontend?
+## No Docker for the Frontend?
 
 At this point, you may be wondering why we aren't doing the same for our
 `frontend/` application? The reason for this is that we are intending to deploy
@@ -111,7 +111,7 @@ We don't need anything fancy serving our frontend when we go to production, we
 just need something that will be able to reliably serve our built frontend
 files.
 
-# Conclusion
+## Conclusion
 
 So, in this part of the series, we managed to add Docker to our backend
 application and how this benefits us, the developers when it comes to continuing

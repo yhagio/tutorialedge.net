@@ -27,14 +27,14 @@ live examples!
 If you get through this I would love to hear your feedback either in the
 comments section or on twitter: [@Elliot_F](https://twitter.com/Elliot_F).
 
-# Introduction
+## Introduction
 
 Being able to handle events in some manner is vital if you want to be able to
 make awesome real time applications with VueJS. Thankfully, VueJS allows us to
 handle events in a fairly easy fashion and this is just one of the reasons that
 I'm becoming a big fan of the framework!
 
-# A Simple Example
+## A Simple Example
 
 Let's kick this tutorial off by dealing with a standard button click event. So
 initially we will need a `<button/>` element, and a method defined in our Vue
@@ -103,7 +103,7 @@ new Vue({
 });
 ```
 
-## Keyboard Input
+### Keyboard Input
 
 Say you wanted to add functionality on a certain key press event within your
 application, you could do this by using `keyup.key` combined with the `v-on`
@@ -152,14 +152,14 @@ specific key code for that key. You can see the full list of key codes here:
 [Mozilla Key Codes](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode).
 
 
-# Conclusion
+## Conclusion
 
 So, in this tutorial, we covered how you can effectively handle events within
 your VueJS applications. Hopefully you enjoyed this! If you did then please let
 me know in either the comments section below or on twitter:
 [@Elliot_F](https://twitter.com/Elliot_F).
 
-## Further Reading
+### Further Reading
 
 If you enjoyed this article then you may enjoy some of the other tutorials on our site:
 

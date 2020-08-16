@@ -53,7 +53,7 @@ Below this, we'll then use the `reflect` package from the Go standard library in
 
 <Quiz question="What happens if we try and compare 2 different struct types with the same fields and values using the DeepEqual function?" answer="DeepEqual does a test to see whether or not the two instances are they same type" correct="B" A="It returns true" B="It returns false" />
 
-## Further Reading
+### Further Reading
 
 If you found this code snippet useful, you may also be interested in some of the other content on the site:
 

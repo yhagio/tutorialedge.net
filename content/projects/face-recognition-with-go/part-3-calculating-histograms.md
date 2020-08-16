@@ -21,7 +21,7 @@ local binary patterns of a given image. In this part of the course, we'll be
 looking at how you can take these calculated local binary patterns and generate
 a histogram.
 
-# Test Cases
+## Test Cases
 
 ```go
 package histogram
@@ -31,7 +31,7 @@ func TestHistogram(t *testing.T) {
 }
 ```
 
-# Implementing the Code
+## Implementing the Code
 
 ```go
 package histogram
@@ -41,7 +41,7 @@ func Histogram() {
 }
 ```
 
-# Next Part of the Series
+## Next Part of the Series
 
 - [Part 4 - Calculating Distances]()
 

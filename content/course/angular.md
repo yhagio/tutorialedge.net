@@ -8,7 +8,7 @@ series: angular
 title: Angular
 ---
 
-### Course Outline
+#### Course Outline
 
 Angular 2 is the latest iteration of the wildly successful Angular framework and
 this course is designed to take you all the way from the basics through to

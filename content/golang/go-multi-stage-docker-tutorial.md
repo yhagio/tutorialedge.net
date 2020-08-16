@@ -28,7 +28,7 @@ docker support to allow you to easily deploy your containerized apps for the wor
 
 > _**Note**_ - This tutorial is a follow up to my previous Go + Docker tutorial which can be found here: [Containerizing Your Go Applications with Docker](/golang/go-docker-tutorial/)
 
-# What is The Need for Multi-Stage Dockerfiles?
+## What is The Need for Multi-Stage Dockerfiles?
 
 In order to see why multi-stage Dockerfiles are useful, we'll be creating a simple Dockerfile that
 features one stage to both build and run our application, and a second Dockerfile which features
@@ -40,25 +40,25 @@ see for ourselves just how multi-stage Dockerfiles are preferred over their simp
 So, In my previous tutorial, we created a really simple Docker image in which our Go application was both built and run from. This `Dockerfile` looked something like this:
 
 ```Dockerfile
-# We specify the base image we need for our
-# go application
+## We specify the base image we need for our
+## go application
 FROM golang:1.12.0-alpine3.9
-# We create an /app directory within our
-# image that will hold our application source
-# files
+## We create an /app directory within our
+## image that will hold our application source
+## files
 RUN mkdir /app
-# We copy everything in the root directory
-# into our /app directory
+## We copy everything in the root directory
+## into our /app directory
 ADD . /app
-# We specify that we now wish to execute
-# any further commands inside our /app
-# directory
+## We specify that we now wish to execute
+## any further commands inside our /app
+## directory
 WORKDIR /app
-# we run go build to compile the binary
-# executable of our Go program
+## we run go build to compile the binary
+## executable of our Go program
 RUN go build -o main .
-# Our start command which kicks off
-# our newly created binary executable
+## Our start command which kicks off
+## our newly created binary executable
 CMD ["/app/main"]
 ```
 
@@ -86,7 +86,7 @@ Within this image will be all the packages and dependencies that are needed to b
 our Go applications. With multi-stage dockerfiles, we can actually reduce the size of these images
 dramatically by splitting things up into two distinct stages.
 
-# A Simple Multi-Stage Dockerfile
+## A Simple Multi-Stage Dockerfile
 
 Using multi-stage Dockerfiles, we can pick apart the tasks of building and running our
 Go applications into different stages. Typically, we start off with a large image which
@@ -98,16 +98,16 @@ absolutely needed in order to run a binary executable. This would typically be c
 a `production` stage or something similar.
 
 ```Dockerfile
-# We use the larger image which includes
-# all of the dependencies that we need to
-# compile our program
+## We use the larger image which includes
+## all of the dependencies that we need to
+## compile our program
 FROM bigImageWithEverything AS Builder
 RUN go build -o main ./...
 
-# We then define a secondary stage which
-# is built off a far smaller image which
-# has the absolute bare minimum needed to
-# run our binary executable application
+## We then define a secondary stage which
+## is built off a far smaller image which
+## has the absolute bare minimum needed to
+## run our binary executable application
 FROM LightweightImage AS Production
 CMD ["./main"]
 ```
@@ -119,7 +119,7 @@ absolutely tiny images in which our application will run in a production environ
 > This can help us differentiate different stages of our Dockerfile and we can use the `--target`
 > flag to build specific stages.
 
-# A Real-Life Example
+## A Real-Life Example
 
 Now that we've covered the basic concepts, let's take a look at how we could define a real
 multi-stage Dockerfile that will first compile our application and subsequently run our
@@ -208,26 +208,26 @@ Next, we'll create a `Dockerfile` in the same directory as our `main.go` file ab
 images:
 
 ```Dockerfile
-# We'll choose the incredibly lightweight
-# Go alpine image to work with
+## We'll choose the incredibly lightweight
+## Go alpine image to work with
 FROM golang:1.11.1 AS builder
 
-# We create an /app directory in which
-# we'll put all of our project code
+## We create an /app directory in which
+## we'll put all of our project code
 RUN mkdir /app
 ADD . /app
 WORKDIR /app
-# We want to build our application's binary executable
+## We want to build our application's binary executable
 RUN CGO_ENABLED=0 GOOS=linux go build -o main ./...
 
-# the lightweight scratch image we'll
-# run our application within
+## the lightweight scratch image we'll
+## run our application within
 FROM alpine:latest AS production
-# We have to copy the output from our
-# builder stage to our production stage
+## We have to copy the output from our
+## builder stage to our production stage
 COPY --from=builder /app .
-# we can then kick off our newly compiled
-# binary exectuable!!
+## we can then kick off our newly compiled
+## binary exectuable!!
 CMD ["./main"]
 ```
 
@@ -261,7 +261,7 @@ open up `http://localhost:8080` in our browser and see our Go application return
 > our containerized Go application and you should be able to view the logs using the
 > `docker logs` command.
 
-# Conclusion
+## Conclusion
 
 To wrap things up, in this tutorial, we looked at how we could define a really simple Dockerfile
 which creates a heavy Docker image. We then looked at how we could optimize this by using

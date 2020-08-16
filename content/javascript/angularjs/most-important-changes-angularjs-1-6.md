@@ -18,7 +18,7 @@ After having a look at the AngularJS release notes for 1.6, I thought I’d
 compile my thoughts together as to the most important changes to the framework
 in the coming release.
 
-# Expression Sandbox Removal
+## Expression Sandbox Removal
 
 [Expression Sandbox Removal Full Notes](http://angularjs.blogspot.co.uk/2016/09/angular-16-expression-sandbox-removal.html)
 
@@ -35,7 +35,7 @@ This will help to speed up the framework as a whole and is ultimately a good
 thing,if you are developing a full stack app then you need to consider security
 at all levels of your application.
 
-# \$http Success/Error Callback Methods Deprecated
+## \$http Success/Error Callback Methods Deprecated
 
 Regardless of the fact this was considered bad practice in Angular 1.5, you may
 still have some of these sprawled about your codebase, in 1.6 this callback
@@ -68,7 +68,7 @@ $http.get('oauth/clients')
 Note: the response object returned is different, if you are trying to access the
 data of your response, just append .data and you should see the new content.
 
-# Changes to ngModel
+## Changes to ngModel
 
 There have been some notable changes to ngModel, for instance you are no longer
 able to methods to $scope.$watch without some form of context. This essentially
@@ -83,7 +83,7 @@ $scope.$watch("something", function() {
 });
 ```
 
-# Updates to jqLite
+## Updates to jqLite
 
 I don’t typically use jqLite in my day to day coding but there were multiple
 breaking changes to this featured in the changelog, if you do tend to use this

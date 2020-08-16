@@ -41,7 +41,7 @@ We'll use the `range` keyword to allow us to iterate over the `scientists` array
 
 In this instance we ignore the `index` returned by utilizing an `_` in its place. We then print out the value within the body of our `for` loop.
 
-## Further Reading:
+### Further Reading:
 
 If you found this useful, then you may also enjoy these other articles on the site:
 

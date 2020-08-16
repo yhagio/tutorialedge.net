@@ -37,7 +37,7 @@ Therefore, parameterization of containers allows the container and its methods
 to explicitly declare trait bounds that are expected from stored types. All
 other characteristics of the stored item will be parameterized.
 
-# Investigating generics
+## Investigating generics
 
 Generics refer to the practice of parameterizing classes in object-oriented
 programming (OOP) languages. Rust does not have an exact equivalent of classes.
@@ -164,7 +164,7 @@ object. Multiple traits or none can be specified to declare all expected
 interfaces. Multiple traits or lifetime bounds can be declared with the
 `'l + Trait1 + Trait2` syntax.
 
-# Investigating generalized algebraic datatypes
+## Investigating generalized algebraic datatypes
 
 Sometimes, it is desirable to have the type system carry more information than
 normal. If you look at the process of compilation, types occupy a space between

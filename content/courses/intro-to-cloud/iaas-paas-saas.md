@@ -11,7 +11,7 @@ tags:
   - cloud
 title: Cloud Platforms - IAAS vs PAAS vs SAAS
 twitter: https://twitter.com/Elliot_F
-# video: 433296255
+## video: 433296255
 nextPage: /courses/ogimg-dev/frontend-02/
 weight: 1
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg
@@ -25,7 +25,7 @@ You'll more often than not see a grid that looks like the one below when people 
 
 This grid is excellent at showing how each level of service differs in terms of what the application developer manages compared to what the platform or service provider manages. 
 
-## IAAS
+### IAAS
 
 When people talk about `IAAS`, they are referring to Infrastructure as a Service. This is where you effectively rent servers using services such as AWS' EC2. You would then be responsible for the management of these servers, and for the deployment of your applications to said servers.
 
@@ -33,13 +33,13 @@ Any servers requested would have to be configured to meet your exact system need
 
 It ultimately offers you far more fine-grained control when it comes to managing the infrastructure your applications run upon. However, in the world of designing applications for the cloud, this fine-grained control may not necessarily needed and could slow down the rate at which you develop new applications.   
 
-## PAAS
+### PAAS
 
 `PAAS` or Platforms as a Service are offerings such as Pivotal's CloudFoundry or AWS' Elastic Beanstalk. These offerings effectively manage the underlying servers for you and allow you to focus purely on your application. 
 
 These abstract away the difficulties you typically encounter when manage your own fleet of servers and, more often than not, provide you with things such as load balancers, monitoring and logging with minimal added fuss to the application developer.
 
-## FAAS
+### FAAS
 
 `FAAS`, or Functions as a Service, are a newer style of offering where you focus purely on individual functions. Say, for instance, Gemma was looking to write an API Endpoint that she wanted to be scalable, resilient and available at a moments notice. She could leverage `FAAS`, write her function or a group of functions with a single entry point, and then deploy this as an AWS Lambda function.
 
@@ -47,6 +47,6 @@ This Lambda function will then scale dynamically to handle any incoming demands 
 
 We'll be covering the advantages of `FAAS` in a later chapter and how Gemma used them to revolutionize things such as monitoring and batch processing. 
 
-## SAAS 
+### SAAS 
 
 `SAAS`, or Software as a Service would be akin to the likes of Microsoft Outlook, Twitter, or Github. These services are essentially a black box in terms of underlying infrastructure and are merely something you would consume through the likes of a web portal, a mobile application, or a standalone client.

@@ -17,11 +17,11 @@ be asked within a Python coding interview. This is in no way a comprehensive lis
 give you some additional practice if you are looking to sharpen your skills/knowledge before 
 going into some interviews.
 
-# Question 1
+## Question 1
 
 > **Question** - Explain Decorators and How You Would Implement A Simple Decorator
 
-## Answer
+### Answer
 
 Functions in Python are first class objects which can subsequently be passed around within your applications 
 as if they were a standard variable or list. This allows us to create functions which take in functions and 
@@ -54,64 +54,64 @@ hello world
 finished wrapping a decorator
 ```
 
-# Question 2
+## Question 2
 
 > **Question** - Explain The GIL (Global Interpreter Lock) and its limitations when creating concurrent applications.
 
-## Answer
+### Answer
 
 The GIL, or the `Global Interpreter Lock` within Python
 
-# Question 3
+## Question 3
 
 > Explain some of the things that the multithreading package is good at optimizing
 
-## Answer
+### Answer
 
-# Question 4
+## Question 4
 
 > How would you improve the performance of a CPU intensive Python application
 
-## Answer
+### Answer
 
-# Question 5
+## Question 5
 
 > Explain Monkey-Patching
 
-## Answer
+### Answer
 
-# Question 6
+## Question 6
 
 > Difference between *args and **kwargs
 
-## Answer
+### Answer
 
-# Question 7
+## Question 7
 
 > What tools would you typically use to debug your Python applications?
 
-## Answer
+### Answer
 
-# Question 8
+## Question 8
 
 > What are some considerations when making your application multi-threaded
 
-## Answer
+### Answer
 
-# Question 9
+## Question 9
 
 > How do you ensure that differences in Python version packages don't break other applications running on your machine
 
-## Answer
+### Answer
 
-# Question 10
+## Question 10
 
 > How is memory managed in Python?
 
-## Answer
+### Answer
 
 
-# Conclusion
+## Conclusion
 
 > **Note -** If you want to keep track of when new Go articles are posted to the
 > site, then please feel free to follow me on twitter for all the latest news:

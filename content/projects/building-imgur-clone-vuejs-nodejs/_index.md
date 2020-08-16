@@ -14,7 +14,7 @@ twitter: https://twitter.com/Elliot_F
 
 Welcome fellow programmers! In this free project series, we are going to be building a really awesome Imgur clone using Vue.JS as our frontend and a simple backend written in Node.JS.
 
-## Goals
+### Goals
 
 By the end of this course we will have covered the following concepts:
 
@@ -24,11 +24,11 @@ By the end of this course we will have covered the following concepts:
 * How we can implement authentication and authorization using OAuth2 and JWT
 * How to provision cloud infrastructure using the industry standard tool - Terraform
 
-## Who is this course for?
+### Who is this course for?
 
 This course is primarily geared towards those of you who are somewhat new to full-stack development and wish to see how you can get started building your own simple web applications using Vue.JS and Node.JS using some industry standard tools like the `serverless cli` and Terraform to provision your underlying cloud infrastructure that supports your application.
 
-## Prerequisites
+### Prerequisites
 
 Before you can start this course, you will need the following tools installed:
 
@@ -37,7 +37,7 @@ Before you can start this course, you will need the following tools installed:
 * Terraform v0.12+
 * Serverless CLI
 
-## Finished Product 
+### Finished Product 
 
 It's nice to be able to visualize what you are going to be building and see results at every step of the process. We'll be building this up bit-by-bit to ensure that at every stage of the process, we see results.
 

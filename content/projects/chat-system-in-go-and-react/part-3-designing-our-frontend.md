@@ -25,7 +25,7 @@ frontend which looks a little something like this:
 
 ![Chat Application Screenshot](https://images.tutorialedge.net/images/chat-app-go-react/screenshot-01.png)
 
-# Component Based Approach
+## Component Based Approach
 
 In React, as well as all other popular frontend frameworks, we tend to divide
 our applications down into a series of components. Each component typically
@@ -38,7 +38,7 @@ other teams also working on the application. These components provide you with a
 certain _separation of concerns_ and effectively, it allows you to build up your
 app through composition and keep your directory structure logically grouped.
 
-# A Header Component
+## A Header Component
 
 So, let's start off by creating a really simple `Header` component. We'll do
 this by creating a new directory under `frontend/src/` called `components/` and
@@ -58,7 +58,7 @@ for our Header component.
 > new directory for it within our `components/` directory and we'll typically be
 > creating those three files within that directory.
 
-## Header.jsx
+### Header.jsx
 
 Let's implement our `function component` within our `Header.jsx` file. This will
 simply render our a header for our site with a simple title:
@@ -76,7 +76,7 @@ const Header = () => (
 export default Header;
 ```
 
-## Header.scss
+### Header.scss
 
 Next, we'll want to give it some styling. ReactJS projects don't automatically
 come with the ability to handle `scss` files, so we'll first need to install
@@ -103,7 +103,7 @@ And, once this has completed, we can then add our styles like so:
 }
 ```
 
-## index.js
+### index.js
 
 Finally, we'll want to export our `Header` component so that other components
 within our application can subsequently import it and render it within their own
@@ -115,7 +115,7 @@ import Header from "./header.jsx";
 export default Header;
 ```
 
-## Updating our App.js
+### Updating our App.js
 
 Now that we've created our new `Header` component, let's try and import it into
 our `App.js` component and then display it by adding it to our `render()`
@@ -142,7 +142,7 @@ Upon saving, our frontend application should recompile and we should see our new
 > **Congratulations** - You have successfully just created your first React
 > component!
 
-# A Chat History Component
+## A Chat History Component
 
 Ok, so, we've managed to build and render a really simple component, so let's
 build some more and get a bit more comfortable.
@@ -154,7 +154,7 @@ Once again, we'll be creating a new folder within our `components/` directory,
 but this time we'll call is `ChatHistory/`. Once we've created this directory,
 let's create the three files for our component.
 
-## ChatHistory.jsx
+### ChatHistory.jsx
 
 Let's start off with our `ChatHistory.jsx` file. This time, it's going to be
 slightly more complex as we are going to be building a `Class` component as
@@ -196,7 +196,7 @@ class ChatHistory extends Component {
 export default ChatHistory;
 ```
 
-## ChatHistory.scss
+### ChatHistory.scss
 
 Let's add a little style to our `ChatHistory` component in our
 `ChatHistory.scss` file, this is just a simple background color change and some
@@ -214,7 +214,7 @@ updates to padding and margin:
 }
 ```
 
-## Index.js
+### Index.js
 
 And finally, we need to export our new component, just like we did our `Header`
 component, so that it can be imported within our `App.js` and rendered:
@@ -225,7 +225,7 @@ import ChatHistory from "./ChatHistory.jsx";
 export default ChatHistory;
 ```
 
-## App.js and api/index.js Updates
+### App.js and api/index.js Updates
 
 So, now that we have our `ChatHistory` component, we need to actually feed it
 some messages.
@@ -320,7 +320,7 @@ echoes it back to the frontend and it's rendered successfully within our
 
 ![Chat Application Screenshot](https://images.tutorialedge.net/images/chat-app-go-react/screenshot-01.png)
 
-# Conclusion
+## Conclusion
 
 So, we've managed to successfully improve our frontend application and see it
 coming together as a chat application. In the next part of the series, we are

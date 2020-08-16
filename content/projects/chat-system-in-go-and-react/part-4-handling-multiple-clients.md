@@ -32,7 +32,7 @@ course:
 
 ![Chat Application Screenshot](https://images.tutorialedge.net/images/chat-app-go-react/screenshot-01.png)
 
-# Splitting out our Websocket Code
+## Splitting out our Websocket Code
 
 Now that we've done that necessary bit of house-cleaning, we can move on to
 improving our codebase. We're going to be splitting up some of our application
@@ -187,7 +187,7 @@ By this point, your directory structure should look like this:
 - ...
 ```
 
-# Handling Multiple Clients
+## Handling Multiple Clients
 
 Excellent, so now that we've done our basic house-keeping, we can move on to
 improving our backend and implement a mechanism to handle multiple clients.
@@ -197,7 +197,7 @@ to our WebSocket server. Whenever a new connection is made, we'll have to add
 them to a pool of existing connections and ensure that every time a message is
 sent, everyone in that pool receives that message.
 
-## Using Channels
+### Using Channels
 
 We're going to be working on a system that features a lot of concurrent
 connections. For each of these concurrent connections, a new `goroutine` is spun
@@ -216,7 +216,7 @@ communicate in a safe fashion across these multiple, concurrent `goroutines`.
 > **Note -** If you wish to learn more about channels in Go, you can check out
 > my other article here: [Go Channels Tutorial](/golang/go-channels-tutorial/)
 
-## Client.go
+### Client.go
 
 Let's start off by creating a new file called `Client.go`, this will live within
 our `pkg/websocket` directory and within it we'll define a `Client` struct which
@@ -277,7 +277,7 @@ func (c *Client) Read() {
 Awesome, now that we've defined our Client within our code, we can move on to
 implementing our Pool.
 
-## Pool Struct
+### Pool Struct
 
 We'll create a new file within the same directory as our `client.go` file and
 our `websocket.go` file called `pool.go`
@@ -358,7 +358,7 @@ func (pool *Pool) Start() {
 }
 ```
 
-## Websocket.go
+### Websocket.go
 
 Awesome, let's make some more small changes to our `websocket.go` file and
 remove some of the no-longer necessary functions and methods:
@@ -390,7 +390,7 @@ func Upgrade(w http.ResponseWriter, r *http.Request) (*websocket.Conn, error) {
 }
 ```
 
-# Updating our main.go file:
+## Updating our main.go file:
 
 And finally, we'll need to update our `main.go` file to create a new `Client` on
 every connection and to register that client with a `Pool`:
@@ -437,7 +437,7 @@ func main() {
 }
 ```
 
-# Testing it Works
+## Testing it Works
 
 Now that we've made all of the necessary changes, we should be in a great place
 to test what we've done and ensure everything is working as intended.
@@ -456,7 +456,7 @@ can now send and receive messages from other clients connected within the same
 
 ![Chat Application Screenshot](https://images.tutorialedge.net/images/chat-app-go-react/screenshot-01.png)
 
-# Conclusion
+## Conclusion
 
 So, in this part of the series, we managed to implement a way to handle multiple
 clients and broadcast messages to everyone connected in the connection pool.

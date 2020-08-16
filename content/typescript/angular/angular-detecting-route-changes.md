@@ -61,7 +61,7 @@ export class TopNavComponent implements OnInit {
 }
 ```
 
-# Conclusion
+## Conclusion
 
 If you found this tutorial useful or require more examples or assistance then
 please let me know in the comments section below!

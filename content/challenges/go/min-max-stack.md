@@ -41,13 +41,13 @@ tests:
 
 👋 Welcome Gophers! In this challenge, we are going to be continuing on the data structures theme and attempting to implement some of the underlying functionality of a `min/max stack`. 
 
-# 
+## 
 
-# See the Solution
+## See the Solution
 
 Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 05 - Min/Max Stacks](https://discuss.tutorialedge.net/t/challenge-05-implementing-a-stack/22) 
 
-## Further Reading
+### Further Reading
 
 If you enjoyed this challenge and want some more data structures challenges then check out these:
 

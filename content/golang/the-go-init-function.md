@@ -25,7 +25,7 @@ into play. In this tutorial, we'll be looking at how you can use this `init()`
 function to achieve fame and glory, or more likely to help you to build your
 next Go based project.
 
-# The init Function
+## The init Function
 
 In Go, the `init()` function is incredibly powerful and compared to some other
 languages, is a lot easier to use within your Go programs. These `init()`
@@ -95,7 +95,7 @@ My Wonderful Go Program
 Name: Elliot
 ```
 
-# Multiple Packages
+## Multiple Packages
 
 Let's have a look at a more complex scenario that is closer to what you'd expect
 in a production Go system. Imagine we had 4 distinct Go packages within our
@@ -112,7 +112,7 @@ the connection pool that we set up in our `init()` function.
 > order of execution of your `init()` functions. It's instead better to focus on
 > writing your systems in such a way that the order does not matter.
 
-# Order of Initialization
+## Order of Initialization
 
 For more complex systems, you may have more than one file making up any given
 package. Each of these files may indeed have their own `init()` functions
@@ -155,7 +155,7 @@ In this scenario, you'll see that `AnswerToLife()` will run before our `init()`
 function as our `WhatIsThe` variable is declared before our `init()` function is
 called.
 
-# Multiple Init Functions in the Same File
+## Multiple Init Functions in the Same File
 
 What happens if we have multiple `init()` functions within the same Go file? At
 first I didn't think this was possible, but Go does indeed support having 2
@@ -206,7 +206,7 @@ having one monolithic code block in a single `init()` function which is always a
 good thing. The one caveat of this style is that you will have to take care when
 ensuring declaration order.
 
-# Conclusion
+## Conclusion
 
 So this concludes the basic introduction to the world of `init()` functions.
 Once you've mastered the use of the package initialization, you may find it

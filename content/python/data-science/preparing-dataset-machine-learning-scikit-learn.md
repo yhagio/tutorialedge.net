@@ -67,7 +67,7 @@ This produces an output as illustrated in the following screenshot:
 
 ![jupter notebook output screenshot](https://images.tutorialedge.net/images/python/data-science/preparing-dataset-machine-learning/image1-17.png)
 
-# Dropping features that are redundant
+## Dropping features that are redundant
 
 From the dataset seen previously, there are a few columns that are redundant to
 the machine learning process:
@@ -90,7 +90,7 @@ We can drop these features from the dataset using the following code:
 df = df.drop(['nameOrig', 'nameDest', 'isFlaggedFraud'], axis = 1)
 ```
 
-# Reducing the size of the data
+## Reducing the size of the data
 
 The dataset that we are working with contains over 6 million rows of data. Most
 machine learning algorithms will take a large amount of time to work with a
@@ -124,7 +124,7 @@ the concat method from pandas.
 This results in a dataframe with a little over 20,000 rows, over which we can
 now execute our algorithms relatively quickly.
 
-# Encoding the categorical variables
+## Encoding the categorical variables
 
 One of the main constraints of scikit-learn is that you cannot implement the
 machine learning algorithms on columns that are categorical in nature. For
@@ -225,7 +225,7 @@ now redundant post one hot encoding. The final dataframe now looks like this:
 
 ![jupter notebook output screenshot](https://images.tutorialedge.net/images/python/data-science/preparing-dataset-machine-learning/image2-19.png)
 
-# Missing values
+## Missing values
 
 Another constraint with scikit-learn is that it cannot handle data with missing
 values. Therefore, we must check whether our dataset has any missing values in
@@ -272,7 +272,7 @@ df.to_csv('fraud_prediction.csv')
 This will create a .csv file of this dataset in the directory that you are
 working in, which you can load into the notebook again using pandas.
 
-# Conclusion
+## Conclusion
 
 If you found this article interesting, you can explore
 [Machine Learning with scikit-learn Quick Start Guide](https://amzn.to/2FInwhE)

@@ -51,7 +51,7 @@ want. This can be a nightmare when you have clients dithering between colors and
 you find yourself spending more time in tedious updates like this than actually
 developing.
 
-# CSS3 Variables Enter The Fold
+## CSS3 Variables Enter The Fold
 
 Thankfully, most major browsers have no added support for these new experimental
 variables.
@@ -60,7 +60,7 @@ variables.
 > you can find here:
 > [Using CSS Variables - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables#Browser_compatibility)
 
-## Basic Usage
+### Basic Usage
 
 ```css
 :root {
@@ -81,7 +81,7 @@ div {
 }
 ```
 
-# Example
+## Example
 
 In this example we are going to create a simple `--light-blue` variable that
 we'll reference within 2 distinct css rules. This should hopefully give you some
@@ -115,7 +115,7 @@ lorem ipsum dolor sit.
 }
 </style>
 
-## Source Code
+### Source Code
 
 Now if we have a look at the full source code to the above example. You'll see
 our two html elements and the `style` tag below them which contains our CSS. We
@@ -148,7 +148,7 @@ this on the first line of the `.box` and `.text` rules for different properties.
 </style>
 ```
 
-# Overall
+## Overall
 
 With these variables the larger your css file and the more places that you use
 this distinct variable, the more worthwhile it's going to be for you if you ever

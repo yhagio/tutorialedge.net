@@ -32,7 +32,7 @@ a taste of writing your own functions in Go.
 
 > **Source Code** - The full source code for this repository can be found here: [TutorialEdge/Go-Functions-Tutorial](https://github.com/TutorialEdge/go-functions-tutorial)
 
-# Function Declaration
+## Function Declaration
 
 The first thing we'll need to figure out is, how do you declare a function
 within a go program? Now, if you are en experienced programmer then this should
@@ -56,7 +56,7 @@ code readability.
 > **Capitalization Matters!** If you want your functions to be accessible in other packages
 then you will have to make the first letter of your function name Uppercase!
 
-# A Simple Example
+## A Simple Example
 
 Now that we have covered the basic theory, let's see this in practice by defining our own
 simple function. 
@@ -77,7 +77,7 @@ which is the product of our `firstName` variable concatenated with a space `" "`
 
 Once we have done this concatenation, we then return the `fullname` variable.
 
-## Full Source Code
+### Full Source Code
 
 And the full program would look like this:
 
@@ -103,7 +103,7 @@ func main() {
 }
 ```
 
-# Multiple Results From a Function
+## Multiple Results From a Function
 
 It's quite often in Go programs that you'll see two results being returned from
 a function call. This is typically the result as the first result, and any
@@ -142,7 +142,7 @@ func main() {
 > **Try it Yourself** - Try running this program on your own machine by calling
 `go run main.go` and see what the result is.
 
-# Anonymous Functions
+## Anonymous Functions
 
 Anonymous functions are very similar to regular functions except they lack a
 name in their function declaration. These functions can be defined within named 
@@ -181,7 +181,7 @@ func main() {
 ```
 
 
-# Try It Yourself Challenges!
+## Try It Yourself Challenges!
 
 One of the best ways to learn a new concept is to try this out for yourself. In 
 order to aide your learning, I have created a branch within the Github repo for this
@@ -217,7 +217,7 @@ ok      github.com/tutorialedge/go-functions-tutorial   0.005s
 > **Complete Challenge Code** The complete version of this code can be found here:
 [Challenge 01 - Complete](https://github.com/TutorialEdge/go-functions-tutorial/tree/challenge-01-complete)
 
-# Conclusion
+## Conclusion
 
 So, in this article we managed to cover quite a fair bit on functions within the
 go programming language. Hopefully, you found this useful! If you require any
@@ -228,6 +228,6 @@ section below!
 > on the site then please feel free to follow me on twitter:
 > [@Elliot_f](https://twitter.com/elliot_f)
 
-## Further Reading
+### Further Reading
 
 - [Go Variadic Function Tutorial](/golang/go-variadic-function-tutorial/)

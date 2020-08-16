@@ -30,14 +30,14 @@ to said component.
 By the end of this tutorial, you should be comfortable building your own simple,
 single-page components within Vue.js.
 
-# Video Tutorial
+## Video Tutorial
 
 This tutorial is available in video format. Should you wish to support the
 series then please subscribe and like the video on YouTube!
 
 <div style="position:relative;height:0;padding-bottom:42.76%"><iframe src="https://www.youtube.com/embed/FX1s4XBO0D4?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="842" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 
-# A Simple Navbar Component
+## A Simple Navbar Component
 
 So, the first thing I always notice whenever I open up HackerNews is the iconic
 orange navbar at the top. This will undoubtedly have to feature in our own
@@ -100,7 +100,7 @@ the pure-css documentation page just to get us started.
 > section for your HTML, a `<script>` section for your components core code, and
 > a `<style>` section for when you wish to customize the look of your component.
 
-# Registering our New Component
+## Registering our New Component
 
 So, now that we've defined our `Navbar.vue` component, it's time to register it
 within our existing Vue.js application and start using it. As it stands, our
@@ -177,7 +177,7 @@ Our finished `src/App.vue` file should look like this:
 <style></style>
 ```
 
-# Adding a CSS Framework
+## Adding a CSS Framework
 
 Pretty much every web application you see will utilize some form of `CSS`
 framework. Now, for this project, I'm choosing to use the Pure-CSS framework as
@@ -199,13 +199,13 @@ page within your project and add:
 To just below your `<title>` tag. Upon clicking the `cmd-s` you should see your
 application reload on `http://localhost:8080` with a slightly different style.
 
-# How it looks
+## How it looks
 
 At this stage, your application should look something like this:
 
 ![Our HackerNews clone as it stands](https://images.tutorialedge.net/images/hackernews-clone/screenshot-03.png)
 
-# Next Steps
+## Next Steps
 
 Now that we've defined a few, very simple components within our application,
 it's time to move on and start thinking about how we can show different views

@@ -22,13 +22,13 @@ Once we have a firm handle as to how gRPC can benefit our systems, we'll then be
 
 > **Note** - If you haven't already, I would check out the other tutorial on this site covering [Protocol Buffers in Go](/golang/go-protocol-buffer-tutorial/) 
 
-# Video Tutorial
+## Video Tutorial
 
 This tutorial is also available in video format if you would like to follow along:
 
 {{< youtube id="BdzYdN_Zd9Q" autoplay="false" >}}
 
-# Prerequisites
+## Prerequisites
 
 **Before you can complete this tutorial**, you will have to have the following installed on your machine:
 
@@ -36,7 +36,7 @@ This tutorial is also available in video format if you would like to follow alon
 
 You will have to ensure that `$GOPATH/bin` is on your environment path so that you can use the `protoc` tool later on in this tutorial.
 
-# gRPC Introduction
+## gRPC Introduction
 
 So, before we dive in, we first need to understand what gRPC is, how it works and so on. 
 
@@ -46,7 +46,7 @@ Remote Procedure Calls are something that we use within distributed systems that
 
 It's similar to REST API communication in the sense that with it, you are effectively exposing functionality within your app to other apps using a HTTP connection as the communication medium.
 
-# Differences between gRPC and REST
+## Differences between gRPC and REST
 
 Whilst REST and gRPC are somewhat similar, there are some fundamental differences in how they work that you should be aware of.
 
@@ -56,13 +56,13 @@ that is typically used within REST APIs
 1. With gRPC you can utilize `HTTP/2` capabilities such as server-side streaming, client-side streaming
 or even bidirectional-streaming should you wish.
 
-# Challenges with gRPC
+## Challenges with gRPC
 
 You should bear in mind that whilst gRPC does allow you to utilize these newer bits of technology, it is more challenging prototyping a gRPC service due to the fact that tools like the Postman HTTP client cannot be used in order to easily interact with your exposed gRPC service. 
 
 You do have options that make this possible, but it's not something that's readily available natively. There are options to use tools such as envoy to reverse proxy standard JSON requests and transcode them into the right data format but this is an additional dependency that can be tricky to set up for simple projects.
 
-# Building a gRPC Server in Go
+## Building a gRPC Server in Go
 
 Let's start off by defining a really simple gRPC server in Go. Once we have a simple server up and running we can set about creating a gRPC client that will be able to interact with it.
 
@@ -117,7 +117,7 @@ func main() {
 
 This right here is the absolute minimum for a gRPC server written in go. However, right now it doesn't exactly do much. 
 
-## Adding Some Functionality
+### Adding Some Functionality
 
 Let's see how we can start exposing some functionality via our gRPC server so that gRCP clients can interact with our server in a meaningful way. 
 
@@ -220,7 +220,7 @@ Go gRPC Beginners Tutorial!
 
 Awesome! We now have a brand spanking, shiny new gRPC server up and running on `localhost:9000` on our machine! 
 
-# Building a gRPC Client in Go
+## Building a gRPC Client in Go
 
 Now that we have our server up and running, let's take a look at how we can build up a simple client
 that will be able to interact with it.
@@ -269,7 +269,7 @@ $ go run client.go
 
 Awesome, we have successfully created a very simple gRPC client that now talks to our new gRPC server!
 
-# Challenge
+## Challenge
 
 > **Challenge** - Add a new method called `BroadcastMessage` to our gRPC server. 
 
@@ -367,13 +367,13 @@ Awesome, we have successfully created a very simple gRPC client that now talks t
 
 </details>
 
-# Conclusion
+## Conclusion
 
 So, in this tutorial, we've looked at how you can build out a simple gRPC client and server in Go. We built up a basic server that accepts incoming messages from a client and then returns a response to those clients.  
 
 Now, this is just the start of my dive into gRPC and over the coming weeks we'll be expanding on the foundations laid out in this article and we'll be taking a look at more complex topics such as authentication and authorization as well as 2-way streaming!
 
-## Further Reading
+### Further Reading
 
 If you enjoyed this tutorial then you may also enjoy my other tutorials:
 

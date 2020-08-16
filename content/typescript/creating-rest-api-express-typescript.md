@@ -18,7 +18,7 @@ In this tutorial, we are going to be building a REST API using both `express`
 and TypeScript! This REST API will simply return a status depending on what API
 endpoint we hit using our HTTP Client.
 
-# Prerequisites
+## Prerequisites
 
 You will require at least the following:
 
@@ -26,7 +26,7 @@ You will require at least the following:
 - The Yarn Package Manager
 - ExpressJS
 
-# Our Project Layout
+## Our Project Layout
 
 So within our project, we are going to create a couple of incredibly simple
 endpoints that will simply return a few simple strings, depending on what `HTTP`
@@ -35,7 +35,7 @@ verb is used to hit said route.
 We'll be using the `tsc` compiler to transpile our TypeScript code back to
 normal JavaScript and then we'll be running this built code using `nodemon`.
 
-# Package.json
+## Package.json
 
 We'll need to start by initializing our project using the `npm init` command.
 This will generate the initial version of our `package.json` and allow us to
@@ -79,7 +79,7 @@ Should we try to run our `watch` script by calling `npm run watch`, you should
 notice it fails. This is because we haven't yet specified our `tsconfig.json`
 and as such our `tsc -W` fails to execute.
 
-# Our tsconfig.json
+## Our tsconfig.json
 
 Create a new `tsconfig.json` file within your root directory and add the
 following configuration:
@@ -115,7 +115,7 @@ will be building up our project. For the purpose of this tutorial, we'll be
 adding all of our code to a `src` directory and we want any `.ts` files
 underneath that directory to be included when our project is being rebuilt.
 
-# Initial Dependencies
+## Initial Dependencies
 
 Before we can start coding up our REST API, we'll need to install any
 dependencies we may be using. To do this, call the following `npm install`
@@ -127,7 +127,7 @@ $ npm install express @types/express --save-dev
 
 Now that we have these included within our project, we can start programming!
 
-# Our app.ts File
+## Our app.ts File
 
 Let's begin programming by creating our `app.ts` file. Within this we are going
 to import the `express` node module and then set up our `express` server. This
@@ -150,7 +150,7 @@ app.get("/", (req, res) => {
 export default app;
 ```
 
-# Our server.ts File
+## Our server.ts File
 
 Our `/src/server.ts` file will act as the entry point for our REST API. This
 will kick off our application and start listening for incoming requests. We'll
@@ -180,7 +180,7 @@ within your browser or with your REST client of choice, and it should deliver
 `Hi` back to you. Awesome, we now have the base upon which we will be building
 the rest of our RESTful API!
 
-# Our Status Controller
+## Our Status Controller
 
 Now that we have our base API, we want to expand upon it a bit and create a few
 new API endpoints that we can interact with. We will want to create a new status
@@ -204,7 +204,7 @@ export let awesome = (req: Request, res: Response) => {
 };
 ```
 
-# Running our Build Server
+## Running our Build Server
 
 In order to run our REST API locally, you can run the `watch` script like so:
 
@@ -227,7 +227,7 @@ like so:
 [ Node] App is running on http://localhost:3000 in development mode
 ```
 
-# Writing our Mocha Test Suite
+## Writing our Mocha Test Suite
 
 Now that we've written our simple TypeScript based RESTful API, we need to be
 able to programatically check that it works! What good is a production bit of
@@ -292,7 +292,7 @@ our incredible new test suite by calling `npm run test`:
 And Voila! We now have a working test suite that we can expand out and ensure
 that everything we write now works!
 
-# Conclusion
+## Conclusion
 
 Hopefully, you have found this tutorial useful. We managed to set up an entire
 RESTful API written in TypeScript that automatically rebuilds whenever we make

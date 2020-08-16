@@ -90,7 +90,7 @@ diagram:
 
 So, this is how the game play works.
 
-# Implementing an example min-max algorithm
+## Implementing an example min-max algorithm
 
 In this section, we will be implementing a min-max algorithm (a tic-tac-toe
 example). So, let's get to NetBeans. We will have an ArrayList, and we will

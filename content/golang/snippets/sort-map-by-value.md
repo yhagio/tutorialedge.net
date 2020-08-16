@@ -58,7 +58,7 @@ Fraser 20
 Sophie 24
 ```
 
-<!-- # Sort Map by Integer Value
+<!-- ## Sort Map by Integer Value
 
 ```go
 mymap := map[string]int{"Elliot": 25, "Sophie": 24, "Fraser": 20}
@@ -71,7 +71,7 @@ mymap := map[string]int{"Elliot": 25, "Sophie": 24, "Fraser": 20}
 
 ``` -->
 
-## Further Reading
+### Further Reading
 
 If you enjoyed this code snippet, you may also enjoy these articles:
 

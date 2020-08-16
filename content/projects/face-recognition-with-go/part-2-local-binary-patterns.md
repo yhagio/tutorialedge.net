@@ -63,7 +63,7 @@ decimal number `35` in this particular example.
 > you can increase the radius to get higher quality matches at the expense of
 > more computational cost
 
-# Initializing Our Project
+## Initializing Our Project
 
 Before any programming can be done, we'll need to get our workspace sorted out.
 We can do that by creating a new folder on our local machine and running the
@@ -104,7 +104,7 @@ $ go run main.go
 Hello World
 ```
 
-# Implementation
+## Implementation
 
 Let's dive into the implementation of our LBP algorithm. We'll start off by
 creating a really simple helper function that will take in 2 integer values and
@@ -203,7 +203,7 @@ ok      github.com/elliotforbes/go-face-recognition/pkg/lbp     0.014s
 As you can see from our `-v` verbose output, we have successfully run our
 `TestGetBinaryValue` test function.
 
-# Calculating Binary Strings
+## Calculating Binary Strings
 
 Let's move on to calculating full binary strings for a grid of 3x3 pixels. We'll
 start off by implementing the test that will ensure whatever we implement is
@@ -286,12 +286,12 @@ ok      github.com/elliotforbes/go-face-recognition/pkg/lbp     0.014s
 Awesome, we now have 2 working tests validating what we have implemented is
 correct.
 
-# Taking an Image as Input
+## Taking an Image as Input
 
 The next step we'll want to implement is the ability to read in a given image so
 that we can then transform this into
 
-# Next Part of the Series
+## Next Part of the Series
 
 In the next part of the series, we'll look at what it takes to calculate the
 histograms for an image. These histograms will be a crucial part of our project

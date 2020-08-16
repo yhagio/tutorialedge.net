@@ -32,11 +32,11 @@ content back to a client making requests to our server. Once we have achieved
 this, we'll then look at how we can serve static files before finally moving on
 to how we can serve these files using HTTP over TLS or `https` for short.
 
-# Prerequisites
+## Prerequisites
 
 * You will need Go version 1.11+ installed on your development machine. 
 
-# Creating a Basic Web Server
+## Creating a Basic Web Server
 
 Ok, so to begin with, we’ll create a very simple web server that will just
 return whatever the URL path is of your query. This will be a good base from
@@ -73,7 +73,7 @@ as the first parameter. So essentially whenever a request is made for the home
 page or `http://localhost:8081/`, we'll see our first handler respond as the
 query matches that pattern.
 
-# Running Our Server
+## Running Our Server
 
 Ok so now that we've created our own very simplistic server we can try running
 it by typing `go run server.go` in to our console. Once this is done head over
@@ -81,7 +81,7 @@ to your browser and head to `http://localhost:8081/world`. On this page, you
 should hopefully see your query string echoed back to you in true "hello world"
 fashion.
 
-# Adding a bit of Complexity
+## Adding a bit of Complexity
 
 So now that we've got a basic web server set up, let's try incrementing a
 counter every time a specific URL is hit. Due to the fact that the web server is
@@ -137,7 +137,7 @@ Run this and then navigate to `http://localhost:8081/increment` and you should s
 the current count which will be locked, incremented and then unlocked every time
 you make a request to that page.
 
-# Serving Static Files
+## Serving Static Files
 
 Now that we've had a look at the asynchronous nature of a Go based web server,
 we can move on to serving some static files.
@@ -189,18 +189,18 @@ func main() {
 }
 ```
 
-## Checking it Works
+### Checking it Works
 
 Again run the server and navigate to `http://localhost:8081/index.html` and you
 should hopefully see your very simple index.html file rendered in all its glory.
 
-# Serving Content from a Directory
+## Serving Content from a Directory
 
 So, the above method works at serving files based on it's path, but doing it
 this way means we have a directory structure that looks a little like this:
 
 ```s
-- main.go # our webserver
+- main.go ## our webserver
 - index.html
 - styles/
 - - style.css
@@ -215,7 +215,7 @@ within our project called `static/` which will contain all of our website's
 static files.
 
 ```s
-# Our Updated project structure
+## Our Updated project structure
 - main.go
 - static/
 - - index.html
@@ -249,14 +249,14 @@ As you can see, we've moved away from using the `HandleFunc` method and we've
 started using `http.Handle()` passing in our path and `http.Dir()` which points
 to our newly created `static/` directory.
 
-## Checking it Works
+### Checking it Works
 
 Now that we've updated our code, let's try running it once again using
 `go run main.go`. This will kick off our web server once again at
 `http://localhost:8081` and if we try and navigate to that URL, we should see
 the `index.html` that we have within our newly created `static` directory.
 
-# Serving Content over HTTPS
+## Serving Content over HTTPS
 
 Perfect, so we've been able to create a really simple web server that can serve
 any of the static files we want, but we've not yet thought about security. How
@@ -285,7 +285,7 @@ func main() {
 > **Note -** In this example, I pass in already generated `server.crt` and
 > `server.key` certificate files.
 
-## Generating Keys
+### Generating Keys
 
 If you don't have keys already generated, you can generate self-signed certs
 locally using `openssl`:
@@ -301,13 +301,13 @@ start your `https` web server by typing `go run main.go`. When you navigate to
 `https://localhost:8081` you should see that the connection is now secured based
 on your self-signed cert.
 
-# Conclusion
+## Conclusion
 
 I hope you found this tutorial useful and if you did then please let me know in
 the comments section below! This is part one of a series of GoLang tutorials in
 which we play around with APIs and creating servers so stay tuned for more!
 
-## **Recommended Reading:**
+### **Recommended Reading:**
 
 - [Authenticating your REST API with JWTs](/golang/authenticating-golang-rest-api-with-jwts/)
 - [Go MySQL Tutorial](/golang/golang-mysql-tutorial/)

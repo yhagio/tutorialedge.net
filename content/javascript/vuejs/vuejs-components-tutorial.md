@@ -18,13 +18,13 @@ weight: 2
 > [Getting Started with VueJS](/javascript/vuejs/getting-started-with-vuejs/)
 > article.
 
-# Video Tutorial
+## Video Tutorial
 
 This tutorial is also available in video format if you wish to watch it!
 
 <div style="position:relative;height:0;padding-bottom:42.76%"><iframe src="https://www.youtube.com/embed/5ounPLpSdeE?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="842" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 
-# Introduction
+## Introduction
 
 In this tutorial, we are going to look at how you can work with components
 within your VueJS applications. We are going to start at looking at very simple
@@ -33,13 +33,13 @@ components and then move on to your standard `.vue` file components.
 > The official documentation for VueJS components can be found here:
 > [VueJS Components Guide](https://vuejs.org/v2/guide/components.html)
 
-# Goals
+## Goals
 
 By the end of this tutorial, you will be able to define your own components in Vue.JS
 using either the JavaScript `Vue.component` function, or contained within 
 `.vue` component files.
 
-# What is A Component?
+## What is A Component?
 
 A component within a VueJS application, is a self-contained unit of code that
 represents a logical block of your application. Like for example, say you had a
@@ -56,7 +56,7 @@ working.
 make in Component A impacting Component B. By having these defined as 2 separate
 components, you typically have an added level of safety when making any changes.
 
-# A Basic Component
+## A Basic Component
 
 Let's start off by creating a very simple component. We can register this
 globally by using the `Vue.component(tagName, options)` like so:
@@ -100,7 +100,7 @@ application with the `tagName`.
 </div>
 ```
 
-## The Data Function
+### The Data Function
 
 In the previous tutorial, we created a Vue instance which featured a `data`
 object with a `msg` within it. One of the key things to note when starting to
@@ -111,7 +111,7 @@ You can certainly still define `data` as an object but you will see a number of
 error warnings in the console and a number of weird side effects in you
 application, such as one component impacting the data within another.
 
-# Component.vue files
+## Component.vue files
 
 Now, whilst this is how you would define a basic component, I typically never
 use this method within my Vue.JS applications. If you are doing anything serious
@@ -142,7 +142,7 @@ of that.
 > applications as it allows you to easily use `.vue` files within your Vue.JS
 > applications.
 
-## Defining a Simple Component
+### Defining a Simple Component
 
 > **Note** - This section assumes you have set up your Vue.JS application
 using the `vue cli`. If you would like to see how this is done, please check
@@ -224,7 +224,7 @@ if you are running `yarn serve` or `npm run serve`. With this rebuilt, you
 will now see your lovely new `<simple-component/>` component rendering in its
 mighty blue glory within your Vue.JS application.
 
-# Conclusion
+## Conclusion
 
 > **Source Code** - The full source code for this tutorial can be found here:
 [TutorialEdge/vuejs-components-tutorial](https://github.com/TutorialEdge/vuejs-components-tutorial)
@@ -234,7 +234,7 @@ components within your Vue.JS applications. If you need further help then please
 let me know in the comments section below or by tweeting me:
 [@Elliot_F](https://twitter.com/elliot_f).
 
-## Further Reading
+### Further Reading
 
 If you found this tutorial useful, then you may also like some of our other 
 Vue.JS tutorials:

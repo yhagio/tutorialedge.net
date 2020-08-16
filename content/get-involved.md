@@ -13,7 +13,7 @@ tutorials? Fork this entire site from our public github repo, make some changes
 and then submit a pull request and I'll review it and if it meets our standards,
 it'll get pushed live to the site.
 
-# Authoring New Tutorials
+## Authoring New Tutorials
 
 Authoring a new tutorial is simple with hugo. All you have to do is create a new
 `file.md` within the directory of your choice and then fill in the appropriate

@@ -18,7 +18,7 @@ compartmentalizing blocks of code into distinct blocks that can be reused in
 multiple locations around your application. In Angular 2 we can do this by
 creating our own components.
 
-# What Are Components?
+## What Are Components?
 
 In Angular we can define these things we call components. These components are
 functional blocks of code that we can attach to html tags. Say for instance we
@@ -27,7 +27,7 @@ widget on the side of the page that shows the current users current profile
 picture, as well as some other pieces of information. We could encapsulate all
 the functionality of this widget into a component.
 
-## Why Are Components Used?
+### Why Are Components Used?
 
 When we split our applications into numerous components and sub-components we
 are essentially breaking down our problems into smaller and smaller problems. We
@@ -38,7 +38,7 @@ tested without potentially impacting anything else in our system.
 > developers can work on a single application without worrying about pushing
 > other bugs into production.
 
-# Creating a Simple Component
+## Creating a Simple Component
 
 If you’ve come from an Angular 1.\* background then you should find creating
 components to be a little bit simpler in Angular2. In Angular 2 we have done
@@ -60,7 +60,7 @@ import { Component } from "@angular/core";
 export class UserComponent {}
 ```
 
-# @Component Decorator
+## @Component Decorator
 
 - _selector_ - This defines what HTML tag we will bind to. In the above example
   we bind to the `<user></user>` tag.
@@ -78,7 +78,7 @@ export class UserComponent {}
 - _providers_ - Here we pass in any services that we want to utilize within our
   component.
 
-# Creating Components using the Angular-CLI
+## Creating Components using the Angular-CLI
 
 If you've built your project using the Angular-CLI then creating new components
 that work straight away is easy:

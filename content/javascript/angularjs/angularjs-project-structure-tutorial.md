@@ -19,7 +19,7 @@ down the line when you have to deal with maintenance and enhancements.
 I'm going to start off by showing you sub-optimal project structures and then
 move on to the most recommended way of structuring your angularjs projects.
 
-# Simple PoCs and Tiny Applications
+## Simple PoCs and Tiny Applications
 
 There are multiple ways we can structure applications and of course different
 structures are better suited for different applications. For incredibly simple
@@ -45,7 +45,7 @@ controller.js and service.js become packed with thousands of lines of code.
 | Con     | As soon as your application grows this becomes a mess                         |
 | Con     | Having one file for controllers and services could lead to a haystack of code |
 
-# File Type Based Approach
+## File Type Based Approach
 
 Another well known way of structuring applications is to split applications up
 based on file type. This leads to a project structure like this:
@@ -73,7 +73,7 @@ wade through.
 | Con     | Code for each feature is split across multiple directories                                |
 | Con     | As soon as you hit more than 10 or so of a file type, it becomes a haystack               |
 
-# Component Based Approach
+## Component Based Approach
 
 A new style of structuring your application is to follow a component based
 approach. This makes sense as we can break our applications down into a series
@@ -121,7 +121,7 @@ subdirectory would encapsulate all our comments related code.
 | Pro     | Parallel development becomes easier                                            |
 | Con     | Interaction between components may be challenging to implement                 |
 
-# Examples of Component Based Applications
+## Examples of Component Based Applications
 
 For examples of how to write your own component based applications then please
 check out my post:
@@ -131,7 +131,7 @@ Todd Motto, one of the most respected AngularJS community members has an
 excellent github repo that showcases a component based application :
 [Angular 1.5 Components App](https://github.com/toddmotto/angular-1-5-components-app)
 
-# Conclusion
+## Conclusion
 
 If you found this tutorial or have any further questions then please let me know
 in the comments section below.

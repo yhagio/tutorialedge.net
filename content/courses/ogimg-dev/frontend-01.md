@@ -21,7 +21,7 @@ In this series, we are going to be building a full SaaS Web Application using Re
 
 The SaaS product will allow developers to programmatically generate OpenGraph images for their social media posts.
 
-## Topics Covered:
+### Topics Covered:
 
 * Styling our App with Tailwind CSS
 * Using Hooks within our React.js App
@@ -31,7 +31,7 @@ The SaaS product will allow developers to programmatically generate OpenGraph im
 * Building a REST API with Node.js
 * Securing Endpoints with JWTs
 
-## Episode 01
+### Episode 01
 
 In this tutorial, we cover setting up our project directory and bootstrapping our React.js application using the `create-react-app` CLI.
 

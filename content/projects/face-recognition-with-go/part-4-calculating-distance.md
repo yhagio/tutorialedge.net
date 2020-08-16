@@ -20,11 +20,11 @@ In this part of the series, we'll be taking a look at how you can use the
 histograms that we generated in the previous part of this series to help us
 calculate distances between images in our face recognition system.
 
-# Test Cases
+## Test Cases
 
-# Implementation
+## Implementation
 
-# Next Part of the Series
+## Next Part of the Series
 
 - [Part 4 - Calculating Distances]()
 

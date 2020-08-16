@@ -19,7 +19,7 @@ Python and TypeScript, but that's not to say you can't use them in Go. In fact,
 for certain problems, using decorators is the perfect solution as we'll
 hopefully be finding out in this tutorial.
 
-# Understanding the Decorator Pattern
+## Understanding the Decorator Pattern
 
 > **Decorators** essentially allow you to wrap existing functionality and append
 > or prepend your own custom functionality on top.
@@ -105,7 +105,7 @@ Now, this may strike you as a bit odd at first. Why would you want to do
 something like this? It essentially adds a layer of abstraction over your call
 to `myFunc` and complicates the code without really adding much value.
 
-# A Simple Decorator
+## A Simple Decorator
 
 Let's see how we could use this pattern to add some value to our codebase. We
 could, if we wanted, add some additional logging around the execution of a
@@ -152,7 +152,7 @@ having to alter it's implementation. We are now able to clearly see when this
 function was started and when it finished execution and it highlights to us that
 the function takes just about a second to finish execution.
 
-# Real World Examples
+## Real World Examples
 
 Let's look at a few more examples as to how we can use decorators for further
 fame and fortune. We'll take a really simple http web server and decorate our
@@ -282,7 +282,7 @@ This highlights the key benefits of the decorator pattern, where wrapping code
 within our codebase is incredibly simple. We can easily add new authenticated
 endpoints using this same method
 
-# Conclusion
+## Conclusion
 
 Hopefully, this tutorial helped to demystify the wonders of the decorator and
 how you can use the decorator pattern within your own Go-based programs. We
@@ -301,7 +301,7 @@ below!
 > site, then please feel free to follow me on twitter for all the latest news:
 > [@Elliot_F](https://twitter.com/elliot_f).
 
-## Further Reading
+### Further Reading
 
 If you are looking for more, then you may quite like some of the other articles
 on this site. Feel free to check out the following articles:

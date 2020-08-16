@@ -75,7 +75,7 @@ tests:
 
 👋 Welcome Gophers! In this challenge, you will be tasked with finding out how many rotations an ordered `int` slice has undergone and shifted by.
 
-## Examples:
+### Examples:
 
 ```go
 arr := []int{1, 2, 3, 4, 5}
@@ -85,11 +85,11 @@ arr := []int{3, 4, 5, 1, 2}
 MinRotations(arr) // returns 3
 ```
 
-# See the Solution
+## See the Solution
 
 Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 18 - Minimum Rotations](https://discuss.tutorialedge.net/t/challenge-18-minimum-rotations/40) 
 
-## Further Reading:
+### Further Reading:
 
 If you enjoyed this challenge, you may also enjoy some of the other challenges on this site:
 

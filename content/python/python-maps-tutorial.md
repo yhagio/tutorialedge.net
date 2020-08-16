@@ -47,7 +47,7 @@ but with maps we can be far more succinct:
 results = list(map(double, values))
 ```
 
-## Complete Example
+### Complete Example
 
 Below you'll find a complete exmaple for a simple map which applies the double
 function to every element in the values array.
@@ -68,7 +68,7 @@ this produces the following output:
 [4, 6, 8, 10, 12, 14, 16]
 ```
 
-# Conclusion
+## Conclusion
 
 Hopefully you found this tutorial useful! If you did or you require further
 assistance then please feel free to let me know in the comments section below or

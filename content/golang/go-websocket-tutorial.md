@@ -23,11 +23,11 @@ By the end of this tutorial, we should have covered the following:
 For the purpose of this tutorial, we'll be working with the `gorilla/websocket` package
 as I've used it personally in a few production applications to great success.
 
-# Video Tutorial
+## Video Tutorial
 
 {{< youtube id="dniVs0xKYKk" autoplay="false" >}}
 
-# WebSockets - What Are They?
+## WebSockets - What Are They?
 
 So I've covered this a few times in a number of different tutorials, but it's always
 worth mentioning why we use WebSockets and how they differ from traditional `HTTP` requests.
@@ -41,7 +41,7 @@ communication is done over this single long-lived TCP connection. This drastical
 the amount of network overhead required to build real-time applications using WebSockets as
 there isn't a constant polling of HTTP endpoints required.
 
-# A Simple Example
+## A Simple Example
 
 Let's start off with a really simple Go program, once we can run that we can build on top of it
 and start building some simple WebSocket endpoints.
@@ -73,7 +73,7 @@ Let's sanity check that we can run this by opening up a terminal, navigating to 
 project's directory and then calling `go run main.go`. We should see that it successfully
 outputs `Hello World` in our terminal.
 
-# A Simple HTTP Endpoint
+## A Simple HTTP Endpoint
 
 We're going to start off by building a simple HTTP server that returns `Hello World` whenever we hit it on port `8080`. We'll also define a simple HTTP endpoint that will act as the base of the
 WebSocket endpoint that we'll be creating:
@@ -111,13 +111,13 @@ Awesome, when we try run this using `go run main.go` we should see that it succe
 our newly defined HTTP server on `http://localhost:8080` and we should subsequently be able to hit
 both the `/` and the `/ws` routes within our browser.
 
-# Upgrading a HTTP Connection
+## Upgrading a HTTP Connection
 
 In order to create a WebSocket endpoint, we effectively need to upgrade an incoming connection
 from a standard HTTP endpoint to a long-lasting WebSocket connection. In order to do this,
 we are going to be using some of the functionality from the very cool `gorilla/websocket` package!
 
-## Define our Upgrader
+### Define our Upgrader
 
 The first thing we'll have to do is to define a `websocker.Upgrader` struct. This will hold
 information such as the Read and Write buffer size for our WebSocket connection:
@@ -131,7 +131,7 @@ var upgrader = websocket.Upgrader{
 }
 ```
 
-## Check Incoming Origin
+### Check Incoming Origin
 
 The next thing we'll want to add to our existing `wsEndpoint` function is a call to
 `upgrader.CheckOrigin`. This will determine whether or not an incoming request from a
@@ -149,7 +149,7 @@ func wsEndpoint(w http.ResponseWriter, r *http.Request) {
 For now, we have kept it really simple and simply return true regardless of what host is
 trying to connect to our endpoint.
 
-## Upgrading our Connection
+### Upgrading our Connection
 
 We can now start attempting to upgrade the incoming HTTP connection using the
 `upgrader.Upgrade()` function which will take in the Response Writer and the pointer
@@ -170,7 +170,7 @@ func wsEndpoint(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
-## Continually Listening On That Connection
+### Continually Listening On That Connection
 
 Next, we'll want to implement a function which will continually listen for any
 incoming messages sent through that WebSocket connection. We'll call this `reader()` for 
@@ -229,7 +229,7 @@ Hello World
 
 Awesome, everything appears to have worked!
 
-## Writing Back to Our Client
+### Writing Back to Our Client
 
 I mentioned before that WebSockets allow for duplex communication, i.e. back-and-forth
 communication across the same TCP connection. In order to send messages from our Go
@@ -261,7 +261,7 @@ func wsEndpoint(w http.ResponseWriter, r *http.Request) {
 This addition means that any client that connects to our WebSocket server will
 be greeted by a nice `Hi Client!` message!
 
-# Testing it All Works With A Client
+## Testing it All Works With A Client
 
 The final step, is testing to see if everything works by creating a client and attempting
 to connect to our new WebSocket endpoint. For this, we'll create an incredibly simple
@@ -311,7 +311,7 @@ as a `Hi From The Client!` message!
 
 We have now achieved full duplex communication!
 
-# Docker-izing our Application
+## Docker-izing our Application
 
 I've talked about the benefits of Docker in a number of my other tutorials, but essentially,
 it allows us to define the exact environment that our App needs to run successfully. This means
@@ -340,7 +340,7 @@ If everything has worked successfully, we should then be able to see our applica
 running within our docker container mapped to our local machines port `8080`. If we open up
 `http://localhost:8080` within our browser, we should see our application return `home page`.
 
-# Conclusion
+## Conclusion
 
 In this tutorial, we have managed to cover some of the basics of WebSockets and how you can build
 a simple WebSocket based application in Go!
@@ -349,7 +349,7 @@ So, hopefully you enjoyed this tutorial and found it useful! I'm hoping this hig
 
 > **Source Code** - The full source code for this tutorial can be found here: [TutorialEdge/Go](https://github.com/TutorialEdge/Go/)
 
-## Further Reading
+### Further Reading
 
 If you enjoyed this article, you may like my tutorial series which utilizes WebSockets to build a Real-Time chat application using both React and Golang. It covers how you would pool 
 WebSocket connections and do things such as broadcast updates to all connected 

@@ -35,7 +35,7 @@ snippet: |
 
 In order to achieve the conversion we can use the built-in `string` function which takes in a byte slice and returns a string value!
 
-## Further Reading:
+### Further Reading:
 
 If you found this snippet useful, you may also like some of the other snippets on the site:
 

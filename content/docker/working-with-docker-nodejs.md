@@ -24,11 +24,11 @@ We'll be creating a Docker image that will dynamically pick up changes to a
 NodeJS application and automatically recompile and rerun our application without
 having to rebuild and re-run our docker image.
 
-# Video Tutorial
+## Video Tutorial
 
 <div style="position:relative;height:0;padding-bottom:42.76%"><iframe src="https://www.youtube.com/embed/CsWoMpK3EtE?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="842" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 
-# Advantages of Docker
+## Advantages of Docker
 
 Docker offers a number of massive advantages and can drastically reduce the
 friction of deploying your application to multiple platforms with minimal fuss.
@@ -37,7 +37,7 @@ New developers can easily pull down Docker-ized applications and run them with a
 couple of commands on their local machine. Application developers explicitly
 state within the `Dockerfile` everything that application needs in order to run.
 
-# Our NodeJS Application
+## Our NodeJS Application
 
 We are going to start off with a fairly simple, 6-line NodeJS Express.JS
 application that will simply serve `Hello World!` when it's `/` endpoint is hit
@@ -89,7 +89,7 @@ add the following to the newly created file:
 > should then be able to navigate to `http://localhost:3000/` and be greeted
 > with `Hello World!` in your browser.
 
-# Dockerizing our Application
+## Dockerizing our Application
 
 The aim of the game here is to get a docker image that is as thin as possible in
 terms of size and is still able to provide our application with everything it
@@ -100,20 +100,20 @@ own Docker image on top of.
 
 ```Dockerfile
 FROM node:9-slim
-# WORKDIR specifies the directory our
-# application's code will live within
+## WORKDIR specifies the directory our
+## application's code will live within
 WORKDIR /app
-# We copy our package.json file to our
-# app directory
+## We copy our package.json file to our
+## app directory
 COPY package.json /app
-# We then run npm install to install
-# express for our application
+## We then run npm install to install
+## express for our application
 RUN npm install
-# We then copy the rest of our application
-# to the app direcoty
+## We then copy the rest of our application
+## to the app direcoty
 COPY . /app
-# We start our application by calling
-# npm start.
+## We start our application by calling
+## npm start.
 CMD ["npm", "start"]
 ```
 
@@ -128,7 +128,7 @@ time we build our Docker image, it doesn't constantly have to reinstall all our
 dependencies. This may not take a lot of time for this particular project, but
 for larger projects, this can become a massive time drain.
 
-## Building our Docker Image
+### Building our Docker Image
 
 Now that we have defined our `Dockerfile` within our application's directory, we
 can go about building our Docker image. We can do this by running the following
@@ -141,7 +141,7 @@ can go about building our Docker image. We can do this by running the following
 This will subsequently run through the 6 steps outlined within our `Dockerfile`
 and build our complete Docker image.
 
-## Running our Docker Image
+### Running our Docker Image
 
 Once our Docker image has been successfully built, we can then go about running
 one or more Docker containers based off this image by running the following
@@ -161,13 +161,13 @@ run in the background on our host machine.
 > essentially map any requests to port `9000` from our host machine to the
 > underlying docker container listening on port `3000`.
 
-## Viewing running Docker Containers
+### Viewing running Docker Containers
 
 In order to view all of the running containers on your local machine, type
 `docker ps`. This should show our `node-docker` container running and the ports
 that it's listening to.
 
-# Automatically Picking up Changes
+## Automatically Picking up Changes
 
 The first thing we'll have to do in order for our running Docker container to
 pick up any changes is mount it to a directory on my host machine. We can
@@ -218,7 +218,7 @@ If you now navigate to `http://localhost:9001` you should see your application
 up and running, if you then subsequently make any changes to the app, these
 changes will be picked up and automatically reran within our container! Awesome!
 
-# Conclusion
+## Conclusion
 
 In this tutorial, we learned how to implement a docker container that perfectly
 wraps our NodeJS application. This Docker container is deployable anywhere that

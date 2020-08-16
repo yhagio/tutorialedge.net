@@ -18,9 +18,9 @@ twitter: https://twitter.com/Elliot_F
 In this tutorial, we are going to be looking at the _Heap_ data structure and
 how it can be used to solve various problems in an efficient manner.
 
-# Heaps - The Theory
+## Heaps - The Theory
 
-# Conclusion
+## Conclusion
 
 That about wraps up this tutorial, I'm very much hoping you have found it
 useful! If you have any suggestions for any improvements that could be made then

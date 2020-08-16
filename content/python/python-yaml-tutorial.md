@@ -20,7 +20,7 @@ In this tutorial, we will be looking at how you can effectively work with yaml i
 - ✅ How to update and write to your own Yaml files
 - ✅ How to navigate a more complex yaml file structure with loops and nested structures
 
-# Reading Yaml Files
+## Reading Yaml Files
 
 Let's start off by looking at how we can read the contents of a yaml file and access a few simple values. 
 
@@ -44,12 +44,12 @@ Let's take a look at
 output...
 ```
 
-# Prerequisites
+## Prerequisites
 
-# Conclusion
+## Conclusion
 
 Hopefully you found this tutorial useful! If you have any comments or anything you would like to add then please feel free to let me know in the comments section below!
 
-## Further Reading:
+### Further Reading:
 
 * []()

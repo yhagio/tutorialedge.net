@@ -16,7 +16,7 @@ This past month I was fortunate enough to make the leap from junior to senior en
 
 > **Note** - Your mileage may vary. 
 
-# Communication and Soft Skills
+## Communication and Soft Skills
 
 This is without a doubt **the most important learning point** that I've taken away from my past few years of work. 
 
@@ -25,16 +25,16 @@ The vast majority of successful projects take strong teams in order to get off t
 Throughout the last year, the team I have been part of has been truly exceptional. We are all strong communicators who work incredibly well together 
 
 
-# Expectation Setting
+## Expectation Setting
 
-# Responsibility
+## Responsibility
 
-# Team Work
+## Team Work
 
-# Constant Learning
+## Constant Learning
 
-# Conclusion
+## Conclusion
 
-## Further Reading:
+### Further Reading:
 
 * []()

@@ -15,14 +15,14 @@ In this tutorial, we are going to be looking at tickers in Go and how you can us
 
 Tickers are exceptionally helpful when you need to perform an action repeatedly at given time intervals and we can use tickers, in combination with goroutines in order to run these tasks in the background of our applications.
 
-# Tickers vs Timers
+## Tickers vs Timers
 
 Before we dive in, it's useful to know the distinction between both `tickers` and `timers.`
 
 * `Tickers` - These are excellent for repeated tasks
 * `Timers` - These are used for one-off tasks
 
-# A Simple Example
+## A Simple Example
 
 Let's start off with a really simple in which we repeatedly run a simple `fmt.Println` statement ever 5 seconds.
 
@@ -61,7 +61,7 @@ Tock
 ^Csignal: interrupt
 ```
 
-# Running in the Background
+## Running in the Background
 
 So we have been able to implement a really simple Go application that uses a `ticker` to repeatedly perform an action. However, what happens if we want this action to be performed in the background of our Go application though?
 
@@ -116,11 +116,11 @@ Tock
 ^Csignal: interrupt
 ```
 
-# Conclusion
+## Conclusion
 
 So, in this tutorial, we have looked at how you can use tickers within your own Go applications to before repeatable tasks, both on the main thread, and as a background task.
 
-## Further Reading
+### Further Reading
 
 If you enjoyed this and wish to see how you can use `tickers` in a more advanced context then I recommend checking out my other article which is a real-time YouTube stats monitoring system.
 
