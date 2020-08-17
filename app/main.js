@@ -20,6 +20,7 @@ import ChallengeStats from './components/challenge/ChallengeStats.vue';
 import Navbar from './components/nav/Nav.vue';
 import config from 'environment';
 import Carbon from './components/misc/Carbon.vue'
+import Writer from './components/write/Writer.vue'
 import dayjs from 'dayjs'
 import codemirror from 'vue-codemirror';
 import { Auth0Plugin } from "./auth";
@@ -49,6 +50,7 @@ var app = new Vue({
     ChallengeHome,
     Githubsvg,
     SearchPage,
+    Writer,
     Quiz,
     ProfileNavButton,
     Pricing,

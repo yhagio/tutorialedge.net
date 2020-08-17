@@ -17,7 +17,7 @@
                 </div>
                 <div class="flex-1 mt-4">
                     <div class="flex justify-end">
-                        <!-- <a href="/write/"><button class="bg-transparent border border-solid border-gray-600  hover:bg-gray-600 text-gray-200 font-semibold hover:text-white py-4 px-4 rounded">Create Post ✍️ </button></a> -->
+                        <!-- <a href="/write/"><button class="bg-transparent mr-8 border border-solid border-gray-600  hover:bg-gray-600 text-gray-200 font-semibold hover:text-white py-4 px-4 rounded">Create Post ✍️ </button></a> -->
                         <a href="/logout/"><button aria-label="logout" class="bg-transparent border border-solid border-gray-600  hover:bg-gray-600 text-gray-200 font-semibold hover:text-white py-4 px-4 rounded">Logout 🚪</button></a>
                     </div>
                 </div>
