@@ -68,7 +68,7 @@ pandigital := LargestPandigitalPrime() // returns largest pandigital prime
 
 ## See the Solution
 
-Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 22 - Pandigital Primes](https://discuss.tutorialedge.net/t/challenge-15-repeating-letters/36) 
+Feel free to have a look at the forum discussion thread for this challenge and contribute with your own solutions here - [Challenge 22 - Pandigital Primes](https://discuss.tutorialedge.net/t/challenge-22-largest-pandigital-prime/70) 
 
 
 ### Further Reading:
