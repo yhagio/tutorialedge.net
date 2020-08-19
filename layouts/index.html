@@ -58,6 +58,7 @@
 	<div class="max-w-screen-xl mx-auto">
 		<div class="mx-auto md:grid md:grid-cols-3 md:col-gap-8 md:row-gap-10">
 			{{ range (where .Site.Pages "Section" "course") }} {{ if and (ne .Title "Course") (ne .Title "Courses") }}
+			<a href="{{ .Permalink }}">
 				<div class="bg-white text-center rounded overflow-hidden shadow-lg px-4 py-4 mx-2">
 					{{ if .Params.image }}
 						<img class="w-24 mx-auto h-auto" src="https://images.tutorialedge.net/images/{{ .Params.image }}" alt="Sunset in the mountains">
@@ -74,6 +75,7 @@
 						{{ end }}
 					</div>
 				</div>
+			</a>
 			{{ end }} {{ end }}
 		</div>
 	</div>
