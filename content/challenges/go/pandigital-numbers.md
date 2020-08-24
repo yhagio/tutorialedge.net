@@ -43,7 +43,7 @@ tests:
         )
 
         func TestLargestPandigitalPrime(t *testing.T) {
-            expected := 7654321
+            expected := 7652413
             result := LargestPandigitalPrime()
 
             if expected != result {
