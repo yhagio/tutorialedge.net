@@ -93,6 +93,7 @@ The task will be to implement the `FilterDuplicates` function so that it returns
   "Alan",
   "Jennifer",
   "Graham",
+  "Paul",
 }
 
 ```
