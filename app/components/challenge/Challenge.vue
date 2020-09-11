@@ -61,6 +61,12 @@
                 </div>
             </div>
         </div>
+        
+        <div class="p-8 mb-4 rounded bg-white shadow m-8 mr-10">
+            <h2 class="text-xl mb-4">🏆 Sponsorship</h2>
+            <p class="mb-8">Enjoying these challenges? Consider sponsoring the site for as little as $1.99/month and help pay for the Elastic Beanstalk instances these challenges run on!</p>
+            <a class="btn btn-subscribe mb-4" href="/pricing/">Sponsor Now</a>
+        </div>
 
         <div class="p-4 rounded bg-white shadow m-8 mr-10">
             <Carbon />
