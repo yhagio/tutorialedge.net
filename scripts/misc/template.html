@@ -7,48 +7,48 @@
 <body>
 
 <div class="container">
-    <div class="max-w-full min-h-8 rounded overflow-hidden shadow-lg bg-white">
-        <div class="px-8 py-8">
-            <p class="text-sm text-gray-600 flex items-center uppercase">
-                {{series}}
-            </p>
-            <div class="font-bold h-14 text-xl mb-3">{{title}}</div>
-            <div class="line-clamp module">
-                <p class="text-gray-700 text-base">{{summary}}</p>
-            </div>
-        </div>
-        <div class="flex px-6 mb-4">
-            <div class="flex-1">
-                <div class="flex">
-                    <img class="w-8 h-8 rounded-full mr-4" src="https://images.tutorialedge.net/images/logo.png" alt="{{author}}">
-                    <div class="text-sm">
-                        <p class="text-gray-900 leading-none">{{author}}</p>
-                        <p class="text-gray-600">{{formatDate publishdate day="numeric" month="long" year="numeric"}}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="flex-1 float-right">
-                <div class="flex ml-12">
-                    <div class="text-sm mt-2 ml-12">
-                        <p class="text-gray-600">TutorialEdge.net</p>
-                    </div>
-                    <img class="w-10 h-10 rounded-full ml-4 float-right" src="https://images.tutorialedge.net/images/logo.png" alt="TutorialEdge">
-                </div>
-            </div>
-
-          </div>
-      </div>
+    <div class="max-w-full p-8 min-h-8 text-center">
+        <img class="w-20 h-20 rounded-full m-auto shadow" src="https://images.tutorialedge.net/images/logo.svg" alt="{{author}}">
+        <div class="title h-14 text-2xl mt-8 mb-3">{{title}}</div>
+        <p class="text-gray-800 text-sm">Author: {{.}}</p>
     </div>
+</div>
+
 <style>
+@font-face {
+    font-family: 'Inter';
+    font-style:  normal;
+    font-weight: normal;
+    src: url("_fonts/Inter-Regular.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style:  normal;
+    font-weight: bold;
+    src: url("_fonts/Inter-Bold.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: 'Vera';
+    font-style: normal;
+    font-weight: normal;
+    src: url("_fonts/Vera-Mono.woff2")  format("woff2");
+    }
+
 body{ 
-    background-color: #267D8E;
+    background-image: radial-gradient(circle at 25px 25px, lightgray 2%, transparent 0%), radial-gradient(circle at 75px 75px, lightgray 2%, transparent 0%);
+    background-size: 100px 100px;
+    /* background-image: url(../../static/images/svg/small-dots.svg); */
 }
 .module {
   width: 100%;
   margin: 0 0 1em 0;
   overflow: hidden;
 }
-
+.title {
+    font-family: 'Inter', sans-serif;
+}
 .line-clamp {
     display: -webkit-box;
   -webkit-line-clamp: 3;
