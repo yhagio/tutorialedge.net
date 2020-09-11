@@ -39,7 +39,8 @@ async function generateImage(imagePath) {
     
         await page.goto("file://" + __dirname + "/temp/index.html");
         await fs.mkdirSync(imagesCDNPath + imagePath, { recursive: true })
-        await page.screenshot({path: imagesCDNPath + imagePath + "card.png", clip: {x: 0, y: 0, width: 600, height: 330}});
+        await page.setViewport({ width: 2048, height: 1170 });
+        await page.screenshot({path: imagesCDNPath + imagePath + "card.png"});
         await browser.close();
     // } else {
     //     console.log("Card already exists for path: %s", imagePath)
