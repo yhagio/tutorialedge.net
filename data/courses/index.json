@@ -5,5 +5,12 @@
         "desc": "Building a SaaS WebSite with React.js and Node.js - Under Construction",
         "url": "/courses/ogimg-dev/frontend-01/",
         "tech": ["React.js", "Node.js", "Docker", "AWS"]
+    },
+    "webassembly": {
+        "img": "https://images.tutorialedge.net/images/golang.svg",
+        "title": "Getting Started with Go and WebAssembly",
+        "desc": "Learn the fundamentals of working with Go and WebAssembly",
+        "url": "/courses/gowebassembly/01-course-overview/",
+        "tech": ["Go", "WebAssembly"]
     }
 }
