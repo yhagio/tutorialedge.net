@@ -1,0 +1,28 @@
+{
+  "Fundamentals": {
+    "name": "Fundamentals",
+    "weight": 1,
+    "articles": [
+      {
+        "title": "Course Overview",
+        "state": "published",
+        "url": "/courses/gowebassembly/01-course-overview/"
+      },
+      {
+        "title": "Getting Started With Go and WebAssembly",
+        "state": "published",
+        "url": "/courses/gowebassembly/02-getting-started-with-go-webassembly/"
+      },
+      {
+        "title": "🔒 - Running Go and WebAssembly in the Browser",
+        "state": "published",
+        "url": "/courses/gowebassembly/03-running-go-webassembly-in-browser/"
+      },
+      {
+        "title": "🔒 - Basic DOM Manipulation in Go and WebAssembly",
+        "state": "published",
+        "url": "/courses/gowebassembly/04-basic-dom-manipulation-webassembly-go/"
+      }
+    ]
+  }
+}
