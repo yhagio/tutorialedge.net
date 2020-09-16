@@ -64,7 +64,7 @@ export default {
                     this.loading = false;
                     this.profile = response.data;
     
-                    if(this.profile.account.premium) {
+                    if(this.profile.account.premium || this.user['https://tutorialedge.net_user_metadata'].sponsor) {
                         this.showOverlay = false;
                         this.loadVideo();
                     }
