@@ -18,6 +18,8 @@ authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 
 Let's take this a step further and try and do some basic DOM-manipulation in our WebAssembly application.
 
+We'll start off by modifying the `main` function and implementing the functionality to append a `h1` tag to our `body` so that we aren't just rendering a blank page.
+
 ```go
 package main
 

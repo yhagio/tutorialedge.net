@@ -10,9 +10,9 @@
                         <h2 class="text-2xl text-white mt-2">Profile: {{ this.user.name }}</h2>
 
                         <p class="text-sm text-gray-400 mt-4">Nickname: <span class="text-white">{{this.user.nickname}}</span></p>
-                        <!-- <p class="text-sm text-gray-400 mt-4">Debug Info: <span class="text-white">{{this.user}}</span></p> -->
+                        <p class="text-sm text-gray-400 mt-4">Debug Info: <span class="text-white">{{this.user}}</span></p>
 
-                        <p id="account-status" class="text-sm text-white mt-4" v-if="this.profile.account.premium">✅ Premium Account</p>
+                        <p id="account-status" class="text-sm text-white mt-4" v-if="this.profile.account.premium || this.user['https://tutorialedge.net_user_metadata'].sponsor">✅ Premium Account</p>
                         <p id="account-status" class="text-sm text-gray-400 mt-4" v-if="!this.profile.account.premium">Free Account - <a class="text-white text-underline" href="/pricing/">Upgrade Account 🚀</a></p>
                     </div>
                 </div>
