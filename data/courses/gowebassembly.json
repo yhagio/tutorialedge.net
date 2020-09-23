@@ -22,6 +22,11 @@
         "title": "🔒 - Basic DOM Manipulation in Go and WebAssembly",
         "state": "published",
         "url": "/courses/gowebassembly/04-basic-dom-manipulation-webassembly-go/"
+      },
+      {
+        "title": "🔒 - Optimizing WASM File Size using Tinygo",
+        "state": "published",
+        "url": "/courses/gowebassembly/05-optimizing-wasm-size-tinygo/"
       }
     ]
   }
