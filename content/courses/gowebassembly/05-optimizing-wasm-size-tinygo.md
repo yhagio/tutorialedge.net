@@ -11,8 +11,8 @@ tags:
 title: Optimizing WASM File Size using Tinygo
 twitter: https://twitter.com/Elliot_F
 video: 460998542
-nextPage: /courses/gowebassembly/getting-started-with-gow-ebassembly/
-weight: 2
+nextPage: /courses/gowebassembly/getting-started-with-gowebassembly/
+weight: 5
 authorImage: https://images.tutorialedge.net/authors/profile.jpeg
 ---
 
