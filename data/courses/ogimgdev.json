@@ -58,11 +58,6 @@
         "title": "Generating Screenshots with Puppeteer",
         "state": "published",
         "url": "/courses/ogimg-dev/backend-03/"
-      },
-      {
-        "title": "Serving Our Images",
-        "state": "pending",
-        "url": "/courses/ogimg-dev/backend-04/"
       }
     ]
   },
