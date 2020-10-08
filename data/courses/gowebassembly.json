@@ -27,6 +27,11 @@
         "title": "🔒 - Optimizing WASM File Size using Tinygo",
         "state": "published",
         "url": "/courses/gowebassembly/05-optimizing-wasm-size-tinygo/"
+      },
+      {
+        "title": "🔒 - Go WebAssembly Function Basics",
+        "state": "published",
+        "url": "/courses/gowebassembly/06-go-wasm-basic-functions-tutorial/"
       }
     ]
   }
