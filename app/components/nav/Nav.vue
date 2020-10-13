@@ -4,7 +4,7 @@
             <div class="flex py-4 px-4 items-center justify-between">
                 <div>
                     <a class="flex" href="/">
-                        <img class="w-8 h-auto" src="https://images.tutorialedge.net/images/logo.svg" alt="TutorialEdge">
+                        <img class="w-8 h-8" src="https://images.tutorialedge.net/images/logo.svg" alt="TutorialEdge">
                         <h2 class="hidden lg:block text-white text-xl font-semibold ml-4 mt-1">TutorialEdge.net</h2>
                     </a>
                 </div>
